@@ -1,6 +1,6 @@
-// === Module 17254: ChannelItem ===
+// === Module 17258: ChannelItem ===
 
-// Module 17254 (ChannelItem)
+// Module 17258 (ChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1114 */;
@@ -8,8 +8,8 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8431 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 8475 */;
-import BaseChannelItem from "BaseChannelItem" /* 13031 */;
-import _modDef17255 from "module_17255" /* 17255 */;
+import BaseChannelItem from "BaseChannelItem" /* 13039 */;
+import _modDef17259 from "module_17259" /* 17259 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5207 */;
@@ -124,7 +124,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     if (tmp5) {
-      let tmp11 = _modDef17255;
+      let tmp11 = _modDef17259;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
     } else {
       if (cResult[10] === channel) {
@@ -211,7 +211,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef17255;
+      let tmp12 = _modDef17259;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -235,7 +235,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return closure_1_14(tmp9(13031).BaseChannelIcon, obj10);
+    return closure_1_14(tmp9(13039).BaseChannelIcon, obj10);
   }
 });
 ReactCompilerGating = fn(558);

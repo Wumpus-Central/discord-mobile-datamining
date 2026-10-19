@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155
 import NativeViewDefault from "NativeView" /* 6439 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7118 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 13955 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 13959 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5210 */;
 import AudioManagerStore from "AudioManagerStore" /* 9059 */;
@@ -156,8 +156,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
   const cResult = channel(576).c(19);
   channel = channel.channel;
   const tmp4 = closure_13();
-  arr = arr(11478)();
-  let tmp5 = arr(11399)();
+  arr = arr(11496)();
+  let tmp5 = arr(11417)();
   dependencyMap = tmp5;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GameConsoleStore];
@@ -417,8 +417,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
   channel = channel.channel;
   let arr;
   let awaitingRemoteSessionInfo;
-  arr = arr(11478)();
-  dependencyMap = arr(11399)();
+  arr = arr(11496)();
+  dependencyMap = arr(11417)();
   let tmp = closure_13();
   const items = [awaitingRemoteSessionInfo];
   const stateFromStores = channel(573).useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());

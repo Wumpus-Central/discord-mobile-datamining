@@ -1,6 +1,6 @@
-// === Module 13882: AppStoreOverlayStatsCarousel ===
+// === Module 13886: AppStoreOverlayStatsCarousel ===
 
-// Module 13882 (AppStoreOverlayStatsCarousel)
+// Module 13886 (AppStoreOverlayStatsCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,8 +9,8 @@ import Text_Text from "Text/Text" /* 5187 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
 import AnalyticsActions from "AnalyticsActions" /* 7672 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7681 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 13883 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 13884 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 13887 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 13888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 17206: SpotifyNeutralIcon ===
+// === Module 17210: SpotifyNeutralIcon ===
 
-// Module 17206 (SpotifyNeutralIcon)
+// Module 17210 (SpotifyNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4912 */;
-import _mod17207 from "module_17207" /* 17207 */;
+import _mod17211 from "module_17211" /* 17211 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const SpotifyNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod17207;
+    const tmpResult = _mod17211;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const SpotifyNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17207, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17211, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

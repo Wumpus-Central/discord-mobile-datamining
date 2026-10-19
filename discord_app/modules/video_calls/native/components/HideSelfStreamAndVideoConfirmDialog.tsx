@@ -1,6 +1,6 @@
-// === Module 18339: HideSelfStreamAndVideoConfirmDialog ===
+// === Module 18343: HideSelfStreamAndVideoConfirmDialog ===
 
-// Module 18339 (HideSelfStreamAndVideoConfirmDialog)
+// Module 18343 (HideSelfStreamAndVideoConfirmDialog)
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5360 */;
 import common_AlertDefault from "common/Alert" /* 5498 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["type", "onConfirm"];
 const View = fn(17).View;
-const constants = fn(18338).SelfStreamAndVideoAlertType;
+const constants = fn(18342).SelfStreamAndVideoAlertType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5191);

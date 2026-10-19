@@ -1,6 +1,6 @@
-// === Module 14083: UserProfileActivityButtons ===
+// === Module 14087: UserProfileActivityButtons ===
 
-// Module 14083 (UserProfileActivityButtons)
+// Module 14087 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -16,13 +16,13 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7748 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7759 */;
 import isStreamingDefault from "isStreaming" /* 8658 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9507 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11200 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11201 */;
-import joinFrameActivityDefault from "joinFrameActivity" /* 11202 */;
-import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 11204 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 14084 */;
-import getActivityJoinability from "getActivityJoinability" /* 14085 */;
-import getStreamURLDefault from "getStreamURL" /* 14087 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11219 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11220 */;
+import joinFrameActivityDefault from "joinFrameActivity" /* 11221 */;
+import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 11223 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 14088 */;
+import getActivityJoinability from "getActivityJoinability" /* 14089 */;
+import getStreamURLDefault from "getStreamURL" /* 14091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
@@ -30,7 +30,7 @@ import ChannelStore from "ChannelStore" /* 2068 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6017 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5116 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import LocalActivityStore from "LocalActivityStore" /* 10958 */;
+import LocalActivityStore from "LocalActivityStore" /* 10974 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
@@ -523,7 +523,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(11182).canOpenSpotifyUrl(), done: false };
+                const obj5 = { value: closure_0(11201).canOpenSpotifyUrl(), done: false };
                 return obj5;
               }
             } else if (1 === tmp7) {
@@ -540,7 +540,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj7 = closure_0(11182);
+              const obj7 = closure_0(11201);
               if (closure_128_0) {
                 obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
               } else {

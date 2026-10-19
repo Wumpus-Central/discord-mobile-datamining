@@ -1,6 +1,6 @@
-// === Module 14165: UserProfileRecentActivityCard ===
+// === Module 14169: UserProfileRecentActivityCard ===
 
-// Module 14165 (UserProfileRecentActivityCard)
+// Module 14169 (UserProfileRecentActivityCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -18,11 +18,11 @@ import utils from "utils" /* 8544 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8733 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9150 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9151 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14046 */;
-import BadgesAll from "Badges" /* 14059 */;
-import TrendingType from "TrendingType" /* 14064 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14071 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14072 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14050 */;
+import BadgesAll from "Badges" /* 14063 */;
+import TrendingType from "TrendingType" /* 14068 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14075 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14076 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -637,13 +637,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       if (cResult[4] === user) {
         let tmp8 = cResult[5];
       }
-      const tmp9 = tmp6(14071)(tmp8);
+      const tmp9 = tmp6(14075)(tmp8);
       _require = tmp9;
       if (cResult[6] === tmp9) {
         if (cResult[7] === user.id) {
           let tmp10 = cResult[8];
         }
-        tmp6(14072)(tmp10);
+        tmp6(14076)(tmp10);
         let application_id;
         if ("application_id" in entry.extra) {
           application_id = entry.extra.application_id;

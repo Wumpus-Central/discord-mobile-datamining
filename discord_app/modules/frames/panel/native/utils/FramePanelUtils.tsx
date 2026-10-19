@@ -1,6 +1,6 @@
-// === Module 18544: FramePanelUtils ===
+// === Module 18548: FramePanelUtils ===
 
-// Module 18544 (FramePanelUtils)
+// Module 18548 (FramePanelUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import FramesStore from "FramesStore" /* 6295 */;

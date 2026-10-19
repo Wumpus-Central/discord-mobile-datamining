@@ -1,6 +1,6 @@
-// === Module 15618: UserProfileEditBannerButton ===
+// === Module 15622: UserProfileEditBannerButton ===
 
-// Module 15618 (UserProfileEditBannerButton)
+// Module 15622 (UserProfileEditBannerButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Pressables from "Pressables" /* 6462 */;
@@ -10,7 +10,7 @@ import PencilIcon from "PencilIcon" /* 10023 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileBannerDefault = tmp5(8646);
-const EditButtonDefault = tmp5(15619);
+const EditButtonDefault = tmp5(15623);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

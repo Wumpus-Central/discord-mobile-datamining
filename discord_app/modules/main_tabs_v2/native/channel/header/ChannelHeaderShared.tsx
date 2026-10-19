@@ -1,6 +1,6 @@
-// === Module 13793: ChannelHeaderShared ===
+// === Module 13797: ChannelHeaderShared ===
 
-// Module 13793 (ChannelHeaderShared)
+// Module 13797 (ChannelHeaderShared)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -14,8 +14,8 @@ import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /*
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8431 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10565 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10592 */;
-import _modDef13794 from "module_13794" /* 13794 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13795 */;
+import _modDef13798 from "module_13798" /* 13798 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13799 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               }
               let tmp13 = !tmp4;
               if (!tmp4) {
-                const obj6 = { source: _modDef13794, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
+                const obj6 = { source: _modDef13798, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
                 tmp13 = closure_1_8(native.Icon, obj6);
               }
               cResult[7] = tmp4;
@@ -259,7 +259,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13794, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13798, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;

@@ -1,6 +1,6 @@
-// === Module 13204: GuildPowerupsImage ===
+// === Module 13212: GuildPowerupsImage ===
 
-// Module 13204 (GuildPowerupsImage)
+// Module 13212 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;

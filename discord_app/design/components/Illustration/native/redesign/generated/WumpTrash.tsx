@@ -1,6 +1,6 @@
-// === Module 17093: WumpTrash ===
+// === Module 17097: WumpTrash ===
 
-// Module 17093 (WumpTrash)
+// Module 17097 (WumpTrash)
 import c from "c" /* 576 */;
 import shared from "shared" /* 5065 */;
 import FastImageDefault from "FastImage" /* 5128 */;
@@ -16,10 +16,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWumpTrash
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_17094");
+          return require("module_17098");
         },
       darker() {
-          return require("module_17095");
+          return require("module_17099");
         }
     };
     const illustrationSource = _mod8633.getIllustrationSource(theme, obj3);
@@ -35,10 +35,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWumpTrash
   const obj = shared;
   return _mod8633.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17094");
+      return require("module_17098");
     },
     darker() {
-      return require("module_17095");
+      return require("module_17099");
     }
   });
 });
@@ -47,10 +47,10 @@ ReactCompilerGating = fn(558);
 function getWumpTrashSource(theme) {
   return _mod8633.getIllustrationSource(theme, {
     dark() {
-      return require("module_17094");
+      return require("module_17098");
     },
     darker() {
-      return require("module_17095");
+      return require("module_17099");
     }
   });
 }

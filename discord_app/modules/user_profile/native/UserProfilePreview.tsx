@@ -1,6 +1,6 @@
-// === Module 10820: UserProfilePreview ===
+// === Module 10836: UserProfilePreview ===
 
-// Module 10820 (UserProfilePreview)
+// Module 10836 (UserProfilePreview)
 import nativeDefault from "native" /* 587 */;
 import scaleProfileFrameDefault from "scaleProfileFrame" /* 8624 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           tmp11(8641)();
           const tmp14 = tmp11(8627)(tmp13);
           const tmp16 = null != primaryColor;
-          const customStatusActivity = guildId(10821).useCustomStatusActivity();
+          const customStatusActivity = guildId(10837).useCustomStatusActivity();
           if (cResult[9] === primaryColor) {
             if (cResult[10] === secondaryColor) {
               if (cResult[11] === theme) {
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           cResult[11] = theme;
           cResult[12] = obj5;
           tmp22 = obj5;
-          const tmpResult6 = guildId(10821);
+          const tmpResult6 = guildId(10837);
         }
       }
     }
@@ -412,9 +412,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const tmp8 = closure_12(flag, null != primaryColor, maxWidth);
   const tmp9 = isPremiumTryItOut(8641)();
   const tmp6 = isPremiumTryItOut(8627)({ user, displayProfile: tmp5, pendingThemeColors, isPreview: isPremiumTryItOut });
-  const customStatusActivity = guildId(10821).useCustomStatusActivity();
+  const customStatusActivity = guildId(10837).useCustomStatusActivity();
   let tmp28Result5 = null != customStatusActivity && !flag;
-  const obj2 = guildId(10821);
+  const obj2 = guildId(10837);
   const userProfileColors = guildId(8638).useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ containerBackground, gradientFallbackBackground, avatarBackground } = userProfileColors);
   if (undefined !== avatarDecorationOverride) {
@@ -567,11 +567,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   if (tmp28Result5) {
     const obj16 = { customStatusActivity, themeType: constants.PREVIEW, hasCustomProfileTheme: tmp7, style: null, emojiOnlyStyle: null };
     ({ customStatusBubble: obj20.style, emojiOnlyCustomStatusBubble: obj20.emojiOnlyStyle } = tmp9);
-    tmp28Result5 = closure_9(tmp4(10822), obj16);
+    tmp28Result5 = closure_9(tmp4(10838), obj16);
   }
   const items8 = [tmp28Result5, , ];
   const obj17 = { user, themeType: constants.PREVIEW, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, showBadgeToastOnPress: false, pendingDisplayNameStyles: null, primaryGuildOverride: null, guildId: null };
-  const tmp4Result9 = isPremiumTryItOut(10841);
+  const tmp4Result9 = isPremiumTryItOut(10857);
   if (displayName == null) {
     displayName = pendingGlobalName;
   }
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   obj17.pendingDisplayNameStyles = pendingDisplayNameStyles;
   obj17.primaryGuildOverride = userPrimaryGuild;
   obj17.guildId = guildId;
-  items8[1] = closure_9(isPremiumTryItOut(10842), obj17);
+  items8[1] = closure_9(isPremiumTryItOut(10858), obj17);
   let tmp28Result6 = !flag;
   if (!flag) {
     const obj18 = { userId: user.id, displayProfile: tmp5, themeType: constants.PREVIEW, style: null, bioLineClamp: 1 };
@@ -597,7 +597,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     const obj19 = { backgroundColor: containerBackground };
     items9[2] = obj19;
     obj18.style = items9;
-    tmp28Result6 = closure_9(tmp4(10923), obj18);
+    tmp28Result6 = closure_9(tmp4(10939), obj18);
   }
   items8[2] = tmp28Result6;
   obj13.children = items8;
@@ -632,5 +632,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     closure_9(tmp4(9296), obj22, skuId);
     const tmp4Result12 = tmp4(9296);
   }
-  const tmp4Result10 = isPremiumTryItOut(10842);
+  const tmp4Result10 = isPremiumTryItOut(10858);
 });

@@ -1,6 +1,6 @@
-// === Module 10824: NativeFontModule ===
+// === Module 10840: NativeFontModule ===
 
-// Module 10824 (NativeFontModule)
+// Module 10840 (NativeFontModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

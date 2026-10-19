@@ -1,14 +1,14 @@
-// === Module 11812: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 11831: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 11812 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 11831 (UserProfileApplicationWidgetBottomCollectionLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import noop from "module_19" /* 19 */;
 
 const Text_Text = Text(5187);
-const resolvedValuesFromUserApplicationIdentityProfile = Text(11719);
-const UserProfileApplicationWidgetSkeletons = Text(11806);
+const resolvedValuesFromUserApplicationIdentityProfile = Text(11738);
+const UserProfileApplicationWidgetSkeletons = Text(11825);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

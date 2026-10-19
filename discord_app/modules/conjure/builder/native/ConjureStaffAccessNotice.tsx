@@ -1,6 +1,6 @@
-// === Module 11661: ConjureStaffAccessNotice ===
+// === Module 11680: ConjureStaffAccessNotice ===
 
-// Module 11661 (ConjureStaffAccessNotice)
+// Module 11680 (ConjureStaffAccessNotice)
 import router_utils from "router_utils" /* 1114 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import LinkingDefault from "Linking" /* 4901 */;
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   let tmp = dependencyMap;
   const cResult = conjureStaffAccessTarget(576).c(6);
   let obj = conjureStaffAccessTarget(576);
-  conjureStaffAccessTarget = conjureStaffAccessTarget(11662).useConjureStaffAccessTarget();
+  conjureStaffAccessTarget = conjureStaffAccessTarget(11681).useConjureStaffAccessTarget();
   if (cResult[0] !== conjureStaffAccessTarget) {
     const fn = function n() {
       if (null != conjureStaffAccessTarget) {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   } else {
     if (cResult[2] !== tmp4) {
       const intl = NewInlineNotice(1128).intl;
-      const obj3 = { channel: NewInlineNotice(11662).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
+      const obj3 = { channel: NewInlineNotice(11681).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
       const formatResult = intl.format(_modDef3883["6anmu1"], obj3);
       cResult[2] = tmp4;
       cResult[3] = formatResult;
@@ -56,15 +56,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       cResult[5] = tmp;
     }
   }
-  let obj2 = conjureStaffAccessTarget(11662);
+  let obj2 = conjureStaffAccessTarget(11681);
 }) : (function ConjureStaffAccessNotice() {
-  conjureStaffAccessTarget = conjureStaffAccessTarget(11662).useConjureStaffAccessTarget();
+  conjureStaffAccessTarget = conjureStaffAccessTarget(11681).useConjureStaffAccessTarget();
   [][0] = conjureStaffAccessTarget;
   let tmp5 = null;
   if (null != conjureStaffAccessTarget) {
     let obj2 = { type: "info", role: "none", message: null };
     const intl = tmp(1128).intl;
-    const obj3 = { channel: tmp(11662).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
+    const obj3 = { channel: tmp(11681).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
     obj2.message = intl.format(_modDef3883["6anmu1"], obj3);
     tmp5 = jsx(tmp(7837).NewInlineNotice, { type: "info", role: "none", message: null });
   }

@@ -1,11 +1,11 @@
-// === Module 11046: conjurePublishConnection ===
+// === Module 11065: conjurePublishConnection ===
 
-// Module 11046 (conjurePublishConnection)
+// Module 11065 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10982 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11036 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10998 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11057 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10977 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10993 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
@@ -42,15 +42,20 @@ export const publishStepHandlers = {
           tmp3 = surface;
         }
       }
-      const obj = { publishCta: null };
-      const obj4 = { surface: tmp3 };
-      obj.publishCta = obj4;
-      obj2.patch = obj;
+      const obj = { surface: tmp3, reason: null };
+      let str = "first_publish";
+      if ("new_ui" === publish_cta.publish_cta.reason) {
+        str = "new_ui";
+      }
+      const obj4 = { publishCta: null };
+      obj.reason = str;
+      obj4.publishCta = obj;
+      obj2.patch = obj4;
       DispatcherDefault.dispatch(obj2);
     }
   },
   publish_status(published, projectId) {
-    const obj2 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, published: true === published.published, hasUnpublishedChanges: true === published.has_unpublished_changes, surface: null, previewAppChannels: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null };
+    const obj2 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, published: true === published.published, hasUnpublishedChanges: true === published.has_unpublished_changes, surface: null, previewAppChannels: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null, newUiUnpublished: null };
     const surface = published.surface;
     let tmp = null;
     if (null != surface) {
@@ -101,6 +106,7 @@ export const publishStepHandlers = {
       });
     }
     obj2.patchNotesSent = flatMapResult;
+    obj2.newUiUnpublished = true === published.new_ui_unpublished;
     DispatcherDefault.dispatch(obj2);
   },
   publish_result(ok, projectId) {

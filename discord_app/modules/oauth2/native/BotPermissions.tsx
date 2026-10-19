@@ -1,6 +1,6 @@
-// === Module 13834: BotPermissions ===
+// === Module 13838: BotPermissions ===
 
-// Module 13834 (BotPermissions)
+// Module 13838 (BotPermissions)
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import Text_Text from "Text/Text" /* 5187 */;

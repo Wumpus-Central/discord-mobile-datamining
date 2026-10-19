@@ -1,10 +1,10 @@
-// === Module 14787: LocalAppDetectionStore ===
+// === Module 14791: LocalAppDetectionStore ===
 
-// Module 14787 (LocalAppDetectionStore)
+// Module 14791 (LocalAppDetectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 14788 */;
-import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 14789 */;
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 14792 */;
+import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 14793 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ConsentStore from "ConsentStore" /* 6188 */;
 

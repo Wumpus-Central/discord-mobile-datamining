@@ -1,6 +1,6 @@
-// === Module 15488: useThermalState ===
+// === Module 15492: useThermalState ===
 
-// Module 15488 (useThermalState)
+// Module 15492 (useThermalState)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ThermalUtilsDefault from "ThermalUtils" /* 5396 */;

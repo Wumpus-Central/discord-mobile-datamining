@@ -1,6 +1,6 @@
-// === Module 11100: ChannelsAndRolesModal ===
+// === Module 11119: ChannelsAndRolesModal ===
 
-// Module 11100 (ChannelsAndRolesModal)
+// Module 11119 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

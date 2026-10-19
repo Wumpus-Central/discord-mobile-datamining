@@ -1,17 +1,17 @@
-// === Module 11630: ConjureSettingsSheet ===
+// === Module 11646: ConjureSettingsSheet ===
 
-// Module 11630 (ConjureSettingsSheet)
+// Module 11646 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6942 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10962 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10975 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10978 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10991 */;
 import ConjureProjectStore_mod from "ConjureProjectStore" /* 6293 */;
 
-const useConjureProjectSettingsFormDefault = tmp5(11631);
+const useConjureProjectSettingsFormDefault = tmp5(11647);
 const require = fn;
 const View = fn(17).View;
 let ConjureProjectStore = fn(6293);
@@ -176,7 +176,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp8Result = closure_12(tmp5(11659).Tabs, obj4);
+    let tmp8Result = closure_12(tmp5(11678).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
     tmp8Result = closure_12(tmp5(9051).SegmentedControl, obj5);
@@ -457,9 +457,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   if (guild_id == null) {
     guild_id = guildId;
   }
-  const tmpResultResult = stateFromStores1(11631)(projectId, guild_id);
+  const tmpResultResult = stateFromStores1(11647)(projectId, guild_id);
   _slicedToArray = tmpResultResult;
-  const tmp15 = stateFromStores1(11644)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+  const tmp15 = stateFromStores1(11663)({ projectId, scopeKeys, note, notifyAgent, isPreview });
   noop = tmp15;
   isScoped = tmp15.isScoped;
   loaded = tmp15.loaded;
@@ -612,7 +612,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3883).bA4VU5);
   const intl2 = tmp4(1128).intl;
   const tmpResult2 = stateFromStores1(3883);
-  const tmpResult = stateFromStores1(11631);
+  const tmpResult = stateFromStores1(11647);
   obj5.header = saving(projectId(7117).BottomSheetTitleHeader, { title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe) });
   const obj7 = { style: tmp3.container, children: null };
   let tmp22Result = null;
@@ -644,7 +644,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       }
       const items10 = [fields1, ];
       const obj10 = { projectId, canEdit: tmp10 };
-      items10[1] = tmp22(tmp(11655), obj10, projectId);
+      items10[1] = tmp22(tmp(11674), obj10, projectId);
       obj9.children = items10;
       tmp24Result = tmp24(tmp4(5477).Stack, obj9);
     }
@@ -671,7 +671,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     tmp22Result3 = null;
     if ("model" === found) {
       const obj11 = { projectId };
-      tmp22Result3 = tmp22(tmp4(11658).ConjureModelSettingsContent, obj11);
+      tmp22Result3 = tmp22(tmp4(11677).ConjureModelSettingsContent, obj11);
     }
   }
   items9[5] = tmp22Result3;

@@ -1,6 +1,6 @@
-// === Module 11256: PictureInPictureVideo ===
+// === Module 11275: PictureInPictureVideo ===
 
-// Module 11256 (PictureInPictureVideo)
+// Module 11275 (PictureInPictureVideo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,14 +10,14 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useToken2 from "useToken" /* 4913 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
 import useAvatarColorDefault from "useAvatarColor" /* 8541 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11206 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11216 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11219 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11220 */;
-import VideoRenderer from "VideoRenderer" /* 11271 */;
-import UserTileDefault from "UserTile" /* 11282 */;
-import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 11284 */;
-import _modDef11287 from "module_11287" /* 11287 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11225 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11235 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11238 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11239 */;
+import VideoRenderer from "VideoRenderer" /* 11290 */;
+import UserTileDefault from "UserTile" /* 11300 */;
+import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 11302 */;
+import _modDef11305 from "module_11305" /* 11305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
@@ -26,7 +26,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import SpeakingStore from "SpeakingStore" /* 6203 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11213 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11232 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -920,7 +920,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       let tmp39 = null;
                       if (tmp9) {
                         const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
-                        const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11287, color: tmp4.thermalAlertIcon.color };
+                        const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11305, color: tmp4.thermalAlertIcon.color };
                         obj4.children = value3(native2.Icon, obj5);
                         tmp39 = value3(hasOwnProperty, obj4);
                       }
@@ -1039,7 +1039,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp18Result = null;
       if (tmp5) {
         const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11287, color: tmp.thermalAlertIcon.color };
+        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11305, color: tmp.thermalAlertIcon.color };
         obj8.children = tmp18(native2.Icon, obj9);
         tmp18Result = tmp18(hasOwnProperty, obj8);
       }

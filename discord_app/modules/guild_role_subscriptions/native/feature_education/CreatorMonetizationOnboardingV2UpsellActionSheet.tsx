@@ -1,13 +1,13 @@
-// === Module 17372: CreatorMonetizationOnboardingV2UpsellActionSheet ===
+// === Module 17376: CreatorMonetizationOnboardingV2UpsellActionSheet ===
 
-// Module 17372 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+// Module 17376 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import components_Button_Button from "components/Button/Button" /* 5479 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7118 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8910 */;
-import _modDef17373 from "module_17373" /* 17373 */;
+import _modDef17377 from "module_17377" /* 17377 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
           return markAsDismissed(ContentDismissActionType.UNKNOWN);
         }
       }
-      const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(17373) };
+      const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(17377) };
       const tmp19 = closure_6(markAsDismissed(5128), obj6);
       cResult[11] = tmp4.image;
       cResult[12] = tmp19;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17373 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17377 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress: function handleCheckItOut() {

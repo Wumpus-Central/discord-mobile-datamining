@@ -1,16 +1,16 @@
-// === Module 12851: ForumPostGridBody ===
+// === Module 12868: ForumPostGridBody ===
 
-// Module 12851 (ForumPostGridBody)
+// Module 12868 (ForumPostGridBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8752 */;
-import _modDef12852 from "module_12852" /* 12852 */;
-import _modDef12853 from "module_12853" /* 12853 */;
-import _modDef12854 from "module_12854" /* 12854 */;
-import ForumPostMedia from "ForumPostMedia" /* 12855 */;
+import _modDef12869 from "module_12869" /* 12869 */;
+import _modDef12870 from "module_12870" /* 12870 */;
+import _modDef12871 from "module_12871" /* 12871 */;
+import ForumPostMedia from "ForumPostMedia" /* 12872 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,7 +47,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GIFIco
   const cResult = c.c(2);
   const tmp4 = closure_10();
   if (cResult[0] !== tmp4.gifIcon) {
-    const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef12852, disableColor: true, style: tmp4.gifIcon };
+    const obj2 = { size: native.Icon.Sizes.CUSTOM, source: _modDef12869, disableColor: true, style: tmp4.gifIcon };
     const tmp8 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp4.gifIcon;
     cResult[1] = tmp8;
@@ -58,13 +58,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GIFIco
   return tmp5;
 }) : (function GIFIcon() {
   const tmp = closure_10();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12852, disableColor: true, style: closure_10().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12869, disableColor: true, style: closure_10().gifIcon });
 });
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayIcon() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef12853, disableColor: true };
+    const obj2 = { size: native.Icon.Sizes.SMALL_20, source: _modDef12870, disableColor: true };
     const tmp7 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -73,14 +73,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayIc
   }
   return first;
 }) : (function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12853, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12870, disableColor: true });
 });
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExtraMediaIcon(extraMediaCount) {
   const cResult = c.c(9);
   const tmp4 = closure_10();
   if (cResult[0] !== tmp4.icon.color) {
-    const obj2 = { source: _modDef12854, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+    const obj2 = { source: _modDef12871, color: tmp4.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
     const tmp8 = timestampProducer(native.Icon, obj2);
     cResult[0] = tmp4.icon.color;
     cResult[1] = tmp8;
@@ -120,8 +120,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExtraM
 }) : (function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_10();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
-  items = [timestampProducer(native.Icon, { source: _modDef12854, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
-  const obj2 = { source: _modDef12854, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, { source: _modDef12871, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
+  const obj2 = { source: _modDef12871, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount });
   obj.children = items;
   return React5(View, obj);
@@ -777,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   if (tmp12Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(12859).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(12876).ForumPostAppliedTagPills, obj5);
     tmp12Result = closure_6(View, obj4);
   }
   items4[1] = tmp12Result;

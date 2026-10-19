@@ -1,11 +1,11 @@
-// === Module 13256: useMultiPerkStatusValues ===
+// === Module 13264: useMultiPerkStatusValues ===
 
-// Module 13256 (useMultiPerkStatusValues)
+// Module 13264 (useMultiPerkStatusValues)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2621 from "module_2621" /* 2621 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5104 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 13183 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 13191 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

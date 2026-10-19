@@ -1,6 +1,6 @@
-// === Module 11353: StageMusicManager ===
+// === Module 11371: StageMusicManager ===
 
-// Module 11353 (StageMusicManager)
+// Module 11371 (StageMusicManager)
 import StageChannelParticipants from "StageChannelParticipants" /* 6206 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -8,7 +8,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import VoiceStateStore from "VoiceStateStore" /* 5212 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6152 */;
 import StageInstanceStore from "StageInstanceStore" /* 2073 */;
-import StageMusicStore from "StageMusicStore" /* 11351 */;
+import StageMusicStore from "StageMusicStore" /* 11369 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;
 
 const require = globalThis.__r;
@@ -69,7 +69,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(11354);
+const SoundUtils = fn(11372);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 const ReactCompilerGating = fn(558);
 class StageMusicManager extends tmp3 {

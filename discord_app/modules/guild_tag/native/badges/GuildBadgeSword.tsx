@@ -1,9 +1,9 @@
-// === Module 14927: GuildBadgeSword ===
+// === Module 14931: GuildBadgeSword ===
 
-// Module 14927 (GuildBadgeSword)
+// Module 14931 (GuildBadgeSword)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14928 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14932 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

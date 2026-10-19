@@ -1,6 +1,6 @@
-// === Module 17673: useMainTabsChannelScreenStyles ===
+// === Module 17677: useMainTabsChannelScreenStyles ===
 
-// Module 17673 (useMainTabsChannelScreenStyles)
+// Module 17677 (useMainTabsChannelScreenStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;

@@ -1,6 +1,6 @@
-// === Module 12909: ChatFloatingNavButton ===
+// === Module 12926: ChatFloatingNavButton ===
 
-// Module 12909 (ChatFloatingNavButton)
+// Module 12926 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import spring from "spring" /* 5478 */;

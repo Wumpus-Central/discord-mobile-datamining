@@ -1,6 +1,6 @@
-// === Module 17543: useForLaterCoachmark ===
+// === Module 17547: useForLaterCoachmark ===
 
-// Module 17543 (useForLaterCoachmark)
+// Module 17547 (useForLaterCoachmark)
 import util from "util" /* 1128 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForLa
       dependencyMap(constants.USER_DISMISS);
     };
     obj.renderImgComponent = function renderImgComponent() {
-      return closure_1_5(first(13615).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
+      return closure_1_5(first(13619).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
     };
     return obj;
   }, items1);

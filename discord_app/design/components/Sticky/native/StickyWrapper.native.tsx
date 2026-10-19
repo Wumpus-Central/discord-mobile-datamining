@@ -1,6 +1,6 @@
-// === Module 10687: StickyWrapper ===
+// === Module 10703: StickyWrapper ===
 
-// Module 10687 (StickyWrapper)
+// Module 10703 (StickyWrapper)
 import c from "c" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import noop from "module_19" /* 19 */;

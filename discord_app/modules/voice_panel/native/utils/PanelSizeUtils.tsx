@@ -1,7 +1,7 @@
-// === Module 18185: PanelSizeUtils ===
+// === Module 18189: PanelSizeUtils ===
 
-// Module 18185 (PanelSizeUtils)
-import VoicePanelConstants from "VoicePanelConstants" /* 12914 */;
+// Module 18189 (PanelSizeUtils)
+import VoicePanelConstants from "VoicePanelConstants" /* 10680 */;
 import size from "module_2" /* 2 */;
 
 const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_WIDTH;

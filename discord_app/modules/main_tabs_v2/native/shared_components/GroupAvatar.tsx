@@ -1,6 +1,6 @@
-// === Module 14090: GroupAvatar ===
+// === Module 14094: GroupAvatar ===
 
-// Module 14090 (GroupAvatar)
+// Module 14094 (GroupAvatar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5128 */;

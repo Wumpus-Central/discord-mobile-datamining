@@ -1,6 +1,6 @@
-// === Module 16129: QuestHooks ===
+// === Module 16133: QuestHooks ===
 
-// Module 16129 (QuestHooks)
+// Module 16133 (QuestHooks)
 import c from "c" /* 576 */;
 import QuestTypes from "QuestTypes" /* 6231 */;
 import AdCreativeType from "AdCreativeType" /* 6235 */;
@@ -8,7 +8,7 @@ import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6357
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 6904 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7678 */;
 import AssetUtils from "AssetUtils" /* 9487 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 16156 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 16160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4897 */;
@@ -95,11 +95,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMobileQ
     const tmpResult9 = tmp(9468);
   }
   if (cResult[4] !== bounty) {
-    const questDockAdCreativeId = tmp(16140).getQuestDockAdCreativeId(bounty);
+    const questDockAdCreativeId = tmp(16144).getQuestDockAdCreativeId(bounty);
     cResult[4] = bounty;
     cResult[5] = questDockAdCreativeId;
     let tmp16 = questDockAdCreativeId;
-    const tmpResult10 = tmp(16140);
+    const tmpResult10 = tmp(16144);
   } else {
     tmp16 = cResult[5];
   }
@@ -832,7 +832,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                 obj5.analyticsContext = obj7;
                 v2 = 1;
                 v3 = 1;
-                const obj8 = { value: v2(11021).launchFrame(obj5), done: false };
+                const obj8 = { value: v2(11042).launchFrame(obj5), done: false };
                 return obj8;
               } else {
                 let id;
@@ -846,7 +846,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                   const obj9 = { appId: stateFromStores.id, botId: stateFromStores.bot.id, analyticsLocations: [] };
                   v2 = 2;
                   v3 = 1;
-                  const obj10 = { value: v3(12790).launchActivityInBotDM(obj9), done: false };
+                  const obj10 = { value: v3(12807).launchActivityInBotDM(obj9), done: false };
                   return obj10;
                 }
               }

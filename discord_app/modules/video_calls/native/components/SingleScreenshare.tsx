@@ -1,10 +1,10 @@
-// === Module 11510: SingleScreenshare ===
+// === Module 11528: SingleScreenshare ===
 
-// Module 11510 (SingleScreenshare)
+// Module 11528 (SingleScreenshare)
 import nativeDefault from "native" /* 587 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
 import useMountEffectDefault from "useMountEffect" /* 5496 */;
-import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 11511 */;
+import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 11529 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

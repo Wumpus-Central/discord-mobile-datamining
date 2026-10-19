@@ -1,8 +1,8 @@
-// === Module 15734: useHighlightSettingItem ===
+// === Module 15738: useHighlightSettingItem ===
 
-// Module 15734 (useHighlightSettingItem)
+// Module 15738 (useHighlightSettingItem)
 import c from "c" /* 576 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15730 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15734 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

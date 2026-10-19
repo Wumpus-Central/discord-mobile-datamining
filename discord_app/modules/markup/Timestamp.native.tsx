@@ -1,9 +1,9 @@
-// === Module 11890: Timestamp ===
+// === Module 11909: Timestamp ===
 
-// Module 11890 (Timestamp)
+// Module 11909 (Timestamp)
 import nativeDefault from "native" /* 587 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
-import useFormattedTimestampDefault from "useFormattedTimestamp" /* 11891 */;
+import useFormattedTimestampDefault from "useFormattedTimestamp" /* 11910 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

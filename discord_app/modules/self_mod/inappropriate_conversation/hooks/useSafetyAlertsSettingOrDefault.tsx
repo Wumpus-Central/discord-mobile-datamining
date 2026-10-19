@@ -1,6 +1,6 @@
-// === Module 10698: useSafetyAlertsSettingOrDefault ===
+// === Module 10714: useSafetyAlertsSettingOrDefault ===
 
-// Module 10698 (useSafetyAlertsSettingOrDefault)
+// Module 10714 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import useUserIsTeen from "useUserIsTeen" /* 8004 */;

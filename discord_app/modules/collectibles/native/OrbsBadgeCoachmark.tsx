@@ -1,11 +1,11 @@
-// === Module 10877: OrbsBadgeCoachmark ===
+// === Module 10893: OrbsBadgeCoachmark ===
 
-// Module 10877 (OrbsBadgeCoachmark)
+// Module 10893 (OrbsBadgeCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import useCoachmark from "useCoachmark" /* 9742 */;
-import _modDef10878 from "module_10878" /* 10878 */;
+import _modDef10894 from "module_10894" /* 10894 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsBad
   const cResult = c.c(6);
   const tmp3 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef10878 };
+    const obj2 = { uri: _modDef10894 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -51,7 +51,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsBad
   const tmp = closure_8();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef10878 };
+  const obj3 = { uri: _modDef10894 };
   obj2.source = obj3;
   obj2.style = tmp.coachmarkImage;
   obj.children = jsx(FastImageDefault, { source: null, style: null });

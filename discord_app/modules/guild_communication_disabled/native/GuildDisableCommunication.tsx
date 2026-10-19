@@ -1,6 +1,6 @@
-// === Module 12558: GuildDisableCommunication ===
+// === Module 12575: GuildDisableCommunication ===
 
-// Module 12558 (GuildDisableCommunication)
+// Module 12575 (GuildDisableCommunication)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -10,7 +10,7 @@ import useMountEffectDefault from "useMountEffect" /* 5496 */;
 import TableRadioGroup from "TableRadioGroup" /* 6540 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6942 */;
 import TextArea from "TextArea" /* 7051 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 10833 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 10849 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -481,7 +481,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(12559);
+            const obj4 = tmp4(12576);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value: obj4.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };

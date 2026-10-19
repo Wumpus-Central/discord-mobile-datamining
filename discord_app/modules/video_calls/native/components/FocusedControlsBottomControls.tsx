@@ -1,12 +1,12 @@
-// === Module 11405: FocusedControlsBottomControls ===
+// === Module 11423: FocusedControlsBottomControls ===
 
-// Module 11405 (FocusedControlsBottomControls)
+// Module 11423 (FocusedControlsBottomControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;
-import CallPTTButton from "CallPTTButton" /* 11408 */;
+import CallPTTButton from "CallPTTButton" /* 11426 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 6162 */;
@@ -204,8 +204,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
   positionY = positionY.positionY;
   const tmp4 = closure_19();
   const obj = positionY(576);
-  const canShowTooltip = positionY(11406).useCanShowTooltip(positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  const obj2 = positionY(11406);
+  const canShowTooltip = positionY(11424).useCanShowTooltip(positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  const obj2 = positionY(11424);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / c16, 1) };
   };
@@ -258,7 +258,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
 }) : (function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_19();
-  const canShowTooltip = positionY(11406).useCanShowTooltip(positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  const canShowTooltip = positionY(11424).useCanShowTooltip(positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(4945);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / c16, 1) };

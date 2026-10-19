@@ -80,8 +80,8 @@ prototype["getSharedProjects"] = function getSharedProjects(guildId) {
   }
   return items;
 };
-prototype["getIntegrationStatus"] = function getIntegrationStatus(projectId) {
-  value = map1.get(projectId);
+prototype["getIntegrationStatus"] = function getIntegrationStatus(arg0) {
+  value = map1.get(arg0);
   if (value == null) {
     value = null;
   }

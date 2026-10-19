@@ -1,10 +1,10 @@
-// === Module 15507: images ===
+// === Module 15511: images ===
 
-// Module 15507 (images)
+// Module 15511 (images)
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import ImageUtils from "ImageUtils" /* 1496 */;
 import RPCErrorDefault from "RPCError" /* 9169 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11312 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11330 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

@@ -1,14 +1,14 @@
-// === Module 13774: useAppChannelOverflowMenuItems ===
+// === Module 13778: useAppChannelOverflowMenuItems ===
 
-// Module 13774 (useAppChannelOverflowMenuItems)
+// Module 13778 (useAppChannelOverflowMenuItems)
 import util from "util" /* 1128 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 6297 */;
 import FlagIcon2 from "FlagIcon" /* 9873 */;
-import restartFrames from "restartFrames" /* 11019 */;
-import leaveFrame from "leaveFrame" /* 11020 */;
-import DoorExitIcon from "DoorExitIcon" /* 11366 */;
-import RefreshIcon from "RefreshIcon" /* 11614 */;
-import openAppChannelReportModalDefault from "openAppChannelReportModal" /* 13775 */;
+import restartFrames from "restartFrames" /* 11040 */;
+import leaveFrame from "leaveFrame" /* 11041 */;
+import DoorExitIcon from "DoorExitIcon" /* 11384 */;
+import RefreshIcon from "RefreshIcon" /* 11630 */;
+import openAppChannelReportModalDefault from "openAppChannelReportModal" /* 13779 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
     if (cResult[1] === application_id.id) {
       let tmp4 = cResult[2];
     }
-    const tmp6 = application_id(11697)(application_id, tmp4);
+    const tmp6 = application_id(11716)(application_id, tmp4);
     dependencyMap = tmp6;
     if (null != application_id) {
       const items = [];
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
         if (cResult[9] !== tmp6) {
           const obj3 = {
             label: tmp11,
-            IconComponent: tmp(11614).RefreshIcon,
+            IconComponent: tmp(11630).RefreshIcon,
             action() {
                       return restartFrames.restartFrame(closure_2);
                     }
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
           action = cResult[11];
         }
         if (cResult[12] !== tmp6) {
-          const obj4 = { label: action, IconComponent: tmp(11366).DoorExitIcon, action: null };
+          const obj4 = { label: action, IconComponent: tmp(11384).DoorExitIcon, action: null };
           action = function action() {
             return leaveFrame.leaveFrame(id.id);
           };
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAppCh
   let items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = application_id);
   const memo = noop.useMemo(() => ({ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: application_id.id, guildId: application_id.guild_id }), items);
-  const tmp3 = application_id(11697)(application_id, memo);
+  const tmp3 = application_id(11716)(application_id, memo);
   dependencyMap = tmp3;
   const items1 = [application_id, application_id, tmp3];
   return noop.useMemo(() => {

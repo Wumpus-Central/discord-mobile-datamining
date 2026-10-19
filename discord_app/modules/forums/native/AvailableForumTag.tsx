@@ -1,6 +1,6 @@
-// === Module 10770: AvailableForumTag ===
+// === Module 10786: AvailableForumTag ===
 
-// Module 10770 (AvailableForumTag)
+// Module 10786 (AvailableForumTag)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import Text_Text from "Text/Text" /* 5187 */;

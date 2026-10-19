@@ -1,12 +1,12 @@
-// === Module 13555: Notification ===
+// === Module 13560: Notification ===
 
-// Module 13555 (Notification)
+// Module 13560 (Notification)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5206 */;
 import spring from "spring" /* 5478 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13518 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13523 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["notification", "icon", "children", "accessoryLabelNode", "rightAccessory", "header", "onPress", "onSettingsPress"];
-const InAppNotificationConstants = fn(13519);
+const InAppNotificationConstants = fn(13524);
 ({ MIN_SWIPE_VELOCITY: metroRequire, STARTED_SWIPE_THRESHOLD: closure_7, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
@@ -70,11 +70,11 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
   }
   panning();
   if (cResult[10] !== tmp9) {
-    let result = tmp(13518).extractMetadataFromNotification(tmp9);
+    let result = tmp(13523).extractMetadataFromNotification(tmp9);
     cResult[10] = tmp9;
     cResult[11] = result;
     let tmp17 = result;
-    const tmpResult = tmp(13518);
+    const tmpResult = tmp(13523);
   } else {
     tmp17 = cResult[11];
   }
@@ -86,13 +86,13 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
     channelId = tmp19.channelId;
     const messageId = tmp19.messageId;
     const type = tmp19.type;
-    const inAppNotificationContext = tmp(13535).useInAppNotificationContext();
+    const inAppNotificationContext = tmp(13540).useInAppNotificationContext();
     const notificationGestureY = inAppNotificationContext.notificationGestureY;
     const velocityY = inAppNotificationContext.velocityY;
     const handleDismissNotification = inAppNotificationContext.handleDismissNotification;
     const initialized = inAppNotificationContext.initialized;
     panning = inAppNotificationContext.panning;
-    const tmpResult5 = tmp(13535);
+    const tmpResult5 = tmp(13540);
     const sharedValue = tmp(4945).useSharedValue(1);
     if (cResult[15] !== sharedValue) {
       class L {

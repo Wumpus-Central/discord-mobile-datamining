@@ -1,6 +1,6 @@
-// === Module 14610: PremiumSubscriptionUpsell ===
+// === Module 14614: PremiumSubscriptionUpsell ===
 
-// Module 14610 (PremiumSubscriptionUpsell)
+// Module 14614 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -14,8 +14,8 @@ import components_Button_Button from "components/Button/Button" /* 5479 */;
 import LinearGradientDefault from "LinearGradient" /* 5491 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6473 */;
 import PremiumFeatureListDefault from "PremiumFeatureList" /* 9723 */;
-import _modDef14611 from "module_14611" /* 14611 */;
-import _modDef14612 from "module_14612" /* 14612 */;
+import _modDef14615 from "module_14615" /* 14615 */;
+import _modDef14616 from "module_14616" /* 14616 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
         if (cResult[6] === tmp4.subtitle) {
           if (cResult[7] === tmp4.title) {
             if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-              const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef14611 };
+              const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef14615 };
               const tmp22 = React6(FastImageDefault, obj2);
               cResult[9] = tmp4.upsellFeatureSubLogo;
               cResult[10] = tmp22;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
               tmp19 = cResult[10];
             }
             if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-              const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef14612 };
+              const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef14616 };
               const tmp26 = React6(FastImageDefault, obj4);
               cResult[11] = tmp4.upsellFeatureLogoTier2;
               cResult[12] = tmp26;
@@ -286,11 +286,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     intlResult1 = PremiumUtilsDefault;
-    obj11.source = _modDef14611;
+    obj11.source = _modDef14615;
     const items4 = [React6(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const intlResult2 = FastImageDefault;
-    obj12.source = _modDef14612;
+    obj12.source = _modDef14616;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const intlResult3 = FastImageDefault;

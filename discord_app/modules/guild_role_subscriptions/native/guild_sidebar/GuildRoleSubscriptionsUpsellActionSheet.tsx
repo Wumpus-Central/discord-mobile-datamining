@@ -1,13 +1,13 @@
-// === Module 17367: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 17371: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 17367 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 17371 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import components_Button_Button from "components/Button/Button" /* 5479 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7118 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8910 */;
-import _modDef17368 from "module_17368" /* 17368 */;
+import _modDef17372 from "module_17372" /* 17372 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: markAsDismissed(17368) };
+      const obj2 = { source: markAsDismissed(17372) };
       const tmp12 = closure_6(markAsDismissed(5128), obj2);
       cResult[5] = tmp12;
       let tmp8 = tmp12;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     },
     children: null
   };
-  const obj2 = { source: _modDef17368 };
+  const obj2 = { source: _modDef17372 };
   const items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

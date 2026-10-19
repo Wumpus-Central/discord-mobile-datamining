@@ -1,8 +1,8 @@
-// === Module 19024: NativeNotificationsManager ===
+// === Module 19028: NativeNotificationsManager ===
 
-// Module 19024 (NativeNotificationsManager)
+// Module 19028 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PushNotificationDefault from "PushNotification" /* 11007 */;
+import PushNotificationDefault from "PushNotification" /* 11028 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6362 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;

@@ -1,6 +1,6 @@
-// === Module 15911: UserSettingsFamilyCenter ===
+// === Module 15915: UserSettingsFamilyCenter ===
 
-// Module 15911 (UserSettingsFamilyCenter)
+// Module 15915 (UserSettingsFamilyCenter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -60,8 +60,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   const analyticsLocations = isLoading(7130)(isLoading(7155).FAMILY_CENTER).analyticsLocations;
   const tmp6 = isLoading(7130);
   const acceptedRequestsCount = familyCenterInitialized(8005).useAcceptedRequestsCount();
-  const tmp8 = isLoading(15912)();
-  const selectedTab = isLoading(15913)().selectedTab;
+  const tmp8 = isLoading(15916)();
+  const selectedTab = isLoading(15917)().selectedTab;
   let obj2 = familyCenterInitialized(8005);
   const selectedTeenId = familyCenterInitialized(8007).useSelectedTeenId();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -127,7 +127,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
     }
     tmp22[0] = tmp18;
     tmp22[1] = FamilyCenterSubPages.ACTIVITY;
-    tmp22[2] = closure_14(tmp5(15914), {});
+    tmp22[2] = closure_14(tmp5(15918), {});
     const intl = tmp(1128).intl;
     const stringResult1 = intl.string(tmp5(2589)["gVWG+6"]);
     cResult[4] = tmp22;
@@ -150,7 +150,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
       }
     }
     tmp28[0] = tmp22;
-    let obj4 = { label: tmp21, id: FamilyCenterSubPages.REQUESTS, page: closure_14(tmp5(15954), {}) };
+    let obj4 = { label: tmp21, id: FamilyCenterSubPages.REQUESTS, page: closure_14(tmp5(15958), {}) };
     tmp28[1] = obj4;
     class Q {
       constructor(arg0) {
@@ -227,8 +227,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   const tmp = closure_18();
   const tmp3 = isLoading(7130);
   const acceptedRequestsCount = familyCenterInitialized(8005).useAcceptedRequestsCount();
-  const tmp6 = isLoading(15912)();
-  const selectedTab = isLoading(15913)().selectedTab;
+  const tmp6 = isLoading(15916)();
+  const selectedTab = isLoading(15917)().selectedTab;
   let obj = familyCenterInitialized(8005);
   const selectedTeenId = familyCenterInitialized(8007).useSelectedTeenId();
   let obj2 = familyCenterInitialized(8007);
@@ -249,13 +249,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   const intl = familyCenterInitialized(1128).intl;
   obj6.label = intl.string(isLoading(2589).bdBmqy);
   obj6.id = FamilyCenterSubPages.ACTIVITY;
-  obj6.page = closure_14(isLoading(15914), {});
+  obj6.page = closure_14(isLoading(15918), {});
   const items1 = [obj6, ];
   const obj7 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1128).intl;
   obj7.label = intl2.string(isLoading(2589)["gVWG+6"]);
   obj7.id = FamilyCenterSubPages.REQUESTS;
-  obj7.page = closure_14(isLoading(15954), {});
+  obj7.page = closure_14(isLoading(15958), {});
   items1[1] = obj7;
   obj5.items = items1;
   obj5.onPageChange = function onPageChange(arg0) {
@@ -307,7 +307,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
     let tmp14Result = closure_14(closure_17, {});
   } else {
     const obj13 = { state: segmentedControlState };
-    tmp14Result = closure_14(tmp4(10911).SegmentedControlPages, obj13);
+    tmp14Result = closure_14(tmp4(10927).SegmentedControlPages, obj13);
   }
   obj12.children = tmp14Result;
   obj12 = closure_14(tmp23, obj12);

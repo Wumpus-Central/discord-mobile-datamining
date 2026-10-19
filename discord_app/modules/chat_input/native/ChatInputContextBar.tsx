@@ -1,6 +1,6 @@
-// === Module 13079: ChatInputContextBar ===
+// === Module 13087: ChatInputContextBar ===
 
-// Module 13079 (ChatInputContextBar)
+// Module 13087 (ChatInputContextBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1114 */;

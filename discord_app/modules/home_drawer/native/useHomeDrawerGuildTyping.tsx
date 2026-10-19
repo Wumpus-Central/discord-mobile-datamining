@@ -1,11 +1,11 @@
-// === Module 17462: useHomeDrawerGuildTyping ===
+// === Module 17466: useHomeDrawerGuildTyping ===
 
-// Module 17462 (useHomeDrawerGuildTyping)
+// Module 17466 (useHomeDrawerGuildTyping)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import TypingStore from "TypingStore" /* 12812 */;
+import TypingStore from "TypingStore" /* 12829 */;
 
 const require = globalThis.__r;
 

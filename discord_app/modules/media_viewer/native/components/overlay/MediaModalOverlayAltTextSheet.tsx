@@ -1,6 +1,6 @@
-// === Module 11089: MediaModalOverlayAltTextSheet ===
+// === Module 11108: MediaModalOverlayAltTextSheet ===
 
-// Module 11089 (MediaModalOverlayAltTextSheet)
+// Module 11108 (MediaModalOverlayAltTextSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5187 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7118 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8600 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11090 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

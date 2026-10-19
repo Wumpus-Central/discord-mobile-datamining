@@ -1,6 +1,6 @@
-// === Module 10674: isSelectedFromHomeChannel ===
+// === Module 10691: isSelectedFromHomeChannel ===
 
-// Module 10674 (isSelectedFromHomeChannel)
+// Module 10691 (isSelectedFromHomeChannel)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
 import RootNavigationRef from "RootNavigationRef" /* 5073 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6339 */;

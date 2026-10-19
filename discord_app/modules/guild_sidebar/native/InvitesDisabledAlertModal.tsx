@@ -1,6 +1,6 @@
-// === Module 12940: InvitesDisabledAlertModal ===
+// === Module 12948: InvitesDisabledAlertModal ===
 
-// Module 12940 (InvitesDisabledAlertModal)
+// Module 12948 (InvitesDisabledAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AlertModal from "AlertModal" /* 5405 */;

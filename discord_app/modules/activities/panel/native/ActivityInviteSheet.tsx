@@ -1,6 +1,6 @@
-// === Module 18157: ActivityInviteSheet ===
+// === Module 18161: ActivityInviteSheet ===
 
-// Module 18157 (ActivityInviteSheet)
+// Module 18161 (ActivityInviteSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
@@ -788,7 +788,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       let tmp17Result2 = closure_13(tmp11(1202).EmptyState, obj9);
     } else {
       const obj10 = { data: stateFromStores, error: tmp6, getSendState: callback, onInviteSent: callback2, onPressAvatar: callback1 };
-      tmp17Result2 = closure_13(tmp2(18158), obj10);
+      tmp17Result2 = closure_13(tmp2(18162), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;

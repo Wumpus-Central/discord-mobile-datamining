@@ -1,6 +1,6 @@
-// === Module 16542: NotificationPermissionSettingsHeader ===
+// === Module 16546: NotificationPermissionSettingsHeader ===
 
-// Module 16542 (NotificationPermissionSettingsHeader)
+// Module 16546 (NotificationPermissionSettingsHeader)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
-const NotificationPermissionConstants = fn(13068);
+const NotificationPermissionConstants = fn(13076);
 ({ EventActionLocation: closure_7, EventActionType: closure_8, NotificationNudgeAnalyticsAction: closure_9, NotificationNudgeSurface: c10 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   const cResult = canSeePushNotificationNudge(576).c(20);
   const tmp4 = closure_13();
   let obj = canSeePushNotificationNudge(576);
-  canSeePushNotificationNudge = canSeePushNotificationNudge(13069).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(13077).useCanSeePushNotificationNudge();
   if (cResult[0] !== canSeePushNotificationNudge) {
     const fn = function o() {
       if (canSeePushNotificationNudge) {
@@ -315,10 +315,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     }
     return null;
   }
-  let obj2 = canSeePushNotificationNudge(13069);
+  let obj2 = canSeePushNotificationNudge(13077);
 }) : (function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  canSeePushNotificationNudge = canSeePushNotificationNudge(13069).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(13077).useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {

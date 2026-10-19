@@ -1,9 +1,9 @@
-// === Module 15780: SettingsAccountStandingScreen ===
+// === Module 15784: SettingsAccountStandingScreen ===
 
-// Module 15780 (SettingsAccountStandingScreen)
+// Module 15784 (SettingsAccountStandingScreen)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 15781 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 15785 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

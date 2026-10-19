@@ -1,9 +1,9 @@
-// === Module 14932: GuildBadgeToadstool ===
+// === Module 14936: GuildBadgeToadstool ===
 
-// Module 14932 (GuildBadgeToadstool)
+// Module 14936 (GuildBadgeToadstool)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14928 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14932 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

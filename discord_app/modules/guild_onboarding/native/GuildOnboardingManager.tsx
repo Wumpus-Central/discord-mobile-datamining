@@ -1,6 +1,6 @@
-// === Module 18507: GuildOnboardingManager ===
+// === Module 18511: GuildOnboardingManager ===
 
-// Module 18507 (GuildOnboardingManager)
+// Module 18511 (GuildOnboardingManager)
 import doGuildOnboardingDefault from "doGuildOnboarding" /* 7061 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildStore from "GuildStore" /* 2090 */;

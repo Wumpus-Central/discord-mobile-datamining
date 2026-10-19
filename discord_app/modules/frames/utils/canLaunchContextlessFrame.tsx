@@ -1,6 +1,6 @@
-// === Module 11201: canLaunchContextlessFrame ===
+// === Module 11220: canLaunchContextlessFrame ===
 
-// Module 11201 (canLaunchContextlessFrame)
+// Module 11220 (canLaunchContextlessFrame)
 import Constants from "Constants" /* 1087 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2032 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 6297 */;

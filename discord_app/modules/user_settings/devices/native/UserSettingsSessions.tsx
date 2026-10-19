@@ -1,6 +1,6 @@
-// === Module 15992: UserSettingsSessions ===
+// === Module 15996: UserSettingsSessions ===
 
-// Module 15992 (UserSettingsSessions)
+// Module 15996 (UserSettingsSessions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,11 +8,11 @@ import MobilePhoneIcon from "MobilePhoneIcon" /* 6919 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6957 */;
 import _modDef7995 from "module_7995" /* 7995 */;
 import ScreenIcon from "ScreenIcon" /* 9386 */;
-import _modDef11546 from "module_11546" /* 11546 */;
-import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15993 */;
-import _modDef15994 from "module_15994" /* 15994 */;
-import _modDef15995 from "module_15995" /* 15995 */;
-import VrHeadsetIcon from "VrHeadsetIcon" /* 15996 */;
+import _modDef11564 from "module_11564" /* 11564 */;
+import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15997 */;
+import _modDef15998 from "module_15998" /* 15998 */;
+import _modDef15999 from "module_15999" /* 15999 */;
+import VrHeadsetIcon from "VrHeadsetIcon" /* 16000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -31,15 +31,15 @@ function getOsDetails(text) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              const obj2 = { text, iconSource: _modDef11546, IconComponent: VrHeadsetIcon.VrHeadsetIcon };
+              const obj2 = { text, iconSource: _modDef11564, IconComponent: VrHeadsetIcon.VrHeadsetIcon };
               return obj2;
             } else {
-              const obj = { text, iconSource: _modDef15995, IconComponent: ScreenIcon.ScreenIcon };
+              const obj = { text, iconSource: _modDef15999, IconComponent: ScreenIcon.ScreenIcon };
               return obj;
             }
           }
         }
-        const obj3 = { text, iconSource: _modDef11546, IconComponent: MobilePhoneIcon.MobilePhoneIcon };
+        const obj3 = { text, iconSource: _modDef11564, IconComponent: MobilePhoneIcon.MobilePhoneIcon };
         return obj3;
       }
     }
@@ -47,7 +47,7 @@ function getOsDetails(text) {
   const obj4 = { text: null, iconSource: null, IconComponent: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.cDHCNY);
-  obj4.iconSource = _modDef15995;
+  obj4.iconSource = _modDef15999;
   obj4.IconComponent = ScreenIcon.ScreenIcon;
   return obj4;
 }
@@ -76,7 +76,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   const cResult = otherSessions(576).c(31);
   const tmp4 = closure_13();
   const obj = otherSessions(576);
-  let authSessions = otherSessions(15823).useAuthSessions();
+  let authSessions = otherSessions(15827).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -90,7 +90,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const obj2 = otherSessions(15823);
+  const obj2 = otherSessions(15827);
   const stateFromStores = otherSessions(504).useStateFromStores(tmp6, tmp7);
   const tmp10 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp10[1];
@@ -278,9 +278,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   const tmpResult = otherSessions(504);
 }) : (function UserSettingsSessions() {
   const tmp = closure_13();
-  let authSessions = otherSessions(15823).useAuthSessions();
+  let authSessions = otherSessions(15827).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
-  const obj = otherSessions(15823);
+  const obj = otherSessions(15827);
   const items = [UserStore];
   const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = otherSessions(504);
@@ -590,8 +590,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
   }
   let formatDateResult = null;
   if (!current) {
-    formatDateResult = tmp(15823).formatDate(session.approx_last_used_time);
-    const tmpResult = tmp(15823);
+    formatDateResult = tmp(15827).formatDate(session.approx_last_used_time);
+    const tmpResult = tmp(15827);
   }
   cResult[8] = current;
   cResult[9] = session.approx_last_used_time;
@@ -628,8 +628,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
   let formatDateResult = null;
   ({ text, iconSource, IconComponent } = getOsDetails(os));
   if (!current) {
-    formatDateResult = session(15823).formatDate(session.approx_last_used_time);
-    const obj = session(15823);
+    formatDateResult = session(15827).formatDate(session.approx_last_used_time);
+    const obj = session(15827);
   }
   const items = [text, platform];
   const found = items.filter(session(1388).isNotNullish);
@@ -691,7 +691,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unknow
   const obj = navigation(576);
   navigation = navigation(1505).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "translucent", source: _modDef15994 };
+    const obj3 = { variant: "translucent", source: _modDef15998 };
     const tmp9 = closure_10(tmp(6457).TableRow.Icon, obj3);
     const intl = tmp(1128).intl;
     const stringResult = intl.string(tmp(1128).t.iUa0sn);
@@ -731,7 +731,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unknow
   _require = require("useNavigation").useNavigation();
   const obj2 = { icon: null, label: null, subLabel: null };
   const obj = require("useNavigation");
-  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef15994 });
+  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef15998 });
   const intl = require("util").intl;
   obj2.label = intl.string(require("util").t.iUa0sn);
   const intl2 = require("util").intl;

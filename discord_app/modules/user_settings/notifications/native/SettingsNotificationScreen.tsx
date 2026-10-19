@@ -1,6 +1,6 @@
-// === Module 16538: SettingsNotificationScreen ===
+// === Module 16542: SettingsNotificationScreen ===
 
-// Module 16538 (SettingsNotificationScreen)
+// Module 16542 (SettingsNotificationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,12 +8,12 @@ import Text_Text from "Text/Text" /* 5187 */;
 import Card from "Card" /* 6459 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6567 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6941 */;
-import SettingBuilders from "SettingBuilders" /* 11065 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13069 */;
-import SettingLayoutDefault from "SettingLayout" /* 15728 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16540 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16541 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16542 */;
+import SettingBuilders from "SettingBuilders" /* 11084 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13077 */;
+import SettingLayoutDefault from "SettingLayout" /* 15732 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16544 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16545 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16546 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -113,7 +113,7 @@ function getNotificationSettings() {
   return items1;
 }
 const View = fn(17).View;
-let closure_5 = fn(16539).initializeAndroidNotificationSettingsStore;
+let closure_5 = fn(16543).initializeAndroidNotificationSettingsStore;
 const MobileUserSettings = fn(8260).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);

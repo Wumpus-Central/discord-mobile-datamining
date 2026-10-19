@@ -1,17 +1,17 @@
-// === Module 11207: ChannelCallModal ===
+// === Module 11226: ChannelCallModal ===
 
-// Module 11207 (ChannelCallModal)
+// Module 11226 (ChannelCallModal)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7748 */;
 import VoiceChatHooks from "VoiceChatHooks" /* 10666 */;
-import RevealProvider from "RevealProvider" /* 11209 */;
-import CameraPreviewDefault from "CameraPreview" /* 11212 */;
-import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 11341 */;
-import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 11342 */;
-import PanGestureAnimations from "PanGestureAnimations" /* 11562 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 11563 */;
+import RevealProvider from "RevealProvider" /* 11228 */;
+import CameraPreviewDefault from "CameraPreview" /* 11231 */;
+import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 11359 */;
+import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 11360 */;
+import PanGestureAnimations from "PanGestureAnimations" /* 11578 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 11579 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
@@ -23,7 +23,7 @@ require = fn;
 const ChannelCallStore = fn(10662);
 ({ useChannelCallOrientationHandlers: closure_7, resetChannelCallStore: closure_8, useChannelCallStore: closure_9, setVoiceChatDrawerState: c10, useIsVoiceChatFocused: closure_11 } = ChannelCallStore);
 let VoiceChatDrawerState = fn(10663).VoiceChatDrawerState;
-const Constants = fn(11208);
+const Constants = fn(11227);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -113,8 +113,8 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       if (null != first) {
         ChannelCallModalManagerDefault.initialize(tmp);
         return () => {
-          closure_1_1(11341).terminate();
-          const obj = closure_1_1(11341);
+          closure_1_1(11359).terminate();
+          const obj = closure_1_1(11359);
           closure_1_1(10669).setHidden(false);
           const obj2 = closure_1_1(10669);
           if (!obj3.isModalOpen(closure_1_34)) {
@@ -152,8 +152,8 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(11341).terminate();
-        const obj = closure_1_1(11341);
+        closure_1_1(11359).terminate();
+        const obj = closure_1_1(11359);
         closure_1_1(10669).setHidden(false);
         const obj2 = closure_1_1(10669);
         if (!obj3.isModalOpen(closure_1_34)) {

@@ -1,6 +1,6 @@
-// === Module 18648: StaffMemberConstants ===
+// === Module 18652: StaffMemberConstants ===
 
-// Module 18648 (StaffMemberConstants)
+// Module 18652 (StaffMemberConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/staff/StaffMemberConstants.tsx");

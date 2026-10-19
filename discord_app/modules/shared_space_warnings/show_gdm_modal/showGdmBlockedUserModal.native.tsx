@@ -1,6 +1,6 @@
-// === Module 18640: showGdmBlockedUserModal ===
+// === Module 18644: showGdmBlockedUserModal ===
 
-// Module 18640 (showGdmBlockedUserModal)
+// Module 18644 (showGdmBlockedUserModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import size from "module_2" /* 2 */;
@@ -9,5 +9,5 @@ const result = size.fileFinishedImporting("modules/shared_space_warnings/show_gd
 
 export const showGdmBlockedUserModal = function showGdmBlockedUserModal(arg0) {
   ({ channelId, blockedUserIds, ignoredUserIds } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18641, dependencyMap.paths), "gdm_blocked_user_action_sheet", { channelId, blockedUserIds, ignoredUserIds });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18645, dependencyMap.paths), "gdm_blocked_user_action_sheet", { channelId, blockedUserIds, ignoredUserIds });
 };

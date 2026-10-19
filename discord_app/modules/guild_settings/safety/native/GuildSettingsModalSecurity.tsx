@@ -1,6 +1,6 @@
-// === Module 18794: GuildSettingsModalSecurity ===
+// === Module 18798: GuildSettingsModalSecurity ===
 
-// Module 18794 (GuildSettingsModalSecurity)
+// Module 18798 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 587 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8910 */;
 import noop from "module_19" /* 19 */;
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          tmp58[0] = stateFromStores(15808);
+                          tmp58[0] = stateFromStores(15812);
                           tmp58[1] = tmp4.image;
                           const tmp59 = closure_12(stateFromStores(5128), tmp58);
                           cResult[35] = tmp4.image;
@@ -785,7 +785,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(15808);
+  obj11.source = stateFromStores(15812);
   obj11.style = tmp.image;
   const items6 = [closure_12(stateFromStores(5128), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };

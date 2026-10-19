@@ -1,6 +1,6 @@
-// === Module 11275: MessageLoadingSpinner ===
+// === Module 11294: MessageLoadingSpinner ===
 
-// Module 11275 (MessageLoadingSpinner)
+// Module 11294 (MessageLoadingSpinner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4913 */;

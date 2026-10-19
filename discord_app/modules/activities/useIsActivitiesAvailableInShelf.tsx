@@ -1,7 +1,7 @@
-// === Module 11227: useIsActivitiesAvailableInShelf ===
+// === Module 11246: useIsActivitiesAvailableInShelf ===
 
-// Module 11227 (useIsActivitiesAvailableInShelf)
-import fetchShelf from "fetchShelf" /* 11230 */;
+// Module 11246 (useIsActivitiesAvailableInShelf)
+import fetchShelf from "fetchShelf" /* 11249 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAct
   const cResult = require("c").c(8);
   let obj = require("c");
   const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
-  const tmp3 = isActivitiesEnabledForCurrentPlatform(11229)(arg1);
+  const tmp3 = isActivitiesEnabledForCurrentPlatform(11248)(arg1);
   if (cResult[0] === guildId) {
     if (cResult[1] === tmp3) {
       let tmp4 = cResult[2];

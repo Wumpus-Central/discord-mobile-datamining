@@ -1,6 +1,6 @@
-// === Module 16357: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 16361: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 16357 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 16361 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

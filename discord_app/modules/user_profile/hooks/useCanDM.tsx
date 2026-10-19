@@ -1,6 +1,6 @@
-// === Module 12766: useCanDM ===
+// === Module 12783: useCanDM ===
 
-// Module 12766 (useCanDM)
+// Module 12783 (useCanDM)
 import UserSettings from "UserSettings" /* 2044 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7612 */;
 import LurkingStore from "LurkingStore" /* 4846 */;

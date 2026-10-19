@@ -1,6 +1,6 @@
-// === Module 13511: NotificationTextUtils ===
+// === Module 13516: NotificationTextUtils ===
 
-// Module 13511 (NotificationTextUtils)
+// Module 13516 (NotificationTextUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -22,8 +22,8 @@ import MessageParserDefault from "MessageParser" /* 7635 */;
 import IsolateString from "IsolateString" /* 7638 */;
 import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8271 */;
 import getDisplayFilenameDefault from "getDisplayFilename" /* 8667 */;
-import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 13513 */;
-import FocusModeUtils from "FocusModeUtils" /* 13514 */;
+import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 13518 */;
+import FocusModeUtils from "FocusModeUtils" /* 13519 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 import LurkingStore from "LurkingStore" /* 4846 */;
 import MessageRequestStore from "MessageRequestStore" /* 6333 */;
@@ -39,7 +39,7 @@ import SelfPresenceStore from "SelfPresenceStore" /* 6015 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6222 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2062 */;
 import UserStore from "UserStore" /* 1392 */;
-import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 13512 */;
+import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 13517 */;
 
 const isForwardMessageDefault = isForwardMessage;
 

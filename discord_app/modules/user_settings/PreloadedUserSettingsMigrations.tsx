@@ -1,6 +1,6 @@
-// === Module 15478: PreloadedUserSettingsMigrations ===
+// === Module 15482: PreloadedUserSettingsMigrations ===
 
-// Module 15478 (PreloadedUserSettingsMigrations)
+// Module 15482 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;

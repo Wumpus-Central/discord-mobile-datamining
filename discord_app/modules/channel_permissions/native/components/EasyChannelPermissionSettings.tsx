@@ -1,17 +1,17 @@
-// === Module 17966: EasyChannelPermissionSettings ===
+// === Module 17970: EasyChannelPermissionSettings ===
 
-// Module 17966 (EasyChannelPermissionSettings)
+// Module 17970 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5206 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
 import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8877 */;
 import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8878 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8894 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11164 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11183 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17967 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17971 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;

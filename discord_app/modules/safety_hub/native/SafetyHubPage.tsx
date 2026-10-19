@@ -1,6 +1,6 @@
-// === Module 15781: SafetyHubPage ===
+// === Module 15785: SafetyHubPage ===
 
-// Module 15781 (SafetyHubPage)
+// Module 15785 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,15 +15,15 @@ import MetricEvents from "MetricEvents" /* 5990 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6186 */;
 import InlineNotice from "InlineNotice" /* 7834 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7983 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12605 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12607 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 15782 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12622 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12624 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 15786 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 7803 */;
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(15783);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(15787);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -478,7 +478,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15785, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15789, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

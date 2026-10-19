@@ -1,6 +1,6 @@
-// === Module 15565: EmbeddedActivitiesManager ===
+// === Module 15569: EmbeddedActivitiesManager ===
 
-// Module 15565 (EmbeddedActivitiesManager)
+// Module 15569 (EmbeddedActivitiesManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -12,12 +12,12 @@ import ThermalUtilsDefault from "ThermalUtils" /* 5396 */;
 import getURLForApplication from "getURLForApplication" /* 6299 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 9554 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10789 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11021 */;
-import tryLaunchAsFrame from "tryLaunchAsFrame" /* 11237 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 11238 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 11246 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15494 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10805 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11042 */;
+import tryLaunchAsFrame from "tryLaunchAsFrame" /* 11256 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 11257 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 11265 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15498 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -25,7 +25,7 @@ import ChannelStore from "ChannelStore" /* 2068 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5209 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import UserStore from "UserStore" /* 1392 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 15495 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 15499 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 
@@ -403,11 +403,11 @@ class EmbeddedActivitiesManager extends tmp3 {
     applyArgumentsResult.handleActivityLaunchSuccess = function handleActivityLaunchSuccess(arg0) {
       ({ applicationId: closure_0, nonce: closure_1 } = arg0);
       const timerId = setTimeout(() => {
-        const tmp6 = applyArgumentsResult(15494).awaitingAnalyticsContext[closure_0];
+        const tmp6 = applyArgumentsResult(15498).awaitingAnalyticsContext[closure_0];
         let tmp7;
         if (null != tmp6) {
           if (tmp6.nonce === nonce) {
-            const awaitingAnalyticsContext = applyArgumentsResult(15494).awaitingAnalyticsContext;
+            const awaitingAnalyticsContext = applyArgumentsResult(15498).awaitingAnalyticsContext;
             delete tmp[tmp2];
             tmp7 = tmp6;
           }
@@ -474,10 +474,10 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleActivityLaunchCancel = function handleActivityLaunchCancel(arg0) {
       ({ nonce, applicationId } = arg0);
-      const tmp5 = applyArgumentsResult(15494).awaitingAnalyticsContext[applicationId];
+      const tmp5 = applyArgumentsResult(15498).awaitingAnalyticsContext[applicationId];
       if (null != tmp5) {
         if (tmp5.nonce === nonce) {
-          const awaitingAnalyticsContext = applyArgumentsResult(15494).awaitingAnalyticsContext;
+          const awaitingAnalyticsContext = applyArgumentsResult(15498).awaitingAnalyticsContext;
           delete tmp[tmp2];
         }
       }
@@ -624,10 +624,10 @@ class EmbeddedActivitiesManager extends tmp3 {
                 closure_131_7 = value;
                 if (!obj25.getIsActivitiesEnabledForCurrentPlatform()) {
                   const intl = applyArgumentsResult(1128).intl;
-                  getChannel(11033)(intl.string(applyArgumentsResult(1128).t.UXoQTp));
-                  const tmp48 = getChannel(11033);
+                  getChannel(11054)(intl.string(applyArgumentsResult(1128).t.UXoQTp));
+                  const tmp48 = getChannel(11054);
                 }
-                obj25 = applyArgumentsResult(11228);
+                obj25 = applyArgumentsResult(11247);
               }
             } else {
               if (3 === getChannel) {
@@ -643,11 +643,11 @@ class EmbeddedActivitiesManager extends tmp3 {
                   activityConfigs = closure_131_9.activityConfigs;
                   applications = closure_131_9.applications;
                   const obj9 = { applicationId: closure_131_1, activityConfigs, applications };
-                  if (null == getChannel(11246)(obj9)) {
+                  if (null == getChannel(11265)(obj9)) {
                     const obj11 = { guildId: closure_131_8, force: true };
                     set = 4;
                     c6 = 1;
-                    const obj12 = { value: applyArgumentsResult(11230).fetchShelf(obj11), done: false };
+                    const obj12 = { value: applyArgumentsResult(11249).fetchShelf(obj11), done: false };
                     return obj12;
                   }
                 }
@@ -662,7 +662,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 } else {
                   closure_131_12 = value;
                   const obj16 = { applicationId: closure_131_1, activityConfigs: closure_131_12.activityConfigs, applications: closure_131_12.applications };
-                  getChannel(11246)(obj16);
+                  getChannel(11265)(obj16);
                 }
               } else if (5 === getChannel) {
                 if (arg0 === 1) {
@@ -702,13 +702,13 @@ class EmbeddedActivitiesManager extends tmp3 {
                 obj18.inviterUserId = closure_131_4;
                 set = 6;
                 c6 = 1;
-                const obj20 = { value: applyArgumentsResult(11300).maybeJoinEmbeddedActivity(obj18), done: false };
+                const obj20 = { value: applyArgumentsResult(11318).maybeJoinEmbeddedActivity(obj18), done: false };
                 return obj20;
               } else {
                 const obj21 = { targetApplicationId: closure_131_1, channelId: closure_131_0, analyticsLocations: closure_131_2, commandOrigin: closure_131_3, inviterUserId: closure_131_4 };
                 set = 5;
                 c6 = 1;
-                const obj22 = { value: getChannel(11857)(obj21), done: false };
+                const obj22 = { value: getChannel(11876)(obj21), done: false };
                 return obj22;
               }
             }
@@ -729,14 +729,14 @@ class EmbeddedActivitiesManager extends tmp3 {
               const obj23 = { guildId: closure_131_8 };
               set = 3;
               c6 = 1;
-              const obj24 = { value: applyArgumentsResult(11230).fetchShelf(obj23), done: false };
+              const obj24 = { value: applyArgumentsResult(11249).fetchShelf(obj23), done: false };
               return obj24;
             } else {
               const intl2 = applyArgumentsResult(1128).intl;
-              getChannel(11033)(intl2.string(applyArgumentsResult(1128).t.uGDCcw));
-              const tmp64 = getChannel(11033);
+              getChannel(11054)(intl2.string(applyArgumentsResult(1128).t.uGDCcw));
+              const tmp64 = getChannel(11054);
             }
-            tmp58 = getChannel(11298);
+            tmp58 = getChannel(11316);
           }
         } catch (tmp93) {
           c6 = tmp;
@@ -776,7 +776,7 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleInteractionQueue = function handleInteractionQueue(arg0) {
       ({ nonce, data } = arg0);
-      if (null == applyArgumentsResult(15494).awaitingAnalyticsContext[data.applicationId]) {
+      if (null == applyArgumentsResult(15498).awaitingAnalyticsContext[data.applicationId]) {
         if (data.interactionType === applyArgumentsResult(5542).InteractionTypes.APPLICATION_COMMAND) {
           const items = [AnalyticsLocationDefault.INTERACTION_APPLICATION_COMMAND];
           let tmp3 = items;
@@ -796,7 +796,7 @@ class EmbeddedActivitiesManager extends tmp3 {
         }
         if (flag) {
           const obj2 = { nonce: nonce2, locations, source };
-          applyArgumentsResult(15494).awaitingAnalyticsContext[applicationId] = obj2;
+          applyArgumentsResult(15498).awaitingAnalyticsContext[applicationId] = obj2;
           flag = true;
         }
         if (flag) {
@@ -808,7 +808,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       nonce = nonce.nonce;
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
-          const tmp6 = applyArgumentsResult(15494).awaitingAnalyticsContext[tmp3];
+          const tmp6 = applyArgumentsResult(15498).awaitingAnalyticsContext[tmp3];
           if (null != tmp6) {
             tmp6.interactionId = tmp;
           }
@@ -823,11 +823,11 @@ class EmbeddedActivitiesManager extends tmp3 {
           closure_0 = tmp4;
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const tmp6 = applyArgumentsResult(15494).awaitingAnalyticsContext[closure_0];
+            const tmp6 = applyArgumentsResult(15498).awaitingAnalyticsContext[closure_0];
             let tmp7;
             if (null != tmp6) {
               if (tmp6.nonce === nonce) {
-                const awaitingAnalyticsContext = applyArgumentsResult(15494).awaitingAnalyticsContext;
+                const awaitingAnalyticsContext = applyArgumentsResult(15498).awaitingAnalyticsContext;
                 delete tmp[tmp2];
                 tmp7 = tmp6;
               }
@@ -842,10 +842,10 @@ class EmbeddedActivitiesManager extends tmp3 {
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
           delete tmp3[tmp4];
-          const tmp9 = applyArgumentsResult(15494).awaitingAnalyticsContext[tmp6];
+          const tmp9 = applyArgumentsResult(15498).awaitingAnalyticsContext[tmp6];
           if (null != tmp9) {
             if (tmp9.nonce === nonce) {
-              const awaitingAnalyticsContext = applyArgumentsResult(15494).awaitingAnalyticsContext;
+              const awaitingAnalyticsContext = applyArgumentsResult(15498).awaitingAnalyticsContext;
               delete tmp[tmp2];
             }
           }

@@ -1,6 +1,6 @@
-// === Module 15973: UserSettingsFamilyCenterParentalControls ===
+// === Module 15977: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15973 (UserSettingsFamilyCenterParentalControls)
+// Module 15977 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2589 from "module_2589" /* 2589 */;

@@ -1,9 +1,9 @@
-// === Module 12869: ForumPostMessageContent ===
+// === Module 12886: ForumPostMessageContent ===
 
-// Module 12869 (ForumPostMessageContent)
+// Module 12886 (ForumPostMessageContent)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 12870 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 12887 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

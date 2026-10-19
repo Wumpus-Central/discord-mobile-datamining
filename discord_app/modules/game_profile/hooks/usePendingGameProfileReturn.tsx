@@ -1,6 +1,6 @@
-// === Module 13102: usePendingGameProfileReturn ===
+// === Module 13110: usePendingGameProfileReturn ===
 
-// Module 13102 (usePendingGameProfileReturn)
+// Module 13110 (usePendingGameProfileReturn)
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9150 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9156 */;
 import _slicedToArray from "module_32" /* 32 */;

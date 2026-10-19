@@ -1,13 +1,13 @@
-// === Module 13340: HubProgressActionSheet ===
+// === Module 13345: HubProgressActionSheet ===
 
-// Module 13340 (HubProgressActionSheet)
+// Module 13345 (HubProgressActionSheet)
 import router_utils from "router_utils" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8955 */;
 import HubProgressActionCreators from "HubProgressActionCreators" /* 8967 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13341 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13346 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 
@@ -17,8 +17,8 @@ const HubProgressBarConstants = fn(8968);
 ({ HUB_PROGRESS_ACTION_SHEET_ID: metroRequire, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_7 } = HubProgressBarConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, AnalyticsLocations: closure_9, InstantInviteSources: c10, Routes: closure_11 } = Constants);
-let closure_12 = fn(12952).DirectoryChannelScrollBehavior;
-const GuildProgressConstants = fn(13149);
+let closure_12 = fn(12960).DirectoryChannelScrollBehavior;
+const GuildProgressConstants = fn(13157);
 ({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = GuildProgressConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);

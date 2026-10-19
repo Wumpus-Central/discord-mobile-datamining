@@ -1,15 +1,15 @@
-// === Module 11027: activityLaunchErrorUtils ===
+// === Module 11048: activityLaunchErrorUtils ===
 
-// Module 11027 (activityLaunchErrorUtils)
+// Module 11048 (activityLaunchErrorUtils)
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 5541 */;
 import InteractionUtils from "InteractionUtils" /* 8526 */;
-import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 11029 */;
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 11030 */;
+import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 11050 */;
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 11051 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 11028 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 11049 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 6311 */;
 
 require = fn;

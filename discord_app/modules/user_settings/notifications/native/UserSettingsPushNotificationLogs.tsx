@@ -1,6 +1,6 @@
-// === Module 16627: UserSettingsPushNotificationLogs ===
+// === Module 16631: UserSettingsPushNotificationLogs ===
 
-// Module 16627 (UserSettingsPushNotificationLogs)
+// Module 16631 (UserSettingsPushNotificationLogs)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 closure_128_0 = undefined;
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp5(13570)(), done: false };
+                const obj4 = { value: tmp5(13574)(), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -530,7 +530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               return obj5;
             } else {
               closure_128_0 = value;
-              const obj6 = { message: tmp5(13571)(closure_128_0, false) };
+              const obj6 = { message: tmp5(13575)(closure_128_0, false) };
               tmp2(8755).showShareActionSheet(obj6, "push-notification-logs");
               c3 = 3;
               return { value: "IconComponent", done: null };
@@ -551,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
         return applyArgumentsResult;
       }
-      const tmp28 = closure_7(tmp(13981).ShareIcon, {});
+      const tmp28 = closure_7(tmp(13985).ShareIcon, {});
       cResult[11] = stringResult;
       cResult[12] = t12;
       cResult[13] = tmp28;
@@ -1030,7 +1030,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp5(13570)(), done: false };
+            const obj4 = { value: tmp5(13574)(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -1042,7 +1042,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj5;
         } else {
           closure_128_0 = value;
-          const obj6 = { message: tmp5(13571)(closure_128_0, false) };
+          const obj6 = { message: tmp5(13575)(closure_128_0, false) };
           tmp2(8755).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
           return { value: "IconComponent", done: null };
@@ -1053,7 +1053,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       }
     }
   });
-  obj3.children = closure_7(defaultValue(13981).ShareIcon, {});
+  obj3.children = closure_7(defaultValue(13985).ShareIcon, {});
   items1[1] = closure_7(defaultValue(6462).PressableOpacity, obj3);
   obj2.children = items1;
   let items2 = [closure_8(View, obj2), ];

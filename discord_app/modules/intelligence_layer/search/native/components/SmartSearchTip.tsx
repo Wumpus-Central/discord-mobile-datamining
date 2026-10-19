@@ -1,6 +1,6 @@
-// === Module 17822: SmartSearchTip ===
+// === Module 17826: SmartSearchTip ===
 
-// Module 17822 (SmartSearchTip)
+// Module 17826 (SmartSearchTip)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import _modDef4127 from "module_4127" /* 4127 */;
@@ -26,8 +26,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5191);
-let obj = { container: { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24 }, header: null, titleContainer: null, title: null };
-let obj3 = { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24 };
+let obj = { container: { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_12 }, header: null, titleContainer: null, title: null };
+let obj3 = { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_12 };
 obj.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_20 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_20 };
 obj.titleContainer = { flex: 1, flexDirection: "row", gap: nativeDefault.space.PX_6 };
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
         return hasOwnProperty(native.Avatar, obj, user.id);
       });
-      tmp20 = closure_5(guildId(14078).AvatarPile, obj7);
+      tmp20 = closure_5(guildId(14082).AvatarPile, obj7);
     }
     cResult[9] = arr;
     cResult[10] = guildId;
@@ -180,7 +180,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
       return hasOwnProperty(native.Avatar, obj, user.id);
     });
-    tmp4Result = closure_5(tmp5(14078).AvatarPile, obj6);
+    tmp4Result = closure_5(tmp5(14082).AvatarPile, obj6);
   }
   items2[1] = tmp4Result;
   obj2.children = items2;

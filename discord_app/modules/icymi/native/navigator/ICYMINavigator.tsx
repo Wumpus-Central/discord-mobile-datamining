@@ -1,6 +1,6 @@
-// === Module 17591: ICYMINavigator ===
+// === Module 17595: ICYMINavigator ===
 
-// Module 17591 (ICYMINavigator)
+// Module 17595 (ICYMINavigator)
 import jsxProd from "jsxProd" /* 21 */;
 import NativeStackNavigator from "NativeStackNavigator" /* 9644 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMINav
     const obj3 = {
       name: "icymi-screen",
       getComponent() {
-          return accessibilityNativeStackOptions(17592).ICYMITab;
+          return accessibilityNativeStackOptions(17596).ICYMITab;
         }
     };
     const tmp7 = closure_2(closure_4.Screen, obj3);
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMINav
     const obj4 = {
       name: "notifications-screen",
       getComponent() {
-          return accessibilityNativeStackOptions(17542).ThemedNotificationsModal;
+          return accessibilityNativeStackOptions(17546).ThemedNotificationsModal;
         }
     };
     const tmp11 = closure_2(closure_4.Screen, obj4);
@@ -79,13 +79,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMINav
     closure_2(closure_4.Screen, {
       name: "icymi-screen",
       getComponent() {
-        return closure_0(17592).ICYMITab;
+        return closure_0(17596).ICYMITab;
       }
     }),
     closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return closure_0(17542).ThemedNotificationsModal;
+        return closure_0(17546).ThemedNotificationsModal;
       }
     })
   ];

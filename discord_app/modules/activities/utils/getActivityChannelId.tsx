@@ -1,6 +1,6 @@
-// === Module 14084: getActivityChannelId ===
+// === Module 14088: getActivityChannelId ===
 
-// Module 14084 (getActivityChannelId)
+// Module 14088 (getActivityChannelId)
 import ChannelRecord from "ChannelRecord" /* 2072 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import VoiceStateStore from "VoiceStateStore" /* 5212 */;

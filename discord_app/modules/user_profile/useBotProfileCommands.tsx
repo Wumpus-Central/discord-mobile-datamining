@@ -1,6 +1,6 @@
-// === Module 10927: useBotProfileCommands ===
+// === Module 10943: useBotProfileCommands ===
 
-// Module 10927 (useBotProfileCommands)
+// Module 10943 (useBotProfileCommands)
 import c from "c" /* 576 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10107 */;
 import noop from "module_19" /* 19 */;

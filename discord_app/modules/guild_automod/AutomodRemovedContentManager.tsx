@@ -1,7 +1,7 @@
-// === Module 18441: AutomodRemovedContentManager ===
+// === Module 18445: AutomodRemovedContentManager ===
 
-// Module 18441 (AutomodRemovedContentManager)
-import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCreators" /* 18442 */;
+// Module 18445 (AutomodRemovedContentManager)
+import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCreators" /* 18446 */;
 import MessageStore from "MessageStore" /* 5532 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;

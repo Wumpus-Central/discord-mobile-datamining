@@ -1,10 +1,10 @@
-// === Module 19033: MessageSendFailureNotificationManager ===
+// === Module 19037: MessageSendFailureNotificationManager ===
 
-// Module 19033 (MessageSendFailureNotificationManager)
+// Module 19037 (MessageSendFailureNotificationManager)
 import util from "util" /* 1128 */;
-import PushNotificationDefault from "PushNotification" /* 11007 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13518 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13520 */;
+import PushNotificationDefault from "PushNotification" /* 11028 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13523 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13525 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5034 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -76,7 +76,7 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1087);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(10997).LocalNotificationTypes;
+const LocalNotificationTypes = fn(11018).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

@@ -1,11 +1,11 @@
-// === Module 13673: CollectiblesWishlistItemCard ===
+// === Module 13677: CollectiblesWishlistItemCard ===
 
-// Module 13673 (CollectiblesWishlistItemCard)
+// Module 13677 (CollectiblesWishlistItemCard)
 import SKUPreview from "SKUPreview" /* 9267 */;
 import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 9268 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import SentGiftsStore from "SentGiftsStore" /* 13674 */;
+import SentGiftsStore from "SentGiftsStore" /* 13678 */;
 
 const require = globalThis.__r;
 

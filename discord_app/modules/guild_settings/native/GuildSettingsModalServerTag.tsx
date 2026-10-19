@@ -1,11 +1,11 @@
-// === Module 18778: GuildSettingsModalServerTag ===
+// === Module 18782: GuildSettingsModalServerTag ===
 
-// Module 18778 (GuildSettingsModalServerTag)
+// Module 18782 (GuildSettingsModalServerTag)
 import nativeDefault from "native" /* 587 */;
 import Powerups from "Powerups" /* 5107 */;
 import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8892 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8910 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13162 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13170 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -316,7 +316,7 @@ export default function GuildSettingsModalServerTag(guildId) {
                   return GuildProfileActionCreators.getGuildProfile(guildId, true);
                 }
         };
-        return closure_13(navigation(13949), obj8);
+        return closure_13(navigation(13953), obj8);
       } else if (null == stateFromStores1) {
         return closure_13(tmp2(7004).SceneLoadingIndicator, {});
       } else {
@@ -361,7 +361,7 @@ export default function GuildSettingsModalServerTag(guildId) {
             let badgeColorSecondary = stateFromStores1.badgeColorSecondary;
             size.secondaryTintColor = badgeColorSecondary;
             ({ SIZE_16: obj16.width, SIZE_16: obj16.height } = closure_12);
-            tmp32Result = tmp32(tmp2(14926).GuildBadge, size);
+            tmp32Result = tmp32(tmp2(14930).GuildBadge, size);
           }
           const items12 = [tmp32Result, tmp29];
           obj13.children = items12;
@@ -387,12 +387,12 @@ export default function GuildSettingsModalServerTag(guildId) {
           const obj19 = { guildId, tag: null, badge: null, primaryColor: null, secondaryColor: null, isDirty: null };
           ({ tag: obj22.tag, badge: obj22.badge, badgeColorPrimary: obj22.primaryColor, badgeColorSecondary: obj22.secondaryColor } = stateFromStores1);
           obj19.isDirty = result1;
-          items14[3] = tmp32(tmp39(14924), obj19);
+          items14[3] = tmp32(tmp39(14928), obj19);
           obj15.children = items14;
           let tmp40 = obj15;
         } else {
           const obj20 = { guildId, onUnlockPress: callback2 };
-          const items15 = [tmp32(tmp39(18779), obj20), tmp31Result2];
+          const items15 = [tmp32(tmp39(18783), obj20), tmp31Result2];
           obj15.children = items15;
           tmp40 = obj15;
         }

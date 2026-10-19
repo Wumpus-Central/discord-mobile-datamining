@@ -1,6 +1,6 @@
-// === Module 15692: openPremiumTryItOutModal ===
+// === Module 15696: openPremiumTryItOutModal ===
 
-// Module 15692 (openPremiumTryItOutModal)
+// Module 15696 (openPremiumTryItOutModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8589 */;
@@ -19,6 +19,6 @@ export const openPremiumTryItOutModal = function openPremiumTryItOutModal(avatar
   }
   const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId: id, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW });
   const obj2 = { userId: id, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15693, dependencyMap.paths), { initialTarget: avatar }, undefined, { presentation: "fullScreenModal", fullScreenGestureEnabled: true });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15697, dependencyMap.paths), { initialTarget: avatar }, undefined, { presentation: "fullScreenModal", fullScreenGestureEnabled: true });
   const obj4 = { initialTarget: avatar };
 };

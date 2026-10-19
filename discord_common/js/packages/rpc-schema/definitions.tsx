@@ -1,15 +1,15 @@
-// === Module 15500: definitions ===
+// === Module 15504: definitions ===
 
-// Module 15500 (definitions)
+// Module 15504 (definitions)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import Constants2 from "Constants" /* 2027 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 6297 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8731 */;
 import StatusDisplayTypes from "StatusDisplayTypes" /* 10553 */;
-import ActivityPlatform from "ActivityPlatform" /* 11314 */;
-import SKUTypes from "SKUTypes" /* 15501 */;
-import helpers from "helpers" /* 15502 */;
-import contextMenuIcons from "contextMenuIcons" /* 15503 */;
+import ActivityPlatform from "ActivityPlatform" /* 11332 */;
+import SKUTypes from "SKUTypes" /* 15505 */;
+import helpers from "helpers" /* 15506 */;
+import contextMenuIcons from "contextMenuIcons" /* 15507 */;
 import Constants from "Constants" /* 1098 */;
 import size from "module_2" /* 2 */;
 
@@ -1952,7 +1952,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "unicodeVersion", response: "" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "context", response: "add" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

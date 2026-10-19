@@ -13,7 +13,7 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import DetectableGameStore from "DetectableGameStore" /* 2040 */;
 import IdleStore from "IdleStore" /* 6144 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 6301 */;
-import LocalActivityStore from "LocalActivityStore" /* 10958 */;
+import LocalActivityStore from "LocalActivityStore" /* 10974 */;
 import PresenceStore from "PresenceStore" /* 5207 */;
 import SessionsStore from "SessionsStore" /* 5211 */;
 

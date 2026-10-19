@@ -1,10 +1,10 @@
-// === Module 18569: ArrowsLeftRightIcon ===
+// === Module 18573: ArrowsLeftRightIcon ===
 
-// Module 18569 (ArrowsLeftRightIcon)
+// Module 18573 (ArrowsLeftRightIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4912 */;
-import _mod18570 from "module_18570" /* 18570 */;
+import _mod18574 from "module_18574" /* 18574 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ArrowsLeftRightIcon = ReactCompilerGating.isReactCompilerEnabled() 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod18570;
+    const tmpResult = _mod18574;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ArrowsLeftRightIcon = ReactCompilerGating.isReactCompilerEnabled() 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18570, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18574, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

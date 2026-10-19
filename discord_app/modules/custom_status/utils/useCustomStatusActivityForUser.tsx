@@ -1,6 +1,6 @@
-// === Module 10839: useCustomStatusActivityForUser ===
+// === Module 10855: useCustomStatusActivityForUser ===
 
-// Module 10839 (useCustomStatusActivityForUser)
+// Module 10855 (useCustomStatusActivityForUser)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import PresenceStore from "PresenceStore" /* 5207 */;
 

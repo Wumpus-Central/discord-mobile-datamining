@@ -24,8 +24,8 @@ import StickersSpotIllustration from "StickersSpotIllustration" /* 9588 */;
 import _modDef9592 from "module_9592" /* 9592 */;
 import _modDef9593 from "module_9593" /* 9593 */;
 import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9594 */;
-import NitroScheduleMessageSpotIllustration from "NitroScheduleMessageSpotIllustration" /* 13815 */;
-import _modDef13819 from "module_13819" /* 13819 */;
+import NitroScheduleMessageSpotIllustration from "NitroScheduleMessageSpotIllustration" /* 13819 */;
+import _modDef13823 from "module_13823" /* 13823 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -220,7 +220,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePag
                   cResult[58] = obj12;
                   tmp89 = obj12;
                 }
-                const obj13 = { title: tmp81, description: tmp82, analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY, upsellType: constants.STREAM_QUALITY_UPSELL, image: _modDef13819, imageGradientBackground: null };
+                const obj13 = { title: tmp81, description: tmp82, analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY, upsellType: constants.STREAM_QUALITY_UPSELL, image: _modDef13823, imageGradientBackground: null };
                 const obj14 = { colors: null, start: null, end: null };
                 const items = [token, token1];
                 obj14.colors = items;
@@ -492,7 +492,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePag
   obj20.description = intl17.formatToPlainString(util.t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
   obj20.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
   obj20.upsellType = constants.STREAM_QUALITY_UPSELL;
-  obj20.image = _modDef13819;
+  obj20.image = _modDef13823;
   const obj22 = { colors: null, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END };
   const items = [token, token1];
   obj22.colors = items;

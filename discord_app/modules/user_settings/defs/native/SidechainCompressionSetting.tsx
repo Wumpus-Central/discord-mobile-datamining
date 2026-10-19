@@ -1,6 +1,6 @@
-// === Module 16312: SidechainCompressionSetting ===
+// === Module 16316: SidechainCompressionSetting ===
 
-// Module 16312 (SidechainCompressionSetting)
+// Module 16316 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -10,7 +10,7 @@ import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 require = fn;
 const Features = fn(5216).Features;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSidechainCompressionSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

@@ -1,9 +1,9 @@
-// === Module 12957: GuildDirectoryEditDescriptionModal ===
+// === Module 12965: GuildDirectoryEditDescriptionModal ===
 
-// Module 12957 (GuildDirectoryEditDescriptionModal)
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12956 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12958 */;
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12959 */;
+// Module 12965 (GuildDirectoryEditDescriptionModal)
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12964 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12966 */;
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12967 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -201,7 +201,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj3 = tmp4(12958);
+            const obj3 = tmp4(12966);
             dependencyMap = 1;
             c4 = 1;
             const obj5 = { value: obj3.updateDirectoryEntry(entry.channelId, entry.guildId, closure_0, closure_1), done: false };
@@ -215,7 +215,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          closure_1(12956).close();
+          closure_1(12964).close();
           c4 = 3;
           return { value: "IconComponent", done: null };
         }

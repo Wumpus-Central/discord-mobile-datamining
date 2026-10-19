@@ -1,6 +1,6 @@
-// === Module 16648: DevToolsLoggingFlagsScreen ===
+// === Module 16652: DevToolsLoggingFlagsScreen ===
 
-// Module 16648 (DevToolsLoggingFlagsScreen)
+// Module 16652 (DevToolsLoggingFlagsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;

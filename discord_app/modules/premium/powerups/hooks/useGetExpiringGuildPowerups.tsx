@@ -1,8 +1,8 @@
-// === Module 13241: useGetExpiringGuildPowerups ===
+// === Module 13249: useGetExpiringGuildPowerups ===
 
-// Module 13241 (useGetExpiringGuildPowerups)
+// Module 13249 (useGetExpiringGuildPowerups)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 13176 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 13184 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5103 */;
 

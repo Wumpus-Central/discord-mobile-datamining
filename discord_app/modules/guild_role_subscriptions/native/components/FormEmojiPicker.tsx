@@ -1,6 +1,6 @@
-// === Module 18975: FormEmojiPicker ===
+// === Module 18979: FormEmojiPicker ===
 
-// Module 18975 (FormEmojiPicker)
+// Module 18979 (FormEmojiPicker)
 import nativeDefault from "native" /* 587 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9726 */;
 import noop from "module_19" /* 19 */;
@@ -30,12 +30,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
   onChange = onChange.onChange;
   ({ emojiId, emojiName } = emoji);
   const tmp4 = closure_6();
-  const tmp6 = onChange(14908)();
+  const tmp6 = onChange(14912)();
   if (cResult[0] === emojiId) {
     if (cResult[1] === emojiName) {
       let tmp7 = cResult[2];
     }
-    const emojiByIdOrName = guildId(16295).useEmojiByIdOrName(guildId, tmp7);
+    const emojiByIdOrName = guildId(16299).useEmojiByIdOrName(guildId, tmp7);
     if (cResult[3] === tmp7) {
       if (cResult[4] === guildId) {
         if (cResult[6] === guildId) {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
                   }
                   const _Symbol = Symbol;
                   if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                    let obj2 = { size: guildId(1202).Icon.Sizes.MEDIUM, source: tmp5(11392) };
+                    let obj2 = { size: guildId(1202).Icon.Sizes.MEDIUM, source: tmp5(11410) };
                     const tmp32 = closure_4(guildId(1202).Icon, obj2);
                     cResult[20] = tmp32;
                     let tmp30 = tmp32;
@@ -143,16 +143,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
     }
     if (null != tmp7) {
       const obj5 = { guildId, id: tmp7 };
-      let tmp15 = closure_4(tmp5(16294), obj5);
+      let tmp15 = closure_4(tmp5(16298), obj5);
     } else {
-      const obj6 = { resizeMode: "contain", source: tmp5(18976) };
+      const obj6 = { resizeMode: "contain", source: tmp5(18980) };
       tmp15 = closure_4(tmp5(5128), obj6);
       const tmp5Result = tmp5(5128);
     }
     cResult[3] = tmp7;
     cResult[4] = guildId;
     cResult[5] = tmp15;
-    const tmpResult = guildId(16295);
+    const tmpResult = guildId(16299);
   }
   let result = emojiId;
   if (emojiId == null) {
@@ -180,14 +180,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
     emojiId = tmp2(4859).convertSurrogateToName(emojiName, false);
     const tmp2Result = tmp2(4859);
   }
-  const tmp4 = onChange(14908)();
-  const emojiByIdOrName = guildId(16295).useEmojiByIdOrName(guildId, emojiId);
+  const tmp4 = onChange(14912)();
+  const emojiByIdOrName = guildId(16299).useEmojiByIdOrName(guildId, emojiId);
   if (null != emojiId) {
     let obj = { guildId, id: emojiId };
-    let tmp9 = closure_4(tmp2(16294), obj);
+    let tmp9 = closure_4(tmp2(16298), obj);
     let tmp10 = closure_4;
   } else {
-    const obj3 = { resizeMode: "contain", source: tmp2(18976) };
+    const obj3 = { resizeMode: "contain", source: tmp2(18980) };
     tmp9 = closure_4(tmp2(5128), obj3);
     tmp10 = closure_4;
     const tmp2Result3 = tmp2(5128);
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
   const items = [tmp.container, tmp4.textInput];
   obj4.style = items;
   const items1 = [tmp9, , ];
-  let obj2 = guildId(16295);
+  let obj2 = guildId(16299);
   const items2 = [tmp.content, ];
   const obj5 = { style: items2, children: null };
   items2[1] = null != emojiByIdOrName ? tmp.text : tmp.placeholder;
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
   obj5.children = allEmojiNamesString;
   items1[1] = tmp10(guildId(1202).LegacyText, obj5);
   const tmp2Result4 = onChange(8946);
-  items1[2] = tmp10(guildId(1202).Icon, { size: guildId(1202).Icon.Sizes.MEDIUM, source: onChange(11392) });
+  items1[2] = tmp10(guildId(1202).Icon, { size: guildId(1202).Icon.Sizes.MEDIUM, source: onChange(11410) });
   obj4.children = items1;
   return closure_5(tmp2Result4, obj4);
 });

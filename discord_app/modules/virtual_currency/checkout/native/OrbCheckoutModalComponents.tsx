@@ -1,6 +1,6 @@
-// === Module 14236: OrbCheckoutModalComponents ===
+// === Module 14240: OrbCheckoutModalComponents ===
 
-// Module 14236 (OrbCheckoutModalComponents)
+// Module 14240 (OrbCheckoutModalComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -12,10 +12,10 @@ import components_Button_Button from "components/Button/Button" /* 5479 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6567 */;
 import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7219 */;
 import OrbsIcon from "OrbsIcon" /* 9331 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13650 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13652 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14235 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 14237 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13654 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13656 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14239 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 14241 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -314,7 +314,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbCheckoutL
   const obj3 = { style: tmp4.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: tmp5 };
 }) : (function OrbCheckoutLegalFinePrint() {
   const tmp = closure_8();
-  skuId = skuId(14235).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(14239).useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
   return closure_6(skuId(5187).Text, { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo });

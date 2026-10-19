@@ -1,10 +1,10 @@
-// === Module 14205: WishlistViewerCoachmark ===
+// === Module 14209: WishlistViewerCoachmark ===
 
-// Module 14205 (WishlistViewerCoachmark)
+// Module 14209 (WishlistViewerCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5128 */;
-import _modDef14206 from "module_14206" /* 14206 */;
+import _modDef14210 from "module_14210" /* 14210 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const cResult = c.c(6);
   const tmp3 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef14206 };
+    const obj2 = { uri: _modDef14210 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -49,7 +49,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const tmp = closure_7();
   const obj = { style: tmp.imageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef14206 };
+  const obj3 = { uri: _modDef14210 };
   obj2.source = obj3;
   obj2.style = tmp.image;
   obj.children = jsx(FastImageDefault, { source: null, style: null });

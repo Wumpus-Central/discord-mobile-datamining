@@ -1,6 +1,6 @@
-// === Module 15510: links ===
+// === Module 15514: links ===
 
-// Module 15510 (links)
+// Module 15514 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2032 */;
@@ -8,13 +8,13 @@ import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 483
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5186 */;
 import openUserSettings from "openUserSettings" /* 7370 */;
 import RPCErrorDefault from "RPCError" /* 9169 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11312 */;
-import RPCHelpers from "RPCHelpers" /* 11317 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15484 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15511 */;
-import internalDeepLinks from "internalDeepLinks" /* 15512 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15513 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15515 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11330 */;
+import RPCHelpers from "RPCHelpers" /* 11335 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15488 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15515 */;
+import internalDeepLinks from "internalDeepLinks" /* 15516 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15517 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15519 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
@@ -202,7 +202,7 @@ const items = [, ];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15499);
+let CONTEXT_MENU_ICON_NAMES = fn(15503);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -334,7 +334,7 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15499);
+CONTEXT_MENU_ICON_NAMES = fn(15503);
 let obj6 = {
   scope: null,
   handler(arg0) {

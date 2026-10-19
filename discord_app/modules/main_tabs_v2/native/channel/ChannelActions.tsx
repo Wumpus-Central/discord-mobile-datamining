@@ -14,13 +14,13 @@ import PhoneCallIcon from "PhoneCallIcon" /* 9621 */;
 import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9623 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 9628 */;
 import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10658 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11063 */;
-import useSearchContext from "useSearchContext" /* 12941 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12942 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13001 */;
-import IconActionButtonDefault from "IconActionButton" /* 13773 */;
-import ConversationCoachmark from "ConversationCoachmark" /* 13778 */;
-import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13781 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11082 */;
+import useSearchContext from "useSearchContext" /* 12949 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12950 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13009 */;
+import IconActionButtonDefault from "IconActionButton" /* 13777 */;
+import ConversationCoachmark from "ConversationCoachmark" /* 13782 */;
+import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13785 */;
 import noop from "module_19" /* 19 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 6338 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -903,7 +903,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
     }
   }
   if (hasForumSearchQuery) {
-    ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13779).ForumChannelCloseSearchButton;
+    ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13783).ForumChannelCloseSearchButton;
     obj = { channelId };
     let tmp10 = closure_14(ForumChannelCloseSearchButton, obj);
   } else {
@@ -956,7 +956,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = closure_14(tmp(13779).ForumChannelCloseSearchButton, obj4);
+    let tmp4Result = closure_14(tmp(13783).ForumChannelCloseSearchButton, obj4);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

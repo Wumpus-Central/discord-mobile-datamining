@@ -1,6 +1,6 @@
-// === Module 11423: MobileGoLiveActionSheet ===
+// === Module 11441: MobileGoLiveActionSheet ===
 
-// Module 11423 (MobileGoLiveActionSheet)
+// Module 11441 (MobileGoLiveActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
@@ -17,9 +17,9 @@ import MobilePhoneIcon from "MobilePhoneIcon" /* 6919 */;
 import StreamActionCreators from "StreamActionCreators" /* 7710 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9571 */;
 import _modDef9836 from "module_9836" /* 9836 */;
-import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 11424 */;
-import SpeedometerIcon from "SpeedometerIcon" /* 11429 */;
-import ImageSparkleIcon from "ImageSparkleIcon" /* 11431 */;
+import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 11442 */;
+import SpeedometerIcon from "SpeedometerIcon" /* 11447 */;
+import ImageSparkleIcon from "ImageSparkleIcon" /* 11449 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5371 */;
@@ -225,8 +225,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const tmp21 = cResult[9];
     }
     const tmpResult5 = tmp(504);
-    const goLiveUpsellVariant = guildPremiumTier(11428).useConfig(tmp21).goLiveUpsellVariant;
-    let obj6 = guildPremiumTier(11428);
+    const goLiveUpsellVariant = guildPremiumTier(11446).useConfig(tmp21).goLiveUpsellVariant;
+    let obj6 = guildPremiumTier(11446);
     analyticsLocations = guildPremiumTier(7130)(guildPremiumTier(7155).MOBILE_GO_LIVE_ACTION_SHEET).analyticsLocations;
     const tmp25 = closure_16();
     ApplicationStreamingStore = tmp25;
@@ -708,8 +708,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                             }
                                           }
                                           obj4.onPress = function onPress() {
-                                            user(11422).stopScreenshare();
-                                            const obj = user(11422);
+                                            user(11440).stopScreenshare();
+                                            const obj = user(11440);
                                             guildPremiumTier(5155).hideActionSheet(MobileGoLiveActionSheet);
                                           };
                                           let obj5 = obj4;
@@ -741,7 +741,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                           obj5.onPress = function onPress() {
                                             guildPremiumTier(5155).hideActionSheet(MobileGoLiveActionSheet);
                                             const obj = guildPremiumTier(5155);
-                                            user(11422).startStream();
+                                            user(11440).startStream();
                                           };
                                         }
                                         class H {
@@ -1770,5 +1770,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(11423, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(11441, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 };

@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
                         if (!SubscriptionPlanStore.isFetchingForPremiumSKUs()) {
                           const obj = SubscriptionPlanActionCreators;
                           const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
-                          premiumSubscriptionPlans.catch(/* F156641 */ function() { ... });
+                          premiumSubscriptionPlans.catch(/* F156746 */ function() { ... });
                         }
                       });
                       return () => {

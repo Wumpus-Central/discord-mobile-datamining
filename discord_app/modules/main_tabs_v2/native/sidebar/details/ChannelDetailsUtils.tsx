@@ -1,6 +1,6 @@
-// === Module 11167: ChannelDetailsUtils ===
+// === Module 11186: ChannelDetailsUtils ===
 
-// Module 11167 (ChannelDetailsUtils)
+// Module 11186 (ChannelDetailsUtils)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import ChannelDetailsConstants from "ChannelDetailsConstants" /* 9927 */;
 import size from "module_2" /* 2 */;

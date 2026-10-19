@@ -1,6 +1,6 @@
-// === Module 16411: DisplayNameStylesEditPreview ===
+// === Module 16415: DisplayNameStylesEditPreview ===
 
-// Module 16411 (DisplayNameStylesEditPreview)
+// Module 16415 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -434,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                                 }
                               }
                               const obj4 = { user, nameplate: pendingNameplate, nameplateData: tmp30, guildId, pendingAvatarSrc: stateFromStores, pendingDisplayNameStyles: tmp13, pendingGlobalName: displayName };
-                              const tmp33 = closure_7(tmp(10938).NameplatePreview, obj4);
+                              const tmp33 = closure_7(tmp(10954).NameplatePreview, obj4);
                               cResult[28] = stateFromStores;
                               cResult[29] = displayName;
                               cResult[30] = tmp13;
@@ -471,7 +471,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             }
           }
           const obj7 = { user, displayName, guildId, displayNameStylesOverride: tmp13, isPremiumTryItOut: tmp4, compact: true, hideFrame: true, maxWidth: 320, accessibilityLabel: tmp14 };
-          const tmp20 = closure_7(guildId(10820), obj7);
+          const tmp20 = closure_7(guildId(10836), obj7);
           cResult[12] = displayName;
           cResult[13] = tmp13;
           cResult[14] = guildId;

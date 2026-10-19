@@ -1,6 +1,6 @@
-// === Module 15966: FamilyCenterAvatarPair ===
+// === Module 15970: FamilyCenterAvatarPair ===
 
-// Module 15966 (FamilyCenterAvatarPair)
+// Module 15970 (FamilyCenterAvatarPair)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

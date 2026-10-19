@@ -1,14 +1,14 @@
-// === Module 17529: YouBarName ===
+// === Module 17533: YouBarName ===
 
-// Module 17529 (YouBarName)
+// Module 17533 (YouBarName)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GuildTagDefault from "GuildTag" /* 9130 */;
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10540 */;
 import useUserVoiceActivity from "useUserVoiceActivity" /* 10541 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10565 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10843 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 17530 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10859 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 17534 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -115,8 +115,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj = userId(576);
   const stateFromStores = userId(504).useStateFromStores(tmp5, C);
   const tmpResult = userId(504);
-  const customStatusActivity = userId(10821).useCustomStatusActivity();
-  const tmpResult4 = userId(10821);
+  const customStatusActivity = userId(10837).useCustomStatusActivity();
+  const tmpResult4 = userId(10837);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
@@ -183,8 +183,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(10821).useCustomStatusActivity();
-  let obj2 = userId(10821);
+  const customStatusActivity = userId(10837).useCustomStatusActivity();
+  let obj2 = userId(10837);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;

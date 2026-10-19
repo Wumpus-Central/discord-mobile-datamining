@@ -1,6 +1,6 @@
-// === Module 11182: UserActivitySpotify ===
+// === Module 11201: UserActivitySpotify ===
 
-// Module 11182 (UserActivitySpotify)
+// Module 11201 (UserActivitySpotify)
 import native from "native" /* 1202 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1383 */;

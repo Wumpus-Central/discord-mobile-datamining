@@ -1,6 +1,6 @@
-// === Module 18528: LabelLayoutComponent ===
+// === Module 18532: LabelLayoutComponent ===
 
-// Module 18528 (LabelLayoutComponent)
+// Module 18532 (LabelLayoutComponent)
 import c from "c" /* 576 */;
 import Server from "Server" /* 2000 */;
 import Input from "Input" /* 6564 */;

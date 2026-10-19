@@ -1,6 +1,6 @@
-// === Module 11283: VoiceChannelEffectsStore ===
+// === Module 11301: VoiceChannelEffectsStore ===
 
-// Module 11283 (VoiceChannelEffectsStore)
+// Module 11301 (VoiceChannelEffectsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;

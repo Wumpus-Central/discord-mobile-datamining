@@ -1,6 +1,6 @@
-// === Module 16360: useSyncedModeThemeName ===
+// === Module 16364: useSyncedModeThemeName ===
 
-// Module 16360 (useSyncedModeThemeName)
+// Module 16364 (useSyncedModeThemeName)
 import util from "util" /* 1128 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
 import _modDef2821 from "module_2821" /* 2821 */;

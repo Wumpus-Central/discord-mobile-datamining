@@ -1,8 +1,8 @@
-// === Module 11019: restartFrames ===
+// === Module 11040: restartFrames ===
 
-// Module 11019 (restartFrames)
-import leaveFrame from "leaveFrame" /* 11020 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11021 */;
+// Module 11040 (restartFrames)
+import leaveFrame from "leaveFrame" /* 11041 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11042 */;
 import FramesStore from "FramesStore" /* 6295 */;
 
 require = fn;

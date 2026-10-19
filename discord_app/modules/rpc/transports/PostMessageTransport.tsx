@@ -1,9 +1,9 @@
-// === Module 11310: PostMessageTransport ===
+// === Module 11328: PostMessageTransport ===
 
-// Module 11310 (PostMessageTransport)
+// Module 11328 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1104 */;
 import RPCErrorDefault from "RPCError" /* 9169 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11311 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 11329 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;

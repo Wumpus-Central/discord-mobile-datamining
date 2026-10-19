@@ -1,6 +1,6 @@
-// === Module 12773: showNitroLockedToast ===
+// === Module 12790: showNitroLockedToast ===
 
-// Module 12773 (showNitroLockedToast)
+// Module 12790 (showNitroLockedToast)
 import util from "util" /* 1128 */;
 import _modDef3141 from "module_3141" /* 3141 */;
 import ToastUtils from "ToastUtils" /* 4903 */;

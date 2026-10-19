@@ -1,6 +1,6 @@
-// === Module 13832: GuildSelector ===
+// === Module 13836: GuildSelector ===
 
-// Module 13832 (GuildSelector)
+// Module 13836 (GuildSelector)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;

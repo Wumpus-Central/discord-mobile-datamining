@@ -1,6 +1,6 @@
-// === Module 12326: useChatInputMaxHeight ===
+// === Module 12343: useChatInputMaxHeight ===
 
-// Module 12326 (useChatInputMaxHeight)
+// Module 12343 (useChatInputMaxHeight)
 import useWindowDimensions from "useWindowDimensions" /* 1499 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1899 */;
@@ -9,9 +9,9 @@ import useKeyboardType from "useKeyboardType" /* 5083 */;
 import timing from "timing" /* 5192 */;
 import timingPresets from "timingPresets" /* 5195 */;
 import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 6945 */;
-import useKeyboardStateSharedValue from "useKeyboardStateSharedValue" /* 12327 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12328 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12329 */;
+import useKeyboardStateSharedValue from "useKeyboardStateSharedValue" /* 12344 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12345 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12346 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
@@ -28,7 +28,7 @@ function getChatInputMaxHeight() {
   }
   return Math.min(c6, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - c6));
 }
-const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12322).CHAT_INPUT_PILL_CONTENT_SIZE;
+const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12339).CHAT_INPUT_PILL_CONTENT_SIZE;
 let c6 = 200;
 function getChatInputMaxHeightWorklet() {
   const keyboardStateWorklet = useKeyboardStateSharedValue.getKeyboardStateWorklet();
@@ -38,7 +38,7 @@ function getChatInputMaxHeightWorklet() {
   }
   return Math.min(c6, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, useWindowDimensionsSharedValue.getWindowDimensionsWorklet({ ignoreKeyboard: true }).height - keyboardHeight - c6));
 }
-getChatInputMaxHeightWorklet.__closure = { getKeyboardStateWorklet: fn(12327).getKeyboardStateWorklet, KeyboardTypes: fn(1631).KeyboardTypes, getWindowDimensionsWorklet: fn(12328).getWindowDimensionsWorklet, MAX_HEIGHT: 200, MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE };
+getChatInputMaxHeightWorklet.__closure = { getKeyboardStateWorklet: fn(12344).getKeyboardStateWorklet, KeyboardTypes: fn(1631).KeyboardTypes, getWindowDimensionsWorklet: fn(12345).getWindowDimensionsWorklet, MAX_HEIGHT: 200, MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE };
 getChatInputMaxHeightWorklet.__workletHash = 13025947543230;
 getChatInputMaxHeightWorklet.__initData = { code: "function getChatInputMaxHeightWorklet_useChatInputMaxHeightTsx1(){const{getKeyboardStateWorklet,KeyboardTypes,getWindowDimensionsWorklet,MAX_HEIGHT,MIN_HEIGHT}=this.__closure;const{keyboardHeight:keyboardHeightSystem,customKeyboardHeight:customKeyboardHeight,keyboardType:keyboardType}=getKeyboardStateWorklet();const keyboardHeight=keyboardType!==KeyboardTypes.SYSTEM?customKeyboardHeight:keyboardHeightSystem;const window=getWindowDimensionsWorklet({ignoreKeyboard:true});const windowHeightNoKeyboard=window.height-keyboardHeight;return Math.min(MAX_HEIGHT,Math.max(MIN_HEIGHT*2,windowHeightNoKeyboard-MAX_HEIGHT));}" };
 const ReactCompilerGating = fn(558);
@@ -60,7 +60,7 @@ function getChatInputHeightAnimationTimingWorklet(height, textFieldMinHeight) {
   }
 }
 let obj3 = { getChatInputMaxHeightWorklet, withTiming: null, timingFastDuration: null, Easing: null };
-let obj = { getKeyboardStateWorklet: fn(12327).getKeyboardStateWorklet, KeyboardTypes: fn(1631).KeyboardTypes, getWindowDimensionsWorklet: fn(12328).getWindowDimensionsWorklet, MAX_HEIGHT: 200, MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE };
+let obj = { getKeyboardStateWorklet: fn(12344).getKeyboardStateWorklet, KeyboardTypes: fn(1631).KeyboardTypes, getWindowDimensionsWorklet: fn(12345).getWindowDimensionsWorklet, MAX_HEIGHT: 200, MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE };
 obj3.withTiming = fn(5192).withTiming;
 obj3.timingFastDuration = fn(5195).timingFastDuration;
 obj3.Easing = fn(4945).Easing;

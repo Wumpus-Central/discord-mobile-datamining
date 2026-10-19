@@ -1,6 +1,6 @@
-// === Module 12284: ConjureSecretsSheet ===
+// === Module 12302: ConjureSecretsSheet ===
 
-// Module 12284 (ConjureSecretsSheet)
+// Module 12302 (ConjureSecretsSheet)
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(10962).sendUserMessage;
+const sendUserMessage = fn(10978).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5191);

@@ -1,12 +1,12 @@
-// === Module 19096: ParentalConsentConnectionScreen ===
+// === Module 19100: ParentalConsentConnectionScreen ===
 
-// Module 19096 (ParentalConsentConnectionScreen)
+// Module 19100 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import _modDef2885 from "module_2885" /* 2885 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15920 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15924 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -194,7 +194,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2885.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2885["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(15921, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(15925, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

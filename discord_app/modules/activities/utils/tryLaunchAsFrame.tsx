@@ -1,8 +1,8 @@
-// === Module 11237: tryLaunchAsFrame ===
+// === Module 11256: tryLaunchAsFrame ===
 
-// Module 11237 (tryLaunchAsFrame)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11021 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11201 */;
+// Module 11256 (tryLaunchAsFrame)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11042 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11220 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
 
 require = fn;

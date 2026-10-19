@@ -1,6 +1,6 @@
-// === Module 14860: AddFriendById ===
+// === Module 14864: AddFriendById ===
 
-// Module 14860 (AddFriendById)
+// Module 14864 (AddFriendById)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,7 +10,7 @@ import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4923 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import TextField from "TextField" /* 6570 */;
 import FriendsUtils from "FriendsUtils" /* 7298 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 14861 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 14865 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

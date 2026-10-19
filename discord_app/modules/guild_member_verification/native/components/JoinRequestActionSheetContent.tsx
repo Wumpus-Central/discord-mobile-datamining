@@ -1,6 +1,6 @@
-// === Module 17728: JoinRequestActionSheetContent ===
+// === Module 17732: JoinRequestActionSheetContent ===
 
-// Module 17728 (JoinRequestActionSheetContent)
+// Module 17732 (JoinRequestActionSheetContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,8 +11,8 @@ import Text_Text from "Text/Text" /* 5187 */;
 import CircleXIcon from "CircleXIcon" /* 6573 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7144 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
-import HourglassIcon from "HourglassIcon" /* 11826 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 17726 */;
+import HourglassIcon from "HourglassIcon" /* 11845 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 17730 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
@@ -105,7 +105,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                             }
                             if (cResult[29] !== user) {
                               const obj4 = { user };
-                              const tmp29 = closure_8(joinRequest(14193), obj4);
+                              const tmp29 = closure_8(joinRequest(14197), obj4);
                               cResult[29] = user;
                               cResult[30] = tmp29;
                               let tmp27 = tmp29;
@@ -151,7 +151,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                                   }
                                 }
                                 const obj7 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: tmp23, children: tmp30 };
-                                const tmp36 = closure_8(joinRequest(10841), obj7);
+                                const tmp36 = closure_8(joinRequest(10857), obj7);
                                 cResult[35] = gradientFallbackBackground;
                                 cResult[36] = primaryColor;
                                 cResult[37] = secondaryColor;
@@ -173,7 +173,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                           }
                         }
                         const obj9 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-                        const tmp26 = closure_8(tmp(14111).PrimaryInfo, obj9);
+                        const tmp26 = closure_8(tmp(14115).PrimaryInfo, obj9);
                         cResult[25] = containerBackground;
                         cResult[26] = displayProfile;
                         cResult[27] = user;
@@ -268,17 +268,17 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj7.containerStyle = items3;
     const obj9 = { style: tmp3.primaryInfo, children: null };
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-    const items4 = [closure_8(tmp6(14111).PrimaryInfo, obj10), ];
+    const items4 = [closure_8(tmp6(14115).PrimaryInfo, obj10), ];
     const obj11 = { user };
-    items4[1] = closure_8(joinRequest(14193), obj11);
+    items4[1] = closure_8(joinRequest(14197), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
-    items2[1] = closure_8(joinRequest(10841), obj7);
+    items2[1] = closure_8(joinRequest(10857), obj7);
     obj4.children = items2;
     items1[1] = closure_9(View, obj4);
     obj2.children = items1;
     tmp9 = closure_9(closure_10, obj2);
-    const tmpResult = joinRequest(10841);
+    const tmpResult = joinRequest(10857);
   }
   return tmp9;
 }));
@@ -317,9 +317,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenIn
   const obj = interviewChannelId(576);
   const stateFromStores = Button(504).useStateFromStores(first, tmp5, tmp6);
   const ButtonResult = Button(504);
-  const joinRequestButtonActions = Button(13317).useJoinRequestButtonActions(joinRequest, interviewChannelId);
+  const joinRequestButtonActions = Button(13325).useJoinRequestButtonActions(joinRequest, interviewChannelId);
   ({ handleOpenInterview, submitting } = joinRequestButtonActions);
-  const ButtonResult1 = Button(13317);
+  const ButtonResult1 = Button(13325);
   if (ButtonResult2.isActionedApplicationStatus(joinRequest.applicationStatus)) {
     if (!stateFromStores) {
       return null;
@@ -369,9 +369,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenIn
     return tmp2;
   }, items1);
   const obj = interviewChannelId(504);
-  const joinRequestButtonActions = interviewChannelId(13317).useJoinRequestButtonActions(joinRequest, interviewChannelId);
+  const joinRequestButtonActions = interviewChannelId(13325).useJoinRequestButtonActions(joinRequest, interviewChannelId);
   ({ handleOpenInterview, submitting } = joinRequestButtonActions);
-  const obj2 = interviewChannelId(13317);
+  const obj2 = interviewChannelId(13325);
   if (!obj3.isActionedApplicationStatus(joinRequest.applicationStatus)) {
     const obj4 = { variant: "secondary", size: "md", icon: null, text: null, onPress: null, disabled: null };
     const obj5 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "sm" };
@@ -857,7 +857,7 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     tmp4 = cResult[1];
   }
   const obj = joinRequest(576);
-  const joinRequestButtonActions = joinRequest(13317).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, tmp4);
+  const joinRequestButtonActions = joinRequest(13325).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, tmp4);
   ({ approveRequest, rejectRequest, handleOpenInterview, submitting } = joinRequestButtonActions);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { color: nativeDefault.colors.WHITE, size: "lg" };
@@ -947,17 +947,17 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[5] = submitting;
   cResult[6] = tmp13;
   tmp12 = tmp13;
-  const tmpResult = joinRequest(13317);
+  const tmpResult = joinRequest(13325);
 }) : (function JoinRequestActionSheetApplicationActions(joinRequest) {
   joinRequest = joinRequest.joinRequest;
   const items = [joinRequest];
   const callback = noop.useCallback(() => {
     openJoinRequestActionSheetDefault(joinRequest);
   }, items);
-  const joinRequestButtonActions = joinRequest(13317).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
+  const joinRequestButtonActions = joinRequest(13325).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
   ({ submitting, approveRequest, rejectRequest, handleOpenInterview } = joinRequestButtonActions);
   const obj2 = { variant: "primary", icon: null, label: null, onPress: null, disabled: null };
-  const obj = joinRequest(13317);
+  const obj = joinRequest(13325);
   obj2.icon = closure_8(joinRequest(6473).CheckmarkLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
   const intl = joinRequest(1128).intl;
   obj2.label = intl.string(joinRequest(1128).t.BzjDQJ);
@@ -1468,7 +1468,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(17729), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
+  items1[4] = closure_8(memo(17733), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
   obj.children = items1;
   return closure_9(View, obj);
 });

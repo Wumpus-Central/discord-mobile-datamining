@@ -1,6 +1,6 @@
-// === Module 12313: useConjureMentionCandidates ===
+// === Module 12330: useConjureMentionCandidates ===
 
-// Module 12313 (useConjureMentionCandidates)
+// Module 12330 (useConjureMentionCandidates)
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;

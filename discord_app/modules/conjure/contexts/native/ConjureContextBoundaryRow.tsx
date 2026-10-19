@@ -1,6 +1,6 @@
-// === Module 12173: ConjureContextBoundaryRow ===
+// === Module 12191: ConjureContextBoundaryRow ===
 
-// Module 12173 (ConjureContextBoundaryRow)
+// Module 12191 (ConjureContextBoundaryRow)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   ({ projectId, contextSwitch } = arg0);
   const tmp4 = closure_7();
   const obj = action(576);
-  const conjureContextSwitchRow = action(11637).useConjureContextSwitchRow(projectId, contextSwitch);
+  const conjureContextSwitchRow = action(11653).useConjureContextSwitchRow(projectId, contextSwitch);
   if (null == conjureContextSwitchRow) {
     return null;
   } else {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj4 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-      const tmp14 = closure_4(tmp(11156).ChatPlusIcon, obj4);
+      const tmp14 = closure_4(tmp(11175).ChatPlusIcon, obj4);
       cResult[2] = tmp14;
       let tmp11 = tmp14;
     } else {
@@ -222,12 +222,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     cResult[7] = tmp21;
     tmp18 = tmp21;
   }
-  const obj2 = action(11637);
+  const obj2 = action(11653);
 }) : (function ConjureContextBoundaryRow(arg0) {
   let action;
   ({ projectId, contextSwitch } = arg0);
   const tmp = closure_7();
-  const conjureContextSwitchRow = action(11637).useConjureContextSwitchRow(projectId, contextSwitch);
+  const conjureContextSwitchRow = action(11653).useConjureContextSwitchRow(projectId, contextSwitch);
   if (null == conjureContextSwitchRow) {
     return null;
   } else {
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const items = [closure_4(View, obj4), , ];
     const obj5 = { style: tmp.contextLabel, accessible: true, accessibilityRole: "header", children: null };
     const obj6 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-    const items1 = [closure_4(tmp2(11156).ChatPlusIcon, obj6), ];
+    const items1 = [closure_4(tmp2(11175).ChatPlusIcon, obj6), ];
     const obj7 = { variant: "text-xs/semibold", color: "text-default", children: conjureContextSwitchRow.label };
     items1[1] = closure_4(tmp2(5187).Text, obj7);
     obj5.children = items1;
@@ -288,5 +288,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     obj2.children = items2;
     return closure_5(View, obj2);
   }
-  const obj = action(11637);
+  const obj = action(11653);
 });

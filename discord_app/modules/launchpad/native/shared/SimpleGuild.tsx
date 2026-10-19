@@ -1,12 +1,12 @@
-// === Module 18376: SimpleGuild ===
+// === Module 18380: SimpleGuild ===
 
-// Module 18376 (SimpleGuild)
+// Module 18380 (SimpleGuild)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import GuildIconDefault from "GuildIcon" /* 6436 */;
-import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 18377 */;
-import CutoutImageDefault from "CutoutImage" /* 18379 */;
-import useSimpleGuildSizeDefault from "useSimpleGuildSize" /* 18380 */;
+import useSimpleGuildDefaultColorsDefault from "useSimpleGuildDefaultColors" /* 18381 */;
+import CutoutImageDefault from "CutoutImage" /* 18383 */;
+import useSimpleGuildSizeDefault from "useSimpleGuildSize" /* 18384 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6362 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
   const tmpResult = guildId(504);
   const stateFromStoresObject = guildId(504).useStateFromStoresObject(tmp14, tmp16, tmp17);
   ({ unread: unread2, badge: badge2 } = stateFromStoresObject);
-  const tmpResult5 = guildId(18378);
+  const tmpResult5 = guildId(18382);
   const tmp20 = tmp4 ? tmpResult5.SimpleGuildContainerAnimated : tmpResult5.SimpleGuildContainer;
   if (cResult[7] === size) {
     if (cResult[8] === style) {
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
       }
     }
     const tmp22 = useSimpleGuildSizeDefault(tmp21);
-    const activityIndicatorState = guildId(17472).useActivityIndicatorState(guildId);
+    const activityIndicatorState = guildId(17476).useActivityIndicatorState(guildId);
     let tmp32 = unread2;
     if (!unread2) {
       tmp32 = tmp6;
@@ -350,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGu
     cResult[21] = tmp32;
     cResult[22] = tmp35Result;
     tmp33 = tmp35Result;
-    const tmpResult6 = guildId(17472);
+    const tmpResult6 = guildId(17476);
   }
   const obj10 = { size, style };
   cResult[7] = size;

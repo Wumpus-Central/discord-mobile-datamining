@@ -1,6 +1,6 @@
-// === Module 13883: AppStoreOverlayStatCardUtils ===
+// === Module 13887: AppStoreOverlayStatCardUtils ===
 
-// Module 13883 (AppStoreOverlayStatCardUtils)
+// Module 13887 (AppStoreOverlayStatCardUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatCardUtils.tsx");

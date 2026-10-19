@@ -1,23 +1,23 @@
-// === Module 12214: CaterpillarIllocon ===
+// === Module 12232: CaterpillarIllocon ===
 
-// Module 12214 (CaterpillarIllocon)
+// Module 12232 (CaterpillarIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import assetHelpers from "assetHelpers" /* 6550 */;
-import _modDef12215 from "module_12215" /* 12215 */;
-import _modDef12216 from "module_12216" /* 12216 */;
-import _modDef12217 from "module_12217" /* 12217 */;
+import _modDef12233 from "module_12233" /* 12233 */;
+import _modDef12234 from "module_12234" /* 12234 */;
+import _modDef12235 from "module_12235" /* 12235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12215 }, 3: null };
-const obj2 = { uri: _modDef12215 };
-obj[2] = { uri: _modDef12216 };
-const obj3 = { uri: _modDef12216 };
-obj[3] = { uri: _modDef12217 };
+let obj = { 1: null, 2: { uri: _modDef12233 }, 3: null };
+const obj2 = { uri: _modDef12233 };
+obj[2] = { uri: _modDef12234 };
+const obj3 = { uri: _modDef12234 };
+obj[3] = { uri: _modDef12235 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12217 };
+const obj4 = { uri: _modDef12235 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx");
 

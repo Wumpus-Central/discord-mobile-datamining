@@ -1,11 +1,11 @@
-// === Module 15828: KeyImage ===
+// === Module 15832: KeyImage ===
 
-// Module 15828 (KeyImage)
+// Module 15832 (KeyImage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import SecurityKeySpotIllustration from "SecurityKeySpotIllustration" /* 15829 */;
+import SecurityKeySpotIllustration from "SecurityKeySpotIllustration" /* 15833 */;
 import createStyles from "createStyles" /* 5191 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

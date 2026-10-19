@@ -1,9 +1,9 @@
-// === Module 14049: useConjurePresenceActivityImage ===
+// === Module 14053: useConjurePresenceActivityImage ===
 
-// Module 14049 (useConjurePresenceActivityImage)
+// Module 14053 (useConjurePresenceActivityImage)
 import shared from "shared" /* 5065 */;
 import useThemeDefault from "useTheme" /* 5127 */;
-import conjurePresenceActivityImageDefault from "conjurePresenceActivityImage" /* 14050 */;
+import conjurePresenceActivityImageDefault from "conjurePresenceActivityImage" /* 14054 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

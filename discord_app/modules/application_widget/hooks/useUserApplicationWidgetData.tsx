@@ -1,22 +1,22 @@
-// === Module 11685: useUserApplicationWidgetData ===
+// === Module 11704: useUserApplicationWidgetData ===
 
-// Module 11685 (useUserApplicationWidgetData)
+// Module 11704 (useUserApplicationWidgetData)
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7591 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8585 */;
-import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 11687 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 11688 */;
+import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 11706 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 11707 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 11686 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 11705 */;
 import UserProfileStore from "UserProfileStore" /* 7586 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11038 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11059 */;
 
 const require = globalThis.__r;
 
 require = fn;
-fn(11686).FetchState;
-const FetchState = fn(11038).FetchState;
+fn(11705).FetchState;
+const FetchState = fn(11059).FetchState;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationWidgetConfig(arg0) {
   _require = arg0;

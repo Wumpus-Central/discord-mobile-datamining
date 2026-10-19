@@ -1,14 +1,14 @@
-// === Module 12168: ConjureFileMention ===
+// === Module 12186: ConjureFileMention ===
 
-// Module 12168 (ConjureFileMention)
+// Module 12186 (ConjureFileMention)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import conjureFileMentions from "conjureFileMentions" /* 12105 */;
-import conjureStoredAttachments from "conjureStoredAttachments" /* 12169 */;
-import ConjureFileThumbnailDefault from "ConjureFileThumbnail" /* 12170 */;
+import conjureFileMentions from "conjureFileMentions" /* 12124 */;
+import conjureStoredAttachments from "conjureStoredAttachments" /* 12187 */;
+import ConjureFileThumbnailDefault from "ConjureFileThumbnail" /* 12188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

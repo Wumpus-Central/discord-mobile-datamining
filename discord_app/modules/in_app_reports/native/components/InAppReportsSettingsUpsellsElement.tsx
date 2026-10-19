@@ -1,13 +1,13 @@
-// === Module 14353: InAppReportsSettingsUpsellsElement ===
+// === Module 14357: InAppReportsSettingsUpsellsElement ===
 
-// Module 14353 (InAppReportsSettingsUpsellsElement)
+// Module 14357 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5206 */;
 import useMountEffectDefault from "useMountEffect" /* 5496 */;
 import SettingsIcon from "SettingsIcon" /* 7368 */;
 import openUserSettings from "openUserSettings" /* 7370 */;
 import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7992 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14347 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14351 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -68,7 +68,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
       }
     }
     const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-    const tmp16 = closure_9(tmp7(14347), obj2);
+    const tmp16 = closure_9(tmp7(14351), obj2);
     cResult[6] = description;
     cResult[7] = disabledTitle;
     cResult[8] = tmp5;

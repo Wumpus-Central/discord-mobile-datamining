@@ -1,6 +1,6 @@
-// === Module 12045: formatPollMessageChatData ===
+// === Module 12064: formatPollMessageChatData ===
 
-// Module 12045 (formatPollMessageChatData)
+// Module 12064 (formatPollMessageChatData)
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4832 */;
@@ -9,7 +9,7 @@ import UnicodeEmojisDefault from "UnicodeEmojis" /* 4859 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4863 */;
 import _mod6001 from "module_6001" /* 6001 */;
 import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9249 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 12048 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 12067 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import EmojiStore from "EmojiStore" /* 6243 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -165,7 +165,7 @@ function computeBasicPollChatData(message, arg1, arg2) {
     return obj6;
   }
 }
-const getPollState = fn(10797).getPollState;
+const getPollState = fn(10813).getPollState;
 const Constants = fn(1087);
 ({ MessageStates: c10, EMPTY_STRING_SNOWFLAKE_ID } = Constants);
 const ThemeTypes = fn(1098).ThemeTypes;

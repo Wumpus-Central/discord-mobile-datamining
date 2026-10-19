@@ -18,7 +18,7 @@ import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8403 */;
 import HighlightJsAnsiLanguage from "HighlightJsAnsiLanguage" /* 8424 */;
 import TimestampUtils from "TimestampUtils" /* 8428 */;
 import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8430 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 14840 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 14844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

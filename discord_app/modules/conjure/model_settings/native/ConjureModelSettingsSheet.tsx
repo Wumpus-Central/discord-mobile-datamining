@@ -1,17 +1,17 @@
-// === Module 11658: ConjureModelSettingsSheet ===
+// === Module 11677: ConjureModelSettingsSheet ===
 
-// Module 11658 (ConjureModelSettingsSheet)
+// Module 11677 (ConjureModelSettingsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
 import ActionSheet from "ActionSheet" /* 7175 */;
-import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 10992 */;
-import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 11597 */;
+import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 11013 */;
+import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 11613 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10962 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10975 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10978 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10991 */;
 
 require = fn;
 const View = fn(17).View;

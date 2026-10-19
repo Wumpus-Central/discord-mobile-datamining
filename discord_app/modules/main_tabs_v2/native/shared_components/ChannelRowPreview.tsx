@@ -1,6 +1,6 @@
-// === Module 13529: ChannelRowPreview ===
+// === Module 13534: ChannelRowPreview ===
 
-// Module 13529 (ChannelRowPreview)
+// Module 13534 (ChannelRowPreview)
 import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import useToken from "useToken" /* 4913 */;
@@ -16,12 +16,12 @@ import PhoneCallIcon from "PhoneCallIcon" /* 9621 */;
 import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9623 */;
 import AttachmentIcon from "AttachmentIcon" /* 10327 */;
 import MusicIcon from "MusicIcon" /* 10551 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10823 */;
-import VideoIcon from "VideoIcon" /* 11168 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11879 */;
-import ChannelListLayout from "ChannelListLayout" /* 11882 */;
-import StickerIcon from "StickerIcon" /* 13214 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 13517 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10839 */;
+import VideoIcon from "VideoIcon" /* 11187 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11898 */;
+import ChannelListLayout from "ChannelListLayout" /* 11901 */;
+import StickerIcon from "StickerIcon" /* 13222 */;
+import useFormattedMessagePreview from "useFormattedMessagePreview" /* 13522 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;

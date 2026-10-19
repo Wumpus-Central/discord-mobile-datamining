@@ -1,6 +1,6 @@
-// === Module 17922: SpamRequestsScreen ===
+// === Module 17926: SpamRequestsScreen ===
 
-// Module 17922 (SpamRequestsScreen)
+// Module 17926 (SpamRequestsScreen)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;

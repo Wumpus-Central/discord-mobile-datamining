@@ -1,13 +1,13 @@
-// === Module 17138: YouBarStackNavigator ===
+// === Module 17142: YouBarStackNavigator ===
 
-// Module 17138 (YouBarStackNavigator)
+// Module 17142 (YouBarStackNavigator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import Navigator from "Navigator" /* 6965 */;
 import LayerScope from "LayerScope" /* 7124 */;
 import ICYMIExperiment from "ICYMIExperiment" /* 8746 */;
-import notifications_Notifications from "notifications/Notifications" /* 17542 */;
-import useNotificationPermissionPromptDefault from "useNotificationPermissionPrompt" /* 17663 */;
+import notifications_Notifications from "notifications/Notifications" /* 17546 */;
+import useNotificationPermissionPromptDefault from "useNotificationPermissionPrompt" /* 17667 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5034 */;
@@ -24,7 +24,7 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(10947).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(10963).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const NativeStackNavigator = fn(9644);

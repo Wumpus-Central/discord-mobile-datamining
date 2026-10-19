@@ -1,9 +1,9 @@
-// === Module 14319: getApplicationFromMessage ===
+// === Module 14323: getApplicationFromMessage ===
 
-// Module 14319 (getApplicationFromMessage)
+// Module 14323 (getApplicationFromMessage)
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 
-const SpotifyApplication = fn(14316).SpotifyApplication;
+const SpotifyApplication = fn(14320).SpotifyApplication;
 const isSpotifyParty = fn(8732).isSpotifyParty;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");

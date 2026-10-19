@@ -1,8 +1,8 @@
-// === Module 11677: conjurePreviewModes ===
+// === Module 11696: conjurePreviewModes ===
 
-// Module 11677 (conjurePreviewModes)
+// Module 11696 (conjurePreviewModes)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6294 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11012 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11033 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,12 +1,12 @@
-// === Module 11294: ActivityTile ===
+// === Module 11312: ActivityTile ===
 
-// Module 11294 (ActivityTile)
+// Module 11312 (ActivityTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import native2 from "native" /* 4922 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11300 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11318 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -500,7 +500,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
               const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(11204)(obj4), done: false };
+              const obj5 = { value: v1(11223)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -510,8 +510,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(11299).setOrientationLockState(closure_128_3);
-          const obj = tmp2(11299);
+          const result = tmp2(11317).setOrientationLockState(closure_128_3);
+          const obj = tmp2(11317);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

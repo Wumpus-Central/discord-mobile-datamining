@@ -1,9 +1,9 @@
-// === Module 14248: useAvatarDecorationSections ===
+// === Module 14252: useAvatarDecorationSections ===
 
-// Module 14248 (useAvatarDecorationSections)
+// Module 14252 (useAvatarDecorationSections)
 import util from "util" /* 1128 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7542 */;
-import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 14249 */;
+import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 14253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7530 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7546 */;
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(14249)(useMemo(() => {
+  return first(14253)(useMemo(() => {
     let obj = CollectiblesUtils;
     const avatarDecorations = obj.getAvatarDecorations(stateFromStores, first);
     const reduced = avatarDecorations.reduce((premium_purchase, skuId) => {

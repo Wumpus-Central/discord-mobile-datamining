@@ -1,25 +1,25 @@
-// === Module 13066: ChatInputNotificationNudge ===
+// === Module 13074: ChatInputNotificationNudge ===
 
-// Module 13066 (ChatInputNotificationNudge)
+// Module 13074 (ChatInputNotificationNudge)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import useIsAppDMDefault from "useIsAppDM" /* 11957 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13069 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13070 */;
+import useIsAppDMDefault from "useIsAppDM" /* 11976 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13077 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13078 */;
 import _slicedToArray from "module_32" /* 32 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6222 */;
 
-const PostReactionPermissionNudgeExperimentDefault = tmp9(13078);
+const PostReactionPermissionNudgeExperimentDefault = tmp9(13086);
 require = fn;
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const PermissionPromptType = fn(13067).PermissionPromptType;
+const PermissionPromptType = fn(13075).PermissionPromptType;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, NOOP: closure_11 } = Constants);
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
-const NotificationPermissionConstants = fn(13068);
+const NotificationPermissionConstants = fn(13076);
 ({ EventActionLocation: map1, EventActionType: closure_14, NotificationNudgeAnalyticsAction: closure_15, NotificationNudgeSurface: closure_16 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInpu
   }
   const tmpResult = channel(504);
   let CHANNEL_BANNER = PermissionPromptType;
-  const shouldShowPushNotificationNudgeByPromptType = channel(13069).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
+  const shouldShowPushNotificationNudgeByPromptType = channel(13077).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "ChatInputNotificationNudge" };
     cResult[3] = obj2;
@@ -305,9 +305,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInpu
   } else {
     tmp12 = cResult[3];
   }
-  const tmpResult5 = channel(13069);
+  const tmpResult5 = channel(13077);
   const tmp9Result = PostReactionPermissionNudgeExperimentDefault;
-  const shouldShowPushNotificationNudgeByPromptType1 = channel(13069).useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER.POST_REACTION_BANNER);
+  const shouldShowPushNotificationNudgeByPromptType1 = channel(13077).useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER.POST_REACTION_BANNER);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { cooldownDurationMs };
     cResult[4] = obj3;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInpu
   } else {
     tmp14 = cResult[4];
   }
-  const tmpResult6 = channel(13069);
+  const tmpResult6 = channel(13077);
   let prop = null;
   if (tmp10) {
     prop = null;
@@ -496,11 +496,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInpu
     tmp5 = !useIsAppDMDefault(channel);
   }
   const obj = channel(504);
-  const shouldShowPushNotificationNudgeByPromptType = channel(13069).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
-  const tmpResult = channel(13069);
+  const shouldShowPushNotificationNudgeByPromptType = channel(13077).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
+  const tmpResult = channel(13077);
   const tmp4Result = PostReactionPermissionNudgeExperimentDefault;
-  const shouldShowPushNotificationNudgeByPromptType1 = channel(13069).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
-  const tmpResult4 = channel(13069);
+  const shouldShowPushNotificationNudgeByPromptType1 = channel(13077).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
+  const tmpResult4 = channel(13077);
   let prop = null;
   if (tmp5) {
     prop = null;

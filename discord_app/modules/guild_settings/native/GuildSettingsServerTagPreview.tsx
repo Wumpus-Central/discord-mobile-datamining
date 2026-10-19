@@ -1,6 +1,6 @@
-// === Module 14924: GuildSettingsServerTagPreview ===
+// === Module 14928: GuildSettingsServerTagPreview ===
 
-// Module 14924 (GuildSettingsServerTagPreview)
+// Module 14928 (GuildSettingsServerTagPreview)
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               let tmp25 = cResult[15];
             }
             if (cResult[16] !== card.avatar) {
-              const obj2 = { source: onAdopted(13545), style: card.avatar, importantForAccessibility: "no" };
+              const obj2 = { source: onAdopted(13550), style: card.avatar, importantForAccessibility: "no" };
               const tmp29 = closure_9(onAdopted(5128), obj2);
               cResult[16] = card.avatar;
               cResult[17] = tmp29;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                                       let tmp72 = cResult[50];
                                     }
                                     if (cResult[51] !== card.avatar) {
-                                      const obj8 = { source: onAdopted(14970), style: card.avatar, importantForAccessibility: "no" };
+                                      const obj8 = { source: onAdopted(14974), style: card.avatar, importantForAccessibility: "no" };
                                       const tmp76 = closure_9(onAdopted(5128), obj8);
                                       cResult[51] = card.avatar;
                                       cResult[52] = tmp76;
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                     if (null != badge) {
                       const size = { badge, primaryTintColor: primaryColor, secondaryTintColor: secondaryColor, width: null, height: null };
                       ({ SIZE_12: obj14.width, SIZE_12: obj14.height } = GuildTagBadgeSize);
-                      tmp52Result = closure_9(Card(14926).GuildBadge, size);
+                      tmp52Result = closure_9(Card(14930).GuildBadge, size);
                     }
                     obj20.guildBadge = tmp52Result;
                     tmp52Result2 = closure_9(Card(9130).BaseGuildTagChiplet, obj20);
@@ -586,7 +586,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             dependencyMap(true);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(14925).adoptGuildIdentity(guildId, true), done: false };
+            const obj5 = { value: tmp2(14929).adoptGuildIdentity(guildId, true), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -631,7 +631,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   obj6.style = items3;
   const obj7 = { source: null, style: null, importantForAccessibility: "no" };
   const tmp10 = _slicedToArray(noop.useState(false), 2);
-  obj7.source = onAdopted(13545);
+  obj7.source = onAdopted(13550);
   obj7.style = tmp.avatar;
   const items4 = [closure_9(onAdopted(5128), obj7), ];
   const obj8 = { style: tmp.messageBody, children: null };
@@ -659,7 +659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     if (null != badge) {
       const size = { badge, primaryTintColor: primaryColor, secondaryTintColor: secondaryColor, width: null, height: null };
       ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-      tmp15Result = closure_9(tmp2(14926).GuildBadge, size);
+      tmp15Result = closure_9(tmp2(14930).GuildBadge, size);
     }
     obj14.guildBadge = tmp15Result;
     tmp15Result3 = closure_9(tmp2(9130).BaseGuildTagChiplet, obj14);
@@ -682,7 +682,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj18 = { source: null, style: null, importantForAccessibility: "no" };
   const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
   const tmp4Result = onAdopted(5128);
-  obj18.source = onAdopted(14970);
+  obj18.source = onAdopted(14974);
   obj18.style = tmp.avatar;
   const items11 = [closure_9(onAdopted(5128), obj18), ];
   const obj19 = { style: tmp.messageBody, children: null };

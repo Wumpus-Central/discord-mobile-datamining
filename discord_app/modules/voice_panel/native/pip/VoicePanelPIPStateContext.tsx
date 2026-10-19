@@ -1,6 +1,6 @@
-// === Module 18184: VoicePanelPIPStateContext ===
+// === Module 18188: VoicePanelPIPStateContext ===
 
-// Module 18184 (VoicePanelPIPStateContext)
+// Module 18188 (VoicePanelPIPStateContext)
 import noop from "module_19" /* 19 */;
 
 let size = { id: "end", mode: "toCharArray$esjava$1", width: false, height: null, containerHeight: 0, showSecondaryPIP: null, scale: null };

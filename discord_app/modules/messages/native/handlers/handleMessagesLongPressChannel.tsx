@@ -1,6 +1,6 @@
-// === Module 11136: handleMessagesLongPressChannel ===
+// === Module 11155: handleMessagesLongPressChannel ===
 
-// Module 11136 (handleMessagesLongPressChannel)
+// Module 11155 (handleMessagesLongPressChannel)
 import ChannelUtils from "ChannelUtils" /* 5514 */;
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 9971 */;
 import size from "module_2" /* 2 */;

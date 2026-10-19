@@ -1,6 +1,6 @@
-// === Module 11235: EmbeddedActivitiesActionCreators ===
+// === Module 11254: EmbeddedActivitiesActionCreators ===
 
-// Module 11235 (EmbeddedActivitiesActionCreators)
+// Module 11254 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
@@ -8,7 +8,7 @@ import DismissibleContentUtils from "DismissibleContentUtils" /* 2053 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6315 */;
-import createProxyTicket from "createProxyTicket" /* 11026 */;
+import createProxyTicket from "createProxyTicket" /* 11047 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;

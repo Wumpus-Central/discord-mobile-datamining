@@ -1,6 +1,6 @@
-// === Module 12674: ForwardModal ===
+// === Module 12691: ForwardModal ===
 
-// Module 12674 (ForwardModal)
+// Module 12691 (ForwardModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ToastUtils from "ToastUtils" /* 4903 */;
@@ -10,10 +10,10 @@ import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 
 import ChannelUtils from "ChannelUtils" /* 5514 */;
 import ClipboardUtils from "ClipboardUtils" /* 7162 */;
 import HeaderActionButton from "HeaderActionButton" /* 7365 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12671 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12672 */;
-import formatResults from "formatResults" /* 12676 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 12678 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12688 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 12689 */;
+import formatResults from "formatResults" /* 12693 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 12695 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(12675).MAX_DESTINATION_COUNT;
+const MAX_DESTINATION_COUNT = fn(12692).MAX_DESTINATION_COUNT;
 let UserRowModes = fn(10520).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
                 if (forwardOptions(source[27])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5401).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(12681), {
+                    closure_1_0(5401).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(12698), {
                       onConfirm() {
                         return closure_0(true);
                       },

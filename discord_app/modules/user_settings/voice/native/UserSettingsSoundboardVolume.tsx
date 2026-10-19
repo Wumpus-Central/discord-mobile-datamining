@@ -1,10 +1,10 @@
-// === Module 11454: UserSettingsSoundboardVolume ===
+// === Module 11472: UserSettingsSoundboardVolume ===
 
-// Module 11454 (UserSettingsSoundboardVolume)
+// Module 11472 (UserSettingsSoundboardVolume)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7130 */;
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7324 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11451 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11469 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
     obj7.children = items;
     obj6.subLabel = closure_7(closure_6, obj7);
     obj5.children = closure_5(tmp(6457).TableRow, obj6);
-    const tmp30 = closure_5(tmp(11442).UserSettingsTableRowGroup, obj5);
+    const tmp30 = closure_5(tmp(11460).UserSettingsTableRowGroup, obj5);
     cResult[14] = tmp23;
     cResult[15] = tmp18;
     cResult[16] = tmp30;
@@ -156,5 +156,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Soundboa
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
   obj2.children = closure_5(analyticsLocations(6457).TableRow, obj3);
-  return closure_5(analyticsLocations(11442).UserSettingsTableRowGroup, obj2);
+  return closure_5(analyticsLocations(11460).UserSettingsTableRowGroup, obj2);
 });

@@ -1,10 +1,10 @@
-// === Module 16949: EncryptionSetting ===
+// === Module 16953: EncryptionSetting ===
 
-// Module 16949 (EncryptionSetting)
+// Module 16953 (EncryptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 16950 */;
+import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 16954 */;
 import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5230 */;
 
 require = fn;
@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureF
   const items = [SecureFramesPersistedStore];
   return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
 });
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureFramesEncryptionDescription() {
   const cResult = c.c(2);
   const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();

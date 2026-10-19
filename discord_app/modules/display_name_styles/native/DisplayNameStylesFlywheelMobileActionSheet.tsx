@@ -1,11 +1,11 @@
-// === Module 18084: DisplayNameStylesFlywheelMobileActionSheet ===
+// === Module 18088: DisplayNameStylesFlywheelMobileActionSheet ===
 
-// Module 18084 (DisplayNameStylesFlywheelMobileActionSheet)
+// Module 18088 (DisplayNameStylesFlywheelMobileActionSheet)
 import nativeDefault from "native" /* 587 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5033 */;
 import openUserSettings from "openUserSettings" /* 7370 */;
-import openPremiumTryItOutModal from "openPremiumTryItOutModal" /* 15692 */;
+import openPremiumTryItOutModal from "openPremiumTryItOutModal" /* 15696 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   }
   dependencyMap = tmp13;
   const tmpResult = markAsDismissed(504);
-  enabled2 = markAsDismissed(15624).useTryItOutMobileRefreshConfig("DisplayNameStylesFlywheelMobileActionSheet").enabled;
+  enabled2 = markAsDismissed(15628).useTryItOutMobileRefreshConfig("DisplayNameStylesFlywheelMobileActionSheet").enabled;
   if (cResult[4] !== tmp13) {
     const intl = tmp(1128).intl;
     const string = intl.string;
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                 return;
               }
             }
-            const tmp25 = closure_9(tmp(18085).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+            const tmp25 = closure_9(tmp(18089).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
           }
           cResult[16] = enabled;
           cResult[17] = tmp25;
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                 return;
               }
             }
-            const obj6 = { uri: tmp5(18089) };
+            const obj6 = { uri: tmp5(18093) };
             tmp32[0] = obj6;
             tmp32[1] = tmp7.image;
             tmp32[3] = !enabled;
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                 return;
               }
             }
-            tmp29[0] = tmp5(18089);
+            tmp29[0] = tmp5(18093);
             tmp29[1] = tmp7.image;
             tmp28Result = closure_9(tmp(9303).APNGPlayer, tmp29);
           }
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     cResult[8] = markAsDismissed;
     cResult[9] = fn2;
   }
-  const tmpResult2 = markAsDismissed(15624);
+  const tmpResult2 = markAsDismissed(15628);
 }) : (function DisplayNameStylesFlywheelMobileActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   let enabled2;
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   let result = ref(4864).canUsePremiumProfileCustomization(stateFromStores);
   dependencyMap = result;
   const obj5 = ref(4864);
-  enabled2 = markAsDismissed(15624).useTryItOutMobileRefreshConfig("DisplayNameStylesFlywheelMobileActionSheet").enabled;
+  enabled2 = markAsDismissed(15628).useTryItOutMobileRefreshConfig("DisplayNameStylesFlywheelMobileActionSheet").enabled;
   const intl = markAsDismissed(1128).intl;
   const string = intl.string;
   const tmp10 = ref(2981);
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const obj10 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = closure_9(tmp2(18085).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = closure_9(tmp2(18089).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result, ];
   if (enabled) {
@@ -386,19 +386,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   } else {
     if (tmp2Result.isIOS()) {
       const obj17 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj18 = { uri: tmp4(18089) };
+      const obj18 = { uri: tmp4(18093) };
       obj17.source = obj18;
       obj17.style = tmp6.image;
       obj17.enableAnimation = !enabled;
       let tmp15Result2 = closure_9(tmp4(5128), obj17);
       const tmp4Result = tmp4(5128);
     } else {
-      const obj19 = { url: tmp4(18089), style: tmp6.image, autoplay: true };
+      const obj19 = { url: tmp4(18093), style: tmp6.image, autoplay: true };
       tmp15Result2 = closure_9(tmp2(9303).APNGPlayer, obj19);
     }
     tmp2Result = tmp2(1384);
   }
-  const obj6 = markAsDismissed(15624);
+  const obj6 = markAsDismissed(15628);
   const obj9 = {
     onPress() {
       const current = ref.current;

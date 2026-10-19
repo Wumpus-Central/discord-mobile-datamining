@@ -1,6 +1,6 @@
-// === Module 16905: ShopNitroUpsellBanner ===
+// === Module 16909: ShopNitroUpsellBanner ===
 
-// Module 16905 (ShopNitroUpsellBanner)
+// Module 16909 (ShopNitroUpsellBanner)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
@@ -14,7 +14,7 @@ import LinearGradientDefault from "LinearGradient" /* 5491 */;
 import Card from "Card" /* 6459 */;
 import XSmallIcon from "XSmallIcon" /* 6485 */;
 import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10081 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 16901 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 16905 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

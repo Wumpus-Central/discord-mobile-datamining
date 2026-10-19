@@ -1,21 +1,21 @@
-// === Module 18234: VoicePanelHeaderSpeaker ===
+// === Module 18238: VoicePanelHeaderSpeaker ===
 
-// Module 18234 (VoicePanelHeaderSpeaker)
+// Module 18238 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import dismissible_content from "dismissible_content" /* 2052 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5033 */;
 import NativeViewDefault from "NativeView" /* 6439 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9065 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 13955 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 13956 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18165 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 18237 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 13959 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 13960 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18169 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 18241 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5210 */;
 import AudioRouteStore from "AudioRouteStore" /* 5231 */;
-import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 18236 */;
+import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 18240 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import SessionsStore from "SessionsStore" /* 5211 */;
 
@@ -23,7 +23,7 @@ require = fn;
 let closure_3 = ["ref"];
 let closure_4 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(18235).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(18239).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1087).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -522,7 +522,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "a" };
+        const obj = { onPress, ref: "r" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };

@@ -1,6 +1,6 @@
-// === Module 16982: SafetyGuildSettingMessageRequests ===
+// === Module 16986: SafetyGuildSettingMessageRequests ===
 
-// Module 16982 (SafetyGuildSettingMessageRequests)
+// Module 16986 (SafetyGuildSettingMessageRequests)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
@@ -9,10 +9,10 @@ import common_AlertDefault from "common/Alert" /* 5498 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6174 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6961 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7764 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15859 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16975 */;
-import useShouldDisableMessageRequestSettings from "useShouldDisableMessageRequestSettings" /* 16983 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16984 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15863 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16979 */;
+import useShouldDisableMessageRequestSettings from "useShouldDisableMessageRequestSettings" /* 16987 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16988 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
@@ -45,9 +45,9 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(16972);
+const UserSettingsSafetySelectedGuildStore = fn(16976);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11066).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+let closure_6 = fn(11085).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDisabled() {
@@ -109,7 +109,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDisable
   return shouldDisableMessageRequestSettings;
 });
 let closure_8 = tmp4;
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
   const cResult = c.c(3);
   const selectedGuildId = hasOwnProperty().selectedGuildId;

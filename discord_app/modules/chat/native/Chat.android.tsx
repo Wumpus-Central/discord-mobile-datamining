@@ -1,13 +1,13 @@
-// === Module 12618: Chat ===
+// === Module 12635: Chat ===
 
-// Module 12618 (Chat)
+// Module 12635 (Chat)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
 import ChatNativeComponentDefault from "ChatNativeComponent" /* 9898 */;
-import useNavigationTTIContentPainted from "useNavigationTTIContentPainted" /* 12619 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12625 */;
-import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 12628 */;
+import useNavigationTTIContentPainted from "useNavigationTTIContentPainted" /* 12636 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12642 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 12645 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
@@ -65,7 +65,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DCDCha
   const obj4 = { style: tmp4.chatList, floatingChatInputEnabled: true, onContentPaintStateChange: tmp8, children: tmp9 };
 }) : (function DCDChatList() {
   const tmp = closure_9();
-  navigationTTIContentPainted = navigationTTIContentPainted(12619).useNavigationTTIContentPainted();
+  navigationTTIContentPainted = navigationTTIContentPainted(12636).useNavigationTTIContentPainted();
   const items = [navigationTTIContentPainted];
   const memo = noop.useMemo(() => {
     const Gesture = navigationTTIContentPainted(dependencyMap[8]).Gesture;
@@ -75,8 +75,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DCDCha
   const callback = noop.useCallback((nativeEvent) => navigationTTIContentPainted(nativeEvent.nativeEvent), items);
   const obj2 = { gesture: memo, children: null };
   const obj3 = { style: tmp.chatList, floatingChatInputEnabled: true, onContentPaintStateChange: callback, children: null };
-  const obj = navigationTTIContentPainted(12619);
-  obj3.children = closure_7(navigationTTIContentPainted(12625).TTIFirstContentfulPaint, { label: "chat_list_android" });
+  const obj = navigationTTIContentPainted(12636);
+  obj3.children = closure_7(navigationTTIContentPainted(12642).TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj2.children = closure_7(ChatListNativeComponentDefault, obj3);
   return closure_7(navigationTTIContentPainted(6612).GestureDetector, obj2);
 });

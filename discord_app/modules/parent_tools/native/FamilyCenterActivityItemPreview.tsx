@@ -1,6 +1,6 @@
-// === Module 15945: FamilyCenterActivityItemPreview ===
+// === Module 15949: FamilyCenterActivityItemPreview ===
 
-// Module 15945 (FamilyCenterActivityItemPreview)
+// Module 15949 (FamilyCenterActivityItemPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils from "utils" /* 1992 */;
@@ -11,8 +11,8 @@ import NameplateUtils from "NameplateUtils" /* 9314 */;
 import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9317 */;
 import NitroWheelIcon2 from "NitroWheelIcon" /* 9327 */;
 import BoostGemIcon from "BoostGemIcon" /* 9709 */;
-import ShopIcon from "ShopIcon" /* 11950 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15944 */;
+import ShopIcon from "ShopIcon" /* 11969 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15948 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,15 +21,15 @@ let closure_4 = fn(8621).PROFILE_FRAME_ASPECT_RATIO;
 const jsx = fn(21).jsx;
 const createStyles = fn(5191);
 let obj2 = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
-let size = { width: fn(15944).PREVIEW_SIZE, height: fn(15944).PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
+let size = { width: fn(15948).PREVIEW_SIZE, height: fn(15948).PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
 obj2.purchasePlaceholder = size;
-const size1 = { width: fn(15944).PREVIEW_SIZE, height: fn(15944).PREVIEW_SIZE, marginRight: 12 };
+const size1 = { width: fn(15948).PREVIEW_SIZE, height: fn(15948).PREVIEW_SIZE, marginRight: 12 };
 obj2.avatarDecorationPreview = size1;
-const size2 = { width: fn(15944).PREVIEW_SIZE, height: fn(15944).PREVIEW_SIZE, marginRight: 12, borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
+const size2 = { width: fn(15948).PREVIEW_SIZE, height: fn(15948).PREVIEW_SIZE, marginRight: 12, borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 obj2.nameplateContainer = size2;
-const size3 = { position: "absolute", right: 0, width: fn(15944).PREVIEW_SIZE * fn(15944).NAMEPLATE_ASPECT_RATIO, height: fn(15944).PREVIEW_SIZE };
+const size3 = { position: "absolute", right: 0, width: fn(15948).PREVIEW_SIZE * fn(15948).NAMEPLATE_ASPECT_RATIO, height: fn(15948).PREVIEW_SIZE };
 obj2.nameplatePreview = size3;
-const size4 = { width: fn(15944).PREVIEW_SIZE, height: fn(15944).PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
+const size4 = { width: fn(15948).PREVIEW_SIZE, height: fn(15948).PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
 obj2.profileFrameContainer = size4;
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

@@ -1,14 +1,14 @@
-// === Module 13476: ForumChannelEmptyState ===
+// === Module 13481: ForumChannelEmptyState ===
 
-// Module 13476 (ForumChannelEmptyState)
+// Module 13481 (ForumChannelEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import shared from "shared" /* 5065 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import _modDef13477 from "module_13477" /* 13477 */;
-import _modDef13478 from "module_13478" /* 13478 */;
+import _modDef13482 from "module_13482" /* 13482 */;
+import _modDef13483 from "module_13483" /* 13483 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,9 +44,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp9 = cResult[4];
     }
     if (tmpResult2.isThemeLight(tmpResult.useThemeContext().theme)) {
-      let tmp5Result = _modDef13477;
+      let tmp5Result = _modDef13482;
     } else {
-      tmp5Result = _modDef13478;
+      tmp5Result = _modDef13483;
     }
     if (cResult[5] === tmp4.image) {
       if (cResult[6] === tmp5Result) {
@@ -158,9 +158,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef13477;
+    let tmp4Result = _modDef13482;
   } else {
-    tmp4Result = _modDef13478;
+    tmp4Result = _modDef13483;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

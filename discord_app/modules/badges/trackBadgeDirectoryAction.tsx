@@ -1,6 +1,6 @@
-// === Module 10908: trackBadgeDirectoryAction ===
+// === Module 10924: trackBadgeDirectoryAction ===
 
-// Module 10908 (trackBadgeDirectoryAction)
+// Module 10924 (trackBadgeDirectoryAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserStore from "UserStore" /* 1392 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8590 */;

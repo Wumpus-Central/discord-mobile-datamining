@@ -1,6 +1,6 @@
-// === Module 12749: CheckpointScreen ===
+// === Module 12766: CheckpointScreen ===
 
-// Module 12749 (CheckpointScreen)
+// Module 12766 (CheckpointScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6942 */;

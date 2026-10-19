@@ -1,6 +1,6 @@
-// === Module 12761: CheckpointGamesStatsScreen ===
+// === Module 12778: CheckpointGamesStatsScreen ===
 
-// Module 12761 (CheckpointGamesStatsScreen)
+// Module 12778 (CheckpointGamesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -10,12 +10,12 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef3141 from "module_3141" /* 3141 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import GameControllerIcon from "GameControllerIcon" /* 9514 */;
-import CheckpointTextDefault from "CheckpointText" /* 12747 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12749 */;
-import NumberAnimationDefault from "NumberAnimation" /* 12753 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12758 */;
+import CheckpointTextDefault from "CheckpointText" /* 12764 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12766 */;
+import NumberAnimationDefault from "NumberAnimation" /* 12770 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12775 */;
 import GameStore from "GameStore" /* 2022 */;
-import CheckpointStore from "CheckpointStore" /* 12725 */;
+import CheckpointStore from "CheckpointStore" /* 12742 */;
 import CheckpointConstants from "CheckpointConstants" /* 5537 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5191 */;

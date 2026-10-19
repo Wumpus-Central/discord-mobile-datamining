@@ -1,6 +1,6 @@
-// === Module 16302: InputModeSetting ===
+// === Module 16306: InputModeSetting ===
 
-// Module 16302 (InputModeSetting)
+// Module 16306 (InputModeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 require = fn;
 const InputModes = fn(5216).InputModes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputModeSettingTrailing() {
   let Q8gkVL = dependencyMap;
   const cResult = c.c(4);
@@ -100,7 +100,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return stringResult;
   }),
-  onPress: fn(11448).handleInputModePress,
+  onPress: fn(11466).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t.nuFtHH)];

@@ -1,6 +1,6 @@
-// === Module 15931: FamilyCenterActivityCard ===
+// === Module 15935: FamilyCenterActivityCard ===
 
-// Module 15931 (FamilyCenterActivityCard)
+// Module 15935 (FamilyCenterActivityCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -13,15 +13,15 @@ import useUserLinks from "useUserLinks" /* 8005 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8006 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 8008 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8946 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12653 */;
-import _modDef14463 from "module_14463" /* 14463 */;
-import _modDef15932 from "module_15932" /* 15932 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 15934 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 15935 */;
-import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal" /* 15937 */;
-import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity" /* 15938 */;
-import FamilyCenterActivitySectionDefault from "FamilyCenterActivitySection" /* 15941 */;
-import FamilyCenterSettingsControlsDefault from "FamilyCenterSettingsControls" /* 15948 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12670 */;
+import _modDef14467 from "module_14467" /* 14467 */;
+import _modDef15936 from "module_15936" /* 15936 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 15938 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 15939 */;
+import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal" /* 15941 */;
+import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity" /* 15942 */;
+import FamilyCenterActivitySectionDefault from "FamilyCenterActivitySection" /* 15945 */;
+import FamilyCenterSettingsControlsDefault from "FamilyCenterSettingsControls" /* 15952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -42,7 +42,7 @@ function FamilyCenterActivityCardPrefaceText() {
   const obj6 = { style: tmp.container, children: null };
   let tmp12 = null;
   if (!tmp4) {
-    const obj7 = { color: tmp.icon.color, source: _modDef15932, style: tmp.icon };
+    const obj7 = { color: tmp.icon.color, source: _modDef15936, style: tmp.icon };
     tmp12 = React6(native.Icon, obj7);
   }
   const items = [tmp12, , ];
@@ -64,7 +64,7 @@ function FamilyCenterActivityCardPrefaceText() {
   };
   const formatToPlainStringResult = intl.formatToPlainString(_modDef2589.tazvHQ, { activeLinks: activeLinkUserIds.length });
   const tmp2Result = TouchableHitBoxDefault;
-  obj9.children = React6(native.Icon, { color: tmp.icon.color, source: _modDef14463, size: native.Icon.Sizes.EXTRA_SMALL, style: tmp.icon });
+  obj9.children = React6(native.Icon, { color: tmp.icon.color, source: _modDef14467, size: native.Icon.Sizes.EXTRA_SMALL, style: tmp.icon });
   items[2] = React6(tmp2Result, obj9);
   obj6.children = items;
   return collapsed(View, obj6);

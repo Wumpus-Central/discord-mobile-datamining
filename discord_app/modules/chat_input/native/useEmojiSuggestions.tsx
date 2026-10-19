@@ -1,6 +1,6 @@
-// === Module 13085: useEmojiSuggestions ===
+// === Module 13093: useEmojiSuggestions ===
 
-// Module 13085 (useEmojiSuggestions)
+// Module 13093 (useEmojiSuggestions)
 import EmojiTypes from "EmojiTypes" /* 4862 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6226 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -157,7 +157,7 @@ function searchEmojiSuggestions(channel) {
   }
 }
 const LoadState = fn(6243).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(13086);
+const EnglishEmojiSuggestionsConstants = fn(13094);
 ({ QUERY_DENYLIST: closure_7, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 let EmojiIntention = fn(1395).EmojiIntention;
 const re10 = /(\S+)\s$/;

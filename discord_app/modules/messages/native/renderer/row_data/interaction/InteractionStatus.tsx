@@ -1,6 +1,6 @@
-// === Module 14262: InteractionStatus ===
+// === Module 14266: InteractionStatus ===
 
-// Module 14262 (InteractionStatus)
+// Module 14266 (InteractionStatus)
 import util from "util" /* 1128 */;
 import InteractionUtils from "InteractionUtils" /* 8526 */;
 import size from "module_2" /* 2 */;

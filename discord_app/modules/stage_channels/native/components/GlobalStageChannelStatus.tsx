@@ -1,14 +1,14 @@
-// === Module 11404: GlobalStageChannelStatus ===
+// === Module 11422: GlobalStageChannelStatus ===
 
-// Module 11404 (GlobalStageChannelStatus)
+// Module 11422 (GlobalStageChannelStatus)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useChannelNameDefault from "useChannelName" /* 5521 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 7754 */;
 import StatusBarDefault from "StatusBar" /* 10669 */;
-import PushNotificationDefault from "PushNotification" /* 11007 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11231 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11396 */;
+import PushNotificationDefault from "PushNotification" /* 11028 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11250 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11414 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -132,7 +132,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
         }
       }
     }
-    const getStageRTCPanelHeight = tmp(11394).useGetStageRTCPanelHeight(tmp21);
+    const getStageRTCPanelHeight = tmp(11412).useGetStageRTCPanelHeight(tmp21);
     if (cResult[7] !== channel) {
       class S {
         constructor() {
@@ -365,7 +365,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
       cResult[14] = tmp26;
       cResult[15] = items2;
     }
-    const tmpResult6 = tmp(11394);
+    const tmpResult6 = tmp(11412);
   }
   cResult[4] = stringResult;
   if (stateFromStores != null) {
@@ -502,7 +502,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
     id2 = channel.id;
   }
   let stageIgnoredUsersCount = channel(7986).useStageIgnoredUsersCount(id2);
-  channel(11394);
+  channel(11412);
   if (channel != null) {
     const id = channel.id;
   }

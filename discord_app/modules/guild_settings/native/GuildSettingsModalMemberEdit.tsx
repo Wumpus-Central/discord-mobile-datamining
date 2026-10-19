@@ -1,6 +1,6 @@
-// === Module 12552: GuildSettingsModalMemberEdit ===
+// === Module 12569: GuildSettingsModalMemberEdit ===
 
-// Module 12552 (GuildSettingsModalMemberEdit)
+// Module 12569 (GuildSettingsModalMemberEdit)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -18,17 +18,17 @@ import TextInput from "TextInput" /* 6563 */;
 import HeaderActionButton from "HeaderActionButton" /* 7365 */;
 import Form from "Form" /* 8855 */;
 import BotTagDefault from "BotTag" /* 9039 */;
-import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 12551 */;
-import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 12555 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12556 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12561 */;
+import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 12568 */;
+import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 12572 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12573 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 12578 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 12553 */;
+import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 12570 */;
 
 const require = globalThis.__r;
 
@@ -752,7 +752,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
       const merged = Object.assign(arg0);
       obj.guildId = guildId;
       obj.onKick = onKick;
-      return closure_2_18(onRemove(12566), obj);
+      return closure_2_18(onRemove(12583), obj);
     }
   };
   obj8 = {
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
       const merged = Object.assign(arg0);
       obj.guildId = guildId;
       obj.onBan = onBan;
-      return closure_2_18(onRemove(12570), obj);
+      return closure_2_18(onRemove(12587), obj);
     }
   };
   tmp = _require;
@@ -797,7 +797,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(12566), obj);
+          return closure_2_18(onRemove(12583), obj);
         }
       },
       [closure_2_17.MEMBER_BAN]: {
@@ -809,7 +809,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(12570), obj);
+          return closure_2_18(onRemove(12587), obj);
         }
       }
     };

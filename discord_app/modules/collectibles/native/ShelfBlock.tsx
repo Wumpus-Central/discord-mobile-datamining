@@ -1,6 +1,6 @@
-// === Module 16937: ShelfBlock ===
+// === Module 16941: ShelfBlock ===
 
-// Module 16937 (ShelfBlock)
+// Module 16941 (ShelfBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;

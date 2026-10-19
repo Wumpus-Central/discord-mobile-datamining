@@ -1,6 +1,6 @@
-// === Module 17755: SearchFilterSuggestions ===
+// === Module 17759: SearchFilterSuggestions ===
 
-// Module 17755 (SearchFilterSuggestions)
+// Module 17759 (SearchFilterSuggestions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4922 */;
@@ -9,8 +9,8 @@ import Text_Text from "Text/Text" /* 5187 */;
 import spring from "spring" /* 5478 */;
 import springPresets from "springPresets" /* 5482 */;
 import TableRow from "TableRow" /* 6457 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12980 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 17756 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12988 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 17760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -509,12 +509,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(17750).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(17754).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(17750);
-  const validFilterTokens = searchContext(17759).useValidFilterTokens(searchContext);
+  let obj = searchContext(17754);
+  const validFilterTokens = searchContext(17763).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -552,7 +552,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(17759);
+  let obj2 = searchContext(17763);
   const fn = function _() {
     return dismissed.get();
   };

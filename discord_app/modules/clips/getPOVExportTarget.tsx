@@ -1,6 +1,6 @@
-// === Module 15074: getPOVExportTarget ===
+// === Module 15078: getPOVExportTarget ===
 
-// Module 15074 (getPOVExportTarget)
+// Module 15078 (getPOVExportTarget)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/clips/getPOVExportTarget.tsx");

@@ -1,6 +1,6 @@
-// === Module 18805: GuildSettingsRoleTemplate ===
+// === Module 18809: GuildSettingsRoleTemplate ===
 
-// Module 18805 (GuildSettingsRoleTemplate)
+// Module 18809 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -12,7 +12,7 @@ import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5462 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 6904 */;
 import _modDef8678 from "module_8678" /* 8678 */;
 import PaginationDefault from "Pagination" /* 10419 */;
-import _modDef11115 from "module_11115" /* 11115 */;
+import _modDef11134 from "module_11134" /* 11134 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
@@ -23,7 +23,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(18801);
+const GuildSettingsRoleConstants = fn(18805);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: c10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         const obj4 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: closure_3.templateContent, children: null };
-          const items = [closure_3_14(native.Icon, { source: _modDef11115, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
+          const items = [closure_3_14(native.Icon, { source: _modDef11134, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
           obj.children = items;
           return value2(hasOwnProperty, obj, "" + item.key + "_content_" + index);
         });

@@ -1,6 +1,6 @@
-// === Module 15494: ActivitySessionAnalytics ===
+// === Module 15498: ActivitySessionAnalytics ===
 
-// Module 15494 (ActivitySessionAnalytics)
+// Module 15498 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import v1 from "v1" /* 1281 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -9,12 +9,12 @@ import MonitoringAgentDefault from "MonitoringAgent" /* 5985 */;
 import MetricEvents from "MetricEvents" /* 5990 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6359 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 9554 */;
-import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 11027 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 11238 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11239 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 11246 */;
-import getPlatformDefault from "getPlatform" /* 11836 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 13901 */;
+import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 11048 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 11257 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11258 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 11265 */;
+import getPlatformDefault from "getPlatform" /* 11855 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 13905 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
@@ -22,7 +22,7 @@ import QuestStore from "QuestStore" /* 7656 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5209 */;
 import UserStore from "UserStore" /* 1392 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 15495 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 15499 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 
 require = fn;

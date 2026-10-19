@@ -1,6 +1,6 @@
-// === Module 15927: FamilyCenterFeatureRow ===
+// === Module 15931: FamilyCenterFeatureRow ===
 
-// Module 15927 (FamilyCenterFeatureRow)
+// Module 15931 (FamilyCenterFeatureRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,11 +11,11 @@ import TableRow from "TableRow" /* 6457 */;
 import TableRowGroup from "TableRowGroup" /* 6542 */;
 import EyeIcon from "EyeIcon" /* 6929 */;
 import _modDef9003 from "module_9003" /* 9003 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12653 */;
-import _modDef13028 from "module_13028" /* 13028 */;
-import QrCodeIcon from "QrCodeIcon" /* 15924 */;
-import _modDef15928 from "module_15928" /* 15928 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 15929 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12670 */;
+import _modDef13036 from "module_13036" /* 13036 */;
+import QrCodeIcon from "QrCodeIcon" /* 15928 */;
+import _modDef15932 from "module_15932" /* 15932 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 15933 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     tmp23 = cResult[6];
   }
   if (cResult[7] !== ageSpecificText) {
-    const obj2 = { icon: _modDef15928, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
+    const obj2 = { icon: _modDef15932, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
     cResult[7] = ageSpecificText;
     cResult[8] = obj2;
     let tmp26 = obj2;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     tmp28 = cResult[9];
   }
   if (cResult[10] !== ageSpecificText1) {
-    const obj3 = { icon: _modDef13028, IconComponent: EyeIcon.EyeIcon, header: tmp28, description: ageSpecificText1 };
+    const obj3 = { icon: _modDef13036, IconComponent: EyeIcon.EyeIcon, header: tmp28, description: ageSpecificText1 };
     cResult[10] = ageSpecificText1;
     cResult[11] = obj3;
     let tmp31 = obj3;
@@ -198,13 +198,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2589["+pi4Yt"]), intl6.string(_modDef2589["1xPTwE"]));
-  obj4.icon = _modDef15928;
+  obj4.icon = _modDef15932;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2589["001l3m"]);
   obj4.description = ageSpecificText;
   const items = [obj4, , ];
-  const obj5 = { icon: _modDef13028, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef13036, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
   obj5.header = intl8.string(_modDef2589.yipAeP);
   obj5.description = ageSpecificText1;

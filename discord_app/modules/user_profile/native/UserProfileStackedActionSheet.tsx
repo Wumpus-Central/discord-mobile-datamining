@@ -1,6 +1,6 @@
-// === Module 10840: UserProfileStackedActionSheet ===
+// === Module 10856: UserProfileStackedActionSheet ===
 
-// Module 10840 (UserProfileStackedActionSheet)
+// Module 10856 (UserProfileStackedActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

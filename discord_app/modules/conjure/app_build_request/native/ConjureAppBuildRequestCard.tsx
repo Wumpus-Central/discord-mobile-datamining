@@ -1,11 +1,11 @@
-// === Module 12281: ConjureAppBuildRequestCard ===
+// === Module 12299: ConjureAppBuildRequestCard ===
 
-// Module 12281 (ConjureAppBuildRequestCard)
+// Module 12299 (ConjureAppBuildRequestCard)
 import nativeDefault from "native" /* 587 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5155 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12149 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12280 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 11662 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12298 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureA
   ({ projectId, canSend } = arg0);
   const tmp4 = closure_7();
   const obj = conjureAppBuildRequestForm(576);
-  conjureAppBuildRequestForm = conjureAppBuildRequestForm(12282).useConjureAppBuildRequestForm(projectId, request, canSend);
+  conjureAppBuildRequestForm = conjureAppBuildRequestForm(12300).useConjureAppBuildRequestForm(projectId, request, canSend);
   if (cResult[0] === conjureAppBuildRequestForm.projects) {
     if (cResult[1] === conjureAppBuildRequestForm.targetId) {
       const _Symbol = Symbol;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureA
                     }
                     const obj8 = { label: tmp47, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
                     ({ prompt: obj9.value, setPrompt: obj9.onChange } = conjureAppBuildRequestForm);
-                    obj8.maxLength = tmp(12282).CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
+                    obj8.maxLength = tmp(12300).CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
                     obj8.disabled = conjureAppBuildRequestForm.sending;
                     obj8.errorMessage = tmp50;
                     const tmp55 = closure_4(tmp(7051).TextArea, obj8);
@@ -306,13 +306,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureA
   cResult[0] = conjureAppBuildRequestForm.projects;
   cResult[1] = conjureAppBuildRequestForm.targetId;
   cResult[2] = found;
-  let obj2 = conjureAppBuildRequestForm(12282);
+  let obj2 = conjureAppBuildRequestForm(12300);
 }) : (function ConjureAppBuildRequestCard(request) {
   request = request.request;
   let conjureAppBuildRequestForm;
   ({ projectId, canSend, onDismiss } = request);
   const tmp = closure_7();
-  conjureAppBuildRequestForm = conjureAppBuildRequestForm(12282).useConjureAppBuildRequestForm(projectId, request, canSend);
+  conjureAppBuildRequestForm = conjureAppBuildRequestForm(12300).useConjureAppBuildRequestForm(projectId, request, canSend);
   const projects = conjureAppBuildRequestForm.projects;
   const found = projects.find((projectId) => projectId.projectId === conjureAppBuildRequestForm.targetId);
   const intl = conjureAppBuildRequestForm(1128).intl;
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureA
   let obj2 = { style: tmp.card, children: null };
   const obj3 = { style: tmp.header, children: null };
   const obj4 = { style: tmp.heading, children: null };
-  const obj = conjureAppBuildRequestForm(12282);
+  const obj = conjureAppBuildRequestForm(12300);
   obj4.children = closure_4(conjureAppBuildRequestForm(5187).Text, { variant: "text-md/semibold", color: "text-default", accessibilityRole: "header", children: request.summary });
   const items = [closure_4(View, obj4), ];
   const obj6 = { variant: "tertiary", size: "sm", icon: closure_4(conjureAppBuildRequestForm(6485).XSmallIcon, { size: "sm" }), onPress: onDismiss, accessibilityLabel: null };
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureA
   const intl5 = tmp2(1128).intl;
   obj12.label = intl5.string(_modDef3883.XZNsDA);
   ({ prompt: obj9.value, setPrompt: obj9.onChange } = conjureAppBuildRequestForm);
-  obj12.maxLength = conjureAppBuildRequestForm(12282).CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
+  obj12.maxLength = conjureAppBuildRequestForm(12300).CONJURE_APP_BUILD_PROMPT_MAX_LENGTH;
   obj12.disabled = conjureAppBuildRequestForm.sending;
   let stringResult1;
   if (conjureAppBuildRequestForm.failed) {

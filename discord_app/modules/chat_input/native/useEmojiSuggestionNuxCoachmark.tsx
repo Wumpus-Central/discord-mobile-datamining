@@ -1,6 +1,6 @@
-// === Module 13089: useEmojiSuggestionNuxCoachmark ===
+// === Module 13097: useEmojiSuggestionNuxCoachmark ===
 
-// Module 13089 (useEmojiSuggestionNuxCoachmark)
+// Module 13097 (useEmojiSuggestionNuxCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,7 +11,7 @@ import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1647 */;
 import useToken from "useToken" /* 4913 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 5083 */;
 import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6945 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12810 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

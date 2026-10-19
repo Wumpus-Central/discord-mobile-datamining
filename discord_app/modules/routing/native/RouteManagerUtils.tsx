@@ -1,6 +1,6 @@
-// === Module 11563: RouteManagerUtils ===
+// === Module 11579: RouteManagerUtils ===
 
-// Module 11563 (RouteManagerUtils)
+// Module 11579 (RouteManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
@@ -12,9 +12,9 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 6354 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6377 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7748 */;
-import MemoryRouter from "MemoryRouter" /* 11564 */;
-import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 11569 */;
-import RouteManagerDefault from "RouteManager" /* 11570 */;
+import MemoryRouter from "MemoryRouter" /* 11580 */;
+import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 11585 */;
+import RouteManagerDefault from "RouteManager" /* 11586 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import DefaultRouteStore from "DefaultRouteStore" /* 5038 */;
@@ -108,7 +108,7 @@ function saveLastNonVoiceRouteListener(pathname) {
   const obj2 = { path: items, strict: false, exact: false };
 }
 function updateSelectedChannelListener(location, arg1) {
-  const matchPathResult = channel2(11564).matchPath(location.pathname, { path: items, strict: false, exact: false });
+  const matchPathResult = channel2(11580).matchPath(location.pathname, { path: items, strict: false, exact: false });
   let params;
   if (matchPathResult != null) {
     params = matchPathResult.params;
@@ -218,7 +218,7 @@ function updateSelectedChannelListener(location, arg1) {
     obj12.isAppStartupNavigation = tmp19;
     const channel3 = SelectedChannelActionCreatorsDefault.selectChannel(obj12);
   }
-  const obj = channel2(11564);
+  const obj = channel2(11580);
   const obj2 = { path: items, strict: false, exact: false };
   const obj4 = { match: matchPathResult, location };
   const tmpResult6 = channel2(5072);

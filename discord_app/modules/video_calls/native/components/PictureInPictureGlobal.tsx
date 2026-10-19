@@ -1,6 +1,6 @@
-// === Module 18056: PictureInPictureGlobal ===
+// === Module 18060: PictureInPictureGlobal ===
 
-// Module 18056 (PictureInPictureGlobal)
+// Module 18060 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1202 */;
@@ -9,10 +9,10 @@ import timing from "timing" /* 5192 */;
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6315 */;
 import NavigatorConstants from "NavigatorConstants" /* 6536 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7748 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11206 */;
-import PictureInPictureDefault from "PictureInPicture" /* 11215 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11217 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18057 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11225 */;
+import PictureInPictureDefault from "PictureInPicture" /* 11234 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11236 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
@@ -22,7 +22,7 @@ import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(11219);
+const usePipDimensionsDefault = tmp5(11238);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
@@ -360,7 +360,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const tmpResult8 = tmp(504);
-    const shouldForcePipOrientation = tmp(11216).useShouldForcePipOrientation(tmp31);
+    const shouldForcePipOrientation = tmp(11235).useShouldForcePipOrientation(tmp31);
     tmp(8600);
     if (cResult[20] === channel.id) {
       class M {
@@ -409,7 +409,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[21] = shouldForcePipOrientation;
     cResult[22] = obj2;
     tmp35 = obj2;
-    const tmpResult9 = tmp(11216);
+    const tmpResult9 = tmp(11235);
   }
   let tmp19 = stateFromStores1;
   if (null != tmp6) {

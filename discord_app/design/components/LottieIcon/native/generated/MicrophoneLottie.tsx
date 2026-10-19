@@ -1,9 +1,9 @@
-// === Module 15019: MicrophoneLottie ===
+// === Module 15023: MicrophoneLottie ===
 
-// Module 15019 (MicrophoneLottie)
+// Module 15023 (MicrophoneLottie)
 import c from "c" /* 576 */;
-import LottieIcon from "LottieIcon" /* 11420 */;
-import _mod15020 from "module_15020" /* 15020 */;
+import LottieIcon from "LottieIcon" /* 11438 */;
+import _mod15024 from "module_15024" /* 15024 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ export const MicrophoneLottie = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmp5 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15020;
+    const tmpResult = _mod15024;
     cResult[3] = tmpResult;
     let tmp9 = tmpResult;
   } else {
@@ -52,5 +52,5 @@ export const MicrophoneLottie = ReactCompilerGating.isReactCompilerEnabled() ? (
 }) : (function MicrophoneLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15020, ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15024, ref: ref.ref, layers, markers: items });
 });

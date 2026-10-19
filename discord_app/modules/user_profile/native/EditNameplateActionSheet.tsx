@@ -1,6 +1,6 @@
-// === Module 15658: EditNameplateActionSheet ===
+// === Module 15662: EditNameplateActionSheet ===
 
-// Module 15658 (EditNameplateActionSheet)
+// Module 15662 (EditNameplateActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,8 +9,8 @@ import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators
 import useShopProductItems from "useShopProductItems" /* 8569 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8571 */;
 import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9312 */;
-import NameplatePreview from "NameplatePreview" /* 10938 */;
-import EditNameplateSection from "EditNameplateSection" /* 15660 */;
+import NameplatePreview from "NameplatePreview" /* 10954 */;
+import EditNameplateSection from "EditNameplateSection" /* 15664 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7546 */;
@@ -527,7 +527,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
   obj4.colors = items2;
   items1[2] = closure_10(purchase(5491), obj4);
   obj3.children = items1;
-  const items3 = [closure_11(View, obj3), closure_10(tmp10(10938).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
+  const items3 = [closure_11(View, obj3), closure_10(tmp10(10954).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
   const obj5 = { style: tmp.nameplateGradientContainer, children: null };
   const items4 = [closure_10(tmp10(9312).NameplateDummyUserPreview, { width: 140 }), closure_10(tmp10(9312).NameplateDummyUserPreview, { width: 100 }), ];
   const obj6 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.2 }, end: { x: 0, y: 0.9 }, colors: null };

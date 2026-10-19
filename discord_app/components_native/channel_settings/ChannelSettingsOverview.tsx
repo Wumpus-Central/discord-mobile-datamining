@@ -1,6 +1,6 @@
-// === Module 17948: ChannelSettingsOverview ===
+// === Module 17952: ChannelSettingsOverview ===
 
-// Module 17948 (ChannelSettingsOverview)
+// Module 17952 (ChannelSettingsOverview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -45,16 +45,16 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import XLargeIcon from "XLargeIcon" /* 10561 */;
 import GroupPlusIcon from "GroupPlusIcon" /* 10639 */;
 import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10643 */;
-import AvailableForumTagDefault from "AvailableForumTag" /* 10770 */;
-import threadActionSheets from "threadActionSheets" /* 10774 */;
-import Slider from "Slider" /* 15061 */;
-import RegionActionCreatorsDefault from "RegionActionCreators" /* 17951 */;
-import SecondsSliderUtils from "SecondsSliderUtils" /* 17952 */;
-import openConjureDeleteAppChannelAlertDefault from "openConjureDeleteAppChannelAlert" /* 17953 */;
-import ChannelSettingsUtils from "ChannelSettingsUtils" /* 17954 */;
-import ThreadAutoArchiveBottomSheet from "ThreadAutoArchiveBottomSheet" /* 17955 */;
-import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 17956 */;
-import VoiceChannelAppSettingDefault from "VoiceChannelAppSetting" /* 17957 */;
+import AvailableForumTagDefault from "AvailableForumTag" /* 10786 */;
+import threadActionSheets from "threadActionSheets" /* 10790 */;
+import Slider from "Slider" /* 15065 */;
+import RegionActionCreatorsDefault from "RegionActionCreators" /* 17955 */;
+import SecondsSliderUtils from "SecondsSliderUtils" /* 17956 */;
+import openConjureDeleteAppChannelAlertDefault from "openConjureDeleteAppChannelAlert" /* 17957 */;
+import ChannelSettingsUtils from "ChannelSettingsUtils" /* 17958 */;
+import ThreadAutoArchiveBottomSheet from "ThreadAutoArchiveBottomSheet" /* 17959 */;
+import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 17960 */;
+import VoiceChannelAppSettingDefault from "VoiceChannelAppSetting" /* 17961 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
@@ -64,7 +64,7 @@ import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import ReadStateStore from "ReadStateStore" /* 6291 */;
-import RegionStore from "RegionStore" /* 17949 */;
+import RegionStore from "RegionStore" /* 17953 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -75,7 +75,7 @@ const View = fn(17).View;
 const ChannelRecord = fn(2072);
 ({ EDITABLE_VOICE_SETTINGS_TYPES: closure_7, isGuildTextChannelType: closure_8, THREADED_CHANNEL_TYPES: closure_9, THREAD_CHANNEL_TYPES: c10, SLOWMODE_CHANNEL_TYPES: closure_11, NSFW_CHANNEL_TYPES: closure_12, TOGGLE_ANNOUNCEMENT_CHANNEL_TYPES: map1, GUILD_WEBHOOK_CHANNEL_TYPES: closure_14 } = ChannelRecord);
 const isGuildNSFW = fn(2086).isGuildNSFW;
-let closure_25 = fn(17950).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(17954).ChannelSettingsAutoFocusElement;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_26, BITRATE_DEFAULT: closure_27, BITRATE_MIN: closure_28, ChannelSettingsSections: closure_29, ChannelTypes: closure_30, ChannelTypesSets: items, GuildFeatures: closure_32, GuildSettingsSections: closure_33, HelpdeskArticles: closure_34, MAX_CHANNEL_NAME_LENGTH: closure_35, MAX_VOICE_USER_LIMIT: closure_36, MAX_STAGE_VOICE_USER_LIMIT: closure_37, Permissions: closure_38, SettingsPaneTypes: closure_39, SLOWMODE_VALUES: closure_40, VideoQualityMode: closure_41 } = Constants);
 const ChannelConstants = fn(2075);
@@ -449,7 +449,7 @@ class ChannelSettingsOverview extends PureComponent {
       closure_128_6 = tmp2(7222).conjureChannelAppId(closure_128_1);
       if (tmp106 != guild2) {
         if (tmp106 != closure_128_6) {
-          const conjureServerApp = tmp2(12567).loadConjureServerApp(guild2.id, closure_128_6);
+          const conjureServerApp = tmp2(12584).loadConjureServerApp(guild2.id, closure_128_6);
           tmp106 = closure_128_5;
           conjureServerApp.then((app) => {
             if (null == app) {
@@ -461,7 +461,7 @@ class ChannelSettingsOverview extends PureComponent {
             }
             return tmp6;
           }, closure_128_5);
-          tmp2(12567);
+          tmp2(12584);
         }
       }
       closure_128_5();
@@ -797,7 +797,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(17955).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(17959).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1099,7 +1099,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj7.value = Math.min(channel.userLimit, tmp10);
       obj7.maximumValue = tmp10;
       obj7.onValueChange = this.handleUserLimitChange;
-      items2[1] = closure_1_47(tmp7(15061).Slider, obj7);
+      items2[1] = closure_1_47(tmp7(15065).Slider, obj7);
       obj3.children = items2;
       obj2.children = __V(tmp7(6459).Card, obj3);
       items.push(closure_1_47(tmp7(6542).TableRowGroup, obj2, "channel-user-limit"));
@@ -1284,7 +1284,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(6457).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(2078).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(17962).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(17966).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1628,7 +1628,7 @@ prototype["renderCategory"] = function renderCategory() {
         tmp7 = self;
         const obj = self(5521);
       }
-      const obj2 = { icon: closure_47(tmp7(17278).FolderPlusIcon, {}), label: null, trailing: null, arrow: null, onPress: null };
+      const obj2 = { icon: closure_47(tmp7(17282).FolderPlusIcon, {}), label: null, trailing: null, arrow: null, onPress: null };
       const intl2 = tmp7(1128).intl;
       obj2.label = intl2.string(tmp7(1128).t.vHCZwr);
       const obj3 = { text: stringResult };

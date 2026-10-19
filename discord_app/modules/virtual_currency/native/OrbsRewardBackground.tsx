@@ -1,9 +1,9 @@
-// === Module 13922: OrbsRewardBackground ===
+// === Module 13926: OrbsRewardBackground ===
 
-// Module 13922 (OrbsRewardBackground)
+// Module 13926 (OrbsRewardBackground)
 import FastImageDefault from "FastImage" /* 5128 */;
-import _modDef13923 from "module_13923" /* 13923 */;
-import _modDef13924 from "module_13924" /* 13924 */;
+import _modDef13927 from "module_13927" /* 13927 */;
+import _modDef13928 from "module_13928" /* 13928 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
@@ -86,7 +86,7 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
     const effect = obj4.useEffect(tmp18, tmp19);
     const _Symbol = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef13923 };
+      const obj2 = { uri: _modDef13927 };
       cResult[10] = obj2;
       let tmp21 = obj2;
     } else {
@@ -129,7 +129,7 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
     }
     if (tmp29) {
       const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-      const obj7 = { uri: _modDef13924 };
+      const obj7 = { uri: _modDef13928 };
       obj6.source = obj7;
       obj6.style = style;
       obj6.onLoad = tmp16;
@@ -202,7 +202,7 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
   const obj4 = { source: null, style: null, resizeMode: "cover", onLoad: null };
   const obj5 = { uri: null };
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  obj5.uri = _modDef13923;
+  obj5.uri = _modDef13927;
   obj4.source = obj5;
   obj4.style = style;
   obj4.onLoad = callback;
@@ -213,7 +213,7 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
   }
   if (tmp14Result) {
     const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-    const obj7 = { uri: _modDef13924 };
+    const obj7 = { uri: _modDef13928 };
     obj6.source = obj7;
     obj6.style = style;
     obj6.onLoad = callback1;

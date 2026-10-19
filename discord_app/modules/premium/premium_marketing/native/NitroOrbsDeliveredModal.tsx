@@ -1,13 +1,13 @@
-// === Module 14413: NitroOrbsDeliveredModal ===
+// === Module 14417: NitroOrbsDeliveredModal ===
 
-// Module 14413 (NitroOrbsDeliveredModal)
+// Module 14417 (NitroOrbsDeliveredModal)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
 import openUserSettings from "openUserSettings" /* 7370 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7529 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 9263 */;
-import _modDef14414 from "module_14414" /* 14414 */;
+import _modDef14418 from "module_14418" /* 14418 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroOrb
     }
     const obj4 = { style: StyleSheet.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
     const obj5 = { style: tmp4.background, onReady: tmp13 };
-    obj4.children = closure_10(onClose(13922).OrbsRewardBackground, obj5);
+    obj4.children = closure_10(onClose(13926).OrbsRewardBackground, obj5);
     const tmp17 = closure_10(View, obj4);
     cResult[7] = tmp4.background;
     cResult[8] = tmp17;
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroOrb
       obj6.children = closure_10(onClose(7170).ActionSheetCloseButton, obj7);
       const items = [closure_10(View, obj6), , ];
       const obj8 = { style: tmp4.body, children: null };
-      const obj9 = { source: _modDef14414, style: tmp4.orbGraphic, resizeMode: "contain" };
+      const obj9 = { source: _modDef14418, style: tmp4.orbGraphic, resizeMode: "contain" };
       const items1 = [closure_10(FastImageDefault, obj9), ];
       const obj10 = { children: null };
       const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp4.title, children: null };
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroOrb
   const obj2 = { style: tmp.root, children: null };
   const obj3 = { style: StyleSheet.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const callback2 = noop.useCallback(() => _undefined(true), []);
-  obj3.children = closure_10(onClose(13922).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
+  obj3.children = closure_10(onClose(13926).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
   const items2 = [closure_10(View, obj3), , ];
   let tmp14Result = !tmp12Result;
   if (!tmp12Result) {
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroOrb
     obj6.children = closure_10(onClose(7170).ActionSheetCloseButton, obj7);
     const items3 = [closure_10(View, obj6), , ];
     const obj8 = { style: tmp.body, children: null };
-    const obj9 = { source: tmp2(14414), style: tmp.orbGraphic, resizeMode: "contain" };
+    const obj9 = { source: tmp2(14418), style: tmp.orbGraphic, resizeMode: "contain" };
     const items4 = [closure_10(tmp2(5128), obj9), ];
     const obj10 = { children: null };
     const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp.title, children: null };

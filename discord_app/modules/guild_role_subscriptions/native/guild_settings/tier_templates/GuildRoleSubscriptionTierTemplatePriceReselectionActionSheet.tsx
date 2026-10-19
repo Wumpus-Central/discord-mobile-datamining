@@ -1,6 +1,6 @@
-// === Module 19006: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 19010: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 19006 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 19010 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import PriceUtils from "PriceUtils" /* 7216 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8946 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16285 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16289 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,7 +56,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
     if (cResult[3] === containerSelected) {
       let tmp8 = cResult[4];
     }
-    const tmp9Result = importDefault(selected ? 18912 : 17709);
+    const tmp9Result = importDefault(selected ? 18916 : 17713);
     if (cResult[5] === tmp4.rowStatusIcon) {
       if (cResult[6] === tmp9Result) {
         let tmp11 = cResult[7];
@@ -139,7 +139,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
   items[1] = containerSelected;
   const obj3 = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj3.source = importDefault(selected ? 18912 : 17709);
+  obj3.source = importDefault(selected ? 18916 : 17713);
   const items1 = [React6(FastImageDefault, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = util.intl;

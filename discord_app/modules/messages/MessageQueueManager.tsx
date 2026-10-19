@@ -1,6 +1,6 @@
-// === Module 18564: MessageQueueManager ===
+// === Module 18568: MessageQueueManager ===
 
-// Module 18564 (MessageQueueManager)
+// Module 18568 (MessageQueueManager)
 import MessageQueueDefault from "MessageQueue" /* 8020 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;
 

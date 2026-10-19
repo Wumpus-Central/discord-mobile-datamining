@@ -1,6 +1,6 @@
-// === Module 15709: useGuildProfileEditForm ===
+// === Module 15713: useGuildProfileEditForm ===
 
-// Module 15709 (useGuildProfileEditForm)
+// Module 15713 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -560,14 +560,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       closure_3 = tmp3;
       if (!closure_15) {
         if (null != stateFromStores) {
-          const guildMemberChangesForUpdateRequest = stateFromStores(10949).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
+          const guildMemberChangesForUpdateRequest = stateFromStores(10965).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
           closure_131_0 = guildMemberChangesForUpdateRequest;
-          stateFromStores(10949);
+          stateFromStores(10965);
           let id;
           if (selectedGuild != null) {
             id = selectedGuild.id;
           }
-          const profileChangesForUpdateRequest = stateFromStores(10949).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
+          const profileChangesForUpdateRequest = stateFromStores(10965).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
           closure_131_2 = true;
           closure_131_3 = false;
           const _Object = Object;
@@ -578,9 +578,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             }
             const v2 = 1;
             c6 = 1;
-            return { value: stateFromStores(10953).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
+            return { value: stateFromStores(10969).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
           }
-          stateFromStores(10949);
+          stateFromStores(10965);
         }
       }
       yield "IconComponent";
@@ -621,9 +621,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                 const intl = stateFromStores(1128).intl;
                 stateFromStores = intl.string(stateFromStores(1128).t.s35OuK);
               }
-              const result1 = stateFromStores(15622).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+              const result1 = stateFromStores(15626).showGenericGuildProfileUpdateFailureToast(stateFromStores);
               closure_131_3 = true;
-              stateFromStores(15622);
+              stateFromStores(15626);
             }
           }
           let tmp50 = closure_131_2;
@@ -656,9 +656,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const aPIError1 = new stateFromStores(5891).APIError(closure_131_8);
           const firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
           if (null != firstFieldErrorMessage2) {
-            const result2 = stateFromStores(15622).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+            const result2 = stateFromStores(15626).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
             closure_131_3 = true;
-            stateFromStores(15622);
+            stateFromStores(15626);
           }
         }
         let tmp24 = closure_131_2;
@@ -681,8 +681,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       }
       if (!tmp62) {
         const intl2 = stateFromStores(1128).intl;
-        const result3 = stateFromStores(15622).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1128).t.s35OuK));
-        stateFromStores(15622);
+        const result3 = stateFromStores(15626).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1128).t.s35OuK));
+        stateFromStores(15626);
       }
       if (closure_131_2) {
         closure_132_13.delay();

@@ -1,8 +1,8 @@
-// === Module 11512: SingleStream ===
+// === Module 11530: SingleStream ===
 
-// Module 11512 (SingleStream)
+// Module 11530 (SingleStream)
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
-import StreamTileDefault from "StreamTile" /* 11261 */;
+import StreamTileDefault from "StreamTile" /* 11280 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SingleSt
   }
   const obj3 = { gestureEnabled: true, resizeMode: null, onSingleTap: null, onDoubleTap: null, participant: null, style: null };
   const obj = channel(576);
-  obj3.resizeMode = channel(11271).ResizeMode.CONTAIN;
+  obj3.resizeMode = channel(11290).ResizeMode.CONTAIN;
   obj3.onSingleTap = first;
   obj3.onDoubleTap = tmp5;
   obj3.participant = participant;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SingleSt
   channel = channel.channel;
   const obj = {
     gestureEnabled: true,
-    resizeMode: channel(11271).ResizeMode.CONTAIN,
+    resizeMode: channel(11290).ResizeMode.CONTAIN,
     onSingleTap() {
       closure_1_3();
     },
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SingleSt
   };
   return jsx(StreamTileDefault, {
     gestureEnabled: true,
-    resizeMode: channel(11271).ResizeMode.CONTAIN,
+    resizeMode: channel(11290).ResizeMode.CONTAIN,
     onSingleTap() {
       closure_1_3();
     },

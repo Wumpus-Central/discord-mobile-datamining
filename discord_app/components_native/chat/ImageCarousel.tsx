@@ -15,7 +15,7 @@ import Upload from "Upload" /* 8024 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9564 */;
 import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10320 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10322 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11991 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 12010 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8175 */;
 

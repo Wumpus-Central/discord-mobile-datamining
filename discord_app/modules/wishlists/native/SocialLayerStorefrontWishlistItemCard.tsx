@@ -1,6 +1,6 @@
-// === Module 13676: SocialLayerStorefrontWishlistItemCard ===
+// === Module 13680: SocialLayerStorefrontWishlistItemCard ===
 
-// Module 13676 (SocialLayerStorefrontWishlistItemCard)
+// Module 13680 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 9268 */;
@@ -8,7 +8,7 @@ import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9320 *
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
-import SentGiftsStore from "SentGiftsStore" /* 13674 */;
+import SentGiftsStore from "SentGiftsStore" /* 13678 */;
 
 const require = globalThis.__r;
 

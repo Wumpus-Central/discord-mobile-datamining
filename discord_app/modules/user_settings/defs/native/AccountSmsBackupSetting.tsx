@@ -1,18 +1,18 @@
-// === Module 15815: AccountSmsBackupSetting ===
+// === Module 15819: AccountSmsBackupSetting ===
 
-// Module 15815 (AccountSmsBackupSetting)
+// Module 15819 (AccountSmsBackupSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5400 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import PhoneActionCreators from "PhoneActionCreators" /* 7011 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 15805 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 15812 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 15809 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 15816 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const initialize = obj(504);
-const account_MFAUtils = obj(15810);
+const account_MFAUtils = obj(15814);
 require = fn;
 const UserFlags = fn(1087).UserFlags;
 let closure_5 = fn(7009).PHONE_VERIFICATION_MODAL_KEY;
@@ -97,7 +97,7 @@ let closure_7 = apply.debounce(function toggleSMS(user) {
     const tmp5 = asyncRequireImpl(7008, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountSMSBackupSettingToggleValue() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -197,7 +197,7 @@ const toggle = SettingBuilders.createToggle({
     }
   },
   useDescription: tmp2,
-  usePredicate: fn(15723).useIsTOTPEnabled
+  usePredicate: fn(15727).useIsTOTPEnabled
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

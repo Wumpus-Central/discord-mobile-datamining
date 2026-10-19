@@ -1,6 +1,6 @@
-// === Module 14059: Badges ===
+// === Module 14063: Badges ===
 
-// Module 14059 (Badges)
+// Module 14063 (Badges)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,13 +10,13 @@ import Text_Text from "Text/Text" /* 5187 */;
 import utils from "utils" /* 8544 */;
 import TrophyIcon from "TrophyIcon" /* 9211 */;
 import GameControllerIcon from "GameControllerIcon" /* 9514 */;
-import TimerIcon2 from "TimerIcon" /* 11161 */;
-import RetryIcon2 from "RetryIcon" /* 11616 */;
-import FireIcon2 from "FireIcon" /* 13938 */;
-import useTimestampTickedNow from "useTimestampTickedNow" /* 14057 */;
-import NewUserIcon from "NewUserIcon" /* 14060 */;
-import FlashIcon2 from "FlashIcon" /* 14062 */;
-import TrendingType from "TrendingType" /* 14064 */;
+import TimerIcon2 from "TimerIcon" /* 11180 */;
+import RetryIcon2 from "RetryIcon" /* 11632 */;
+import FireIcon2 from "FireIcon" /* 13942 */;
+import useTimestampTickedNow from "useTimestampTickedNow" /* 14061 */;
+import NewUserIcon from "NewUserIcon" /* 14064 */;
+import FlashIcon2 from "FlashIcon" /* 14066 */;
+import TrendingType from "TrendingType" /* 14068 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 
@@ -82,7 +82,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActiveTimest
   const tmpResult = utils;
 }) : (function ActiveTimestamp(style) {
   const entry = style.entry;
-  const now = entry(14057).useTimestampTickedNow().now;
+  const now = entry(14061).useTimestampTickedNow().now;
   const items = [entry, now];
   const children = noop.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
   return closure_6(entry(5187).Text, { style: style.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children });

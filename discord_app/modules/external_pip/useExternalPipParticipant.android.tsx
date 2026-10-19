@@ -1,6 +1,6 @@
-// === Module 18135: useExternalPipParticipant ===
+// === Module 18139: useExternalPipParticipant ===
 
-// Module 18135 (useExternalPipParticipant)
+// Module 18139 (useExternalPipParticipant)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -293,7 +293,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "code" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "end" };
   };
   cResult[1] = channelId;
   cResult[2] = focusedParticipantStreamId;
@@ -438,7 +438,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "code" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "end" };
   }, items1);
   const items2 = [stateFromStoresObject.selectedParticipantSpeaking];
   const effect = noop.useEffect(() => {

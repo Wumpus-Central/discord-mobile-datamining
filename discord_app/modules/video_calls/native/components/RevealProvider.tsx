@@ -1,13 +1,13 @@
-// === Module 11209: RevealProvider ===
+// === Module 11228: RevealProvider ===
 
-// Module 11209 (RevealProvider)
+// Module 11228 (RevealProvider)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10664 */;
 import StatusBarDefault from "StatusBar" /* 10669 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11210 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 11211 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11229 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 11230 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4897 */;
 import GameConsoleStore from "GameConsoleStore" /* 5210 */;

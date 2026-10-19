@@ -1,15 +1,15 @@
-// === Module 15516: ActivityShareLinkModal ===
+// === Module 15520: ActivityShareLinkModal ===
 
-// Module 15516 (ActivityShareLinkModal)
+// Module 15520 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ToastUtils from "ToastUtils" /* 4903 */;
 import LinkIcon from "LinkIcon" /* 5137 */;
 import ClipboardUtils from "ClipboardUtils" /* 7162 */;
 import HeaderActionButton from "HeaderActionButton" /* 7365 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 11944 */;
-import formatResults from "formatResults" /* 12676 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15515 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11963 */;
+import formatResults from "formatResults" /* 12693 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15519 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(12676).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(12693).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
           throw value;
         } else if (arg0 !== 2) {
           closure_128_0 = value.filter(tmp2(1388).isNotNullish);
-          closure_128_1 = tmp2(15517).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
+          closure_128_1 = tmp2(15521).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
           closure_129_6(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(15517);
+          let obj5 = tmp2(15521);
           let obj7 = { text: null };
           const intl = tmp2(1128).intl;
           const obj8 = { applicationName: closure_129_14.name };
@@ -329,8 +329,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
           tmp3(4904).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
           closure_129_4(true, closure_129_7);
           let obj6 = tmp3(4904);
-          const result = tmp2(15515).closeActivityShareLinkModal();
-          const obj9 = tmp2(15515);
+          const result = tmp2(15519).closeActivityShareLinkModal();
+          const obj9 = tmp2(15519);
         }
         c3 = 3;
         let obj = { value, done: true };

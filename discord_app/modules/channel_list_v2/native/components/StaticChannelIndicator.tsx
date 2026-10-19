@@ -1,6 +1,6 @@
-// === Module 13032: StaticChannelIndicator ===
+// === Module 13040: StaticChannelIndicator ===
 
-// Module 13032 (StaticChannelIndicator)
+// Module 13040 (StaticChannelIndicator)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

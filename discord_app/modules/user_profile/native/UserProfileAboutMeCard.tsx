@@ -1,6 +1,6 @@
-// === Module 10923: UserProfileAboutMeCard ===
+// === Module 10939: UserProfileAboutMeCard ===
 
-// Module 10923 (UserProfileAboutMeCard)
+// Module 10939 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -14,9 +14,9 @@ import GuildIconDefault from "GuildIcon" /* 6436 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7180 */;
 import UserProfileAnalyticsContext from "UserProfileAnalyticsContext" /* 8588 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8764 */;
-import BioTextDefault from "BioText" /* 10924 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 10926 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 10928 */;
+import BioTextDefault from "BioText" /* 10940 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 10942 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 10944 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;

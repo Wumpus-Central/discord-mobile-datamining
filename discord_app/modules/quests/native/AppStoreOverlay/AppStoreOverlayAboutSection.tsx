@@ -1,6 +1,6 @@
-// === Module 13890: AppStoreOverlayAboutSection ===
+// === Module 13894: AppStoreOverlayAboutSection ===
 
-// Module 13890 (AppStoreOverlayAboutSection)
+// Module 13894 (AppStoreOverlayAboutSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

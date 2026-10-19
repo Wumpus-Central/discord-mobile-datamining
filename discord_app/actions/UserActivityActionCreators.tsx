@@ -1,6 +1,6 @@
-// === Module 11186: UserActivityActionCreators ===
+// === Module 11205: UserActivityActionCreators ===
 
-// Module 11186 (UserActivityActionCreators)
+// Module 11205 (UserActivityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PresenceStore from "PresenceStore" /* 5207 */;
@@ -50,9 +50,9 @@ export const sync = function sync(activity, userId) {
 };
 export const play = function play(activity, userId) {
   _require = activity;
-  const promise = require("asyncRequireImpl")(11183, dependencyMap.paths);
-  const nextPromise = require("asyncRequireImpl")(11183, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1));
-  require("asyncRequireImpl")(11183, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1)).then((metadata) => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId, metadata })).catch(() => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId }));
+  const promise = require("asyncRequireImpl")(11202, dependencyMap.paths);
+  const nextPromise = require("asyncRequireImpl")(11202, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1));
+  require("asyncRequireImpl")(11202, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1)).then((metadata) => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId, metadata })).catch(() => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId }));
 };
 export const getMetadata = function getMetadata() {
   const self = this;

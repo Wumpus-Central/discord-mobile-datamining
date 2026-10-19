@@ -1,6 +1,6 @@
-// === Module 13559: MediaPreviewRightAccessory ===
+// === Module 13564: MediaPreviewRightAccessory ===
 
-// Module 13559 (MediaPreviewRightAccessory)
+// Module 13564 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -19,8 +19,8 @@ import PlayIcon from "PlayIcon" /* 8674 */;
 import common_VideoDefault from "common/Video" /* 8699 */;
 import ClipView from "ClipView" /* 9308 */;
 import StickerDefault from "Sticker" /* 10073 */;
-import useContentHarmTypes from "useContentHarmTypes" /* 12598 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 13530 */;
+import useContentHarmTypes from "useContentHarmTypes" /* 12615 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 13535 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 
@@ -66,7 +66,7 @@ createStyles = fn(5191);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
 createStyles = fn(5191);
 let obj11 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(13519).RIGHT_ACCESSORY_LEFT_MARGIN } });
+let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(13524).RIGHT_ACCESSORY_LEFT_MARGIN } });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBadge() {
   const cResult = c.c(5);
@@ -910,7 +910,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaP
   return tmp4;
 });
 ReactCompilerGating = fn(558);
-let obj12 = { rightAccessoryContainer: { marginLeft: fn(13519).RIGHT_ACCESSORY_LEFT_MARGIN } };
+let obj12 = { rightAccessoryContainer: { marginLeft: fn(13524).RIGHT_ACCESSORY_LEFT_MARGIN } };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

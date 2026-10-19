@@ -1,6 +1,6 @@
-// === Module 10762: useNativeForumPostHandlers ===
+// === Module 10778: useNativeForumPostHandlers ===
 
-// Module 10762 (useNativeForumPostHandlers)
+// Module 10778 (useNativeForumPostHandlers)
 import _modDef38 from "module_38" /* 38 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ChatInputUtils from "ChatInputUtils" /* 5081 */;
@@ -14,7 +14,7 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 8431 */;
 import openMediaModal from "openMediaModal" /* 8660 */;
 import messages_MessagesUtils from "messages/MessagesUtils" /* 9682 */;
 import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9684 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10763 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10779 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4897 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

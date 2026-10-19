@@ -1,9 +1,9 @@
-// === Module 14939: GuildBadgeCrosshairs ===
+// === Module 14943: GuildBadgeCrosshairs ===
 
-// Module 14939 (GuildBadgeCrosshairs)
+// Module 14943 (GuildBadgeCrosshairs)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14928 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14932 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,12 +1,12 @@
-// === Module 17292: GuildThemeMemberCoachmark ===
+// === Module 17296: GuildThemeMemberCoachmark ===
 
-// Module 17292 (GuildThemeMemberCoachmark)
+// Module 17296 (GuildThemeMemberCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2621 from "module_2621" /* 2621 */;
 import Powerups from "Powerups" /* 5107 */;
 import BoostingActionCreators from "BoostingActionCreators" /* 6215 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13204 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13212 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5103 */;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
     cResult[14] = U;
   }
   const tmpResult3 = guildId(504);
-  let guildPowerupBannerImage = guildId(13201).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  let guildPowerupBannerImage = guildId(13209).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
     class D {
       constructor() {
@@ -178,13 +178,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
         return;
       }
     }
-    guildPowerupBannerImage = markAsDismissed(17293);
+    guildPowerupBannerImage = markAsDismissed(17297);
   }
   cResult[6] = stateFromStores;
   cResult[7] = stateFromStores1;
   cResult[8] = guildPowerupBannerImage;
   tmp13 = guildPowerupBannerImage;
-  const tmpResult4 = guildId(13201);
+  const tmpResult4 = guildId(13209);
 }) : (function GuildThemeMemberCoachmark(guildId) {
   guildId = guildId.guildId;
   const markAsDismissed = guildId.markAsDismissed;
@@ -209,9 +209,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   const items2 = [guildPowerupBannerImage];
   const stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
   const obj2 = guildId(504);
-  guildPowerupBannerImage = guildId(13201).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  guildPowerupBannerImage = guildId(13209).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(17293);
+    guildPowerupBannerImage = markAsDismissed(17297);
   }
   const diff = onDismiss - markAsDismissed(8299)(guildId).available;
   c5 = diff;
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
     obj.onButtonPress = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(13201);
+  const obj3 = guildId(13209);
   const coachmark = tmp2(9742).useCoachmark(guildId.targetRef, memo);
   return null;
 });

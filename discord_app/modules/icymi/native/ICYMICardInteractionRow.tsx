@@ -1,6 +1,6 @@
-// === Module 17639: ICYMICardInteractionRow ===
+// === Module 17643: ICYMICardInteractionRow ===
 
-// Module 17639 (ICYMICardInteractionRow)
+// Module 17643 (ICYMICardInteractionRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -18,10 +18,10 @@ import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8745 */;
 import messages_MessagesUtils from "messages/MessagesUtils" /* 9682 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9726 */;
 import PendingReplyActionCreators from "PendingReplyActionCreators" /* 9990 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12261 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12671 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 12683 */;
-import ICYMIShared from "ICYMIShared" /* 17633 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12279 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12688 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 12700 */;
+import ICYMIShared from "ICYMIShared" /* 17637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 7282 */;

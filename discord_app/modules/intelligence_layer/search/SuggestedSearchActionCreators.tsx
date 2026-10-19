@@ -1,11 +1,11 @@
-// === Module 13021: SuggestedSearchActionCreators ===
+// === Module 13029: SuggestedSearchActionCreators ===
 
-// Module 13021 (SuggestedSearchActionCreators)
+// Module 13029 (SuggestedSearchActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SmartSearchExperiments from "SmartSearchExperiments" /* 13020 */;
+import SmartSearchExperiments from "SmartSearchExperiments" /* 13028 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 12981 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 12989 */;
 
 require = fn;
 function canFetchSuggestedSearches(guildId) {
@@ -86,7 +86,7 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
         } else {
           guildId = closure_132_0.guildId;
           channelIds = closure_132_0.channelIds;
-          parentSuggestedSearch = closure_133_1(closure_133_2[6]).getParentSuggestedSearch();
+          parentSuggestedSearch = closure_133_1(closure_133_2[6]).getParentSuggestedSearch(closure_132_0.queryText);
           const obj14 = closure_133_1(closure_133_2[6]);
           const obj7 = { type: "SUGGESTED_SEARCHES_FETCH_START", scope: closure_132_0 };
           closure_133_1(closure_133_2[7]).dispatch(obj7);
@@ -212,7 +212,7 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
     }
   }
 };
-const SmartSearchConstants = fn(12982);
+const SmartSearchConstants = fn(12990);
 ({ SUGGESTED_SEARCHES_REQUEST_LIMIT: hasOwnProperty, SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS } = SmartSearchConstants);
 const Constants = fn(1087);
 ({ Endpoints: metroRequire, NOOP: closure_7 } = Constants);

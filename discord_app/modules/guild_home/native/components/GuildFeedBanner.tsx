@@ -1,19 +1,19 @@
-// === Module 17698: GuildFeedBanner ===
+// === Module 17702: GuildFeedBanner ===
 
-// Module 17698 (GuildFeedBanner)
+// Module 17702 (GuildFeedBanner)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import timing from "timing" /* 5192 */;
 import timingPresets from "timingPresets" /* 5195 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 14986 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 14990 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 14985 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 14989 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildFeedConstants = fn(17699);
+const GuildFeedConstants = fn(17703);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_8 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1087).GuildFeatures;
@@ -156,7 +156,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildF
       ({ width, height } = tmp7(1499)());
       const tmp30 = tmp7(1499)();
       const _Math = Math;
-      const drawerWidth = tmp(11081).useDrawerWidth();
+      const drawerWidth = tmp(11100).useDrawerWidth();
       const bound1 = Math.min(width, height);
       if (tmp29) {
         const _Math2 = Math;
@@ -311,7 +311,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildF
                                                                             },
                                         children: null
                                       };
-                                      const obj13 = { style: tmp4.publicIcon, source: tmp7(17702) };
+                                      const obj13 = { style: tmp4.publicIcon, source: tmp7(17706) };
                                       const items5 = [closure_10(tmp(1202).Icon, obj13), ];
                                       const obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
                                       let intl = tmp(1128).intl;
@@ -440,9 +440,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildF
           tmp37 = tmp18;
         } else {
           if (tmpResult7.isThemeDark(tmp9)) {
-            let tmp7Result5 = tmp7(17700);
+            let tmp7Result5 = tmp7(17704);
           } else {
-            tmp7Result5 = tmp7(17701);
+            tmp7Result5 = tmp7(17705);
           }
           tmpResult7 = tmp(5065);
         }
@@ -452,7 +452,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildF
       cResult[23] = tmp35;
       cResult[24] = items11;
       tmp36 = items11;
-      const tmpResult6 = tmp(11081);
+      const tmpResult6 = tmp(11100);
     }
   }
   const features = guild.features;
@@ -537,7 +537,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildF
   width = size.width;
   height = size.height;
   const tmp2Result4 = guild(504);
-  drawerWidth = guild(11081).useDrawerWidth();
+  drawerWidth = guild(11100).useDrawerWidth();
   const items4 = [width, height, tmp12, drawerWidth];
   let obj4 = { style: tmp.container, children: null };
   const memo1 = obj3.useMemo(() => {
@@ -608,7 +608,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildF
                 },
           children: null
         };
-        const obj18 = { style: tmp.publicIcon, source: tmp6(17702) };
+        const obj18 = { style: tmp.publicIcon, source: tmp6(17706) };
         const items11 = [closure_10(tmp2(1202).Icon, obj18), ];
         const obj19 = { variant: "text-xs/medium", color: "text-default", children: null };
         let intl = tmp2(1128).intl;
@@ -647,13 +647,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildF
     return closure_11(tmp16, obj4);
   } else {
     if (tmp2Result6.isThemeDark(tmp8)) {
-      let tmp6Result2 = tmp6(17700);
+      let tmp6Result2 = tmp6(17704);
     } else {
-      tmp6Result2 = tmp6(17701);
+      tmp6Result2 = tmp6(17705);
     }
     tmp2Result6 = tmp2(5065);
   }
-  const tmp2Result5 = guild(11081);
+  const tmp2Result5 = guild(11100);
 });
 ReactCompilerGating = fn(558);
 let obj6 = { padding: 4, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

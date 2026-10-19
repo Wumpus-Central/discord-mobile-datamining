@@ -1,6 +1,6 @@
-// === Module 12784: createAppMessageEmbed ===
+// === Module 12801: createAppMessageEmbed ===
 
-// Module 12784 (createAppMessageEmbed)
+// Module 12801 (createAppMessageEmbed)
 import util from "util" /* 1128 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -15,15 +15,15 @@ import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7513 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8156 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8547 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9548 */;
-import ApplicationUtils from "ApplicationUtils" /* 10998 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11201 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12785 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12786 */;
-import getPlayInContext from "getPlayInContext" /* 12787 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12788 */;
-import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 12789 */;
-import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 12790 */;
-import playFrameFromEmbedDefault from "playFrameFromEmbed" /* 12791 */;
+import ApplicationUtils from "ApplicationUtils" /* 11019 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11220 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12802 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12803 */;
+import getPlayInContext from "getPlayInContext" /* 12804 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12805 */;
+import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 12806 */;
+import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 12807 */;
+import playFrameFromEmbedDefault from "playFrameFromEmbed" /* 12808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8548 */;

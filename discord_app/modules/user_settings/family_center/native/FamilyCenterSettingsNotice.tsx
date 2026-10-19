@@ -1,10 +1,10 @@
-// === Module 15856: FamilyCenterSettingsNotice ===
+// === Module 15860: FamilyCenterSettingsNotice ===
 
-// Module 15856 (FamilyCenterSettingsNotice)
+// Module 15860 (FamilyCenterSettingsNotice)
 import _modDef2589 from "module_2589" /* 2589 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7290 */;
 import LayerActionCreators from "LayerActionCreators" /* 7573 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15726 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15730 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

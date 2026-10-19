@@ -1,6 +1,6 @@
-// === Module 13912: QuestCopyHooks ===
+// === Module 13916: QuestCopyHooks ===
 
-// Module 13912 (QuestCopyHooks)
+// Module 13916 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import NumberUtils from "NumberUtils" /* 1903 */;
@@ -14,9 +14,9 @@ import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9151 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9473 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9492 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 9495 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11298 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 13899 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 13914 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11316 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 13903 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 13918 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ const require = globalThis.__r;
 
 const util = v1votF6(1128);
 const utils_QuestUtils = v1votF6(7676);
-const SponsoredQuestUtils = v1votF6(13913);
+const SponsoredQuestUtils = v1votF6(13917);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);

@@ -33,8 +33,8 @@ import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10647
 import markChannelUnreadDefault from "markChannelUnread" /* 10652 */;
 import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10658 */;
 import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 10659 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 13626 */;
-import openAppChannelToChatDefault from "openAppChannelToChat" /* 13627 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 13630 */;
+import openAppChannelToChatDefault from "openAppChannelToChat" /* 13631 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 6201 */;

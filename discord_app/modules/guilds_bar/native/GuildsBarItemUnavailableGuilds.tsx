@@ -1,11 +1,11 @@
-// === Module 17489: GuildsBarItemUnavailableGuilds ===
+// === Module 17493: GuildsBarItemUnavailableGuilds ===
 
-// Module 17489 (GuildsBarItemUnavailableGuilds)
+// Module 17493 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
-import _modDef17480 from "module_17480" /* 17480 */;
+import _modDef17484 from "module_17484" /* 17484 */;
 import noop from "module_19" /* 19 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6221 */;
 
@@ -97,8 +97,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return;
         }
       }
-      const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17480 };
-      const tmp14 = jsx(FastImageDefault, { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17480 });
+      const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17484 };
+      const tmp14 = jsx(FastImageDefault, { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17484 });
       cResult[6] = unavailableGuilds.unavailableGuildsIcon;
       cResult[7] = tmp14;
     } else {
@@ -160,8 +160,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17480 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17480 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17484 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17484 });
     tmp5 = <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</Pressable>;
   }
   return tmp5;

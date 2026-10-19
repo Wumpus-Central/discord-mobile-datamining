@@ -1,15 +1,15 @@
-// === Module 11558: ActiveSpeakerTooltip ===
+// === Module 11576: ActiveSpeakerTooltip ===
 
-// Module 11558 (ActiveSpeakerTooltip)
+// Module 11576 (ActiveSpeakerTooltip)
 import nativeDefault from "native" /* 587 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11125 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11144 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(11528);
+const StageChannelListStore = fn(11546);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

@@ -1,6 +1,6 @@
-// === Module 17644: ICYMIShareModal ===
+// === Module 17648: ICYMIShareModal ===
 
-// Module 17644 (ICYMIShareModal)
+// Module 17648 (ICYMIShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
 import components_Button_Button from "components/Button/Button" /* 5479 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6942 */;
 import ShareEventUtils from "ShareEventUtils" /* 8809 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 12697 */;
-import ShareChatInputDefault from "ShareChatInput" /* 12706 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 12714 */;
+import ShareChatInputDefault from "ShareChatInput" /* 12723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -745,7 +745,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
               const obj5 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
               c5 = 2;
               c6 = 1;
-              const obj6 = { value: entry(17645).sendMessageWithEmbed(obj5), done: false };
+              const obj6 = { value: entry(17649).sendMessageWithEmbed(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
@@ -845,7 +845,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(17645).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(17649).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

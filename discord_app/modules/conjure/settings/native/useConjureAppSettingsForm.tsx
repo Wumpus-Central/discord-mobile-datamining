@@ -1,13 +1,13 @@
-// === Module 11644: useConjureAppSettingsForm ===
+// === Module 11663: useConjureAppSettingsForm ===
 
-// Module 11644 (useConjureAppSettingsForm)
+// Module 11663 (useConjureAppSettingsForm)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5155 */;
-import conjureSettingValues from "conjureSettingValues" /* 11645 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11648 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11650 */;
+import conjureSettingValues from "conjureSettingValues" /* 11664 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11667 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11669 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,13 +15,13 @@ import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureChatStore from "ConjureChatStore" /* 10963 */;
+import ConjureChatStore from "ConjureChatStore" /* 10979 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10979 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10995 */;
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(10962).sendUserMessage;
+const sendUserMessage = fn(10978).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const ConjureSettingsChannelSheet = "ConjureSettingsChannelSheet";
@@ -340,8 +340,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   c4 = undefined;
   let found;
   ({ projectId, isPreview, hint, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(11646).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(11646);
+  const conjureSettingsGuildId = def(11665).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(11665);
   const items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -1198,7 +1198,7 @@ export default function useConjureAppSettingsForm(projectId) {
                 c5 = 2;
                 c6 = 3;
                 c7 = 1;
-                const obj8 = { value: _null(11050).submitProjectSettings(projectId, memo3), done: false };
+                const obj8 = { value: _null(11069).submitProjectSettings(projectId, memo3), done: false };
                 return obj8;
               }
             }
@@ -1239,7 +1239,7 @@ export default function useConjureAppSettingsForm(projectId) {
                 if (application_id == null) {
                   _null = null;
                 }
-                _null(11019).restartAppFrames(_null);
+                _null(11040).restartAppFrames(_null);
                 let isPreviewlessProjectResult = null != project2;
                 if (isPreviewlessProjectResult) {
                   isPreviewlessProjectResult = _null(6294).isPreviewlessProject(project2);
@@ -1254,17 +1254,17 @@ export default function useConjureAppSettingsForm(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null(11019).restartAppFrames(_null2);
-                  const obj3 = _null(11019);
+                  _null(11040).restartAppFrames(_null2);
+                  const obj3 = _null(11040);
                 }
-                const obj = _null(11019);
+                const obj = _null(11040);
               }
               c5 = 0;
               closure_131_12(false);
               c7 = 3;
             }
-            const projectRebuild = _null(11050).requestProjectRebuild(closure_131_0);
-            const obj4 = _null(11050);
+            const projectRebuild = _null(11069).requestProjectRebuild(closure_131_0);
+            const obj4 = _null(11069);
           }
           const intl = _null(1128).intl;
           closure_1_12(closure_131_0, intl.string(_null2(3883)["08bsJL"]));

@@ -1,6 +1,6 @@
-// === Module 13010: NewMessageUserList ===
+// === Module 13018: NewMessageUserList ===
 
-// Module 13010 (NewMessageUserList)
+// Module 13018 (NewMessageUserList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5057 */;

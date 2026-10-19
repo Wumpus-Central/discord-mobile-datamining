@@ -1,12 +1,12 @@
-// === Module 13995: MediaModalOverlayFooter ===
+// === Module 13999: MediaModalOverlayFooter ===
 
-// Module 13995 (MediaModalOverlayFooter)
+// Module 13999 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11090 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

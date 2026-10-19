@@ -1,8 +1,8 @@
-// === Module 12128: ConjureTipsHost ===
+// === Module 12147: ConjureTipsHost ===
 
-// Module 12128 (ConjureTipsHost)
+// Module 12147 (ConjureTipsHost)
 import nativeDefault from "native" /* 587 */;
-import useConjureTipsDefault from "useConjureTips" /* 12129 */;
+import useConjureTipsDefault from "useConjureTips" /* 12148 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   ({ projectId, messages, draftHasText, onAskForIdeas } = onShow);
   const tmp2 = closure_6();
   const obj = onShow(576);
-  const tmp3Result = useConjureTipsDefault(onShow(12139).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
+  const tmp3Result = useConjureTipsDefault(onShow(12158).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
   if (cResult[0] !== tmp3Result) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   let joined;
   ({ projectId, messages, draftHasText, onAskForIdeas } = onShow);
   const tmp = closure_6();
-  const tmp2Result = joined(12129)(onShow(12139).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
+  const tmp2Result = joined(12148)(onShow(12158).CONJURE_TIPS, projectId, messages, draftHasText, onAskForIdeas);
   const mapped = tmp2Result.map((tip) => "" + tip.tip.id + ":" + tip.presentation);
   joined = mapped.join(",");
   const items = [joined, onShow];

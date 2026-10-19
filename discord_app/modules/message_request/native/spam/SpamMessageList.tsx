@@ -1,6 +1,6 @@
-// === Module 18037: SpamMessageList ===
+// === Module 18041: SpamMessageList ===
 
-// Module 18037 (SpamMessageList)
+// Module 18041 (SpamMessageList)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import transitionToChannel from "transitionToChannel" /* 5202 */;

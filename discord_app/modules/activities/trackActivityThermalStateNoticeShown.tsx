@@ -1,6 +1,6 @@
-// === Module 18350: trackActivityThermalStateNoticeShown ===
+// === Module 18354: trackActivityThermalStateNoticeShown ===
 
-// Module 18350 (trackActivityThermalStateNoticeShown)
+// Module 18354 (trackActivityThermalStateNoticeShown)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

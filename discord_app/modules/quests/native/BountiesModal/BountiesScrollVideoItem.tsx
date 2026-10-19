@@ -1,10 +1,10 @@
-// === Module 16055: BountiesScrollVideoItem ===
+// === Module 16059: BountiesScrollVideoItem ===
 
-// Module 16055 (BountiesScrollVideoItem)
+// Module 16059 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 6233 */;
 import AdCreativeType from "AdCreativeType" /* 6235 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13915 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16056 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13919 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16060 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -731,7 +731,7 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(13915).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(13919).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(6235).AdCreativeType.BOUNTY,
     questContent: bounty(6233).QuestContent.VIDEO_MODAL_MOBILE,

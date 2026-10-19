@@ -1,20 +1,20 @@
-// === Module 18577: PresetAvatarSelect ===
+// === Module 18581: PresetAvatarSelect ===
 
-// Module 18577 (PresetAvatarSelect)
+// Module 18581 (PresetAvatarSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import Pressables from "Pressables" /* 6462 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 18578 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 18579 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 18580 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 18581 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 18582 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 18583 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 18584 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 18585 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 18582 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 18583 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 18584 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 18585 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 18586 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 18587 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 18588 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 18589 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

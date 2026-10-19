@@ -1,11 +1,11 @@
-// === Module 11023: _launchFrame ===
+// === Module 11044: _launchFrame ===
 
-// Module 11023 (_launchFrame)
+// Module 11044 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6313 */;
-import leaveFrame from "leaveFrame" /* 11020 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 11024 */;
-import createProxyTicket from "createProxyTicket" /* 11026 */;
+import leaveFrame from "leaveFrame" /* 11041 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 11045 */;
+import createProxyTicket from "createProxyTicket" /* 11047 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import FramesStore from "FramesStore" /* 6295 */;
 
@@ -206,7 +206,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(11020);
+    obj2 = obj2(11041);
     obj2.leaveFrame(mainFrame1.id);
   }
 }

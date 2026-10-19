@@ -1,6 +1,6 @@
-// === Module 12709: ModalActionButton ===
+// === Module 12726: ModalActionButton ===
 
-// Module 12709 (ModalActionButton)
+// Module 12726 (ModalActionButton)
 import c from "c" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5479 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

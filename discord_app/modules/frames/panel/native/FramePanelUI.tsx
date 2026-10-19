@@ -1,18 +1,18 @@
-// === Module 18172: FramePanelUI ===
+// === Module 18176: FramePanelUI ===
 
-// Module 18172 (FramePanelUI)
+// Module 18176 (FramePanelUI)
 import c from "c" /* 576 */;
-import ActivityPanelUI from "ActivityPanelUI" /* 18146 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 18171 */;
-import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 18177 */;
+import ActivityPanelUI from "ActivityPanelUI" /* 18150 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 18175 */;
+import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 18181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderActivityOrPIP(id, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 18173;
+    let tmp4 = 18177;
   } else {
-    tmp4 = 18174;
+    tmp4 = 18178;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, id);
 }

@@ -1,23 +1,23 @@
-// === Module 10958: LocalActivityStore ===
+// === Module 10974: LocalActivityStore ===
 
-// Module 10958 (LocalActivityStore)
+// Module 10974 (LocalActivityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1357 from "module_1357" /* 1357 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11059 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11078 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 10959 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 10960 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 10975 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 10976 */;
 import SpotifyStore from "SpotifyStore" /* 6016 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import DetectableGameStore from "DetectableGameStore" /* 2040 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 11056 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 11075 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import SessionsStore from "SessionsStore" /* 5211 */;
 

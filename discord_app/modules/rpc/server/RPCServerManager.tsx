@@ -1,6 +1,6 @@
-// === Module 15481: RPCServerManager ===
+// === Module 15485: RPCServerManager ===
 
-// Module 15481 (RPCServerManager)
+// Module 15485 (RPCServerManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -9,12 +9,12 @@ import frameDeepLinks from "frameDeepLinks" /* 7314 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7678 */;
 import getSocketFrameDefault from "getSocketFrame" /* 9162 */;
 import transformUserDefault from "transformUser" /* 9167 */;
-import RPCHelpers from "RPCHelpers" /* 11317 */;
-import transformMessage from "transformMessage" /* 11318 */;
-import getRemoteIconURLDefault from "getRemoteIconURL" /* 11319 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15482 */;
-import useThermalState from "useThermalState" /* 15488 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15489 */;
+import RPCHelpers from "RPCHelpers" /* 11335 */;
+import transformMessage from "transformMessage" /* 11336 */;
+import getRemoteIconURLDefault from "getRemoteIconURL" /* 11337 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15486 */;
+import useThermalState from "useThermalState" /* 15492 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15493 */;
 import _slicedToArray from "module_32" /* 32 */;
 import QuestStore from "QuestStore" /* 7656 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -372,7 +372,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11317);
+            obj = obj(11335);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -387,7 +387,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11317);
+            obj = obj(11335);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -402,7 +402,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(constants2.NONE, user);
           const rpcServer = tmp2.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11317);
+            obj = obj(11335);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -424,7 +424,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(11317);
+              obj = obj(11335);
               rpcServer = obj.transformBaseRelationship(relationshipType, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) => closure_0(dependencyMap[30]).transformApplicationRelationship(closure_0, socket.socket.application.id));
@@ -449,7 +449,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(11317);
+              obj = obj(11335);
               rpcServer = obj.transformBaseRelationship(tmp, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) => closure_0(dependencyMap[30]).transformApplicationRelationship(closure_0, socket.socket.application.id));
@@ -479,7 +479,7 @@ class RPCServerManager {
             closure_0 = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
             const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-              obj = obj(11317);
+              obj = obj(11335);
               return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
             });
           }

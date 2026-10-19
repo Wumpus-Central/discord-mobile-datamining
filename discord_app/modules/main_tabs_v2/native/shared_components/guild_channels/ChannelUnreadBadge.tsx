@@ -1,16 +1,16 @@
-// === Module 17159: ChannelUnreadBadge ===
+// === Module 17163: ChannelUnreadBadge ===
 
-// Module 17159 (ChannelUnreadBadge)
+// Module 17163 (ChannelUnreadBadge)
 import useFontScale from "useFontScale" /* 5486 */;
 import Badge from "Badge" /* 9604 */;
-import ChannelListLayout from "ChannelListLayout" /* 11882 */;
+import ChannelListLayout from "ChannelListLayout" /* 11901 */;
 import noop from "module_19" /* 19 */;
 
 const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11881).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11900).MUTED_OPACITY_CONTENT;
 const UnreadSetting = fn(6223).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(5191);

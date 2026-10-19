@@ -1,9 +1,9 @@
-// === Module 11307: createWebViewController ===
+// === Module 11325: createWebViewController ===
 
-// Module 11307 (createWebViewController)
+// Module 11325 (createWebViewController)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11308 */;
-import createWebViewHtmlFile from "createWebViewHtmlFile" /* 11324 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11326 */;
+import createWebViewHtmlFile from "createWebViewHtmlFile" /* 11342 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -30,7 +30,7 @@ export default function createWebViewController(id, contextSource) {
   }
   closure_5 = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(11014)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(11035)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;

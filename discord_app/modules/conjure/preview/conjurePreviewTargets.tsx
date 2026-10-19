@@ -1,17 +1,17 @@
-// === Module 11692: conjurePreviewTargets ===
+// === Module 11711: conjurePreviewTargets ===
 
-// Module 11692 (conjurePreviewTargets)
+// Module 11711 (conjurePreviewTargets)
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
-import ConjurePreviewMode from "ConjurePreviewMode" /* 11678 */;
+import ConjurePreviewMode from "ConjurePreviewMode" /* 11697 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
 
 export const previewTargets = function previewTargets(modes, frameSurfaceOptions) {
   closure_0 = frameSurfaceOptions;
-  let items = stateFromStores3;
-  if (stateFromStores3 === undefined) {
+  let items = stateFromStores4;
+  if (stateFromStores4 === undefined) {
     items = [];
   }
   return modes.flatMap((mode) => {

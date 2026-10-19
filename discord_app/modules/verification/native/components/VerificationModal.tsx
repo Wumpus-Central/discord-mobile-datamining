@@ -1,6 +1,6 @@
-// === Module 18664: VerificationModal ===
+// === Module 18668: VerificationModal ===
 
-// Module 18664 (VerificationModal)
+// Module 18668 (VerificationModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -18,10 +18,10 @@ import Navigator from "Navigator" /* 6965 */;
 import VerifyPhoneDefault from "VerifyPhone" /* 7044 */;
 import HeaderActionButton from "HeaderActionButton" /* 7365 */;
 import _modDef8937 from "module_8937" /* 8937 */;
-import OverviewDefault from "Overview" /* 18670 */;
+import OverviewDefault from "Overview" /* 18674 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PhoneVerificationStore from "PhoneVerificationStore" /* 18665 */;
+import PhoneVerificationStore from "PhoneVerificationStore" /* 18669 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2062 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -395,15 +395,15 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
     return tmp14;
   }
   const obj = navigation(576);
-  const tmp15 = jsx(navigation(1202).EmptyState, { Illustration: navigation(18666).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> });
+  const tmp15 = jsx(navigation(1202).EmptyState, { Illustration: navigation(18670).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> });
   cResult[5] = tmp4.button;
   cResult[6] = tmp11;
   cResult[7] = tmp15;
   tmp14 = tmp15;
-  const obj3 = { Illustration: navigation(18666).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> };
+  const obj3 = { Illustration: navigation(18670).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> };
 }) : (function PhoneThenEmailInterstitial(navigation) {
   navigation = navigation.navigation;
-  const obj = { Illustration: navigation(18666).VerifyPhone, title: null, body: null, children: null };
+  const obj = { Illustration: navigation(18670).VerifyPhone, title: null, body: null, children: null };
   const intl = navigation(1128).intl;
   obj.title = intl.string(navigation(1128).t.KLnLIP);
   const intl2 = navigation(1128).intl;
@@ -428,7 +428,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
   };
   obj2.children = jsx(navigation(5479).Button, { text: null, onPress: null });
   obj.children = <View style={closure_12().button}>{null}</View>;
-  return jsx(navigation(1202).EmptyState, { Illustration: navigation(18666).VerifyPhone, title: null, body: null, children: null });
+  return jsx(navigation(1202).EmptyState, { Illustration: navigation(18670).VerifyPhone, title: null, body: null, children: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

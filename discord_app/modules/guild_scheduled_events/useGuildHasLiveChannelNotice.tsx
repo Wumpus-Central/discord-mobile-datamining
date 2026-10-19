@@ -1,6 +1,6 @@
-// === Module 17308: useGuildHasLiveChannelNotice ===
+// === Module 17312: useGuildHasLiveChannelNotice ===
 
-// Module 17308 (useGuildHasLiveChannelNotice)
+// Module 17312 (useGuildHasLiveChannelNotice)
 import StageChannelParticipants from "StageChannelParticipants" /* 6206 */;
 import noop from "module_19" /* 19 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6152 */;
@@ -9,7 +9,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5215 */;
-import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 17309 */;
+import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 17313 */;
 
 require = fn;
 let closure_11 = fn(2074).GuildScheduledEventEntityTypes;
@@ -196,7 +196,7 @@ export const useGuildHasLiveChannelNotice = tmp2;
 export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildLiveChannelNoticeInfo(arg0) {
   const cResult = activeEventOrStageInstanceChannel(576).c(29);
   const obj = activeEventOrStageInstanceChannel(576);
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(17311).useActiveEventOrStageInstanceChannel(arg0);
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(17315).useActiveEventOrStageInstanceChannel(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
     cResult[0] = items;
@@ -231,7 +231,7 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
       }
     }
   }
-  const obj2 = activeEventOrStageInstanceChannel(17311);
+  const obj2 = activeEventOrStageInstanceChannel(17315);
   const stateFromStores = activeEventOrStageInstanceChannel(504).useStateFromStores(first, S);
   const tmpResult = activeEventOrStageInstanceChannel(504);
   const guildActiveEvent = activeEventOrStageInstanceChannel(8927).useGuildActiveEvent(arg0);

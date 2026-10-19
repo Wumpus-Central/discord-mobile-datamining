@@ -1,6 +1,6 @@
-// === Module 13034: DoubleTapToReactActionSheet ===
+// === Module 13042: DoubleTapToReactActionSheet ===
 
-// Module 13034 (DoubleTapToReactActionSheet)
+// Module 13042 (DoubleTapToReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;

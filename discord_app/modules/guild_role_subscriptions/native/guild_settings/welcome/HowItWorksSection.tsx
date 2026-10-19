@@ -1,15 +1,15 @@
-// === Module 18914: HowItWorksSection ===
+// === Module 18918: HowItWorksSection ===
 
-// Module 18914 (HowItWorksSection)
+// Module 18918 (HowItWorksSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import _modDef18915 from "module_18915" /* 18915 */;
-import _modDef18916 from "module_18916" /* 18916 */;
-import _modDef18917 from "module_18917" /* 18917 */;
+import _modDef18919 from "module_18919" /* 18919 */;
+import _modDef18920 from "module_18920" /* 18920 */;
+import _modDef18921 from "module_18921" /* 18921 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HowItWor
     const obj2 = { cardNumber: 1, description: null, iconSource: null };
     const intl = util.intl;
     obj2.description = intl.string(util.t.lT0ZNS);
-    obj2.iconSource = _modDef18915;
+    obj2.iconSource = _modDef18919;
     const tmp10 = React4(closure_7, obj2);
     const tmp11 = React4(native.Spacer, { size: 12 });
     cResult[0] = tmp10;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HowItWor
     const obj3 = { cardNumber: 2, description: null, iconSource: null };
     const intl2 = util.intl;
     obj3.description = intl2.string(util.t.ihN2Wb);
-    obj3.iconSource = _modDef18916;
+    obj3.iconSource = _modDef18920;
     const tmp16 = React4(closure_7, obj3);
     cResult[2] = tmp16;
     let tmp12 = tmp16;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HowItWor
     const obj5 = { cardNumber: 3, description: null, iconSource: null };
     const intl3 = util.intl;
     obj5.description = intl3.string(util.t.c8krDQ);
-    obj5.iconSource = _modDef18917;
+    obj5.iconSource = _modDef18921;
     const tmp25 = React4(closure_7, obj5);
     cResult[5] = tmp25;
     let tmp21 = tmp25;
@@ -184,19 +184,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HowItWor
   const obj3 = { cardNumber: 1, description: null, iconSource: null };
   const intl = util.intl;
   obj3.description = intl.string(util.t.lT0ZNS);
-  obj3.iconSource = _modDef18915;
+  obj3.iconSource = _modDef18919;
   const items = [React4(closure_7, obj3), React4(native.Spacer, { size: 12 }), ];
   const obj4 = { cardNumber: 2, description: null, iconSource: null };
   const intl2 = util.intl;
   obj4.description = intl2.string(util.t.ihN2Wb);
-  obj4.iconSource = _modDef18916;
+  obj4.iconSource = _modDef18920;
   items[2] = React4(closure_7, obj4);
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2), ];
   const obj5 = { cardNumber: 3, description: null, iconSource: null };
   const intl3 = util.intl;
   obj5.description = intl3.string(util.t.c8krDQ);
-  obj5.iconSource = _modDef18917;
+  obj5.iconSource = _modDef18921;
   items1[1] = React4(closure_7, obj5);
   obj.children = items1;
   return hasOwnProperty(View, obj);

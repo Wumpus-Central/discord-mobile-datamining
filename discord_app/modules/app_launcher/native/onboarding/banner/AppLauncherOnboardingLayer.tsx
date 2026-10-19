@@ -1,9 +1,9 @@
-// === Module 11843: AppLauncherOnboardingLayer ===
+// === Module 11862: AppLauncherOnboardingLayer ===
 
-// Module 11843 (AppLauncherOnboardingLayer)
+// Module 11862 (AppLauncherOnboardingLayer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 11844 */;
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 11863 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

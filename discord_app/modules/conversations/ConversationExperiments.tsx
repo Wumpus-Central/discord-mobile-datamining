@@ -185,10 +185,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsTopical
 });
 let closure_10 = tmp7;
 ReactCompilerGating = fn(558);
-function isConversationDebugUXEnabled(arg0, location) {
-  let tmp2 = null != arg0;
+function isConversationDebugUXEnabled(guildId, location) {
+  let tmp2 = null != guildId;
   if (tmp2) {
-    guild = GuildStore.getGuild(arg0);
+    guild = GuildStore.getGuild(guildId);
     let flag;
     if (guild != null) {
       const features = guild.features;

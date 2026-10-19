@@ -1,6 +1,6 @@
-// === Module 18227: VoicePanelSettingsOverview ===
+// === Module 18231: VoicePanelSettingsOverview ===
 
-// Module 18227 (VoicePanelSettingsOverview)
+// Module 18231 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -23,16 +23,16 @@ import useIsSecureFramesVerified from "useIsSecureFramesVerified" /* 9082 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9105 */;
 import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9120 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9996 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11441 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 13952 */;
-import _modDef14361 from "module_14361" /* 14361 */;
-import WrenchIcon from "WrenchIcon" /* 16621 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 18225 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 18228 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11459 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 13956 */;
+import _modDef14365 from "module_14365" /* 14365 */;
+import WrenchIcon from "WrenchIcon" /* 16625 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 18229 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 18232 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11213 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11232 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -195,7 +195,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelSe
         const obj9 = { style: tmp4.secureFramesIcon, size: "xs", accessibilityLabel: null };
         const intl = tmp(1128).intl;
         obj9.accessibilityLabel = intl.string(tmp(1128).t.mR9cf3);
-        tmp24 = closure_18(tmp(13952).ShieldLockIcon, obj9);
+        tmp24 = closure_18(tmp(13956).ShieldLockIcon, obj9);
       }
       cResult[15] = isCallSecureFramesVerified;
       cResult[16] = tmp4.secureFramesIcon;
@@ -293,7 +293,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShareA
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { onPress: first, icon: null, label: null, trailing: null };
-    let obj3 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14361 };
+    let obj3 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14365 };
     obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj3);
     let intl = util.intl;
     obj2.label = intl.string(util.t.iQzQs3);
@@ -322,7 +322,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShareA
       const tmpResult2 = showShareActionSheet;
     }
   }, []);
-  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14361 }), label: null, trailing: null };
+  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14365 }), label: null, trailing: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
   obj.trailing = collapsedCategories(TableRowArrow.TableRowArrow, {});
@@ -354,7 +354,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
     tmp8 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14361 };
+    const obj2 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14365 };
     const tmp13 = collapsedCategories(TableRowIcon.TableRowIcon, obj2);
     const intl = util.intl;
     const stringResult = intl.string(util.t["qv5/SP"]);
@@ -391,7 +391,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
   }, []);
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14361 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef14365 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
   obj2.value = stateFromStores;
@@ -484,7 +484,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18229, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18233, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

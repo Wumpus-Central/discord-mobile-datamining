@@ -1,6 +1,6 @@
-// === Module 17877: ChannelDetailsNavigationBar ===
+// === Module 17881: ChannelDetailsNavigationBar ===
 
-// Module 17877 (ChannelDetailsNavigationBar)
+// Module 17881 (ChannelDetailsNavigationBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4913 */;
@@ -10,10 +10,10 @@ import timingPresets from "timingPresets" /* 5195 */;
 import _modDef7018 from "module_7018" /* 7018 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9996 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10595 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11167 */;
-import useSearchContext from "useSearchContext" /* 12941 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13001 */;
-import ChannelDetailsMoreButtonDefault from "ChannelDetailsMoreButton" /* 17878 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11186 */;
+import useSearchContext from "useSearchContext" /* 12949 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13009 */;
+import ChannelDetailsMoreButtonDefault from "ChannelDetailsMoreButton" /* 17882 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4846 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4847 */;
@@ -34,11 +34,11 @@ let closure_14 = fn(9613).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5191);
-let obj = { container: { position: "relative", zIndex: 1, height: fn(13022).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 }, navigationHeader: null, backButton: null, buttonsContainer: null, searchHeader: null };
-let obj3 = { position: "relative", zIndex: 1, height: fn(13022).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 };
-obj.navigationHeader = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(13022).SEARCH_BAR_HEIGHT };
+let obj = { container: { position: "relative", zIndex: 1, height: fn(13030).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 }, navigationHeader: null, backButton: null, buttonsContainer: null, searchHeader: null };
+let obj3 = { position: "relative", zIndex: 1, height: fn(13030).SEARCH_BAR_HEIGHT, marginTop: nativeDefault.space.PX_8 };
+obj.navigationHeader = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(13030).SEARCH_BAR_HEIGHT };
 obj.backButton = { alignSelf: "stretch", justifyContent: "center" };
-let obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(13022).SEARCH_BAR_HEIGHT };
+let obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4, position: "absolute", height: fn(13030).SEARCH_BAR_HEIGHT };
 obj.buttonsContainer = { flex: 1, flexDirection: "row", gap: nativeDefault.modules.mobile.CHANNEL_DETAILS_NAV_BUTTONS_GAP, justifyContent: "flex-end" };
 obj.searchHeader = { position: "absolute" };
 let closure_17 = createStyles.createStyles(obj);
@@ -439,7 +439,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Search
     }
     const obj8 = { ref, channelId: null, guildId: null, showBackButton: true };
     ({ id: obj4.channelId, guild_id: obj4.guildId } = channel);
-    const tmp10 = closure_15(cleanUp(17751), obj8);
+    const tmp10 = closure_15(cleanUp(17755), obj8);
     cResult[3] = channel.guild_id;
     cResult[4] = channel.id;
     cResult[5] = ref;
@@ -491,7 +491,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Search
   fn.__workletHash = 14243423616139;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj3 = { style: null, children: closure_15(cleanUp(17751), { ref, channelId: channel.id, guildId: channel.guild_id, showBackButton: true }) };
+  let obj3 = { style: null, children: closure_15(cleanUp(17755), { ref, channelId: channel.id, guildId: channel.guild_id, showBackButton: true }) };
   const items = [tmp.searchHeader, animatedStyle];
   obj3.style = items;
   return closure_15(cleanUp(4945).View, obj3);

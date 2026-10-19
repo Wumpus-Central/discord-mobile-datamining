@@ -1,6 +1,6 @@
-// === Module 15849: IgnoredUserRow ===
+// === Module 15853: IgnoredUserRow ===
 
-// Module 15849 (IgnoredUserRow)
+// Module 15853 (IgnoredUserRow)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7293 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
 import noop from "module_19" /* 19 */;
@@ -127,7 +127,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Ignored
           }
         }
         const obj7 = { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 };
-        const tmp18 = jsx(tmp(15846).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 });
+        const tmp18 = jsx(tmp(15850).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 });
         cResult[16] = tmp7;
         cResult[17] = tmp15;
         cResult[18] = userRecord;
@@ -201,7 +201,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Ignored
   };
   const items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(15846).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(15850).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {

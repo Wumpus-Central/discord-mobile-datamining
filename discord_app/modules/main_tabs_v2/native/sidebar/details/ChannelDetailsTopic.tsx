@@ -1,6 +1,6 @@
-// === Module 17881: ChannelDetailsTopic ===
+// === Module 17885: ChannelDetailsTopic ===
 
-// Module 17881 (ChannelDetailsTopic)
+// Module 17885 (ChannelDetailsTopic)
 import c from "c" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 5057 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5179 */;

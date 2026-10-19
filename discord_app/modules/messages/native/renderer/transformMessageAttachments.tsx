@@ -1,6 +1,6 @@
-// === Module 14264: transformMessageAttachments ===
+// === Module 14268: transformMessageAttachments ===
 
-// Module 14264 (transformMessageAttachments)
+// Module 14268 (transformMessageAttachments)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -14,7 +14,7 @@ import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8535 */;
 import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8537 */;
 import getDisplayFilenameDefault from "getDisplayFilename" /* 8667 */;
 import MediaPlaybackFacts from "MediaPlaybackFacts" /* 9901 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 12701 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 12718 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;

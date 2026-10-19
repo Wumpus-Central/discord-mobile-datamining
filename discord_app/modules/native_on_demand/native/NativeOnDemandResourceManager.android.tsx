@@ -1,8 +1,8 @@
-// === Module 18571: NativeOnDemandResourceManager ===
+// === Module 18575: NativeOnDemandResourceManager ===
 
-// Module 18571 (NativeOnDemandResourceManager)
+// Module 18575 (NativeOnDemandResourceManager)
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5343 */;
-import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 18572 */;
+import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 18576 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;

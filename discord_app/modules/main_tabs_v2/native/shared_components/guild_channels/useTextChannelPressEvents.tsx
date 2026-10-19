@@ -1,11 +1,11 @@
-// === Module 18390: useTextChannelPressEvents ===
+// === Module 18394: useTextChannelPressEvents ===
 
-// Module 18390 (useTextChannelPressEvents)
+// Module 18394 (useTextChannelPressEvents)
 import transitionToChannel from "transitionToChannel" /* 5202 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7290 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10595 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10763 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 17240 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10779 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 17244 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 

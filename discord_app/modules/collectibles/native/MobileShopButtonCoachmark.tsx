@@ -1,6 +1,6 @@
-// === Module 13933: MobileShopButtonCoachmark ===
+// === Module 13937: MobileShopButtonCoachmark ===
 
-// Module 13933 (MobileShopButtonCoachmark)
+// Module 13937 (MobileShopButtonCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5128 */;

@@ -1,6 +1,6 @@
-// === Module 17707: HomeWelcomeMessage ===
+// === Module 17711: HomeWelcomeMessage ===
 
-// Module 17707 (HomeWelcomeMessage)
+// Module 17711 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8585 */;

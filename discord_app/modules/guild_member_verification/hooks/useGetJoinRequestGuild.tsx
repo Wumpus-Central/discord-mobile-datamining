@@ -1,6 +1,6 @@
-// === Module 13951: useGetJoinRequestGuild ===
+// === Module 13955: useGetJoinRequestGuild ===
 
-// Module 13951 (useGetJoinRequestGuild)
+// Module 13955 (useGetJoinRequestGuild)
 import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6396 */;
 import noop from "module_19" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5035 */;

@@ -1,6 +1,6 @@
-// === Module 15761: useDismissOnce ===
+// === Module 15765: useDismissOnce ===
 
-// Module 15761 (useDismissOnce)
+// Module 15765 (useDismissOnce)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

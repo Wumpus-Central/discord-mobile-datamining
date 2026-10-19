@@ -1,6 +1,6 @@
-// === Module 14515: ReferralProgramShareConfirmationActionSheet ===
+// === Module 14519: ReferralProgramShareConfirmationActionSheet ===
 
-// Module 14515 (ReferralProgramShareConfirmationActionSheet)
+// Module 14519 (ReferralProgramShareConfirmationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -138,7 +138,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
       cResult[12] = recipientDisplayName;
       cResult[13] = tmp15;
     }
-    const obj11 = { style: tmp9, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Reflect" };
+    const obj11 = { style: tmp9, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
     const tmp12 = closure_5(tmp(1202).Avatar, obj11);
     cResult[7] = tmp9;
     cResult[8] = user;
@@ -163,7 +163,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
     erroredAvatar = tmp.erroredAvatar;
   }
   items[1] = erroredAvatar;
-  const items1 = [closure_5(user(1202).Avatar, { style: items, size: user(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Reflect" }), , ];
+  const items1 = [closure_5(user(1202).Avatar, { style: items, size: user(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" }), , ];
   if (tmp6) {
     const obj4 = { children: null };
     const obj5 = { variant: "text-md/medium", color: "text-muted", style: tmp.recipientDisplayName, children: name };
@@ -183,7 +183,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1128).intl;
   obj9.text = intl2.string(user(1128).t["g33r/P"]);
-  const obj3 = { style: items, size: user(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Reflect" };
+  const obj3 = { style: items, size: user(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
   obj9.icon = closure_5(user(8471).ChatIcon, { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
   obj9.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Referral
     }
     const _Symbol5 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_5(tmp(14516).FistBumpSpotIllustration, {});
+      const tmp19 = closure_5(tmp(14520).FistBumpSpotIllustration, {});
       cResult[4] = tmp19;
       let tmp17 = tmp19;
     } else {
@@ -352,9 +352,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Referral
   const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(7117).BottomSheetTitleHeader, { title: null }), children: null };
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1128).t.AwGSWl, obj);
-  const items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(14516).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5187).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5187).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
+  const items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(14520).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5187).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5187).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(14516).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(14520).FistBumpSpotIllustration, {}) };
   const obj6 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
   const obj7 = { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult };
   obj8.children = Array.from(trialCreationResult.trialCreationResult.trialCreationResult.selectedUsers).map((user) => hasOwnProperty(closure_9, { user, trialCreationResult: trialCreationResult.get(user.id) }, user.id));

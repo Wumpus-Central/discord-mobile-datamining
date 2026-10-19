@@ -1,14 +1,14 @@
-// === Module 18612: ConnectGuardianShareModal ===
+// === Module 18616: ConnectGuardianShareModal ===
 
-// Module 18612 (ConnectGuardianShareModal)
+// Module 18616 (ConnectGuardianShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2589 from "module_2589" /* 2589 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import NavigatorHeader from "NavigatorHeader" /* 6478 */;
-import Modal from "Modal" /* 10913 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 15922 */;
+import Modal from "Modal" /* 10929 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 15926 */;
 import noop from "module_19" /* 19 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7525 */;
 
@@ -23,8 +23,8 @@ function ConnectGuardianShareScreen() {
     ModalActionCreatorsDefault.pop();
   }, []);
   let obj = getLinkCode(1128);
-  getLinkCode = getLinkCode(12650).useFamilyCenterActions({ onError: callback }).getLinkCode;
-  const obj2 = getLinkCode(12650);
+  getLinkCode = getLinkCode(12667).useFamilyCenterActions({ onError: callback }).getLinkCode;
+  const obj2 = getLinkCode(12667);
   const items = [FamilyCenterStore];
   const stateFromStores = getLinkCode(573).useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
   const obj3 = getLinkCode(573);
@@ -55,7 +55,7 @@ function ConnectGuardianShareScreen() {
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const obj11 = { shareActions: "full", linkCode: stateFromStores, expiresAt: stateFromStores1, onRefresh: getLinkCode };
-      let tmp11Result = closure_6(tmp2(15923).ConnectGuardianCard, obj11);
+      let tmp11Result = closure_6(tmp2(15927).ConnectGuardianCard, obj11);
     }
     const obj12 = { children: null };
     const obj13 = { children: null };

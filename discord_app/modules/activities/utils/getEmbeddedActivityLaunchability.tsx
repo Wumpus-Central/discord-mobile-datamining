@@ -1,9 +1,9 @@
-// === Module 11253: getEmbeddedActivityLaunchability ===
+// === Module 11272: getEmbeddedActivityLaunchability ===
 
-// Module 11253 (getEmbeddedActivityLaunchability)
+// Module 11272 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1128 */;
 import AgeGateUtils from "AgeGateUtils" /* 6180 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11228 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11247 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4845 */;

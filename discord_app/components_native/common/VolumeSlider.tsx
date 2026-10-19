@@ -1,6 +1,6 @@
-// === Module 11451: VolumeSlider ===
+// === Module 11469: VolumeSlider ===
 
-// Module 11451 (VolumeSlider)
+// Module 11469 (VolumeSlider)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
@@ -8,7 +8,7 @@ import useToken from "useToken" /* 4913 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5351 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 8501 */;
 import _modDef8678 from "module_8678" /* 8678 */;
-import VoiceXIcon from "VoiceXIcon" /* 11452 */;
+import VoiceXIcon from "VoiceXIcon" /* 11470 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSl
   if (cResult[9] === tmp8) {
     if (cResult[12] !== tmp15.leftIcon) {
       const obj2 = { style: tmp15.leftIcon };
-      const tmp20 = closure_7(tmp(11452).VoiceXIcon, obj2);
+      const tmp20 = closure_7(tmp(11470).VoiceXIcon, obj2);
       cResult[12] = tmp15.leftIcon;
       cResult[13] = tmp20;
     }

@@ -1,6 +1,6 @@
-// === Module 17448: HomeDrawerFolderRow ===
+// === Module 17452: HomeDrawerFolderRow ===
 
-// Module 17448 (HomeDrawerFolderRow)
+// Module 17452 (HomeDrawerFolderRow)
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import BellSlashIcon2 from "BellSlashIcon" /* 10654 */;

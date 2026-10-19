@@ -1,6 +1,6 @@
-// === Module 11855: useEmbeddedAppsForChannel ===
+// === Module 11874: useEmbeddedAppsForChannel ===
 
-// Module 11855 (useEmbeddedAppsForChannel)
+// Module 11874 (useEmbeddedAppsForChannel)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7134 */;
 import noop from "module_19" /* 19 */;

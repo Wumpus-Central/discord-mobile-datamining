@@ -13,7 +13,7 @@ import uploader_UploadUtils from "uploader/UploadUtils" /* 8033 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 8035 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9564 */;
 import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10323 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13106 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

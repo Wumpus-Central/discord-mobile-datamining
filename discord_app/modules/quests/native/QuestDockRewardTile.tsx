@@ -1,6 +1,6 @@
-// === Module 13908: QuestDockRewardTile ===
+// === Module 13912: QuestDockRewardTile ===
 
-// Module 13908 (QuestDockRewardTile)
+// Module 13912 (QuestDockRewardTile)
 import nativeDefault from "native" /* 587 */;
 import AssetUtils from "AssetUtils" /* 9487 */;
 import _slicedToArray from "module_32" /* 32 */;

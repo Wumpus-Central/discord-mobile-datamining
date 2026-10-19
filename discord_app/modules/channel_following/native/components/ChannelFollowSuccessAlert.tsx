@@ -1,6 +1,6 @@
-// === Module 13129: ChannelFollowSuccessAlert ===
+// === Module 13137: ChannelFollowSuccessAlert ===
 
-// Module 13129 (ChannelFollowSuccessAlert)
+// Module 13137 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1128 */;
 import useThemeDefault from "useTheme" /* 5127 */;
@@ -13,8 +13,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(13130), fn(13131), fn(13132)];
-let items1 = [fn(13133), fn(13134), fn(13135)];
+let items = [fn(13138), fn(13139), fn(13140)];
+let items1 = [fn(13141), fn(13142), fn(13143)];
 let items2 = [
   () => {
     const intl = util.intl;

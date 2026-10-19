@@ -1,6 +1,6 @@
-// === Module 13027: UpcomingEventsLongPressActionSheet ===
+// === Module 13035: UpcomingEventsLongPressActionSheet ===
 
-// Module 13027 (UpcomingEventsLongPressActionSheet)
+// Module 13035 (UpcomingEventsLongPressActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7077 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7081 */;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
     }
     const _Symbol2 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = { source: stateFromStores1(13028) };
+      const obj4 = { source: stateFromStores1(13036) };
       const tmp28 = closure_7(tmp(1202).Icon, obj4);
       cResult[14] = tmp28;
       let tmp25 = tmp28;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
     } else {
       tmp32 = cResult[17];
     }
-    const tmp35 = stateFromStores1(stateFromStores1 ? 13029 : 13030);
+    const tmp35 = stateFromStores1(stateFromStores1 ? 13037 : 13038);
     if (cResult[18] !== tmp35) {
       const obj7 = { source: tmp35 };
       const tmp38 = closure_7(tmp(1202).Icon, obj7);
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
   const items2 = [closure_7(guildId(7117).BottomSheetTitleHeader, obj3), , ];
   const obj6 = { leading: null, label: null, onPress: null };
   const tmp9 = stateFromStores1(6436);
-  obj6.leading = closure_7(guildId(1202).Icon, { source: stateFromStores1(13028) });
+  obj6.leading = closure_7(guildId(1202).Icon, { source: stateFromStores1(13036) });
   const obj8 = { text: null };
   const intl2 = guildId(1128).intl;
   obj8.text = intl2.string(guildId(1128).t.e6RscS);
@@ -247,8 +247,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Upcoming
   };
   items2[1] = closure_7(guildId(8855).FormRow, obj6);
   const obj9 = { leading: null, label: null, onPress: null };
-  const obj7 = { source: stateFromStores1(13028) };
-  obj9.leading = closure_7(guildId(1202).Icon, { source: tmp8(stateFromStores1 ? 13029 : 13030) });
+  const obj7 = { source: stateFromStores1(13036) };
+  obj9.leading = closure_7(guildId(1202).Icon, { source: tmp8(stateFromStores1 ? 13037 : 13038) });
   const intl3 = tmp2(1128).intl;
   const string = intl3.string;
   const t = tmp2(1128).t;

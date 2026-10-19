@@ -1,6 +1,6 @@
-// === Module 14212: BundleProductDetailsActionSheetPreview ===
+// === Module 14216: BundleProductDetailsActionSheetPreview ===
 
-// Module 14212 (BundleProductDetailsActionSheetPreview)
+// Module 14216 (BundleProductDetailsActionSheetPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5187 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7542 */;
 import useShopProductItems from "useShopProductItems" /* 8569 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 14214 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 14218 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

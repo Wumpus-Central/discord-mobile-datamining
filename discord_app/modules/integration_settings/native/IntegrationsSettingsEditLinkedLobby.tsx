@@ -1,6 +1,6 @@
-// === Module 17997: IntegrationsSettingsEditLinkedLobby ===
+// === Module 18001: IntegrationsSettingsEditLinkedLobby ===
 
-// Module 17997 (IntegrationsSettingsEditLinkedLobby)
+// Module 18001 (IntegrationsSettingsEditLinkedLobby)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5187 */;

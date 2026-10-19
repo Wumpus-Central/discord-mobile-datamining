@@ -9,7 +9,7 @@ import useChannelName from "useChannelName" /* 5521 */;
 import TextIcon2 from "TextIcon" /* 8480 */;
 import ForumIcon from "ForumIcon" /* 8488 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10595 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 12712 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 12729 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -232,8 +232,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         obj2.guild = stateFromStores;
         obj2.channel = tmp4;
-        obj2.size = tmp(12712).GuildIconWithChannelTypeSizes.SMALL_32;
-        const tmp34 = closure_14(tmp(12712).GuildIconWithChannelType, obj2);
+        obj2.size = tmp(12729).GuildIconWithChannelTypeSizes.SMALL_32;
+        const tmp34 = closure_14(tmp(12729).GuildIconWithChannelType, obj2);
       }
       cResult[26] = tmp4;
       cResult[27] = stateFromStores;

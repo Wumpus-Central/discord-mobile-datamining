@@ -1,15 +1,15 @@
-// === Module 18681: GuildSettingsRoleSubscriptionsSection ===
+// === Module 18685: GuildSettingsRoleSubscriptionsSection ===
 
-// Module 18681 (GuildSettingsRoleSubscriptionsSection)
+// Module 18685 (GuildSettingsRoleSubscriptionsSection)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import TableRow from "TableRow" /* 6457 */;
 import TableRowGroup from "TableRowGroup" /* 6542 */;
-import _modDef18682 from "module_18682" /* 18682 */;
-import _modDef18683 from "module_18683" /* 18683 */;
-import _modDef18684 from "module_18684" /* 18684 */;
-import _modDef18685 from "module_18685" /* 18685 */;
+import _modDef18686 from "module_18686" /* 18686 */;
+import _modDef18687 from "module_18687" /* 18687 */;
+import _modDef18688 from "module_18688" /* 18688 */;
+import _modDef18689 from "module_18689" /* 18689 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -60,7 +60,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
     tmp10 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: pushScreen(18682) };
+    const obj2 = { source: pushScreen(18686) };
     const tmp15 = closure_7(tmp(6457).TableRow.Icon, obj2);
     cResult[5] = tmp15;
     let tmp12 = tmp15;
@@ -92,7 +92,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
     tmp19 = cResult[8];
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { source: pushScreen(18683) };
+    const obj4 = { source: pushScreen(18687) };
     const tmp24 = closure_7(tmp(6457).TableRow.Icon, obj4);
     cResult[9] = tmp24;
     let tmp21 = tmp24;
@@ -131,7 +131,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
       }
       const _Symbol2 = Symbol;
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj6 = { source: pushScreen(18685) };
+        const obj6 = { source: pushScreen(18689) };
         const tmp37 = closure_7(tmp(6457).TableRow.Icon, obj6);
         cResult[17] = tmp37;
         let tmp34 = tmp37;
@@ -181,7 +181,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
     const obj9 = { label: null, arrow: true, icon: null, onPress: null };
     const intl4 = tmp(1128).intl;
     obj9.label = intl4.string(tmp(1128).t.p2Rsdl);
-    const obj10 = { source: pushScreen(18684) };
+    const obj10 = { source: pushScreen(18688) };
     obj9.icon = closure_7(tmp(6457).TableRow.Icon, obj10);
     obj9.onPress = function onPress() {
       return pushScreen(constants2.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: guild.id });
@@ -204,7 +204,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
   const obj3 = { label: null, arrow: true, icon: null, onPress: null };
   const intl2 = util.intl;
   obj3.label = intl2.string(util.t["/CfKoD"]);
-  obj3.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18682 });
+  obj3.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18686 });
   obj3.onPress = function onPress() {
     return importDefault(constants2.ROLE_SUBSCRIPTIONS_BASIC);
   };
@@ -212,8 +212,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
   const obj5 = { label: null, arrow: true, icon: null, onPress: null };
   const intl3 = util.intl;
   obj5.label = intl3.string(util.t.pXbGYc);
-  const obj4 = { source: _modDef18682 };
-  obj5.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18683 });
+  const obj4 = { source: _modDef18686 };
+  obj5.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18687 });
   obj5.onPress = function onPress() {
     return importDefault(constants2.ROLE_SUBSCRIPTIONS_TIERS);
   };
@@ -222,7 +222,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
     const obj7 = { label: null, arrow: true, icon: null, onPress: null };
     const intl4 = util.intl;
     obj7.label = intl4.string(util.t.p2Rsdl);
-    const obj8 = { source: _modDef18684 };
+    const obj8 = { source: _modDef18688 };
     obj7.icon = closure_7(TableRow.TableRow.Icon, obj8);
     obj7.onPress = function onPress() {
       return importDefault(constants2.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: id.id });
@@ -233,8 +233,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
   const obj9 = { label: null, arrow: true, icon: null, onPress: null };
   const intl5 = util.intl;
   obj9.label = intl5.string(util.t.C5Dbwn);
-  const obj6 = { source: _modDef18683 };
-  obj9.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18685 });
+  const obj6 = { source: _modDef18687 };
+  obj9.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18689 });
   obj9.onPress = function onPress() {
     return importDefault(constants2.ROLE_SUBSCRIPTIONS_EMOJIS);
   };

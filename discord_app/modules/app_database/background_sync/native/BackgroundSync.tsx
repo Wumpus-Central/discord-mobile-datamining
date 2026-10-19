@@ -1,6 +1,6 @@
-// === Module 18450: background_sync/BackgroundSync ===
+// === Module 18454: background_sync/BackgroundSync ===
 
-// Module 18450 (background_sync/BackgroundSync)
+// Module 18454 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;

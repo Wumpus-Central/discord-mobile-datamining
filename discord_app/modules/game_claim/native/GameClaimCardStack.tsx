@@ -1,6 +1,6 @@
-// === Module 17315: GameClaimCardStack ===
+// === Module 17319: GameClaimCardStack ===
 
-// Module 17315 (GameClaimCardStack)
+// Module 17319 (GameClaimCardStack)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5128 */;

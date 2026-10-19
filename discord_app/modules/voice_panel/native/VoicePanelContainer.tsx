@@ -1,11 +1,11 @@
-// === Module 18178: VoicePanelContainer ===
+// === Module 18182: VoicePanelContainer ===
 
-// Module 18178 (VoicePanelContainer)
+// Module 18182 (VoicePanelContainer)
 import c from "c" /* 576 */;
 import _mod4828 from "module_4828" /* 4828 */;
 import native from "native" /* 4922 */;
-import VoicePanelUIDefault from "VoicePanelUI" /* 18179 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 18348 */;
+import VoicePanelUIDefault from "VoicePanelUI" /* 18183 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 18352 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import VoicePanelStore from "VoicePanelStore" /* 6352 */;

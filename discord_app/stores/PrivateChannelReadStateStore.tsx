@@ -1,6 +1,6 @@
-// === Module 14826: PrivateChannelReadStateStore ===
+// === Module 14830: PrivateChannelReadStateStore ===
 
-// Module 14826 (PrivateChannelReadStateStore)
+// Module 14830 (PrivateChannelReadStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FunctionUtils from "FunctionUtils" /* 2042 */;

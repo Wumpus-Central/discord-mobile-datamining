@@ -1,16 +1,16 @@
-// === Module 17904: AddFriendsScreen ===
+// === Module 17908: AddFriendsScreen ===
 
-// Module 17904 (AddFriendsScreen)
+// Module 17908 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8770 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13341 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13345 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 17907 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 17909 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13346 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13350 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 17911 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 17913 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -58,10 +58,10 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(13365).Sections;
+const Sections = fn(13370).Sections;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-let ContactPermissions = fn(13343).ContactPermissions;
+let ContactPermissions = fn(13348).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
@@ -80,11 +80,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
   let obj = require("c");
   const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
   if (cResult[0] !== contactSyncAccount) {
-    const isContactSyncEnabledResult = tmp(13345).isContactSyncEnabled(contactSyncAccount);
+    const isContactSyncEnabledResult = tmp(13350).isContactSyncEnabled(contactSyncAccount);
     cResult[0] = contactSyncAccount;
     cResult[1] = isContactSyncEnabledResult;
     let tmp5 = isContactSyncEnabledResult;
-    let tmpResult = tmp(13345);
+    let tmpResult = tmp(13350);
   } else {
     tmp5 = cResult[1];
   }

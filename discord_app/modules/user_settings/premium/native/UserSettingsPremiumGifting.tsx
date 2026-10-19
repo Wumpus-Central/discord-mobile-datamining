@@ -1,6 +1,6 @@
-// === Module 14629: UserSettingsPremiumGifting ===
+// === Module 14633: UserSettingsPremiumGifting ===
 
-// Module 14629 (UserSettingsPremiumGifting)
+// Module 14633 (UserSettingsPremiumGifting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -19,13 +19,13 @@ import BillingActionCreatorsDefault from "BillingActionCreators" /* 7410 */;
 import BadgeId from "BadgeId" /* 8582 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8595 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9694 */;
-import _modDef14630 from "module_14630" /* 14630 */;
-import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 14631 */;
-import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 14637 */;
-import PremiumTierCardDefault from "PremiumTierCard" /* 14639 */;
-import GiftPurchaseButtonDefault from "GiftPurchaseButton" /* 14642 */;
-import PremiumUnverifiedWarningDefault from "PremiumUnverifiedWarning" /* 14644 */;
-import UserSettingsGiftingBadgeProgressDefault from "UserSettingsGiftingBadgeProgress" /* 14645 */;
+import _modDef14634 from "module_14634" /* 14634 */;
+import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 14635 */;
+import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 14641 */;
+import PremiumTierCardDefault from "PremiumTierCard" /* 14643 */;
+import GiftPurchaseButtonDefault from "GiftPurchaseButton" /* 14646 */;
+import PremiumUnverifiedWarningDefault from "PremiumUnverifiedWarning" /* 14648 */;
+import UserSettingsGiftingBadgeProgressDefault from "UserSettingsGiftingBadgeProgress" /* 14649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8590 */;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     constants2 = tmp27[0];
     closure_11 = tmp27[1];
     const tmpResult9 = tmp(504);
-    const subscriptionPlansLoaded = tmp(14472).useSubscriptionPlansLoaded();
+    const subscriptionPlansLoaded = tmp(14476).useSubscriptionPlansLoaded();
     const _Symbol4 = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
       class L {
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     function renderEmptyState() {
       const obj = { style: closure_2.emptyGiftLinks, children: null };
-      const obj2 = { style: closure_2.emptyImage, source: _modDef14630 };
+      const obj2 = { style: closure_2.emptyImage, source: _modDef14634 };
       const items = [map1(FastImageDefault, obj2), ];
       const obj3 = { style: closure_2.emptyGiftDescription, accessible: true, children: null };
       const obj4 = { style: closure_2.emptyGiftHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -376,7 +376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     cResult[22] = tmp7.emptyGiftLinks;
     cResult[23] = tmp7.emptyImage;
     cResult[24] = renderEmptyState;
-    const tmpResult10 = tmp(14472);
+    const tmpResult10 = tmp(14476);
   }
   const tmpResult6 = recipientUserId(504);
 }) : (function UserSettingsPremiumGifting(ref) {

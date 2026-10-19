@@ -1,6 +1,6 @@
-// === Module 13056: ApplicationCommandLoadingItem ===
+// === Module 13064: ApplicationCommandLoadingItem ===
 
-// Module 13056 (ApplicationCommandLoadingItem)
+// Module 13064 (ApplicationCommandLoadingItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useFontScale from "useFontScale" /* 5486 */;

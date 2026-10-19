@@ -1,14 +1,14 @@
-// === Module 16371: AndroidClassicChatFontScaleSetting ===
+// === Module 16375: AndroidClassicChatFontScaleSetting ===
 
-// Module 16371 (AndroidClassicChatFontScaleSetting)
+// Module 16375 (AndroidClassicChatFontScaleSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import _mod4828 from "module_4828" /* 4828 */;
 import SettingsConstants from "SettingsConstants" /* 8260 */;
-import FontScaleStore from "FontScaleStore" /* 16319 */;
+import FontScaleStore from "FontScaleStore" /* 16323 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11065 */;
+import SettingBuilders from "SettingBuilders" /* 11084 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

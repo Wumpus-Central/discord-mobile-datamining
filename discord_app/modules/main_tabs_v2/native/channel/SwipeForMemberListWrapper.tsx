@@ -1,6 +1,6 @@
-// === Module 17747: SwipeForMemberListWrapper ===
+// === Module 17751: SwipeForMemberListWrapper ===
 
-// Module 17747 (SwipeForMemberListWrapper)
+// Module 17751 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,8 +12,8 @@ import useChatLayout from "useChatLayout" /* 5075 */;
 import ChatInputUtils from "ChatInputUtils" /* 5081 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5206 */;
 import useMountEffect from "useMountEffect" /* 5496 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11696 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 17137 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11715 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 17141 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

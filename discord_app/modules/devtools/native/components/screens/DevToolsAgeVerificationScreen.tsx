@@ -1,6 +1,6 @@
-// === Module 16783: DevToolsAgeVerificationScreen ===
+// === Module 16787: DevToolsAgeVerificationScreen ===
 
-// Module 16783 (DevToolsAgeVerificationScreen)
+// Module 16787 (DevToolsAgeVerificationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;

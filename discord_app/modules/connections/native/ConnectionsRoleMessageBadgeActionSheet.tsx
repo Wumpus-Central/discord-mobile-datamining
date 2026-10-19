@@ -1,6 +1,6 @@
-// === Module 12536: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 12553: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 12536 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 12553 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -19,8 +19,8 @@ import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6473 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7152 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
 import BotTagDefault from "BotTag" /* 9039 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11117 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11121 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11136 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11140 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
@@ -28,7 +28,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import GuildRoleStore from "GuildRoleStore" /* 2122 */;
 import GuildStore from "GuildStore" /* 2090 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12537 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12554 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -245,7 +245,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutChecks
       const items1 = [null, , , ];
       let tmp26 = null;
       if (null != tmp7) {
-        const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Reflect" };
+        const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "a" };
         tmp26 = value3(native.Avatar, obj6);
       }
       items1[1] = tmp26;
@@ -357,7 +357,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutChecks
         const items1 = [null, , , ];
         let tmp26 = null;
         if (null != tmp7) {
-          const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Reflect" };
+          const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "a" };
           tmp26 = value3(native.Avatar, obj6);
         }
         items1[1] = tmp26;

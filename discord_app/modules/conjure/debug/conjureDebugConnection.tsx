@@ -1,16 +1,16 @@
-// === Module 10989: conjureDebugConnection ===
+// === Module 11008: conjureDebugConnection ===
 
-// Module 10989 (conjureDebugConnection)
+// Module 11008 (conjureDebugConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10981 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10982 */;
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10990 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10967 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10997 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10998 */;
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 11009 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10983 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let obj3 = { web: { location: "runtime_frame", code: fn(10981).ConjureErrorCodes.RUNTIME_FRAME_ERROR }, preview: null };
+let obj3 = { web: { location: "runtime_frame", code: fn(10997).ConjureErrorCodes.RUNTIME_FRAME_ERROR }, preview: null };
 let obj = {
   log(log, projectId) {
     projectId = projectId.projectId;
@@ -208,8 +208,8 @@ let obj2 = {
     }
   }
 };
-let obj4 = { location: "runtime_frame", code: fn(10981).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
-obj3.preview = { location: "runtime_worker", code: fn(10981).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
+let obj4 = { location: "runtime_frame", code: fn(10997).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
+obj3.preview = { location: "runtime_worker", code: fn(10997).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
 let c5 = 10;
 const map = new Map();
 let set = new Set();

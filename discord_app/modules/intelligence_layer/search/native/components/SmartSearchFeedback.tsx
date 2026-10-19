@@ -1,12 +1,12 @@
-// === Module 17830: SmartSearchFeedback ===
+// === Module 17834: SmartSearchFeedback ===
 
-// Module 17830 (SmartSearchFeedback)
+// Module 17834 (SmartSearchFeedback)
 import nativeDefault from "native" /* 587 */;
 import _modDef4127 from "module_4127" /* 4127 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12984 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13002 */;
-import SmartSearchActionCreators from "SmartSearchActionCreators" /* 13019 */;
-import IconActionButtonDefault from "IconActionButton" /* 13773 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12992 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13010 */;
+import SmartSearchActionCreators from "SmartSearchActionCreators" /* 13027 */;
+import IconActionButtonDefault from "IconActionButton" /* 13777 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,10 +16,10 @@ SmartSearchResultsStoreDefault;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5191);
-let obj2 = { feedbackContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_6, height: nativeDefault.space.PX_24 }, buttonContainer: { flexDirection: "row", alignItems: "center" } };
+let obj2 = { feedbackContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_6, height: nativeDefault.space.PX_24 }, buttonContainer: { flexDirection: "row", alignItems: "center" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_6, height: nativeDefault.space.PX_24 };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_6, height: nativeDefault.space.PX_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchFeedback.tsx");
 

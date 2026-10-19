@@ -1,6 +1,6 @@
-// === Module 17580: ActionStatusSubLabel ===
+// === Module 17584: ActionStatusSubLabel ===
 
-// Module 17580 (ActionStatusSubLabel)
+// Module 17584 (ActionStatusSubLabel)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4923 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;

@@ -1,13 +1,13 @@
-// === Module 16908: HeroBlock ===
+// === Module 16912: HeroBlock ===
 
-// Module 16908 (HeroBlock)
+// Module 16912 (HeroBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9259 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9262 */;
 import SkeletonCardDefault from "SkeletonCard" /* 9376 */;
-import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 16921 */;
+import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 16925 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7530 */;
 
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((heroBlock) => {
   let stateFromStores;
   closure_5 = undefined;
   constants = undefined;
-  let obj = heroBlock(16909);
+  let obj = heroBlock(16913);
   dependencyMap = heroBlock(1505).useNavigation();
   let obj2 = heroBlock(1505);
   noop = heroBlock(9262).useCollectiblesAnalyticsContext();
@@ -276,21 +276,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((heroBlock) => {
   const tmpResult9 = heroBlock(9468);
   const tmp7 = preferVCPrice(5127)();
   const tmp8 = closure_13();
-  const tmpResult10 = heroBlock(16910);
+  const tmpResult10 = heroBlock(16914);
   const token = heroBlock(4913).useToken(preferVCPrice(587).colors.BACKGROUND_BASE_LOW);
   const tmpResult11 = heroBlock(4913);
   const tmpResult12 = heroBlock(5063);
   const tmpResult13 = heroBlock(5063);
   const hexToRgbaStringResult = tmpResult12.hexToRgbaString(heroBlock(5063).hexWithOpacity(token, 0));
   const token1 = heroBlock(4913).useToken(preferVCPrice(587).colors.BACKGROUND_BASE_LOWEST);
-  const tmp12 = preferVCPrice(16911)();
+  const tmp12 = preferVCPrice(16915)();
   closure_5 = tmp12;
   const items1 = [heroBlock.rankedSkuIds, tmp12];
   const memo = noop.useMemo(() => closure_5(heroBlock.rankedSkuIds), items1);
   const tmpResult14 = heroBlock(4913);
-  const filteredAndSortedProducts = heroBlock(16114).useFilteredAndSortedProducts({ products: memo, bypassAndroidUnsyncedFilter: tmp4 });
+  const filteredAndSortedProducts = heroBlock(16118).useFilteredAndSortedProducts({ products: memo, bypassAndroidUnsyncedFilter: tmp4 });
   constants = tmp14;
-  const tmpResult15 = heroBlock(16114);
+  const tmpResult15 = heroBlock(16118);
   let unpublishedAt;
   if (stateFromStores != null) {
     unpublishedAt = stateFromStores.unpublishedAt;
@@ -430,8 +430,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((heroBlock) => {
         const intl5 = tmp(1128).intl;
         const obj31 = { category: stateFromStores.name };
         obj30.accessibilityLabel = intl5.formatToPlainString(tmp(1128).t.FNtLb3, obj31);
-        let tmp22Result9 = closure_10(tmp6(16925), obj30);
-        const tmp6Result3 = tmp6(16925);
+        let tmp22Result9 = closure_10(tmp6(16929), obj30);
+        const tmp6Result3 = tmp6(16929);
       } else {
         if (0 === filteredAndSortedProducts.length) {
           const obj32 = { accessibilityLabel: null };
@@ -470,13 +470,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((heroBlock) => {
       items5[2] = closure_10(stateFromStores, obj29);
       obj6.children = items5;
       obj5.children = closure_12(stateFromStores, obj6);
-      obj4.children = closure_10(tmp6(16928), obj5);
+      obj4.children = closure_10(tmp6(16932), obj5);
       return closure_10(tmp(7130).AnalyticsLocationProvider, obj4);
     } else {
       if (tmpResult16.isThemeDark(tmp7)) {
-        let tmp6Result4 = tmp6(16923);
+        let tmp6Result4 = tmp6(16927);
       } else {
-        tmp6Result4 = tmp6(16924);
+        tmp6Result4 = tmp6(16928);
       }
       tmpResult16 = tmp(5065);
     }

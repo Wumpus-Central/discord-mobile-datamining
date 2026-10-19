@@ -1,19 +1,19 @@
-// === Module 15797: TwoFASetupModal ===
+// === Module 15801: TwoFASetupModal ===
 
-// Module 15797 (TwoFASetupModal)
+// Module 15801 (TwoFASetupModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useInitialValueDefault from "useInitialValue" /* 6447 */;
 import Navigator from "Navigator" /* 6965 */;
-import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 15796 */;
-import TwoFASetupScanDefault from "TwoFASetupScan" /* 15803 */;
-import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 15804 */;
+import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 15800 */;
+import TwoFASetupScanDefault from "TwoFASetupScan" /* 15807 */;
+import TwoFASetupEnterCodeDefault from "TwoFASetupEnterCode" /* 15808 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const TwoFAModalSetupSections = fn(15798).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(15802).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5191);
@@ -149,17 +149,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
       const obj = closure_0(6910);
-      obj3.headerLeft = closure_0(6478).getHeaderCloseButton(closure_1(15796).close);
+      obj3.headerLeft = closure_0(6478).getHeaderCloseButton(closure_1(15800).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(15799).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(15800), {});
+        return closure_1_6(closure_1_1(15804), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15799).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupScanDefault, { totpSecret });
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15799).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
@@ -175,12 +175,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
       const obj4 = closure_0(6478);
-      obj5.headerLeft = closure_0(6478).getHeaderCloseButton(closure_1(15796).close);
+      obj5.headerLeft = closure_0(6478).getHeaderCloseButton(closure_1(15800).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(15807), {});
+        return closure_1_6(closure_1_1(15811), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;
@@ -222,17 +222,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
       const obj = totpSecret(6910);
-      obj3.headerLeft = totpSecret(6478).getHeaderCloseButton(closure_1(15796).close);
+      obj3.headerLeft = totpSecret(6478).getHeaderCloseButton(closure_1(15800).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(15799).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(15800), {});
+        return closure_1_6(closure_1_1(15804), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15799).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupScanDefault, { totpSecret });
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(15799).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return closure_1_6(totpSecret(15803).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_2_6(TwoFASetupEnterCodeDefault, { totpSecret });
@@ -248,12 +248,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
       const obj4 = totpSecret(6478);
-      obj5.headerLeft = totpSecret(6478).getHeaderCloseButton(closure_1(15796).close);
+      obj5.headerLeft = totpSecret(6478).getHeaderCloseButton(closure_1(15800).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(15807), {});
+        return closure_1_6(closure_1_1(15811), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;

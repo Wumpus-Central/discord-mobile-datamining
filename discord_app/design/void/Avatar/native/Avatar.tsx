@@ -1,18 +1,18 @@
-// === Module 15190: Avatar ===
+// === Module 15194: Avatar ===
 
-// Module 15190 (Avatar)
+// Module 15194 (Avatar)
 import nativeDefault from "native" /* 587 */;
 import IconDefault from "Icon" /* 5481 */;
 import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8555 */;
 import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9307 */;
 import ClipView from "ClipView" /* 9308 */;
-import _modDef11289 from "module_11289" /* 11289 */;
-import _modDef11290 from "module_11290" /* 11290 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14079 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15179 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15180 */;
-import Status from "Status" /* 15181 */;
-import SpeakerPulseDefault from "SpeakerPulse" /* 15191 */;
+import _modDef11307 from "module_11307" /* 11307 */;
+import _modDef11308 from "module_11308" /* 11308 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14083 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15183 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15184 */;
+import Status from "Status" /* 15185 */;
+import SpeakerPulseDefault from "SpeakerPulse" /* 15195 */;
 import noop from "module_19" /* 19 */;
 
 const CutoutableAvatarImageDefault = CutoutableAvatarImage;
@@ -377,7 +377,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                   const items = [, ];
                                                                   ({ status: arr2[0], voiceStatus: arr2[1] } = closure_21);
                                                                   obj2.style = items;
-                                                                  const obj3 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11289, color: nativeDefault.unsafe_rawColors.WHITE };
+                                                                  const obj3 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11307, color: nativeDefault.unsafe_rawColors.WHITE };
                                                                   obj2.children = closure_2_8(IconDefault, obj3);
                                                                   let tmp2 = closure_2_8(View, obj2);
                                                                 } else if (mute) {
@@ -385,7 +385,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                   const items1 = [, ];
                                                                   ({ status: arr[0], voiceStatus: arr[1] } = closure_21);
                                                                   obj.style = items1;
-                                                                  const obj4 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11290, color: nativeDefault.unsafe_rawColors.WHITE };
+                                                                  const obj4 = { size: IconDefault.Sizes.REFRESH_SMALL_16, source: _modDef11308, color: nativeDefault.unsafe_rawColors.WHITE };
                                                                   obj.children = closure_2_8(IconDefault, obj4);
                                                                   tmp2 = closure_2_8(View, obj);
                                                                 }
@@ -741,5 +741,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
 }));
-export const AvatarSizes = fn(14079).AvatarSizes;
+export const AvatarSizes = fn(14083).AvatarSizes;
 export { getStatusSize };

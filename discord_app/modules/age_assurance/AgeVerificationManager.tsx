@@ -1,6 +1,6 @@
-// === Module 18438: AgeVerificationManager ===
+// === Module 18442: AgeVerificationManager ===
 
-// Module 18438 (AgeVerificationManager)
+// Module 18442 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1109 */;
 import Server from "Server" /* 2000 */;
@@ -8,7 +8,7 @@ import ChannelMessagesDefault from "ChannelMessages" /* 6008 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 6176 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6177 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7983 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12643 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12660 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import MessageStore from "MessageStore" /* 5532 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;

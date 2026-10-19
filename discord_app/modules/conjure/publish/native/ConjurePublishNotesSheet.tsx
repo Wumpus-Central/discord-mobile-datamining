@@ -1,13 +1,13 @@
-// === Module 12180: ConjurePublishNotesSheet ===
+// === Module 12198: ConjurePublishNotesSheet ===
 
-// Module 12180 (ConjurePublishNotesSheet)
+// Module 12198 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5155 */;
 import ConjureUtils from "ConjureUtils" /* 7222 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11648 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12181 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11667 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12199 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -260,7 +260,7 @@ export default function ConjurePublishNotesSheet(projectName) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = projectId(12181).rememberPatchNotesChannel(closure_129_2, closure_129_18.id);
+              const result = projectId(12199).rememberPatchNotesChannel(closure_129_2, closure_129_18.id);
               let id;
               if (closure_128_0 != null) {
                 const body = closure_128_0.body;
@@ -271,12 +271,12 @@ export default function ConjurePublishNotesSheet(projectName) {
               closure_128_1 = id;
               if (null != closure_128_1) {
                 const obj8 = { publishedRevision: closure_129_3, guildId: closure_129_1, channelId: closure_129_18.id, messageId: closure_128_1 };
-                projectId(11046).recordPatchNotesSent(closure_129_0, obj8, closure_129_12);
-                const obj = projectId(11046);
+                projectId(11065).recordPatchNotesSent(closure_129_0, obj8, closure_129_12);
+                const obj = projectId(11065);
               }
               closure_129_21();
               dependencyMap = 0;
-              const obj10 = projectId(12181);
+              const obj10 = projectId(12199);
             }
           }
           const _Error = Error;

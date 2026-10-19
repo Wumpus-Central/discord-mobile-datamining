@@ -1,18 +1,18 @@
-// === Module 17454: GuildsBarFavorites ===
+// === Module 17458: GuildsBarFavorites ===
 
-// Module 17454 (GuildsBarFavorites)
+// Module 17458 (GuildsBarFavorites)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import StarIcon from "StarIcon" /* 9851 */;
 import FavoritesHooks from "FavoritesHooks" /* 10625 */;
-import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17262 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17437 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17440 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17452 */;
-import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17455 */;
-import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17456 */;
+import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17266 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17441 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17444 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17456 */;
+import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17459 */;
+import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17460 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 2071 */;
 
@@ -148,10 +148,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
   const memo = noop.useMemo(() => ({
     onPress() {
-      closure_1_1(17452)(closure_1_5);
+      closure_1_1(17456)(closure_1_5);
     },
     onLongPress() {
-      closure_1_1(17262)();
+      closure_1_1(17266)();
     }
   }), []);
   const memo1 = noop.useMemo(() => {

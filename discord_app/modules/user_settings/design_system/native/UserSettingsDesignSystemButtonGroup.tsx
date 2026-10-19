@@ -1,6 +1,6 @@
-// === Module 16835: UserSettingsDesignSystemButtonGroup ===
+// === Module 16839: UserSettingsDesignSystemButtonGroup ===
 
-// Module 16835 (UserSettingsDesignSystemButtonGroup)
+// Module 16839 (UserSettingsDesignSystemButtonGroup)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import Stack_Stack from "Stack/Stack" /* 5477 */;

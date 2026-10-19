@@ -1,6 +1,6 @@
-// === Module 18252: VoicePanelCard ===
+// === Module 18256: VoicePanelCard ===
 
-// Module 18252 (VoicePanelCard)
+// Module 18256 (VoicePanelCard)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4922 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4945 */;
@@ -11,10 +11,10 @@ import StreamKeyUtils from "StreamKeyUtils" /* 6156 */;
 import StreamActionCreators from "StreamActionCreators" /* 7710 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9878 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11892 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18182 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18255 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18256 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11911 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18186 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18259 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
@@ -25,14 +25,14 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12914);
+const VoicePanelConstants = fn(10680);
 ({ VoicePanelCTACard: closure_9, VoicePanelModes: c10, MODE_CHANGE_PHYSICS: closure_11, SPEAKING_PHYSICS: closure_12, VoicePanelCardItemType: map1 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12912).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18183).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12917).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10678).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18187).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(10683).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
 const ParticipantTypes = fn(5214).ParticipantTypes;
-let SCALE_PHYSICS = fn(12915).SCALE_PHYSICS;
+let SCALE_PHYSICS = fn(10681).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;

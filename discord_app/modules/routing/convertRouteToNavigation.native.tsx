@@ -1,6 +1,6 @@
-// === Module 11572: convertRouteToNavigation ===
+// === Module 11588: convertRouteToNavigation ===
 
-// Module 11572 (convertRouteToNavigation)
+// Module 11588 (convertRouteToNavigation)
 import Constants from "Constants" /* 1087 */;
 import matchPathCompat from "matchPathCompat" /* 5039 */;
 import RouteUtils from "RouteUtils" /* 5052 */;
@@ -8,7 +8,7 @@ import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
 import RootNavigationRef from "RootNavigationRef" /* 5073 */;
 import useChatLayout from "useChatLayout" /* 5075 */;
 import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9617 */;
-import handleConjureRouteDefault from "handleConjureRoute" /* 11573 */;
+import handleConjureRouteDefault from "handleConjureRoute" /* 11589 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -90,7 +90,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                     const tmpResult22 = NavigationRouteUtils;
                   }
                   if (tmp17) {
-                    const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "Reflect" };
+                    const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "a" };
                     NavigationRouteUtils.navigateToChannel(obj10);
                     const tmpResult23 = NavigationRouteUtils;
                   }

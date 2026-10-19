@@ -1,6 +1,6 @@
-// === Module 15887: ContactSyncNameUpdateModal ===
+// === Module 15891: ContactSyncNameUpdateModal ===
 
-// Module 15887 (ContactSyncNameUpdateModal)
+// Module 15891 (ContactSyncNameUpdateModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
@@ -14,7 +14,7 @@ function onClose() {
   ModalActionCreatorsDefault.pop();
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(13343).ContactSyncScenes;
+const ContactSyncScenes = fn(13348).ContactSyncScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5191);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(6536).NAV_BAR_HEIGHT + 32 } };
@@ -31,7 +31,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
     _require = asyncGeneratorStep(async (arg0) => {
       closure_1 = tmp3;
       closure_0(true);
-      await first(13349).updateName(closure_0);
+      await first(13354).updateName(closure_0);
       if (1 === tmp7) {
         c3 = 0;
         const obj7 = { text: null, variant: "critical" };
@@ -114,7 +114,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
     cResult[7] = tmp16;
     tmp13 = tmp16;
   }
-  const tmp12 = jsx(onNext(13363), { onNext, onRemoveName: S, loading: tmp6, initialName: undefined });
+  const tmp12 = jsx(onNext(13368), { onNext, onRemoveName: S, loading: tmp6, initialName: undefined });
   cResult[2] = tmp6;
   cResult[3] = undefined;
   cResult[4] = tmp12;
@@ -132,7 +132,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
   }
   dependencyMap = async function _onNext2(arg0) {
     _require(true);
-    await tmp3(13349).updateName(closure_0);
+    await tmp3(13354).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { text: null, variant: "critical" };
@@ -174,7 +174,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contac
     str = "";
   }
   obj3.initialName = str;
-  obj2.children = jsx(onNext(13363), {
+  obj2.children = jsx(onNext(13368), {
     onNext,
     onRemoveName() {
       return onNext(null);

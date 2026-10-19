@@ -1,19 +1,19 @@
-// === Module 14364: VoiceActionSheet ===
+// === Module 14368: VoiceActionSheet ===
 
-// Module 14364 (VoiceActionSheet)
+// Module 14368 (VoiceActionSheet)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7130 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
-import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 14365 */;
+import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 14369 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5215 */;
 
 const VisualEffectViewDefault = tmp5(5465);
-const NUFChannelsManagerDefault = tmp5(14366);
-const NUFVoiceChannelsTemplateDefault = tmp5(14373);
-const GuildEventVoiceBannerDefault = tmp5(14376);
-const VoiceEmptyStateDefault = tmp5(14377);
-const VoiceMemberListDefault = tmp5(14380);
+const NUFChannelsManagerDefault = tmp5(14370);
+const NUFVoiceChannelsTemplateDefault = tmp5(14377);
+const GuildEventVoiceBannerDefault = tmp5(14380);
+const VoiceEmptyStateDefault = tmp5(14381);
+const VoiceMemberListDefault = tmp5(14384);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);

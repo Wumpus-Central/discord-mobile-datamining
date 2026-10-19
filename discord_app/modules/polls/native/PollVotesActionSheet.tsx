@@ -1,6 +1,6 @@
-// === Module 12044: PollVotesActionSheet ===
+// === Module 12063: PollVotesActionSheet ===
 
-// Module 12044 (PollVotesActionSheet)
+// Module 12063 (PollVotesActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -15,9 +15,9 @@ import Pressables from "Pressables" /* 6462 */;
 import EmojiDefault from "Emoji" /* 7098 */;
 import PollsUtils from "PollsUtils" /* 8165 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
-import formatPollMessageChatData from "formatPollMessageChatData" /* 12045 */;
-import _modDef12052 from "module_12052" /* 12052 */;
-import _modDef12053 from "module_12053" /* 12053 */;
+import formatPollMessageChatData from "formatPollMessageChatData" /* 12064 */;
+import _modDef12071 from "module_12071" /* 12071 */;
+import _modDef12072 from "module_12072" /* 12072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -447,7 +447,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F146026 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F146137 */ function() { ... }), 0);
         return;
       }
     }
@@ -455,7 +455,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   } else {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F146026 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F146137 */ function() { ... }), 0);
         return;
       }
     }
@@ -463,7 +463,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   if (cResult[3] !== selectedAnswerId) {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F146026 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F146137 */ function() { ... }), 0);
         return;
       }
     }
@@ -473,7 +473,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   } else {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F146026 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F146137 */ function() { ... }), 0);
         return;
       }
     }
@@ -482,7 +482,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F146026 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F146137 */ function() { ... }), 0);
         return;
       }
     }
@@ -490,7 +490,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   } else {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F146026 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F146137 */ function() { ... }), 0);
         return;
       }
     }
@@ -500,14 +500,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   if (null == message.poll) {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F146026 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F146137 */ function() { ... }), 0);
         return;
       }
     }
   } else {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F146026 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F146137 */ function() { ... }), 0);
         return;
       }
     }
@@ -688,9 +688,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function NoResu
   const tmp4 = closure_15();
   const tmp6 = useThemeDefault();
   if (obj2.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef12052;
+    let tmp5Result = _modDef12071;
   } else {
-    tmp5Result = _modDef12053;
+    tmp5Result = _modDef12072;
   }
   if (cResult[0] === tmp4.noResultsImage) {
     if (cResult[1] === tmp5Result) {
@@ -767,9 +767,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function NoResu
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12052;
+    let tmp2Result = _modDef12071;
   } else {
-    tmp2Result = _modDef12053;
+    tmp2Result = _modDef12072;
   }
   obj2.source = tmp2Result;
   const items = [map1(tmp8, obj2), , ];

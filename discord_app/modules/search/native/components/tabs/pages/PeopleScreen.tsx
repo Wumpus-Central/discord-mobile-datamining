@@ -1,11 +1,11 @@
-// === Module 17836: PeopleScreen ===
+// === Module 17840: PeopleScreen ===
 
-// Module 17836 (PeopleScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13001 */;
+// Module 17840 (PeopleScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13009 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13009 */;
-import SearchQueryStore from "SearchQueryStore" /* 12994 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13017 */;
+import SearchQueryStore from "SearchQueryStore" /* 13002 */;
 
 const require = globalThis.__r;
 

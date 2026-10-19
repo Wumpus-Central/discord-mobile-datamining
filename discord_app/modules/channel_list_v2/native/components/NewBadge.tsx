@@ -1,6 +1,6 @@
-// === Module 12938: NewBadge ===
+// === Module 12946: NewBadge ===
 
-// Module 12938 (NewBadge)
+// Module 12946 (NewBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

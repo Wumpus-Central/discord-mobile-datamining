@@ -1,11 +1,11 @@
-// === Module 15744: AccountUsernameSetting ===
+// === Module 15748: AccountUsernameSetting ===
 
-// Module 15744 (AccountUsernameSetting)
+// Module 15748 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 5057 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12590 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12607 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
   const items = [UserStore];
   return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
 });
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
   let Text = require;
   let tmp = dependencyMap;

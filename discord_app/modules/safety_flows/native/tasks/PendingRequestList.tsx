@@ -1,12 +1,12 @@
-// === Module 19099: PendingRequestList ===
+// === Module 19103: PendingRequestList ===
 
-// Module 19099 (PendingRequestList)
+// Module 19103 (PendingRequestList)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef2589 from "module_2589" /* 2589 */;
 import _modDef2885 from "module_2885" /* 2885 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 15919 */;
-import _modDef15967 from "module_15967" /* 15967 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 15923 */;
+import _modDef15971 from "module_15971" /* 15971 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -353,13 +353,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
     avatar = request.parent_avatar;
   }
   const obj = request(504);
-  const pendingRequestResolution = request(19097).usePendingRequestResolution(request.parent_id);
+  const pendingRequestResolution = request(19101).usePendingRequestResolution(request.parent_id);
   ({ isConnected, isResolved } = pendingRequestResolution);
-  const tmp2Result = request(19097);
+  const tmp2Result = request(19101);
   const obj2 = { style: tmp.row, children: null };
-  const result = request(19100).formatPendingRequestSentText(request.created_at);
+  const result = request(19104).formatPendingRequestSentText(request.created_at);
   const obj3 = { avatarStyle: tmp.avatar, source: null, disablePlaceholder: true };
-  const tmp2Result2 = request(19100);
+  const tmp2Result2 = request(19104);
   obj3.source = AvatarUtilsDefault.getUserAvatarSource({ id: request.parent_id, avatar });
   const items1 = [closure_7(request(1202).Avatar, obj3), , ];
   const obj5 = { style: tmp.details, children: null };
@@ -398,7 +398,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
         const obj12 = { size: "small", color: tmp.declineIcon.color };
         let tmp13Result6 = closure_7(closure_4, obj12);
       } else {
-        const obj13 = { size: tmp2(1202).Icon.Sizes.SMALL, color: tmp.declineIcon.color, source: _modDef15967 };
+        const obj13 = { size: tmp2(1202).Icon.Sizes.SMALL, color: tmp.declineIcon.color, source: _modDef15971 };
         tmp13Result6 = closure_7(tmp2(1202).Icon, obj13);
       }
       obj10.children = tmp13Result6;

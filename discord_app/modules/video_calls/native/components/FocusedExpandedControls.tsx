@@ -1,6 +1,6 @@
-// === Module 11501: FocusedExpandedControls ===
+// === Module 11519: FocusedExpandedControls ===
 
-// Module 11501 (FocusedExpandedControls)
+// Module 11519 (FocusedExpandedControls)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,13 +11,13 @@ import FastImageDefault from "FastImage" /* 5128 */;
 import Form from "Form" /* 8855 */;
 import CallsUtils from "CallsUtils" /* 9058 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9065 */;
-import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11422 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11451 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11472 */;
-import _modDef11502 from "module_11502" /* 11502 */;
-import _modDef11503 from "module_11503" /* 11503 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11504 */;
-import useDeafStatesDefault from "useDeafStates" /* 11505 */;
+import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11440 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11469 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11490 */;
+import _modDef11520 from "module_11520" /* 11520 */;
+import _modDef11521 from "module_11521" /* 11521 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11522 */;
+import useDeafStatesDefault from "useDeafStates" /* 11523 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -50,7 +50,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
         return tmp5;
       } else {
         if (cResult[3] !== tmp4.sparkle2) {
-          const obj2 = { style: tmp4.sparkle2, source: _modDef11502 };
+          const obj2 = { style: tmp4.sparkle2, source: _modDef11520 };
           const tmp13 = React5(FastImageDefault, obj2);
           cResult[3] = tmp4.sparkle2;
           cResult[4] = tmp13;
@@ -59,7 +59,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
           tmp9 = cResult[4];
         }
         if (cResult[5] !== tmp4.sparkle) {
-          const obj3 = { style: tmp4.sparkle, source: _modDef11503 };
+          const obj3 = { style: tmp4.sparkle, source: _modDef11521 };
           const tmp18 = React5(FastImageDefault, obj3);
           cResult[5] = tmp4.sparkle;
           cResult[6] = tmp18;
@@ -100,10 +100,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
     if (iconSource.showIconSparkle) {
       const obj = { children: null };
       const items = [tmp11, , ];
-      const obj3 = { style: tmp.sparkle2, source: _modDef11502 };
+      const obj3 = { style: tmp.sparkle2, source: _modDef11520 };
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.sparkle, source: null };
-      obj4.source = _modDef11503;
+      obj4.source = _modDef11521;
       items[2] = React5(FastImageDefault, obj4);
       obj.children = items;
       tmp7 = closure_1_8(View, obj);
@@ -473,7 +473,7 @@ export const DeafenButton = ReactCompilerGating.isReactCompilerEnabled() ? (func
     tmp7 = cResult[1];
   }
   const onPress = tmp7.onPress;
-  const tmp5Result = importDefault(tmp7.deaf ? 11506 : 11507);
+  const tmp5Result = importDefault(tmp7.deaf ? 11524 : 11525);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
     const stringResult = intl.string(util.t.wjcRFX);
@@ -503,7 +503,7 @@ export const DeafenButton = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const tmp3 = useDeafStatesDefault(disabled.channel);
   const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
-  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11506 : 11507), label: null };
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11524 : 11525), label: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t.wjcRFX);
   return React5(closure_12, obj2);

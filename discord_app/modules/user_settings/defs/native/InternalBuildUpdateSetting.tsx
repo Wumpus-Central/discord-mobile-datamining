@@ -1,14 +1,14 @@
-// === Module 16817: InternalBuildUpdateSetting ===
+// === Module 16821: InternalBuildUpdateSetting ===
 
-// Module 16817 (InternalBuildUpdateSetting)
+// Module 16821 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _modDef4797 from "module_4797" /* 4797 */;
 import DownloadIcon from "DownloadIcon" /* 5143 */;
-import RefreshIcon2 from "RefreshIcon" /* 11614 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 14917 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15884 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 15417 */;
+import RefreshIcon2 from "RefreshIcon" /* 11630 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 14921 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15888 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 15421 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -101,7 +101,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasInte
 }) : (function useHasInternalBuildUpdateSetting() {
   return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
 });
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function InstallNativeUpdateIcon() {
   let tmp8Result = dependencyMap;
   const cResult = c.c(4);

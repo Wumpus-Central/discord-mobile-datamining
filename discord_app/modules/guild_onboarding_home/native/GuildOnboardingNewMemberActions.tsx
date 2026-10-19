@@ -1,9 +1,9 @@
-// === Module 17708: GuildOnboardingNewMemberActions ===
+// === Module 17712: GuildOnboardingNewMemberActions ===
 
-// Module 17708 (GuildOnboardingNewMemberActions)
+// Module 17712 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 587 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12926 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12934 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 6243 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

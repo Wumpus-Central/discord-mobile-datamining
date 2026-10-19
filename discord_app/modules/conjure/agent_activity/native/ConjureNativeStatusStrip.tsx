@@ -1,19 +1,19 @@
-// === Module 12298: ConjureNativeStatusStrip ===
+// === Module 12315: ConjureNativeStatusStrip ===
 
-// Module 12298 (ConjureNativeStatusStrip)
+// Module 12315 (ConjureNativeStatusStrip)
 import nativeDefault from "native" /* 587 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5155 */;
-import ConjureStatusLabels from "ConjureStatusLabels" /* 12124 */;
-import ConjureUsageSheet from "ConjureUsageSheet" /* 12304 */;
-import ConjureNativeTurnTimerDefault from "ConjureNativeTurnTimer" /* 12305 */;
+import ConjureStatusLabels from "ConjureStatusLabels" /* 12143 */;
+import ConjureUsageSheet from "ConjureUsageSheet" /* 12321 */;
+import ConjureNativeTurnTimerDefault from "ConjureNativeTurnTimer" /* 12322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10977 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10993 */;
 
 require = fn;
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(11711).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(11730).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5191);
@@ -361,8 +361,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                 if (cResult[14] !== projectUsage) {
                   let runesUsedLabelsResult = null;
                   if (null != projectUsage) {
-                    runesUsedLabelsResult = tmp(12124).runesUsedLabels(projectUsage);
-                    const tmpResult3 = tmp(12124);
+                    runesUsedLabelsResult = tmp(12143).runesUsedLabels(projectUsage);
+                    const tmpResult3 = tmp(12143);
                   }
                   cResult[14] = projectUsage;
                   cResult[15] = runesUsedLabelsResult;
@@ -402,7 +402,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                     }
                   }
                 }
-                const tmp23 = tmp15 === tmp(12124).RECALLING_LINES[0];
+                const tmp23 = tmp15 === tmp(12143).RECALLING_LINES[0];
                 if (cResult[18] === tmp14) {
                   class K {
                     constructor() {
@@ -546,7 +546,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   }
   obj4.publishPending = stateFromStores;
   obj4.publishing = stateFromStores;
-  const thinkingLabelResult = projectId(12124).thinkingLabel(obj4);
+  const thinkingLabelResult = projectId(12143).thinkingLabel(obj4);
   const intl = tmp(1128).intl;
   const stringResult1 = intl.string(thinkingLabelResult);
   cResult[4] = activity;
@@ -561,7 +561,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   cResult[13] = stringResult1;
   tmp16 = stringResult1;
   tmp15 = thinkingLabelResult;
-  const tmpResult4 = projectId(12124);
+  const tmpResult4 = projectId(12143);
 }) : (function ConjureNativeStatusStrip(projectId) {
   projectId = projectId.projectId;
   ({ thinking, remixStartedAt, saving } = projectId);
@@ -608,13 +608,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   }
   obj2.publishPending = tmp8;
   obj2.publishing = stateFromStores;
-  const thinkingLabelResult = projectId(12124).thinkingLabel(obj2);
+  const thinkingLabelResult = projectId(12143).thinkingLabel(obj2);
   const intl = tmp2(1128).intl;
   const stringResult = intl.string(thinkingLabelResult);
   let runesUsedLabelsResult = null;
   if (null != projectUsage) {
-    runesUsedLabelsResult = tmp2(12124).runesUsedLabels(projectUsage);
-    const tmp2Result2 = tmp2(12124);
+    runesUsedLabelsResult = tmp2(12143).runesUsedLabels(projectUsage);
+    const tmp2Result2 = tmp2(12143);
   }
   let tmp12 = null != activity;
   if (tmp12) {
@@ -668,7 +668,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
     obj3.children = items3;
     return closure_9(View, obj3);
   }
-  const tmp18 = thinkingLabelResult === projectId(12124).RECALLING_LINES[0];
+  const tmp18 = thinkingLabelResult === projectId(12143).RECALLING_LINES[0];
   let tmp19 = thinking;
   if (!thinking) {
     tmp19 = tmp18;
@@ -699,5 +699,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   obj11.onPress = onToggleThinking;
   obj11.children = closure_8(closure_11, { line: stringResult, rotating: tmp18, immediate: saving });
   tmp16Result4 = closure_8(tmp2(6462).PressableOpacity, obj11);
-  const tmp2Result = projectId(12124);
+  const tmp2Result = projectId(12143);
 });

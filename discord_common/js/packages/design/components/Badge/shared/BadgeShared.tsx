@@ -1,6 +1,6 @@
-// === Module 13091: BadgeShared ===
+// === Module 13099: BadgeShared ===
 
-// Module 13091 (BadgeShared)
+// Module 13099 (BadgeShared)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Badge/shared/BadgeShared.tsx");

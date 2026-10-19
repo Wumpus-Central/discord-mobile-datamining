@@ -1,6 +1,6 @@
-// === Module 13433: HubEmailConnectionStudentPrompt ===
+// === Module 13438: HubEmailConnectionStudentPrompt ===
 
-// Module 13433 (HubEmailConnectionStudentPrompt)
+// Module 13438 (HubEmailConnectionStudentPrompt)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import TextStyles from "TextStyles" /* 6162 */;
 
 const require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13423).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13428).HubEmailConnectionSteps;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   const obj = onClose(1505);
   const obj6 = { source: null };
   const tmp2 = invite(7106);
-  obj6.source = invite(13434);
+  obj6.source = invite(13439);
   obj5.leading = closure_6(invite(5128), obj6);
   obj5.trailing = invite(7106).Arrow;
   const intl2 = onClose(1128).intl;
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   const tmp3 = invite(5128);
   const obj8 = { source: null };
   const tmp4 = invite(7106);
-  obj8.source = invite(13435);
+  obj8.source = invite(13440);
   obj7.leading = closure_6(invite(5128), obj8);
   obj7.trailing = invite(7106).Arrow;
   const intl4 = onClose(1128).intl;
@@ -199,5 +199,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   items[2] = closure_6(tmp4, obj7);
   obj3.children = items;
   obj2.children = closure_7(View, obj3);
-  return closure_6(onClose(13432).HubEmailConnectionScreen, obj2);
+  return closure_6(onClose(13437).HubEmailConnectionScreen, obj2);
 });

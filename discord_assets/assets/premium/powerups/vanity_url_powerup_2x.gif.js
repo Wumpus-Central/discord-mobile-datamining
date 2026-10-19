@@ -1,6 +1,6 @@
-// === Module 17298: ? ===
+// === Module 17302: ? ===
 
-// Module 17298
+// Module 17302
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/powerups/vanity_url_powerup_2x.gif.js");

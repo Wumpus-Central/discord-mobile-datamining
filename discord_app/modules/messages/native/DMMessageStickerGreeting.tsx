@@ -1,6 +1,6 @@
-// === Module 12905: DMMessageStickerGreeting ===
+// === Module 12922: DMMessageStickerGreeting ===
 
-// Module 12905 (DMMessageStickerGreeting)
+// Module 12922 (DMMessageStickerGreeting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
   const intl2 = tmp(1128).intl;
   intl2.formatToPlainString(channel(1128).t.m0zYbV, { username: name });
   let obj5 = hasInputText(5057);
-  const showConvoStarterInDM = channel(12907).useShowConvoStarterInDM(channel);
+  const showConvoStarterInDM = channel(12924).useShowConvoStarterInDM(channel);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [StickersStore];
     cResult[6] = items2;
@@ -447,7 +447,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DMMessag
     }
     tmp20 = cResult[9];
   }
-  const tmpResult7 = channel(12907);
+  const tmpResult7 = channel(12924);
   const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
   if (cResult[10] !== showConvoStarterInDM) {
     class U {

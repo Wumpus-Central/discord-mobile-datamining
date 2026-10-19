@@ -1,6 +1,6 @@
-// === Module 17369: IAPUpsellActionSheet ===
+// === Module 17373: IAPUpsellActionSheet ===
 
-// Module 17369 (IAPUpsellActionSheet)
+// Module 17373 (IAPUpsellActionSheet)
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import noop from "module_19" /* 19 */;
@@ -47,13 +47,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IAPUpsel
       }
       return tmp12;
     }
-    const obj2 = { imageSource: markAsDismissed(17371), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed };
-    const tmp16 = jsx(markAsDismissed(17370), { imageSource: markAsDismissed(17371), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed });
+    const obj2 = { imageSource: markAsDismissed(17375), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed };
+    const tmp16 = jsx(markAsDismissed(17374), { imageSource: markAsDismissed(17375), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed });
     cResult[6] = tmp4;
     cResult[7] = markAsDismissed;
     cResult[8] = tmp16;
     tmp12 = tmp16;
-    const tmp15 = markAsDismissed(17370);
+    const tmp15 = markAsDismissed(17374);
   }
   function handleCTAPress() {
     router_utils.transitionTo(Routes.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IAPUpsel
   const obj = guildId(576);
 }) : (function IAPUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
-  const obj = { imageSource: markAsDismissed(17371), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
+  const obj = { imageSource: markAsDismissed(17375), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
   const intl = util.intl;
   obj.header = intl.string(util.t.rBw4cE);
   const intl2 = util.intl;
@@ -78,5 +78,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IAPUpsel
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   obj.markAsDismissed = markAsDismissed;
-  return jsx(markAsDismissed(17370), { imageSource: markAsDismissed(17371), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
+  return jsx(markAsDismissed(17374), { imageSource: markAsDismissed(17375), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
 });

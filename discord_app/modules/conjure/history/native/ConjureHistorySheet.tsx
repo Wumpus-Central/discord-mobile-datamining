@@ -1,6 +1,6 @@
-// === Module 12085: ConjureHistorySheet ===
+// === Module 12104: ConjureHistorySheet ===
 
-// Module 12085 (ConjureHistorySheet)
+// Module 12104 (ConjureHistorySheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -17,10 +17,10 @@ import TableRowGroup2 from "TableRowGroup" /* 6542 */;
 import IconButton from "IconButton" /* 7840 */;
 import _modDef9044 from "module_9044" /* 9044 */;
 import ContextMenu from "ContextMenu" /* 9662 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11679 */;
-import conjureHistoryRequests from "conjureHistoryRequests" /* 12081 */;
-import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 12091 */;
-import ConjureSaveBackupSheet from "ConjureSaveBackupSheet" /* 12094 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11698 */;
+import conjureHistoryRequests from "conjureHistoryRequests" /* 12100 */;
+import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 12110 */;
+import ConjureSaveBackupSheet from "ConjureSaveBackupSheet" /* 12113 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -224,20 +224,20 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
     tmp5 = cResult[6];
   }
   let obj = renderItem(576);
-  const tmpResult = renderItem(11679);
-  const mapped = renderItem(11679).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
+  const tmpResult = renderItem(11698);
+  const mapped = renderItem(11698).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
   cResult[0] = getMs;
   cResult[1] = items;
   cResult[2] = nowMs;
   cResult[3] = renderItem;
   cResult[4] = mapped;
-  const groupHistoryByDayResult = renderItem(11679).groupHistoryByDay(items, getMs, nowMs);
+  const groupHistoryByDayResult = renderItem(11698).groupHistoryByDay(items, getMs, nowMs);
 }) : (function HistoryDayGroups(renderItem) {
   renderItem = renderItem.renderItem;
   ({ items, getMs, nowMs } = renderItem);
   let obj = { spacing: 16, children: null };
-  const obj2 = renderItem(11679);
-  obj.children = renderItem(11679).groupHistoryByDay(items, getMs, nowMs).map((label) => {
+  const obj2 = renderItem(11698);
+  obj.children = renderItem(11698).groupHistoryByDay(items, getMs, nowMs).map((label) => {
     label = label.label;
     const obj = { title: label, hasIcons: false, children: null };
     const items = label.items;
@@ -1475,7 +1475,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
   });
   let intl = onChange(1128).intl;
   obj3.accessibilityLabel = intl.string(_modDef3883["/2GnYy"]);
-  obj3.children = closure_7(onChange(11659).Tabs, { state: segmentedControlState });
+  obj3.children = closure_7(onChange(11678).Tabs, { state: segmentedControlState });
   return closure_7(View, obj3);
 });
 const size = fn(2);
@@ -1494,14 +1494,14 @@ export default function ConjureHistorySheet(projectId) {
   const tmp = onRestoreVersion;
   const tmp3 = onSaveBackup(onRestoreVersion(1633)().bottom + onRestoreVersion(587).space.PX_16);
   [tmp5, tmp6] = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
-  const tmp7 = onRestoreVersion(12092)(projectId, projectId.installScope);
+  const tmp7 = onRestoreVersion(12111)(projectId, projectId.installScope);
   ({ sharedDatabase: c2, versions, databases, refreshAllBackups } = tmp7);
   versionTitles = tmp7.versionTitles;
   ({ previewBackups, previewBackupsLoading } = tmp7);
   const tmp4 = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
   conjureDatabaseBusy = require("conjureDatabaseLock").useConjureDatabaseBusy(projectId);
   let obj = require("conjureDatabaseLock");
-  const tmp10 = onRestoreVersion(11633)(projectId);
+  const tmp10 = onRestoreVersion(11649)(projectId);
   [tmp12, c6] = versionTitles(conjureDatabaseBusy.useState(false), 2);
   const refresh = versions.refresh;
   _require = refreshAllBackups(function*(arg0, arg1) {
@@ -1622,7 +1622,7 @@ export default function ConjureHistorySheet(projectId) {
               closure_128_0 = undefined;
               c2 = 1;
               v3 = 1;
-              const obj6 = { value: tmp2(12083).runConjureDataRewind(tmp2, tmp2), done: false };
+              const obj6 = { value: tmp2(12102).runConjureDataRewind(tmp2, tmp2), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -1718,7 +1718,7 @@ export default function ConjureHistorySheet(projectId) {
   const items4 = [projectId, refreshAllBackups];
   onSaveBackup = conjureDatabaseBusy.useCallback((environment) => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(12094, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
+    return obj.openLazy(asyncRequireImpl(12113, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
   }, items4);
   let obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
   let obj3 = { children: null };
@@ -1746,7 +1746,7 @@ export default function ConjureHistorySheet(projectId) {
     let obj7 = { children: null };
     let obj8 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = tmp8(1128).intl;
-    const obj9 = { days: tmp8(12093).RESTORE_WINDOW_DAYS };
+    const obj9 = { days: tmp8(12112).RESTORE_WINDOW_DAYS };
     obj8.children = intl2.formatToPlainString(tmp(3883).ptsHZu, obj9);
     const items6 = [tmp15(tmp8(5187).Text, obj8), databases.map((database) => React5(closure_16, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
     obj7.children = items6;

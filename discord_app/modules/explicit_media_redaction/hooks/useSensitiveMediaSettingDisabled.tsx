@@ -1,7 +1,7 @@
-// === Module 15870: useSensitiveMediaSettingDisabled ===
+// === Module 15874: useSensitiveMediaSettingDisabled ===
 
-// Module 15870 (useSensitiveMediaSettingDisabled)
-import useParentalControlSettings from "useParentalControlSettings" /* 15859 */;
+// Module 15874 (useSensitiveMediaSettingDisabled)
+import useParentalControlSettings from "useParentalControlSettings" /* 15863 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

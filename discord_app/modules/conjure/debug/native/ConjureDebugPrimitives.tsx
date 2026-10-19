@@ -1,13 +1,13 @@
-// === Module 12346: ConjureDebugPrimitives ===
+// === Module 12363: ConjureDebugPrimitives ===
 
-// Module 12346 (ConjureDebugPrimitives)
+// Module 12363 (ConjureDebugPrimitives)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import components_Button_Button from "components/Button/Button" /* 5479 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12344 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12361 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

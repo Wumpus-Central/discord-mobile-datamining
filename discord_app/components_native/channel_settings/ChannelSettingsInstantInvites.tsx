@@ -1,6 +1,6 @@
-// === Module 17964: ChannelSettingsInstantInvites ===
+// === Module 17968: ChannelSettingsInstantInvites ===
 
-// Module 17964 (ChannelSettingsInstantInvites)
+// Module 17968 (ChannelSettingsInstantInvites)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import InstantInvite from "InstantInvite" /* 10601 */;
@@ -15,7 +15,7 @@ const InstantInviteDefault = InstantInvite;
 const FastestListDefault = tmp2(7021);
 const _modDef10619 = tmp2(10619);
 const _modDef10620 = tmp2(10620);
-const InstantInviteSelfMeasurerDefault = tmp2(17965);
+const InstantInviteSelfMeasurerDefault = tmp2(17969);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1087).ChannelSettingsSections;

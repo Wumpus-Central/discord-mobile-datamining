@@ -1,6 +1,6 @@
-// === Module 12535: MessageGameIconActionSheet ===
+// === Module 12552: MessageGameIconActionSheet ===
 
-// Module 12535 (MessageGameIconActionSheet)
+// Module 12552 (MessageGameIconActionSheet)
 import nativeDefault from "native" /* 587 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
 import noop from "module_19" /* 19 */;

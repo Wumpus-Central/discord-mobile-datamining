@@ -1,6 +1,6 @@
-// === Module 14855: handleSupportedURL ===
+// === Module 14859: handleSupportedURL ===
 
-// Module 14855 (handleSupportedURL)
+// Module 14859 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
@@ -20,21 +20,21 @@ import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9150 */;
 import GameProfileActionCreators from "GameProfileActionCreators" /* 9156 */;
 import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9244 */;
 import QuestUtils from "QuestUtils" /* 9470 */;
-import ApplicationUtils from "ApplicationUtils" /* 10998 */;
-import authorizeCallbackDefault from "authorizeCallback" /* 11000 */;
-import closeVoicePanelsDefault from "closeVoicePanels" /* 11022 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12507 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12647 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13374 */;
-import BountyActionCreators from "BountyActionCreators" /* 13905 */;
-import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 14864 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 14898 */;
-import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 14997 */;
+import ApplicationUtils from "ApplicationUtils" /* 11019 */;
+import authorizeCallbackDefault from "authorizeCallback" /* 11021 */;
+import closeVoicePanelsDefault from "closeVoicePanels" /* 11043 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12524 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 12664 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13379 */;
+import BountyActionCreators from "BountyActionCreators" /* 13909 */;
+import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 14868 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 14902 */;
+import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15001 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6332 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 14468 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 14472 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -46,10 +46,10 @@ const Constants = fn(1087);
 const StaticChannelRoute = fn(2075).StaticChannelRoute;
 const StreamTypes = fn(6154).StreamTypes;
 const NativePermissionTypes = fn(7749).NativePermissionTypes;
-let closure_22 = fn(10999).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(11020).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(7526).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5171).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(14856).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(14860).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8260).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -288,7 +288,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           remoteAuthFingerprint(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14868, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14872, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[41]);
             const tmp3 = payload(inviteCode[41]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;

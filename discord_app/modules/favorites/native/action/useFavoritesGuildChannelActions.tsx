@@ -1,6 +1,6 @@
-// === Module 10776: useFavoritesGuildChannelActions ===
+// === Module 10792: useFavoritesGuildChannelActions ===
 
-// Module 10776 (useFavoritesGuildChannelActions)
+// Module 10792 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;
 import FavoriteStore from "FavoriteStore" /* 2071 */;

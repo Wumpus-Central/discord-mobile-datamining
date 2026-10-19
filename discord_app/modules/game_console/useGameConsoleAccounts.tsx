@@ -1,6 +1,6 @@
-// === Module 11478: useGameConsoleAccounts ===
+// === Module 11496: useGameConsoleAccounts ===
 
-// Module 11478 (useGameConsoleAccounts)
+// Module 11496 (useGameConsoleAccounts)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;

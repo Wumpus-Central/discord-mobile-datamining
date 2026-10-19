@@ -1,7 +1,7 @@
-// === Module 12282: ConjureAppBuildRequest ===
+// === Module 12300: ConjureAppBuildRequest ===
 
-// Module 12282 (ConjureAppBuildRequest)
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12278 */;
+// Module 12300 (ConjureAppBuildRequest)
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12296 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -211,7 +211,7 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
                 promise = sendAppBuildRequest(closure_0, closure_5.projectId, closure_6);
                 nextPromise = promise.then(() => {
                   const intl = closure_0(1128).intl;
-                  return closure_0(12117).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3883).jZlNst, { name: projectId.name, projectId: projectId.projectId }) + "\n\n" + closure_1_6);
+                  return closure_0(12136).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3883).jZlNst, { name: projectId.name, projectId: projectId.projectId }) + "\n\n" + closure_1_6);
                 }, () => {
                   dependencyMap(false);
                   closure_1_3(true);
@@ -255,7 +255,7 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
           promise = sendAppBuildRequest(closure_0, closure_5.projectId, closure_6);
           nextPromise = promise.then(() => {
             const intl = closure_0(1128).intl;
-            return closure_0(12117).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3883).jZlNst, { name: projectId.name, projectId: projectId.projectId }) + "\n\n" + closure_1_6);
+            return closure_0(12136).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3883).jZlNst, { name: projectId.name, projectId: projectId.projectId }) + "\n\n" + closure_1_6);
           }, () => {
             dependencyMap(false);
             closure_1_3(true);
@@ -338,7 +338,7 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
         _slicedToArray(false);
         sendAppBuildRequest(closure_0, found.projectId, trimmed).then(() => {
           const intl = closure_0(1128).intl;
-          return closure_0(12117).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3883).jZlNst, { name: found.name, projectId: found.projectId }) + "\n\n" + trimmed);
+          return closure_0(12136).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3883).jZlNst, { name: found.name, projectId: found.projectId }) + "\n\n" + trimmed);
         }, () => {
           dependencyMap(false);
           closure_1_3(true);

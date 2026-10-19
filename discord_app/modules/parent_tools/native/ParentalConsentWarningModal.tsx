@@ -1,6 +1,6 @@
-// === Module 18611: ParentalConsentWarningModal ===
+// === Module 18615: ParentalConsentWarningModal ===
 
-// Module 18611 (ParentalConsentWarningModal)
+// Module 18615 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -98,7 +98,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       ModalDispatchQueueDefault.enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18612, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18616, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);

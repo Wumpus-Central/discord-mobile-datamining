@@ -1,12 +1,12 @@
-// === Module 17525: YouBarNameplate ===
+// === Module 17529: YouBarNameplate ===
 
-// Module 17525 (YouBarNameplate)
+// Module 17529 (YouBarNameplate)
 import spring from "spring" /* 5478 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(16136).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(16140).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 const __initData = { code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}" };
 const __initData2 = { code: "function YouBarNameplateTsx2(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}" };
@@ -20,7 +20,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ avatarSize, barWidth } = arg0);
   let obj = isQuestRendered(576);
   token = isQuestRendered(4913).useToken(token(587).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp6 = token(16222)(token);
+  const tmp6 = token(16226)(token);
   dependencyMap = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -116,7 +116,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let token;
   ({ nameplate, barWidth } = isQuestRendered);
   token = isQuestRendered(4913).useToken(token(587).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(16222)(token);
+  const tmp4 = token(16226)(token);
   dependencyMap = tmp4;
   let obj = isQuestRendered(4913);
   const tmp2 = token;

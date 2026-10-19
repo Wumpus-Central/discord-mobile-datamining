@@ -1,9 +1,9 @@
-// === Module 12765: CheckpointStatNumber ===
+// === Module 12782: CheckpointStatNumber ===
 
-// Module 12765 (CheckpointStatNumber)
+// Module 12782 (CheckpointStatNumber)
 import c from "c" /* 576 */;
 import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5009 */;
-import CheckpointTextDefault from "CheckpointText" /* 12747 */;
+import CheckpointTextDefault from "CheckpointText" /* 12764 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

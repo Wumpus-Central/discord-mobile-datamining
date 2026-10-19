@@ -1,17 +1,16 @@
-// === Module 11049: conjureRemixConnection ===
+// === Module 11068: conjureRemixConnection ===
 
-// Module 11049 (conjureRemixConnection)
+// Module 11068 (conjureRemixConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10982 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11042 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10998 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 let closure_5 = async function _acceptRemix(arg0) {
-  closure_2 = tmp2;
-  const items = [ConjureWorkerTickets.mintRemixTicket(closure_0), ];
-  items[1] = ConjureWorkerTickets.mintWorkerTicket(closure_1);
+  closure_3 = tmp2;
+  const items = [closure_0, ConjureWorkerTickets.mintWorkerTicket(closure_1)];
   await Promise.all(items);
   if (1 === tmp5) {
     if (arg0 === 1) {
@@ -143,6 +142,6 @@ export const acceptRemix = function acceptRemix() {
   }
   return applyArgumentsResult;
 };
-export const sendRetryRemix = function sendRetryRemix(arg0) {
-  return conjureProjectSockets.sendOnConjureSocket(arg0, "retry remix", (sendRetryRemix) => sendRetryRemix.sendRetryRemix());
+export const sendRetryRemix = function sendRetryRemix(projectId) {
+  return conjureProjectSockets.sendOnConjureSocket(projectId, "retry remix", (sendRetryRemix) => sendRetryRemix.sendRetryRemix());
 };

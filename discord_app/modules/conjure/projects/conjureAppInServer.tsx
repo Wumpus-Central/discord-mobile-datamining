@@ -1,6 +1,6 @@
-// === Module 10987: conjureAppInServer ===
+// === Module 11006: conjureAppInServer ===
 
-// Module 10987 (conjureAppInServer)
+// Module 11006 (conjureAppInServer)
 import ConjureUtils from "ConjureUtils" /* 7222 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
 import UserProfileStore from "UserProfileStore" /* 7586 */;

@@ -1,6 +1,6 @@
-// === Module 11539: CallTile ===
+// === Module 11557: CallTile ===
 
-// Module 11539 (CallTile)
+// Module 11557 (CallTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -9,13 +9,13 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5205 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11540 */;
-import _modDef11545 from "module_11545" /* 11545 */;
-import _modDef11546 from "module_11546" /* 11546 */;
-import _modDef11547 from "module_11547" /* 11547 */;
-import _modDef11548 from "module_11548" /* 11548 */;
-import _modDef11549 from "module_11549" /* 11549 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 11550 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11558 */;
+import _modDef11563 from "module_11563" /* 11563 */;
+import _modDef11564 from "module_11564" /* 11564 */;
+import _modDef11565 from "module_11565" /* 11565 */;
+import _modDef11566 from "module_11566" /* 11566 */;
+import _modDef11567 from "module_11567" /* 11567 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 11568 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -127,17 +127,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
   participant = participant.participant;
   let titleIcon2 = closure_16();
   if (participant.type === constants.STREAM) {
-    let tmp4 = _modDef11545;
+    let tmp4 = _modDef11563;
   } else if (participant.type === tmp3.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp4 = _modDef11546;
+      tmp4 = _modDef11564;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp4 = _modDef11547;
+      tmp4 = _modDef11565;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp4 = _modDef11548;
+      tmp4 = _modDef11566;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp4 = _modDef11549;
+      tmp4 = _modDef11567;
     }
   }
   if (null == tmp4) {
@@ -157,17 +157,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
 }) : (function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef11545;
+    let tmp3 = _modDef11563;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef11546;
+      tmp3 = _modDef11564;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef11547;
+      tmp3 = _modDef11565;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef11548;
+      tmp3 = _modDef11566;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef11549;
+      tmp3 = _modDef11567;
     }
   }
   let tmp14 = null;
@@ -188,7 +188,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   let obj = reveal(576);
   const tmp = reveal;
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(11209).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11228).RevealContext).reveal;
   const tmp6 = useSafeAreaInsetsDefault();
   const fn = function l() {
     let num = 0;
@@ -332,7 +332,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
   const tmp = closure_16();
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(11209).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11228).RevealContext).reveal;
   const tmp4 = useSafeAreaInsetsDefault();
   const tmp5 = reveal;
   class A {

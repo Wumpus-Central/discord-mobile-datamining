@@ -1,6 +1,6 @@
-// === Module 18295: VoicePanelControls ===
+// === Module 18299: VoicePanelControls ===
 
-// Module 18295 (VoicePanelControls)
+// Module 18299 (VoicePanelControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
@@ -11,18 +11,18 @@ import spring from "spring" /* 5478 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
 import native2 from "native" /* 8817 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9878 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11892 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12913 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12918 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12921 */;
-import useControlsLockDefault from "useControlsLock" /* 18180 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18199 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 18296 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18297 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 18298 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 18299 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 18303 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 18305 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10679 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10686 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11911 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12929 */;
+import useControlsLockDefault from "useControlsLock" /* 18184 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18203 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 18300 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18301 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 18302 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 18303 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 18307 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 18309 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
@@ -288,11 +288,11 @@ function useControlsGesture(tab, sharedValue, sharedValue1, G) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12914);
+const VoicePanelConstants = fn(10680);
 ({ UI_SHOW_HIDE_PHYSICS: closure_7, MODE_CHANGE_PHYSICS: closure_8, BORDER_RADIUS_PHYSICS: closure_9, PANEL_CONTROLS_HEIGHT_PHYSICS: c10, VoicePanelModes: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12917);
+const VoicePanelCardConstants = fn(10683);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(12912);
+const VoicePanelControlsConstants = fn(10678);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } = VoicePanelControlsConstants);
 const Constants = fn(1087);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
@@ -376,9 +376,9 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
   } else {
     first = cResult[0];
   }
-  const tmp6 = isScreenReaderEnabled(12328)(first);
+  const tmp6 = isScreenReaderEnabled(12345)(first);
   dependencyMap = tmp6;
-  const context = windowDimensions.useContext(isScreenReaderEnabled(12913));
+  const context = windowDimensions.useContext(isScreenReaderEnabled(10679));
   const controlsSpecs = context.controlsSpecs;
   windowDimensions = context.windowDimensions;
   const mode = context.mode;
@@ -465,9 +465,9 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
 }) : (function useWrapperSpecs(wrapperSpecs) {
   _require = wrapperSpecs;
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
-  const tmp2 = isScreenReaderEnabled(12328)({ ignoreKeyboard: true });
+  const tmp2 = isScreenReaderEnabled(12345)({ ignoreKeyboard: true });
   dependencyMap = tmp2;
-  const context = windowDimensions.useContext(isScreenReaderEnabled(12913));
+  const context = windowDimensions.useContext(isScreenReaderEnabled(10679));
   const controlsSpecs = context.controlsSpecs;
   windowDimensions = context.windowDimensions;
   const mode = context.mode;
@@ -1041,7 +1041,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         tab = false;
                         const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
                         const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-                        chatOpen(/* F158372 */ function() { ... });
+                        chatOpen(/* F158480 */ function() { ... });
                         if (!disableControlsUpdate) {
                           const obj3 = { mode: constants.DRAWER };
                           const merged = Object.assign(controlsProps);
@@ -1121,7 +1121,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       tab = false;
                       const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
                       const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-                      chatOpen(/* F158372 */ function() { ... });
+                      chatOpen(/* F158480 */ function() { ... });
                       if (!disableControlsUpdate) {
                         const obj3 = { mode: constants.DRAWER };
                         const merged = Object.assign(controlsProps);
@@ -1392,7 +1392,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         tab = false;
                         const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
                         const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-                        chatOpen(/* F158372 */ function() { ... });
+                        chatOpen(/* F158480 */ function() { ... });
                         if (!disableControlsUpdate) {
                           const obj3 = { mode: constants.DRAWER };
                           const merged = Object.assign(controlsProps);
@@ -1497,7 +1497,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 tab = false;
                 const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
                 const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-                chatOpen(/* F158372 */ function() { ... });
+                chatOpen(/* F158480 */ function() { ... });
                 if (!disableControlsUpdate) {
                   const obj3 = { mode: constants.DRAWER };
                   const merged = Object.assign(controlsProps);
@@ -1564,7 +1564,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               tab = false;
               const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
               const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-              chatOpen(/* F158372 */ function() { ... });
+              chatOpen(/* F158480 */ function() { ... });
               if (!disableControlsUpdate) {
                 const obj3 = { mode: constants.DRAWER };
                 const merged = Object.assign(controlsProps);
@@ -1598,7 +1598,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tab = false;
           const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
           const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-          chatOpen(/* F158372 */ function() { ... });
+          chatOpen(/* F158480 */ function() { ... });
           if (!disableControlsUpdate) {
             const obj3 = { mode: constants.DRAWER };
             const merged = Object.assign(controlsProps);

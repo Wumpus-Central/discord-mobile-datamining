@@ -1,6 +1,6 @@
-// === Module 11705: FrameStackLevel ===
+// === Module 11724: FrameStackLevel ===
 
-// Module 11705 (FrameStackLevel)
+// Module 11724 (FrameStackLevel)
 import size from "module_2" /* 2 */;
 
 const obj = { Backstage: "backstage", WithinAppContent: "within-app-content", WithinCallContent: "within-call-content", AboveAppContent: "above-app-content" };

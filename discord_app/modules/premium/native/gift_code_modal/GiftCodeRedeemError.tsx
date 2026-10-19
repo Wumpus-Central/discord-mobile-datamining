@@ -1,6 +1,6 @@
-// === Module 10954: GiftCodeRedeemError ===
+// === Module 10970: GiftCodeRedeemError ===
 
-// Module 10954 (GiftCodeRedeemError)
+// Module 10970 (GiftCodeRedeemError)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 5187 */;
 import components_Button_Button from "components/Button/Button" /* 5479 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7092 */;
-import _modDef10955 from "module_10955" /* 10955 */;
-import _modDef10956 from "module_10956" /* 10956 */;
+import _modDef10971 from "module_10971" /* 10971 */;
+import _modDef10972 from "module_10972" /* 10972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,10 +33,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   const tmp4 = closure_7();
   ({ container, body } = tmp4);
   if (obj2.useTheme().dark) {
-    let tmp5Result = _modDef10955;
+    let tmp5Result = _modDef10971;
     let tmp7 = importDefault;
   } else {
-    tmp5Result = _modDef10956;
+    tmp5Result = _modDef10972;
     tmp7 = importDefault;
   }
   if (cResult[0] !== tmp5Result) {
@@ -152,9 +152,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp8Result = _modDef10955;
+    let tmp8Result = _modDef10971;
   } else {
-    tmp8Result = _modDef10956;
+    tmp8Result = _modDef10972;
   }
   const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), , ];
   const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

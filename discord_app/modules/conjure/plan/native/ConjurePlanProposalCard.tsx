@@ -1,18 +1,18 @@
-// === Module 12245: ConjurePlanProposalCard ===
+// === Module 12263: ConjurePlanProposalCard ===
 
-// Module 12245 (ConjurePlanProposalCard)
+// Module 12263 (ConjurePlanProposalCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5179 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12171 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12186 */;
-import conjurePlanBot from "conjurePlanBot" /* 12252 */;
-import conjurePlanDesign from "conjurePlanDesign" /* 12255 */;
-import ConjurePlanWidgetDefault from "ConjurePlanWidget" /* 12256 */;
-import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples" /* 12257 */;
-import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview" /* 12259 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12189 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12204 */;
+import conjurePlanBot from "conjurePlanBot" /* 12270 */;
+import conjurePlanDesign from "conjurePlanDesign" /* 12273 */;
+import ConjurePlanWidgetDefault from "ConjurePlanWidget" /* 12274 */;
+import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples" /* 12275 */;
+import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview" /* 12277 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
 

@@ -1,10 +1,10 @@
-// === Module 16590: DeveloperModeSetting ===
+// === Module 16594: DeveloperModeSetting ===
 
-// Module 16590 (DeveloperModeSetting)
+// Module 16594 (DeveloperModeSetting)
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import SettingsConstants from "SettingsConstants" /* 8260 */;
-import SettingBuilders from "SettingBuilders" /* 11065 */;
+import SettingBuilders from "SettingBuilders" /* 11084 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

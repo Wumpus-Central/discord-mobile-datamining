@@ -1,15 +1,15 @@
-// === Module 19034: NativeExperimentBridgeManager ===
+// === Module 19038: NativeExperimentBridgeManager ===
 
-// Module 19034 (NativeExperimentBridgeManager)
+// Module 19038 (NativeExperimentBridgeManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6011 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 11094 */;
-import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 19035 */;
-import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 19036 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 19037 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 11113 */;
+import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 19039 */;
+import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 19040 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 19041 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;

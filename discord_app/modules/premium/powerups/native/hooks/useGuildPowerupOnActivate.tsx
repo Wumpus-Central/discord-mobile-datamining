@@ -1,6 +1,6 @@
-// === Module 13218: useGuildPowerupOnActivate ===
+// === Module 13226: useGuildPowerupOnActivate ===
 
-// Module 13218 (useGuildPowerupOnActivate)
+// Module 13226 (useGuildPowerupOnActivate)
 import BoostingActionCreators from "BoostingActionCreators" /* 6215 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 8294 */;
 import noop from "module_19" /* 19 */;

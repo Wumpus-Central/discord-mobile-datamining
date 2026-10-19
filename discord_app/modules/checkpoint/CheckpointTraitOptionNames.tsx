@@ -1,6 +1,6 @@
-// === Module 12739: CheckpointTraitOptionNames ===
+// === Module 12756: CheckpointTraitOptionNames ===
 
-// Module 12739 (CheckpointTraitOptionNames)
+// Module 12756 (CheckpointTraitOptionNames)
 import _modDef3141 from "module_3141" /* 3141 */;
 
 const obj = {};

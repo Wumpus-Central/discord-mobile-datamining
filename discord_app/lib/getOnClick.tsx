@@ -14,8 +14,8 @@ import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /*
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8770 */;
 import QuestUtils from "QuestUtils" /* 9470 */;
 import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10459 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 11086 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11140 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 11105 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 11159 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
@@ -317,7 +317,7 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "r" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -491,7 +491,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(13971, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(13975, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;

@@ -1,6 +1,6 @@
-// === Module 15875: GoreMediaFiltersGuildsSetting ===
+// === Module 15879: GoreMediaFiltersGuildsSetting ===
 
-// Module 15875 (GoreMediaFiltersGuildsSetting)
+// Module 15879 (GoreMediaFiltersGuildsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
@@ -8,11 +8,11 @@ import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactio
 import useUserIsTeen from "useUserIsTeen" /* 8004 */;
 import SettingsConstants from "SettingsConstants" /* 8260 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8515 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 15867 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 15868 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 15871 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 15872 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11065 */;
+import SettingBuilders from "SettingBuilders" /* 11084 */;
 import size from "module_2" /* 2 */;
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDisabled() {

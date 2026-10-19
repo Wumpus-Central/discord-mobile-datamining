@@ -1,6 +1,6 @@
-// === Module 16100: BountiesModalContent ===
+// === Module 16104: BountiesModalContent ===
 
-// Module 16100 (BountiesModalContent)
+// Module 16104 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
@@ -15,11 +15,11 @@ import AdCreativeType from "AdCreativeType" /* 6235 */;
 import QuestDataUtils from "QuestDataUtils" /* 7652 */;
 import AnalyticsActions from "AnalyticsActions" /* 7672 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7681 */;
-import AnimationUtils from "AnimationUtils" /* 13730 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13876 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 13898 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13915 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16044 */;
+import AnimationUtils from "AnimationUtils" /* 13734 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 13880 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 13902 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13919 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 16048 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ function doRewardEarnedHapticFeedback() {
 let View = fn(17).View;
 const QuestConstants = fn(6228);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16048);
+const BountiesModalConstants = fn(16052);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);

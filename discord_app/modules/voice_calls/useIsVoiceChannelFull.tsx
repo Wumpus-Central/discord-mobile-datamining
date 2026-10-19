@@ -1,6 +1,6 @@
-// === Module 11390: useIsVoiceChannelFull ===
+// === Module 11408: useIsVoiceChannelFull ===
 
-// Module 11390 (useIsVoiceChannelFull)
+// Module 11408 (useIsVoiceChannelFull)
 import ChannelUtils from "ChannelUtils" /* 5514 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4845 */;

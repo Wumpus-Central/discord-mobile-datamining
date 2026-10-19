@@ -1,6 +1,6 @@
-// === Module 11052: conjureAppBuildRequestConnection ===
+// === Module 11071: conjureAppBuildRequestConnection ===
 
-// Module 11052 (conjureAppBuildRequestConnection)
+// Module 11071 (conjureAppBuildRequestConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 14114: GameRelationshipStoreHooks ===
+// === Module 14118: GameRelationshipStoreHooks ===
 
-// Module 14114 (GameRelationshipStoreHooks)
+// Module 14118 (GameRelationshipStoreHooks)
 import _slicedToArray from "module_32" /* 32 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7612 */;
 

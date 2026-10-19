@@ -1,6 +1,6 @@
-// === Module 17305: ChannelsUnreadBars ===
+// === Module 17309: ChannelsUnreadBars ===
 
-// Module 17305 (ChannelsUnreadBars)
+// Module 17309 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import HapticUtils from "HapticUtils" /* 5156 */;
@@ -201,7 +201,7 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(11881).getScaledChannelRowHeight;
+const getScaledChannelRowHeight = fn(11900).getScaledChannelRowHeight;
 const UnreadSetting = fn(6223).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

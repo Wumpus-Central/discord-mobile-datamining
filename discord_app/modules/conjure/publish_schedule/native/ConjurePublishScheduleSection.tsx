@@ -1,10 +1,10 @@
-// === Module 11655: ConjurePublishScheduleSection ===
+// === Module 11674: ConjurePublishScheduleSection ===
 
-// Module 11655 (ConjurePublishScheduleSection)
+// Module 11674 (ConjurePublishScheduleSection)
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import AlertModal from "AlertModal" /* 5405 */;
-import useConjurePublishScheduleDefault from "useConjurePublishSchedule" /* 11656 */;
+import useConjurePublishScheduleDefault from "useConjurePublishSchedule" /* 11675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         let tmp18Result = null;
         if (null != tmp5.saved) {
           const obj10 = { spacing: tmp4(587).space.PX_8, children: null };
-          const result = tmp(11657).publishScheduleDetails(tmp5.saved);
+          const result = tmp(11676).publishScheduleDetails(tmp5.saved);
           const items2 = [result.map((children, index) => closure_1_3(projectId(dependencyMap[8]).Text, { variant: "text-sm/normal", children }, index)), ];
           const obj11 = { variant: "secondary", text: null, disabled: null, onPress: null };
           const intl5 = tmp(1128).intl;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           items2[1] = tmp22(tmp(5479).Button, obj11);
           obj10.children = items2;
           tmp18Result = closure_4(tmp(5477).Stack, obj10);
-          const tmpResult = tmp(11657);
+          const tmpResult = tmp(11676);
         }
         const obj12 = { children: null };
         items1[1] = tmp18Result;
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       let tmp5Result = null;
       if (null != tmp3.saved) {
         const obj6 = { spacing: tmp(587).space.PX_8, children: null };
-        const result = tmp6(11657).publishScheduleDetails(tmp3.saved);
+        const result = tmp6(11676).publishScheduleDetails(tmp3.saved);
         const items2 = [result.map((children, index) => closure_1_3(projectId(dependencyMap[8]).Text, { variant: "text-sm/normal", children }, index)), ];
         const obj7 = { variant: "secondary", text: null, disabled: null, onPress: null };
         const intl5 = tmp6(1128).intl;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         items2[1] = closure_3(tmp6(5479).Button, obj7);
         obj6.children = items2;
         tmp5Result = closure_4(tmp6(5477).Stack, obj6);
-        const tmp6Result = tmp6(11657);
+        const tmp6Result = tmp6(11676);
       }
       const obj8 = { children: null };
       items1[1] = tmp5Result;

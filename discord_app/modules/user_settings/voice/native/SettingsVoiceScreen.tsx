@@ -1,6 +1,6 @@
-// === Module 16301: SettingsVoiceScreen ===
+// === Module 16305: SettingsVoiceScreen ===
 
-// Module 16301 (SettingsVoiceScreen)
+// Module 16305 (SettingsVoiceScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 5065 */;
@@ -8,12 +8,12 @@ import useThemeDefault from "useTheme" /* 5127 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
-import SettingBuilders from "SettingBuilders" /* 11065 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11459 */;
-import KrispLogo from "KrispLogo" /* 11462 */;
-import _modDef11463 from "module_11463" /* 11463 */;
-import _modDef11464 from "module_11464" /* 11464 */;
-import SettingLayoutDefault from "SettingLayout" /* 15728 */;
+import SettingBuilders from "SettingBuilders" /* 11084 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11477 */;
+import KrispLogo from "KrispLogo" /* 11480 */;
+import _modDef11481 from "module_11481" /* 11481 */;
+import _modDef11482 from "module_11482" /* 11482 */;
+import SettingLayoutDefault from "SettingLayout" /* 15732 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2131 */;
@@ -98,9 +98,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispL
   const tmp4 = closure_12();
   const tmp6 = useThemeDefault();
   if (obj2.isThemeLight(tmp6)) {
-    let tmp5Result = _modDef11463;
+    let tmp5Result = _modDef11481;
   } else {
-    tmp5Result = _modDef11464;
+    tmp5Result = _modDef11482;
   }
   ({ krisp, logo } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -162,9 +162,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispL
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef11463;
+    let tmp2Result = _modDef11481;
   } else {
-    tmp2Result = _modDef11464;
+    tmp2Result = _modDef11482;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

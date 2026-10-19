@@ -1,6 +1,6 @@
-// === Module 12738: CheckpointCharacterTraits ===
+// === Module 12755: CheckpointCharacterTraits ===
 
-// Module 12738 (CheckpointCharacterTraits)
+// Module 12755 (CheckpointCharacterTraits)
 import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5538 */;
 import CheckpointTrait from "CheckpointTrait" /* 5561 */;
 import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5562 */;

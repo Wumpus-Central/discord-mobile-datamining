@@ -1,10 +1,10 @@
-// === Module 17797: ChannelTitle ===
+// === Module 17801: ChannelTitle ===
 
-// Module 17797 (ChannelTitle)
+// Module 17801 (ChannelTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17793 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17797 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

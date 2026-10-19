@@ -1,6 +1,6 @@
-// === Module 12037: PollCreation ===
+// === Module 12056: PollCreation ===
 
-// Module 12037 (PollCreation)
+// Module 12056 (PollCreation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -18,16 +18,16 @@ import PollsUtils from "PollsUtils" /* 8165 */;
 import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9594 */;
 import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9596 */;
 import PollsIcon from "PollsIcon" /* 10325 */;
-import _modDef10916 from "module_10916" /* 10916 */;
-import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12036 */;
-import PollAnswerInputDefault from "PollAnswerInput" /* 12064 */;
+import _modDef10932 from "module_10932" /* 10932 */;
+import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12055 */;
+import PollAnswerInputDefault from "PollAnswerInput" /* 12083 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function PollDurationSelectionRow(selectedDuration) {
   selectedDuration = selectedDuration.selectedDuration;
   const onChange = selectedDuration.onChange;
-  const tmp = onChange(12038)()[selectedDuration];
+  const tmp = onChange(12057)()[selectedDuration];
   let obj = { label: null, accessibilityLabel: null, accessibilityHint: null, onPress: null, trailing: null, arrow: true };
   const intl = selectedDuration(1128).intl;
   obj.label = intl.string(selectedDuration(1128).t.bGHzxb);
@@ -37,7 +37,7 @@ function PollDurationSelectionRow(selectedDuration) {
   obj.accessibilityHint = intl3.string(selectedDuration(1128).t.A4PJ1o);
   obj.onPress = function handlePollDurationPress() {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12039, dependencyMap.paths), closure_2_8, { selectedDuration, onChange });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12058, dependencyMap.paths), closure_2_8, { selectedDuration, onChange });
   };
   obj.trailing = closure_9(selectedDuration(5187).Text, { variant: "text-md/normal", color: "text-muted", children: tmp });
   return closure_9(selectedDuration(6457).TableRow, obj);
@@ -244,7 +244,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAns
   const tmp4 = closure_12();
   const addAnswerButtonDefault = tmp4.addAnswerButtonDefault;
   if (cResult[0] !== tmp4.addAnswerIcon.color) {
-    const obj2 = { source: _modDef10916, size: native.Icon.Sizes.LARGE, color: tmp4.addAnswerIcon.color };
+    const obj2 = { source: _modDef10932, size: native.Icon.Sizes.LARGE, color: tmp4.addAnswerIcon.color };
     const tmp8 = React6(native.Icon, obj2);
     cResult[0] = tmp4.addAnswerIcon.color;
     cResult[1] = tmp8;
@@ -290,10 +290,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAns
 }) : (function AddAnswerButton(onPress) {
   const tmp = closure_12();
   const obj2 = { onPress: onPress.onPress, style: tmp.addAnswerButtonDefault, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const obj = { source: _modDef10916, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color };
+  const obj = { source: _modDef10932, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.B2Uvme);
-  const items = [React6(native.Icon, { source: _modDef10916, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color }), ];
+  const items = [React6(native.Icon, { source: _modDef10932, size: native.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color }), ];
   const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.B2Uvme);
@@ -359,7 +359,7 @@ export default function PollCreation(channel) {
     const intl = channel(1128).intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(channel(1128).t.BByGU4, { number: indexToRemove.indexToRemove + 1 }));
   }, []);
-  const tmp11 = onCancel(12040)(channel, callback, callback1);
+  const tmp11 = onCancel(12059)(channel, callback, callback1);
   answers = tmp11.answers;
   ({ question: c4, allowMultiSelect } = tmp11);
   ({ setAllowMultiSelect: c6, canAddMoreAnswers, canRemoveMoreAnswers: c7, handleAnswerTextChange: c8, handleEmojiSelect: c9, handleAddAnswer } = tmp11);
@@ -369,8 +369,8 @@ export default function PollCreation(channel) {
   const setShouldFocusOnInvalidField = tmp11.setShouldFocusOnInvalidField;
   ({ handleQuestionChange, handleSubmitPoll, duration, setDuration } = tmp11);
   let obj2 = channel(9595);
-  closure_18 = channel(12058).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
-  let obj3 = channel(12058);
+  closure_18 = channel(12077).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
+  let obj3 = channel(12077);
   channel(6484).useNavigatorBackPressHandler(() => {
     if (obj.isPollCreationEmpty(c4, answers)) {
       closure_18();
@@ -386,7 +386,7 @@ export default function PollCreation(channel) {
     }
     return flag;
   });
-  const obj6 = onCancel(12059)({
+  const obj6 = onCancel(12078)({
     onAddAnswer() {
       handleAddAnswer();
     }
@@ -446,7 +446,7 @@ export default function PollCreation(channel) {
       TEXT_BRAND = tmp(587).colors.TEXT_BRAND;
     }
     const obj12 = { color: TEXT_BRAND };
-    obj11.icon = tmp14(tmp4(12060).CalendarPlusIcon, obj12);
+    obj11.icon = tmp14(tmp4(12079).CalendarPlusIcon, obj12);
     obj11.onPress = function onPress() {
       const obj2 = { onSelect, currentTimestamp: scheduledTimestamp, onClear: null, entryPoint: null, channelId: null };
       let fn;
@@ -480,8 +480,8 @@ export default function PollCreation(channel) {
       anyErrorMessage = createPollError.getAnyErrorMessage();
     }
     const obj15 = { children: anyErrorMessage };
-    tmp14Result = tmp14(tmp(12062), obj15);
-    let tmpResult = tmp(12062);
+    tmp14Result = tmp14(tmp(12081), obj15);
+    let tmpResult = tmp(12081);
   }
   const items6 = [tmp14Result, , ];
   const obj16 = { ref: obj6.refWithKey("question"), onChange: handleQuestionChange, onSubmitEditing: obj6.focusNext, error: null };

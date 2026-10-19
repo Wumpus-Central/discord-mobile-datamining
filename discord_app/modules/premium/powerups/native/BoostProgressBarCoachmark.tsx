@@ -1,6 +1,6 @@
-// === Module 17291: BoostProgressBarCoachmark ===
+// === Module 17295: BoostProgressBarCoachmark ===
 
-// Module 17291 (BoostProgressBarCoachmark)
+// Module 17295 (BoostProgressBarCoachmark)
 import util from "util" /* 1128 */;
 import _modDef2621 from "module_2621" /* 2621 */;
 import BoostThisServerRive from "BoostThisServerRive" /* 4993 */;

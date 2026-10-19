@@ -1,9 +1,9 @@
-// === Module 11581: useConjureAppSlotsLeft ===
+// === Module 11597: useConjureAppSlotsLeft ===
 
-// Module 11581 (useConjureAppSlotsLeft)
+// Module 11597 (useConjureAppSlotsLeft)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10983 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10999 */;
 import noop from "module_19" /* 19 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
 

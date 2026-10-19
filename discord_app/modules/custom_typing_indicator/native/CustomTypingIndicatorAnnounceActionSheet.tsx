@@ -1,6 +1,6 @@
-// === Module 12819: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 12836: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 12819 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 12836 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 587 */;
 import openUserSettings from "openUserSettings" /* 7370 */;
 import noop from "module_19" /* 19 */;

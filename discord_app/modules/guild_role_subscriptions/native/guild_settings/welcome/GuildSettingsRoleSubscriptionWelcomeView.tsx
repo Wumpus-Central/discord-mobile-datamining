@@ -1,6 +1,6 @@
-// === Module 18901: GuildSettingsRoleSubscriptionWelcomeView ===
+// === Module 18905: GuildSettingsRoleSubscriptionWelcomeView ===
 
-// Module 18901 (GuildSettingsRoleSubscriptionWelcomeView)
+// Module 18905 (GuildSettingsRoleSubscriptionWelcomeView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,12 +8,12 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import NavigatorConstants from "NavigatorConstants" /* 6536 */;
-import ErrorBlockDefault from "ErrorBlock" /* 12062 */;
-import WarningNoticeDefault from "WarningNotice" /* 18903 */;
-import EligibilityActionSheet from "EligibilityActionSheet" /* 18906 */;
-import HowItWorksSectionDefault from "HowItWorksSection" /* 18914 */;
-import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 18918 */;
-import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 18927 */;
+import ErrorBlockDefault from "ErrorBlock" /* 12081 */;
+import WarningNoticeDefault from "WarningNotice" /* 18907 */;
+import EligibilityActionSheet from "EligibilityActionSheet" /* 18910 */;
+import HowItWorksSectionDefault from "HowItWorksSection" /* 18918 */;
+import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 18922 */;
+import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 18931 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(18906, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
+    return obj.openLazy(asyncRequireImpl(18910, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
       eligibility,
       onRequireModeratorMFAClick() {
         navigation.push(constants.SECURITY);
@@ -100,7 +100,7 @@ function StartEarningButton(isTermsAccepted) {
     const obj9 = { loading, text: null, icon: null, pillStyle: null, onPress: null };
     const intl = tmp5(tmp3[12]).intl;
     obj9.text = intl.string(tmp5(tmp3[12]).t.NL5ZNS);
-    const obj10 = { source: require("module_11287"), color: require("native").unsafe_rawColors.WHITE, size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20 };
+    const obj10 = { source: require("module_11305"), color: require("native").unsafe_rawColors.WHITE, size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20 };
     obj9.icon = closure_11(tmp5(tmp3[23]).Icon, obj10);
     obj9.pillStyle = { backgroundColor: "#EB5D30" };
     obj9.onPress = callback1;
@@ -113,9 +113,9 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(16259).CREATOR_REVENUE_PORTAL_URL;
+const creatorPortalUrl = fn(16263).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1087).GuildSettingsSections;
-const constants = fn(18902).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(18906).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(5191);

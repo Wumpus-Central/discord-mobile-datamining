@@ -1,6 +1,6 @@
-// === Module 11097: handleMessagesTapImage ===
+// === Module 11116: handleMessagesTapImage ===
 
-// Module 11097 (handleMessagesTapImage)
+// Module 11116 (handleMessagesTapImage)
 import LinkingDefault from "Linking" /* 4901 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8666 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7579 */;

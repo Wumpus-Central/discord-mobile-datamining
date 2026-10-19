@@ -1,14 +1,14 @@
-// === Module 18332: JankVoicePanelTabReporter ===
+// === Module 18336: JankVoicePanelTabReporter ===
 
-// Module 18332 (JankVoicePanelTabReporter)
+// Module 18336 (JankVoicePanelTabReporter)
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 17137 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 17141 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let VoicePanelModes = fn(12914).VoicePanelModes;
-const VoicePanelControlsModes = fn(12912).VoicePanelControlsModes;
+let VoicePanelModes = fn(10680).VoicePanelModes;
+const VoicePanelControlsModes = fn(10678).VoicePanelControlsModes;
 const map = new Map();
 function isDrawerShown(drawerMode, arg1) {
   let tmp = drawerMode.drawerMode && !drawerMode.hidden;

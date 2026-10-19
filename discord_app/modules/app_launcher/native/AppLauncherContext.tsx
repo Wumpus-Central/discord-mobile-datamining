@@ -1,10 +1,10 @@
-// === Module 10932: AppLauncherContext ===
+// === Module 10948: AppLauncherContext ===
 
-// Module 10932 (AppLauncherContext)
+// Module 10948 (AppLauncherContext)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10933 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10934 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10949 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

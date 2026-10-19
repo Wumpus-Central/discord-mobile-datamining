@@ -1,11 +1,11 @@
-// === Module 12778: TraitOptionDetails ===
+// === Module 12795: TraitOptionDetails ===
 
-// Module 12778 (TraitOptionDetails)
+// Module 12795 (TraitOptionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3141 from "module_3141" /* 3141 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import RarityBadgeDefault from "RarityBadge" /* 12779 */;
+import RarityBadgeDefault from "RarityBadge" /* 12796 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,11 +51,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
       }
     }
     if (cResult[2] !== asset) {
-      const assetDescription = tmp(12737).getAssetDescription(asset);
+      const assetDescription = tmp(12754).getAssetDescription(asset);
       cResult[2] = asset;
       cResult[3] = assetDescription;
       let tmp6 = assetDescription;
-      const tmpResult = tmp(12737);
+      const tmpResult = tmp(12754);
     } else {
       tmp6 = cResult[3];
     }
@@ -83,8 +83,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
     let format = _require;
     let obj = dependencyMap;
     if (asset.rarity !== require("CheckpointTraitRarity").CheckpointTraitRarity.NITRO) {
-      let assetDescription = format(12737).getAssetDescription(asset);
-      const formatResult = format(12737);
+      let assetDescription = format(12754).getAssetDescription(asset);
+      const formatResult = format(12754);
     }
     const intl = format(1128).intl;
     format = intl.format;

@@ -1,6 +1,6 @@
-// === Module 17719: useSubscribeToGuildMemberUpdates ===
+// === Module 17723: useSubscribeToGuildMemberUpdates ===
 
-// Module 17719 (useSubscribeToGuildMemberUpdates)
+// Module 17723 (useSubscribeToGuildMemberUpdates)
 import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 7254 */;
 import noop from "module_19" /* 19 */;
 

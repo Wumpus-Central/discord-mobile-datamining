@@ -1,6 +1,6 @@
-// === Module 13970: utils/CustomActivityLinkUtils ===
+// === Module 13974: utils/CustomActivityLinkUtils ===
 
-// Module 13970 (utils/CustomActivityLinkUtils)
+// Module 13974 (utils/CustomActivityLinkUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 const CustomLinkType = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };

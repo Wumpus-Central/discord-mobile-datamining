@@ -1,12 +1,12 @@
-// === Module 10929: MarkupReactCommandRule ===
+// === Module 10945: MarkupReactCommandRule ===
 
-// Module 10929 (MarkupReactCommandRule)
+// Module 10945 (MarkupReactCommandRule)
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import ToastUtils from "ToastUtils" /* 4903 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import ClipboardUtils from "ClipboardUtils" /* 7162 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7513 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 10935 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 10951 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupRe
   const cResult = node(576).c(18);
   node = node.node;
   ({ output, state, style } = node);
-  const tmp4 = null != noop.useContext(node(10932).AppLauncherContext);
+  const tmp4 = null != noop.useContext(node(10948).AppLauncherContext);
   closure_1 = tmp4;
   const tmp5 = closure_6();
   dependencyMap = tmp5;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupRe
 }) : (function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(10932).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(10948).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,

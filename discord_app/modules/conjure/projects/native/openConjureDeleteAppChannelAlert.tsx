@@ -1,6 +1,6 @@
-// === Module 17953: openConjureDeleteAppChannelAlert ===
+// === Module 17957: openConjureDeleteAppChannelAlert ===
 
-// Module 17953 (openConjureDeleteAppChannelAlert)
+// Module 17957 (openConjureDeleteAppChannelAlert)
 import useAlertStore from "useAlertStore" /* 5401 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -268,7 +268,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(12568)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(12585)(conjureServerApp), done: false };
                 return obj4;
               }
             }

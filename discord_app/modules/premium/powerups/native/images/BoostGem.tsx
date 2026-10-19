@@ -1,6 +1,6 @@
-// === Module 13203: BoostGem ===
+// === Module 13211: BoostGem ===
 
-// Module 13203 (BoostGem)
+// Module 13211 (BoostGem)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
 import noop from "module_19" /* 19 */;

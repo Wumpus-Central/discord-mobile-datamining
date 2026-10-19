@@ -1,6 +1,6 @@
-// === Module 18762: EmptyServerSettingsEmoji ===
+// === Module 18766: EmptyServerSettingsEmoji ===
 
-// Module 18762 (EmptyServerSettingsEmoji)
+// Module 18766 (EmptyServerSettingsEmoji)
 import c from "c" /* 576 */;
 import shared from "shared" /* 5065 */;
 import FastImageDefault from "FastImage" /* 5128 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmptyServ
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_18763");
+          return require("module_18767");
         },
       darker() {
-          return require("module_18764");
+          return require("module_18768");
         },
       light() {
-          return require("module_18765");
+          return require("module_18769");
         }
     };
     const illustrationSource = _mod8633.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmptyServ
   const obj = shared;
   return _mod8633.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18763");
+      return require("module_18767");
     },
     darker() {
-      return require("module_18764");
+      return require("module_18768");
     },
     light() {
-      return require("module_18765");
+      return require("module_18769");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getEmptyServerSettingsEmojiSource(theme) {
   return _mod8633.getIllustrationSource(theme, {
     dark() {
-      return require("module_18763");
+      return require("module_18767");
     },
     darker() {
-      return require("module_18764");
+      return require("module_18768");
     },
     light() {
-      return require("module_18765");
+      return require("module_18769");
     }
   });
 }

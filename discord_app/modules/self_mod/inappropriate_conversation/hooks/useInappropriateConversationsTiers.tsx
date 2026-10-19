@@ -1,10 +1,10 @@
-// === Module 13629: useInappropriateConversationsTiers ===
+// === Module 13633: useInappropriateConversationsTiers ===
 
-// Module 13629 (useInappropriateConversationsTiers)
+// Module 13633 (useInappropriateConversationsTiers)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10696 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10697 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10712 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10713 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

@@ -1,18 +1,18 @@
-// === Module 16821: BuildOverrideActiveSetting ===
+// === Module 16825: BuildOverrideActiveSetting ===
 
-// Module 16821 (BuildOverrideActiveSetting)
+// Module 16825 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2209 from "module_2209" /* 2209 */;
 import Stack_Stack from "Stack/Stack" /* 5477 */;
 import components_Button_Button from "components/Button/Button" /* 5479 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12502 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15595 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15884 */;
-import DevToolsContent from "DevToolsContent" /* 16819 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12519 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15599 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15888 */;
+import DevToolsContent from "DevToolsContent" /* 16823 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10792 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10808 */;
 
 require = fn;
 function handleBuildOverrideActivePress() {
@@ -58,7 +58,7 @@ ReactCompilerGating = fn(558);
 function useHasBuildOverrideActive() {
   return null != closure_7();
 }
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
   const cResult = c.c(3);
   const tmp4 = closure_7();
@@ -136,7 +136,7 @@ let obj5 = {
     return intl.string(_modDef2209.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(11614).RefreshIcon,
+  IconComponent: fn(11630).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(3);
     const tmp4 = closure_7();
@@ -219,7 +219,7 @@ export default SettingBuilders.createStatic({
     return intl.string(_modDef2209.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(11614).RefreshIcon,
+  IconComponent: fn(11630).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(3);
     const tmp4 = closure_7();

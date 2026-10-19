@@ -1,12 +1,12 @@
-// === Module 11183: SpotifyUtils ===
+// === Module 11202: SpotifyUtils ===
 
-// Module 11183 (SpotifyUtils)
+// Module 11202 (SpotifyUtils)
 import DurationsDefault from "Durations" /* 1104 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11185 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11186 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11204 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11205 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11184 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11203 */;
 import SpotifyStore from "SpotifyStore" /* 6016 */;
 
 require = fn;
@@ -132,7 +132,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11185).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11204).setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);
       }

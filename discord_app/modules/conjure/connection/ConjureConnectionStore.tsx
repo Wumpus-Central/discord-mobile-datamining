@@ -1,24 +1,24 @@
-// === Module 10962: ConjureConnectionStore ===
+// === Module 10978: ConjureConnectionStore ===
 
-// Module 10962 (ConjureConnectionStore)
+// Module 10978 (ConjureConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import createNonce from "createNonce" /* 10106 */;
-import conjureChatConnection from "conjureChatConnection" /* 10980 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10981 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10982 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10996 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 11035 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 11041 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11042 */;
-import conjurePublishConnection from "conjurePublishConnection" /* 11046 */;
-import conjurePublishScheduleRequests from "conjurePublishScheduleRequests" /* 11047 */;
-import ConjureWebSocket from "ConjureWebSocket" /* 11054 */;
+import conjureChatConnection from "conjureChatConnection" /* 10996 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10997 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10998 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11004 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11017 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 11056 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 11062 */;
+import conjurePublishConnection from "conjurePublishConnection" /* 11065 */;
+import conjurePublishScheduleRequests from "conjurePublishScheduleRequests" /* 11066 */;
+import ConjureWebSocket from "ConjureWebSocket" /* 11073 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureChatStore from "ConjureChatStore" /* 10963 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10967 */;
+import ConjureChatStore from "ConjureChatStore" /* 10979 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10983 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
 
 require = fn;
@@ -267,163 +267,159 @@ function handleEvent(projectId, pendingEvents, type) {
     }
   }
 }
-let closure_21 = async function _openWithFreshTicket(arg0, arg1) {
-  closure_0 = arg0;
-  let ws = arg1;
-  c7 = 0;
-  c8 = 0;
-  c6 = 0;
-  return (async (arg0, value) => {
-    if (c8 === 2) {
-      c8 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_21 = async function _openWithFreshTicket(arg0) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c8 = 2;
-        if (0 === c7) {
-          if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            let obj7 = { value, done: true };
-            return obj7;
-          } else {
-            closure_4 = tmp3;
-            closure_3 = tmp5;
-            closure_131_0 = projectId;
-            closure_131_1 = ws;
-            closure_131_2 = undefined;
-            let ticket;
-            let baseUrl;
-            const ws2 = ws.ws;
-            ws2.close();
-            c6 = 1;
-            c7 = 2;
-            c8 = 1;
-            let obj9 = { value: ConjureWorkerTickets.mintWorkerTicket(projectId), done: false };
-            return obj9;
-          }
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          let obj7 = { value, done: true };
+          return obj7;
         } else {
-          if (1 === tmp8) {
-            c6 = 0;
-            closure_131_5 = closure_5;
-            if (closure_131_1.disposed) {
-              c8 = 3;
-              return { value: "IconComponent", done: null };
-            } else {
-              closure_132_12(closure_131_0, "failed");
-              const _Error = Error;
-              let str = "ws open failed";
-              if (closure_131_5 instanceof Error) {
-                str = closure_131_5.message;
-              }
-              closure_132_16(closure_131_0, closure_131_1, str);
-              closure_131_1.pendingModelSettings = null;
-              closure_131_1.pendingTemplatePrep = null;
-              closure_132_0(closure_132_2[21]).rejectPendingPublish(closure_131_0, "Connection failed before the publish result arrived");
-              let obj3 = closure_132_0(closure_132_2[21]);
-              let result = closure_132_0(closure_132_2[22]).rejectPendingPublishSchedule(closure_131_0);
-              let obj4 = closure_132_0(closure_132_2[22]);
-              let result1 = closure_132_0(closure_132_2[21]).rejectPendingPatchNotesDraft(closure_131_0, "Connection failed before the draft arrived");
-              let obj5 = closure_132_0(closure_132_2[21]);
-              let obj10 = { location: "connection", code: closure_132_0(closure_132_2[28]).ConjureErrorCodes.WS_OPEN_FAILED, message: null };
-              const _Error2 = Error;
-              let str2 = "ws open failed";
-              if (closure_131_5 instanceof Error) {
-                str2 = closure_131_5.message;
-              }
-              obj10.message = str2;
-              closure_132_0(closure_132_2[28]).trackConjureErrored(closure_131_0, obj10);
-              c8 = 3;
-              let obj6 = closure_132_0(closure_132_2[28]);
-            }
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
-          } else {
-            closure_131_2 = value;
-            ticket = closure_131_2.ticket;
-            baseUrl = closure_131_2.baseUrl;
-            if (!closure_131_1.disposed) {
-              ws = closure_131_1.ws;
-              obj = { url: baseUrl, ticket, templateId: null, onEvent: null, onClose: null, onError: null };
-              const warmTemplateId = closure_131_1.warmTemplateId;
-              templateId = warmTemplateId;
-              if (warmTemplateId == null) {
-                templateId = undefined;
-              }
-              obj.templateId = templateId;
-              obj.onEvent = function onEvent(arg0) {
-                return closure_2_20(projectId, ws, arg0);
-              };
-              obj.onClose = function onClose() {
-                projectId(11046).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
-                obj = projectId(11046);
-                const result = projectId(11047).rejectPendingPublishSchedule(projectId);
-                obj2 = projectId(11047);
-                const result1 = projectId(11046).rejectPendingPatchNotesDraft(projectId, "Connection closed before the draft arrived");
-                const obj3 = projectId(11046);
-                const result2 = projectId(11035).clearConjurePreviewClaims(projectId);
-                if (ws.disposed) {
-                  const obj6 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
-                  closure_1(584).dispatch(obj6);
-                  const obj9 = closure_1(584);
-                } else if (ws.helloSeen) {
-                  ws.reconnectPending = true;
-                  const obj8 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "connecting" };
-                  closure_1(584).dispatch(obj8);
-                  const backoff = ws.backoff;
-                  backoff.fail(() => {
-                    closure_2_22(projectId);
-                  });
-                  const obj7 = closure_1(584);
-                } else {
-                  const obj10 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
-                  closure_1(584).dispatch(obj10);
-                  closure_2_16(projectId, ws, "Connection closed before the message was sent");
-                  ws.pendingModelSettings = null;
-                  ws.pendingTemplatePrep = null;
-                  const obj5 = closure_1(584);
-                }
-                const obj4 = projectId(11035);
-              };
-              obj.onError = function onError() {
-
-              };
-              ws.open(obj);
-              c6 = 0;
-            }
+          closure_4 = tmp3;
+          closure_3 = tmp5;
+          closure_131_0 = projectId;
+          closure_131_1 = importDefault;
+          closure_131_2 = undefined;
+          let ticket;
+          let baseUrl;
+          const ws2 = importDefault.ws;
+          ws2.close();
+          if (importDefault.helloSeen) {
+            ConjureWorkerTickets.forgetEarlyTicket(projectId);
           }
+          c6 = 1;
+          c7 = 2;
+          c8 = 1;
+          let obj10 = { value: ConjureWorkerTickets.mintWorkerTicket(projectId), done: false };
+          return obj10;
+        }
+      } else {
+        if (1 === tmp8) {
+          c6 = 0;
+          closure_131_5 = closure_5;
+          if (closure_131_1.disposed) {
+            c8 = 3;
+            return { value: "IconComponent", done: null };
+          } else {
+            closure_132_12(closure_131_0, "failed");
+            const _Error = Error;
+            let str = "ws open failed";
+            if (closure_131_5 instanceof Error) {
+              str = closure_131_5.message;
+            }
+            closure_132_16(closure_131_0, closure_131_1, str);
+            closure_131_1.pendingModelSettings = null;
+            closure_131_1.pendingTemplatePrep = null;
+            closure_132_0(closure_132_2[22]).rejectPendingPublish(closure_131_0, "Connection failed before the publish result arrived");
+            let obj3 = closure_132_0(closure_132_2[22]);
+            let result = closure_132_0(closure_132_2[23]).rejectPendingPublishSchedule(closure_131_0);
+            let obj4 = closure_132_0(closure_132_2[23]);
+            let result1 = closure_132_0(closure_132_2[22]).rejectPendingPatchNotesDraft(closure_131_0, "Connection failed before the draft arrived");
+            let obj5 = closure_132_0(closure_132_2[22]);
+            const obj11 = { location: "connection", code: closure_132_0(closure_132_2[29]).ConjureErrorCodes.WS_OPEN_FAILED, message: null };
+            const _Error2 = Error;
+            let str2 = "ws open failed";
+            if (closure_131_5 instanceof Error) {
+              str2 = closure_131_5.message;
+            }
+            obj11.message = str2;
+            closure_132_0(closure_132_2[29]).trackConjureErrored(closure_131_0, obj11);
+            c8 = 3;
+            let obj6 = closure_132_0(closure_132_2[29]);
+          }
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          return { value: "IconComponent", done: null };
-        }
-      } catch (tmp63) {
-        closure_5 = tmp63;
-        if (tmp4 === c6) {
-          c8 = tmp2;
-          throw tmp63;
+          const obj12 = { value, done: true };
+          return obj12;
         } else {
-          c7 = tmp;
+          closure_131_2 = value;
+          ticket = closure_131_2.ticket;
+          baseUrl = closure_131_2.baseUrl;
+          if (!closure_131_1.disposed) {
+            const ws = closure_131_1.ws;
+            obj = { url: baseUrl, ticket, templateId: null, onEvent: null, onClose: null, onError: null };
+            const warmTemplateId = closure_131_1.warmTemplateId;
+            let templateId = warmTemplateId;
+            if (warmTemplateId == null) {
+              templateId = undefined;
+            }
+            obj.templateId = templateId;
+            obj.onEvent = function onEvent(arg0) {
+              return closure_2_20(projectId, closure_1_1, arg0);
+            };
+            obj.onClose = function onClose() {
+              projectId(11065).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
+              obj = projectId(11065);
+              const result = projectId(11066).rejectPendingPublishSchedule(projectId);
+              obj2 = projectId(11066);
+              const result1 = projectId(11065).rejectPendingPatchNotesDraft(projectId, "Connection closed before the draft arrived");
+              const obj3 = projectId(11065);
+              const result2 = projectId(11056).clearConjurePreviewClaims(projectId);
+              if (closure_1_1.disposed) {
+                const obj6 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
+                closure_1(584).dispatch(obj6);
+                const obj9 = closure_1(584);
+              } else if (closure_1_1.helloSeen) {
+                closure_1_1.reconnectPending = true;
+                const obj8 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "connecting" };
+                closure_1(584).dispatch(obj8);
+                const backoff = closure_1_1.backoff;
+                backoff.fail(() => {
+                  closure_2_22(projectId);
+                });
+                const obj7 = closure_1(584);
+              } else {
+                const obj10 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
+                closure_1(584).dispatch(obj10);
+                closure_2_16(projectId, closure_1_1, "Connection closed before the message was sent");
+                closure_1_1.pendingModelSettings = null;
+                closure_1_1.pendingTemplatePrep = null;
+                const obj5 = closure_1(584);
+              }
+              const obj4 = projectId(11056);
+            };
+            obj.onError = function onError() {
+
+            };
+            ws.open(obj);
+            c6 = 0;
+          }
         }
+        c6 = 0;
+        c8 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } catch (tmp63) {
+      closure_5 = tmp63;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp63;
+      } else {
+        c7 = tmp;
       }
     }
-  })();
+  }
 };
 function connect(projectId) {
   let warmTemplateId = arg1;
@@ -511,40 +507,41 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(10963).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(10970);
-const ConjureSmartContextStore = fn(10971);
-const ConjureDebugLogStore = fn(10972);
-const ConjureLiveReloadStore = fn(10974);
-const ConjureModelSettingsStore = fn(10975);
-const ConjureOverlayBackgroundStore = fn(10976);
-const ConjurePublishStatusStore = fn(10977);
-const ConjureRemixStore = fn(10978);
-const ConjureSettingsStore = fn(10979);
+const getOlderHistoryCursor = fn(10979).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10986);
+const ConjureSmartContextStore = fn(10987);
+const ConjureDebugLogStore = fn(10988);
+const ConjureLiveReloadStore = fn(10990);
+const ConjureModelSettingsStore = fn(10991);
+const ConjureOverlayBackgroundStore = fn(10992);
+const ConjurePublishStatusStore = fn(10993);
+const ConjureRemixStore = fn(10994);
+const ConjureSettingsStore = fn(10995);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(10988).browserSessionsFrameHandlers);
-const merged1 = Object.assign(fn(10980).chatFrameHandlers);
-const merged2 = Object.assign(fn(10989).debugFrameHandlers);
-const merged3 = Object.assign(fn(10991).liveReloadFrameHandlers);
-const merged4 = Object.assign(fn(10992).modelSettingsFrameHandlers);
-const merged5 = Object.assign(fn(10993).previewFrameHandlers);
-const merged6 = Object.assign(fn(11046).publishFrameHandlers);
-const merged7 = Object.assign(fn(11047).publishScheduleFrameHandlers);
-const merged8 = Object.assign(fn(11049).remixFrameHandlers);
-const merged9 = Object.assign(fn(11050).settingsFrameHandlers);
-const merged10 = Object.assign(fn(11051).smartContextFrameHandlers);
+let merged = Object.assign(fn(11007).browserSessionsFrameHandlers);
+const merged1 = Object.assign(fn(10996).chatFrameHandlers);
+const merged2 = Object.assign(fn(11008).debugFrameHandlers);
+const merged3 = Object.assign(fn(11010).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(11012).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(11013).modelSettingsFrameHandlers);
+const merged6 = Object.assign(fn(11014).previewFrameHandlers);
+const merged7 = Object.assign(fn(11065).publishFrameHandlers);
+const merged8 = Object.assign(fn(11066).publishScheduleFrameHandlers);
+const merged9 = Object.assign(fn(11068).remixFrameHandlers);
+const merged10 = Object.assign(fn(11069).settingsFrameHandlers);
+const merged11 = Object.assign(fn(11070).smartContextFrameHandlers);
 let obj2 = {};
-const merged11 = Object.assign(fn(11052).appBuildRequestStepHandlers);
-const merged12 = Object.assign(fn(10980).chatStepHandlers);
-const merged13 = Object.assign(fn(10989).debugStepHandlers);
-const merged14 = Object.assign(fn(10993).previewStepHandlers);
-const merged15 = Object.assign(fn(11053).projectStepHandlers);
-const merged16 = Object.assign(fn(11046).publishStepHandlers);
-const set1 = new Set(["hello", "history", "capture_preview", "control_preview", "control_claim", "control_abort", "capture_claim", "preview_operation", "request_upstream_ticket"]);
+const merged12 = Object.assign(fn(11071).appBuildRequestStepHandlers);
+const merged13 = Object.assign(fn(10996).chatStepHandlers);
+const merged14 = Object.assign(fn(11008).debugStepHandlers);
+const merged15 = Object.assign(fn(11014).previewStepHandlers);
+const merged16 = Object.assign(fn(11072).projectStepHandlers);
+const merged17 = Object.assign(fn(11065).publishStepHandlers);
+const set1 = new Set(["hello", "history", "capture_preview", "control_preview", "control_claim", "control_abort", "capture_claim", "preview_operation", "request_upstream_ticket", "host_approvals"]);
 const map3 = new Map();
 const map4 = new Map();
 const Store = initializeDefault.Store;
@@ -600,6 +597,7 @@ const conjureConnectionStore = new ConjureConnectionStore(DispatcherDefault, {
     return flag ? undefined : false;
   },
   LOGOUT: function handleLogout() {
+    conjureMediaTickets.clearMediaTickets();
     if (0 === map.size) {
       return false;
     } else {

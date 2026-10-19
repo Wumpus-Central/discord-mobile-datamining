@@ -1,19 +1,19 @@
-// === Module 17055: MainNavigator ===
+// === Module 17059: MainNavigator ===
 
-// Module 17055 (MainNavigator)
+// Module 17059 (MainNavigator)
 import c from "c" /* 576 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
 import DeviceUtils from "DeviceUtils" /* 5167 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9934 */;
-import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11402 */;
-import StartupProfiler from "StartupProfiler" /* 12805 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15055 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17057 */;
-import AutoAnalytics from "AutoAnalytics" /* 17885 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 17932 */;
-import AppComponents from "AppComponents" /* 18120 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 18366 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18397 */;
+import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11420 */;
+import StartupProfiler from "StartupProfiler" /* 12822 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15059 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17061 */;
+import AutoAnalytics from "AutoAnalytics" /* 17889 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 17936 */;
+import AppComponents from "AppComponents" /* 18124 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 18370 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -65,7 +65,7 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17056).StackNavigationAnimationSettings;
+let closure_7 = fn(17060).StackNavigationAnimationSettings;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);

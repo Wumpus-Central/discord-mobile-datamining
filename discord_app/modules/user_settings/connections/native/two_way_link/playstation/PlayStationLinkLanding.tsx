@@ -1,12 +1,12 @@
-// === Module 13853: PlayStationLinkLanding ===
+// === Module 13857: PlayStationLinkLanding ===
 
-// Module 13853 (PlayStationLinkLanding)
+// Module 13857 (PlayStationLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
-import _modDef13854 from "module_13854" /* 13854 */;
+import _modDef13858 from "module_13858" /* 13858 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(13852).PlayStationLinkModalScenes;
+let closure_4 = fn(13856).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const createStyles = fn(5191);
@@ -60,7 +60,7 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
     tmp12 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj7 = { uri: _modDef13854 };
+    const obj7 = { uri: _modDef13858 };
     cResult[4] = obj7;
     let tmp13 = obj7;
   } else {
@@ -120,7 +120,7 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef13854 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef13858 }), []);
   const obj3 = { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
   let intl2 = navigation(1128).intl;
   obj3.headerConnect = intl2.string(navigation(1128).t.xAWHOy);

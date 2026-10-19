@@ -1,14 +1,14 @@
-// === Module 16067: BountiesScrollEndCard ===
+// === Module 16071: BountiesScrollEndCard ===
 
-// Module 16067 (BountiesScrollEndCard)
+// Module 16071 (BountiesScrollEndCard)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import timing from "timing" /* 5192 */;
 import timingPresets from "timingPresets" /* 5195 */;
 import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9748 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16050 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 16051 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 16054 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 16055 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 
@@ -128,7 +128,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
             }
           }
           const obj6 = { bounty, visible, sourceQuestContent, onClose: V, showCloseButton: false, disabled: !isActive };
-          const tmp27 = closure_8(isScrollingInBoundsSharedValue(16071), obj6);
+          const tmp27 = closure_8(isScrollingInBoundsSharedValue(16075), obj6);
           cResult[16] = bounty;
           cResult[17] = sourceQuestContent;
           cResult[18] = !isActive;
@@ -137,7 +137,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
         }
       }
       const obj7 = { bounty, sourceQuestContent, disabled: !isActive };
-      const tmp21 = closure_8(isScrollingInBoundsSharedValue(16068), obj7);
+      const tmp21 = closure_8(isScrollingInBoundsSharedValue(16072), obj7);
       cResult[11] = bounty;
       cResult[12] = sourceQuestContent;
       cResult[13] = !isActive;
@@ -192,11 +192,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   const obj6 = { style: null, pointerEvents: "box-none", children: null };
   const items2 = [tmp.overlayContent, animatedStyle];
   obj6.style = items2;
-  const items3 = [closure_8(isScrollingInBoundsSharedValue(16068), { bounty, sourceQuestContent, disabled: !isActive }), ];
+  const items3 = [closure_8(isScrollingInBoundsSharedValue(16072), { bounty, sourceQuestContent, disabled: !isActive }), ];
   const obj8 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: closure_8(isScrollingInBoundsSharedValue(16071), {
+    children: closure_8(isScrollingInBoundsSharedValue(16075), {
       bounty,
       visible,
       sourceQuestContent,

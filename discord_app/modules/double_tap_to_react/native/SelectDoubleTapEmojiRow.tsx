@@ -1,6 +1,6 @@
-// === Module 13035: SelectDoubleTapEmojiRow ===
+// === Module 13043: SelectDoubleTapEmojiRow ===
 
-// Module 13035 (SelectDoubleTapEmojiRow)
+// Module 13043 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import EmojiDefault from "Emoji" /* 7098 */;

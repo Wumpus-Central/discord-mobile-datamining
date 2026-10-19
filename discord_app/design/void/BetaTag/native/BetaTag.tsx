@@ -1,6 +1,6 @@
-// === Module 13822: BetaTag ===
+// === Module 13826: BetaTag ===
 
-// Module 13822 (BetaTag)
+// Module 13826 (BetaTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;

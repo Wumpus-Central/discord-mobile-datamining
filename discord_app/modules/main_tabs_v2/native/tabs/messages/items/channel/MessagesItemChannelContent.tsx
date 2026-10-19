@@ -1,6 +1,6 @@
-// === Module 17161: MessagesItemChannelContent ===
+// === Module 17165: MessagesItemChannelContent ===
 
-// Module 17161 (MessagesItemChannelContent)
+// Module 17165 (MessagesItemChannelContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,10 +15,10 @@ import GuildTagDefault from "GuildTag" /* 9130 */;
 import ActivityStatusDefault from "ActivityStatus" /* 10538 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10565 */;
 import _modDef10642 from "module_10642" /* 10642 */;
-import _modDef10772 from "module_10772" /* 10772 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 16373 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 17163 */;
-import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 17165 */;
+import _modDef10788 from "module_10788" /* 10788 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 16377 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 17167 */;
+import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 17169 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6291 */;
 
@@ -101,7 +101,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else if (muted) {
     if (cResult[6] === channelMutedIcon2.channelIcon) {
     }
-    const obj4 = { source: _modDef10772, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10788, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr3[0], channelMutedIcon: arr3[1] } = channelMutedIcon2);
     obj4.style = items2;
@@ -139,7 +139,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
     obj3.style = items1;
     tmp2 = timestampProducer(native.Icon, obj3);
   } else if (muted) {
-    const obj4 = { source: _modDef10772, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10788, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj4.style = items2;
@@ -294,7 +294,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(17162);
+  const tmpResult3 = channel(17166);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
@@ -407,7 +407,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj19.color = str7;
       obj19.layout = tmp(9615).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj19.muted = muted;
-      let tmp20Result7 = closure_6(tmp(13529).ChannelRowPreview, obj19);
+      let tmp20Result7 = closure_6(tmp(13534).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
       const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;

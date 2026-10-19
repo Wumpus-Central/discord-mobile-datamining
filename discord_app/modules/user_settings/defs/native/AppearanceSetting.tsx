@@ -1,6 +1,6 @@
-// === Module 16315: AppearanceSetting ===
+// === Module 16319: AppearanceSetting ===
 
-// Module 16315 (AppearanceSetting)
+// Module 16319 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -115,14 +115,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
     return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
   }
 });
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(16316).PaintPaletteIcon,
+  IconComponent: fn(16320).PaintPaletteIcon,
   useTrailing: tmp2,
   screen: {
     route: fn(1087).UserSettingsSections.APPEARANCE,

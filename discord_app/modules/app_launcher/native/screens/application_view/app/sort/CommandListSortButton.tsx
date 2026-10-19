@@ -1,6 +1,6 @@
-// === Module 11961: CommandListSortButton ===
+// === Module 11980: CommandListSortButton ===
 
-// Module 11961 (CommandListSortButton)
+// Module 11980 (CommandListSortButton)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const CommandListSortOrder = fn(11947).CommandListSortOrder;
+const CommandListSortOrder = fn(11966).CommandListSortOrder;
 const ANDROID_FOREGROUND_RIPPLE = fn(1206).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -37,7 +37,7 @@ export default function CommandListSortButton(sortOrder) {
     activeOpacity: 0.8,
     style: tmp.container,
     onPress: function handlePress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11962, dependencyMap.paths), "CommandListSortActionSheet", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11981, dependencyMap.paths), "CommandListSortActionSheet", {
         sortOrder,
         onSortOptionPress,
         onClose() {
@@ -48,7 +48,7 @@ export default function CommandListSortButton(sortOrder) {
     children: null
   };
   const obj2 = { style: tmp.button, children: null };
-  const items = [closure_6(sortOrder(5187).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }), closure_6(sortOrder(10843).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(587).colors.TEXT_DEFAULT })];
+  const items = [closure_6(sortOrder(5187).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }), closure_6(sortOrder(10859).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(587).colors.TEXT_DEFAULT })];
   obj2.children = items;
   obj.children = closure_7(View, obj2);
   return closure_6(sortOrder(6462).PressableOpacity, obj);

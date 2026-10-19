@@ -1,8 +1,8 @@
-// === Module 13522: GuildAntiRaidPermissionsUtils ===
+// === Module 13527: GuildAntiRaidPermissionsUtils ===
 
-// Module 13522 (GuildAntiRaidPermissionsUtils)
+// Module 13527 (GuildAntiRaidPermissionsUtils)
 import PermissionStore from "PermissionStore" /* 4845 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11096 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11115 */;
 
 const require = globalThis.__r;
 

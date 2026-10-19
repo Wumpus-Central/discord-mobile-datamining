@@ -1,6 +1,6 @@
-// === Module 11462: KrispLogo ===
+// === Module 11480: KrispLogo ===
 
-// Module 11462 (KrispLogo)
+// Module 11480 (KrispLogo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -9,8 +9,8 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
 import LinkingDefault from "Linking" /* 4901 */;
 import shared from "shared" /* 5065 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import _modDef11463 from "module_11463" /* 11463 */;
-import _modDef11464 from "module_11464" /* 11464 */;
+import _modDef11481 from "module_11481" /* 11481 */;
+import _modDef11482 from "module_11482" /* 11482 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
@@ -54,10 +54,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLog
   const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
   const tmpResult = initialize;
   if (tmpResult2.isThemeLight(stateFromStores)) {
-    let tmp8Result = _modDef11463;
+    let tmp8Result = _modDef11481;
     let tmp10 = importDefault;
   } else {
-    tmp8Result = _modDef11464;
+    tmp8Result = _modDef11482;
     tmp10 = importDefault;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -113,10 +113,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLog
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef11463;
+    let tmp4Result = _modDef11481;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef11464;
+    tmp4Result = _modDef11482;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };

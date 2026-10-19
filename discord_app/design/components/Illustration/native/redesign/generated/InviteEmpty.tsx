@@ -1,6 +1,6 @@
-// === Module 18841: InviteEmpty ===
+// === Module 18845: InviteEmpty ===
 
-// Module 18841 (InviteEmpty)
+// Module 18845 (InviteEmpty)
 import c from "c" /* 576 */;
 import shared from "shared" /* 5065 */;
 import FastImageDefault from "FastImage" /* 5128 */;
@@ -19,7 +19,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteEmp
           return require("module_10620");
         },
       darker() {
-          return require("module_18842");
+          return require("module_18846");
         },
       light() {
           return require("module_10619");
@@ -41,7 +41,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteEmp
       return require("module_10620");
     },
     darker() {
-      return require("module_18842");
+      return require("module_18846");
     },
     light() {
       return require("module_10619");
@@ -56,7 +56,7 @@ function getInviteEmptySource(theme) {
       return require("module_10620");
     },
     darker() {
-      return require("module_18842");
+      return require("module_18846");
     },
     light() {
       return require("module_10619");

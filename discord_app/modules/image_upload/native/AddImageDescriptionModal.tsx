@@ -1,6 +1,6 @@
-// === Module 13743: AddImageDescriptionModal ===
+// === Module 13747: AddImageDescriptionModal ===
 
-// Module 13743 (AddImageDescriptionModal)
+// Module 13747 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9933 */;
@@ -137,7 +137,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
             obj2.description = ref.current;
             id(9564).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
             const obj = id(9564);
-            id(13742).close();
+            id(13746).close();
           });
           let merged = Object.assign(arg0);
           return renderHeaderTextButton({});
@@ -222,7 +222,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
           obj2.description = ref.current;
           id(9564).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
           const obj = id(9564);
-          id(13742).close();
+          id(13746).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});

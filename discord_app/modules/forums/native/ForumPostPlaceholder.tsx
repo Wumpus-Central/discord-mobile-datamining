@@ -1,6 +1,6 @@
-// === Module 12873: ForumPostPlaceholder ===
+// === Module 12890: ForumPostPlaceholder ===
 
-// Module 12873 (ForumPostPlaceholder)
+// Module 12890 (ForumPostPlaceholder)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;

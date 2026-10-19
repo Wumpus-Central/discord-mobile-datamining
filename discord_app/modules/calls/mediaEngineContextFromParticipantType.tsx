@@ -1,6 +1,6 @@
-// === Module 11292: mediaEngineContextFromParticipantType ===
+// === Module 11310: mediaEngineContextFromParticipantType ===
 
-// Module 11292 (mediaEngineContextFromParticipantType)
+// Module 11310 (mediaEngineContextFromParticipantType)
 import CallConstants from "CallConstants" /* 5214 */;
 import Constants from "Constants" /* 5216 */;
 import size from "module_2" /* 2 */;

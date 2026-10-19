@@ -46,7 +46,7 @@ import VideoHealthManager from "VideoHealthManager" /* 5393 */;
 import ThermalUtilsDefault from "ThermalUtils" /* 5396 */;
 import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 5398 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
-import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 14841 */;
+import E2eLatencyMeasurementExperiment2 from "E2eLatencyMeasurementExperiment" /* 14845 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeviceFrecencyStore from "DeviceFrecencyStore" /* 5219 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5229 */;

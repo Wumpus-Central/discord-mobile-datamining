@@ -1,10 +1,10 @@
-// === Module 16747: PasskeyUpsellPromoSheet ===
+// === Module 16751: PasskeyUpsellPromoSheet ===
 
-// Module 16747 (PasskeyUpsellPromoSheet)
+// Module 16751 (PasskeyUpsellPromoSheet)
 import FastImageDefault from "FastImage" /* 5128 */;
 import NativeCeremoniesDefault from "NativeCeremonies" /* 6908 */;
-import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 16746 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 16749 */;
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 16750 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 16753 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPr
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function PasswordlessUpsellPromoSheet() {
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { source: tmp(16748), style: { height: 190, width: 220, resizeMode: "contain" } };
+    let obj2 = { source: tmp(16752), style: { height: 190, width: 220, resizeMode: "contain" } };
     const tmp8 = closure_6(FastImageDefault, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Password
   }
   let obj = require("c");
 }) : (function PasswordlessUpsellPromoSheet() {
-  let obj = { source: require("module_16748"), style: { height: 190, width: 220, resizeMode: "contain" } };
+  let obj = { source: require("module_16752"), style: { height: 190, width: 220, resizeMode: "contain" } };
   _require = noop.useRef(false);
   let obj2 = { illustration: closure_6(FastImageDefault, obj), title: null, description: null, onDismiss: null, actions: null };
   let intl = require("util").intl;

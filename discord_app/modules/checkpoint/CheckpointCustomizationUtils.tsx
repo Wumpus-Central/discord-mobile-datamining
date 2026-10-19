@@ -1,13 +1,13 @@
-// === Module 12737: CheckpointCustomizationUtils ===
+// === Module 12754: CheckpointCustomizationUtils ===
 
-// Module 12737 (CheckpointCustomizationUtils)
+// Module 12754 (CheckpointCustomizationUtils)
 import util from "util" /* 1128 */;
 import _modDef3141 from "module_3141" /* 3141 */;
 import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5538 */;
 import CheckpointTrait from "CheckpointTrait" /* 5561 */;
 import CheckpointTraitConfig from "CheckpointTraitConfig" /* 5882 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 12730 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 12738 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 12747 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 12755 */;
 import CheckpointConstants from "CheckpointConstants" /* 5537 */;
 import size from "module_2" /* 2 */;
 
@@ -115,7 +115,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
     tmp5 = _require;
     CHECKPOINT_OUTFIT_COLOR_OPTION_NAMES = require("CheckpointTraitOptionNames").CHECKPOINT_TRAIT_OPTION_NAMES[tmp4];
   }
-  dependencyMap = tmp5(12738).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
+  dependencyMap = tmp5(12755).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
   return arr.map((optionId) => {
     trait = optionId;
     const obj = {
@@ -129,7 +129,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
         }
         return str;
       },
-      rarity: trait(12738).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
+      rarity: trait(12755).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
       asset: null
     };
     let thumbnail;

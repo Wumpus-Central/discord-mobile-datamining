@@ -1,12 +1,12 @@
-// === Module 13232: usePowerupGroupConfig ===
+// === Module 13240: usePowerupGroupConfig ===
 
-// Module 13232 (usePowerupGroupConfig)
+// Module 13240 (usePowerupGroupConfig)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _modDef2621 from "module_2621" /* 2621 */;
 import GuildTagUtils from "GuildTagUtils" /* 8563 */;
-import _modDef13233 from "module_13233" /* 13233 */;
-import _modDef13234 from "module_13234" /* 13234 */;
+import _modDef13241 from "module_13241" /* 13241 */;
+import _modDef13242 from "module_13242" /* 13242 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       const stringResult = intl.string(_modDef2621.KC9HRW);
       const intl2 = tmp(1128).intl;
       const stringResult1 = intl2.string(_modDef2621.GJiSmP);
-      const obj2 = { staticUrl: _modDef13233, animatedUrl: _modDef13234 };
+      const obj2 = { staticUrl: _modDef13241, animatedUrl: _modDef13242 };
       cResult[3] = stringResult;
       cResult[4] = stringResult1;
       cResult[5] = obj2;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       obj2.title = intl.string(_modDef2621.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2621.GJiSmP);
-      const obj3 = { staticUrl: _modDef13233, animatedUrl: _modDef13234 };
+      const obj3 = { staticUrl: _modDef13241, animatedUrl: _modDef13242 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

@@ -1,6 +1,6 @@
-// === Module 11248: confirmActivityChangeAlert ===
+// === Module 11267: confirmActivityChangeAlert ===
 
-// Module 11248 (confirmActivityChangeAlert)
+// Module 11267 (confirmActivityChangeAlert)
 import util from "util" /* 1128 */;
 import StringUtils from "StringUtils" /* 2034 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;

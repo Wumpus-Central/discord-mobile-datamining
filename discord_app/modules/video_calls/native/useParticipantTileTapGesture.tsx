@@ -1,6 +1,6 @@
-// === Module 11259: useParticipantTileTapGesture ===
+// === Module 11278: useParticipantTileTapGesture ===
 
-// Module 11259 (useParticipantTileTapGesture)
+// Module 11278 (useParticipantTileTapGesture)
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
 import size from "module_2" /* 2 */;
 

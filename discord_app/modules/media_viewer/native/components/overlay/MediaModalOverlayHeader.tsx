@@ -1,12 +1,12 @@
-// === Module 13989: MediaModalOverlayHeader ===
+// === Module 13993: MediaModalOverlayHeader ===
 
-// Module 13989 (MediaModalOverlayHeader)
+// Module 13993 (MediaModalOverlayHeader)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;
 import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 8762 */;
 import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 9983 */;
-import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 13990 */;
+import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 13994 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
   ({ animationDriver, channelId } = arg0);
   let tmp4 = closure_10();
   let obj = isModalOpen(576);
-  const headerLayoutAnimation = isModalOpen(13986).useHeaderLayoutAnimation(animationDriver);
+  const headerLayoutAnimation = isModalOpen(13990).useHeaderLayoutAnimation(animationDriver);
   if (cResult[0] === disableDownload) {
     if (cResult[1] === shareable) {
       if (cResult[2] === source) {
@@ -329,14 +329,14 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
   cResult[2] = source;
   cResult[3] = obj17;
   tmp6 = obj17;
-  const obj2 = isModalOpen(13986);
+  const obj2 = isModalOpen(13990);
 }) : (function MediaModalOverlayHeader(arg0) {
   ({ source, contextName, contextIcon } = arg0);
   let isModalOpen;
   ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
   const tmp = closure_10();
-  const headerLayoutAnimation = isModalOpen(13986).useHeaderLayoutAnimation(animationDriver);
-  let obj = isModalOpen(13986);
+  const headerLayoutAnimation = isModalOpen(13990).useHeaderLayoutAnimation(animationDriver);
+  let obj = isModalOpen(13990);
   const mediaShareActions = isModalOpen(8726).useMediaShareActions({ source, disableDownload, shareable });
   const tmp7 = useShouldHideMediaOptionsDefault(channelId);
   const obj2 = isModalOpen(8726);
@@ -412,7 +412,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
               obj.accessibilityLabel = intl.string(isModalOpen(1128).t.PdRCRg);
               const tmp4 = MediaViewerOverlayButtonDefault;
               if (obj2.isAndroid()) {
-                let tmp2Result = closure_1_8(isModalOpen(13991).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
+                let tmp2Result = closure_1_8(isModalOpen(13995).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
               } else {
                 tmp2Result = closure_1_8(isModalOpen(9543).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
               }

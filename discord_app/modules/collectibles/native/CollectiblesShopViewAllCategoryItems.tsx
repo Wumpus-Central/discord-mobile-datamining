@@ -1,6 +1,6 @@
-// === Module 16946: CollectiblesShopViewAllCategoryItems ===
+// === Module 16950: CollectiblesShopViewAllCategoryItems ===
 
-// Module 16946 (CollectiblesShopViewAllCategoryItems)
+// Module 16950 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import spring from "spring" /* 5478 */;

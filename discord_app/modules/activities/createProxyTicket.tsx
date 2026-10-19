@@ -1,6 +1,6 @@
-// === Module 11026: createProxyTicket ===
+// === Module 11047: createProxyTicket ===
 
-// Module 11026 (createProxyTicket)
+// Module 11047 (createProxyTicket)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

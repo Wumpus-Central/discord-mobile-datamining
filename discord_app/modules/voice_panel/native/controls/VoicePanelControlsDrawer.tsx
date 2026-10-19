@@ -1,6 +1,6 @@
-// === Module 18335: VoicePanelControlsDrawer ===
+// === Module 18339: VoicePanelControlsDrawer ===
 
-// Module 18335 (VoicePanelControlsDrawer)
+// Module 18339 (VoicePanelControlsDrawer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
@@ -8,10 +8,10 @@ import Suspender from "Suspender" /* 5430 */;
 import spring from "spring" /* 5478 */;
 import useRefValueDefault from "useRefValue" /* 6438 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9878 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12911 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12921 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 18336 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 18347 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12928 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12929 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 18340 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 18351 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12914);
+const VoicePanelConstants = fn(10680);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

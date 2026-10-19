@@ -1,11 +1,11 @@
-// === Module 16364: SyncThemeSetting ===
+// === Module 16368: SyncThemeSetting ===
 
-// Module 16364 (SyncThemeSetting)
+// Module 16368 (SyncThemeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5360 */;
-import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 16365 */;
+import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 16369 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5032 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncThe
   const items = [ThemeStore];
   return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
 });
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncThemeAcrossClientsValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

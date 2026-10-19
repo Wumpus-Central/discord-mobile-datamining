@@ -1,6 +1,6 @@
-// === Module 11221: useDraggablePip ===
+// === Module 11240: useDraggablePip ===
 
-// Module 11221 (useDraggablePip)
+// Module 11240 (useDraggablePip)
 import native from "native" /* 1202 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;
@@ -10,7 +10,7 @@ import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const useChannelCallStore = fn(10662).useChannelCallStore;
-const Constants = fn(11208);
+const Constants = fn(11227);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001, damping: 20 };
 let __initData = { code: "function useDraggablePipTsx1(){const{withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING}=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});}" };

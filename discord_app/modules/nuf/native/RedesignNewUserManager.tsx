@@ -1,13 +1,13 @@
-// === Module 18587: RedesignNewUserManager ===
+// === Module 18591: RedesignNewUserManager ===
 
-// Module 18587 (RedesignNewUserManager)
+// Module 18591 (RedesignNewUserManager)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5072 */;
 import RootNavigationRef from "RootNavigationRef" /* 5073 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8955 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 18588 */;
-import NewUserUtils from "NewUserUtils" /* 18592 */;
-import ContactSyncModalStore from "ContactSyncModalStore" /* 13342 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 18592 */;
+import NewUserUtils from "NewUserUtils" /* 18596 */;
+import ContactSyncModalStore from "ContactSyncModalStore" /* 13347 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2062 */;
 import NewUserStore from "NewUserStore" /* 6413 */;

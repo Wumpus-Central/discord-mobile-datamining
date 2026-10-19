@@ -1,6 +1,6 @@
-// === Module 16297: PremiumRestoreSubscriptionSetting ===
+// === Module 16301: PremiumRestoreSubscriptionSetting ===
 
-// Module 16297 (PremiumRestoreSubscriptionSetting)
+// Module 16301 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPremiumRestoreSubscriptionSetting() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

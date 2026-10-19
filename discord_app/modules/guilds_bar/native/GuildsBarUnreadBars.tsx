@@ -1,14 +1,14 @@
-// === Module 17493: GuildsBarUnreadBars ===
+// === Module 17497: GuildsBarUnreadBars ===
 
-// Module 17493 (GuildsBarUnreadBars)
+// Module 17497 (GuildsBarUnreadBars)
 import initialize from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import c from "c" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import FastList from "FastList" /* 7038 */;
-import QuestHooks from "QuestHooks" /* 16129 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16138 */;
+import QuestHooks from "QuestHooks" /* 16133 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16142 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6362 */;
@@ -207,7 +207,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "a" };
+            let obj6 = { beforeItem: null, afterItem: "r" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -220,15 +220,15 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
 }
 const View = fn(17).View;
 const GuildsNodeType = fn(6219).GuildsNodeType;
-const GuildsBarConstants = fn(17425);
+const GuildsBarConstants = fn(17429);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(16136);
+const YouBarConstants = fn(16140);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5191);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
 let closure_17 = { beforeItem: "Array", afterItem: "Reflect" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "r" };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUnreadBarWrapperStyles() {
   const cResult = c.c(10);
@@ -555,6 +555,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj.orientation = "visible";
     fastList.scrollToLocation(obj);
   }, items2);
-  obj3.children = jsx(top(17494), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
+  obj3.children = jsx(top(17498), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
   return <scrollPosValue style={tmp7.style} collapsable={false} pointerEvents="box-none" testID="guilds-bar-unread-bars">{null}</scrollPosValue>;
 }));

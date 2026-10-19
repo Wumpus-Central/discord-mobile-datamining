@@ -1,6 +1,6 @@
-// === Module 17890: usePostableChannelCount ===
+// === Module 17894: usePostableChannelCount ===
 
-// Module 17890 (usePostableChannelCount)
+// Module 17894 (usePostableChannelCount)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4845 */;

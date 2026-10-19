@@ -1,6 +1,6 @@
-// === Module 12522: ExperimentEmbed ===
+// === Module 12539: ExperimentEmbed ===
 
-// Module 12522 (ExperimentEmbed)
+// Module 12539 (ExperimentEmbed)
 import c from "c" /* 576 */;
 import ExperimentManager from "ExperimentManager" /* 5117 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
@@ -8,13 +8,13 @@ import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8156 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8158 */;
 import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8413 */;
 import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8415 */;
-import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11074 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11075 */;
-import useApexExperiments from "useApexExperiments" /* 11076 */;
-import _modDef12523 from "module_12523" /* 12523 */;
-import _modDef12524 from "module_12524" /* 12524 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 12525 */;
-import _modDef12526 from "module_12526" /* 12526 */;
+import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11093 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11094 */;
+import useApexExperiments from "useApexExperiments" /* 11095 */;
+import _modDef12540 from "module_12540" /* 12540 */;
+import _modDef12541 from "module_12541" /* 12541 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 12542 */;
+import _modDef12543 from "module_12543" /* 12543 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -331,7 +331,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
         obj5.titleColor = colors.titleColor;
         obj5.subtitle = label;
         obj5.subtitleColor = colors.subtitleColor;
-        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12526);
+        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12543);
         obj5.thumbnailBackgroundColor = colors.backgroundColor;
         obj5.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj5.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -360,7 +360,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
         }
         obj6.subtitle = combined1;
         obj6.subtitleColor = colors.subtitleColor;
-        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12526);
+        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12543);
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj6.acceptLabelText = "View Experiment Details";
         obj6.embedCanBeTapped = true;
@@ -384,9 +384,9 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
   obj7.bodyText = "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj7.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result10.isThemeDark(theme)) {
-    let tmpResult = _modDef12523;
+    let tmpResult = _modDef12540;
   } else {
-    tmpResult = _modDef12524;
+    tmpResult = _modDef12541;
   }
   obj7.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj7.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

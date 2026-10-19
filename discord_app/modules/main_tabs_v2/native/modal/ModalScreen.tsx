@@ -1,6 +1,6 @@
-// === Module 18017: modal/ModalScreen ===
+// === Module 18021: modal/ModalScreen ===
 
-// Module 18017 (modal/ModalScreen)
+// Module 18021 (modal/ModalScreen)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 9263 */;
@@ -319,10 +319,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Modal(ro
   obj5.transitionState = null;
   obj5.onClose = callback;
   const items2 = [<modal.modal />, ];
-  tmp7Result = modal(18018);
+  tmp7Result = modal(18022);
   let isIOSResult = modal(1384).isIOS();
   if (isIOSResult) {
-    isIOSResult = closure_10(tmp7(11828).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_10(tmp7(11847).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj4.children = items2;

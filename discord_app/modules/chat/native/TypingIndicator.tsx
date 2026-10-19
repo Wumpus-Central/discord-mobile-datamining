@@ -1,6 +1,6 @@
-// === Module 12811: TypingIndicator ===
+// === Module 12828: TypingIndicator ===
 
-// Module 12811 (TypingIndicator)
+// Module 12828 (TypingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,14 +9,14 @@ import native from "native" /* 4922 */;
 import spring from "spring" /* 5478 */;
 import springPresets from "springPresets" /* 5482 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5509 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 12813 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12816 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 12817 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 12818 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 12830 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12833 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 12834 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 12835 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5190 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6245 */;
-import TypingStore from "TypingStore" /* 12812 */;
+import TypingStore from "TypingStore" /* 12829 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

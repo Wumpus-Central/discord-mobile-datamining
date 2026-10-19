@@ -1,6 +1,6 @@
-// === Module 16782: DesignTogglesActions ===
+// === Module 16786: DesignTogglesActions ===
 
-// Module 16782 (DesignTogglesActions)
+// Module 16786 (DesignTogglesActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DesignTogglesStore from "DesignTogglesStore" /* 6481 */;
 

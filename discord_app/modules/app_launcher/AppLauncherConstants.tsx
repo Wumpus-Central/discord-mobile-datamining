@@ -1,6 +1,6 @@
-// === Module 11947: AppLauncherConstants ===
+// === Module 11966: AppLauncherConstants ===
 
-// Module 11947 (AppLauncherConstants)
+// Module 11966 (AppLauncherConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");

@@ -1,6 +1,6 @@
-// === Module 11694: ConjureNativePreview ===
+// === Module 11713: ConjureNativePreview ===
 
-// Module 11694 (ConjureNativePreview)
+// Module 11713 (ConjureNativePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3883 from "module_3883" /* 3883 */;
@@ -9,13 +9,13 @@ import components_Button_Button from "components/Button/Button" /* 5479 */;
 import Card from "Card" /* 6459 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7077 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7290 */;
-import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10996 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 11011 */;
-import leaveFrame from "leaveFrame" /* 11020 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11021 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11695 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11698 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11716 */;
+import ConjurePlatformUtils from "ConjurePlatformUtils" /* 11017 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 11032 */;
+import leaveFrame from "leaveFrame" /* 11041 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11042 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11714 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11717 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11735 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6295 */;
@@ -31,7 +31,7 @@ const UserProfileApplicationWidgetTypes = intl(7591);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11668);
+const conjureDesignFeedbackStore = fn(11687);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);
@@ -1065,7 +1065,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
     const items8 = [closure_22(stateFromStores(10671), obj7, stateFromStores.id), ];
     let tmp29Result = null;
     if (tmp2Result6.isAndroid()) {
-      tmp29Result = closure_22(tmp2(11828).PortalKeyboardRenderer, { portal: true });
+      tmp29Result = closure_22(tmp2(11847).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp29Result;
     obj6.children = items8;

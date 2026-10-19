@@ -1,10 +1,10 @@
-// === Module 17791: guild_channels/ChannelTitle ===
+// === Module 17795: guild_channels/ChannelTitle ===
 
-// Module 17791 (guild_channels/ChannelTitle)
+// Module 17795 (guild_channels/ChannelTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import ChannelListLayout from "ChannelListLayout" /* 11882 */;
+import ChannelListLayout from "ChannelListLayout" /* 11901 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 17752: SearchScreenSearchBar ===
+// === Module 17756: SearchScreenSearchBar ===
 
-// Module 17752 (SearchScreenSearchBar)
+// Module 17756 (SearchScreenSearchBar)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import mergeProps from "mergeProps" /* 4918 */;
 import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6582 */;
-import layout_SearchBarDefault from "layout/SearchBar" /* 17753 */;
-import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 17755 */;
-import SearchFilterButtonDefault from "SearchFilterButton" /* 17760 */;
+import layout_SearchBarDefault from "layout/SearchBar" /* 17757 */;
+import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 17759 */;
+import SearchFilterButtonDefault from "SearchFilterButton" /* 17764 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

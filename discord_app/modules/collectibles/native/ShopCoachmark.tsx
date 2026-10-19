@@ -1,6 +1,6 @@
-// === Module 17930: ShopCoachmark ===
+// === Module 17934: ShopCoachmark ===
 
-// Module 17930 (ShopCoachmark)
+// Module 17934 (ShopCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

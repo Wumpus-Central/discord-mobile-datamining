@@ -1,14 +1,14 @@
-// === Module 13322: ChatPlaceholder ===
+// === Module 13330: ChatPlaceholder ===
 
-// Module 13322 (ChatPlaceholder)
+// Module 13330 (ChatPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6942 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13323 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 13324 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 13325 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13331 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 13332 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 13333 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = tmp14(4945);

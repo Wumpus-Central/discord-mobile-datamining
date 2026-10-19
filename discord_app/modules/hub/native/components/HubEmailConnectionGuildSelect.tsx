@@ -1,6 +1,6 @@
-// === Module 13446: HubEmailConnectionGuildSelect ===
+// === Module 13451: HubEmailConnectionGuildSelect ===
 
-// Module 13446 (HubEmailConnectionGuildSelect)
+// Module 13451 (HubEmailConnectionGuildSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -17,7 +17,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13423).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13428).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5191);
@@ -347,7 +347,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(13437).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(13442).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {

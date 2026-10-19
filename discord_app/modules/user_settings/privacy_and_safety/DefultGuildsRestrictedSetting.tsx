@@ -1,6 +1,6 @@
-// === Module 16975: DefultGuildsRestrictedSetting ===
+// === Module 16979: DefultGuildsRestrictedSetting ===
 
-// Module 16975 (DefultGuildsRestrictedSetting)
+// Module 16979 (DefultGuildsRestrictedSetting)
 import UserSettings from "UserSettings" /* 2044 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

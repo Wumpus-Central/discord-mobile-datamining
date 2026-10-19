@@ -1,6 +1,6 @@
-// === Module 11087: MessagesRenderer ===
+// === Module 11106: MessagesRenderer ===
 
-// Module 11087 (MessagesRenderer)
+// Module 11106 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
@@ -19,11 +19,11 @@ import NativeChatUtilsDefault from "NativeChatUtils" /* 9897 */;
 import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9899 */;
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 9902 */;
 import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 9976 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11088 */;
-import MessagesHandlers from "MessagesHandlers" /* 11095 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12621 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12802 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 12803 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11107 */;
+import MessagesHandlers from "MessagesHandlers" /* 11114 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12638 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12819 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 12820 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

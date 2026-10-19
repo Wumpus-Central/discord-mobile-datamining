@@ -1,10 +1,10 @@
-// === Module 17263: FavoritesGuildActionSheet ===
+// === Module 17267: FavoritesGuildActionSheet ===
 
-// Module 17263 (FavoritesGuildActionSheet)
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 17264 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 17265 */;
-import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 17266 */;
-import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 17267 */;
+// Module 17267 (FavoritesGuildActionSheet)
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 17268 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 17269 */;
+import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 17270 */;
+import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 17271 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 2071 */;
 
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
               }
             }
             obj11.label = obj9.string(tmp(1128).t["0dOFq+"]);
-            const obj12 = { IconComponent: tmp(11963).ArrowsUpDownIcon };
+            const obj12 = { IconComponent: tmp(11982).ArrowsUpDownIcon };
             obj11.icon = closure_4(tmp(7171).ActionSheetRow.Icon, obj12);
             obj11.onPress = function onPress() {
               onClose();
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     const obj9 = { label: null, icon: null, onPress: null };
     const intl2 = tmp5(1128).intl;
     obj9.label = intl2.string(tmp5(1128).t["0dOFq+"]);
-    const obj10 = { IconComponent: tmp5(11963).ArrowsUpDownIcon };
+    const obj10 = { IconComponent: tmp5(11982).ArrowsUpDownIcon };
     obj9.icon = closure_4(tmp5(7171).ActionSheetRow.Icon, obj10);
     obj9.onPress = function onPress() {
       onClose();

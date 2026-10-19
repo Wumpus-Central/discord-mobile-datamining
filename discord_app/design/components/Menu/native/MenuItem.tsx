@@ -1,11 +1,11 @@
-// === Module 15008: MenuItem ===
+// === Module 15012: MenuItem ===
 
-// Module 15008 (MenuItem)
+// Module 15012 (MenuItem)
 import c from "c" /* 576 */;
 import IconDefault from "Icon" /* 5481 */;
 import FormRowDefault from "FormRow" /* 7106 */;
 import FormLabelDefault from "FormLabel" /* 7108 */;
-import Menu from "Menu" /* 15002 */;
+import Menu from "Menu" /* 15006 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

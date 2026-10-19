@@ -1,6 +1,6 @@
-// === Module 11315: setupEmbeddedAppBotScope ===
+// === Module 11333: setupEmbeddedAppBotScope ===
 
-// Module 11315 (setupEmbeddedAppBotScope)
+// Module 11333 (setupEmbeddedAppBotScope)
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6377 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8731 */;
 import GuildMemberStore from "GuildMemberStore" /* 2128 */;

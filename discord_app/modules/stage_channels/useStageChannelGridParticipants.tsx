@@ -1,6 +1,6 @@
-// === Module 11555: useStageChannelGridParticipants ===
+// === Module 11573: useStageChannelGridParticipants ===
 
-// Module 11555 (useStageChannelGridParticipants)
+// Module 11573 (useStageChannelGridParticipants)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6206 */;

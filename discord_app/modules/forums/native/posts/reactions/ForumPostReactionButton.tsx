@@ -1,6 +1,6 @@
-// === Module 10761: ForumPostReactionButton ===
+// === Module 10777: ForumPostReactionButton ===
 
-// Module 10761 (ForumPostReactionButton)
+// Module 10777 (ForumPostReactionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
@@ -14,9 +14,9 @@ import EmojiDefault from "Emoji" /* 7098 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 8168 */;
 import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9684 */;
 import useEmojiColorPalette from "useEmojiColorPalette" /* 9885 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 10759 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10762 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 10778 */;
+import useReactionPermissionsDefault from "useReactionPermissions" /* 10775 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10778 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 10794 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

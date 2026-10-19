@@ -1,6 +1,6 @@
-// === Module 11911: useTrackAppLauncherItemImpressionOnFirstView ===
+// === Module 11930: useTrackAppLauncherItemImpressionOnFirstView ===
 
-// Module 11911 (useTrackAppLauncherItemImpressionOnFirstView)
+// Module 11930 (useTrackAppLauncherItemImpressionOnFirstView)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import useTrackImpression from "useTrackImpression" /* 9263 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.
   const cResult = entrypoint(576).c(6);
   let obj = entrypoint(576);
   const tmp = entrypoint;
-  entrypoint = entrypoint(10932).useAppLauncherContext().entrypoint;
+  entrypoint = entrypoint(10948).useAppLauncherContext().entrypoint;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const _Set = Set;
     const set = new Set();
@@ -34,7 +34,7 @@ export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.
   } else {
     tmp9 = cResult[1];
   }
-  let obj2 = entrypoint(10932);
+  let obj2 = entrypoint(10948);
   const focusEffect = tmp(1506).useFocusEffect(tmp9);
   if (cResult[2] !== entrypoint) {
     const fn2 = function p(itemKey) {
@@ -66,8 +66,8 @@ export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.
   }
   return tmp12;
 }) : (function useTrackAppLauncherItemImpressionOnFirstView() {
-  entrypoint = entrypoint(10932).useAppLauncherContext().entrypoint;
-  let obj = entrypoint(10932);
+  entrypoint = entrypoint(10948).useAppLauncherContext().entrypoint;
+  let obj = entrypoint(10948);
   dependencyMap = noop.useRef(new Set());
   const set = new Set();
   const focusEffect = entrypoint(1506).useFocusEffect(noop.useCallback(() => {

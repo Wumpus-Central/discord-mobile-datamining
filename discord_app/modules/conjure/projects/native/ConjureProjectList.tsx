@@ -1,19 +1,19 @@
-// === Module 11577: ConjureProjectList ===
+// === Module 11593: ConjureProjectList ===
 
-// Module 11577 (ConjureProjectList)
+// Module 11593 (ConjureProjectList)
 import nativeDefault from "native" /* 587 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5155 */;
 import ConjureUtils from "ConjureUtils" /* 7222 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10983 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11576 */;
-import ConjureActivity from "ConjureActivity" /* 11578 */;
-import ConjureCreateSheet from "ConjureCreateSheet" /* 11579 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 11611 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11630 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 11663 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 11665 */;
-import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 11666 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10999 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11592 */;
+import ConjureActivity from "ConjureActivity" /* 11594 */;
+import ConjureCreateSheet from "ConjureCreateSheet" /* 11595 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 11627 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11646 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 11682 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 11684 */;
+import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 11685 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
@@ -54,7 +54,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
   ({ onPress, onMore } = project);
   const tmp4 = closure_11(0);
   const obj = project(576);
-  const conjureProjectBadge = project(10984).useConjureProjectBadge(project.id);
+  const conjureProjectBadge = project(11001).useConjureProjectBadge(project.id);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjureProjectStore];
     cResult[0] = items;
@@ -76,7 +76,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const obj2 = project(10984);
+  const obj2 = project(11001);
   const stateFromStores = project(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] !== project.updated_at) {
     let formatToPlainStringResult;
@@ -231,8 +231,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
   project = project.project;
   const onMore = project.onMore;
   const tmp = closure_11(0);
-  const conjureProjectBadge = project(10984).useConjureProjectBadge(project.id);
-  const obj = project(10984);
+  const conjureProjectBadge = project(11001).useConjureProjectBadge(project.id);
+  const obj = project(11001);
   const items = [ConjureProjectStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(items, () => ConjureProjectStore.isProjectDeleting(project.id), items1);
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     if (cResult[11] === guildId) {
       if (cResult[15] !== stateFromStoresArray1) {
         const substr = stateFromStoresArray1.slice();
-        const sorted = substr.sort(tmp(11578).compareConjureProjectsByUpdatedAt);
+        const sorted = substr.sort(tmp(11594).compareConjureProjectsByUpdatedAt);
         cResult[15] = stateFromStoresArray1;
         cResult[16] = sorted;
       }
@@ -477,11 +477,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         cResult[23] = tmp25;
         cResult[24] = tmp28;
       }
-      const projectOpenerResult = tmp(11576).projectOpener(guildId, U);
+      const projectOpenerResult = tmp(11592).projectOpener(guildId, U);
       cResult[19] = guildId;
       cResult[20] = U;
       cResult[21] = projectOpenerResult;
-      const tmpResult6 = tmp(11576);
+      const tmpResult6 = tmp(11592);
     }
   }
   if (cResult[13] !== guildId) {
@@ -536,7 +536,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     }
   }
   const found = stateFromStoresArray.filter(M);
-  const sorted1 = found.sort(tmp(11578).compareConjureProjectsByUpdatedAt);
+  const sorted1 = found.sort(tmp(11594).compareConjureProjectsByUpdatedAt);
   cResult[10] = stateFromStoresArray;
   cResult[11] = guildId;
   cResult[12] = sorted1;

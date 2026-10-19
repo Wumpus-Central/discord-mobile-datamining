@@ -1,13 +1,13 @@
-// === Module 15532: subscriptionHelpers ===
+// === Module 15536: subscriptionHelpers ===
 
-// Module 15532 (subscriptionHelpers)
+// Module 15536 (subscriptionHelpers)
 import QuestTaskUtils from "QuestTaskUtils" /* 7678 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8600 */;
 import getSocketFrameDefault from "getSocketFrame" /* 9162 */;
-import useThermalState from "useThermalState" /* 15488 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15489 */;
+import useThermalState from "useThermalState" /* 15492 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15493 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15485 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15489 */;
 import QuestStore from "QuestStore" /* 7656 */;
 
 require = fn;

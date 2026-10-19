@@ -1,12 +1,12 @@
-// === Module 11811: UserProfileApplicationWidgetBottomProgressLayout ===
+// === Module 11830: UserProfileApplicationWidgetBottomProgressLayout ===
 
-// Module 11811 (UserProfileApplicationWidgetBottomProgressLayout)
+// Module 11830 (UserProfileApplicationWidgetBottomProgressLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11719 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11806 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11738 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11825 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

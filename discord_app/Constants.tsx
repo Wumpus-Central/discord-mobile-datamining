@@ -2062,8 +2062,8 @@ const frozen2 = Object.freeze({
   CONJURE_PROJECT_WS_TICKET(projectId) {
     return "/conjure/projects/" + projectId + "/ws-ticket";
   },
-  CONJURE_PROJECT_REMIX_TICKET(arg0) {
-    return "/conjure/projects/" + arg0 + "/remix-ticket";
+  CONJURE_PROJECT_REMIX_TICKET(id) {
+    return "/conjure/projects/" + id + "/remix-ticket";
   },
   CONJURE_PROJECT_PUBLISH(arg0) {
     return "/conjure/projects/" + arg0 + "/publish";
@@ -4118,8 +4118,8 @@ const obj2 = {
   CONJURE_PROJECT_WS_TICKET(projectId) {
     return "/conjure/projects/" + projectId + "/ws-ticket";
   },
-  CONJURE_PROJECT_REMIX_TICKET(arg0) {
-    return "/conjure/projects/" + arg0 + "/remix-ticket";
+  CONJURE_PROJECT_REMIX_TICKET(id) {
+    return "/conjure/projects/" + id + "/remix-ticket";
   },
   CONJURE_PROJECT_PUBLISH(arg0) {
     return "/conjure/projects/" + arg0 + "/publish";

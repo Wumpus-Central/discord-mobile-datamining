@@ -1,6 +1,6 @@
-// === Module 16874: UserSettingsDesignSystemBadge ===
+// === Module 16878: UserSettingsDesignSystemBadge ===
 
-// Module 16874 (UserSettingsDesignSystemBadge)
+// Module 16878 (UserSettingsDesignSystemBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -11,11 +11,11 @@ import TableRadioGroup from "TableRadioGroup" /* 6540 */;
 import TextInput from "TextInput" /* 6563 */;
 import TableSwitchRow from "TableSwitchRow" /* 7172 */;
 import StarIcon3 from "StarIcon" /* 9851 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10899 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10901 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10903 */;
-import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 10905 */;
-import Badge_Badge from "Badge/Badge" /* 13090 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10915 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10917 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10919 */;
+import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 10921 */;
+import Badge_Badge from "Badge/Badge" /* 13098 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

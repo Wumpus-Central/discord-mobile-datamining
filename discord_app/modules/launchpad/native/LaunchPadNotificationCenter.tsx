@@ -1,8 +1,8 @@
-// === Module 18396: LaunchPadNotificationCenter ===
+// === Module 18400: LaunchPadNotificationCenter ===
 
-// Module 18396 (LaunchPadNotificationCenter)
+// Module 18400 (LaunchPadNotificationCenter)
 import c from "c" /* 576 */;
-import notifications_NotificationsDefault from "notifications/Notifications" /* 17542 */;
+import notifications_NotificationsDefault from "notifications/Notifications" /* 17546 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

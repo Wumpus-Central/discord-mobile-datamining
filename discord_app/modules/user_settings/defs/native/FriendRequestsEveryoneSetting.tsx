@@ -1,11 +1,11 @@
-// === Module 16020: FriendRequestsEveryoneSetting ===
+// === Module 16024: FriendRequestsEveryoneSetting ===
 
-// Module 16020 (FriendRequestsEveryoneSetting)
+// Module 16024 (FriendRequestsEveryoneSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6961 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15859 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15863 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const Constants = fn(1087);
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
   const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;

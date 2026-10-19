@@ -1,6 +1,6 @@
-// === Module 16981: useAllowFriendsFromMutualGuildsOnly ===
+// === Module 16985: useAllowFriendsFromMutualGuildsOnly ===
 
-// Module 16981 (useAllowFriendsFromMutualGuildsOnly)
+// Module 16985 (useAllowFriendsFromMutualGuildsOnly)
 import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6961 */;

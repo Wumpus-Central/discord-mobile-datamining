@@ -1,6 +1,6 @@
-// === Module 14868: RemoteAuthModal ===
+// === Module 14872: RemoteAuthModal ===
 
-// Module 14868 (RemoteAuthModal)
+// Module 14872 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,10 +15,10 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import ButtonGroup from "ButtonGroup" /* 6214 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6433 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6944 */;
-import _modDef14867 from "module_14867" /* 14867 */;
-import _modDef14869 from "module_14869" /* 14869 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 14870 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 14874 */;
+import _modDef14871 from "module_14871" /* 14871 */;
+import _modDef14873 from "module_14873" /* 14873 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 14874 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 14878 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -237,7 +237,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const obj4 = { scale };
-      const tmp18 = closure_7(tmp(14870).QrLoginSpotIllustration, obj4);
+      const tmp18 = closure_7(tmp(14874).QrLoginSpotIllustration, obj4);
       cResult[7] = tmp18;
       let tmp15 = tmp18;
     } else {
@@ -665,7 +665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
   const tmp3 = closure_10();
   const top = useSafeAreaInsetsDefault().top;
   if (cResult[0] !== tmp3.imageStyle) {
-    const obj2 = { source: _modDef14869, style: tmp3.imageStyle };
+    const obj2 = { source: _modDef14873, style: tmp3.imageStyle };
     const tmp8 = React5(FastImageDefault, obj2);
     cResult[0] = tmp3.imageStyle;
     cResult[1] = tmp8;
@@ -742,7 +742,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
   const obj8 = { style: null, source: null };
   const items1 = [tmp3.logo, tmp9];
   obj8.style = items1;
-  obj8.source = _modDef14867;
+  obj8.source = _modDef14871;
   const tmp12 = React5(FastImageDefault, obj8);
   cResult[4] = tmp3.logo;
   cResult[5] = tmp9;
@@ -752,12 +752,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
 }) : (function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef14869, style: tmp.imageStyle };
+  const obj2 = { source: _modDef14873, style: tmp.imageStyle };
   const items = [React5(FastImageDefault, obj2), , ];
   const obj3 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj3.style = items1;
-  obj3.source = _modDef14867;
+  obj3.source = _modDef14871;
   items[1] = React5(FastImageDefault, obj3);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.mainCard, children: null };

@@ -1,6 +1,6 @@
-// === Module 12668: jumpToReferencedMessage ===
+// === Module 12685: jumpToReferencedMessage ===
 
-// Module 12668 (jumpToReferencedMessage)
+// Module 12685 (jumpToReferencedMessage)
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7445 */;
 import size from "module_2" /* 2 */;
 

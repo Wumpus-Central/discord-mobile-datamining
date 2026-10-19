@@ -1,6 +1,6 @@
-// === Module 16868: UserSettingsDesignSystemModal ===
+// === Module 16872: UserSettingsDesignSystemModal ===
 
-// Module 16868 (UserSettingsDesignSystemModal)
+// Module 16872 (UserSettingsDesignSystemModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5187 */;
@@ -10,11 +10,11 @@ import NavigatorHeader from "NavigatorHeader" /* 6478 */;
 import Navigator from "Navigator" /* 6965 */;
 import ModalScreen from "ModalScreen" /* 7781 */;
 import ModalContent from "ModalContent" /* 7782 */;
-import Modal from "Modal" /* 10913 */;
-import ModalFooter from "ModalFooter" /* 12659 */;
-import ModalActionButton from "ModalActionButton" /* 12709 */;
-import StepModal from "StepModal" /* 15057 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 15059 */;
+import Modal from "Modal" /* 10929 */;
+import ModalFooter from "ModalFooter" /* 12676 */;
+import ModalActionButton from "ModalActionButton" /* 12726 */;
+import StepModal from "StepModal" /* 15061 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 15063 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -518,7 +518,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Switch
       }
     }
     const obj3 = { isVisible: tmp7, floatingBackgroundColor: tmp4.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction };
-    const tmp13 = closure_7(tmp(12708).ModalFloatingAction, obj3);
+    const tmp13 = closure_7(tmp(12725).ModalFloatingAction, obj3);
     cResult[4] = onAction;
     cResult[5] = tmp4.screen.backgroundColor;
     cResult[6] = tmp7;
@@ -532,7 +532,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Switch
   [arr2, c1] = noop.useState(parts.map(() => false));
   const obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
   const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-  obj.footer = closure_7(parts(12708).ModalFloatingAction, { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction });
+  obj.footer = closure_7(parts(12725).ModalFloatingAction, { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction });
   const obj3 = { style: tmp.tableRows, children: null };
   const obj2 = { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
   obj3.children = closure_7(parts(6542).TableRowGroup, {
@@ -555,7 +555,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Switch
       }, index);
     })
   });
-  const items = [closure_7(closure_5, obj3), closure_7(parts(12708).ModalFloatingActionSpacer, {})];
+  const items = [closure_7(closure_5, obj3), closure_7(parts(12725).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(closure_14, obj);
 });

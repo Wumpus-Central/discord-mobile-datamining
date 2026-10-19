@@ -1,16 +1,16 @@
-// === Module 12140: ConjureLiveBehindTip ===
+// === Module 12159: ConjureLiveBehindTip ===
 
-// Module 12140 (ConjureLiveBehindTip)
+// Module 12159 (ConjureLiveBehindTip)
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import UploadIcon from "UploadIcon" /* 9705 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 12141 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 12160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(12130).CONJURE_LIVE_BEHIND_TIP_BASE);
+const merged = Object.assign(fn(12149).CONJURE_LIVE_BEHIND_TIP_BASE);
 obj.render = function render(arg0, context) {
   const publish = context.context.publish;
   let tmp2 = null;

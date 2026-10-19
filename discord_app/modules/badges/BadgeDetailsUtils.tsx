@@ -1,12 +1,12 @@
-// === Module 10897: BadgeDetailsUtils ===
+// === Module 10913: BadgeDetailsUtils ===
 
-// Module 10897 (BadgeDetailsUtils)
+// Module 10913 (BadgeDetailsUtils)
 import util from "util" /* 1128 */;
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import BadgeId from "BadgeId" /* 8582 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8590 */;
 import BadgeIdResolution from "BadgeIdResolution" /* 8591 */;
-import BadgeUtils from "BadgeUtils" /* 10889 */;
+import BadgeUtils from "BadgeUtils" /* 10905 */;
 import size from "module_2" /* 2 */;
 
 const getObtainedAtFromBadge = BadgeDirectoryStore.getObtainedAtFromBadge;

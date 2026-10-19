@@ -1,12 +1,12 @@
-// === Module 17281: useShouldShowGuildThemeMemberCoachmark ===
+// === Module 17285: useShouldShowGuildThemeMemberCoachmark ===
 
-// Module 17281 (useShouldShowGuildThemeMemberCoachmark)
+// Module 17285 (useShouldShowGuildThemeMemberCoachmark)
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5104 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5108 */;
 import ServerThemeExperiment from "ServerThemeExperiment" /* 5109 */;
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8299 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13194 */;
-import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 17282 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13202 */;
+import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 17286 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

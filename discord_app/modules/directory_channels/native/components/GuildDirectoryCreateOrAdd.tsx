@@ -1,6 +1,6 @@
-// === Module 12953: GuildDirectoryCreateOrAdd ===
+// === Module 12961: GuildDirectoryCreateOrAdd ===
 
-// Module 12953 (GuildDirectoryCreateOrAdd)
+// Module 12961 (GuildDirectoryCreateOrAdd)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -13,14 +13,14 @@ import SegmentedControlState from "SegmentedControlState" /* 8805 */;
 import SegmentedControl from "SegmentedControl" /* 9051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12954 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12962 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(12952).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12960).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5191);
@@ -57,7 +57,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
       if (cResult[7] !== stateFromStores) {
         const obj2 = { entry: stateFromStores };
-        const tmp16 = closure_9(directoryChannelId(12955), obj2);
+        const tmp16 = closure_9(directoryChannelId(12963), obj2);
         cResult[7] = stateFromStores;
         cResult[8] = tmp16;
         let tmp13 = tmp16;
@@ -109,7 +109,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmp = closure_11();
   const items = [GuildDirectoryStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id));
-  const obj2 = { label: guild.name, icon: closure_9(directoryChannelId(6436), { style: tmp.guildIcon, guild }), trailing: closure_9(directoryChannelId(12955), { entry: stateFromStores }), start, end };
+  const obj2 = { label: guild.name, icon: closure_9(directoryChannelId(6436), { style: tmp.guildIcon, guild }), trailing: closure_9(directoryChannelId(12963), { entry: stateFromStores }), start, end };
   return closure_9(guild(6457).TableRow, obj2);
 }));
 ReactCompilerGating = fn(558);

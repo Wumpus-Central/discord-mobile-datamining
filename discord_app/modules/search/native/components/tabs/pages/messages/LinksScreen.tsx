@@ -1,8 +1,8 @@
-// === Module 17855: LinksScreen ===
+// === Module 17859: LinksScreen ===
 
-// Module 17855 (LinksScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12980 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 17848 */;
+// Module 17859 (LinksScreen)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12988 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 17852 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

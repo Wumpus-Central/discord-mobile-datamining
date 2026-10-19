@@ -1,6 +1,6 @@
-// === Module 11991: AttachmentPreview ===
+// === Module 12010: AttachmentPreview ===
 
-// Module 11991 (AttachmentPreview)
+// Module 12010 (AttachmentPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -9,20 +9,20 @@ import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import FileUtils from "FileUtils" /* 8031 */;
 import common_Video from "common/Video" /* 8699 */;
-import _modDef11992 from "module_11992" /* 11992 */;
-import _modDef11993 from "module_11993" /* 11993 */;
-import _modDef11994 from "module_11994" /* 11994 */;
-import _modDef11995 from "module_11995" /* 11995 */;
-import _modDef11996 from "module_11996" /* 11996 */;
-import _modDef11997 from "module_11997" /* 11997 */;
-import _modDef11998 from "module_11998" /* 11998 */;
-import _modDef11999 from "module_11999" /* 11999 */;
-import _modDef12000 from "module_12000" /* 12000 */;
-import _modDef12001 from "module_12001" /* 12001 */;
-import _modDef12002 from "module_12002" /* 12002 */;
-import _modDef12003 from "module_12003" /* 12003 */;
-import _modDef12004 from "module_12004" /* 12004 */;
-import _modDef12005 from "module_12005" /* 12005 */;
+import _modDef12011 from "module_12011" /* 12011 */;
+import _modDef12012 from "module_12012" /* 12012 */;
+import _modDef12013 from "module_12013" /* 12013 */;
+import _modDef12014 from "module_12014" /* 12014 */;
+import _modDef12015 from "module_12015" /* 12015 */;
+import _modDef12016 from "module_12016" /* 12016 */;
+import _modDef12017 from "module_12017" /* 12017 */;
+import _modDef12018 from "module_12018" /* 12018 */;
+import _modDef12019 from "module_12019" /* 12019 */;
+import _modDef12020 from "module_12020" /* 12020 */;
+import _modDef12021 from "module_12021" /* 12021 */;
+import _modDef12022 from "module_12022" /* 12022 */;
+import _modDef12023 from "module_12023" /* 12023 */;
+import _modDef12024 from "module_12024" /* 12024 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5191);
 let obj = { fileInfoAttachmentPreviewFile: { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: nativeDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: nativeDefault.space.PX_8 }, attachmentFileIcon: { height: 32, width: 24 }, attachmentFileName: { paddingRight: 4, paddingLeft: 4, maxWidth: 136 }, videoIcon: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" } };
 let closure_7 = createStyles.createStyles(obj);
-let obj4 = { archive: _modDef11992, acrobat: _modDef11993, ae: _modDef11994, ai: _modDef11995, audio: _modDef11996, code: _modDef11997, document: _modDef11998, image: _modDef11999, photoshop: _modDef12000, sketch: _modDef12001, spreadsheet: _modDef12002, unknown: _modDef12003, video: _modDef12004, webcode: _modDef12005 };
+let obj4 = { archive: _modDef12011, acrobat: _modDef12012, ae: _modDef12013, ai: _modDef12014, audio: _modDef12015, code: _modDef12016, document: _modDef12017, image: _modDef12018, photoshop: _modDef12019, sketch: _modDef12020, spreadsheet: _modDef12021, unknown: _modDef12022, video: _modDef12023, webcode: _modDef12024 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AttachmentIcon(fileName) {
   const cResult = c.c(3);
@@ -44,7 +44,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AttachmentIc
   }
   let tmp4 = obj4[obj2.classifyFileName(obj2, str)];
   if (tmp4 == null) {
-    tmp4 = _modDef12003;
+    tmp4 = _modDef12022;
   }
   if (cResult[0] === tmp4) {
     if (cResult[1] === tmp3.attachmentFileIcon) {
@@ -69,7 +69,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AttachmentIc
     }
     let tmp2 = obj4[obj.classifyFileName(obj, str)];
     if (tmp2 == null) {
-      tmp2 = _modDef12003;
+      tmp2 = _modDef12022;
     }
     return tmp2;
   }, items);

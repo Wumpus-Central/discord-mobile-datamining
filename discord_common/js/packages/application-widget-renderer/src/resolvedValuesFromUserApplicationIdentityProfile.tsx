@@ -1,8 +1,8 @@
-// === Module 11803: discord_common/resolvedValuesFromUserApplicationIdentityProfile ===
+// === Module 11822: discord_common/resolvedValuesFromUserApplicationIdentityProfile ===
 
-// Module 11803 (discord_common/resolvedValuesFromUserApplicationIdentityProfile)
-import resolvedValues from "resolvedValues" /* 11722 */;
-import ProfileDataDynamicType from "ProfileDataDynamicType" /* 11804 */;
+// Module 11822 (discord_common/resolvedValuesFromUserApplicationIdentityProfile)
+import resolvedValues from "resolvedValues" /* 11741 */;
+import ProfileDataDynamicType from "ProfileDataDynamicType" /* 11823 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

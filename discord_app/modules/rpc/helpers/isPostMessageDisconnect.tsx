@@ -1,6 +1,6 @@
-// === Module 15568: isPostMessageDisconnect ===
+// === Module 15572: isPostMessageDisconnect ===
 
-// Module 15568 (isPostMessageDisconnect)
+// Module 15572 (isPostMessageDisconnect)
 import Constants from "Constants" /* 5895 */;
 import size from "module_2" /* 2 */;
 

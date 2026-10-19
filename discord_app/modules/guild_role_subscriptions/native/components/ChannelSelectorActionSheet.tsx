@@ -1,13 +1,13 @@
-// === Module 18973: ChannelSelectorActionSheet ===
+// === Module 18977: ChannelSelectorActionSheet ===
 
-// Module 18973 (ChannelSelectorActionSheet)
+// Module 18977 (ChannelSelectorActionSheet)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import useCreateChannelSubmit from "useCreateChannelSubmit" /* 8875 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8880 */;
-import _modDef14680 from "module_14680" /* 14680 */;
+import _modDef14684 from "module_14684" /* 14684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -77,7 +77,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             }
             let tmp14 = selected;
             if (selected) {
-              const obj3 = { style: tmp3.selectedIcon, source: tmp4(18912) };
+              const obj3 = { style: tmp3.selectedIcon, source: tmp4(18916) };
               tmp14 = closure_11(tmp4(5128), obj3);
               const tmp4Result = tmp4(5128);
             }
@@ -90,7 +90,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     const obj4 = { style: tmp3.channelRow, onPress: tmp6, accessible: true, accessibilityLabel: tmp5, channel, selected, disableHighlightOnPress: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS };
-    const tmp12 = closure_11(tmp4(17254), obj4);
+    const tmp12 = closure_11(tmp4(17258), obj4);
     cResult[3] = channel;
     cResult[4] = tmp6;
     cResult[5] = selected;
@@ -124,9 +124,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   obj.channel = channel;
   obj.selected = selected;
   obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(17254), obj), ];
+  const children = [closure_11(onChannelSelected(17258), obj), ];
   if (selected) {
-    const obj2 = { style: tmp.selectedIcon, source: tmp2(18912) };
+    const obj2 = { style: tmp.selectedIcon, source: tmp2(18916) };
     selected = closure_11(tmp2(5128), obj2);
     const tmp2Result = tmp2(5128);
   }
@@ -224,7 +224,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     if (tmp.createChannelLabel.color != null) {
       str1 = str.toString();
     }
-    const obj7 = { color: str1, source: _modDef14680 };
+    const obj7 = { color: str1, source: _modDef14684 };
     const items3 = [closure_11(tmp5(1202).Icon, obj7), ];
     const obj8 = { style: tmp.createChannelLabel, variant: "text-md/medium", color: "text-link", children: null };
     const intl3 = tmp5(1128).intl;

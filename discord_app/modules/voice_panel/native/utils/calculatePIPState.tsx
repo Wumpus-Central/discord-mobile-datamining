@@ -1,11 +1,11 @@
-// === Module 18354: calculatePIPState ===
+// === Module 18358: calculatePIPState ===
 
-// Module 18354 (calculatePIPState)
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18182 */;
+// Module 18358 (calculatePIPState)
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18186 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
 
 require = fn;
-const VoicePanelModes = fn(12914).VoicePanelModes;
+const VoicePanelModes = fn(10680).VoicePanelModes;
 const ParticipantTypes = fn(5214).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");

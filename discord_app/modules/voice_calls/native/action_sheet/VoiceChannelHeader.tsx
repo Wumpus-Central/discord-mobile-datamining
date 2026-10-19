@@ -1,6 +1,6 @@
-// === Module 14391: VoiceChannelHeader ===
+// === Module 14395: VoiceChannelHeader ===
 
-// Module 14391 (VoiceChannelHeader)
+// Module 14395 (VoiceChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -11,11 +11,11 @@ import Pressables from "Pressables" /* 6462 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7073 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8955 */;
 import _modDef10640 from "module_10640" /* 10640 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11146 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11390 */;
-import CallStateHooks from "CallStateHooks" /* 14392 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14393 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 14394 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11165 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11408 */;
+import CallStateHooks from "CallStateHooks" /* 14396 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14397 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 14398 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -151,7 +151,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   }
   const obj = channel(576);
   const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-  const tmp10 = stateFromStores1(11390)(channel);
+  const tmp10 = stateFromStores1(11408)(channel);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [EmbeddedActivitiesStore];
     cResult[3] = items1;
@@ -414,9 +414,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { size: channel(1202).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
   if (isRoleRequiredDefault(channel)) {
-    let tmp5Result = tmp5(14396);
+    let tmp5Result = tmp5(14400);
   } else {
-    tmp5Result = tmp5(11497);
+    tmp5Result = tmp5(11515);
   }
   obj6.source = tmp5Result;
   obj6.style = tmp.icons;

@@ -1,12 +1,12 @@
-// === Module 17866: SearchTabsTransitionGroup ===
+// === Module 17870: SearchTabsTransitionGroup ===
 
-// Module 17866 (SearchTabsTransitionGroup)
+// Module 17870 (SearchTabsTransitionGroup)
 import c from "c" /* 576 */;
 import native from "native" /* 4922 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import spring from "spring" /* 5478 */;
 import springPresets from "springPresets" /* 5482 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 11659 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 11678 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

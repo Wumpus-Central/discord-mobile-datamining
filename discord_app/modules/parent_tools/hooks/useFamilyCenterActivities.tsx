@@ -1,6 +1,6 @@
-// === Module 15936: useFamilyCenterActivities ===
+// === Module 15940: useFamilyCenterActivities ===
 
-// Module 15936 (useFamilyCenterActivities)
+// Module 15940 (useFamilyCenterActivities)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import PriceUtils from "PriceUtils" /* 7216 */;

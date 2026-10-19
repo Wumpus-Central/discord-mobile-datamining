@@ -1,6 +1,6 @@
-// === Module 13316: useGetJoinRequestAndGuildForInterviewChannel ===
+// === Module 13324: useGetJoinRequestAndGuildForInterviewChannel ===
 
-// Module 13316 (useGetJoinRequestAndGuildForInterviewChannel)
+// Module 13324 (useGetJoinRequestAndGuildForInterviewChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6396 */;

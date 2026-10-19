@@ -1,6 +1,6 @@
-// === Module 10818: InfoBox ===
+// === Module 10834: InfoBox ===
 
-// Module 10818 (InfoBox)
+// Module 10834 (InfoBox)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5145 */;

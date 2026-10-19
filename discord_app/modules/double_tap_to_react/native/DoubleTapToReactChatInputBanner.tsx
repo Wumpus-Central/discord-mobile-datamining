@@ -1,6 +1,6 @@
-// === Module 12932: DoubleTapToReactChatInputBanner ===
+// === Module 12940: DoubleTapToReactChatInputBanner ===
 
-// Module 12932 (DoubleTapToReactChatInputBanner)
+// Module 12940 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -17,7 +17,7 @@ import Pressables from "Pressables" /* 6462 */;
 import XSmallIcon from "XSmallIcon" /* 6485 */;
 import EmojiDefault from "Emoji" /* 7098 */;
 import canAddNewReactionsDefault from "canAddNewReactions" /* 8257 */;
-import renderChannelBadge from "renderChannelBadge" /* 12933 */;
+import renderChannelBadge from "renderChannelBadge" /* 12941 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
@@ -90,7 +90,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13034, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13042, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {

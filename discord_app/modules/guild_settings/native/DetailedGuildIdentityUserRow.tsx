@@ -77,7 +77,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
           const obj5 = { style: tmp4.mainIdentity, children: null };
           let tmp19 = null;
           if (tmp8) {
-            const obj6 = { size: native.AvatarSizes.SIZE_16, style: tmp4.primaryAvatar, user, guildId: "Reflect" };
+            const obj6 = { size: native.AvatarSizes.SIZE_16, style: tmp4.primaryAvatar, user, guildId: "a" };
             tmp19 = hasOwnProperty(native.Avatar, obj6);
           }
           const items1 = [tmp19, ];
@@ -132,7 +132,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Reflect" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "a" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];

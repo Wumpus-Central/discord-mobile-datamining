@@ -1,6 +1,6 @@
-// === Module 11400: VoicePanelUtils ===
+// === Module 11418: VoicePanelUtils ===
 
-// Module 11400 (VoicePanelUtils)
+// Module 11418 (VoicePanelUtils)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

@@ -1,12 +1,12 @@
-// === Module 13088: EmojiSuggestionChatButton ===
+// === Module 13096: EmojiSuggestionChatButton ===
 
-// Module 13088 (EmojiSuggestionChatButton)
+// Module 13096 (EmojiSuggestionChatButton)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import spring from "spring" /* 5478 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13084 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13092 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;

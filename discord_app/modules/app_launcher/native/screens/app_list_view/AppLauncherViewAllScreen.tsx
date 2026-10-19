@@ -1,6 +1,6 @@
-// === Module 12027: AppLauncherViewAllScreen ===
+// === Module 12046: AppLauncherViewAllScreen ===
 
-// Module 12027 (AppLauncherViewAllScreen)
+// Module 12046 (AppLauncherViewAllScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
@@ -8,9 +8,9 @@ import Text_Text from "Text/Text" /* 5187 */;
 import Pressables from "Pressables" /* 6462 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6482 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7513 */;
-import AppLauncherContext from "AppLauncherContext" /* 10932 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11847 */;
-import AppLauncherBackButton from "AppLauncherBackButton" /* 11943 */;
+import AppLauncherContext from "AppLauncherContext" /* 10948 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11866 */;
+import AppLauncherBackButton from "AppLauncherBackButton" /* 11962 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOA
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
-let size = { width: fn(11943).BACK_BUTTON_SIZE, height: fn(11943).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(11962).BACK_BUTTON_SIZE, height: fn(11962).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
 obj2.backButton = size;
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

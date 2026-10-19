@@ -1,23 +1,23 @@
-// === Module 12234: BotIllocon ===
+// === Module 12252: BotIllocon ===
 
-// Module 12234 (BotIllocon)
+// Module 12252 (BotIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import assetHelpers from "assetHelpers" /* 6550 */;
-import _modDef12235 from "module_12235" /* 12235 */;
-import _modDef12236 from "module_12236" /* 12236 */;
-import _modDef12237 from "module_12237" /* 12237 */;
+import _modDef12253 from "module_12253" /* 12253 */;
+import _modDef12254 from "module_12254" /* 12254 */;
+import _modDef12255 from "module_12255" /* 12255 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12235 }, 3: null };
-const obj2 = { uri: _modDef12235 };
-obj[2] = { uri: _modDef12236 };
-const obj3 = { uri: _modDef12236 };
-obj[3] = { uri: _modDef12237 };
+let obj = { 1: null, 2: { uri: _modDef12253 }, 3: null };
+const obj2 = { uri: _modDef12253 };
+obj[2] = { uri: _modDef12254 };
+const obj3 = { uri: _modDef12254 };
+obj[3] = { uri: _modDef12255 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12237 };
+const obj4 = { uri: _modDef12255 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BotIllocon.native.tsx");
 

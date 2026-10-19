@@ -1,6 +1,6 @@
-// === Module 17854: useFileOrLinkImageDimensions ===
+// === Module 17858: useFileOrLinkImageDimensions ===
 
-// Module 17854 (useFileOrLinkImageDimensions)
+// Module 17858 (useFileOrLinkImageDimensions)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

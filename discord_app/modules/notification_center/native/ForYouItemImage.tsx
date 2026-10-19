@@ -1,6 +1,6 @@
-// === Module 17563: ForYouItemImage ===
+// === Module 17567: ForYouItemImage ===
 
-// Module 17563 (ForYouItemImage)
+// Module 17567 (ForYouItemImage)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import FastImageDefault from "FastImage" /* 5128 */;
@@ -9,13 +9,13 @@ import Pressables from "Pressables" /* 6462 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8577 */;
 import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8647 */;
 import _modDef9023 from "module_9023" /* 9023 */;
-import _modDef17565 from "module_17565" /* 17565 */;
-import _modDef17566 from "module_17566" /* 17566 */;
-import _modDef17567 from "module_17567" /* 17567 */;
-import _modDef17568 from "module_17568" /* 17568 */;
 import _modDef17569 from "module_17569" /* 17569 */;
 import _modDef17570 from "module_17570" /* 17570 */;
 import _modDef17571 from "module_17571" /* 17571 */;
+import _modDef17572 from "module_17572" /* 17572 */;
+import _modDef17573 from "module_17573" /* 17573 */;
+import _modDef17574 from "module_17574" /* 17574 */;
+import _modDef17575 from "module_17575" /* 17575 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -26,50 +26,50 @@ function getFallbackIcon(type, fallbackImage) {
     const obj2 = { icon: _modDef9023, color: fallbackImage.fallbackImage.color };
     return obj2;
   } else if (NotificationCenterItemsTypes.NotificationCenterItems.FRIEND_REQUEST_REMINDER === type) {
-    const obj3 = { icon: _modDef17565, color: fallbackImage.fallbackImage.color };
+    const obj3 = { icon: _modDef17569, color: fallbackImage.fallbackImage.color };
     return obj3;
   } else {
     if (NotificationCenterItemsTypes.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED !== type) {
       if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES !== type) {
         if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES !== type) {
           if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES === type) {
-            const obj4 = { icon: _modDef17567, color: fallbackImage.fallbackImage.color };
+            const obj4 = { icon: _modDef17571, color: fallbackImage.fallbackImage.color };
             return obj4;
           } else {
-            const obj = { icon: _modDef17568, color: fallbackImage.fallbackImage.color };
+            const obj = { icon: _modDef17572, color: fallbackImage.fallbackImage.color };
             return obj;
           }
         }
       }
     }
-    const obj5 = { icon: _modDef17566, color: fallbackImage.fallbackImageV2.color, backgroundStyle: fallbackImage.guildGridBackground };
+    const obj5 = { icon: _modDef17570, color: fallbackImage.fallbackImageV2.color, backgroundStyle: fallbackImage.guildGridBackground };
     return obj5;
   }
 }
 function getLifecycleIcon(item_enum) {
   if (item_enum === NotificationCenterItemsTypes.ItemEnum.UPDATE_PROFILE) {
-    const obj2 = { source: _modDef17569 };
-    let tmp5 = jsx(FastImageDefault, { source: _modDef17569 });
+    const obj2 = { source: _modDef17573 };
+    let tmp5 = jsx(FastImageDefault, { source: _modDef17573 });
   } else {
     if (item_enum !== NotificationCenterItemsTypes.ItemEnum.FIND_FRIENDS) {
       if (item_enum !== NotificationCenterItemsTypes.ItemEnum.ADD_FRIEND) {
         if (item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE) {
-          const obj3 = { source: _modDef17571, style: { width: "105%" } };
-          tmp5 = jsx(FastImageDefault, { source: _modDef17571, style: { width: "105%" } });
+          const obj3 = { source: _modDef17575, style: { width: "105%" } };
+          tmp5 = jsx(FastImageDefault, { source: _modDef17575, style: { width: "105%" } });
         } else {
-          const obj = { source: _modDef17568 };
-          tmp5 = jsx(native.Icon, { source: _modDef17568 });
+          const obj = { source: _modDef17572 };
+          tmp5 = jsx(native.Icon, { source: _modDef17572 });
         }
       }
     }
-    const obj4 = { source: _modDef17570, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
-    tmp5 = jsx(native.Icon, { source: _modDef17570, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE });
+    const obj4 = { source: _modDef17574, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
+    tmp5 = jsx(native.Icon, { source: _modDef17574, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE });
   }
   return tmp5;
 }
 const View = fn(17).View;
 const getGuildAcronym = fn(2086).getGuildAcronym;
-const Constants = fn(17564);
+const Constants = fn(17568);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
 let createStyles = fn(5191);

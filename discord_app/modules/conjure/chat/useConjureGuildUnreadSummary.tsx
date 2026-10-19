@@ -1,7 +1,7 @@
-// === Module 17341: useConjureGuildUnreadSummary ===
+// === Module 17345: useConjureGuildUnreadSummary ===
 
-// Module 17341 (useConjureGuildUnreadSummary)
-import ConjureActionCreators from "ConjureActionCreators" /* 10983 */;
+// Module 17345 (useConjureGuildUnreadSummary)
+import ConjureActionCreators from "ConjureActionCreators" /* 10999 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6291 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6293 */;
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   }
   const effect = noop.useEffect(tmp10, tmp11);
   const tmpResult = stateFromStoresArray(504);
-  return stateFromStoresArray(10984).useConjureUnreadSummary(arg0);
+  return stateFromStoresArray(11001).useConjureUnreadSummary(arg0);
 }) : (function useConjureGuildUnreadSummary(arg0) {
   const items = [ReadStateStore, ConjureProjectStore];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
@@ -80,5 +80,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     }
   }, items1);
   let obj = stateFromStoresArray(504);
-  return stateFromStoresArray(10984).useConjureUnreadSummary(arg0);
+  return stateFromStoresArray(11001).useConjureUnreadSummary(arg0);
 });

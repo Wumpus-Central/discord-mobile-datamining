@@ -1,14 +1,14 @@
-// === Module 12016: AppLauncherUserOption ===
+// === Module 12035: AppLauncherUserOption ===
 
-// Module 12016 (AppLauncherUserOption)
+// Module 12035 (AppLauncherUserOption)
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12008 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12012 */;
-import UsernameTextDefault from "UsernameText" /* 12014 */;
-import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12017 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12027 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12031 */;
+import UsernameTextDefault from "UsernameText" /* 12033 */;
+import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12036 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
@@ -67,7 +67,7 @@ export default function AppLauncherUserOption(option) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(12017, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
+    obj2.openLazy(asyncRequireImpl(12036, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onUserPress(user) {

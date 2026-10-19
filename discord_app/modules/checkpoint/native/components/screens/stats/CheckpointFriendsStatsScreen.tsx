@@ -1,6 +1,6 @@
-// === Module 12764: CheckpointFriendsStatsScreen ===
+// === Module 12781: CheckpointFriendsStatsScreen ===
 
-// Module 12764 (CheckpointFriendsStatsScreen)
+// Module 12781 (CheckpointFriendsStatsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,16 +9,16 @@ import FriendsIcon from "FriendsIcon" /* 4910 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
 import ChatIcon from "ChatIcon" /* 8471 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 10350 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11474 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 12730 */;
-import CheckpointTextDefault from "CheckpointText" /* 12747 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12765 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11492 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 12747 */;
+import CheckpointTextDefault from "CheckpointText" /* 12764 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12782 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import UserStore from "UserStore" /* 1392 */;
-import CheckpointStore from "CheckpointStore" /* 12725 */;
+import CheckpointStore from "CheckpointStore" /* 12742 */;
 
 require = fn;
 function SidekickMessageInput(user) {
@@ -154,7 +154,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1128).intl;
     obj5.accessibilityLabel = intl2.string(user(1128).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(12656).GiftIcon, obj6);
+    obj5.children = closure_13(user(12673).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5), ];
     const obj7 = {
       onPress: function handleSend() {

@@ -1,8 +1,8 @@
-// === Module 17734: useFrameLifecycle ===
+// === Module 17738: useFrameLifecycle ===
 
-// Module 17734 (useFrameLifecycle)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11021 */;
-import preloadChannelAppFrame from "preloadChannelAppFrame" /* 13628 */;
+// Module 17738 (useFrameLifecycle)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11042 */;
+import preloadChannelAppFrame from "preloadChannelAppFrame" /* 13632 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -46,7 +46,7 @@ function useFrameLifecycleState(applicationId) {
         const obj7 = { state: obj.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: obj.Loading, frame: "a" };
+        const obj8 = { state: obj.Loading, frame: "r" };
         obj10 = obj8;
       } else {
         if (null != data) {

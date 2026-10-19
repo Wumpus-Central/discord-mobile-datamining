@@ -1,14 +1,14 @@
-// === Module 17396: GuildUpsellChannelList ===
+// === Module 17400: GuildUpsellChannelList ===
 
-// Module 17396 (GuildUpsellChannelList)
+// Module 17400 (GuildUpsellChannelList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import components_Button_Button from "components/Button/Button" /* 5479 */;
 import Card from "Card" /* 6459 */;
-import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 17406 */;
+import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 17410 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14787 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14791 */;
 import ConsentStore from "ConsentStore" /* 6188 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(17397).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(17401).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -48,13 +48,13 @@ const obj12 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.joinSection = { gap: nativeDefault.space.PX_4 };
 let closure_14 = createStyles.createStyles(obj2);
 const obj13 = { gap: nativeDefault.space.PX_4 };
-let items = [{ id: "hangout", title: fn(1128).t.ScXySs, description: fn(1128).t.DSCqxM, Icon: fn(14036).BumpingFistsSpotIllustration }, , ];
-const obj14 = { id: "hangout", title: fn(1128).t.ScXySs, description: fn(1128).t.DSCqxM, Icon: fn(14036).BumpingFistsSpotIllustration };
-items[1] = { id: "gaming", title: fn(1128).t["F+MTAZ"], description: fn(1128).t.srNlJw, Icon: fn(17398).ChatControllersSpotIllustration };
-const obj15 = { id: "gaming", title: fn(1128).t["F+MTAZ"], description: fn(1128).t.srNlJw, Icon: fn(17398).ChatControllersSpotIllustration };
-items[2] = { id: "hobbies", title: fn(1128).t["0Ka6B5"], description: fn(1128).t["5oGAp/"], Icon: fn(17402).MiniaturesSpotIllustration };
+let items = [{ id: "hangout", title: fn(1128).t.ScXySs, description: fn(1128).t.DSCqxM, Icon: fn(14040).BumpingFistsSpotIllustration }, , ];
+const obj14 = { id: "hangout", title: fn(1128).t.ScXySs, description: fn(1128).t.DSCqxM, Icon: fn(14040).BumpingFistsSpotIllustration };
+items[1] = { id: "gaming", title: fn(1128).t["F+MTAZ"], description: fn(1128).t.srNlJw, Icon: fn(17402).ChatControllersSpotIllustration };
+const obj15 = { id: "gaming", title: fn(1128).t["F+MTAZ"], description: fn(1128).t.srNlJw, Icon: fn(17402).ChatControllersSpotIllustration };
+items[2] = { id: "hobbies", title: fn(1128).t["0Ka6B5"], description: fn(1128).t["5oGAp/"], Icon: fn(17406).MiniaturesSpotIllustration };
 const ReactCompilerGating = fn(558);
-const obj16 = { id: "hobbies", title: fn(1128).t["0Ka6B5"], description: fn(1128).t["5oGAp/"], Icon: fn(17402).MiniaturesSpotIllustration };
+const obj16 = { id: "hobbies", title: fn(1128).t["0Ka6B5"], description: fn(1128).t["5oGAp/"], Icon: fn(17406).MiniaturesSpotIllustration };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
 
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildUps
   } else {
     first = cResult[0];
   }
-  const GameCommunityAddServerEntryExperiment = tmp(14790).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = tmp(14794).GameCommunityAddServerEntryExperiment;
   const cardAction = GameCommunityAddServerEntryExperiment.useConfig(first).cardAction;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     items = [ConsentStore, LocalAppDetectionStore];

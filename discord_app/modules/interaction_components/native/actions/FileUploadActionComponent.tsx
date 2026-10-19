@@ -1,13 +1,13 @@
-// === Module 18529: FileUploadActionComponent ===
+// === Module 18533: FileUploadActionComponent ===
 
-// Module 18529 (FileUploadActionComponent)
+// Module 18533 (FileUploadActionComponent)
 import c from "c" /* 576 */;
 import XSmallIcon from "XSmallIcon" /* 6485 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 7144 */;
 import IconButton from "IconButton" /* 7840 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9564 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10322 */;
-import AttachmentPreview from "AttachmentPreview" /* 11991 */;
+import AttachmentPreview from "AttachmentPreview" /* 12010 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
@@ -19,7 +19,7 @@ const util = obj(1128);
 const InteractionComponentUtils = obj(5536);
 const FileSizeUtils = obj(5896);
 const TableRow = obj(6457);
-const FileUpIcon = obj(11620);
+const FileUpIcon = obj(11636);
 require = fn;
 const View = fn(17).View;
 const DraftType = fn(7510).DraftType;

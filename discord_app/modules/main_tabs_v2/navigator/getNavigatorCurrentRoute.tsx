@@ -1,6 +1,6 @@
-// === Module 10936: getNavigatorCurrentRoute ===
+// === Module 10952: getNavigatorCurrentRoute ===
 
-// Module 10936 (getNavigatorCurrentRoute)
+// Module 10952 (getNavigatorCurrentRoute)
 import RootNavigationRef from "RootNavigationRef" /* 5073 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 14374: NUFTemplate ===
+// === Module 14378: NUFTemplate ===
 
-// Module 14374 (NUFTemplate)
+// Module 14378 (NUFTemplate)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5128 */;

@@ -1,9 +1,9 @@
-// === Module 14969: GuildBadgeBee ===
+// === Module 14973: GuildBadgeBee ===
 
-// Module 14969 (GuildBadgeBee)
+// Module 14973 (GuildBadgeBee)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14928 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14932 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

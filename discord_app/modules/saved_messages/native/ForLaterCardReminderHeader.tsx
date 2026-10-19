@@ -1,11 +1,11 @@
-// === Module 13606: ForLaterCardReminderHeader ===
+// === Module 13610: ForLaterCardReminderHeader ===
 
-// Module 13606 (ForLaterCardReminderHeader)
+// Module 13610 (ForLaterCardReminderHeader)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import ClockIcon2 from "ClockIcon" /* 5150 */;
-import SavedMessageUtils from "SavedMessageUtils" /* 13595 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 13607 */;
+import SavedMessageUtils from "SavedMessageUtils" /* 13599 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 13611 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

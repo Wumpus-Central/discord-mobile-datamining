@@ -1,9 +1,9 @@
-// === Module 11646: useConjureSettingPickerOptions ===
+// === Module 11665: useConjureSettingPickerOptions ===
 
-// Module 11646 (useConjureSettingPickerOptions)
+// Module 11665 (useConjureSettingPickerOptions)
 import NicknameUtils from "NicknameUtils" /* 5509 */;
 import ConjureUtils from "ConjureUtils" /* 7222 */;
-import conjureGuildPickerSources from "conjureGuildPickerSources" /* 11647 */;
+import conjureGuildPickerSources from "conjureGuildPickerSources" /* 11666 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
@@ -93,13 +93,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if ("role" === channel_filter.type) {
       tmp8 = arg0;
     }
-    const conjureGuildRoles = result(11647).useConjureGuildRoles(tmp8);
-    const resultResult1 = result(11647);
+    const conjureGuildRoles = result(11666).useConjureGuildRoles(tmp8);
+    const resultResult1 = result(11666);
     let tmp9 = null;
     if ("user" === channel_filter.type) {
       tmp9 = arg0;
     }
-    const conjureGuildMemberUsers = result(11647).useConjureGuildMemberUsers(tmp9);
+    const conjureGuildMemberUsers = result(11666).useConjureGuildMemberUsers(tmp9);
     class S {
       constructor() {
         channels = null;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       tmp11 = cResult[5];
       tmp12 = cResult[6];
     }
-    const resultResult2 = result(11647);
+    const resultResult2 = result(11666);
     const stateFromStores1 = result(504).useStateFromStores(tmp11, tmp12);
     const type = channel_filter.type;
     if ("channel" === type) {
@@ -267,9 +267,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(11647).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(11666).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(11647);
+        const obj = closure_0(11666);
         obj2.label = closure_0(5509).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};

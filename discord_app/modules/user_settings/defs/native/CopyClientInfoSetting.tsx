@@ -1,6 +1,6 @@
-// === Module 16616: CopyClientInfoSetting ===
+// === Module 16620: CopyClientInfoSetting ===
 
-// Module 16616 (CopyClientInfoSetting)
+// Module 16620 (CopyClientInfoSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -12,9 +12,9 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
 import ClipboardUtils from "ClipboardUtils" /* 7162 */;
 import ActionSheetRow from "ActionSheetRow" /* 7171 */;
 import ActionSheet from "ActionSheet" /* 7175 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 11094 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12502 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10792 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 11113 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12519 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10808 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1383 */;
 
 require = fn;
@@ -75,11 +75,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IOSAnch
   const cResult = subLabel(576).c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
-    let result = tmp(11094).isIOSAnchoredChatScrollerEnabled();
+    let result = tmp(11113).isIOSAnchoredChatScrollerEnabled();
     const t = tmp(1128).t;
     const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
     cResult[0] = stringResult;
-    const tmpResult = tmp(11094);
+    const tmpResult = tmp(11113);
   } else {
     subLabel = cResult[0];
     const _Symbol = Symbol;
@@ -395,7 +395,7 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

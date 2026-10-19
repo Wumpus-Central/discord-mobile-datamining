@@ -1,6 +1,6 @@
-// === Module 13683: PremiumGiftDuration ===
+// === Module 13687: PremiumGiftDuration ===
 
-// Module 13683 (PremiumGiftDuration)
+// Module 13687 (PremiumGiftDuration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

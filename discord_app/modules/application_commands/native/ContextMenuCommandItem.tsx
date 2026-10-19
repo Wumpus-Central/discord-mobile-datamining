@@ -1,6 +1,6 @@
-// === Module 18015: ContextMenuCommandItem ===
+// === Module 18019: ContextMenuCommandItem ===
 
-// Module 18015 (ContextMenuCommandItem)
+// Module 18019 (ContextMenuCommandItem)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,7 +9,7 @@ import Server from "Server" /* 2000 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import SendMessageIcon from "SendMessageIcon" /* 5139 */;
 import TableRow from "TableRow" /* 6457 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12876 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12893 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContextM
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(12876).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(12893).getApplicationCommandsIconSource(section);
   const obj2 = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {

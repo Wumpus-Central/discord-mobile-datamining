@@ -1,17 +1,17 @@
-// === Module 17258: useChannelListSpecs ===
+// === Module 17262: useChannelListSpecs ===
 
-// Module 17258 (useChannelListSpecs)
+// Module 17262 (useChannelListSpecs)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import useFontScale from "useFontScale" /* 5486 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11892 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 17146 */;
-import RedesignGuildHeader from "RedesignGuildHeader" /* 17259 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11911 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 17150 */;
+import RedesignGuildHeader from "RedesignGuildHeader" /* 17263 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RedesignChannelListConstants = fn(11881);
+const RedesignChannelListConstants = fn(11900);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_4, BANNER_MAX_HEIGHT_PERCENTAGE: hasOwnProperty } = RedesignChannelListConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -110,11 +110,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
   tmp9 = null != banner.banner;
   const tmpResult = useFontScale;
 }) : (function useChannelListSpecs(banner) {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(17259).useRedesignGuildHeaderHeight(banner);
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(17263).useRedesignGuildHeaderHeight(banner);
   height = height(1499)({ ignoreKeyboard: true }).height;
-  const tmp2 = height(17146)();
+  const tmp2 = height(17150)();
   dependencyMap = tmp2;
-  const obj = redesignGuildHeaderHeight(17259);
+  const obj = redesignGuildHeaderHeight(17263);
   const fontScale = redesignGuildHeaderHeight(5486).useFontScale();
   closure_4 = tmp4;
   const top = height(1633)().top;

@@ -1,6 +1,6 @@
-// === Module 11971: useLatch ===
+// === Module 11990: useLatch ===
 
-// Module 11971 (useLatch)
+// Module 11990 (useLatch)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

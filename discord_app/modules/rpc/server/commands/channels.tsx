@@ -1,6 +1,6 @@
-// === Module 15498: channels ===
+// === Module 15502: channels ===
 
-// Module 15498 (channels)
+// Module 15502 (channels)
 import router_utils from "router_utils" /* 1114 */;
 import ChannelUtils from "ChannelUtils" /* 5514 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6145 */;
@@ -10,7 +10,7 @@ import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 
 import isPostMessageSocketDefault from "isPostMessageSocket" /* 9163 */;
 import RPCErrorDefault from "RPCError" /* 9169 */;
 import botScopedAccess from "botScopedAccess" /* 9172 */;
-import RPCHelpers from "RPCHelpers" /* 11317 */;
+import RPCHelpers from "RPCHelpers" /* 11335 */;
 import ChannelRecord from "ChannelRecord" /* 2072 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -19,7 +19,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
 import VoiceStateStore from "VoiceStateStore" /* 5212 */;
 import Constants_mod from "Constants" /* 5895 */;
 import Constants_mod from "Constants" /* 1087 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15499 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15503 */;
 import size from "module_2" /* 2 */;
 
 ({ isVoiceChannel: c3, isTextChannel: closure_4 } = ChannelRecord);

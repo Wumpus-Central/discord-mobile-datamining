@@ -1,6 +1,6 @@
-// === Module 12777: TraitOptionItem ===
+// === Module 12794: TraitOptionItem ===
 
-// Module 12777 (TraitOptionItem)
+// Module 12794 (TraitOptionItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4927 */;
@@ -10,7 +10,7 @@ import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5538 */;
 import _modDef6520 from "module_6520" /* 6520 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9327 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 12737 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 12754 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import CheckpointConstants from "CheckpointConstants" /* 5537 */;
 import jsxProd from "jsxProd" /* 21 */;

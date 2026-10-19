@@ -1,6 +1,6 @@
-// === Module 15731: SettingRenderer ===
+// === Module 15735: SettingRenderer ===
 
-// Module 15731 (SettingRenderer)
+// Module 15735 (SettingRenderer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -18,16 +18,16 @@ import ClipboardUtils from "ClipboardUtils" /* 7162 */;
 import TableSwitchRow from "TableSwitchRow" /* 7172 */;
 import FormSwitch from "FormSwitch" /* 7173 */;
 import ClydeIcon from "ClydeIcon" /* 10475 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11451 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15732 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 15734 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 15735 */;
-import settings_tracking_Tracking from "settings/tracking/Tracking" /* 15736 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11469 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15736 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 15738 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 15739 */;
+import settings_tracking_Tracking from "settings/tracking/Tracking" /* 15740 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15730 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15734 */;
 import GuildStore from "GuildStore" /* 2090 */;
 
 const GuildIconDefault = GuildIcon;
@@ -100,7 +100,7 @@ function StaticSettingSearchResult(title) {
 let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11066);
+const SettingRendererConstants = fn(11085);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -638,8 +638,8 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(15734).useHighlightSettingItem(setting);
-  let obj = trailing(15734);
+  let highlightSettingItem = trailing(15738).useHighlightSettingItem(setting);
+  let obj = trailing(15738);
   const items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => _undefined.locale);
   trailing = undefined;

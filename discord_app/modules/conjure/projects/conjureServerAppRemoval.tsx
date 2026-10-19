@@ -1,10 +1,10 @@
-// === Module 12567: conjureServerAppRemoval ===
+// === Module 12584: conjureServerAppRemoval ===
 
-// Module 12567 (conjureServerAppRemoval)
+// Module 12584 (conjureServerAppRemoval)
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6357 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6377 */;
 import ConjureUtils from "ConjureUtils" /* 7222 */;
-import conjureAppInServer from "conjureAppInServer" /* 10987 */;
+import conjureAppInServer from "conjureAppInServer" /* 11006 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
@@ -52,8 +52,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           let items = [];
         } else {
-          items = guild(10987).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(10987);
+          items = guild(11006).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(11006);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -62,8 +62,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(10987).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(10987);
+          canRemoveConjureBotResult = guild(11006).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(11006);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -71,8 +71,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(10987).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(10987);
+          canRemoveConjureBotResult = guild(11006).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(11006);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;

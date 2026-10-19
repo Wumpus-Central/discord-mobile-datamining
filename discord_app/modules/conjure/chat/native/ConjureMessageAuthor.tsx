@@ -1,6 +1,6 @@
-// === Module 12158: ConjureMessageAuthor ===
+// === Module 12176: ConjureMessageAuthor ===
 
-// Module 12158 (ConjureMessageAuthor)
+// Module 12176 (ConjureMessageAuthor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import _modDef3883 from "module_3883" /* 3883 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import Pressables from "Pressables" /* 6462 */;
 import AppsIcon from "AppsIcon" /* 8506 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 12159 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12160 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 12177 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12178 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5191);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, conjureTile: null };
-let size = { width: fn(12143).MESSAGE_AVATAR_SIZE, height: fn(12143).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(12162).MESSAGE_AVATAR_SIZE, height: fn(12162).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
 obj2.conjureTile = size;
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -138,8 +138,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserH
   const cResult = messageAuthorUser(576).c(6);
   ({ at, userId } = arg0);
   let obj = messageAuthorUser(576);
-  messageAuthorUser = messageAuthorUser(12155).useMessageAuthorUser(userId);
-  const obj2 = messageAuthorUser(12155);
+  messageAuthorUser = messageAuthorUser(12173).useMessageAuthorUser(userId);
+  const obj2 = messageAuthorUser(12173);
   const name = messageAuthorUser(5057).useName(messageAuthorUser);
   if (cResult[0] !== messageAuthorUser) {
     const fn = function t() {
@@ -173,8 +173,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserH
 }) : (function ConjureUserHeader(arg0) {
   let messageAuthorUser;
   ({ userId, at } = arg0);
-  messageAuthorUser = messageAuthorUser(12155).useMessageAuthorUser(userId);
-  let obj = messageAuthorUser(12155);
+  messageAuthorUser = messageAuthorUser(12173).useMessageAuthorUser(userId);
+  let obj = messageAuthorUser(12173);
   const name = messageAuthorUser(5057).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
@@ -226,7 +226,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     size = PressableOpacity(1202).AvatarSizes.NORMAL;
   }
   let obj = messageAuthorUser(576);
-  messageAuthorUser = PressableOpacity(12155).useMessageAuthorUser(userId);
+  messageAuthorUser = PressableOpacity(12173).useMessageAuthorUser(userId);
   if (cResult[0] !== messageAuthorUser) {
     const fn = function t() {
       if (null != messageAuthorUser) {
@@ -271,14 +271,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     cResult[5] = tmp10;
     tmp8 = tmp10;
   }
-  const PressableOpacityResult = PressableOpacity(12155);
+  const PressableOpacityResult = PressableOpacity(12173);
 }) : (function ConjureUserAvatar(size) {
   let NORMAL = size.size;
   if (NORMAL === undefined) {
     NORMAL = messageAuthorUser(1202).AvatarSizes.NORMAL;
   }
   messageAuthorUser = undefined;
-  messageAuthorUser = messageAuthorUser(12155).useMessageAuthorUser(size.userId);
+  messageAuthorUser = messageAuthorUser(12173).useMessageAuthorUser(size.userId);
   const items = [messageAuthorUser];
   const callback = noop.useCallback(() => {
     if (null != messageAuthorUser) {

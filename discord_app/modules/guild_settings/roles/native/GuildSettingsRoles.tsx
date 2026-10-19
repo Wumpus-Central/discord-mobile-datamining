@@ -1,6 +1,6 @@
-// === Module 18795: GuildSettingsRoles ===
+// === Module 18799: GuildSettingsRoles ===
 
-// Module 18795 (GuildSettingsRoles)
+// Module 18799 (GuildSettingsRoles)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -14,15 +14,15 @@ import Pressables from "Pressables" /* 6462 */;
 import TableRowGroup from "TableRowGroup" /* 6542 */;
 import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 7097 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8910 */;
-import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 11963 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17270 */;
-import GuildSettingsRolesManager from "GuildSettingsRolesManager" /* 18798 */;
-import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 18799 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 18806 */;
-import actions_GuildActionCreators from "actions/GuildActionCreators" /* 18808 */;
-import GuildSettingsModalRolesActionCreatorsDefault from "GuildSettingsModalRolesActionCreators" /* 18809 */;
-import MemberRolesAbstractUI from "MemberRolesAbstractUI" /* 18810 */;
-import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem" /* 18814 */;
+import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 11982 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 17274 */;
+import GuildSettingsRolesManager from "GuildSettingsRolesManager" /* 18802 */;
+import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 18803 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 18810 */;
+import actions_GuildActionCreators from "actions/GuildActionCreators" /* 18812 */;
+import GuildSettingsModalRolesActionCreatorsDefault from "GuildSettingsModalRolesActionCreators" /* 18813 */;
+import MemberRolesAbstractUI from "MemberRolesAbstractUI" /* 18814 */;
+import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem" /* 18818 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -31,7 +31,7 @@ import GuildRoleStore from "GuildRoleStore" /* 2122 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7096 */;
-import GuildSettingsModalRolesStore from "GuildSettingsModalRolesStore" /* 18796 */;
+import GuildSettingsModalRolesStore from "GuildSettingsModalRolesStore" /* 18800 */;
 import TextStyles from "TextStyles" /* 6162 */;
 
 const require = globalThis.__r;
@@ -40,7 +40,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(2123).isEveryoneRole;
-let closure_15 = fn(18797).GuildSettingsRoleEditSections;
+let closure_15 = fn(18801).GuildSettingsRoleEditSections;
 const Constants = fn(1087);
 ({ GuildSettingsSections: closure_16, AnalyticEvents: closure_17, AnalyticsSections: closure_18, Permissions: closure_19, Fonts } = Constants);
 const jsxProd = fn(21);

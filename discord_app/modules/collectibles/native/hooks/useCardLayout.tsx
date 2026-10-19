@@ -1,6 +1,6 @@
-// === Module 16926: useCardLayout ===
+// === Module 16930: useCardLayout ===
 
-// Module 16926 (useCardLayout)
+// Module 16930 (useCardLayout)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 9259 */;
@@ -18,7 +18,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   if (num < 2) {
     if (cResult[0] !== num) {
-      const obj2 = { columns: num, cardWidth: "r", rowWidth: "toCharArray$esjava$1" };
+      const obj2 = { columns: num, cardWidth: "Array", rowWidth: "toCharArray$esjava$1" };
       cResult[0] = num;
       cResult[1] = obj2;
       let tmp31 = obj2;
@@ -125,7 +125,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     num = 2;
   }
   if (num < 2) {
-    const obj2 = { columns: num, cardWidth: "r", rowWidth: "toCharArray$esjava$1" };
+    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "toCharArray$esjava$1" };
     return obj2;
   } else {
     let num2 = 2;

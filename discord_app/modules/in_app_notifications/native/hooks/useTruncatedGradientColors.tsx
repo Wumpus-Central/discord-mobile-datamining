@@ -1,6 +1,6 @@
-// === Module 13528: useTruncatedGradientColors ===
+// === Module 13533: useTruncatedGradientColors ===
 
-// Module 13528 (useTruncatedGradientColors)
+// Module 13533 (useTruncatedGradientColors)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

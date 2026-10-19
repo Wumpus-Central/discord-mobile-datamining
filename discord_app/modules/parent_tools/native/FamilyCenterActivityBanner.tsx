@@ -1,6 +1,6 @@
-// === Module 15917: FamilyCenterActivityBanner ===
+// === Module 15921: FamilyCenterActivityBanner ===
 
-// Module 15917 (FamilyCenterActivityBanner)
+// Module 15921 (FamilyCenterActivityBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,8 +9,8 @@ import FastImageDefault from "FastImage" /* 5128 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import useUserLinks from "useUserLinks" /* 8005 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8006 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12653 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15918 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12670 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   }
   const tmpResult = useAgeSpecificText;
   const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp13, tmp14);
-  const tmp4Result = importDefault(tmp5 ? 15925 : 15926);
+  const tmp4Result = importDefault(tmp5 ? 15929 : 15930);
   if (cResult[4] === tmp6.art) {
     if (cResult[5] === tmp4Result) {
       let tmp19 = cResult[6];
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2589.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2589.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
   const obj5 = { source: null, style: null };
   const formatResult = intl3.format(_modDef2589.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
-  obj5.source = importDefault(tmp3 ? 15925 : 15926);
+  obj5.source = importDefault(tmp3 ? 15929 : 15930);
   obj5.style = tmp4.art;
   const items = [React4(FastImageDefault, obj5), React4(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

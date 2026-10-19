@@ -1,6 +1,6 @@
-// === Module 11824: WidgetActionCreators ===
+// === Module 11843: WidgetActionCreators ===
 
-// Module 11824 (WidgetActionCreators)
+// Module 11843 (WidgetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

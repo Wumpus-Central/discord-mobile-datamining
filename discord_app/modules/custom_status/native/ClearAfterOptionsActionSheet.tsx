@@ -1,6 +1,6 @@
-// === Module 10917: ClearAfterOptionsActionSheet ===
+// === Module 10933: ClearAfterOptionsActionSheet ===
 
-// Module 10917 (ClearAfterOptionsActionSheet)
+// Module 10933 (ClearAfterOptionsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ClearAfterOptions = fn(10827).ClearAfterOptions;
+const ClearAfterOptions = fn(10843).ClearAfterOptions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5191);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClearAft
     }
     const _Symbol3 = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const mapped = ClearAfterOptions.map((value) => closure_1_7(onChange(6539).TableRadioRow, { value, label: first(10918)(value) }, value));
+      const mapped = ClearAfterOptions.map((value) => closure_1_7(onChange(6539).TableRadioRow, { value, label: first(10934)(value) }, value));
       cResult[5] = mapped;
       let tmp15 = mapped;
     } else {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClearAft
   const intl2 = util.intl;
   obj3.title = intl2.string(util.t.E45wvP);
   obj3.defaultValue = initialValue;
-  obj3.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(10918)(value) }, value));
+  obj3.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(10934)(value) }, value));
   const items = [closure_7(TableRadioGroup.TableRadioGroup, obj3), ];
   const obj4 = { style: tmp.buttonWrapper, children: null };
   const obj5 = {

@@ -1,6 +1,6 @@
-// === Module 18827: RolePermissionTemplatesActionSheet ===
+// === Module 18831: RolePermissionTemplatesActionSheet ===
 
-// Module 18827 (RolePermissionTemplatesActionSheet)
+// Module 18831 (RolePermissionTemplatesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
 import ActionSheet from "ActionSheet" /* 7175 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 18805 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 18809 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
       tmp18 = tmp21;
     }
     const obj5 = { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId };
-    const tmp17 = jsx(onPermissionsChanged(18805), { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
+    const tmp17 = jsx(onPermissionsChanged(18809), { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
     cResult[8] = guildId;
     cResult[9] = tmp10;
     cResult[10] = tmp17;

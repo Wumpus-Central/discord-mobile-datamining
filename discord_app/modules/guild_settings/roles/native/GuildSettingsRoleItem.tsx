@@ -1,6 +1,6 @@
-// === Module 18814: GuildSettingsRoleItem ===
+// === Module 18818: GuildSettingsRoleItem ===
 
-// Module 18814 (GuildSettingsRoleItem)
+// Module 18818 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 587 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6377 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -958,7 +958,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               } else if (closure_1_5) {
                 c1 = 1;
                 c2 = 1;
-                const obj6 = { value: tmp2(11126).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                const obj6 = { value: tmp2(11145).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                 return obj6;
               }
             } else if (arg0 === 1) {
@@ -1100,7 +1100,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(11126).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(11145).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {

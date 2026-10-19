@@ -1,6 +1,6 @@
-// === Module 15200: void/Badge/Badge ===
+// === Module 15204: void/Badge/Badge ===
 
-// Module 15200 (void/Badge/Badge)
+// Module 15204 (void/Badge/Badge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

@@ -1,6 +1,6 @@
-// === Module 12929: MemberActionChatInputBanner ===
+// === Module 12937: MemberActionChatInputBanner ===
 
-// Module 12929 (MemberActionChatInputBanner)
+// Module 12937 (MemberActionChatInputBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -13,11 +13,11 @@ import Text_Text from "Text/Text" /* 5187 */;
 import timing from "timing" /* 5192 */;
 import useChannelNameDefault from "useChannelName" /* 5521 */;
 import Pressables from "Pressables" /* 6462 */;
-import _modDef12520 from "module_12520" /* 12520 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 12927 */;
-import _modDef12928 from "module_12928" /* 12928 */;
-import MemberActionUtils from "MemberActionUtils" /* 12930 */;
-import _modDef12931 from "module_12931" /* 12931 */;
+import _modDef12537 from "module_12537" /* 12537 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 12935 */;
+import _modDef12936 from "module_12936" /* 12936 */;
+import MemberActionUtils from "MemberActionUtils" /* 12938 */;
+import _modDef12939 from "module_12939" /* 12939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
@@ -129,7 +129,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   emoji = emoji.emoji;
   const tmp3 = closure_15();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { size: Text(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12520 };
+    const obj2 = { size: Text(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12537 };
     const tmp7 = closure_12(Text(1202).Icon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -238,7 +238,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   emoji = emoji.emoji;
   let id;
   const tmp = closure_15();
-  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1202).Icon, { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12520 }) };
+  const obj = { style: tmp.emojiPlaceholder, children: closure_12(id(1202).Icon, { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12537 }) };
   const tmp6 = closure_12(View, obj);
   id = undefined;
   if (emoji != null) {
@@ -247,7 +247,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (emoji != null) {
     const name = emoji.name;
   }
-  const obj2 = { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12520 };
+  const obj2 = { size: id(1202).Icon.Sizes.REFRESH_SMALL_16, source: _modDef12537 };
   const items = [EmojiStore];
   const items1 = [id];
   const stateFromStores = id(573).useStateFromStores(items, () => {
@@ -540,7 +540,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
                     items[1] = map1(View, obj3);
                     let tmp6Result = completed;
                     if (completed) {
-                      const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12931 };
+                      const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12939 };
                       tmp6Result = __initData(native.Icon, obj6);
                     }
                     items[2] = tmp6Result;
@@ -791,7 +791,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         items[1] = map1(View, obj3);
         let tmp6Result = completed;
         if (completed) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12931 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12939 };
           tmp6Result = __initData(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -838,7 +838,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
             obj3.children = items1;
             items[1] = map1(View, obj3);
             const obj7 = { style: closure_1.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef12928 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef12936 };
             obj7.children = __initData(native.Icon, obj8);
             items[2] = __initData(View, obj7);
             obj.children = items;

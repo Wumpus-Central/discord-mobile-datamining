@@ -1,9 +1,9 @@
-// === Module 15476: VoiceNotificationManager ===
+// === Module 15480: VoiceNotificationManager ===
 
-// Module 15476 (VoiceNotificationManager)
+// Module 15480 (VoiceNotificationManager)
 import nativeDefault from "native" /* 587 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 10002 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11523 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11541 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
 import ApplicationStore from "ApplicationStore" /* 5540 */;
@@ -25,7 +25,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "Set", connectionState: "data", selfMute: false, deafened: 2472, isPushToTalk: 2473, embeddedActivity: 2474, isStreaming: 2475 };
+    obj.state = { channelId: "Set", connectionState: "data", selfMute: false, deafened: "\u03BA\u03AC\u03BB\u03B5", isPushToTalk: "\u039A\u03B9\u03BD\u03AD\u03B6\u03B9\u03BA\u03BF \u03BB\u03AC\u03C7\u03B1\u03BD\u03BF", embeddedActivity: "\u03BB\u03B1\u03C7\u03B1\u03BD\u03AF\u03B4\u03B1", isStreaming: "\u03BB\u03AC\u03C7\u03B1\u03BD\u03BF" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       const state = RTCConnectionStore.getState();
@@ -216,7 +216,7 @@ prototype["terminate"] = function terminate() {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "Set", connectionState: "data", selfMute: false, deafened: 2472, isPushToTalk: 2473, embeddedActivity: 2474, isStreaming: 2475 };
+obj2.state = { channelId: "Set", connectionState: "data", selfMute: false, deafened: "\u03BA\u03AC\u03BB\u03B5", isPushToTalk: "\u039A\u03B9\u03BD\u03AD\u03B6\u03B9\u03BA\u03BF \u03BB\u03AC\u03C7\u03B1\u03BD\u03BF", embeddedActivity: "\u03BB\u03B1\u03C7\u03B1\u03BD\u03AF\u03B4\u03B1", isStreaming: "\u03BB\u03AC\u03C7\u03B1\u03BD\u03BF" };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   const state = RTCConnectionStore.getState();

@@ -1,13 +1,13 @@
-// === Module 18639: SharedSpacesWarningManager ===
+// === Module 18643: SharedSpacesWarningManager ===
 
-// Module 18639 (SharedSpacesWarningManager)
+// Module 18643 (SharedSpacesWarningManager)
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 14809 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 18640 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 14813 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 18644 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5209 */;
 import RelationshipStore from "RelationshipStore" /* 4855 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 14806 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 14810 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7085 */;
 
 require = fn;
@@ -62,7 +62,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(14808);
+const SharedSpacesWarningStore = fn(14812);
 ({ isBlockedWarningQueued: hasOwnProperty, dequeueBlockWarning: metroRequire, gdmBlockedWarningInCooldown: closure_7, voiceBlockedWarningInCooldownForUsers: closure_8 } = SharedSpacesWarningStore);
 const prototype = function SharedSpacesWarningManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

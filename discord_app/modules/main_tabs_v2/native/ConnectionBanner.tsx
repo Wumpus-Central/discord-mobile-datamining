@@ -1,6 +1,6 @@
-// === Module 17537: ConnectionBanner ===
+// === Module 17541: ConnectionBanner ===
 
-// Module 17537 (ConnectionBanner)
+// Module 17541 (ConnectionBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
@@ -12,20 +12,20 @@ import Text_Text from "Text/Text" /* 5187 */;
 import spring from "spring" /* 5478 */;
 import LinearGradientDefault from "LinearGradient" /* 5491 */;
 import _modDef6520 from "module_6520" /* 6520 */;
-import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 14762 */;
-import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 17538 */;
-import ConnectionFineIcon from "ConnectionFineIcon" /* 17540 */;
+import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 14766 */;
+import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 17542 */;
+import ConnectionFineIcon from "ConnectionFineIcon" /* 17544 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 14761 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 14765 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const constants = fn(14761).ConnectivityIndicatorState;
-const YouBarConstants = fn(16136);
+const constants = fn(14765).ConnectivityIndicatorState;
+const YouBarConstants = fn(16140);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1087).AnalyticEvents;

@@ -1,18 +1,18 @@
-// === Module 13006: SearchTabsLayoutStore ===
+// === Module 13014: SearchTabsLayoutStore ===
 
-// Module 13006 (SearchTabsLayoutStore)
+// Module 13014 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 12983 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12984 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 12985 */;
-import SearchUtils from "SearchUtils" /* 12987 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 12991 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12992 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 12993 */;
+import SearchUtils from "SearchUtils" /* 12995 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import SearchMessageStore from "SearchMessageStore" /* 6340 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13007 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 13008 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13009 */;
-import SearchQueryStore from "SearchQueryStore" /* 12994 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13015 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 13016 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13017 */;
+import SearchQueryStore from "SearchQueryStore" /* 13002 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {

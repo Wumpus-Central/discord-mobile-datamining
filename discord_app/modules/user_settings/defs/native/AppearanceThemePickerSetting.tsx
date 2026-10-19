@@ -1,6 +1,6 @@
-// === Module 16321: AppearanceThemePickerSetting ===
+// === Module 16325: AppearanceThemePickerSetting ===
 
-// Module 16321 (AppearanceThemePickerSetting)
+// Module 16325 (AppearanceThemePickerSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import ThemeStore from "ThemeStore" /* 1207 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSingleThemePickerVisible() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ const route = SettingBuilders.createRoute({
     const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   }),
-  useTrailing: fn(16315).useAppearanceSettingTrailing,
+  useTrailing: fn(16319).useAppearanceSettingTrailing,
   screen: {
     route: fn(1087).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

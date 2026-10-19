@@ -1,6 +1,6 @@
-// === Module 16167: QuestModalContentCloudBackground ===
+// === Module 16171: QuestModalContentCloudBackground ===
 
-// Module 16167 (QuestModalContentCloudBackground)
+// Module 16171 (QuestModalContentCloudBackground)
 import c from "c" /* 576 */;
 import themes from "themes" /* 4920 */;
 import useTheme from "useTheme" /* 5127 */;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestMod
               if (cResult[11] === tmp16) {
                 let tmp17 = cResult[12];
               }
-              const tmp18Result = importDefault(tmp6 ? 16168 : 16169);
+              const tmp18Result = importDefault(tmp6 ? 16172 : 16173);
               if (cResult[13] === str) {
                 if (cResult[14] === tmp17) {
                   if (cResult[15] === tmp18Result) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestMod
     const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj6.style = items2;
-    obj6.source = importDefault(isThemeDarkResult ? 16168 : 16169);
+    obj6.source = importDefault(isThemeDarkResult ? 16172 : 16173);
     obj6.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj6);
     obj3.children = items1;

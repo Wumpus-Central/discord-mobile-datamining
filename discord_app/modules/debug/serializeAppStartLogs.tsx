@@ -1,6 +1,6 @@
-// === Module 13572: serializeAppStartLogs ===
+// === Module 13576: serializeAppStartLogs ===
 
-// Module 13572 (serializeAppStartLogs)
+// Module 13576 (serializeAppStartLogs)
 import _modDef12 from "module_12" /* 12 */;
 import ThreadUtils from "ThreadUtils" /* 8190 */;
 import size from "module_2" /* 2 */;

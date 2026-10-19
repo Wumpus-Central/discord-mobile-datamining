@@ -1,6 +1,6 @@
-// === Module 14178: UserProfileConnections ===
+// === Module 14182: UserProfileConnections ===
 
-// Module 14178 (UserProfileConnections)
+// Module 14182 (UserProfileConnections)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -16,10 +16,10 @@ import TableRowGroup from "TableRowGroup" /* 6542 */;
 import ClipboardUtils from "ClipboardUtils" /* 7162 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7180 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8764 */;
-import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11128 */;
-import _modDef11133 from "module_11133" /* 11133 */;
-import _modDef11134 from "module_11134" /* 11134 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 14182 */;
+import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11147 */;
+import _modDef11152 from "module_11152" /* 11152 */;
+import _modDef11153 from "module_11153" /* 11153 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 14186 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 import StreamerModeStore from "StreamerModeStore" /* 5058 */;
@@ -120,7 +120,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
         cResult[11] = tmp24;
         tmp21 = tmp24;
       }
-      const obj4 = { source: _modDef11134, color: WHITE };
+      const obj4 = { source: _modDef11153, color: WHITE };
       const merged = Object.assign(tmp6);
       const tmp20 = __initData(native2.Icon, obj4);
       cResult[5] = WHITE;
@@ -128,7 +128,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       cResult[7] = tmp20;
       tmp15 = tmp20;
     }
-    const obj5 = { source: _modDef11133, color: PLATFORM_TWITTER };
+    const obj5 = { source: _modDef11152, color: PLATFORM_TWITTER };
     const merged1 = Object.assign(tmp6);
     const tmp14 = __initData(native2.Icon, obj5);
     cResult[2] = PLATFORM_TWITTER;
@@ -154,10 +154,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11133, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11152, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [__initData(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11134, color: WHITE };
+    const obj5 = { source: _modDef11153, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = __initData(native2.Icon, obj5);
     obj3.children = items;
@@ -1321,7 +1321,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(14179)(userId));
+  ({ connections, appIdentities } = theme(14183)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {

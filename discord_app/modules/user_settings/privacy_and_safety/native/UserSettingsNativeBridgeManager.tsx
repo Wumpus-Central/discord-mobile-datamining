@@ -1,6 +1,6 @@
-// === Module 19040: UserSettingsNativeBridgeManager ===
+// === Module 19044: UserSettingsNativeBridgeManager ===
 
-// Module 19040 (UserSettingsNativeBridgeManager)
+// Module 19044 (UserSettingsNativeBridgeManager)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;

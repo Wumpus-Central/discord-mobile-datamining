@@ -1,6 +1,6 @@
-// === Module 11679: ConjureHistoryFormat ===
+// === Module 11698: ConjureHistoryFormat ===
 
-// Module 11679 (ConjureHistoryFormat)
+// Module 11698 (ConjureHistoryFormat)
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import getTimestampString from "getTimestampString" /* 5548 */;

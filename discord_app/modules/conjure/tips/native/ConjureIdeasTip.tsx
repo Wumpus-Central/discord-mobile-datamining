@@ -1,16 +1,16 @@
-// === Module 12150: ConjureIdeasTip ===
+// === Module 12168: ConjureIdeasTip ===
 
-// Module 12150 (ConjureIdeasTip)
+// Module 12168 (ConjureIdeasTip)
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import LightbulbIcon from "LightbulbIcon" /* 9863 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 12141 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 12160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(12132).CONJURE_IDEAS_TIP_BASE);
+const merged = Object.assign(fn(12151).CONJURE_IDEAS_TIP_BASE);
 obj.render = function render(arg0, context) {
   context = context.context;
   const obj = { icon: LightbulbIcon.LightbulbIcon, onDismiss: context.dismiss, children: null };

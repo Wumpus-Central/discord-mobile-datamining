@@ -1,6 +1,6 @@
-// === Module 12506: usePendingFolderGuildIds ===
+// === Module 12523: usePendingFolderGuildIds ===
 
-// Module 12506 (usePendingFolderGuildIds)
+// Module 12523 (usePendingFolderGuildIds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5035 */;

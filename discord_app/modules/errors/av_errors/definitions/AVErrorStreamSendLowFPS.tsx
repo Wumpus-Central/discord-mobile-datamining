@@ -1,12 +1,12 @@
-// === Module 19057: AVErrorStreamSendLowFPS ===
+// === Module 19061: AVErrorStreamSendLowFPS ===
 
-// Module 19057 (AVErrorStreamSendLowFPS)
+// Module 19061 (AVErrorStreamSendLowFPS)
 import DurationsDefault from "Durations" /* 1104 */;
 import StreamQualityUtils from "StreamQualityUtils" /* 5370 */;
 import AVError from "AVError" /* 5389 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6156 */;
-import AVErrorContext from "AVErrorContext" /* 19051 */;
-import AVErrorUtils from "AVErrorUtils" /* 19054 */;
+import AVErrorContext from "AVErrorContext" /* 19055 */;
+import AVErrorUtils from "AVErrorUtils" /* 19058 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6153 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7694 */;

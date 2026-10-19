@@ -1,6 +1,6 @@
-// === Module 13491: useWelcomeScreenEnabled ===
+// === Module 13496: useWelcomeScreenEnabled ===
 
-// Module 13491 (useWelcomeScreenEnabled)
+// Module 13496 (useWelcomeScreenEnabled)
 import Constants from "Constants" /* 1087 */;
 import ChannelRecord from "ChannelRecord" /* 2072 */;
 import ChannelStore from "ChannelStore" /* 2068 */;

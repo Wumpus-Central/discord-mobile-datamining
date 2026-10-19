@@ -1,6 +1,6 @@
-// === Module 14670: GuildBoostingMarketingBoosterRecognitionCards ===
+// === Module 14674: GuildBoostingMarketingBoosterRecognitionCards ===
 
-// Module 14670 (GuildBoostingMarketingBoosterRecognitionCards)
+// Module 14674 (GuildBoostingMarketingBoosterRecognitionCards)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,11 +8,11 @@ import Text_Text from "Text/Text" /* 5187 */;
 import ShieldUserIcon from "ShieldUserIcon" /* 8895 */;
 import HeartIcon from "HeartIcon" /* 9269 */;
 import BoostGemIcon from "BoostGemIcon" /* 9709 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 14596 */;
-import _modDef14671 from "module_14671" /* 14671 */;
-import _modDef14672 from "module_14672" /* 14672 */;
-import _modDef14673 from "module_14673" /* 14673 */;
-import _modDef14674 from "module_14674" /* 14674 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 14600 */;
+import _modDef14675 from "module_14675" /* 14675 */;
+import _modDef14676 from "module_14676" /* 14676 */;
+import _modDef14677 from "module_14677" /* 14677 */;
+import _modDef14678 from "module_14678" /* 14678 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
     tmp7 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { icon: _modDef14671, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+    const obj3 = { icon: _modDef14675, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
     const intl2 = util.intl;
     obj3.children = intl2.string(util.t.TZigSO);
     const tmp14 = React4(closure_7, obj3);
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
     tmp10 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { icon: _modDef14672, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+    const obj4 = { icon: _modDef14676, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
     const intl3 = util.intl;
     obj4.children = intl3.string(util.t.hjQuV2);
     const tmp19 = React4(closure_7, obj4);
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
     tmp15 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { icon: _modDef14673, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+    const obj5 = { icon: _modDef14677, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
     const intl4 = util.intl;
     obj5.children = intl4.string(util.t["2RUcaM"]);
     const tmp24 = React4(closure_7, obj5);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
     tmp20 = cResult[5];
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj6 = { icon: _modDef14674, IconComponent: HeartIcon.HeartIcon, children: null };
+    const obj6 = { icon: _modDef14678, IconComponent: HeartIcon.HeartIcon, children: null };
     const intl5 = util.intl;
     obj6.children = intl5.string(util.t.bJoZKV);
     const tmp29 = React4(closure_7, obj6);
@@ -188,19 +188,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   obj2.children = intl.string(util.t.IzKs3o);
   const items = [React4(Text_Text.Heading, obj2), ];
   const obj3 = { style: tmp.recognitionCardsContainer, children: null };
-  const obj4 = { icon: _modDef14671, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  const obj4 = { icon: _modDef14675, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.TZigSO);
   const items1 = [React4(closure_7, obj4), , , ];
-  const obj5 = { icon: _modDef14672, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  const obj5 = { icon: _modDef14676, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hjQuV2);
   items1[1] = React4(closure_7, obj5);
-  const obj6 = { icon: _modDef14673, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  const obj6 = { icon: _modDef14677, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
   obj6.children = intl4.string(util.t["2RUcaM"]);
   items1[2] = React4(closure_7, obj6);
-  const obj7 = { icon: _modDef14674, IconComponent: HeartIcon.HeartIcon, children: null };
+  const obj7 = { icon: _modDef14678, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t.bJoZKV);
   items1[3] = React4(closure_7, obj7);

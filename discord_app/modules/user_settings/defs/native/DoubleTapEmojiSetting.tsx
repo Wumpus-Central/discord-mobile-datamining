@@ -1,6 +1,6 @@
-// === Module 16993: DoubleTapEmojiSetting ===
+// === Module 16997: DoubleTapEmojiSetting ===
 
-// Module 16993 (DoubleTapEmojiSetting)
+// Module 16997 (DoubleTapEmojiSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -153,7 +153,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDoubleTap
 });
 ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDoubleTapEmojiDescription() {
   const cResult = c.c(2);
   const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;

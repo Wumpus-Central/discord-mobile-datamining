@@ -1,6 +1,6 @@
-// === Module 11916: useCommandContext ===
+// === Module 11935: useCommandContext ===
 
-// Module 11916 (useCommandContext)
+// Module 11935 (useCommandContext)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;

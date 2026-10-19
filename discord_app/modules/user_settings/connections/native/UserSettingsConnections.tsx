@@ -1,22 +1,22 @@
-// === Module 16003: UserSettingsConnections ===
+// === Module 16007: UserSettingsConnections ===
 
-// Module 16003 (UserSettingsConnections)
+// Module 16007 (UserSettingsConnections)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import useThemeDefault from "useTheme" /* 5127 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7136 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 9507 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14180 */;
-import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 16007 */;
-import ConnectedAccountDefault from "ConnectedAccount" /* 16008 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14184 */;
+import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 16011 */;
+import ConnectedAccountDefault from "ConnectedAccount" /* 16012 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7074 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6017 */;
 import LocaleStore from "LocaleStore" /* 2132 */;
 
-const ConnectionsEmptyStateUpsellDefault = tmp2(16004);
+const ConnectionsEmptyStateUpsellDefault = tmp2(16008);
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const FetchState = fn(7074).FetchState;
@@ -61,7 +61,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   const effect2 = authorizedAppsFetchState.useEffect(() => {
     if (null != selectedPlatformType) {
       if (-1 === selectedPlatformType) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16002, dependencyMap.paths), "AddConnection");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16006, dependencyMap.paths), "AddConnection");
       } else {
         const obj = { platformType: selectedPlatformType, location: AnalyticsLocations.USER_SETTINGS };
         authorizeConnectionDefault(obj);

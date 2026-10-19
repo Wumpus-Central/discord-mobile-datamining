@@ -1,8 +1,8 @@
-// === Module 13628: preloadChannelAppFrame ===
+// === Module 13632: preloadChannelAppFrame ===
 
-// Module 13628 (preloadChannelAppFrame)
+// Module 13632 (preloadChannelAppFrame)
 import getURLForApplicationDefault from "getURLForApplication" /* 6299 */;
-import leaveFrame from "leaveFrame" /* 11020 */;
+import leaveFrame from "leaveFrame" /* 11041 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import FramesStore from "FramesStore" /* 6295 */;
@@ -41,16 +41,15 @@ export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
     }
   }
   if (null != tmp5) {
-    ({ applicationId, frameId } = tmp5);
-    ({ channel, surface } = tmp5);
+    ({ channel, applicationId, frameId } = tmp5);
     if (map.has(frameId)) {
       closure_130_0 = frameId;
       value = map.get(frameId);
       if (value == null) {
-        const obj3 = { stopTimer: null, launchRequestId: "a" };
+        const obj4 = { stopTimer: null, launchRequestId: "r" };
         const timeout = new frameId(2063).Timeout();
-        obj3.stopTimer = timeout;
-        value = obj3;
+        obj4.stopTimer = timeout;
+        value = obj4;
       }
       const result = map.set(frameId, value);
       const stopTimer2 = value.stopTimer;
@@ -76,58 +75,64 @@ export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
       });
     } else if (null == FramesStore.getFrame(frameId)) {
       if (PermissionStore.can(constants2.VIEW_CHANNEL, channel)) {
-        if (null != getURLForApplicationDefault(applicationId)) {
-          closure_129_0 = frameId;
-          value3 = map.get(frameId);
-          if (value3 == null) {
-            const obj5 = { stopTimer: null, launchRequestId: "a" };
-            const timeout1 = new frameId(2063).Timeout();
-            obj5.stopTimer = timeout1;
-            value3 = obj5;
-          }
-          const result1 = map.set(frameId, value3);
-          let stopTimer = value3.stopTimer;
-          stopTimer.start(5000, () => {
-            value = map.get(frameId);
-            if (null != value) {
-              const stopTimer = value.stopTimer;
-              stopTimer.stop();
-              map.delete(frameId);
-              let tmp5 = null != value.launchRequestId;
-              if (tmp5) {
-                const frame = FramesStore.getFrame(frameId);
+        if (!obj3.isChannelContentGated(channel)) {
+          if (!tmp7Result.isChannelSpoilerGated(channel)) {
+            if (null != getURLForApplicationDefault(applicationId)) {
+              closure_129_0 = frameId;
+              value3 = map.get(frameId);
+              if (value3 == null) {
+                const obj5 = { stopTimer: null, launchRequestId: "r" };
+                const timeout1 = new frameId(2063).Timeout();
+                obj5.stopTimer = timeout1;
+                value3 = obj5;
+              }
+              const result1 = map.set(frameId, value3);
+              let stopTimer = value3.stopTimer;
+              stopTimer.start(5000, () => {
+                value = map.get(frameId);
+                if (null != value) {
+                  const stopTimer = value.stopTimer;
+                  stopTimer.stop();
+                  map.delete(frameId);
+                  let tmp5 = null != value.launchRequestId;
+                  if (tmp5) {
+                    const frame = FramesStore.getFrame(frameId);
+                    let launchRequestId;
+                    if (frame != null) {
+                      launchRequestId = frame.launchRequestId;
+                    }
+                    tmp5 = launchRequestId === value.launchRequestId;
+                  }
+                  if (tmp5) {
+                    leaveFrame.leaveFrame(frameId);
+                  }
+                }
+              });
+              const obj6 = { applicationId, surface: tmp5.surface, showErrorModal: false };
+              const tmp7Result2 = frameId(11044);
+              frameId(11044).launchFrame(obj6).catch(() => {
+                value = map.get(frameId);
+                if (value != null) {
+                  const stopTimer = value.stopTimer;
+                  stopTimer.stop();
+                }
+                map.delete(frameId);
+              });
+              value4 = map.get(frameId);
+              if (null != value4) {
+                let frame = FramesStore.getFrame(frameId);
                 let launchRequestId;
                 if (frame != null) {
                   launchRequestId = frame.launchRequestId;
                 }
-                tmp5 = launchRequestId === value.launchRequestId;
+                value4.launchRequestId = launchRequestId;
               }
-              if (tmp5) {
-                leaveFrame.leaveFrame(frameId);
-              }
+              const launchFrameResult = frameId(11044).launchFrame(obj6);
             }
-          });
-          const obj6 = { applicationId, surface, showErrorModal: false };
-          const obj4 = frameId(11023);
-          frameId(11023).launchFrame(obj6).catch(() => {
-            value = map.get(frameId);
-            if (value != null) {
-              const stopTimer = value.stopTimer;
-              stopTimer.stop();
-            }
-            map.delete(frameId);
-          });
-          value4 = map.get(frameId);
-          if (null != value4) {
-            let frame = FramesStore.getFrame(frameId);
-            let launchRequestId;
-            if (frame != null) {
-              launchRequestId = frame.launchRequestId;
-            }
-            value4.launchRequestId = launchRequestId;
           }
-          const launchFrameResult = frameId(11023).launchFrame(obj6);
+          tmp7Result = frameId(6200);
         }
+        obj3 = frameId(6180);
       }
     }
   }

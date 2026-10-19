@@ -1,10 +1,10 @@
-// === Module 16517: DisplayMediaUploadsSetting ===
+// === Module 16521: DisplayMediaUploadsSetting ===
 
-// Module 16517 (DisplayMediaUploadsSetting)
+// Module 16521 (DisplayMediaUploadsSetting)
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import SettingsConstants from "SettingsConstants" /* 8260 */;
-import SettingBuilders from "SettingBuilders" /* 11065 */;
+import SettingBuilders from "SettingBuilders" /* 11084 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

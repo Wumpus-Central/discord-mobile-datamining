@@ -1,9 +1,9 @@
-// === Module 18247: VoiceChannelAppActionCreators ===
+// === Module 18251: VoiceChannelAppActionCreators ===
 
-// Module 18247 (VoiceChannelAppActionCreators)
+// Module 18251 (VoiceChannelAppActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import leaveFrame from "leaveFrame" /* 11020 */;
-import voiceChannelAppSession from "voiceChannelAppSession" /* 18246 */;
+import leaveFrame from "leaveFrame" /* 11041 */;
+import voiceChannelAppSession from "voiceChannelAppSession" /* 18250 */;
 import FramesStore from "FramesStore" /* 6295 */;
 
 require = fn;

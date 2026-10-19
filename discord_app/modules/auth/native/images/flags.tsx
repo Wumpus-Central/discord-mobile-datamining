@@ -1,10 +1,6 @@
-// === Module 16480: flags ===
+// === Module 16484: flags ===
 
-// Module 16480 (flags)
-import _mod16481 from "module_16481" /* 16481 */;
-import _mod16482 from "module_16482" /* 16482 */;
-import _mod16483 from "module_16483" /* 16483 */;
-import _mod16484 from "module_16484" /* 16484 */;
+// Module 16484 (flags)
 import _mod16485 from "module_16485" /* 16485 */;
 import _mod16486 from "module_16486" /* 16486 */;
 import _mod16487 from "module_16487" /* 16487 */;
@@ -32,8 +28,12 @@ import _mod16508 from "module_16508" /* 16508 */;
 import _mod16509 from "module_16509" /* 16509 */;
 import _mod16510 from "module_16510" /* 16510 */;
 import _mod16511 from "module_16511" /* 16511 */;
+import _mod16512 from "module_16512" /* 16512 */;
+import _mod16513 from "module_16513" /* 16513 */;
+import _mod16514 from "module_16514" /* 16514 */;
+import _mod16515 from "module_16515" /* 16515 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = { bg: _mod16481, cs: _mod16482, da: _mod16483, de: _mod16484, el: _mod16485, "en-GB": _mod16486, "en-US": _mod16487, "es-ES": _mod16488, "es-419": _mod16489, fi: _mod16490, fr: _mod16491, hi: _mod16492, hr: _mod16493, hu: _mod16494, it: _mod16495, ja: _mod16496, ko: _mod16497, lt: _mod16498, nl: _mod16499, no: _mod16500, pl: _mod16501, "pt-BR": _mod16502, ro: _mod16503, ru: _mod16504, "sv-SE": _mod16505, th: _mod16506, tr: _mod16507, uk: _mod16508, vi: _mod16509, "zh-CN": _mod16510, "zh-TW": _mod16511 };
+export const flags = { bg: _mod16485, cs: _mod16486, da: _mod16487, de: _mod16488, el: _mod16489, "en-GB": _mod16490, "en-US": _mod16491, "es-ES": _mod16492, "es-419": _mod16493, fi: _mod16494, fr: _mod16495, hi: _mod16496, hr: _mod16497, hu: _mod16498, it: _mod16499, ja: _mod16500, ko: _mod16501, lt: _mod16502, nl: _mod16503, no: _mod16504, pl: _mod16505, "pt-BR": _mod16506, ro: _mod16507, ru: _mod16508, "sv-SE": _mod16509, th: _mod16510, tr: _mod16511, uk: _mod16512, vi: _mod16513, "zh-CN": _mod16514, "zh-TW": _mod16515 };

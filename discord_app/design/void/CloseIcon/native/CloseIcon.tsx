@@ -1,6 +1,6 @@
-// === Module 15166: CloseIcon ===
+// === Module 15170: CloseIcon ===
 
-// Module 15166 (CloseIcon)
+// Module 15170 (CloseIcon)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

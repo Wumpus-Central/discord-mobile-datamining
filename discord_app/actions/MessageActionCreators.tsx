@@ -20,7 +20,7 @@ import getInviteURLDefault from "getInviteURL" /* 8966 */;
 import createNonce from "createNonce" /* 10106 */;
 import createMessage from "createMessage" /* 10111 */;
 import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10401 */;
-import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 14401 */;
+import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 14405 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6013 */;
@@ -1089,7 +1089,7 @@ let obj17 = {
               } else {
                 dependencyMap = 1;
                 c4 = 1;
-                const obj6 = { value: tmp2(14400)(closure_0), done: false };
+                const obj6 = { value: tmp2(14404)(closure_0), done: false };
                 return obj6;
               }
             }
@@ -1736,13 +1736,13 @@ let obj17 = {
               logger.info("Queueing message to be sent LogId:" + rounded);
               emojiUsed(inviteAnalyticsMetadata[72]).enqueue(channel, (ok) => {
                 if (ok.ok) {
-                  id(14401).donateSentMessage(content, channelId);
+                  id(14405).donateSentMessage(content, channelId);
                   let obj4 = { sendAnalytics: null, poll: null };
                   let obj5 = { duration: tmp, queueSize: length };
                   obj4.sendAnalytics = obj5;
                   obj4.poll = poll;
                   closure_4_55.receiveMessage(channelId, ok.body, true, obj4);
-                  const obj15 = id(14401);
+                  const obj15 = id(14405);
                   request = request.getRequest(id(11).cast(channelId));
                   if (null != request) {
                     ({ guildId, userId, applicationStatus } = request);

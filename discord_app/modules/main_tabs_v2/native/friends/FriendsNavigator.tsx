@@ -1,6 +1,6 @@
-// === Module 17892: FriendsNavigator ===
+// === Module 17896: FriendsNavigator ===
 
-// Module 17892 (FriendsNavigator)
+// Module 17896 (FriendsNavigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,7 +9,7 @@ import native from "native" /* 4922 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5068 */;
 import HeaderShared from "HeaderShared" /* 9599 */;
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9605 */;
-import _modDef13282 from "module_13282" /* 13282 */;
+import _modDef13290 from "module_13290" /* 13290 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,7 +39,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reques
   }
   if (cResult[1] !== onPress) {
     const obj2 = { isModal: true, children: null };
-    const obj3 = { source: _modDef13282, onPress, accessibilityLabel: first };
+    const obj3 = { source: _modDef13290, onPress, accessibilityLabel: first };
     obj2.children = React5(HeaderShared.HeaderIconButton, obj3);
     const tmp10 = React5(PressableNavigatorButtonWrapperDefault, obj2);
     cResult[1] = onPress;
@@ -51,7 +51,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reques
   return tmp6;
 }) : (function RequestsSettingsModalButton(onPress) {
   const obj = { isModal: true, children: null };
-  const obj2 = { source: _modDef13282, onPress: onPress.onPress, accessibilityLabel: null };
+  const obj2 = { source: _modDef13290, onPress: onPress.onPress, accessibilityLabel: null };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["3D5yo/"]);
   obj.children = React5(HeaderShared.HeaderIconButton, obj2);
@@ -103,7 +103,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
               return obj;
             },
         getComponent() {
-              return closure_0(17893).default;
+              return closure_0(17897).default;
             }
       };
       const tmp13 = closure_7(closure_9.Screen, obj2);
@@ -120,7 +120,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj4.title = intl.string(tmp(1128).t.jD1qzM);
       obj3.options = obj4;
       obj3.getComponent = function getComponent() {
-        return closure_0(17899).default;
+        return closure_0(17903).default;
       };
       const tmp17 = closure_7(closure_9.Screen, obj3);
       cResult[6] = tmp17;
@@ -136,7 +136,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj6.title = intl2.string(tmp(1128).t["3hF1W4"]);
       obj5.options = obj6;
       obj5.getComponent = function getComponent() {
-        return closure_0(17902).default;
+        return closure_0(17906).default;
       };
       const tmp21 = closure_7(closure_9.Screen, obj5);
       cResult[7] = tmp21;
@@ -152,7 +152,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj8.title = intl3.string(tmp(1128).t.w5uwoI);
       obj7.options = obj8;
       obj7.getComponent = function getComponent() {
-        return closure_0(17903).default;
+        return closure_0(17907).default;
       };
       const tmp25 = closure_7(closure_9.Screen, obj7);
       cResult[8] = tmp25;
@@ -168,7 +168,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj10.title = intl4.string(tmp(1128).t.zIJnA6);
       obj9.options = obj10;
       obj9.getComponent = function getComponent() {
-        return closure_0(17904).default;
+        return closure_0(17908).default;
       };
       const tmp29 = closure_7(closure_9.Screen, obj9);
       cResult[9] = tmp29;
@@ -184,7 +184,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj12.title = intl5.string(tmp(1128).t.QzVsOs);
       obj11.options = obj12;
       obj11.getComponent = function getComponent() {
-        return closure_0(17915).default;
+        return closure_0(17919).default;
       };
       const tmp33 = closure_7(closure_9.Screen, obj11);
       cResult[10] = tmp33;
@@ -200,7 +200,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj14.title = intl6.string(tmp(1128).t["1uAmCw"]);
       obj13.options = obj14;
       obj13.getComponent = function getComponent() {
-        return closure_0(17916).default;
+        return closure_0(17920).default;
       };
       const tmp37 = closure_7(closure_9.Screen, obj13);
       cResult[11] = tmp37;
@@ -216,7 +216,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj16.title = intl7.string(tmp(1128).t.XT4hVl);
       obj15.options = obj16;
       obj15.getComponent = function getComponent() {
-        return closure_0(17917).default;
+        return closure_0(17921).default;
       };
       const tmp41 = closure_7(closure_9.Screen, obj15);
       cResult[12] = tmp41;
@@ -243,7 +243,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
               return obj;
             },
         getComponent() {
-              return closure_0(17919).default;
+              return closure_0(17923).default;
             }
       };
       const tmp45 = closure_7(closure_9.Screen, obj17);
@@ -260,7 +260,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj19.title = intl8.string(tmp(1128).t.oHVeHc);
       obj18.options = obj19;
       obj18.getComponent = function getComponent() {
-        return closure_0(17922).default;
+        return closure_0(17926).default;
       };
       const tmp49 = closure_7(closure_9.Screen, obj18);
       cResult[14] = tmp49;
@@ -276,7 +276,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       obj21.title = intl9.string(tmp(1128).t.tFY5Zb);
       obj20.options = obj21;
       obj20.getComponent = function getComponent() {
-        return closure_0(17923).default;
+        return closure_0(17927).default;
       };
       const tmp53 = closure_7(closure_9.Screen, obj20);
       cResult[15] = tmp53;
@@ -407,7 +407,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
         return obj;
       },
       getComponent() {
-        return closure_0(17893).default;
+        return closure_0(17897).default;
       }
     }),
   ,
@@ -427,7 +427,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj5.title = intl.string(require("util").t.jD1qzM);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(17899).default;
+    return closure_0(17903).default;
   };
   items[1] = closure_7(closure_9.Screen, obj4);
   const obj6 = { name: "gdm", options: null, getComponent: null };
@@ -436,7 +436,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj7.title = intl2.string(require("util").t["3hF1W4"]);
   obj6.options = obj7;
   obj6.getComponent = function getComponent() {
-    return closure_0(17902).default;
+    return closure_0(17906).default;
   };
   items[2] = closure_7(closure_9.Screen, obj6);
   const obj8 = { name: "add-friend", options: null, getComponent: null };
@@ -445,7 +445,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj9.title = intl3.string(require("util").t.w5uwoI);
   obj8.options = obj9;
   obj8.getComponent = function getComponent() {
-    return closure_0(17903).default;
+    return closure_0(17907).default;
   };
   items[3] = closure_7(closure_9.Screen, obj8);
   const obj10 = { name: "add-friends", options: null, getComponent: null };
@@ -454,7 +454,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj11.title = intl4.string(require("util").t.zIJnA6);
   obj10.options = obj11;
   obj10.getComponent = function getComponent() {
-    return closure_0(17904).default;
+    return closure_0(17908).default;
   };
   items[4] = closure_7(closure_9.Screen, obj10);
   const obj12 = { name: "username-search", options: null, getComponent: null };
@@ -463,7 +463,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj13.title = intl5.string(require("util").t.QzVsOs);
   obj12.options = obj13;
   obj12.getComponent = function getComponent() {
-    return closure_0(17915).default;
+    return closure_0(17919).default;
   };
   items[5] = closure_7(closure_9.Screen, obj12);
   const obj14 = { name: "suggested-friends", options: null, getComponent: null };
@@ -472,7 +472,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj15.title = intl6.string(require("util").t["1uAmCw"]);
   obj14.options = obj15;
   obj14.getComponent = function getComponent() {
-    return closure_0(17916).default;
+    return closure_0(17920).default;
   };
   items[6] = closure_7(closure_9.Screen, obj14);
   const obj16 = { name: "requests-settings", options: null, getComponent: null };
@@ -481,7 +481,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj17.title = intl7.string(require("util").t.XT4hVl);
   obj16.options = obj17;
   obj16.getComponent = function getComponent() {
-    return closure_0(17917).default;
+    return closure_0(17921).default;
   };
   items[7] = closure_7(closure_9.Screen, obj16);
   items[8] = closure_7(closure_9.Screen, {
@@ -501,7 +501,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
       return obj;
     },
     getComponent() {
-      return closure_0(17919).default;
+      return closure_0(17923).default;
     }
   });
   const obj19 = { name: "spam-requests", options: null, getComponent: null };
@@ -510,7 +510,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj20.title = intl8.string(require("util").t.oHVeHc);
   obj19.options = obj20;
   obj19.getComponent = function getComponent() {
-    return closure_0(17922).default;
+    return closure_0(17926).default;
   };
   items[9] = closure_7(closure_9.Screen, obj19);
   const obj21 = { name: "ignored-user-requests", options: null, getComponent: null };
@@ -519,7 +519,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   obj22.title = intl9.string(require("util").t.tFY5Zb);
   obj21.options = obj22;
   obj21.getComponent = function getComponent() {
-    return closure_0(17923).default;
+    return closure_0(17927).default;
   };
   items[10] = closure_7(closure_9.Screen, obj21);
   obj2.children = items;

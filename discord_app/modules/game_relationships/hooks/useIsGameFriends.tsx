@@ -1,6 +1,6 @@
-// === Module 14166: useIsGameFriends ===
+// === Module 14170: useIsGameFriends ===
 
-// Module 14166 (useIsGameFriends)
+// Module 14170 (useIsGameFriends)
 import _slicedToArray from "module_32" /* 32 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7612 */;
 

@@ -1,6 +1,6 @@
-// === Module 18360: MediaPlaybackPanelUI ===
+// === Module 18364: MediaPlaybackPanelUI ===
 
-// Module 18360 (MediaPlaybackPanelUI)
+// Module 18364 (MediaPlaybackPanelUI)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
@@ -12,24 +12,24 @@ import spring from "spring" /* 5478 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6612 */;
 import LayerScope from "LayerScope" /* 7124 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9878 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10681 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 18149 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 18151 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 18359 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 18361 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10684 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 18153 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 18155 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 18363 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 18365 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11343 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 11361 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(15570);
+const MediaPlaybackPanelConstants = fn(15574);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(12915).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(12914).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(10681).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(10680).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5191);
 let obj2 = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };

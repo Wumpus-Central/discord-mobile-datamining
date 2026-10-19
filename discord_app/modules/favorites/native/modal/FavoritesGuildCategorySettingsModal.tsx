@@ -1,6 +1,6 @@
-// === Module 17238: FavoritesGuildCategorySettingsModal ===
+// === Module 17242: FavoritesGuildCategorySettingsModal ===
 
-// Module 17238 (FavoritesGuildCategorySettingsModal)
+// Module 17242 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;

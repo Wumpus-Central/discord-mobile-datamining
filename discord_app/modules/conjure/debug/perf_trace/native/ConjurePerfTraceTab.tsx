@@ -1,6 +1,6 @@
-// === Module 12331: ConjurePerfTraceTab ===
+// === Module 12348: ConjurePerfTraceTab ===
 
-// Module 12331 (ConjurePerfTraceTab)
+// Module 12348 (ConjurePerfTraceTab)
 import nativeDefault from "native" /* 587 */;
 import v1 from "v1" /* 1281 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
@@ -9,16 +9,16 @@ import Text_Text from "Text/Text" /* 5187 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import Card from "Card" /* 6459 */;
 import FileManagerUtils from "FileManagerUtils" /* 8605 */;
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10990 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12334 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12336 */;
-import ConjurePerfTraceList from "ConjurePerfTraceList" /* 12339 */;
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 11009 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12351 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12353 */;
+import ConjurePerfTraceList from "ConjurePerfTraceList" /* 12356 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10967 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10983 */;
 
-const ConjureHeaderIconButtonDefault = tmp5(11666);
+const ConjureHeaderIconButtonDefault = tmp5(11685);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -65,17 +65,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
     }
     ({ rowBody, rowTop } = tmp4);
     if (cResult[5] !== trace) {
-      const perfTraceStatusResult = tmp(10990).perfTraceStatus(trace);
+      const perfTraceStatusResult = tmp(11009).perfTraceStatus(trace);
       cResult[5] = trace;
       cResult[6] = perfTraceStatusResult;
       let tmp11 = perfTraceStatusResult;
-      const tmpResult = tmp(10990);
+      const tmpResult = tmp(11009);
     } else {
       tmp11 = cResult[6];
     }
     if (cResult[7] !== tmp11) {
       const obj2 = { status: tmp11 };
-      const tmp16 = closure_8(trace(12338), obj2);
+      const tmp16 = closure_8(trace(12355), obj2);
       cResult[7] = tmp11;
       cResult[8] = tmp16;
       let tmp13 = tmp16;
@@ -87,11 +87,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
         let tmp17 = cResult[11];
       }
       if (cResult[12] !== trace) {
-        const perfTraceDurationResult = tmp(12334).perfTraceDuration(trace);
+        const perfTraceDurationResult = tmp(12351).perfTraceDuration(trace);
         cResult[12] = trace;
         cResult[13] = perfTraceDurationResult;
         let tmp20 = perfTraceDurationResult;
-        const tmpResult3 = tmp(12334);
+        const tmpResult3 = tmp(12351);
       } else {
         tmp20 = cResult[13];
       }
@@ -111,11 +111,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
               let tmp25 = cResult[20];
             }
             if (cResult[21] !== trace) {
-              const perfTraceSummaryResult = tmp(12334).perfTraceSummary(trace);
+              const perfTraceSummaryResult = tmp(12351).perfTraceSummary(trace);
               cResult[21] = trace;
               cResult[22] = perfTraceSummaryResult;
               let tmp29 = perfTraceSummaryResult;
-              const tmpResult4 = tmp(12334);
+              const tmpResult4 = tmp(12351);
             } else {
               tmp29 = cResult[22];
             }
@@ -207,7 +207,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
     tmp17 = tmp19;
   }
   const fn = function f() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12332, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12349, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
   };
   cResult[2] = projectId;
   cResult[3] = trace.id;
@@ -227,7 +227,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const obj2 = {
     variant: "primary",
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12332, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12349, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
     },
     accessibilityLabel: trace.name,
     children: null
@@ -235,7 +235,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const obj3 = { style: tmp.rowBody, children: null };
   const obj4 = { style: tmp.rowTop, children: null };
   const obj5 = { status: null };
-  const tmp9 = trace(12338);
+  const tmp9 = trace(12355);
   obj5.status = ConjurePerfTraceLayout.perfTraceStatus(trace);
   const items = [closure_8(tmp9, obj5), closure_8(Text_Text.Text, { variant: "text-sm/semibold", color: "text-default", style: tmp.rowName, lineClamp: 1, children: trace.name }), ];
   const obj8 = { variant: "text-xs/normal", color: "text-subtle", children: null };
@@ -261,7 +261,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
 ReactCompilerGating = fn(558);
 let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 function openPerfTrace(projectId, traceId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12332, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12349, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/native/ConjurePerfTraceTab.tsx");
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       cResult[8] = tmp18;
     }
     if (cResult[9] !== tmp12) {
-      const tmpResult3 = tmp(12336);
+      const tmpResult3 = tmp(12353);
       cResult[9] = tmp12;
       class F {
         constructor() {
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           return;
         }
       }
-      const sumPerfTraceStatsResult = tmp(12336).sumPerfTraceStats(tmp12);
+      const sumPerfTraceStatsResult = tmp(12353).sumPerfTraceStats(tmp12);
     }
     if (cResult[11] === tmp12) {
       if (cResult[12] === projectId) {
@@ -1373,12 +1373,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     tmp21 = F;
   }
   const tmp10 = _slicedToArray(noop.useState(""), 2);
-  const filterPerfTracesResult = projectId(12339).filterPerfTraces(stateFromStoresArray, first1);
+  const filterPerfTracesResult = projectId(12356).filterPerfTraces(stateFromStoresArray, first1);
   cResult[4] = first1;
   cResult[5] = stateFromStoresArray;
   cResult[6] = filterPerfTracesResult;
   tmp12 = filterPerfTracesResult;
-  const tmpResult4 = projectId(12339);
+  const tmpResult4 = projectId(12356);
 }) : (function ConjurePerfTraceTab(projectId) {
   projectId = projectId.projectId;
   let first;

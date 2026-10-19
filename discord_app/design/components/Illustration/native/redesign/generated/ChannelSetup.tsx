@@ -1,6 +1,6 @@
-// === Module 18866: ChannelSetup ===
+// === Module 18870: ChannelSetup ===
 
-// Module 18866 (ChannelSetup)
+// Module 18870 (ChannelSetup)
 import c from "c" /* 576 */;
 import shared from "shared" /* 5065 */;
 import FastImageDefault from "FastImage" /* 5128 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelSe
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_18867");
+          return require("module_18871");
         },
       darker() {
-          return require("module_18868");
+          return require("module_18872");
         },
       light() {
-          return require("module_18869");
+          return require("module_18873");
         }
     };
     const illustrationSource = _mod8633.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelSe
   const obj = shared;
   return _mod8633.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18867");
+      return require("module_18871");
     },
     darker() {
-      return require("module_18868");
+      return require("module_18872");
     },
     light() {
-      return require("module_18869");
+      return require("module_18873");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getChannelSetupSource(theme) {
   return _mod8633.getIllustrationSource(theme, {
     dark() {
-      return require("module_18867");
+      return require("module_18871");
     },
     darker() {
-      return require("module_18868");
+      return require("module_18872");
     },
     light() {
-      return require("module_18869");
+      return require("module_18873");
     }
   });
 }

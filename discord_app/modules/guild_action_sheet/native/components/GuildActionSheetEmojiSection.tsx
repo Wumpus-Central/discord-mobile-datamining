@@ -1,6 +1,6 @@
-// === Module 14994: GuildActionSheetEmojiSection ===
+// === Module 14998: GuildActionSheetEmojiSection ===
 
-// Module 14994 (GuildActionSheetEmojiSection)
+// Module 14998 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4864 */;
 import ToastUtils from "ToastUtils" /* 4903 */;

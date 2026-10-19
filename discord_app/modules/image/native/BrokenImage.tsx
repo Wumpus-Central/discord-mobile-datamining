@@ -1,6 +1,6 @@
-// === Module 11894: BrokenImage ===
+// === Module 11913: BrokenImage ===
 
-// Module 11894 (BrokenImage)
+// Module 11913 (BrokenImage)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
 import noop from "module_19" /* 19 */;

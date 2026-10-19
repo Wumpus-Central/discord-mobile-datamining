@@ -1,12 +1,12 @@
-// === Module 11637: ConjureSmartContext ===
+// === Module 11653: ConjureSmartContext ===
 
-// Module 11637 (ConjureSmartContext)
-import conjureSmartContextConnection from "conjureSmartContextConnection" /* 11051 */;
+// Module 11653 (ConjureSmartContext)
+import conjureSmartContextConnection from "conjureSmartContextConnection" /* 11070 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 10963 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10962 */;
-import ConjureSmartContextStore from "ConjureSmartContextStore" /* 10971 */;
+import ConjureChatStore from "ConjureChatStore" /* 10979 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10978 */;
+import ConjureSmartContextStore from "ConjureSmartContextStore" /* 10987 */;
 
 const require = globalThis.__r;
 
@@ -211,7 +211,7 @@ const result = size.fileFinishedImporting("modules/conjure/contexts/ConjureSmart
 export const useConjureContextSwitchRow = tmp2;
 export const useConjureSmartContextSetting = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureSmartContextSetting(arg0) {
   _require = arg0;
-  const cResult = require("c").c(12);
+  const cResult = require("c").c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjureSmartContextStore];
     cResult[0] = items;
@@ -220,7 +220,7 @@ export const useConjureSmartContextSetting = ReactCompilerGating.isReactCompiler
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function s() {
+    const fn = function o() {
       return ConjureSmartContextStore.getSmartContext(closure_0);
     };
     const items1 = [arg0];
@@ -233,98 +233,27 @@ export const useConjureSmartContextSetting = ReactCompilerGating.isReactCompiler
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  let obj = require("c");
+  const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-  [flag] = noop.useState(null);
-  if (tmp11) {
-    tmp10(null);
+  if (cResult[4] !== arg0) {
+    const fn2 = function c(arg0) {
+      return conjureSmartContextConnection.sendSmartContext(closure_0, arg0);
+    };
+    cResult[4] = arg0;
+    cResult[5] = fn2;
+    let tmp9 = fn2;
+  } else {
+    tmp9 = cResult[5];
   }
-  let tmp13 = null != flag;
-  if (tmp13) {
-    let flag2 = stateFromStores;
-    if (stateFromStores == null) {
-      flag2 = false;
-    }
-    tmp13 = flag !== flag2;
-  }
-  dependencyMap = tmp13;
-  if (cResult[4] === tmp13) {
-    if (cResult[5] === flag) {
-      if (cResult[6] === arg0) {
-        let tmp14 = cResult[7];
-      }
-      if (flag == null) {
-        flag = stateFromStores;
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      if (cResult[8] === tmp13) {
-        if (cResult[9] === tmp14) {
-          if (cResult[10] === flag) {
-            let tmp15 = cResult[11];
-          }
-          return tmp15;
-        }
-      }
-      const obj2 = { checked: flag, changed: tmp13, setChecked: tmp10, save: tmp14 };
-      cResult[8] = tmp13;
-      cResult[9] = tmp14;
-      cResult[10] = flag;
-      cResult[11] = obj2;
-      tmp15 = obj2;
-    }
-  }
-  const fn2 = function x() {
-    let sendSmartContextResult = !closure_2;
-    if (closure_2) {
-      sendSmartContextResult = null == flag;
-    }
-    if (!sendSmartContextResult) {
-      sendSmartContextResult = conjureSmartContextConnection.sendSmartContext(closure_0, flag);
-    }
-    return sendSmartContextResult;
-  };
-  cResult[4] = tmp13;
-  cResult[5] = flag;
-  cResult[6] = arg0;
-  cResult[7] = fn2;
-  tmp14 = fn2;
-  tmp11 = null != flag && flag === stateFromStores;
   const tmpResult = require("initialize");
+  return require("useToggleDraft").useToggleDraft(stateFromStores, tmp9);
 }) : (function useConjureSmartContextSetting(arg0) {
   _require = arg0;
   const items = [ConjureSmartContextStore];
   const items1 = [arg0];
+  const items2 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureSmartContextStore.getSmartContext(closure_0), items1);
-  [checked, setChecked] = noop.useState(null);
-  if (tmp4) {
-    setChecked(null);
-  }
-  changed = null != checked;
-  if (changed) {
-    let flag2 = stateFromStores;
-    if (stateFromStores == null) {
-      flag2 = false;
-    }
-    changed = checked !== flag2;
-  }
-  const items2 = [changed, checked, arg0];
-  const save = noop.useCallback(() => {
-    let sendSmartContextResult = !changed;
-    if (changed) {
-      sendSmartContextResult = null == checked;
-    }
-    if (!sendSmartContextResult) {
-      sendSmartContextResult = conjureSmartContextConnection.sendSmartContext(closure_0, checked);
-    }
-    return sendSmartContextResult;
-  }, items2);
-  if (checked == null) {
-    checked = stateFromStores;
-  }
-  if (checked == null) {
-    checked = false;
-  }
-  return { checked, changed, setChecked, save };
+  const callback = noop.useCallback((arg0) => conjureSmartContextConnection.sendSmartContext(closure_0, arg0), items2);
+  const obj = require("initialize");
+  return require("useToggleDraft").useToggleDraft(stateFromStores, callback);
 });

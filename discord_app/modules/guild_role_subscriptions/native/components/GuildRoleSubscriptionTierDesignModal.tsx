@@ -1,19 +1,19 @@
-// === Module 18985: GuildRoleSubscriptionTierDesignModal ===
+// === Module 18989: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 18985 (GuildRoleSubscriptionTierDesignModal)
+// Module 18989 (GuildRoleSubscriptionTierDesignModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useToken from "useToken" /* 4913 */;
 import RoleIconUtils from "RoleIconUtils" /* 7160 */;
 import FormHeaderDefault from "FormHeader" /* 8949 */;
-import FormStylesDefault from "FormStyles" /* 14908 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16281 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 16292 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18944 */;
-import FormImagePicker from "FormImagePicker" /* 18950 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18951 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 18967 */;
+import FormStylesDefault from "FormStyles" /* 14912 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16285 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 16296 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18948 */;
+import FormImagePicker from "FormImagePicker" /* 18954 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18955 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 18971 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16259).GuildRoleSubscriptionsTierScenes;
+const constants = fn(16263).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1087).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -235,7 +235,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   if (cResult[10] !== tmp8) {
     class M {
       constructor(arg0) {
-        obj = { icon: arg0.uri, unicodeEmoji: "a" };
+        obj = { icon: arg0.uri, unicodeEmoji: "r" };
         return closure_0(obj);
       }
     }
@@ -244,7 +244,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   } else {
     class M {
       constructor(arg0) {
-        obj = { icon: arg0.uri, unicodeEmoji: "a" };
+        obj = { icon: arg0.uri, unicodeEmoji: "r" };
         return closure_0(obj);
       }
     }
@@ -252,7 +252,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   if (cResult[12] === tmp12) {
     class M {
       constructor(arg0) {
-        obj = { icon: arg0.uri, unicodeEmoji: "a" };
+        obj = { icon: arg0.uri, unicodeEmoji: "r" };
         return closure_0(obj);
       }
     }
@@ -269,7 +269,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   cResult[15] = React6(FormImagePickerDefault, obj9);
   const tmp29 = React6(FormImagePickerDefault, obj9);
 }) : (function Content() {
-  const tmp3 = role(14908)();
+  const tmp3 = role(14912)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -306,16 +306,16 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj8.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "r" });
   };
   obj8.disabled = roleSubscriptionSettingsDisabled;
-  items1[2] = closure_9(role(18950), obj8);
+  items1[2] = closure_9(role(18954), obj8);
   const obj9 = { style: tmp3.header, children: null };
-  const tmpResult3 = role(18950);
+  const tmpResult3 = role(18954);
   const intl3 = tmp4(1128).intl;
   obj9.children = intl3.string(require("util").t["W7hH+z"]);
   items1[3] = closure_9(role(8949), obj9);
-  items1[4] = closure_9(role(18986), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[4] = closure_9(role(18990), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj6.children = items1;
   return closure_10(closure_11, obj6);
 });

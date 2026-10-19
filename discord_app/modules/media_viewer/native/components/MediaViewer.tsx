@@ -1,12 +1,12 @@
-// === Module 14008: MediaViewer ===
+// === Module 14012: MediaViewer ===
 
-// Module 14008 (MediaViewer)
+// Module 14012 (MediaViewer)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;
 import useVideoControls from "useVideoControls" /* 8663 */;
 import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8693 */;
-import MediaViewerItem from "MediaViewerItem" /* 14010 */;
+import MediaViewerItem from "MediaViewerItem" /* 14014 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ function MediaViewer(arg0) {
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(14014)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(14018)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -200,7 +200,7 @@ function MediaViewer(arg0) {
   obj18.pointerEvents = str;
   obj18.children = renderOverlay(dismiss, overlayEnabled);
   items6[3] = dismiss(height(4946), obj18);
-  items6[4] = dismiss(tmp(11211), {});
+  items6[4] = dismiss(tmp(11230), {});
   obj16.children = items6;
   const children = tmp30(tmp31, obj16);
   return dismiss(tmp7(7130).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });

@@ -1,8 +1,8 @@
-// === Module 17496: useGuildsBarCreatePendingFolderNode ===
+// === Module 17500: useGuildsBarCreatePendingFolderNode ===
 
-// Module 17496 (useGuildsBarCreatePendingFolderNode)
+// Module 17500 (useGuildsBarCreatePendingFolderNode)
 import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6396 */;
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 12506 */;
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 12523 */;
 import noop from "module_19" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5035 */;
 import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 6220 */;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         return closure_1_5.isFolderExpanded(closure_0(closure_1_2[7]).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER);
       }
     }
-    const obj3 = { folderId: tmp2(17497).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
+    const obj3 = { folderId: tmp2(17501).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
     const intl = tmp2(1128).intl;
     obj3.folderName = intl.string(tmp2(1128).t["scsU+l"]);
     obj3.expanded = stateFromStores1;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     }
   }, items2);
   if (arr2.length > 0) {
-    const obj3 = { folderId: tmp2(17497).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
+    const obj3 = { folderId: tmp2(17501).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
     const intl = tmp2(1128).intl;
     obj3.folderName = intl.string(tmp2(1128).t["scsU+l"]);
     obj3.expanded = stateFromStores1;

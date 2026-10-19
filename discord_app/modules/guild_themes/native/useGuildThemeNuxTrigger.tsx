@@ -1,8 +1,8 @@
-// === Module 17283: useGuildThemeNuxTrigger ===
+// === Module 17287: useGuildThemeNuxTrigger ===
 
-// Module 17283 (useGuildThemeNuxTrigger)
+// Module 17287 (useGuildThemeNuxTrigger)
 import initialize from "initialize" /* 504 */;
-import guild_themes_useGuildThemeNuxTriggerDefault from "guild_themes/useGuildThemeNuxTrigger" /* 17289 */;
+import guild_themes_useGuildThemeNuxTriggerDefault from "guild_themes/useGuildThemeNuxTrigger" /* 17293 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4897 */;
 

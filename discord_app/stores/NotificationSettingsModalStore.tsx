@@ -1,6 +1,6 @@
-// === Module 18663: NotificationSettingsModalStore ===
+// === Module 18667: NotificationSettingsModalStore ===
 
-// Module 18663 (NotificationSettingsModalStore)
+// Module 18667 (NotificationSettingsModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelRecord from "ChannelRecord" /* 2072 */;

@@ -1,21 +1,21 @@
-// === Module 17114: AuthManager ===
+// === Module 17118: AuthManager ===
 
-// Module 17114 (AuthManager)
+// Module 17118 (AuthManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import transitionToGuild from "transitionToGuild" /* 7329 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13070 */;
-import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 14401 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13078 */;
+import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 14405 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(13067).PermissionStateType;
+const PermissionStateType = fn(13075).PermissionStateType;
 const ME = fn(1087).ME;
 let closure_8 = fn(7749).NotificationAuthorizationStatus;
-const NewUserTypes = fn(13371).NewUserTypes;
+const NewUserTypes = fn(13376).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -78,8 +78,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(17115).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(17115);
+          const result = applyArgumentsResult(17119).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(17119);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;
@@ -106,12 +106,12 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(13455).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(13455);
+        applyArgumentsResult(13460).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(13460);
       }
       obj = applyArgumentsResult(8955);
-      applyArgumentsResult(13370).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(13370);
+      applyArgumentsResult(13375).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(13375);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {

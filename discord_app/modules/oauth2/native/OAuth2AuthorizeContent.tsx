@@ -1,6 +1,6 @@
-// === Module 11006: OAuth2AuthorizeContent ===
+// === Module 11027: OAuth2AuthorizeContent ===
 
-// Module 11006 (OAuth2AuthorizeContent)
+// Module 11027 (OAuth2AuthorizeContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;

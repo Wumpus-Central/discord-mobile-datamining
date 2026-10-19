@@ -1,6 +1,6 @@
-// === Module 15898: showDataPrivacyRateLimitAlert ===
+// === Module 15902: showDataPrivacyRateLimitAlert ===
 
-// Module 15898 (showDataPrivacyRateLimitAlert)
+// Module 15902 (showDataPrivacyRateLimitAlert)
 import util from "util" /* 1128 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
 import size from "module_2" /* 2 */;

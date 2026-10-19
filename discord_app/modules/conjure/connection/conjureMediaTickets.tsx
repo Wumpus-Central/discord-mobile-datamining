@@ -1,6 +1,7 @@
-// === Module 11041: conjureMediaTickets ===
+// === Module 11062: conjureMediaTickets ===
 
-// Module 11041 (conjureMediaTickets)
+// Module 11062 (conjureMediaTickets)
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11004 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -56,9 +57,11 @@ export const getMediaTicket = function getMediaTicket(projectId) {
     return cleanupPromise;
   }
 };
-export const retireMediaTicket = function retireMediaTicket(arg0) {
-  map.delete(arg0);
+export const retireMediaTicket = function retireMediaTicket(projectId) {
+  map.delete(projectId);
+  ConjureWorkerTickets.forgetEarlyTicket(projectId);
 };
 export const clearMediaTickets = function clearMediaTickets() {
   map.clear();
+  ConjureWorkerTickets.forgetEarlyTickets();
 };

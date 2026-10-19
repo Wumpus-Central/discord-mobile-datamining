@@ -1,12 +1,12 @@
-// === Module 12114: conjureCardOverrides ===
+// === Module 12133: conjureCardOverrides ===
 
-// Module 12114 (conjureCardOverrides)
+// Module 12133 (conjureCardOverrides)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureCardOverrides.tsx");
 
-export const conjureCardExpanded = function conjureCardExpanded(c13, render_id, set) {
-  value = c13.get(render_id);
+export const conjureCardExpanded = function conjureCardExpanded(c14, render_id, set) {
+  value = c14.get(render_id);
   if (value == null) {
     value = !set;
   }

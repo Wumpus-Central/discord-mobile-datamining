@@ -1,6 +1,6 @@
-// === Module 18786: GuildSettingsServerTagColorGrid ===
+// === Module 18790: GuildSettingsServerTagColorGrid ===
 
-// Module 18786 (GuildSettingsServerTagColorGrid)
+// Module 18790 (GuildSettingsServerTagColorGrid)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 

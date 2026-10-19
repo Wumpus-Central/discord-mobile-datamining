@@ -1,17 +1,17 @@
-// === Module 13521: GuildAntiRaidHooks ===
+// === Module 13526: GuildAntiRaidHooks ===
 
-// Module 13521 (GuildAntiRaidHooks)
+// Module 13526 (GuildAntiRaidHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8313 */;
-import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 13522 */;
+import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 13527 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import PermissionStore from "PermissionStore" /* 4845 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5034 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11096 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11115 */;
 
 const require = globalThis.__r;
 

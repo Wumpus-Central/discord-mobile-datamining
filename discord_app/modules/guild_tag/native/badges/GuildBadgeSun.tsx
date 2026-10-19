@@ -1,9 +1,9 @@
-// === Module 14948: GuildBadgeSun ===
+// === Module 14952: GuildBadgeSun ===
 
-// Module 14948 (GuildBadgeSun)
+// Module 14952 (GuildBadgeSun)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7843 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14928 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14932 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

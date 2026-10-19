@@ -1,6 +1,6 @@
-// === Module 16002: AddConnectionActionSheet ===
+// === Module 16006: AddConnectionActionSheet ===
 
-// Module 16002 (AddConnectionActionSheet)
+// Module 16006 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1087 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 2029 */;

@@ -6,8 +6,8 @@ import NavigatorHeader from "NavigatorHeader" /* 6478 */;
 import Navigator from "Navigator" /* 6965 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7130 */;
 import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7402 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14613 */;
-import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14629 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 14617 */;
+import UserSettingsPremiumGiftingDefault from "UserSettingsPremiumGifting" /* 14633 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -32,7 +32,7 @@ function getScreens(analyticsLocation) {
   const intl2 = analyticsLocation(1128).intl;
   obj4.title = intl2.string(analyticsLocation(1128).t["8jmdON"]);
   obj4.render = function render() {
-    return planId(onClose(14568), {});
+    return planId(onClose(14572), {});
   };
   obj[UserSettingsSections.PREMIUM_MANAGE_PLAN] = obj4;
   const obj5 = { title: null, headerLeft: null, render: null };
@@ -41,7 +41,7 @@ function getScreens(analyticsLocation) {
   const obj3 = analyticsLocation(6478);
   obj5.headerLeft = analyticsLocation(6478).getHeaderCloseButton(onClose);
   obj5.render = function render() {
-    return planId(onClose(14571), {});
+    return planId(onClose(14575), {});
   };
   obj[UserSettingsSections.GUILD_BOOSTING] = obj5;
   const obj7 = { title: null, headerLeft: null, initialParams: null, render: null };

@@ -1,6 +1,6 @@
-// === Module 18344: StreamReportProblemActionSheet ===
+// === Module 18348: StreamReportProblemActionSheet ===
 
-// Module 18344 (StreamReportProblemActionSheet)
+// Module 18348 (StreamReportProblemActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -12,8 +12,8 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7117 */;
 import ActionSheetRow from "ActionSheetRow" /* 7171 */;
 import ActionSheet from "ActionSheet" /* 7175 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7691 */;
-import trackStreamProblemDefault from "trackStreamProblem" /* 18345 */;
-import getStreamIssueReportOptionsDefault from "getStreamIssueReportOptions" /* 18346 */;
+import trackStreamProblemDefault from "trackStreamProblem" /* 18349 */;
+import getStreamIssueReportOptionsDefault from "getStreamIssueReportOptions" /* 18350 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5207 */;
 
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReportPr
     tmp17 = tmp19;
   }
   let obj = stream(576);
-  const mapped = analyticsData(18346)({ isStreamer: false, isEndStream: false }).map((label, index) => {
+  const mapped = analyticsData(18350)({ isStreamer: false, isEndStream: false }).map((label, index) => {
     stream = label.value;
     return jsx(stream(dependencyMap[15]).ActionSheetRow, {
       label: label.label,
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReportPr
   cResult[3] = stream;
   cResult[4] = mapped;
   tmp8 = mapped;
-  const arr = analyticsData(18346)({ isStreamer: false, isEndStream: false });
+  const arr = analyticsData(18350)({ isStreamer: false, isEndStream: false });
 }) : (function ReportProblem(arg0) {
   ({ stream: require, analyticsData: importDefault } = arg0);
   useMountEffectDefault(() => {

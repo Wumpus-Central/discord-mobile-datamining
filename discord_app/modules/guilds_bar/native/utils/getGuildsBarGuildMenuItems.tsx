@@ -1,13 +1,13 @@
-// === Module 17429: getGuildsBarGuildMenuItems ===
+// === Module 17433: getGuildsBarGuildMenuItems ===
 
-// Module 17429 (getGuildsBarGuildMenuItems)
+// Module 17433 (getGuildsBarGuildMenuItems)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7081 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7086 */;
-import _modDef13029 from "module_13029" /* 13029 */;
-import _modDef13030 from "module_13030" /* 13030 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 14918 */;
+import _modDef13037 from "module_13037" /* 13037 */;
+import _modDef13038 from "module_13038" /* 13038 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 14922 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2090 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6222 */;
@@ -100,7 +100,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
     const splice = items.splice;
     const obj5 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj5.iconSource = _modDef13030;
+      obj5.iconSource = _modDef13038;
       const intl5 = tmp(1128).intl;
       obj5.label = intl5.string(tmp(1128).t.De0BTC);
       obj5.action = function action() {
@@ -110,12 +110,12 @@ export default function getGuildsBarGuildMenuItems(guildId) {
       };
       splice(1, 0, obj5);
     } else {
-      obj5.iconSource = _modDef13029;
+      obj5.iconSource = _modDef13037;
       const intl4 = tmp(1128).intl;
       obj5.label = intl4.string(tmp(1128).t.vRzp7P);
       obj5.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        obj.openLazy(asyncRequireImpl(10771, dependencyMap.paths), "muteSettings" + guildId, { guildId });
+        obj.openLazy(asyncRequireImpl(10787, dependencyMap.paths), "muteSettings" + guildId, { guildId });
       };
       splice(1, 0, obj5);
     }

@@ -1,14 +1,14 @@
-// === Module 10677: ChatViewWrapperAnimatedKeyboard ===
+// === Module 10694: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 10677 (ChatViewWrapperAnimatedKeyboard)
+// Module 10694 (ChatViewWrapperAnimatedKeyboard)
 import c from "c" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4945 */;
 import timing from "timing" /* 5192 */;
 import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6945 */;
 import LayerScope from "LayerScope" /* 7124 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10684 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 10686 */;
-import StickyWrapper from "StickyWrapper" /* 10687 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10700 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 10702 */;
+import StickyWrapper from "StickyWrapper" /* 10703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

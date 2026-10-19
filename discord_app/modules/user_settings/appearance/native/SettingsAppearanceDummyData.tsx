@@ -1,14 +1,10 @@
-// === Module 16333: SettingsAppearanceDummyData ===
+// === Module 16337: SettingsAppearanceDummyData ===
 
-// Module 16333 (SettingsAppearanceDummyData)
+// Module 16337 (SettingsAppearanceDummyData)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
-import _modDef13545 from "module_13545" /* 13545 */;
-import _modDef14970 from "module_14970" /* 14970 */;
-import _modDef16334 from "module_16334" /* 16334 */;
-import _modDef16335 from "module_16335" /* 16335 */;
-import _modDef16336 from "module_16336" /* 16336 */;
-import _modDef16337 from "module_16337" /* 16337 */;
+import _modDef13550 from "module_13550" /* 13550 */;
+import _modDef14974 from "module_14974" /* 14974 */;
 import _modDef16338 from "module_16338" /* 16338 */;
 import _modDef16339 from "module_16339" /* 16339 */;
 import _modDef16340 from "module_16340" /* 16340 */;
@@ -16,6 +12,10 @@ import _modDef16341 from "module_16341" /* 16341 */;
 import _modDef16342 from "module_16342" /* 16342 */;
 import _modDef16343 from "module_16343" /* 16343 */;
 import _modDef16344 from "module_16344" /* 16344 */;
+import _modDef16345 from "module_16345" /* 16345 */;
+import _modDef16346 from "module_16346" /* 16346 */;
+import _modDef16347 from "module_16347" /* 16347 */;
+import _modDef16348 from "module_16348" /* 16348 */;
 import size from "module_2" /* 2 */;
 
 const StatusTypes = Constants.StatusTypes;
@@ -29,8 +29,8 @@ export default function _default() {
   obj2.title = intl.string(util.t.B6GPzA);
   const intl2 = util.intl;
   obj2.subtitle = intl2.string(util.t["Tnrh/k"]);
-  obj2.image = _modDef16334;
-  const items1 = [_modDef16335, _modDef16336, _modDef16337, _modDef16338, _modDef16339];
+  obj2.image = _modDef16338;
+  const items1 = [_modDef16339, _modDef16340, _modDef16341, _modDef16342, _modDef16343];
   obj2.avatars = items1;
   const items2 = [obj2, ];
   const obj3 = { title: null, subtitle: null, kind: "voice-chat", image: null };
@@ -38,7 +38,7 @@ export default function _default() {
   obj3.title = intl3.string(util.t.YAgqmE);
   const intl4 = util.intl;
   obj3.subtitle = intl4.string(util.t["9YJgal"]);
-  obj3.image = _modDef16340;
+  obj3.image = _modDef16344;
   items2[1] = obj3;
   obj.cards = items2;
   items[1] = obj;
@@ -49,7 +49,7 @@ export default function _default() {
   obj4.title = intl6.string(util.t["mK5Zd+"]);
   const intl7 = util.intl;
   obj4.preview = intl7.string(util.t.cvvVUV);
-  obj4.avatar1 = _modDef16341;
+  obj4.avatar1 = _modDef16345;
   items[2] = obj4;
   const obj5 = { id: "4", kind: "channel-row", timestamp: null, title: null, preview: null, isUnread: true, avatar1: null, avatar2: null };
   const intl8 = util.intl;
@@ -58,8 +58,8 @@ export default function _default() {
   obj5.title = intl9.string(util.t.FpJH9k);
   const intl10 = util.intl;
   obj5.preview = intl10.string(util.t.F1WIrQ);
-  obj5.avatar1 = _modDef16342;
-  obj5.avatar2 = _modDef16343;
+  obj5.avatar1 = _modDef16346;
+  obj5.avatar2 = _modDef16347;
   items[3] = obj5;
   const obj6 = { id: "5", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl11 = util.intl;
@@ -68,7 +68,7 @@ export default function _default() {
   obj6.title = intl12.string(util.t.PHbyD7);
   const intl13 = util.intl;
   obj6.preview = intl13.string(util.t.GSuP1s);
-  obj6.avatar1 = _modDef14970;
+  obj6.avatar1 = _modDef14974;
   obj6.status = StatusTypes.IDLE;
   items[4] = obj6;
   const obj7 = { id: "7", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, avatar2: null };
@@ -78,8 +78,8 @@ export default function _default() {
   obj7.title = intl15.string(util.t["0HGnUV"]);
   const intl16 = util.intl;
   obj7.preview = intl16.string(util.t["VYL+vm"]);
-  obj7.avatar1 = _modDef13545;
-  obj7.avatar2 = _modDef16337;
+  obj7.avatar1 = _modDef13550;
+  obj7.avatar2 = _modDef16341;
   items[5] = obj7;
   const obj8 = { id: "10", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
   const intl17 = util.intl;
@@ -88,7 +88,7 @@ export default function _default() {
   obj8.title = intl18.string(util.t["z+f+zN"]);
   const intl19 = util.intl;
   obj8.preview = intl19.string(util.t.Wy2xnv);
-  obj8.avatar1 = _modDef16343;
+  obj8.avatar1 = _modDef16347;
   items[6] = obj8;
   const obj9 = { id: "11", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, avatar2: null };
   const intl20 = util.intl;
@@ -97,8 +97,8 @@ export default function _default() {
   obj9.title = intl21.string(util.t["AYOqO/"]);
   const intl22 = util.intl;
   obj9.preview = intl22.string(util.t.OrbvPP);
-  obj9.avatar1 = _modDef16338;
-  obj9.avatar2 = _modDef13545;
+  obj9.avatar1 = _modDef16342;
+  obj9.avatar2 = _modDef13550;
   items[7] = obj9;
   const obj10 = { id: "12", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl23 = util.intl;
@@ -107,7 +107,7 @@ export default function _default() {
   obj10.title = intl24.string(util.t["86rWJp"]);
   const intl25 = util.intl;
   obj10.preview = intl25.string(util.t.dFT4dX);
-  obj10.avatar1 = _modDef16344;
+  obj10.avatar1 = _modDef16348;
   obj10.status = StatusTypes.DND;
   items[8] = obj10;
   const obj11 = { id: "13", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
@@ -117,7 +117,7 @@ export default function _default() {
   obj11.title = intl27.string(util.t["z3+vGV"]);
   const intl28 = util.intl;
   obj11.preview = intl28.string(util.t.Zj8Sl1);
-  obj11.avatar1 = _modDef16338;
+  obj11.avatar1 = _modDef16342;
   items[9] = obj11;
   const obj12 = { id: "15", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl29 = util.intl;
@@ -126,7 +126,7 @@ export default function _default() {
   obj12.title = intl30.string(util.t["8SENG2"]);
   const intl31 = util.intl;
   obj12.preview = intl31.string(util.t["2ziAWp"]);
-  obj12.avatar1 = _modDef16336;
+  obj12.avatar1 = _modDef16340;
   obj12.status = StatusTypes.DND;
   items[10] = obj12;
   return items;

@@ -1,13 +1,13 @@
-// === Module 17499: GuildsBarDragPreview ===
+// === Module 17503: GuildsBarDragPreview ===
 
-// Module 17499 (GuildsBarDragPreview)
+// Module 17503 (GuildsBarDragPreview)
 import c from "c" /* 576 */;
 import _mod4828 from "module_4828" /* 4828 */;
 import native from "native" /* 4922 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import spring from "spring" /* 5478 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17428 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17432 */;
 
 require = fn;
 function getItemPreviewKey(id) {
@@ -17,7 +17,7 @@ function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const GuildsNodeType = fn(6219).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17425).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(17429).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
@@ -153,7 +153,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   if ("convert-after" === overState) {
     if (null != overNode) {
       if (cResult[0] !== overNode) {
-        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "applicationId", expanded: 1255866370, children: 2102460419 };
+        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "applicationId", expanded: null, children: null };
         const items = [overNode];
         element.children = items;
         cResult[0] = overNode;
@@ -310,7 +310,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "applicationId", expanded: 1255866370, children: 2102460419 };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "applicationId", expanded: null, children: null };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -669,7 +669,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (null != dragSpecs) {
           if (null != overSpecs) {
             const state = overSpecs.state;
-            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "\u0441\u0456\u043C\u0432\u0430\u043B", scrollPosition: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B", dragRegion: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E", windowSize: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442", dropComplete: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B", listInsets: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E" };
+            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", scrollPosition: null, dragRegion: 0, windowSize: 0, dropComplete: "hidden", listInsets: 24 };
             ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
             obj.overState = state;
             let node;
@@ -734,7 +734,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "\u0441\u0456\u043C\u0432\u0430\u043B", scrollPosition: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B", dragRegion: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E", windowSize: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442", dropComplete: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B", listInsets: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", scrollPosition: null, dragRegion: 0, windowSize: 0, dropComplete: "hidden", listInsets: 24 };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

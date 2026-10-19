@@ -1,6 +1,6 @@
-// === Module 11413: ? ===
+// === Module 11431: ? ===
 
-// Module 11413
+// Module 11431
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MicrophoneSpotIllustration-3x.png.js");

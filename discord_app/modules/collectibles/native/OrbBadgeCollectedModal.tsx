@@ -1,12 +1,12 @@
-// === Module 14238: OrbBadgeCollectedModal ===
+// === Module 14242: OrbBadgeCollectedModal ===
 
-// Module 14238 (OrbBadgeCollectedModal)
+// Module 14242 (OrbBadgeCollectedModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6190 */;
 import NavigatorHeader from "NavigatorHeader" /* 6478 */;
 import _mod9352 from "module_9352" /* 9352 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 13721 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 13725 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 
@@ -115,7 +115,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
       }
     }
     const obj2 = { source: null, style: null };
-    const obj3 = { uri: onPressViewBadge(13923) };
+    const obj3 = { uri: onPressViewBadge(13927) };
     obj2.source = obj3;
     obj2.style = tmp4.background;
     let tmp10Result = closure_6(onPressViewBadge(5128), obj2);
@@ -128,9 +128,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
         return;
       }
     }
-    const obj4 = { uri: onPressViewBadge(13924) };
+    const obj4 = { uri: onPressViewBadge(13928) };
     tmp11[0] = obj4;
-    tmp11[1] = onPressViewBadge(13923);
+    tmp11[1] = onPressViewBadge(13927);
     tmp11[2] = tmp4.background;
     tmp10Result = closure_6(tmp(8699).VideoComponent, tmp11);
   }
@@ -156,7 +156,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
   }, items2);
   if (stateFromStores) {
     const obj3 = { source: null, style: null };
-    const obj4 = { uri: onPressViewBadge(13923) };
+    const obj4 = { uri: onPressViewBadge(13927) };
     obj3.source = obj4;
     obj3.style = tmp.background;
     let tmp9Result = closure_6(onPressViewBadge(5128), obj3);
@@ -165,9 +165,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbBad
     const tmp15 = onPressViewBadge(5128);
   } else {
     const obj5 = { source: null, poster: null, style: null, resizeMode: "contain", muted: true, pauseWhileAppInactive: true, paused: false };
-    const obj6 = { uri: onPressViewBadge(13924) };
+    const obj6 = { uri: onPressViewBadge(13928) };
     obj5.source = obj6;
-    obj5.poster = onPressViewBadge(13923);
+    obj5.poster = onPressViewBadge(13927);
     obj5.style = tmp.background;
     tmp9Result = closure_6(tmp2(8699).VideoComponent, obj5);
     tmp12 = onPressViewBadge;

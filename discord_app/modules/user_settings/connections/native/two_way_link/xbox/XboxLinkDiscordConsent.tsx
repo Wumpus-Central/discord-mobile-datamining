@@ -48,14 +48,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
   }
   const obj2 = navigation(1505);
-  const tmp8 = jsx(navigation(9525).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(13285).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: tmp5, onError: tmp6 });
+  const tmp8 = jsx(navigation(9525).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(13293).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: tmp5, onError: tmp6 });
   cResult[4] = callbackCode;
   cResult[5] = callbackState;
   cResult[6] = tmp6;
   cResult[7] = tmp5;
   cResult[8] = tmp8;
   tmp7 = tmp8;
-  const obj3 = { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(13285).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: tmp5, onError: tmp6 };
+  const obj3 = { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(13293).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: tmp5, onError: tmp6 };
 }) : (function XboxLinkDiscordConsent(arg0) {
   let navigation;
   ({ callbackCode, callbackState } = arg0);
@@ -69,5 +69,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
   const obj = navigation(1505);
-  return jsx(navigation(9525).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(13285).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
+  return jsx(navigation(9525).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(13293).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
 });

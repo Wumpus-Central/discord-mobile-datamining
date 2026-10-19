@@ -1,6 +1,6 @@
-// === Module 18126: getFrameSurfaceQueryParams ===
+// === Module 18130: getFrameSurfaceQueryParams ===
 
-// Module 18126 (getFrameSurfaceQueryParams)
+// Module 18130 (getFrameSurfaceQueryParams)
 import _modDef38 from "module_38" /* 38 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 6297 */;
 import size from "module_2" /* 2 */;

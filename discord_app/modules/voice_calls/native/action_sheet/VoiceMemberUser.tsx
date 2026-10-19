@@ -1,6 +1,6 @@
-// === Module 14383: VoiceMemberUser ===
+// === Module 14387: VoiceMemberUser ===
 
-// Module 14383 (VoiceMemberUser)
+// Module 14387 (VoiceMemberUser)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
@@ -12,13 +12,13 @@ import useIsSpeakingDefault from "useIsSpeaking" /* 6316 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 7292 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7691 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7748 */;
-import _modDef11287 from "module_11287" /* 11287 */;
-import _modDef14384 from "module_14384" /* 14384 */;
-import _modDef14385 from "module_14385" /* 14385 */;
-import _modDef14386 from "module_14386" /* 14386 */;
-import _modDef14387 from "module_14387" /* 14387 */;
+import _modDef11305 from "module_11305" /* 11305 */;
 import _modDef14388 from "module_14388" /* 14388 */;
 import _modDef14389 from "module_14389" /* 14389 */;
+import _modDef14390 from "module_14390" /* 14390 */;
+import _modDef14391 from "module_14391" /* 14391 */;
+import _modDef14392 from "module_14392" /* 14392 */;
+import _modDef14393 from "module_14393" /* 14393 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -114,7 +114,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     if (cResult[14] === tmp11.id) {
       let tmp25 = cResult[15];
     }
-    const avatarSpeakingColor = tmp(11284).useAvatarSpeakingColor(tmp25);
+    const avatarSpeakingColor = tmp(11302).useAvatarSpeakingColor(tmp25);
     const _Symbol = Symbol;
     if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
       let items = [stateFromStores];
@@ -131,7 +131,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       tmp27 = cResult[16];
       tmp28 = cResult[17];
     }
-    const tmpResult = tmp(11284);
+    const tmpResult = tmp(11302);
     stateFromStores = tmp(504).useStateFromStores(tmp27, tmp28);
     const _Symbol2 = Symbol;
     if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
@@ -658,8 +658,8 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     guild_id = channel.guild_id;
   }
   obj4.guildId = guild_id;
-  const avatarSpeakingColor = user(11284).useAvatarSpeakingColor(obj4);
-  const obj3 = user(11284);
+  const avatarSpeakingColor = user(11302).useAvatarSpeakingColor(obj4);
+  const obj3 = user(11302);
   const items = [ThemeStore];
   const stateFromStores = user(504).useStateFromStores(items, () => theme.theme);
   const tmp8Result = user(504);
@@ -760,7 +760,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const obj7 = { style: tmp2.row, children: null };
       let tmp22Result = null;
       if (user.isSpectating) {
-        const obj8 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14389), style: tmp21 };
+        const obj8 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14393), style: tmp21 };
         tmp22Result = closure_13(tmp8(1202).Icon, obj8);
       }
       const items3 = [tmp22Result, , , , ];
@@ -768,7 +768,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         items3[1] = null;
         let tmp22Result5 = null;
         if (tmp16) {
-          const obj9 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14386), style: tmp21 };
+          const obj9 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14390), style: tmp21 };
           tmp22Result5 = closure_13(tmp8(1202).Icon, obj9);
         }
         items3[2] = tmp22Result5;
@@ -784,18 +784,18 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           tmp25Result = closure_14(closure_5, obj7);
         } else {
           if (localVideoDisabled) {
-            const obj11 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14387), style: tmp2.voiceStatusIconMargin, disableColor: true };
+            const obj11 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14391), style: tmp2.voiceStatusIconMargin, disableColor: true };
             let obj12 = obj11;
           } else {
-            obj12 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14388), style: tmp21 };
+            obj12 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14392), style: tmp21 };
           }
           closure_13(tmp8(1202).Icon, obj12);
         }
       } else {
         if (tmp8Result6.isThemeDark(stateFromStores)) {
-          let tmp5Result = channel(14384);
+          let tmp5Result = channel(14388);
         } else {
-          tmp5Result = channel(14385);
+          tmp5Result = channel(14389);
         }
         const obj13 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp21.tintColor, disableColor: localMute };
         closure_13(tmp8(1202).Icon, obj13);
@@ -828,7 +828,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj14.label = closure_13(user(8855).FormRow.Label, obj17);
   if (localVideoAutoDisabled) {
     const obj18 = { style: tmp2.autoDisabledVideo, children: null };
-    const obj19 = { source: channel(11287), size: tmp8(1202).Icon.Sizes.EXTRA_SMALL, disableColor: true };
+    const obj19 = { source: channel(11305), size: tmp8(1202).Icon.Sizes.EXTRA_SMALL, disableColor: true };
     const items6 = [closure_13(tmp8(1202).Icon, obj19), ];
     const obj20 = { variant: "text-xs/medium", color: "text-default", style: tmp2.autoDisabledVideoLabel, children: null };
     const intl3 = tmp8(1128).intl;
@@ -942,9 +942,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
                       }
                     }
           };
-          obj4.children = closure_13(channel(11540), obj5);
+          obj4.children = closure_13(channel(11558), obj5);
           tmp31Result = closure_13(closure_5, obj4);
-          const tmp34 = channel(11540);
+          const tmp34 = channel(11558);
         }
         cResult[11] = channel;
         cResult[12] = tmp4;
@@ -1019,9 +1019,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
               }
             }
       };
-      obj4.children = closure_13(channel(11540), obj5);
+      obj4.children = closure_13(channel(11558), obj5);
       tmp10Result = closure_13(closure_5, obj4);
-      const tmp20 = channel(11540);
+      const tmp20 = channel(11558);
     }
     const obj6 = { children: null };
     items1[1] = tmp10Result;

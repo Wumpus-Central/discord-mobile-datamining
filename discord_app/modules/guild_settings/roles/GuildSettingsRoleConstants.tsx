@@ -1,11 +1,11 @@
-// === Module 18801: GuildSettingsRoleConstants ===
+// === Module 18805: GuildSettingsRoleConstants ===
 
-// Module 18801 (GuildSettingsRoleConstants)
+// Module 18805 (GuildSettingsRoleConstants)
 import util from "util" /* 1128 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4850 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 18802 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 18806 */;
 import Constants from "Constants" /* 1087 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18804 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18808 */;
 import "BigFlagUtils";
 import BigFlagUtils_mod from "BigFlagUtils" /* 1099 */;
 import shims_mod from "shims" /* 586 */;

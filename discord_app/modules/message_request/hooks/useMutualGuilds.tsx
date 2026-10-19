@@ -1,6 +1,6 @@
-// === Module 18026: useMutualGuilds ===
+// === Module 18030: useMutualGuilds ===
 
-// Module 18026 (useMutualGuilds)
+// Module 18030 (useMutualGuilds)
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8585 */;
 import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7586 */;

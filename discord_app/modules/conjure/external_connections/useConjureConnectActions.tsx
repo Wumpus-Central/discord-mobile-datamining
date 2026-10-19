@@ -1,7 +1,7 @@
-// === Module 12097: useConjureConnectActions ===
+// === Module 12116: useConjureConnectActions ===
 
-// Module 12097 (useConjureConnectActions)
-import conjureExternalConnections from "conjureExternalConnections" /* 12078 */;
+// Module 12116 (useConjureConnectActions)
+import conjureExternalConnections from "conjureExternalConnections" /* 12097 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -49,7 +49,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
   }
   const fn2 = function v(type) {
     if (null != type) {
-      const result = type(12078).beginExternalAuthorization(ref.current, type.type);
+      const result = type(12097).beginExternalAuthorization(ref.current, type.type);
       if (null != result) {
         ref.current = result;
         dependencyMap(result);
@@ -81,7 +81,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                   closure_128_0 = undefined;
                   c2 = 1;
                   c3 = 1;
-                  const obj6 = { value: tmp2(12077).requestExternalAuthorizeUrl(tmp2, tmp2.type), done: false };
+                  const obj6 = { value: tmp2(12096).requestExternalAuthorizeUrl(tmp2, tmp2.type), done: false };
                   return obj6;
                 }
               } else if (arg0 === 1) {
@@ -108,7 +108,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                   stringResult = intl.string(tmp5(3883).POxkSh);
                 }
                 closure_2_1(stringResult);
-                obj3 = tmp2(12078);
+                obj3 = tmp2(12097);
               }
             } catch (tmp34) {
               c3 = tmp;
@@ -137,7 +137,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
           return applyArgumentsResult;
         })();
       }
-      let obj = type(12078);
+      let obj = type(12097);
     }
   };
   cResult[1] = arg1;
@@ -188,7 +188,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                 closure_128_0 = undefined;
                 c2 = 1;
                 c3 = 1;
-                const obj6 = { value: type(12077).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
+                const obj6 = { value: type(12096).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
                 return obj6;
               }
             } else if (arg0 === 1) {
@@ -215,7 +215,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                 stringResult = intl.string(closure_2_1(3883).POxkSh);
               }
               closure_1(stringResult);
-              obj3 = type(12078);
+              obj3 = type(12097);
             }
           } catch (tmp34) {
             c3 = tmp;
@@ -224,7 +224,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
         }
       };
       if (null != type) {
-        const result = type(12078).beginExternalAuthorization(ref.current, type.type);
+        const result = type(12097).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -249,7 +249,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
             return applyArgumentsResult;
           })();
         }
-        let obj = type(12078);
+        let obj = type(12097);
       }
     }, items)
   };

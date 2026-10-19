@@ -1,13 +1,13 @@
-// === Module 17335: HubSidebar ===
+// === Module 17339: HubSidebar ===
 
-// Module 17335 (HubSidebar)
+// Module 17339 (HubSidebar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import transitionToChannel from "transitionToChannel" /* 5202 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8955 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12950 */;
-import BaseChannelItem from "BaseChannelItem" /* 13031 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12958 */;
+import BaseChannelItem from "BaseChannelItem" /* 13039 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4843 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;
@@ -20,7 +20,7 @@ const InstantInviteSources = fn(1087).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5191);
-let obj2 = { container: { marginVertical: fn(11881).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, row: { flex: 1 } };
+let obj2 = { container: { marginVertical: fn(11900).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, row: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubItem(active) {
@@ -102,8 +102,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubIte
   }
   const obj = { style: closure_9().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = closure_9();
-  obj.name = React5(tmp5(13031).BaseChannelName, { name: label, mode: DEFAULT });
-  obj.icon = React5(tmp5(13031).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj.name = React5(tmp5(13039).BaseChannelName, { name: label, mode: DEFAULT });
+  obj.icon = React5(tmp5(13039).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     const obj2 = { value: unreadCount };
@@ -113,7 +113,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubIte
   return React5(BaseChannelItemDefault, obj);
 });
 ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11881).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11900).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
 
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubSideb
     }
     return tmp2;
   });
-  guild(17336);
+  guild(17340);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -350,8 +350,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubSideb
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(17337), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(16656).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const items4 = [closure_7(stateFromStores(17341), obj5), , , ];
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(16660).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1128).intl;
     obj6.label = intl.string(tmp(1128).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubSideb
     };
     obj6.unreadCount = tmp7;
     items4[1] = closure_7(closure_10, obj6);
-    const obj7 = { IconComponent: tmp(10915).PlusMediumIcon, label: null, handleItemClick: null };
+    const obj7 = { IconComponent: tmp(10931).PlusMediumIcon, label: null, handleItemClick: null };
     const intl2 = tmp(1128).intl;
     obj7.label = intl2.string(tmp(1128).t.emRpdS);
     obj7.handleItemClick = function handleItemClick() {

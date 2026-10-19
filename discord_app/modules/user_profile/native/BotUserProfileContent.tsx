@@ -1,6 +1,6 @@
-// === Module 14015: BotUserProfileContent ===
+// === Module 14019: BotUserProfileContent ===
 
-// Module 14015 (BotUserProfileContent)
+// Module 14019 (BotUserProfileContent)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ToastUtils from "ToastUtils" /* 4903 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5155 */;
@@ -117,7 +117,7 @@ export default noop.memo(function BotUserProfileContent(user) {
                 id = channel.id;
               }
               obj2.channelId = id;
-              obj.openLazy(asyncRequireImpl(10838, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj2, "stack");
+              obj.openLazy(asyncRequireImpl(10854, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj2, "stack");
             },
         style: null,
         emojiOnlyStyle: null

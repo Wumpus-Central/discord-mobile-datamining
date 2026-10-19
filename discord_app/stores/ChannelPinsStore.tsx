@@ -1,6 +1,6 @@
-// === Module 13754: ChannelPinsStore ===
+// === Module 13758: ChannelPinsStore ===
 
-// Module 13754 (ChannelPinsStore)
+// Module 13758 (ChannelPinsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

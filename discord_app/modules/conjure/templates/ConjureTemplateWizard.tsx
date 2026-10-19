@@ -1,10 +1,10 @@
-// === Module 11607: ConjureTemplateWizard ===
+// === Module 11623: ConjureTemplateWizard ===
 
-// Module 11607 (ConjureTemplateWizard)
+// Module 11623 (ConjureTemplateWizard)
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import ConjureUtils from "ConjureUtils" /* 7222 */;
-import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 11608 */;
+import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 11624 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -75,7 +75,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
     }
   })();
 };
-const ConjureConnectionStore = fn(10962);
+const ConjureConnectionStore = fn(10978);
 ({ prepareTemplate: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");

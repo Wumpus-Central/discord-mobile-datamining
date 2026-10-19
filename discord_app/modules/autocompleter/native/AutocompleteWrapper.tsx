@@ -1,6 +1,6 @@
-// === Module 13038: AutocompleteWrapper ===
+// === Module 13046: AutocompleteWrapper ===
 
-// Module 13038 (AutocompleteWrapper)
+// Module 13046 (AutocompleteWrapper)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -21,9 +21,9 @@ import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9571 */;
 import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10015 */;
 import AutocompleteOptions from "AutocompleteOptions" /* 10099 */;
 import TimestampSuggestionUtils from "TimestampSuggestionUtils" /* 10112 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12876 */;
-import Autocomplete from "Autocomplete" /* 13039 */;
-import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 13050 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12893 */;
+import Autocomplete from "Autocomplete" /* 13047 */;
+import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 13058 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 8189 */;

@@ -1,6 +1,6 @@
-// === Module 10684: useChannelSafeAreaBottomStyles ===
+// === Module 10700: useChannelSafeAreaBottomStyles ===
 
-// Module 10684 (useChannelSafeAreaBottomStyles)
+// Module 10700 (useChannelSafeAreaBottomStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;

@@ -1,9 +1,9 @@
-// === Module 14312: getGameOrganizationDisplayNoun ===
+// === Module 14316: getGameOrganizationDisplayNoun ===
 
-// Module 14312 (getGameOrganizationDisplayNoun)
+// Module 14316 (getGameOrganizationDisplayNoun)
 import util from "util" /* 1128 */;
 import _modDef2459 from "module_2459" /* 2459 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 10794 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 10810 */;
 import size from "module_2" /* 2 */;
 
 const constants = GameOrganizationInviteConstants.GameOrganizationDisplayNouns;

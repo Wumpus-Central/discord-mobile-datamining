@@ -1,6 +1,6 @@
-// === Module 18772: GuildSettingsStickerCreate ===
+// === Module 18776: GuildSettingsStickerCreate ===
 
-// Module 18772 (GuildSettingsStickerCreate)
+// Module 18776 (GuildSettingsStickerCreate)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
@@ -10,7 +10,7 @@ import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAwar
 import EmojiDefault from "Emoji" /* 7098 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9726 */;
 import StickerDefault from "Sticker" /* 10073 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 10833 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 10849 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -474,7 +474,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     obj18.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj18);
   } else {
-    tmp32Result = tmp32(tmp31(18774).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(18778).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp32Result;
   items4[1] = onPressEmoji(stickerId(6462).PressableHighlight, obj16);

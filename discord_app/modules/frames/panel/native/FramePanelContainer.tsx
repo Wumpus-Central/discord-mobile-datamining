@@ -1,11 +1,11 @@
-// === Module 18169: FramePanelContainer ===
+// === Module 18173: FramePanelContainer ===
 
-// Module 18169 (FramePanelContainer)
+// Module 18173 (FramePanelContainer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import WakeLockDefault from "WakeLock" /* 11332 */;
-import FramePanelControllerDefault from "FramePanelController" /* 18170 */;
-import FramePanelUIDefault from "FramePanelUI" /* 18172 */;
+import WakeLockDefault from "WakeLock" /* 11350 */;
+import FramePanelControllerDefault from "FramePanelController" /* 18174 */;
+import FramePanelUIDefault from "FramePanelUI" /* 18176 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6295 */;
 

@@ -1,9 +1,9 @@
-// === Module 15988: UserSettingsAuthedAppPermissions ===
+// === Module 15992: UserSettingsAuthedAppPermissions ===
 
-// Module 15988 (UserSettingsAuthedAppPermissions)
+// Module 15992 (UserSettingsAuthedAppPermissions)
 import Text_Text from "Text/Text" /* 5187 */;
 import disclosures2 from "disclosures" /* 9531 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15982 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15986 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

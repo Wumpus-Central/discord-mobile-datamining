@@ -1,6 +1,6 @@
-// === Module 11664: useConjureProjectIcon ===
+// === Module 11683: useConjureProjectIcon ===
 
-// Module 11664 (useConjureProjectIcon)
+// Module 11683 (useConjureProjectIcon)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6357 */;

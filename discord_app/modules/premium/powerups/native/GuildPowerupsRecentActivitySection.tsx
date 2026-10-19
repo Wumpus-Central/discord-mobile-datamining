@@ -1,6 +1,6 @@
-// === Module 13262: GuildPowerupsRecentActivitySection ===
+// === Module 13270: GuildPowerupsRecentActivitySection ===
 
-// Module 13262 (GuildPowerupsRecentActivitySection)
+// Module 13270 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -12,10 +12,10 @@ import Text_Text from "Text/Text" /* 5187 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6941 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8247 */;
 import BoostGemIcon from "BoostGemIcon" /* 9709 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 13263 */;
-import BoostTier1Icon from "BoostTier1Icon" /* 13265 */;
-import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 13267 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 13270 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 13271 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 13273 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 13275 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 13278 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5191 */;

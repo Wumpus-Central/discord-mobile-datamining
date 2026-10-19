@@ -1,6 +1,6 @@
-// === Module 18042: RestrictedMessagePreviewHeader ===
+// === Module 18046: RestrictedMessagePreviewHeader ===
 
-// Module 18042 (RestrictedMessagePreviewHeader)
+// Module 18046 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ToastUtils from "ToastUtils" /* 4903 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(13110).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(13118).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5191);
@@ -43,7 +43,7 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13290, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13298, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
         const result = channel(8589).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });

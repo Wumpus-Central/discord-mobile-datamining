@@ -1,6 +1,6 @@
-// === Module 15174: ThemedIcon ===
+// === Module 15178: ThemedIcon ===
 
-// Module 15174 (ThemedIcon)
+// Module 15178 (ThemedIcon)
 import c from "c" /* 576 */;
 import useToken from "useToken" /* 4913 */;
 import IconDefault from "Icon" /* 5481 */;

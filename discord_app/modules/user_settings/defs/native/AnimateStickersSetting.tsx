@@ -1,6 +1,6 @@
-// === Module 16477: AnimateStickersSetting ===
+// === Module 16481: AnimateStickersSetting ===
 
-// Module 16477 (AnimateStickersSetting)
+// Module 16481 (AnimateStickersSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 2044 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const StickerAnimationSettings = fn(2047).StickerAnimationSettings;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnimateStickerSettingOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

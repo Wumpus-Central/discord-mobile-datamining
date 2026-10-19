@@ -1,6 +1,6 @@
-// === Module 12029: useCustomKeyboardBottomSheetConfig ===
+// === Module 12048: useCustomKeyboardBottomSheetConfig ===
 
-// Module 12029 (useCustomKeyboardBottomSheetConfig)
+// Module 12048 (useCustomKeyboardBottomSheetConfig)
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1899 */;
 import useKeyboardType from "useKeyboardType" /* 5083 */;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCusto
   }
   const tmp8 = minimum(1499)(first);
   _require = tmp8;
-  const tmp9 = minimum(10683)();
+  const tmp9 = minimum(10699)();
   minimum = tmp9.minimum;
   const maximum = tmp9.maximum;
   if (cResult[1] === minimum) {
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCusto
           obj3.containerHeight = tmp8.height;
           obj3.initialPosition = initialPosition;
           let str;
-          if (tmp(10682).IS_SYSTEM_KEYBOARD_EXTERNAL) {
+          if (tmp(10698).IS_SYSTEM_KEYBOARD_EXTERNAL) {
             str = "adjustResize";
           }
           obj3.android_keyboardInputMode = str;

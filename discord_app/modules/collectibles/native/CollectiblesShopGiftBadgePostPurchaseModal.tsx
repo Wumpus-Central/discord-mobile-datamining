@@ -1,6 +1,6 @@
-// === Module 13667: CollectiblesShopGiftBadgePostPurchaseModal ===
+// === Module 13671: CollectiblesShopGiftBadgePostPurchaseModal ===
 
-// Module 13667 (CollectiblesShopGiftBadgePostPurchaseModal)
+// Module 13671 (CollectiblesShopGiftBadgePostPurchaseModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -12,7 +12,7 @@ import XSmallIcon from "XSmallIcon" /* 6485 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7155 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7529 */;
 import ModalScreen from "ModalScreen" /* 7781 */;
-import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 13668 */;
+import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 13672 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

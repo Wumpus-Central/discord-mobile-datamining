@@ -1,6 +1,6 @@
-// === Module 12125: ConjureShellGlow ===
+// === Module 12144: ConjureShellGlow ===
 
-// Module 12125 (ConjureShellGlow)
+// Module 12144 (ConjureShellGlow)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
@@ -1118,7 +1118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                                       }
                                     }
                                     const size = { width, height: v500, thinking, fill: tmp88, fillOpacity: 0.16 };
-                                    const tmp92 = sharedValue4(stateFromStores(12126), size);
+                                    const tmp92 = sharedValue4(stateFromStores(12145), size);
                                     cResult[56] = tmp88;
                                     cResult[57] = 0.16;
                                     class Se {

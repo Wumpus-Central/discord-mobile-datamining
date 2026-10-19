@@ -1,6 +1,6 @@
-// === Module 14973: GameOrganizationInviteActionSheet ===
+// === Module 14977: GameOrganizationInviteActionSheet ===
 
-// Module 14973 (GameOrganizationInviteActionSheet)
+// Module 14977 (GameOrganizationInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
 import InstantInviteUtils from "InstantInviteUtils" /* 8957 */;
 import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8965 */;
 import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8987 */;
-import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 14974 */;
+import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 14978 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2090 */;
@@ -502,7 +502,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
     let tmp14Result = closure_10(closure_15, {});
   } else {
     const obj9 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-    tmp14Result = closure_10(combined(14977), obj9);
+    tmp14Result = closure_10(combined(14981), obj9);
   }
   obj3.children = tmp14Result;
   return closure_10(guildId(7175).ActionSheet, obj3);

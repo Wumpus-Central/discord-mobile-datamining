@@ -1,6 +1,6 @@
-// === Module 17533: YouBarButton ===
+// === Module 17537: YouBarButton ===
 
-// Module 17533 (YouBarButton)
+// Module 17537 (YouBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import IconButton from "IconButton" /* 7840 */;
@@ -12,7 +12,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16136);
+const YouBarConstants = fn(16140);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
     }
     return tmp6;
   }
-  const rect = { position: "absolute", left: sum, top: sum1, right: "ix", bottom: "kind", padding: "right", minWidth: "application" };
+  const rect = { position: "absolute", left: sum, top: sum1, right: "ix", bottom: "Number", padding: "format", minWidth: "application" };
   cResult[0] = sum;
   cResult[1] = sum1;
   cResult[2] = rect;
@@ -127,7 +127,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
   }
   const items = [size, badgeSize, num2, num];
   return noop.useMemo(() => {
-    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "ix", bottom: "kind", padding: "right", minWidth: "application" };
+    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "ix", bottom: "Number", padding: "format", minWidth: "application" };
     return rect;
   }, items);
 });

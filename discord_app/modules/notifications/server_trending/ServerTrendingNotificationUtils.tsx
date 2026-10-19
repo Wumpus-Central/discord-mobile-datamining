@@ -1,6 +1,6 @@
-// === Module 16568: ServerTrendingNotificationUtils ===
+// === Module 16572: ServerTrendingNotificationUtils ===
 
-// Module 16568 (ServerTrendingNotificationUtils)
+// Module 16572 (ServerTrendingNotificationUtils)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 2044 */;

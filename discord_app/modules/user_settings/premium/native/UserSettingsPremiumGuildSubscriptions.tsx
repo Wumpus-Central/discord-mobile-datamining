@@ -1,6 +1,6 @@
-// === Module 14571: UserSettingsPremiumGuildSubscriptions ===
+// === Module 14575: UserSettingsPremiumGuildSubscriptions ===
 
-// Module 14571 (UserSettingsPremiumGuildSubscriptions)
+// Module 14575 (UserSettingsPremiumGuildSubscriptions)
 import util from "util" /* 1128 */;
 import user from "user" /* 1400 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2131 */;
@@ -10,11 +10,11 @@ import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreat
 import UserSettingsUtils from "UserSettingsUtils" /* 6961 */;
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7234 */;
 import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8296 */;
-import GuildBoostSlotsInventoryDefault from "GuildBoostSlotsInventory" /* 14572 */;
-import BoostingUnavailablePillDefault from "BoostingUnavailablePill" /* 14586 */;
-import BoostingCountDownPillDefault from "BoostingCountDownPill" /* 14588 */;
-import TopPattern from "TopPattern" /* 14590 */;
-import GuildBoostingUpsellDefault from "GuildBoostingUpsell" /* 14594 */;
+import GuildBoostSlotsInventoryDefault from "GuildBoostSlotsInventory" /* 14576 */;
+import BoostingUnavailablePillDefault from "BoostingUnavailablePill" /* 14590 */;
+import BoostingCountDownPillDefault from "BoostingCountDownPill" /* 14592 */;
+import TopPattern from "TopPattern" /* 14594 */;
+import GuildBoostingUpsellDefault from "GuildBoostingUpsell" /* 14598 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 import BillingInfoStore from "BillingInfoStore" /* 4866 */;
@@ -305,8 +305,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   const tmp3 = flag(7385)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(14534)(endsAt, tmp(14534).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(14534);
+  fpDurationText = flag(14538)(endsAt, tmp(14538).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(14538);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = { hasFetchedSlots: GuildBoostSlotStore.hasFetched, hasSlots: Object.keys(GuildBoostSlotStore.boostSlots).length > 0, hasAvailableSlots: null, hasFetchedSubscriptionPlans: null, isFetchingSubscriptionPlans: null, isFetchingPaymentSources: null, shouldFetchSubscriptionPlans: null, fractionalState: null, isInReverseTrial: null, fpDurationText: null, premiumGroupRole: null };

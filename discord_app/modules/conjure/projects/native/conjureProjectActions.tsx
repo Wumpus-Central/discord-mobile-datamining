@@ -1,6 +1,6 @@
-// === Module 11613: conjureProjectActions ===
+// === Module 11629: conjureProjectActions ===
 
-// Module 11613 (conjureProjectActions)
+// Module 11629 (conjureProjectActions)
 import util from "util" /* 1128 */;
 import _modDef3883 from "module_3883" /* 3883 */;
 import ToastUtils from "ToastUtils" /* 4903 */;
@@ -9,12 +9,12 @@ import CopyIcon from "CopyIcon" /* 5141 */;
 import AlertModal from "AlertModal" /* 5405 */;
 import ChannelUtils from "ChannelUtils" /* 5514 */;
 import ClipboardUtils from "ClipboardUtils" /* 7162 */;
-import conjureProjectMute from "conjureProjectMute" /* 10985 */;
-import ConjureArchivePicker from "ConjureArchivePicker" /* 11582 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11624 */;
-import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11629 */;
+import conjureProjectMute from "conjureProjectMute" /* 11002 */;
+import ConjureArchivePicker from "ConjureArchivePicker" /* 11598 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 11640 */;
+import openConjureUnpublishUserAppAlertDefault from "openConjureUnpublishUserAppAlert" /* 11645 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10977 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10993 */;
 
 const require = globalThis.__r;
 
@@ -88,7 +88,7 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1128).intl;
-          await tmp3(11582).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3883).Owerd3));
+          await tmp3(11598).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3883).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1128).intl;
@@ -122,7 +122,7 @@ let closure_11 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10962);
+const ConjureConnectionStore = fn(10978);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 const ConjureProjectStore = fn(6293);
 ({ canPublishProject: closure_7, canRemixProject: closure_8, isProjectOwner: closure_9 } = ConjureProjectStore);

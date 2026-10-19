@@ -1,6 +1,6 @@
-// === Module 15841: Blocked ===
+// === Module 15845: Blocked ===
 
-// Module 15841 (Blocked)
+// Module 15845 (Blocked)
 import c from "c" /* 576 */;
 import shared from "shared" /* 5065 */;
 import FastImageDefault from "FastImage" /* 5128 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBlockedSo
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_15842");
+          return require("module_15846");
         },
       darker() {
-          return require("module_15843");
+          return require("module_15847");
         },
       light() {
-          return require("module_15844");
+          return require("module_15848");
         }
     };
     const illustrationSource = _mod8633.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBlockedSo
   const obj = shared;
   return _mod8633.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15842");
+      return require("module_15846");
     },
     darker() {
-      return require("module_15843");
+      return require("module_15847");
     },
     light() {
-      return require("module_15844");
+      return require("module_15848");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getBlockedSource(theme) {
   return _mod8633.getIllustrationSource(theme, {
     dark() {
-      return require("module_15842");
+      return require("module_15846");
     },
     darker() {
-      return require("module_15843");
+      return require("module_15847");
     },
     light() {
-      return require("module_15844");
+      return require("module_15848");
     }
   });
 }

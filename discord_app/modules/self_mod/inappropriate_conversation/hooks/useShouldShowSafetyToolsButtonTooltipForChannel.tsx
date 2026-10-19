@@ -1,13 +1,13 @@
-// === Module 10735: useShouldShowSafetyToolsButtonTooltipForChannel ===
+// === Module 10751: useShouldShowSafetyToolsButtonTooltipForChannel ===
 
-// Module 10735 (useShouldShowSafetyToolsButtonTooltipForChannel)
+// Module 10751 (useShouldShowSafetyToolsButtonTooltipForChannel)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10597 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10695 */;
-import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10736 */;
-import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 10737 */;
-import InappropriateConversationUtils from "InappropriateConversationUtils" /* 10738 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10711 */;
+import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10752 */;
+import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 10753 */;
+import InappropriateConversationUtils from "InappropriateConversationUtils" /* 10754 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

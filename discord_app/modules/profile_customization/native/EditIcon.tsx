@@ -1,6 +1,6 @@
-// === Module 11643: EditIcon ===
+// === Module 11659: EditIcon ===
 
-// Module 11643 (EditIcon)
+// Module 11659 (EditIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PencilIcon from "PencilIcon" /* 10023 */;

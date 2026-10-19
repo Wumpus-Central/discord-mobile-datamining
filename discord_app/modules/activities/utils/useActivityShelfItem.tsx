@@ -1,20 +1,20 @@
-// === Module 11853: useActivityShelfItem ===
+// === Module 11872: useActivityShelfItem ===
 
-// Module 11853 (useActivityShelfItem)
+// Module 11872 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import Server from "Server" /* 2000 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4834 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6359 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7134 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11025 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11201 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11295 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11296 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11336 */;
-import getPlatformDefault from "getPlatform" /* 11836 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11854 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11855 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11046 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11220 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11313 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11314 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11354 */;
+import getPlatformDefault from "getPlatform" /* 11855 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11873 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6292 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2067 */;
@@ -39,7 +39,7 @@ function useOnActivityItemSelected(arg0) {
   }
   let tmp = closure_10({ context, applicationId: str, fetchesApplication });
   analyticsLocations = context(7130)().analyticsLocations;
-  closure_13 = context(11296)();
+  closure_13 = context(11314)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {

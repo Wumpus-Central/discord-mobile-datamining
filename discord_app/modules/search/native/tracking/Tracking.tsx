@@ -1,14 +1,14 @@
-// === Module 13001: search/tracking/Tracking ===
+// === Module 13009: search/tracking/Tracking ===
 
-// Module 13001 (search/tracking/Tracking)
+// Module 13009 (search/tracking/Tracking)
 import v1 from "v1" /* 1281 */;
 import UserSettings from "UserSettings" /* 2044 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5206 */;
-import SearchUtils from "SearchUtils" /* 12987 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13002 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13004 */;
+import SearchUtils from "SearchUtils" /* 12995 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13010 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13012 */;
 import ChannelStore from "ChannelStore" /* 2068 */;
-import SearchQueryStore from "SearchQueryStore" /* 12994 */;
+import SearchQueryStore from "SearchQueryStore" /* 13002 */;
 
 require = fn;
 let closure_5 = fn(9613).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;

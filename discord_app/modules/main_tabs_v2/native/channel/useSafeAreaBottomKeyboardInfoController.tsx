@@ -1,6 +1,6 @@
-// === Module 10682: useSafeAreaBottomKeyboardInfoController ===
+// === Module 10698: useSafeAreaBottomKeyboardInfoController ===
 
-// Module 10682 (useSafeAreaBottomKeyboardInfoController)
+// Module 10698 (useSafeAreaBottomKeyboardInfoController)
 import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1895 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import noop from "module_19" /* 19 */;

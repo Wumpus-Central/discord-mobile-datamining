@@ -24,13 +24,13 @@ import handleMessagesTapLink from "handleMessagesTapLink" /* 9911 */;
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 9971 */;
 import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 9976 */;
 import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 9977 */;
-import handleMessagesTapImage from "handleMessagesTapImage" /* 11097 */;
-import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11098 */;
-import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11136 */;
-import contentHandlers2 from "contentHandlers" /* 11137 */;
-import GuildNSFWDefault from "GuildNSFW" /* 11560 */;
-import ChatDefault from "Chat" /* 12618 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 13334 */;
+import GuildNSFWDefault from "GuildNSFW" /* 10675 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 10677 */;
+import handleMessagesTapImage from "handleMessagesTapImage" /* 11116 */;
+import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11117 */;
+import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11155 */;
+import contentHandlers2 from "contentHandlers" /* 11156 */;
+import ChatDefault from "Chat" /* 12635 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5181 */;
 import ActionSheetStore from "ActionSheetStore" /* 4897 */;
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const chatManager4 = applyArgumentsResult.chatManager;
         const jumpTargetId = tmp3.jumpTargetId;
         const previousRows = chatManager4.getPreviousRows();
-        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "test", shouldInitialScroll: "Array", animated: "function DetailsHeaderTsx1(){const{height}=this.__closure;return{height:height.get()};}", scrollPosition: "toCharArray$esjava$1", focusTargetId: "toCharArray$esjava$1" };
+        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "test", shouldInitialScroll: "Array", animated: 0, scrollPosition: 2, focusTargetId: 0 };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
           if (applyArgumentsResult.didPositionInitialScroll) {
@@ -291,9 +291,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "System",
+        messageChannel: "DM_SETTINGS_UPSELL_SHOW",
         selectedChannelId: null,
-        tapLinkData: "ix"
+        tapLinkData: "sm"
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

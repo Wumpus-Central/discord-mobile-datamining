@@ -1,6 +1,6 @@
-// === Module 10969: ConjureUsageTypes ===
+// === Module 10985: ConjureUsageTypes ===
 
-// Module 10969 (ConjureUsageTypes)
+// Module 10985 (ConjureUsageTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/usage/ConjureUsageTypes.tsx");

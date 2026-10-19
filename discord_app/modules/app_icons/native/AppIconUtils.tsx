@@ -1,12 +1,12 @@
-// === Module 14528: AppIconUtils ===
+// === Module 14532: AppIconUtils ===
 
-// Module 14528 (AppIconUtils)
+// Module 14532 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
 import useMountEffectDefault from "useMountEffect" /* 5496 */;
 import openUserSettings from "openUserSettings" /* 7370 */;
-import NativeAppIconModuleDefault from "NativeAppIconModule" /* 14529 */;
+import NativeAppIconModuleDefault from "NativeAppIconModule" /* 14533 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

@@ -1,10 +1,10 @@
-// === Module 18533: CheckboxActionComponent ===
+// === Module 18537: CheckboxActionComponent ===
 
-// Module 18533 (CheckboxActionComponent)
+// Module 18537 (CheckboxActionComponent)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 2000 */;
 import ComponentStateContext from "ComponentStateContext" /* 8522 */;
-import Checkbox from "Checkbox" /* 13835 */;
+import Checkbox from "Checkbox" /* 13839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

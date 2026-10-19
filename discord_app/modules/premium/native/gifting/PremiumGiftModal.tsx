@@ -8,10 +8,10 @@ import useInitialValueDefault from "useInitialValue" /* 6447 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7130 */;
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10352 */;
 import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10353 */;
-import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 13668 */;
-import GiftingSKUSelectScreenDefault from "GiftingSKUSelectScreen" /* 13679 */;
-import PremiumGiftCustomizationDefault from "PremiumGiftCustomization" /* 13681 */;
-import PremiumGiftSuccessDefault from "PremiumGiftSuccess" /* 13710 */;
+import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 13672 */;
+import GiftingSKUSelectScreenDefault from "GiftingSKUSelectScreen" /* 13683 */;
+import PremiumGiftCustomizationDefault from "PremiumGiftCustomization" /* 13685 */;
+import PremiumGiftSuccessDefault from "PremiumGiftSuccess" /* 13714 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
               cResult[22] = tmp34;
             }
             const obj3 = { currentStep: tmp19, children: tmp26 };
-            const tmp31 = jsx(tmp4(13739), { currentStep: tmp19, children: tmp26 });
+            const tmp31 = jsx(tmp4(13743), { currentStep: tmp19, children: tmp26 });
             cResult[12] = tmp19;
             cResult[13] = tmp26;
             cResult[14] = tmp31;

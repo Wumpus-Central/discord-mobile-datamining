@@ -1,6 +1,6 @@
-// === Module 18657: FavoriteManager ===
+// === Module 18661: FavoriteManager ===
 
-// Module 18657 (FavoriteManager)
+// Module 18661 (FavoriteManager)
 import FavoritesUtils from "FavoritesUtils" /* 2093 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 10624 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -86,7 +86,7 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(17326);
+const FavoritesGuildSuggestionsStore = fn(17330);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1087).NOOP;
 const prototype = function FavoriteManager() {

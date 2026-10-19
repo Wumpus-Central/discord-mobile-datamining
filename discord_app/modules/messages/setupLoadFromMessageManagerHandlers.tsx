@@ -1,6 +1,6 @@
-// === Module 18563: setupLoadFromMessageManagerHandlers ===
+// === Module 18567: setupLoadFromMessageManagerHandlers ===
 
-// Module 18563 (setupLoadFromMessageManagerHandlers)
+// Module 18567 (setupLoadFromMessageManagerHandlers)
 import DurationsDefault from "Durations" /* 1104 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6339 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2119 */;

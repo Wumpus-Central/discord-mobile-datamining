@@ -1,6 +1,6 @@
-// === Module 12070: MediaKeyboardAccessoriesContainer ===
+// === Module 12089: MediaKeyboardAccessoriesContainer ===
 
-// Module 12070 (MediaKeyboardAccessoriesContainer)
+// Module 12089 (MediaKeyboardAccessoriesContainer)
 import ReanimatedRexport from "ReanimatedRexport" /* 4945 */;
 import noop from "module_19" /* 19 */;
 import NativeMenuStore from "NativeMenuStore" /* 9993 */;

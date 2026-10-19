@@ -1,14 +1,14 @@
-// === Module 18586: TouchableUploadAvatar ===
+// === Module 18590: TouchableUploadAvatar ===
 
-// Module 18586 (TouchableUploadAvatar)
+// Module 18590 (TouchableUploadAvatar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import FastImageDefault from "FastImage" /* 5128 */;
 import Pressables from "Pressables" /* 6462 */;
-import _modDef13483 from "module_13483" /* 13483 */;
-import _modDef14867 from "module_14867" /* 14867 */;
+import _modDef13488 from "module_13488" /* 13488 */;
+import _modDef14871 from "module_14871" /* 14871 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
   ({ avatarSource, showPendingAvatar, onSelectAvatar } = arg0);
   const tmp5 = closure_6();
   if (!(undefined !== showPendingAvatar && showPendingAvatar)) {
-    let tmp7 = _modDef14867;
+    let tmp7 = _modDef14871;
   } else {
     tmp7 = avatarSource;
   }
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
         let tmp13 = cResult[3];
       }
       if (cResult[4] !== tmp5.uploadAvatarIcon) {
-        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13483, style: tmp5.uploadAvatarIcon };
+        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13488, style: tmp5.uploadAvatarIcon };
         const tmp20 = React4(native.Icon, obj2);
         cResult[4] = tmp5.uploadAvatarIcon;
         cResult[5] = tmp20;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef14867;
+    let tmp3 = _modDef14871;
   } else {
     tmp3 = avatarSource;
   }
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
     const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
     const items = [React4(FastImageDefault, obj4), ];
     const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
-    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13483, style: tmp.uploadAvatarIcon };
+    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13488, style: tmp.uploadAvatarIcon };
     obj5.children = React4(native.Icon, obj6);
     items[1] = React4(View, obj5);
     obj3.children = items;

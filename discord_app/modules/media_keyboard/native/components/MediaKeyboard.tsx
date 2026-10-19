@@ -1,6 +1,6 @@
-// === Module 12031: MediaKeyboard ===
+// === Module 12050: MediaKeyboard ===
 
-// Module 12031 (MediaKeyboard)
+// Module 12050 (MediaKeyboard)
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -16,9 +16,9 @@ import PollsIcon from "PollsIcon" /* 10325 */;
 import AttachmentIcon from "AttachmentIcon" /* 10327 */;
 import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10329 */;
 import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10331 */;
-import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12036 */;
-import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 12070 */;
-import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 12071 */;
+import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12055 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 12089 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 12090 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 8175 */;
 
@@ -29,7 +29,7 @@ const MediaKeyboardConstants = fn(1629);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(11831).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(11850).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ReactCompilerGating = fn(558);

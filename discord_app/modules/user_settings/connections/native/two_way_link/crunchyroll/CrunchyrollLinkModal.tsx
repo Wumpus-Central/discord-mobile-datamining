@@ -1,19 +1,19 @@
-// === Module 13862: CrunchyrollLinkModal ===
+// === Module 13866: CrunchyrollLinkModal ===
 
-// Module 13862 (CrunchyrollLinkModal)
+// Module 13866 (CrunchyrollLinkModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Navigator from "Navigator" /* 6965 */;
 import HeaderActionButton from "HeaderActionButton" /* 7365 */;
 import _modDef7995 from "module_7995" /* 7995 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9517 */;
-import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 13849 */;
-import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 13861 */;
-import CrunchyrollLinkLandingDefault from "CrunchyrollLinkLanding" /* 13864 */;
-import CrunchyrollLinkPreConnectDefault from "CrunchyrollLinkPreConnect" /* 13866 */;
-import CrunchyrollLinkDiscordConsentDefault from "CrunchyrollLinkDiscordConsent" /* 13868 */;
-import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 13869 */;
-import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 13871 */;
+import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 13853 */;
+import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 13865 */;
+import CrunchyrollLinkLandingDefault from "CrunchyrollLinkLanding" /* 13868 */;
+import CrunchyrollLinkPreConnectDefault from "CrunchyrollLinkPreConnect" /* 13870 */;
+import CrunchyrollLinkDiscordConsentDefault from "CrunchyrollLinkDiscordConsent" /* 13872 */;
+import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 13873 */;
+import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 13875 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -77,7 +77,7 @@ function getScreens(headerStyle) {
     }
   };
 }
-const constants = fn(13863).CrunchyrollLinkModalScenes;
+const constants = fn(13867).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1087).PlatformTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => getScreens(twoWayLinkStyles), items);
   const obj = twoWayLinkStyles(9517);
-  const accountLinkStepTracking = twoWayLinkStyles(13849).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
+  const accountLinkStepTracking = twoWayLinkStyles(13853).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
   const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1128).intl;
   obj3.headerBackTitle = intl.string(twoWayLinkStyles(1128).t["13/7kX"]);

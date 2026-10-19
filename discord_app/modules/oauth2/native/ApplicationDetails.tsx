@@ -1,6 +1,6 @@
-// === Module 13836: ApplicationDetails ===
+// === Module 13840: ApplicationDetails ===
 
-// Module 13836 (ApplicationDetails)
+// Module 13840 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -14,10 +14,10 @@ import GlobeEarthIcon from "GlobeEarthIcon" /* 9393 */;
 import scopes from "scopes" /* 9529 */;
 import disclosures from "disclosures" /* 9531 */;
 import Utils from "Utils" /* 9533 */;
-import ShieldIcon from "ShieldIcon" /* 10717 */;
-import HammerIcon from "HammerIcon" /* 11605 */;
-import RobotIcon from "RobotIcon" /* 11627 */;
-import EmbedIcon from "EmbedIcon" /* 13837 */;
+import ShieldIcon from "ShieldIcon" /* 10733 */;
+import HammerIcon from "HammerIcon" /* 11621 */;
+import RobotIcon from "RobotIcon" /* 11643 */;
+import EmbedIcon from "EmbedIcon" /* 13841 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

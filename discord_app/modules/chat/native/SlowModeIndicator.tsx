@@ -1,10 +1,10 @@
-// === Module 12832: SlowModeIndicator ===
+// === Module 12849: SlowModeIndicator ===
 
-// Module 12832 (SlowModeIndicator)
+// Module 12849 (SlowModeIndicator)
 import nativeDefault from "native" /* 587 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4904 */;
 import SlowmodeUtils from "SlowmodeUtils" /* 7641 */;
-import TimerIcon from "TimerIcon" /* 11161 */;
+import TimerIcon from "TimerIcon" /* 11180 */;
 import noop from "module_19" /* 19 */;
 import SlowmodeStore from "SlowmodeStore" /* 7640 */;
 
@@ -66,7 +66,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           if (cResult[11] !== tmp4.icon) {
             const obj3 = { style: tmp4.icon, size: "xxs" };
-            const tmp20 = closure_5(tmp(11161).TimerIcon, obj3);
+            const tmp20 = closure_5(tmp(11180).TimerIcon, obj3);
             cResult[11] = tmp4.icon;
             cResult[12] = tmp20;
             let tmp18 = tmp20;

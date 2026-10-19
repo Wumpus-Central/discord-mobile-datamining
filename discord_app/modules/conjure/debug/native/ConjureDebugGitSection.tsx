@@ -1,12 +1,12 @@
-// === Module 12350: ConjureDebugGitSection ===
+// === Module 12367: ConjureDebugGitSection ===
 
-// Module 12350 (ConjureDebugGitSection)
+// Module 12367 (ConjureDebugGitSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5187 */;
 import AlertModal from "AlertModal" /* 5405 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12346 */;
-import ConjureDebugGit from "ConjureDebugGit" /* 12363 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12363 */;
+import ConjureDebugGit from "ConjureDebugGit" /* 12380 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ obj2.restartAgentRow = { flexDirection: "row", flexWrap: "wrap", alignItems: "ce
 obj2.clearAlarm = { flexShrink: 1 };
 obj2.disabled = { opacity: 0.5 };
 let closure_9 = createStyles.createStyles(obj2);
-let obj5 = { checkout: fn(8474).FolderIcon, edit: fn(10023).PencilIcon, remote: fn(12351).CloudIcon, commits: fn(12353).ListNumberedIcon, calendar: fn(8952).CalendarIcon, save: fn(12355).SaveIcon, objects: fn(9545).ServerIcon, download: fn(12357).CloudDownloadIcon, size: fn(11429).SpeedometerIcon, file: fn(11989).FileIcon };
+let obj5 = { checkout: fn(8474).FolderIcon, edit: fn(10023).PencilIcon, remote: fn(12368).CloudIcon, commits: fn(12370).ListNumberedIcon, calendar: fn(8952).CalendarIcon, save: fn(12372).SaveIcon, objects: fn(9545).ServerIcon, download: fn(12374).CloudDownloadIcon, size: fn(11447).SpeedometerIcon, file: fn(12008).FileIcon };
 let obj6 = { ok: null, warning: null, error: null, ahead: null, behind: null };
 let items = [fn(7144).CircleCheckIcon, nativeDefault.colors.ICON_FEEDBACK_POSITIVE];
 obj6.ok = items;
@@ -32,9 +32,9 @@ let items1 = [fn(7838).WarningIcon, nativeDefault.colors.ICON_FEEDBACK_WARNING];
 obj6.warning = items1;
 let items2 = [fn(6573).CircleXIcon, nativeDefault.colors.ICON_FEEDBACK_CRITICAL];
 obj6.error = items2;
-let items3 = [fn(12359).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
+let items3 = [fn(12376).ArrowSmallUpIcon, nativeDefault.colors.ICON_MUTED];
 obj6.ahead = items3;
-let items4 = [fn(12361).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
+let items4 = [fn(12378).ArrowSmallDownIcon, nativeDefault.colors.ICON_MUTED];
 obj6.behind = items4;
 fn(558);
 let obj4 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };

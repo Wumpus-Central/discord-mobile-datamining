@@ -1,6 +1,6 @@
-// === Module 15639: CustomizeBadgesSheet ===
+// === Module 15643: CustomizeBadgesSheet ===
 
-// Module 15639 (CustomizeBadgesSheet)
+// Module 15643 (CustomizeBadgesSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -24,11 +24,11 @@ import ContextMenuState from "ContextMenuState" /* 9663 */;
 import ContextMenuConstants from "ContextMenuConstants" /* 9664 */;
 import openPremiumModalDefault from "openPremiumModal" /* 9693 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9694 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10880 */;
-import BadgeUtils from "BadgeUtils" /* 10889 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11892 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 14168 */;
-import BadgeGrid from "BadgeGrid" /* 15640 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10896 */;
+import BadgeUtils from "BadgeUtils" /* 10905 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11911 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 14172 */;
+import BadgeGrid from "BadgeGrid" /* 15644 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8558 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -201,7 +201,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj14 = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(15640).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(15640).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(15644).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(15644).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 ReactCompilerGating = fn(558);

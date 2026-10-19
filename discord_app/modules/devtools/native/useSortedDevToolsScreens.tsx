@@ -1,10 +1,10 @@
-// === Module 16820: useSortedDevToolsScreens ===
+// === Module 16824: useSortedDevToolsScreens ===
 
-// Module 16820 (useSortedDevToolsScreens)
+// Module 16824 (useSortedDevToolsScreens)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 16637 */;
-import DevToolsScreens from "DevToolsScreens" /* 16641 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 16641 */;
+import DevToolsScreens from "DevToolsScreens" /* 16645 */;
 import _slicedToArray from "module_32" /* 32 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7673 */;
 

@@ -1,6 +1,6 @@
-// === Module 12028: PortalKeyboardBottomSheet ===
+// === Module 12047: PortalKeyboardBottomSheet ===
 
-// Module 12028 (PortalKeyboardBottomSheet)
+// Module 12047 (PortalKeyboardBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
