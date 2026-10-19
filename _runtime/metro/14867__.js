@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 120, height: 120, scales: [2, 3], hash: "0242e2e3975e7ca5a2256573e276d96f", name: "logo", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 40, height: 40, scales: [2, 3], hash: "1d68443a64aaff8d1d20c2355b47322a", name: "cta", type: "png" });

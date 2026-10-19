@@ -1,10 +1,18 @@
 // === Module 15133: ? ===
 
 // Module 15133
-import _mod15122 from "module_15122" /* 15122 */;
+import _mod15126 from "module_15126" /* 15126 */;
 
 
-export default (arg0, arg1, arg2) => {
-  const obj = new _mod15122(arg0, arg2);
-  return obj.intersects(new _mod15122(arg1, arg2), arg2);
+export default (arg0, arg1) => {
+  try {
+    const tmp8 = new _mod15126(arg0, arg1);
+    let str = tmp8.range;
+    if (!str) {
+      str = "*";
+    }
+    return str;
+  } catch (err) {
+    return null;
+  }
 };

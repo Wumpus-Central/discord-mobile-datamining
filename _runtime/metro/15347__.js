@@ -1,18 +1,11 @@
 // === Module 15347: ? ===
 
 // Module 15347
-import _mod15338 from "module_15338" /* 15338 */;
-import _mod15346 from "module_15346" /* 15346 */;
+import _mod15331 from "module_15331" /* 15331 */;
 import _mod15348 from "module_15348" /* 15348 */;
-import _mod15349 from "module_15349" /* 15349 */;
 
+let closure_2 = _mod15331({}.hasOwnProperty);
 
-export default _mod15338 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod15348("Symbol");
-  let tmpResultResult = _mod15346(tmp3);
-  if (tmpResultResult) {
-    tmpResultResult = _mod15349(tmp3.prototype, Object(arg0));
-    const tmpResult = _mod15349;
-  }
-  return tmpResultResult;
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod15348(arg0), arg1);
 });

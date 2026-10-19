@@ -1,18 +1,16 @@
 // === Module 15342: ? ===
 
 // Module 15342
-import _mod15327 from "module_15327" /* 15327 */;
+import prop_mod from "module_15343" /* 15343 */;
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod15327(1.toString);
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
-  }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+export default prop;

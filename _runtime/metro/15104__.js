@@ -1,7 +1,15 @@
 // === Module 15104: ? ===
 
 // Module 15104
-import _mod15093 from "module_15093" /* 15093 */;
+import _mod15096 from "module_15096" /* 15096 */;
 
 
-export default (arg0, arg1) => new _mod15093(arg0, arg1).minor;
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod15096(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
+  }
+  return version;
+};

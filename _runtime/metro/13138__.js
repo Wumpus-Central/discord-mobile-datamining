@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 62, height: 65, scales: [1, 2, 3], hash: "38485069fbc14bffd27bdd20bfea4ac1", name: "pending-alert", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/channel_following/light", width: 280, height: 120, scales: [2, 3], hash: "822095525bba6121eeb33373acfc6100", name: "channel_following_success_1", type: "png" });

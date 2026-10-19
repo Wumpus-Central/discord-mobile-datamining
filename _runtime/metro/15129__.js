@@ -1,18 +1,14 @@
 // === Module 15129: ? ===
 
 // Module 15129
-import _mod15122 from "module_15122" /* 15122 */;
+import _mod15126 from "module_15126" /* 15126 */;
 
 
 export default (arg0, arg1) => {
-  try {
-    const tmp8 = new _mod15122(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
-    }
-    return str;
-  } catch (err) {
-    return null;
-  }
+  const tmp = new _mod15126(arg0, arg1);
+  return new _mod15126(arg0, arg1).set.map((arr) => {
+    const mapped = arr.map((value) => value.value);
+    const str = mapped.join(" ");
+    return mapped.join(" ").trim().split(" ");
+  });
 };

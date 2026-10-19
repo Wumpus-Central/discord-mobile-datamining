@@ -1,19 +1,7 @@
 // === Module 18071: ? ===
 
 // Module 18071
-import baseFlatten from "baseFlatten" /* 5292 */;
-import baseRest from "baseRest" /* 8777 */;
-import _mod18072 from "module_18072" /* 18072 */;
-import baseDifference from "baseDifference" /* 18073 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default baseRest((arg0, arg1) => {
-  if (_mod18072(arg0)) {
-    const tmpResult = baseDifference;
-    let tmpResultResult = tmpResult(arg0, baseFlatten(arg1, 1, _mod18072, true));
-    const tmpResult2 = baseFlatten;
-  } else {
-    tmpResultResult = [];
-  }
-  return tmpResultResult;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 60, height: 60, scales: [2, 3], hash: "063292ce4c9cf6ef0db464edc768d34e", name: "icon-server-muted", type: "png" });

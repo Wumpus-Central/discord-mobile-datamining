@@ -1,6 +1,10 @@
 // === Module 15389: ? ===
 
 // Module 15389
-import _mod17 from "module_17" /* 17 */;
+import _mod15367 from "module_15367" /* 15367 */;
+import _mod15368 from "module_15368" /* 15368 */;
 
-const parsed = parseInt(_mod17.Platform.Version, 10);
+
+export default Object.keys || (function keys(arg0) {
+  return _mod15368(arg0, _mod15367);
+});

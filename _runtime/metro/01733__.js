@@ -80,7 +80,7 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "frame",
+      startTimestamp: "premiumTabPopover",
       reduceMotion: null
     };
     let num = obj.velocity;

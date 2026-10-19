@@ -1,23 +1,5 @@
 // === Module 14737: ? ===
 
 // Module 14737
-import _mod14729 from "module_14729" /* 14729 */;
 
-let c2 = true;
-let c3 = true;
-try {
-  const _String = String;
-  fromCharCode.apply(null, [0]);
-  try {
-    const _String2 = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(1);
-    fromCharCode2.apply(null, uint8Array);
-    const buf8 = new _mod14729.Buf8(256);
-    require = 252;
-  } catch (err) {
-    c3 = false;
-  }
-} catch (err) {
-  c2 = false;
-}
+export default { 2: "need dictionary", 1: "stream end", 0: "", "-1": "file error", "-2": "stream error", "-3": "data error", "-4": "insufficient memory", "-5": "buffer error", "-6": "incompatible version" };

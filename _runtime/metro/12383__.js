@@ -1,61 +1,33 @@
 // === Module 12383: ? ===
 
 // Module 12383
-import _mod12370 from "module_12370" /* 12370 */;
+import _mod12384 from "module_12384" /* 12384 */;
+import _mod12387 from "module_12387" /* 12387 */;
 
-function dateTimestampInSeconds() {
-  return Date.now() / 1000;
-}
-let timeOrigin;
-const _performance = _mod12370.GLOBAL_OBJ.performance;
-let fn = dateTimestampInSeconds;
-if (_performance) {
-  fn = dateTimestampInSeconds;
-  if (_performance.now) {
-    const _Date = Date;
-    const timestamp = Date.now();
-    timeOrigin = timestamp - _performance.now();
-    if (null != _performance.timeOrigin) {
-      timeOrigin = _performance.timeOrigin;
-    }
-    fn = () => (timeOrigin + _performance.now()) / 1000;
-  }
-}
-const _performance2 = _mod12370.GLOBAL_OBJ.performance;
-if (_performance2) {
-  if (_performance2.now) {
-    const nowResult = _performance2.now();
-    const _Date2 = Date;
-    const timestamp1 = Date.now();
-    let num2 = 3600000;
-    if (_performance2.timeOrigin) {
-      const _Math = Math;
-      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
-    }
-    let timeOrigin2 = _performance2.timing;
-    if (timeOrigin2) {
-      timeOrigin2 = _performance2.timing.navigationStart;
-    }
-    let num3 = 3600000;
-    if (typeof timeOrigin2 === "number") {
-      const _Math2 = Math;
-      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
-    }
-    if (!tmp6) {
-      if (num3 >= 3600000) {
-        exports._browserPerformanceTimeOriginMode = "dateNow";
+require = arg1;
+const dependencyMap = arg6;
+function instrumentError() {
+  onerror = _mod12387.GLOBAL_OBJ.onerror;
+  _mod12387.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
+    _mod12384.triggerHandlers("error", { column, error, line, msg, url });
+    if (!onerror) {
+      return onerror;
+    } else {
+      const self = this;
+      const apply = onerror.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
       }
     }
-    if (num2 <= num3) {
-      exports._browserPerformanceTimeOriginMode = "timeOrigin";
-      timeOrigin2 = _performance2.timeOrigin;
-    } else {
-      exports._browserPerformanceTimeOriginMode = "navigationStart";
-    }
-    tmp6 = num2 < 3600000;
-  }
+    const obj = { column, error, line, msg, url };
+  };
+  _mod12387.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
 }
+let onerror = null;
 
-export const _browserPerformanceTimeOriginMode = "none";
-export { dateTimestampInSeconds };
-export const timestampInSeconds = fn;
+export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod12384.addHandler("error", errorCallback);
+  _mod12384.maybeInstrument("error", instrumentError);
+};

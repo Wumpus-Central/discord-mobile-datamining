@@ -1,130 +1,69 @@
 // === Module 12425: ? ===
 
 // Module 12425
-import _mod12369 from "module_12369" /* 12369 */;
-import _mod12396 from "module_12396" /* 12396 */;
-import _mod12397 from "module_12397" /* 12397 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod12386 from "module_12386" /* 12386 */;
+import _mod12413 from "module_12413" /* 12413 */;
+import _mod12414 from "module_12414" /* 12414 */;
+import _mod12418 from "module_12418" /* 12418 */;
+import _mod12426 from "module_12426" /* 12426 */;
 
-function setupIntegration(on, name, arg2) {
-  closure_0 = on;
-  if (arg2[name.name]) {
-    if (_mod12397.DEBUG_BUILD) {
-      const logger2 = _mod12369.logger;
-      const _HermesInternal2 = HermesInternal;
-      logger2.log("Integration skipped because it was already installed: " + name.name);
-    }
-  } else {
-    arg2[name.name] = name;
-    if (tmp) {
-      name.setupOnce();
-      items.push(name.name);
-    }
-    if (tmp4) {
-      name.setup(on);
-    }
-    if (typeof name.preprocessEvent === "function") {
-      const preprocessEvent = name.preprocessEvent;
-      closure_1 = preprocessEvent.bind(name);
-      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
-    }
-    if (typeof name.processEvent === "function") {
-      const processEvent = name.processEvent;
-      closure_2 = processEvent.bind(name);
-      const _Object = Object;
-      const obj = { id: name.name };
-      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
-    }
-    if (_mod12397.DEBUG_BUILD) {
-      const logger = _mod12369.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Integration installed: " + name.name);
-    }
-    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
-    tmp4 = name.setup && typeof name.setup === "function";
-  }
-}
-let items = [];
+require = arg1;
+const dependencyMap = arg6;
 
-export const addIntegration = function addIntegration(name) {
-  const client = _mod12396.getClient();
-  if (client) {
-    client.addIntegration(name);
-  } else if (_mod12397.DEBUG_BUILD) {
-    const logger = _mod12369.logger;
-    const _HermesInternal = HermesInternal;
-    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
-  }
-};
-export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
-  const iter = arg1[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let obj = nextResult;
-    if (nextResult) {
-      let afterAllSetup = obj.afterAllSetup;
-    }
-    if (nextResult) {
-      let afterAllSetupResult = obj.afterAllSetup(arg0);
-    }
-    continue;
-  }
-};
-export function defineIntegration(arg0) {
-  return arg0;
-}
-export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
-  const arr = defaultIntegrations.defaultIntegrations || [];
-  const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((item) => {
-    item.isDefaultInstance = true;
-  });
-  if (Array.isArray(integrations)) {
-    items = [];
-    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
-    let arr2 = items;
-  } else {
-    arr2 = arr;
-    if (typeof integrations === "function") {
-      const integrationsResult = integrations(arr);
-      const _Array = Array;
-      let tmp2 = integrationsResult;
-      if (!Array.isArray(integrationsResult)) {
-        const items1 = [integrationsResult];
-        tmp2 = items1;
+export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
+  if (obj.hasTracingEnabled(tracesSampler)) {
+    const isolationScope = _mod12413.getIsolationScope();
+    const obj2 = {};
+    const merged = Object.assign(normalizedRequest);
+    obj2.normalizedRequest = normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    if (typeof tracesSampler.tracesSampler === "function") {
+      let num = tracesSampler.tracesSampler(obj2);
+    } else if (undefined !== obj2.parentSampled) {
+      num = obj2.parentSampled;
+    } else {
+      num = 1;
+      if (undefined !== tracesSampler.tracesSampleRate) {
+        num = tracesSampler.tracesSampleRate;
       }
-      arr2 = tmp2;
     }
+    const tmpResult = _mod12413;
+    const parseSampleRateResult = _mod12426.parseSampleRate(num);
+    if (undefined === parseSampleRateResult) {
+      if (_mod12414.DEBUG_BUILD) {
+        const logger3 = _mod12386.logger;
+        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
+      }
+      const items = [false];
+      let items3 = items;
+    } else if (parseSampleRateResult) {
+      const _Math = Math;
+      if (Math.random() < parseSampleRateResult) {
+        const items1 = [true, parseSampleRateResult];
+        let items2 = items1;
+      } else {
+        if (_mod12414.DEBUG_BUILD) {
+          const logger2 = _mod12386.logger;
+          const _Number = Number;
+          const _HermesInternal = HermesInternal;
+          logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
+        }
+        items2 = [false, parseSampleRateResult];
+      }
+    } else {
+      if (_mod12414.DEBUG_BUILD) {
+        const logger = _mod12386.logger;
+        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        if (typeof tracesSampler.tracesSampler === "function") {
+          str = "tracesSampler returned 0 or false";
+        }
+        logger.log(`[Tracing] Discarding transaction because ${str}`);
+      }
+      items3 = [false, parseSampleRateResult];
+    }
+    return items3;
+  } else {
+    const items4 = [false];
+    return items4;
   }
-  const item1 = arr2.forEach((name) => {
-    name = name.name;
-    let isDefaultInstance = tmp2;
-    if (obj[name]) {
-      isDefaultInstance = !tmp2.isDefaultInstance;
-    }
-    if (isDefaultInstance) {
-      isDefaultInstance = name.isDefaultInstance;
-    }
-    if (!isDefaultInstance) {
-      obj[name] = name;
-    }
-  });
-  const values = Object.values({});
-  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
-  if (findIndexResult > -1) {
-    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
-  }
-  return values;
-};
-export const installedIntegrations = items;
-export { setupIntegration };
-export const setupIntegrations = function setupIntegrations(arg0, arr) {
-  closure_0 = arg0;
-  const obj = {};
-  const item = arr.forEach((item) => {
-    if (item) {
-      setupIntegration(closure_0, item, obj);
-    }
-  });
-  return obj;
+  obj = _mod12418;
 };

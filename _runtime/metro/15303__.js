@@ -1,5 +1,10 @@
 // === Module 15303: ? ===
 
 // Module 15303
+const require = globalThis.__r;
 
-export const calendars = ["buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-civil", "islamic-rgsa", "islamic-tbla", "islamic-umalqura", "islamicc", "iso8601", "japanese", "persian", "roc"];
+const require = arg1;
+const dependencyMap = arg6;
+
+export const shouldPolyfill = require("module_15304").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

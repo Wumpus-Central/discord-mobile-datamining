@@ -907,7 +907,7 @@ let fn = () => {
             self._onReject = obj1.onReject || obj.defaultOnReject;
             if (obj.shouldCatchExceptions(obj1)) {
               _promise = self._promise;
-              catchPromise = _promise.catch(/* F158927 */ function() { ... });
+              catchPromise = _promise.catch(/* F159035 */ function() { ... });
             }
             _resetStateResult = self._resetState();
           } else {
@@ -1442,14 +1442,14 @@ let fn = () => {
         arg0.constants = obj2;
         arg0.loadAxo = function loadAxo(arg0) {
           const self = this;
-          const f158944 = () => {
+          const f159052 = () => {
             let minified = () => { ... };
             closure_5 = { label: 0, sent() { ... }, trys: [], ops: [] };
             let obj = { next: () => { ... }, throw: () => { ... }, return: () => { ... } };
             let btSdkVersion = 2;
             if (typeof Symbol === "function") {
               let _Symbol = Symbol;
-              obj[Symbol.iterator] = /* F158938 */ function() { ... };
+              obj[Symbol.iterator] = /* F159046 */ function() { ... };
             }
             return obj;
           };
@@ -2075,7 +2075,7 @@ let fn = () => {
           if (this.limitBroadcastToFramesArray) {
             targetFrames = this.targetFrames;
             mapped = targetFrames.map(() => { ... });
-            found = mapped.filter(/* F158951 */ function() { ... });
+            found = mapped.filter(/* F159059 */ function() { ... });
           } else {
             found = [];
           }
@@ -2088,7 +2088,7 @@ let fn = () => {
             result = self.targetFramesAsWindows();
             tmp = globalThis;
             _Boolean = Boolean;
-            return Boolean(result.find(/* F158952 */ function() { ... }));
+            return Boolean(result.find(/* F159060 */ function() { ... }));
           } else {
             flag = true;
             return true;
@@ -2924,7 +2924,7 @@ let fn = () => {
           tmp = applePayWeb.merchantCapabilities || ["supports3DS"];
           obj.merchantCapabilities = tmp;
           supportedNetworks = applePayWeb.supportedNetworks;
-          obj.supportedNetworks = supportedNetworks.map(/* F155065 */ function() { ... });
+          obj.supportedNetworks = supportedNetworks.map(/* F155170 */ function() { ... });
           return Object.assign({}, obj, global);
         }
         performValidation(arg0) {
@@ -10767,7 +10767,7 @@ let fn = () => {
           self._clientPromise = obj5.then(fn.bind(self));
           if (global.client) {
             _clientPromise = self._clientPromise;
-            fn2 = /* F155204 */ function() { ... };
+            fn2 = /* F155309 */ function() { ... };
             nextPromise = _clientPromise.then(fn2.bind(self));
           } else {
             tmp4 = globalThis;
@@ -11097,7 +11097,7 @@ let fn = () => {
             }
             fn2 = () => { ... };
             nextPromise = resolved.then(fn2.bind(self));
-            fn3 = /* F155228 */ function() { ... };
+            fn3 = /* F155333 */ function() { ... };
             return promise.then(fn3.bind(self));
           } else {
             if (dataAttributes["client-metadata-id"]) {
@@ -11361,7 +11361,7 @@ let fn = () => {
             removeChildResult = parentNode.removeChild(self._paypalScript);
           }
           _frameServicePromise = self._frameServicePromise;
-          catchPromise = _frameServicePromise.catch(/* F155230 */ function() { ... });
+          catchPromise = _frameServicePromise.catch(/* F155335 */ function() { ... });
           return catchPromise.then(() => { ... });
         }
       }
@@ -12700,7 +12700,7 @@ let fn = () => {
         }
         _addV1IframeToPage() {
           obj = { element: this._v1Modal };
-          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F155276 */ function() { ... });
+          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F155381 */ function() { ... });
           return;
         }
         _setupFrameworkSpecificListeners() {
@@ -12905,7 +12905,7 @@ let fn = () => {
           dfReferenceId = this.getDfReferenceId();
           nextPromise = dfReferenceId.then(() => { ... });
           nextPromise1 = nextPromise.then(() => { ... });
-          catchPromise = nextPromise1.catch(/* F155290 */ function() { ... });
+          catchPromise = nextPromise1.catch(/* F155395 */ function() { ... });
           nextPromise2 = catchPromise.then(() => { ... });
           return nextPromise2.then(() => { ... });
         }
@@ -14601,11 +14601,11 @@ let fn = () => {
           if (this.venmoContextId) {
             tmp = fn;
             obj1 = { input: null };
-            tmp2 = f155340;
+            tmp2 = f155445;
             obj4 = { id: null, status: null };
             obj4.id = self.venmoContextId;
             obj4.status = fn;
-            obj1.input = f155340(obj4, obj);
+            obj1.input = f155445(obj4, obj);
             tmp3 = closure_5;
             apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp3.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : tmp3.UPDATE_PAYMENT_CONTEXT_QUERY, obj1);
             return apiRequestResult.then(() => {

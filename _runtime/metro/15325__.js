@@ -1,8 +1,15 @@
 // === Module 15325: ? ===
 
 // Module 15325
-import _mod15326 from "module_15326" /* 15326 */;
-import _mod15330 from "module_15330" /* 15330 */;
+import _mod15324 from "module_15324" /* 15324 */;
 
 
-export default (arg0) => _mod15326(_mod15330(arg0));
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod15324, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod15324[tmp2] = tmp;
+  }
+};

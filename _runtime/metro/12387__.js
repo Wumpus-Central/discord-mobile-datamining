@@ -1,30 +1,26 @@
 // === Module 12387: ? ===
 
 // Module 12387
-import _mod12370 from "module_12370" /* 12370 */;
-import _mod12371 from "module_12371" /* 12371 */;
+import _mod12388 from "module_12388" /* 12388 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const getMainCarrier = function getMainCarrier() {
-  const GLOBAL_OBJ = _mod12370.GLOBAL_OBJ;
-  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
-  GLOBAL_OBJ.__SENTRY__ = tmp3;
-  tmp3.version = tmp3.version || _mod12371.SDK_VERSION;
-  const tmp4 = tmp3.version || _mod12371.SDK_VERSION;
-  tmp3[_mod12371.SDK_VERSION] = tmp3[_mod12371.SDK_VERSION] || {};
-  return _mod12370.GLOBAL_OBJ;
-};
-export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
-  const tmp = __SENTRY__.__SENTRY__ || {};
-  __SENTRY__.__SENTRY__ = tmp;
-  let SDK_VERSION = tmp.version;
-  if (!SDK_VERSION) {
-    SDK_VERSION = _mod12371.SDK_VERSION;
+export const GLOBAL_OBJ = globalThis;
+export const getGlobalSingleton = function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
+  let tmp = arg2;
+  if (!arg2) {
+    tmp = globalThis;
   }
-  tmp.version = SDK_VERSION;
-  const tmp4 = tmp[_mod12371.SDK_VERSION] || {};
-  tmp[_mod12371.SDK_VERSION] = tmp4;
+  const tmp2 = tmp.__SENTRY__ || {};
+  tmp.__SENTRY__ = tmp2;
+  const tmp3 = tmp2[_mod12388.SDK_VERSION] || {};
+  tmp2[_mod12388.SDK_VERSION] = tmp3;
+  let tmp4 = tmp3[globalMetricsAggregators];
+  if (!tmp4) {
+    const tmp6 = fn();
+    tmp3[globalMetricsAggregators] = tmp6;
+    tmp4 = tmp6;
+  }
   return tmp4;
 };

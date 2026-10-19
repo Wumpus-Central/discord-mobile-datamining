@@ -66,7 +66,7 @@ export const VirtualDetector = function VirtualDetector(children) {
           if (tmp2.gesture.config.shouldUseReanimatedDetector) {
             setMode(children(register[4]).InterceptingDetectorMode.REANIMATED);
           }
-          obj = { viewTag: tmp, handlerTags, methods: tmp2.gesture.detectorCallbacks, viewRef: "a", userSelect: "fleur-de-lis", touchAction: "harcerze", enableContextMenu: "lilijka" };
+          obj = { viewTag: tmp, handlerTags, methods: tmp2.gesture.detectorCallbacks, viewRef: "a", userSelect: "Array", touchAction: "moveShouldSetResponder", enableContextMenu: "a" };
           ({ userSelect: obj.userSelect, touchAction: obj.touchAction, enableContextMenu: obj.enableContextMenu } = tmp2);
           register(obj);
           return () => {

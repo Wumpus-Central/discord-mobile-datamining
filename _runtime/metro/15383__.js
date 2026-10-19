@@ -1,17 +1,13 @@
 // === Module 15383: ? ===
 
 // Module 15383
-import _mod15335 from "module_15335" /* 15335 */;
-import _mod15342 from "module_15342" /* 15342 */;
+import _mod15331 from "module_15331" /* 15331 */;
+import _mod15340 from "module_15340" /* 15340 */;
+import all from "module_15350" /* 15350 */;
 
-let closure_2 = _mod15335("keys");
+let closure_0 = _mod15331(Function.toString);
+if (!all(_mod15340.inspectSource)) {
+  _mod15340.inspectSource = (arg0) => closure_0(arg0);
+}
 
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod15342(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
+export default _mod15340.inspectSource;

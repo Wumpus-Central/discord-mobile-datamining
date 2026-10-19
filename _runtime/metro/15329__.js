@@ -1,9 +1,8 @@
 // === Module 15329: ? ===
 
 // Module 15329
-import _mod15327 from "module_15327" /* 15327 */;
+import _mod15330 from "module_15330" /* 15330 */;
+import _mod15334 from "module_15334" /* 15334 */;
 
-let closure_0 = _mod15327({}.toString);
-let closure_1 = _mod15327("".slice);
 
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default (arg0) => _mod15330(_mod15334(arg0));
