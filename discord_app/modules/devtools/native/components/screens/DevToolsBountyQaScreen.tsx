@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const _Symbol2 = Symbol;
                 if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp31 = closure_8(tmp(12079).UndoIcon, {});
+                  const tmp31 = closure_8(tmp(12098).UndoIcon, {});
                   cResult[23] = tmp31;
                   let tmp29 = tmp31;
                 } else {
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     label: "Refresh Organic Serve",
                     subLabel:
                       "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-                    icon: closure_8(tmp(16145).RedoIcon, {}),
+                    icon: closure_8(tmp(16149).RedoIcon, {}),
                     onPress: tmp16,
                   };
                   const tmp37 = closure_8(tmp(6457).TableRow, obj5);
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         c1 = 3;
                         c3 = 1;
                         const obj7 = {
-                          value: tmp3(13905).resetCreativePreviewDeliveryState(
+                          value: tmp3(13909).resetCreativePreviewDeliveryState(
                             tmp22,
                             tmp3(6231).AdPlacement.MOBILE_HOME_DOCK_AREA,
                           ),
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const NumberResult = Number(tmp37);
                       c1 = 2;
                       c3 = 1;
-                      const obj8 = { value: tmp3(13905).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+                      const obj8 = { value: tmp3(13909).resetPreviewDeliveryStateLookback(NumberResult), done: false };
                       return obj8;
                     }
                   }
@@ -438,7 +438,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     c1 = 3;
                     c3 = 1;
                     const obj7 = {
-                      value: tmp3(13905).resetCreativePreviewDeliveryState(
+                      value: tmp3(13909).resetCreativePreviewDeliveryState(
                         tmp22,
                         tmp3(6231).AdPlacement.MOBILE_HOME_DOCK_AREA,
                       ),
@@ -451,7 +451,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const NumberResult = Number(tmp37);
                   c1 = 2;
                   c3 = 1;
-                  const obj8 = { value: tmp3(13905).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+                  const obj8 = { value: tmp3(13909).resetPreviewDeliveryStateLookback(NumberResult), done: false };
                   return obj8;
                 }
               }
@@ -580,7 +580,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           label: "Reset and re-serve",
           subLabel:
             "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-          icon: closure_8(stateFromStores(12079).UndoIcon, {}),
+          icon: closure_8(stateFromStores(12098).UndoIcon, {}),
           onPress: function handleResetAndRefresh() {
             const self = this;
             const apply = closure_2.apply;
@@ -598,7 +598,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         label: "Reset and re-serve",
         subLabel:
           "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-        icon: closure_8(stateFromStores(12079).UndoIcon, {}),
+        icon: closure_8(stateFromStores(12098).UndoIcon, {}),
         onPress: function handleResetAndRefresh() {
           const self = this;
           const apply = closure_2.apply;
@@ -613,7 +613,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items6[1] = closure_8(stateFromStores(6457).TableRow, {
         label: "Refresh Organic Serve",
         subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-        icon: closure_8(stateFromStores(16145).RedoIcon, {}),
+        icon: closure_8(stateFromStores(16149).RedoIcon, {}),
         onPress: function handleRefreshOrganicServe() {
           const questToDeliver = stateFromStores(9474).fetchQuestToDeliver(
             stateFromStores(6231).AdPlacement.MOBILE_HOME_DOCK_AREA,

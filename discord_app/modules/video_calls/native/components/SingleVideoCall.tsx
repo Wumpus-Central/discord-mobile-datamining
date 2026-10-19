@@ -52,17 +52,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             gestureEnabled: true,
             participant,
             avatarSize: channel(1202).AvatarSizes.PROFILE,
-            resizeMode: channel(11271).ResizeMode.AUTO,
+            resizeMode: channel(11290).ResizeMode.AUTO,
             statusStyle: tmp8,
             onSingleTap,
             onDoubleTap: tmp6,
             onLongPress: tmp7,
           };
-          const tmp13 = jsx(tmp4(11282), {
+          const tmp13 = jsx(tmp4(11300), {
             gestureEnabled: true,
             participant,
             avatarSize: channel(1202).AvatarSizes.PROFILE,
-            resizeMode: channel(11271).ResizeMode.AUTO,
+            resizeMode: channel(11290).ResizeMode.AUTO,
             statusStyle: tmp8,
             onSingleTap,
             onDoubleTap: tmp6,
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = tmp8;
           cResult[12] = tmp13;
           tmp9 = tmp13;
-          const tmp4Result = tmp4(11282);
+          const tmp4Result = tmp4(11300);
         }
         const obj3 = { marginRight: right, marginBottom: bottom };
         cResult[5] = bottom;

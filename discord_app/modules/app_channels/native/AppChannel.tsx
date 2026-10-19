@@ -22,6 +22,7 @@ import useAppChannelClosedDefault from "../useAppChannelClosed.tsx";
 import useChannelAppFrameTeardownDefault from "../../frames/useChannelAppFrameTeardown.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const useChannelContentGate = obj(10672);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -56,10 +57,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 ({ frame, state } = useFrameLifecycleDefault(tmp9));
                 const tmp10 = useFrameLifecycleDefault(tmp9);
-                useEdgeOnlySwipeExitDefault(state === tmp(17734).FrameLifecycleState.Launched);
+                useEdgeOnlySwipeExitDefault(state === tmp(17738).FrameLifecycleState.Launched);
                 const tmp5Result = useEdgeOnlySwipeExitDefault;
                 let tmp14 = null;
-                if (state === tmp(17734).FrameLifecycleState.Launched) {
+                if (state === tmp(17738).FrameLifecycleState.Launched) {
                   tmp14 = applicationId;
                 }
                 useInlineFrameOAuthNavigationDefault(tmp14);
@@ -85,7 +86,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                if (tmp(17734).FrameLifecycleState.Launched === state) {
+                if (tmp(17738).FrameLifecycleState.Launched === state) {
                   class M {
                     constructor(arg0) {
                       obj = closure_0(closure_2[14]);
@@ -95,7 +96,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const obj2 = {
                     frameId: frame.id,
-                    level: tmp(11705).FrameStackLevel.WithinAppContent,
+                    level: tmp(11724).FrameStackLevel.WithinAppContent,
                     presentation: tmp7,
                   };
                   const tmp21 = closure_5(FrameRenderTargetDefault, obj2);
@@ -320,7 +321,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp4 = cResult[2];
         }
         if (cResult[3] !== channel.id) {
-          const fn = function s() {
+          const fn = function p() {
             return -1 !== openChannelSecondaryViewChat.getChannelSecondaryViewChatIndex(channel.id);
           };
           cResult[3] = channel.id;
@@ -405,48 +406,54 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 size = fn(2);
-const result = size.fileFinishedImporting("modules/app_channels/native/AppChannel.tsx");
+let result = size.fileFinishedImporting("modules/app_channels/native/AppChannel.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConnectedAppChannel(channel) {
-      let stringResult = dependencyMap;
-      const cResult = c.c(4);
+      let obj = require;
+      let result = dependencyMap;
+      const cResult = c.c(6);
       channel = channel.channel;
       let application_id = channel.application_id;
       if (application_id == null) {
-        application_id = obj2.useDMAppChannelApplicationId(channel);
+        application_id = obj3.useDMAppChannelApplicationId(channel);
       }
       useChannelAppFrameTeardownDefault(channel);
-      if (null == application_id) {
+      obj3 = conjureDMAppChannel;
+      const channelContentGate = useChannelContentGate.useChannelContentGate(channel.guild_id, channel);
+      if (null != channelContentGate) {
+        if (cResult[0] !== channelContentGate) {
+          obj = useChannelContentGate;
+          result = obj.renderChannelContentGate(channelContentGate);
+          cResult[0] = channelContentGate;
+          cResult[1] = result;
+        }
+      } else if (null == application_id) {
         const _Symbol = Symbol;
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { heading: null, description: null };
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj4 = { heading: null, description: null };
           const intl = util.intl;
-          obj3.heading = intl.string(util.t.tU5fiM);
+          obj4.heading = intl.string(util.t.tU5fiM);
           const intl2 = util.intl;
-          stringResult = intl2.string(util.t.E94mJf);
-          obj3.description = stringResult;
-          const tmp12 = hasOwnProperty(FrameSurfaceState.FrameSurfaceExplanation, obj3);
-          cResult[0] = tmp12;
-          let first = tmp12;
-        } else {
-          first = cResult[0];
+          obj4.description = intl2.string(util.t.E94mJf);
+          const tmp12 = hasOwnProperty(FrameSurfaceState.FrameSurfaceExplanation, obj4);
+          cResult[2] = tmp12;
         }
       } else {
-        if (cResult[1] === application_id) {
-          if (cResult[2] === channel) {
-            let tmp5 = cResult[3];
+        if (cResult[3] === application_id) {
+          if (cResult[4] === channel) {
+            let tmp5 = cResult[5];
           }
           return tmp5;
         }
-        const obj4 = { applicationId: application_id, channel };
-        const tmp8 = hasOwnProperty(closure_11, obj4);
-        cResult[1] = application_id;
-        cResult[2] = channel;
-        cResult[3] = tmp8;
+        const obj5 = { applicationId: application_id, channel };
+        const tmp8 = hasOwnProperty(closure_11, obj5);
+        cResult[3] = application_id;
+        cResult[4] = channel;
+        cResult[5] = tmp8;
         tmp5 = tmp8;
       }
-      obj2 = conjureDMAppChannel;
+      const objResult = useChannelContentGate;
     }
   : function ConnectedAppChannel(channel) {
       channel = channel.channel;
@@ -455,16 +462,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         application_id = obj.useDMAppChannelApplicationId(channel);
       }
       useChannelAppFrameTeardownDefault(channel);
-      if (null == application_id) {
+      obj = conjureDMAppChannel;
+      const channelContentGate = useChannelContentGate.useChannelContentGate(channel.guild_id, channel);
+      if (null != channelContentGate) {
+        let result = useChannelContentGate.renderChannelContentGate(channelContentGate);
+        const tmpResult2 = useChannelContentGate;
+      } else if (null == application_id) {
         const obj2 = { heading: null, description: null };
         const intl = util.intl;
         obj2.heading = intl.string(util.t.tU5fiM);
         const intl2 = util.intl;
         obj2.description = intl2.string(util.t.E94mJf);
-        let tmp6 = hasOwnProperty(FrameSurfaceState.FrameSurfaceExplanation, obj2);
+        result = hasOwnProperty(FrameSurfaceState.FrameSurfaceExplanation, obj2);
       } else {
         const obj3 = { applicationId: application_id, channel };
-        tmp6 = hasOwnProperty(closure_11, obj3);
+        result = hasOwnProperty(closure_11, obj3);
       }
-      return tmp6;
+      return result;
     };

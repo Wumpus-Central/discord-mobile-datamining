@@ -15,7 +15,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       category = category.category;
       const onClose = category.onClose;
       const tmp4 = onClose(5521)(category, true);
-      const tmp5 = onClose(13630)(category);
+      const tmp5 = onClose(13634)(category);
       dependencyMap = tmp5;
       const DeveloperMode = category(2044).DeveloperMode;
       const setting = DeveloperMode.useSetting();
@@ -137,7 +137,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   : function FavoritesGuildCategoryActionSheetConnected(category) {
       category = category.category;
       const onClose = category.onClose;
-      const tmp3 = onClose(13630)(category);
+      const tmp3 = onClose(13634)(category);
       dependencyMap = tmp3;
       const DeveloperMode = category(2044).DeveloperMode;
       const setting = DeveloperMode.useSetting();

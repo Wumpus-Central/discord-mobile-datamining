@@ -712,7 +712,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 {
                   label: label.label,
                   subLabel: label.subLabel,
-                  icon: closure_1_14(first(16646).BeakerIcon, {}),
+                  icon: closure_1_14(first(16650).BeakerIcon, {}),
                   onPress() {
                     return first(closure_0);
                   },
@@ -748,7 +748,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 {
                   label: label.label,
                   subLabel: label.subLabel,
-                  icon: closure_1_14(first(16646).BeakerIcon, {}),
+                  icon: closure_1_14(first(16650).BeakerIcon, {}),
                   onPress() {
                     return first(closure_0);
                   },
@@ -816,7 +816,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               {
                 label: label.label,
                 subLabel: label.subLabel,
-                icon: closure_1_14(closure_1_0(16646).BeakerIcon, {}),
+                icon: closure_1_14(closure_1_0(16650).BeakerIcon, {}),
                 onPress() {
                   return closure_2_0(closure_0);
                 },
@@ -843,7 +843,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             {
               label: label.label,
               subLabel: label.subLabel,
-              icon: closure_1_14(label(16646).BeakerIcon, {}),
+              icon: closure_1_14(label(16650).BeakerIcon, {}),
               onPress() {
                 return label(label);
               },

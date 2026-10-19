@@ -8,7 +8,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 require = fn;
 const SystemTheme = fn(1210).SystemTheme;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSyncedModePickerVisible() {
       const cResult = c.c(2);

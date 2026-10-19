@@ -619,7 +619,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             closure_3 = tmp3;
             if (!closure_15) {
               if (null != stateFromStores) {
-                const guildMemberChangesForUpdateRequest = stateFromStores(10949).getGuildMemberChangesForUpdateRequest(
+                const guildMemberChangesForUpdateRequest = stateFromStores(10965).getGuildMemberChangesForUpdateRequest(
                   {
                     pendingAvatar,
                     pendingNickname,
@@ -629,12 +629,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   },
                 );
                 closure_131_0 = guildMemberChangesForUpdateRequest;
-                stateFromStores(10949);
+                stateFromStores(10965);
                 let id;
                 if (selectedGuild != null) {
                   id = selectedGuild.id;
                 }
-                const profileChangesForUpdateRequest = stateFromStores(10949).getProfileChangesForUpdateRequest(
+                const profileChangesForUpdateRequest = stateFromStores(10965).getProfileChangesForUpdateRequest(
                   {
                     pendingBanner,
                     pendingBio,
@@ -656,11 +656,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const v2 = 1;
                   c6 = 1;
                   return {
-                    value: stateFromStores(10953).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest),
+                    value: stateFromStores(10969).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest),
                     done: false,
                   };
                 }
-                stateFromStores(10949);
+                stateFromStores(10965);
               }
             }
             yield "IconComponent";
@@ -706,9 +706,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const intl = stateFromStores(1128).intl;
                       stateFromStores = intl.string(stateFromStores(1128).t.s35OuK);
                     }
-                    const result1 = stateFromStores(15622).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+                    const result1 = stateFromStores(15626).showGenericGuildProfileUpdateFailureToast(stateFromStores);
                     closure_131_3 = true;
-                    stateFromStores(15622);
+                    stateFromStores(15626);
                   }
                 }
                 let tmp50 = closure_131_2;
@@ -742,9 +742,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                 if (null != firstFieldErrorMessage2) {
                   const result2 =
-                    stateFromStores(15622).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+                    stateFromStores(15626).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
                   closure_131_3 = true;
-                  stateFromStores(15622);
+                  stateFromStores(15626);
                 }
               }
               let tmp24 = closure_131_2;
@@ -767,10 +767,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (!tmp62) {
               const intl2 = stateFromStores(1128).intl;
-              const result3 = stateFromStores(15622).showGenericGuildProfileUpdateFailureToast(
+              const result3 = stateFromStores(15626).showGenericGuildProfileUpdateFailureToast(
                 intl2.string(stateFromStores(1128).t.s35OuK),
               );
-              stateFromStores(15622);
+              stateFromStores(15626);
             }
             if (closure_131_2) {
               closure_132_13.delay();

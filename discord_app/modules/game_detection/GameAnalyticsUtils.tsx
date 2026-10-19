@@ -22,7 +22,7 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     return {
       gameName: "Array",
       gameId: "ix",
-      exe: "justifyContent",
+      exe: "location",
       distributor: "username",
       sku: "enabled",
       gameMetadata: "o",

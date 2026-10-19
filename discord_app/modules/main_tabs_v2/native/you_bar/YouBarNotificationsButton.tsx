@@ -12,7 +12,7 @@ import SavedMessagesStore from "../../../saved_messages/SavedMessagesStore.tsx";
 const ReanimatedRexportDefault = tmp5(4945);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16136);
+const YouBarConstants = fn(16140);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_BUTTON_HIT_SLOP: closure_7,
@@ -96,7 +96,7 @@ export default noop.memo(
           const fn3 = function f() {
             const result = value(5156).triggerHapticFeedback(value(5156).HapticFeedbackTypes.SOFT);
             const obj = value(5156);
-            value(13582).showForLaterModal(value(9981).SavedMessageSortTypes.BOOKMARK);
+            value(13586).showForLaterModal(value(9981).SavedMessageSortTypes.BOOKMARK);
           };
           cResult[2] = fn3;
           let tmp12 = fn3;
@@ -238,7 +238,7 @@ export default noop.memo(
                           hitSlop,
                         };
                         obj7.children = closure_8(tmp(7840).IconButton, obj9);
-                        const tmp38 = closure_8(tmp(17533).YouBarButtonContainer, obj7);
+                        const tmp38 = closure_8(tmp(17537).YouBarButtonContainer, obj7);
                         cResult[28] = tmp19;
                         cResult[29] = str4;
                         cResult[30] = tmp30;
@@ -264,7 +264,7 @@ export default noop.memo(
                 }
               }
               const obj12 = { icon: tmp15, hasBadge: tmp11, badgeStyle: tmp4.overdueReminderDot };
-              const tmp23 = closure_8(tmp(17533).YouBarButtonIcon, obj12);
+              const tmp23 = closure_8(tmp(17537).YouBarButtonIcon, obj12);
               cResult[14] = tmp15;
               cResult[15] = tmp11;
               cResult[16] = tmp4.overdueReminderDot;
@@ -307,7 +307,7 @@ export default noop.memo(
         hasNameplate = hasNameplate.hasNameplate;
         let onLongPress;
         const tmp = closure_10();
-        value = onLongPress(17535)().value;
+        value = onLongPress(17539)().value;
         _require = value;
         const fn = function u() {
           let num = 0;
@@ -355,7 +355,7 @@ export default noop.memo(
         onLongPress = noop.useCallback(() => {
           const result = _undefined(5156).triggerHapticFeedback(_undefined(5156).HapticFeedbackTypes.SOFT);
           const obj = _undefined(5156);
-          _undefined(13582).showForLaterModal(_undefined(9981).SavedMessageSortTypes.BOOKMARK);
+          _undefined(13586).showForLaterModal(_undefined(9981).SavedMessageSortTypes.BOOKMARK);
         }, []);
         const items1 = [onLongPress];
         const memo = noop.useMemo(() => {

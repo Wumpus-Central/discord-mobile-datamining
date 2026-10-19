@@ -23,7 +23,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const UserRemediationAction = fn(7294).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(10723);
+const RestrictionConfirmationConstants = fn(10739);
 ({ IGNORE_CONFIRMATION_ACTION_SHEET_KEY: c10, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: closure_11 } =
   RestrictionConfirmationConstants);
 const Constants = fn(1087);
@@ -334,7 +334,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
         });
         const obj2 = { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" };
         const obj3 = ActionSheetActionCreatorsDefault;
-        const tmp2 = asyncRequireImpl(10725, dependencyMap.paths);
+        const tmp2 = asyncRequireImpl(10741, dependencyMap.paths);
         obj3.openLazy(
           tmp2,
           collapsed,

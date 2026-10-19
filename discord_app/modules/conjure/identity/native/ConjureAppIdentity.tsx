@@ -226,7 +226,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                             tmp22 = null;
                             if (!disabled) {
                               const obj3 = { style: tmp4.editIcon };
-                              tmp22 = closure_7(onError(11643), obj3);
+                              tmp22 = closure_7(onError(11659), obj3);
                             }
                           }
                           cResult[22] = disabled;
@@ -254,7 +254,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           }
           if (tmp5) {
             const obj5 = { size: "md", color: onError(587).colors.ICON_MUTED };
-            let tmp13Result = closure_7(onChange(11641).ImagePlusIcon, obj5);
+            let tmp13Result = closure_7(onChange(11657).ImagePlusIcon, obj5);
           } else {
             const obj6 = { source: null, style: null, resizeMode: "cover" };
             const obj7 = { uri: iconURL };
@@ -336,7 +336,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   obj.onPress = callback;
   if (null == iconURL) {
     const obj2 = { size: "md", color: onError(587).colors.ICON_MUTED };
-    let tmp6Result = closure_7(onChange(11641).ImagePlusIcon, obj2);
+    let tmp6Result = closure_7(onChange(11657).ImagePlusIcon, obj2);
     let tmp9 = onError;
   } else {
     tmp9 = onError;
@@ -353,7 +353,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     tmp6Result2 = null;
     if (!disabled) {
       const obj5 = { style: tmp.editIcon };
-      tmp6Result2 = closure_7(tmp9(11643), obj5);
+      tmp6Result2 = closure_7(tmp9(11659), obj5);
     }
   }
   children[1] = tmp6Result2;

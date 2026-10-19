@@ -148,7 +148,7 @@ function getActionSheetButtons(channel) {
                 string6Result = string6(t1["jeyb/W"]);
               }
               obj9.label = string6Result;
-              obj9.IconComponent = tmp(10765).LockUnlockedIcon;
+              obj9.IconComponent = tmp(10781).LockUnlockedIcon;
               obj9.onPress = function onPress() {
                 ThreadActionCreatorsDefault.unlockThread(channel);
               };
@@ -213,7 +213,7 @@ function getActionSheetButtons(channel) {
                 const combined = "muteSettings" + channel.id;
                 obj2.guildId = channel.getGuildId();
                 obj2.channelId = channel.id;
-                obj.openLazy(asyncRequireImpl(10771, dependencyMap.paths), combined, obj2);
+                obj.openLazy(asyncRequireImpl(10787, dependencyMap.paths), combined, obj2);
               };
               push3(obj12);
               const buttons7 = obj11.buttons;
@@ -637,7 +637,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
       cResult[29] = tmp45;
     }
     const obj6 = { title: tmp29, icon: tmp32 };
-    const tmp41 = closure_13(tmp(10777).ActionSheetIconHeader, obj6);
+    const tmp41 = closure_13(tmp(10793).ActionSheetIconHeader, obj6);
     cResult[21] = tmp29;
     cResult[22] = tmp32;
     cResult[23] = tmp41;
@@ -698,7 +698,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   }
   obj13.handleJoinThreadVoice = tmp24;
   obj13.hasActiveThreadVoice = stateFromStores3;
-  obj13.favorites = onClose(10776)(channel);
+  obj13.favorites = onClose(10792)(channel);
   const tmp23Result = getActionSheetButtons(obj13);
   const items5 = [tmp23Result.length, setting, onClose];
   const effect = setting.useEffect(() => {
@@ -707,7 +707,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
     }
     tmp = 0 !== length.length || setting;
   }, items5);
-  const obj14 = { header: tmp20(channel(10777).ActionSheetIconHeader, { title: tmp15, icon: tmp19 }), children: null };
+  const obj14 = { header: tmp20(channel(10793).ActionSheetIconHeader, { title: tmp15, icon: tmp19 }), children: null };
   const items6 = [
     tmp23Result.map((buttons) => {
       let obj = { hasIcons: true, children: null };

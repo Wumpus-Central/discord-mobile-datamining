@@ -375,6 +375,19 @@ prototype["sendSmartContext"] = function sendSmartContext(enabled) {
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendHostAccess"] = function sendHostAccess(arg0) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      socket.send(JSON.stringify(arg0));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendRestartSandbox"] = function sendRestartSandbox() {
   const self = this;
   if (null != this.socket) {

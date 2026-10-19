@@ -363,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return;
                                 }
                               }
-                              tmp58[0] = stateFromStores(15808);
+                              tmp58[0] = stateFromStores(15812);
                               tmp58[1] = tmp4.image;
                               const tmp59 = closure_12(stateFromStores(5128), tmp58);
                               cResult[35] = tmp4.image;
@@ -814,7 +814,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { style: tmp.center, children: null };
       const obj11 = { source: null, style: null, resizeMode: "contain" };
       let obj2 = guildId(504);
-      obj11.source = stateFromStores(15808);
+      obj11.source = stateFromStores(15812);
       obj11.style = tmp.image;
       const items6 = [closure_12(stateFromStores(5128), obj11)];
       const obj12 = { style: tmp.infoWrapper, children: null };

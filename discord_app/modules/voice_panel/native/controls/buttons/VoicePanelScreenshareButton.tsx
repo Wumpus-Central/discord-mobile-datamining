@@ -15,9 +15,9 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const MetaQuestUtils = fn(1630);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13213).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13221).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18327).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18331).MobilePhoneShareIcon;
 }
 const createStyles = fn(5191);
 let obj3 = { circle: null, iconContainer: null };

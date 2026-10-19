@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : function SettingsAgeGroupScreen() {
-      isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(15724).useIsTinyBroncoSettingsEnabled();
+      isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(15728).useIsTinyBroncoSettingsEnabled();
       let items = [isTinyBroncoSettingsEnabled];
       const node = noop.useMemo(() => {
         const obj2 = { sections: null, ListHeaderComponent: null };

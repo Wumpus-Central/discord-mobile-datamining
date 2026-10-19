@@ -51,7 +51,7 @@ export default noop.memo(
                 }
               }
             }
-            return { channelId: "ix", type: "<string:79365185>" };
+            return { channelId: "ix", type: "WHITE_500" };
           };
           cResult[0] = items;
           cResult[1] = fn;
@@ -235,7 +235,7 @@ export default noop.memo(
               }
             }
           }
-          return { channelId: "ix", type: "<string:79365185>" };
+          return { channelId: "ix", type: "WHITE_500" };
         });
         if ("private" === stateFromStoresObject.type) {
           let obj2 = { style: tmp.wrapper, children: null };

@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(12581);
+const Constants = fn(12598);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -202,10 +202,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
       const tmp = closure_9();
-      let hasMentionRaidLimitAccess = rule(17978).useHasMentionRaidLimitAccess(rule.guildId);
+      let hasMentionRaidLimitAccess = rule(17982).useHasMentionRaidLimitAccess(rule.guildId);
       const intl = rule(1128).intl;
       const stringResult = intl.string(rule(1128).t["s/26oQ"]);
-      let obj = rule(17978);
+      let obj = rule(17982);
       [tmp7, c3] = noop.useState(true);
       let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
       const intl2 = rule(1128).intl;

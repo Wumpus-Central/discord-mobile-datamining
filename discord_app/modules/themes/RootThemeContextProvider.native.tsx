@@ -186,7 +186,7 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
       const obj2 = manaTypeConsolidationExperiment(6941);
       [][0] = manaTypeConsolidationExperiment;
       const plainTextExperiment =
-        manaTypeConsolidationExperiment(17053).usePlainTextExperiment("RootThemeContextProvider");
+        manaTypeConsolidationExperiment(17057).usePlainTextExperiment("RootThemeContextProvider");
       if (null == tmp4) {
         let num2 = 0;
         if (1 !== saturation) {
@@ -207,7 +207,7 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
             enabled: plainTextExperiment,
             children: children.children,
           });
-          return jsx(tmp(11559).RootThemeContextProvider, {
+          return jsx(tmp(11577).RootThemeContextProvider, {
             theme: stateFromStoresObject.theme,
             flags: num2,
             saturation,
@@ -234,5 +234,5 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
         setThemeFlagResult1 = tmp(4922).setThemeFlag(0, tmp(4922).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
         const tmpResult6 = tmp(4922);
       }
-      const obj3 = manaTypeConsolidationExperiment(17053);
+      const obj3 = manaTypeConsolidationExperiment(17057);
     };

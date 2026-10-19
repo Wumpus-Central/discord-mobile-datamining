@@ -17,7 +17,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = onChange(576).c(15);
       ({ selectedApplicationId, onChange } = guildId);
       let obj = onChange(576);
-      const voiceChannelAppSettingOptions = onChange(17959).useVoiceChannelAppSettingOptions(
+      const voiceChannelAppSettingOptions = onChange(17963).useVoiceChannelAppSettingOptions(
         guildId.guildId,
         selectedApplicationId,
       );
@@ -184,11 +184,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = tmp18;
         cResult[14] = tmp29;
       }
-      const obj2 = onChange(17959);
+      const obj2 = onChange(17963);
     }
   : function VoiceChannelAppActionSheet(guildId) {
       ({ selectedApplicationId, onChange } = guildId);
-      const voiceChannelAppSettingOptions = onChange(17959).useVoiceChannelAppSettingOptions(
+      const voiceChannelAppSettingOptions = onChange(17963).useVoiceChannelAppSettingOptions(
         guildId.guildId,
         selectedApplicationId,
       );

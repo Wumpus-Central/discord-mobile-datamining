@@ -26,7 +26,7 @@ export default function authorizeCallback(arg0) {
         if (null != pathname) {
           if (null != pathname.match(re5)) {
             const obj3 = { application: tmp, guild: tmp2 };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11001, dependencyMap.paths), obj3, React3);
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11022, dependencyMap.paths), obj3, React3);
             const tmp8Result4 = ModalActionCreatorsDefault;
           } else if (null != pathname.match(re6)) {
             if (!canceled) {

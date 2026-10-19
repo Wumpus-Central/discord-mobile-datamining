@@ -87,11 +87,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = giftCode(576);
       const stateFromStores = giftCode(504).useStateFromStores(first, tmp7);
       let tmpResult = giftCode(504);
-      const getOrFetchSubscriptionPlan = giftCode(10811).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-      const tmpResult7 = giftCode(10811);
+      const getOrFetchSubscriptionPlan = giftCode(10827).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+      const tmpResult7 = giftCode(10827);
       const getOrFetchApplication = giftCode(7134).useGetOrFetchApplication(giftCode.applicationId);
       const tmpResult8 = giftCode(7134);
-      const tmpResult9 = giftCode(10815);
+      const tmpResult9 = giftCode(10831);
       let skuId = null;
       if (tmpResult10.isCollectiblesGiftCode(giftCode)) {
         skuId = giftCode.skuId;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp20 = cResult[8];
       }
       const tmpResult11 = giftCode(8569);
-      const handleUseNow1 = giftCode(10946).useHandleUseNow(tmp20);
+      const handleUseNow1 = giftCode(10962).useHandleUseNow(tmp20);
       const handleUseNow = handleUseNow1.handleUseNow;
       const canUseNow = handleUseNow1.canUseNow;
       const isApplying = handleUseNow1.isApplying;
@@ -605,11 +605,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [SKUStore];
       const stateFromStores = giftCode(504).useStateFromStores(items, () => SKUStore.get(giftCode.skuId));
       let obj = giftCode(504);
-      const getOrFetchSubscriptionPlan = giftCode(10811).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-      const obj2 = giftCode(10811);
+      const getOrFetchSubscriptionPlan = giftCode(10827).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+      const obj2 = giftCode(10827);
       const getOrFetchApplication = giftCode(7134).useGetOrFetchApplication(giftCode.applicationId);
       const obj3 = giftCode(7134);
-      const obj4 = giftCode(10815);
+      const obj4 = giftCode(10831);
       let skuId = null;
       if (obj5.isCollectiblesGiftCode(giftCode)) {
         skuId = giftCode.skuId;
@@ -637,10 +637,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { skuId: "", type: tmp2(1995).CollectiblesItemType.BUNDLE, items: [] };
         tmp12 = obj7;
       }
-      const handleUseNow1 = giftCode(10946).useHandleUseNow({ product: tmp12 });
+      const handleUseNow1 = giftCode(10962).useHandleUseNow({ product: tmp12 });
       const isApplying = handleUseNow1.isApplying;
       ({ handleUseNow, canUseNow } = handleUseNow1);
-      const tmp2Result6 = giftCode(10946);
+      const tmp2Result6 = giftCode(10962);
       [tmp15, c3] = noop.useState();
       const callback = noop.useCallback((nativeEvent) => {
         ({ width: giftCode, height: user } = nativeEvent.nativeEvent.layout);

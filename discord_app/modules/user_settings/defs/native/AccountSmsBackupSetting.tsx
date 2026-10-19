@@ -10,7 +10,7 @@ import showUserSettingsInputAlertDefault from "../../account/native/showUserSett
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const initialize = obj(504);
-const account_MFAUtils = obj(15810);
+const account_MFAUtils = obj(15814);
 require = fn;
 const UserFlags = fn(1087).UserFlags;
 let closure_5 = fn(7009).PHONE_VERIFICATION_MODAL_KEY;
@@ -97,7 +97,7 @@ let closure_7 = apply.debounce(function toggleSMS(user) {
     const tmp5 = asyncRequireImpl(7008, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountSMSBackupSettingToggleValue() {
       const cResult = c.c(4);
@@ -201,7 +201,7 @@ const toggle = SettingBuilders.createToggle({
     }
   },
   useDescription: tmp2,
-  usePredicate: fn(15723).useIsTOTPEnabled,
+  usePredicate: fn(15727).useIsTOTPEnabled,
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

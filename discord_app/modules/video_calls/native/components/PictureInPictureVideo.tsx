@@ -15,7 +15,7 @@ import useIsViewingActivity from "../../../activities/native/useIsViewingActivit
 import VideoRenderer from "VideoRenderer.tsx";
 import UserTileDefault from "UserTile.tsx";
 import useAvatarSpeakingColor from "../../../calls/native/useAvatarSpeakingColor.tsx";
-import _modDef11287 from "../../../../../_runtime/metro/11287__.js";
+import _modDef11305 from "../../../../../_runtime/metro/11305__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -1019,7 +1019,7 @@ let closure_23 = noop.memo(
                               const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
                               const obj5 = {
                                 style: tmp4.thermalAlertIcon,
-                                source: _modDef11287,
+                                source: _modDef11305,
                                 color: tmp4.thermalAlertIcon.color,
                               };
                               obj4.children = value3(native2.Icon, obj5);
@@ -1165,7 +1165,7 @@ let closure_23 = noop.memo(
             let tmp18Result = null;
             if (tmp5) {
               const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11287, color: tmp.thermalAlertIcon.color };
+              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11305, color: tmp.thermalAlertIcon.color };
               obj8.children = tmp18(native2.Icon, obj9);
               tmp18Result = tmp18(hasOwnProperty, obj8);
             }

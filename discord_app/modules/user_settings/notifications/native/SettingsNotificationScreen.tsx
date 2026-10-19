@@ -116,7 +116,7 @@ function getNotificationSettings() {
   return items1;
 }
 const View = fn(17).View;
-let closure_5 = fn(16539).initializeAndroidNotificationSettingsStore;
+let closure_5 = fn(16543).initializeAndroidNotificationSettingsStore;
 const MobileUserSettings = fn(8260).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);

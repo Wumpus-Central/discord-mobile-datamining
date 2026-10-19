@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         style: null,
       };
       const obj = channel(576);
-      obj3.resizeMode = channel(11271).ResizeMode.CONTAIN;
+      obj3.resizeMode = channel(11290).ResizeMode.CONTAIN;
       obj3.onSingleTap = first;
       obj3.onDoubleTap = tmp5;
       obj3.participant = participant;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const obj = {
         gestureEnabled: true,
-        resizeMode: channel(11271).ResizeMode.CONTAIN,
+        resizeMode: channel(11290).ResizeMode.CONTAIN,
         onSingleTap() {
           closure_1_3();
         },
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       return jsx(StreamTileDefault, {
         gestureEnabled: true,
-        resizeMode: channel(11271).ResizeMode.CONTAIN,
+        resizeMode: channel(11290).ResizeMode.CONTAIN,
         onSingleTap() {
           closure_1_3();
         },

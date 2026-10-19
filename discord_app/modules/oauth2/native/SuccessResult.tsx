@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              tmp52[0] = application(11002);
+              tmp52[0] = application(11023);
               const tmp53 = closure_12(application(5128), tmp52);
               cResult[26] = tmp53;
               const tmp49 = tmp53;

@@ -754,7 +754,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(12048).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(12067).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -891,7 +891,7 @@ let closure_29 = async function _endPollEarly(arg0) {
   return "Reflect";
 };
 const DraftType = fn(7510).DraftType;
-const PollsInteractionStore = fn(10797);
+const PollsInteractionStore = fn(10813);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

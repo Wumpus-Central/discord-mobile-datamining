@@ -584,7 +584,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = items1;
       const items3 = [
         closure_11(View, obj3),
-        closure_10(tmp10(10938).NameplatePreview, {
+        closure_10(tmp10(10954).NameplatePreview, {
           nameplate: memo,
           user,
           guildId,

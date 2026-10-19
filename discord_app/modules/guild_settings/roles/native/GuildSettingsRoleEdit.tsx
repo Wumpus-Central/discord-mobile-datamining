@@ -39,11 +39,11 @@ let closure_4 = ["guild"];
 let closure_5 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(2123).isEveryoneRole;
-const RoleColorsStyle = fn(18802).RoleColorsStyle;
-const constants = fn(18797).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(18806).RoleColorsStyle;
+const constants = fn(18801).GuildSettingsRoleEditSections;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_19, DEFAULT_ROLE_COLOR: closure_20, GuildSettingsSections: closure_21 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(18804).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(18808).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
 const createStyles = fn(5191);
@@ -195,10 +195,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(18816).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(18820).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(18816);
+          const obj = applyArgumentsResult(18820);
           const obj3 = { text: null, variant: "success" };
           const intl = applyArgumentsResult(1128).intl;
           obj3.text = intl.string(applyArgumentsResult(1128).t.ulZn1j);
@@ -229,15 +229,15 @@ class GuildSettingsRoleEdit extends PureComponent {
           updateRoleResult.then(
             () => {
               if (null != closure_1_2) {
-                const result = closure_3_0(11126).putRoleConnectionsConfigurations(closure_1_4, closure_1_5, tmp);
+                const result = closure_3_0(11145).putRoleConnectionsConfigurations(closure_1_4, closure_1_5, tmp);
                 result.then(success, failure);
-                const obj5 = closure_3_0(11126);
+                const obj5 = closure_3_0(11145);
               } else if (typeof success === "function") {
-                closure_3_0(18816).commitSectionChanges(closure_1_5, effectiveSection);
+                closure_3_0(18820).commitSectionChanges(closure_1_5, effectiveSection);
                 navigation.pop();
                 const obj2 = { submitting: false, formErrors: {} };
                 closure_0.setState(obj2);
-                const obj = closure_3_0(18816);
+                const obj = closure_3_0(18820);
                 obj4 = { text: null, variant: "success" };
                 const intl = closure_3_0(1128).intl;
                 obj4.text = intl.string(closure_3_0(1128).t.ulZn1j);
@@ -327,7 +327,7 @@ class GuildSettingsRoleEdit extends PureComponent {
                 if (null === guild_connections) {
                   v1 = 1;
                   c2 = 1;
-                  const obj6 = { value: tmp4(11126).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
+                  const obj6 = { value: tmp4(11145).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
                   return obj6;
                 }
               }
@@ -397,11 +397,11 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(18816).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(18816);
+              const result = applyArgumentsResult(18820).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(18820);
             } else {
-              const result1 = applyArgumentsResult(18816).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(18816);
+              const result1 = applyArgumentsResult(18820).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(18820);
             }
             closure_0(true);
           };

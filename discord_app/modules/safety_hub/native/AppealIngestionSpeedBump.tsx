@@ -43,9 +43,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores == null) {
         stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      const safetyHubClassification = emitAppealIngestionEvent(12604).useSafetyHubClassification(stateFromStores);
-      const tmpResult3 = emitAppealIngestionEvent(12604);
-      emitAppealIngestionEvent = emitAppealIngestionEvent(12612).useEmitAppealIngestionEvent();
+      const safetyHubClassification = emitAppealIngestionEvent(12621).useSafetyHubClassification(stateFromStores);
+      const tmpResult3 = emitAppealIngestionEvent(12621);
+      emitAppealIngestionEvent = emitAppealIngestionEvent(12629).useEmitAppealIngestionEvent();
       ({ isDsaEligible, classification } = safetyHubClassification);
       let str;
       if (classification != null) {
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { headerText: tmp13, subHeaderText: tmp15 };
-        const tmp19 = closure_8(tmp(12610).AppealIngestionModalHeader, obj2);
+        const tmp19 = closure_8(tmp(12627).AppealIngestionModalHeader, obj2);
         cResult[6] = tmp19;
         let tmp17 = tmp19;
       } else {
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   obj7.children = items2;
                   items1[1] = closure_9(View, obj7);
                   obj6.children = items1;
-                  const tmp57 = closure_9(tmp(12610).AppealIngestionModalScreen, obj6);
+                  const tmp57 = closure_9(tmp(12627).AppealIngestionModalScreen, obj6);
                   cResult[27] = tmp4.container;
                   cResult[28] = tmp34;
                   cResult[29] = tmp40;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = isCoppa;
       cResult[13] = tmp29;
       tmp28 = tmp29;
-      const tmpResult4 = emitAppealIngestionEvent(12612);
+      const tmpResult4 = emitAppealIngestionEvent(12629);
     }
   : function AppealIngestionSpeedBump(arg0) {
       ({ isCoppa, isSpam, isDeveloperClassification } = arg0);

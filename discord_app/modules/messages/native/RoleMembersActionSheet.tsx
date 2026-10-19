@@ -289,9 +289,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj5.channelId = channelId;
         obj5.roleId = roleId;
-        obj4.children = closure_8(tmp9(11144), obj5);
+        obj4.children = closure_8(tmp9(11163), obj5);
         tmp16Result = closure_8(tmp3(7118).BottomSheet, obj4);
-        let tmp9Result = tmp9(11144);
+        let tmp9Result = tmp9(11163);
       }
       return tmp16Result;
     };

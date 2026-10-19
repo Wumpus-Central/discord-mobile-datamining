@@ -227,11 +227,11 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       positionY = positionY.positionY;
       const tmp4 = closure_19();
       const obj = positionY(576);
-      const canShowTooltip = positionY(11406).useCanShowTooltip(
+      const canShowTooltip = positionY(11424).useCanShowTooltip(
         positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
         true,
       );
-      const obj2 = positionY(11406);
+      const obj2 = positionY(11424);
       const fn = function o() {
         return { opacity: 1 - Math.min((-1 * positionY.get()) / c16, 1) };
       };
@@ -294,7 +294,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   : function FocusedControlsBottomDrawerTooltip(positionY) {
       positionY = positionY.positionY;
       const tmp = closure_19();
-      const canShowTooltip = positionY(11406).useCanShowTooltip(
+      const canShowTooltip = positionY(11424).useCanShowTooltip(
         positionY(1107).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
         true,
       );

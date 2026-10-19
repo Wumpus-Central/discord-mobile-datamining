@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef14863 from "../../../../../_runtime/metro/14863__.js";
+import _modDef14867 from "../../../../../_runtime/metro/14867__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const dismissUpsellCTA = fn(13344).dismissUpsellCTA;
+const dismissUpsellCTA = fn(13349).dismissUpsellCTA;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
@@ -101,7 +101,7 @@ export default noop.memo(
             onPress: tmp5,
             onLongPress: tmp6,
             style: tmp7,
-            iconSource: _modDef14863,
+            iconSource: _modDef14867,
             title: tmp8,
             subtitle: tmp9,
           };
@@ -109,7 +109,7 @@ export default noop.memo(
             onPress: tmp5,
             onLongPress: tmp6,
             style: tmp7,
-            iconSource: _modDef14863,
+            iconSource: _modDef14867,
             title: tmp8,
             subtitle: tmp9,
           });
@@ -155,7 +155,7 @@ export default noop.memo(
             const result = location(7167).showSimpleActionSheet(obj2);
           },
           style: null,
-          iconSource: _modDef14863,
+          iconSource: _modDef14867,
           title: null,
           subtitle: null,
         };
@@ -193,7 +193,7 @@ export default noop.memo(
             const result = location(7167).showSimpleActionSheet(obj2);
           },
           style: null,
-          iconSource: _modDef14863,
+          iconSource: _modDef14867,
           title: null,
           subtitle: null,
         });

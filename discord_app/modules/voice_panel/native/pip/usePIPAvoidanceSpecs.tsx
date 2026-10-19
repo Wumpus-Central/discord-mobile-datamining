@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
-import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import VoicePanelControlsConstants from "../controls/VoicePanelControlsConstants.tsx";
 import VoicePanelConstants from "../../VoicePanelConstants.tsx";
 import MorphablePanelConstants from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
+import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import calculateVoicePanelHeaderSpecsDefault from "../header/calculateVoicePanelHeaderSpecs.tsx";
 import getPIPBottomOffsetForPIPModeDefault from "../../../panels/morphable/native/getPIPBottomOffsetForPIPMode.tsx";
 import getAdjustedBottomOffsetsDefault from "../../../panels/morphable/native/getAdjustedBottomOffsets.tsx";

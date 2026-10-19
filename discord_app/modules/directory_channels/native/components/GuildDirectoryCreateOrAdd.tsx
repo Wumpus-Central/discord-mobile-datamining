@@ -18,7 +18,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(12952).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12960).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5191);
@@ -78,7 +78,7 @@ let closure_12 = noop.memo(
             }
             if (cResult[7] !== stateFromStores) {
               const obj2 = { entry: stateFromStores };
-              const tmp16 = closure_9(directoryChannelId(12955), obj2);
+              const tmp16 = closure_9(directoryChannelId(12963), obj2);
               cResult[7] = stateFromStores;
               cResult[8] = tmp16;
               let tmp13 = tmp16;
@@ -136,7 +136,7 @@ let closure_12 = noop.memo(
         const obj2 = {
           label: guild.name,
           icon: closure_9(directoryChannelId(6436), { style: tmp.guildIcon, guild }),
-          trailing: closure_9(directoryChannelId(12955), { entry: stateFromStores }),
+          trailing: closure_9(directoryChannelId(12963), { entry: stateFromStores }),
           start,
           end,
         };

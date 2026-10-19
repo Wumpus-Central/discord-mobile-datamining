@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
         if (choices == null) {
           choices = [];
         }
-        return choices.map(/* F111326 */ function() { ... });
+        return choices.map(/* F111452 */ function() { ... });
       }
     }
     cResult[2] = option.choices;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
         if (choices == null) {
           choices = [];
         }
-        return choices.map(/* F111326 */ function() { ... });
+        return choices.map(/* F111452 */ function() { ... });
       }
     }
   }
@@ -289,11 +289,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   let tmp16 = tmp13;
   if (tmp13) {
     const obj3 = { onChange: callback };
-    tmp16 = closure_9(tmp3(11977).AppLauncherListSearchBar, obj3);
+    tmp16 = closure_9(tmp3(11996).AppLauncherListSearchBar, obj3);
   }
   const items3 = [tmp16, ];
   if (0 === data.length) {
-    let tmp20 = closure_9(tmp3(11977).AppLauncherListEmptyState, {});
+    let tmp20 = closure_9(tmp3(11996).AppLauncherListEmptyState, {});
   } else {
     const obj4 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     const obj5 = { paddingBottom: sum };
@@ -310,5 +310,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   }
   items3[1] = tmp20;
   obj2.children = items3;
-  return closure_10(option(11979).AppLauncherCommandOptionActionSheet, obj2);
+  return closure_10(option(11998).AppLauncherCommandOptionActionSheet, obj2);
 });

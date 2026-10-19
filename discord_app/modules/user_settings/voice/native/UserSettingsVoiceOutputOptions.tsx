@@ -315,5 +315,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       items4[1] = tmp9Result;
       obj4.children = items4;
-      return closure_10(stateFromStores1(11442).UserSettingsTableRowGroup, obj4);
+      return closure_10(stateFromStores1(11460).UserSettingsTableRowGroup, obj4);
     };

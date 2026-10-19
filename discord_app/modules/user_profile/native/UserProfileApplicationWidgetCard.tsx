@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp10Result;
       let tmp13 = rendererProps;
       if (rendererProps == null) {
-        tmp13 = tmp9(11813)(userId, widget.applicationId);
+        tmp13 = tmp9(11832)(userId, widget.applicationId);
       }
       ({ surfaceConfigs, resolutionContext, isLoading, hasIdentity } = tmp13);
       const tmp14 = stateFromStores(7131)(getOrFetchApplication);
@@ -379,10 +379,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         trackEntryPointImpression: true,
         stackingBehavior: "stack",
       };
-      const tmp15 = stateFromStores(11816)(widget.applicationId, stateFromStores1);
-      ({ pending, refresh } = stateFromStores(11817)(widget.applicationId));
-      const tmp17 = surfaceConfigs[userId(undefined, 11689).ApplicationWidgetConfigSurface.WIDGET_TOP];
-      const tmp18 = surfaceConfigs[userId(undefined, 11689).ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
+      const tmp15 = stateFromStores(11835)(widget.applicationId, stateFromStores1);
+      ({ pending, refresh } = stateFromStores(11836)(widget.applicationId));
+      const tmp17 = surfaceConfigs[userId(undefined, 11708).ApplicationWidgetConfigSurface.WIDGET_TOP];
+      const tmp18 = surfaceConfigs[userId(undefined, 11708).ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
       let tmp19 = null;
       if (null != iconURL) {
         const obj5 = { source: null, style: null };
@@ -420,11 +420,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const obj7 = { style: cardStyle, title: null, titleLeadingIcon: null, children: null };
             const tmp9Result = tmp9(7180);
-            obj7.title = tmp2(11821).getWidgetTitle(widget);
+            obj7.title = tmp2(11840).getWidgetTitle(widget);
             obj7.titleLeadingIcon = tmp19;
             const obj8 = { style: tmp.stillSyncing, children: null };
             const obj9 = { size: "xs", color: tmp9(587).colors.TEXT_MUTED };
-            const items3 = [closure_8(tmp2(11826).HourglassIcon, obj9)];
+            const items3 = [closure_8(tmp2(11845).HourglassIcon, obj9)];
             const obj10 = { variant: "text-sm/medium", color: "text-muted", children: null };
             const intl = tmp2(1128).intl;
             obj10.children = intl.string(tmp2(1128).t.z5K4Uv);
@@ -432,12 +432,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj8.children = items3;
             obj7.children = closure_9(closure_5, obj8);
             tmp24 = closure_8(tmp9Result, obj7);
-            const tmp2Result5 = tmp2(11821);
+            const tmp2Result5 = tmp2(11840);
           }
         }
       }
-      const tmp16 = stateFromStores(11817)(widget.applicationId);
-      const result = userId(11719).bindResolveFieldValue(resolutionContext);
+      const tmp16 = stateFromStores(11836)(widget.applicationId);
+      const result = userId(11738).bindResolveFieldValue(resolutionContext);
       const obj11 = {
         style: tmp.header,
         onPress() {
@@ -452,12 +452,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         children: null,
       };
-      const tmp2Result6 = userId(11719);
-      obj11.accessibilityLabel = userId(11821).getWidgetTitle(widget);
+      const tmp2Result6 = userId(11738);
+      obj11.accessibilityLabel = userId(11840).getWidgetTitle(widget);
       const items4 = [tmp19];
       const obj12 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: null };
-      const tmp2Result7 = userId(11821);
-      obj12.children = userId(11821).getWidgetTitle(widget);
+      const tmp2Result7 = userId(11840);
+      obj12.children = userId(11840).getWidgetTitle(widget);
       items4[1] = closure_8(userId(5187).Text, obj12);
       obj11.children = items4;
       const tmp32 = closure_9(closure_4, obj11);
@@ -466,14 +466,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp31Result = null;
       if (null != tmp17) {
-        if (tmp2(11717).ApplicationWidgetLayoutName.WIDGET_TOP_HERO === layout) {
+        if (tmp2(11736).ApplicationWidgetLayoutName.WIDGET_TOP_HERO === layout) {
           const obj13 = { header: tmp32, topConfig: tmp17, resolveFieldValue: result, numberFormat: memo };
-          tmp31Result = closure_8(tmp9(11718), obj13);
+          tmp31Result = closure_8(tmp9(11737), obj13);
         } else {
           tmp31Result = null;
-          if (tmp2(11717).ApplicationWidgetLayoutName.WIDGET_TOP_CONTAINED === layout) {
+          if (tmp2(11736).ApplicationWidgetLayoutName.WIDGET_TOP_CONTAINED === layout) {
             const obj14 = { header: tmp32, topConfig: tmp17, resolveFieldValue: result, numberFormat: memo };
-            tmp31Result = closure_8(tmp9(11809), obj14);
+            tmp31Result = closure_8(tmp9(11828), obj14);
           }
         }
       }
@@ -482,17 +482,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp31Result2 = null;
       if (null != tmp18) {
-        if (tmp2(11717).ApplicationWidgetLayoutName.WIDGET_BOTTOM_STATS === layout2) {
+        if (tmp2(11736).ApplicationWidgetLayoutName.WIDGET_BOTTOM_STATS === layout2) {
           const obj15 = { bottomConfig: tmp18, resolveFieldValue: result, numberFormat: memo };
-          tmp31Result2 = closure_8(tmp9(11810), obj15);
-        } else if (tmp2(11717).ApplicationWidgetLayoutName.WIDGET_BOTTOM_PROGRESS === layout2) {
+          tmp31Result2 = closure_8(tmp9(11829), obj15);
+        } else if (tmp2(11736).ApplicationWidgetLayoutName.WIDGET_BOTTOM_PROGRESS === layout2) {
           const obj16 = { bottomConfig: tmp18, resolveFieldValue: result };
-          tmp31Result2 = closure_8(tmp9(11811), obj16);
+          tmp31Result2 = closure_8(tmp9(11830), obj16);
         } else {
           tmp31Result2 = null;
-          if (tmp2(11717).ApplicationWidgetLayoutName.WIDGET_BOTTOM_COLLECTION === layout2) {
+          if (tmp2(11736).ApplicationWidgetLayoutName.WIDGET_BOTTOM_COLLECTION === layout2) {
             const obj17 = { bottomConfig: tmp18, resolveFieldValue: result };
-            tmp31Result2 = closure_8(tmp9(11812), obj17);
+            tmp31Result2 = closure_8(tmp9(11831), obj17);
           }
         }
       }
@@ -524,7 +524,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj20.onPress = refresh;
               obj20.style = tmp.refresh;
               const obj21 = { size: "xs", color: tmp9(587).colors.TEXT_MUTED };
-              const items6 = [closure_8(tmp2(11616).RetryIcon, obj21)];
+              const items6 = [closure_8(tmp2(11632).RetryIcon, obj21)];
               const obj22 = { variant: "text-xs/medium", color: "text-muted", children: null };
               const intl3 = tmp2(1128).intl;
               obj22.children = intl3.string(tmp2(1128).t.wzzjk9);

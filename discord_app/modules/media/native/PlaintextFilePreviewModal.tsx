@@ -460,5 +460,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj[constants.PREVIEW] = obj2;
         return obj;
       }, items1);
-      return jsx(url(10913).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+      return jsx(url(10929).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
     };

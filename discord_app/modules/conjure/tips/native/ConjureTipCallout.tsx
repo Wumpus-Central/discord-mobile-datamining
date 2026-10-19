@@ -5,8 +5,8 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import ConjureTipGutterRowDefault from "ConjureTipGutterRow.tsx";
 import ConjureNativeCardSurfaceDefault from "../../shared/native/ConjureNativeCardSurface.tsx";
+import ConjureTipGutterRowDefault from "ConjureTipGutterRow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

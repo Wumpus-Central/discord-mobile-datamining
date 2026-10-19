@@ -22,7 +22,7 @@ function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(17969, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
+  obj2.openLazy(asyncRequireImpl(17973, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
     channel,
     canSkip: flag,
   });
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let intl = tmp(1128).intl;
                   obj5.title = intl.string(tmp(1128).t.f7VbhF);
                   let obj6 = {
-                    icon: closure_10(tmp(10920).CirclePlusIcon, {}),
+                    icon: closure_10(tmp(10936).CirclePlusIcon, {}),
                     label: null,
                     onPress: null,
                     disabled: null,
@@ -275,11 +275,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj3 = { channel, canSkip: false };
                       obj2.openLazy(
-                        asyncRequireImpl(17969, dependencyMap.paths),
+                        asyncRequireImpl(17973, dependencyMap.paths),
                         "channel-add-moderators-" + channel.id,
                         obj3,
                       );
-                      const tmp7 = asyncRequireImpl(17969, dependencyMap.paths);
+                      const tmp7 = asyncRequireImpl(17973, dependencyMap.paths);
                     }
                   };
                   obj6.disabled = !canUpdateStageChannelModerators;
@@ -520,11 +520,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = ActionSheetActionCreatorsDefault;
                 const obj3 = { channel, canSkip: false };
                 obj2.openLazy(
-                  asyncRequireImpl(17969, dependencyMap.paths),
+                  asyncRequireImpl(17973, dependencyMap.paths),
                   "channel-add-moderators-" + channel.id,
                   obj3,
                 );
-                const tmp7 = asyncRequireImpl(17969, dependencyMap.paths);
+                const tmp7 = asyncRequireImpl(17973, dependencyMap.paths);
               }
             };
             obj9.disabled = !canUpdateStageChannelModerators;

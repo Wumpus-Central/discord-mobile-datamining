@@ -8,11 +8,11 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef11545 from "../../../../../_runtime/metro/11545__.js";
-import _modDef11546 from "../../../../../_runtime/metro/11546__.js";
-import _modDef11547 from "../../../../../_runtime/metro/11547__.js";
-import _modDef11548 from "../../../../../_runtime/metro/11548__.js";
-import _modDef11549 from "../../../../../_runtime/metro/11549__.js";
+import _modDef11563 from "../../../../../_runtime/metro/11563__.js";
+import _modDef11564 from "../../../../../_runtime/metro/11564__.js";
+import _modDef11565 from "../../../../../_runtime/metro/11565__.js";
+import _modDef11566 from "../../../../../_runtime/metro/11566__.js";
+import _modDef11567 from "../../../../../_runtime/metro/11567__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -171,17 +171,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       participant = participant.participant;
       let titleIcon2 = closure_16();
       if (participant.type === constants.STREAM) {
-        let tmp4 = _modDef11545;
+        let tmp4 = _modDef11563;
       } else if (participant.type === tmp3.USER) {
         const voicePlatform = participant.voicePlatform;
         if (constants2.MOBILE === voicePlatform) {
-          tmp4 = _modDef11546;
+          tmp4 = _modDef11564;
         } else if (constants2.XBOX === voicePlatform) {
-          tmp4 = _modDef11547;
+          tmp4 = _modDef11565;
         } else if (constants2.PLAYSTATION === voicePlatform) {
-          tmp4 = _modDef11548;
+          tmp4 = _modDef11566;
         } else if (constants2.QUEST === voicePlatform) {
-          tmp4 = _modDef11549;
+          tmp4 = _modDef11567;
         }
       }
       if (null == tmp4) {
@@ -207,17 +207,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   : function ParticipantIcon(participant) {
       participant = participant.participant;
       if (participant.type === constants.STREAM) {
-        let tmp3 = _modDef11545;
+        let tmp3 = _modDef11563;
       } else if (participant.type === tmp2.USER) {
         const voicePlatform = participant.voicePlatform;
         if (constants2.MOBILE === voicePlatform) {
-          tmp3 = _modDef11546;
+          tmp3 = _modDef11564;
         } else if (constants2.XBOX === voicePlatform) {
-          tmp3 = _modDef11547;
+          tmp3 = _modDef11565;
         } else if (constants2.PLAYSTATION === voicePlatform) {
-          tmp3 = _modDef11548;
+          tmp3 = _modDef11566;
         } else if (constants2.QUEST === voicePlatform) {
-          tmp3 = _modDef11549;
+          tmp3 = _modDef11567;
         }
       }
       let tmp14 = null;
@@ -248,7 +248,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = reveal(576);
       const tmp = reveal;
       ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-      reveal = noop.useContext(reveal(11209).RevealContext).reveal;
+      reveal = noop.useContext(reveal(11228).RevealContext).reveal;
       const tmp6 = useSafeAreaInsetsDefault();
       const fn = function l() {
         let num = 0;
@@ -393,7 +393,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
       const tmp = closure_16();
       ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-      reveal = noop.useContext(reveal(11209).RevealContext).reveal;
+      reveal = noop.useContext(reveal(11228).RevealContext).reveal;
       const tmp4 = useSafeAreaInsetsDefault();
       const tmp5 = reveal;
       class A {

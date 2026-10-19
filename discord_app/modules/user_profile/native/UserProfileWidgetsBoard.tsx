@@ -1230,11 +1230,11 @@ const memoResult = noop.memo(
             arr3 = substr1;
           }
           if (cResult[51] !== widget) {
-            const widgetTitle = tmp(11821).getWidgetTitle(widget);
+            const widgetTitle = tmp(11840).getWidgetTitle(widget);
             cResult[51] = widget;
             cResult[52] = widgetTitle;
             let tmp60 = widgetTitle;
-            const tmpResult2 = tmp(11821);
+            const tmpResult2 = tmp(11840);
           } else {
             tmp60 = cResult[52];
           }
@@ -1290,7 +1290,7 @@ const memoResult = noop.memo(
           }
           if (tmp63) {
             const obj15 = { userId, widget };
-            tmp63 = closure_9(disableInteraction(14152), obj15);
+            tmp63 = closure_9(disableInteraction(14156), obj15);
           }
           cResult[53] = disableInteraction;
           cResult[54] = stateFromStores;
@@ -1510,7 +1510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_13();
       const obj = userId(576);
       const tmp4 = undefined === isVisible || isVisible;
-      const displayableBoardWidgets = userId(14158).useDisplayableBoardWidgets(userId);
+      const displayableBoardWidgets = userId(14162).useDisplayableBoardWidgets(userId);
       let num = 0;
       closure_15(tmp4, displayableBoardWidgets.length > 0);
       if (0 === displayableBoardWidgets.length) {
@@ -1553,7 +1553,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = fn;
         tmp8 = fn;
       }
-      const tmpResult = userId(14158);
+      const tmpResult = userId(14162);
     }
   : function UserProfileWidgetsBoard(userId) {
       userId = userId.userId;
@@ -1563,7 +1563,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const cardStyle = userId.cardStyle;
       const tmp = closure_13();
-      const displayableBoardWidgets = userId(14158).useDisplayableBoardWidgets(userId);
+      const displayableBoardWidgets = userId(14162).useDisplayableBoardWidgets(userId);
       closure_15(flag, displayableBoardWidgets.length > 0);
       let tmp3 = null;
       if (0 !== displayableBoardWidgets.length) {

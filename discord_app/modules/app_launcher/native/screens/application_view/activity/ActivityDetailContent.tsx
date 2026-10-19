@@ -482,7 +482,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       _require = asyncGeneratorStep(async () => {
         applicationId(1267).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
           application_id: tmp3,
-          button_action: recipientIds(10933).EntryPointCommandButtonActions.OPEN_APP_DM,
+          button_action: recipientIds(10949).EntryPointCommandButtonActions.OPEN_APP_DM,
         });
         const _setTimeout = setTimeout;
         ref.current = setTimeout(() => {
@@ -508,7 +508,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             closure_128_0 = value;
             c5 = 1;
             return {
-              value: applicationId(11857)({ targetApplicationId: tmp3, channelId: closure_128_0, analyticsLocations }),
+              value: applicationId(11876)({ targetApplicationId: tmp3, channelId: closure_128_0, analyticsLocations }),
               done: false,
             };
           }
@@ -551,7 +551,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         asyncGeneratorStep(async () => {
           tmp3(1267).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
             application_id: applicationId,
-            button_action: botUserId(10933).EntryPointCommandButtonActions.OPEN_APP_DM,
+            button_action: botUserId(10949).EntryPointCommandButtonActions.OPEN_APP_DM,
           });
           const _setTimeout = setTimeout;
           closure_4.current = setTimeout(() => {
@@ -577,7 +577,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               c4 = 3;
               c5 = 1;
               return {
-                value: tmp3(11857)({
+                value: tmp3(11876)({
                   targetApplicationId: closure_129_1,
                   channelId: closure_128_0,
                   analyticsLocations: closure_129_2,
@@ -618,10 +618,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ context, sectionName, onActivityItemSelected, entrypoint } = application);
       const tmp4 = closure_15();
       let obj = application(576);
-      const width = application(10932).useRequiredAppLauncherContext().width;
-      const obj2 = application(10932);
-      const getPrimaryAppCommand = application(11241).useGetPrimaryAppCommand(context, application.id);
-      const obj3 = application(11241);
+      const width = application(10948).useRequiredAppLauncherContext().width;
+      const obj2 = application(10948);
+      const getPrimaryAppCommand = application(11260).useGetPrimaryAppCommand(context, application.id);
+      const obj3 = application(11260);
       const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
       [r10041, importDefault] = noop.useState(undefined);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -635,7 +635,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp7 = _slicedToArray(noop.useState(undefined), 2);
       const isScreenLandscape = application(8600).useIsScreenLandscape();
-      entrypoint !== application(10933).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+      entrypoint !== application(10949).AppLauncherEntrypoint.VOICE && isScreenLandscape;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DeveloperActivityShelfStore];
         cResult[1] = items;
@@ -807,10 +807,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       importDefault = undefined;
       ({ sectionName, onActivityItemSelected, hasCommands } = application);
       const tmp = closure_15();
-      const width = application(10932).useRequiredAppLauncherContext().width;
-      let obj = application(10932);
-      const getPrimaryAppCommand = application(11241).useGetPrimaryAppCommand(context, application.id);
-      const obj2 = application(11241);
+      const width = application(10948).useRequiredAppLauncherContext().width;
+      let obj = application(10948);
+      const getPrimaryAppCommand = application(11260).useGetPrimaryAppCommand(context, application.id);
+      const obj2 = application(11260);
       const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.APP_DETAIL).analyticsLocations;
       [tmp8, c1] = noop.useState(undefined);
       const callback = noop.useCallback((nativeEvent) => {
@@ -819,7 +819,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = _slicedToArray(noop.useState(undefined), 2);
       const isScreenLandscape = application(8600).useIsScreenLandscape();
       let detailsContainerLandscape =
-        entrypoint !== application(10933).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+        entrypoint !== application(10949).AppLauncherEntrypoint.VOICE && isScreenLandscape;
       const obj3 = application(8600);
       const items = [DeveloperActivityShelfStore];
       const stateFromStoresObject = application(504).useStateFromStoresObject(items, () => ({
@@ -873,15 +873,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmp2Result8 = tmp2(7134);
         const obj9 = { context, applicationId: application.id };
-        const activityAction = tmp2(11853).useActivityAction(obj9);
-        const tmp2Result9 = tmp2(11853);
-        const delayedSwapToActivityActionLeave = tmp2(11954).useDelayedSwapToActivityActionLeave(activityAction);
+        const activityAction = tmp2(11872).useActivityAction(obj9);
+        const tmp2Result9 = tmp2(11872);
+        const delayedSwapToActivityActionLeave = tmp2(11973).useDelayedSwapToActivityActionLeave(activityAction);
         const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-        const tmp2Result10 = tmp2(11954);
-        ({ reason, disabled } = tmp5(11955)(obj10));
+        const tmp2Result10 = tmp2(11973);
+        ({ reason, disabled } = tmp5(11974)(obj10));
         const obj11 = { context, application, botUserId: null };
         let id;
-        tmp5(11956);
+        tmp5(11975);
         if (bot != null) {
           id = bot.id;
         }
@@ -961,13 +961,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
         const obj25 = { applicationId: application.id, width: null, contentWidth: null };
         let result = width;
-        const tmp29 = tmp5(11955)(obj10);
+        const tmp29 = tmp5(11974)(obj10);
         if (detailsContainerLandscape) {
           result = (65 * width) / 100;
         }
         obj25.width = result;
         obj25.contentWidth = tmp8;
-        obj24.children = closure_11(tmp5(11893), obj25);
+        obj24.children = closure_11(tmp5(11912), obj25);
         const items4 = [closure_11(View, obj24)];
         const items5 = [tmp.details];
         if (detailsContainerLandscape) {
@@ -982,17 +982,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
         const obj30 = { style: tmp.tagIcon, size: "xs" };
         obj29.icon = closure_11(tmp2(8489).GroupIcon, obj30);
-        const tmp5Result3 = tmp5(11893);
+        const tmp5Result3 = tmp5(11912);
         let num5 = num;
         if (num == null) {
           num5 = 0;
         }
-        obj29.tagName = tmp2(11958).getItemSubtitleForMaxPlayersShort(num5);
-        const tmp2Result12 = tmp2(11958);
+        obj29.tagName = tmp2(11977).getItemSubtitleForMaxPlayersShort(num5);
+        const tmp2Result12 = tmp2(11977);
         if (num == null) {
           num = 0;
         }
-        obj29.accessibilityLabel = tmp5(11958)(num);
+        obj29.accessibilityLabel = tmp5(11977)(num);
         const items7 = [closure_11(closure_16, obj29, "participants")];
         const tags = application.tags;
         let mapped;

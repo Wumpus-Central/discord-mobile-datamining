@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj7.label = intl.string(Form(1128).t.jp25Id);
           const intl2 = Form(1128).intl;
           obj7.subLabel = intl2.string(Form(1128).t.mKIOkI);
-          obj7.icon = closure_6(Form(17875).WebhookIcon, {});
+          obj7.icon = closure_6(Form(17879).WebhookIcon, {});
           obj7.onPress = function onPress() {
             return navigation.push(ChannelSettingsSections.WEBHOOKS);
           };
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj8.label = intl3.string(Form(1128).t.OrV60r);
             const intl4 = Form(1128).intl;
             obj8.subLabel = intl4.string(Form(1128).t.rQREJl);
-            obj8.icon = closure_6(Form(17984).ChannelsFollowedIcon, {});
+            obj8.icon = closure_6(Form(17988).ChannelsFollowedIcon, {});
             obj8.onPress = function onPress() {
               return navigation.push(ChannelSettingsSections.CHANNELS_FOLLOWED);
             };

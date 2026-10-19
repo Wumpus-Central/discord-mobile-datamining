@@ -160,7 +160,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(13068).EventActionType;
+const EventActionType = fn(13076).EventActionType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let closure_10 = fn(7749).NotificationAuthorizationStatus;
 fn(558);

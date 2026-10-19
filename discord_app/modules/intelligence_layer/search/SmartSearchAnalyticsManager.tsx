@@ -50,8 +50,17 @@ class SmartSearchAnalyticsManager {
   }
 }
 const prototype = SmartSearchAnalyticsManager.prototype;
-prototype["getParentSuggestedSearch"] = function getParentSuggestedSearch() {
-  return this.parentSuggestedSearch;
+prototype["getParentSuggestedSearch"] = function getParentSuggestedSearch(queryText) {
+  const parentSuggestedSearch = this.parentSuggestedSearch;
+  let suggestedSearchText;
+  if (parentSuggestedSearch != null) {
+    suggestedSearchText = parentSuggestedSearch.suggestedSearchText;
+  }
+  let prop = null;
+  if (suggestedSearchText === queryText) {
+    prop = this.parentSuggestedSearch;
+  }
+  return prop;
 };
 prototype["setIsRowViewable"] = function setIsRowViewable(isViewable, getQueryId) {
   this.updateVisibility({ isRowViewable: isViewable }, getQueryId);
@@ -117,38 +126,26 @@ prototype["updateVisibility"] = function updateVisibility(arg0, getQueryId) {
     }
   }
 };
-prototype["getParentSuggestedSearchId"] = function getParentSuggestedSearchId(queryText) {
-  parentSuggestedSearch = this;
-  if (null == this.parentSuggestedSearch) {
-    return null;
-  } else if (queryText === parentSuggestedSearch.parentSuggestedSearch.suggestedSearchText) {
-    ({ parentSuggestedSearch, suggestionId } = parentSuggestedSearch);
-  } else {
-    parentSuggestedSearch.parentSuggestedSearch = null;
-    suggestionId = null;
-  }
-};
 prototype["getContextualProperties"] = function getContextualProperties(smartSearchQuery, getQueryId) {
   const queryId = getQueryId.getQueryId(smartSearchQuery.searchContext);
+  const parentSuggestedSearch = this.getParentSuggestedSearch(smartSearchQuery.queryText);
+  let suggestionId;
+  if (parentSuggestedSearch != null) {
+    suggestionId = parentSuggestedSearch.suggestionId;
+  }
+  if (suggestionId == null) {
+    suggestionId = null;
+  }
   const obj = {
-    search_session_id: null,
-    search_query_id: null,
-    search_location: null,
-    guild_id: null,
-    channel_id: null,
-    filter_channel_ids: null,
-    num_filter_channels: null,
-    parent_suggested_search_id: null,
+    search_session_id: getQueryId.getSessionId(smartSearchQuery.searchContext),
+    search_query_id: queryId,
+    search_location: getQueryId.getLocation(smartSearchQuery.searchContext),
+    guild_id: smartSearchQuery.guildId,
+    channel_id: SearchUtils.getChannelIdFromSearchContext(smartSearchQuery.searchContext),
+    filter_channel_ids: smartSearchQuery.channelIds,
+    num_filter_channels: smartSearchQuery.channelIds.length,
+    parent_suggested_search_id: suggestionId,
   };
-  const parentSuggestedSearchId = this.getParentSuggestedSearchId(smartSearchQuery.queryText);
-  obj.search_session_id = getQueryId.getSessionId(smartSearchQuery.searchContext);
-  obj.search_query_id = queryId;
-  obj.search_location = getQueryId.getLocation(smartSearchQuery.searchContext);
-  obj.guild_id = smartSearchQuery.guildId;
-  obj.channel_id = SearchUtils.getChannelIdFromSearchContext(smartSearchQuery.searchContext);
-  obj.filter_channel_ids = smartSearchQuery.channelIds;
-  obj.num_filter_channels = smartSearchQuery.channelIds.length;
-  obj.parent_suggested_search_id = parentSuggestedSearchId;
   return obj;
 };
 prototype["trackSmartSearchAnswerReturned"] = function trackSmartSearchAnswerReturned(arg0, getQueryId) {

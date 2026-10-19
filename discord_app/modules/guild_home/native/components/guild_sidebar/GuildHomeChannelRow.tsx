@@ -11,7 +11,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(5191);
 let obj2 = {
   container: {
-    marginVertical: fn(11881).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11900).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -19,7 +19,7 @@ let obj2 = {
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11881).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11900).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const ChannelModes = tmp(13031).ChannelModes;
+      const ChannelModes = tmp(13039).ChannelModes;
       const tmp6 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1128).intl;
@@ -70,9 +70,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp6) {
         const obj3 = { name: tmp10, mode: tmp6 };
-        const tmp15 = jsx(tmp(13031).BaseChannelName, { name: tmp10, mode: tmp6 });
-        const obj4 = { mode: tmp6, IconComponent: tmp(14845).SignPostIcon };
-        const tmp16 = jsx(tmp(13031).BaseChannelIcon, { mode: tmp6, IconComponent: tmp(14845).SignPostIcon });
+        const tmp15 = jsx(tmp(13039).BaseChannelName, { name: tmp10, mode: tmp6 });
+        const obj4 = { mode: tmp6, IconComponent: tmp(14849).SignPostIcon };
+        const tmp16 = jsx(tmp(13039).BaseChannelIcon, { mode: tmp6, IconComponent: tmp(14849).SignPostIcon });
         cResult[6] = tmp6;
         cResult[7] = tmp15;
         cResult[8] = tmp16;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
       }, items);
-      const ChannelModes = id(13031).ChannelModes;
+      const ChannelModes = id(13039).ChannelModes;
       if (selected) {
         let DEFAULT = ChannelModes.SELECTED;
         let tmp5 = tmp3;
@@ -150,8 +150,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp5(1128).intl;
       obj2.name = intl2.string(tmp5(1128).t.VbpLyU);
       obj2.mode = DEFAULT;
-      obj.name = jsx(tmp5(13031).BaseChannelName, { name: null, mode: null });
-      obj.icon = jsx(tmp5(13031).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(14845).SignPostIcon });
+      obj.name = jsx(tmp5(13039).BaseChannelName, { name: null, mode: null });
+      obj.icon = jsx(tmp5(13039).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(14849).SignPostIcon });
       return (
         <tmp7
           onPress={callback}

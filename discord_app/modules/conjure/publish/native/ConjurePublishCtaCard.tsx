@@ -1,5 +1,9 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishCtaCard.tsx
 import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
+import _modDef3883 from "../../intl/ConjureUntranslated.messages.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import useConjurePublishActionDefault from "../useConjurePublishAction.tsx";
 import conjurePublishCard from "../conjurePublishCard.tsx";
 import ConjureTipInlineCalloutDefault from "../../tips/native/ConjureTipInlineCallout.tsx";
@@ -66,11 +70,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 items1[1] = closure_4(guildId(6436), obj4);
                 const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
                 const tmp16 = guildId(6436);
-                obj5.children = tmp(12109).publishCardServerName(stateFromStores.name);
+                obj5.children = tmp(12128).publishCardServerName(stateFromStores.name);
                 items1[2] = closure_4(tmp(5187).Text, obj5);
                 obj2.children = items1;
                 tmp12 = closure_5(tmp(5477).Stack, obj2);
-                const tmpResult2 = tmp(12109);
+                const tmpResult2 = tmp(12128);
               }
               cResult[10] = stateFromStores;
               cResult[11] = tmp12;
@@ -153,11 +157,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         items2[1] = closure_4(guildId(6436), obj5);
         const obj6 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
         const tmp8 = guildId(6436);
-        obj6.children = tmp(12109).publishCardServerName(stateFromStores.name);
+        obj6.children = tmp(12128).publishCardServerName(stateFromStores.name);
         items2[2] = closure_4(tmp(5187).Text, obj6);
         obj3.children = items2;
         tmp4Result = closure_5(tmp(5477).Stack, obj3);
-        const tmpResult = tmp(12109);
+        const tmpResult = tmp(12128);
       }
       children[1] = tmp4Result;
       return closure_5(publish(5477).Stack, { direction: "horizontal", spacing: 8, align: "center", children });
@@ -167,43 +171,69 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/native/ConjurePublishCtaCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function ConjurePublishCtaCard(projectId) {
-      const cResult = c.c(2);
-      const tmp5 = useConjurePublishActionDefault(projectId.projectId);
-      if (cResult[0] !== tmp5) {
-        let tmp8 = null;
-        if (null != tmp5) {
-          tmp8 = null;
-          if (tmpResult.isConjurePublishCtaVisible(tmp5)) {
-            const obj2 = { children: null };
-            const obj3 = { publish: tmp5 };
-            obj2.children = React4(closure_6, obj3);
-            tmp8 = React4(ConjureTipInlineCalloutDefault, obj2);
-            const tmp4Result = ConjureTipInlineCalloutDefault;
-          }
-          tmpResult = conjurePublishCard;
+  ? function ConjurePublishCtaCard(cta) {
+      const cResult = c.c(3);
+      cta = cta.cta;
+      const tmp5 = useConjurePublishActionDefault(cta.projectId);
+      if (cResult[0] === cta) {
+        if (cResult[1] === tmp5) {
+          let tmp6 = cResult[2];
         }
-        cResult[0] = tmp5;
-        cResult[1] = tmp8;
-        let tmp6 = tmp8;
-      } else {
-        tmp6 = cResult[1];
+        return tmp6;
       }
-      return tmp6;
+      let tmp8Result2 = null;
+      if (null != tmp5) {
+        tmp8Result2 = null;
+        if (tmpResult.isConjurePublishCtaVisible(tmp5, cta)) {
+          let tmp8Result = null;
+          if ("new_ui" === cta.reason) {
+            const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
+            const intl = util.intl;
+            obj2.children = intl.string(_modDef3883["9ZqzLo"]);
+            tmp8Result = React4(Text_Text.Text, obj2);
+          }
+          const obj3 = { children: null };
+          const obj4 = { spacing: 8, children: null };
+          const items = [tmp8Result];
+          const obj5 = { publish: tmp5 };
+          items[1] = React4(closure_6, obj5);
+          obj4.children = items;
+          obj3.children = hasOwnProperty(Stack_Stack.Stack, obj4);
+          tmp8Result2 = React4(ConjureTipInlineCalloutDefault, obj3);
+          const tmp4Result = ConjureTipInlineCalloutDefault;
+        }
+        tmpResult = conjurePublishCard;
+      }
+      cResult[0] = cta;
+      cResult[1] = tmp5;
+      cResult[2] = tmp8Result2;
+      tmp6 = tmp8Result2;
     }
-  : function ConjurePublishCtaCard(projectId) {
-      const tmp3 = useConjurePublishActionDefault(projectId.projectId);
-      let tmp4 = null;
+  : function ConjurePublishCtaCard(cta) {
+      cta = cta.cta;
+      const tmp3 = useConjurePublishActionDefault(cta.projectId);
+      let tmp6Result2 = null;
       if (null != tmp3) {
-        tmp4 = null;
-        if (obj.isConjurePublishCtaVisible(tmp3)) {
-          const obj2 = { children: null };
-          const obj3 = { publish: tmp3 };
-          obj2.children = React4(closure_6, obj3);
-          tmp4 = React4(ConjureTipInlineCalloutDefault, obj2);
+        tmp6Result2 = null;
+        if (obj.isConjurePublishCtaVisible(tmp3, cta)) {
+          let tmp6Result = null;
+          if ("new_ui" === cta.reason) {
+            const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
+            const intl = util.intl;
+            obj2.children = intl.string(_modDef3883["9ZqzLo"]);
+            tmp6Result = React4(Text_Text.Text, obj2);
+          }
+          const obj3 = { children: null };
+          const obj4 = { spacing: 8, children: null };
+          const items = [tmp6Result];
+          const obj5 = { publish: tmp3 };
+          items[1] = React4(closure_6, obj5);
+          obj4.children = items;
+          obj3.children = hasOwnProperty(Stack_Stack.Stack, obj4);
+          tmp6Result2 = React4(ConjureTipInlineCalloutDefault, obj3);
           const tmpResult = ConjureTipInlineCalloutDefault;
         }
         obj = conjurePublishCard;
       }
-      return tmp4;
+      return tmp6Result2;
     };

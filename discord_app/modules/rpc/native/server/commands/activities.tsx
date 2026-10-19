@@ -11,7 +11,7 @@ Constants = fn(1087);
 ({ InstantInviteSources: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 const NativePermissionTypes = fn(7749).NativePermissionTypes;
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15499);
+let CONTEXT_MENU_ICON_NAMES = fn(15503);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(8731).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
@@ -33,7 +33,7 @@ obj3.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.OPEN_INVITE_DIALOG] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_INVITE_DIALOG, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(15499);
+CONTEXT_MENU_ICON_NAMES = fn(15503);
 let obj6 = { scope: null, handler: null };
 let obj7 = {};
 const items1 = [fn(8731).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
@@ -128,7 +128,7 @@ obj6.handler = function handler(socket) {
               dependencyMap = 3;
               c3 = 1;
               const obj13 = {
-                value: tmp2(11235).uploadImageAttachment(closure_128_0, closure_128_1, obj11),
+                value: tmp2(11254).uploadImageAttachment(closure_128_0, closure_128_1, obj11),
                 done: false,
               };
               return obj13;

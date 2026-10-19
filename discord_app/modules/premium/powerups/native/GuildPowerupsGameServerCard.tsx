@@ -6,8 +6,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GameServerStore from "../../../game_server/GameServerStore.tsx";
 
-const useGuildPowerupOnShowMoreDefault = description(13249);
-const GuildPowerupsPerkCardDefault = description(13254);
+const useGuildPowerupOnShowMoreDefault = description(13257);
+const GuildPowerupsPerkCardDefault = description(13262);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

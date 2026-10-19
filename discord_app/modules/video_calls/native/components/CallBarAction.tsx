@@ -218,15 +218,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                         width: result1,
                                         height: result1,
                                         borderRadius: tmp11.badgeRadius,
-                                        top: onPress(11225).getBadgeTop(
+                                        top: onPress(11244).getBadgeTop(
                                           tmp11.badgeRadius,
                                           tmp11.buttonRadius,
                                           cutoutPositionInDegrees,
                                         ),
                                         left: null,
                                       };
-                                      const tmpResult = onPress(11225);
-                                      size1.left = onPress(11225).getBadgeLeft(
+                                      const tmpResult = onPress(11244);
+                                      size1.left = onPress(11244).getBadgeLeft(
                                         tmp11.badgeRadius,
                                         tmp11.buttonRadius,
                                         cutoutPositionInDegrees,
@@ -234,7 +234,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                       items1[1] = size1;
                                       obj5.style = items1;
                                       tmp38 = closure_10(View, obj5);
-                                      const tmpResult2 = onPress(11225);
+                                      const tmpResult2 = onPress(11244);
                                     }
                                     cResult[34] = tmp11.badgeRadius;
                                     cResult[35] = tmp11.buttonRadius;

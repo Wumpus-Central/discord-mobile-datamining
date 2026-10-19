@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL;
     };
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useInGameDMsSettingOptions() {
       const cResult = c.c(3);

@@ -50,16 +50,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const customTypingIndicatorSuggestionPresets = tmp(12816).getCustomTypingIndicatorSuggestionPresets();
+        const customTypingIndicatorSuggestionPresets = tmp(12833).getCustomTypingIndicatorSuggestionPresets();
         const mapped = customTypingIndicatorSuggestionPresets.map((value) => {
           const obj = { value, label: null };
           const intl = onChange(1128).intl;
-          obj.label = intl.string(onChange(12816).getCustomTypingIndicatorSuggestionMessage(value));
+          obj.label = intl.string(onChange(12833).getCustomTypingIndicatorSuggestionMessage(value));
           return jsx(onChange(6539).TableRadioRow, { value, label: null }, value);
         });
         cResult[4] = mapped;
         let tmp14 = mapped;
-        const tmpResult = tmp(12816);
+        const tmpResult = tmp(12833);
       } else {
         tmp14 = cResult[4];
       }
@@ -118,11 +118,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const tmp = closure_6();
-      const customTypingIndicatorSuggestionPresets = onChange(12816).getCustomTypingIndicatorSuggestionPresets();
+      const customTypingIndicatorSuggestionPresets = onChange(12833).getCustomTypingIndicatorSuggestionPresets();
       obj3.children = customTypingIndicatorSuggestionPresets.map((value) => {
         const obj = { value, label: null };
         const intl = onChange(1128).intl;
-        obj.label = intl.string(onChange(12816).getCustomTypingIndicatorSuggestionMessage(value));
+        obj.label = intl.string(onChange(12833).getCustomTypingIndicatorSuggestionMessage(value));
         return jsx(onChange(6539).TableRadioRow, { value, label: null }, value);
       });
       obj.children = jsx(onChange(6540).TableRadioGroup, {

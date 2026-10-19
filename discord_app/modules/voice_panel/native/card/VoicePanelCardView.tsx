@@ -9,8 +9,8 @@ import Suspender from "../../../../../_runtime/05430_Suspender.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
-import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
 import calculateVoicePanelHeaderSpecsDefault from "../header/calculateVoicePanelHeaderSpecs.tsx";
+import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
 import VoicePanelCardDefault from "VoicePanelCard.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -25,16 +25,16 @@ function renderCard(key, item, transitionState, cleanUp) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12914);
+const VoicePanelConstants = fn(10680);
 ({
   LAYOUT_PHYSICS: closure_8,
   VoicePanelModes: closure_9,
   UI_SHOW_HIDE_PHYSICS,
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12912).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18183).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12917).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10678).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18187).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(10683).EDGE_GUTTER;
 const isUserParticipant = fn(5214).isUserParticipant;
 const jsx = fn(21).jsx;
 let SCALE_PHYSICS = {};
@@ -383,7 +383,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useLazyContentFreeze() {
       const cResult = mode(576).c(6);
       const obj = mode(576);
-      mode = mode(18184).usePIPState().mode;
+      mode = mode(18188).usePIPState().mode;
       const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = {};
@@ -429,10 +429,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = mode;
       cResult[3] = fn;
       tmp7 = fn;
-      const obj2 = mode(18184);
+      const obj2 = mode(18188);
     }
   : function useLazyContentFreeze() {
-      mode = mode(18184).usePIPState().mode;
+      mode = mode(18188).usePIPState().mode;
       const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
       dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
       const items = [mode];
@@ -452,7 +452,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           ref.current = false;
         }
       }, items);
-      const obj = mode(18184);
+      const obj = mode(18188);
       return mode === VoicePanelPIPModes.IN_APP && ref(6438)(ref);
     };
 ReactCompilerGating = fn(558);
@@ -534,10 +534,10 @@ export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VoicePanelCardView(viewableChunks) {
         const cResult = channelId(576).c(11);
-        channelId = noop.useContext(stateFromStoresArray(12913)).channelId;
+        channelId = noop.useContext(stateFromStoresArray(10679)).channelId;
         let obj = channelId(576);
         const tmp4 = closure_23(viewableChunks.viewableChunks);
-        const chunkedParticipants = channelId(18281).useChunkedParticipants(channelId, tmp4);
+        const chunkedParticipants = channelId(18285).useChunkedParticipants(channelId, tmp4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelRTCStore];
           cResult[0] = items;
@@ -560,7 +560,7 @@ export default noop.memo(
           tmp8 = cResult[2];
           tmp9 = cResult[3];
         }
-        const obj3 = channelId(18281);
+        const obj3 = channelId(18285);
         stateFromStoresArray = channelId(504).useStateFromStoresArray(first, tmp8, tmp9);
         dependencyMap = noop.useRef(stateFromStoresArray);
         if (cResult[4] !== stateFromStoresArray) {

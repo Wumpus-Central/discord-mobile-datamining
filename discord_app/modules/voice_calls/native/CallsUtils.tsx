@@ -246,7 +246,7 @@ const tmp2 = PlatformUtils.isAndroid()
         AudioRouteStore,
       ];
       const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
-        isVideoMode = isEnabled(11440).isVideoMode(
+        isVideoMode = isEnabled(11458).isVideoMode(
           ChannelStore,
           SelectedChannelStore,
           ApplicationStreamingStore,

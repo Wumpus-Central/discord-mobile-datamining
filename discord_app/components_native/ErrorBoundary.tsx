@@ -43,7 +43,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
           let id;
           if (overrides != null) {
-            const tmp4 = overrides[closure_0(undefined, 12502).DEVICE_FIELD];
+            const tmp4 = overrides[closure_0(undefined, 12519).DEVICE_FIELD];
             if (tmp4 != null) {
               id = tmp4.id;
             }
@@ -65,7 +65,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           _require = asyncGeneratorStep(async () => {
             tmp3(true);
-            await tmp3(12502).clearBuildOverride();
+            await tmp3(12519).clearBuildOverride();
             if (1 === tmp7) {
               c3 = 0;
               tmp3(false);

@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const ApplicationCommandConstants = fn(5503);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(13053).ITEM_HEIGHT;
+const ITEM_HEIGHT = fn(13061).ITEM_HEIGHT;
 const AUTOCOMPLETE_ROW_HEIGHT = fn(10016).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let tmp7 = bound(ref.useState(0), 2);
-      const commandDiscoveryManager = onPressSlashItem(13055).useCommandDiscoveryManager(first);
+      const commandDiscoveryManager = onPressSlashItem(13063).useCommandDiscoveryManager(first);
       if (cResult[1] !== channel) {
         const obj4 = { channel, type: "channel" };
         cResult[1] = channel;
@@ -879,7 +879,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = !canOnlyUseTextCommands;
       cResult[6] = obj7;
       tmp15 = obj7;
-      let tmpResult = onPressSlashItem(13055);
+      let tmpResult = onPressSlashItem(13063);
     }
   : function ApplicationCommandDiscovery(channel) {
       ({ onPressSlashItem: require, onHeightChange } = channel);
@@ -1177,7 +1177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const section = item.section;
         let found;
         if (item.inputType === require("ApplicationCommandTypes").ApplicationCommandInputType.PLACEHOLDER) {
-          return filteredSectionId(onHeightChange(13056), {});
+          return filteredSectionId(onHeightChange(13064), {});
         } else {
           found = sectionDescriptors.find((id) => id.id === item.applicationId);
           const obj = {
@@ -1193,7 +1193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             showIcon: item.applicationId !== section.section.id,
             guildId: found.guild_id,
           };
-          return filteredSectionId(onHeightChange(13057), obj);
+          return filteredSectionId(onHeightChange(13065), obj);
         }
       };
       obj9.renderSectionHeader = function renderSectionHeader(section) {

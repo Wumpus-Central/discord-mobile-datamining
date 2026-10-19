@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(2065).ContentDismissActionType;
-const NotificationPermissionConstants = fn(13068);
+const NotificationPermissionConstants = fn(13076);
 ({
   EventActionType: c10,
   EventActionLocation: closure_11,
@@ -86,12 +86,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       closure_5(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         function handlePress() {
-          const pushNotificationPermission = onDismiss(13069).requestPushNotificationPermission(
+          const pushNotificationPermission = onDismiss(13077).requestPushNotificationPermission(
             constants2.ALLOW_TO_REQUEST,
             constants3.NOTIFICATION_CENTER,
             closure_1_8,
           );
-          const obj = onDismiss(13069);
+          const obj = onDismiss(13077);
           AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
             action: constants4.ACCEPT,
             prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
@@ -269,12 +269,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = onDismiss(1128).intl;
       obj9.text = intl3.string(onDismiss(1128).t.a4bgO0);
       obj9.onPress = function handlePress() {
-        const pushNotificationPermission = onDismiss(13069).requestPushNotificationPermission(
+        const pushNotificationPermission = onDismiss(13077).requestPushNotificationPermission(
           constants2.ALLOW_TO_REQUEST,
           constants3.NOTIFICATION_CENTER,
           closure_1_8,
         );
-        const obj = onDismiss(13069);
+        const obj = onDismiss(13077);
         AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
           action: constants4.ACCEPT,
           prompt_type: constants5.NOTIFICATION_CENTER_BANNER,

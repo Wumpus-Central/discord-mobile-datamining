@@ -15,7 +15,7 @@ const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(11943).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(11962).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
 const createStyles = fn(5191);
 let obj2 = {
@@ -98,11 +98,11 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
         application = section.application;
       }
       if (cResult[0] !== application) {
-        const appLauncherIconSource = scrollOffsetY(11847).getAppLauncherIconSource(application);
+        const appLauncherIconSource = scrollOffsetY(11866).getAppLauncherIconSource(application);
         cResult[0] = application;
         cResult[1] = appLauncherIconSource;
         loadingIcon = appLauncherIconSource;
-        const tmpResult = scrollOffsetY(11847);
+        const tmpResult = scrollOffsetY(11866);
       } else {
         loadingIcon = cResult[1];
       }
@@ -506,7 +506,7 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
       const obj11 = { style: null };
       let items3 = [tmp.headerBannerOverlay, animatedStyle2];
       obj11.style = items3;
-      const items4 = [tmp16(section(4945).View, obj11), tmp16(section(11943), { onPress: onPress.onPressBack }), , ,];
+      const items4 = [tmp16(section(4945).View, obj11), tmp16(section(11962), { onPress: onPress.onPressBack }), , ,];
       const obj12 = {
         lineClamp: 1,
         animated: true,

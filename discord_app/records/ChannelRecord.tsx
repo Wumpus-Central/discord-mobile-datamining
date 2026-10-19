@@ -870,8 +870,8 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "e_mail",
-    safetyWarnings: "email",
+    rtcRegion: "flag_de",
+    safetyWarnings: false,
     blockedUserWarningDismissed: false,
     template: false,
     themeColor: false,
@@ -885,7 +885,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     linkedLobby: false,
     hdStreamingUntil: false,
     hdStreamingBuyerId: false,
-    voiceHangout: false,
+    voiceHangout: true,
   };
   if (null == application_id.available_tags) {
     obj.availableTags = undefined;

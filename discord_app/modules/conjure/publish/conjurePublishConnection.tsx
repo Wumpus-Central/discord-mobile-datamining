@@ -47,10 +47,15 @@ export const publishStepHandlers = {
           tmp3 = surface;
         }
       }
-      const obj = { publishCta: null };
-      const obj4 = { surface: tmp3 };
-      obj.publishCta = obj4;
-      obj2.patch = obj;
+      const obj = { surface: tmp3, reason: null };
+      let str = "first_publish";
+      if ("new_ui" === publish_cta.publish_cta.reason) {
+        str = "new_ui";
+      }
+      const obj4 = { publishCta: null };
+      obj.reason = str;
+      obj4.publishCta = obj;
+      obj2.patch = obj4;
       DispatcherDefault.dispatch(obj2);
     }
   },
@@ -66,6 +71,7 @@ export const publishStepHandlers = {
       publishedAt: null,
       publishing: null,
       patchNotesSent: null,
+      newUiUnpublished: null,
     };
     const surface = published.surface;
     let tmp = null;
@@ -122,6 +128,7 @@ export const publishStepHandlers = {
       });
     }
     obj2.patchNotesSent = flatMapResult;
+    obj2.newUiUnpublished = true === published.new_ui_unpublished;
     DispatcherDefault.dispatch(obj2);
   },
   publish_result(ok, projectId) {

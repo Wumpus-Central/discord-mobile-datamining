@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 const CircleInformationIcon = GlobeEarthIcon(5145);
 const GlobeEarthIcon2 = GlobeEarthIcon(9393);
-const EmbedIcon = GlobeEarthIcon(13837);
+const EmbedIcon = GlobeEarthIcon(13841);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);

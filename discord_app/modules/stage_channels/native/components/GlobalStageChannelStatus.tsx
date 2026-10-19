@@ -169,7 +169,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const getStageRTCPanelHeight = tmp(11394).useGetStageRTCPanelHeight(tmp21);
+        const getStageRTCPanelHeight = tmp(11412).useGetStageRTCPanelHeight(tmp21);
         if (cResult[7] !== channel) {
           class S {
             constructor() {
@@ -404,7 +404,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp26;
           cResult[15] = items2;
         }
-        const tmpResult6 = tmp(11394);
+        const tmpResult6 = tmp(11412);
       }
       cResult[4] = stringResult;
       if (stateFromStores != null) {
@@ -546,7 +546,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         id2 = channel.id;
       }
       let stageIgnoredUsersCount = channel(7986).useStageIgnoredUsersCount(id2);
-      channel(11394);
+      channel(11412);
       if (channel != null) {
         const id = channel.id;
       }

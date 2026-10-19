@@ -230,8 +230,8 @@ export default noop.memo(
             const tmp21 = cResult[9];
           }
           const tmpResult5 = tmp(504);
-          const goLiveUpsellVariant = guildPremiumTier(11428).useConfig(tmp21).goLiveUpsellVariant;
-          let obj6 = guildPremiumTier(11428);
+          const goLiveUpsellVariant = guildPremiumTier(11446).useConfig(tmp21).goLiveUpsellVariant;
+          let obj6 = guildPremiumTier(11446);
           analyticsLocations = guildPremiumTier(7130)(
             guildPremiumTier(7155).MOBILE_GO_LIVE_ACTION_SHEET,
           ).analyticsLocations;
@@ -748,8 +748,8 @@ export default noop.memo(
                                                   }
                                                 }
                                                 obj4.onPress = function onPress() {
-                                                  user(11422).stopScreenshare();
-                                                  const obj = user(11422);
+                                                  user(11440).stopScreenshare();
+                                                  const obj = user(11440);
                                                   guildPremiumTier(5155).hideActionSheet(MobileGoLiveActionSheet);
                                                 };
                                                 let obj5 = obj4;
@@ -782,7 +782,7 @@ export default noop.memo(
                                                 obj5.onPress = function onPress() {
                                                   guildPremiumTier(5155).hideActionSheet(MobileGoLiveActionSheet);
                                                   const obj = guildPremiumTier(5155);
-                                                  user(11422).startStream();
+                                                  user(11440).startStream();
                                                 };
                                               }
                                               class H {
@@ -1878,5 +1878,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(11423, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(11441, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 };

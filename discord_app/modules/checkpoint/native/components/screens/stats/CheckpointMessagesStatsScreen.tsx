@@ -10,7 +10,7 @@ import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
 import NumberAnimationDefault from "../../NumberAnimation.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
-import _modDef12756 from "../../../../../../../discord_assets/assets/checkpoint/messages.png.js";
+import _modDef12773 from "../../../../../../../discord_assets/assets/checkpoint/messages.png.js";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp29Result = CheckpointScreenDefault;
       const container = tmp3.container;
       if (cResult[27] !== tmp3.image) {
-        const obj13 = { uri: _modDef12756, style: tmp3.image };
+        const obj13 = { uri: _modDef12773, style: tmp3.image };
         const tmp36 = timestampProducer(CheckpointApngPlayerDefault, obj13);
         cResult[27] = tmp3.image;
         cResult[28] = tmp36;
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.imageContainer, children: null };
       const obj5 = { uri: null, style: null };
       const tmp8Result = CheckpointScreenDefault;
-      obj5.uri = _modDef12756;
+      obj5.uri = _modDef12773;
       obj5.style = tmp.image;
       obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
       const items1 = [timestampProducer(View, obj4)];

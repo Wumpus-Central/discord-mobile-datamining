@@ -20,18 +20,18 @@ export default function ForLaterCardActionButtons(savedMessage) {
   const callback = noop.useCallback(
     () =>
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13598, dependencyMap.paths),
+        asyncRequireImpl(13602, dependencyMap.paths),
         "MessageReminderDurationActionSheet",
         {
           createReminder(dueAt) {
             const obj2 = {};
             const merged = Object.assign(closure_1_0.saveData);
             obj2.dueAt = dueAt;
-            obj2.source = savedMessage(13601).SavedMessageSources.FOR_LATER_LIST;
-            return savedMessage(13591).addOrUpdateSavedMessage(obj2);
+            obj2.source = savedMessage(13605).SavedMessageSources.FOR_LATER_LIST;
+            return savedMessage(13595).addOrUpdateSavedMessage(obj2);
           },
           removeReminder() {
-            return savedMessage(13591).removeSavedMessage({
+            return savedMessage(13595).removeSavedMessage({
               channelId: closure_1_0.saveData.channelId,
               messageId: closure_1_0.saveData.messageId,
               displayToast: true,
@@ -46,7 +46,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   );
   let intl = savedMessage(1128).intl;
   obj.label = intl.string(savedMessage(1128).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(13602).ChatArrowRightIcon;
+  obj.IconComponent = savedMessage(13606).ChatArrowRightIcon;
   obj.action = function action() {
     return jumpToMessage();
   };
@@ -110,7 +110,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
       action: null,
     };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(13604).BellZIcon;
+      let PencilIcon = tmp3(13608).BellZIcon;
     } else {
       PencilIcon = tmp3(10023).PencilIcon;
     }

@@ -65,7 +65,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     };
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePreNavigationAction() {
       const cResult = first(576).c(3);
@@ -124,7 +124,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(16383).AccessibilityIcon,
+  IconComponent: fn(16387).AccessibilityIcon,
   useTrailing: tmp2,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
     ? function usePreNavigationAction() {

@@ -547,7 +547,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     channelId,
                     allowEmpty,
                   };
-                  const tmp30 = jsx(onSubmit(11654), {
+                  const tmp30 = jsx(onSubmit(11673), {
                     onPressOptionItem: tmp10,
                     renderIcon: tmp11,
                     skipIcon: !tmp18,
@@ -796,5 +796,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj2.channelId = channelId;
       obj2.allowEmpty = allowEmpty;
-      return tmp9(onSubmit(11654), obj2);
+      return tmp9(onSubmit(11673), obj2);
     };

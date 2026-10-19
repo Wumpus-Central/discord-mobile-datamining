@@ -229,7 +229,7 @@ export default noop.memo(
                                                             channel,
                                                             style: tmp46,
                                                           };
-                                                          const tmp49 = closure_7(tmp4(10923), obj10);
+                                                          const tmp49 = closure_7(tmp4(10939), obj10);
                                                           cResult[51] = channel;
                                                           cResult[52] = displayProfile;
                                                           cResult[53] = tmp46;
@@ -269,7 +269,7 @@ export default noop.memo(
                                           onPressPronouns: tmp20,
                                           showBadgeToastOnPress: true,
                                         };
-                                        const tmp40 = closure_7(tmp4(10842), obj12);
+                                        const tmp40 = closure_7(tmp4(10858), obj12);
                                         cResult[34] = tmp10;
                                         cResult[35] = containerBackground;
                                         cResult[36] = name;
@@ -463,7 +463,7 @@ export default noop.memo(
             trackUserProfileAction({ action: "PRESS_PRONOUNS" });
             ToastUtils.presentUserPronouns();
           };
-          obj8.children = closure_7(tmp(10842), obj9);
+          obj8.children = closure_7(tmp(10858), obj9);
           const items3 = [closure_7(View, obj8)];
           const obj11 = { style: tmp3.cards, children: null };
           const obj12 = { userId: user.id, displayProfile, channel, style: null };
@@ -471,7 +471,7 @@ export default noop.memo(
           const obj13 = { backgroundColor: containerBackground };
           items4[1] = obj13;
           obj12.style = items4;
-          obj11.children = closure_7(tmp(10923), obj12);
+          obj11.children = closure_7(tmp(10939), obj12);
           items3[1] = closure_7(View, obj11);
           obj6.children = items3;
           items1[1] = closure_8(View, obj6);

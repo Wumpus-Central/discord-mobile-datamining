@@ -101,14 +101,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl = tmp(1128).intl;
               const obj4 = { name };
               const formatResult = intl.format(
-                tmp(12816).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion),
+                tmp(12833).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion),
                 obj4,
               );
               cResult[11] = name;
               cResult[12] = suggestion;
               cResult[13] = formatResult;
               tmp15 = formatResult;
-              const tmpResult = tmp(12816);
+              const tmpResult = tmp(12833);
             }
             const items1 = [tmp4Result.text, textStyle];
             cResult[8] = tmp4Result.text;

@@ -12,7 +12,7 @@ function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["+uI23H"]);
 }
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useObscuredContentFriendsDmSettingValue() {
       let obj = require;
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       const intl = selectedTeenId(1128).intl;
-      const obj = selectedTeenId(15863);
+      const obj = selectedTeenId(15867);
       const stringResult = intl.string(selectedTeenId(1128).t.GYpoAq);
       const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl2 = selectedTeenId(1128).intl;
@@ -101,8 +101,8 @@ const pressable = SettingBuilders.createPressable({
       obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
       const items = [selectedTeenId(1211).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(15868).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(15868);
+      const result = selectedTeenId(15872).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(15872);
     }
   },
   unsearchable: true,

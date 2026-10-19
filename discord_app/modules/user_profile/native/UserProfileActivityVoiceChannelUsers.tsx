@@ -189,14 +189,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp11;
           }
           const obj2 = { title: first, onBack, scrollable: true, children: tmp8 };
-          const tmp14 = jsx(onPressUser(10840), { title: first, onBack, scrollable: true, children: tmp8 });
+          const tmp14 = jsx(onPressUser(10856), { title: first, onBack, scrollable: true, children: tmp8 });
           cResult[8] = onBack;
           cResult[9] = tmp8;
           cResult[10] = tmp14;
           tmp11 = tmp14;
         }
         const obj3 = { data: users, keyExtractor: tmp6, renderItem: tmp7 };
-        const tmp10 = jsx(channel(10840).UserProfileStackedActionSheetList, {
+        const tmp10 = jsx(channel(10856).UserProfileStackedActionSheetList, {
           data: users,
           keyExtractor: tmp6,
           renderItem: tmp7,

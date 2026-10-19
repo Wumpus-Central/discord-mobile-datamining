@@ -10,8 +10,8 @@ import UniqueUsernamesStore from "../../../../unique_usernames/UniqueUsernamesSt
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(17061).useRegistrationUIStore;
-const RegistrationConstants = fn(17062);
+const useRegistrationUIStore = fn(17065).useRegistrationUIStore;
+const RegistrationConstants = fn(17066);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } =
   RegistrationConstants);
 const size = fn(2);

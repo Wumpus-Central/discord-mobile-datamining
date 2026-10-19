@@ -37,7 +37,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === userId) {
             let tmp5 = cResult[5];
           }
-          return iconSize(13313).useProvisionalAccountExplanationText(tmp5);
+          return iconSize(13321).useProvisionalAccountExplanationText(tmp5);
         }
         const obj2 = { userId, renderApplicationName: tmp4 };
         cResult[3] = tmp4;
@@ -63,7 +63,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
         items,
       );
-      return iconSize(13313).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
+      return iconSize(13321).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
     };
 fn(558);
 ReactCompilerGating = fn(558);

@@ -15,7 +15,7 @@ function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const GuildsNodeType = fn(6219).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17425).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(17429).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(5191);
 let closure_8 = createStyles.createStyles({
@@ -190,8 +190,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               parentId: "Reflect",
               name: "Array",
               color: "applicationId",
-              expanded: 1255866370,
-              children: 2102460419,
+              expanded: null,
+              children: null,
             };
             const items = [overNode];
             element.children = items;
@@ -380,8 +380,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               parentId: "Reflect",
               name: "Array",
               color: "applicationId",
-              expanded: 1255866370,
-              children: 2102460419,
+              expanded: null,
+              children: null,
             };
             const items = [tmp2];
             element.children = items;
@@ -891,12 +891,12 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "\u0441\u0456\u043C\u0432\u0430\u043B",
-                    scrollPosition: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B",
-                    dragRegion: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E",
-                    windowSize: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
-                    dropComplete: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B",
-                    listInsets: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E",
+                    gestureState: "MOBILE_VOICE_OVERLAY_STATE_CHANGED",
+                    scrollPosition: null,
+                    dragRegion: 0,
+                    windowSize: 0,
+                    dropComplete: "hidden",
+                    listInsets: 24,
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                   obj.overState = state;
@@ -991,12 +991,12 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "\u0441\u0456\u043C\u0432\u0430\u043B",
-                  scrollPosition: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B",
-                  dragRegion: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E",
-                  windowSize: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
-                  dropComplete: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B",
-                  listInsets: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E",
+                  gestureState: "MOBILE_VOICE_OVERLAY_STATE_CHANGED",
+                  scrollPosition: null,
+                  dragRegion: 0,
+                  windowSize: 0,
+                  dropComplete: "hidden",
+                  listInsets: 24,
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                 obj.overState = state;

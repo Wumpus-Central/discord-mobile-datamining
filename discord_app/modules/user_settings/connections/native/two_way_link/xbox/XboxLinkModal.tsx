@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [twoWayLinkStyles];
       const memo = noop.useMemo(() => getScreens(twoWayLinkStyles), items);
       const obj = twoWayLinkStyles(9517);
-      const accountLinkStepTracking = twoWayLinkStyles(13849).useAccountLinkStepTracking(
+      const accountLinkStepTracking = twoWayLinkStyles(13853).useAccountLinkStepTracking(
         PlatformTypes.XBOX,
         locationStack.locationStack,
       );

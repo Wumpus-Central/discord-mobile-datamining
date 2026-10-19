@@ -715,9 +715,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(2026).ImageSizes;
-const promiseDeduper = new fn(11039).PromiseDeduper();
-const promiseDeduper3 = new fn(11039).PromiseDeduper();
-const promiseDeduper4 = new fn(11039).PromiseDeduper();
+const promiseDeduper = new fn(11060).PromiseDeduper();
+const promiseDeduper3 = new fn(11060).PromiseDeduper();
+const promiseDeduper4 = new fn(11060).PromiseDeduper();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting(

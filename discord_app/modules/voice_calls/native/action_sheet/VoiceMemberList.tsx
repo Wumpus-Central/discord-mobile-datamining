@@ -131,8 +131,8 @@ let closure_28 = noop.memo(
               const intl = FormRow(1128).intl;
               obj2.accessibilityLabel = intl.string(FormRow(1128).t["6Qgrev"]);
               obj2.source = _modDef10640;
-              obj2.size = FormRow(14381).CircularIconButton.Sizes.MEDIUM_32;
-              const tmp19 = closure_23(FormRow(14381).CircularIconButton, obj2);
+              obj2.size = FormRow(14385).CircularIconButton.Sizes.MEDIUM_32;
+              const tmp19 = closure_23(FormRow(14385).CircularIconButton, obj2);
               const intl2 = FormRow(1128).intl;
               const stringResult = intl2.string(FormRow(1128).t["6Qgrev"]);
               cResult[5] = tmp19;
@@ -185,8 +185,8 @@ let closure_28 = noop.memo(
             const intl = tmp4(1128).intl;
             obj3.accessibilityLabel = intl.string(tmp4(1128).t["6Qgrev"]);
             obj3.source = _modDef10640;
-            obj3.size = tmp4(14381).CircularIconButton.Sizes.MEDIUM_32;
-            obj2.leading = closure_23(tmp4(14381).CircularIconButton, obj3);
+            obj3.size = tmp4(14385).CircularIconButton.Sizes.MEDIUM_32;
+            obj2.leading = closure_23(tmp4(14385).CircularIconButton, obj3);
             const intl2 = tmp4(1128).intl;
             obj2.label = intl2.string(tmp4(1128).t["6Qgrev"]);
             obj2.onPress = function onPress() {
@@ -307,7 +307,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj3 = { embeddedActivity: item, channelId, onItemPress: tmp13, isActionSheet };
-            const tmp17 = closure_23(tmp4(14382), obj3);
+            const tmp17 = closure_23(tmp4(14386), obj3);
             cResult[4] = channelId;
             cResult[5] = isActionSheet;
             cResult[6] = tmp13;
@@ -368,7 +368,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
                       };
                       c5 = 1;
                       c6 = 1;
-                      const obj7 = { value: analyticsContext(11204)(obj6), done: false };
+                      const obj7 = { value: analyticsContext(11223)(obj6), done: false };
                       return obj7;
                     } else {
                       c6 = 3;
@@ -421,13 +421,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
         const merged = Object.assign(item);
         obj4.onPress = onPressUser;
         obj4.isActionSheet = isActionSheet;
-        const tmp12 = closure_23(tmp4(14383), obj4);
+        const tmp12 = closure_23(tmp4(14387), obj4);
         cResult[9] = isActionSheet;
         cResult[10] = onPressUser;
         cResult[11] = item;
         cResult[12] = tmp12;
         tmp6 = tmp12;
-        const tmp4Result = tmp4(14383);
+        const tmp4Result = tmp4(14387);
       }
       let obj2 = require("analytics");
       tmp5 = undefined !== item.url && undefined !== item.applicationId;
@@ -523,13 +523,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           },
           isActionSheet,
         };
-        return closure_23(tmp2(14382), obj2);
+        return closure_23(tmp2(14386), obj2);
       } else {
         let obj3 = {};
         const merged = Object.assign(item);
         obj3.onPress = onPressUser;
         obj3.isActionSheet = isActionSheet;
-        return closure_23(tmp2(14383), obj3);
+        return closure_23(tmp2(14387), obj3);
       }
       let obj = isActionSheet(9837);
       tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -923,7 +923,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return sum;
                 } else {
                   if (tmp) {
-                    tmp4 = tmp4(14382);
+                    tmp4 = tmp4(14386);
                     calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                     let result = calculateActivityRowHeight(closure_4);
                   } else {

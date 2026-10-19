@@ -4,7 +4,7 @@ import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
-import _objectDestructuringEmpty from "../../../../_runtime/12884__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/12901__objectDestructuringEmpty.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;

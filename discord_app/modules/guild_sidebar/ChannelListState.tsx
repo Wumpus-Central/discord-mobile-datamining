@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "System",
+      version: "DM_SETTINGS_UPSELL_SHOW",
     });
     merged.id = global;
     obj = closure_25;

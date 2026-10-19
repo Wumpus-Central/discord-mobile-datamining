@@ -115,7 +115,7 @@ export default function ICYMISettingsActionSheet() {
                 v1 = 1;
                 dependencyMap = 1;
                 const obj5 = {
-                  value: tmp4(17597).regenerateFeedAndClearReadStates(
+                  value: tmp4(17601).regenerateFeedAndClearReadStates(
                     constants.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON,
                   ),
                   done: false,

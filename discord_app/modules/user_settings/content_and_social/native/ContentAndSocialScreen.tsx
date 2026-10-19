@@ -439,11 +439,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first1 = _slicedToArray(noop.useState(tmp7), 1)[0];
       if (cResult[3] !== first1) {
         const obj2 = { defaultIndex: first1, settings: first };
-        const segmentedControl = route(11065).createSegmentedControl(obj2);
+        const segmentedControl = route(11084).createSegmentedControl(obj2);
         cResult[3] = first1;
         cResult[4] = segmentedControl;
         let tmp10 = segmentedControl;
-        const tmpResult = route(11065);
+        const tmpResult = route(11084);
       } else {
         tmp10 = cResult[4];
       }

@@ -20,7 +20,7 @@ let obj = Object.create(
     obj.cancelled = false;
     obj.push = function push() {
       obj = ModalActionCreatorsDefault;
-      obj.pushLazy(obj(2002)(18567, dependencyMap.paths), {}, c7);
+      obj.pushLazy(obj(2002)(18571, dependencyMap.paths), {}, c7);
       if (obj.cancelled) {
         ModalActionCreatorsDefault.popWithKey(c7);
         const tmpResult = ModalActionCreatorsDefault;
@@ -54,7 +54,7 @@ let obj = Object.create(
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(2002)(18567, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(2002)(18571, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
@@ -116,7 +116,7 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     const obj2 = { text: null, icon: null };
     const intl = obj(1128).intl;
     obj2.text = intl.formatToPlainString(obj(1128).t.wx7O3L, { username: user.username });
-    obj2.icon = obj(18569).ArrowsLeftRightIcon;
+    obj2.icon = obj(18573).ArrowsLeftRightIcon;
     obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", obj2);
   }, 100);
 };
@@ -125,7 +125,7 @@ prototype["onSwitchError"] = function onSwitchError() {
   const obj2 = { text: null, icon: null };
   const intl = obj(1128).intl;
   obj2.text = intl.string(obj(1128).t.pqvKWA);
-  obj2.icon = obj(18569).ArrowsLeftRightIcon;
+  obj2.icon = obj(18573).ArrowsLeftRightIcon;
   obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

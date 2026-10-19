@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj5 = { color: tmp5(587).colors.INTERACTIVE_TEXT_DEFAULT };
-              let tmp19 = closure_5(tmp(11004).ArrowSmallLeftIcon, obj5);
+              let tmp19 = closure_5(tmp(11025).ArrowSmallLeftIcon, obj5);
             } else {
               class S {
                 constructor() {
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       if (null != tmp4.backStep) {
         const obj7 = { color: tmp2(587).colors.INTERACTIVE_TEXT_DEFAULT };
-        let tmp11Result = closure_5(tmp5(11004).ArrowSmallLeftIcon, obj7);
+        let tmp11Result = closure_5(tmp5(11025).ArrowSmallLeftIcon, obj7);
       } else {
         const obj8 = { color: tmp2(587).colors.INTERACTIVE_TEXT_DEFAULT };
         tmp11Result = closure_5(tmp5(6485).XSmallIcon, obj8);
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(tmp4);
       obj13.onScroll = callback;
       obj13.centerContent = true;
-      obj12.children = closure_5(sharedValue(11006), obj13);
+      obj12.children = closure_5(sharedValue(11027), obj13);
       items4[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
       obj3.children = items4;
       return closure_6(View, obj3);

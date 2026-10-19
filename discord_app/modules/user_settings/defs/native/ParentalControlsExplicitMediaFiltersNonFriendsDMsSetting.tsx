@@ -46,7 +46,7 @@ function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
     const intl = selectedTeenId(1128).intl;
-    const obj = selectedTeenId(15863);
+    const obj = selectedTeenId(15867);
     const stringResult = intl.string(selectedTeenId(1128).t.GYpoAq);
     const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     const intl2 = selectedTeenId(1128).intl;
@@ -59,15 +59,15 @@ function onObscuredContentNonFriendsDmOnPress() {
       });
     };
     obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(15868).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(15868);
+    let result = selectedTeenId(15872).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(15872);
   }
 }
 function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["Yh+HX1"]);
 }
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
   parent: fn(8260).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,

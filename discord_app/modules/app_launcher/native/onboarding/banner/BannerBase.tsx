@@ -6,7 +6,7 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
-import _mod11861 from "../../../../../../_runtime/metro/11861__.js";
+import _mod11880 from "../../../../../../_runtime/metro/11880__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -39,7 +39,7 @@ const rect = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: PX_12,
   flexDirection: "row",
-  minHeight: fn(11846).APP_ICON_SIZE + 2 * PX_12 + 4,
+  minHeight: fn(11865).APP_ICON_SIZE + 2 * PX_12 + 4,
   bottom: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
 };
@@ -478,7 +478,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp35 = null != image;
                     if (tmp35) {
                       const obj7 = { style: tmp4.imageContainer, children: null };
-                      const obj8 = { style: tmp4.trinketsLottie, source: _mod11861, autoPlay: !stateFromStores };
+                      const obj8 = { style: tmp4.trinketsLottie, source: _mod11880, autoPlay: !stateFromStores };
                       class M {
                         constructor() {
                           obj = closure_1;
@@ -811,7 +811,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp11Result = null != image;
       if (tmp11Result) {
         const obj9 = { style: tmp.imageContainer, children: null };
-        const obj10 = { style: tmp.trinketsLottie, source: tmp4(11861), autoPlay: !stateFromStores };
+        const obj10 = { style: tmp.trinketsLottie, source: tmp4(11880), autoPlay: !stateFromStores };
         const items5 = [closure_7(tmp7(6385), obj10), image];
         obj9.children = items5;
         tmp11Result = closure_8(View, obj9);

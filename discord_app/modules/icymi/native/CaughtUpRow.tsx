@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5187).Text);
-const createICYMIStyles = fn(17594);
+const createICYMIStyles = fn(17598);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: {
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj6 = sharedValue(8745);
                     c1 = 1;
                     v3 = 1;
-                    const obj7 = { value: tmp4(17613).maybeFetchGuildDiscoveryCategories(), done: false };
+                    const obj7 = { value: tmp4(17617).maybeFetchGuildDiscoveryCategories(), done: false };
                     return obj7;
                   }
                 } else if (arg0 === 1) {
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj6 = { size: "custom", style: tmp4.icon, color: "background-brand" };
-            const tmp28 = closure_7(tmp(14062).FlashIcon, obj6);
+            const tmp28 = closure_7(tmp(14066).FlashIcon, obj6);
             cResult[9] = tmp4.icon;
             cResult[10] = tmp28;
           } else {
@@ -940,7 +940,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj6 = v1(8745);
                   v1 = 1;
                   dependencyMap = 1;
-                  const obj7 = { value: tmp4(17613).maybeFetchGuildDiscoveryCategories(), done: false };
+                  const obj7 = { value: tmp4(17617).maybeFetchGuildDiscoveryCategories(), done: false };
                   return obj7;
                 }
               } else if (arg0 === 1) {
@@ -1143,7 +1143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj11 = { style: tmp.textContainer, children: null };
       const obj12 = {
         style: null,
-        children: closure_7(visible(14062).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }),
+        children: closure_7(visible(14066).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }),
       };
       const items1 = [tmp.iconWrapper, animatedStyle];
       obj12.style = items1;
@@ -1181,7 +1181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj16.children = items6;
       items5[1] = closure_8(View, obj16);
       obj10.children = items5;
-      const items7 = [closure_8(View, obj10), closure_7(visible(17633).Separator, {})];
+      const items7 = [closure_8(View, obj10), closure_7(visible(17637).Separator, {})];
       const obj19 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
       const obj13 = { size: "custom", style: tmp.icon, color: "background-brand" };
       const obj8 = visible(4913);

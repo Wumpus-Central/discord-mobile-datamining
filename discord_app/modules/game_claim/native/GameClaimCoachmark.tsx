@@ -65,7 +65,7 @@ export default noop.memo(
         ({ guild, markAsDismissed } = arg0);
         const tmp4 = closure_13();
         let obj = markAsDismissed(576);
-        let first = markAsDismissed(17316).useUnclaimedGameIdsForGuild(guild.id)[0];
+        let first = markAsDismissed(17320).useUnclaimedGameIdsForGuild(guild.id)[0];
         if (first == null) {
           first = null;
         }
@@ -77,7 +77,7 @@ export default noop.memo(
         } else {
           first1 = cResult[0];
         }
-        const obj2 = markAsDismissed(17316);
+        const obj2 = markAsDismissed(17320);
         ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
         if (null == coverImageUrl) {
           return null;

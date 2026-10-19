@@ -11,7 +11,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const CommandListSortOrder = fn(11947).CommandListSortOrder;
+const CommandListSortOrder = fn(11966).CommandListSortOrder;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { leading: null, title: null };
           const obj3 = { size: "sm", color: onSortOptionPress(587).colors.TEXT_DEFAULT };
-          obj2.leading = jsx(tmp(11963).ArrowsUpDownIcon, {
+          obj2.leading = jsx(tmp(11982).ArrowsUpDownIcon, {
             size: "sm",
             color: onSortOptionPress(587).colors.TEXT_DEFAULT,
           });

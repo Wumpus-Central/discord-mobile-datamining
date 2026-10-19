@@ -621,7 +621,7 @@ export default {
       const obj2 = { type: "INVITE_RESOLVE", code };
       tmp(584).dispatch(obj2);
       const tmpResult = tmp(584);
-      nextPromise = tmp(13958)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(13962)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -634,7 +634,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(13958)(code, arg1, arg2);
+      const promise = tmp(13962)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -1862,8 +1862,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(13961).onOpenHubInvite(flags);
-        const obj6 = obj(13961);
+        obj(13965).onOpenHubInvite(flags);
+        const obj6 = obj(13965);
       }
     }
     let num = flags.flags;
@@ -1879,10 +1879,10 @@ export default {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(13962).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(13962);
+            const result1 = tmp6(13966).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(13966);
           }
-          tmp6Result3 = tmp6(13962);
+          tmp6Result3 = tmp6(13966);
         }
       }
     }
@@ -2351,9 +2351,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(13964).generateAttemptId();
+    const attemptId = tmp18(13968).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(13964);
+    const tmp18Result = tmp18(13968);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }

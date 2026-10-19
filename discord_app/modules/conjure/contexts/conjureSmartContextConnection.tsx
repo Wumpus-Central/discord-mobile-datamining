@@ -24,15 +24,15 @@ export const smartContextFrameHandlers = {
     });
   },
 };
-export const undoContextSwitch = function undoContextSwitch(arg0, id) {
+export const undoContextSwitch = function undoContextSwitch(projectId, id) {
   closure_0 = id;
-  return conjureProjectSockets.sendOnConjureSocket(arg0, "undo context switch", (sendUndoContextSwitch) =>
+  return conjureProjectSockets.sendOnConjureSocket(projectId, "undo context switch", (sendUndoContextSwitch) =>
     sendUndoContextSwitch.sendUndoContextSwitch(closure_0),
   );
 };
-export const sendSmartContext = function sendSmartContext(arg0, checked) {
-  closure_0 = checked;
-  return conjureProjectSockets.sendOnConjureSocket(arg0, "smart context", (sendSmartContext) =>
+export const sendSmartContext = function sendSmartContext(projectId, arg1) {
+  closure_0 = arg1;
+  return conjureProjectSockets.sendOnConjureSocket(projectId, "smart context", (sendSmartContext) =>
     sendSmartContext.sendSmartContext(closure_0),
   );
 };

@@ -182,7 +182,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = channel(576);
       const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-      const tmp10 = stateFromStores1(11390)(channel);
+      const tmp10 = stateFromStores1(11408)(channel);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [EmbeddedActivitiesStore];
         cResult[3] = items1;
@@ -462,9 +462,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { size: channel(1202).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
       if (isRoleRequiredDefault(channel)) {
-        let tmp5Result = tmp5(14396);
+        let tmp5Result = tmp5(14400);
       } else {
-        tmp5Result = tmp5(11497);
+        tmp5Result = tmp5(11515);
       }
       obj6.source = tmp5Result;
       obj6.style = tmp.icons;

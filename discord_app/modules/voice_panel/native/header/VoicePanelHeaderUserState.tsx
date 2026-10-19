@@ -193,7 +193,7 @@ export default noop.memo(
     ? function VoicePanelHeaderUserState(isHeaderHidden) {
         const cResult = isHeaderHidden(576).c(9);
         isHeaderHidden = isHeaderHidden.isHeaderHidden;
-        const context = noop.useContext(channelId(12913));
+        const context = noop.useContext(channelId(10679));
         channelId = context.channelId;
         const guildId = context.guildId;
         const tmp6 = closure_8();
@@ -222,7 +222,7 @@ export default noop.memo(
         let obj = isHeaderHidden(576);
         const tmp4 = channelId;
         const stateFromStores = isHeaderHidden(504).useStateFromStores(first, tmp9);
-        const tmp11 = closure_9(tmp4(18196)(stateFromStores, channelId, guildId), guildId);
+        const tmp11 = closure_9(tmp4(18200)(stateFromStores, channelId, guildId), guildId);
         const tmpResult = isHeaderHidden(504);
         class P {
           constructor() {
@@ -270,7 +270,7 @@ export default noop.memo(
     : function VoicePanelHeaderUserState(isHeaderHidden) {
         isHeaderHidden = isHeaderHidden.isHeaderHidden;
         let channelId;
-        const context = noop.useContext(channelId(12913));
+        const context = noop.useContext(channelId(10679));
         channelId = context.channelId;
         const guildId = context.guildId;
         const tmp2 = closure_8();
@@ -283,7 +283,7 @@ export default noop.memo(
           }
           return id;
         });
-        const tmp4 = closure_9(channelId(18196)(stateFromStores, channelId, guildId), guildId);
+        const tmp4 = closure_9(channelId(18200)(stateFromStores, channelId, guildId), guildId);
         isHeaderHidden(4945);
         const fn = function f() {
           let num = 0;

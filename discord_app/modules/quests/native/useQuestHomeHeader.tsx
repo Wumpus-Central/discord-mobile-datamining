@@ -22,7 +22,7 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let obj2 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     let obj3 = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(tmp3(13721).BalanceWidgetPillButton, obj3);
+    isVirtualCurrencyEnabled = closure_8(tmp3(13725).BalanceWidgetPillButton, obj3);
   }
   let items = [isVirtualCurrencyEnabled];
   const merged1 = Object.assign(merged);
@@ -54,7 +54,7 @@ function FiltersButton(setSelectedSortMethod) {
   const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16042, dependencyMap.paths),
+      asyncRequireImpl(16046, dependencyMap.paths),
       "QuestHomeSortingFilteringBottomSheet",
       {
         onSortMethodChange: setSelectedSortMethod,

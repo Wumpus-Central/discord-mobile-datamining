@@ -21,7 +21,7 @@ import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(13669);
+const GiftingBadgeConstants = fn(13673);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,
@@ -134,7 +134,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-        const tmp10 = closure_10(tmp(12656).GiftIcon, obj2);
+        const tmp10 = closure_10(tmp(12673).GiftIcon, obj2);
         const intl = tmp(1128).intl;
         const stringResult = intl.string(_modDef2685.g86YiI);
         cResult[3] = tmp10;
@@ -268,7 +268,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
       const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-      obj2.icon = closure_10(onSendGift(12656).GiftIcon, {
+      obj2.icon = closure_10(onSendGift(12673).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });

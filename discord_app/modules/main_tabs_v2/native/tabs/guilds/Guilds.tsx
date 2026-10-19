@@ -17,10 +17,10 @@ import GatewayConnectionStore from "../../../../gateway/GatewayConnectionStore.t
 
 const native = ThemeContextProvider(4922);
 const QuestsEligibility = ThemeContextProvider(9468);
-const QuestDockExternalCoordinationContext = ThemeContextProvider(16137);
-const GuildsRenderExperiment2 = ThemeContextProvider(17141);
+const QuestDockExternalCoordinationContext = ThemeContextProvider(16141);
+const GuildsRenderExperiment2 = ThemeContextProvider(17145);
 require = fn;
-const YouBarNavigatorScreens = fn(10947).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(10963).YouBarNavigatorScreens;
 const ComponentActions = fn(1087).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

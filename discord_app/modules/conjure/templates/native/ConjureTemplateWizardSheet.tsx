@@ -15,7 +15,7 @@ import ConjureChatStore from "../../chat/ConjureChatStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10962);
+const ConjureConnectionStore = fn(10978);
 ({ ensureConnection: c10, sendUserMessage: closure_11, stageModelSettings: closure_12 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
@@ -60,7 +60,7 @@ let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.action = { flex: 1 };
 let closure_17 = createStyles.createStyles(obj2);
-let obj9 = { shield: fn(11603).ChatShieldIcon, hammer: fn(11605).HammerIcon, group: fn(8489).GroupIcon };
+let obj9 = { shield: fn(11619).ChatShieldIcon, hammer: fn(11621).HammerIcon, group: fn(8489).GroupIcon };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/templates/native/ConjureTemplateWizardSheet.tsx");
 
@@ -91,7 +91,7 @@ export default function ConjureTemplateWizardSheet(template) {
   let result3 = dependencyMap;
   let items = [first, closure_8];
   const stateFromStores = template(504).useStateFromStores(items, () =>
-    template(11607).conjureTemplateWizardGuilds(first.getGuildsArray(), "ConjureTemplateWizardSheet"),
+    template(11623).conjureTemplateWizardGuilds(first.getGuildsArray(), "ConjureTemplateWizardSheet"),
   );
   let obj2 = template(504);
   [tmp4, c6] = stateFromStores.useState(0);
@@ -128,24 +128,24 @@ export default function ConjureTemplateWizardSheet(template) {
     if (null != first) {
       c0 = false;
       const obj2 = { guild_id: tmp, install_scope: "guild" };
-      const project = template(10983).createProject(obj2);
-      let obj = template(10983);
+      const project = template(10999).createProject(obj2);
+      let obj = template(10999);
       project
         .then((current) => {
           closure_0 = current;
           ref.current = current;
           ref2.current = current;
           if (closure_0) {
-            const obj3 = template(10983);
-            template(10983)
+            const obj3 = template(10999);
+            template(10999)
               .deleteProject(current)
               .catch(() => {});
-            const deleteProjectResult = template(10983).deleteProject(current);
+            const deleteProjectResult = template(10999).deleteProject(current);
           } else {
             const obj = { templateId: _true.id };
             closure_10(current, obj);
             first3(current, dependencyMap);
-            const result = template(11607).startConjureTemplateWizard(current, _true);
+            const result = template(11623).startConjureTemplateWizard(current, _true);
             return result.then((result) => {
               if (!c0) {
                 c11(result);
@@ -202,7 +202,7 @@ export default function ConjureTemplateWizardSheet(template) {
   if (tmp25) {
     tmp25 = null != stateFromStores1;
   }
-  guildId(11609)(first2, template.id, tmp25);
+  guildId(11625)(first2, template.id, tmp25);
   if (stateFromStores2) {
     stateFromStores2 = null == tmp21;
   }
@@ -222,14 +222,14 @@ export default function ConjureTemplateWizardSheet(template) {
       onCreated(first2, current);
     }
   }, items5);
-  const tmp24 = guildId(11609);
-  const conjureWizardIntroResult = obj(11607).conjureWizardIntro(tmp21);
-  const objResult6 = obj(11607);
-  let result = obj(11607).conjureWizardServerCopy(tmp21);
-  const objResult7 = obj(11607);
-  result1 = obj(11607).conjureWizardQuestions(tmp21);
-  const objResult8 = obj(11607);
-  const result2 = obj(11607).conjureTemplateWizardSteps(result1, first1);
+  const tmp24 = guildId(11625);
+  const conjureWizardIntroResult = obj(11623).conjureWizardIntro(tmp21);
+  const objResult6 = obj(11623);
+  let result = obj(11623).conjureWizardServerCopy(tmp21);
+  const objResult7 = obj(11623);
+  result1 = obj(11623).conjureWizardQuestions(tmp21);
+  const objResult8 = obj(11623);
+  const result2 = obj(11623).conjureTemplateWizardSteps(result1, first1);
   const tmp31 = result2[Math.min(Math, tmp4, result2.length - 1)];
   length = result2.length;
   let tmp32;
@@ -313,11 +313,11 @@ export default function ConjureTemplateWizardSheet(template) {
                           value: result(tmp48[16])
                             .setGuildHints(first2, obj8)
                             .catch((error) => {
-                              result = closure_1_0(10986).classifyCreateFailure(error);
-                              const obj = closure_1_0(10986);
-                              const conjureCreateError = new closure_1_0(10986).ConjureCreateError(
+                              result = closure_1_0(11003).classifyCreateFailure(error);
+                              const obj = closure_1_0(11003);
+                              const conjureCreateError = new closure_1_0(11003).ConjureCreateError(
                                 result,
-                                closure_1_0(10986).createFailureStatus(error),
+                                closure_1_0(11003).createFailureStatus(error),
                               );
                               throw conjureCreateError;
                             }),
@@ -520,7 +520,7 @@ export default function ConjureTemplateWizardSheet(template) {
         obj20.text = intl5.string(tmp23(3883)["5iv8MF"]);
         let tmp56 = null == first2 || null == first;
         if (!tmp56) {
-          obj = obj(11607);
+          obj = obj(11623);
           result3 = obj.isConjureWizardComplete(result1, first3);
           tmp56 = !result3;
         }
@@ -545,8 +545,8 @@ export default function ConjureTemplateWizardSheet(template) {
         if (!tmp48) {
           let tmp55 = typeof tmp31 === "object";
           if (typeof tmp31 === "object") {
-            tmp55 = !obj(11607).canLeaveConjureWizardQuestion(tmp32, str);
-            const objResult10 = obj(11607);
+            tmp55 = !obj(11623).canLeaveConjureWizardQuestion(tmp32, str);
+            const objResult10 = obj(11623);
           }
           tmp48 = tmp55;
         }

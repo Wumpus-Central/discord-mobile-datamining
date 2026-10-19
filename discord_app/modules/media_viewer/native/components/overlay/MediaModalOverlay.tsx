@@ -72,7 +72,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp7Result = importDefault(onToggleMute.isMuted ? 13983 : 11497);
+      const tmp7Result = importDefault(onToggleMute.isMuted ? 13987 : 11515);
       if (cResult[1] === onToggleMute) {
         if (cResult[2] === tmp4.overlayButton) {
           if (cResult[3] === tmp4.overlayButtonIcon) {
@@ -121,7 +121,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.w4m945);
       const rect = { left: true, right: true, children: null };
-      obj.source = importDefault(isMuted ? 13983 : 11497);
+      obj.source = importDefault(isMuted ? 13987 : 11515);
       obj.color = nativeDefault.unsafe_rawColors.WHITE;
       obj.onPress = onToggleMute;
       ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -142,7 +142,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp7Result = importDefault(onToggleObscure.spoilerActive ? 13984 : 13985);
+      const tmp7Result = importDefault(onToggleObscure.spoilerActive ? 13988 : 13989);
       if (cResult[1] === onToggleObscure) {
         if (cResult[2] === tmp4.overlayButton) {
           if (cResult[3] === tmp4.overlayButtonIcon) {
@@ -191,7 +191,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.UIsxUw);
       const rect = { left: true, right: true, children: null };
-      obj.source = importDefault(spoilerActive ? 13984 : 13985);
+      obj.source = importDefault(spoilerActive ? 13988 : 13989);
       obj.color = nativeDefault.unsafe_rawColors.WHITE;
       obj.onPress = onToggleObscure;
       ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -458,7 +458,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           importDefault = tmp4;
           const tmp7 = useVideoControlsDefault(index, source, tmp4);
-          const first = _slicedToArray(index(13988).useMediaItemSpoilerState(index), 1)[0];
+          const first = _slicedToArray(index(13992).useMediaItemSpoilerState(index), 1)[0];
           if (cResult[4] !== index) {
             const fn = function b() {
               return useMediaViewerSources.toggleSpoiler(index);
@@ -527,7 +527,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = obscure;
           cResult[14] = tmp11;
           cResult[15] = tmp23;
-          const tmpResult = index(13988);
+          const tmpResult = index(13992);
         }
       }
       const videoControls = getVideoControls(index, source);
@@ -557,7 +557,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       obj2.obscure = flag;
-      obj2.spoilerActive = _slicedToArray(index(13988).useMediaItemSpoilerState(index), 1)[0];
+      obj2.spoilerActive = _slicedToArray(index(13992).useMediaItemSpoilerState(index), 1)[0];
       obj2.toggleObscure = callback;
       return closure_9(closure_15, obj2);
     };

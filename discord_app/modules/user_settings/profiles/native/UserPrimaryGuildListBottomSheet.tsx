@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = str(ref.useState(""), 2);
       ref = ref.useRef(null);
       let obj = selectedGuildId(576);
-      const guildTagCreationUpsell = selectedGuildId(13944).useGuildTagCreationUpsell(
+      const guildTagCreationUpsell = selectedGuildId(13948).useGuildTagCreationUpsell(
         "UserPrimaryGuildListBottomSheet",
       );
       const creatableGuilds = guildTagCreationUpsell.creatableGuilds;
@@ -691,7 +691,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp16;
         const str3 = str.trim();
       }
-      const obj3 = selectedGuildId(13944);
+      const obj3 = selectedGuildId(13948);
     }
   : function UserPrimaryGuildListBottomSheet(availableGuilds) {
       availableGuilds = availableGuilds.availableGuilds;

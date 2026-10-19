@@ -214,7 +214,7 @@ const items = [,];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15499);
+let CONTEXT_MENU_ICON_NAMES = fn(15503);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -346,7 +346,7 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15499);
+CONTEXT_MENU_ICON_NAMES = fn(15503);
 let obj6 = {
   scope: null,
   handler(arg0) {

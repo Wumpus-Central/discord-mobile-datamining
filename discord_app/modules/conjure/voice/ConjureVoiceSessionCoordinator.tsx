@@ -166,15 +166,15 @@ prototype["start"] = function start(id) {
               );
               throw tmp15;
             }
-            tmp38Result2 = tmp38(15483);
+            tmp38Result2 = tmp38(15487);
           }
-          tmp38Result = tmp38(15483);
+          tmp38Result = tmp38(15487);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj11 = obj2(15483);
+        obj11 = obj2(15487);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -260,16 +260,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15486);
+    obj2 = obj2(15490);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15486).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15490).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15486);
+      const tmp11Result = tmp11(15490);
     }
     tmp11 = obj2;
   } else {
@@ -396,7 +396,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15487).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15491).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

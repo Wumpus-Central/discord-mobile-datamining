@@ -25,9 +25,9 @@ export default noop.memo(
               const stringResult = intl.string(channel(1128).t["9mysCh"]);
               const intl2 = channel(1128).intl;
               const stringResult1 = intl2.string(channel(1128).t.PDUCIN);
-              const obj2 = { IconComponent: channel(14847).ChannelListMagnifyingGlassIcon };
+              const obj2 = { IconComponent: channel(14851).ChannelListMagnifyingGlassIcon };
               const tmp12 = jsx(channel(6465).TableRowIcon, {
-                IconComponent: channel(14847).ChannelListMagnifyingGlassIcon,
+                IconComponent: channel(14851).ChannelListMagnifyingGlassIcon,
               });
               cResult[4] = stringResult;
               cResult[5] = stringResult1;
@@ -107,7 +107,7 @@ export default noop.memo(
         const intl2 = channel(1128).intl;
         obj2.subLabel = intl2.string(channel(1128).t.PDUCIN);
         const tmp2 = analyticsSection(6439);
-        obj2.icon = jsx(channel(6465).TableRowIcon, { IconComponent: channel(14847).ChannelListMagnifyingGlassIcon });
+        obj2.icon = jsx(channel(6465).TableRowIcon, { IconComponent: channel(14851).ChannelListMagnifyingGlassIcon });
         obj2.onPress = callback;
         obj.children = jsx(channel(6457).TableRow, {
           label: null,

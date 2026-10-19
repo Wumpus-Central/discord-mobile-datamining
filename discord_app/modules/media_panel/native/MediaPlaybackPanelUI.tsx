@@ -24,10 +24,10 @@ const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(15570);
+const MediaPlaybackPanelConstants = fn(15574);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(12915).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(12914).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(10681).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(10680).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5191);
 let obj2 = {

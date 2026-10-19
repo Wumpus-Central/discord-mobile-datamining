@@ -23,7 +23,7 @@ import QuestStore from "../../QuestStore.tsx";
 
 const require = globalThis.__r;
 
-const QuestBottomSheetProgressCard = QuestBottomSheetProgressCardWatchTask(16198);
+const QuestBottomSheetProgressCard = QuestBottomSheetProgressCardWatchTask(16202);
 require = fn;
 const useState = fn(19).useState;
 const View = fn(17).View;
@@ -1032,8 +1032,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const sourceQuestContent = quest.sourceQuestContent;
       quest = undefined;
       ({ initialStep, location: _location } = quest);
-      dependencyMap = quest(13911).useTrackQuestContentClickedWithImpression();
-      let obj = quest(13911);
+      dependencyMap = quest(13915).useTrackQuestContentClickedWithImpression();
+      let obj = quest(13915);
       const tmp = quest;
       quest = quest(9504).useGetQuestImpressionId();
       let obj2 = quest(9504);
@@ -1044,8 +1044,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = quest(quest(9473).useTaskPlatformScreen(quest, questTaskDetails), 3);
       closure_4 = tmp5[2];
       const obj5 = quest(9473);
-      const hasWatchVideoOnMobileTasks = quest(16129).useHasWatchVideoOnMobileTasks(quest.config);
-      const obj6 = quest(16129);
+      const hasWatchVideoOnMobileTasks = quest(16133).useHasWatchVideoOnMobileTasks(quest.config);
+      const obj6 = quest(16133);
       [tmp8, tmp9] = quest(closure_16({ quest, initialStep, location: _location }), 2);
       const userStatus = quest.userStatus;
       let completedAt;

@@ -40,7 +40,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const ICYMIAnalytics = tmp2(15424).ICYMIAnalytics;
+                  const ICYMIAnalytics = tmp2(15428).ICYMIAnalytics;
                   let str = "NoDotShown";
                   if (tmp2) {
                     str = "DotShown";
@@ -148,7 +148,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const ICYMIAnalytics = tmp2(15424).ICYMIAnalytics;
+                  const ICYMIAnalytics = tmp2(15428).ICYMIAnalytics;
                   let str = "NoDotShown";
                   if (tmp2) {
                     str = "DotShown";

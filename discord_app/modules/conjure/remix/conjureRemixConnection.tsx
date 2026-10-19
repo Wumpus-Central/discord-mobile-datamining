@@ -7,9 +7,8 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 require = fn;
 let closure_5 = async function _acceptRemix(arg0) {
-  closure_2 = tmp2;
-  const items = [ConjureWorkerTickets.mintRemixTicket(closure_0)];
-  items[1] = ConjureWorkerTickets.mintWorkerTicket(closure_1);
+  closure_3 = tmp2;
+  const items = [closure_0, ConjureWorkerTickets.mintWorkerTicket(closure_1)];
   await Promise.all(items);
   if (1 === tmp5) {
     if (arg0 === 1) {
@@ -149,8 +148,8 @@ export const acceptRemix = function acceptRemix() {
   }
   return applyArgumentsResult;
 };
-export const sendRetryRemix = function sendRetryRemix(arg0) {
-  return conjureProjectSockets.sendOnConjureSocket(arg0, "retry remix", (sendRetryRemix) =>
+export const sendRetryRemix = function sendRetryRemix(projectId) {
+  return conjureProjectSockets.sendOnConjureSocket(projectId, "retry remix", (sendRetryRemix) =>
     sendRetryRemix.sendRetryRemix(),
   );
 };

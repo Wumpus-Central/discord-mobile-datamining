@@ -286,7 +286,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               style: closure_1.popoutCheckGroupPlatformIcon,
               user: tmp7,
               size: native.AvatarSizes.XSMALL,
-              guildId: "Reflect",
+              guildId: "a",
             };
             tmp26 = value3(native.Avatar, obj6);
           }
@@ -408,7 +408,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 style: closure_1.popoutCheckGroupPlatformIcon,
                 user: tmp7,
                 size: native.AvatarSizes.XSMALL,
-                guildId: "Reflect",
+                guildId: "a",
               };
               tmp26 = value3(native.Avatar, obj6);
             }

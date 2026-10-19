@@ -882,7 +882,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(12566), obj);
+          return closure_2_18(onRemove(12583), obj);
         },
       };
       obj8 = {
@@ -894,7 +894,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(12570), obj);
+          return closure_2_18(onRemove(12587), obj);
         },
       };
       tmp = _require;
@@ -928,7 +928,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const merged = Object.assign(arg0);
               obj.guildId = guildId;
               obj.onKick = onKick;
-              return closure_2_18(onRemove(12566), obj);
+              return closure_2_18(onRemove(12583), obj);
             },
           },
           [closure_2_17.MEMBER_BAN]: {
@@ -940,7 +940,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const merged = Object.assign(arg0);
               obj.guildId = guildId;
               obj.onBan = onBan;
-              return closure_2_18(onRemove(12570), obj);
+              return closure_2_18(onRemove(12587), obj);
             },
           },
         };

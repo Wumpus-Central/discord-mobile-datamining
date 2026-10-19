@@ -184,9 +184,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       displayType = displayType.displayType;
       const tmp4 = closure_13();
       const obj = displayType(576);
-      const actionsForDisplayType = displayType(15936).useActionsForDisplayType(displayType);
-      const obj2 = displayType(15936);
-      const actionTotalsForDisplayType = displayType(15936).useActionTotalsForDisplayType(displayType);
+      const actionsForDisplayType = displayType(15940).useActionsForDisplayType(displayType);
+      const obj2 = displayType(15940);
+      const actionTotalsForDisplayType = displayType(15940).useActionTotalsForDisplayType(displayType);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = {};
         cResult[0] = obj4;
@@ -194,11 +194,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const obj3 = displayType(15936);
-      const familyCenterActions = displayType(12650).useFamilyCenterActions(first);
+      const obj3 = displayType(15940);
+      const familyCenterActions = displayType(12667).useFamilyCenterActions(first);
       const loadMore = familyCenterActions.loadMore;
       const isMoreLoading = familyCenterActions.isMoreLoading;
-      const tmpResult = displayType(12650);
+      const tmpResult = displayType(12667);
       [tmp10, dependencyMap] = noop.useState(closure_7);
       if (cResult[1] === actionsForDisplayType) {
         if (cResult[2] === displayType) {
@@ -363,11 +363,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function FamilyCenterActivitySection(displayType) {
       displayType = displayType.displayType;
       let loadMoreButton = closure_13();
-      const actionsForDisplayType = displayType(15936).useActionsForDisplayType(displayType);
-      const obj = displayType(15936);
-      const actionTotalsForDisplayType = displayType(15936).useActionTotalsForDisplayType(displayType);
-      const obj2 = displayType(15936);
-      const familyCenterActions = displayType(12650).useFamilyCenterActions({});
+      const actionsForDisplayType = displayType(15940).useActionsForDisplayType(displayType);
+      const obj = displayType(15940);
+      const actionTotalsForDisplayType = displayType(15940).useActionTotalsForDisplayType(displayType);
+      const obj2 = displayType(15940);
+      const familyCenterActions = displayType(12667).useFamilyCenterActions({});
       const loadMore = familyCenterActions.loadMore;
       const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
       dependencyMap = tmp6[1];
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { displayType };
         const items1 = [
           closure_9(closure_12, obj6),
-          substr.map((action) => closure_1_9(loadMore(15942), { action }, action.event_id)),
+          substr.map((action) => closure_1_9(loadMore(15946), { action }, action.event_id)),
         ];
         if (substr.length >= actionTotalsForDisplayType) {
           items1[2] = null;
@@ -421,5 +421,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           closure_9(closure_6, obj7);
         }
       }
-      const obj3 = displayType(12650);
+      const obj3 = displayType(12667);
     };

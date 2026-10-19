@@ -286,9 +286,9 @@ export default noop.memo(
           tmp12 = tmp8;
         }
         const tmp3Result = channel(573);
-        const connectedUserLimit = channel(12936).useConnectedUserLimit({ channel, video: tmp12 });
-        const tmp3Result3 = channel(12936);
-        let connectedUserLimitFormatted = channel(12936).useConnectedUserLimitFormatted({
+        const connectedUserLimit = channel(12944).useConnectedUserLimit({ channel, video: tmp12 });
+        const tmp3Result3 = channel(12944);
+        let connectedUserLimitFormatted = channel(12944).useConnectedUserLimitFormatted({
           channel,
           video: tmp12,
           userCount: sum,
@@ -416,6 +416,6 @@ export default noop.memo(
             formatted = str(toUpperCase.VJlc0S);
           }
         }
-        const tmp3Result4 = channel(12936);
+        const tmp3Result4 = channel(12944);
       },
 );

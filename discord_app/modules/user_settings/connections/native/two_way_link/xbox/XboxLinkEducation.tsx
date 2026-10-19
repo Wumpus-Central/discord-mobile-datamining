@@ -7,7 +7,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef13844 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef13848 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj10 = { uri: _modDef13844 };
+        const obj10 = { uri: _modDef13848 };
         cResult[16] = obj10;
         let tmp18 = obj10;
       } else {
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
       const obj3 = { style: twoWayLinkStyles.container, children: null };
       const obj4 = { style: twoWayLinkStyles.content, children: null };
-      const memo = noop.useMemo(() => ({ uri: _modDef13844 }), []);
+      const memo = noop.useMemo(() => ({ uri: _modDef13848 }), []);
       const items = [timestampProducer(FastImageDefault, { source: memo, style: tmp.image }), ,];
       const obj6 = {
         variant: "heading-xl/bold",

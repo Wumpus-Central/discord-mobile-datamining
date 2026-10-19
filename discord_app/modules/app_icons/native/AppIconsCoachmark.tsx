@@ -5,7 +5,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _modDef9836 from "../../../../_runtime/metro/09836__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef18076 from "../../../../_runtime/metro/18076__.js";
+import _modDef18080 from "../../../../_runtime/metro/18080__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        let obj2 = { source: _modDef18076, style: tmp4.image };
+        let obj2 = { source: _modDef18080, style: tmp4.image };
         const tmp19 = closure_7(FastImageDefault, obj2);
         cResult[10] = tmp4.image;
         cResult[11] = tmp19;
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.info, children: null };
       const obj5 = { source: null, style: null };
       const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-      obj5.source = _modDef18076;
+      obj5.source = _modDef18080;
       obj5.style = tmp.image;
       const items2 = [closure_7(FastImageDefault, obj5), ,];
       const obj6 = { style: tmp.titleContainer, children: null };

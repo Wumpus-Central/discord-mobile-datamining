@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = dismissOnce;
       const isVerifiedTeen = dismissOnce(6165).useIsVerifiedTeen();
       let obj2 = dismissOnce(6165);
-      dismissOnce = dismissOnce(15761).useDismissOnce(markAsDismissed.markAsDismissed);
+      dismissOnce = dismissOnce(15765).useDismissOnce(markAsDismissed.markAsDismissed);
       if (cResult[0] !== dismissOnce) {
         const fn = function o() {
           dismissOnce(ContentDismissActionType.USER_DISMISS);
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { text: null, onPress: null };
       const intl = tmp(1128).intl;
-      const obj3 = dismissOnce(15761);
+      const obj3 = dismissOnce(15765);
       if (isVerifiedTeen) {
         class M {
           constructor() {
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       const isVerifiedTeen = dismissOnce(6165).useIsVerifiedTeen();
       let obj = dismissOnce(6165);
-      dismissOnce = dismissOnce(15761).useDismissOnce(markAsDismissed.markAsDismissed);
+      dismissOnce = dismissOnce(15765).useDismissOnce(markAsDismissed.markAsDismissed);
       const items = [dismissOnce];
       const items1 = [dismissOnce];
       const callback = noop.useCallback(() => {
@@ -279,8 +279,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
       const obj5 = { source: null, style: null, resizeMode: "contain" };
-      let obj2 = dismissOnce(15761);
-      obj5.source = tmp14(15762);
+      let obj2 = dismissOnce(15765);
+      obj5.source = tmp14(15766);
       obj5.style = tmp.illustration;
       obj4.illustration = closure_8(tmp14(5128), obj5);
       const intl2 = tmp2(1128).intl;

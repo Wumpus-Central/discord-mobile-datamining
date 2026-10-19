@@ -73,7 +73,7 @@ export default noop.memo(
           } else {
             tmp17 = cResult[7];
           }
-          const tmp5Result = importDefault(showKeyboardIcon ? 11987 : 9253);
+          const tmp5Result = importDefault(showKeyboardIcon ? 12006 : 9253);
           if (cResult[8] === tmp9.expressionButtonIconTint) {
             if (cResult[9] === token1) {
               if (cResult[10] === tmp5Result) {
@@ -179,7 +179,7 @@ export default noop.memo(
         obj4.children = jsx(native.Icon, {
           size: token1,
           style: tmp7.expressionButtonIconTint,
-          source: importDefault(showKeyboardIcon ? 11987 : 9253),
+          source: importDefault(showKeyboardIcon ? 12006 : 9253),
         });
         return jsx(Pressables.PressableOpacity, {
           ref: noop.useRef(null),

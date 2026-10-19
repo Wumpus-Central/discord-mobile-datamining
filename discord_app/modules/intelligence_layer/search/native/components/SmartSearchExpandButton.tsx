@@ -1,21 +1,17 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchExpandButton.tsx
-import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../intl/index.native.tsx";
 import _modDef4127 from "../../SmartSearch.messages.js";
-import ChevronSmallDownIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import ChevronSmallUpIcon2 from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
-import useSearchHostSurface from "../useSearchHostSurface.tsx";
+import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
 const createStyles = fn(5191);
-let closure_9 = createStyles.createStyles((backgroundColor) => {
+let closure_10 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" },
     pill: {
@@ -39,97 +35,111 @@ let closure_9 = createStyles.createStyles((backgroundColor) => {
 });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting(
+let result = size.fileFinishedImporting(
   "modules/intelligence_layer/search/native/components/SmartSearchExpandButton.tsx",
 );
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function SmartSearchExpandButton(arg0) {
-        const cResult = c.c(15);
+        const cResult = onPress(576).c(17);
         ({ isCollapsed, onPress } = arg0);
-        const tmp4 = closure_9(useSearchHostSurface.useSearchHostSurfaceColor());
+        const obj = onPress(576);
+        const tmp4 = closure_10(onPress(17836).useSearchHostSurfaceColor());
         if (isCollapsed) {
-          let ChevronSmallUpIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
+          let ChevronSmallUpIcon = onPress(10859).ChevronSmallDownIcon;
         } else {
-          ChevronSmallUpIcon = ChevronSmallUpIcon2.ChevronSmallUpIcon;
+          ChevronSmallUpIcon = onPress(14650).ChevronSmallUpIcon;
         }
-        if (cResult[0] !== isCollapsed) {
-          const intl = util.intl;
-          const tmp9 = _modDef4127;
-          const stringResult = intl.string(isCollapsed ? tmp9.NuTbB9 : tmp9.FKLBbW);
-          cResult[0] = isCollapsed;
-          cResult[1] = stringResult;
+        if (cResult[0] !== onPress) {
+          const fn = function l() {
+            const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+            onPress();
+          };
+          cResult[0] = onPress;
+          cResult[1] = fn;
+          let tmp5 = fn;
         } else {
-          if (cResult[2] !== tmp4.surface) {
+          tmp5 = cResult[1];
+        }
+        if (cResult[2] !== isCollapsed) {
+          const intl = onPress(1128).intl;
+          const tmp10 = _modDef4127;
+          const stringResult = intl.string(isCollapsed ? tmp10.NuTbB9 : tmp10.FKLBbW);
+          cResult[2] = isCollapsed;
+          cResult[3] = stringResult;
+        } else {
+          if (cResult[4] !== tmp4.surface) {
             const obj3 = { style: tmp4.surface, pointerEvents: "none" };
-            const tmp15 = timestampProducer(hasOwnProperty, obj3);
-            cResult[2] = tmp4.surface;
-            cResult[3] = tmp15;
-            let tmp12 = tmp15;
+            const tmp16 = closure_7(closure_6, obj3);
+            cResult[4] = tmp4.surface;
+            cResult[5] = tmp16;
+            let tmp13 = tmp16;
           } else {
-            tmp12 = cResult[3];
+            tmp13 = cResult[5];
           }
-          if (cResult[4] !== ChevronSmallUpIcon) {
+          if (cResult[6] !== ChevronSmallUpIcon) {
             const obj4 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-            const tmp19 = timestampProducer(ChevronSmallUpIcon, obj4);
-            cResult[4] = ChevronSmallUpIcon;
-            cResult[5] = tmp19;
-            let tmp16 = tmp19;
+            const tmp20 = closure_7(ChevronSmallUpIcon, obj4);
+            cResult[6] = ChevronSmallUpIcon;
+            cResult[7] = tmp20;
+            let tmp17 = tmp20;
           } else {
-            tmp16 = cResult[5];
+            tmp17 = cResult[7];
           }
-          if (cResult[6] === onPress) {
-            if (cResult[7] === tmp4.pill) {
-              if (cResult[8] === tmp7) {
-                if (cResult[9] === tmp12) {
-                  if (cResult[10] === tmp16) {
-                    let tmp20 = cResult[11];
+          if (cResult[8] === tmp5) {
+            if (cResult[9] === tmp4.pill) {
+              if (cResult[10] === tmp8) {
+                if (cResult[11] === tmp13) {
+                  if (cResult[12] === tmp17) {
+                    let tmp21 = cResult[13];
                   }
-                  if (cResult[12] === tmp4.block) {
-                    if (cResult[13] === tmp20) {
-                      let tmp25 = cResult[14];
+                  if (cResult[14] === tmp4.block) {
+                    if (cResult[15] === tmp21) {
+                      let tmp26 = cResult[16];
                     }
-                    return tmp25;
+                    return tmp26;
                   }
-                  const obj5 = { style: tmp5, hitSlop: rect, children: tmp20 };
-                  const tmp29 = timestampProducer(hasOwnProperty, obj5);
-                  cResult[12] = tmp4.block;
-                  cResult[13] = tmp20;
-                  cResult[14] = tmp29;
-                  tmp25 = tmp29;
+                  const obj5 = { style: tmp6, hitSlop: rect, children: tmp21 };
+                  const tmp30 = closure_7(closure_6, obj5);
+                  cResult[14] = tmp4.block;
+                  cResult[15] = tmp21;
+                  cResult[16] = tmp30;
+                  tmp26 = tmp30;
                 }
               }
             }
           }
           const obj6 = {
-            style: tmp6,
+            style: tmp7,
             hitSlop: rect,
             accessibilityRole: "button",
-            accessibilityLabel: cResult[1],
-            onPress,
+            accessibilityLabel: cResult[3],
+            onPress: tmp5,
             children: null,
           };
-          const items = [tmp12, tmp16];
+          const items = [tmp13, tmp17];
           obj6.children = items;
-          const tmp24 = React5(React3, obj6);
-          cResult[6] = onPress;
-          cResult[7] = tmp4.pill;
-          cResult[8] = cResult[1];
-          cResult[9] = tmp12;
-          cResult[10] = tmp16;
-          cResult[11] = tmp24;
-          tmp20 = tmp24;
+          const tmp25 = closure_8(closure_4, obj6);
+          cResult[8] = tmp5;
+          cResult[9] = tmp4.pill;
+          cResult[10] = cResult[3];
+          cResult[11] = tmp13;
+          cResult[12] = tmp17;
+          cResult[13] = tmp25;
+          tmp21 = tmp25;
         }
+        const obj2 = onPress(17836);
       }
-    : function SmartSearchExpandButton(isCollapsed) {
-        isCollapsed = isCollapsed.isCollapsed;
-        const tmp3 = closure_9(useSearchHostSurface.useSearchHostSurfaceColor());
+    : function SmartSearchExpandButton(arg0) {
+        ({ isCollapsed, onPress } = arg0);
+        const tmp3 = closure_10(onPress(17836).useSearchHostSurfaceColor());
         if (isCollapsed) {
-          let ChevronSmallUpIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
+          let ChevronSmallUpIcon = onPress(10859).ChevronSmallDownIcon;
         } else {
-          ChevronSmallUpIcon = ChevronSmallUpIcon2.ChevronSmallUpIcon;
+          ChevronSmallUpIcon = onPress(14650).ChevronSmallUpIcon;
         }
+        const items = [onPress];
         const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
         const obj3 = {
           style: tmp3.pill,
@@ -139,25 +149,27 @@ export default noop.memo(
           onPress: null,
           children: null,
         };
-        const intl = util.intl;
-        const tmp9 = _modDef4127;
+        const callback = noop.useCallback(() => {
+          const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+          onPress();
+        }, items);
+        const intl = onPress(1128).intl;
+        const tmp10 = _modDef4127;
         if (isCollapsed) {
-          let FKLBbW = tmp9.NuTbB9;
-          let tmp10 = importDefault;
+          let FKLBbW = tmp10.NuTbB9;
+          let tmp11 = importDefault;
         } else {
-          FKLBbW = tmp9.FKLBbW;
-          tmp10 = importDefault;
+          FKLBbW = tmp10.FKLBbW;
+          tmp11 = importDefault;
         }
         obj3.accessibilityLabel = intl.string(FKLBbW);
-        obj3.onPress = isCollapsed.onPress;
-        const items = [timestampProducer(hasOwnProperty, { style: tmp3.surface, pointerEvents: "none" })];
+        obj3.onPress = callback;
+        const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" })];
+        const obj = onPress(17836);
         const obj4 = { style: tmp3.surface, pointerEvents: "none" };
-        items[1] = timestampProducer(ChevronSmallUpIcon, {
-          size: "sm",
-          color: tmp10(587).colors.INTERACTIVE_ICON_DEFAULT,
-        });
-        obj3.children = items;
-        obj2.children = React5(React3, obj3);
-        return timestampProducer(hasOwnProperty, obj2);
+        items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(587).colors.INTERACTIVE_ICON_DEFAULT });
+        obj3.children = items1;
+        obj2.children = closure_8(closure_4, obj3);
+        return closure_7(closure_6, obj2);
       },
 );

@@ -97,11 +97,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult9 = tmp(9468);
       }
       if (cResult[4] !== bounty) {
-        const questDockAdCreativeId = tmp(16140).getQuestDockAdCreativeId(bounty);
+        const questDockAdCreativeId = tmp(16144).getQuestDockAdCreativeId(bounty);
         cResult[4] = bounty;
         cResult[5] = questDockAdCreativeId;
         let tmp16 = questDockAdCreativeId;
-        const tmpResult10 = tmp(16140);
+        const tmpResult10 = tmp(16144);
       } else {
         tmp16 = cResult[5];
       }
@@ -881,7 +881,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                       obj5.analyticsContext = obj7;
                       v2 = 1;
                       v3 = 1;
-                      const obj8 = { value: v2(11021).launchFrame(obj5), done: false };
+                      const obj8 = { value: v2(11042).launchFrame(obj5), done: false };
                       return obj8;
                     } else {
                       let id;
@@ -899,7 +899,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                         };
                         v2 = 2;
                         v3 = 1;
-                        const obj10 = { value: v3(12790).launchActivityInBotDM(obj9), done: false };
+                        const obj10 = { value: v3(12807).launchActivityInBotDM(obj9), done: false };
                         return obj10;
                       }
                     }

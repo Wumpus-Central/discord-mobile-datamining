@@ -33,7 +33,7 @@ let obj = {
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = {
   marginTop: 4,
-  height: fn(18206).SOUND_BUTTON_HEIGHT,
+  height: fn(18210).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -45,7 +45,7 @@ obj.button = {
 };
 let obj2 = {
   marginTop: 4,
-  height: fn(18206).SOUND_BUTTON_HEIGHT,
+  height: fn(18210).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",

@@ -6,7 +6,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RoleTierEditStore = fn(18949);
+const RoleTierEditStore = fn(18953);
 ({ LoadingState: c3, usePriceTiersAvailableInGuild: closure_4 } = RoleTierEditStore);
 const CurrencyCodes = fn(1087).CurrencyCodes;
 const jsx = fn(21).jsx;

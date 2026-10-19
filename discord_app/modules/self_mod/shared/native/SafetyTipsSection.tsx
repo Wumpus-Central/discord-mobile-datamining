@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       showHeader = showHeader.showHeader;
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(safetyTips(10712).SafetyBookletSpotIllustration, {});
+        const tmp7 = closure_4(safetyTips(10728).SafetyBookletSpotIllustration, {});
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let showHeader = children.showHeader;
       const tmp = closure_6();
       const items = [
-        closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10712).SafetyBookletSpotIllustration, {}) }),
+        closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10728).SafetyBookletSpotIllustration, {}) }),
         ,
       ];
       if (showHeader) {
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       obj4.children = items1;
       items[1] = closure_5(safetyTips(5477).Stack, obj4);
-      const obj = { style: tmp.image, children: closure_4(safetyTips(10712).SafetyBookletSpotIllustration, {}) };
+      const obj = { style: tmp.image, children: closure_4(safetyTips(10728).SafetyBookletSpotIllustration, {}) };
       const obj5 = {
         style: tmp.text,
         accessibilityRole: "header",

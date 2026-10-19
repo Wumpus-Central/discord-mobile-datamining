@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj3 = { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-          const tmp12 = jsx(unread(13547), {
+          const tmp12 = jsx(unread(13552), {
             context: "guild",
             value: notification,
             allMessagesSubLabel: tmp5,
@@ -126,5 +126,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           NotificationLabel.notifications(message_notifications),
         );
       };
-      return jsx(unread(13547), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+      return jsx(unread(13552), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
     };

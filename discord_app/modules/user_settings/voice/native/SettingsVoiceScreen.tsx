@@ -9,8 +9,8 @@ import LegacyBaseButton from "../../../../../_runtime/06612_LegacyBaseButton.js"
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import KrispLogo from "KrispLogo.tsx";
-import _modDef11463 from "../../../../../_runtime/metro/11463__.js";
-import _modDef11464 from "../../../../../_runtime/metro/11464__.js";
+import _modDef11481 from "../../../../../_runtime/metro/11481__.js";
+import _modDef11482 from "../../../../../_runtime/metro/11482__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -108,9 +108,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_12();
       const tmp6 = useThemeDefault();
       if (obj2.isThemeLight(tmp6)) {
-        let tmp5Result = _modDef11463;
+        let tmp5Result = _modDef11481;
       } else {
-        tmp5Result = _modDef11464;
+        tmp5Result = _modDef11482;
       }
       ({ krisp, logo } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -178,9 +178,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_12();
       const tmp4 = useThemeDefault();
       if (obj.isThemeLight(tmp4)) {
-        let tmp2Result = _modDef11463;
+        let tmp2Result = _modDef11481;
       } else {
-        tmp2Result = _modDef11464;
+        tmp2Result = _modDef11482;
       }
       const obj2 = { style: tmp.krisp, children: null };
       const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

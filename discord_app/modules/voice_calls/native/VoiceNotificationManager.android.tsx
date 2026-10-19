@@ -27,10 +27,10 @@ class VoiceNotificationManager {
       channelId: "Set",
       connectionState: "data",
       selfMute: false,
-      deafened: 2472,
-      isPushToTalk: 2473,
-      embeddedActivity: 2474,
-      isStreaming: 2475,
+      deafened: "\u03BA\u03AC\u03BB\u03B5",
+      isPushToTalk: "\u039A\u03B9\u03BD\u03AD\u03B6\u03B9\u03BA\u03BF \u03BB\u03AC\u03C7\u03B1\u03BD\u03BF",
+      embeddedActivity: "\u03BB\u03B1\u03C7\u03B1\u03BD\u03AF\u03B4\u03B1",
+      isStreaming: "\u03BB\u03AC\u03C7\u03B1\u03BD\u03BF",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
@@ -239,10 +239,10 @@ obj2.state = {
   channelId: "Set",
   connectionState: "data",
   selfMute: false,
-  deafened: 2472,
-  isPushToTalk: 2473,
-  embeddedActivity: 2474,
-  isStreaming: 2475,
+  deafened: "\u03BA\u03AC\u03BB\u03B5",
+  isPushToTalk: "\u039A\u03B9\u03BD\u03AD\u03B6\u03B9\u03BA\u03BF \u03BB\u03AC\u03C7\u03B1\u03BD\u03BF",
+  embeddedActivity: "\u03BB\u03B1\u03C7\u03B1\u03BD\u03AF\u03B4\u03B1",
+  isStreaming: "\u03BB\u03AC\u03C7\u03B1\u03BD\u03BF",
 };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();

@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const sortApplicationsViaFrecency = tmp(11932).useSortApplicationsViaFrecency(tmp29);
+          const sortApplicationsViaFrecency = tmp(11951).useSortApplicationsViaFrecency(tmp29);
           if (cResult[14] === stateFromStores) {
             class I {
               constructor(arg0, arg1) {
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const tmpResult2 = tmp(11932);
+          const tmpResult2 = tmp(11951);
           const obj8 = stateFromStores(12);
           const found = stateFromStores(12).compact(sortApplicationsViaFrecency.map(R)).filter(tmp32);
           mapped = found.map(E);

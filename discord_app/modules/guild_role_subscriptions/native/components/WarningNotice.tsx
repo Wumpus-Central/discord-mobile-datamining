@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef14682 from "../../../../../_runtime/metro/14682__.js";
+import _modDef14686 from "../../../../../_runtime/metro/14686__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp5 = cResult[3];
           }
           if (cResult[4] !== tmp4.alertIcon) {
-            const obj2 = { style: tmp4.alertIcon, source: _modDef14682 };
+            const obj2 = { style: tmp4.alertIcon, source: _modDef14686 };
             const tmp10 = React4(FastImageDefault, obj2);
             cResult[4] = tmp4.alertIcon;
             cResult[5] = tmp10;
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ container: arr[1], containerYellow: arr[2] } = tmp);
       obj.style = items;
       const obj2 = { style: tmp.horizontalContainer, children: null };
-      const obj3 = { style: tmp.alertIcon, source: _modDef14682 };
+      const obj3 = { style: tmp.alertIcon, source: _modDef14686 };
       const items1 = [React4(FastImageDefault, obj3)];
       const obj4 = { style: null, variant: "text-sm/medium", color: "interactive-text-active", children: notice };
       const items2 = [,];

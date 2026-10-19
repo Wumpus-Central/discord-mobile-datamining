@@ -74,11 +74,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = subLabel(576).c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1128).intl;
-        let result = tmp(11094).isIOSAnchoredChatScrollerEnabled();
+        let result = tmp(11113).isIOSAnchoredChatScrollerEnabled();
         const t = tmp(1128).t;
         const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
         cResult[0] = stringResult;
-        const tmpResult = tmp(11094);
+        const tmpResult = tmp(11113);
       } else {
         subLabel = cResult[0];
         const _Symbol = Symbol;
@@ -429,7 +429,7 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

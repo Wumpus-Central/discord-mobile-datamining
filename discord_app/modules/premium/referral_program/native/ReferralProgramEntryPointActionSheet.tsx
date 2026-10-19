@@ -59,7 +59,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const callback = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.PRIMARY);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14511, dependencyMap.paths),
+      asyncRequireImpl(14515, dependencyMap.paths),
       "referral-program-share-action-sheet",
     );
   }, items);

@@ -50,7 +50,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
       ({ animationDriver, channelId } = arg0);
       let tmp4 = closure_10();
       let obj = isModalOpen(576);
-      const headerLayoutAnimation = isModalOpen(13986).useHeaderLayoutAnimation(animationDriver);
+      const headerLayoutAnimation = isModalOpen(13990).useHeaderLayoutAnimation(animationDriver);
       if (cResult[0] === disableDownload) {
         if (cResult[1] === shareable) {
           if (cResult[2] === source) {
@@ -360,15 +360,15 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
       cResult[2] = source;
       cResult[3] = obj17;
       tmp6 = obj17;
-      const obj2 = isModalOpen(13986);
+      const obj2 = isModalOpen(13990);
     }
   : function MediaModalOverlayHeader(arg0) {
       ({ source, contextName, contextIcon } = arg0);
       let isModalOpen;
       ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
       const tmp = closure_10();
-      const headerLayoutAnimation = isModalOpen(13986).useHeaderLayoutAnimation(animationDriver);
-      let obj = isModalOpen(13986);
+      const headerLayoutAnimation = isModalOpen(13990).useHeaderLayoutAnimation(animationDriver);
+      let obj = isModalOpen(13990);
       const mediaShareActions = isModalOpen(8726).useMediaShareActions({ source, disableDownload, shareable });
       const tmp7 = useShouldHideMediaOptionsDefault(channelId);
       const obj2 = isModalOpen(8726);
@@ -456,7 +456,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
               obj.accessibilityLabel = intl.string(isModalOpen(1128).t.PdRCRg);
               const tmp4 = MediaViewerOverlayButtonDefault;
               if (obj2.isAndroid()) {
-                let tmp2Result = closure_1_8(isModalOpen(13991).MoreVerticalIcon, {
+                let tmp2Result = closure_1_8(isModalOpen(13995).MoreVerticalIcon, {
                   size: "md",
                   color: "interactive-text-active",
                 });

@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/Ac
 import _mod6001 from "module_6001" /* 6001 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import _modDef11978 from "../../../../../../_runtime/metro/11978__.js";
+import _modDef11997 from "../../../../../../_runtime/metro/11997__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
@@ -404,7 +404,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.emptyState) {
-        const obj2 = { style: tmp4.emptyState, lightSource: _modDef11978, darkSource: _modDef11978, title: first };
+        const obj2 = { style: tmp4.emptyState, lightSource: _modDef11997, darkSource: _modDef11997, title: first };
         const tmp10 = React6(native.EmptyState, obj2);
         cResult[1] = tmp4.emptyState;
         cResult[2] = tmp10;
@@ -415,7 +415,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp7;
     }
   : function AutocompleteFailedEmptyState() {
-      const obj = { style: closure_12().emptyState, lightSource: _modDef11978, darkSource: _modDef11978, title: null };
+      const obj = { style: closure_12().emptyState, lightSource: _modDef11997, darkSource: _modDef11997, title: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.rTAbPn);
       return React6(native.EmptyState, obj);

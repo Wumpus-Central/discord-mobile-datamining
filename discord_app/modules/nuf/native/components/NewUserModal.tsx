@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             name: "enable-notification",
             getComponent() {
-              return closure_0(17116).RedesignNotificationScreen;
+              return closure_0(17120).RedesignNotificationScreen;
             },
             initialParams: null,
           };
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = {
             name: "choose-avatar",
             getComponent() {
-              return closure_0(18595).default;
+              return closure_0(18599).default;
             },
             options() {
               return {
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }),
                     );
                   };
-                  return closure_2_5(closure_1(13362), obj);
+                  return closure_2_5(closure_1(13367), obj);
                 },
               };
             },
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             name: "contact-sync",
             options: { headerShown: false },
             getComponent() {
-              return closure_0(13350).ContactSyncOnboardingModal;
+              return closure_0(13355).ContactSyncOnboardingModal;
             },
             initialParams: null,
           };
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             name: "discoverability",
             options: { headerShown: false },
             getComponent() {
-              return closure_0(18596).default;
+              return closure_0(18600).default;
             },
             initialParams: null,
           };
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj11 = {
             name: "connect-guardian",
             getComponent() {
-              return closure_0(18602).default;
+              return closure_0(18606).default;
             },
             initialParams: null,
           };
@@ -316,14 +316,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_5(closure_7.Screen, {
           name: "enable-notification",
           getComponent() {
-            return closure_0(17116).RedesignNotificationScreen;
+            return closure_0(17120).RedesignNotificationScreen;
           },
           initialParams: { onComplete },
         }),
         closure_5(closure_7.Screen, {
           name: "choose-avatar",
           getComponent() {
-            return closure_0(18595).default;
+            return closure_0(18599).default;
           },
           options() {
             return {
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }),
                   );
                 };
-                return closure_2_5(closure_1(13362), obj);
+                return closure_2_5(closure_1(13367), obj);
               },
             };
           },
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name: "contact-sync",
           options: { headerShown: false },
           getComponent() {
-            return closure_0(13350).ContactSyncOnboardingModal;
+            return closure_0(13355).ContactSyncOnboardingModal;
           },
           initialParams: { onComplete },
         }),
@@ -360,14 +360,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name: "discoverability",
           options: { headerShown: false },
           getComponent() {
-            return closure_0(18596).default;
+            return closure_0(18600).default;
           },
           initialParams: { onComplete },
         }),
         closure_5(closure_7.Screen, {
           name: "connect-guardian",
           getComponent() {
-            return closure_0(18602).default;
+            return closure_0(18606).default;
           },
           initialParams: { onComplete },
         }),

@@ -17,7 +17,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (num < 2) {
         if (cResult[0] !== num) {
-          const obj2 = { columns: num, cardWidth: "r", rowWidth: "toCharArray$esjava$1" };
+          const obj2 = { columns: num, cardWidth: "Array", rowWidth: "toCharArray$esjava$1" };
           cResult[0] = num;
           cResult[1] = obj2;
           let tmp31 = obj2;
@@ -125,7 +125,7 @@ export const useCardLayout = ReactCompilerGating.isReactCompilerEnabled()
         num = 2;
       }
       if (num < 2) {
-        const obj2 = { columns: num, cardWidth: "r", rowWidth: "toCharArray$esjava$1" };
+        const obj2 = { columns: num, cardWidth: "Array", rowWidth: "toCharArray$esjava$1" };
         return obj2;
       } else {
         let num2 = 2;

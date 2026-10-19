@@ -1497,7 +1497,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       if (num == null) {
         num = -1;
       }
-      const realizedOperatorForResult = metadataField(18831).realizedOperatorFor(existingPendingConfiguration.operator);
+      const realizedOperatorForResult = metadataField(18835).realizedOperatorFor(existingPendingConfiguration.operator);
       c7 = realizedOperatorForResult;
       value = undefined;
       if (existingPendingConfiguration != null) {
@@ -1505,9 +1505,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           value = iter.value;
         }
       }
-      let obj = metadataField(18831);
-      const tmpResult = metadataField(18831);
-      str1 = metadataField(18831).displayedValueFor(value, realizedOperatorForResult).toString();
+      let obj = metadataField(18835);
+      const tmpResult = metadataField(18835);
+      str1 = metadataField(18835).displayedValueFor(value, realizedOperatorForResult).toString();
       let mapped = noop;
       [value] = noop.useState(str1);
       closure_10 = tmp9;
@@ -1640,7 +1640,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         };
         return onInputValueChange(metadataField(7172).TableSwitchRow, obj8, metadataField);
       }
-      const str = metadataField(18831).displayedValueFor(value, realizedOperatorForResult);
+      const str = metadataField(18835).displayedValueFor(value, realizedOperatorForResult);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()

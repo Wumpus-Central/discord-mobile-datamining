@@ -13,8 +13,8 @@ import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
-import _modDef14867 from "../../../../../_runtime/metro/14867__.js";
-import _modDef14869 from "../../../../../_runtime/metro/14869__.js";
+import _modDef14871 from "../../../../../_runtime/metro/14871__.js";
+import _modDef14873 from "../../../../../_runtime/metro/14873__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -321,7 +321,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { scale };
-          const tmp18 = closure_7(tmp(14870).QrLoginSpotIllustration, obj4);
+          const tmp18 = closure_7(tmp(14874).QrLoginSpotIllustration, obj4);
           cResult[7] = tmp18;
           let tmp15 = tmp18;
         } else {
@@ -793,7 +793,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = closure_10();
       const top = useSafeAreaInsetsDefault().top;
       if (cResult[0] !== tmp3.imageStyle) {
-        const obj2 = { source: _modDef14869, style: tmp3.imageStyle };
+        const obj2 = { source: _modDef14873, style: tmp3.imageStyle };
         const tmp8 = React5(FastImageDefault, obj2);
         cResult[0] = tmp3.imageStyle;
         cResult[1] = tmp8;
@@ -870,7 +870,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: null, source: null };
       const items1 = [tmp3.logo, tmp9];
       obj8.style = items1;
-      obj8.source = _modDef14867;
+      obj8.source = _modDef14871;
       const tmp12 = React5(FastImageDefault, obj8);
       cResult[4] = tmp3.logo;
       cResult[5] = tmp9;
@@ -881,12 +881,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function RemoteAuth(arg0) {
       const tmp = closure_10();
       const obj = { style: tmp.background, children: null };
-      const obj2 = { source: _modDef14869, style: tmp.imageStyle };
+      const obj2 = { source: _modDef14873, style: tmp.imageStyle };
       const items = [React5(FastImageDefault, obj2), ,];
       const obj3 = { style: null, source: null };
       const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
       obj3.style = items1;
-      obj3.source = _modDef14867;
+      obj3.source = _modDef14871;
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { style: tmp.mainCard, children: null };

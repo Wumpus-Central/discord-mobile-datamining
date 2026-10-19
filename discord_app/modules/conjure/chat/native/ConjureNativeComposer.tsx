@@ -92,12 +92,14 @@ let obj3 = {
 };
 obj5.container = {
   paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
-  paddingVertical: nativeDefault.space.PX_8,
+  paddingTop: nativeDefault.space.PX_4,
+  paddingBottom: nativeDefault.space.PX_8,
   gap: nativeDefault.space.PX_8,
 };
 let obj6 = {
   paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
-  paddingVertical: nativeDefault.space.PX_8,
+  paddingTop: nativeDefault.space.PX_4,
+  paddingBottom: nativeDefault.space.PX_8,
   gap: nativeDefault.space.PX_8,
 };
 obj5.box = {
@@ -590,7 +592,7 @@ export default function ConjureNativeComposer(projectId) {
         conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
       if (arr.length > diff) {
         const intl = obj2(1128).intl;
-        let obj = { count: obj2(11595).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+        let obj = { count: obj2(11611).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
         _undefined3(intl.formatToPlainString(_modDef3883.Q0aCVZ, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
@@ -622,7 +624,7 @@ export default function ConjureNativeComposer(projectId) {
         };
         obj3 = obj5;
       });
-      obj2 = obj2(12117);
+      obj2 = obj2(12136);
       result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
     }
   }, items12);
@@ -662,9 +664,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(12276).pickConjurePhotos(
+                value: projectId(12294).pickConjurePhotos(
                   "mixed",
-                  projectId(11595).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(11611).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };

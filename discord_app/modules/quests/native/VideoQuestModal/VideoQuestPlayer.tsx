@@ -17,7 +17,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(16056).PlayerState;
+export const PlayerState = fn(16060).PlayerState;
 export const VideoQuestPlayer = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VideoQuestPlayer(onEnd) {

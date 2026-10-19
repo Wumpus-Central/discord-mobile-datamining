@@ -17,13 +17,13 @@ const obj = {
   wrapperOffset: null,
 };
 let ReanimatedHelperTypes = fn(7040);
-obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(15570).MediaPlaybackPanelModes.PIP);
+obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(15574).MediaPlaybackPanelModes.PIP);
 obj.setMode = function setMode() {
   const error = new Error("MediaPlaybackPanelModes.Provider.setMode: not called within a context provider");
   throw error;
 };
 ReanimatedHelperTypes = fn(7040);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12915).MorphablePanelModes.PIP);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(10681).MorphablePanelModes.PIP);
 ReanimatedHelperTypes = fn(7040);
 obj.wrapperDimensions = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0 });
 ReanimatedHelperTypes = fn(7040);

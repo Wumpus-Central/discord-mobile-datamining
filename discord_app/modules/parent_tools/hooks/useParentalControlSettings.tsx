@@ -538,7 +538,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useAllowFriendsFromMutualGuildsOnlyForTeen() {
       const selectedTeen = controlledSetting(8007).useSelectedTeen();
-      const ParentalControlledFriendSourceFlags = controlledSetting(15860).ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = controlledSetting(15864).ParentalControlledFriendSourceFlags;
       let id;
       if (selectedTeen != null) {
         id = selectedTeen.id;

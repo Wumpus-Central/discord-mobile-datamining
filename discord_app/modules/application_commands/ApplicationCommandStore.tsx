@@ -169,8 +169,8 @@ function handleUpdateOptionStates(channelId) {
           isActive: false,
           lastValidationResult: null,
           optionValue: null,
-          location: "application",
-          length: "hideActionSheet",
+          location: "r",
+          length: "IconComponent",
         };
         if (tmp.activeOptionName === tmp9) {
           tmp.activeOptionName = null;

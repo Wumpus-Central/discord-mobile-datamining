@@ -22,7 +22,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const UserRemediationAction = fn(7294).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(10723);
+const RestrictionConfirmationConstants = fn(10739);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: c10 } =
   RestrictionConfirmationConstants);
 const Constants = fn(1087);
@@ -332,7 +332,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       });
       const obj2 = { action: UserRemediationAction.GOTO_BLOCK, location: "user-profile-context-menu" };
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(10724, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(10740, dependencyMap.paths);
       obj3.openLazy(
         tmp2,
         React6,

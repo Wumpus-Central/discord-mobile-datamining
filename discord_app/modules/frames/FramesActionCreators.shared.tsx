@@ -251,7 +251,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(11020);
+    obj2 = obj2(11041);
     obj2.leaveFrame(mainFrame1.id);
   }
 }

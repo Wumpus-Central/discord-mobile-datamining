@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [GuildStore];
       return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
     };
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

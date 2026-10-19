@@ -100,9 +100,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: result,
         lineHeight: "ix",
-        textAlign: true,
+        textAlign: "getAllEventDismissals",
         width: num,
-        marginBottom: true,
+        marginBottom: "hippodrome",
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -119,9 +119,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: size * num,
         lineHeight: "ix",
-        textAlign: true,
+        textAlign: "getAllEventDismissals",
         width: size,
-        marginBottom: true,
+        marginBottom: "hippodrome",
       };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };

@@ -1,8 +1,4 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import _mod16481 from "../../../../../_runtime/metro/16481__.js";
-import _mod16482 from "../../../../../_runtime/metro/16482__.js";
-import _mod16483 from "../../../../../_runtime/metro/16483__.js";
-import _mod16484 from "../../../../../_runtime/metro/16484__.js";
 import _mod16485 from "../../../../../_runtime/metro/16485__.js";
 import _mod16486 from "../../../../../_runtime/metro/16486__.js";
 import _mod16487 from "../../../../../_runtime/metro/16487__.js";
@@ -30,40 +26,44 @@ import _mod16508 from "../../../../../_runtime/metro/16508__.js";
 import _mod16509 from "../../../../../_runtime/metro/16509__.js";
 import _mod16510 from "../../../../../_runtime/metro/16510__.js";
 import _mod16511 from "../../../../../_runtime/metro/16511__.js";
+import _mod16512 from "../../../../../_runtime/metro/16512__.js";
+import _mod16513 from "../../../../../_runtime/metro/16513__.js";
+import _mod16514 from "../../../../../_runtime/metro/16514__.js";
+import _mod16515 from "../../../../../_runtime/metro/16515__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = {
-  bg: _mod16481,
-  cs: _mod16482,
-  da: _mod16483,
-  de: _mod16484,
-  el: _mod16485,
-  "en-GB": _mod16486,
-  "en-US": _mod16487,
-  "es-ES": _mod16488,
-  "es-419": _mod16489,
-  fi: _mod16490,
-  fr: _mod16491,
-  hi: _mod16492,
-  hr: _mod16493,
-  hu: _mod16494,
-  it: _mod16495,
-  ja: _mod16496,
-  ko: _mod16497,
-  lt: _mod16498,
-  nl: _mod16499,
-  no: _mod16500,
-  pl: _mod16501,
-  "pt-BR": _mod16502,
-  ro: _mod16503,
-  ru: _mod16504,
-  "sv-SE": _mod16505,
-  th: _mod16506,
-  tr: _mod16507,
-  uk: _mod16508,
-  vi: _mod16509,
-  "zh-CN": _mod16510,
-  "zh-TW": _mod16511,
+  bg: _mod16485,
+  cs: _mod16486,
+  da: _mod16487,
+  de: _mod16488,
+  el: _mod16489,
+  "en-GB": _mod16490,
+  "en-US": _mod16491,
+  "es-ES": _mod16492,
+  "es-419": _mod16493,
+  fi: _mod16494,
+  fr: _mod16495,
+  hi: _mod16496,
+  hr: _mod16497,
+  hu: _mod16498,
+  it: _mod16499,
+  ja: _mod16500,
+  ko: _mod16501,
+  lt: _mod16502,
+  nl: _mod16503,
+  no: _mod16504,
+  pl: _mod16505,
+  "pt-BR": _mod16506,
+  ro: _mod16507,
+  ru: _mod16508,
+  "sv-SE": _mod16509,
+  th: _mod16510,
+  tr: _mod16511,
+  uk: _mod16512,
+  vi: _mod16513,
+  "zh-CN": _mod16514,
+  "zh-TW": _mod16515,
 };

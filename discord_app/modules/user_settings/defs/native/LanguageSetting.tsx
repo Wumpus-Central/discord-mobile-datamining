@@ -4,7 +4,7 @@ import LocaleStore from "../../LocaleStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useLanguageSettingTrailing() {
       const cResult = stateFromStores(576).c(4);

@@ -8,13 +8,13 @@ import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeVi
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import ThemedGradientDefault from "../../../client_themes/native/ThemedGradient.tsx";
 import _modDef10562 from "../../../../../_runtime/metro/10562__.js";
-import ChatFloatingNavButtonDefault from "../../../chat_input/native/ChatFloatingNavButton.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
+import ChatFloatingNavButtonDefault from "../../../chat_input/native/ChatFloatingNavButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(12912).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(10678).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1087);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

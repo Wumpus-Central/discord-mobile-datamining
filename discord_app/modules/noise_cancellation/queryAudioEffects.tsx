@@ -1,7 +1,7 @@
 // discord_app/modules/noise_cancellation/queryAudioEffects.tsx
 import utils_PlatformUtils from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
-import _modDef15091 from "../../../_runtime/metro/15091__.js";
+import _modDef15095 from "../../../_runtime/metro/15095__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -55,7 +55,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
                 const obj7 = { value: Promise.reject(error), done: true };
                 return obj7;
               }
-              obj5 = _modDef15091;
+              obj5 = _modDef15095;
             } else {
               const _Error = Error;
               const error1 = new Error("Audio effects querying not supported on non-Windows platforms");

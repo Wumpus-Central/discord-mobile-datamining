@@ -8,8 +8,8 @@ const result = size.fileFinishedImporting("modules/conjure/preview/conjurePrevie
 
 export const previewTargets = function previewTargets(modes, frameSurfaceOptions) {
   closure_0 = frameSurfaceOptions;
-  let items = stateFromStores3;
-  if (stateFromStores3 === undefined) {
+  let items = stateFromStores4;
+  if (stateFromStores4 === undefined) {
     items = [];
   }
   return modes.flatMap((mode) => {

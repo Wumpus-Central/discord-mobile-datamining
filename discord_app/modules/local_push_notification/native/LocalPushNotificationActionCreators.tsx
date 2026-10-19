@@ -37,8 +37,8 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(2002)(12499, dependencyMap.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(2002)(12499, dependencyMap.paths);
+        data(2002)(12516, dependencyMap.paths).then((result) => result.default(channelId.channelId));
+        const promise2 = data(2002)(12516, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
         data(2002)(5202, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_1_0);

@@ -210,5 +210,5 @@ export default noop.memo(
         return React4(inlineStylesDefault, size);
       },
 );
-export const getBadgeLeft = fn(11225).getBadgeLeft;
-export const getBadgeTop = fn(11225).getBadgeTop;
+export const getBadgeLeft = fn(11244).getBadgeLeft;
+export const getBadgeTop = fn(11244).getBadgeTop;

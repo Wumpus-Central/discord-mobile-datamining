@@ -7,7 +7,7 @@ import MobileVoiceOverlayStore from "../../../../stores/native/MobileVoiceOverla
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAndroidMobileOverlaySettingValue() {
       const cResult = c.c(2);
@@ -61,7 +61,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Wfoivk);
   },
-  usePredicate: fn(11443).isMobileOverlaySupported,
+  usePredicate: fn(11461).isMobileOverlaySupported,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");

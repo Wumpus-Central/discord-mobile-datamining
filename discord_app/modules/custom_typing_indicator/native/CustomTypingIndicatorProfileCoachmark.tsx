@@ -6,8 +6,8 @@ import user from "../../../../discord_common/js/packages/protos/discord_protos/u
 import _modDef3885 from "../intl/CustomTypingIndicator.messages.js";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef12823 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef12824 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef12840 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef12841 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,7 +29,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [_modDef12823, _modDef12824, _modDef12823];
+        const items = [_modDef12840, _modDef12841, _modDef12840];
         cResult[0] = items;
         let first = items;
       } else {
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         textStyle: tmp.typingText,
         emojiSource: null,
       };
-      const items = [_modDef12823, _modDef12824, _modDef12823];
+      const items = [_modDef12840, _modDef12841, _modDef12840];
       obj2.emojiSource = items;
       obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, {
         name: "Locke",

@@ -83,10 +83,10 @@ let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1FAF8}\u{1F3FE}",
+  userDiscounts: "\u270A\u{1F3FF}",
   isFetching: true,
   lastFetchSuccessful: null,
-  shouldTriggerOffer: 15,
+  shouldTriggerOffer: 8,
   cooldownExpirationTimestamps: {
     [OfferTriggerTypes.CHANNEL_OPENED]: 0,
     [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0,

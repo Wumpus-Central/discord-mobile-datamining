@@ -31,7 +31,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
       }
       const fractionalPremiumInfo = tmp5.fractionalPremiumInfo;
       let obj = require("c");
-      const appleSubscriptionOwnership = gknRR3(14457).useAppleSubscriptionOwnership(isPurchasedViaApple);
+      const appleSubscriptionOwnership = gknRR3(14461).useAppleSubscriptionOwnership(isPurchasedViaApple);
       if (null == subscriptionPeriodStart) {
         return null;
       } else {
@@ -149,7 +149,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
         cResult[7] = billingInformationString;
         tmp6 = billingInformationString;
       }
-      const gknRR3Result = gknRR3(14457);
+      const gknRR3Result = gknRR3(14461);
     }
   : function useBillingInformationNative(isPurchasedViaApple, subscriptionPeriodStart, arg2) {
       let tmp = arg2;

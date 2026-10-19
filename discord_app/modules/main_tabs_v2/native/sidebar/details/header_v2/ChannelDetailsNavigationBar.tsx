@@ -36,7 +36,7 @@ let obj = {
   container: {
     position: "relative",
     zIndex: 1,
-    height: fn(13022).SEARCH_BAR_HEIGHT,
+    height: fn(13030).SEARCH_BAR_HEIGHT,
     marginTop: nativeDefault.space.PX_8,
   },
   navigationHeader: null,
@@ -47,7 +47,7 @@ let obj = {
 let obj3 = {
   position: "relative",
   zIndex: 1,
-  height: fn(13022).SEARCH_BAR_HEIGHT,
+  height: fn(13030).SEARCH_BAR_HEIGHT,
   marginTop: nativeDefault.space.PX_8,
 };
 obj.navigationHeader = {
@@ -56,7 +56,7 @@ obj.navigationHeader = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13022).SEARCH_BAR_HEIGHT,
+  height: fn(13030).SEARCH_BAR_HEIGHT,
 };
 obj.backButton = { alignSelf: "stretch", justifyContent: "center" };
 let obj4 = {
@@ -65,7 +65,7 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13022).SEARCH_BAR_HEIGHT,
+  height: fn(13030).SEARCH_BAR_HEIGHT,
 };
 obj.buttonsContainer = {
   flex: 1,
@@ -557,7 +557,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj8 = { ref, channelId: null, guildId: null, showBackButton: true };
         ({ id: obj4.channelId, guild_id: obj4.guildId } = channel);
-        const tmp10 = closure_15(cleanUp(17751), obj8);
+        const tmp10 = closure_15(cleanUp(17755), obj8);
         cResult[3] = channel.guild_id;
         cResult[4] = channel.id;
         cResult[5] = ref;
@@ -626,7 +626,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj.useAnimatedStyle(fn);
       let obj3 = {
         style: null,
-        children: closure_15(cleanUp(17751), {
+        children: closure_15(cleanUp(17755), {
           ref,
           channelId: channel.id,
           guildId: channel.guild_id,

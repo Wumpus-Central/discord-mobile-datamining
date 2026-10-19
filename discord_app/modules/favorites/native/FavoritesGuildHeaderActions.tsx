@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import _modDef3465 from "../intl/FavoritesGuild.messages.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef10916 from "../../../../_runtime/metro/10916__.js";
+import _modDef10932 from "../../../../_runtime/metro/10932__.js";
 import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -20,7 +20,7 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
         const obj2 = {
           variant: "secondary",
           size: "sm",
-          icon: _modDef10916,
+          icon: _modDef10932,
           onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
           accessibilityLabel: null,
           maxFontSizeMultiplier: 1,
@@ -30,7 +30,7 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
         const tmp7 = jsx(IconButton.IconButton, {
           variant: "secondary",
           size: "sm",
-          icon: _modDef10916,
+          icon: _modDef10932,
           onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
           accessibilityLabel: null,
           maxFontSizeMultiplier: 1,
@@ -46,7 +46,7 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
       const obj = {
         variant: "secondary",
         size: "sm",
-        icon: _modDef10916,
+        icon: _modDef10932,
         onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,
@@ -56,7 +56,7 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
       return jsx(IconButton.IconButton, {
         variant: "secondary",
         size: "sm",
-        icon: _modDef10916,
+        icon: _modDef10932,
         onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,

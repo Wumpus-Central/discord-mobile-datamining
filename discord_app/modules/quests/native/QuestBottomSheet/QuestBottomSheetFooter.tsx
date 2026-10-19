@@ -1212,16 +1212,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items,
       );
       const obj4 = quest(9473);
-      const hasWatchVideoOnMobileTasks = quest(16129).useHasWatchVideoOnMobileTasks(quest.config);
-      const obj5 = quest(16129);
-      const mobileActivityQuest = quest(16129).useMobileActivityQuest(quest);
+      const hasWatchVideoOnMobileTasks = quest(16133).useHasWatchVideoOnMobileTasks(quest.config);
+      const obj5 = quest(16133);
+      const mobileActivityQuest = quest(16133).useMobileActivityQuest(quest);
       ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-      const obj6 = quest(16129);
-      const primaryCtaCopy = quest(13912).usePrimaryCtaCopy({ quest, application: questApplication });
-      const obj7 = quest(13912);
+      const obj6 = quest(16133);
+      const primaryCtaCopy = quest(13916).usePrimaryCtaCopy({ quest, application: questApplication });
+      const obj7 = quest(13916);
       const userStatus = quest.userStatus;
       let completedAt;
-      const obj8 = quest(16163);
+      const obj8 = quest(16167);
       const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
       if (userStatus != null) {
         completedAt = userStatus.completedAt;
@@ -1231,23 +1231,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (userStatus2 != null) {
         claimedAt = userStatus2.claimedAt;
       }
-      const mobileActivityPressHandler = quest(16163).useMobileActivityPressHandler({
+      const mobileActivityPressHandler = quest(16167).useMobileActivityPressHandler({
         questId: quest.id,
         sourceQuestContent,
         launchMobileActivity,
       });
       const tmp11 = null != completedAt;
       const isQuestAccessSuspended = quest(9473).useIsQuestAccessSuspended();
-      const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16157) };
+      const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16161) };
       let tmp40Result6 = null;
-      if (step !== quest(16159).QuestBottomSheetStep.TASK_SELECT) {
+      if (step !== quest(16163).QuestBottomSheetStep.TASK_SELECT) {
         const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-        if (tmp2(16159).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+        if (tmp2(16163).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
           const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
           let tmp40Result = closure_10(closure_16, obj12);
         } else {
           tmp40Result = null;
-          if (tmp2(16159).QuestBottomSheetStep.TASK_STATUS === step) {
+          if (tmp2(16163).QuestBottomSheetStep.TASK_STATUS === step) {
             if (tmp11) {
               const obj13 = {
                 questId: quest.id,

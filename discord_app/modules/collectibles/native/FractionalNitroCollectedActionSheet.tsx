@@ -19,7 +19,7 @@ import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx
 import _modDef10384 from "../../../../_runtime/metro/10384__.js";
 import _modDef10385 from "../../../../_runtime/metro/10385__.js";
 import CircleQuestionIcon from "../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
-import _modDef14240 from "../../../../_runtime/metro/14240__.js";
+import _modDef14244 from "../../../../_runtime/metro/14244__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -82,7 +82,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       skuId = skuId.skuId;
       const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef14240 };
+        const obj2 = { source: _modDef14244 };
         const tmp9 = React6(FastImageDefault, obj2);
         cResult[0] = tmp9;
         let first = tmp9;
@@ -131,7 +131,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   : function NitroAcquiredHeader(skuId) {
       const tmp = closure_12();
       const obj = { style: tmp.header, children: null };
-      const obj2 = { source: _modDef14240 };
+      const obj2 = { source: _modDef14244 };
       const items = [React6(FastImageDefault, obj2)];
       const obj3 = { style: tmp.fractionNitroIcon, children: null };
       const size = {
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [tmp12Result];
       const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
       let obj = skuId(7574);
-      obj5.children = tmp15(skuId(13736).CircleQuestionIcon, {
+      obj5.children = tmp15(skuId(13740).CircleQuestionIcon, {
         style: tmp.questionIcon,
         color: consumed(587).colors.WHITE,
       });

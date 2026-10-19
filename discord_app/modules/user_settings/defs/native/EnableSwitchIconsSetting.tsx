@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [AccessibilityStore];
       return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
     };
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -35,7 +35,7 @@ const toggle = SettingBuilders.createToggle({
   },
   parent: fn(8260).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
-  onValueChange: fn(15462).setSwitchIconsEnabled,
+  onValueChange: fn(15466).setSwitchIconsEnabled,
   hasIcon: true,
 });
 const size = fn(2);

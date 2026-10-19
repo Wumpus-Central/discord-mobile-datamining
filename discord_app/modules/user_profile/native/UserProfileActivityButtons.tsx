@@ -715,7 +715,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                     c3 = 1;
                     c4 = 2;
                     c5 = 1;
-                    const obj5 = { value: closure_0(11182).canOpenSpotifyUrl(), done: false };
+                    const obj5 = { value: closure_0(11201).canOpenSpotifyUrl(), done: false };
                     return obj5;
                   }
                 } else if (1 === tmp7) {
@@ -732,7 +732,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj6;
                 } else {
                   closure_128_0 = value;
-                  const obj7 = closure_0(11182);
+                  const obj7 = closure_0(11201);
                   if (closure_128_0) {
                     obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
                   } else {

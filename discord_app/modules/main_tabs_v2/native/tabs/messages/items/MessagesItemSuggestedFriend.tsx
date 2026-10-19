@@ -7,7 +7,7 @@ import asyncRequireImpl from "../../../../../../../_runtime/02002_asyncRequireIm
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import _mod7091 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod13645 from "../../../../../../../_runtime/metro/13645__.js";
+import _mod13649 from "../../../../../../../_runtime/metro/13649__.js";
 import FriendSuggestionUtils from "../../../../../friend_suggestions/FriendSuggestionUtils.tsx";
 import AddFriendsScreenUtils from "../../../friends/components/AddFriendsScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -280,7 +280,7 @@ export const MessagesItemSuggestedFriendLegend = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function MessagesItemSuggestedFriendLegend(arg0) {
         const cResult = c.c(4);
-        [tmp3, tmp4] = _mod13645.useRecyclingState(false);
+        [tmp3, tmp4] = _mod13649.useRecyclingState(false);
         if (cResult[0] === tmp3) {
           if (cResult[1] === arg0) {
             if (cResult[2] === tmp4) {
@@ -302,7 +302,7 @@ export const MessagesItemSuggestedFriendLegend = noop.memo(
       }
     : function MessagesItemSuggestedFriendLegend(arg0) {
         const obj2 = {};
-        [tmp2, tmp3] = _mod13645.useRecyclingState(false);
+        [tmp2, tmp3] = _mod13649.useRecyclingState(false);
         const merged = Object.assign(arg0);
         obj2.addedPressed = tmp2;
         obj2.setAddedPressed = tmp3;

@@ -21,9 +21,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guildId = guildId.guildId;
       const tmp4 = closure_5();
       let obj = guildId(576);
-      const guildTagCreationUpsell = guildId(13944).useGuildTagCreationUpsell(
+      const guildTagCreationUpsell = guildId(13948).useGuildTagCreationUpsell(
         "GuildProfileCreateTagUpsell",
-        creatableGuilds(13946),
+        creatableGuilds(13950),
       );
       creatableGuilds = guildTagCreationUpsell.creatableGuilds;
       if (guildTagCreationUpsell.isUpsellVisible) {
@@ -70,15 +70,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      const obj2 = guildId(13944);
+      const obj2 = guildId(13948);
     }
   : function GuildProfileCreateTagUpsell(guildId) {
       guildId = guildId.guildId;
       let creatableGuilds;
       const tmp = closure_5();
-      const guildTagCreationUpsell = guildId(13944).useGuildTagCreationUpsell(
+      const guildTagCreationUpsell = guildId(13948).useGuildTagCreationUpsell(
         "GuildProfileCreateTagUpsell",
-        creatableGuilds(13946),
+        creatableGuilds(13950),
       );
       creatableGuilds = guildTagCreationUpsell.creatableGuilds;
       let tmp5 = null;

@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     pendingDisplayNameStyles: tmp13,
                                     pendingGlobalName: displayName,
                                   };
-                                  const tmp33 = closure_7(tmp(10938).NameplatePreview, obj4);
+                                  const tmp33 = closure_7(tmp(10954).NameplatePreview, obj4);
                                   cResult[28] = stateFromStores;
                                   cResult[29] = displayName;
                                   cResult[30] = tmp13;
@@ -572,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 maxWidth: 320,
                 accessibilityLabel: tmp14,
               };
-              const tmp20 = closure_7(guildId(10820), obj7);
+              const tmp20 = closure_7(guildId(10836), obj7);
               cResult[12] = displayName;
               cResult[13] = tmp13;
               cResult[14] = guildId;

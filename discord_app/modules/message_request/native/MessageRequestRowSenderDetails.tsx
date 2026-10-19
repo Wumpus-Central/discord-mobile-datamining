@@ -75,7 +75,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     const obj17 = otherUser(576);
     const stateFromStores = otherUser(504).useStateFromStores(first, tmp32);
     const tmp23Result = otherUser(504);
-    const messageRequestRelativeTimestampText = otherUser(18023).useMessageRequestRelativeTimestampText(channel2);
+    const messageRequestRelativeTimestampText = otherUser(18027).useMessageRequestRelativeTimestampText(channel2);
     const _Math3 = Math;
     const _Math4 = Math;
     const random = Math.random();
@@ -318,7 +318,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     avatar = tmp28.avatar;
     cResult[4] = avatar;
     cResult[5] = tmp39Result;
-    const tmp23Result3 = otherUser(18023);
+    const tmp23Result3 = otherUser(18027);
   } else {
     ({ channel, otherUser } = isRestricted);
     let flag = isRestricted.isRestricted;
@@ -341,7 +341,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     let obj = otherUser(504);
     const _Math = Math;
     const _Math2 = Math;
-    const messageRequestRelativeTimestampText1 = otherUser(18023).useMessageRequestRelativeTimestampText(channel);
+    const messageRequestRelativeTimestampText1 = otherUser(18027).useMessageRequestRelativeTimestampText(channel);
     const random1 = Math.random();
     const rounded1 = Math.floor(random1 * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
     const obj16 = { style: tmp2.avatarContainer, children: null };

@@ -68,7 +68,7 @@ export const openSocialLayerStorefrontProductSelfPurchaseSuccessModal =
     closure_0 = arg0;
     return actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return asyncRequireImpl(13646, dependencyMap.paths).then(
+        return asyncRequireImpl(13650, dependencyMap.paths).then(
           (SocialLayerStorefrontProductSelfPurchaseSuccessModal) => {
             closure_0 =
               SocialLayerStorefrontProductSelfPurchaseSuccessModal.SocialLayerStorefrontProductSelfPurchaseSuccessModal;
@@ -88,7 +88,7 @@ export const openSocialLayerStorefrontProductGiftPurchaseSuccessModal =
     closure_0 = arg0;
     return actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return asyncRequireImpl(13646, dependencyMap.paths).then(
+        return asyncRequireImpl(13650, dependencyMap.paths).then(
           (SocialLayerStorefrontProductGiftPurchaseSuccessModal) => {
             closure_0 =
               SocialLayerStorefrontProductGiftPurchaseSuccessModal.SocialLayerStorefrontProductGiftPurchaseSuccessModal;

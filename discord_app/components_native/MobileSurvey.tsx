@@ -2,7 +2,7 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import _modDef11496 from "../../_runtime/metro/11496__.js";
+import _modDef11514 from "../../_runtime/metro/11514__.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../_runtime/metro/00019__.js";
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: confirmIcon.confirmIcon,
             color: nativeDefault.unsafe_rawColors.WHITE,
             size: native.Icon.Sizes.SMALL,
-            source: _modDef11496,
+            source: _modDef11514,
           });
         };
         tmp5 = jsx(stateFromStores(5498), {

@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(16136);
+const YouBarConstants = fn(16140);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -519,7 +519,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           status: null,
           statusSizeOverride: null,
           cutout: null,
-          statusStyle: -300,
+          statusStyle: 984.8,
         };
         if (OFFLINE === StatusTypes.UNKNOWN) {
           OFFLINE = StatusTypes.OFFLINE;

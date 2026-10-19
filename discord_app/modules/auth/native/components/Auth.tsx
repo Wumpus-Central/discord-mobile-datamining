@@ -18,7 +18,7 @@ const utils_PlatformUtils = PX_24(1385);
 const KeyboardChatScrollView = PX_24(1647);
 const WideAuthScrollContext = PX_24(6932);
 const Navigator = PX_24(6965);
-const _mod17113 = PX_24(17113);
+const _mod17117 = PX_24(17117);
 require = fn;
 function getInitialAuthRouteStack() {
   if (!obj.hasRegistrationHandoff()) {
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1087).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(17060);
+let RegistrationStepsUtils = fn(17064);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -186,7 +186,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         obj13 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { backgroundImageSource: _mod17113, backgroundImageCover: true };
+        const obj4 = { backgroundImageSource: _mod17117, backgroundImageCover: true };
         const tmp19 = closure_9(tmp3(6934), obj4);
         cResult[4] = tmp19;
         let tmp16 = tmp19;
@@ -358,7 +358,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         closure_1(false);
       }, []);
       const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-      obj3.backgroundImageSource = _mod17113;
+      obj3.backgroundImageSource = _mod17117;
       const children = [closure_9(BackgroundImageDefault, obj3)];
       if (tmp5) {
         const obj5 = { value: tmp11, children: null };

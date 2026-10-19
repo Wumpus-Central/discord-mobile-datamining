@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef11392 from "../../../../../_runtime/metro/11392__.js";
+import _modDef11410 from "../../../../../_runtime/metro/11410__.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";
@@ -63,7 +63,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj2 = { source: _modDef11392 };
+                const obj2 = { source: _modDef11410 };
                 const tmp20 = hasOwnProperty(native.Icon, obj2);
                 cResult[12] = tmp20;
                 let tmp17 = tmp20;
@@ -180,7 +180,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj3.children = items1;
-      const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef11392 })];
+      const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef11410 })];
       obj2.children = items2;
       const items3 = [
         timestampProducer(View, obj2),

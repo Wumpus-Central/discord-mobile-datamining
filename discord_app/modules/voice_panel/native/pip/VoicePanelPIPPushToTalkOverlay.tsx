@@ -13,7 +13,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(12914).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(10680).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
@@ -130,14 +130,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function VoicePanelPIPPushToTalkOverlay() {
       const cResult = pIPState(576).c(19);
       let obj = pIPState(576);
-      pIPState = pIPState(18184).usePIPState();
+      pIPState = pIPState(18188).usePIPState();
       const tmp5 = closure_13();
       const tmp6 = WHITE(closure_14(), 2);
       const isPushingToTalk = tmp6[0];
       dependencyMap = tmp8;
       WHITE = isPushingToTalk(587).unsafe_rawColors.WHITE;
       const BLACK = isPushingToTalk(587).unsafe_rawColors.BLACK;
-      let obj2 = pIPState(18184);
+      let obj2 = pIPState(18188);
       const tmp9 = isPushingToTalk;
       const fn = function t() {
         let num = 8;
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         withSpring: pIPState(5478).withSpring,
         isPushingToTalk,
         PUSH_TO_TALK_PIP_PHYSICS,
-        getVoicePanelPIPBorderRadius: pIPState(18182).getVoicePanelPIPBorderRadius,
+        getVoicePanelPIPBorderRadius: pIPState(18186).getVoicePanelPIPBorderRadius,
         pipState: pIPState,
       };
       fn3.__workletHash = 450590017248;
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj12 = {
               style: animatedStyle1,
               size: tmp(1202).Icon.Sizes.SMALL_20,
-              source: tmp9(18294),
+              source: tmp9(18298),
               disableColor: true,
             };
             const tmp25 = closure_7(closure_11, obj12);
@@ -348,19 +348,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         withSpring: pIPState(5478).withSpring,
         isPushingToTalk,
         PUSH_TO_TALK_PIP_PHYSICS,
-        getVoicePanelPIPBorderRadius: pIPState(18182).getVoicePanelPIPBorderRadius,
+        getVoicePanelPIPBorderRadius: pIPState(18186).getVoicePanelPIPBorderRadius,
         pipState: pIPState,
       };
     }
   : function VoicePanelPIPPushToTalkOverlay() {
-      pIPState = pIPState(18184).usePIPState();
+      pIPState = pIPState(18188).usePIPState();
       const tmp2 = closure_13();
       const tmp3 = WHITE(closure_14(), 2);
       const isPushingToTalk = tmp3[0];
       dependencyMap = tmp5;
       WHITE = isPushingToTalk(587).unsafe_rawColors.WHITE;
       const BLACK = isPushingToTalk(587).unsafe_rawColors.BLACK;
-      let obj = pIPState(18184);
+      let obj = pIPState(18188);
       let fn = function o() {
         let num = 8;
         if (first.get()) {
@@ -442,7 +442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         withSpring: pIPState(5478).withSpring,
         isPushingToTalk,
         PUSH_TO_TALK_PIP_PHYSICS,
-        getVoicePanelPIPBorderRadius: pIPState(18182).getVoicePanelPIPBorderRadius,
+        getVoicePanelPIPBorderRadius: pIPState(18186).getVoicePanelPIPBorderRadius,
         pipState: pIPState,
       };
       fn3.__workletHash = 10396812460138;
@@ -498,13 +498,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         withSpring: pIPState(5478).withSpring,
         isPushingToTalk,
         PUSH_TO_TALK_PIP_PHYSICS,
-        getVoicePanelPIPBorderRadius: pIPState(18182).getVoicePanelPIPBorderRadius,
+        getVoicePanelPIPBorderRadius: pIPState(18186).getVoicePanelPIPBorderRadius,
         pipState: pIPState,
       };
       obj11.children = closure_7(closure_11, {
         style: animatedStyle1,
         size: pIPState(1202).Icon.Sizes.SMALL_20,
-        source: isPushingToTalk(18294),
+        source: isPushingToTalk(18298),
         disableColor: true,
       });
       obj10.children = closure_7(NativeView, obj11);

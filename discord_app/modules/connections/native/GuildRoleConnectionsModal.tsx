@@ -46,7 +46,7 @@ export default noop.memo(
           return jsx(guildId(7365).HeaderActionButton, { source: onClose(7995), onPress, accessibilityLabel: null });
         };
         obj4.render = function render() {
-          return jsx(onClose(11123), { guildId, onCloseModal });
+          return jsx(onClose(11142), { guildId, onCloseModal });
         };
         obj3[GUILD_ROLE_CONNECTIONS_SCREEN] = obj4;
         cResult[0] = guildId;
@@ -75,7 +75,7 @@ export default noop.memo(
             return jsx(guildId(7365).HeaderActionButton, { source: onClose(7995), onPress, accessibilityLabel: null });
           };
           obj2.render = function render() {
-            return jsx(onClose(11123), { guildId, onCloseModal });
+            return jsx(onClose(11142), { guildId, onCloseModal });
           };
           obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
           return obj;

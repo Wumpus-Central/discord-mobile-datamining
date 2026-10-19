@@ -15,7 +15,7 @@ let items = [
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      asyncRequireImpl(15595, dependencyMap.paths).then((navigateToDevTools) => {
+      asyncRequireImpl(15599, dependencyMap.paths).then((navigateToDevTools) => {
         navigateToDevTools.navigateToDevTools();
       });
       return true;
@@ -29,7 +29,7 @@ let obj = {
   eventName: "keyCommandShowDevTools",
   discoverabilityTitle: "Open DevTools Panel",
   onKeyCommand() {
-    asyncRequireImpl(15595, dependencyMap.paths).then((navigateToDevTools) => {
+    asyncRequireImpl(15599, dependencyMap.paths).then((navigateToDevTools) => {
       navigateToDevTools.navigateToDevTools();
     });
     return true;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const keyCommands = stateFromStores(5473).useKeyCommands(stateFromStores ? items : []);
       if (stateFromStores) {
         if (stateFromStores1) {
-          return jsx(tmp(17036).default, {});
+          return jsx(tmp(17040).default, {});
         }
       }
       return null;

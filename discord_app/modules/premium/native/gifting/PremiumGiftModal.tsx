@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[22] = tmp34;
                 }
                 const obj3 = { currentStep: tmp19, children: tmp26 };
-                const tmp31 = jsx(tmp4(13739), { currentStep: tmp19, children: tmp26 });
+                const tmp31 = jsx(tmp4(13743), { currentStep: tmp19, children: tmp26 });
                 cResult[12] = tmp19;
                 cResult[13] = tmp26;
                 cResult[14] = tmp31;

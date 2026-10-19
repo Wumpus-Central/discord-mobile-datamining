@@ -63,7 +63,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchCollectiblesProduct = user(10815).useFetchCollectiblesProduct(skuId);
+  const fetchCollectiblesProduct = user(10831).useFetchCollectiblesProduct(skuId);
   const product = fetchCollectiblesProduct.product;
   let type;
   if (product != null) {
@@ -75,7 +75,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (type === user(1995).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  const tmp2Result = user(10815);
+  const tmp2Result = user(10831);
   userProfileFrame = user(8564).useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -83,7 +83,7 @@ export default function UserProfileFrameEditButton(arg0) {
   const items1 = [userProfileFrame, guildId, user, tmp4[1]];
   let name;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15653, dependencyMap.paths), "Profile Frame", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15657, dependencyMap.paths), "Profile Frame", {
       user,
       currentProfileFrame: userProfileFrame,
       guildId,
@@ -135,7 +135,7 @@ export default function UserProfileFrameEditButton(arg0) {
     const intl3 = user(1128).intl;
     obj6.label = intl3.string(user(1128).t.GWrZOd);
     const obj7 = { showNewBadge: tmp4[0] === user(2052).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
-    obj6.labelTrailing = jsx(user(15636).UserProfileEditFormLabelBadges, {
+    obj6.labelTrailing = jsx(user(15640).UserProfileEditFormLabelBadges, {
       showNewBadge: tmp4[0] === user(2052).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE,
     });
     obj6.buttonText = formatToPlainStringResult;
@@ -159,10 +159,10 @@ export default function UserProfileFrameEditButton(arg0) {
       let tmp18Result = <View style={tmp.previewContainer}>{null}</View>;
       const tmp23 = guildId(9317);
     } else {
-      const obj11 = { source: guildId(14256), style: tmp.noneIcon };
-      tmp18Result = jsx(user(1202).Icon, { source: guildId(14256), style: tmp.noneIcon });
+      const obj11 = { source: guildId(14260), style: tmp.noneIcon };
+      tmp18Result = jsx(user(1202).Icon, { source: guildId(14260), style: tmp.noneIcon });
     }
     obj6.leading = tmp18Result;
   }
-  return jsx(user(15636).UserProfileEditFormButton, obj6);
+  return jsx(user(15640).UserProfileEditFormButton, obj6);
 }

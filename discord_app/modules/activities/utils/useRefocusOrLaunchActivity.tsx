@@ -75,8 +75,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if (null != stateFromStores1) {
                     if (stateFromStores1.applicationId === applicationId) {
                       const obj5 = { frameId: stateFromStores1.id, layoutMode: constants.FOCUSED };
-                      const result = tmp3(11021).updateFrameLayoutMode(obj5);
-                      const obj10 = tmp3(11021);
+                      const result = tmp3(11042).updateFrameLayoutMode(obj5);
+                      const obj10 = tmp3(11042);
                     }
                   }
                   if (tmp9) {
@@ -85,8 +85,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     if ("guild_id" in _location) {
                       guild_id = _location.guild_id;
                     }
-                    tmp3(11206)(guild_id, _location);
-                    const tmp26 = tmp3(11206);
+                    tmp3(11225)(guild_id, _location);
+                    const tmp26 = tmp3(11225);
                   } else {
                     if (runBeforeLaunchAttempt != null) {
                       runBeforeLaunchAttempt();
@@ -98,7 +98,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                       obj7.analyticsContext = obj8;
                       dependencyMap = 2;
                       c5 = 1;
-                      const obj9 = { value: tmp3(11021).launchFrame(obj7), done: false };
+                      const obj9 = { value: tmp3(11042).launchFrame(obj7), done: false };
                       return obj9;
                     } else {
                       let id;
@@ -128,7 +128,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   obj11.analyticsLocations = analyticsLocations;
                   dependencyMap = 3;
                   c5 = 1;
-                  const obj12 = { value: analyticsLocations(12790).launchActivityInBotDM(obj11), done: false };
+                  const obj12 = { value: analyticsLocations(12807).launchActivityInBotDM(obj11), done: false };
                   return obj12;
                 }
               }

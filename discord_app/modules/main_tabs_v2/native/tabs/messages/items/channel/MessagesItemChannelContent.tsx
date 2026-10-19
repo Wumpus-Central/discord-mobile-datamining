@@ -13,7 +13,7 @@ import GuildTagDefault from "../../../../../../guild_tag/native/GuildTag.tsx";
 import ActivityStatusDefault from "../../../../../../activity_status/native/ActivityStatus.tsx";
 import UsernameWithEffectsDefault from "../../../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import _modDef10642 from "../../../../../../../../_runtime/metro/10642__.js";
-import _modDef10772 from "../../../../../../../../_runtime/metro/10772__.js";
+import _modDef10788 from "../../../../../../../../_runtime/metro/10788__.js";
 import useMessagePreviewsDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import MessagesItemChannelWaveDefault from "MessagesItemChannelWave.tsx";
@@ -143,7 +143,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (muted) {
         if (cResult[6] === channelMutedIcon2.channelIcon) {
         }
-        const obj4 = { source: _modDef10772, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj4 = { source: _modDef10788, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items2 = [,];
         ({ channelIcon: arr3[0], channelMutedIcon: arr3[1] } = channelMutedIcon2);
         obj4.style = items2;
@@ -182,7 +182,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.style = items1;
         tmp2 = timestampProducer(native.Icon, obj3);
       } else if (muted) {
-        const obj4 = { source: _modDef10772, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj4 = { source: _modDef10788, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items2 = [,];
         ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
         obj4.style = items2;
@@ -343,7 +343,7 @@ export default noop.memo(
           tmp12 = !isChangelogChannelDefault(channel.id);
         }
         const tmpResult = channel(504);
-        const tmpResult3 = channel(17162);
+        const tmpResult3 = channel(17166);
         let id = stateFromStores;
         if (stateFromStores == null) {
           id = channel.id;
@@ -458,7 +458,7 @@ export default noop.memo(
             obj19.color = str7;
             obj19.layout = tmp(9615).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
             obj19.muted = muted;
-            let tmp20Result7 = closure_6(tmp(13529).ChannelRowPreview, obj19);
+            let tmp20Result7 = closure_6(tmp(13534).ChannelRowPreview, obj19);
           } else if (channel.isDM()) {
             const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
             let guild_id;

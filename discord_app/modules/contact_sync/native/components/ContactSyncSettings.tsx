@@ -208,7 +208,7 @@ let closure_16 = async function _updateFriendSync(arg0) {
     }
   }
 };
-const ContactSyncPersistedStore = fn(13344);
+const ContactSyncPersistedStore = fn(13349);
 ({ deleteStoredContacts: hasOwnProperty, setStoredContacts: metroRequire } = ContactSyncPersistedStore);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, FriendDiscoveryFlags: closure_8, AnalyticsSections: closure_9 } = Constants);
@@ -218,8 +218,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettings.tsx");
 
 export default function ContactSyncSettings() {
-  contactSyncAccount = contactSyncAccount(13345).useContactSyncAccount();
-  let obj = contactSyncAccount(13345);
+  contactSyncAccount = contactSyncAccount(13350).useContactSyncAccount();
+  let obj = contactSyncAccount(13350);
   const items = [UserStore];
   const stateFromStores = contactSyncAccount(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let phone;
@@ -231,10 +231,10 @@ export default function ContactSyncSettings() {
     isStaffResult = stateFromStores.isStaff();
   }
   let obj2 = contactSyncAccount(504);
-  const tmpResult = contactSyncAccount(13345);
+  const tmpResult = contactSyncAccount(13350);
   const FriendDiscoverySettings = tmp(2044).FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
-  const isContactSyncEnabledResult = contactSyncAccount(13345).isContactSyncEnabled(contactSyncAccount);
+  const isContactSyncEnabledResult = contactSyncAccount(13350).isContactSyncEnabled(contactSyncAccount);
   const hasFlagResult = contactSyncAccount(1405).hasFlag(setting, constants2.FIND_BY_PHONE);
   dependencyMap = hasFlagResult;
   const tmpResult3 = contactSyncAccount(1405);
@@ -248,7 +248,7 @@ export default function ContactSyncSettings() {
     const obj5 = {
       label: "STAFF ONLY - Find your friends deletion",
       value: true,
-      onValueChange: tmp(13345).adminDeleteContactSync,
+      onValueChange: tmp(13350).adminDeleteContactSync,
     };
     const items1 = [closure_10(tmp(8855).FormSwitchRow, obj5), closure_10(tmp(8855).FormDivider, {})];
     obj4.children = items1;
@@ -301,7 +301,7 @@ export default function ContactSyncSettings() {
   const intl4 = tmp(1128).intl;
   const hasFlagResult1 = contactSyncAccount(1405).hasFlag(setting, constants2.FIND_BY_EMAIL);
   obj11.children = intl4.format(contactSyncAccount(1128).t.BoR0dO, {
-    onClick: contactSyncAccount(13345).handleOpenLearnMoreLink,
+    onClick: contactSyncAccount(13350).handleOpenLearnMoreLink,
   });
   items4[1] = closure_10(contactSyncAccount(8855).FormHint, obj11);
   const obj13 = { children: null };

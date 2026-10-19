@@ -13,8 +13,8 @@ export const setConjureSocket = function setConjureSocket(projectId, ws) {
 export const deleteConjureSocket = function deleteConjureSocket(projectId) {
   map.delete(projectId);
 };
-export const sendOnConjureSocket = function sendOnConjureSocket(arg0, arg1, fn) {
-  value = map.get(arg0);
+export const sendOnConjureSocket = function sendOnConjureSocket(projectId, arg1, fn) {
+  value = map.get(projectId);
   try {
     if (null == value) {
       const _Error = Error;

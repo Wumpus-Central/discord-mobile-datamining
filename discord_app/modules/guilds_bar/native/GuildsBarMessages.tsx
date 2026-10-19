@@ -151,8 +151,8 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "row",
-          externalChildren: "center",
+          label: "primary",
+          externalChildren: "sm",
           expandedChildren: null,
           children: null,
         };
@@ -171,8 +171,8 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "row",
-          externalChildren: "center",
+          label: "primary",
+          externalChildren: "sm",
           expandedChildren: null,
           children: null,
         });

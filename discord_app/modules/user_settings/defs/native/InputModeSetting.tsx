@@ -7,7 +7,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 require = fn;
 const InputModes = fn(5216).InputModes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11065);
+const SettingBuilders = fn(11084);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useInputModeSettingTrailing() {
       let Q8gkVL = dependencyMap;
@@ -102,7 +102,7 @@ const pressable = SettingBuilders.createPressable({
         }
         return stringResult;
       },
-  onPress: fn(11448).handleInputModePress,
+  onPress: fn(11466).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t.nuFtHH)];

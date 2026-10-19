@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
 const QuestDockMode = fn(6228).QuestDockMode;
-const QuestDockConstants = fn(16133);
+const QuestDockConstants = fn(16137);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } =
   QuestDockConstants);
 const VerticalGradient = fn(1087).VerticalGradient;
@@ -66,7 +66,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = activeQuestDockMode(576).c(7);
       ({ children, style } = arg0);
       const tmp3 = closure_17();
-      activeQuestDockMode = noop.useContext(activeQuestDockMode(16134).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = noop.useContext(activeQuestDockMode(16138).QuestDockGestureContext).activeQuestDockMode;
       let obj = activeQuestDockMode(576);
       const fn = function n() {
         let num = 0;
@@ -120,7 +120,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   : function QuestDockBackgroundMediaFade(arg0) {
       let activeQuestDockMode;
       ({ children, style } = arg0);
-      activeQuestDockMode = noop.useContext(activeQuestDockMode(16134).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = noop.useContext(activeQuestDockMode(16138).QuestDockGestureContext).activeQuestDockMode;
       const tmp = closure_17();
       const fn = function s() {
         let num = 0;

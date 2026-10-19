@@ -820,8 +820,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ref = initialSearchQuery.useRef(null);
       importDefault = initialSearchQuery.useRef(0);
       const tmp2 = useSafeAreaInsetsDefault();
-      let obj = ref(11383);
-      [dependencyMap, tmp5] = ref(11383).useLocalStorageState("devtools-dc-search", "");
+      let obj = ref(11401);
+      [dependencyMap, tmp5] = ref(11401).useLocalStorageState("devtools-dc-search", "");
       _slicedToArray = tmp5;
       initialSearchQuery = _slicedToArray(
         initialSearchQuery.useState(() => {
@@ -862,7 +862,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
         return items;
       });
-      let tmp4 = _slicedToArray(ref(11383).useLocalStorageState("devtools-dc-search", ""), 2);
+      let tmp4 = _slicedToArray(ref(11401).useLocalStorageState("devtools-dc-search", ""), 2);
       let items = [closure_6];
       const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
         dailyCapOverridden: closure_6.dailyCapOverridden,

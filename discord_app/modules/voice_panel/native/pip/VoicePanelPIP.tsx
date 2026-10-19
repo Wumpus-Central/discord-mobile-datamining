@@ -7,11 +7,11 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06612_LegacyBaseButton.js";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
-import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff.tsx";
 import utils_triggerIOSHapticDefault from "../utils/triggerIOSHaptic.tsx";
 import VoicePanelPIPUtils from "VoicePanelPIPUtils.tsx";
 import VoicePanelPIPStateContext from "VoicePanelPIPStateContext.tsx";
@@ -27,10 +27,10 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12914);
+const VoicePanelConstants = fn(10680);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12912).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18183).VoicePanelPIPModes;
+const VoicePanelControlsModes = fn(10678).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18187).VoicePanelPIPModes;
 const ActivityPanelModes = fn(6298).ActivityPanelModes;
 const isLaunched = fn(6296).isLaunched;
 const jsxProd = fn(21);

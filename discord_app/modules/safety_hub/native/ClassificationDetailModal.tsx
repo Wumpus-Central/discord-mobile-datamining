@@ -21,7 +21,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ classificationId, source, shouldRedirectToAccountStanding } = arg0);
       const tmp5 = closure_7();
       let obj = safetyHubInitialized(576);
-      safetyHubInitialized = safetyHubInitialized(12640).useSafetyHubInitialized();
+      safetyHubInitialized = safetyHubInitialized(12657).useSafetyHubInitialized();
       if (cResult[0] !== safetyHubInitialized) {
         const fn = function l() {
           if (!safetyHubInitialized) {
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       const effect = noop.useEffect(tmp7, tmp8);
-      const tmpResult = safetyHubInitialized(12640);
+      const tmpResult = safetyHubInitialized(12657);
       const isFocused = safetyHubInitialized(1506).useIsFocused();
       if (cResult[3] === classificationId) {
         if (cResult[4] === tmp4) {
@@ -94,21 +94,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return closure_1(6190).pop();
       });
       obj4.render = function render() {
-        return jsx(source(12603), {
+        return jsx(source(12620), {
           classificationId,
           source,
           onClose() {
             closure_1(6190).pop();
             if (closure_1_1) {
-              closure_0(12639).openAccountStanding();
-              const obj = closure_0(12639);
+              closure_0(12656).openAccountStanding();
+              const obj = closure_0(12656);
             }
             const arr = closure_1(6190);
           },
           onError() {
             closure_1_1(6190).pop();
             const arr = closure_1_1(6190);
-            classificationId(12639).openAccountStanding();
+            classificationId(12656).openAccountStanding();
           },
         });
       };
@@ -130,14 +130,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_7();
       dependencyMap = tmp;
-      const safetyHubInitialized = classificationId(12640).useSafetyHubInitialized();
+      const safetyHubInitialized = classificationId(12657).useSafetyHubInitialized();
       const items = [safetyHubInitialized];
       const effect = safetyHubInitialized.useEffect(() => {
         if (!safetyHubInitialized) {
           const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
         }
       }, items);
-      let obj = classificationId(12640);
+      let obj = classificationId(12657);
       const isFocused = classificationId(1506).useIsFocused();
       const items1 = [classificationId, flag, tmp, source];
       const memo = safetyHubInitialized.useMemo(() => {
@@ -152,21 +152,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_1(6190).pop();
           }),
           render() {
-            return jsx(source(12603), {
+            return jsx(source(12620), {
               classificationId,
               source,
               onClose() {
                 closure_1(6190).pop();
                 if (closure_1_1) {
-                  closure_0(12639).openAccountStanding();
-                  const obj = closure_0(12639);
+                  closure_0(12656).openAccountStanding();
+                  const obj = closure_0(12656);
                 }
                 const arr = closure_1(6190);
               },
               onError() {
                 closure_1_1(6190).pop();
                 const arr = closure_1_1(6190);
-                classificationId(12639).openAccountStanding();
+                classificationId(12656).openAccountStanding();
               },
             });
           },

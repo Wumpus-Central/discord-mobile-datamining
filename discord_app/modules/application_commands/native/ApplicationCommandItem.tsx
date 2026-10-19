@@ -230,12 +230,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = formatToPlainStringResult;
         }
         const tmpResult3 = section(504);
-        const applicationCommandsIconSource = section(12876).getApplicationCommandsIconSource(section, stateFromStores);
+        const applicationCommandsIconSource = section(12893).getApplicationCommandsIconSource(section, stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = section;
         cResult[6] = applicationCommandsIconSource;
         tmp10 = applicationCommandsIconSource;
-        const tmpResult4 = section(12876);
+        const tmpResult4 = section(12893);
       }
       const fn = function c() {
         if (null != guildId) {

@@ -203,7 +203,7 @@ export default noop.memo(
                                                                 }
                                                                 const obj5 = { value: tmp70, children: tmp61 };
                                                                 const tmp73 = closure_9(
-                                                                  entrypoint(10932).AppLauncherContext.Provider,
+                                                                  entrypoint(10948).AppLauncherContext.Provider,
                                                                   obj5,
                                                                 );
                                                                 cResult[66] = tmp70;

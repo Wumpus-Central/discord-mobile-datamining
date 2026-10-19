@@ -24,12 +24,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: 12,
-    scrollPosition: 12,
-    windowSize: null,
-    setStateShallow: null,
-    dropStart: 0,
-    dropComplete: "No Output Devices",
+    listInsets: 50,
+    scrollPosition: 100,
+    windowSize: 100,
+    setStateShallow: 50,
+    dropStart: 100,
+    dropComplete: true,
   };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
@@ -71,7 +71,9 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1274).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "r", overSpecs: "toCharArray$esjava$1" }));
+      dropSpecs(1274).batchUpdates(() =>
+        dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" }),
+      );
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;

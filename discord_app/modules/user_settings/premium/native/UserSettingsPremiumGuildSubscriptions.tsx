@@ -343,8 +343,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = flag(7385)({ forceFetch: true });
       isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
       const tmpResult = require("ReverseTrialUtils");
-      fpDurationText = flag(14534)(endsAt, tmp(14534).CountDownMessageTypes.LONG_TIME_LEFT);
-      const tmp4 = flag(14534);
+      fpDurationText = flag(14538)(endsAt, tmp(14538).CountDownMessageTypes.LONG_TIME_LEFT);
+      const tmp4 = flag(14538);
       const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
         const obj = {

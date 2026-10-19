@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 const FamilyCenterConstants = fn(7526);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } =
   FamilyCenterConstants);
-const THROUGHLINE_URL = fn(10690).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(10706).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let createStyles = fn(5191);

@@ -64,7 +64,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[2];
       }
       const tmp6 = declineLinkRequest(8006)();
-      const familyCenterActions = otherUser(12650).useFamilyCenterActions(tmp9);
+      const familyCenterActions = otherUser(12667).useFamilyCenterActions(tmp9);
       declineLinkRequest = familyCenterActions.declineLinkRequest;
       const isDeclineLoading = familyCenterActions.isDeclineLoading;
       if (cResult[3] === declineLinkRequest) {
@@ -74,11 +74,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5(38)(!tmp6, "FamilyCenterDeclineLinkModal should only be rendered for teens.");
         if (cResult[6] !== otherUser) {
           const obj3 = { otherUser, iconSrc: tmp5(7995) };
-          const tmp16 = closure_5(tmp5(15966), obj3);
+          const tmp16 = closure_5(tmp5(15970), obj3);
           cResult[6] = otherUser;
           cResult[7] = tmp16;
           let tmp13 = tmp16;
-          const tmp5Result = tmp5(15966);
+          const tmp5Result = tmp5(15970);
         } else {
           tmp13 = cResult[7];
         }
@@ -102,7 +102,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[11] !== otherUser) {
           const obj5 = { user: otherUser };
-          const tmp24 = closure_5(tmp5(15934), obj5);
+          const tmp24 = closure_5(tmp5(15938), obj5);
           cResult[11] = otherUser;
           cResult[12] = tmp24;
           let tmp22 = tmp24;
@@ -189,7 +189,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                       const items = [tmp46, tmp49];
                       obj10.children = items;
                       obj9.children = closure_6(tmp(6214).ButtonGroup, obj10);
-                      const tmp55 = closure_5(tmp(12659).ModalFooter, obj9);
+                      const tmp55 = closure_5(tmp(12676).ModalFooter, obj9);
                       cResult[33] = tmp46;
                       cResult[34] = tmp55;
                       let tmp52 = tmp55;
@@ -271,7 +271,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = otherUser.id;
       cResult[5] = C;
       tmp11 = C;
-      const tmpResult = otherUser(12650);
+      const tmpResult = otherUser(12667);
     }
   : function FamilyCenterModalDeclineScreen(otherUser) {
       otherUser = otherUser.otherUser;
@@ -285,7 +285,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         otherUser(4903).presentFailedToast(intl.string(otherUser(1128).t.R0RpRX));
       }, []);
       const tmp2 = declineLinkRequest(8006)();
-      const familyCenterActions = otherUser(12650).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+      const familyCenterActions = otherUser(12667).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
       declineLinkRequest = familyCenterActions.declineLinkRequest;
       const isDeclineLoading = familyCenterActions.isDeclineLoading;
       const items = [declineLinkRequest, otherUser.id];
@@ -297,14 +297,14 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { children: null };
       const obj4 = { style: tmp.header, children: null };
       const obj5 = { otherUser, iconSrc: null };
-      const obj = otherUser(12650);
+      const obj = otherUser(12667);
       obj5.iconSrc = declineLinkRequest(7995);
-      const items1 = [closure_5(declineLinkRequest(15966), obj5), ,];
+      const items1 = [closure_5(declineLinkRequest(15970), obj5), ,];
       const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
       let intl = otherUser(1128).intl;
       obj6.children = intl.string(declineLinkRequest(2589).teIRCR);
       items1[1] = closure_5(otherUser(5187).Text, obj6);
-      items1[2] = closure_5(declineLinkRequest(15934), { user: otherUser });
+      items1[2] = closure_5(declineLinkRequest(15938), { user: otherUser });
       obj4.children = items1;
       const items2 = [closure_6(View, obj4)];
       const obj7 = { style: tmp.body, children: null };
@@ -345,7 +345,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       items5[1] = closure_5(otherUser(5479).Button, obj13);
       obj11.children = items5;
       obj10.children = closure_6(otherUser(6214).ButtonGroup, obj11);
-      items4[1] = closure_5(otherUser(12659).ModalFooter, obj10);
+      items4[1] = closure_5(otherUser(12676).ModalFooter, obj10);
       obj2.children = items4;
       return closure_6(otherUser(7781).ModalScreen, obj2);
     };
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp4) {
         const obj4 = { initialRouteName: "DECLINE", screens: tmp4, headerBackTitle: tmp6 };
-        const tmp10 = closure_5(tmp(10913).Modal, obj4);
+        const tmp10 = closure_5(tmp(10929).Modal, obj4);
         cResult[3] = tmp4;
         cResult[4] = tmp10;
         let tmp8 = tmp10;
@@ -418,5 +418,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = { initialRouteName: "DECLINE", screens: memo, headerBackTitle: null };
       const intl = otherUser(1128).intl;
       obj.headerBackTitle = intl.string(otherUser(1128).t["13/7kX"]);
-      return closure_5(otherUser(10913).Modal, obj);
+      return closure_5(otherUser(10929).Modal, obj);
     };

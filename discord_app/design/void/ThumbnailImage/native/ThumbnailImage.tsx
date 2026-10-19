@@ -7,7 +7,7 @@ let _default = fn(17).Image;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1384);
 if (PlatformUtils.isAndroid()) {
-  _default = fn(15176).default;
+  _default = fn(15180).default;
 }
 const ReactCompilerGating = fn(558);
 const size = fn(2);

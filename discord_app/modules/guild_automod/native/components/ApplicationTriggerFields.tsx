@@ -70,7 +70,7 @@ export default function ApplicationTriggerFields(rule) {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(18724, dependencyMap.paths),
+        asyncRequireImpl(18728, dependencyMap.paths),
         "AutomodSelectApplication",
         obj2,
       );

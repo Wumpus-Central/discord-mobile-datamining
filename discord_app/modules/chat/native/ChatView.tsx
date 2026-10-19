@@ -60,8 +60,8 @@ let result = size.fileFinishedImporting("modules/chat/native/ChatView.tsx");
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function ChatView(isActive) {
-        let setInterstitialResult2 = chatInputRef;
-        const cResult = channelId(chatInputRef[11]).c(64);
+        let setInterstitialResult = chatInputRef;
+        const cResult = channelId(chatInputRef[11]).c(62);
         ({ alwaysRespectKeyboard, channelId } = isActive);
         isActive = isActive.isActive;
         chatInputRef = isActive.chatInputRef;
@@ -69,7 +69,7 @@ export default noop.memo(
         const screenIndex = isActive.screenIndex;
         const secondaryTextFieldRef = isActive.secondaryTextFieldRef;
         const setNoExtractUI = isActive.setNoExtractUI;
-        alwaysRespectKeyboard = tmp4;
+        MessageStore = tmp4;
         let messages = ref2();
         if (cResult[0] !== (undefined !== alwaysRespectKeyboard && alwaysRespectKeyboard)) {
           const fn = function u() {
@@ -97,53 +97,40 @@ export default noop.memo(
             tmp10 = cResult[5];
           }
           if (cResult[6] !== channelId) {
-            class C {
-              constructor() {
-                return closure_6.getChannel(channelId);
-              }
-            }
+            const fn2 = function p() {
+              return ChannelStore.getChannel(channelId);
+            };
             cResult[6] = channelId;
-            cResult[7] = C;
+            cResult[7] = fn2;
+            let tmp12 = fn2;
           } else {
-            class C {
-              constructor() {
-                return closure_6.getChannel(channelId);
-              }
-            }
+            tmp12 = cResult[7];
           }
-          const stateFromStores = channelId(setInterstitialResult2[13]).useStateFromStores(tmp10, C);
+          let stateFromStores = channelId(setInterstitialResult[13]).useStateFromStores(tmp10, tmp12);
           if (cResult[8] === channelId) {
-            class C {
-              constructor() {
-                return closure_6.getChannel(channelId);
-              }
+            if (cResult[9] === stateFromStores) {
+              let tmp14 = cResult[10];
             }
             if (cResult[11] === tmp14) {
-              class C {
-                constructor() {
-                  return closure_6.getChannel(channelId);
-                }
+              if (cResult[12] === tmp19) {
+                let tmp20 = cResult[13];
               }
               ({ channelIsLoading, channel } = tmp20);
-              const isChannelContentGated = channelId(setInterstitialResult2[15]).useIsChannelContentGated(channel);
-              const tmpResult5 = channelId(setInterstitialResult2[15]);
               if (stateFromStores == null) {
-                class C {
-                  constructor() {
-                    return closure_6.getChannel(channelId);
-                  }
-                }
+                stateFromStores = null;
               }
-              empty = channelId(setInterstitialResult2[16]).useGetSpoilerGatingChannelId(stateFromStores);
+              const channelContentGate = channelId(setInterstitialResult[15]).useChannelContentGate(
+                guildId,
+                stateFromStores,
+              );
               closure_10 = HACK_fixModalInteraction.useRef(channelId);
               HACK_fixModalInteraction.useRef(null);
-              const tmp22 = null != empty;
-              const tmpResult6 = channelId(setInterstitialResult2[16]);
+              const tmpResult3 = channelId(setInterstitialResult[15]);
               const _Symbol2 = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                 class U {
                   constructor() {
-                    tmp = new isActive(chatInputRef[17])();
+                    tmp = new isActive(chatInputRef[16])();
                     return tmp;
                   }
                 }
@@ -151,30 +138,30 @@ export default noop.memo(
               } else {
                 class U {
                   constructor() {
-                    tmp = new isActive(chatInputRef[17])();
+                    tmp = new isActive(chatInputRef[16])();
                     return tmp;
                   }
                 }
               }
-              let setInterstitial = isActive;
-              const tmp24 = isActive(setInterstitialResult2[18])(U);
-              const tmp25 = isActive(setInterstitialResult2[19])(channelId);
-              const isResourceChannel = tmp25;
+              let obj7 = isActive;
+              const tmp23 = isActive(setInterstitialResult[17])(U);
+              const tmp24 = isActive(setInterstitialResult[18])(channelId);
+              const isResourceChannel = tmp24;
               const _Symbol3 = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                 class U {
                   constructor() {
-                    tmp = new isActive(chatInputRef[17])();
+                    tmp = new isActive(chatInputRef[16])();
                     return tmp;
                   }
                 }
-                let items1 = [alwaysRespectKeyboard];
+                let items1 = [MessageStore];
                 cResult[15] = items1;
-                const tmp26 = items1;
+                const tmp25 = items1;
               } else {
                 class U {
                   constructor() {
-                    tmp = new isActive(chatInputRef[17])();
+                    tmp = new isActive(chatInputRef[16])();
                     return tmp;
                   }
                 }
@@ -182,344 +169,459 @@ export default noop.memo(
               if (cResult[16] === channelId) {
                 class U {
                   constructor() {
-                    tmp = new isActive(chatInputRef[17])();
+                    tmp = new isActive(chatInputRef[16])();
                     return tmp;
                   }
                 }
-                const stateFromStoresObject = channelId(setInterstitialResult2[13]).useStateFromStoresObject(
-                  tmp26,
+                const stateFromStoresObject = channelId(setInterstitialResult[13]).useStateFromStoresObject(
+                  tmp25,
+                  Z,
                   tmp27,
-                  tmp28,
                 );
-                const shouldRenderPlaceholder = stateFromStoresObject.shouldRenderPlaceholder;
+                empty = stateFromStoresObject.shouldRenderPlaceholder;
                 const shouldRenderBegginingRow = stateFromStoresObject.shouldRenderBegginingRow;
                 const _Symbol4 = Symbol;
                 if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
-                  cResult[20] = tmp31;
+                  cResult[20] = Y;
                 } else {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
                 }
-                const onScroll = tmp31;
+                const onScroll = Y;
                 if (cResult[21] !== chatInputRef) {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
                   cResult[21] = chatInputRef;
-                  cResult[22] = tmp33;
+                  cResult[22] = tmp31;
                 } else {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
                 }
-                const onPressKey = tmp33;
+                const onPressKey = tmp31;
                 const _Symbol5 = Symbol;
                 if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
-                  cResult[23] = tmp35;
+                  cResult[23] = tmp33;
                 } else {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
                 }
-                const scrollToNewMessages = tmp35;
+                const scrollToNewMessages = tmp33;
                 const _Symbol6 = Symbol;
                 if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
-                  cResult[24] = tmp37;
+                  cResult[24] = tmp35;
                 } else {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
                 }
-                const onJumpToPresent = tmp37;
+                const onJumpToPresent = tmp35;
                 const _Symbol7 = Symbol;
-                if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                class Z {
+                  constructor() {
+                    messages = closure_7.getMessages(channelId);
+                    tmp = 0 === messages.length;
+                    if (tmp) {
+                      tmp2 = messages.loadingMore || !messages.ready;
+                      tmp = tmp2;
                     }
-                  }
-                  let items2 = [];
-                  cResult[25] = tmp40;
-                  cResult[26] = items2;
-                  let tmp39 = items2;
-                } else {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                    obj = { shouldRenderPlaceholder: tmp, shouldRenderBegginingRow: null };
+                    hasMoreBefore = messages.hasMoreBefore;
+                    tmp3 = !hasMoreBefore;
+                    if (!hasMoreBefore) {
+                      tmp4 = closure_14;
+                      tmp3 = !closure_14;
                     }
+                    obj.shouldRenderBegginingRow = tmp3;
+                    return obj;
                   }
-                  tmp39 = cResult[26];
                 }
-                const layoutEffect = HACK_fixModalInteraction.useLayoutEffect(tmp40, tmp39);
+                const layoutEffect = HACK_fixModalInteraction.useLayoutEffect(tmp37, tmp38);
                 if (cResult[27] !== channelId) {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
-                  const items3 = [channelId];
+                  let items2 = [channelId];
                   cResult[27] = channelId;
-                  cResult[28] = tmp44;
-                  cResult[29] = items3;
-                  let tmp43 = items3;
+                  cResult[28] = tmp42;
+                  cResult[29] = items2;
+                  let tmp41 = items2;
                 } else {
-                  class U {
-                    constructor() {
-                      tmp = new isActive(chatInputRef[17])();
-                      return tmp;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
+                      return;
                     }
                   }
-                  tmp43 = cResult[29];
+                  tmp41 = cResult[29];
                 }
-                const effect1 = HACK_fixModalInteraction.useEffect(tmp44, tmp43);
+                const effect1 = HACK_fixModalInteraction.useEffect(tmp42, tmp41);
                 if (cResult[30] !== channel.id) {
-                  class Ie {
-                    constructor() {
-                      closure_10.current = channel.id;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
                       return;
                     }
                   }
-                  const items4 = [channel.id];
+                  const items3 = [channel.id];
                   cResult[30] = channel.id;
-                  cResult[31] = Ie;
-                  cResult[32] = items4;
-                  let tmp47 = items4;
+                  cResult[31] = tmp46;
+                  cResult[32] = items3;
+                  let tmp45 = items3;
                 } else {
-                  class Ie {
-                    constructor() {
-                      closure_10.current = channel.id;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
                       return;
                     }
                   }
-                  tmp47 = cResult[32];
+                  tmp45 = cResult[32];
                 }
-                const effect2 = HACK_fixModalInteraction.useEffect(Ie, tmp47);
+                const effect2 = HACK_fixModalInteraction.useEffect(tmp46, tmp45);
                 const _Symbol8 = Symbol;
                 if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
-                  class Ie {
-                    constructor() {
-                      closure_10.current = channel.id;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
                       return;
                     }
                   }
-                  const items5 = [];
-                  cResult[33] = tmp51;
-                  cResult[34] = items5;
-                  let tmp50 = items5;
+                  const items4 = [];
+                  cResult[33] = tmp50;
+                  cResult[34] = items4;
+                  let tmp49 = items4;
                 } else {
-                  class Ie {
-                    constructor() {
-                      closure_10.current = channel.id;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
                       return;
                     }
                   }
-                  tmp50 = cResult[34];
+                  tmp49 = cResult[34];
                 }
-                const effect3 = HACK_fixModalInteraction.useEffect(tmp51, tmp50);
+                const effect3 = HACK_fixModalInteraction.useEffect(tmp50, tmp49);
                 if (cResult[35] === HACK_fixModalInteraction) {
-                  class Ie {
-                    constructor() {
-                      closure_10.current = channel.id;
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
                       return;
                     }
                   }
                 }
-                if (cResult[59] === channelId) {
-                  class Ie {
-                    constructor() {
-                      closure_10.current = channel.id;
+                if (cResult[57] === channelId) {
+                  class Y {
+                    constructor(arg0) {
+                      current = closure_12.current;
+                      if (current != null) {
+                        tmp = isActive;
+                        onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                      }
                       return;
                     }
                   }
-                  if (cResult[62] !== tmp5) {
-                    class Ie {
-                      constructor() {
-                        closure_10.current = channel.id;
+                  if (cResult[60] !== tmp5) {
+                    class Y {
+                      constructor(arg0) {
+                        current = closure_12.current;
+                        if (current != null) {
+                          tmp = isActive;
+                          onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                        }
                         return;
                       }
                     }
                     if (!tmp5) {
-                      class Ie {
-                        constructor() {
-                          closure_10.current = channel.id;
+                      class Y {
+                        constructor(arg0) {
+                          current = closure_12.current;
+                          if (current != null) {
+                            tmp = isActive;
+                            onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                          }
                           return;
                         }
                       }
-                      const tmp57 = channel(setInterstitial(setInterstitialResult2[44]), { absolute: true });
+                      const tmp56 = channel(obj7(setInterstitialResult[39]), { absolute: true });
                     }
-                    cResult[62] = tmp5;
-                    cResult[63] = tmp57;
-                    const tmp56 = tmp57;
+                    cResult[60] = tmp5;
+                    cResult[61] = tmp56;
+                    const tmp55 = tmp56;
                   } else {
-                    class Ie {
-                      constructor() {
-                        closure_10.current = channel.id;
+                    class Y {
+                      constructor(arg0) {
+                        current = closure_12.current;
+                        if (current != null) {
+                          tmp = isActive;
+                          onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                        }
                         return;
                       }
                     }
                   }
-                  let obj3 = { profile: channelId(setInterstitialResult2[45]).Profiles.ChatView, children: null };
-                  const items6 = [tmp53, tmp56];
-                  const setInterstitialResult = setInterstitial(setInterstitialResult2[45]);
-                  const tmp58 = closure_10;
-                  if (tmpResult8.shouldNSFWGateGuild(guildId)) {
-                    class Ie {
-                      constructor() {
-                        closure_10.current = channel.id;
+                  let obj3 = { profile: channelId(setInterstitialResult[40]).Profiles.ChatView, children: null };
+                  const items5 = [tmp52, tmp55];
+                  if (null != channelContentGate) {
+                    class Y {
+                      constructor(arg0) {
+                        current = closure_12.current;
+                        if (current != null) {
+                          tmp = isActive;
+                          onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                        }
                         return;
                       }
                     }
-                    let tmp60Result = channel(setInterstitial(setInterstitialResult2[37]), {});
-                    setInterstitial = setInterstitial(setInterstitialResult2[35]).setInterstitial;
-                    setInterstitialResult2 = setInterstitial("NsfwGateChat");
-                    const setInterstitialResult1 = setInterstitial(setInterstitialResult2[35]);
+                    let result = obj13.renderChannelContentGate(channelContentGate);
+                    obj7 = obj7(setInterstitialResult[34]);
+                    setInterstitialResult = obj7.setInterstitial(channelContentGate.kind);
                   } else {
-                    class Ie {
-                      constructor() {
-                        closure_10.current = channel.id;
+                    class Y {
+                      constructor(arg0) {
+                        current = closure_12.current;
+                        if (current != null) {
+                          tmp = isActive;
+                          onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                        }
                         return;
                       }
                     }
                     if (channelIsLoading) {
-                      class Ie {
-                        constructor() {
-                          closure_10.current = channel.id;
+                      class Y {
+                        constructor(arg0) {
+                          current = closure_12.current;
+                          if (current != null) {
+                            tmp = isActive;
+                            onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                          }
                           return;
                         }
                       }
                       if (!screenIndex.isConnected()) {
-                        class Ie {
-                          constructor() {
-                            closure_10.current = channel.id;
+                        class Y {
+                          constructor(arg0) {
+                            current = closure_12.current;
+                            if (current != null) {
+                              tmp = isActive;
+                              onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                            }
                             return;
                           }
                         }
-                        tmp60Result = tmp60();
+                        result = tmp64();
                       }
                     }
                     if (channelIsLoading) {
-                      class Ie {
-                        constructor() {
-                          closure_10.current = channel.id;
+                      class Y {
+                        constructor(arg0) {
+                          current = closure_12.current;
+                          if (current != null) {
+                            tmp = isActive;
+                            onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                          }
                           return;
                         }
                       }
                       let obj4 = { style: messages.empty, title: null, body: null };
-                      const intl2 = channelId(setInterstitialResult2[14]).intl;
-                      obj4.title = intl2.string(channelId(setInterstitialResult2[14]).t.ai6Lbr);
-                      const intl3 = channelId(setInterstitialResult2[14]).intl;
-                      obj4.body = intl3.string(channelId(setInterstitialResult2[14]).t["LTr+x9"]);
-                      const tmp62 = channel(channelId(setInterstitialResult2[38]).EmptyState, obj4);
-                      setInterstitial(setInterstitialResult2[35]).setInterstitial("EmptyState");
-                      const setInterstitialResult3 = setInterstitial(setInterstitialResult2[35]);
+                      const intl2 = channelId(setInterstitialResult[14]).intl;
+                      obj4.title = intl2.string(channelId(setInterstitialResult[14]).t.ai6Lbr);
+                      const intl3 = channelId(setInterstitialResult[14]).intl;
+                      obj4.body = intl3.string(channelId(setInterstitialResult[14]).t["LTr+x9"]);
+                      const tmp60 = channel(channelId(setInterstitialResult[35]).EmptyState, obj4);
+                      obj7(setInterstitialResult[34]).setInterstitial("EmptyState");
+                      const obj7Result2 = obj7(setInterstitialResult[34]);
                     } else {
-                      class Ie {
-                        constructor() {
-                          closure_10.current = channel.id;
+                      class Y {
+                        constructor(arg0) {
+                          current = closure_12.current;
+                          if (current != null) {
+                            tmp = isActive;
+                            onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                          }
                           return;
                         }
                       }
                     }
                   }
-                  items6[2] = tmp60Result;
-                  obj3.children = items6;
-                  obj3 = tmp58(setInterstitialResult, obj3);
+                  items5[2] = result;
+                  obj3.children = items5;
+                  obj3 = closure_10(obj7(setInterstitialResult[40]), obj3);
                   cResult[35] = HACK_fixModalInteraction;
                   cResult[36] = tmp4;
                   cResult[37] = channel;
                   cResult[38] = channelId;
                   cResult[39] = channelIsLoading;
+                  class Z {
+                    constructor() {
+                      messages = closure_7.getMessages(channelId);
+                      tmp = 0 === messages.length;
+                      if (tmp) {
+                        tmp2 = messages.loadingMore || !messages.ready;
+                        tmp = tmp2;
+                      }
+                      obj = { shouldRenderPlaceholder: tmp, shouldRenderBegginingRow: null };
+                      hasMoreBefore = messages.hasMoreBefore;
+                      tmp3 = !hasMoreBefore;
+                      if (!hasMoreBefore) {
+                        tmp4 = closure_14;
+                        tmp3 = !closure_14;
+                      }
+                      obj.shouldRenderBegginingRow = tmp3;
+                      return obj;
+                    }
+                  }
                   cResult[40] = chatInputRef;
-                  cResult[41] = tmp5;
-                  cResult[42] = guildId;
-                  cResult[43] = tmp33;
-                  cResult[44] = isActive;
-                  cResult[45] = tmp25;
-                  cResult[46] = isChannelContentGated;
+                  cResult[41] = channelContentGate;
+                  cResult[42] = tmp5;
+                  cResult[43] = guildId;
+                  cResult[44] = tmp31;
+                  cResult[45] = isActive;
+                  cResult[46] = tmp24;
                   cResult[47] = screenIndex;
                   cResult[48] = secondaryTextFieldRef;
                   cResult[49] = setNoExtractUI;
                   cResult[50] = shouldRenderBegginingRow;
-                  cResult[51] = shouldRenderPlaceholder;
-                  cResult[52] = empty;
-                  cResult[53] = tmp22;
-                  ({ chat: tmp3[54], empty } = messages);
-                  cResult[55] = empty;
+                  cResult[51] = empty;
+                  ({ chat: tmp3[52], empty } = messages);
+                  cResult[53] = empty;
                   messages = messages.messages;
-                  cResult[56] = messages;
-                  cResult[57] = tmp24;
-                  cResult[58] = obj3;
-                  tmpResult8 = channelId(setInterstitialResult2[36]);
+                  cResult[54] = messages;
+                  cResult[55] = tmp23;
+                  cResult[56] = obj3;
+                  const obj7Result = obj7(setInterstitialResult[40]);
                 }
                 let obj5 = { channelId, guildId };
-                const tmp55 = channel(setInterstitial(setInterstitialResult2[43]), obj5);
-                cResult[59] = channelId;
-                cResult[60] = guildId;
-                cResult[61] = tmp55;
-                tmp53 = tmp55;
-                const tmpResult7 = channelId(setInterstitialResult2[13]);
+                const tmp54 = channel(obj7(setInterstitialResult[38]), obj5);
+                cResult[57] = channelId;
+                cResult[58] = guildId;
+                cResult[59] = tmp54;
+                tmp52 = tmp54;
+                const tmpResult4 = channelId(setInterstitialResult[13]);
               }
-              const fn2 = function z() {
-                messages = MessageStore.getMessages(channelId);
-                let tmp = 0 === messages.length;
-                if (tmp) {
-                  tmp = messages.loadingMore || !messages.ready;
-                  const tmp2 = messages.loadingMore || !messages.ready;
+              class Z {
+                constructor() {
+                  messages = closure_7.getMessages(channelId);
+                  tmp = 0 === messages.length;
+                  if (tmp) {
+                    tmp2 = messages.loadingMore || !messages.ready;
+                    tmp = tmp2;
+                  }
+                  obj = { shouldRenderPlaceholder: tmp, shouldRenderBegginingRow: null };
+                  hasMoreBefore = messages.hasMoreBefore;
+                  tmp3 = !hasMoreBefore;
+                  if (!hasMoreBefore) {
+                    tmp4 = closure_14;
+                    tmp3 = !closure_14;
+                  }
+                  obj.shouldRenderBegginingRow = tmp3;
+                  return obj;
                 }
-                const obj = { shouldRenderPlaceholder: tmp, shouldRenderBegginingRow: null };
-                const hasMoreBefore = messages.hasMoreBefore;
-                let tmp3 = !hasMoreBefore;
-                if (!hasMoreBefore) {
-                  tmp3 = !closure_14;
-                }
-                obj.shouldRenderBegginingRow = tmp3;
-                return obj;
-              };
-              const items7 = [channelId, tmp25];
+              }
+              const items6 = [channelId, tmp24];
               cResult[16] = channelId;
-              cResult[17] = tmp25;
-              cResult[18] = fn2;
-              cResult[19] = items7;
+              cResult[17] = tmp24;
+              cResult[18] = Z;
+              cResult[19] = items6;
               ref2 = HACK_fixModalInteraction.useRef(null);
-              tmp27 = fn2;
-              tmp28 = items7;
+              tmp27 = items6;
             }
             let obj6 = { channel: tmp14, channelIsLoading: null == stateFromStores };
             cResult[11] = tmp14;
@@ -529,27 +631,32 @@ export default noop.memo(
           }
           let tmp16 = stateFromStores;
           if (null == stateFromStores) {
-            class Ie {
-              constructor() {
-                closure_10.current = channel.id;
+            class Y {
+              constructor(arg0) {
+                current = closure_12.current;
+                if (current != null) {
+                  tmp = isActive;
+                  onChatViewScrolledResult = current.onChatViewScrolled(isActive);
+                }
                 return;
               }
             }
-            let obj7 = { id: channelId, type: messages.GUILD_TEXT, name: null };
-            const intl = channelId(setInterstitialResult2[14]).intl;
-            obj7.name = intl.string(channelId(setInterstitialResult2[14]).t.ZTNur7);
-            tmp16 = secondaryTextFieldRef(obj7);
+            let obj8 = { id: channelId, type: messages.GUILD_TEXT, name: null };
+            const intl = channelId(setInterstitialResult[14]).intl;
+            obj8.name = intl.string(channelId(setInterstitialResult[14]).t.ZTNur7);
+            tmp16 = secondaryTextFieldRef(obj8);
           }
           cResult[8] = channelId;
           cResult[9] = stateFromStores;
           cResult[10] = tmp16;
-          const tmpResult = channelId(setInterstitialResult2[13]);
+          tmp14 = tmp16;
+          const tmpResult = channelId(setInterstitialResult[13]);
         }
-        const items8 = [channelId, undefined !== alwaysRespectKeyboard && alwaysRespectKeyboard];
+        const items7 = [channelId, undefined !== alwaysRespectKeyboard && alwaysRespectKeyboard];
         cResult[2] = undefined !== alwaysRespectKeyboard && alwaysRespectKeyboard;
         cResult[3] = channelId;
-        cResult[4] = items8;
-        tmp7 = items8;
+        cResult[4] = items7;
+        tmp7 = items7;
         let obj = channelId(chatInputRef[11]);
       }
     : function ChatView(alwaysRespectKeyboard) {
@@ -580,7 +687,8 @@ export default noop.memo(
         let onPressKey;
         let scrollToNewMessages;
         let onJumpToPresent;
-        let setInterstitial = ref();
+        let tmp = ref();
+        closure_8 = tmp;
         let items = [channelId, flag];
         const effect = chatInputRef.useEffect(() => {
           if (!flag) {
@@ -602,19 +710,17 @@ export default noop.memo(
         }, items2);
         ({ channelIsLoading, channel } = memo);
         let obj2 = flag(504);
-        const isChannelContentGated = flag(6180).useIsChannelContentGated(channel);
-        let obj3 = flag(6180);
         if (stateFromStores == null) {
           stateFromStores = null;
         }
-        const getSpoilerGatingChannelId = flag(6200).useGetSpoilerGatingChannelId(stateFromStores);
+        const channelContentGate = flag(10672).useChannelContentGate(guildId, stateFromStores);
         closure_11 = chatInputRef.useRef(channelId);
         chatInputRef.useRef(null);
         ref = chatInputRef.useRef(null);
-        channelId(6447)(() => new channelId(isActive[17])());
-        const tmp10 = channelId(10673)(channelId);
+        channelId(6447)(() => new channelId(isActive[16])());
+        const tmp10 = channelId(10690)(channelId);
         isResourceChannel = tmp10;
-        let obj4 = flag(6200);
+        let obj3 = flag(10672);
         const items3 = [MessageStore];
         const items4 = [channelId, tmp10];
         const stateFromStoresObject = flag(504).useStateFromStoresObject(
@@ -665,7 +771,7 @@ export default noop.memo(
             current.jumpToPresent();
           }
         }, items7);
-        const layoutEffect = chatInputRef.useLayoutEffect(() => flag(isActive[20]).trackAppUIViewed(), []);
+        const layoutEffect = chatInputRef.useLayoutEffect(() => flag(isActive[19]).trackAppUIViewed(), []);
         const items8 = [channelId];
         const effect1 = chatInputRef.useEffect(() => {
           const thread = LazyLoadedThreadManagerDefault.loadThread(channelId);
@@ -677,29 +783,30 @@ export default noop.memo(
         }, items9);
         const effect3 = chatInputRef.useEffect(
           () => () => {
-            const result = flag(isActive[23]).clearOldestUnreadMessageId(ref.current);
+            const result = flag(isActive[22]).clearOldestUnreadMessageId(ref.current);
           },
           [],
         );
-        let obj5 = { profile: null, children: null };
+        let obj4 = { profile: null, children: null };
         const tmp16 = channel;
-        const tmp2Result = flag(504);
-        obj5.profile = flag(12805).Profiles.ChatView;
-        const items10 = [stateFromStores(channelId(13484), { channelId, guildId }), ,];
-        let tmp18Result = null;
+        const tmp3Result = flag(504);
+        obj4.profile = flag(12822).Profiles.ChatView;
+        let setInterstitial = stateFromStores;
+        const items10 = [stateFromStores(channelId(13489), { channelId, guildId }), ,];
+        let setInterstitialResult = null;
         if (!flag2) {
-          tmp18Result = tmp18(tmp9(10529), { absolute: true });
+          setInterstitialResult = setInterstitial(tmp9(10529), { absolute: true });
         }
-        items10[1] = tmp18Result;
-        const tmp17 = channelId(12805);
-        if (tmp2Result2.shouldNSFWGateGuild(guildId)) {
-          let tmp18Result3 = tmp18(tmp9(13332), {});
-          tmp9(9).setInterstitial("NsfwGateChat");
+        items10[1] = setInterstitialResult;
+        if (null != channelContentGate) {
+          let result = tmp3(10672).renderChannelContentGate(channelContentGate);
+          const tmp3Result2 = tmp3(10672);
+          tmp9(9).setInterstitial(channelContentGate.kind);
           const tmp9Result = tmp9(9);
         } else {
           function renderMessagesWrapper() {
             const obj = {
-              style: setInterstitial.messages,
+              style: closure_8.messages,
               channelId,
               stickyHeader: React6(ChatViewStickyHeaderDefault, { channel, ref, scrollToNewMessages }),
               children: null,
@@ -715,7 +822,7 @@ export default noop.memo(
               onPressKey,
               onScroll,
               ref,
-              style: setInterstitial.chat,
+              style: closure_8.chat,
               visibleMessagesWindowHandler,
               children: null,
             };
@@ -779,50 +886,35 @@ export default noop.memo(
           }
           if (channelIsLoading) {
             if (!GatewayConnectionStore.isConnected()) {
-              tmp18Result3 = renderMessagesWrapper();
+              result = renderMessagesWrapper();
             }
           }
           if (channelIsLoading) {
-            let obj6 = { style: setInterstitial.empty, title: null, body: null };
-            let intl = tmp2(1128).intl;
-            obj6.title = intl.string(tmp2(1128).t.ai6Lbr);
-            const intl2 = tmp2(1128).intl;
-            obj6.body = intl2.string(tmp2(1128).t["LTr+x9"]);
-            let tmp18Result4 = tmp18(tmp2(1202).EmptyState, obj6);
-            setInterstitial = tmp9(9).setInterstitial;
+            let obj5 = { style: tmp.empty, title: null, body: null };
+            let intl = tmp3(1128).intl;
+            obj5.title = intl.string(tmp3(1128).t.ai6Lbr);
+            const intl2 = tmp3(1128).intl;
+            obj5.body = intl2.string(tmp3(1128).t["LTr+x9"]);
+            let setInterstitialResult2 = setInterstitial(tmp3(1202).EmptyState, obj5);
+            tmp = tmp9(9);
+            setInterstitial = tmp.setInterstitial;
             setInterstitial("EmptyState");
-            const tmp9Result6 = tmp9(9);
-          } else if (isChannelContentGated) {
-            let obj7 = { guildId, channelId };
-            tmp18Result4 = tmp18(tmp9(11560), obj7);
-            tmp9(9).setInterstitial("GuildNSFW");
-            const tmp9Result7 = tmp9(9);
+          } else if (channel.isDirectory()) {
+            let obj6 = { channel, guildId };
+            setInterstitialResult2 = setInterstitial(tmp9(13340), obj6);
+            tmp9(9).setInterstitial("GuildDirectory");
+            const tmp9Result3 = tmp9(9);
+          } else if (channel.isForumLikeChannel()) {
+            let obj7 = { channel };
+            setInterstitialResult2 = setInterstitial(tmp9(13475), obj7);
+            tmp9(9).setInterstitial("ForumChannel");
+            const tmp9Result4 = tmp9(9);
           } else {
-            if (null != getSpoilerGatingChannelId) {
-              if (null != getSpoilerGatingChannelId) {
-                let obj8 = { guildId, channelId: getSpoilerGatingChannelId };
-                tmp18Result4 = tmp18(tmp9(13334), obj8, channelId);
-                tmp9(9).setInterstitial("ChannelSpoiler");
-                const tmp9Result8 = tmp9(9);
-              }
-            }
-            if (channel.isDirectory()) {
-              let obj9 = { channel, guildId };
-              tmp18Result4 = tmp18(tmp9(13335), obj9);
-              tmp9(9).setInterstitial("GuildDirectory");
-              const tmp9Result9 = tmp9(9);
-            } else if (channel.isForumLikeChannel()) {
-              let obj10 = { channel };
-              tmp18Result4 = tmp18(tmp9(13470), obj10);
-              tmp9(9).setInterstitial("ForumChannel");
-              const tmp9Result10 = tmp9(9);
-            } else {
-              tmp18Result4 = renderMessagesWrapper();
-            }
+            setInterstitialResult2 = renderMessagesWrapper();
           }
         }
-        items10[2] = tmp18Result3;
-        obj5.children = items10;
-        return tmp16(tmp17, obj5);
+        items10[2] = result;
+        obj4.children = items10;
+        return tmp16(channelId(12822), obj4);
       },
 );

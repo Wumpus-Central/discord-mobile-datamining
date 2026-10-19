@@ -194,7 +194,7 @@ function getActionSheetButtons(thread) {
           obj11.IconComponent = tmp5(tmp2[30]).TagsIcon;
           obj11.onPress = function onPress() {
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(10769, dependencyMap.paths),
+              asyncRequireImpl(10785, dependencyMap.paths),
               "ForumPostTagsActionSheet",
               { thread, parentChannel, canManageThread },
             );
@@ -370,7 +370,7 @@ function getActionSheetButtons(thread) {
             const combined = "muteSettings" + thread.id;
             obj2.guildId = thread.getGuildId();
             obj2.channelId = thread.id;
-            obj.openLazy(asyncRequireImpl(10771, dependencyMap.paths), combined, obj2);
+            obj.openLazy(asyncRequireImpl(10787, dependencyMap.paths), combined, obj2);
           };
           push3(obj19);
         }
@@ -675,7 +675,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp37 = onClose(5521)(thread);
-      const tmp38 = onClose(10776)(thread);
+      const tmp38 = onClose(10792)(thread);
       if (null != stateFromStores) {
         class O {
           constructor() {
@@ -830,7 +830,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[44] = tmp2;
         }
         const obj4 = { title: tmp37, icon: tmp39 };
-        const tmp47 = jsx(tmp(10777).ActionSheetIconHeader, { title: tmp37, icon: tmp39 });
+        const tmp47 = jsx(tmp(10793).ActionSheetIconHeader, { title: tmp37, icon: tmp39 });
         cResult[46] = tmp37;
         cResult[47] = tmp39;
         cResult[48] = tmp47;
@@ -944,7 +944,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         favorites: useFavoritesGuildChannelActionsDefault(thread),
       });
       obj17.startExpanded = thread(1630).isMetaQuest();
-      obj17.header = tmp20(thread(10777).ActionSheetIconHeader, { title: tmp18, icon: tmp21 });
+      obj17.header = tmp20(thread(10793).ActionSheetIconHeader, { title: tmp18, icon: tmp21 });
       obj17.children = arr8.map((buttons) => {
         buttons = buttons.buttons;
         return jsx(

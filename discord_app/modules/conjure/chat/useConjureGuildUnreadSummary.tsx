@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp10, tmp11);
       const tmpResult = stateFromStoresArray(504);
-      return stateFromStoresArray(10984).useConjureUnreadSummary(arg0);
+      return stateFromStoresArray(11001).useConjureUnreadSummary(arg0);
     }
   : function useConjureGuildUnreadSummary(arg0) {
       const items = [ReadStateStore, ConjureProjectStore];
@@ -80,5 +80,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj = stateFromStoresArray(504);
-      return stateFromStoresArray(10984).useConjureUnreadSummary(arg0);
+      return stateFromStoresArray(11001).useConjureUnreadSummary(arg0);
     };

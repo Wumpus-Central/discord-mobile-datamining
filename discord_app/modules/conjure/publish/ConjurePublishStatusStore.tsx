@@ -56,7 +56,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
   },
   CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function handleProjectPublishStatusUpdate(publishedRevision) {
     ({ projectId, surface, previewAppChannels } = publishedRevision);
-    let patchNotesSent = previewAppChannels;
+    patchNotesSent = previewAppChannels;
     publishedRevision = publishedRevision.publishedRevision;
     ({ published, hasUnpublishedChanges } = publishedRevision);
     if (publishedRevision === undefined) {
@@ -70,7 +70,10 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
     if (flag === undefined) {
       flag = false;
     }
-    patchNotesSent = publishedRevision.patchNotesSent;
+    ({ patchNotesSent, newUiUnpublished } = publishedRevision);
+    if (newUiUnpublished === undefined) {
+      newUiUnpublished = false;
+    }
     let str = "unpublished";
     if (published) {
       let str2 = "up_to_date";
@@ -117,7 +120,9 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
               if (value.publishedAt === publishedAt) {
                 if (value.publishing === flag) {
                   if (value.patchNotesSent === patchNotesSent) {
-                    return false;
+                    if (value.newUiUnpublished === newUiUnpublished) {
+                      return false;
+                    }
                   }
                 }
               }
@@ -134,6 +139,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
       publishedAt,
       publishing: flag,
       patchNotesSent,
+      newUiUnpublished,
     });
   },
   CONJURE_PROJECT_PUBLISH_START: function handleProjectPublishStart(projectId) {

@@ -3,7 +3,7 @@ import c from "../../../_runtime/00576_c.js";
 import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
 import SoundUtils from "../sound_playback/SoundUtils.tsx";
 import VoiceConnectFeedbackExperimentDefault from "../voice_calls/VoiceConnectFeedbackExperiment.tsx";
-import _modDef18071 from "../../../_runtime/metro/18071__.js";
+import _modDef18075 from "../../../_runtime/metro/18075__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -848,22 +848,22 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             keys = [];
           }
-          const tmp8 = _modDef18071(rtcUserIds, rtcConnected.rtcUserIds);
+          const tmp8 = _modDef18075(rtcUserIds, rtcConnected.rtcUserIds);
           let rtcConnected3 = rtcConnected.rtcConnected;
           if (rtcConnected3) {
             rtcConnected3 = rtcConnected.rtcUserIds.length <= c31;
           }
           if (rtcConnected3) {
-            rtcConnected3 = _modDef18071(tmp8, keys).length > 0;
+            rtcConnected3 = _modDef18075(tmp8, keys).length > 0;
           }
           let tmp10 = rtcConnected.rtcConnected && rtcConnected;
           if (tmp10) {
             tmp10 = rtcConnected.rtcUserIds.length <= c31;
           }
           if (tmp10) {
-            tmp10 = _modDef18071(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
+            tmp10 = _modDef18075(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
           }
-          streamingUserIds.current = _modDef18071(keys, tmp8);
+          streamingUserIds.current = _modDef18075(keys, tmp8);
           if (rtcConnected.voiceChannelId === voiceChannelId) {
             if (null != voiceChannelId) {
               channel = ChannelStore.getChannel(voiceChannelId);
@@ -1086,22 +1086,22 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             keys = [];
           }
-          const tmp8 = _modDef18071(rtcUserIds, rtcConnected.rtcUserIds);
+          const tmp8 = _modDef18075(rtcUserIds, rtcConnected.rtcUserIds);
           let rtcConnected3 = rtcConnected.rtcConnected;
           if (rtcConnected3) {
             rtcConnected3 = rtcConnected.rtcUserIds.length <= c31;
           }
           if (rtcConnected3) {
-            rtcConnected3 = _modDef18071(tmp8, keys).length > 0;
+            rtcConnected3 = _modDef18075(tmp8, keys).length > 0;
           }
           let tmp10 = rtcConnected.rtcConnected && rtcConnected;
           if (tmp10) {
             tmp10 = rtcConnected.rtcUserIds.length <= c31;
           }
           if (tmp10) {
-            tmp10 = _modDef18071(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
+            tmp10 = _modDef18075(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
           }
-          streamingUserIds.current = _modDef18071(keys, tmp8);
+          streamingUserIds.current = _modDef18075(keys, tmp8);
           if (rtcConnected.voiceChannelId === voiceChannelId) {
             if (null != voiceChannelId) {
               channel = ChannelStore.getChannel(voiceChannelId);

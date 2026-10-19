@@ -354,7 +354,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             return guild_id;
           }
         }
-        const avatarSpeakingColor = tmp(11284).useAvatarSpeakingColor(obj3);
+        const avatarSpeakingColor = tmp(11302).useAvatarSpeakingColor(obj3);
         if (cResult[9] === stateFromStores1) {
           class C {
             constructor() {
@@ -401,7 +401,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = stateFromStores1;
         cResult[10] = stateFromStores;
         cResult[11] = avatarURL;
-        const tmpResult6 = tmp(11284);
+        const tmpResult6 = tmp(11302);
       }
       obj3 = { userId, guildId: stateFromStores1 };
       cResult[6] = stateFromStores1;
@@ -430,17 +430,17 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = userId(504);
       const avatarDecoration = userId(6330).useAvatarDecoration(stateFromStores, stateFromStores1);
       const obj4 = userId(6330);
-      const avatarSpeakingColor = userId(11284).useAvatarSpeakingColor({ userId, guildId: stateFromStores1 });
+      const avatarSpeakingColor = userId(11302).useAvatarSpeakingColor({ userId, guildId: stateFromStores1 });
       const obj2 = { userId, guildId: stateFromStores1, avatarURI: null, location: "ExternalPipViewVideo-native" };
       let avatarURL;
-      const obj5 = userId(11284);
+      const obj5 = userId(11302);
       const tmp7 = channelId;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
       }
       obj2.avatarURI = avatarURL;
-      const tmp8 = channelId(18133);
-      ({ gradientStops, backgroundColor } = channelId(18133)(obj2));
+      const tmp8 = channelId(18137);
+      ({ gradientStops, backgroundColor } = channelId(18137)(obj2));
       const items2 = [tmp.user, backgroundColor];
       const obj6 = {
         style: noop.useMemo(() => {
@@ -630,7 +630,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const children = [
-        closure_12(streamReady(11276), {
+        closure_12(streamReady(11295), {
           useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
           style: memo,
           streamId,

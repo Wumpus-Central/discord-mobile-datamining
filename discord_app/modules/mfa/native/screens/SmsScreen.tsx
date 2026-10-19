@@ -207,10 +207,10 @@ export default function SmsScreen(mfaChallenge) {
     }
   };
   const tmp2 = finish(6903)();
-  const screenStyles = finish(16738).useScreenStyles(tmp2);
+  const screenStyles = finish(16742).useScreenStyles(tmp2);
   const tmp4 = first(noop.useState(null), 2);
   dependencyMap = tmp4[1];
-  let obj = finish(16738);
+  let obj = finish(16742);
   [tmp6, c3] = first(noop.useState(false), 2);
   const tmp7 = first(noop.useState(""), 2);
   first = tmp7[0];
@@ -260,7 +260,7 @@ export default function SmsScreen(mfaChallenge) {
   let obj4 = {
     autoFocus: true,
     autoCapitalize: "characters",
-    maxLength: mfaChallenge(16741).SMS_CODE_LENGTH,
+    maxLength: mfaChallenge(16745).SMS_CODE_LENGTH,
     autoComplete: "sms-otp",
     textContentType: "oneTimeCode",
     keyboardType: "number-pad",
@@ -292,7 +292,7 @@ export default function SmsScreen(mfaChallenge) {
   obj3.children = items1;
   obj2.input = closure_9(c6, obj3);
   let obj6 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  const tmp15 = finish(16737);
+  const tmp15 = finish(16741);
   const intl6 = mfaChallenge(1128).intl;
   obj6.text = intl6.string(mfaChallenge(1128).t.geKm7t);
   let tmp17 = tmp6;
@@ -307,10 +307,10 @@ export default function SmsScreen(mfaChallenge) {
     tmp6 = tmp12;
   }
   if (!tmp6) {
-    tmp6 = first.length !== tmp8(16741).SMS_CODE_LENGTH;
+    tmp6 = first.length !== tmp8(16745).SMS_CODE_LENGTH;
   }
   obj6.disabled = tmp6;
-  obj2.submit = handleChange(finish(16736), obj6);
+  obj2.submit = handleChange(finish(16740), obj6);
   obj2.screenProps = { mfaChallenge, finish };
   return handleChange(tmp15, obj2);
 }

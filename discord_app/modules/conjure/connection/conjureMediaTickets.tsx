@@ -1,4 +1,5 @@
 // discord_app/modules/conjure/connection/conjureMediaTickets.tsx
+import ConjureWorkerTickets from "ConjureWorkerTickets.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -57,9 +58,11 @@ export const getMediaTicket = function getMediaTicket(projectId) {
     return cleanupPromise;
   }
 };
-export const retireMediaTicket = function retireMediaTicket(arg0) {
-  map.delete(arg0);
+export const retireMediaTicket = function retireMediaTicket(projectId) {
+  map.delete(projectId);
+  ConjureWorkerTickets.forgetEarlyTicket(projectId);
 };
 export const clearMediaTickets = function clearMediaTickets() {
   map.clear();
+  ConjureWorkerTickets.forgetEarlyTickets();
 };

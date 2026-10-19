@@ -738,7 +738,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores) {
           let MicrophoneIcon = tmp2(9078).MicrophoneSlashIcon;
         } else {
-          MicrophoneIcon = tmp2(11474).MicrophoneIcon;
+          MicrophoneIcon = tmp2(11492).MicrophoneIcon;
         }
         const obj6 = { children: null };
         obj5.icon = MicrophoneIcon;

@@ -84,7 +84,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp14;
           tmp11 = tmp14;
         }
-        const obj3 = { style: tmp4.raisedHand, source: tmp6(11389), color: PRIMARY_800 };
+        const obj3 = { style: tmp4.raisedHand, source: tmp6(11407), color: PRIMARY_800 };
         const tmp10 = hasOwnProperty(native.Icon, obj3);
         cResult[3] = PRIMARY_800;
         cResult[4] = tmp4.raisedHand;
@@ -116,7 +116,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = {
         style: items,
-        children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11389), color: PRIMARY_800 }),
+        children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11407), color: PRIMARY_800 }),
       };
       items[1] = activeBackground;
       return hasOwnProperty(View, obj);
@@ -219,7 +219,7 @@ export default noop.memo(
                                   if (cResult[38] !== blocked) {
                                     let tmp41 = blocked;
                                     if (blocked) {
-                                      tmp41 = closure_5(tmp(11533).BlockedStatus, {});
+                                      tmp41 = closure_5(tmp(11551).BlockedStatus, {});
                                     }
                                     cResult[38] = blocked;
                                     cResult[39] = tmp41;
@@ -230,7 +230,7 @@ export default noop.memo(
                                   if (cResult[40] !== ignored) {
                                     let tmp44 = ignored;
                                     if (ignored) {
-                                      tmp44 = closure_5(tmp(11533).IgnoredStatus, {});
+                                      tmp44 = closure_5(tmp(11551).IgnoredStatus, {});
                                     }
                                     cResult[40] = ignored;
                                     cResult[41] = tmp44;
@@ -276,7 +276,7 @@ export default noop.memo(
                                               let tmp58 = stateFromStores;
                                               if (stateFromStores) {
                                                 const obj3 = {
-                                                  source: tmp5(11554),
+                                                  source: tmp5(11572),
                                                   size: tmp(1202).Icon.Sizes.SMALL,
                                                   color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                 };

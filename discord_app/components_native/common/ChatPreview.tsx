@@ -22,13 +22,13 @@ import handleMessagesTapLink from "../../modules/messages/native/handlers/handle
 import showLongPressURLActionSheetDefault from "../../modules/links/native/showLongPressURLActionSheet.tsx";
 import MessageDataSnowflakeUtils from "../../modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx";
 import showLongPressMessageActionSheet from "../../modules/messages/native/long_press/showLongPressMessageActionSheet.tsx";
+import GuildNSFWDefault from "../warnings/GuildNSFW.tsx";
+import ChannelSpoilerDefault from "../../modules/spoiler_channels/native/ChannelSpoiler.tsx";
 import handleMessagesTapImage from "../../modules/messages/native/handlers/handleMessagesTapImage.tsx";
 import handleMessagesTapChannel from "../../modules/messages/native/handlers/handleMessagesTapChannel.tsx";
 import handleMessagesLongPressChannel from "../../modules/messages/native/handlers/handleMessagesLongPressChannel.tsx";
 import contentHandlers2 from "../chat/contentHandlers.tsx";
-import GuildNSFWDefault from "../warnings/GuildNSFW.tsx";
 import ChatDefault from "../../modules/chat/native/Chat.android.tsx";
-import ChannelSpoilerDefault from "../../modules/spoiler_channels/native/ChannelSpoiler.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../modules/a11y/AccessibilityStore.tsx";
 import ActionSheetStore from "../../modules/action_sheet/native/ActionSheetStore.tsx";
@@ -285,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "test",
           shouldInitialScroll: "Array",
-          animated: "function DetailsHeaderTsx1(){const{height}=this.__closure;return{height:height.get()};}",
-          scrollPosition: "toCharArray$esjava$1",
-          focusTargetId: "toCharArray$esjava$1",
+          animated: 0,
+          scrollPosition: 2,
+          focusTargetId: 0,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -362,9 +362,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "System",
+        messageChannel: "DM_SETTINGS_UPSELL_SHOW",
         selectedChannelId: null,
-        tapLinkData: "ix",
+        tapLinkData: "sm",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

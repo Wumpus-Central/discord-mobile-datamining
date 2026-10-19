@@ -13,8 +13,8 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj4 = { value, done: true };
-      return obj4;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "IconComponent", done: null };
     }
@@ -27,25 +27,24 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           dependencyMap = tmp3;
           closure_2 = tmp7;
           closure_130_0 = closure_1;
-          let enabled;
-          closure_130_2 = undefined;
+          closure_130_1 = undefined;
           c5 = 1;
           c6 = 2;
           c7 = 1;
-          const obj7 = { value: uploadAppLogFiles(closure_0), done: false };
-          return obj7;
+          const obj6 = { value: uploadAppLogFiles(closure_0), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c5 = 0;
-        closure_130_3 = closure_4;
-        if (closure_130_3 instanceof closure_131_0(closure_131_3[4]).UploadVoiceDebugLogsError) {
-          closure_130_2 = (function uploadErrorToAVUnderlyingError(code) {
+        closure_130_2 = closure_4;
+        if (closure_130_2 instanceof closure_131_0(closure_131_3[4]).UploadVoiceDebugLogsError) {
+          closure_130_1 = (function uploadErrorToAVUnderlyingError(code) {
             code = code.code;
             if (closure_1_0(dependencyMap[4]).UploadErrorCodes.GENERAL === code) {
               return closure_1_0(dependencyMap[5]).AVUnderlyingError.UploadErrorGeneral;
@@ -58,15 +57,15 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
             } else if (closure_1_0(dependencyMap[4]).UploadErrorCodes.READ === code) {
               return closure_1_0(dependencyMap[5]).AVUnderlyingError.UploadErrorRead;
             }
-          })(closure_130_3);
+          })(closure_130_2);
         }
-        const obj8 = {
+        const obj7 = {
           type: closure_131_0(closure_131_3[5]).AVError.DEBUG_LOG_UPLOAD_FAILED,
-          underlyingError: closure_130_2,
-          errorMessage: closure_130_3.message,
+          underlyingError: closure_130_1,
+          errorMessage: closure_130_2.message,
         };
-        closure_131_0(closure_131_3[5]).reportAVError(obj8);
-        throw closure_130_3;
+        closure_131_0(closure_131_3[5]).reportAVError(obj7);
+        throw closure_130_2;
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c7 = 3;
@@ -74,18 +73,16 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
-          enabled = closure_131_1(closure_131_3[6]).getConfig({ location: "uploadDebugLogFiles" }).enabled;
-          const obj2 = closure_131_1(closure_131_3[6]);
           c6 = 3;
           c7 = 1;
-          const obj10 = {
-            value: closure_131_0(closure_131_3[7]).uploadRtcLogFiles(14680064, enabled, closure_130_0),
+          const obj9 = {
+            value: closure_131_0(closure_131_3[6]).uploadRtcLogFiles(14680064, closure_130_0),
             done: false,
           };
-          return obj10;
+          return obj9;
         }
       } else if (arg0 === 1) {
         c7 = 3;
@@ -100,11 +97,11 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
         c7 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp38) {
-      closure_4 = tmp38;
+    } catch (tmp35) {
+      closure_4 = tmp35;
       if (tmp4 === c5) {
         c7 = tmp2;
-        throw tmp38;
+        throw tmp35;
       } else {
         c6 = tmp;
       }
@@ -176,10 +173,10 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
             closure_130_2 = str;
             c5 = 1;
             c5 = 4;
-            closure_131_1(closure_131_3[9])().then((result) => closure_1_1(closure_1_3[10])(result, true));
+            closure_131_1(closure_131_3[8])().then((result) => closure_1_1(closure_1_3[9])(result, true));
             c6 = 7;
             c7 = 1;
-            const promise = closure_131_1(closure_131_3[9])();
+            const promise = closure_131_1(closure_131_3[8])();
           }
         }
       } else {
@@ -200,14 +197,14 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
               const _HermesInternal2 = HermesInternal;
               closure_130_3 = "Push logs failed: " + closure_4;
               c5 = 5;
-              const consumeLogsResult = closure_131_0(closure_131_3[11]).consumeLogs();
+              const consumeLogsResult = closure_131_0(closure_131_3[10]).consumeLogs();
               c1 = consumeLogsResult;
               if (consumeLogsResult == null) {
                 c1 = "";
               }
               closure_130_4 = c1;
               c5 = 1;
-              const obj5 = closure_131_0(closure_131_3[11]);
+              const obj5 = closure_131_0(closure_131_3[10]);
             } else if (5 === tmp11) {
               if (arg0 === 1) {
                 c7 = 3;
@@ -259,11 +256,11 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
                 c5 = 0;
               }
               closure_130_7 = tmp12;
-              const tmp42 = closure_131_1(closure_131_3[13])(closure_130_7);
-              const result = closure_131_0(closure_131_3[14]).serializeComponentRenderAverages();
+              const tmp42 = closure_131_1(closure_131_3[12])(closure_130_7);
+              const result = closure_131_0(closure_131_3[13]).serializeComponentRenderAverages();
               const _JSON = JSON;
               const _JSON2 = JSON;
-              const json = JSON.stringify(closure_131_1(closure_131_3[15])(), undefined, 2);
+              const json = JSON.stringify(closure_131_1(closure_131_3[14])(), undefined, 2);
               const _HermesInternal3 = HermesInternal;
               closure_130_8 =
                 "\n    " +
@@ -283,12 +280,12 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
                 "\n\n    Push Notifications:\n    " +
                 closure_130_3 +
                 "\n    ";
-              const obj6 = closure_131_0(closure_131_3[14]);
-              closure_131_2(closure_131_3[8]).clear();
+              const obj6 = closure_131_0(closure_131_3[13]);
+              closure_131_2(closure_131_3[7]).clear();
               const obj11 = { category: closure_130_0, filename: "discord_app_logs", body: closure_130_8 };
               c6 = 9;
               c7 = 1;
-              const obj12 = { value: closure_131_1(closure_131_3[16])(obj11), done: false };
+              const obj12 = { value: closure_131_1(closure_131_3[15])(obj11), done: false };
               return obj12;
             }
             closure_130_5 = closure_130_1.length + closure_130_2.length + closure_130_3.length + closure_130_4.length;
@@ -308,11 +305,11 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
               closure_130_4 = slice4(length4 - Math.floor(closure_130_4.length * closure_130_6));
             }
             tmp12 = null;
-            if (null != closure_131_0(closure_131_3[12]).default) {
+            if (null != closure_131_0(closure_131_3[11]).default) {
               c6 = 8;
               c7 = 1;
               const obj13 = {
-                value: closure_131_0(closure_131_3[12]).default.getAppFirstVisibleTimestamp(),
+                value: closure_131_0(closure_131_3[11]).default.getAppFirstVisibleTimestamp(),
                 done: false,
               };
               return obj13;

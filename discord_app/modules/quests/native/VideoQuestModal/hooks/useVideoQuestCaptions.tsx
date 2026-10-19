@@ -31,9 +31,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
             value
               .then((text) => {
                 try {
-                  closure_1_2(url(16186).parseVtt(text.text).cues);
+                  closure_1_2(url(16190).parseVtt(text.text).cues);
                   dependencyMap(constants.SUCCESS);
-                  const obj = url(16186);
+                  const obj = url(16190);
                 } catch (err) {
                   dependencyMap(constants.ERROR);
                 }
@@ -43,9 +43,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
               });
             const nextPromise = value.then((text) => {
               try {
-                closure_1_2(url(16186).parseVtt(text.text).cues);
+                closure_1_2(url(16190).parseVtt(text.text).cues);
                 dependencyMap(constants.SUCCESS);
-                const obj = url(16186);
+                const obj = url(16190);
               } catch (err) {
                 dependencyMap(constants.ERROR);
               }
@@ -97,9 +97,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
           value
             .then((text) => {
               try {
-                closure_1_2(url(16186).parseVtt(text.text).cues);
+                closure_1_2(url(16190).parseVtt(text.text).cues);
                 dependencyMap(constants.SUCCESS);
-                const obj = url(16186);
+                const obj = url(16190);
               } catch (err) {
                 dependencyMap(constants.ERROR);
               }
@@ -109,9 +109,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
             });
           const nextPromise = value.then((text) => {
             try {
-              closure_1_2(url(16186).parseVtt(text.text).cues);
+              closure_1_2(url(16190).parseVtt(text.text).cues);
               dependencyMap(constants.SUCCESS);
-              const obj = url(16186);
+              const obj = url(16190);
             } catch (err) {
               dependencyMap(constants.ERROR);
             }

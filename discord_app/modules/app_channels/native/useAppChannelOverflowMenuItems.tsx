@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === application_id.id) {
           let tmp4 = cResult[2];
         }
-        const tmp6 = application_id(11697)(application_id, tmp4);
+        const tmp6 = application_id(11716)(application_id, tmp4);
         dependencyMap = tmp6;
         if (null != application_id) {
           const items = [];
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[9] !== tmp6) {
               const obj3 = {
                 label: tmp11,
-                IconComponent: tmp(11614).RefreshIcon,
+                IconComponent: tmp(11630).RefreshIcon,
                 action() {
                   return restartFrames.restartFrame(closure_2);
                 },
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               action = cResult[11];
             }
             if (cResult[12] !== tmp6) {
-              const obj4 = { label: action, IconComponent: tmp(11366).DoorExitIcon, action: null };
+              const obj4 = { label: action, IconComponent: tmp(11384).DoorExitIcon, action: null };
               action = function action() {
                 return leaveFrame.leaveFrame(id.id);
               };
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      const tmp3 = application_id(11697)(application_id, memo);
+      const tmp3 = application_id(11716)(application_id, memo);
       dependencyMap = tmp3;
       const items1 = [application_id, application_id, tmp3];
       return noop.useMemo(() => {

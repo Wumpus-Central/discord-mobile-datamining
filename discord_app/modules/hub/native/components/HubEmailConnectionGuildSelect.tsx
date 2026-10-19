@@ -15,7 +15,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13423).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13428).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5191);
@@ -413,7 +413,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(13437).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(13442).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {

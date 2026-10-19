@@ -127,10 +127,10 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
 };
 const identity = fn(1269);
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "props",
-  isVibrationsEnabled: "colors",
-  isSoundsEnabled: "join",
-  isNotifyEveryTime: "c",
+  isLightsEnabled: "ix",
+  isVibrationsEnabled: "channelId",
+  isSoundsEnabled: "shapes",
+  isNotifyEveryTime: "Array",
 }));
 fn(558);
 let ReactCompilerGating = fn(558);

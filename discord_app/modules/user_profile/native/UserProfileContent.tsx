@@ -70,7 +70,7 @@ function CustomStatusBubble(guildId) {
   let tmp7 = null;
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(10838, dependencyMap.paths),
+      asyncRequireImpl(10854, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -127,7 +127,7 @@ function RemoveGameFriendIconButton(user) {
   const items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14113, dependencyMap.paths),
+      asyncRequireImpl(14117, dependencyMap.paths),
       "UserProfileGameFriendActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -283,7 +283,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === user.id) {
           let tmp9 = cResult[2];
         }
-        const variantProps = tmp(14115).useBadgeDirectoryNuxCoachmarkVariant(tmp9).variantProps;
+        const variantProps = tmp(14119).useBadgeDirectoryNuxCoachmarkVariant(tmp9).variantProps;
         if (cResult[3] !== variantProps) {
           if (null != variantProps) {
             const items = [tmp(2052).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER];
@@ -298,9 +298,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           [tmp14, tmp15] = tmp(7376).useSelectedDismissibleContent(cResult[4]);
           const tmp16 = tmp14 === tmp(2052).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER;
           const tmp13 = _slicedToArray(tmp(7376).useSelectedDismissibleContent(cResult[4]), 2);
-          const badgeDirectoryNuxEntryPoint = tmp(14118).useBadgeDirectoryNuxEntryPoint(tmp16, tmp15);
+          const badgeDirectoryNuxEntryPoint = tmp(14122).useBadgeDirectoryNuxEntryPoint(tmp16, tmp15);
           ({ entryPointRef, onOpenBadgeDirectory } = badgeDirectoryNuxEntryPoint);
-          const tmpResult5 = tmp(14118);
+          const tmpResult5 = tmp(14122);
           const name = tmp5(5509).useName(guildId, channelId.channelId, user);
           if (cResult[5] === name) {
             if (cResult[6] === displayNameOverride) {
@@ -449,7 +449,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                           }
                                           obj4.markAsDismissed = tmp15;
-                                          tmp37 = closure_20(tmp5(14119), obj4);
+                                          tmp37 = closure_20(tmp5(14123), obj4);
                                         }
                                         class G {
                                           constructor() {
@@ -498,7 +498,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 onOpenBadgeDirectory,
                 pendingDisplayNameStyles,
               };
-              const tmp35 = closure_20(tmp5(10842), obj5);
+              const tmp35 = closure_20(tmp5(10858), obj5);
               cResult[14] = badgeContainerBackground;
               cResult[15] = entryPointRef;
               cResult[16] = guildId;
@@ -545,7 +545,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           tmp19 = tmp21;
           const tmp5Result = tmp5(5509);
         }
-        const tmpResult = tmp(14115);
+        const tmpResult = tmp(14119);
       }
       const obj6 = { userId: user.id, enabled: tmp4, fetchCatalog: false, location: "UserProfileContent" };
       cResult[0] = tmp4;
@@ -585,8 +585,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         showBadgeDirectoryNuxCoachmark = flag;
       }
       obj3.enabled = showBadgeDirectoryNuxCoachmark;
-      const variantProps = userTag(14115).useBadgeDirectoryNuxCoachmarkVariant(obj3).variantProps;
-      const obj2 = userTag(14115);
+      const variantProps = userTag(14119).useBadgeDirectoryNuxCoachmarkVariant(obj3).variantProps;
+      const obj2 = userTag(14119);
       if (null != variantProps) {
         const items = [tmp5(2052).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER];
         let items1 = items;
@@ -597,9 +597,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       [tmp8, tmp9] = userTag(7376).useSelectedDismissibleContent(items1);
       const tmp10 = tmp8 === userTag(2052).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER;
       const tmp7 = _slicedToArray(userTag(7376).useSelectedDismissibleContent(items1), 2);
-      const badgeDirectoryNuxEntryPoint = userTag(14118).useBadgeDirectoryNuxEntryPoint(tmp10, tmp9);
+      const badgeDirectoryNuxEntryPoint = userTag(14122).useBadgeDirectoryNuxEntryPoint(tmp10, tmp9);
       ({ entryPointRef, onOpenBadgeDirectory } = badgeDirectoryNuxEntryPoint);
-      const tmp5Result3 = userTag(14118);
+      const tmp5Result3 = userTag(14122);
       const name = trackUserProfileAction(5509).useName(guildId, channelId, user);
       let tmp13 = name;
       if (null != displayNameOverride) {
@@ -673,11 +673,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.badgeDirectoryEntryPointRef = entryPointRef;
       obj4.onOpenBadgeDirectory = onOpenBadgeDirectory;
       obj4.pendingDisplayNameStyles = pendingDisplayNameStyles;
-      const children = [closure_20(trackUserProfileAction(10842), obj4)];
+      const children = [closure_20(trackUserProfileAction(10858), obj4)];
       let tmp17Result = null != variantProps;
       if (tmp17Result) {
         const obj5 = { targetRef: entryPointRef, userId: user.id, variantProps, visible: tmp10, markAsDismissed: tmp9 };
-        tmp17Result = closure_20(tmp(14119), obj5);
+        tmp17Result = closure_20(tmp(14123), obj5);
       }
       children[1] = tmp17Result;
       return closure_22(closure_21, { children });
@@ -710,7 +710,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = guildId(8588);
       const stateFromStores = guildId(504).useStateFromStores(first, tmp8);
-      const tmp10 = trackUserProfileAction(10951)();
+      const tmp10 = trackUserProfileAction(10967)();
       dependencyMap = tmp10;
       if (cResult[3] !== stateFromStores) {
         const obj3 = { guild: stateFromStores };
@@ -720,7 +720,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp11 = cResult[4];
       }
-      const tmp12 = trackUserProfileAction(10951)(tmp11);
+      const tmp12 = trackUserProfileAction(10967)(tmp11);
       closure_3 = tmp12;
       if (cResult[5] === tmp10) {
         if (cResult[6] === trackUserProfileAction) {
@@ -772,7 +772,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                   primaryButton: tmp22,
                   secondaryButton: tmp25,
                 };
-                const tmp32 = closure_20(tmp4(14043), obj5);
+                const tmp32 = closure_20(tmp4(14047), obj5);
                 cResult[20] = tmp5.primaryButtons;
                 cResult[21] = tmp22;
                 cResult[22] = tmp25;
@@ -834,8 +834,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = guildId(8588);
       const items = [GuildStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-      dependencyMap = trackUserProfileAction(10951)();
-      closure_3 = trackUserProfileAction(10951)({ guild: stateFromStores });
+      dependencyMap = trackUserProfileAction(10967)();
+      closure_3 = trackUserProfileAction(10967)({ guild: stateFromStores });
       const obj3 = {
         style: tmp3.primaryButtons,
         maxWidth: ACTION_SHEET_MAX_WIDTH,
@@ -844,7 +844,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj2 = guildId(504);
       const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-      const tmp7 = trackUserProfileAction(14043);
+      const tmp7 = trackUserProfileAction(14047);
       obj4.icon = closure_20(guildId(10023).PencilIcon, {
         size: "sm",
         color: trackUserProfileAction(587).colors.WHITE,

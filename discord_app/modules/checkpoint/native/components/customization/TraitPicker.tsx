@@ -24,11 +24,11 @@ const jsxProd = fn(21);
 let c12 = 600;
 const PX_12 = nativeDefault.space.PX_12;
 const createStyles = fn(5191);
-let obj2 = { container: { gap: fn(12776).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
-let obj3 = { gap: fn(12776).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(12776).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(12776).CONTENT_INSET };
-obj2.details = { paddingHorizontal: fn(12776).CONTENT_INSET };
+let obj2 = { container: { gap: fn(12793).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
+let obj3 = { gap: fn(12793).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(12793).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(12793).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(12793).CONTENT_INSET };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
@@ -169,7 +169,7 @@ const __initData2 = {
   code: "function TraitPickerTsx2(){const{INTRO_DETAILS_DURATION_MS,Easing,withTiming,isDetailsVisible,INTRO_DETAILS_OFFSET_Y}=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isDetailsVisible?1:0,timing),transform:[{translateY:withTiming(isDetailsVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};}",
 };
 ReactCompilerGating = fn(558);
-let obj5 = { paddingHorizontal: fn(12776).CONTENT_INSET };
+let obj5 = { paddingHorizontal: fn(12793).CONTENT_INSET };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitPicker.tsx");
 
@@ -728,8 +728,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp2Result7 = selectedOptionId(504);
-      const visibleTraitRarities = selectedOptionId(12738).getVisibleTraitRarities(
-        selectedOptionId(12737).CUSTOMIZATION_OPTION_TRAITS[customizationOption],
+      const visibleTraitRarities = selectedOptionId(12755).getVisibleTraitRarities(
+        selectedOptionId(12754).CUSTOMIZATION_OPTION_TRAITS[customizationOption],
         stateFromStores1,
       );
       const items6 = [];
@@ -916,7 +916,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       num8 = 11;
       cResult[11] = { visibleTraitOptions: items6, totalCount: num7, earnedCount: num8 };
       const obj6 = { visibleTraitOptions: items6, totalCount: num7, earnedCount: num8 };
-      const tmp2Result8 = selectedOptionId(12738);
+      const tmp2Result8 = selectedOptionId(12755);
     }
   : function TraitPicker(customizationOption) {
       customizationOption = customizationOption.customizationOption;

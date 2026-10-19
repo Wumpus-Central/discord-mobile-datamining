@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef13865 from "../../../../../../../_runtime/metro/13865__.js";
+import _modDef13869 from "../../../../../../../_runtime/metro/13869__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(13863).CrunchyrollLinkModalScenes;
+let closure_4 = fn(13867).CrunchyrollLinkModalScenes;
 const Constants = fn(1087);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = navigation(1505);
       const tmp17 = jsx(navigation(9516).TwoWayLinkLanding, {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef13865,
+        img: _modDef13869,
         imgStyle: tmp4.image,
         headerConnect: tmp8,
         body: tmp9,
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp16 = tmp17;
       const obj5 = {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef13865,
+        img: _modDef13869,
         imgStyle: tmp4.image,
         headerConnect: tmp8,
         body: tmp9,
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef13865,
+        img: _modDef13869,
         imgStyle: tmp.image,
         headerConnect: null,
         body: null,
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.valueProps = memo;
       return jsx(navigation(9516).TwoWayLinkLanding, {
         platformType: constants2.CRUNCHYROLL,
-        img: _modDef13865,
+        img: _modDef13869,
         imgStyle: tmp.image,
         headerConnect: null,
         body: null,

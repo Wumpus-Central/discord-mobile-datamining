@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
-import _modDef13867 from "../../../../../../../_runtime/metro/13867__.js";
+import _modDef13871 from "../../../../../../../_runtime/metro/13871__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const constants = fn(13863).CrunchyrollLinkModalScenes;
+const constants = fn(13867).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1087).PlatformTypes;
 const redirectDestination = fn(8730).CRUNCHYROLL_LINK_DEST_ORIGIN;
 const jsx = fn(21).jsx;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: N,
         onNext: tmp6,
-        img: _modDef13867,
+        img: _modDef13871,
         imgStyle: tmp4.image,
         title: tmp8,
         body: tmp9,
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: N,
         onNext: tmp6,
-        img: _modDef13867,
+        img: _modDef13871,
         imgStyle: tmp4.image,
         title: tmp8,
         body: tmp9,
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: N,
         onNext: tmp6,
-        img: _modDef13867,
+        img: _modDef13871,
         imgStyle: tmp4.image,
         title: tmp8,
         body: tmp9,
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: callback1,
         onNext: callback,
-        img: _modDef13867,
+        img: _modDef13871,
         imgStyle: tmp.image,
         title: null,
         body: null,
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: callback1,
         onNext: callback,
-        img: _modDef13867,
+        img: _modDef13871,
         imgStyle: tmp.image,
         title: null,
         body: null,

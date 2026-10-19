@@ -353,17 +353,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
         }
       }, items2);
-      let obj = onChangeText(10932);
-      const animationDelayedAutoFocus = onChangeText(11980).useAnimationDelayedAutoFocus(autoFocus, () => {
+      let obj = onChangeText(10948);
+      const animationDelayedAutoFocus = onChangeText(11999).useAnimationDelayedAutoFocus(autoFocus, () => {
         const current = ref.current;
         if (current != null) {
           current.focus();
         }
       });
-      if (obj.useAppLauncherContext().entrypoint === onChangeText(10933).AppLauncherEntrypoint.VOICE) {
+      if (obj.useAppLauncherContext().entrypoint === onChangeText(10949).AppLauncherEntrypoint.VOICE) {
         let TextInput = tmp4(1202).TextInput;
       } else {
-        TextInput = guildId(11985);
+        TextInput = guildId(12004);
       }
       const items3 = [tmp.container, ,];
       if (hasError) {
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        tmp14Result = tmp14(guildId(11986), obj5);
+        tmp14Result = tmp14(guildId(12005), obj5);
       }
       items4[1] = tmp14Result;
       obj3.children = items4;

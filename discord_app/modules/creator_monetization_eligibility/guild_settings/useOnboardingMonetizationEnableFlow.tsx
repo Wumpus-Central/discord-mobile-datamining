@@ -108,9 +108,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp20 = refresh(18931);
-      ({ error, loading, createEnableRequest, submittedRequest } = refresh(18931)(undefined));
-      const tmp20Result = refresh(18931)(undefined);
+      const tmp20 = refresh(18935);
+      ({ error, loading, createEnableRequest, submittedRequest } = refresh(18935)(undefined));
+      const tmp20Result = refresh(18935)(undefined);
       if (features != null) {
         class T {
           constructor() {
@@ -123,11 +123,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp19ResultResult = refresh(18932)(undefined);
+      const tmp19ResultResult = refresh(18936)(undefined);
       ({ loading: loading2, error: error2, refresh } = tmp19ResultResult);
       const eligibility = tmp19ResultResult.eligibility;
-      const tmp19Result = refresh(18932);
-      ({ isApplicationRejected, requestCooldownDuration } = refresh(18933)(eligibility));
+      const tmp19Result = refresh(18936);
+      ({ isApplicationRejected, requestCooldownDuration } = refresh(18937)(eligibility));
       if (features != null) {
         class T {
           constructor() {
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp24 = refresh(18933)(eligibility);
+      const tmp24 = refresh(18937)(eligibility);
       if (features != null) {
         class T {
           constructor() {
@@ -492,18 +492,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (features != null) {
         id = features.id;
       }
-      const tmp10 = refresh(18931);
-      ({ submittedRequest, error, loading, createEnableRequest } = refresh(18931)(id));
+      const tmp10 = refresh(18935);
+      ({ submittedRequest, error, loading, createEnableRequest } = refresh(18935)(id));
       let id1;
-      const tmp10Result = refresh(18931)(id);
+      const tmp10Result = refresh(18935)(id);
       if (features != null) {
         id1 = features.id;
       }
-      const tmp9ResultResult = refresh(18932)(id1);
+      const tmp9ResultResult = refresh(18936)(id1);
       refresh = tmp9ResultResult.refresh;
       ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-      const tmp9Result = refresh(18932);
-      ({ isApplicationRejected, requestCooldownDuration } = refresh(18933)(eligibility));
+      const tmp9Result = refresh(18936);
+      ({ isApplicationRejected, requestCooldownDuration } = refresh(18937)(eligibility));
       let hasItem2;
       if (features != null) {
         const features3 = features.features;
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp19 = true === hasItem3;
       }
-      const tmp16 = refresh(18933)(eligibility);
+      const tmp16 = refresh(18937)(eligibility);
       let id2;
       if (features != null) {
         id2 = features.id;

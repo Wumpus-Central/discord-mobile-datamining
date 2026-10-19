@@ -86,7 +86,7 @@ function getScreens() {
   };
   return obj;
 }
-const GuildDirectoryCreate = fn(12952).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12960).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
 const createStyles = fn(5191);
 let obj2 = { safeArea: { marginTop: fn(6536).NAV_BAR_HEIGHT, flex: 1 } };

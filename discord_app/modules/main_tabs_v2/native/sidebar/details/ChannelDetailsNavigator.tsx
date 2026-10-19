@@ -3,7 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
 import navigateToThreadCreation from "../../../../threads/native/navigateToThreadCreation.tsx";
-import _modDef13483 from "../../../../../../_runtime/metro/13483__.js";
+import _modDef13488 from "../../../../../../_runtime/metro/13488__.js";
 import ChannelSettingsModal from "../../../../../components_native/channel_settings/ChannelSettingsModal.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const constants = fn(9927).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const SearchNavigatorScreens = fn(17774).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(17778).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = Object.freeze({});
@@ -98,7 +98,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] !== tmp4) {
           HeaderIconButton = HeaderIconButton(9599).HeaderIconButton;
           const obj3 = { accessibilityLabel: tmp6, onPress: tmp4, source: null };
-          tmp = _modDef13483;
+          tmp = _modDef13488;
           obj3.source = tmp;
           const tmp11 = closure_10(HeaderIconButton, obj3);
           cResult[3] = tmp4;
@@ -117,7 +117,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1128).intl;
         obj2.accessibilityLabel = intl.string(tmp(1128).t.rBIGBL);
         obj2.onPress = tmp4;
-        obj2.source = _modDef13483;
+        obj2.source = _modDef13488;
         tmp5 = closure_10(tmp(9599).HeaderIconButton, obj2);
       }
       return tmp5;

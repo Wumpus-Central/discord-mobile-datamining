@@ -574,7 +574,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 pendingImage = undefined;
                 if (null != base64) {
                   const obj11 = { imageUri: base64, description: null };
-                  const obj = tmp2(15607);
+                  const obj = tmp2(15611);
                   obj11.description = tmp2(8567).generateAvatarDescription();
                   pendingImage = obj.createPendingImage(obj11);
                   const obj3 = tmp2(8567);

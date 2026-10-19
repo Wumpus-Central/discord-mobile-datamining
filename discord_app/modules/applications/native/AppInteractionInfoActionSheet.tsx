@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const bottom = useSafeAreaInsetsDefault().bottom;
       if (cResult[0] !== onBack) {
         const obj2 = { onBack };
-        const tmp8 = closure_8(tmp5(13758), obj2);
+        const tmp8 = closure_8(tmp5(13762), obj2);
         cResult[0] = onBack;
         cResult[1] = tmp8;
       }

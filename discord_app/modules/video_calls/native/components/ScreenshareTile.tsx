@@ -7,7 +7,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06612_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef11260 from "../../../../../_runtime/metro/11260__.js";
+import _modDef11279 from "../../../../../_runtime/metro/11279__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[5];
         }
         if (cResult[6] !== tmp4.image) {
-          const obj3 = { source: _modDef11260, style: tmp4.image, resizeMode: "contain" };
+          const obj3 = { source: _modDef11279, style: tmp4.image, resizeMode: "contain" };
           const tmp19 = hasOwnProperty(FastImageDefault, obj3);
           cResult[6] = tmp4.image;
           cResult[7] = tmp19;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj4 = { source: null, style: null, resizeMode: "contain" };
       const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-      obj4.source = _modDef11260;
+      obj4.source = _modDef11279;
       obj4.style = tmp.image;
       items[1] = hasOwnProperty(FastImageDefault, obj4);
       const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };

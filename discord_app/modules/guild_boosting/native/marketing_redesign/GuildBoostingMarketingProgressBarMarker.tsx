@@ -1,9 +1,9 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBarMarker.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef14657 from "../../../../../_runtime/metro/14657__.js";
-import _modDef14658 from "../../../../../_runtime/metro/14658__.js";
-import _modDef14659 from "../../../../../_runtime/metro/14659__.js";
+import _modDef14661 from "../../../../../_runtime/metro/14661__.js";
+import _modDef14662 from "../../../../../_runtime/metro/14662__.js";
+import _modDef14663 from "../../../../../_runtime/metro/14663__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ const TierMarkerPositions = {
   [BoostedGuildTiers.TIER_2]: 0.6666666666666666,
   [BoostedGuildTiers.TIER_3]: 1,
 };
-let obj2 = { [TIER_1]: _modDef14657, [TIER_2]: _modDef14658, [TIER_3]: _modDef14659 };
+let obj2 = { [TIER_1]: _modDef14661, [TIER_2]: _modDef14662, [TIER_3]: _modDef14663 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 let createStyles = fn(5191);
 let obj4 = {
@@ -547,7 +547,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 tmp34 = tier !== BoostedGuildTiers.NONE;
                               }
                               if (tmp34) {
-                                const obj8 = { source: tmp5(11115), style: tmp4.progressBarMarkerUnlockedIcon };
+                                const obj8 = { source: tmp5(11134), style: tmp4.progressBarMarkerUnlockedIcon };
                                 tmp34 = closure_6(tmp5(5128), obj8);
                                 const tmp5Result = tmp5(5128);
                               }
@@ -725,7 +725,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp20Result = tier !== BoostedGuildTiers.NONE;
         }
         if (tmp20Result) {
-          const obj8 = { source: tmp2(11115), style: tmp.progressBarMarkerUnlockedIcon };
+          const obj8 = { source: tmp2(11134), style: tmp.progressBarMarkerUnlockedIcon };
           tmp20Result = closure_6(tmp2(5128), obj8);
           const tmp2Result = tmp2(5128);
         }

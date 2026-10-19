@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const useAutomodRulesList = fn(18696).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(18698);
+const useAutomodRulesList = fn(18700).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(18702);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(12581).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(12598).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -556,7 +556,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             let v0 = 1;
                             c5 = 2;
                             c6 = 1;
-                            const obj6 = { value: closure_0(12586).deleteAutomodRule(id, closure_0), done: false };
+                            const obj6 = { value: closure_0(12603).deleteAutomodRule(id, closure_0), done: false };
                             return obj6;
                           }
                         } else if (1 === tmp7) {

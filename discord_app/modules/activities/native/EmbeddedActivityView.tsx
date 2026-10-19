@@ -464,7 +464,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       applicationId = applicationId.applicationId;
       const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
       const merged1 = Object.assign(merged);
-      return closure_14(applicationId(11325).BaseEmbeddedAppWebView, {
+      return closure_14(applicationId(11343).BaseEmbeddedAppWebView, {
         iframeId: _slicedToArray(
           noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)),
           1,

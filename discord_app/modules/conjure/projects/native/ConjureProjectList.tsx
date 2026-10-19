@@ -80,7 +80,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ({ onPress, onMore } = project);
       const tmp4 = closure_11(0);
       const obj = project(576);
-      const conjureProjectBadge = project(10984).useConjureProjectBadge(project.id);
+      const conjureProjectBadge = project(11001).useConjureProjectBadge(project.id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureProjectStore];
         cResult[0] = items;
@@ -102,7 +102,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const obj2 = project(10984);
+      const obj2 = project(11001);
       const stateFromStores = project(504).useStateFromStores(first, tmp8, tmp9);
       if (cResult[4] !== project.updated_at) {
         let formatToPlainStringResult;
@@ -272,8 +272,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       project = project.project;
       const onMore = project.onMore;
       const tmp = closure_11(0);
-      const conjureProjectBadge = project(10984).useConjureProjectBadge(project.id);
-      const obj = project(10984);
+      const conjureProjectBadge = project(11001).useConjureProjectBadge(project.id);
+      const obj = project(11001);
       const items = [ConjureProjectStore];
       const items1 = [project.id];
       const stateFromStores = project(504).useStateFromStores(
@@ -426,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[11] === guildId) {
           if (cResult[15] !== stateFromStoresArray1) {
             const substr = stateFromStoresArray1.slice();
-            const sorted = substr.sort(tmp(11578).compareConjureProjectsByUpdatedAt);
+            const sorted = substr.sort(tmp(11594).compareConjureProjectsByUpdatedAt);
             cResult[15] = stateFromStoresArray1;
             cResult[16] = sorted;
           }
@@ -555,11 +555,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[23] = tmp25;
             cResult[24] = tmp28;
           }
-          const projectOpenerResult = tmp(11576).projectOpener(guildId, U);
+          const projectOpenerResult = tmp(11592).projectOpener(guildId, U);
           cResult[19] = guildId;
           cResult[20] = U;
           cResult[21] = projectOpenerResult;
-          const tmpResult6 = tmp(11576);
+          const tmpResult6 = tmp(11592);
         }
       }
       if (cResult[13] !== guildId) {
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const found = stateFromStoresArray.filter(M);
-      const sorted1 = found.sort(tmp(11578).compareConjureProjectsByUpdatedAt);
+      const sorted1 = found.sort(tmp(11594).compareConjureProjectsByUpdatedAt);
       cResult[10] = stateFromStoresArray;
       cResult[11] = guildId;
       cResult[12] = sorted1;

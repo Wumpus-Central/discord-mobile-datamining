@@ -14,12 +14,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12914);
+const VoicePanelConstants = fn(10680);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12912).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18183).VoicePanelPIPModes;
-const SCALE_PHYSICS = fn(12915).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(10678).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18187).VoicePanelPIPModes;
+const SCALE_PHYSICS = fn(10681).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 50;

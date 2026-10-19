@@ -19,7 +19,7 @@ import ToggleIconButton from "../../../../design/components/Button/native/Toggle
 import useToggleButtonProps from "../../../../design/components/Button/native/useToggleButtonProps.native.tsx";
 import ToggleButton from "../../../../design/components/Button/native/ToggleButton.native.tsx";
 import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState.tsx";
-import _modDef16830 from "../../../../../_runtime/metro/16830__.js";
+import _modDef16834 from "../../../../../_runtime/metro/16834__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -201,7 +201,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef16830;
+    tmpResult = _modDef16834;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;

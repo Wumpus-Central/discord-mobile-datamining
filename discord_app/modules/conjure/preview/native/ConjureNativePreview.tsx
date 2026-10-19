@@ -29,7 +29,7 @@ const UserProfileApplicationWidgetTypes = intl(7591);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11668);
+const conjureDesignFeedbackStore = fn(11687);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({
@@ -1128,7 +1128,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         const items8 = [closure_22(stateFromStores(10671), obj7, stateFromStores.id)];
         let tmp29Result = null;
         if (tmp2Result6.isAndroid()) {
-          tmp29Result = closure_22(tmp2(11828).PortalKeyboardRenderer, { portal: true });
+          tmp29Result = closure_22(tmp2(11847).PortalKeyboardRenderer, { portal: true });
         }
         items8[1] = tmp29Result;
         obj6.children = items8;

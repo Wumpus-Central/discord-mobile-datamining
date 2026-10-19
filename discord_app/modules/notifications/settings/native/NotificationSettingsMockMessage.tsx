@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            obj9.source = sharedValue(13545);
+            obj9.source = sharedValue(13550);
             obj9.size = tmp(1202).AvatarSizes.LARGE_48;
             obj8.children = closure_7(tmp(1202).Avatar, obj9);
             const tmp39 = closure_7(View, obj8);
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         timingStandard: require("timingPresets").timingStandard,
       };
       obj10.children = tmp12(require("native").Avatar, {
-        source: sharedValue(13545),
+        source: sharedValue(13550),
         size: require("native").AvatarSizes.LARGE_48,
       });
       const items4 = [tmp12(View, obj10)];
