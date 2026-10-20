@@ -51,7 +51,7 @@ export default noop.memo(
                 }
               }
             }
-            return { channelId: "unicodeVersion", type: true };
+            return { channelId: "unicodeVersion", type: "map" };
           };
           cResult[0] = items;
           cResult[1] = fn;
@@ -235,7 +235,7 @@ export default noop.memo(
               }
             }
           }
-          return { channelId: "unicodeVersion", type: true };
+          return { channelId: "unicodeVersion", type: "map" };
         });
         if ("private" === stateFromStoresObject.type) {
           let obj2 = { style: tmp.wrapper, children: null };

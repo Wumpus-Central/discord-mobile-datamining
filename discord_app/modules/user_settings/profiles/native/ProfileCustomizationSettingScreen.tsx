@@ -77,7 +77,7 @@ export default noop.memo(
         let obj2 = obj5(5213);
         const nativeStackNavigation = obj5(1505).useNativeStackNavigation();
         let obj3 = obj5(1505);
-        const params = obj5(7038).useSettingNavigationRoute().params;
+        const params = obj5(7041).useSettingNavigationRoute().params;
         let autoFocusElement;
         if (params != null) {
           autoFocusElement = params.autoFocusElement;
@@ -121,7 +121,7 @@ export default noop.memo(
             }
           }
         }
-        let obj4 = obj5(7038);
+        let obj4 = obj5(7041);
         const obj6 = {
           items: tmp13,
           pageWidth: tmp8[0],
@@ -154,7 +154,7 @@ export default noop.memo(
           };
           return maybeShowUnsavedChangesAlertDefault(obj);
         };
-        const segmentedControlState = obj5(8821).useSegmentedControlState(obj6);
+        const segmentedControlState = obj5(8833).useSegmentedControlState(obj6);
         const activeIndex = segmentedControlState.activeIndex;
         const tmp18 = items[activeIndex.get(activeIndex)];
         if (tmp18 == null) {
@@ -278,7 +278,7 @@ export default noop.memo(
           }
           tmp35 = cResult[11];
         }
-        const tmpResult = obj5(8821);
+        const tmpResult = obj5(8833);
         stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
         closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
         if (cResult[12] === tmp29) {

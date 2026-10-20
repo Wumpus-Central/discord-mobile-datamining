@@ -11,8 +11,8 @@ import ChannelListLayoutTypes from "../../../../../main_tabs_v2/ChannelListLayou
 import useMessageAuthorDefault from "../../../../../messages/useMessageAuthor.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
-import _modDef10076 from "../../../../../../../_runtime/metro/10076__.js";
-import _modDef10801 from "../../../../../../../_runtime/metro/10801__.js";
+import _modDef10087 from "../../../../../../../_runtime/metro/10087__.js";
+import _modDef10812 from "../../../../../../../_runtime/metro/10812__.js";
 import ChannelRowPreview from "../../../../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
 import BellZIcon from "../../../../../../design/components/Icon/native/redesign/generated/BellZIcon.tsx";
 import SearchListRow from "../SearchListRow.tsx";
@@ -152,7 +152,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             }
             let tmp23 = isFavorite;
             if (isFavorite) {
-              const obj5 = { source: _modDef10076, size: tmp(1202).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
+              const obj5 = { source: _modDef10087, size: tmp(1202).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
               tmp23 = closure_14(tmp(1202).Icon, obj5);
             }
             cResult[14] = isFavorite;
@@ -162,7 +162,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp20 = muted;
           if (muted) {
-            const obj6 = { source: _modDef10801, size: tmp(1202).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
+            const obj6 = { source: _modDef10812, size: tmp(1202).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
             tmp20 = closure_14(tmp(1202).Icon, obj6);
           }
           cResult[11] = muted;
@@ -178,12 +178,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = tmp15;
       }
       const tmpResult = channel(504);
-      const channelIcon = channel(8447).getChannelIcon(channel, { isRulesChannel: tmp8 });
+      const channelIcon = channel(8451).getChannelIcon(channel, { isRulesChannel: tmp8 });
       cResult[3] = channel;
       cResult[4] = tmp8;
       cResult[5] = channelIcon;
       tmp9 = channelIcon;
-      const tmpResult2 = channel(8447);
+      const tmpResult2 = channel(8451);
     }
   : function GuildChannelMessageRowHeader(channel) {
       channel = channel.channel;
@@ -199,9 +199,9 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         return rulesChannelId;
       });
       const obj = channel(504);
-      const channelIcon = channel(8447).getChannelIcon(channel, { isRulesChannel: stateFromStores === channel.id });
+      const channelIcon = channel(8451).getChannelIcon(channel, { isRulesChannel: stateFromStores === channel.id });
       const obj4 = { style: tmp.header, children: null };
-      const obj2 = channel(8447);
+      const obj2 = channel(8451);
       const obj3 = { isRulesChannel: stateFromStores === channel.id };
       const tmp7 = useChannelNameDefault(channel);
       const items1 = [
@@ -220,12 +220,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         ,
       ];
       if (muted) {
-        const obj6 = { source: _modDef10801, size: tmp2(1202).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+        const obj6 = { source: _modDef10812, size: tmp2(1202).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
         muted = closure_14(tmp2(1202).Icon, obj6);
       }
       items1[2] = muted;
       if (isFavorite) {
-        const obj7 = { source: _modDef10076, size: tmp2(1202).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+        const obj7 = { source: _modDef10087, size: tmp2(1202).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
         isFavorite = closure_14(tmp2(1202).Icon, obj7);
       }
       items1[3] = isFavorite;
@@ -311,7 +311,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp8, tmp9);
       const obj = channel(576);
-      const searchMessageTimestamp = channel(17838).useSearchMessageTimestamp(message, channel);
+      const searchMessageTimestamp = channel(17861).useSearchMessageTimestamp(message, channel);
       ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
       if (cResult[5] !== tmp5) {
         const obj3 = { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: tmp5 };
@@ -394,7 +394,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp33 = null;
                   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
                     const obj7 = { size: "xs", style: tmp4.suppressNotificationsIcon };
-                    tmp33 = closure_14(channel(13642).BellZIcon, obj7);
+                    tmp33 = closure_14(channel(13660).BellZIcon, obj7);
                   }
                   cResult[21] = message;
                   cResult[22] = tmp4.suppressNotificationsIcon;
@@ -432,14 +432,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp16 = muted;
       if (muted) {
-        const obj10 = { source: _modDef10801, size: channel(1202).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
+        const obj10 = { source: _modDef10812, size: channel(1202).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
         tmp16 = closure_14(channel(1202).Icon, obj10);
       }
       cResult[7] = muted;
       cResult[8] = tmp4.channelStatus;
       cResult[9] = tmp16;
       tmp15 = tmp16;
-      const tmpResult = channel(17838);
+      const tmpResult = channel(17861);
     }
   : function PrivateChannelMessageRowLabel(message) {
       message = message.message;
@@ -456,7 +456,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp = channel.isDM() || channel.isGroupDM();
       }, items1);
-      const searchMessageTimestamp = message(17838).useSearchMessageTimestamp(message, channel);
+      const searchMessageTimestamp = message(17861).useSearchMessageTimestamp(message, channel);
       const obj2 = { style: tmp.labelContainer, children: null };
       const obj3 = { style: tmp.authorRow, children: null };
       ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
@@ -470,15 +470,15 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         ,
       ];
       if (muted) {
-        const obj4 = { source: channel(10801), size: tmp4(1202).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+        const obj4 = { source: channel(10812), size: tmp4(1202).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
         muted = closure_14(tmp4(1202).Icon, obj4);
       }
       items2[1] = muted;
       let isSystemDMResult = channel.isSystemDM();
       if (isSystemDMResult) {
-        const obj5 = { type: channel(9055).Types.SYSTEM_DM, verified: true };
-        isSystemDMResult = closure_14(channel(9055), obj5);
-        const tmp13 = channel(9055);
+        const obj5 = { type: channel(9067).Types.SYSTEM_DM, verified: true };
+        isSystemDMResult = closure_14(channel(9067), obj5);
+        const tmp13 = channel(9067);
       }
       items2[2] = isSystemDMResult;
       obj3.children = items2;
@@ -497,13 +497,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9Result = null;
       if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
         const obj7 = { size: "xs", style: tmp.suppressNotificationsIcon };
-        tmp9Result = closure_14(tmp4(13642).BellZIcon, obj7);
+        tmp9Result = closure_14(tmp4(13660).BellZIcon, obj7);
       }
       items3[2] = tmp9Result;
       let tmp9Result2 = null;
       if (message.isPoll()) {
         const obj8 = { style: tmp.pollBadge };
-        tmp9Result2 = closure_14(channel(17839), obj8);
+        tmp9Result2 = closure_14(channel(17862), obj8);
       }
       items3[3] = tmp9Result2;
       obj2.children = items3;
@@ -819,7 +819,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const stateFromStores2 = tmp(504).useStateFromStores(tmp13, tmp15);
           const tmpResult5 = tmp(504);
-          const isChannelSpoilerGated = tmp(6630).useIsChannelSpoilerGated(stateFromStores);
+          const isChannelSpoilerGated = tmp(6633).useIsChannelSpoilerGated(stateFromStores);
           if (cResult[11] === stateFromStores) {
             if (cResult[12] === stateFromStores1) {
               if (cResult[13] === isChannelSpoilerGated) {
@@ -845,7 +845,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = stateFromStores2;
           cResult[15] = obj2;
           tmp18 = obj2;
-          const tmpResult6 = tmp(6630);
+          const tmpResult6 = tmp(6633);
         }
         class C {
           constructor() {

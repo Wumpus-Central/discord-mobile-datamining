@@ -82,7 +82,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol4 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = new tmp5(8076)();
+          const obj4 = new tmp5(8080)();
           let obj3 = {
             renderEmbeds: tmp11,
             inlineEmbedMedia: tmp13,
@@ -158,7 +158,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled()
             rowGenerator: tmp17,
             maxHeight,
           };
-          const tmp27 = closure_5(tmp5(9687), obj7);
+          const tmp27 = closure_5(tmp5(9700), obj7);
           cResult[12] = maxHeight;
           cResult[13] = message;
           cResult[14] = tmp9;

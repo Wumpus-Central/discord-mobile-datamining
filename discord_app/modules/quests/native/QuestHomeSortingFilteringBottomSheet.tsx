@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6658).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(6661).QuestHomeSortMethods;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4945);
@@ -365,13 +365,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
       const options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(9509).getFilterTypeText(item.filter),
+          label: onSortMethodChange(9522).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter)
         };
-        return ref(onSortMethodChange(6848).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(6851).TableCheckboxRow, obj, index);
       });
       return ref(TableRowGroup.TableRowGroup, obj, index);
     })

@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
       };
       items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, {
-        location: channel(7224).MESSAGE_LONG_PRESS_MENU,
+        location: channel(7227).MESSAGE_LONG_PRESS_MENU,
       });
       obj7.children = items1;
       return closure_6(emojiFontSize, obj7);

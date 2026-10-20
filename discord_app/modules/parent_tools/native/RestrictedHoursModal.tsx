@@ -707,7 +707,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScr
       let tmp4 = cResult[2];
       let tmp5 = cResult[3];
     }
-    return tmp(7043).useNavigatorScreens(tmp4, tmp5);
+    return tmp(7046).useNavigatorScreens(tmp4, tmp5);
   }
   const fn = function o() {
     return {

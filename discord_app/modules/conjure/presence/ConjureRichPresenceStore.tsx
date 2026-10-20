@@ -202,7 +202,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_13);
                         details = closure_1_13.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F107661 */ function() { ... });
+                        let found = prop.filter(/* F107764 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];

@@ -6,7 +6,7 @@ import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.t
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7168 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7171 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import InviteSuggestionsActionCreators from "../../../../actions/InviteSuggestionsActionCreators.tsx";
@@ -24,8 +24,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(9052).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(7021).CreateGuildModalStates;
+let closure_6 = fn(9064).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7024).CreateGuildModalStates;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_12,
@@ -250,7 +250,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             keyExtractor: tmp14,
             getItemType: tmp15,
           };
-          const tmp18 = closure_17(tmp(7168).FlashList, obj3);
+          const tmp18 = closure_17(tmp(7171).FlashList, obj3);
           cResult[11] = tmp5;
           cResult[12] = tmp7;
           cResult[13] = tmp4.suggestionRowsContainer;
@@ -307,7 +307,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.getItemType = function getItemType(type) {
           return type.type;
         };
-        obj2.children = closure_17(_mod7168.FlashList, obj3);
+        obj2.children = closure_17(_mod7171.FlashList, obj3);
         tmp6Result2 = closure_17(closure_5, obj2);
       }
       return tmp6Result2;

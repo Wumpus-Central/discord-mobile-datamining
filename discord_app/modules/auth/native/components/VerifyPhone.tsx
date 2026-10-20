@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(17094).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(17095);
+let closure_6 = fn(17113).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(17114);
 ({
   authStateToRegisterTransitionStep: closure_7,
   RegisterTransitionSteps: closure_8,
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_7 = noop.useRef(false);
       const context = noop.useContext(require("Auth").TrackRegistrationContext);
       const tmp4 = _slicedToArray(noop.useState(false), 2);
-      onPhoneTokenReceived(17111)(closure_7(sourceState));
+      onPhoneTokenReceived(17130)(closure_7(sourceState));
       const items = [context];
       const effect = noop.useEffect(() => {
         if (_undefined()) {
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (v3()) {
           context({ step: context.PHONE_VERIFICATION, actionType: callback.SUBMITTED });
         }
-        yield onPhoneTokenReceived(7088).verifyPhone(closure_0, closure_0, false);
+        yield onPhoneTokenReceived(7091).verifyPhone(closure_0, closure_0, false);
         if (1 === tmp7) {
           v0 = 0;
           closure_129_1 = closure_3;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return applyArgumentsResult;
       }, items2);
-      onPhoneTokenReceived(7122)(callback1);
+      onPhoneTokenReceived(7125)(callback1);
       const items3 = [onBail];
       const memo = noop.useMemo(() => {
         let tmp2 = null;
@@ -320,11 +320,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         loading: null,
         disableKeyboardAvoidingView: true,
       };
-      const tmp7 = onPhoneTokenReceived(17111);
+      const tmp7 = onPhoneTokenReceived(17130);
       obj.codeType = require("CodeField").CodeType.NUMERIC;
       obj.footer = memo;
       obj.disabled = tmp5;
-      return jsx(onPhoneTokenReceived(7123), {
+      return jsx(onPhoneTokenReceived(7126), {
         title,
         description,
         error: tmp3,

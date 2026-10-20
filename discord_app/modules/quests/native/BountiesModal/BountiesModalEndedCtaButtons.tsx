@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       const tmp = closure_5();
-      closure_3 = bounty(9520).useGetQuestImpressionId();
-      let obj = bounty(9520);
+      closure_3 = bounty(9533).useGetQuestImpressionId();
+      let obj = bounty(9533);
       const fn = function y() {
         let num = 0;
         if (visible) {
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 5587342121093;
       fn.__initData = __initData2;
       const animatedStyle = obj2.useAnimatedStyle(fn);
-      bounty(16103);
+      bounty(16122);
       if (visible) {
         const obj4 = { style: null, children: null };
         const items = [tmp.container, animatedStyle];

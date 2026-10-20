@@ -10,7 +10,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11183).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11194).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_7,
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = _location(576);
       const stateFromStores = _location(504).useStateFromStores(tmp5, tmp6);
       const tmpResult = _location(504);
-      const groupDMNitroAudience = _location(11181).useGroupDMNitroAudience();
+      const groupDMNitroAudience = _location(11192).useGroupDMNitroAudience();
       importDefault = "upgrade" === groupDMNitroAudience;
       if (cResult[2] !== _location) {
         class I {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult2 = _location(11181);
+      const tmpResult2 = _location(11192);
       const onPress = usePremiumFeatureUpsellGetNitroDefault(false, I, constants3.IN_APP).onPress;
       if (cResult[4] === groupDMNitroAudience) {
         class I {
@@ -123,13 +123,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = {
         audience: groupDMNitroAudience,
         location: _location,
-        acquisitionStrategy: _location(11181).GroupDMNitroAcquisitionStrategy.CHECKOUT,
+        acquisitionStrategy: _location(11192).GroupDMNitroAcquisitionStrategy.CHECKOUT,
         onCheckout: onPress,
       };
       let obj2 = {
         audience: groupDMNitroAudience,
         location: _location,
-        acquisitionStrategy: _location(11181).GroupDMNitroAcquisitionStrategy.CHECKOUT,
+        acquisitionStrategy: _location(11192).GroupDMNitroAcquisitionStrategy.CHECKOUT,
         onCheckout: onPress,
       };
     }
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [AccessibilityStore];
       const stateFromStores = _location(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       let obj = _location(504);
-      const groupDMNitroAudience = _location(11181).useGroupDMNitroAudience();
+      const groupDMNitroAudience = _location(11192).useGroupDMNitroAudience();
       importDefault = tmp6;
       const items1 = [_location];
       const callback = noop.useCallback(() => {
@@ -158,8 +158,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         loading = tmp9.loading;
       }
       const obj4 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null, onCheckout: null };
-      let obj2 = _location(11181);
-      obj4.acquisitionStrategy = _location(11181).GroupDMNitroAcquisitionStrategy.CHECKOUT;
+      let obj2 = _location(11192);
+      obj4.acquisitionStrategy = _location(11192).GroupDMNitroAcquisitionStrategy.CHECKOUT;
       obj4.onCheckout = tmp9.onPress;
       const tmp8ResultResult = useGroupDMNitroUpsellActionDefault(obj4);
       dependencyMap = tmp8ResultResult;
@@ -200,9 +200,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { number: number2 };
       const obj9 = { number };
       const tmp8Result = useGroupDMNitroUpsellActionDefault;
-      obj11.text = intl3.string(_location(11181).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
-      const tmp2Result = _location(11181);
-      obj11.icon = closure_11(_location(9343).NitroWheelIcon, {
+      obj11.text = intl3.string(_location(11192).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+      const tmp2Result = _location(11192);
+      obj11.icon = closure_11(_location(9355).NitroWheelIcon, {
         style: tmp.nitroWheelIcon,
         color: nativeDefault.unsafe_rawColors.WHITE,
         size: "custom",

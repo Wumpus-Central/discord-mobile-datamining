@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8218).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8222).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -105,7 +105,7 @@ let closure_11 = noop.memo(
                         }
                         if (cResult[19] !== selected) {
                           const obj3 = { selected };
-                          const tmp30 = closure_7(item(6936).FormRadio, obj3);
+                          const tmp30 = closure_7(item(6939).FormRadio, obj3);
                           cResult[19] = selected;
                           cResult[20] = tmp30;
                           let tmp28 = tmp30;
@@ -145,7 +145,7 @@ let closure_11 = noop.memo(
                               accessibilityState,
                               trailing: tmp31,
                             };
-                            const tmp37 = closure_7(item(6851).TableRow, obj4);
+                            const tmp37 = closure_7(item(6854).TableRow, obj4);
                             cResult[25] = accessibilityRole;
                             cResult[26] = accessibilityState;
                             cResult[27] = end;
@@ -187,7 +187,7 @@ let closure_11 = noop.memo(
                   obj7.guildTag = tag;
                   obj7.guildBadge = tmp7;
                   obj7.badgeSize = GuildTagBadgeSize.SIZE_16;
-                  tmp26Result = closure_7(item(9146).BaseGuildTagChiplet, obj7);
+                  tmp26Result = closure_7(item(9158).BaseGuildTagChiplet, obj7);
                 }
                 cResult[13] = tmp7;
                 cResult[14] = profile;
@@ -199,9 +199,9 @@ let closure_11 = noop.memo(
               }
               let tmp20 = null;
               if (null != item) {
-                const obj8 = { style: tmp4.guildIcon, guild: item, size: item(6831).GuildIconSizes.SMALL_32 };
-                tmp20 = closure_7(onSelectGuild(6831), obj8);
-                const tmp23 = onSelectGuild(6831);
+                const obj8 = { style: tmp4.guildIcon, guild: item, size: item(6834).GuildIconSizes.SMALL_32 };
+                tmp20 = closure_7(onSelectGuild(6834), obj8);
+                const tmp23 = onSelectGuild(6834);
               }
               cResult[10] = item;
               cResult[11] = tmp4.guildIcon;
@@ -236,8 +236,8 @@ let closure_11 = noop.memo(
           if (profile != null) {
             badge1 = profile.badge;
           }
-          guildTagBadgeUrl = item(8579).getGuildTagBadgeUrl(item.id, badge1, GuildTagBadgeSize.SIZE_24);
-          const tmpResult2 = item(8579);
+          guildTagBadgeUrl = item(8591).getGuildTagBadgeUrl(item.id, badge1, GuildTagBadgeSize.SIZE_24);
+          const tmpResult2 = item(8591);
         }
         let badge2;
         if (profile != null) {
@@ -263,8 +263,8 @@ let closure_11 = noop.memo(
           if (profile != null) {
             badge = profile.badge;
           }
-          guildTagBadgeUrl = item(8579).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-          let obj = item(8579);
+          guildTagBadgeUrl = item(8591).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+          let obj = item(8591);
         }
         const radioA11yNative = item(5001).useRadioA11yNative({ selected });
         ({ accessibilityRole, accessibilityState } = radioA11yNative);
@@ -297,7 +297,7 @@ let closure_11 = noop.memo(
         obj3.label = name;
         let tmp10Result = null;
         if (null != item) {
-          const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(6831).GuildIconSizes.SMALL_32 };
+          const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(6834).GuildIconSizes.SMALL_32 };
           tmp10Result = closure_7(GuildIconDefault, obj4);
         }
         obj3.icon = tmp10Result;
@@ -323,12 +323,12 @@ let closure_11 = noop.memo(
           obj10.guildTag = tag;
           obj10.guildBadge = guildTagBadgeUrl;
           obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-          tmp10Result2 = closure_7(tmp7(9146).BaseGuildTagChiplet, obj10);
+          tmp10Result2 = closure_7(tmp7(9158).BaseGuildTagChiplet, obj10);
         }
-        const items = [tmp10Result2, closure_7(item(6936).FormRadio, { selected })];
+        const items = [tmp10Result2, closure_7(item(6939).FormRadio, { selected })];
         obj5.children = items;
         obj3.trailing = closure_8(View, obj5);
-        return closure_7(item(6851).TableRow, obj3);
+        return closure_7(item(6854).TableRow, obj3);
       },
 );
 ReactCompilerGating = fn(558);
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = str(ref.useState(""), 2);
       ref = ref.useRef(null);
       let obj = selectedGuildId(576);
-      const guildTagCreationUpsell = selectedGuildId(13981).useGuildTagCreationUpsell(
+      const guildTagCreationUpsell = selectedGuildId(13999).useGuildTagCreationUpsell(
         "UserPrimaryGuildListBottomSheet",
       );
       const creatableGuilds = guildTagCreationUpsell.creatableGuilds;
@@ -477,7 +477,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj5 = { placeholder: null, accessibilityLabel: null, onChange: null };
-                const SearchField = selectedGuildId(7093).SearchField;
+                const SearchField = selectedGuildId(7096).SearchField;
                 let intl = selectedGuildId(1128).intl;
                 obj5.placeholder = intl.string(selectedGuildId(1128).t.uohsSv);
                 const intl2 = selectedGuildId(1128).intl;
@@ -691,7 +691,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp16;
         const str3 = str.trim();
       }
-      const obj3 = selectedGuildId(13981);
+      const obj3 = selectedGuildId(13999);
     }
   : function UserPrimaryGuildListBottomSheet(availableGuilds) {
       availableGuilds = availableGuilds.availableGuilds;

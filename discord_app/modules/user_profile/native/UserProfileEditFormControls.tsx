@@ -563,7 +563,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
               }
             }
             const obj4 = { "aria-hidden": true, value, onValueChange: tmp9, disabled: tmp4 };
-            const tmp21 = timestampProducer(tmp(7242).FormSwitch, obj4);
+            const tmp21 = timestampProducer(tmp(7245).FormSwitch, obj4);
             cResult[14] = tmp4;
             cResult[15] = tmp9;
             cResult[16] = value;
@@ -616,7 +616,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
         closure_2(value);
       }, items);
       if (isAndroidResult) {
-        let PressableHighlight = tmp2(6856).PressableHighlight;
+        let PressableHighlight = tmp2(6859).PressableHighlight;
       } else {
         PressableHighlight = React4;
       }

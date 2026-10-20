@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
         if (cResult[4] !== tmp4.header) {
-          const obj3 = { source: navigation(13483), style: tmp4.header };
+          const obj3 = { source: navigation(13501), style: tmp4.header };
           const tmp14 = closure_5(navigation(5631), obj3);
           cResult[4] = tmp4.header;
           cResult[5] = tmp14;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = onClose(1128).intl;
             obj.text = intl.string(onClose(1128).t.cpT0Cq);
             obj.onPress = onPress;
-            return closure_2_5(onClose(7431).HeaderActionButton, obj);
+            return closure_2_5(onClose(7434).HeaderActionButton, obj);
           },
         });
       };
@@ -179,14 +179,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = onClose(1128).intl;
             obj.text = intl.string(onClose(1128).t.cpT0Cq);
             obj.onPress = onPress;
-            return closure_2_5(onClose(7431).HeaderActionButton, obj);
+            return closure_2_5(onClose(7434).HeaderActionButton, obj);
           },
         });
       }, items);
       const obj2 = { style: tmp.container, children: null };
       const obj3 = { source: null, style: null };
       let obj = onClose(1505);
-      obj3.source = navigation(13483);
+      obj3.source = navigation(13501);
       obj3.style = tmp.header;
       const items1 = [closure_5(navigation(5631), obj3), , ,];
       const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };

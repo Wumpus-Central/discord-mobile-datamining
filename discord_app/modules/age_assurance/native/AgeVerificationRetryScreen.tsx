@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onClose, modalSessionId } = arg0);
       const tmp4 = closure_12();
       if (cResult[0] !== onClose) {
-        let obj2 = { onComplete: onClose, entryPoint: modalSessionId(6605).AgeVerificationModalEntryPoint.RETRY_MODAL };
+        let obj2 = { onComplete: onClose, entryPoint: modalSessionId(6608).AgeVerificationModalEntryPoint.RETRY_MODAL };
         cResult[0] = onClose;
         cResult[1] = obj2;
         let tmp5 = obj2;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       let obj = modalSessionId(576);
-      const initiateAgeVerification1 = modalSessionId(7891).useInitiateAgeVerification(tmp5);
+      const initiateAgeVerification1 = modalSessionId(7895).useInitiateAgeVerification(tmp5);
       ({ loading, initiateAgeVerification } = initiateAgeVerification1);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = modalSessionId(1128).intl;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp23 = closure_9(modalSessionId(7846).ShieldSpotIllustration, {});
+            const tmp23 = closure_9(modalSessionId(7850).ShieldSpotIllustration, {});
             cResult[12] = tmp23;
             let tmp21 = tmp23;
           } else {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     );
                   }),
                 };
-                const tmp35 = closure_9(modalSessionId(6935).TableRowGroup, obj5);
+                const tmp35 = closure_9(modalSessionId(6938).TableRowGroup, obj5);
                 cResult[20] = arr;
                 cResult[21] = tmp35;
                 let tmp33 = tmp35;
@@ -271,10 +271,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                const result = v3(6605).trackAgeVerificationModalClicked(
+                const result = v3(6608).trackAgeVerificationModalClicked(
                   modalSessionId,
-                  v3(6605).AgeVerificationModalVersion.RETRY,
-                  v3(6605).AgeVerificationModalCta.GET_STARTED,
+                  v3(6608).AgeVerificationModalVersion.RETRY,
+                  v3(6608).AgeVerificationModalCta.GET_STARTED,
                 );
                 c1 = 1;
                 v3 = 1;
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = modalSessionId;
       cResult[8] = items4;
       arr = items4;
-      const tmpResult = modalSessionId(7891);
+      const tmpResult = modalSessionId(7895);
     }
   : function GetStartedScreen(modalSessionId) {
       modalSessionId = modalSessionId.modalSessionId;
@@ -365,10 +365,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  const result = v3(6605).trackAgeVerificationModalClicked(
+                  const result = v3(6608).trackAgeVerificationModalClicked(
                     c0,
-                    v3(6605).AgeVerificationModalVersion.RETRY,
-                    v3(6605).AgeVerificationModalCta.GET_STARTED,
+                    v3(6608).AgeVerificationModalVersion.RETRY,
+                    v3(6608).AgeVerificationModalCta.GET_STARTED,
                   );
                   v1 = 1;
                   c0 = 1;

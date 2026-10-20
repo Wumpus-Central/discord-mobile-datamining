@@ -1,22 +1,47 @@
 // discord_app/modules/checkpoint/native/components/CheckpointScreen.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHECKPOINT_NAV_HEIGHT = fn(5970).CHECKPOINT_NAV_HEIGHT;
+const CHECKPOINT_NAV_HEIGHT = fn(5973).CHECKPOINT_NAV_HEIGHT;
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
 const createStyles = fn(4945);
-let closure_9 = createStyles.createStyles({
+let closure_10 = createStyles.createStyles({
   container: { height: "100%", width: "100%" },
   scroll: { width: "100%" },
   scrollContent: { flexGrow: 1 },
 });
+fn(558);
 const ReactCompilerGating = fn(558);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function useCheckpointScreenContentHeight() {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { ignoreKeyboard: true };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
+      return useWindowDimensionsDefault(first).height - insets.top - CHECKPOINT_NAV_HEIGHT - insets.bottom - PX_24;
+    }
+  : function useCheckpointScreenContentHeight() {
+      const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
+      return (
+        useWindowDimensionsDefault({ ignoreKeyboard: true }).height -
+        insets.top -
+        CHECKPOINT_NAV_HEIGHT -
+        insets.bottom -
+        PX_24
+      );
+    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointScreen.tsx");
 
@@ -24,11 +49,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function CheckpointScreen(children) {
       const cResult = c.c(15);
       children = children.children;
-      const tmp2 = closure_9();
+      const tmp2 = closure_10();
       const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
       const sum = insets.left + PX_24;
       const sum1 = insets.right + PX_24;
-      const sum2 = insets.bottom + nativeDefault.space.PX_24;
+      const sum2 = insets.bottom + PX_24;
       const sum3 = insets.top + CHECKPOINT_NAV_HEIGHT;
       if (cResult[0] === sum) {
         if (cResult[1] === sum1) {
@@ -93,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj4;
     }
   : function CheckpointScreen(children) {
-      const tmp = closure_9();
+      const tmp = closure_10();
       const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
       const items = [, , ,];
       ({ bottom: arr[0], left: arr[1], right: arr[2], top: arr[3] } = insets);
@@ -110,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           () => ({
             paddingLeft: insets.left + PX_24,
             paddingRight: insets.right + PX_24,
-            paddingBottom: insets.bottom + nativeDefault.space.PX_24,
+            paddingBottom: insets.bottom + PX_24,
             paddingTop: insets.top + CHECKPOINT_NAV_HEIGHT,
           }),
           items,
@@ -125,3 +150,4 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       return <closure_5 style={tmp.container}>{null}</closure_5>;
     };
+export const useCheckpointScreenContentHeight = tmp3;

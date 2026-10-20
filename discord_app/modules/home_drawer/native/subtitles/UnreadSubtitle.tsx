@@ -14,7 +14,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = subtitleStyles(576).c(16);
       ({ guild, channel, channelName, count } = arg0);
       const obj = subtitleStyles(576);
-      subtitleStyles = subtitleStyles(17499).useSubtitleStyles();
+      subtitleStyles = subtitleStyles(17518).useSubtitleStyles();
       if (cResult[0] === channel) {
         if (cResult[1] === guild) {
           let tmp5 = cResult[2];
@@ -105,17 +105,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let channelIconComponentWithGuild;
       if (null != channel) {
-        channelIconComponentWithGuild = tmp(8447).getChannelIconComponentWithGuild(channel, guild);
-        const tmpResult = tmp(8447);
+        channelIconComponentWithGuild = tmp(8451).getChannelIconComponentWithGuild(channel, guild);
+        const tmpResult = tmp(8451);
       }
       if (channelIconComponentWithGuild == null) {
-        channelIconComponentWithGuild = tmp(8496).TextIcon;
+        channelIconComponentWithGuild = tmp(8500).TextIcon;
       }
       cResult[0] = channel;
       cResult[1] = guild;
       cResult[2] = channelIconComponentWithGuild;
       tmp5 = channelIconComponentWithGuild;
-      const obj2 = subtitleStyles(17499);
+      const obj2 = subtitleStyles(17518);
     }
   : function UnreadSubtitle(arg0) {
       ({ channel, channelName } = arg0);

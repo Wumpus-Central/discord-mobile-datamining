@@ -27,8 +27,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       showsGenericMessage = tmp4;
       const tmp5 = closure_5();
       const obj = showsGenericMessage(576);
-      const logAppLauncherEmptyStateView = showsGenericMessage(11886).useLogAppLauncherEmptyStateView(
-        tmp(10961).AppLauncherEmptyStateType.SEARCH_EMPTY,
+      const logAppLauncherEmptyStateView = showsGenericMessage(11900).useLogAppLauncherEmptyStateView(
+        tmp(10972).AppLauncherEmptyStateType.SEARCH_EMPTY,
         showsGenericMessage.query,
       );
       if (cResult[0] !== tmp4) {
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp15;
         tmp13 = tmp15;
       }
-      const tmpResult = showsGenericMessage(11886);
+      const tmpResult = showsGenericMessage(11900);
     }
   : function EmptyState(showsGenericMessage) {
       let flag = showsGenericMessage.showsGenericMessage;
@@ -116,8 +116,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       const tmp = closure_5();
-      const logAppLauncherEmptyStateView = flag(11886).useLogAppLauncherEmptyStateView(
-        flag(10961).AppLauncherEmptyStateType.SEARCH_EMPTY,
+      const logAppLauncherEmptyStateView = flag(11900).useLogAppLauncherEmptyStateView(
+        flag(10972).AppLauncherEmptyStateType.SEARCH_EMPTY,
         showsGenericMessage.query,
       );
       const items = [flag];

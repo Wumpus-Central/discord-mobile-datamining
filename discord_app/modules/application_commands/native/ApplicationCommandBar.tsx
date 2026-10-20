@@ -87,7 +87,7 @@ obj2.applicationCommandOption = {
   fontSize: 12,
   alignItems: "center",
   borderRadius: nativeDefault.radii.xs,
-  backgroundColor: fn(6655).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
+  backgroundColor: fn(6658).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
 };
 let obj5 = {
   marginHorizontal: 4,
@@ -95,7 +95,7 @@ let obj5 = {
   fontSize: 12,
   alignItems: "center",
   borderRadius: nativeDefault.radii.xs,
-  backgroundColor: fn(6655).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
+  backgroundColor: fn(6658).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
 };
 obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -119,7 +119,7 @@ obj2.descriptionEllipsis = {
 const obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.completeCommandOption = { backgroundColor: fn(6655).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+obj2.completeCommandOption = { backgroundColor: fn(6658).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
@@ -349,7 +349,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       return collapsed(Pressables.PressableOpacity, obj);
     };
 fn(558);
-const obj12 = { backgroundColor: fn(6655).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+const obj12 = { backgroundColor: fn(6658).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (optionState) => {
@@ -1323,9 +1323,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = items5;
       const items8 = [
         closure_12(ref, obj3),
-        c10(command(8871).FormDivider, { style: tmp.applicationDescriptionDivider }),
+        c10(command(8883).FormDivider, { style: tmp.applicationDescriptionDivider }),
         c10(closure_15, { command, option: currentOption, optionState: tmp17 }),
-        c10(command(8871).FormDivider, { style: tmp.applicationDescriptionDivider }),
+        c10(command(8883).FormDivider, { style: tmp.applicationDescriptionDivider }),
       ];
       obj2.children = items8;
       return closure_12(ref, obj2);

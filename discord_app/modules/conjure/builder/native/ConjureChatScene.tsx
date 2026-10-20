@@ -42,19 +42,19 @@ const ConjureHistorySheetDefault = ConjureHistorySheet;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Keyboard: closure_7, View: closure_8 } = get_ActivityIndicator);
-const closeConnection = fn(10990).closeConnection;
-const conjureDesignFeedbackStore = fn(11708);
+const closeConnection = fn(11001).closeConnection;
+const conjureDesignFeedbackStore = fn(11722);
 ({
   enterConjureDesignFeedback: closure_11,
   exitConjureDesignFeedback: closure_12,
   useConjureDesignFeedback: map1,
 } = conjureDesignFeedbackStore);
-const isLaunched = fn(6724).isLaunched;
+const isLaunched = fn(6727).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
-  promptFirstPublish: fn(11712).showConjureFirstPublishSheet,
+  promptFirstPublish: fn(11726).showConjureFirstPublishSheet,
   showError(text) {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_FAILED", { text, variant: "critical" });
   },
@@ -479,9 +479,9 @@ export default function ConjureChatScene(guildId) {
           obj7.application = application;
           obj7.guildId = closure_131_24;
           obj7.onClose = function onClose() {
-            const result = c0(11714).repairConjureGuildHints(closure_1_7, closure_1_24);
-            obj = c0(11714);
-            result.finally(() => application(11011).getProject(closure_1_1)).catch(() => {});
+            const result = c0(11728).repairConjureGuildHints(closure_1_7, closure_1_24);
+            obj = c0(11728);
+            result.finally(() => application(11023).getProject(closure_1_1)).catch(() => {});
           };
           let result = application3(tmp2[32]).openConjureAppInstallModal(obj7);
           const obj2 = application3(tmp2[32]);
@@ -714,7 +714,7 @@ export default function ConjureChatScene(guildId) {
       let fn;
       if (closure_26) {
         if (closure_38) {
-          fn = (color) => setMode(closure_1_0(10871).ChevronSmallDownIcon, { size: "xs", color });
+          fn = (color) => setMode(closure_1_0(10882).ChevronSmallDownIcon, { size: "xs", color });
         }
       }
       preview.renderTrailingIcon = fn;
@@ -727,7 +727,7 @@ export default function ConjureChatScene(guildId) {
             targets,
             target,
             onChange(mode) {
-              const previewTarget = closure_2_0(11732).selectPreviewTarget(
+              const previewTarget = closure_2_0(11746).selectPreviewTarget(
                 mode,
                 closure_1_18,
                 closure_1_21,
@@ -1148,7 +1148,7 @@ export default function ConjureChatScene(guildId) {
                   ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
                   obj = {
                     ref,
-                    IconComponent: title(9558).MoreHorizontalIcon,
+                    IconComponent: title(9571).MoreHorizontalIcon,
                     onPress,
                     accessibilityLabel: null,
                     accessibilityActions: null,
@@ -1158,7 +1158,7 @@ export default function ConjureChatScene(guildId) {
                   obj.accessibilityLabel = intl.string(title(1128).t["UKOtz+"]);
                   obj.accessibilityActions = accessibilityActions;
                   obj.onAccessibilityAction = onAccessibilityAction;
-                  return closure_1_18(closure_1_1(11706), obj);
+                  return closure_1_18(closure_1_1(11720), obj);
                 },
               };
               items[1] = setMode(title(navigation[70]).ContextMenu, obj2);

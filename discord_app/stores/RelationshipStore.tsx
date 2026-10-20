@@ -98,7 +98,7 @@ let closure_20 = {
   friends: "toCharArray$esjava$1",
   blocked: "Symbol",
   ignored: "unicodeVersion",
-  blockedOrIgnored: "np",
+  blockedOrIgnored: "ty",
 };
 const set3 = new Set();
 const map1 = new Map();

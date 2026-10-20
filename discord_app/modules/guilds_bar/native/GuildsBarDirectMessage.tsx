@@ -421,7 +421,7 @@ export default noop.memo(
           config: memo1,
           cutouts,
           externalChildren: badge,
-          expandedChildren: null,
+          expandedChildren: true,
           children: null,
         };
         let tmp11Result = null;
@@ -466,7 +466,7 @@ export default noop.memo(
           config: memo1,
           cutouts,
           externalChildren: badge,
-          expandedChildren: null,
+          expandedChildren: true,
           children: null,
         });
       },

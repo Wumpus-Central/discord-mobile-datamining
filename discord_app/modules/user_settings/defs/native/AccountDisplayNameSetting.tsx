@@ -6,7 +6,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountDisplayNameSettingTrailing() {
       const cResult = c.c(2);
@@ -45,7 +45,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["9AjdkD"]);
   },
-  parent: fn(8276).MobileUserSettings.ACCOUNT,
+  parent: fn(8280).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountDisplayNameSettingTrailing() {
         const cResult = c.c(2);

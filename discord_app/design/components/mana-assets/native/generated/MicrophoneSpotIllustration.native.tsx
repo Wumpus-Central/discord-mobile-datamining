@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef11450 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MicrophoneSpotIllustration-1x.png.js";
-import _modDef11451 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MicrophoneSpotIllustration-2x.png.js";
-import _modDef11452 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MicrophoneSpotIllustration-3x.png.js";
+import _modDef11461 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MicrophoneSpotIllustration-1x.png.js";
+import _modDef11462 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MicrophoneSpotIllustration-2x.png.js";
+import _modDef11463 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MicrophoneSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11450 }, 3: null };
-let obj2 = { uri: _modDef11450 };
-obj[2] = { uri: _modDef11451 };
-const obj3 = { uri: _modDef11451 };
-obj[3] = { uri: _modDef11452 };
+let obj = { 1: null, 2: { uri: _modDef11461 }, 3: null };
+let obj2 = { uri: _modDef11461 };
+obj[2] = { uri: _modDef11462 };
+const obj3 = { uri: _modDef11462 };
+obj[3] = { uri: _modDef11463 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef11452 };
+const obj4 = { uri: _modDef11463 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/MicrophoneSpotIllustration.native.tsx",

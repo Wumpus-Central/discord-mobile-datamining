@@ -73,7 +73,7 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(5809).DEFAULT_SPATIAL_AUDIO_OPTIONS;
+const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(5811).DEFAULT_SPATIAL_AUDIO_OPTIONS;
 const Constants = fn(5680);
 ({ Features: closure_7, MediaEngineContextTypes: closure_8, SpatialAudioStatus } = Constants);
 let obj = {};

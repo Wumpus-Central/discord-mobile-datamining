@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return () => {
             closure_1_9.current = false;
             if (ref.current) {
-              first(5171).hideActionSheet(projectId(11747).CONJURE_DESIGN_REMARK_SHEET_KEY);
+              first(5171).hideActionSheet(projectId(11761).CONJURE_DESIGN_REMARK_SHEET_KEY);
               const obj = first(5171);
             }
           };
@@ -126,9 +126,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] !== projectId) {
         const fn3 = function y() {
           return () => {
-            const result = projectId(11033).inspectConjurePreviewPoint(
+            const result = projectId(11045).inspectConjurePreviewPoint(
               closure_1_0,
-              projectId(11051).CONJURE_INSPECT_CLEAR_POINT,
+              projectId(11063).CONJURE_INSPECT_CLEAR_POINT,
             );
           };
         };
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return () => {
           closure_1_9.current = false;
           if (ref.current) {
-            size(5171).hideActionSheet(projectId(11747).CONJURE_DESIGN_REMARK_SHEET_KEY);
+            size(5171).hideActionSheet(projectId(11761).CONJURE_DESIGN_REMARK_SHEET_KEY);
             const obj = size(5171);
           }
         };
@@ -361,9 +361,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [projectId];
       const effect2 = noop.useEffect(
         () => () => {
-          const result = projectId(11033).inspectConjurePreviewPoint(
+          const result = projectId(11045).inspectConjurePreviewPoint(
             closure_1_0,
-            projectId(11051).CONJURE_INSPECT_CLEAR_POINT,
+            projectId(11063).CONJURE_INSPECT_CLEAR_POINT,
           );
         },
         items1,
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             point.y = Math.round(nativeEvent.nativeEvent.locationY);
             closure_4(point);
             closure_8(false);
-            const result = projectId(11033).inspectConjurePreviewPoint(point, point);
+            const result = projectId(11045).inspectConjurePreviewPoint(point, point);
             result.then((status) => {
               if (ref.current) {
                 closure_4(null);
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_8(true);
               }
             });
-            const obj2 = projectId(11033);
+            const obj2 = projectId(11045);
           }
         }
       }, items4);

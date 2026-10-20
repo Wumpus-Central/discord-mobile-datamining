@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged = Object.assign(tmp5);
           obj3.leading = tmp13;
           obj3.trailing = tmp15;
-          const tmp22 = jsx(tmp(7194).BottomSheetTitleHeader, {});
+          const tmp22 = jsx(tmp(7197).BottomSheetTitleHeader, {});
           cResult[12] = tmp5;
           cResult[13] = tmp13;
           cResult[14] = tmp15;

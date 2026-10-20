@@ -6,13 +6,13 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import _modDef5654 from "../../../../../_runtime/metro/05654__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7137 from "../../../../../_runtime/metro/07137__.js";
-import _modDef8268 from "../../../../../_runtime/metro/08268__.js";
-import _modDef11149 from "../../../../../_runtime/metro/11149__.js";
-import _modDef11154 from "../../../../../_runtime/metro/11154__.js";
-import _modDef13522 from "../../../../../_runtime/metro/13522__.js";
-import _modDef16885 from "../../../../../_runtime/metro/16885__.js";
-import _modDef16886 from "../../../../../_runtime/metro/16886__.js";
+import _modDef7140 from "../../../../../_runtime/metro/07140__.js";
+import _modDef8272 from "../../../../../_runtime/metro/08272__.js";
+import _modDef11160 from "../../../../../_runtime/metro/11160__.js";
+import _modDef11165 from "../../../../../_runtime/metro/11165__.js";
+import _modDef13540 from "../../../../../_runtime/metro/13540__.js";
+import _modDef16904 from "../../../../../_runtime/metro/16904__.js";
+import _modDef16905 from "../../../../../_runtime/metro/16905__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -23,14 +23,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let items = [
-  _modDef13522,
-  _modDef7137,
-  _modDef8268,
-  _modDef11154,
+  _modDef13540,
+  _modDef7140,
+  _modDef8272,
+  _modDef11165,
   _modDef5654,
-  _modDef16885,
-  _modDef16886,
-  _modDef11149,
+  _modDef16904,
+  _modDef16905,
+  _modDef11160,
 ];
 let closure_10 = [
   "Launch Probe!",
@@ -95,8 +95,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: true,
-              action: true,
+              variant: "frunz\u0103 \u00EEn aer",
+              action: "frunz\u0103 plutind \u00EEn aer",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -124,8 +124,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: true,
-              action: true,
+              variant: "frunz\u0103 \u00EEn aer",
+              action: "frunz\u0103 plutind \u00EEn aer",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -185,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { triggerOnLongPress: tmp4, items: tmp5, align, title: "Sample title", children: C };
-        const tmp19 = closure_7(tmp(9676).ContextMenu, obj5);
+        const tmp19 = closure_7(tmp(9689).ContextMenu, obj5);
         cResult[11] = align;
         cResult[12] = tmp5;
         cResult[13] = C;
@@ -229,8 +229,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 label: length[index % length.length],
                 IconComponent: "a",
                 iconSource: length2[index % length2.length],
-                variant: true,
-                action: true,
+                variant: "frunz\u0103 \u00EEn aer",
+                action: "frunz\u0103 plutind \u00EEn aer",
               };
               let str = "default";
               if (index === closure_0 - 1) {
@@ -253,8 +253,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: true,
-              action: true,
+              variant: "frunz\u0103 \u00EEn aer",
+              action: "frunz\u0103 plutind \u00EEn aer",
             };
             let str = "default";
             if (index === closure_0 - 1) {

@@ -127,7 +127,7 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10990).sendUserMessage;
+const sendUserMessage = fn(11001).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
 const zustandStore = fn(5124).createZustandStore(() => ({ draftsByProject: {} }));

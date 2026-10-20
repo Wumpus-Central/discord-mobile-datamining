@@ -9,7 +9,7 @@ import UserSettingsModalActionCreatorsDefault from "../../actions/UserSettingsMo
 import transitionToGuild from "../../modules/routing/transitionToGuild.native.tsx";
 import useGuildPowerupsBoostCountDefault from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import TouchableHitBoxDefault from "../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10099 from "../../../_runtime/metro/10099__.js";
+import _modDef10110 from "../../../_runtime/metro/10110__.js";
 import BoostedGuildTierProgressCircleDefault from "../../modules/premium/native/BoostedGuildTierProgressCircle.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -100,7 +100,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp4.premiumGuildImage) {
             const obj3 = {
-              source: _modDef10099,
+              source: _modDef10110,
               style: tmp4.premiumGuildImage,
               resizeMode: "contain",
               resizeMethod: "resize",
@@ -207,7 +207,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj10 = {
           guild: stateFromStores,
-          size: tmp(6831).GuildIconSizes.LARGE,
+          size: tmp(6834).GuildIconSizes.LARGE,
           style: tmp4.guildIcon,
           selected: false,
         };
@@ -244,7 +244,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
         const tmp2Result = TouchableHitBoxDefault;
-        obj3.size = tmp5(6831).GuildIconSizes.LARGE;
+        obj3.size = tmp5(6834).GuildIconSizes.LARGE;
         obj3.style = tmp.guildIcon;
         const items1 = [closure_7(GuildIconDefault, obj3), ,];
         const obj4 = { style: tmp.guildCardDescription, children: null };
@@ -253,7 +253,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: tmp.subscriptionInfo, children: null };
         const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
         const tmp2Result3 = GuildIconDefault;
-        obj7.source = _modDef10099;
+        obj7.source = _modDef10110;
         obj7.style = tmp.premiumGuildImage;
         const items3 = [closure_7(FastImageDefault, obj7)];
         const obj8 = { variant: "text-xs/medium", children: null };

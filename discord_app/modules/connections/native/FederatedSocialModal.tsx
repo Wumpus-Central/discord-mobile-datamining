@@ -193,11 +193,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] !== platformType.onClose) {
-        const headerBackButton = tmp(6872).getHeaderBackButton(platformType.onClose);
+        const headerBackButton = tmp(6875).getHeaderBackButton(platformType.onClose);
         cResult[2] = platformType.onClose;
         cResult[3] = headerBackButton;
         let tmp10 = headerBackButton;
-        const tmpResult = tmp(6872);
+        const tmpResult = tmp(6875);
       } else {
         tmp10 = cResult[3];
       }

@@ -1898,6 +1898,12 @@ const frozen2 = Object.freeze({
   CHECKPOINT_RESET: "/checkpoint/reset",
   QUESTS_CURRENT_QUESTS: "/quests/@me",
   ORBS_ARCADE_GAMES: "/orbs-arcade/games/@me",
+  ORBS_ARCADE_CLAIM_REWARDS(arg0) {
+    return "/orbs-arcade/games/" + arg0 + "/rewards/claim";
+  },
+  ORBS_ARCADE_RESET_GAME(arg0) {
+    return "/orbs-arcade/games/" + arg0 + "/reset";
+  },
   QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
   QUEST(arg0) {
     return "/quests/" + arg0;
@@ -3964,6 +3970,12 @@ const obj2 = {
   CHECKPOINT_RESET: "/checkpoint/reset",
   QUESTS_CURRENT_QUESTS: "/quests/@me",
   ORBS_ARCADE_GAMES: "/orbs-arcade/games/@me",
+  ORBS_ARCADE_CLAIM_REWARDS(arg0) {
+    return "/orbs-arcade/games/" + arg0 + "/rewards/claim";
+  },
+  ORBS_ARCADE_RESET_GAME(arg0) {
+    return "/orbs-arcade/games/" + arg0 + "/reset";
+  },
   QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
   QUEST(arg0) {
     return "/quests/" + arg0;
@@ -9016,6 +9028,7 @@ export const AnalyticEvents = {
   SLAYER_STOREFRONT_CARD_IMPRESSION: "slayer_storefront_card_impression",
   SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED: "slayer_storefront_card_element_clicked",
   SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED: "slayer_storefront_pdp_element_clicked",
+  SLAYER_STOREFRONT_PDP_VIEWED: "slayer_storefront_pdp_viewed",
   SLAYER_STOREFRONT_ORBS_PURCHASE_GATE_VIEWED: "slayer_storefront_orbs_purchase_gate_viewed",
   SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED: "slayer_storefront_page_element_clicked",
   SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED: "slayer_storefront_forward_modal_element_clicked",

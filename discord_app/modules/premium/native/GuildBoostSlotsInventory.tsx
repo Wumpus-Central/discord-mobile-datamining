@@ -11,7 +11,7 @@ import actions_BillingActionCreatorsAll from "../../billing/actions/BillingActio
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
-import _modDef14610 from "../../../../_runtime/metro/14610__.js";
+import _modDef14628 from "../../../../_runtime/metro/14628__.js";
 import SubscriptionPlaceholderPattern from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
@@ -352,7 +352,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = tmp(1128).intl;
             obj6.children = intl2.string(tmp(1128).t.jqqLb6);
             obj5.children = closure_10(tmp(5195).Text, obj6);
-            tmp22 = closure_10(tmp(6856).PressableOpacity, obj5);
+            tmp22 = closure_10(tmp(6859).PressableOpacity, obj5);
           }
           cResult[5] = guildBoostSlot;
           cResult[6] = tmp22;
@@ -429,7 +429,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = guildBoostSlot(1128).intl;
           obj6.children = intl2.string(guildBoostSlot(1128).t.jqqLb6);
           obj5.children = closure_10(guildBoostSlot(5195).Text, obj6);
-          tmp6Result2 = closure_10(guildBoostSlot(6856).PressableOpacity, obj5);
+          tmp6Result2 = closure_10(guildBoostSlot(6859).PressableOpacity, obj5);
         }
         obj3.action = tmp6Result2;
         obj3.isLast = tmp;
@@ -526,7 +526,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp(1128).intl;
         obj6.children = intl2.string(tmp(1128).t["7KyPor"]);
         obj5.children = closure_10(tmp(5195).Text, obj6);
-        obj3.action = closure_10(tmp(6856).PressableOpacity, obj5);
+        obj3.action = closure_10(tmp(6859).PressableOpacity, obj5);
         obj3.isLast = 0 === found.length;
         tmp12 = closure_10(closure_16, obj3);
       }
@@ -599,7 +599,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = found(1128).intl;
         obj5.children = intl2.string(found(1128).t["7KyPor"]);
         obj4.children = closure_10(found(5195).Text, obj5);
-        obj2.action = closure_10(found(6856).PressableOpacity, obj4);
+        obj2.action = closure_10(found(6859).PressableOpacity, obj4);
         obj2.isLast = 0 === found.length;
         tmp4 = closure_10(closure_16, obj2);
       }
@@ -649,7 +649,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp14 = cResult[7];
             }
             if (cResult[8] !== tmp4.guildInfoRowIcon) {
-              const obj3 = { source: _modDef14610, style: tmp4.guildInfoRowIcon };
+              const obj3 = { source: _modDef14628, style: tmp4.guildInfoRowIcon };
               const tmp21 = collapsed(FastImageDefault, obj3);
               cResult[8] = tmp4.guildInfoRowIcon;
               cResult[9] = tmp21;
@@ -770,7 +770,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [collapsed(Text_Text.Text, obj5)];
         const obj6 = { style: tmp.guildInfoRowBottom, children: null };
         const obj7 = { source: null, style: null };
-        obj7.source = _modDef14610;
+        obj7.source = _modDef14628;
         obj7.style = tmp.guildInfoRowIcon;
         const items2 = [collapsed(FastImageDefault, obj7)];
         const obj8 = {
@@ -849,7 +849,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[6];
       }
       const tmpResult3 = guildId(504);
-      let subscriptionPlaceholderPatternSource = guildId(14611).useSubscriptionPlaceholderPatternSource();
+      let subscriptionPlaceholderPatternSource = guildId(14629).useSubscriptionPlaceholderPatternSource();
       if (null != tmp13) {
         subscriptionPlaceholderPatternSource = tmp13;
       }
@@ -1003,7 +1003,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               tmp28 = tmp30;
             }
             const obj8 = { guild: stateFromStores, theme: stateFromStores1 };
-            const tmp27 = closure_10(guildBoostSlots(14615), obj8);
+            const tmp27 = closure_10(guildBoostSlots(14633), obj8);
             cResult[16] = stateFromStores;
             cResult[17] = stateFromStores1;
             cResult[18] = tmp27;
@@ -1026,7 +1026,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = prop;
       cResult[9] = items5;
       tmp19 = items5;
-      const tmpResult4 = guildId(14611);
+      const tmpResult4 = guildId(14629);
     }
   : function BoostedGuild(arg0) {
       ({ guildId: require, guildBoostSlots } = arg0);
@@ -1067,7 +1067,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11Result = closure_10(View, obj8);
       }
       items3[1] = tmp11Result;
-      items3[2] = closure_10(guildBoostSlots(14615), { guild: stateFromStores, theme: stateFromStores1 });
+      items3[2] = closure_10(guildBoostSlots(14633), { guild: stateFromStores, theme: stateFromStores1 });
       obj6.children = items3;
       const items4 = [
         closure_11(View, obj6),
@@ -1100,7 +1100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function l() {
           const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
-          const guildBoostSlots = tmp16(8312).fetchGuildBoostSlots();
+          const guildBoostSlots = tmp16(8316).fetchGuildBoostSlots();
         };
         const items = [];
         cResult[0] = fn;
@@ -1261,7 +1261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_14();
       const effect = noop.useEffect(() => {
         const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
-        const guildBoostSlots = valueResult(8312).fetchGuildBoostSlots();
+        const guildBoostSlots = valueResult(8316).fetchGuildBoostSlots();
       }, []);
       const items = [SubscriptionStore];
       const stateFromStores = initialize.useStateFromStores(items, () =>

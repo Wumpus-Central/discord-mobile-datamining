@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductD
   } else {
     return null;
   }
-  tmpResult = selectedVariantIndex(7607);
+  tmpResult = selectedVariantIndex(7610);
 }) : (function ProductDetailsActionSheetVariants(disabled) {
   ({ product, selectedVariantIndex } = disabled);
   let flag = disabled.disabled;

@@ -42,7 +42,7 @@ function getScreens(guild, toUser) {
       c2 = 0;
       c1 = 0;
       return (async (arg0) => {
-        await toUser(8926).transferOwnership(id.id, id2.id, constants.EMAIL, id);
+        await toUser(8938).transferOwnership(id.id, id2.id, constants.EMAIL, id);
         return value;
       })();
     });
@@ -57,10 +57,10 @@ function getScreens(guild, toUser) {
       return applyArgumentsResult;
     };
     obj.onSuccess = function onSuccess() {
-      toUser(12598).close();
-      const obj = toUser(12598);
-      toUser(8926).close();
-      const obj2 = toUser(8926);
+      toUser(12615).close();
+      const obj = toUser(12615);
+      toUser(8938).close();
+      const obj2 = toUser(8938);
       const result = closure_0(5624).showTransferOwnershipSuccess();
     };
     obj.onResend = asyncGeneratorStep(async () => {
@@ -114,7 +114,7 @@ function getScreens(guild, toUser) {
     obj.headerText = intl.string(guild(1128).t.Z5s7PM);
     const intl2 = guild(1128).intl;
     obj.confirmButtonText = intl2.string(guild(1128).t.Z5s7PM);
-    return jsx(toUser(6954), {
+    return jsx(toUser(6957), {
       onFormSubmit: null,
       onSuccess: null,
       onResend: null,
@@ -125,7 +125,7 @@ function getScreens(guild, toUser) {
   obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
   return obj2;
 }
-const TransferOwnershipConstants = fn(12600);
+const TransferOwnershipConstants = fn(12617);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } =
   TransferOwnershipConstants);
 const jsx = fn(21).jsx;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
       const intl = guild(1128).intl;
       obj.headerBackTitle = intl.string(guild(1128).t["13/7kX"]);
-      return jsx(guild(7043).Navigator, {
+      return jsx(guild(7046).Navigator, {
         screens: memo,
         initialRouteName: constants.TRANFSER_OWNERSHIP,
         headerBackTitle: null,

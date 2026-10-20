@@ -48,7 +48,7 @@ function maybeClearUrgentMessage(channelId) {
     UserActionCreatorsAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
   }
 }
-const SYSTEM_USER = fn(18694).SYSTEM_USER;
+const SYSTEM_USER = fn(18717).SYSTEM_USER;
 const UserFlags = fn(1087).UserFlags;
 let c7 = false;
 const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAlert) {

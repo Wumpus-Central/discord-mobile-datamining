@@ -3,13 +3,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
-import _modDef11535 from "../../../../_runtime/metro/11535__.js";
+import _modDef11546 from "../../../../_runtime/metro/11546__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const GameConsoleConstants = fn(9540);
+const GameConsoleConstants = fn(9553);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp4.externalLinkIcon) {
         const fn = function _() {
-          return jsx(native.Icon, { source: _modDef11535, style: closure_0.externalLinkIcon });
+          return jsx(native.Icon, { source: _modDef11546, style: closure_0.externalLinkIcon });
         };
         cResult[4] = tmp4.externalLinkIcon;
         cResult[5] = fn;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.cancelText = intl4.string(require("util").t.kYaBOg);
       obj.fillCancelText = true;
       obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-        return jsx(native.Icon, { source: _modDef11535, style: closure_0.externalLinkIcon });
+        return jsx(native.Icon, { source: _modDef11546, style: closure_0.externalLinkIcon });
       };
       obj.onConfirm = function onConfirm() {
         const obj = closure_0(1384);

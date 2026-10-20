@@ -25,11 +25,11 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 const initialize = intl(504);
 const util = intl(1128);
-const UserProfileApplicationWidgetTypes = intl(7654);
+const UserProfileApplicationWidgetTypes = intl(7657);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11708);
+const conjureDesignFeedbackStore = fn(11722);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({
@@ -39,7 +39,7 @@ const Constants = fn(1087);
   AppStates: closure_19,
   ME: closure_20,
 } = Constants);
-const isLaunched = fn(6724).isLaunched;
+const isLaunched = fn(6727).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
 const createStyles = fn(4945);
@@ -677,7 +677,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = id(576).c(43);
       closure_24();
       let obj = id(576);
-      const application = id(6757).useApplication(previewApplicationId.previewApplicationId);
+      const application = id(6760).useApplication(previewApplicationId.previewApplicationId);
       const data = application.data;
       id = undefined;
       if (data != null) {
@@ -719,7 +719,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[2];
         tmp10 = cResult[3];
       }
-      let obj2 = id(6757);
+      let obj2 = id(6760);
       const stateFromStores = id(504).useStateFromStores(first, tmp9, tmp10);
       const tmp13 = _slicedToArray(noop.useState(null), 2);
       dependencyMap = tmp13[1];
@@ -982,7 +982,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores1;
       let stateFromStores2;
       let tmp = closure_24();
-      const application = id(6757).useApplication(previewApplicationId.previewApplicationId);
+      const application = id(6760).useApplication(previewApplicationId.previewApplicationId);
       const data = application.data;
       id = undefined;
       if (data != null) {
@@ -994,7 +994,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       if (id == null) {
         id = null;
       }
-      let obj = id(6757);
+      let obj = id(6760);
       const items = [ChannelStore];
       const items1 = [id];
       stateFromStores = id(504).useStateFromStores(
@@ -1025,8 +1025,8 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
             if (!closure_3) {
               c0 = false;
               const obj2 = { recipientIds: tmp, navigateToChannel: false };
-              const obj = stateFromStores(7357);
-              stateFromStores(7357)
+              const obj = stateFromStores(7360);
+              stateFromStores(7360)
                 .openPrivateChannel(obj2)
                 .catch(() => {
                   if (!c0) {
@@ -1125,10 +1125,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           alwaysRespectKeyboard: true,
           disableGradient: true,
         };
-        const items8 = [closure_22(stateFromStores(10684), obj7, stateFromStores.id)];
+        const items8 = [closure_22(stateFromStores(10695), obj7, stateFromStores.id)];
         let tmp29Result = null;
         if (tmp2Result6.isAndroid()) {
-          tmp29Result = closure_22(tmp2(11868).PortalKeyboardRenderer, { portal: true });
+          tmp29Result = closure_22(tmp2(11882).PortalKeyboardRenderer, { portal: true });
         }
         items8[1] = tmp29Result;
         obj6.children = items8;

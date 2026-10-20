@@ -151,7 +151,7 @@ let closure_13 = noop.memo(
                                   style: tmp12,
                                   children: tmp23,
                                 };
-                                const tmp29 = closure_9(tmp(6856).PressableOpacity, obj2);
+                                const tmp29 = closure_9(tmp(6859).PressableOpacity, obj2);
                                 cResult[25] = tmp23;
                                 cResult[26] = tmp9;
                                 cResult[27] = tmp10;
@@ -173,7 +173,7 @@ let closure_13 = noop.memo(
                       ({ emoji: obj5.style, customEmoji: obj5.fastImageStyle, textEmoji: obj5.textEmojiStyle } = tmp4);
                       obj6.name = str;
                       obj6.src = cResult[15];
-                      const tmp22 = closure_9(onPress(7175), obj6);
+                      const tmp22 = closure_9(onPress(7178), obj6);
                       cResult[16] = tmp4.customEmoji;
                       cResult[17] = tmp4.emoji;
                       cResult[18] = tmp4.textEmoji;
@@ -283,7 +283,7 @@ let closure_13 = noop.memo(
         obj4.src = url;
         obj3.children = closure_9(EmojiDefault, obj4);
         obj2.children = closure_9(View, obj3);
-        return closure_9(emoji(6856).PressableOpacity, obj2);
+        return closure_9(emoji(6859).PressableOpacity, obj2);
       },
 );
 ReactCompilerGating = fn(558);
@@ -301,7 +301,7 @@ export default noop.memo(
         const tmp4 = closure_12();
         let obj = selectedEmoji(576);
         let tmp = selectedEmoji;
-        const frequentlyUsedReactionEmojis = selectedEmoji(9744).useFrequentlyUsedReactionEmojis(undefined);
+        const frequentlyUsedReactionEmojis = selectedEmoji(9757).useFrequentlyUsedReactionEmojis(undefined);
         const rounded = Math.floor(Math.min(onPressEmoji(1499)().width, ACTION_SHEET_MAX_WIDTH) / 60);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
@@ -315,7 +315,7 @@ export default noop.memo(
         } else {
           [tmp6, tmp7] = cResult;
         }
-        let obj2 = selectedEmoji(9744);
+        let obj2 = selectedEmoji(9757);
         const stateFromStores = tmp(504).useStateFromStores(tmp6, tmp7);
         if (cResult[2] === frequentlyUsedReactionEmojis) {
           if (cResult[3] === rounded) {

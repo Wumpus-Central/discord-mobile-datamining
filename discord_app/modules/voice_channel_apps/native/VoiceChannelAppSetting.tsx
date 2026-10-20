@@ -46,7 +46,7 @@ function VoiceChannelAppRow(guildId) {
   obj3.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(17994, dependencyMap.paths),
+      asyncRequireImpl(18017, dependencyMap.paths),
       VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY,
       { guildId, selectedApplicationId: application_id, onChange },
     );

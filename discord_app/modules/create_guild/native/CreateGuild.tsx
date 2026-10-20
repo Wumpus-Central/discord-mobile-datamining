@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onPress: onIconPress,
             icon: guild.icon,
           };
-          const tmp27 = closure_7(ref(12551), obj2);
+          const tmp27 = closure_7(ref(12568), obj2);
           cResult[15] = guild.icon;
           cResult[16] = onIconPress;
           cResult[17] = tmp4.contentContainer.backgroundColor;
@@ -457,7 +457,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj4.children = customDescription;
       items1[1] = closure_7(isScreenReaderEnabled(5195).Text, obj4);
-      items1[2] = closure_7(ref(12551), {
+      items1[2] = closure_7(ref(12568), {
         iconBackgroundColor: tmp.contentContainer.backgroundColor,
         style: tmp.iconUploader,
         onPress: onIconPress,
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp9Result = !!isStaffResult;
       obj6.autoFocus = autoFocus;
-      items1[3] = closure_7(isScreenReaderEnabled(6956).TextInput, obj6);
+      items1[3] = closure_7(isScreenReaderEnabled(6959).TextInput, obj6);
       if (tmp9Result) {
         const obj7 = {
           onValueChange: onStaffOnlyChange,
@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl4 = tmp4(1128).intl;
         obj7.subLabel = intl4.string(tmp4(1128).t.edQ5va);
-        tmp9Result = closure_7(tmp4(7241).TableSwitchRow, obj7);
+        tmp9Result = closure_7(tmp4(7244).TableSwitchRow, obj7);
       }
       items1[4] = tmp9Result;
       const obj8 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -540,12 +540,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               message2 = error.message;
             }
             const obj11 = { children: message2 };
-            tmp9Result2 = closure_7(ref(6981), obj11);
-            const tmp12Result = ref(6981);
+            tmp9Result2 = closure_7(ref(6984), obj11);
+            const tmp12Result = ref(6984);
           }
         }
       }
       items1[7] = tmp9Result2;
-      obj.children = closure_8(isScreenReaderEnabled(5932).Stack, { children: items1 });
+      obj.children = closure_8(isScreenReaderEnabled(5935).Stack, { children: items1 });
       return closure_7(ScrollView, obj);
     };

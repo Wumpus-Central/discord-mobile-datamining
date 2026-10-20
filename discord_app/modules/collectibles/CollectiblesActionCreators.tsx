@@ -964,11 +964,11 @@ let closure_31 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
     }
   }
 };
-const addDebugLog = fn(7610).addDebugLog;
-let closure_11 = fn(7613).CollectiblesCategoriesRecord;
-const CollectiblesMarketingRecord = fn(7617);
+const addDebugLog = fn(7613).addDebugLog;
+let closure_11 = fn(7616).CollectiblesCategoriesRecord;
+const CollectiblesMarketingRecord = fn(7620);
 ({ CollectiblesMarketingsRecord: closure_12, rehydratePersistedMarketings: map1 } = CollectiblesMarketingRecord);
-let closure_16 = fn(7624).CollectiblesShopHomeRecord;
+let closure_16 = fn(7627).CollectiblesShopHomeRecord;
 const constants = fn(1089).CollectiblesMobileShopScreen;
 const Constants = fn(1087);
 ({ Endpoints: closure_18, Routes, UserSettingsSections: closure_19 } = Constants);

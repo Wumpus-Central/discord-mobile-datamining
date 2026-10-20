@@ -87,8 +87,8 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1087);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(7361).ClearFriendRequestFilters;
-const SafetyToastType = fn(7362).SafetyToastType;
+const ClearFriendRequestFilters = fn(7364).ClearFriendRequestFilters;
+const SafetyToastType = fn(7365).SafetyToastType;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -308,7 +308,7 @@ let obj2 = {
         obj3.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
       })
       .catch(() => {
-        channelId(7368).showFailedToast();
+        channelId(7371).showFailedToast();
         const AccessibilityAnnouncer = userId(4952).AccessibilityAnnouncer;
         const intl = userId(1128).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1128).t.n6Jo3E));
@@ -334,7 +334,7 @@ let obj2 = {
         );
       })
       .catch(() => {
-        channelId(7368).showFailedToast();
+        channelId(7371).showFailedToast();
         const AccessibilityAnnouncer = id(4952).AccessibilityAnnouncer;
         const intl = id(1128).intl;
         AccessibilityAnnouncer.announce(intl.string(id(1128).t.n6Jo3E));

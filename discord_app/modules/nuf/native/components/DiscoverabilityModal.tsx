@@ -13,7 +13,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(13381).useContactSyncModalStore;
+const useContactSyncModalStore = fn(13399).useContactSyncModalStore;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let obj2 = {
@@ -164,9 +164,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function v(arg0) {
-          const result = allowPhone(13409).startContactSyncForDiscoverability(arg0);
-          const obj = allowPhone(13409);
-          const result1 = allowPhone(13409).closeDiscoverabilityModal(false);
+          const result = allowPhone(13427).startContactSyncForDiscoverability(arg0);
+          const obj = allowPhone(13427);
+          const result1 = allowPhone(13427).closeDiscoverabilityModal(false);
         };
         cResult[3] = fn2;
         let tmp8 = fn2;
@@ -210,9 +210,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = { style: tmp.container, children: null };
       const callback = noop.useCallback((arg0) => {
-        const result = allowPhone(13409).startContactSyncForDiscoverability(arg0);
-        const obj = allowPhone(13409);
-        const result1 = allowPhone(13409).closeDiscoverabilityModal(false);
+        const result = allowPhone(13427).startContactSyncForDiscoverability(arg0);
+        const obj = allowPhone(13427);
+        const result1 = allowPhone(13427).closeDiscoverabilityModal(false);
       }, []);
       const obj2 = { onNext: callback, loading: false, initialName: null };
       const tmp2 = useContactSyncModalStore();

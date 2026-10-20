@@ -11,14 +11,6 @@ class ConjureSequencedBuffer {
   }
 }
 const prototype = ConjureSequencedBuffer.prototype;
-prototype["at"] = function at(arg0) {
-  const items = this.items;
-  return items.at(arg0);
-};
-prototype["findIndex"] = function findIndex(arg0) {
-  const items = this.items;
-  return items.findIndex(arg0);
-};
 prototype["indexOfSeq"] = function indexOfSeq(seq) {
   const self = this;
   let diff = this.items.length - 1;
@@ -63,27 +55,6 @@ prototype["insert"] = function insert(arg0) {
   items.splice(tmp2, 0, arg0);
   self.cached = null;
 };
-prototype["replace"] = function replace(arg0, arg1) {
-  const self = this;
-  if (keyOfResult === this.keyOf(arg1)) {
-    self.items[arg0] = arg1;
-    self.cached = null;
-  } else {
-    const items = self.items;
-    items.splice(arg0, 1);
-    self.insert(arg1);
-  }
-  keyOfResult = this.keyOf(this.items[arg0]);
-};
-prototype["retain"] = function retain(arg0) {
-  const self = this;
-  const items = this.items;
-  const found = items.filter(arg0);
-  if (found.length !== this.items.length) {
-    self.items = found;
-    self.cached = null;
-  }
-};
 prototype["trim"] = function trim(arg0) {
   const self = this;
   if (this.items.length > arg0) {
@@ -91,9 +62,6 @@ prototype["trim"] = function trim(arg0) {
     items.splice(0, self.items.length - arg0);
     self.cached = null;
   }
-};
-prototype["values"] = function values() {
-  return this.items;
 };
 prototype["snapshot"] = function snapshot() {
   const self = this;

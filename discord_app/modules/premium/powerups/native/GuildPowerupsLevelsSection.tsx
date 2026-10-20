@@ -165,8 +165,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.title = intl.string(listings(2558)["TXY/b0"]);
       const intl2 = util.intl;
       obj2.description = intl2.string(listings(2558).aJv4PB);
-      const items1 = [closure_5(listings(13275), obj2)];
-      const tmp3 = listings(13275);
+      const items1 = [closure_5(listings(13293), obj2)];
+      const tmp3 = listings(13293);
       items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
         cardMarginRight: PX_16,
         cardWidth: 250,

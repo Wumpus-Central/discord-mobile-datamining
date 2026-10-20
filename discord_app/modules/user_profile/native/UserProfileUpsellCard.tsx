@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7490).Gradients;
+const Gradients = fn(7493).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4945);
@@ -22,8 +22,8 @@ let obj2 = {
   inner: null,
 };
 let obj3 = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
-obj2.outer = { marginHorizontal: fn(7250).PROFILE_SIDE_PADDING - 1 };
-let obj4 = { marginHorizontal: fn(7250).PROFILE_SIDE_PADDING - 1 };
+obj2.outer = { marginHorizontal: fn(7253).PROFILE_SIDE_PADDING - 1 };
+let obj4 = { marginHorizontal: fn(7253).PROFILE_SIDE_PADDING - 1 };
 obj2.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.inner = { paddingVertical: 12, paddingHorizontal: 14 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj3 = { style: tmp4.titleContainer, children: null };
               const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-              const items1 = [closure_6(tmp(9343).NitroWheelIcon, obj4)];
+              const items1 = [closure_6(tmp(9355).NitroWheelIcon, obj4)];
               const obj5 = { variant: "heading-sm/bold", children: headerText };
               items1[1] = closure_6(tmp(5195).Text, obj5);
               obj3.children = items1;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != headerText) {
         const obj3 = { style: tmp.titleContainer, children: null };
         const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-        const items3 = [closure_6(tmp3(9343).NitroWheelIcon, obj4)];
+        const items3 = [closure_6(tmp3(9355).NitroWheelIcon, obj4)];
         const obj5 = { variant: "heading-sm/bold", children: headerText };
         items3[1] = closure_6(tmp3(5195).Text, obj5);
         obj3.children = items3;

@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7250).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7253).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let c5 = 0.9;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };

@@ -235,5 +235,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items1[1] = closure_6(guildId(5205).Button, obj3);
       obj2.children = items1;
       obj.buttons = closure_8(closure_7, obj2);
-      return closure_6(onClose(6787), obj);
+      return closure_6(onClose(6790), obj);
     };

@@ -37,8 +37,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6807).addPostConnectionCallback;
-let closure_10 = fn(7479).handleMobileWebCheckoutStatus;
+fn(6810).addPostConnectionCallback;
+let closure_10 = fn(7482).handleMobileWebCheckoutStatus;
 const Constants = fn(1087);
 ({
   AnalyticEvents: map1,
@@ -49,13 +49,13 @@ const Constants = fn(1087);
   ME: closure_18,
 } = Constants);
 const StaticChannelRoute = fn(4807).StaticChannelRoute;
-const StreamTypes = fn(6591).StreamTypes;
-const NativePermissionTypes = fn(7812).NativePermissionTypes;
-let closure_22 = fn(11036).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_23 = fn(7592).FAMILY_CENTER_LINK_REQUEST_REGEX;
+const StreamTypes = fn(6594).StreamTypes;
+const NativePermissionTypes = fn(7816).NativePermissionTypes;
+let closure_22 = fn(11048).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_23 = fn(7595).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5660).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(14892).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8276).MobileUserSettings;
+const SHARE_SCREEN_MODAL_KEY = fn(14910).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8280).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -211,7 +211,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "barf" };
+      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj25 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj20.navigationSettings = obj25;
       rootNavigationRef1(inviteCode[31])(obj20);
@@ -302,7 +302,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(14904, dependencyMap.paths),
+                    asyncRequireImpl(14922, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -673,15 +673,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(6620).popAll();
-                        const obj5 = closure_1(6620);
+                        closure_1(6623).popAll();
+                        const obj5 = closure_1(6623);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7436).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7436);
+                        dependencyMap(7439).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7439);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(7220).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(7223).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;

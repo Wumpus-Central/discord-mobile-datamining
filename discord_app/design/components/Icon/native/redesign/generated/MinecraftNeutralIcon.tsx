@@ -2,9 +2,9 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9210 from "../../../../../../../_runtime/metro/09210__.js";
-import _mod9211 from "../../../../../../../_runtime/metro/09211__.js";
-import _mod9212 from "../../../../../../../_runtime/metro/09212__.js";
+import _mod9222 from "../../../../../../../_runtime/metro/09222__.js";
+import _mod9223 from "../../../../../../../_runtime/metro/09223__.js";
+import _mod9224 from "../../../../../../../_runtime/metro/09224__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -53,7 +53,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
         str2 = tmp7;
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod9210;
+        const tmpResult = _mod9222;
         cResult[6] = tmpResult;
         let tmp12 = tmpResult;
       } else {
@@ -66,7 +66,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmpResult3 = _mod9211;
+            const tmpResult3 = _mod9223;
             cResult[11] = tmpResult3;
             let tmp17 = tmpResult3;
           } else {
@@ -94,7 +94,7 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const _Symbol3 = Symbol;
                 if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmpResult4 = _mod9212;
+                  const tmpResult4 = _mod9224;
                   cResult[19] = tmpResult4;
                   let tmp29 = tmpResult4;
                 } else {
@@ -193,15 +193,15 @@ export const MinecraftNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
       );
       const obj = { children: null };
       const merged1 = Object.assign(merged);
-      const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod9210, color, style }), ,];
-      const obj3 = { source: _mod9211, color: str, style: null };
+      const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod9222, color, style }), ,];
+      const obj3 = { source: _mod9223, color: str, style: null };
       const items1 = [style];
       const items2 = [];
       items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
       obj3.style = items2;
       const merged2 = Object.assign(merged);
       items[1] = timestampProducer(BaseIconImage.BaseIconImage, obj3);
-      const obj4 = { source: _mod9212, color: str2, style: null };
+      const obj4 = { source: _mod9224, color: str2, style: null };
       const items3 = [style];
       const items4 = [];
       items4[HermesBuiltin.arraySpread(items3.flat(), 0)] = { position: "absolute", top: 0 };

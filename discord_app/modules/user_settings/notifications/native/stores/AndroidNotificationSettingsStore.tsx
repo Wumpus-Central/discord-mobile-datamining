@@ -130,7 +130,7 @@ let closure_4 = identity.createWithEqualityFn(() => ({
   isLightsEnabled: "toCharArray$esjava$1",
   isVibrationsEnabled: "Symbol",
   isSoundsEnabled: "unicodeVersion",
-  isNotifyEveryTime: "np",
+  isNotifyEveryTime: "ty",
 }));
 fn(558);
 let ReactCompilerGating = fn(558);

@@ -16,7 +16,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       user = user.user;
       ({ channel, onPress, start, end } = user);
       const obj = user(576);
-      const avatarDecoration = user(6730).useAvatarDecoration(user, channel.guild_id);
+      const avatarDecoration = user(6733).useAvatarDecoration(user, channel.guild_id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PresenceStore];
         cResult[0] = items;
@@ -38,7 +38,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp7 = cResult[2];
       }
-      const obj2 = user(6730);
+      const obj2 = user(6733);
       const stateFromStoresObject = user(504).useStateFromStoresObject(first, tmp7);
       ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
       if (cResult[3] === channel.guild_id) {
@@ -67,7 +67,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     const obj3 = { onPress, label: tmp9, icon: tmp11, start, end };
-                    const tmp16 = jsx(tmp(6851).TableRow, { onPress, label: tmp9, icon: tmp11, start, end });
+                    const tmp16 = jsx(tmp(6854).TableRow, { onPress, label: tmp9, icon: tmp11, start, end });
                     cResult[14] = end;
                     cResult[15] = onPress;
                     cResult[16] = start;
@@ -122,8 +122,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       user = user.user;
       const channel = user.channel;
       ({ onPress, start, end } = user);
-      const avatarDecoration = user(6730).useAvatarDecoration(user, channel.guild_id);
-      const obj = user(6730);
+      const avatarDecoration = user(6733).useAvatarDecoration(user, channel.guild_id);
+      const obj = user(6733);
       const items = [PresenceStore];
       const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({
         status: PresenceStore.getStatus(user.id),
@@ -146,7 +146,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       });
       obj3.start = start;
       obj3.end = end;
-      return jsx(user(6851).TableRow, { onPress, label: null, icon: null, start: null, end: null });
+      return jsx(user(6854).TableRow, { onPress, label: null, icon: null, start: null, end: null });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -189,14 +189,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp11;
           }
           const obj2 = { title: first, onBack, scrollable: true, children: tmp8 };
-          const tmp14 = jsx(onPressUser(10868), { title: first, onBack, scrollable: true, children: tmp8 });
+          const tmp14 = jsx(onPressUser(10879), { title: first, onBack, scrollable: true, children: tmp8 });
           cResult[8] = onBack;
           cResult[9] = tmp8;
           cResult[10] = tmp14;
           tmp11 = tmp14;
         }
         const obj3 = { data: users, keyExtractor: tmp6, renderItem: tmp7 };
-        const tmp10 = jsx(channel(10868).UserProfileStackedActionSheetList, {
+        const tmp10 = jsx(channel(10879).UserProfileStackedActionSheetList, {
           data: users,
           keyExtractor: tmp6,
           renderItem: tmp7,

@@ -227,7 +227,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 accessibilityRole: "link",
                 onPress() {
                   const obj2 = { href: null };
-                  const obj = learnMore(8780);
+                  const obj = learnMore(8792);
                   obj2.href = closure_1_1(2068).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
                   return obj.handleClick(obj2);
                 },
@@ -259,7 +259,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               accessibilityRole: "link",
               onPress() {
                 const obj2 = { href: null };
-                const obj = learnMore(8780);
+                const obj = learnMore(8792);
                 obj2.href = closure_1_1(2068).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
                 return obj.handleClick(obj2);
               },
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === user.id) {
             let tmp4 = cResult[3];
           }
-          const tmp6 = cardStyle(14198)(tmp4);
+          const tmp6 = cardStyle(14216)(tmp4);
           ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = tmp6);
           if (!hasCurrentActivity) {
             if (!hasRecentActivity) {
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                let obj2 = tmp(14201);
+                let obj2 = tmp(14219);
                 if (isCurrentUser) {
                   obj2 = {};
                   let tmp7Result = closure_5(obj2.UserProfileActivityEmptyCurrentUser, obj2);
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = tmp(1128).intl;
             obj6.heading = intl.string(tmp(1128).t.J6STd9);
             const obj7 = { user, currentUser, guildId, style: cardStyle };
-            obj6.children = closure_5(cardStyle(14082), obj7);
+            obj6.children = closure_5(cardStyle(14100), obj7);
             tmp17 = closure_5(closure_10, obj6);
           }
           cResult[10] = cardStyle;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function UserProfileActivityTab(user) {
       user = user.user;
       ({ currentUser, guildId, cardStyle } = user);
-      ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14198)({
+      ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14216)({
         userId: user.id,
         currentUserId: currentUser.id,
         guildId,
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (tmp4) {
             let tmp10Result = closure_5(closure_9, {});
           } else {
-            const tmp7 = user(14201);
+            const tmp7 = user(14219);
             if (isCurrentUser) {
               tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
             } else {
@@ -434,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = user(1128).intl;
         obj3.heading = intl.string(user(1128).t.J6STd9);
         const obj4 = { user, currentUser, guildId, style: cardStyle };
-        obj3.children = closure_5(cardStyle(14082), obj4);
+        obj3.children = closure_5(cardStyle(14100), obj4);
         hasCurrentActivity = closure_5(closure_10, obj3);
       }
       const items = [hasCurrentActivity];
@@ -455,5 +455,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items[1] = hasRecentActivity;
       tmp10Result = closure_6(closure_7, { children: items });
       const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-      const tmp3 = cardStyle(14198)({ userId: user.id, currentUserId: currentUser.id, guildId });
+      const tmp3 = cardStyle(14216)({ userId: user.id, currentUserId: currentUser.id, guildId });
     };

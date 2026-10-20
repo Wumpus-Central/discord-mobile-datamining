@@ -6,7 +6,7 @@ import ChannelListLayout from "layouts/ChannelListLayout.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UnreadSetting = fn(6653).UnreadSetting;
+const UnreadSetting = fn(6656).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let closure_5 = createStyles.createStyleProperties({

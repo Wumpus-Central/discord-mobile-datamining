@@ -182,11 +182,11 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
       const tmp4 = useColorThemeBackgroundDefault();
       const obj = manaTypeConsolidationExperiment(504);
       manaTypeConsolidationExperiment =
-        manaTypeConsolidationExperiment(7023).useManaTypeConsolidationExperiment("RootThemeContextProvider");
-      const obj2 = manaTypeConsolidationExperiment(7023);
+        manaTypeConsolidationExperiment(7026).useManaTypeConsolidationExperiment("RootThemeContextProvider");
+      const obj2 = manaTypeConsolidationExperiment(7026);
       [][0] = manaTypeConsolidationExperiment;
       const plainTextExperiment =
-        manaTypeConsolidationExperiment(17086).usePlainTextExperiment("RootThemeContextProvider");
+        manaTypeConsolidationExperiment(17105).usePlainTextExperiment("RootThemeContextProvider");
       if (null == tmp4) {
         let num2 = 0;
         if (1 !== saturation) {
@@ -207,7 +207,7 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
             enabled: plainTextExperiment,
             children: children.children,
           });
-          return jsx(tmp(11598).RootThemeContextProvider, {
+          return jsx(tmp(11609).RootThemeContextProvider, {
             theme: stateFromStoresObject.theme,
             flags: num2,
             saturation,
@@ -234,5 +234,5 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
         setThemeFlagResult1 = tmp(4999).setThemeFlag(0, tmp(4999).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
         const tmpResult6 = tmp(4999);
       }
-      const obj3 = manaTypeConsolidationExperiment(17086);
+      const obj3 = manaTypeConsolidationExperiment(17105);
     };

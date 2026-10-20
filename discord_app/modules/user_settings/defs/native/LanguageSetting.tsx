@@ -4,7 +4,7 @@ import LocaleStore from "../../LocaleStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useLanguageSettingTrailing() {
       const cResult = stateFromStores(576).c(4);
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(9431).LanguageIcon,
+  IconComponent: fn(9443).LanguageIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useLanguageSettingTrailing() {
         const cResult = stateFromStores(576).c(4);

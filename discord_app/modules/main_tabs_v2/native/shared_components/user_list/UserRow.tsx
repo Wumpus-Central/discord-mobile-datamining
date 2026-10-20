@@ -34,7 +34,7 @@ const UserUtilsDefault = UserUtils;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10534).UserRowModes;
+const UserRowModes = fn(10545).UserRowModes;
 const Constants = fn(1087);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -560,14 +560,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(10546)(channel, false);
+                const obj2 = user(10557)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
                 const tmp3 = user(38);
                 obj = { recipientIds: current.id };
-                user(7357).openPrivateChannel(obj);
-                const tmpResult = user(7357);
+                user(7360).openPrivateChannel(obj);
+                const tmpResult = user(7360);
               }
             });
         };
@@ -616,14 +616,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10546)(channel, false);
+          const obj2 = user(10557)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           obj = { recipientIds: current.id };
-          user(7357).openPrivateChannel(obj);
-          const tmpResult = user(7357);
+          user(7360).openPrivateChannel(obj);
+          const tmpResult = user(7360);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -677,10 +677,10 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8593, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8605, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8593, dependencyMap.paths);
+      const promise = asyncRequireImpl(8605, dependencyMap.paths);
     } else {
       tmp(user);
     }

@@ -92,7 +92,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (null != stateFromStores) {
               if (null != stateFromStores1) {
                 if (null == dependencyMap[skuId.skuId]) {
-                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "enumerable" };
                 } else {
                   obj = { isActiveFromLevel: tmp17.premiumTier >= tmp20, levelEntitlement: null, levelPowerup: null };
                   let tmp3;
@@ -166,7 +166,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return obj3;
             }
           }
-          obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+          obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "enumerable" };
         }
       });
       cResult[6] = stateFromStores;
@@ -221,7 +221,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (null != stateFromStores) {
               if (null != unlockedPowerups) {
                 if (null == dependencyMap[skuId.skuId]) {
-                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+                  let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "enumerable" };
                 } else {
                   let tmp4;
                   if (null != dependencyMap2[tmp22]) {
@@ -294,7 +294,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return obj3;
             }
           }
-          obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+          obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "enumerable" };
         }
       });
     };

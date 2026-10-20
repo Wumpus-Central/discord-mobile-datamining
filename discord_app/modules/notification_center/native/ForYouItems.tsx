@@ -34,7 +34,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import NotificationCenterStore from "../NotificationCenterStore.tsx";
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(17590);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(17609);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -157,7 +157,7 @@ const Constants = fn(1087);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6619).NotificationTypes;
+const NotificationTypes = fn(6622).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
@@ -446,7 +446,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       ({ compactMode, roleStyle } = item);
       const tmp3 = closure_32();
       const obj = item(576);
-      const notifCenterV2MessagePreviewParser = message_channel_id(5934).getNotifCenterV2MessagePreviewParser(
+      const notifCenterV2MessagePreviewParser = message_channel_id(5937).getNotifCenterV2MessagePreviewParser(
         closure_27(),
         closure_28,
         roleStyle,
@@ -473,7 +473,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      const obj2 = message_channel_id(5934);
+      const obj2 = message_channel_id(5937);
       const stateFromStores = item(504).useStateFromStores(first, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelStore];
@@ -557,7 +557,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             str = "text-muted";
           }
           const obj5 = { textColor: str };
-          const result = tmp(8426).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
+          const result = tmp(8430).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
           if (null == iconType) {
             if (cResult[15] === Text) {
               if (cResult[16] === tmp28) {
@@ -604,7 +604,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj8 = { style: tmp3.messagePreviewIconV2Container, children: null };
             if (constants4.ATTACHMENT === iconType) {
-              let tmp35 = guild_id(12903);
+              let tmp35 = guild_id(12921);
               const obj9 = { source: tmp35, size: tmp(1202).IconSizes.SMALL, style: null };
               messagePreviewIconV2 = tmp3.messagePreviewIconV2;
               obj9.style = messagePreviewIconV2;
@@ -613,12 +613,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             } else if (constants4.STICKER !== iconType) {
               tmp35 = null;
               if (constants4.VOICE_MESSAGE === iconType) {
-                tmp35 = guild_id(8048);
+                tmp35 = guild_id(8052);
               }
             }
-            tmp35 = guild_id(10110);
+            tmp35 = guild_id(10121);
           }
-          const tmpResult6 = tmp(8426);
+          const tmpResult6 = tmp(8430);
         }
         const items5 = [tmp26, prop];
         cResult[12] = tmp26;
@@ -671,7 +671,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       ({ compactMode, roleStyle } = item);
       let messagePreviewIconV2 = closure_32();
       let SMALL = dependencyMap;
-      const notifCenterV2MessagePreviewParser = message_channel_id(5934).getNotifCenterV2MessagePreviewParser(
+      const notifCenterV2MessagePreviewParser = message_channel_id(5937).getNotifCenterV2MessagePreviewParser(
         closure_27(),
         closure_28,
         roleStyle,
@@ -681,7 +681,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       const guild_id = item.guild_id;
       message_channel_id = item.message_channel_id;
       ({ content, isSystemMessage } = tmp2);
-      const obj = message_channel_id(5934);
+      const obj = message_channel_id(5937);
       let items = [GuildStore];
       const stateFromStores = item(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
       const obj2 = item(504);
@@ -746,7 +746,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         str = "text-muted";
       }
       const items5 = [
-        item(8426).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }),
+        item(8430).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }),
       ];
       if (null == iconType) {
         items5[1] = tmp12;
@@ -757,7 +757,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const obj9 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
         if (constants4.ATTACHMENT === iconType) {
-          let tmp15 = guild_id(12903);
+          let tmp15 = guild_id(12921);
           const obj10 = { source: tmp15, size: null, style: null };
           SMALL = tmp3(1202).IconSizes.SMALL;
           obj10.size = SMALL;
@@ -768,12 +768,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (constants4.STICKER !== iconType) {
           tmp15 = null;
           if (constants4.VOICE_MESSAGE === iconType) {
-            tmp15 = guild_id(8048);
+            tmp15 = guild_id(8052);
           }
         }
-        tmp15 = guild_id(10110);
+        tmp15 = guild_id(10121);
       }
-      const tmp3Result = item(8426);
+      const tmp3Result = item(8430);
     };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
@@ -970,7 +970,7 @@ let closure_39 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(17587).deleteNotificationCenterItem(tmp3);
+        yield tmp3(17606).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };

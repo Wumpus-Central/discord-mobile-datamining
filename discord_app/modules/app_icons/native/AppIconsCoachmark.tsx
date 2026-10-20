@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9850 from "../../../../_runtime/metro/09850__.js";
+import _modDef9862 from "../../../../_runtime/metro/09862__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef18109 from "../../../../_runtime/metro/18109__.js";
+import _modDef18132 from "../../../../_runtime/metro/18132__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        let obj2 = { source: _modDef18109, style: tmp4.image };
+        let obj2 = { source: _modDef18132, style: tmp4.image };
         const tmp19 = closure_7(FastImageDefault, obj2);
         cResult[10] = tmp4.image;
         cResult[11] = tmp19;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = {
-          source: _modDef9850,
+          source: _modDef9862,
           size: tmp(1202).IconSizes.MEDIUM,
           style: tmp4.nitroWheel,
           disableColor: true,
@@ -356,13 +356,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.info, children: null };
       const obj5 = { source: null, style: null };
       const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-      obj5.source = _modDef18109;
+      obj5.source = _modDef18132;
       obj5.style = tmp.image;
       const items2 = [closure_7(FastImageDefault, obj5), ,];
       const obj6 = { style: tmp.titleContainer, children: null };
       const items3 = [
         closure_7(markAsDismissed(1202).Icon, {
-          source: _modDef9850,
+          source: _modDef9862,
           size: markAsDismissed(1202).IconSizes.MEDIUM,
           style: tmp.nitroWheel,
           disableColor: true,

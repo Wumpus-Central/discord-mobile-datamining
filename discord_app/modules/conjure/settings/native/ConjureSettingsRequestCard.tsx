@@ -19,80 +19,84 @@ const result = size.fileFinishedImporting("modules/conjure/settings/native/Conju
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureSettingsRequestCard(projectId) {
-      const cResult = projectId(576).c(16);
+      const cResult = projectId(576).c(17);
       projectId = projectId.projectId;
       let note = projectId.request;
-      const tmp4 = closure_6();
-      if (cResult[0] === projectId) {
-        if (cResult[1] === note.keys) {
-          if (cResult[2] === note.note) {
-            let tmp5 = cResult[3];
-          }
-          const _Symbol = Symbol;
-          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-            const intl = tmp(1128).intl;
-            obj2.children = intl.string(note(3820)["jZjP+I"]);
-            const tmp10 = closure_4(tmp(5195).Text, obj2);
-            cResult[4] = tmp10;
-            let tmp7 = tmp10;
-          } else {
-            tmp7 = cResult[4];
-          }
-          if (cResult[5] !== note.note) {
-            if (null == note.note) {
-              const intl2 = tmp(1128).intl;
-              let note2 = intl2.string(note(3820).XuOf5s);
-              note = note.note;
-              cResult[5] = note;
-              cResult[6] = note2;
+      const notifyAgent = projectId.notifyAgent;
+      dependencyMap = tmp4;
+      const tmp5 = closure_6();
+      if (cResult[0] === (undefined === notifyAgent || notifyAgent)) {
+        if (cResult[1] === projectId) {
+          if (cResult[2] === note.keys) {
+            if (cResult[3] === note.note) {
+              let tmp6 = cResult[4];
             }
-            note2 = note.note;
-          } else {
-            if (cResult[7] !== cResult[6]) {
-              const obj3 = { variant: "text-sm/normal", color: "text-default", children: tmp11 };
-              const tmp17 = closure_4(tmp(5195).Text, obj3);
-              cResult[7] = tmp11;
-              cResult[8] = tmp17;
-              let tmp15 = tmp17;
+            const _Symbol = Symbol;
+            if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+              let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+              const intl = tmp(1128).intl;
+              obj2.children = intl.string(note(3820)["jZjP+I"]);
+              const tmp11 = closure_4(tmp(5195).Text, obj2);
+              cResult[5] = tmp11;
+              let tmp8 = tmp11;
             } else {
-              tmp15 = cResult[8];
+              tmp8 = cResult[5];
             }
-            const _Symbol2 = Symbol;
-            if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl3 = tmp(1128).intl;
-              const stringResult = intl3.string(note(3820).d49riY);
-              cResult[9] = stringResult;
-              let tmp18 = stringResult;
-            } else {
-              tmp18 = cResult[9];
-            }
-            if (cResult[10] !== tmp5) {
-              const obj4 = { variant: "secondary", size: "sm", onPress: tmp5, text: tmp18 };
-              const tmp23 = closure_4(tmp(5205).Button, obj4);
-              cResult[10] = tmp5;
-              cResult[11] = tmp23;
-              let tmp21 = tmp23;
-            } else {
-              tmp21 = cResult[11];
-            }
-            if (cResult[12] === tmp4.card) {
-              if (cResult[13] === tmp15) {
-                if (cResult[14] === tmp21) {
-                  let tmp24 = cResult[15];
-                }
-                return tmp24;
+            if (cResult[6] !== note.note) {
+              if (null == note.note) {
+                const intl2 = tmp(1128).intl;
+                let note2 = intl2.string(note(3820).XuOf5s);
+                note = note.note;
+                cResult[6] = note;
+                cResult[7] = note2;
               }
+              note2 = note.note;
+            } else {
+              if (cResult[8] !== cResult[7]) {
+                const obj3 = { variant: "text-sm/normal", color: "text-default", children: tmp12 };
+                const tmp18 = closure_4(tmp(5195).Text, obj3);
+                cResult[8] = tmp12;
+                cResult[9] = tmp18;
+                let tmp16 = tmp18;
+              } else {
+                tmp16 = cResult[9];
+              }
+              const _Symbol2 = Symbol;
+              if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl3 = tmp(1128).intl;
+                const stringResult = intl3.string(note(3820).d49riY);
+                cResult[10] = stringResult;
+                let tmp19 = stringResult;
+              } else {
+                tmp19 = cResult[10];
+              }
+              if (cResult[11] !== tmp6) {
+                const obj4 = { variant: "secondary", size: "sm", onPress: tmp6, text: tmp19 };
+                const tmp24 = closure_4(tmp(5205).Button, obj4);
+                cResult[11] = tmp6;
+                cResult[12] = tmp24;
+                let tmp22 = tmp24;
+              } else {
+                tmp22 = cResult[12];
+              }
+              if (cResult[13] === tmp5.card) {
+                if (cResult[14] === tmp16) {
+                  if (cResult[15] === tmp22) {
+                    let tmp25 = cResult[16];
+                  }
+                  return tmp25;
+                }
+              }
+              const obj5 = { style: tmp5.card, children: null };
+              const items = [tmp8, tmp16, tmp22];
+              obj5.children = items;
+              const tmp28 = closure_5(note(11696), obj5);
+              cResult[13] = tmp5.card;
+              cResult[14] = tmp16;
+              cResult[15] = tmp22;
+              cResult[16] = tmp28;
+              tmp25 = tmp28;
             }
-            const obj5 = { style: tmp4.card, children: null };
-            const items = [tmp7, tmp15, tmp21];
-            obj5.children = items;
-            const tmp27 = closure_5(note(11683), obj5);
-            cResult[12] = tmp4.card;
-            cResult[13] = tmp15;
-            cResult[14] = tmp21;
-            cResult[15] = tmp27;
-            tmp24 = tmp27;
           }
         }
       }
@@ -102,31 +106,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             projectId,
             scopeKeys: note.keys,
             note: note.note,
-            notifyAgent: true,
+            notifyAgent,
             isPreview: true,
           }),
           key: ConjureSettingsSheet.CONJURE_SETTINGS_SHEET_KEY,
         };
         ActionSheetActionCreators.showActionSheet(obj2);
       };
-      cResult[0] = projectId;
-      cResult[1] = note.keys;
-      cResult[2] = note.note;
-      cResult[3] = fn;
-      tmp5 = fn;
+      cResult[0] = undefined === notifyAgent || notifyAgent;
+      cResult[1] = projectId;
+      cResult[2] = note.keys;
+      cResult[3] = note.note;
+      cResult[4] = fn;
+      tmp6 = fn;
       const obj = projectId(576);
     }
   : function ConjureSettingsRequestCard(projectId) {
       projectId = projectId.projectId;
       const request = projectId.request;
-      const items = [projectId, request];
+      let flag = projectId.notifyAgent;
+      if (flag === undefined) {
+        flag = true;
+      }
+      const items = [flag, projectId, request];
       const callback = noop.useCallback(() => {
         const obj2 = {
           content: React4(ConjureSettingsSheetDefault, {
             projectId,
             scopeKeys: request.keys,
             note: request.note,
-            notifyAgent: true,
+            notifyAgent: flag,
             isPreview: true,
           }),
           key: ConjureSettingsSheet.CONJURE_SETTINGS_SHEET_KEY,
@@ -136,9 +145,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: closure_6().card, children: null };
       const tmp = closure_6();
       let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-      const intl = projectId(1128).intl;
-      obj2.children = intl.string(request(3820)["jZjP+I"]);
-      const items1 = [closure_4(projectId(5195).Text, obj2), ,];
+      const intl = projectId(flag[9]).intl;
+      obj2.children = intl.string(request(flag[10])["jZjP+I"]);
+      const items1 = [closure_4(projectId(flag[8]).Text, obj2), ,];
       if (null != request.note) {
         if ("" !== request.note) {
           let note = request.note;
@@ -146,13 +155,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-sm/normal", color: "text-default", children: note };
         items1[1] = closure_4(tmp9, obj3);
         const obj4 = { variant: "secondary", size: "sm", onPress: callback, text: null };
-        const intl3 = tmp8(1128).intl;
-        obj4.text = intl3.string(tmp4(3820).d49riY);
-        items1[2] = closure_4(tmp8(5205).Button, obj4);
+        const intl3 = tmp8(tmp5[9]).intl;
+        obj4.text = intl3.string(tmp4(tmp5[10]).d49riY);
+        items1[2] = closure_4(tmp8(tmp5[11]).Button, obj4);
         obj.children = items1;
         return closure_5(tmp6, obj);
       }
-      const intl2 = tmp8(1128).intl;
-      note = intl2.string(tmp4(3820).XuOf5s);
-      tmp6 = request(11683);
+      const intl2 = tmp8(tmp5[9]).intl;
+      note = intl2.string(tmp4(tmp5[10]).XuOf5s);
+      tmp6 = request(flag[12]);
     };

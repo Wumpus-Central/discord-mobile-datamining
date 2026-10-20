@@ -16,10 +16,10 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import PremiumPlanActionSheetHeaderDefault from "../../premium/native/PremiumPlanActionSheetHeader.tsx";
 import utils_CollectiblesUtils from "../utils/CollectiblesUtils.tsx";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
-import _modDef10398 from "../../../../_runtime/metro/10398__.js";
-import _modDef10399 from "../../../../_runtime/metro/10399__.js";
+import _modDef10409 from "../../../../_runtime/metro/10409__.js";
+import _modDef10410 from "../../../../_runtime/metro/10410__.js";
 import CircleQuestionIcon from "../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
-import _modDef14277 from "../../../../_runtime/metro/14277__.js";
+import _modDef14295 from "../../../../_runtime/metro/14295__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -48,17 +48,17 @@ obj2.buttonContainer = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "st
 obj2.description = { textAlign: "center" };
 obj2.header = { height: 112, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 let size = {
-  width: fn(9356).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
-  height: fn(9356).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
+  width: fn(9368).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
+  height: fn(9368).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: null,
 };
 let obj5 = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "stretch" };
-let items = [{ translateX: -fn(9356).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }];
-let obj6 = { translateX: -fn(9356).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
-items[1] = { translateY: -fn(9356).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let items = [{ translateX: -fn(9368).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }];
+let obj6 = { translateX: -fn(9368).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+items[1] = { translateY: -fn(9368).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size.transform = items;
 obj2.fractionNitroIcon = size;
 const size1 = {
@@ -82,7 +82,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       skuId = skuId.skuId;
       const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef14277 };
+        const obj2 = { source: _modDef14295 };
         const tmp9 = React6(FastImageDefault, obj2);
         cResult[0] = tmp9;
         let first = tmp9;
@@ -131,7 +131,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   : function NitroAcquiredHeader(skuId) {
       const tmp = closure_12();
       const obj = { style: tmp.header, children: null };
-      const obj2 = { source: _modDef14277 };
+      const obj2 = { source: _modDef14295 };
       const items = [React6(FastImageDefault, obj2)];
       const obj3 = { style: tmp.fractionNitroIcon, children: null };
       const size = {
@@ -145,7 +145,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       return collapsed(hasOwnProperty, obj);
     };
 ReactCompilerGating = fn(558);
-let obj7 = { translateY: -fn(9356).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let obj7 = { translateY: -fn(9368).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FractionalNitroCollectedActionSheet.tsx");
 
@@ -159,9 +159,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ isLoading, isFractionalPremiumActive, expiresAt } = fetchFractionalPremiumInfo);
       if (consumed) {
         if (tmpResult.isThemeDark(tmp6)) {
-          let tmp5Result = _modDef10398;
+          let tmp5Result = _modDef10409;
         } else {
-          tmp5Result = _modDef10399;
+          tmp5Result = _modDef10410;
         }
         if (cResult[0] !== tmp5Result) {
           const obj3 = { source: tmp5Result };
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp;
       const tmp4 = consumed(5166)();
       noop = tmp4;
-      const fetchFractionalPremiumInfo = skuId(7637).useFetchFractionalPremiumInfo();
+      const fetchFractionalPremiumInfo = skuId(7640).useFetchFractionalPremiumInfo();
       const isFractionalPremiumActive = fetchFractionalPremiumInfo.isFractionalPremiumActive;
       const expiresAt = fetchFractionalPremiumInfo.expiresAt;
       const items = [consumed, tmp4];
@@ -410,9 +410,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const tmp10 = FastImageDefault;
           let obj3 = dependencyMap;
           if (obj2.isThemeDark(closure_3)) {
-            let tmp8Result = _modDef10398;
+            let tmp8Result = _modDef10409;
           } else {
-            tmp8Result = _modDef10399;
+            tmp8Result = _modDef10410;
           }
           obj3 = { source: tmp8Result };
           React6(tmp10, obj3);
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       if (consumed) {
         let obj2 = { premiumType: closure_8.TIER_2 };
-        let tmp12Result = closure_9(tmp2(7489), obj2);
+        let tmp12Result = closure_9(tmp2(7492), obj2);
         let tmp15 = closure_9;
       } else {
         let obj3 = { skuId };
@@ -475,12 +475,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { children: null };
       const items2 = [tmp12Result];
       const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
-      let obj = skuId(7637);
-      obj5.children = tmp15(skuId(13774).CircleQuestionIcon, {
+      let obj = skuId(7640);
+      obj5.children = tmp15(skuId(13792).CircleQuestionIcon, {
         style: tmp.questionIcon,
         color: consumed(587).colors.WHITE,
       });
-      items2[1] = tmp15(skuId(6856).PressableOpacity, obj5);
+      items2[1] = tmp15(skuId(6859).PressableOpacity, obj5);
       obj4.children = items2;
       const items3 = [closure_10(closure_11, obj4), ,];
       const obj7 = { style: tmp.body, children: null };

@@ -7,7 +7,7 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const NsfwGateSource = fn(7261).NsfwGateSource;
+const NsfwGateSource = fn(7264).NsfwGateSource;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;
@@ -86,7 +86,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const obj = first(5622);
           return obj.openURL(first(2068).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
         };
-        const tmp16 = jsx(tmp(5869).AlertActionButton, { text: null, onPress: null }, "help-center");
+        const tmp16 = jsx(tmp(5872).AlertActionButton, { text: null, onPress: null }, "help-center");
         cResult[6] = tmp16;
         let tmp14 = tmp16;
       } else {
@@ -98,9 +98,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { variant: "secondary", text: null };
         const intl4 = tmp(1128).intl;
         obj4.text = intl4.string(tmp(1128).t.WAI6xu);
-        items1[1] = jsx(tmp(5869).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
+        items1[1] = jsx(tmp(5872).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
         obj3.actions = items1;
-        const tmp19 = jsx(tmp(5869).AlertModal, { title: tmp10, content: tmp11, actions: null });
+        const tmp19 = jsx(tmp(5872).AlertModal, { title: tmp10, content: tmp11, actions: null });
         cResult[7] = tmp19;
         let tmp17 = tmp19;
       } else {
@@ -153,13 +153,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = currentUser(5622);
         return obj.openURL(currentUser(2068).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
       };
-      const items1 = [jsx(guildId(5869).AlertActionButton, { text: null, onPress: null }, "help-center")];
+      const items1 = [jsx(guildId(5872).AlertActionButton, { text: null, onPress: null }, "help-center")];
       let obj3 = { variant: "secondary", text: null };
       const intl4 = guildId(1128).intl;
       obj3.text = intl4.string(guildId(1128).t.WAI6xu);
-      items1[1] = jsx(guildId(5869).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
+      items1[1] = jsx(guildId(5872).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
       obj.actions = items1;
-      return jsx(guildId(5869).AlertModal, { title: null, content: null, actions: null });
+      return jsx(guildId(5872).AlertModal, { title: null, content: null, actions: null });
     };
 let closure_11 = tmp3;
 const size = fn(2);

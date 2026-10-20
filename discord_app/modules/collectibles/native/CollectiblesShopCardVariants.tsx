@@ -271,8 +271,8 @@ export default noop.memo(
         let variants = product.product;
         const tmp2 = closure_6();
         const obj = defaultVariantIndex(576);
-        defaultVariantIndex = defaultVariantIndex(9276).useDefaultVariantIndex(variants);
-        const obj2 = defaultVariantIndex(9276);
+        defaultVariantIndex = defaultVariantIndex(9288).useDefaultVariantIndex(variants);
+        const obj2 = defaultVariantIndex(9288);
         if (obj3.getIsVariantProduct(variants)) {
           let num3 = 3;
           if (variants.variants.length <= 4) {
@@ -348,14 +348,14 @@ export default noop.memo(
         } else {
           return null;
         }
-        obj3 = defaultVariantIndex(7607);
+        obj3 = defaultVariantIndex(7610);
       }
     : function CardProductVariants(product) {
         product = product.product;
         let defaultVariantIndex;
         const tmp = closure_6();
-        defaultVariantIndex = defaultVariantIndex(9276).useDefaultVariantIndex(product);
-        const obj = defaultVariantIndex(9276);
+        defaultVariantIndex = defaultVariantIndex(9288).useDefaultVariantIndex(product);
+        const obj = defaultVariantIndex(9288);
         if (obj2.getIsVariantProduct(product)) {
           let num3 = 3;
           if (product.variants.length <= 4) {
@@ -393,6 +393,6 @@ export default noop.memo(
         } else {
           return null;
         }
-        obj2 = defaultVariantIndex(7607);
+        obj2 = defaultVariantIndex(7610);
       },
 );

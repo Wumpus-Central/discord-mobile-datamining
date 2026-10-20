@@ -2,7 +2,7 @@
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
 import TextStylesDefault from "../../rebrand/native/TextStyles.tsx";
-import _modDef14665 from "../../../../_runtime/metro/14665__.js";
+import _modDef14683 from "../../../../_runtime/metro/14683__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -10,7 +10,7 @@ import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const usePremiumPlanSelectStore = fn(14651).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(14669).usePremiumPlanSelectStore;
 let closure_9 = fn(1394).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -29,13 +29,13 @@ const merged = Object.assign(TextStylesDefault(fn(1098).Fonts.DISPLAY_EXTRABOLD,
 obj3.alignSelf = "center";
 obj3.textAlign = "center";
 obj3.paddingBottom = 8;
-obj3.color = fn(6655).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(6658).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
 obj2.description = {
   alignSelf: "center",
   textAlign: "center",
   paddingBottom: 32,
-  color: fn(6655).DARK_WHITE_500_LIGHT_BLACK_500,
+  color: fn(6658).DARK_WHITE_500_LIGHT_BLACK_500,
 };
 obj2.upsellButton = { marginBottom: 16 };
 obj2.continueButton = { marginBottom: 4 };
@@ -46,7 +46,7 @@ let obj4 = {
   alignSelf: "center",
   textAlign: "center",
   paddingBottom: 32,
-  color: fn(6655).DARK_WHITE_500_LIGHT_BLACK_500,
+  color: fn(6658).DARK_WHITE_500_LIGHT_BLACK_500,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
@@ -274,8 +274,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       [tmp4, c3] = noop.useState(null);
       const obj = noop;
       const tmp3 = _slicedToArray(noop.useState(null), 2);
-      const premiumBundledItemsFromProductId = productId(7464).getPremiumBundledItemsFromProductId(productId);
-      const obj2 = productId(7464);
+      const premiumBundledItemsFromProductId = productId(7467).getPremiumBundledItemsFromProductId(productId);
+      const obj2 = productId(7467);
       let items = [LocaleStore];
       const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
       const obj3 = productId(504);
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp5Result = productId(1903);
         const obj7 = { style: tmp.image, source: null };
         const tmp19 = common_AlertDefault;
-        obj7.source = _modDef14665;
+        obj7.source = _modDef14683;
         const items2 = [closure_10(FastImageDefault, obj7), , , , ,];
         const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
         const intl = productId(1128).intl;

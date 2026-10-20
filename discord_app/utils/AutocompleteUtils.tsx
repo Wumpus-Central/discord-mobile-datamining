@@ -11,7 +11,7 @@ import UserUtilsDefault from "UserUtils.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import RegexUtilsDefault from "RegexUtils.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/06775_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/06778_fuzzysearch.js";
 import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import OnboardingHomeUtils from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -436,7 +436,7 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(6657);
+const InAppNavigationRecord = fn(6660);
 ({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: metroRequire } = InAppNavigationRecord);
 const ChannelRecord = fn(4804);
 ({
@@ -456,18 +456,18 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1087);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(6773).AutocompleterResultTypes;
+fn(6776).AutocompleterResultTypes;
 const StaticChannelId = fn(4807).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(6774).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(6774).default.MENTION_HERE;
-const MENTION_GAME = fn(6774).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(6774).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(6774).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(6777).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(6777).default.MENTION_HERE;
+const MENTION_GAME = fn(6777).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(6777).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(6777).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({
@@ -1262,7 +1262,7 @@ export default {
     const intl3 = util.intl;
     items1[1] = intl3.string(util.t.pWG4ze);
     const intl4 = util.intl;
-    items1[2] = intl4.string(util.t.EBYkzk);
+    items1[2] = intl4.string(util.t.fG3RIg);
     obj4[constants.SHOP_ORBS_TAB] = items1;
     const intl5 = util.intl;
     const items2 = [intl5.string(util.t.ElYQFS), ,];
@@ -2016,12 +2016,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(6443).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(6446).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6443).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(6446).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6443).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(6446).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -2059,7 +2059,7 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7389);
+              obj2 = flag(7392);
             }
           });
         });

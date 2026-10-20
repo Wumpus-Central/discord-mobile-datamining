@@ -10,7 +10,7 @@ import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnbo
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7589).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7592).ChannelListGuildActionRow;
 const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (premiumProgressBarEnabled) {
               items2.push(ChannelListGuildActionRow.GUILD_PREMIUM_PROGRESS_BAR);
             }
-            tmpResult18 = tmp(7442);
+            tmpResult18 = tmp(7445);
           }
         }
       }

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef8452 from "../../../../_runtime/metro/08452__.js";
+import _modDef8456 from "../../../../_runtime/metro/08456__.js";
 import HeadphonesDenyIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
@@ -47,7 +47,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11921);
+const ChannelListLayout = fn(11935);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
@@ -343,7 +343,7 @@ export default noop.memo(
                                             let tmp = null;
                                             if (isInEmbeddedActivity) {
                                               const obj = {
-                                                source: _modDef8452,
+                                                source: _modDef8456,
                                                 size: native.Icon.Sizes.REFRESH_SMALL_16,
                                                 style: closure_16.legacyVoiceStateIcon,
                                               };

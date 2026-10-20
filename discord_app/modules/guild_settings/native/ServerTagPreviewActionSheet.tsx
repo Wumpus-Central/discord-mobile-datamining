@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(8906).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8918).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4945);
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       badgeColorSecondary = guildId.guildId;
       const tmp4 = closure_8();
       const obj = badgeColorSecondary(576);
-      const guildProfile1 = badgeColorSecondary(8907).useGuildProfile(badgeColorSecondary);
+      const guildProfile1 = badgeColorSecondary(8919).useGuildProfile(badgeColorSecondary);
       ({ guildProfile, fetchStatus } = guildProfile1);
       if (cResult[0] !== badgeColorSecondary) {
         const fn = function f() {
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           const _Symbol = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp12 = closure_6(tmp(7082).SceneLoadingIndicator, {});
+            const tmp12 = closure_6(tmp(7085).SceneLoadingIndicator, {});
             cResult[17] = tmp12;
             tmp10 = tmp12;
           } else {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { title: null };
           const intl3 = tmp(1128).intl;
           obj8.title = intl3.string(tmp(1128).t["2QmKZ2"]);
-          const tmp36 = closure_6(tmp(7194).BottomSheetTitleHeader, obj8);
+          const tmp36 = closure_6(tmp(7197).BottomSheetTitleHeader, obj8);
           cResult[18] = tmp36;
           let tmp34 = tmp36;
         } else {
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj14 = { children: null };
           const items2 = [tmp34, tmp10];
           obj14.children = items2;
-          const tmp39 = closure_7(tmp(7244).ActionSheet, obj14);
+          const tmp39 = closure_7(tmp(7247).ActionSheet, obj14);
           cResult[19] = tmp10;
           cResult[20] = tmp39;
           let tmp37 = tmp39;
@@ -174,12 +174,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp37;
       }
-      const obj2 = badgeColorSecondary(8907);
+      const obj2 = badgeColorSecondary(8919);
     }
   : function ServerTagPreviewActionSheet(guildId) {
       guildId = guildId.guildId;
       const tmp = closure_8();
-      const guildProfile1 = guildId(8907).useGuildProfile(guildId);
+      const guildProfile1 = guildId(8919).useGuildProfile(guildId);
       let guildProfile = guildProfile1.guildProfile;
       const items = [guildId];
       const effect = noop.useEffect(() => {
@@ -224,14 +224,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = closure_7(View, obj3);
         tmp8 = closure_6;
       } else {
-        tmp7 = closure_6(tmp2(7082).SceneLoadingIndicator, {});
+        tmp7 = closure_6(tmp2(7085).SceneLoadingIndicator, {});
         tmp8 = closure_6;
       }
       const obj7 = { children: null };
       const obj13 = { title: null };
       const intl3 = tmp2(1128).intl;
       obj13.title = intl3.string(guildId(1128).t["2QmKZ2"]);
-      const items2 = [tmp8(guildId(7194).BottomSheetTitleHeader, obj13), tmp7];
+      const items2 = [tmp8(guildId(7197).BottomSheetTitleHeader, obj13), tmp7];
       obj7.children = items2;
-      return closure_7(guildId(7244).ActionSheet, obj7);
+      return closure_7(guildId(7247).ActionSheet, obj7);
     };

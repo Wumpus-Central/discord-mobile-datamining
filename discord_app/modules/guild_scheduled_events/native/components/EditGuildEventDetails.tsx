@@ -18,7 +18,7 @@ function assertGuildEventDetailsValid(guildEvent) {
     throw error;
   }
 }
-let closure_6 = fn(6732).isGuildScheduledEventActive;
+let closure_6 = fn(6735).isGuildScheduledEventActive;
 let constants = fn(4806).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);

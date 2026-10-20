@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const items = [tmp18, tmp27];
                     obj6.children = items;
                     obj5.children = closure_5(trackAction(5230).BottomSheetScrollView, obj6);
-                    const tmp34 = closure_4(trackAction(7244).ActionSheet, obj5);
+                    const tmp34 = closure_4(trackAction(7247).ActionSheet, obj5);
                     cResult[24] = tmp18;
                     cResult[25] = tmp27;
                     cResult[26] = tmp8;

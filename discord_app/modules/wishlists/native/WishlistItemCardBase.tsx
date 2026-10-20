@@ -78,7 +78,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-        const tmp9 = closure_5(tmp(9285).HeartIcon, obj2);
+        const tmp9 = closure_5(tmp(9297).HeartIcon, obj2);
         cResult[2] = tmp9;
         let tmp6 = tmp9;
       } else {
@@ -123,7 +123,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_5(toastText(9285).HeartIcon, {
+        children: closure_5(toastText(9297).HeartIcon, {
           color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
           size: "md",
         }),

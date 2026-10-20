@@ -7,7 +7,7 @@ import SearchMessageStore from "../../SearchMessageStore.tsx";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_6 = fn(9629).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_6 = fn(9642).SEARCH_MESSAGE_TAB_SENTINEL;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()

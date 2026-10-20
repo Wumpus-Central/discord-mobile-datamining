@@ -1476,7 +1476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       S.__workletHash = 8205438722579;
       S.__initData = derivedValue1;
       const animatedStyle = obj3.useAnimatedStyle(S);
-      const tmp8 = selected(7172)(option.guildId);
+      const tmp8 = selected(7175)(option.guildId);
       closure_5 = tmp8;
       num = 0;
       if (null != tmp8) {
@@ -1839,9 +1839,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           str = "";
         }
         obj13.name = str;
-        obj12.children = closure_9(tmp7(7175), obj13);
+        obj12.children = closure_9(tmp7(7178), obj13);
         tmp38Result = tmp38(closure_5, obj12);
-        const tmp7Result = tmp7(7175);
+        const tmp7Result = tmp7(7178);
       }
       const items7 = [tmp38Result];
       const obj15 = { style: tmp.optionText, children: null };
@@ -1861,7 +1861,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj15.children = items8;
       items7[1] = ref(closure_5, obj15);
       obj11.children = items7;
-      const items9 = [ref(option(6856).PressableOpacity, obj11), , ,];
+      const items9 = [ref(option(6859).PressableOpacity, obj11), , ,];
       let tmp44Result2 = null;
       if (num > 0) {
         const obj18 = {
@@ -1886,7 +1886,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj21.style = items11;
       const obj16 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title };
       const tmp2Result20 = option(5001);
-      obj21.children = closure_9(option(7178).CheckmarkSmallIcon, { size: "xs", color: selected(587).colors.WHITE });
+      obj21.children = closure_9(option(7181).CheckmarkSmallIcon, { size: "xs", color: selected(587).colors.WHITE });
       items9[2] = closure_9(selected(5014).View, obj21);
       if (canBeNew) {
         canBeNew = !selected;

@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1087).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7362).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7365).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4945);

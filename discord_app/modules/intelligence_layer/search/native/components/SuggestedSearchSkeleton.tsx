@@ -16,7 +16,7 @@ let obj2 = {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: nativeDefault.space.PX_16,
-    paddingVertical: fn(9629).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(9642).SEARCH_ROW_TAP_STATE_PADDING,
   },
   icon: null,
   labels: null,
@@ -30,7 +30,7 @@ let size = {
   marginRight: nativeDefault.space.PX_12,
 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(13022).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(13040).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = {
   height: 16,
   width: "72%",
@@ -50,7 +50,7 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_16,
-  paddingVertical: fn(9629).SEARCH_ROW_TAP_STATE_PADDING,
+  paddingVertical: fn(9642).SEARCH_ROW_TAP_STATE_PADDING,
 };
 size = fn(2);
 let result = size.fileFinishedImporting(

@@ -7,8 +7,8 @@ import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallo
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const useChannelCallStore = fn(10675).useChannelCallStore;
-const Constants = fn(11241);
+const useChannelCallStore = fn(10686).useChannelCallStore;
+const Constants = fn(11252);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = {
   mass: 1,

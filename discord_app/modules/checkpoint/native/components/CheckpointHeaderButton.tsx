@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const CHECKPOINT_PRIMARY = fn(5970).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5973).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles({

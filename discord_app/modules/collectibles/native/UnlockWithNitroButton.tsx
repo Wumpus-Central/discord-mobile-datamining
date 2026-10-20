@@ -66,7 +66,7 @@ export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled(
         }
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp20 = jsx(onTrackPress(9343).NitroWheelIcon, { size: "sm", color: "white" });
+          const tmp20 = jsx(onTrackPress(9355).NitroWheelIcon, { size: "sm", color: "white" });
           cResult[7] = tmp20;
           let tmp18 = tmp20;
         } else {

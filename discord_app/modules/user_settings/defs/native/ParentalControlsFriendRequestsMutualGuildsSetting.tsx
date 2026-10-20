@@ -11,7 +11,7 @@ import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 require = fn;
 const FriendSourceFlags = fn(1087).FriendSourceFlags;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFriendRequestsMutualGuildsSettingValue() {
       const cResult = c.c(2);
@@ -30,8 +30,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp6.mutualGuilds;
     }
   : function useFriendRequestsMutualGuildsSettingValue() {
-      const selectedTeenId = controlledSetting(8070).useSelectedTeenId();
-      const ParentalControlledFriendSourceFlags = controlledSetting(15893).ParentalControlledFriendSourceFlags;
+      const selectedTeenId = controlledSetting(8074).useSelectedTeenId();
+      const ParentalControlledFriendSourceFlags = controlledSetting(15912).ParentalControlledFriendSourceFlags;
       controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
       const items = [controlledSetting];
       return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualGuilds;
@@ -41,7 +41,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mozb8f);
   },
-  parent: fn(8276).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8280).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useFriendRequestsMutualGuildsSettingValue() {
         const cResult = c.c(2);
@@ -60,8 +60,8 @@ const toggle = SettingBuilders.createToggle({
         return tmp6.mutualGuilds;
       }
     : function useFriendRequestsMutualGuildsSettingValue() {
-        const selectedTeenId = controlledSetting(8070).useSelectedTeenId();
-        const ParentalControlledFriendSourceFlags = controlledSetting(15893).ParentalControlledFriendSourceFlags;
+        const selectedTeenId = controlledSetting(8074).useSelectedTeenId();
+        const ParentalControlledFriendSourceFlags = controlledSetting(15912).ParentalControlledFriendSourceFlags;
         controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
         const items = [controlledSetting];
         return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualGuilds;

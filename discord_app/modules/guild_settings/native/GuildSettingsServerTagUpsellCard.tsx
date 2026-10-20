@@ -387,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj7 = { spacing: nativeDefault.space.PX_8, style: textBlock, children: null };
             const items5 = [tmp37, tmp42];
             obj7.children = items5;
-            const tmp46 = closure_7(tmp(5932).Stack, obj7);
+            const tmp46 = closure_7(tmp(5935).Stack, obj7);
             cResult[30] = tmp4.textBlock;
             cResult[31] = tmp37;
             cResult[32] = tmp42;
@@ -505,15 +505,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj11.children = intl2.string(guildId(1128).t.Tg0fDm);
       items6[1] = closure_6(guildId(5195).Text, obj11);
       obj9.children = items6;
-      items5[1] = closure_7(guildId(5932).Stack, obj9);
+      items5[1] = closure_7(guildId(5935).Stack, obj9);
       const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
       const intl3 = tmp2(1128).intl;
       obj12.text = intl3.string(guildId(1128).t.kMRDWs);
-      obj12.icon = closure_6(guildId(17378).BoostTier2Icon, { color: "white" });
+      obj12.icon = closure_6(guildId(17397).BoostTier2Icon, { color: "white" });
       obj12.onPress = guildId.onUnlockPress;
       items5[2] = closure_6(guildId(5205).Button, obj12);
       obj6.children = items5;
-      items4[3] = closure_7(guildId(5932).Stack, obj6);
+      items4[3] = closure_7(guildId(5935).Stack, obj6);
       obj2.children = items4;
       return closure_7(closure_4, obj2);
     };

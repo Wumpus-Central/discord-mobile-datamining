@@ -251,7 +251,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(11056);
+    obj2 = obj2(11068);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -427,7 +427,7 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(6724);
+const FramesConstants = fn(6727);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
@@ -453,8 +453,8 @@ export { clearMainFrameSlot };
 export { demoteMainFrame };
 export { promoteFrame };
 export { updateFrameLayoutMode };
-export const setFrameRunsInBackground = function setFrameRunsInBackground(frameId, enabled) {
-  DispatcherDefault.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId, enabled });
+export const setFrameRunsInBackground = function setFrameRunsInBackground(id, enabled) {
+  DispatcherDefault.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId: id, enabled });
 };
 export const updateFramePanelMode = function updateFramePanelMode(id, PIP) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP });

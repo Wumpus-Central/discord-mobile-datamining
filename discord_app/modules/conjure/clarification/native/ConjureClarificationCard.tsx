@@ -682,12 +682,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                     const options1 = tmp23.options;
                                                                     mapped = options1.map((answer) => {
                                                                       closure_0 = answer;
-                                                                      let fn;
-                                                                      if (!closure_12) {
-                                                                        fn = () => closure_19(closure_0);
-                                                                      }
                                                                       const obj = {
-                                                                        onPress: fn,
+                                                                        onPress() {
+                                                                          return closure_19(closure_0);
+                                                                        },
+                                                                        disabled,
                                                                         accessibilityLabel: null,
                                                                         children: null,
                                                                       };
@@ -1395,11 +1394,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const options1 = tmp15.options;
         tmp49Result6 = options1.map((answer) => {
           closure_0 = answer;
-          let fn;
-          if (!closure_12) {
-            fn = () => callback1(closure_0);
-          }
-          const obj = { onPress: fn, accessibilityLabel: null, children: null };
+          const obj = {
+            onPress() {
+              return callback1(closure_0);
+            },
+            disabled,
+            accessibilityLabel: null,
+            children: null,
+          };
           const intl = projectId(onSubmit[6]).intl;
           if (true === answer.recommended) {
             let AQbxhf = clarification(onSubmit[7])["2p6UFz"];

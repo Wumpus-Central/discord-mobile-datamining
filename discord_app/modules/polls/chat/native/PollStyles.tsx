@@ -1,5 +1,5 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
-import _mod6438 from "module_6438" /* 6438 */;
+import _mod6441 from "module_6441" /* 6441 */;
 import PollLayoutTypes from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import PollMessageChatDataTypes from "../PollMessageChatDataTypes.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -18,7 +18,7 @@ function normal(border, first1) {
     radioBackground: null,
     radioForeground: null,
   };
-  const match = _mod6438.match(first1);
+  const match = _mod6441.match(first1);
   obj.label = match
     .with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE)
     .otherwise(() => colors.colors.TEXT_DEFAULT);
@@ -44,7 +44,7 @@ function normalVote(colors, first1) {
       radioBackground: null,
       radioForeground: null,
     };
-    const match = _mod6438.match(first1);
+    const match = _mod6441.match(first1);
     obj2.label = match
       .with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE)
       .otherwise(() => colors.colors.TEXT_DEFAULT);

@@ -7,10 +7,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const util = format(1128);
 const Text_Text = format(5195);
-const GiftingBadgesUtils = format(10420);
+const GiftingBadgesUtils = format(10431);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8606).getSingleRequirementThreshold;
+let closure_4 = fn(8618).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4945);

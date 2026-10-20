@@ -82,11 +82,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = stats(576).c(25);
       stats = stats.stats;
       if (cResult[0] !== stats) {
-        const perfModelSummaryResult = tmp(12371).perfModelSummary(stats);
+        const perfModelSummaryResult = tmp(12388).perfModelSummary(stats);
         cResult[0] = stats;
         cResult[1] = perfModelSummaryResult;
         let tmp4 = perfModelSummaryResult;
-        const tmpResult = tmp(12371);
+        const tmpResult = tmp(12388);
       } else {
         tmp4 = cResult[1];
       }
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const PERF_CATEGORIES = tmp(11025).PERF_CATEGORIES;
+            const PERF_CATEGORIES = tmp(11037).PERF_CATEGORIES;
             const mapped = PERF_CATEGORIES.map((item) => {
               const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
               const obj2 = { style: closure_1.legendItem, children: null };
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ConjurePerfTraceStatsHeader(stats) {
       stats = stats.stats;
-      const perfModelSummaryResult = stats(12371).perfModelSummary(stats);
+      const perfModelSummaryResult = stats(12388).perfModelSummary(stats);
       const tmp4 = closure_6();
       dependencyMap = styles();
       let obj2 = { style: tmp4.header, children: null };
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       let items = [closure_3(dependencyMap, obj3), ,];
       const obj4 = { style: tmp4.legend, children: null };
-      const PERF_CATEGORIES = stats(11025).PERF_CATEGORIES;
+      const PERF_CATEGORIES = stats(11037).PERF_CATEGORIES;
       obj4.children = PERF_CATEGORIES.map((item) => {
         const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
         const obj2 = { style: closure_1.legendItem, children: null };

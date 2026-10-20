@@ -30,7 +30,7 @@ function showTooManyInvitesToast() {
   ToastActionCreatorsDefault.open("GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES", obj2);
 }
 const View = fn(17).View;
-let closure_6 = fn(9052).useInstantInviteSendStates;
+let closure_6 = fn(9064).useInstantInviteSendStates;
 const NOOP_NULL = fn(1098).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const stringResult = intl.string(combined(2396).nVMqjA);
-        const ActionSheet = formatToPlainString(7244).ActionSheet;
+        const ActionSheet = formatToPlainString(7247).ActionSheet;
         const _Symbol = Symbol;
         if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
           class N {
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const Stack = formatToPlainString(5932).Stack;
+        const Stack = formatToPlainString(5935).Stack;
         const PX_16 = centeredText(587).space.PX_16;
         const header = str.header;
         let obj2 = { spacing: centeredText(587).space.PX_4, children: null };
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj7.children = intl3.formatToPlainString(centeredText(2396).BBk7Qw, obj8);
         items3[1] = closure_10(formatToPlainString(5195).Text, obj7);
         obj2.children = items3;
-        const tmp25 = closure_11(formatToPlainString(5932).Stack, obj2);
+        const tmp25 = closure_11(formatToPlainString(5935).Stack, obj2);
         const intl4 = formatToPlainString(1128).intl;
         formatToPlainString = intl4.formatToPlainString;
         const obj9 = { noun: stringResult };
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[27] = true;
         cResult[28] = true;
         cResult[29] = tmp21;
-        const SearchField = formatToPlainString(7093).SearchField;
+        const SearchField = formatToPlainString(7096).SearchField;
       }
       class U {
         constructor(arg0) {
@@ -514,19 +514,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.children = intl4.formatToPlainString(combined(2396).BBk7Qw, { noun: stringResult });
       items4[1] = closure_10(guildId(5195).Text, obj7);
       obj5.children = items4;
-      const items5 = [closure_11(guildId(5932).Stack, obj5)];
+      const items5 = [closure_11(guildId(5935).Stack, obj5)];
       const obj8 = { size: "md", round: true, onChange: callback, placeholder: null };
       const intl5 = guildId(1128).intl;
       obj8.placeholder = intl5.formatToPlainString(combined(2396).cRK6SQ, { noun: stringResult });
-      items5[1] = closure_10(guildId(7093).SearchField, obj8);
+      items5[1] = closure_10(guildId(7096).SearchField, obj8);
       obj4.children = items5;
-      obj3.header = closure_11(guildId(5932).Stack, obj4);
+      obj3.header = closure_11(guildId(5935).Stack, obj4);
       if (tmp7[0]) {
         let tmp14Result = closure_10(closure_15, {});
       } else {
         const obj9 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-        tmp14Result = closure_10(combined(15013), obj9);
+        tmp14Result = closure_10(combined(15031), obj9);
       }
       obj3.children = tmp14Result;
-      return closure_10(guildId(7244).ActionSheet, obj3);
+      return closure_10(guildId(7247).ActionSheet, obj3);
     };

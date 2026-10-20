@@ -20,8 +20,8 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(7759).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8092);
+const getSystemAnalyticsInfo = fn(7763).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8096);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1,
@@ -31,7 +31,7 @@ const ClipsConstants = fn(8092);
 } = ClipsConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(6591).StreamTypes;
+const StreamTypes = fn(6594).StreamTypes;
 const Features = fn(5680).Features;
 class ClipsManager extends tmp4 {
   constructor() {

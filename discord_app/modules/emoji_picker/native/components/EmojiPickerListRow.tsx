@@ -7,8 +7,8 @@ import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import shared from "../../../../design/shared.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7176 from "../../../../../_runtime/metro/07176__.js";
-import _modDef7177 from "../../../../../_runtime/metro/07177__.js";
+import _modDef7179 from "../../../../../_runtime/metro/07179__.js";
+import _modDef7180 from "../../../../../_runtime/metro/07180__.js";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import getEmojiItemUrlDefault from "../../../emojis/utils/getEmojiItemUrl.tsx";
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView.tsx";
@@ -20,7 +20,7 @@ require = fn;
 let closure_3 = ["nativeRow"];
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9743);
+const EmojiPickerListConstants = fn(9756);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1243).PADDING_VERTICAL;
 const jsxProd = fn(21);
@@ -168,9 +168,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
             const obj4 = { resizeMode: "contain", style: surrogates.image, placeholder: null, source: null, usesSmallCache: true };
             const tmp14 = FastImageDefault;
             if (tmpResult.isThemeDark(ThemeStore.theme)) {
-              let tmp13Result = _modDef7176;
+              let tmp13Result = _modDef7179;
             } else {
-              tmp13Result = _modDef7177;
+              tmp13Result = _modDef7180;
             }
             obj4.placeholder = tmp13Result;
             const obj5 = { uri: image };
@@ -234,10 +234,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
     const obj2 = { resizeMode: "contain", style: tmp.image, placeholder: null, source: null, usesSmallCache: true };
     const tmp2Result = FastImageDefault;
     if (tmp6Result.isThemeDark(ThemeStore.theme)) {
-      tmp3 = 7176;
+      tmp3 = 7179;
       let tmp2Result2 = importDefault(tmp3);
     } else {
-      tmp2Result2 = _modDef7177;
+      tmp2Result2 = _modDef7180;
     }
     obj2.placeholder = tmp2Result2;
     const obj3 = { uri: tmp4 };

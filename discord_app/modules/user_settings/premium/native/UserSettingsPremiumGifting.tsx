@@ -17,7 +17,7 @@ import BillingActionCreatorsDefault from "../../../../actions/native/BillingActi
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryActionCreators from "../../../badges/BadgeDirectoryActionCreators.tsx";
 import PremiumFeaturesCards from "PremiumFeaturesCards.tsx";
-import _modDef14667 from "../../../../../_runtime/metro/14667__.js";
+import _modDef14685 from "../../../../../_runtime/metro/14685__.js";
 import OutboundPromotionCardDefault from "../../../../components_native/premium/OutboundPromotionCard.tsx";
 import EntitlementGiftGroupCardDefault from "../../../../components_native/premium/EntitlementGiftGroupCard.tsx";
 import PremiumTierCardDefault from "../../../../components_native/premium/PremiumTierCard.tsx";
@@ -195,9 +195,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         noop = tmp15;
-        const isPaymentsBlocked = tmp(7475).useIsPaymentsBlocked();
-        const tmpResult7 = tmp(7475);
-        const outboundPromotions = tmp(9436).useOutboundPromotions();
+        const isPaymentsBlocked = tmp(7478).useIsPaymentsBlocked();
+        const tmpResult7 = tmp(7478);
+        const outboundPromotions = tmp(9448).useOutboundPromotions();
         const promotionsLoaded = outboundPromotions.promotionsLoaded;
         const activeOutboundPromotions = outboundPromotions.activeOutboundPromotions;
         BadgeDirectoryStore = outboundPromotions.claimedEndedOutboundPromotions;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const GiftingBadgeExperiment = tmp(10414).GiftingBadgeExperiment;
+        const GiftingBadgeExperiment = tmp(10425).GiftingBadgeExperiment;
         const enabled = GiftingBadgeExperiment.useConfig(tmp22).enabled;
         const _Symbol3 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -264,13 +264,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp24 = cResult[9];
         }
-        const tmpResult8 = tmp(9436);
+        const tmpResult8 = tmp(9448);
         const stateFromStores = tmp(504).useStateFromStores(tmp23, tmp24);
         const tmp27 = navigation(noop.useState(false), 2);
         constants2 = tmp27[0];
         closure_11 = tmp27[1];
         const tmpResult9 = tmp(504);
-        const subscriptionPlansLoaded = tmp(14509).useSubscriptionPlansLoaded();
+        const subscriptionPlansLoaded = tmp(14527).useSubscriptionPlansLoaded();
         const _Symbol4 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           class L {
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         function renderEmptyState() {
           const obj = { style: closure_2.emptyGiftLinks, children: null };
-          const obj2 = { style: closure_2.emptyImage, source: _modDef14667 };
+          const obj2 = { style: closure_2.emptyImage, source: _modDef14685 };
           const items = [map1(FastImageDefault, obj2)];
           const obj3 = { style: closure_2.emptyGiftDescription, accessible: true, children: null };
           const obj4 = {
@@ -456,7 +456,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[22] = tmp7.emptyGiftLinks;
         cResult[23] = tmp7.emptyImage;
         cResult[24] = renderEmptyState;
-        const tmpResult10 = tmp(14509);
+        const tmpResult10 = tmp(14527);
       }
       const tmpResult6 = recipientUserId(504);
     }

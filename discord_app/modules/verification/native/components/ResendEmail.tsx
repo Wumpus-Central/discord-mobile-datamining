@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const tmpResult = navigation(504);
   const stateFromStores1 = navigation(504).useStateFromStores(tmp10, tmp11);
   if (cResult[4] !== stateFromStores1) {
-    const result = verified(6945).isEmailReverification(stateFromStores1);
+    const result = verified(6948).isEmailReverification(stateFromStores1);
     class E {
       constructor() {
         currentUser = closure_1_7.getCurrentUser();
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
     }
     cResult[4] = stateFromStores1;
     cResult[5] = result;
-    const obj5 = verified(6945);
+    const obj5 = verified(6948);
   }
   const tmpResult2 = navigation(504);
   [tmp19, dependencyMap] = ref(noop.useState(false), 2);
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
         return currentUser;
       }
     }
-    const tmp28 = closure_9(tmp(6946).EnvelopeOpenSpotIllustration, { scale: 0.75 });
+    const tmp28 = closure_9(tmp(6949).EnvelopeOpenSpotIllustration, { scale: 0.75 });
   } else {
     class P {
       constructor() {
@@ -325,9 +325,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const items1 = [UserRequiredActionStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items1, () => action.getAction());
   let obj3 = navigation(504);
-  const result = verified(6945).isEmailReverification(stateFromStores1);
+  const result = verified(6948).isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
-  const obj4 = verified(6945);
+  const obj4 = verified(6948);
   [tmp10, dependencyMap] = ref(noop.useState(false), 2);
   const tmp9 = ref(noop.useState(false), 2);
   const items2 = [verified];
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const callback = noop.useCallback(() => {
     navigation.push(VerificationModalScenes.ENTER_EMAIL);
   }, items3);
-  const items4 = [closure_9(navigation(6946).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [closure_9(navigation(6949).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1128).intl;
   obj6.children = intl.string(navigation(1128).t.fUtddV);

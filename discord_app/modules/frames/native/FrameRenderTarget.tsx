@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import useFramePoolBorrowDefault from "useFramePoolBorrow.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const WebView = WebViewTarget(7851);
+const WebView = WebViewTarget(7855);
 require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);

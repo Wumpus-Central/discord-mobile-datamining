@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         name = thread.name;
       }
       let obj2 = {
-        header: jsx(message(7194).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+        header: jsx(message(7197).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
         children: null,
       };
       obj.subtitle = name;
@@ -220,8 +220,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3.children = tmp4Result;
       obj2.children = <View style={tmp.content}>{null}</View>;
-      return jsx(message(7244).ActionSheet, {
-        header: jsx(message(7194).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+      return jsx(message(7247).ActionSheet, {
+        header: jsx(message(7197).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
         children: null,
       });
     };

@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[19] !== channel.channel) {
                       let obj3 = { channel: channel.channel };
-                      const tmp22 = closure_6(tmp(13579).NotificationSettingsChannelPresets, obj3);
+                      const tmp22 = closure_6(tmp(13597).NotificationSettingsChannelPresets, obj3);
                       class M {
                         constructor() {
                           obj = {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[25] !== channel.channel) {
                       const obj6 = { style: tmp25, channel: channel.channel };
-                      const tmp29 = closure_6(tmp(13588).NotificationSettingsChannelMessageUnread, obj6);
+                      const tmp29 = closure_6(tmp(13606).NotificationSettingsChannelMessageUnread, obj6);
                       class M {
                         constructor() {
                           obj = {
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       let isForumLikeChannelResult = obj9.isForumLikeChannel();
                       if (isForumLikeChannelResult) {
                         const obj7 = { style: { marginTop: 24 }, channel: channel.channel };
-                        isForumLikeChannelResult = closure_6(tmp(13593).NotificationSettingsChannelPost, obj7);
+                        isForumLikeChannelResult = closure_6(tmp(13611).NotificationSettingsChannelPost, obj7);
                       }
                       cResult[25] = channel.channel;
                       cResult[26] = tmp29;
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp37[4] = tmp27;
                       tmp37[5] = tmp31;
                       obj8.children = tmp37;
-                      const tmp38 = closure_7(tmp(8871).Form, obj8);
+                      const tmp38 = closure_7(tmp(8883).Form, obj8);
                       cResult[31] = tmp9.screenContainer;
                       cResult[32] = tmp26;
                       cResult[33] = tmp27;
@@ -383,10 +383,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: { marginBottom: 16 }, title: null, subtitle: null, onPressUnmute: null };
         const intl2 = tmp(1128).intl;
         obj5.title = intl2.string(tmp(1128).t["6MCxAy"]);
-        obj5.subtitle = tmp(13578).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
+        obj5.subtitle = tmp(13596).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
         obj5.onPressUnmute = callback1;
-        muted = closure_6(tmp(13578).NotificationSettingsMuteBanner, obj5);
-        const tmpResult = tmp(13578);
+        muted = closure_6(tmp(13596).NotificationSettingsMuteBanner, obj5);
+        const tmpResult = tmp(13596);
       }
       const items3 = [
         muted,
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let isForumLikeChannelResult = channel.isForumLikeChannel();
       if (isForumLikeChannelResult) {
         const obj9 = { style: { marginTop: 24 }, channel: channel.channel };
-        isForumLikeChannelResult = closure_6(tmp(13593).NotificationSettingsChannelPost, obj9);
+        isForumLikeChannelResult = closure_6(tmp(13611).NotificationSettingsChannelPost, obj9);
       }
       items3[4] = isForumLikeChannelResult;
       const inherited = channelPresetInheritance.inherited;

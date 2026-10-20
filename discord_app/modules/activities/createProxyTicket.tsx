@@ -161,3 +161,26 @@ export const prefetchProxyTicket = function prefetchProxyTicket(prop, arg1, type
   obj.expiresAt = Date.now() + 60000;
   const result = map.set(joined, obj);
 };
+export const rememberProxyTicket = function rememberProxyTicket(
+  proxy_ticket,
+  id,
+  CONJURE_UNKNOWN_CHANNEL,
+  APP_CHANNEL,
+) {
+  let str = CONJURE_UNKNOWN_CHANNEL;
+  const items = [AuthenticationStore.getId(), id, ,];
+  if (CONJURE_UNKNOWN_CHANNEL == null) {
+    str = "";
+  }
+  let str2 = APP_CHANNEL;
+  items[2] = str;
+  if (APP_CHANNEL == null) {
+    str2 = "";
+  }
+  items[3] = str2;
+  const obj = { ticket: null, expiresAt: null };
+  const joined = items.join(":");
+  obj.ticket = Promise.resolve(proxy_ticket);
+  obj.expiresAt = Date.now() + 60000;
+  const result = map.set(joined, obj);
+};

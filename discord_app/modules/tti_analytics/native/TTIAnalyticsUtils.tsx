@@ -338,8 +338,8 @@ let closure_28 = async function _trackAppUIViewed() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj7 = { value, done: true };
-      return obj7;
+      const obj9 = { value, done: true };
+      return obj9;
     } else {
       return { value: "IconComponent", done: null };
     }
@@ -352,8 +352,8 @@ let closure_28 = async function _trackAppUIViewed() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -364,17 +364,17 @@ let closure_28 = async function _trackAppUIViewed() {
           let extraProperties;
           closure_131_5 = undefined;
           closure_131_6 = undefined;
-          const tmp75 = getRedesignScreenName();
-          let unknown = tmp75;
-          if (tmp75 == null) {
+          const tmp84 = getRedesignScreenName();
+          let unknown = tmp84;
+          if (tmp84 == null) {
             unknown = "unknown";
           }
           closure_131_0 = unknown;
           const AppStartInfo = AppStartInfo2.AppStartInfo;
           c5 = 1;
           c6 = 1;
-          const obj10 = { value: AppStartInfo.getAppStartInfo(), done: false };
-          return obj10;
+          const obj12 = { value: AppStartInfo.getAppStartInfo(), done: false };
+          return obj12;
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -382,8 +382,8 @@ let closure_28 = async function _trackAppUIViewed() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
           closure_131_1 = value;
           appCreatedTime = closure_131_1.appCreatedTime;
@@ -392,22 +392,22 @@ let closure_28 = async function _trackAppUIViewed() {
           const allNativeTimestamps = closure_132_1(closure_132_2[21]).getAllNativeTimestamps();
           c5 = 2;
           c6 = 1;
-          const obj12 = {
+          const obj14 = {
             value: allNativeTimestamps.then((nativeLogs) => {
               c1(paths[17]).logGroups[0].nativeLogs = nativeLogs;
               c1(paths[23]).processNativeLogs(nativeLogs, closure_1_2);
             }),
             done: false,
           };
-          return obj12;
+          return obj14;
         }
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
+        const obj15 = { value, done: true };
+        return obj15;
       } else {
         const cumulativeCPUUsage = closure_132_1(closure_132_2[25]).getCumulativeCPUUsage();
         let usage;
@@ -426,30 +426,37 @@ let closure_28 = async function _trackAppUIViewed() {
           paths = {};
         }
         const merged1 = Object.assign(paths);
-        const obj15 = closure_132_1(closure_132_2[25]);
+        const obj17 = closure_132_1(closure_132_2[25]);
         const merged2 = Object.assign(closure_132_1(closure_132_2[23]).serializeTTITracker(appFirstVisibleTime));
         obj.load_id = closure_132_16;
         obj.screen_name = closure_131_0;
         obj.has_cached_data = closure_132_4.hasCache();
         obj.startup_cpu_usage_cumulative = closure_131_5;
         obj.theme = closure_132_6.theme;
-        closure_131_6 = obj;
         let obj2 = closure_132_1(closure_132_2[23]);
+        let result = null;
+        if (obj3.isIOS()) {
+          result = closure_132_0(closure_132_2[27]).isIOSAnchoredChatScrollerEnabled();
+          const obj4 = closure_132_0(closure_132_2[27]);
+        }
+        obj.ios_using_anchored_scroller = result;
+        closure_131_6 = obj;
+        obj3 = closure_132_0(closure_132_2[26]);
         closure_132_1(closure_132_2[17]).mark("\u2757", "Track app_ui_viewed2");
-        const obj3 = closure_132_1(closure_132_2[17]);
+        const obj5 = closure_132_1(closure_132_2[17]);
         closure_132_1(closure_132_2[19]).track(closure_132_10.APP_UI_VIEWED2, closure_131_6, {
           logEventProperties: true,
         });
-        const obj4 = closure_132_1(closure_132_2[19]);
-        const result = closure_132_0(closure_132_2[26]).trackAndroidArtProfileSnapshot(
+        const obj6 = closure_132_1(closure_132_2[19]);
+        const result1 = closure_132_0(closure_132_2[28]).trackAndroidArtProfileSnapshot(
           closure_132_16,
           closure_132_15(),
         );
         closure_132_26 = closure_131_6;
         if (closure_132_9.alertStartupMetrics) {
-          const obj14 = {
+          const obj16 = {
             importer() {
-              return unknown(paths[29])(paths[28], paths.paths).then((result) => {
+              return unknown(paths[31])(paths[30], paths.paths).then((result) => {
                 closure_0 = result.default;
                 return (arg0) => {
                   let str = closure_2_6.app_launch_scenario;
@@ -479,11 +486,11 @@ let closure_28 = async function _trackAppUIViewed() {
             },
             isDismissable: false,
           };
-          closure_132_1(closure_132_2[27]).openLazy(obj14);
-          const obj6 = closure_132_1(closure_132_2[27]);
+          closure_132_1(closure_132_2[29]).openLazy(obj16);
+          const obj8 = closure_132_1(closure_132_2[29]);
         }
-        const obj5 = closure_132_0(closure_132_2[26]);
-        if (obj8.runningTTIAutomation()) {
+        const obj7 = closure_132_0(closure_132_2[28]);
+        if (obj10.runningTTIAutomation()) {
           (function logToDevice(json) {
             obj = {};
             let merged = Object.assign(json);
@@ -518,9 +525,9 @@ let closure_28 = async function _trackAppUIViewed() {
         c6 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp57) {
+    } catch (tmp66) {
       c6 = tmp;
-      throw tmp57;
+      throw tmp66;
     }
   }
 };
@@ -603,7 +610,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7688).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7691).ACCEPT_INVITE_MODAL_KEY;
 const StaticChannelRoutes = fn(4807).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1281);

@@ -98,42 +98,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if ("role" === channel_filter.type) {
           tmp8 = arg0;
         }
-        const conjureGuildRoles = result(11687).useConjureGuildRoles(tmp8);
-        const resultResult1 = result(11687);
+        const conjureGuildRoles = result(11700).useConjureGuildRoles(tmp8);
+        const resultResult1 = result(11700);
         let tmp9 = null;
         if ("user" === channel_filter.type) {
           tmp9 = arg0;
         }
-        const conjureGuildMemberUsers = result(11687).useConjureGuildMemberUsers(tmp9);
-        class S {
-          constructor() {
-            channels = null;
-            if (null != closure_0) {
-              tmp3 = closure_1;
-              str = "channel";
-              channels = null;
-              if ("channel" === closure_1.type) {
-                tmp4 = closure_3;
-                channels = closure_3.getChannels(tmp);
-              }
-            }
-            return channels;
-          }
-        }
+        const conjureGuildMemberUsers = result(11700).useConjureGuildMemberUsers(tmp9);
+        const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [StreamerModeStore];
-          const fn = function j() {
+          const fn2 = function j() {
             return StreamerModeStore.hidePersonalInformation;
           };
           cResult[5] = items1;
-          cResult[6] = fn;
-          let tmp12 = fn;
+          cResult[6] = fn2;
+          let tmp12 = fn2;
           let tmp11 = items1;
         } else {
           tmp11 = cResult[5];
           tmp12 = cResult[6];
         }
-        const resultResult2 = result(11687);
+        const resultResult2 = result(11700);
         const stateFromStores1 = result(504).useStateFromStores(tmp11, tmp12);
         const type = channel_filter.type;
         if ("channel" === type) {
@@ -141,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           mapped = null;
           if (!tmp20) {
-            result = result(7291).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
+            result = result(7294).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
             map = result.map;
             mapped = map((id) => {
               const obj = {
@@ -150,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               return obj;
             });
-            const resultResult4 = result(7291);
+            const resultResult4 = result(7294);
           }
           cResult[7] = stateFromStores;
           channel_filter = channel_filter.channel_filter;
@@ -160,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           if ("role" === type) {
             if (cResult[10] !== conjureGuildRoles) {
-              const _Symbol = Symbol;
+              const _Symbol2 = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
                 class I {
                   constructor(arg0) {
@@ -200,28 +186,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const resultResult3 = result(504);
       }
-      class S {
-        constructor() {
+      const fn = function p() {
+        let channels = null;
+        if (null != closure_0) {
           channels = null;
-          if (null != closure_0) {
-            tmp3 = closure_1;
-            str = "channel";
-            channels = null;
-            if ("channel" === closure_1.type) {
-              tmp4 = closure_3;
-              channels = closure_3.getChannels(tmp);
-            }
+          if ("channel" === type.type) {
+            channels = GuildChannelStore.getChannels(tmp);
           }
-          return channels;
         }
-      }
+        return channels;
+      };
       const items2 = [arg0, channel_filter.type];
       cResult[1] = channel_filter.type;
       cResult[2] = arg0;
-      cResult[3] = S;
+      cResult[3] = fn;
       cResult[4] = items2;
       tmp5 = items2;
-      tmp4 = S;
+      tmp4 = fn;
       let obj = require("c");
     }
   : function useConjureSettingPickerOptions(arg0, type) {
@@ -286,10 +267,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
         } else if ("user" === type) {
           return conjureGuildMemberUsers.map((id) => {
-            const result = closure_0(11687).conjureMemberUsername(id, stateFromStores1);
+            const result = closure_0(11700).conjureMemberUsername(id, stateFromStores1);
             const obj2 = { id: id.id, label: null };
-            const obj = closure_0(11687);
-            obj2.label = closure_0(5944).getName(closure_1_0, null, id);
+            const obj = closure_0(11700);
+            obj2.label = closure_0(5947).getName(closure_1_0, null, id);
             if ("" === result) {
               let obj4 = {};
             } else {
@@ -303,6 +284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items3);
     };
+export const MAX_CONJURE_SETTING_PICKS = 25;
 export { conjureSettingPickedIds };
 export const withSavedPicks = function withSavedPicks(arr, value, arg2) {
   closure_0 = arr;
@@ -348,5 +330,25 @@ export const withSavedPicks = function withSavedPicks(arr, value, arg2) {
     const items3 = [value];
     items2 = items3;
   }
+};
+export const withPickCap = function withPickCap(arr, arg1) {
+  closure_0 = arg1;
+  if (arg1.length < 25) {
+    const items = [];
+    HermesBuiltin.arraySpread(arr, 0);
+    let mapped = items;
+  } else {
+    mapped = arr.map((id) => {
+      let tmp = id;
+      if (!closure_0.includes(id.id)) {
+        const obj = {};
+        const merged = Object.assign(id);
+        obj.disabled = true;
+        tmp = obj;
+      }
+      return tmp;
+    });
+  }
+  return mapped;
 };
 export const useConjureSettingsGuildId = tmp2;

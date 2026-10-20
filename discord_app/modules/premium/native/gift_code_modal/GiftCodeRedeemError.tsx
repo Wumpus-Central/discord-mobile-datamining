@@ -8,8 +8,8 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef10983 from "../../../../../_runtime/metro/10983__.js";
-import _modDef10984 from "../../../../../_runtime/metro/10984__.js";
+import _modDef10994 from "../../../../../_runtime/metro/10994__.js";
+import _modDef10995 from "../../../../../_runtime/metro/10995__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -45,10 +45,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       ({ container, body } = tmp4);
       if (obj2.useTheme().dark) {
-        let tmp5Result = _modDef10983;
+        let tmp5Result = _modDef10994;
         let tmp7 = importDefault;
       } else {
-        tmp5Result = _modDef10984;
+        tmp5Result = _modDef10995;
         tmp7 = importDefault;
       }
       if (cResult[0] !== tmp5Result) {
@@ -169,9 +169,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
       if (theme.dark) {
-        let tmp8Result = _modDef10983;
+        let tmp8Result = _modDef10994;
       } else {
-        tmp8Result = _modDef10984;
+        tmp8Result = _modDef10995;
       }
       const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
       const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

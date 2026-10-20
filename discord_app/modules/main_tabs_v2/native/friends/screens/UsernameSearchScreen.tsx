@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect1 = noop.useEffect(T, tmp10);
       ref = noop.useRef(null);
-      const clientThemesOverride = navigation(9623).useClientThemesOverride();
+      const clientThemesOverride = navigation(9636).useClientThemesOverride();
       if (cResult[5] === insets.top) {
         class T {
           constructor() {
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = navigation(9623);
+      const tmpResult = navigation(9636);
       let tmp13 = null;
       if (tmpResult2.isIOS()) {
         class T {
@@ -219,8 +219,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }),
         items,
       );
-      const clientThemesOverride = navigation(9623).useClientThemesOverride();
-      let obj = navigation(9623);
+      const clientThemesOverride = navigation(9636).useClientThemesOverride();
+      let obj = navigation(9636);
       let prop = null;
       if (obj2.isIOS()) {
         prop = null;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [tmp.content, clientThemesOverride];
       obj4.style = items1;
       obj2 = navigation(1384);
-      const items2 = [closure_8(ref(10543), { absolute: true })];
+      const items2 = [closure_8(ref(10554), { absolute: true })];
       const obj5 = {
         alwaysBounceVertical: false,
         keyboardShouldPersistTaps: "handled",
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const items3 = [tmp.container, prop];
-      const tmp3Result = ref(7083);
+      const tmp3Result = ref(7086);
       items3[2] = { paddingBottom: insets.bottom + ref(587).space.PX_16 };
       obj5.contentContainerStyle = items3;
       const obj7 = {
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.headerText = intl.string(navigation(1128).t.YEOwDM);
       obj7.headerTextStyle = tmp.headerText;
       obj7.ref = ref;
-      obj5.children = closure_8(ref(14896), obj7);
+      obj5.children = closure_8(ref(14914), obj7);
       items2[1] = closure_8(closure_4, obj5);
       obj4.children = items2;
       obj3.children = closure_9(tmp3Result, obj4);

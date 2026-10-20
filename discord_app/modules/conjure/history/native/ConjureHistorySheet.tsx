@@ -13,7 +13,7 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import TableRowGroup2 from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9060 from "../../../../../_runtime/metro/09060__.js";
+import _modDef9072 from "../../../../../_runtime/metro/09072__.js";
 import ContextMenu from "../../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import ConjureHistoryFormat from "../ConjureHistoryFormat.tsx";
 import conjureHistoryRequests from "../conjureHistoryRequests.tsx";
@@ -195,7 +195,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
         if (cResult[3] === renderItem) {
           if (cResult[7] !== cResult[4]) {
             const obj2 = { spacing: 16, children: tmp4 };
-            const tmp9 = closure_7(renderItem(5932).Stack, obj2);
+            const tmp9 = closure_7(renderItem(5935).Stack, obj2);
             cResult[7] = tmp4;
             cResult[8] = tmp9;
             let tmp7 = tmp9;
@@ -222,27 +222,27 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
     tmp5 = cResult[6];
   }
   let obj = renderItem(576);
-  const tmpResult = renderItem(11719);
-  const mapped = renderItem(11719).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
+  const tmpResult = renderItem(11733);
+  const mapped = renderItem(11733).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
   cResult[0] = getMs;
   cResult[1] = items;
   cResult[2] = nowMs;
   cResult[3] = renderItem;
   cResult[4] = mapped;
-  const groupHistoryByDayResult = renderItem(11719).groupHistoryByDay(items, getMs, nowMs);
+  const groupHistoryByDayResult = renderItem(11733).groupHistoryByDay(items, getMs, nowMs);
 }) : (function HistoryDayGroups(renderItem) {
   renderItem = renderItem.renderItem;
   ({ items, getMs, nowMs } = renderItem);
   let obj = { spacing: 16, children: null };
-  const obj2 = renderItem(11719);
-  obj.children = renderItem(11719).groupHistoryByDay(items, getMs, nowMs).map((label) => {
+  const obj2 = renderItem(11733);
+  obj.children = renderItem(11733).groupHistoryByDay(items, getMs, nowMs).map((label) => {
     label = label.label;
     const obj = { title: label, hasIcons: false, children: null };
     const items = label.items;
     obj.children = items.map(renderItem);
     return React5(TableRowGroup2.TableRowGroup, obj, label.key);
   });
-  return closure_7(renderItem(5932).Stack, obj);
+  return closure_7(renderItem(5935).Stack, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VersionsPanel(restoreDisabled) {
@@ -618,7 +618,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Databa
                                 if (cResult[64] !== tmp9) {
                                   function ce(arg0) {
                                     ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-                                    return React5(IconButton.IconButton, { ref, icon: _modDef9060, size: "sm", variant: "secondary", accessibilityLabel, accessibilityActions, onAccessibilityAction, onPress });
+                                    return React5(IconButton.IconButton, { ref, icon: _modDef9072, size: "sm", variant: "secondary", accessibilityLabel, accessibilityActions, onAccessibilityAction, onPress });
                                   }
                                   cResult[64] = tmp9;
                                   cResult[65] = ce;
@@ -1329,7 +1329,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Databa
       align: "below",
       children(arg0) {
         ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-        return React5(IconButton.IconButton, { ref, icon: _modDef9060, size: "sm", variant: "secondary", accessibilityLabel, accessibilityActions, onAccessibilityAction, onPress });
+        return React5(IconButton.IconButton, { ref, icon: _modDef9072, size: "sm", variant: "secondary", accessibilityLabel, accessibilityActions, onAccessibilityAction, onPress });
       }
     })
   ];
@@ -1459,7 +1459,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
     return items;
   }, []);
   const tmp = _slicedToArray(closure_17(), 2);
-  let obj = onChange(8821);
+  let obj = onChange(8833);
   const obj3 = { onLayout: tmp3, accessibilityLabel: null, children: null };
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
@@ -1473,7 +1473,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
   });
   let intl = onChange(1128).intl;
   obj3.accessibilityLabel = intl.string(_modDef3820["/2GnYy"]);
-  obj3.children = closure_7(onChange(11699).Tabs, { state: segmentedControlState });
+  obj3.children = closure_7(onChange(11713).Tabs, { state: segmentedControlState });
   return closure_7(View, obj3);
 });
 const size = fn(2);
@@ -1492,14 +1492,14 @@ export default function ConjureHistorySheet(projectId) {
   const tmp = onRestoreVersion;
   const tmp3 = onSaveBackup(onRestoreVersion(1633)().bottom + onRestoreVersion(587).space.PX_16);
   [tmp5, tmp6] = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
-  const tmp7 = onRestoreVersion(12131)(projectId, projectId.installScope);
+  const tmp7 = onRestoreVersion(12146)(projectId, projectId.installScope);
   ({ sharedDatabase: c2, versions, databases, refreshAllBackups } = tmp7);
   versionTitles = tmp7.versionTitles;
   ({ previewBackups, previewBackupsLoading } = tmp7);
   const tmp4 = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
   conjureDatabaseBusy = require("conjureDatabaseLock").useConjureDatabaseBusy(projectId);
   let obj = require("conjureDatabaseLock");
-  const tmp10 = onRestoreVersion(11670)(projectId);
+  const tmp10 = onRestoreVersion(11683)(projectId);
   [tmp12, c6] = versionTitles(conjureDatabaseBusy.useState(false), 2);
   const refresh = versions.refresh;
   _require = refreshAllBackups(function*(arg0, arg1) {
@@ -1620,7 +1620,7 @@ export default function ConjureHistorySheet(projectId) {
               closure_128_0 = undefined;
               c2 = 1;
               v3 = 1;
-              const obj6 = { value: tmp2(12122).runConjureDataRewind(tmp2, tmp2), done: false };
+              const obj6 = { value: tmp2(12137).runConjureDataRewind(tmp2, tmp2), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -1716,7 +1716,7 @@ export default function ConjureHistorySheet(projectId) {
   const items4 = [projectId, refreshAllBackups];
   onSaveBackup = conjureDatabaseBusy.useCallback((environment) => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(12133, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
+    return obj.openLazy(asyncRequireImpl(12148, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
   }, items4);
   let obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
   let obj3 = { children: null };
@@ -1744,7 +1744,7 @@ export default function ConjureHistorySheet(projectId) {
     let obj7 = { children: null };
     let obj8 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = tmp8(1128).intl;
-    const obj9 = { days: tmp8(12132).RESTORE_WINDOW_DAYS };
+    const obj9 = { days: tmp8(12147).RESTORE_WINDOW_DAYS };
     obj8.children = intl2.formatToPlainString(tmp(3820).ptsHZu, obj9);
     const items6 = [tmp15(tmp8(5195).Text, obj8), databases.map((database) => React5(closure_16, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
     obj7.children = items6;

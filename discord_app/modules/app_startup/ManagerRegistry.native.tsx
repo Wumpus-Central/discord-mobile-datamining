@@ -144,6 +144,12 @@ const obj = {
     },
     loadAfterConnectionOpen: true,
   },
+  ConjureBackgroundFramesManager: {
+    actions: ["FRAME_LAUNCH_START"],
+    inlineRequire() {
+      return require("ConjureBackgroundFramesManager").default;
+    },
+  },
   ConjureTurnNotificationManager: {
     actions: ["CONJURE_TURN_NOTIFICATION", "CONJURE_TURN_SETTLED", "LOGOUT"],
     inlineRequire() {

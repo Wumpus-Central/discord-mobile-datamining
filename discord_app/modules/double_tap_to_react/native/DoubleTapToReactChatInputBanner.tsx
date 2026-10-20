@@ -95,7 +95,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13074, dependencyMap.paths),
+      asyncRequireImpl(13092, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );
@@ -557,17 +557,17 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
         if (!tmp7) {
           let tmp10 = null != channel.lastMessageId;
           if (tmp10) {
-            tmp10 = emoji(8273)(channel);
+            tmp10 = emoji(8277)(channel);
           }
           tmp9 = tmp10;
         }
         tmp5 = tmp9;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fallbackDoubleTapDisambiguatedEmoji = tmp(8270).getFallbackDoubleTapDisambiguatedEmoji();
+        const fallbackDoubleTapDisambiguatedEmoji = tmp(8274).getFallbackDoubleTapDisambiguatedEmoji();
         cResult[0] = fallbackDoubleTapDisambiguatedEmoji;
         emoji = fallbackDoubleTapDisambiguatedEmoji;
-        const tmpResult = tmp(8270);
+        const tmpResult = tmp(8274);
       } else {
         emoji = cResult[0];
       }
@@ -598,7 +598,7 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
                 return tmp;
               },
             };
-            tmp2 = closure_9(emoji(10326), obj2);
+            tmp2 = closure_9(emoji(10337), obj2);
             cResult[2] = channel;
             cResult[3] = tmp2;
           }

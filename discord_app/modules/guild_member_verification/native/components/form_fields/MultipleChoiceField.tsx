@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj2 = { defaultValue: response, onChange: M, hasIcons, children: tmp14 };
-            const tmp20 = closure_4(onChange(6933).TableRadioGroup, obj2);
+            const tmp20 = closure_4(onChange(6936).TableRadioGroup, obj2);
             cResult[11] = hasIcons;
             cResult[12] = response;
             cResult[13] = M;

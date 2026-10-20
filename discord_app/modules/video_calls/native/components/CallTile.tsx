@@ -8,11 +8,11 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef11584 from "../../../../../_runtime/metro/11584__.js";
-import _modDef11585 from "../../../../../_runtime/metro/11585__.js";
-import _modDef11586 from "../../../../../_runtime/metro/11586__.js";
-import _modDef11587 from "../../../../../_runtime/metro/11587__.js";
-import _modDef11588 from "../../../../../_runtime/metro/11588__.js";
+import _modDef11595 from "../../../../../_runtime/metro/11595__.js";
+import _modDef11596 from "../../../../../_runtime/metro/11596__.js";
+import _modDef11597 from "../../../../../_runtime/metro/11597__.js";
+import _modDef11598 from "../../../../../_runtime/metro/11598__.js";
+import _modDef11599 from "../../../../../_runtime/metro/11599__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -21,7 +21,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10675);
+const ChannelCallStore = fn(10686);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
 const CallConstants = fn(5593);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
@@ -171,17 +171,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       participant = participant.participant;
       let titleIcon2 = closure_16();
       if (participant.type === constants.STREAM) {
-        let tmp4 = _modDef11584;
+        let tmp4 = _modDef11595;
       } else if (participant.type === tmp3.USER) {
         const voicePlatform = participant.voicePlatform;
         if (constants2.MOBILE === voicePlatform) {
-          tmp4 = _modDef11585;
+          tmp4 = _modDef11596;
         } else if (constants2.XBOX === voicePlatform) {
-          tmp4 = _modDef11586;
+          tmp4 = _modDef11597;
         } else if (constants2.PLAYSTATION === voicePlatform) {
-          tmp4 = _modDef11587;
+          tmp4 = _modDef11598;
         } else if (constants2.QUEST === voicePlatform) {
-          tmp4 = _modDef11588;
+          tmp4 = _modDef11599;
         }
       }
       if (null == tmp4) {
@@ -207,17 +207,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   : function ParticipantIcon(participant) {
       participant = participant.participant;
       if (participant.type === constants.STREAM) {
-        let tmp3 = _modDef11584;
+        let tmp3 = _modDef11595;
       } else if (participant.type === tmp2.USER) {
         const voicePlatform = participant.voicePlatform;
         if (constants2.MOBILE === voicePlatform) {
-          tmp3 = _modDef11585;
+          tmp3 = _modDef11596;
         } else if (constants2.XBOX === voicePlatform) {
-          tmp3 = _modDef11586;
+          tmp3 = _modDef11597;
         } else if (constants2.PLAYSTATION === voicePlatform) {
-          tmp3 = _modDef11587;
+          tmp3 = _modDef11598;
         } else if (constants2.QUEST === voicePlatform) {
-          tmp3 = _modDef11588;
+          tmp3 = _modDef11599;
         }
       }
       let tmp14 = null;
@@ -248,7 +248,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = reveal(576);
       const tmp = reveal;
       ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-      reveal = noop.useContext(reveal(11242).RevealContext).reveal;
+      reveal = noop.useContext(reveal(11253).RevealContext).reveal;
       const tmp6 = useSafeAreaInsetsDefault();
       const fn = function l() {
         let num = 0;
@@ -393,7 +393,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
       const tmp = closure_16();
       ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-      reveal = noop.useContext(reveal(11242).RevealContext).reveal;
+      reveal = noop.useContext(reveal(11253).RevealContext).reveal;
       const tmp4 = useSafeAreaInsetsDefault();
       const tmp5 = reveal;
       class A {

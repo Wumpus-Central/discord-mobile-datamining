@@ -90,7 +90,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp16 = cResult[8];
         }
-        if (null == tmp8(6321)(tmp16)) {
+        if (null == tmp8(6324)(tmp16)) {
           if (cResult[12] === tmp9) {
             if (cResult[13] === tmp22) {
               if (cResult[14] === currentUser) {
@@ -131,7 +131,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           if (cResult[9] === id) {
           }
-          tmp8 = tmp8(10579);
+          tmp8 = tmp8(10590);
           const obj6 = {
             userId: currentUser.id,
             userName: id,

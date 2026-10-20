@@ -182,9 +182,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       sku = sku.sku;
       let getOrFetchApplication;
       const tmp = closure_8();
-      getOrFetchApplication = getOrFetchApplication(7203).useGetOrFetchApplication(sku.applicationId);
-      let obj = getOrFetchApplication(7203);
-      const userPrice = getOrFetchApplication(10478).useFormattedSKUPrice({
+      getOrFetchApplication = getOrFetchApplication(7206).useGetOrFetchApplication(sku.applicationId);
+      let obj = getOrFetchApplication(7206);
+      const userPrice = getOrFetchApplication(10489).useFormattedSKUPrice({
         sku,
         priceSetAssignmentPurchaseType: constants.GIFT,
       }).userPrice;

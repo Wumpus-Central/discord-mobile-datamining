@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeButterfly.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/07906_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07910_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";

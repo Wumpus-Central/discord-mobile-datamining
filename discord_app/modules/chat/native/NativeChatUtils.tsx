@@ -1,9 +1,9 @@
 // discord_app/modules/chat/native/NativeChatUtils.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import NativeChatModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx";
 import ChatNativeComponent from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker.tsx";
-import NativeChatModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 

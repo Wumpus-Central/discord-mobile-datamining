@@ -78,7 +78,7 @@ function DropdownPrompt(guildId) {
   const handleSelectOption = _prompt(isNew[41])(guildId).handleSelectOption;
   const items1 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = stateFromStoresArray.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7180, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7183, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: _prompt.id,
       onSelect: function handleOptionSelected(arg0, arg1) {
@@ -143,10 +143,10 @@ function DropdownPrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(7144);
+const GuildOnboardingPromptsConstants = fn(7147);
 ({ GuildOnboardingTab: closure_11, OnboardingPromptType: closure_12 } = GuildOnboardingPromptsConstants);
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
-const ReadStateTypes = fn(6653).ReadStateTypes;
+const ReadStateTypes = fn(6656).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const createStyles = fn(4945);
@@ -308,7 +308,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === setTab) {
           let tmp11 = cResult[4];
         }
-        const tmp5Result = tmp5(isThemeDarkResult ? 11136 : 11137);
+        const tmp5Result = tmp5(isThemeDarkResult ? 11147 : 11148);
         if (cResult[5] === tmp4.emptyContainerImage) {
           if (cResult[6] === tmp5Result) {
             let tmp13 = cResult[7];
@@ -401,7 +401,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.emptyContainer, children: null };
       const obj4 = { style: tmp.emptyContainerImage, source: null };
       const obj2 = setTab(504);
-      obj4.source = tmp4(isThemeDarkResult ? 11136 : 11137);
+      obj4.source = tmp4(isThemeDarkResult ? 11147 : 11148);
       const items1 = [closure_15(FastImageDefault, obj4), ,];
       const obj5 = { style: tmp.emptyContainerHeader, children: null };
       const intl = tmp2(1128).intl;
@@ -517,8 +517,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== tmp10) {
           if (null != tmp10) {
-            let selectedRoleIds = tmp(7149).getSelectedRoleIds(tmp10);
-            const tmpResult3 = tmp(7149);
+            let selectedRoleIds = tmp(7152).getSelectedRoleIds(tmp10);
+            const tmpResult3 = tmp(7152);
           } else {
             const _Set = Set;
             selectedRoleIds = new Set();
@@ -527,8 +527,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = selectedRoleIds;
         } else if (cResult[8] !== tmp10) {
           if (null != tmp10) {
-            let selectedChannelIds = tmp(7149).getSelectedChannelIds(tmp10);
-            const tmpResult4 = tmp(7149);
+            let selectedChannelIds = tmp(7152).getSelectedChannelIds(tmp10);
+            const tmpResult4 = tmp(7152);
           } else {
             const _Set2 = Set;
             selectedChannelIds = new Set();
@@ -556,7 +556,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[14] === tmp13) {
                   let tmp24 = cResult[15];
                 }
-                ({ helpText, helpTextAdditional } = selectedOptionIds(7170)(tmp24));
+                ({ helpText, helpTextAdditional } = selectedOptionIds(7173)(tmp24));
                 if (cResult[16] === helpText) {
                   if (cResult[17] === helpTextAdditional) {
                     if (cResult[18] === tmp4) {
@@ -583,7 +583,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = tmp4;
                 cResult[19] = tmp28;
                 tmp27 = tmp28;
-                const tmp26 = selectedOptionIds(7170)(tmp24);
+                const tmp26 = selectedOptionIds(7173)(tmp24);
               }
             }
           }
@@ -1453,7 +1453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = guildId(504).useStateFromStores(tmp10, N);
       const tmpResult2 = guildId(504);
       ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, newAnswersCount, onboardingPrompts } =
-        tmp5(11138)(guildId));
+        tmp5(11149)(guildId));
       if (cResult[6] === guildId) {
         class N {
           constructor() {
@@ -1504,7 +1504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = guildId;
       cResult[7] = stateFromStores;
       cResult[8] = D;
-      const tmp14 = tmp5(11138)(guildId);
+      const tmp14 = tmp5(11149)(guildId);
     }
   : function CustomizeCommunity(guildId) {
       guildId = guildId.guildId;
@@ -1525,7 +1525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return prop;
       });
-      const tmp7 = stateFromStores(11138)(guildId);
+      const tmp7 = stateFromStores(11149)(guildId);
       ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
       const items2 = [guildId, stateFromStores, stateFromStores1];
       ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -1544,13 +1544,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () =>
           null != guildId
             ? () => {
-                guildId(7154).ackGuildFeature(
+                guildId(7157).ackGuildFeature(
                   closure_1_0,
                   constants.GUILD_ONBOARDING_QUESTION,
                   GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0),
                 );
-                const obj = guildId(7154);
-                const result = stateFromStores(7148).updateOnboardingResponses(closure_1_0);
+                const obj = guildId(7157);
+                const result = stateFromStores(7151).updateOnboardingResponses(closure_1_0);
               }
             : undefined,
         items3,

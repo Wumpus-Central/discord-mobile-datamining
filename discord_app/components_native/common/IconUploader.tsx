@@ -4,7 +4,7 @@ import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import FastImageDefault from "FastImage.tsx";
 import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import _modDef9952 from "../../../_runtime/metro/09952__.js";
+import _modDef9963 from "../../../_runtime/metro/09963__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -59,13 +59,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[9] === iconStyle) {
                 }
               }
-              let obj3 = { style: iconStyle, icon, value: name, size: tmp(6831).GuildIconSizes.XLARGE, animate: true };
-              const tmp24 = closure_7(onChangeIconPress(6831), obj3);
+              let obj3 = { style: iconStyle, icon, value: name, size: tmp(6834).GuildIconSizes.XLARGE, animate: true };
+              const tmp24 = closure_7(onChangeIconPress(6834), obj3);
               cResult[8] = icon;
               cResult[9] = iconStyle;
               cResult[10] = name;
               cResult[11] = tmp24;
-              const tmp23 = onChangeIconPress(6831);
+              const tmp23 = onChangeIconPress(6834);
             } else {
               if (cResult[12] !== icon) {
                 const source = tmp(1417).makeSource(icon);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     onPress: tmp11,
                     children: tmp31,
                   };
-                  const tmp41 = closure_7(tmp(6856).PressableOpacity, obj6);
+                  const tmp41 = closure_7(tmp(6859).PressableOpacity, obj6);
                   cResult[27] = tmp11;
                   cResult[28] = tmp31;
                   cResult[29] = tmp41;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             let tmp27 = null;
             if (!tmp4) {
-              const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(9952) };
+              const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(9963) };
               tmp27 = closure_7(onChangeIconPress(5631), obj8);
               const tmp30 = onChangeIconPress(5631);
             }
@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [tmp8];
       let tmp17 = null;
       if (!flag) {
-        let obj5 = { style: tmp.uploadIcon, source: _modDef9952 };
+        let obj5 = { style: tmp.uploadIcon, source: _modDef9963 };
         tmp17 = closure_7(FastImageDefault, obj5);
       }
       items1[1] = tmp17;

@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[19] === visible) {
                         let tmp19 = cResult[20];
                       }
-                      const coachmark = markAsDismissed(9756).useCoachmark(targetRef, tmp19);
+                      const coachmark = markAsDismissed(9768).useCoachmark(targetRef, tmp19);
                       return null;
                     }
                   }

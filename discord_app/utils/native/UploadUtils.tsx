@@ -1945,7 +1945,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(8107);
+                      tmpResult = closure_1_0(8111);
                     }
                     const obj = closure_1_0(1384);
                   })(closure_130_0, closure_130_1)) {
@@ -2594,7 +2594,7 @@ let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1087);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(7812).NativePermissionTypes;
+const NativePermissionTypes = fn(7816).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2663,8 +2663,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(8107).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(8107).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(8111).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(8111).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

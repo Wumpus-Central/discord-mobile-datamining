@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj6 = { size, preferredMimeType: "image/png" };
                   c3 = 1;
                   c4 = 1;
-                  const obj7 = { value: _var(8098).openImagePicker(obj6), done: false };
+                  const obj7 = { value: _var(8102).openImagePicker(obj6), done: false };
                   return obj7;
                 }
               } else if (arg0 === 1) {
@@ -161,9 +161,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (closure_2_9.includes(c0)) {
                     const obj = _var(1496);
-                    if (dataUriFileSizeResult <= _var(18859).ROLE_ICON_MAX_FILE_SIZE) {
-                      _var(18855).updateRoleIcon(closure_1, base64, null);
-                      const obj2 = _var(18855);
+                    if (dataUriFileSizeResult <= _var(18882).ROLE_ICON_MAX_FILE_SIZE) {
+                      _var(18878).updateRoleIcon(closure_1, base64, null);
+                      const obj2 = _var(18878);
                     }
                     dataUriFileSizeResult = _var(1496).dataUriFileSize(base64);
                   }
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { title: null };
           let intl = tmp(1128).intl;
           obj2.title = intl.string(tmp(1128).t.B9grJw);
-          const tmp14 = closure_7(tmp(7194).BottomSheetTitleHeader, obj2);
+          const tmp14 = closure_7(tmp(7197).BottomSheetTitleHeader, obj2);
           cResult[11] = tmp14;
           const tmp13 = tmp14;
         } else {
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj4 = { label: tmp18, subLabel: tmp17, onPress: tmp9 };
-          let tmp22 = closure_7(tmp(6851).TableRow, obj4);
+          let tmp22 = closure_7(tmp(6854).TableRow, obj4);
           cResult[15] = tmp9;
           cResult[16] = tmp22;
         } else {
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj6 = { label: tmp23, onPress: tmp10 };
-          const tmp26 = closure_7(tmp(6851).TableRow, obj6);
+          const tmp26 = closure_7(tmp(6854).TableRow, obj6);
           cResult[18] = tmp10;
           cResult[19] = tmp26;
         } else {
@@ -583,9 +583,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { hasIcons: false, children: null };
           const items3 = [tmp21, tmp25, tmp27];
           obj9.children = items3;
-          items2[2] = closure_8(tmp(6935).TableRowGroup, obj9);
+          items2[2] = closure_8(tmp(6938).TableRowGroup, obj9);
           obj8.children = items2;
-          const tmp31 = closure_8(tmp(7244).ActionSheet, obj8);
+          const tmp31 = closure_8(tmp(7247).ActionSheet, obj8);
           cResult[23] = tmp21;
           cResult[24] = tmp25;
           cResult[25] = tmp27;
@@ -615,7 +615,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl4 = tmp(1128).intl;
           obj10.label = intl4.string(tmp(1128).t["uY+Nk/"]);
           obj10.onPress = tmp12;
-          tmp28 = closure_7(tmp(6851).TableRow, obj10);
+          tmp28 = closure_7(tmp(6854).TableRow, obj10);
         }
         cResult[20] = tmp12;
         cResult[21] = stateFromStores;
@@ -656,18 +656,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       surrogates = closure_0.surrogates;
                     }
                     if (null != surrogates) {
-                      closure_0(18855).updateRoleIcon(surrogates, null, tmp26);
-                      const obj5 = closure_0(18855);
+                      closure_0(18878).updateRoleIcon(surrogates, null, tmp26);
+                      const obj5 = closure_0(18878);
                     }
                   } else {
                     c6 = 1;
-                    const tmp22 = closure_0(18855);
+                    const tmp22 = closure_0(18878);
                     closure_4 = tmp22;
                     const updateRoleIcon = tmp22.updateRoleIcon;
                     closure_2 = surrogates;
                     c7 = 2;
                     c8 = 1;
-                    const obj7 = { value: closure_0(18859).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                    const obj7 = { value: closure_0(18882).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                     return obj7;
                   }
                 }
@@ -710,7 +710,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return applyArgumentsResult;
         };
-        const result = guildId(9740).openEmojiPickerActionSheet(obj2, "stack");
+        const result = guildId(9753).openEmojiPickerActionSheet(obj2, "stack");
       }
       cResult[6] = guildId;
       cResult[7] = roleId;
@@ -876,18 +876,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       surrogates = closure_0.surrogates;
                     }
                     if (null != surrogates) {
-                      closure_0(18855).updateRoleIcon(surrogates, null, tmp26);
-                      const obj5 = closure_0(18855);
+                      closure_0(18878).updateRoleIcon(surrogates, null, tmp26);
+                      const obj5 = closure_0(18878);
                     }
                   } else {
                     c6 = 1;
-                    const tmp22 = closure_0(18855);
+                    const tmp22 = closure_0(18878);
                     closure_4 = tmp22;
                     const updateRoleIcon = tmp22.updateRoleIcon;
                     closure_2 = surrogates;
                     c7 = 2;
                     c8 = 1;
-                    const obj7 = { value: closure_0(18859).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                    const obj7 = { value: closure_0(18882).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                     return obj7;
                   }
                 }
@@ -930,7 +930,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return applyArgumentsResult;
         };
-        const result = guildId(9740).openEmojiPickerActionSheet(obj2, "stack");
+        const result = guildId(9753).openEmojiPickerActionSheet(obj2, "stack");
       };
       items3[1] = closure_7(TableRow.TableRow, obj5);
       let tmp5Result = null;

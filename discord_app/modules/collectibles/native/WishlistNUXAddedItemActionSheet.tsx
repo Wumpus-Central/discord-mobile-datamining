@@ -12,7 +12,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8597).UserProfileSections;
+const UserProfileSections = fn(8609).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -427,7 +427,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj10 = { text: tmp35, onPress: B, variant: "secondary", size: "lg", grow: true };
               items2[1] = closure_8(tmp(5205).Button, obj10);
               obj9.children = items2;
-              const tmp39 = closure_9(tmp(6644).ButtonGroup, obj9);
+              const tmp39 = closure_9(tmp(6647).ButtonGroup, obj9);
               cResult[24] = B;
               cResult[25] = tmp39;
             } else {

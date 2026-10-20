@@ -10,7 +10,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8606).getSingleRequirementThreshold;
+let closure_4 = fn(8618).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReactCompilerGating = fn(558);

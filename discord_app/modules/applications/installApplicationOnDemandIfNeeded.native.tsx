@@ -118,7 +118,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
           const clientId = arg0;
           closure_1_0(5120).dismissKeyboard();
           let obj = closure_1_0(5120);
-          closure_1_0(11035).openOAuth2Modal({
+          closure_1_0(11047).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,

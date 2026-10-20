@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10074).useStickerPickerStore;
+let useStickerPickerStore = fn(10085).useStickerPickerStore;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_8,
@@ -1102,9 +1102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
       const tmp17 = categoryIndex;
-      const tmp19 = categoryIndex(9889)();
+      const tmp19 = categoryIndex(9901)();
       const items9 = [
-        closure_14(categoryIndex(7098), {
+        closure_14(categoryIndex(7101), {
           estimatedListSize: "windowSize",
           horizontal: true,
           itemSize: EXPRESSION_FOOTER_HEIGHT,
@@ -1130,12 +1130,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items10 = [,];
         ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
         obj4.style = items10;
-        const obj5 = { style: tmp.guildIcon, source: tmp17(10110) };
+        const obj5 = { style: tmp.guildIcon, source: tmp17(10121) };
         obj4.children = closure_14(categories(1202).Icon, obj5);
         obj3.children = closure_14(closure_5, obj4);
-        tmp22Result = closure_14(categories(6856).PressableOpacity, obj3);
+        tmp22Result = closure_14(categories(6859).PressableOpacity, obj3);
       }
       items9[1] = tmp22Result;
       obj.children = items9;
-      return closure_15(categoryIndex(9890), obj);
+      return closure_15(categoryIndex(9902), obj);
     };

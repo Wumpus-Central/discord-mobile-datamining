@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
-import _modDef10104 from "../../../../../../_runtime/metro/10104__.js";
+import _modDef10115 from "../../../../../../_runtime/metro/10115__.js";
 import AppLauncherCommandOptionDefault from "../../options/AppLauncherCommandOption.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ReduceMotion = option(5014).ReduceMotion;
       const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
       const obj = option(504);
-      const optionEnteringAnimation = option(12012).useOptionEnteringAnimation();
+      const optionEnteringAnimation = option(12027).useOptionEnteringAnimation();
       let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
       if (set.has(option.type)) {
         if (option.required || isPreSelectedOption) {
@@ -184,8 +184,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {
           collapsable: false,
           entering: optionEnteringAnimation.EnteringAnimation,
-          exiting: tmp2(12012).ExitingAnimation,
-          layout: tmp2(12012).LayoutAnimation,
+          exiting: tmp2(12027).ExitingAnimation,
+          layout: tmp2(12027).LayoutAnimation,
           onLayout(arg0) {
             importDefault(arg0, option);
           },
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const obj11 = {
             style: tmp.optionErrorIcon,
-            source: _modDef10104,
+            source: _modDef10115,
             size: tmp2(1202).IconSizes.REFRESH_SMALL_16,
           };
           const items3 = [closure_5(tmp2(1202).Icon, obj11)];
@@ -259,10 +259,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.children = items2;
         obj5.children = closure_6(View, obj6);
         obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-        obj3.children = closure_5(tmp2(12020).AwaitAnimationContext, obj4);
+        obj3.children = closure_5(tmp2(12035).AwaitAnimationContext, obj4);
         return closure_5(tmp2(5014).LayoutAnimationConfig, obj3);
       } else {
         return null;
       }
-      const tmp2Result = option(12012);
+      const tmp2Result = option(12027);
     };

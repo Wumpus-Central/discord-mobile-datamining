@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef12257 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-1x.png.js";
-import _modDef12258 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-2x.png.js";
-import _modDef12259 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-3x.png.js";
+import _modDef12276 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-1x.png.js";
+import _modDef12277 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-2x.png.js";
+import _modDef12278 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12257 }, 3: null };
-const obj2 = { uri: _modDef12257 };
-obj[2] = { uri: _modDef12258 };
-const obj3 = { uri: _modDef12258 };
-obj[3] = { uri: _modDef12259 };
+let obj = { 1: null, 2: { uri: _modDef12276 }, 3: null };
+const obj2 = { uri: _modDef12276 };
+obj[2] = { uri: _modDef12277 };
+const obj3 = { uri: _modDef12277 };
+obj[3] = { uri: _modDef12278 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12259 };
+const obj4 = { uri: _modDef12278 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");
 
@@ -90,7 +90,7 @@ export const ButterflyIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      obj.source = num(6943).getAssetSource(obj);
+      obj.source = num(6946).getAssetSource(obj);
       obj.style = memo;
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;

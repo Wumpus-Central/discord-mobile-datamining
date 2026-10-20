@@ -25,9 +25,9 @@ export default noop.memo(
               const stringResult = intl.string(channel(1128).t["9mysCh"]);
               const intl2 = channel(1128).intl;
               const stringResult1 = intl2.string(channel(1128).t.PDUCIN);
-              const obj2 = { IconComponent: channel(14883).ChannelListMagnifyingGlassIcon };
-              const tmp12 = jsx(channel(6859).TableRowIcon, {
-                IconComponent: channel(14883).ChannelListMagnifyingGlassIcon,
+              const obj2 = { IconComponent: channel(14901).ChannelListMagnifyingGlassIcon };
+              const tmp12 = jsx(channel(6862).TableRowIcon, {
+                IconComponent: channel(14901).ChannelListMagnifyingGlassIcon,
               });
               cResult[4] = stringResult;
               cResult[5] = stringResult1;
@@ -50,7 +50,7 @@ export default noop.memo(
                 end: true,
                 arrow: true,
               };
-              const tmp15 = jsx(channel(6851).TableRow, {
+              const tmp15 = jsx(channel(6854).TableRow, {
                 label: tmp6,
                 subLabel: tmp7,
                 icon: tmp8,
@@ -72,7 +72,7 @@ export default noop.memo(
               return tmp16;
             }
             const obj4 = { style, children: tmp13 };
-            const tmp19 = jsx(analyticsSection(6834), { style, children: tmp13 });
+            const tmp19 = jsx(analyticsSection(6837), { style, children: tmp13 });
             cResult[9] = style;
             cResult[10] = tmp13;
             cResult[11] = tmp19;
@@ -106,10 +106,10 @@ export default noop.memo(
         obj2.label = intl.string(channel(1128).t["9mysCh"]);
         const intl2 = channel(1128).intl;
         obj2.subLabel = intl2.string(channel(1128).t.PDUCIN);
-        const tmp2 = analyticsSection(6834);
-        obj2.icon = jsx(channel(6859).TableRowIcon, { IconComponent: channel(14883).ChannelListMagnifyingGlassIcon });
+        const tmp2 = analyticsSection(6837);
+        obj2.icon = jsx(channel(6862).TableRowIcon, { IconComponent: channel(14901).ChannelListMagnifyingGlassIcon });
         obj2.onPress = callback;
-        obj.children = jsx(channel(6851).TableRow, {
+        obj.children = jsx(channel(6854).TableRow, {
           label: null,
           subLabel: null,
           icon: null,

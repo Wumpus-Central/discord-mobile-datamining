@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "test";
 };
-const GlobalDiscoveryServersConstants = fn(8928);
+const GlobalDiscoveryServersConstants = fn(8940);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,

@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const hasPermission = fn(4855).hasPermission;
-const constants = fn(16292).GuildRoleSubscriptionFormat;
+const constants = fn(16311).GuildRoleSubscriptionFormat;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -12,8 +12,8 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import _modDef14500 from "../../../../_runtime/metro/14500__.js";
-import _modDef15965 from "../../../../_runtime/metro/15965__.js";
+import _modDef14518 from "../../../../_runtime/metro/14518__.js";
+import _modDef15984 from "../../../../_runtime/metro/15984__.js";
 import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal.tsx";
@@ -43,7 +43,7 @@ function FamilyCenterActivityCardPrefaceText() {
   const obj6 = { style: tmp.container, children: null };
   let tmp12 = null;
   if (!tmp4) {
-    const obj7 = { color: tmp.icon.color, source: _modDef15965, style: tmp.icon };
+    const obj7 = { color: tmp.icon.color, source: _modDef15984, style: tmp.icon };
     tmp12 = React6(native.Icon, obj7);
   }
   const items = [tmp12, ,];
@@ -69,7 +69,7 @@ function FamilyCenterActivityCardPrefaceText() {
   const tmp2Result = TouchableHitBoxDefault;
   obj9.children = React6(native.Icon, {
     color: tmp.icon.color,
-    source: _modDef14500,
+    source: _modDef14518,
     size: native.Icon.Sizes.EXTRA_SMALL,
     style: tmp.icon,
   });
@@ -147,8 +147,8 @@ class FamilyCenterActivityCardAccountSelect {
             });
           };
           obj2.selectedItem = tmp.id;
-          obj.openLazy(asyncRequireImpl(8845, dependencyMap.paths), FamilyCenterTeenAccountSelect, obj2);
-          const tmp5 = asyncRequireImpl(8845, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(8857, dependencyMap.paths), FamilyCenterTeenAccountSelect, obj2);
+          const tmp5 = asyncRequireImpl(8857, dependencyMap.paths);
         }
       };
       tmp12 = closure_16;
@@ -170,7 +170,7 @@ class FamilyCenterActivityCardAccountSelect {
   }
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7592);
+const FamilyCenterConstants = fn(7595);
 ({ FamilyCenterAction: metroRequire, TeenActionDisplayType: closure_7 } = FamilyCenterConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
@@ -711,7 +711,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const sortedActivityTypeConfigs = tmp(8071).getSortedActivityTypeConfigs();
+        const sortedActivityTypeConfigs = tmp(8075).getSortedActivityTypeConfigs();
         const card = tmp4.card;
         const _Symbol = Symbol;
         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
@@ -845,7 +845,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[26] = tmp4.other;
         cResult[27] = X;
         tmp32 = X;
-        const tmpResult = tmp(8071);
+        const tmpResult = tmp(8075);
       }
       const obj3 = require("useFamilyCenterActivities");
     }
@@ -857,7 +857,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (undefined === selectedTeenUser) {
         return null;
       } else {
-        const sortedActivityTypeConfigs = tmp2(8071).getSortedActivityTypeConfigs();
+        const sortedActivityTypeConfigs = tmp2(8075).getSortedActivityTypeConfigs();
         const obj2 = { style: tmp.card, children: null };
         const obj3 = { style: tmp.preface, children: closure_9(FamilyCenterActivityCardPrefaceText, {}) };
         const items = [closure_9(View, obj3), ,];

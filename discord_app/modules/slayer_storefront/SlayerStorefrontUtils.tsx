@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/06670_keysSorter.js";
+import keysSorter from "../../../_runtime/06673_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -156,8 +156,8 @@ function getSKUShareURL(guildId, applicationId) {
     window.GLOBAL_ENV.WEBAPP_ENDPOINT +
     map1.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7277).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7279);
+let closure_4 = fn(7280).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7282);
 ({
   getChannelsGameShopPrefix: closure_9,
   STOREFRONT_MARKETING_GUILD_ID: c10,
@@ -167,7 +167,7 @@ const Constants = fn(1087);
 ({ GuildFeatures: closure_12, Routes: map1, SKUProductLines: closure_14 } = Constants);
 const CollectibleShopTab = fn(1089).CollectibleShopTab;
 let str = "jpg";
-if (fn(6337).SUPPORTS_WEBP) {
+if (fn(6340).SUPPORTS_WEBP) {
   str = "webp";
 }
 fn(558);
@@ -496,7 +496,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "test" };
+          let obj4 = { primaryIconAsset: "userId", primaryIconLabel: "code" };
         } else {
           const obj3 = StoreUtils;
           obj4 = {
@@ -513,7 +513,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "test" };
+  return { primaryIconAsset: "userId", primaryIconLabel: "code" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

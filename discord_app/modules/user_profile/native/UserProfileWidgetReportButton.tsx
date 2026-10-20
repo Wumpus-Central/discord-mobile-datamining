@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj.accessibilityRole = "button";
             const intl = userId(1128).intl;
             obj.accessibilityLabel = intl.string(userId(1128).t.xpSHSk);
-            obj.children = jsx(userId(9558).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
+            obj.children = jsx(userId(9571).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
             return <Pressable ref={ref.ref} />;
           };
           cResult[4] = fn;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== tmp6) {
           const obj2 = { items: tmp6, children: tmp7 };
-          const tmp10 = jsx(tmp(9676).ContextMenu, { items: tmp6, children: tmp7 });
+          const tmp10 = jsx(tmp(9689).ContextMenu, { items: tmp6, children: tmp7 });
           cResult[5] = tmp6;
           cResult[6] = tmp10;
           let tmp8 = tmp10;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         {
           label: first,
           variant: "destructive",
-          IconComponent: userId(9887).FlagIcon,
+          IconComponent: userId(9899).FlagIcon,
           action() {
             return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
           },
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {
         label: first,
         variant: "destructive",
-        IconComponent: userId(9887).FlagIcon,
+        IconComponent: userId(9899).FlagIcon,
         action() {
           return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
         },

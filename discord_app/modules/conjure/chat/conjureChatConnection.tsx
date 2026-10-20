@@ -2,6 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
+import conjureAgentReaction from "conjureAgentReaction.tsx";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
@@ -25,7 +26,11 @@ function appendFailureStep(turnId, projectId) {
 function handleProjectEvent(event, projectId) {
   projectId = projectId.projectId;
   DispatcherDefault.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId, event });
-  if ("app_channel_deleted" !== event.type) {
+  let tmp3 = "app_channel_deleted" !== event.type;
+  if (tmp3) {
+    tmp3 = "remixed" !== event.type;
+  }
+  if (tmp3) {
     const result = ConjureActionCreators.refreshConjureInstallState(projectId);
   }
   const obj2 = { type: "CONJURE_CHAT_PROJECT_EVENT", projectId, event };
@@ -61,6 +66,7 @@ let obj = {
   bot_removed: handleProjectEvent,
   preview_bot_removed: handleProjectEvent,
   app_channel_deleted: handleProjectEvent,
+  remixed: handleProjectEvent,
   side_reply(id, projectId) {
     DispatcherDefault.dispatch({
       type: "CONJURE_CHAT_SIDE_REPLY",
@@ -97,6 +103,19 @@ let obj = {
   },
 };
 let obj2 = {
+  reaction(setting, arg1) {
+    const result = conjureAgentReaction.agentReactionFromStep(setting);
+    if (tmp3) {
+      obj3 = {
+        type: "CONJURE_CHAT_MESSAGE_REACTION",
+        projectId: arg1.projectId,
+        id: setting.message_id,
+        reaction: result,
+      };
+      DispatcherDefault.dispatch(obj3);
+    }
+    tmp3 = null != setting.message_id && null != result;
+  },
   reply(message, projectId) {
     projectId = projectId.projectId;
     let str = message.message;

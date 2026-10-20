@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15018);
+const GuildReportRaidModalConstants = fn(15036);
 ({
   getReportRaidHelpArticleURL: closure_7,
   getReportRaidTypeLabel: closure_8,
@@ -110,7 +110,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp13) {
             const obj4 = { hasIcons: false, children: tmp13 };
-            const tmp17 = closure_10(tmp(6935).TableRowGroup, obj4);
+            const tmp17 = closure_10(tmp(6938).TableRowGroup, obj4);
             cResult[10] = tmp13;
             cResult[11] = tmp17;
             let tmp15 = tmp17;
@@ -504,9 +504,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap = 3;
                 } else {
                   tmp21.current = true;
-                  const result = tmp2(12582).trackReportRaidViewed(guildId, first);
-                  const obj2 = tmp2(12582);
-                  tmp2(12582).handleReportRaid(guildId);
+                  const result = tmp2(12599).trackReportRaidViewed(guildId, first);
+                  const obj2 = tmp2(12599);
+                  tmp2(12599).handleReportRaid(guildId);
                   const intl = tmp2(1128).intl;
                   c1 = 1;
                   dependencyMap = 1;

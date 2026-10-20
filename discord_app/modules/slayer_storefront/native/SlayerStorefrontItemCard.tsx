@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import LinearGradientDefault from "../../../../_runtime/05219_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07606_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07609_tinycolor.js";
 import DominantColorUtils from "../../voice_panel/native/card/DominantColorUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

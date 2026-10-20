@@ -307,7 +307,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
           replacedBy = migrationData.replacedBy;
         }
       }
-      const getOrFetchApplication = deprecatedPlatformTypes(7203).useGetOrFetchApplication(replacedBy);
+      const getOrFetchApplication = deprecatedPlatformTypes(7206).useGetOrFetchApplication(replacedBy);
       const tmp10 = useStartAuthorizeDefault(getOrFetchApplication);
       ({ hasAlreadyLinked, canStartAuthorization } = tmp10);
       if (!fetchingConnections) {
@@ -356,7 +356,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
           replacedBy = migrationData.replacedBy;
         }
       }
-      const getOrFetchApplication = deprecatedPlatformTypes(7203).useGetOrFetchApplication(replacedBy);
+      const getOrFetchApplication = deprecatedPlatformTypes(7206).useGetOrFetchApplication(replacedBy);
       const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
       ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
       if (!fetchingConnections) {

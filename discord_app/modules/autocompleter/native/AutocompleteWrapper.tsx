@@ -81,10 +81,10 @@ const Constants = fn(1087);
   AnalyticEvents: closure_12,
   UpsellTypes: map1,
 } = Constants);
-const BOOLEAN_CHOICES = fn(5938).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(10030);
+const BOOLEAN_CHOICES = fn(5941).BOOLEAN_CHOICES;
+const ApplicationCommandsConstants = fn(10041);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_15, AUTOCOMPLETE_ROW_HEIGHT: closure_16 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5939);
+const ChannelAutocompleteConstants = fn(5942);
 ({
   MENTION_SENTINEL: closure_17,
   CHANNEL_SENTINEL: closure_18,
@@ -93,7 +93,7 @@ const ChannelAutocompleteConstants = fn(5939);
   GAME_MENTION_INPUT_PREFIX: closure_21,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_22,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10114).AutocompleteTypes;
+const AutocompleteTypes = fn(10125).AutocompleteTypes;
 const EmojiInteractionPoint = fn(1395).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_25, Fragment: closure_26, jsxs: closure_27 } = jsxProd);
@@ -101,7 +101,7 @@ let c28 = "text-sm/semibold";
 const hairlineWidth = StyleSheet.hairlineWidth;
 let c30 = 200;
 let closure_31 = { allowSpaces: true, maxQueryLength: 64 };
-let obj = { allowSpaces: true, maxQueryLength: fn(8525).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
+let obj = { allowSpaces: true, maxQueryLength: fn(8529).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
 const createStyles = fn(4945);
 let closure_33 = createStyles.createStyles(
   (borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
@@ -950,9 +950,9 @@ class ACWrapper {
       () =>
         autocompleteType === AutocompleteTypes.GAME_MENTIONS
           ? () => {
-              const gameSearchSession = analyticsLocations(8996).getGameSearchSession(
-                analyticsLocations(9422).GameSearchSurface.CHAT_MENTION,
-                analyticsLocations(8997).GameSearchFilterGroup.DEFAULT,
+              const gameSearchSession = analyticsLocations(9008).getGameSearchSession(
+                analyticsLocations(9434).GameSearchSurface.CHAT_MENTION,
+                analyticsLocations(9009).GameSearchFilterGroup.DEFAULT,
               );
               return gameSearchSession.end();
             }

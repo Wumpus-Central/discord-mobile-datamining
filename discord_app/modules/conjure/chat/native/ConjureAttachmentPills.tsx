@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 children: id.name,
               });
               let tmp12 = jsx(
-                projectId(6853).Card,
+                projectId(6856).Card,
                 {
                   style: closure_1.attachmentPill,
                   onPress() {

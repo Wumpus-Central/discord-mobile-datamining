@@ -54,7 +54,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp13 = closure_9(onButtonClick(7434).SettingsIcon, {});
+          const tmp13 = closure_9(onButtonClick(7437).SettingsIcon, {});
           cResult[5] = tmp13;
           let tmp11 = tmp13;
         } else {
@@ -73,7 +73,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-        const tmp16 = closure_9(tmp7(14384), obj2);
+        const tmp16 = closure_9(tmp7(14402), obj2);
         cResult[6] = description;
         cResult[7] = disabledTitle;
         cResult[8] = tmp5;

@@ -97,7 +97,7 @@ let closure_8 = async function _combineStatuses(arg0) {
     }
   })();
 };
-const NativePermissionConstants = fn(7812);
+const NativePermissionConstants = fn(7816);
 ({ NativePermissionTypes, NativePermissionStatus: hasOwnProperty } = NativePermissionConstants);
 const jsx = fn(21).jsx;
 let PlatformUtils = fn(1384);
@@ -138,7 +138,7 @@ if (MetaQuestUtils) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(7831).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(7835).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {}
 const prototype = NativePermissionIOSUtils.prototype;
 prototype["requestPermissionCore"] = function requestPermissionCore(arg0, arg1) {

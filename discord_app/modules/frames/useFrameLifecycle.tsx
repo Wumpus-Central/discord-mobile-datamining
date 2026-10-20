@@ -72,7 +72,7 @@ function useFrameLifecycleState(applicationId) {
     return obj3;
   }
 }
-const FramesConstants = fn(6724);
+const FramesConstants = fn(6727);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = {
   Loading: "loading",

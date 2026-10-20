@@ -11,7 +11,7 @@ import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
 import showEmojiOverflowActionSheetDefault from "../showEmojiOverflowActionSheet.tsx";
-import _modDef18799 from "../../../../../_runtime/metro/18799__.js";
+import _modDef18822 from "../../../../../_runtime/metro/18822__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";

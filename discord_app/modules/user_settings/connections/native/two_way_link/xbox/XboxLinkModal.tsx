@@ -3,7 +3,7 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import util from "../../../../../../intl/index.native.tsx";
 import Navigator from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef8058 from "../../../../../../../_runtime/metro/08058__.js";
+import _modDef8062 from "../../../../../../../_runtime/metro/08062__.js";
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators.tsx";
 import XboxLinkLandingDefault from "XboxLinkLanding.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
@@ -38,7 +38,7 @@ function getScreens(headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(onClose(9534).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return jsx(onClose(9547).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
         return jsx(XboxLinkPreConnectDefault, {});
@@ -49,7 +49,7 @@ function getScreens(headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(onClose(9534).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return jsx(onClose(9547).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
@@ -85,7 +85,7 @@ function getScreens(headerStyle) {
     },
   };
 }
-const XboxLinkModalScenes = fn(9526).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9539).XboxLinkModalScenes;
 const PlatformTypes = fn(1087).PlatformTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -102,11 +102,11 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef8058, onPress: first, accessibilityLabel: null };
+        const obj2 = { source: _modDef8062, onPress: first, accessibilityLabel: null };
         const intl = util.intl;
         obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
         const tmp8 = jsx(HeaderActionButton.HeaderActionButton, {
-          source: _modDef8058,
+          source: _modDef8062,
           onPress: first,
           accessibilityLabel: null,
         });
@@ -119,7 +119,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function CloseButton() {
       const obj = {
-        source: _modDef8058,
+        source: _modDef8062,
         onPress: function onClose() {
           return XboxLinkModalActionCreatorsDefault.hideModal();
         },
@@ -128,7 +128,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
       return jsx(HeaderActionButton.HeaderActionButton, {
-        source: _modDef8058,
+        source: _modDef8062,
         onPress: function onClose() {
           return XboxLinkModalActionCreatorsDefault.hideModal();
         },
@@ -191,11 +191,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function XboxLinkModal(locationStack) {
       let twoWayLinkStyles;
-      twoWayLinkStyles = twoWayLinkStyles(9533).useTwoWayLinkStyles();
+      twoWayLinkStyles = twoWayLinkStyles(9546).useTwoWayLinkStyles();
       const items = [twoWayLinkStyles];
       const memo = noop.useMemo(() => getScreens(twoWayLinkStyles), items);
-      const obj = twoWayLinkStyles(9533);
-      const accountLinkStepTracking = twoWayLinkStyles(13887).useAccountLinkStepTracking(
+      const obj = twoWayLinkStyles(9546);
+      const accountLinkStepTracking = twoWayLinkStyles(13905).useAccountLinkStepTracking(
         PlatformTypes.XBOX,
         locationStack.locationStack,
       );
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = twoWayLinkStyles(1128).intl;
       obj3.headerBackTitle = intl.string(twoWayLinkStyles(1128).t["13/7kX"]);
-      return jsx(twoWayLinkStyles(7043).Navigator, {
+      return jsx(twoWayLinkStyles(7046).Navigator, {
         onStateChange: accountLinkStepTracking,
         screens: memo,
         initialRouteName: XboxLinkModalScenes.LANDING,

@@ -8,13 +8,13 @@ import native from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import GuildRoleRecordUtilsAll from "../../../utils/GuildRoleRecordUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef8848 from "../../../../_runtime/metro/08848__.js";
+import _modDef8860 from "../../../../_runtime/metro/08860__.js";
 import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import InvalidLink from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import GuildIconUploaderDefault from "../../guild/native/GuildIconUploader.tsx";
-import _modDef12556 from "../../../../_runtime/metro/12556__.js";
-import _modDef12557 from "../../../../_runtime/metro/12557__.js";
+import _modDef12573 from "../../../../_runtime/metro/12573__.js";
+import _modDef12574 from "../../../../_runtime/metro/12574__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../rebrand/native/TextStyles.tsx";
 
@@ -25,7 +25,7 @@ const isGuildVocalChannelType = fn(4804).isGuildVocalChannelType;
 const isEveryoneRole = fn(4855).isEveryoneRole;
 const Constants = fn(1087);
 ({ MarketingURLs: closure_8, Fonts, ChannelTypes: closure_9 } = Constants);
-const GuildTemplateStates = fn(7373).GuildTemplateStates;
+const GuildTemplateStates = fn(7376).GuildTemplateStates;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(4945);
@@ -161,7 +161,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_14();
       const obj = guildTemplate(576);
       const typeConsolidationTextTransform =
-        guildTemplate(7022).useTypeConsolidationTextTransform("AcceptGuildTemplate");
+        guildTemplate(7025).useTypeConsolidationTextTransform("AcceptGuildTemplate");
       _modDef38(null != guildTemplate, "guild template cannot be null");
       _modDef38(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
       const bottom = useSafeAreaInsetsDefault().bottom;
@@ -507,7 +507,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                       returnKeyType: "done",
                       clearable: true,
                     };
-                    const tmp33 = closure_11(tmp(6956).TextInput, obj20);
+                    const tmp33 = closure_11(tmp(6959).TextInput, obj20);
                     cResult[23] = name;
                     cResult[24] = setName;
                     cResult[25] = name1;
@@ -588,7 +588,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[0] = guildTemplate.serializedSourceGuild.id;
       cResult[1] = guildTemplate.serializedSourceGuild.roles;
       cResult[2] = found;
-      const obj2 = guildTemplate(7022);
+      const obj2 = guildTemplate(7025);
     }
   : function GuildTemplateResolved(guildTemplate) {
       guildTemplate = guildTemplate.guildTemplate;
@@ -596,7 +596,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       ({ createServer, name, setName, icon, chooseIcon } = guildTemplate);
       const tmp = closure_14();
       const typeConsolidationTextTransform =
-        guildTemplate(7022).useTypeConsolidationTextTransform("AcceptGuildTemplate");
+        guildTemplate(7025).useTypeConsolidationTextTransform("AcceptGuildTemplate");
       _modDef38(null != guildTemplate, "guild template cannot be null");
       _modDef38(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
       const roles = guildTemplate.serializedSourceGuild.roles;
@@ -657,7 +657,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       obj6.errorMessage = name1;
       obj6.value = name;
       obj6.onChange = setName;
-      items1[3] = closure_11(guildTemplate(6956).TextInput, obj6);
+      items1[3] = closure_11(guildTemplate(6959).TextInput, obj6);
       const obj7 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp2(1128).intl;
       obj7.children = intl3.format(guildTemplate(1128).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
@@ -825,11 +825,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         items[1] = channelCategoryIcon;
         const type = children.type;
         if (isGuildVocalChannelType(type)) {
-          let tmp10Result = _modDef8848;
+          let tmp10Result = _modDef8860;
         } else if (type === constants2.GUILD_CATEGORY) {
-          tmp10Result = _modDef12556;
+          tmp10Result = _modDef12573;
         } else {
-          tmp10Result = _modDef12557;
+          tmp10Result = _modDef12574;
         }
         obj2.source = tmp10Result;
         const items1 = [closure_2_11(native.Icon, obj2)];
@@ -895,11 +895,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             items[1] = channelCategoryIcon;
             const type = children.type;
             if (isGuildVocalChannelType(type)) {
-              let tmp10Result = _modDef8848;
+              let tmp10Result = _modDef8860;
             } else if (type === constants2.GUILD_CATEGORY) {
-              tmp10Result = _modDef12556;
+              tmp10Result = _modDef12573;
             } else {
-              tmp10Result = _modDef12557;
+              tmp10Result = _modDef12574;
             }
             obj2.source = tmp10Result;
             const items1 = [closure_2_11(native.Icon, obj2)];

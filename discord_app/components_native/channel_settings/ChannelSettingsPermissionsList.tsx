@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/06775_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06778_fuzzysearch.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";

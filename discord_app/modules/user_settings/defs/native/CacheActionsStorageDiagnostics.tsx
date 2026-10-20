@@ -133,5 +133,5 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
   };
   items[1] = closure_6(onBusyChange(5205).Button, obj3);
   obj.children = items;
-  return closure_7(onBusyChange(5932).Stack, obj);
+  return closure_7(onBusyChange(5935).Stack, obj);
 }

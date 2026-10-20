@@ -30,10 +30,10 @@ let obj4 = {
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-obj2.placeholderDivider = { backgroundColor: fn(6655).DIVIDER_BACKGROUND };
+obj2.placeholderDivider = { backgroundColor: fn(6658).DIVIDER_BACKGROUND };
 const styles = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: fn(6655).DIVIDER_BACKGROUND };
+let obj5 = { backgroundColor: fn(6658).DIVIDER_BACKGROUND };
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx",

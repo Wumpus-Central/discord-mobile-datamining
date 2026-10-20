@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { spacing: 4, style, children: null };
                 const items2 = [tmp12, tmp20];
                 obj3.children = items2;
-                const tmp26 = closure_6(tmp(5932).Stack, obj3);
+                const tmp26 = closure_6(tmp(5935).Stack, obj3);
                 cResult[15] = style;
                 cResult[16] = tmp20;
                 cResult[17] = tmp26;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           items1[1] = closure_5(View, obj3);
           obj.children = items1;
-          tmp2 = closure_6(guild(5932).Stack, obj);
+          tmp2 = closure_6(guild(5935).Stack, obj);
         }
       }
       return tmp2;

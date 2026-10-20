@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MAX_POLL_ANSWER_LENGTH = fn(8254).MAX_POLL_ANSWER_LENGTH;
+const MAX_POLL_ANSWER_LENGTH = fn(8258).MAX_POLL_ANSWER_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       imageSize = imageSize.imageSize;
       const tmp4 = closure_10();
       let obj = onSave(576);
-      ({ renderImage, upload } = value(12104)(
+      ({ renderImage, upload } = value(12119)(
         channelId,
         answer.localCreationAnswerId,
         answer.image,
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      const tmp6 = value(12104)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+      const tmp6 = value(12119)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
       value = _slicedToArray(noop.useState(str), 2)[0];
       if (cResult[0] === onSave) {
         if (cResult[1] === value) {
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = {
-            onPress: onSave(12106).closeEditPollCreationImageAltTextModal,
+            onPress: onSave(12121).closeEditPollCreationImageAltTextModal,
             activeOpacity: 0.5,
             accessibilityRole: "button",
             accessibilityLabel: null,
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = onSave(1128).intl;
           obj2.accessibilityLabel = intl.string(onSave(1128).t.cpT0Cq);
-          const obj3 = { source: tmp5(8058) };
+          const obj3 = { source: tmp5(8062) };
           obj2.children = closure_8(onSave(1202).Icon, obj3);
           const tmp16 = closure_8(closure_5, obj2);
           cResult[3] = tmp16;
@@ -161,10 +161,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj8 = { children: null };
               const intl4 = onSave(1128).intl;
               obj8.children = intl4.string(onSave(1128).t["/2Gnoa"]);
-              const tmp46 = closure_8(tmp5(8965), obj8);
+              const tmp46 = closure_8(tmp5(8977), obj8);
               cResult[17] = tmp46;
               let tmp43 = tmp46;
-              const tmp5Result = tmp5(8965);
+              const tmp5Result = tmp5(8977);
             } else {
               tmp43 = cResult[17];
             }
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj9 = { top: true, style: tmp4.container, children: null };
                     const items = [tmp27, tmp31, tmp60];
                     obj9.children = items;
-                    const tmp65 = closure_9(onSave(7169).SafeAreaPaddingView, obj9);
+                    const tmp65 = closure_9(onSave(7172).SafeAreaPaddingView, obj9);
                     cResult[30] = tmp4.container;
                     cResult[31] = tmp60;
                     cResult[32] = tmp27;
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj10 = { style: tmp35, children: null };
                 const items1 = [tmp36, tmp56];
                 obj10.children = items1;
-                const tmp62 = closure_9(tmp5(7083), obj10);
+                const tmp62 = closure_9(tmp5(7086), obj10);
                 cResult[26] = tmp4.contentContainer;
                 cResult[27] = tmp36;
                 cResult[28] = tmp56;
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               autoCorrect: true,
               accessibilityLabel: tmp47,
             };
-            const tmp52 = closure_8(onSave(8871).FormInput, obj12);
+            const tmp52 = closure_8(onSave(8883).FormInput, obj12);
             cResult[19] = tmp4.textInput;
             cResult[20] = value;
             cResult[21] = tmp52;
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       imageSize = imageSize.imageSize;
       value = undefined;
       const tmp = closure_10();
-      const tmp4 = value(12104)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+      const tmp4 = value(12119)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
       const upload = tmp4.upload;
       let str;
       if (upload != null) {
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { top: true, style: tmp.container, children: null };
       const obj3 = { style: tmp.header, children: null };
       const obj4 = {
-        onPress: onSave(12106).closeEditPollCreationImageAltTextModal,
+        onPress: onSave(12121).closeEditPollCreationImageAltTextModal,
         activeOpacity: 0.5,
         accessibilityRole: "button",
         accessibilityLabel: null,
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = onSave(1128).intl;
       obj4.accessibilityLabel = intl.string(onSave(1128).t.cpT0Cq);
-      obj4.children = closure_8(onSave(1202).Icon, { source: value(8058) });
+      obj4.children = closure_8(onSave(1202).Icon, { source: value(8062) });
       const items1 = [closure_8(closure_5, obj4), ,];
       const obj6 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: null };
       const intl2 = onSave(1128).intl;
@@ -342,16 +342,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [closure_9(closure_6, obj3), closure_8(closure_6, { style: tmp.separator })];
       const obj10 = { style: tmp.contentContainer, children: null };
       const obj11 = { style: tmp.imageContainer, children: tmp4.renderImage };
-      const obj5 = { source: value(8058) };
+      const obj5 = { source: value(8062) };
       const obj9 = { style: tmp.separator };
       const items3 = [closure_8(closure_6, obj11)];
       const obj12 = { style: tmp.formContainer, children: null };
       const items4 = [closure_8(onSave(1202).Spacer, { size: 27 }), , ,];
       const obj13 = { children: null };
-      const tmp2Result = value(7083);
+      const tmp2Result = value(7086);
       const intl4 = onSave(1128).intl;
       obj13.children = intl4.string(onSave(1128).t["/2Gnoa"]);
-      items4[1] = closure_8(value(8965), obj13);
+      items4[1] = closure_8(value(8977), obj13);
       const obj14 = {
         showTopContainer: false,
         showBorder: false,
@@ -368,12 +368,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl5 = onSave(1128).intl;
       obj14.accessibilityLabel = intl5.string(onSave(1128).t["/2Gnoa"]);
-      items4[2] = closure_8(onSave(8871).FormInput, obj14);
+      items4[2] = closure_8(onSave(8883).FormInput, obj14);
       items4[3] = closure_8(onSave(1202).Spacer, { size: 27 });
       obj12.children = items4;
       items3[1] = closure_9(closure_6, obj12);
       obj10.children = items3;
       items2[2] = closure_9(tmp2Result, obj10);
       obj2.children = items2;
-      return closure_9(onSave(7169).SafeAreaPaddingView, obj2);
+      return closure_9(onSave(7172).SafeAreaPaddingView, obj2);
     };

@@ -45,13 +45,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  v3(v3(9166).GameProfileTrackActionActions.ClaimGame);
+                  v3(v3(9178).GameProfileTrackActionActions.ClaimGame);
                   c1 = 1;
                   v3 = 1;
                   const obj4 = {
                     value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(
                       constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                      v3(7379).LoginHandoffSource.GAME_CLAIM,
+                      v3(7382).LoginHandoffSource.GAME_CLAIM,
                     ),
                     done: false,
                   };
@@ -148,13 +148,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  trackAction(v3(9166).GameProfileTrackActionActions.ClaimGame);
+                  trackAction(v3(9178).GameProfileTrackActionActions.ClaimGame);
                   v1 = 1;
                   v3 = 1;
                   const obj4 = {
-                    value: v1(7375).redirectDeveloperPortalWithHandoffToken(
+                    value: v1(7378).redirectDeveloperPortalWithHandoffToken(
                       constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                      v3(7379).LoginHandoffSource.GAME_CLAIM,
+                      v3(7382).LoginHandoffSource.GAME_CLAIM,
                     ),
                     done: false,
                   };

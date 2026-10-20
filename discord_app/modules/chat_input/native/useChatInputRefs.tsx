@@ -17,10 +17,10 @@ import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const DraftType = fn(7577).DraftType;
-let closure_11 = fn(9697).updateChatInputContainerHeight;
+const DraftType = fn(7580).DraftType;
+let closure_11 = fn(9710).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const COMMAND_SENTINEL = fn(5939).COMMAND_SENTINEL;
+const COMMAND_SENTINEL = fn(5942).COMMAND_SENTINEL;
 const MessageSendLocation = fn(4950).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");
@@ -390,7 +390,7 @@ export default function useChatInputRefs(chatInputProps) {
                   const merged = Object.assign(ref.current);
                   obj4.chatInputRef = chatInputRef;
                   obj2.params = obj4;
-                  const result = threadCreationCallback(12891).chatInputSendApplicationCommand(obj2);
+                  const result = threadCreationCallback(12909).chatInputSendApplicationCommand(obj2);
                 },
               );
             }
@@ -415,8 +415,8 @@ export default function useChatInputRefs(chatInputProps) {
                     tmp8 = chatInputRef;
                     obj3.chatInputRef = chatInputRef;
                     obj2.params = obj3;
-                    const result = chatInputProps(12891).chatInputHandleSendText(obj2);
-                    const obj = chatInputProps(12891);
+                    const result = chatInputProps(12909).chatInputHandleSendText(obj2);
+                    const obj = chatInputProps(12909);
                   }
                   const keyboardType = chatInputProps(5122).getKeyboardType();
                   if (keyboardType === chatInputProps(1631).KeyboardTypes.SYSTEM) {

@@ -4,7 +4,7 @@ import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/Ac
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const HubProgressBarConstants = fn(8984);
+const HubProgressBarConstants = fn(8996);
 ({ HUB_PROGRESS_ACTION_SHEET_ID: c3, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_4 } = HubProgressBarConstants);
 const jsx = fn(21).jsx;
 let size = fn(2);
@@ -12,14 +12,14 @@ const result = size.fileFinishedImporting("modules/hub/native/components/progres
 
 export default function HubSidebarProgressOverview(guild) {
   guild = guild.guild;
-  const hubProgressBarCompletedSteps = guild(13375).useHubProgressBarCompletedSteps(guild);
-  const obj = guild(13375);
-  const nextHubProgressStep = guild(13375).getNextHubProgressStep(hubProgressBarCompletedSteps);
+  const hubProgressBarCompletedSteps = guild(13393).useHubProgressBarCompletedSteps(guild);
+  const obj = guild(13393);
+  const nextHubProgressStep = guild(13393).getNextHubProgressStep(hubProgressBarCompletedSteps);
   if (null == nextHubProgressStep) {
     return null;
   } else {
     const size = hubProgressBarCompletedSteps.size;
-    const hubProgressTitleForStep = tmp(13375).getHubProgressTitleForStep(nextHubProgressStep);
+    const hubProgressTitleForStep = tmp(13393).getHubProgressTitleForStep(nextHubProgressStep);
     if (size < total) {
       const intl2 = tmp(1128).intl;
       const obj3 = { number: null, total: null };
@@ -32,10 +32,10 @@ export default function HubSidebarProgressOverview(guild) {
       formatToPlainStringResult = intl.string(tmp(1128).t["+Gyklt"]);
     }
     const _Math = Math;
-    const bound = Math.max(tmp(13194).MIN_PROGRESS_PERCENT, (100 * size) / total);
+    const bound = Math.max(tmp(13212).MIN_PROGRESS_PERCENT, (100 * size) / total);
     const obj4 = {
       onPress: function handlePress() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13379, dependencyMap.paths), React3, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13397, dependencyMap.paths), React3, {
           guild,
           analyticsSource: "Channels Sidebar",
         });
@@ -44,9 +44,9 @@ export default function HubSidebarProgressOverview(guild) {
       subtitle: formatToPlainStringResult,
       percentComplete: bound,
     };
-    return jsx(tmp(15028).GuildProgressOverviewView, {
+    return jsx(tmp(15046).GuildProgressOverviewView, {
       onPress: function handlePress() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13379, dependencyMap.paths), React3, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13397, dependencyMap.paths), React3, {
           guild,
           analyticsSource: "Channels Sidebar",
         });
@@ -56,5 +56,5 @@ export default function HubSidebarProgressOverview(guild) {
       percentComplete: bound,
     });
   }
-  const obj2 = guild(13375);
+  const obj2 = guild(13393);
 }

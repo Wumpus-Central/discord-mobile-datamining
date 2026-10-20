@@ -66,15 +66,15 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 const intl = tmp(1128).intl;
                 obj3.children = intl.string(guildId(3820)["+HGTlC"]);
                 const items1 = [closure_4(tmp(5195).Text, obj3), ,];
-                const obj4 = { guild: stateFromStores, size: tmp(6831).GuildIconSizes.XXSMALL };
-                items1[1] = closure_4(guildId(6831), obj4);
+                const obj4 = { guild: stateFromStores, size: tmp(6834).GuildIconSizes.XXSMALL };
+                items1[1] = closure_4(guildId(6834), obj4);
                 const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
-                const tmp16 = guildId(6831);
-                obj5.children = tmp(12148).publishCardServerName(stateFromStores.name);
+                const tmp16 = guildId(6834);
+                obj5.children = tmp(12163).publishCardServerName(stateFromStores.name);
                 items1[2] = closure_4(tmp(5195).Text, obj5);
                 obj2.children = items1;
-                tmp12 = closure_5(tmp(5932).Stack, obj2);
-                const tmpResult2 = tmp(12148);
+                tmp12 = closure_5(tmp(5935).Stack, obj2);
+                const tmpResult2 = tmp(12163);
               }
               cResult[10] = stateFromStores;
               cResult[11] = tmp12;
@@ -91,7 +91,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { direction: "horizontal", spacing: 8, align: "center", children: null };
             const items2 = [tmp9, tmp11];
             obj6.children = items2;
-            const tmp19 = closure_5(tmp(5932).Stack, obj6);
+            const tmp19 = closure_5(tmp(5935).Stack, obj6);
             cResult[12] = tmp9;
             cResult[13] = tmp11;
             cResult[14] = tmp19;
@@ -153,18 +153,18 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1128).intl;
         obj4.children = intl.string(guildId(3820)["+HGTlC"]);
         const items2 = [closure_4(tmp(5195).Text, obj4), ,];
-        const obj5 = { guild: stateFromStores, size: tmp(6831).GuildIconSizes.XXSMALL };
-        items2[1] = closure_4(guildId(6831), obj5);
+        const obj5 = { guild: stateFromStores, size: tmp(6834).GuildIconSizes.XXSMALL };
+        items2[1] = closure_4(guildId(6834), obj5);
         const obj6 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
-        const tmp8 = guildId(6831);
-        obj6.children = tmp(12148).publishCardServerName(stateFromStores.name);
+        const tmp8 = guildId(6834);
+        obj6.children = tmp(12163).publishCardServerName(stateFromStores.name);
         items2[2] = closure_4(tmp(5195).Text, obj6);
         obj3.children = items2;
-        tmp4Result = closure_5(tmp(5932).Stack, obj3);
-        const tmpResult = tmp(12148);
+        tmp4Result = closure_5(tmp(5935).Stack, obj3);
+        const tmpResult = tmp(12163);
       }
       children[1] = tmp4Result;
-      return closure_5(publish(5932).Stack, { direction: "horizontal", spacing: 8, align: "center", children });
+      return closure_5(publish(5935).Stack, { direction: "horizontal", spacing: 8, align: "center", children });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -117,7 +117,7 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(10739, dependencyMap.paths);
+      const tmp = asyncRequireImpl(10750, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         const items = [
@@ -176,8 +176,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10611).SafetyWarningTypes;
-const Constants = fn(10731);
+const SafetyWarningTypes = fn(10622).SafetyWarningTypes;
+const Constants = fn(10742);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,

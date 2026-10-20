@@ -48,7 +48,7 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7819);
+const ChannelPermissionsConstants = fn(7823);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1098).Permissions;
 const jsxProd = fn(21);
@@ -218,7 +218,7 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(8914), obj10);
+  obj9.children = closure_16(pendingAdditions(8926), obj10);
   const items5 = [closure_16(closure_7, obj9), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -233,7 +233,7 @@ export default function AddMembersBody(pendingAdditions) {
     const obj14 = { type: "warning", message: null, role: "status" };
     const intl4 = guild(1128).intl;
     obj14.message = intl4.string(guild(1128).t["5f3HIC"]);
-    obj13.children = closure_16(guild(7897).InlineNotice, obj14);
+    obj13.children = closure_16(guild(7901).InlineNotice, obj14);
     canEveryoneRoleResult = closure_16(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -241,7 +241,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(8919).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(8931).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1128).intl;
         const obj17 = { query: str };
@@ -262,7 +262,7 @@ export default function AddMembersBody(pendingAdditions) {
     sections: null,
     keyboardShouldPersistTaps: "always",
   };
-  const tmp4Result = pendingAdditions(8914);
+  const tmp4Result = pendingAdditions(8926);
   obj19.contentContainerStyle = {
     paddingHorizontal: pendingAdditions(587).space.PX_16,
     paddingBottom: pendingAdditions(587).space.PX_16 + pendingAdditions(5554)(obj).insets.bottom,

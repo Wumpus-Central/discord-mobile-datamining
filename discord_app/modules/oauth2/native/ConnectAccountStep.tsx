@@ -303,7 +303,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj4 = { color: tmp5(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-          const tmp35 = closure_8(tmp(9558).MoreHorizontalIcon, obj4);
+          const tmp35 = closure_8(tmp(9571).MoreHorizontalIcon, obj4);
           class E {
             constructor() {
               currentUser = null;
@@ -376,7 +376,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[26] = tmp41;
       }
       const tmpResult3 = clientId(504);
-      value = platformType(6456).get(platformType);
+      value = platformType(6459).get(platformType);
       if (null == value) {
         class G {
           constructor() {
@@ -409,7 +409,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const source = obj5.makeSource(tmp(4952).isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
         const tmpResult4 = tmp(4952);
       }
-      const tmp5Result4 = platformType(6456);
+      const tmp5Result4 = platformType(6459);
     }
   : function ConnectAccountStep(clientId) {
       clientId = clientId.clientId;
@@ -434,7 +434,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return currentUser;
       });
       const obj2 = clientId(504);
-      value = platformType(6456).get(platformType);
+      value = platformType(6459).get(platformType);
       if (null == value) {
         let applicationIconSource;
         if (null != stateFromStores) {
@@ -465,7 +465,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { source: applicationIconSource, size: tmp5(1202).AvatarSizes.XLARGE };
         const items4 = [closure_8(tmp5(1202).Avatar, obj9), ,];
         const obj10 = { color: tmp2(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-        items4[1] = closure_8(tmp5(9558).MoreHorizontalIcon, obj10);
+        items4[1] = closure_8(tmp5(9571).MoreHorizontalIcon, obj10);
         const obj11 = { source: userAvatarSource, size: tmp5(1202).AvatarSizes.XLARGE };
         items4[2] = closure_8(tmp5(1202).Avatar, obj11);
         obj8.children = items4;
@@ -523,7 +523,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const source = tmp5Result.makeSource(tmp5(4952).isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
         const tmp5Result2 = tmp5(4952);
       }
-      const obj3 = platformType(6456);
+      const obj3 = platformType(6459);
     };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");

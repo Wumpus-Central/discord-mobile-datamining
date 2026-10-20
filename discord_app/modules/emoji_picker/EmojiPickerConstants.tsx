@@ -12,7 +12,6 @@ export const EmojiCategoryTypes = {
   FAVORITES: "FAVORITES",
   TOP_GUILD_EMOJI: "TOP_GUILD_EMOJI",
   PREMIUM_UPSELL: "PREMIUM_UPSELL",
-  SOUNDMOJI: "SOUNDMOJI",
   SUGGESTED: "SUGGESTED",
 };
 export const GRID_NAVIGATOR_ID = "emoji-picker-grid";
@@ -30,7 +29,6 @@ export const EmojiCategories = {
   SYMBOLS: "symbols",
   FLAGS: "flags",
   PREMIUM_UPSELL: "premium emoji",
-  SOUNDMOJI: "soundmoji",
   SUGGESTED: "suggested",
 };
 export const EmojiSubCategory = { NONE: "", TOP_GUILD_EMOJI: "top_server", NEWLY_ADDED_EMOJI: "newly_added" };

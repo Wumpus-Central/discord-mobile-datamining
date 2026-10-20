@@ -123,7 +123,7 @@ let closure_16 = async function _setAppIcon(arg0) {
   }
   return value;
 };
-const AppIconConstants = fn(9781);
+const AppIconConstants = fn(9793);
 ({
   getDefaultIcon: metroRequire,
   getOfficialAlternateIcons: closure_7,

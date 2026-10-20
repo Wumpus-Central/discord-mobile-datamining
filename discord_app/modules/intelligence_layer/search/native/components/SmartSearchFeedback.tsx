@@ -117,7 +117,7 @@ export const SmartSearchFeedback = ReactCompilerGating.isReactCompilerEnabled()
           if (tmp22) {
             const obj4 = { style: feedbackContainer.buttonContainer, children: null };
             const obj5 = {
-              IconComponent: tmp(9672).ThumbsUpIcon,
+              IconComponent: tmp(9685).ThumbsUpIcon,
               onPress() {
                 const obj = SmartSearchActionCreators;
                 obj.setResultFeedback({
@@ -132,7 +132,7 @@ export const SmartSearchFeedback = ReactCompilerGating.isReactCompilerEnabled()
             obj5.accessibilityLabel = intl2.string(_modDef4064["x/H32X"]);
             const items3 = [closure_6(IconActionButtonDefault, obj5)];
             const obj6 = { IconComponent: null, noMargin: true, onPress: null, accessibilityLabel: null };
-            obj6.IconComponent = tmp(9674).ThumbsDownIcon;
+            obj6.IconComponent = tmp(9687).ThumbsDownIcon;
             obj6.onPress = function onPress() {
               const obj = SmartSearchActionCreators;
               obj.setResultFeedback({
@@ -153,7 +153,7 @@ export const SmartSearchFeedback = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp22;
           tmp21 = tmp22;
         }
-        tmpResult2 = tmp(7168);
+        tmpResult2 = tmp(7171);
       }
       const fn = function y() {
         return SmartSearchResultsStore.getResultFeedback(smartSearchQuery.guildId, smartSearchQuery.requestKey);
@@ -197,7 +197,7 @@ export const SmartSearchFeedback = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp7Result) {
           const obj5 = { style: tmp.buttonContainer, children: null };
           const obj6 = {
-            IconComponent: tmp2(9672).ThumbsUpIcon,
+            IconComponent: tmp2(9685).ThumbsUpIcon,
             onPress() {
               const obj = SmartSearchActionCreators;
               obj.setResultFeedback({
@@ -212,7 +212,7 @@ export const SmartSearchFeedback = ReactCompilerGating.isReactCompilerEnabled()
           obj6.accessibilityLabel = intl2.string(_modDef4064["x/H32X"]);
           const items4 = [closure_6(IconActionButtonDefault, obj6)];
           const obj7 = { IconComponent: null, noMargin: true, onPress: null, accessibilityLabel: null };
-          obj7.IconComponent = tmp2(9674).ThumbsDownIcon;
+          obj7.IconComponent = tmp2(9687).ThumbsDownIcon;
           obj7.onPress = function onPress() {
             const obj = SmartSearchActionCreators;
             obj.setResultFeedback({

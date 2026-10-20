@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const SuggestedFriendSource = fn(13404).SuggestedFriendSource;
+const SuggestedFriendSource = fn(13422).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4945);
@@ -667,7 +667,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.contentContainerStyle = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
       obj6.data = memo;
       obj6.renderItem = callback1;
-      const items5 = [closure_8(friendSuggestions(7168).FlashList, obj6), ,];
+      const items5 = [closure_8(friendSuggestions(7171).FlashList, obj6), ,];
       let obj8 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
       let obj7 = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
       obj8.start = friendSuggestions(1107).VerticalGradient.START;

@@ -62,11 +62,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[4];
       }
       if (cResult[5] !== activeCustomizationOption) {
-        const customizationOptionName = tmp(6316).getCustomizationOptionName(activeCustomizationOption);
+        const customizationOptionName = tmp(6319).getCustomizationOptionName(activeCustomizationOption);
         cResult[5] = activeCustomizationOption;
         cResult[6] = customizationOptionName;
         let tmp14 = customizationOptionName;
-        const tmpResult2 = tmp(6316);
+        const tmpResult2 = tmp(6319);
       } else {
         tmp14 = cResult[6];
       }
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const _Object = values.Object;
-        values = _Object.values(tmp(5993).CheckpointTrait);
+        values = _Object.values(tmp(5996).CheckpointTrait);
         flatMapResult = values.flatMap((item) => {
           if (null == stateFromStores[item]) {
             let items = [];
@@ -182,11 +182,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj3 = { color: "text-muted", variant: "text-md/medium", children: null };
       const obj = stateFromStores(504);
-      const items2 = ["Trait: ", stateFromStores(6316).getCustomizationOptionName(activeCustomizationOption)];
+      const items2 = ["Trait: ", stateFromStores(6319).getCustomizationOptionName(activeCustomizationOption)];
       obj3.children = items2;
       items1[2] = closure_5(stateFromStores(5195).Heading, obj3);
-      const values = Object.values(stateFromStores(5993).CheckpointTrait);
-      const obj4 = stateFromStores(6316);
+      const values = Object.values(stateFromStores(5996).CheckpointTrait);
+      const obj4 = stateFromStores(6319);
       items1[3] = values
         .flatMap((item) => {
           if (null == stateFromStores[item]) {

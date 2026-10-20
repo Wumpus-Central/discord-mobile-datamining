@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef7010 from "../../../../../_runtime/metro/07010__.js";
-import _modDef11574 from "../../../../../_runtime/metro/11574__.js";
+import _modDef7013 from "../../../../../_runtime/metro/07013__.js";
+import _modDef11585 from "../../../../../_runtime/metro/11585__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
@@ -136,7 +136,7 @@ const memoResult = noop.memo(
                 return closure_4.isLocalMute(userId);
               }
             }
-            const tmp15 = channelId(11515);
+            const tmp15 = channelId(11526);
           } else {
             class S {
               constructor() {
@@ -207,15 +207,15 @@ const memoResult = noop.memo(
           flag2 = false;
         }
         if (stateFromStores) {
-          let tmp5 = channelId(11515);
+          let tmp5 = channelId(11526);
           let flag3 = true;
         } else if (flag2) {
-          tmp5 = channelId(11321);
+          tmp5 = channelId(11332);
           flag3 = false;
         } else {
           flag3 = false;
           if (flag) {
-            tmp5 = channelId(11322);
+            tmp5 = channelId(11333);
             flag3 = false;
           }
         }
@@ -264,7 +264,7 @@ const memoResult1 = noop.memo(
           }
           let tmp9;
           if (tmpResult.useStateFromStores(first, tmp7, tmp8)) {
-            tmp9 = channelId(11573);
+            tmp9 = channelId(11584);
           }
           if (null == tmp9) {
             return null;
@@ -326,7 +326,7 @@ const memoResult1 = noop.memo(
         const items1 = [channelId, userId];
         let tmp4;
         if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-          tmp4 = channelId(11573);
+          tmp4 = channelId(11584);
         }
         let tmp6 = null;
         if (null != tmp4) {
@@ -356,13 +356,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== tmp4.restricted) {
         const obj2 = {
           style: tmp4.restricted,
-          source: _modDef11574,
+          source: _modDef11585,
           size: native.Icon.Sizes.EXTRA_SMALL,
           color: nativeDefault.unsafe_rawColors.RED_400,
         };
         const tmp8 = jsx(native.Icon, {
           style: tmp4.restricted,
-          source: _modDef11574,
+          source: _modDef11585,
           size: native.Icon.Sizes.EXTRA_SMALL,
           color: nativeDefault.unsafe_rawColors.RED_400,
         });
@@ -378,7 +378,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_8();
       return jsx(native.Icon, {
         style: closure_8().restricted,
-        source: _modDef11574,
+        source: _modDef11585,
         size: native.Icon.Sizes.EXTRA_SMALL,
         color: nativeDefault.unsafe_rawColors.RED_400,
       });
@@ -394,10 +394,10 @@ export const IgnoredStatus = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(2);
       const tmp4 = closure_8();
       if (cResult[0] !== tmp4.restricted) {
-        const obj2 = { style: tmp4.restricted, source: _modDef7010, size: native.Icon.Sizes.EXTRA_SMALL };
+        const obj2 = { style: tmp4.restricted, source: _modDef7013, size: native.Icon.Sizes.EXTRA_SMALL };
         const tmp8 = jsx(native.Icon, {
           style: tmp4.restricted,
-          source: _modDef7010,
+          source: _modDef7013,
           size: native.Icon.Sizes.EXTRA_SMALL,
         });
         cResult[0] = tmp4.restricted;
@@ -412,7 +412,7 @@ export const IgnoredStatus = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_8();
       return jsx(native.Icon, {
         style: closure_8().restricted,
-        source: _modDef7010,
+        source: _modDef7013,
         size: native.Icon.Sizes.EXTRA_SMALL,
       });
     };

@@ -9,7 +9,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import inlineStyles from "../../../../_runtime/07906_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07910_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -137,7 +137,7 @@ let closure_17 = {
   statusBubblePaddingVertical: 7,
 };
 const dependencyMap = {
-  [fn(7250).UserProfileThemeTypes.PREVIEW]: {
+  [fn(7253).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "text-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,

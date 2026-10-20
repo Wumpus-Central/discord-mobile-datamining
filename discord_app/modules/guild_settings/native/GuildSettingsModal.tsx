@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj2.initialRouteState = undefined;
               obj2.screens = tmp14;
               obj2.viewStyle = tmp6;
-              tmp27Result = tmp27(tmp(7043).Navigator, obj2);
+              tmp27Result = tmp27(tmp(7046).Navigator, obj2);
             }
             cResult[16] = first;
             cResult[17] = tmp6;

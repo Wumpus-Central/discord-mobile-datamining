@@ -61,6 +61,10 @@ const obj = {
     "socket_crashed",
     "spam_message_request_error_view",
     "spam_message_request_view",
+    "wasm_asset_body_duration",
+    "wasm_asset_decoded_bytes",
+    "wasm_asset_encoded_bytes",
+    "wasm_asset_fetch_duration",
   ]),
   DEPRECATED: null,
 };
@@ -123,6 +127,10 @@ const set = new Set([
   "socket_crashed",
   "spam_message_request_error_view",
   "spam_message_request_view",
+  "wasm_asset_body_duration",
+  "wasm_asset_decoded_bytes",
+  "wasm_asset_encoded_bytes",
+  "wasm_asset_fetch_duration",
 ]);
 obj.DEPRECATED = new Set([
   "debug_ota_200_timeout",
@@ -191,5 +199,9 @@ export const MetricEvents = {
   IOS_ATTRIBUTION_CLICK: "ios_attribution_click",
   FRAME_SESSION_JOIN: "frame_session_join",
   FRAME_SESSION_JOIN_FAILED: "frame_session_join_failed",
+  WASM_ASSET_FETCH_DURATION: "wasm_asset_fetch_duration",
+  WASM_ASSET_BODY_DURATION: "wasm_asset_body_duration",
+  WASM_ASSET_ENCODED_BYTES: "wasm_asset_encoded_bytes",
+  WASM_ASSET_DECODED_BYTES: "wasm_asset_decoded_bytes",
 };
 export const MetricEventsSets = obj;

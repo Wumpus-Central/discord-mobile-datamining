@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_3(ContentDismissActionType.USER_DISMISS);
             }
           }
-          const tmp19 = closure_6(tmp(7447).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
+          const tmp19 = closure_6(tmp(7450).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
           cResult[14] = tmp19;
           const tmp18 = tmp19;
         } else {
@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { spacing: tmp5(587).space.PX_16, children: null };
         const items2 = [tmp20, tmp25, tmp29];
         obj8.children = items2;
-        const tmp33 = closure_7(tmp(5932).Stack, obj8);
+        const tmp33 = closure_7(tmp(5935).Stack, obj8);
         cResult[23] = tmp20;
         cResult[24] = tmp25;
         cResult[25] = tmp29;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [
         closure_6(View, {
           style: tmp.illustration,
-          children: closure_6(markAsDismissed(7447).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+          children: closure_6(markAsDismissed(7450).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
         }),
         ,
       ];
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       items3[2] = closure_6(markAsDismissed(5205).Button, obj6);
       obj3.children = items3;
-      obj2.children = closure_7(markAsDismissed(5932).Stack, obj3);
+      obj2.children = closure_7(markAsDismissed(5935).Stack, obj3);
       obj.children = closure_6(View, obj2);
       return closure_6(markAsDismissed(5226).BottomSheet, obj);
     };

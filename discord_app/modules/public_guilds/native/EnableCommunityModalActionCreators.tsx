@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/public_guilds/native/EnableCo
 export default {
   open() {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(18898, dependencyMap.paths),
+      asyncRequireImpl(18921, dependencyMap.paths),
       undefined,
       ENABLED_COMMUNITY_MODAL_KEY,
     );

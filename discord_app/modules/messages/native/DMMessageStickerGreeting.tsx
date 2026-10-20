@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp(1128).intl;
       intl2.formatToPlainString(channel(1128).t.m0zYbV, { username: name });
       let obj5 = hasInputText(4994);
-      const showConvoStarterInDM = channel(12956).useShowConvoStarterInDM(channel);
+      const showConvoStarterInDM = channel(12974).useShowConvoStarterInDM(channel);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [StickersStore];
         cResult[6] = items2;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp20 = cResult[9];
       }
-      const tmpResult7 = channel(12956);
+      const tmpResult7 = channel(12974);
       const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
       if (cResult[10] !== showConvoStarterInDM) {
         class U {
@@ -580,7 +580,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         withTiming: channel(5167).withTiming,
         STANDARD_EASING: channel(1202).STANDARD_EASING,
       };
-      const shouldAnimateSticker = channel(10071).useShouldAnimateSticker(false);
+      const shouldAnimateSticker = channel(10082).useShouldAnimateSticker(false);
       if (!showConvoStarterInDM) {
         class U {
           constructor() {
@@ -615,7 +615,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = tmp4.gradient;
         cResult[15] = tmp32;
       }
-      const tmpResult10 = channel(10071);
+      const tmpResult10 = channel(10082);
     }
   : function DMMessageStickerGreeting(channel) {
       channel = channel.channel;

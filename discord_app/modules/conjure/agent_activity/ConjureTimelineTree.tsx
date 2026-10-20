@@ -701,14 +701,14 @@ export const turnSegments = function turnSegments(steps, arg1) {
   }
   return items4;
 };
-export const turnLifecycle = function turnLifecycle(memo1, turnActive) {
-  const found = memo1.filter((hasWork) => hasWork.hasWork || hasWork.hasTodos);
+export const turnLifecycle = function turnLifecycle(arr, turnActive) {
+  const found = arr.filter((hasWork) => hasWork.hasWork || hasWork.hasTodos);
   const atResult = found.at(-1);
   let index1;
   if (atResult != null) {
     index1 = atResult.index;
   }
-  const atResult1 = memo1.at(-1);
+  const atResult1 = arr.at(-1);
   if (atResult1 != null) {
     const index = atResult1.index;
   }

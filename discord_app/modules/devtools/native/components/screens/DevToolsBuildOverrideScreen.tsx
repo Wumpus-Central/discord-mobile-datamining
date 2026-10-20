@@ -19,11 +19,11 @@ let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 
 obj.contentContainer = { padding: nativeDefault.space.PX_16 };
 let closure_9 = createStyles.createStyles(obj);
 let obj4 = { padding: nativeDefault.space.PX_16 };
-let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(9381).TagIcon, {}) }];
-let obj5 = { label: "Branch Name", value: "branch", icon: jsx(fn(9381).TagIcon, {}) };
-items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(16677).HashmarkIcon, {}) };
+let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(9393).TagIcon, {}) }];
+let obj5 = { label: "Branch Name", value: "branch", icon: jsx(fn(9393).TagIcon, {}) };
+items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(16696).HashmarkIcon, {}) };
 const ReactCompilerGating = fn(558);
-let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(16677).HashmarkIcon, {}) };
+let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(16696).HashmarkIcon, {}) };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
 
@@ -136,7 +136,7 @@ export default noop.memo(
                 },
               };
               const items1 = [
-                jsx(tmp(6851).TableRow, {
+                jsx(tmp(6854).TableRow, {
                   icon: jsx(tmp(5644).CopyIcon, {}),
                   label: tmp13(stateFromStores),
                   subLabel: stateFromStores.id,
@@ -148,29 +148,29 @@ export default noop.memo(
                 ,
               ];
               const obj6 = {
-                icon: jsx(tmp(11651).RefreshIcon, {}),
+                icon: jsx(tmp(11664).RefreshIcon, {}),
                 label: "Refresh Override",
-                onPress: tmp(12539).refreshBuildOverride,
+                onPress: tmp(12556).refreshBuildOverride,
                 arrow: true,
               };
-              items1[1] = jsx(tmp(6851).TableRow, {
-                icon: jsx(tmp(11651).RefreshIcon, {}),
+              items1[1] = jsx(tmp(6854).TableRow, {
+                icon: jsx(tmp(11664).RefreshIcon, {}),
                 label: "Refresh Override",
-                onPress: tmp(12539).refreshBuildOverride,
+                onPress: tmp(12556).refreshBuildOverride,
                 arrow: true,
               });
               const obj7 = {
                 icon: jsx(tmp(5651).TrashIcon, { color: "text-feedback-critical" }),
                 label: "Clear Override",
                 variant: "danger",
-                onPress: tmp(12539).clearBuildOverride,
+                onPress: tmp(12556).clearBuildOverride,
                 arrow: true,
               };
-              items1[2] = jsx(tmp(6851).TableRow, {
+              items1[2] = jsx(tmp(6854).TableRow, {
                 icon: jsx(tmp(5651).TrashIcon, { color: "text-feedback-critical" }),
                 label: "Clear Override",
                 variant: "danger",
-                onPress: tmp(12539).clearBuildOverride,
+                onPress: tmp(12556).clearBuildOverride,
                 arrow: true,
               });
               obj4.children = items1;
@@ -253,7 +253,7 @@ export default noop.memo(
             const mapped = items.map((value) => {
               value = value.value;
               ({ icon, label } = value);
-              return jsx(stateFromStores(6932).TableRadioRow, { value, label, icon }, value);
+              return jsx(stateFromStores(6935).TableRadioRow, { value, label, icon }, value);
             });
             class C {
               constructor() {
@@ -542,7 +542,7 @@ export default noop.memo(
                 }
                 tmp45[0] = tmp31;
                 tmp45[2] = tmp41;
-                const tmp46 = jsx(tmp(6935).TableRowGroup, tmp45);
+                const tmp46 = jsx(tmp(6938).TableRowGroup, tmp45);
                 cResult[29] = tmp31;
                 cResult[30] = tmp41;
                 cResult[31] = tmp46;
@@ -561,7 +561,7 @@ export default noop.memo(
               }
               tmp42[0] = tmp32;
               tmp42[1] = tmp38;
-              const tmp43 = jsx(tmp(6851).TableRow, tmp42);
+              const tmp43 = jsx(tmp(6854).TableRow, tmp42);
               cResult[26] = tmp32;
               cResult[27] = tmp38;
               cResult[28] = tmp43;
@@ -575,7 +575,7 @@ export default noop.memo(
               autoComplete: "off",
               clearable: true,
             };
-            const tmp40 = jsx(tmp(6956).TextInput, {
+            const tmp40 = jsx(tmp(6959).TextInput, {
               size: "md",
               placeholder: combined,
               onChange: H,
@@ -589,7 +589,7 @@ export default noop.memo(
             cResult[25] = tmp40;
           }
           const obj10 = { title: text, defaultValue: first1.type, onChange: tmp23, hasIcons: true, children: tmp24 };
-          const tmp29 = jsx(tmp(6933).TableRadioGroup, {
+          const tmp29 = jsx(tmp(6936).TableRadioGroup, {
             title: text,
             defaultValue: first1.type,
             onChange: tmp23,
@@ -615,7 +615,7 @@ export default noop.memo(
           const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
           let tmp;
           if (overrides != null) {
-            tmp = overrides[first(undefined, 12539).DEVICE_FIELD];
+            tmp = overrides[first(undefined, 12556).DEVICE_FIELD];
           }
           return tmp;
         });
@@ -643,7 +643,7 @@ export default noop.memo(
             const result = ToastUtils.presentCopiedToClipboard();
           };
           const items1 = [
-            jsx(tmp3(6851).TableRow, {
+            jsx(tmp3(6854).TableRow, {
               icon: jsx(tmp3(5644).CopyIcon, {}),
               label: null,
               subLabel: null,
@@ -652,33 +652,33 @@ export default noop.memo(
             ,
           ];
           const obj6 = {
-            icon: jsx(tmp3(11651).RefreshIcon, {}),
+            icon: jsx(tmp3(11664).RefreshIcon, {}),
             label: "Refresh Override",
-            onPress: tmp3(12539).refreshBuildOverride,
+            onPress: tmp3(12556).refreshBuildOverride,
             arrow: true,
           };
-          items1[1] = jsx(tmp3(6851).TableRow, {
-            icon: jsx(tmp3(11651).RefreshIcon, {}),
+          items1[1] = jsx(tmp3(6854).TableRow, {
+            icon: jsx(tmp3(11664).RefreshIcon, {}),
             label: "Refresh Override",
-            onPress: tmp3(12539).refreshBuildOverride,
+            onPress: tmp3(12556).refreshBuildOverride,
             arrow: true,
           });
           const obj7 = {
             icon: jsx(tmp3(5651).TrashIcon, { color: "text-feedback-critical" }),
             label: "Clear Override",
             variant: "danger",
-            onPress: tmp3(12539).clearBuildOverride,
+            onPress: tmp3(12556).clearBuildOverride,
             arrow: true,
           };
-          items1[2] = jsx(tmp3(6851).TableRow, {
+          items1[2] = jsx(tmp3(6854).TableRow, {
             icon: jsx(tmp3(5651).TrashIcon, { color: "text-feedback-critical" }),
             label: "Clear Override",
             variant: "danger",
-            onPress: tmp3(12539).clearBuildOverride,
+            onPress: tmp3(12556).clearBuildOverride,
             arrow: true,
           });
           obj5.children = items1;
-          tmp10Result = jsxs(tmp3(6935).TableRowGroup, { title: "Current Override", hasIcons: true, children: null });
+          tmp10Result = jsxs(tmp3(6938).TableRowGroup, { title: "Current Override", hasIcons: true, children: null });
         }
         const items2 = [tmp10Result, , ,];
         let str = "";
@@ -686,7 +686,7 @@ export default noop.memo(
           str = "New";
         }
         let obj = first(504);
-        items2[1] = jsx(first(6933).TableRadioGroup, {
+        items2[1] = jsx(first(6936).TableRadioGroup, {
           title: `${str} Override Type`,
           defaultValue: first.type,
           onChange(type) {
@@ -696,7 +696,7 @@ export default noop.memo(
           children: items.map((value) => {
             value = value.value;
             ({ icon, label } = value);
-            return jsx(first(6932).TableRadioRow, { value, label, icon }, value);
+            return jsx(first(6935).TableRadioRow, { value, label, icon }, value);
           }),
         });
         const found1 = items.find((value) => value.value === first.type);
@@ -727,10 +727,10 @@ export default noop.memo(
           children: items.map((value) => {
             value = value.value;
             ({ icon, label } = value);
-            return jsx(first(6932).TableRadioRow, { value, label, icon }, value);
+            return jsx(first(6935).TableRadioRow, { value, label, icon }, value);
           }),
         };
-        obj10.label = jsx(first(6956).TextInput, {
+        obj10.label = jsx(first(6959).TextInput, {
           size: "md",
           placeholder: "Enter " + label2,
           onChange(id) {
@@ -744,8 +744,8 @@ export default noop.memo(
           autoComplete: "off",
           clearable: true,
         });
-        obj9.children = jsx(first(6851).TableRow, { icon, label: null });
-        items2[2] = jsx(first(6935).TableRowGroup, { title: label1, hasIcons: true, children: null });
+        obj9.children = jsx(first(6854).TableRow, { icon, label: null });
+        items2[2] = jsx(first(6938).TableRowGroup, { title: label1, hasIcons: true, children: null });
         items2[3] = jsx(first(5205).Button, {
           text: "Apply Build Override",
           disabled: "" === first.id,
@@ -761,7 +761,7 @@ export default noop.memo(
           },
         });
         obj11.children = items2;
-        obj2.children = jsxs(first(5932).Stack, { spacing: 16, children: null });
+        obj2.children = jsxs(first(5935).Stack, { spacing: 16, children: null });
         return (
           <ScrollView style={tmp.content} contentContainerStyle={null}>
             {null}

@@ -237,5 +237,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.children = closure_8(onConfirm(5205).Button, obj8);
       items[2] = closure_8(View, obj7);
       obj2.children = items;
-      return closure_9(onConfirm(7169).SafeAreaPaddingView, obj2);
+      return closure_9(onConfirm(7172).SafeAreaPaddingView, obj2);
     };

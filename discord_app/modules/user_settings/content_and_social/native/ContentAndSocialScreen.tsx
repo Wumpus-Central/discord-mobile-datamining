@@ -158,7 +158,7 @@ function getSocialPermissions(allServersSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8276).MobileUserSettings;
+const MobileUserSettings = fn(8280).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
@@ -439,11 +439,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first1 = _slicedToArray(noop.useState(tmp7), 1)[0];
       if (cResult[3] !== first1) {
         const obj2 = { defaultIndex: first1, settings: first };
-        const segmentedControl = route(11099).createSegmentedControl(obj2);
+        const segmentedControl = route(11111).createSegmentedControl(obj2);
         cResult[3] = first1;
         cResult[4] = segmentedControl;
         let tmp10 = segmentedControl;
-        const tmpResult = route(11099);
+        const tmpResult = route(11111);
       } else {
         tmp10 = cResult[4];
       }

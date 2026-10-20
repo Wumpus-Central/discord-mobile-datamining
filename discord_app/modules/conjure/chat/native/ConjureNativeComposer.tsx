@@ -592,7 +592,7 @@ export default function ConjureNativeComposer(projectId) {
         conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
       if (arr.length > diff) {
         const intl = obj2(1128).intl;
-        let obj = { count: obj2(11632).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+        let obj = { count: obj2(11645).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
         _undefined3(intl.formatToPlainString(_modDef3820.Q0aCVZ, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
@@ -624,7 +624,7 @@ export default function ConjureNativeComposer(projectId) {
         };
         obj3 = obj5;
       });
-      obj2 = obj2(12156);
+      obj2 = obj2(12171);
       result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
     }
   }, items12);
@@ -664,9 +664,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(12314).pickConjurePhotos(
+                value: projectId(12333).pickConjurePhotos(
                   "mixed",
-                  projectId(11632).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(11645).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };

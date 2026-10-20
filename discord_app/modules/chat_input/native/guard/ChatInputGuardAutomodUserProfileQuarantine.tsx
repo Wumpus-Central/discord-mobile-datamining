@@ -202,7 +202,7 @@ export default noop.memo(
                   return;
                 }
               }
-              const tmp20 = jsx(tmp(13185).ChatXIcon, {});
+              const tmp20 = jsx(tmp(13203).ChatXIcon, {});
               cResult[12] = tmp20;
               const tmp19 = tmp20;
             } else {
@@ -285,7 +285,7 @@ export default noop.memo(
           message: null,
         };
         const obj2 = guildId(4886);
-        obj3.icon = jsx(guildId(13185).ChatXIcon, {});
+        obj3.icon = jsx(guildId(13203).ChatXIcon, {});
         obj3.message = stringResult1;
         return jsx(ChatInputGuardDefault, {
           type: "simple-action",

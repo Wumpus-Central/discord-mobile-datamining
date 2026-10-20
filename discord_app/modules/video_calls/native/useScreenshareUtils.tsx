@@ -124,7 +124,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/useScreensha
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useScreenshareUtils(arg0) {
       const cResult = require("c").c(24);
-      const tmp5 = analyticsLocations(11456)(arg0);
+      const tmp5 = analyticsLocations(11467)(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         cResult[0] = closure_8 >= 12;
         let first = tmp8;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[3];
       }
       const tmpResult = require("initialize");
-      const showMobileGoLiveUpsell = analyticsLocations(11467).useConfig(tmp13).showMobileGoLiveUpsell;
+      const showMobileGoLiveUpsell = analyticsLocations(11478).useConfig(tmp13).showMobileGoLiveUpsell;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ApplicationStreamingStore];
         class E {
@@ -170,9 +170,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = cResult[4];
         tmp15 = cResult[5];
       }
-      const tmp4Result = analyticsLocations(11467);
+      const tmp4Result = analyticsLocations(11478);
       const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
-      analyticsLocations = tmp4(7199)().analyticsLocations;
+      analyticsLocations = tmp4(7202)().analyticsLocations;
       let tmp18 = null != stateFromStores1;
       if (tmp18) {
         tmp18 = stateFromStores1.state === ApplicationStreamStates.ACTIVE;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return closure_1_4.getCurrentUserActiveStream();
                       }
                     }
-                    tmp4(tmp18 ? 11472 : 11473);
+                    tmp4(tmp18 ? 11483 : 11484);
                   }
                 }
               }

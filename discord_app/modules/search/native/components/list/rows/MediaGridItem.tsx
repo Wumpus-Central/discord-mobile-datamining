@@ -8,7 +8,7 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchMediaTypes = fn(9629).SearchMediaTypes;
+const SearchMediaTypes = fn(9642).SearchMediaTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4945);

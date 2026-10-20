@@ -7,15 +7,15 @@ import SocialLayerStorefrontStore from "../SocialLayerStorefrontStore.tsx";
 require = fn;
 const MarketingURLs = fn(1087).MarketingURLs;
 let closure_6 = {
-  [fn(10492).StorefrontPlatform.DESKTOP]: "PC",
-  [fn(10492).StorefrontPlatform.XBOX]: "Xbox",
-  [fn(10492).StorefrontPlatform.PLAYSTATION]: "PlayStation",
-  [fn(10492).StorefrontPlatform.SWITCH]: "Switch",
-  [fn(10492).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade",
-  [fn(10492).StorefrontPlatform.NETFLIX]: "Netflix",
-  [fn(10492).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+",
+  [fn(10503).StorefrontPlatform.DESKTOP]: "PC",
+  [fn(10503).StorefrontPlatform.XBOX]: "Xbox",
+  [fn(10503).StorefrontPlatform.PLAYSTATION]: "PlayStation",
+  [fn(10503).StorefrontPlatform.SWITCH]: "Switch",
+  [fn(10503).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade",
+  [fn(10503).StorefrontPlatform.NETFLIX]: "Netflix",
+  [fn(10503).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+",
 };
-let items = [fn(10492).StorefrontPlatform.PLAYSTATION];
+let items = [fn(10503).StorefrontPlatform.PLAYSTATION];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx");
 

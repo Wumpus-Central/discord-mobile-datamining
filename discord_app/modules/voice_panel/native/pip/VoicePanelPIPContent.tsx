@@ -65,8 +65,8 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelModes = fn(10693).VoicePanelModes;
-const VoicePanelPIPModes = fn(18170).VoicePanelPIPModes;
+const VoicePanelModes = fn(10704).VoicePanelModes;
+const VoicePanelPIPModes = fn(18193).VoicePanelPIPModes;
 let Constants = fn(1087);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(2026);
@@ -1143,7 +1143,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const items2 = [channelId];
-      const surfaceDirectRendererExperiment = participantId(5795).useSurfaceDirectRendererExperiment(id1, {
+      const surfaceDirectRendererExperiment = participantId(5797).useSurfaceDirectRendererExperiment(id1, {
         location: "VoicePanelPIPContent",
       });
       updateIsActivityFocused = obj.useCallback((arg0, arg1) => {
@@ -1160,7 +1160,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         }
         _undefined(tmp5);
       }, items2);
-      const tmp6Result = participantId(5795);
+      const tmp6Result = participantId(5797);
       const fn = function _() {
         value = focused.get();
         let id;
@@ -1192,13 +1192,15 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
       S.__initData = __initData8;
       const animatedReaction = tmp6Result6.useAnimatedReaction(fn, S);
       const obj4 = { runOnJS: participantId(5014).runOnJS, updateIsActivityFocused, mode };
-      const fn2 = function y() {
-        return mode.get();
-      };
-      fn2.__closure = { mode };
-      fn2.__workletHash = 16088308548105;
-      fn2.__initData = __initData9;
-      const fn3 = function f(arg0, arg1) {
+      class P {
+        constructor() {
+          return mode.get();
+        }
+      }
+      P.__closure = { mode };
+      P.__workletHash = 16088308548105;
+      P.__initData = __initData9;
+      const fn2 = function f(arg0, arg1) {
         if (arg0 !== arg1) {
           value = focused.get();
           let id;
@@ -1210,10 +1212,10 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       const tmp6Result7 = participantId(5014);
-      fn3.__closure = { runOnJS: participantId(5014).runOnJS, updateIsActivityFocused, focused };
-      fn3.__workletHash = 7336366136494;
-      fn3.__initData = __initData10;
-      const animatedReaction1 = tmp6Result7.useAnimatedReaction(fn2, fn3);
+      fn2.__closure = { runOnJS: participantId(5014).runOnJS, updateIsActivityFocused, focused };
+      fn2.__workletHash = 7336366136494;
+      fn2.__initData = __initData10;
+      const animatedReaction1 = tmp6Result7.useAnimatedReaction(P, fn2);
       const obj5 = { runOnJS: participantId(5014).runOnJS, updateIsActivityFocused, focused };
       const items3 = [updateIsActivityFocused];
       const stateFromStoresObject = participantId(573).useStateFromStoresObject(items3, () => ({
@@ -1227,7 +1229,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         layoutManager.setTargetDimensions(participantId, nativeEvent.width, nativeEvent.height);
       }, items4);
       const tmp6Result8 = participantId(573);
-      canRenderParticipantVideo = participantId(10698).useCanRenderParticipantVideo(stateFromStores);
+      canRenderParticipantVideo = participantId(10709).useCanRenderParticipantVideo(stateFromStores);
       if (canRenderParticipantVideo) {
         let tmp25 = tmp16;
         if (tmp16) {
@@ -1243,7 +1245,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items5);
       const obj6 = { style: null, children: null };
-      const tmp6Result9 = participantId(10698);
+      const tmp6Result9 = participantId(10709);
       if (canRenderParticipantVideo) {
         const items6 = [,];
         ({ blackBackground: arr8[0], user: arr8[1] } = tmp);
@@ -1283,7 +1285,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp33Result = null;
         if (null != user1) {
           const obj11 = {
-            source: tmp6(9337).getCachedSourceFromURI(user1.getAvatarURL(guildId, 80, false)),
+            source: tmp6(9349).getCachedSourceFromURI(user1.getAvatarURL(guildId, 80, false)),
             size: null,
             avatarDecoration: null,
           };
@@ -1295,10 +1297,10 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
           }
           obj11.avatarDecoration = userAvatarDecoration;
           tmp33Result = closure_22(tmp6(1202).Avatar, obj11);
-          const tmp6Result10 = tmp6(9337);
+          const tmp6Result10 = tmp6(9349);
         }
         obj10.children = tmp33Result;
-        items9[1] = closure_22(tmp3(6834), obj10);
+        items9[1] = closure_22(tmp3(6837), obj10);
         const obj12 = { style: tmp.userOpacity };
         items9[2] = closure_22(closure_29, obj12);
         let tmp33Result2 = null;
@@ -1306,16 +1308,16 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
           tmp33Result2 = null;
           if (consumedRequestToRespondToSeriousThermalState) {
             const obj13 = { style: tmp.thermalAlertIconContainer, children: null };
-            const obj14 = { style: tmp.thermalAlertIcon, source: tmp3(11319), color: tmp.thermalAlertIcon.color };
+            const obj14 = { style: tmp.thermalAlertIcon, source: tmp3(11330), color: tmp.thermalAlertIcon.color };
             obj13.children = closure_22(tmp6(1202).Icon, obj14);
-            tmp33Result2 = closure_22(tmp3(6834), obj13);
-            const tmp3Result6 = tmp3(6834);
+            tmp33Result2 = closure_22(tmp3(6837), obj13);
+            const tmp3Result6 = tmp3(6837);
           }
         }
         items9[3] = tmp33Result2;
         obj6.children = items9;
         tmp40 = obj6;
-        const tmp3Result5 = tmp3(6834);
+        const tmp3Result5 = tmp3(6837);
       }
       return closure_23(NativeViewDefault, tmp40);
     };
@@ -1699,13 +1701,13 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  obj5.onSize = N;
+                  obj5.onSize = L;
                   obj5.onLayout = W;
                   const tmp31 = closure_22(closure_26, obj5);
                   cResult[25] = W;
-                  cResult[26] = N;
+                  cResult[26] = L;
                   cResult[27] = streamId;
-                  class N {
+                  class L {
                     constructor(arg0) {
                       nativeEvent = participantId.nativeEvent;
                       setTargetDimensionsResult = layoutManager.setTargetDimensions(
@@ -1823,7 +1825,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[12] = streamId;
           cResult[13] = W;
         }
-        class N {
+        class L {
           constructor(arg0) {
             nativeEvent = participantId.nativeEvent;
             setTargetDimensionsResult = layoutManager.setTargetDimensions(
@@ -1836,7 +1838,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[8] = layoutManager;
         cResult[9] = participantId;
-        cResult[10] = N;
+        cResult[10] = L;
         const tmpResult4 = tmp(tmp2[30]);
       }
       const fn = function c() {
@@ -1877,11 +1879,11 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       let callback2;
       ({ transitionState, transitionCleanUp, layoutTransition } = participantId);
       const tmp = closure_24();
-      const mode = participantId(18217).usePIPState().mode;
+      const mode = participantId(18240).usePIPState().mode;
       let tmp4 = closure_28(tmp, transitionState, transitionCleanUp);
-      const context = video.useContext(mode(10692));
+      const context = video.useContext(mode(10703));
       ({ channelId: c2, layoutManager } = context);
-      let obj = participantId(18217);
+      let obj = participantId(18240);
       let tmp2 = participantId;
       const items = [callback2];
       const stateFromStoresObject = participantId(573).useStateFromStoresObject(items, () => {
@@ -1909,11 +1911,11 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       });
       video = stateFromStoresObject.streamId;
       const obj2 = participantId(573);
-      const surfaceDirectRendererExperiment = participantId(5795).useSurfaceDirectRendererExperiment(
+      const surfaceDirectRendererExperiment = participantId(5797).useSurfaceDirectRendererExperiment(
         stateFromStoresObject.userId,
         { location: "VoicePanelPIPContent.Stream" },
       );
-      const obj3 = participantId(5795);
+      const obj3 = participantId(5797);
       const items1 = [ApplicationStreamingStore];
       const stateFromStores = participantId(573).useStateFromStores(items1, () => {
         const activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(participantId);
@@ -1983,7 +1985,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       }, items6);
       if (stateFromStores === constants.ENDED) {
         const obj5 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-        let tmp23 = closure_22(tmp2(11298).StreamEnded, obj5);
+        let tmp23 = closure_22(tmp2(11309).StreamEnded, obj5);
       } else {
         tmp23 = null;
         if (stateFromStores !== tmp16.FAILED) {
@@ -2029,7 +2031,7 @@ let closure_49 = noop.memo(
           const effect = noop.useEffect(tmp4, tmp5);
           if (cResult[4] !== tmp3.emptyPip) {
             const obj2 = { style: tmp3.emptyPip };
-            const tmp11 = closure_22(transitionCleanUp(6834), obj2);
+            const tmp11 = closure_22(transitionCleanUp(6837), obj2);
             cResult[4] = tmp3.emptyPip;
             cResult[5] = tmp11;
             let tmp8 = tmp11;
@@ -2062,7 +2064,7 @@ let closure_49 = noop.memo(
           }
         }, items);
         const tmp = closure_24();
-        return closure_22(transitionCleanUp(6834), { style: closure_24().emptyPip });
+        return closure_22(transitionCleanUp(6837), { style: closure_24().emptyPip });
       },
 );
 ReactCompilerGating = fn(558);
@@ -2072,7 +2074,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoiceP
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VoicePanelPIPContent(layoutTransition) {
-        const cResult = layoutTransition(id[21]).c(22);
+        const cResult = layoutTransition(id[21]).c(25);
         layoutTransition = layoutTransition.layoutTransition;
         channelId = noop.useContext(channelId(id[22])).channelId;
         let obj = layoutTransition(id[21]);
@@ -2119,7 +2121,7 @@ export default noop.memo(
                 let tmp24 = cResult[13];
               }
               if (cResult[14] !== layoutTransition) {
-                const fn2 = function b(arg0, id, transitionState, transitionCleanUp) {
+                const fn = function b(arg0, id, transitionState, transitionCleanUp) {
                   if (id.id === c48) {
                     const obj2 = { transitionState, transitionCleanUp };
                     return closure_2_22(closure_49, obj2, arg0);
@@ -2145,34 +2147,46 @@ export default noop.memo(
                   }
                 };
                 cResult[14] = layoutTransition;
-                cResult[15] = fn2;
-                let tmp25 = fn2;
+                cResult[15] = fn;
+                let tmp25 = fn;
               } else {
                 tmp25 = cResult[15];
               }
-              if (cResult[16] === stateFromStores) {
-                if (cResult[17] === tmp25) {
-                  let tmp26 = cResult[18];
+              if (cResult[16] !== stateFromStores[0].id) {
+                const externalPipTileNativeId = tmp(tmp2[44]).getExternalPipTileNativeId("pip", stateFromStores[0].id);
+                cResult[16] = stateFromStores[0].id;
+                cResult[17] = externalPipTileNativeId;
+                let tmp26 = externalPipTileNativeId;
+                const tmpResult3 = tmp(tmp2[44]);
+              } else {
+                tmp26 = cResult[17];
+              }
+              if (cResult[18] === stateFromStores) {
+                if (cResult[19] === tmp25) {
+                  let tmp28 = cResult[20];
                 }
-                if (cResult[19] === tmp26) {
-                  if (cResult[20] === tmp24) {
-                    let tmp30 = cResult[21];
+                if (cResult[21] === tmp26) {
+                  if (cResult[22] === tmp28) {
+                    if (cResult[23] === tmp24) {
+                      let tmp32 = cResult[24];
+                    }
+                    return tmp32;
                   }
-                  return tmp30;
                 }
-                let obj4 = { style: tmp24, pointerEvents: "none", children: tmp26 };
-                const tmp32 = closure_22(tmp4(tmp2[29]), obj4);
-                cResult[19] = tmp26;
-                cResult[20] = tmp24;
-                cResult[21] = tmp32;
-                tmp30 = tmp32;
+                let obj4 = { style: tmp24, pointerEvents: "none", nativeID: tmp26, children: tmp28 };
+                const tmp34 = closure_22(tmp4(tmp2[29]), obj4);
+                cResult[21] = tmp26;
+                cResult[22] = tmp28;
+                cResult[23] = tmp24;
+                cResult[24] = tmp34;
+                tmp32 = tmp34;
               }
               let obj5 = { items: stateFromStores, renderItem: tmp25, getItemKey: getFocusedKey };
-              const tmp29 = closure_22(tmp(tmp2[26]).TransitionGroup, obj5);
-              cResult[16] = stateFromStores;
-              cResult[17] = tmp25;
-              cResult[18] = tmp29;
-              tmp26 = tmp29;
+              const tmp31 = closure_22(tmp(tmp2[26]).TransitionGroup, obj5);
+              cResult[18] = stateFromStores;
+              cResult[19] = tmp25;
+              cResult[20] = tmp31;
+              tmp28 = tmp31;
             }
             const items1 = [tmp20, tmp23];
             const items2 = [items1];
@@ -2186,36 +2200,43 @@ export default noop.memo(
           cResult[7] = width;
           cResult[8] = voicePanelPIPBorderRadius;
           tmp21 = voicePanelPIPBorderRadius;
-          const tmpResult2 = tmp(tmp2[28]);
+          const tmpResult4 = tmp(tmp2[28]);
         }
-        const fn = function y() {
-          let tmp = id;
-          if (null != id) {
-            const participant = ChannelRTCStore.getParticipant(channelId, tmp);
-            let type;
-            if (participant != null) {
-              type = participant.type;
+        class P {
+          constructor() {
+            tmp = id;
+            if (null != id) {
+              tmp3 = closure_8;
+              tmp4 = channelId;
+              participant = closure_8.getParticipant(channelId, tmp);
+              type = undefined;
+              if (participant != null) {
+                type = participant.type;
+              }
+              USER = type;
+            } else {
+              tmp2 = ParticipantTypes;
+              USER = ParticipantTypes.USER;
             }
-            let USER = type;
-          } else {
-            USER = constants5.USER;
+            if (USER == null) {
+              tmp7 = ParticipantTypes;
+              USER = ParticipantTypes.USER;
+            }
+            if (tmp == null) {
+              tmp = closure_3;
+            }
+            items = [];
+            items[0] = { id: tmp, type: USER };
+            return items;
           }
-          if (USER == null) {
-            USER = constants5.USER;
-          }
-          if (tmp == null) {
-            tmp = first;
-          }
-          const items = [{ id: tmp, type: USER }];
-          return items;
-        };
+        }
         const items3 = [id, channelId, first];
         cResult[2] = channelId;
         cResult[3] = id;
-        cResult[4] = fn;
+        cResult[4] = P;
         cResult[5] = items3;
         tmp13 = items3;
-        tmp12 = fn;
+        tmp12 = P;
         let obj2 = layoutTransition(id[27]);
       }
     : function VoicePanelPIPContent(layoutTransition) {
@@ -2233,7 +2254,6 @@ export default noop.memo(
         let obj = layoutTransition(id[27]);
         let items = [ChannelRTCStore];
         let items1 = [id, channelId, id1];
-        const items2 = [width, height, tmp.contentWrapper];
         const stateFromStores = layoutTransition(id[30]).useStateFromStores(
           items,
           () => {
@@ -2260,6 +2280,7 @@ export default noop.memo(
           items1,
           areParticipantsEqual,
         );
+        const items2 = [width, height, tmp.contentWrapper];
         const items3 = [layoutTransition];
         const memo = height.useMemo(() => {
           const items = [contentWrapper.contentWrapper];
@@ -2293,13 +2314,15 @@ export default noop.memo(
             }
           }
         }, items3);
-        let obj3 = { style: memo, pointerEvents: "none", children: null };
+        let obj3 = { style: memo, pointerEvents: "none", nativeID: null, children: null };
         let obj2 = layoutTransition(id[30]);
+        const tmp6 = channelId(id[29]);
+        obj3.nativeID = layoutTransition(id[44]).getExternalPipTileNativeId("pip", stateFromStores[0].id);
         obj3.children = closure_22(layoutTransition(id[26]).TransitionGroup, {
           items: stateFromStores,
           renderItem: callback,
           getItemKey: getFocusedKey,
         });
-        return closure_22(channelId(id[29]), obj3);
+        return closure_22(tmp6, obj3);
       },
 );

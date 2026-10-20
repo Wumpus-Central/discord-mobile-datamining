@@ -379,7 +379,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const memberIds = GuildMemberStore.getMemberIds(id);
       let obj = guild(504);
-      const existingMembers = guild(8893).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
+      const existingMembers = guild(8905).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
       let tmp8 = 0 === stateFromStoresArray.length;
       if (tmp8) {
         tmp8 = 1 === existingMembers.length;
@@ -464,20 +464,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj9 = { children: null };
         const MEMBERS = constants.MEMBERS;
-        channel(13190);
-        const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(8505).GroupIcon)];
+        channel(13208);
+        const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(8509).GroupIcon)];
         const ROLES = constants.ROLES;
-        channel(8913);
-        items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(8911).ShieldUserIcon);
+        channel(8925);
+        items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(8923).ShieldUserIcon);
         obj9.children = items5;
       }
       const obj10 = { children: null };
       obj3.children = closure_9(closure_10, obj9);
       const items6 = [closure_8(View, obj3)];
-      const tmp2Result = guild(8893);
-      items6[1] = closure_8(guild(1202).Icon, { source: channel(11431), size: guild(1202).Icon.Sizes.SMALL });
+      const tmp2Result = guild(8905);
+      items6[1] = closure_8(guild(1202).Icon, { source: channel(11442), size: guild(1202).Icon.Sizes.SMALL });
       obj2.children = items6;
-      items2[1] = closure_9(guild(6856).PressableOpacity, obj2);
+      items2[1] = closure_9(guild(6859).PressableOpacity, obj2);
       obj10.children = items2;
       return closure_9(closure_10, obj10);
     };

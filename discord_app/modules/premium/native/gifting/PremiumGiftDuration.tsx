@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   const cResult = planInterval(576).c(9);
   const tmp4 = closure_11();
   const obj = planInterval(576);
-  planInterval = planInterval(10368).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10379).useNativeGiftContext().planInterval;
   ({ durationContainer, durationTitle } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
@@ -332,10 +332,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   cResult[7] = tmp10;
   cResult[8] = tmp14;
   tmp13 = tmp14;
-  const obj2 = planInterval(10368);
+  const obj2 = planInterval(10379);
 }) : (function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(10368).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10379).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1128).intl;

@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         class E {
           constructor() {
             timerId = setTimeout(
-              () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+              () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
               2500,
             );
             return;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           class E {
             constructor() {
               timerId = setTimeout(
-                () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+                () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
                 2500,
               );
               return;
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             class E {
               constructor() {
                 timerId = setTimeout(
-                  () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+                  () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
                   2500,
                 );
                 return;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               class E {
                 constructor() {
                   timerId = setTimeout(
-                    () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+                    () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
                     2500,
                   );
                   return;
@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj2.useAnimatedStyle(fn);
       const effect1 = noop.useEffect(() => {
         const timerId = setTimeout(
-          () => closure_1_1(6620).popWithKey(sharedValue(12967).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+          () => closure_1_1(6623).popWithKey(sharedValue(12985).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
           2500,
         );
       }, []);

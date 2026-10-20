@@ -114,7 +114,7 @@ export default {
       return applyArgumentsResult;
     }
     closure_4 = async function _fetch() {
-      await tmp5(6337).httpGetWithCountryCodeQuery({
+      await tmp5(6340).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENT(closure_2_0, closure_2_1),
         rejectWithError: tmp5(1297).rejectWithMigratedError(),
       });
@@ -148,7 +148,7 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(6337).httpGetWithCountryCodeQuery({
+      await tmp5(6340).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5),
         rejectWithError: tmp5(1297).rejectWithMigratedError(),
       });

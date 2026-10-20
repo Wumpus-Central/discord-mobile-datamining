@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7601).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7604).isAvatarDecorationRecord;
 const AVATAR_DECORATION_SIZE = fn(1418).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -19,7 +19,7 @@ let obj = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(14291).GUTTER_SIZE,
+    paddingHorizontal: fn(14309).GUTTER_SIZE,
   },
   rowSpacer: null,
 };
@@ -27,9 +27,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(14291).GUTTER_SIZE,
+  paddingHorizontal: fn(14309).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(14291).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14309).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(

@@ -761,7 +761,7 @@ export default noop.memo(
         let STATIC = userName.effectDisplayType;
         ({ userId, guildId } = userName);
         if (STATIC === undefined) {
-          STATIC = userName(10580).EffectDisplayType.STATIC;
+          STATIC = userName(10591).EffectDisplayType.STATIC;
         }
         ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
         if (ignoreDisabledStylesSetting === undefined) {
@@ -781,12 +781,12 @@ export default noop.memo(
           }),
         );
         let num2;
-        const tmp6 = num2(6321)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
-        const displayNameStylesEnabled = userName(6322).useDisplayNameStylesEnabled({
+        const tmp6 = num2(6324)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
+        const displayNameStylesEnabled = userName(6325).useDisplayNameStylesEnabled({
           location: "UsernameWithEffects",
         });
-        const obj = userName(6322);
-        const displayNameStylesFont = userName(9142).useDisplayNameStylesFont({
+        const obj = userName(6325);
+        const displayNameStylesFont = userName(9154).useDisplayNameStylesFont({
           displayNameStyles: tmp6,
           ignoreDisabledStylesSetting,
         });
@@ -808,12 +808,12 @@ export default noop.memo(
           }
           tmp11 = tmp12;
         }
-        const obj2 = userName(9142);
+        const obj2 = userName(9154);
         const token = userName(5213).useToken(tmp4(587).colors.BACKGROUND_BASE_LOW);
         const tmp7Result = userName(5213);
         const token1 = userName(5213).useToken(tmp4(587).colors.WHITE);
         const tmp7Result7 = userName(5213);
-        const displayNameStylesAccessibleColors = userName(10581).useDisplayNameStylesAccessibleColors({
+        const displayNameStylesAccessibleColors = userName(10592).useDisplayNameStylesAccessibleColors({
           displayNameStyles: tmp6,
           backgroundColor: token,
         });
@@ -890,14 +890,14 @@ export default noop.memo(
         const tmp26Result = closure_14(str, num2);
         if (displayNameStylesEnabled) {
           if (null != tmp6) {
-            if (STATIC !== tmp7(10580).EffectDisplayType.PLAIN) {
+            if (STATIC !== tmp7(10591).EffectDisplayType.PLAIN) {
               if (null != colorVariants) {
                 const items1 = [merged.style, tmp11];
                 if (tmp7Result11.doesEffectImpactLayout(effectId)) {
                   const layoutImpact = tmp26Result.layoutImpact;
                 }
                 if (effectId === tmp7(1411).DisplayNameEffect.GUMMY) {
-                  const tmp4Result = tmp4(10584);
+                  const tmp4Result = tmp4(10595);
                   let str3 = tmp7(5101).getNodeText(userName);
                   if (str3 == null) {
                     str3 = "";

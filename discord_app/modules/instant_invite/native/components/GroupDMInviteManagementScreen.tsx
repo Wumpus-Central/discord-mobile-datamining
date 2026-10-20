@@ -6,8 +6,8 @@ import discord_common_AnalyticsUtils from "../../../../../discord_common/js/pack
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import InstantInviteDefault from "../../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef10633 from "../../../../../_runtime/metro/10633__.js";
-import _modDef10634 from "../../../../../_runtime/metro/10634__.js";
+import _modDef10644 from "../../../../../_runtime/metro/10644__.js";
+import _modDef10645 from "../../../../../_runtime/metro/10645__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ import InviteRecord from "../../../../records/InviteRecord.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: metroRequire } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(10011);
+const ChannelSettingsStore = fn(10022);
 const Constants = fn(1087);
 ({ ChannelSettingsSections: closure_8, Endpoints: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -273,7 +273,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               return jsx(View, obj);
             }
           }
-          SceneLoadingIndicator = SceneLoadingIndicator(7082).SceneLoadingIndicator;
+          SceneLoadingIndicator = SceneLoadingIndicator(7085).SceneLoadingIndicator;
           let obj = {};
           let tmp16 = <SceneLoadingIndicator />;
         } else {
@@ -310,14 +310,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 return jsx(View, obj);
               }
             }
-            let obj3 = { lightSource: _modDef10633, darkSource: _modDef10634, title: null, body: null };
+            let obj3 = { lightSource: _modDef10644, darkSource: _modDef10645, title: null, body: null };
             const intl = SceneLoadingIndicator(1128).intl;
             obj3.title = intl.string(SceneLoadingIndicator(1128).t["+nLJkZ"]);
             const intl2 = SceneLoadingIndicator(1128).intl;
             obj3.body = intl2.string(SceneLoadingIndicator(1128).t.F53CAc);
             tmp16 = jsx(SceneLoadingIndicator(1202).EmptyState, {
-              lightSource: _modDef10633,
-              darkSource: _modDef10634,
+              lightSource: _modDef10644,
+              darkSource: _modDef10645,
               title: null,
               body: null,
             });
@@ -339,7 +339,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj4 = { contentContainerStyle: tmp2.listContent, data: tmp10, keyExtractor: G, renderItem: F };
-            tmp16 = jsx(SceneLoadingIndicator(7168).FlashList, {
+            tmp16 = jsx(SceneLoadingIndicator(7171).FlashList, {
               contentContainerStyle: tmp2.listContent,
               data: tmp10,
               keyExtractor: G,
@@ -462,22 +462,22 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const callback = noop.useCallback((code) => code.code, []);
       if (tmp3[0]) {
-        let tmp12 = jsx(channelId(7082).SceneLoadingIndicator, {});
+        let tmp12 = jsx(channelId(7085).SceneLoadingIndicator, {});
       } else if (0 === first.length) {
-        let obj2 = { lightSource: tmp4(10633), darkSource: tmp4(10634), title: null, body: null };
+        let obj2 = { lightSource: tmp4(10644), darkSource: tmp4(10645), title: null, body: null };
         const intl = channelId(1128).intl;
         obj2.title = intl.string(channelId(1128).t["+nLJkZ"]);
         const intl2 = channelId(1128).intl;
         obj2.body = intl2.string(channelId(1128).t.F53CAc);
         tmp12 = jsx(channelId(1202).EmptyState, {
-          lightSource: tmp4(10633),
-          darkSource: tmp4(10634),
+          lightSource: tmp4(10644),
+          darkSource: tmp4(10645),
           title: null,
           body: null,
         });
       } else {
         let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
-        tmp12 = jsx(channelId(7168).FlashList, {
+        tmp12 = jsx(channelId(7171).FlashList, {
           contentContainerStyle: tmp.listContent,
           data: memo,
           keyExtractor: callback,
@@ -502,7 +502,7 @@ export default noop.memo(
           }
           if (cResult[3] !== tmp4) {
             const obj2 = { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT };
-            const tmp8 = jsx(channelId(7043).Navigator, {
+            const tmp8 = jsx(channelId(7046).Navigator, {
               screens: tmp4,
               initialRouteName: constants.INSTANT_INVITES_MANAGEMENT,
             });
@@ -519,7 +519,7 @@ export default noop.memo(
         const intl = channelId(1128).intl;
         obj4.title = intl.string(channelId(1128).t.OQ9MKu);
         const obj = channelId(576);
-        obj4.headerLeft = channelId(6872).getHeaderCloseButton(onClose);
+        obj4.headerLeft = channelId(6875).getHeaderCloseButton(onClose);
         obj4.render = function render() {
           return <closure_2_12 channelId={channelId} />;
         };
@@ -529,7 +529,7 @@ export default noop.memo(
         cResult[1] = onClose;
         cResult[2] = obj3;
         tmp4 = obj3;
-        const tmpResult = channelId(6872);
+        const tmpResult = channelId(6875);
       }
     : function GroupDMInviteManagementScreen(channelId) {
         channelId = channelId.channelId;
@@ -548,7 +548,7 @@ export default noop.memo(
           obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
           return obj;
         }, items);
-        return jsx(channelId(7043).Navigator, {
+        return jsx(channelId(7046).Navigator, {
           screens: memo,
           initialRouteName: constants.INSTANT_INVITES_MANAGEMENT,
         });

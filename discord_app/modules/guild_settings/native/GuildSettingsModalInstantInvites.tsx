@@ -12,7 +12,7 @@ import TableRowIcon from "../../../design/components/TableRow/native/TableRowIco
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import GuildAntiRaidTypes from "../../guild_antiraid/GuildAntiRaidTypes.tsx";
 import InstantInvite from "../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef14719 from "../../../../_runtime/metro/14719__.js";
+import _modDef14737 from "../../../../_runtime/metro/14737__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";
@@ -123,7 +123,7 @@ function GuildSettingsModalInstantInvites(invites) {
         };
         const obj4 = { guild, analyticsData: obj };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(12580, dependencyMap.paths),
+          asyncRequireImpl(12597, dependencyMap.paths),
           "GuildIncidentActionsActionSheet",
           obj4,
         );
@@ -249,7 +249,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] !== invitesDisabled) {
           let tmp15 = null;
           if (invitesDisabled) {
-            const obj5 = { source: _modDef14719 };
+            const obj5 = { source: _modDef14737 };
             tmp15 = __initData(TableRowIcon.TableRowIcon, obj5);
           }
           cResult[5] = invitesDisabled;
@@ -307,7 +307,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       let tmp7Result = null;
       if (invitesDisabled) {
-        const obj4 = { source: _modDef14719 };
+        const obj4 = { source: _modDef14737 };
         tmp7Result = __initData(TableRowIcon.TableRowIcon, obj4);
       }
       obj3.icon = tmp7Result;

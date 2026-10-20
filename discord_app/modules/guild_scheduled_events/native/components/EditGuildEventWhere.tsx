@@ -40,7 +40,7 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(6732).isGuildScheduledEventActive;
+let closure_8 = fn(6735).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(4806);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);

@@ -22,7 +22,7 @@ import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
 const StatusTypes = fn(1087).StatusTypes;
-const UnreadSetting = fn(6653).UnreadSetting;
+const UnreadSetting = fn(6656).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(4945);
@@ -287,7 +287,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       renderChannelPressableWrapperDefault;
-      const PressableHighlight = tmp(6856).PressableHighlight;
+      const PressableHighlight = tmp(6859).PressableHighlight;
       if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
@@ -558,8 +558,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let relativeTimestamp = null;
       if (null != extractTimestampResult) {
-        relativeTimestamp = tmp6(6737).getRelativeTimestamp(extractTimestampResult);
-        const tmp6Result = tmp6(6737);
+        relativeTimestamp = tmp6(6740).getRelativeTimestamp(extractTimestampResult);
+        const tmp6Result = tmp6(6740);
       }
       let str = "text-muted";
       if (unread) {
@@ -585,8 +585,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         status: null,
-        streaming: "7f316656b571ac7f7a106867fe919370",
-        style: "el.messages.7f316656b571ac7f7a106867fe919370.compiled.messages",
+        streaming: "b6fd36c944e99d3f382fa528595dc2ff",
+        style: "fr.messages.b6fd36c944e99d3f382fa528595dc2ff.compiled.messages",
         size: "jsona",
         animate: "Mobile NUX Post Reg",
         typing: "Skip avatar modal",
@@ -640,7 +640,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             muted: flag,
             layout: tmp6(5604).ChannelListLayoutTypes.COMPACT,
           };
-          tmp14Result = closure_12(tmp6(13568).ChannelRowPreview, obj9);
+          tmp14Result = closure_12(tmp6(13586).ChannelRowPreview, obj9);
         }
       }
       const obj10 = { children: null };
@@ -654,7 +654,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       items5[2] = renderChannelContentDefault(obj8);
       obj10.children = items5;
       obj5.children = tmp2Result6(closure_14(closure_13, obj10), { fontScale });
-      return tmp2Result5(closure_12(user(6856).PressableHighlight, obj5));
+      return tmp2Result5(closure_12(user(6859).PressableHighlight, obj5));
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
@@ -682,7 +682,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = user(576);
       const stateFromStores = user(504).useStateFromStores(first, tmp6);
       const tmpResult = user(504);
-      const baseChannelUnreadBadgeState = user(17516).useBaseChannelUnreadBadgeState(channel, stateFromStores);
+      const baseChannelUnreadBadgeState = user(17535).useBaseChannelUnreadBadgeState(channel, stateFromStores);
       ({ unread, mentionCount } = baseChannelUnreadBadgeState);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [TypingStore];
@@ -704,7 +704,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp13 = cResult[8];
         }
-        const tmp15 = channel(16406)(channel, tmp13);
+        const tmp15 = channel(16425)(channel, tmp13);
         if (cResult[9] === channel) {
           if (cResult[10] === stateFromStores1) {
             if (cResult[11] === tmp15) {
@@ -748,7 +748,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = user.id;
       cResult[6] = fn2;
       tmp11 = fn2;
-      const tmpResult3 = user(17516);
+      const tmpResult3 = user(17535);
     }
   : function UserResultWithChannel(arg0) {
       ({ user: require, channel } = arg0);
@@ -766,7 +766,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = {};
       const merged = Object.assign(arg0);
       obj4.channel = channel;
-      obj4.lastMessage = channel(16406)(channel, { unread });
+      obj4.lastMessage = channel(16425)(channel, { unread });
       obj4.unread = unread;
       obj4.mentionCount = mentionCount;
       obj4.muted = stateFromStores;

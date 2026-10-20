@@ -175,7 +175,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
     }
   }
-  channel(7335);
+  channel(7338);
   if (cResult[7] === stateFromStores) {
     if (cResult[8] === setting) {
       let tmp11 = cResult[9];
@@ -205,7 +205,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
   const RenderSpoilers = channel(4776).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(573);
-  const enabledHarmTypesBitmaskForChannelType = channel(7335).getEnabledHarmTypesBitmaskForChannelType(channel(7341).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(7338).getEnabledHarmTypesBitmaskForChannelType(channel(7344).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 });
 export const getObscuredAlt = function getObscuredAlt(arg0) {

@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       items1[1] = closure_8(closure_11, { channel: memo, expiresAt: invite.getExpiresAt() });
       obj2.children = items1;
-      obj.children = closure_9(invite(5932).Stack, obj2);
+      obj.children = closure_9(invite(5935).Stack, obj2);
       return closure_8(View, obj);
     };
 export const InstantInviteDetails = tmp3;

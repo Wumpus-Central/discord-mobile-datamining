@@ -6,7 +6,7 @@ import GameProfileCommunitiesLocaleFilterStore from "../GameProfileCommunitiesLo
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9428).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9440).useGameProfileCommunitiesLocaleFilterExclusions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleOptions.tsx");

@@ -12,7 +12,7 @@ import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedCh
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
-import _modDef11509 from "../../../../../_runtime/metro/11509__.js";
+import _modDef11520 from "../../../../../_runtime/metro/11520__.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import beginConsoleTransfer from "../../../game_console/native/beginConsoleTransfer.tsx";
@@ -24,7 +24,7 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const resetFocus = fn(10675).resetFocus;
+const resetFocus = fn(10686).resetFocus;
 const InstantInviteSources = fn(1087).InstantInviteSources;
 const Permissions = fn(1098).Permissions;
 const jsxProd = fn(21);
@@ -38,7 +38,7 @@ let obj2 = {
     justifyContent: "center",
     alignItems: "flex-start",
     flexDirection: "row",
-    height: fn(11255).CALL_ACTION_BAR_HEIGHT,
+    height: fn(11266).CALL_ACTION_BAR_HEIGHT,
   },
 };
 let closure_15 = createStyles.createStyles(obj2);
@@ -80,7 +80,7 @@ let obj3 = {
   justifyContent: "center",
   alignItems: "flex-start",
   flexDirection: "row",
-  height: fn(11255).CALL_ACTION_BAR_HEIGHT,
+  height: fn(11266).CALL_ACTION_BAR_HEIGHT,
 };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
@@ -455,7 +455,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_15();
       const tmp6 = useChannelNameDefault(channel);
       const obj = channel(576);
-      const isVoiceChannelLocked = channel(11429).useIsVoiceChannelLocked(channel);
+      const isVoiceChannelLocked = channel(11440).useIsVoiceChannelLocked(channel);
       if (cResult[0] === channel) {
         if (cResult[1] === isVoiceChannelLocked) {
           let tmp8 = cResult[2];
@@ -508,7 +508,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp15 = null;
         if (null != tmp8) {
-          const obj7 = { source: _modDef11509, onPress: tmp8, accessibilityLabel: null };
+          const obj7 = { source: _modDef11520, onPress: tmp8, accessibilityLabel: null };
           const intl = tmp(1128).intl;
           const obj8 = { channelName: tmp6 };
           obj7.accessibilityLabel = intl.formatToPlainString(tmp(1128).t["dHHb/2"], obj8);
@@ -534,13 +534,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = isVoiceChannelLocked;
       cResult[2] = fn;
       tmp8 = fn;
-      const obj2 = channel(11429);
+      const obj2 = channel(11440);
     }
   : function ChannelCallConnectingHeader(channel) {
       channel = channel.channel;
       const tmp = closure_15();
       const tmp4 = useChannelNameDefault(channel);
-      const isVoiceChannelLocked = channel(11429).useIsVoiceChannelLocked(channel);
+      const isVoiceChannelLocked = channel(11440).useIsVoiceChannelLocked(channel);
       let fn = null;
       if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
         fn = null;
@@ -554,7 +554,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [closure_12(View, { style: { width: 4 } }), , ,];
       let tmp9Result = null;
       if (null != fn) {
-        const obj2 = { source: _modDef11509, onPress: fn, accessibilityLabel: null };
+        const obj2 = { source: _modDef11520, onPress: fn, accessibilityLabel: null };
         const intl = tmp5(1128).intl;
         const obj3 = { channelName: tmp4 };
         obj2.accessibilityLabel = intl.formatToPlainString(tmp5(1128).t["dHHb/2"], obj3);

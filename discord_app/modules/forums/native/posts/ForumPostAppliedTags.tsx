@@ -77,7 +77,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 obj3.tag = obj4;
                 obj3.containerStyle = tmp4.tag;
                 obj3.hasUnreads = hasUnreads;
-                tmp11 = closure_3(hasUnreads(10328).AppliedForumTagPill, obj3);
+                tmp11 = closure_3(hasUnreads(10339).AppliedForumTagPill, obj3);
               }
               cResult[10] = num;
               cResult[11] = hasUnreads;
@@ -138,7 +138,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.tag = obj3;
         obj2.containerStyle = tmp.tag;
         obj2.hasUnreads = hasUnreads;
-        tmp4 = closure_3(hasUnreads(10328).AppliedForumTagPill, obj2);
+        tmp4 = closure_3(hasUnreads(10339).AppliedForumTagPill, obj2);
       }
       items1[1] = tmp4;
       obj.children = items1;

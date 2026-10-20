@@ -14,8 +14,8 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(6649).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17458).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(6652).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17477).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4945);
 let closure_8 = createStyles.createStyles({
@@ -189,9 +189,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "test",
               name: "Array",
-              color: "__packager_asset",
-              expanded: "Latitude",
-              children: "<string:1029722624>",
+              color: "k",
+              expanded: null,
+              children: null,
             };
             const items = [overNode];
             element.children = items;
@@ -379,9 +379,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "test",
               name: "Array",
-              color: "__packager_asset",
-              expanded: "Latitude",
-              children: "<string:1029722624>",
+              color: "k",
+              expanded: null,
+              children: null,
             };
             const items = [tmp2];
             element.children = items;
@@ -891,11 +891,11 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "VOICE_CHANNEL_EFFECT_CLEAR",
-                    scrollPosition: null,
-                    dragRegion: "Show Collectibles Modal",
+                    gestureState: 72,
+                    scrollPosition: 4,
+                    dragRegion: null,
                     windowSize: null,
-                    dropComplete: "EMBEDDED_APP_SHIM_DISCONNECT",
+                    dropComplete: null,
                     listInsets: null,
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
@@ -991,11 +991,11 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "VOICE_CHANNEL_EFFECT_CLEAR",
-                  scrollPosition: null,
-                  dragRegion: "Show Collectibles Modal",
+                  gestureState: 72,
+                  scrollPosition: 4,
+                  dragRegion: null,
                   windowSize: null,
-                  dropComplete: "EMBEDDED_APP_SHIM_DISCONNECT",
+                  dropComplete: null,
                   listInsets: null,
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);

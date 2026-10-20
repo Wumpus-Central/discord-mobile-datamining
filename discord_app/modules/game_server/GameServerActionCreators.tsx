@@ -280,7 +280,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
     const obj2 = {
       type: "GAME_SERVER_UPDATE",
       guildId: "Array",
-      gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS",
+      gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED",
     };
     const obj3 = {};
     const merged = Object.assign(found);
@@ -299,7 +299,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     const obj2 = {
       type: "GAME_SERVER_UPDATE",
       guildId: "Array",
-      gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS",
+      gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED",
     };
     const obj3 = {};
     const merged = Object.assign(found);
@@ -378,7 +378,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
     let obj2 = {
       type: "GAME_SERVER_UPDATE",
       guildId: "Array",
-      gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS",
+      gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED",
     };
     let obj3 = {};
     let merged = Object.assign(found);
@@ -393,10 +393,10 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
     .then((body) => {
       body = body.body;
       let tmp3 = body;
-      if (body.status === closure_0(13208).GameServerStatus.SLEEPING) {
+      if (body.status === closure_0(13226).GameServerStatus.SLEEPING) {
         const obj2 = {};
         const merged = Object.assign(body);
-        obj2.status = closure_0(13208).GameServerStatus.STARTING;
+        obj2.status = closure_0(13226).GameServerStatus.STARTING;
         tmp3 = obj2;
       }
       const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

@@ -41,7 +41,7 @@ const getActivityJoinabilityDefault = getActivityJoinability;
 require = fn;
 const Constants = fn(1087);
 ({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
-const SpotifyConstants = fn(8748);
+const SpotifyConstants = fn(8760);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
@@ -635,7 +635,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = closure_20();
       const sync_id = activity.sync_id;
       let tmp5 = null;
-      if (sync_id(10569)(activity)) {
+      if (sync_id(10580)(activity)) {
         tmp5 = null;
         if (null != sync_id) {
           if (cResult[0] !== activity.name) {
@@ -651,13 +651,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] !== tmp3.icon) {
             const obj3 = {
               size: Button(1202).Icon.Sizes.SMALL,
-              source: sync_id(8566),
+              source: sync_id(8572),
               disableColor: true,
               style: tmp3.icon,
             };
             const tmp10 = jsx(Button(1202).Icon, {
               size: Button(1202).Icon.Sizes.SMALL,
-              source: sync_id(8566),
+              source: sync_id(8572),
               disableColor: true,
               style: tmp3.icon,
             });
@@ -715,7 +715,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                     c3 = 1;
                     c4 = 2;
                     c5 = 1;
-                    const obj5 = { value: closure_0(11216).canOpenSpotifyUrl(), done: false };
+                    const obj5 = { value: closure_0(11227).canOpenSpotifyUrl(), done: false };
                     return obj5;
                   }
                 } else if (1 === tmp7) {
@@ -732,7 +732,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj6;
                 } else {
                   closure_128_0 = value;
-                  const obj7 = closure_0(11216);
+                  const obj7 = closure_0(11227);
                   if (closure_128_0) {
                     obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
                   } else {
@@ -776,17 +776,17 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       ({ activity, onAction: require } = arg0);
       const sync_id = activity.sync_id;
       let tmp4 = null;
-      if (sync_id(10569)(activity)) {
+      if (sync_id(10580)(activity)) {
         tmp4 = null;
         if (null != sync_id) {
           let obj = { text: null, icon: null, variant: "secondary", onPress: null };
           const intl = util.intl;
           let obj2 = { platform: activity.name };
           obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-          const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8566), disableColor: true, style: tmp.icon };
+          const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8572), disableColor: true, style: tmp.icon };
           obj.icon = jsx(native.Icon, {
             size: native.Icon.Sizes.SMALL,
-            source: sync_id(8566),
+            source: sync_id(8572),
             disableColor: true,
             style: tmp.icon,
           });

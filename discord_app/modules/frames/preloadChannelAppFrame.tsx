@@ -6,7 +6,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6724);
+const FramesConstants = fn(6727);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const Constants = fn(1087);
 ({ ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
@@ -112,8 +112,8 @@ export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
                 }
               });
               const obj6 = { applicationId, surface: tmp5.surface, showErrorModal: false };
-              const tmp7Result2 = frameId(11059);
-              frameId(11059)
+              const tmp7Result2 = frameId(11071);
+              frameId(11071)
                 .launchFrame(obj6)
                 .catch(() => {
                   value = map.get(frameId);
@@ -132,12 +132,12 @@ export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
                 }
                 value4.launchRequestId = launchRequestId;
               }
-              const launchFrameResult = frameId(11059).launchFrame(obj6);
+              const launchFrameResult = frameId(11071).launchFrame(obj6);
             }
           }
-          tmp7Result = frameId(6630);
+          tmp7Result = frameId(6633);
         }
-        obj3 = frameId(6610);
+        obj3 = frameId(6613);
       }
     }
   }

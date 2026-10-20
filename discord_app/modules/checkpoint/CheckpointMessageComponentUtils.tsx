@@ -248,11 +248,11 @@ export const transformCheckpoint2026CardComponent = function transformCheckpoint
   }
   return tmp2;
 };
-export const getCharacterLayerUrls = function getCharacterLayerUrls(wearable, arg1) {
-  _require = wearable;
+export const getCharacterLayerUrls = function getCharacterLayerUrls(character, arg1) {
+  _require = character;
   closure_1 = arg1;
   const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = require("CheckpointTraitConfig").CHECKPOINT_WEARABLE_LAYER_BACKGROUND;
-  const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(wearable.wearable);
+  const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(character.wearable);
   const tmp2 = require("CheckpointTraitConfig");
   items = [];
   const item = hasItem

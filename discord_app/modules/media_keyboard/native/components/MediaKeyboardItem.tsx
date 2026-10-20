@@ -8,7 +8,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import _modDef10083 from "../../../../../_runtime/metro/10083__.js";
+import _modDef10094 from "../../../../../_runtime/metro/10094__.js";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import NativeMenuActionCreatorsDefault from "../../../native_menu/native/NativeMenuActionCreators.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
@@ -20,7 +20,7 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10352);
+const DeviceConstants = fn(10363);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.icon) {
-          const obj2 = { source: _modDef10083, style: tmp4.icon };
+          const obj2 = { source: _modDef10094, style: tmp4.icon };
           const tmp9 = React6(native.Icon, obj2);
           cResult[3] = tmp4.icon;
           cResult[4] = tmp9;
@@ -275,7 +275,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp.labelContainer, style];
       obj.style = items;
       const items1 = [
-        React6(native.Icon, { source: _modDef10083, style: tmp.icon }),
+        React6(native.Icon, { source: _modDef10094, style: tmp.icon }),
         React6(Text_Text.Text, {
           style: textStyle,
           color: "text-overlay-light",

@@ -308,8 +308,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== application) {
         let appLauncherIconSource = null;
         if (null != application) {
-          appLauncherIconSource = tmp(11886).getAppLauncherIconSource(application);
-          const tmpResult6 = tmp(11886);
+          appLauncherIconSource = tmp(11900).getAppLauncherIconSource(application);
+          const tmpResult6 = tmp(11900);
         }
         cResult[2] = application;
         cResult[3] = appLauncherIconSource;
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      const tmp11Result = stateFromStores(8557)(tmp12, str);
+      const tmp11Result = stateFromStores(8563)(tmp12, str);
       if (cResult[4] === loadingIcon) {
         if (cResult[5] === tmp8.loadingIcon) {
           if (cResult[7] !== scrollOffsetY) {
@@ -364,8 +364,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[13] !== application) {
             let str2 = "";
             if (null != application) {
-              str2 = tmp(9563).getSectionName(application);
-              const tmpResult8 = tmp(9563);
+              str2 = tmp(9576).getSectionName(application);
+              const tmpResult8 = tmp(9576);
             }
             cResult[13] = application;
             cResult[14] = str2;
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         if (cResult[41] !== onPressBack) {
                           const obj7 = { onPress: onPressBack };
-                          const tmp54 = closure_7(tmp10(11982), obj7);
+                          const tmp54 = closure_7(tmp10(11996), obj7);
                           cResult[41] = onPressBack;
                           cResult[42] = tmp54;
                           let tmp52 = tmp54;
@@ -547,13 +547,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     };
                                     const intl = tmp(1128).intl;
                                     obj11.accessibilityLabel = intl.string(tmp(1128).t.XWDihq);
-                                    const items2 = [closure_7(tmp(7903).IconButton, obj11)];
+                                    const items2 = [closure_7(tmp(7907).IconButton, obj11)];
                                     const obj12 = { application, onAddAppMenuClick };
-                                    items2[1] = closure_7(tmp10(11984), obj12);
+                                    items2[1] = closure_7(tmp10(11998), obj12);
                                     obj10.children = items2;
                                     tmp68 = closure_8(id, obj10);
                                   }
-                                  tmpResult10 = tmp(9563);
+                                  tmpResult10 = tmp(9576);
                                 }
                                 cResult[54] = application;
                                 cResult[55] = stateFromStores;
@@ -629,7 +629,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (null != loadingIcon) {
         const obj18 = { iconSource: loadingIcon, iconBorderRadius: xl, iconSize: 72 };
-        let tmp18 = closure_7(tmp10(11891), obj18);
+        let tmp18 = closure_7(tmp10(11905), obj18);
       } else {
         const obj19 = { style: tmp8.loadingIcon };
         tmp18 = closure_7(id, obj19);
@@ -638,7 +638,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       loadingIcon = tmp8.loadingIcon;
       cResult[5] = loadingIcon;
       cResult[6] = tmp18;
-      const tmp11 = stateFromStores(8557);
+      const tmp11 = stateFromStores(8563);
     }
   : function Header(application) {
       application = application.application;
@@ -651,8 +651,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = closure_11();
       let appLauncherIconSource = null;
       if (null != application) {
-        appLauncherIconSource = tmp(11886).getAppLauncherIconSource(application);
-        const tmpResult = tmp(11886);
+        appLauncherIconSource = tmp(11900).getAppLauncherIconSource(application);
+        const tmpResult = tmp(11900);
       }
       let obj = application(504);
       let str = application(5213).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -671,7 +671,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp6Result = useAvatarColorDefault(tmp7, str);
       if (null != appLauncherIconSource) {
         let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-        let tmp12 = closure_7(tmp5(11891), obj2);
+        let tmp12 = closure_7(tmp5(11905), obj2);
         let tmp13 = closure_7;
       } else {
         let obj3 = { style: tmp3.loadingIcon };
@@ -682,8 +682,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let str2 = "";
       const tmp16 = closure_14({ scrollOffsetY });
       if (null != application) {
-        str2 = tmp(9563).getSectionName(application);
-        const tmpResult6 = tmp(9563);
+        str2 = tmp(9576).getSectionName(application);
+        const tmpResult6 = tmp(9576);
       }
       let result = null != application;
       if (result) {
@@ -771,13 +771,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = tmp(1128).intl;
           obj11.accessibilityLabel = intl.string(tmp(1128).t.XWDihq);
-          const items7 = [tmp13(tmp(7903).IconButton, obj11)];
+          const items7 = [tmp13(tmp(7907).IconButton, obj11)];
           const obj12 = { application, onAddAppMenuClick };
-          items7[1] = tmp13(tmp5(11984), obj12);
+          items7[1] = tmp13(tmp5(11998), obj12);
           obj10.children = items7;
           tmp20Result = closure_8(tmp21, obj10);
         }
-        tmpResult8 = tmp(9563);
+        tmpResult8 = tmp(9576);
       }
       items3[2] = tmp20Result;
       obj4.children = items3;

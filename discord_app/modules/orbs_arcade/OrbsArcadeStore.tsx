@@ -10,6 +10,7 @@ let fetchedAt = null;
 let c4 = false;
 let orbsArcadeGames = [];
 let map = new Map();
+let set = new Set();
 const Store = initializeDefault.Store;
 class OrbsArcadeStore extends Store {}
 const prototype = OrbsArcadeStore.prototype;
@@ -47,6 +48,9 @@ prototype["getGameStateForGame"] = function getGameStateForGame(id) {
   }
   return value;
 };
+prototype["isClaimingRewards"] = function isClaimingRewards(gameId) {
+  return set.has(gameId);
+};
 OrbsArcadeStore.displayName = "OrbsArcadeStore";
 const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
   ORBS_ARCADE_FETCH_GAMES_BEGIN: function handleFetchGamesBegin() {
@@ -82,12 +86,39 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
     ({ game_id, game_state } = arg0);
     const result = map.set(game_id, OrbsArcadeTypes.orbsArcadeGameStateFromServer(game_state));
   },
+  ORBS_ARCADE_CLAIM_REWARDS_BEGIN: function handleClaimRewardsBegin(gameId) {
+    set = new Set(set);
+    set = set.add(gameId.gameId);
+  },
+  ORBS_ARCADE_CLAIM_REWARDS_SUCCESS: function handleClaimRewardsSuccess(gameId) {
+    gameId = gameId.gameId;
+    ({ userId, gameState } = gameId);
+    if (userId !== AuthenticationStore.getId()) {
+      return false;
+    } else {
+      const _Set = Set;
+      set = new Set(set);
+      set.delete(gameId);
+      const result = map.set(gameId, gameState);
+    }
+  },
+  ORBS_ARCADE_CLAIM_REWARDS_FAILURE: function handleClaimRewardsFailure(arg0) {
+    ({ userId, gameId } = arg0);
+    if (userId !== AuthenticationStore.getId()) {
+      return false;
+    } else {
+      const _Set = Set;
+      set = new Set(set);
+      set.delete(gameId);
+    }
+  },
   LOGOUT: function initializeState() {
     c2 = false;
     fetchedAt = null;
     c4 = false;
     orbsArcadeGames = [];
     map = new Map();
+    set = new Set();
   },
 });
 const size = fn(2);

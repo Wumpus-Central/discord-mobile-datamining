@@ -5,7 +5,7 @@ import RunAfterInteractionsUtils from "../../../../utils/native/RunAfterInteract
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const KeyboardAwareViewDefault = tmp8(7083);
+const KeyboardAwareViewDefault = tmp8(7086);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
@@ -87,7 +87,7 @@ export const PostponeRender = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp11 = children;
       if (first) {
-        tmp11 = jsx(tmp(7082).SceneLoadingIndicator, {});
+        tmp11 = jsx(tmp(7085).SceneLoadingIndicator, {});
       }
       cResult[2] = children;
       cResult[3] = first;
@@ -117,7 +117,7 @@ export const PostponeRender = ReactCompilerGating.isReactCompilerEnabled()
         }
       });
       if (first) {
-        children = jsx(first(7082).SceneLoadingIndicator, {});
+        children = jsx(first(7085).SceneLoadingIndicator, {});
       }
       if (ignoreKeyboard) {
         let tmp4Result = closure_5;

@@ -58,7 +58,7 @@ export default noop.memo(
           }
           const mapped = items.map(UserStore.getUser);
           const found = mapped.filter(onSelectUser(1388).isNotNullish);
-          const mapped1 = found.map(tags(10537));
+          const mapped1 = found.map(tags(10548));
           cResult[0] = selectedUserIds;
           cResult[1] = mapped1;
           tags = mapped1;
@@ -156,7 +156,7 @@ export default noop.memo(
                     tags,
                     ref: tagListInputRef,
                   };
-                  const tmp27 = jsx(tags(8914), {
+                  const tmp27 = jsx(tags(8926), {
                     autoFocus,
                     focusOnAdd: true,
                     footer: tmp10,
@@ -217,12 +217,12 @@ export default noop.memo(
               children: null,
             };
             if (forceSearchResults) {
-              let CirclePlusIcon = onSelectUser(13052).ChevronLargeRightIcon;
+              let CirclePlusIcon = onSelectUser(13070).ChevronLargeRightIcon;
             } else {
-              CirclePlusIcon = onSelectUser(10948).CirclePlusIcon;
+              CirclePlusIcon = onSelectUser(10959).CirclePlusIcon;
             }
             obj5.children = <CirclePlusIcon size="xs" />;
-            jsx(onSelectUser(6856).PressableOpacity, {
+            jsx(onSelectUser(6859).PressableOpacity, {
               accessibilityRole: "button",
               accessibilityLabel: stringResult2,
               onPress: onForceSearchResults,

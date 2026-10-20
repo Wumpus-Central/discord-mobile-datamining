@@ -472,7 +472,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0]);
       const merged1 = Object.assign(merged);
-      return closure_14(applicationId(11362).BaseEmbeddedAppWebView, {
+      return closure_14(applicationId(11373).BaseEmbeddedAppWebView, {
         iframeId,
         shellBridgeSecret,
         deepLinkQueryParams: applicationId.deepLinkQueryParams,

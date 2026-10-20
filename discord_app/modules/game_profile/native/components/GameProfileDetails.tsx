@@ -11,7 +11,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8759).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8771).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let joined;
           if (platformsContainer != null) {
             const genres1 = platformsContainer.genres;
-            const mapped = genres1.map(trackAction(9224).getGenreText);
+            const mapped = genres1.map(trackAction(9236).getGenreText);
             joined = mapped.join(", ");
           }
           let genres2;
@@ -779,7 +779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const websites = game.websites;
                     if (websites != null) {
                       const mapped3 = websites.map((item) =>
-                        trackAction(9408)(item, trackAction(587).colors.ICON_SUBTLE),
+                        trackAction(9420)(item, trackAction(587).colors.ICON_SUBTLE),
                       );
                       found = mapped3.filter((item) => null != item);
                     }
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     style: closure_2.platformsContainer,
                     children: platforms.map((platform) =>
                       closure_1_8(
-                        game(9401).GameUpdatePlatformIcon,
+                        game(9413).GameUpdatePlatformIcon,
                         { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE },
                         platform,
                       ),

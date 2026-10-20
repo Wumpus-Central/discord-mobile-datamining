@@ -128,9 +128,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_9();
       importDefault = subblock(1505).useNavigation();
       let obj = subblock(1505);
-      dependencyMap = subblock(9278).useCollectiblesAnalyticsContext();
+      dependencyMap = subblock(9290).useCollectiblesAnalyticsContext();
       const assetUrl = subblock.assetUrl;
-      let obj2 = subblock(9278);
+      let obj2 = subblock(9290);
       let items = [stateFromStores];
       stateFromStores = subblock(504).useStateFromStores(items, () =>
         CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
@@ -150,14 +150,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         date = new Date(unpublishedAt);
       }
       let obj5 = {
-        onChange: subblock(16943).useTrackProductCardImpression(
+        onChange: subblock(16962).useTrackProductCardImpression(
           subblock.categoryStoreListingId,
           "mobile_home",
           "featured_block",
         ).handleCardVisibilityChange,
         children: null,
       };
-      let obj4 = subblock(16943);
+      let obj4 = subblock(16962);
       const obj6 = {
         accessibilityRole: "button",
         accessibilityLabel: null,
@@ -232,13 +232,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const items1 = [tmp11Result];
       const obj8 = { radius: nativeDefault.radii.lg };
-      let result = subblock(7608).shouldShowLimitedTimeBadge(date);
+      let result = subblock(7611).shouldShowLimitedTimeBadge(date);
       if (result) {
         const obj11 = { style: tmp.limitedTimeBadge };
-        result = closure_7(tmp2(9341).LimitedTimeBadge, obj11);
+        result = closure_7(tmp2(9353).LimitedTimeBadge, obj11);
       }
       items1[1] = result;
       obj6.children = items1;
-      obj5.children = closure_8(subblock(6856).PressableOpacity, obj6);
+      obj5.children = closure_8(subblock(6859).PressableOpacity, obj6);
       return closure_7(tmp13, obj5);
     };

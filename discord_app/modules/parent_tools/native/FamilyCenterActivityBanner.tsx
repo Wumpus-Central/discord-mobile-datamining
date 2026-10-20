@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = useAgeSpecificText;
       const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp13, tmp14);
-      const tmp4Result = importDefault(tmp5 ? 15958 : 15959);
+      const tmp4Result = importDefault(tmp5 ? 15977 : 15978);
       if (cResult[4] === tmp6.art) {
         if (cResult[5] === tmp4Result) {
           let tmp19 = cResult[6];
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const formatResult = intl3.format(_modDef2526.MXjDSv, {
         articleLink: "https://support.discord.com/hc/articles/14155060633623",
       });
-      obj5.source = importDefault(tmp3 ? 15958 : 15959);
+      obj5.source = importDefault(tmp3 ? 15977 : 15978);
       obj5.style = tmp4.art;
       const items = [
         React4(FastImageDefault, obj5),

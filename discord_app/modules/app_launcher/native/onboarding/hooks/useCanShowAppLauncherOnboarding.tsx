@@ -13,7 +13,7 @@ import AppLauncherOnboardingPersistedStore from "../stores/AppLauncherOnboarding
 import AppLauncherOnboardingStore from "../stores/AppLauncherOnboardingStore.tsx";
 
 require = fn;
-const BuiltInSectionId = fn(5938).BuiltInSectionId;
+const BuiltInSectionId = fn(5941).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let c10 = result;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;

@@ -65,7 +65,7 @@ export default noop.memo(
         ({ guild, markAsDismissed } = arg0);
         const tmp4 = closure_13();
         let obj = markAsDismissed(576);
-        let first = markAsDismissed(17349).useUnclaimedGameIdsForGuild(guild.id)[0];
+        let first = markAsDismissed(17368).useUnclaimedGameIdsForGuild(guild.id)[0];
         if (first == null) {
           first = null;
         }
@@ -77,7 +77,7 @@ export default noop.memo(
         } else {
           first1 = cResult[0];
         }
-        const obj2 = markAsDismissed(17349);
+        const obj2 = markAsDismissed(17368);
         ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
         if (null == coverImageUrl) {
           return null;
@@ -109,7 +109,7 @@ export default noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp18 = closure_8(markAsDismissed(6879).XSmallIcon, { size: "sm", color: "text-default" });
+            const tmp18 = closure_8(markAsDismissed(6882).XSmallIcon, { size: "sm", color: "text-default" });
             cResult[5] = tmp18;
             let tmp16 = tmp18;
           } else {
@@ -154,7 +154,7 @@ export default noop.memo(
                   if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl4 = markAsDismissed(1128).intl;
                     const stringResult2 = intl4.string(markAsDismissed(1128).t["2u6ZlY"]);
-                    const tmp38 = closure_8(markAsDismissed(8035).LinkExternalSmallIcon, {
+                    const tmp38 = closure_8(markAsDismissed(8039).LinkExternalSmallIcon, {
                       size: "xs",
                       color: "white",
                     });
@@ -202,9 +202,9 @@ export default noop.memo(
                                 v1 = 1;
                                 v3 = 1;
                                 const obj5 = {
-                                  value: v1(7375).redirectDeveloperPortalWithHandoffToken(
+                                  value: v1(7378).redirectDeveloperPortalWithHandoffToken(
                                     constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                                    v3(7379).LoginHandoffSource.GAME_CLAIM,
+                                    v3(7382).LoginHandoffSource.GAME_CLAIM,
                                   ),
                                   done: false,
                                 };
@@ -256,7 +256,7 @@ export default noop.memo(
                     const obj6 = { variant: "secondary", style: tmp4.card, children: null };
                     const items = [tmp19, tmp22, tmp27, tmp31, tmp43];
                     obj6.children = items;
-                    const tmp49 = closure_9(markAsDismissed(6853).Card, obj6);
+                    const tmp49 = closure_9(markAsDismissed(6856).Card, obj6);
                     cResult[29] = tmp4.card;
                     cResult[30] = tmp27;
                     cResult[31] = tmp31;
@@ -300,7 +300,7 @@ export default noop.memo(
             tmp27 = tmp29;
           }
           const obj10 = { accessibilityRole: "button", onPress: tmp15, style: tmp4.closeButton, children: tmp16 };
-          const tmp21 = closure_8(markAsDismissed(6856).PressableOpacity, obj10);
+          const tmp21 = closure_8(markAsDismissed(6859).PressableOpacity, obj10);
           cResult[6] = tmp4.closeButton;
           cResult[7] = tmp15;
           cResult[8] = tmp21;
@@ -392,9 +392,9 @@ export default noop.memo(
                     v1 = 1;
                     v3 = 1;
                     const obj5 = {
-                      value: v1(7375).redirectDeveloperPortalWithHandoffToken(
+                      value: v1(7378).redirectDeveloperPortalWithHandoffToken(
                         constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                        v3(7379).LoginHandoffSource.GAME_CLAIM,
+                        v3(7382).LoginHandoffSource.GAME_CLAIM,
                       ),
                       done: false,
                     };

@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function PasswordlessUpsellPromoSheet() {
       const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: tmp(16781), style: { height: 190, width: 220, resizeMode: "contain" } };
+        let obj2 = { source: tmp(16800), style: { height: 190, width: 220, resizeMode: "contain" } };
         const tmp8 = closure_6(FastImageDefault, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const intl = ref(1128).intl;
                 obj3.name = intl.string(ref(1128).t["8H5RmH"]);
                 obj2.params = obj3;
-                ref(7436).openUserSettings(obj2);
+                ref(7439).openUserSettings(obj2);
               },
             };
             NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {});
@@ -112,8 +112,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj6.text = intl4.string(tmp(1128).t["7J6/nG"]);
           items[1] = closure_6(tmp(5205).Button, obj6);
           obj5.children = items;
-          obj4.actions = closure_7(tmp(6644).ButtonGroup, obj5);
-          const tmp23 = closure_6(tmp(10649).PromoSheet, obj4);
+          obj4.actions = closure_7(tmp(6647).ButtonGroup, obj5);
+          const tmp23 = closure_6(tmp(10660).PromoSheet, obj4);
           cResult[7] = tmp23;
           let tmp20 = tmp23;
         } else {
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function PasswordlessUpsellPromoSheet() {
       let obj = {
-        source: require("../../../../_runtime/metro/16781__.js"),
+        source: require("../../../../_runtime/metro/16800__.js"),
         style: { height: 190, width: 220, resizeMode: "contain" },
       };
       _require = noop.useRef(false);
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const intl = ref(1128).intl;
                 obj3.name = intl.string(ref(1128).t["8H5RmH"]);
                 obj2.params = obj3;
-                ref(7436).openUserSettings(obj2);
+                ref(7439).openUserSettings(obj2);
               },
             };
             NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {});

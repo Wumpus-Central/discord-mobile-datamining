@@ -9,10 +9,10 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import guild_GuildUtils from "../../../guild/GuildUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GuildBadgeDefault = tmp10(6835);
+const GuildBadgeDefault = tmp10(6838);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(6832).ExpressionSourceGuildRecord;
+let closure_4 = fn(6835).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4945);
@@ -378,7 +378,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 const intl3 = tmp16(1128).intl;
                 obj17.children = intl3.string(tmp16(1128).t.riu2R5);
                 obj16.children = tmp9(tmp16(5195).Text, obj17);
-                let tmp9Result = tmp9(tmp16(6856).PressableOpacity, obj16);
+                let tmp9Result = tmp9(tmp16(6859).PressableOpacity, obj16);
               }
               const obj18 = { children: null };
               items4[2] = tmp9Result;
@@ -407,7 +407,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj21 = {
         style: tmp.guildIcon,
         guild: fromGuildType,
-        size: guild(6831).GuildIconSizes.XLARGE,
+        size: guild(6834).GuildIconSizes.XLARGE,
         animate: true,
       };
       tmp7 = closure_5(GuildIconDefault, obj21);

@@ -20,11 +20,11 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(11252);
+const usePipDimensionsDefault = tmp5(11263);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9697).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9710).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1087).PictureInPicturePositions;
 const ParticipantTypes = fn(5593).ParticipantTypes;
 const jsxProd = fn(21);
@@ -376,8 +376,8 @@ let closure_19 = noop.memo(
             }
           }
           const tmpResult8 = tmp(504);
-          const shouldForcePipOrientation = tmp(11249).useShouldForcePipOrientation(tmp31);
-          tmp(8616);
+          const shouldForcePipOrientation = tmp(11260).useShouldForcePipOrientation(tmp31);
+          tmp(8628);
           if (cResult[20] === channel.id) {
             class M {
               constructor() {
@@ -425,7 +425,7 @@ let closure_19 = noop.memo(
           cResult[21] = shouldForcePipOrientation;
           cResult[22] = obj2;
           tmp35 = obj2;
-          const tmpResult9 = tmp(11249);
+          const tmpResult9 = tmp(11260);
         }
         let tmp19 = stateFromStores1;
         if (null != tmp6) {

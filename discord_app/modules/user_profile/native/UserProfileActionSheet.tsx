@@ -22,7 +22,7 @@ import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7250).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7253).UserProfileThemeTypes;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
 const ACTION_SHEET_MAX_WIDTH = fn(5227).ACTION_SHEET_MAX_WIDTH;

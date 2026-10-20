@@ -27,21 +27,21 @@ export default noop.memo(
         const participants = channel.participants;
         const tmp3 = closure_5();
         let obj = channel(576);
-        const isScreenLandscape = channel(8616).useIsScreenLandscape();
+        const isScreenLandscape = channel(8628).useIsScreenLandscape();
         let num = 3;
         if (0 === channel.row) {
           num = participants.length;
         }
         if (cResult[0] !== num) {
           if (1 === num) {
-            StageTileSize = tmp(11569).StageTileSize;
+            StageTileSize = tmp(11580).StageTileSize;
             let HALF = StageTileSize.FULL;
             cResult[0] = num;
             cResult[1] = HALF;
           } else if (2 !== num) {
-            HALF = tmp(11569).StageTileSize.THIRD;
+            HALF = tmp(11580).StageTileSize.THIRD;
           }
-          HALF = tmp(11569).StageTileSize.HALF;
+          HALF = tmp(11580).StageTileSize.HALF;
         } else {
           const size = tmp5;
           let containerLandscape = isScreenLandscape;
@@ -126,7 +126,7 @@ export default noop.memo(
           cResult[4] = items;
           tmp7 = items;
         }
-        let obj2 = channel(8616);
+        let obj2 = channel(8628);
       }
     : function StageGridRow(row) {
         ({ channel: require, participants } = row);

@@ -31,7 +31,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
   }
   _require = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = tmp(8716);
+    const tmpResult = tmp(8728);
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -212,7 +212,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoCompone
     props = controls.props;
   }
   const merged = Object.assign(props);
-  return jsx(pauseWhileAppInactive(8716).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
+  return jsx(pauseWhileAppInactive(8728).default, { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null });
 });
 let closure_10 = tmp4;
 const PureComponent = noop.PureComponent;

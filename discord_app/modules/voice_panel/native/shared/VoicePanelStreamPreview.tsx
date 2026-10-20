@@ -80,7 +80,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
       if (stream != null) {
         ownerId = stream.ownerId;
       }
-      const previewUrl = stream(11583)(guildId, channelId, ownerId).previewUrl;
+      const previewUrl = stream(11594)(guildId, channelId, ownerId).previewUrl;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ApplicationStreamingStore, AuthenticationStore];
         cResult[0] = items;
@@ -113,7 +113,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         tmp13 = cResult[2];
         tmp14 = cResult[3];
       }
-      const tmp6 = stream(11583);
+      const tmp6 = stream(11594);
       ownStreamTextContainer = mode(504).useStateFromStores(first, tmp13, tmp14);
       const tmpResult = mode(504);
       class M {
@@ -198,7 +198,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
                         }
                       }
                       const obj4 = { style: animatedStyle, layout, children: cResult[14] };
-                      const tmp30 = closure_7(tmp5(7116), obj4);
+                      const tmp30 = closure_7(tmp5(7119), obj4);
                       cResult[15] = animatedStyle;
                       cResult[16] = layout;
                       cResult[17] = cResult[14];
@@ -246,8 +246,8 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         obj9.source = obj10;
         obj9.style = closure_3.absoluteFill;
         obj8.children = closure_7(tmp5(5631), obj9);
-        tmp18 = closure_7(tmp5(7116), obj8);
-        const tmp5Result = tmp5(7116);
+        tmp18 = closure_7(tmp5(7119), obj8);
+        const tmp5Result = tmp5(7119);
       }
       cResult[4] = layout;
       cResult[5] = tmp4.streamPreviewImage;
@@ -273,8 +273,8 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
       if (stream != null) {
         ownerId = stream.ownerId;
       }
-      const previewUrl = stream(11583)(guildId, channelId, ownerId).previewUrl;
-      const tmp4 = stream(11583);
+      const previewUrl = stream(11594)(guildId, channelId, ownerId).previewUrl;
+      const tmp4 = stream(11594);
       const items = [ApplicationStreamingStore, AuthenticationStore];
       const items1 = [stream];
       const stateFromStores = mode(504).useStateFromStores(
@@ -327,8 +327,8 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         obj6.source = obj7;
         obj6.style = closure_3.absoluteFill;
         obj5.children = closure_7(tmp2(5631), obj6);
-        tmp14 = closure_7(tmp2(7116), obj5);
-        const tmp2Result = tmp2(7116);
+        tmp14 = closure_7(tmp2(7119), obj5);
+        const tmp2Result = tmp2(7119);
       }
       const items2 = [tmp14];
       const obj8 = { style: animatedStyle, layout, children: null };
@@ -353,7 +353,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         tmp18Result = closure_7(closure_10, obj11);
       }
       obj8.children = tmp18Result;
-      items2[1] = closure_7(stream(7116), obj8);
+      items2[1] = closure_7(stream(7119), obj8);
       obj4.children = items2;
       return closure_8(closure_9, obj4);
     };

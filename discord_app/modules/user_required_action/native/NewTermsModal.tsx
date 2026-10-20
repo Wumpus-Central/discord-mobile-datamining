@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import showSimpleActionSheet from "../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef8953 from "../../../../_runtime/metro/08953__.js";
+import _modDef8965 from "../../../../_runtime/metro/08965__.js";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const obj20 = {
                         style: tmp67,
-                        source: _modDef8953,
+                        source: _modDef8965,
                         color: tmp4.navbarRight.tintColor,
                         onPress: handleMoreActions,
                         accessibilityRole: "button",
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => action.getAction(), []);
       const tmp5 = _slicedToArray(noop.useState(false), 2);
       importDefault = tmp5[1];
-      memo(6878).useNavigatorBackPressHandler(memo(5927).BackPressHandler.minimize);
+      memo(6881).useNavigatorBackPressHandler(memo(5930).BackPressHandler.minimize);
       dependencyMap = noop.useCallback(
         asyncGeneratorStep(async () => {
           if (c3 === 2) {
@@ -514,7 +514,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [],
       );
       const obj2 = { type: null, name: null, properties: null };
-      let obj = memo(6878);
+      let obj = memo(6881);
       obj2.type = memo(1275).ImpressionTypes.VIEW;
       obj2.name = memo(1275).ImpressionNames.USER_AGREEMENTS;
       obj2.properties = { required_action: memo };
@@ -590,15 +590,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj41 = { top };
         items3[1] = obj41;
         obj21.style = items3;
-        obj21.source = tmp2(8953);
+        obj21.source = tmp2(8965);
         obj21.color = tmp.navbarRight.tintColor;
         obj21.onPress = handleMoreActions;
         const intl9 = tmp6(1128).intl;
         obj21.accessibilityLabel = intl9.string(tmp6(1128).t["UKOtz+"]);
-        items2[2] = closure_12(tmp2(8962), obj21);
+        items2[2] = closure_12(tmp2(8974), obj21);
         obj3.children = items2;
         tmp10 = closure_13(closure_6, obj3);
-        const tmp2Result = tmp2(8962);
+        const tmp2Result = tmp2(8974);
       }
       return tmp10;
     };

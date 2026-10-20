@@ -11,7 +11,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = tmp14(5014);
 require = fn;
-let closure_4 = fn(9697).useChatInputContainerHeight;
+let closure_4 = fn(9710).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let obj = { placeholder: null };

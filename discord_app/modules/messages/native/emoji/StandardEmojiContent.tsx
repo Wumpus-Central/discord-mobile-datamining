@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp13 = cResult[5];
         }
-        const trackOpenPopout = tmp(9856).useTrackOpenPopout(tmp13);
+        const trackOpenPopout = tmp(9868).useTrackOpenPopout(tmp13);
         if (cResult[6] !== emojiNode.surrogate) {
           const result = isFavoriteEmoji(4894).convertSurrogateToBase(emojiNode.surrogate);
           cResult[6] = emojiNode.surrogate;
@@ -147,9 +147,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = cResult[7];
         }
         _require = tmp15;
-        const tmpResult = tmp(9856);
-        isFavoriteEmoji = tmp(9744).useIsFavoriteEmoji(tmp10, tmp15);
-        const tmp20 = isFavoriteEmoji(9857)(emojiNode.content);
+        const tmpResult = tmp(9868);
+        isFavoriteEmoji = tmp(9757).useIsFavoriteEmoji(tmp10, tmp15);
+        const tmp20 = isFavoriteEmoji(9869)(emojiNode.content);
         if (cResult[8] !== emojiNode.surrogate) {
           const obj4 = { surrogate: emojiNode.surrogate };
           const tmp24 = closure_6(closure_10, obj4);
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[20] !== tmp6.divider) {
                 const obj8 = { style: tmp6.divider };
-                const tmp42 = closure_6(tmp(8871).FormDivider, obj8);
+                const tmp42 = closure_6(tmp(8883).FormDivider, obj8);
                 cResult[20] = tmp6.divider;
                 cResult[21] = tmp42;
                 let tmp40 = tmp42;
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = tmp25;
         cResult[15] = tmp34;
         tmp31 = tmp34;
-        const tmpResult2 = tmp(9744);
+        const tmpResult2 = tmp(9757);
       }
       const obj11 = {};
       const merged = Object.assign(tmp4);

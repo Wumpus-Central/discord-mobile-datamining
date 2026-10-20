@@ -2838,8 +2838,20 @@ const obj2 = {
 };
 const obj3 = {
   BORDER_WIDTH: {
-    resolve() {
-      return 0;
+    resolve(enabledExperiments) {
+      enabledExperiments = enabledExperiments.enabledExperiments;
+      if (0 === enabledExperiments.length) {
+        return 0;
+      } else {
+        const iter = enabledExperiments[Symbol.iterator]();
+        while (iter !== undefined) {
+          if ("mana-badge-refresh" === iter.next()) {
+            iter.return();
+            return 1;
+          }
+        }
+        return 0;
+      }
     },
   },
 };

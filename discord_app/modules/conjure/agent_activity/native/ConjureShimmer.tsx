@@ -258,9 +258,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj10 = { style: tmp4.fill, start, end, colors: tmp22, locations };
                     obj8.children = closure_8(require("LinearGradient"), obj10);
                     obj6.children = closure_8(require("ReanimatedRexport").View, obj8);
-                    obj4.children = closure_8(require("../../../../../_runtime/metro/06914__.js"), obj6);
+                    obj4.children = closure_8(require("../../../../../_runtime/metro/06917__.js"), obj6);
                     tmp29 = closure_8(closure_6, obj4);
-                    const tmp32 = require("../../../../../_runtime/metro/06914__.js");
+                    const tmp32 = require("../../../../../_runtime/metro/06917__.js");
                   }
                   cResult[22] = live;
                   cResult[23] = tmp22;
@@ -462,9 +462,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
         obj8.children = closure_8(width(5219), obj10);
         obj6.children = closure_8(width(5014).View, obj8);
-        obj5.children = closure_8(width(6914), obj6);
+        obj5.children = closure_8(width(6917), obj6);
         tmp14 = closure_8(closure_6, obj5);
-        const tmp18 = width(6914);
+        const tmp18 = width(6917);
       }
       items3[1] = tmp14;
       obj4.children = items3;

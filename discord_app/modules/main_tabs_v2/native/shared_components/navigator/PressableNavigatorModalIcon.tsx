@@ -19,7 +19,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  const obj = { source: importDefault("back" === str ? 9617 : 9622), onPress: goBack, accessibilityLabel: null };
+  const obj = { source: importDefault("back" === str ? 9630 : 9635), onPress: goBack, accessibilityLabel: null };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -32,7 +32,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   return (
     <tmp4 isModal>
       {jsx(HeaderShared.HeaderIconButton, {
-        source: importDefault("back" === str ? 9617 : 9622),
+        source: importDefault("back" === str ? 9630 : 9635),
         onPress: goBack,
         accessibilityLabel: null,
       })}

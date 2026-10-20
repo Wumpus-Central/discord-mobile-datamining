@@ -5,7 +5,7 @@ import design_shared from "../../../../discord_common/js/packages/design/shared.
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import LinearGradientDefault from "../../../../_runtime/05219_LinearGradient.js";
-import _modDef6914 from "../../../../_runtime/metro/06914__.js";
+import _modDef6917 from "../../../../_runtime/metro/06917__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -268,7 +268,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             tmp28 = tmp31;
           }
           const obj5 = { style: tmp11, maskElement: tmp13, children: tmp19 };
-          const tmp27 = timestampProducer(_modDef6914, obj5);
+          const tmp27 = timestampProducer(_modDef6917, obj5);
           cResult[11] = tmp11;
           cResult[12] = tmp19;
           cResult[13] = tmp27;
@@ -311,7 +311,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: tmp2, start, end }),
       };
       items1[1] = glowLight;
-      const items2 = [timestampProducer(_modDef6914, obj3), children];
+      const items2 = [timestampProducer(_modDef6917, obj3), children];
       obj2.children = items2;
       return React5(hasOwnProperty, obj2);
     };

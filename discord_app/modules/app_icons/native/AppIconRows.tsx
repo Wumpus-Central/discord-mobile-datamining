@@ -7,7 +7,7 @@ import AppIconTypes from "../AppIconTypes.tsx";
 import AppIconUtils from "AppIconUtils.tsx";
 import AppIconRowDefault from "AppIconRow/AppIconRow.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import _objectDestructuringEmpty from "../../../../_runtime/12933__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/12951__objectDestructuringEmpty.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -40,7 +40,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         onLongPress = cResult[0];
       }
-      const TableRowGroup = tmp(6935).TableRowGroup;
+      const TableRowGroup = tmp(6938).TableRowGroup;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1128).intl;
         const stringResult = intl.string(tmp(1128).t.N4YDao);
@@ -133,7 +133,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           obj.onLongPress = onLongPress;
           return createElement(AppIconRowDefault, {});
         });
-        obj.children = closure_9(merged(6935).TableRowGroup, obj2);
+        obj.children = closure_9(merged(6938).TableRowGroup, obj2);
         return closure_9(View, obj);
       }
     };

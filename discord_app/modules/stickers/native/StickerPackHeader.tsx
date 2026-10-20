@@ -1,19 +1,19 @@
 // discord_app/modules/stickers/native/StickerPackHeader.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef10083 from "../../../../_runtime/metro/10083__.js";
-import _modDef10084 from "../../../../_runtime/metro/10084__.js";
+import _modDef10094 from "../../../../_runtime/metro/10094__.js";
+import _modDef10095 from "../../../../_runtime/metro/10095__.js";
 import StickerPackBannerDefault from "StickerPackBanner.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = PressableOpacity(1128);
 const native = PressableOpacity(1202);
 const Text_Text = PressableOpacity(5195);
-const StickersUtils = PressableOpacity(6442);
-const Pressables = PressableOpacity(6856);
+const StickersUtils = PressableOpacity(6445);
+const Pressables = PressableOpacity(6859);
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(10041);
+const StickerPickerConstants = fn(10052);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
@@ -256,7 +256,7 @@ export default noop.memo(
                   tmp15 = tmp18;
                 }
                 const obj13 = {
-                  source: _modDef10084,
+                  source: _modDef10095,
                   style: section.premiumIcon,
                   size: native.Icon.Sizes.EXTRA_SMALL,
                   color: section.icon.color,
@@ -273,7 +273,7 @@ export default noop.memo(
           if (result) {
             const obj14 = { style: section.iconContainer, children: null };
             const obj16 = {
-              source: _modDef10083,
+              source: _modDef10094,
               style: section.animatedIcon,
               size: native.Icon.Sizes.EXTRA_SMALL,
               color: section.icon.color,
@@ -334,7 +334,7 @@ export default noop.memo(
         if (result) {
           const obj5 = { style: tmp.iconContainer, children: null };
           const obj6 = {
-            source: _modDef10083,
+            source: _modDef10094,
             style: tmp.animatedIcon,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: tmp.icon.color,
@@ -352,7 +352,7 @@ export default noop.memo(
           children: stickerPack.name,
         };
         obj7.children = React4(native.Icon, {
-          source: _modDef10084,
+          source: _modDef10095,
           style: tmp.premiumIcon,
           size: native.Icon.Sizes.EXTRA_SMALL,
           color: tmp.icon.color,

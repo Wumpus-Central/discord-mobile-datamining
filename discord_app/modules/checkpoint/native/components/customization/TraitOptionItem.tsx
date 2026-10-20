@@ -6,8 +6,8 @@ import LinearGradientDefault from "../../../../../../_runtime/05219_LinearGradie
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import CheckpointTraitRarity from "../../../../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
-import _modDef6914 from "../../../../../../_runtime/metro/06914__.js";
-import inlineStyles from "../../../../../../_runtime/07906_inlineStyles.js";
+import _modDef6917 from "../../../../../../_runtime/metro/06917__.js";
+import inlineStyles from "../../../../../../_runtime/07910_inlineStyles.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/metro/00017__.js";
 import CheckpointConstants from "../../../CheckpointConstants.tsx";
@@ -85,7 +85,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp23;
           }
           const obj3 = { style: tmp11, maskElement: tmp13, pointerEvents: "none", children: tmp16 };
-          const tmp26 = closure_1_11(_modDef6914, obj3);
+          const tmp26 = closure_1_11(_modDef6917, obj3);
           cResult[6] = tmp11;
           cResult[7] = tmp16;
           cResult[8] = tmp26;
@@ -142,7 +142,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.maskElement = closure_1_11(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
         const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
         obj2.children = closure_1_11(LinearGradientDefault, obj3);
-        let tmp4Result = closure_1_11(_modDef6914, obj2);
+        let tmp4Result = closure_1_11(_modDef6917, obj2);
       } else {
         const items1 = [, ,];
         ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);

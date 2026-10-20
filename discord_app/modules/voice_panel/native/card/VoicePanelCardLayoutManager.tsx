@@ -18,7 +18,7 @@ function getTargetCardSize(windowWidth) {
   return Math.max(closure_1_8, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(10693);
+const VoicePanelConstants = fn(10704);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({
   BASE_TARGET_CARD_SIZE: closure_8,
@@ -26,7 +26,7 @@ const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
   VoicePanelCTACardDimensions: c10,
   VOICE_PANEL_CHUNK_DIVISOR: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(10696);
+const VoicePanelCardConstants = fn(10707);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
 const ParticipantTypes = fn(5593).ParticipantTypes;
 let closure_15 = {
@@ -937,10 +937,10 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
     }
   }
 };
-prototype["subscribeFromItem"] = function subscribeFromItem(arg0) {
+prototype["subscribeFromItem"] = function subscribeFromItem(update) {
   const self = this;
-  closure_0 = arg0;
-  this.layoutCallbacks.add(arg0);
+  closure_0 = update;
+  this.layoutCallbacks.add(update);
   return () => {
     self.layoutCallbacks.delete(closure_0);
   };

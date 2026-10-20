@@ -98,7 +98,7 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
             }
           }
           let tmp17 = channel;
-          tmp17 = tmp17(tmp15 ? 11549 : 11551);
+          tmp17 = tmp17(tmp15 ? 11560 : 11562);
           let obj2 = { participant: selectedParticipant, channel };
           const tmp16Result = <tmp17 participant={selectedParticipant} channel={channel} />;
           cResult[7] = channel;
@@ -133,13 +133,13 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
           return null;
         } else {
           let tmp18 = channel;
-          tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 11549 : 11551);
+          tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 11560 : 11562);
           let obj2 = { participant: selectedParticipant, channel };
           <tmp18 participant={selectedParticipant} channel={channel} />;
         }
       } else if (ParticipantTypes.USER === type) {
         let obj = { participant: selectedParticipant, channel };
-        return jsx(channel(11552), { participant: selectedParticipant, channel });
+        return jsx(channel(11563), { participant: selectedParticipant, channel });
       } else if (ParticipantTypes.HIDDEN_STREAM === type) {
         return null;
       } else if (ParticipantTypes.ACTIVITY === type) {

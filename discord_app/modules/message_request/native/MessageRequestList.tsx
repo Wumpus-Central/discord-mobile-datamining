@@ -868,17 +868,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let data;
       const tmp = closure_9();
       const bottom = data(1633)().bottom;
-      data = data(18060)();
-      dependencyMap = goToMessageRequestPreview(18062).useListHasSingleMessageRequest();
-      let obj = goToMessageRequestPreview(18062);
+      data = data(18083)();
+      dependencyMap = goToMessageRequestPreview(18085).useListHasSingleMessageRequest();
+      let obj = goToMessageRequestPreview(18085);
       const tmp2 = data;
-      const isRestricted = goToMessageRequestPreview(13148).useIsMessageRequestRestrictedViewer();
+      const isRestricted = goToMessageRequestPreview(13166).useIsMessageRequestRestrictedViewer();
       if (0 === data.length) {
         const obj3 = { bodyText: null };
         const intl2 = tmp4(1128).intl;
         obj3.bodyText = intl2.string(tmp4(1128).t.SXrqTf);
-        let tmp9Result = closure_7(tmp2(18065), obj3);
-        const tmp2Result = tmp2(18065);
+        let tmp9Result = closure_7(tmp2(18088), obj3);
+        const tmp2Result = tmp2(18088);
       } else {
         const items = [tmp.list];
         let num = 0;
@@ -931,7 +931,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj8.children = intl.format(tmp4(1128).t.evH4Yb, obj9);
         obj7.children = closure_7(tmp4(5195).Text, obj8);
         obj4.ListHeaderComponent = closure_7(closure_5, obj7);
-        tmp9Result = closure_7(tmp4(7168).FlashList, obj4);
+        tmp9Result = closure_7(tmp4(7171).FlashList, obj4);
         tmp4Result = tmp4(1384);
       }
       return tmp9Result;

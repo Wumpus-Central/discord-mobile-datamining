@@ -271,7 +271,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
           }
         }
         const tmpResult8 = tmp(504);
-        const strangerDangerWarning = tmp(10720).useStrangerDangerWarning(isDM.id);
+        const strangerDangerWarning = tmp(10731).useStrangerDangerWarning(isDM.id);
         if (tmp4) {
           class T {
             constructor() {

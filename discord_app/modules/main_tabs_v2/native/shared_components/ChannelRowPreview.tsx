@@ -674,7 +674,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return obj;
       }, items);
-      return closure_8(gifAutoPlay(9687), {
+      return closure_8(gifAutoPlay(9700), {
         pointerEvents: "none",
         horizontalOffset: 0,
         modifyRow(message) {

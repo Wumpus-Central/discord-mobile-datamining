@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { title: null };
           const intl = tmp(1128).intl;
           obj2.title = intl.string(tmp(1128).t.KTjjrG);
-          const tmp9 = closure_6(tmp(7194).BottomSheetTitleHeader, obj2);
+          const tmp9 = closure_6(tmp(7197).BottomSheetTitleHeader, obj2);
           cResult[3] = tmp9;
           let tmp7 = tmp9;
         } else {

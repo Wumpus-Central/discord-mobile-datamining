@@ -725,25 +725,25 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
                     const result = require("ConjureAnalytics").trackConjurePublishActionClicked(closure_0, obj4);
                     if (null != busy.disabledReason) {
                       platform.showPublishBlocked(
-                        num2(11711).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER,
+                        num2(11725).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER,
                         busy.disabledReason,
                       );
                     }
                     const obj7 = require("ConjureAnalytics");
                   }
-                  num2(11079).preparePublish(closure_0);
+                  num2(11091).preparePublish(closure_0);
                   if (null == busy.confirmReason) {
                     c5 = num3;
                     const obj5 = { value: continuePublish(closure_0, busy, tmp24), done: false };
                     return obj5;
                   } else {
-                    num2 = num2(11711).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
+                    num2 = num2(11725).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
                     flag = busy.confirmReason;
                     platform.showPublishBlocked(num2, flag, () => {
                       closure_2_28(closure_0, busy, closure_1).catch(() => {});
                     });
                   }
-                  const num2Result = num2(11079);
+                  const num2Result = num2(11091);
                 }
               }
             }
@@ -968,13 +968,13 @@ let closure_29 = async function _continuePublish() {
           closure_139_25.add(closure_138_0);
           c12 = 2;
           const requestConsent = closure_138_4.requestConsent;
-          f157667 = requestConsent;
+          f157857 = requestConsent;
           if (requestConsent == null) {
-            f157667 = (arg0) => closure_2_18(arg0, closure_1_3);
+            f157857 = (arg0) => closure_2_18(arg0, closure_1_3);
           }
           c14 = 5;
           c15 = 1;
-          const obj11 = { value: f157667(closure_138_0), done: false };
+          const obj11 = { value: f157857(closure_138_0), done: false };
           return obj11;
         }
       } catch (tmp105) {
@@ -991,7 +991,7 @@ let closure_29 = async function _continuePublish() {
     }
   })();
 };
-let ConjureProjectStore = fn(6721);
+let ConjureProjectStore = fn(6724);
 ({ canPublishProject: closure_11, isProjectOwner: closure_12 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const Permissions = fn(1087).Permissions;

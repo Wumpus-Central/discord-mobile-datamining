@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== title) {
         const obj2 = { title };
-        const tmp8 = jsx(onChange(7194).BottomSheetTitleHeader, { title });
+        const tmp8 = jsx(onChange(7197).BottomSheetTitleHeader, { title });
         cResult[2] = title;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { value, onChange: tmp5, hasIcons: false, children: cResult[5] };
-        const tmp16 = jsx(onChange(6933).TableRadioGroup, {
+        const tmp16 = jsx(onChange(6936).TableRadioGroup, {
           value,
           onChange: tmp5,
           hasIcons: false,

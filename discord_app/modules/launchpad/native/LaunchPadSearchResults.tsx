@@ -61,7 +61,7 @@ function renderSearchResultsSection() {
   return React6(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6653).UnreadSetting;
+const UnreadSetting = fn(6656).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
@@ -351,7 +351,7 @@ let closure_14 = noop.memo(
         items4[2] = renderChannelContentDefault(obj8);
         obj5.children = items4;
         obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-        return tmp7(closure_9(guild(6856).PressableHighlight, obj4));
+        return tmp7(closure_9(guild(6859).PressableHighlight, obj4));
       },
 );
 ReactCompilerGating = fn(558);

@@ -126,14 +126,14 @@ function GiftPurchaseSKUView(selectedSkuId) {
   [first, dependencyMap] = noop.useState(false);
   const currentUser = memo1.getCurrentUser();
   _slicedToArray = noop.useRef({});
-  const giftStyle = selectedSkuId(10368).useNativeGiftContext().giftStyle;
+  const giftStyle = selectedSkuId(10379).useNativeGiftContext().giftStyle;
   let obj = noop;
-  let obj2 = selectedSkuId(10368);
+  let obj2 = selectedSkuId(10379);
   const tmp3 = _slicedToArray;
   let items = [closure_8];
   const stateFromStores = selectedSkuId(504).useStateFromStores(items, () => SKUStore.get(selectedSkuId));
   let obj3 = selectedSkuId(504);
-  const fetchCollectiblesProduct = selectedSkuId(10843).useFetchCollectiblesProduct(selectedSkuId);
+  const fetchCollectiblesProduct = selectedSkuId(10854).useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   noop = product;
   let isFetching = fetchCollectiblesProduct.isFetching;
@@ -277,9 +277,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
       options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
     },
   };
-  closure_8 = tmp(13692)(obj6);
+  closure_8 = tmp(13710)(obj6);
   const items5 = [product];
-  let obj4 = selectedSkuId(10843);
+  let obj4 = selectedSkuId(10854);
   const obj7 = {
     isGift: true,
     options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
@@ -361,16 +361,16 @@ function GiftPurchaseSKUView(selectedSkuId) {
       disabled: isFetching,
     }),
   };
-  items7[1] = closure_12(selectedSkuId(6853).Card, obj9);
+  items7[1] = closure_12(selectedSkuId(6856).Card, obj9);
   const obj11 = { children: null };
   const obj12 = { variant: "text-md/medium", color: "text-overlay-light", children: null };
   const items8 = ["Select style: ", giftStyle];
   obj12.children = items8;
-  const items9 = [closure_11(selectedSkuId(5195).Text, obj12), closure_12(first(10503), {})];
+  const items9 = [closure_11(selectedSkuId(5195).Text, obj12), closure_12(first(10514), {})];
   obj11.children = items9;
-  items7[2] = closure_11(selectedSkuId(6853).Card, obj11);
+  items7[2] = closure_11(selectedSkuId(6856).Card, obj11);
   obj8.children = items7;
-  return closure_11(selectedSkuId(5932).Stack, obj8);
+  return closure_11(selectedSkuId(5935).Stack, obj8);
 }
 const View = fn(17).View;
 let closure_9 = fn(1087).PriceSetAssignmentPurchaseTypes;
@@ -518,7 +518,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const obj3 = { selectedSkuId, giftRecipientId, giftMessage: giftMessage.giftMessage };
             obj2.children = closure_12(GiftPurchaseSKUView, obj3);
-            let tmp6Result = closure_12(tmp(10368).NativeGiftContextProvider, obj2);
+            let tmp6Result = closure_12(tmp(10379).NativeGiftContextProvider, obj2);
             let tmp8 = closure_12;
           }
           const obj4 = { children: tmp6Result };

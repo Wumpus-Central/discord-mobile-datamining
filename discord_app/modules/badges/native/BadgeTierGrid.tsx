@@ -301,8 +301,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tiers == null) {
         tiers = [];
       }
-      const tmp9 = isViewingOtherUser(9871);
-      obj4.children = isViewingOtherUser(9871)(tiers, 3).map((arr) =>
+      const tmp9 = isViewingOtherUser(9883);
+      obj4.children = isViewingOtherUser(9883)(tiers, 3).map((arr) =>
         React4(
           View,
           {
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (complex_icon_static_url == null) {
                 complex_icon_static_url = owned.complex_icon_static_url;
               }
-              const tierRowSubtitle = badge(10917).getTierRowSubtitle({
+              const tierRowSubtitle = badge(10928).getTierRowSubtitle({
                 tier: owned,
                 isUnlocked: owned,
                 isViewingOtherUser,
@@ -344,8 +344,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 items1[1] = dimmedIcon;
                 obj4.style = items1;
-                tmp9Result = closure_2_4(isViewingOtherUser(10909), obj4);
-                const tmp11 = isViewingOtherUser(10909);
+                tmp9Result = closure_2_4(isViewingOtherUser(10920), obj4);
+                const tmp11 = isViewingOtherUser(10920);
               }
               const items2 = [tmp9Result, ,];
               let tmp13Result = null != owned.name;
@@ -369,7 +369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let tmp15 = !owned;
                 if (!owned) {
                   const obj7 = { size: "xxs", color: isViewingOtherUser(587).colors.ICON_MUTED };
-                  tmp15 = closure_2_4(badge(8511).LockIcon, obj7);
+                  tmp15 = closure_2_4(badge(8515).LockIcon, obj7);
                 }
                 const items3 = [tmp15];
                 let str2 = "text-muted";

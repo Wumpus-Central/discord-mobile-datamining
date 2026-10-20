@@ -42,9 +42,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { children: null };
         const obj3 = { hasIcons: true, children: null };
         const obj4 = { icon: tmp5, label: tmp6, onPress: tmp4 };
-        obj3.children = jsx(tmp(6851).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
-        obj2.children = jsx(tmp(6935).TableRowGroup, { hasIcons: true, children: null });
-        const tmp12 = jsx(tmp(7244).ActionSheet, { children: null });
+        obj3.children = jsx(tmp(6854).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
+        obj2.children = jsx(tmp(6938).TableRowGroup, { hasIcons: true, children: null });
+        const tmp12 = jsx(tmp(7247).ActionSheet, { children: null });
         cResult[4] = tmp4;
         cResult[5] = tmp12;
         let tmp10 = tmp12;
@@ -67,11 +67,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = emojiSrc(1128).intl;
       obj3.label = intl.string(emojiSrc(1128).t.cIoudn);
       obj3.onPress = callback;
-      obj2.children = jsx(emojiSrc(6851).TableRow, {
+      obj2.children = jsx(emojiSrc(6854).TableRow, {
         icon: jsx(emojiSrc(5640).LinkIcon, {}),
         label: null,
         onPress: null,
       });
-      obj.children = jsx(emojiSrc(6935).TableRowGroup, { hasIcons: true, children: null });
-      return jsx(emojiSrc(7244).ActionSheet, { children: null });
+      obj.children = jsx(emojiSrc(6938).TableRowGroup, { hasIcons: true, children: null });
+      return jsx(emojiSrc(7247).ActionSheet, { children: null });
     };

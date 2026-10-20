@@ -2,7 +2,7 @@
 import NativeFileModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import bridgeProtocol from "../../../../../discord_common/js/packages/embedded-app-shims/src/native-shell/bridgeProtocol.tsx";
-import _modDef11360 from "../../../../../_runtime/metro/11360__.js";
+import _modDef11371 from "../../../../../_runtime/metro/11371__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -13,7 +13,7 @@ function generateWebViewHtml(arg0) {
   ({ iframeUri, iframeSandboxAttributes, referrerPolicy, shimBridgeSecret } = arg0);
   let str = "";
   if (null != shimBridgeSecret) {
-    const tmp3 = _modDef11360;
+    const tmp3 = _modDef11371;
     const _JSON = JSON;
     const _JSON2 = JSON;
     const json = JSON.stringify(shimBridgeSecret);
@@ -188,7 +188,7 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
     }
   }
 };
-let closure_4 = fn(11050).EMBEDDED_APP_FRAME_ELEMENT_ID;
+let closure_4 = fn(11062).EMBEDDED_APP_FRAME_ELEMENT_ID;
 const discord_activity_data = "discord_activity_data";
 let c7 = null;
 const size = fn(2);

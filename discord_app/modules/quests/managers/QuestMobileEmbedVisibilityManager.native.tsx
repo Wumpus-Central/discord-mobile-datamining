@@ -22,10 +22,10 @@ import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ChannelDetailsStore = fn(9627);
+const ChannelDetailsStore = fn(9640);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
 const isTextChannel = fn(4804).isTextChannel;
-let closure_16 = fn(9491).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_16 = fn(9504).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1087).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -215,7 +215,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(6750).isChannelFocused();
+      let isChannelFocusedResult = applyArgumentsResult(6753).isChannelFocused();
       applyArgumentsResult(5111);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;

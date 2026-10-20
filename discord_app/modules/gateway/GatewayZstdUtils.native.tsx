@@ -5,7 +5,15 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
-  return NativeCompressionModuleDefault.getConstants().supportsZstd;
+  constants = NativeCompressionModuleDefault.getConstants();
+  let flag;
+  if (constants != null) {
+    flag = constants.supportsZstd;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
 };
 export const createZstdContextWeb = function createZstdContextWeb() {
   const error = new Error(

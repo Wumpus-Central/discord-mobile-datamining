@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guild = guild.guild;
       const application = guild.application;
       const tmp4 = closure_15();
-      guild(8740);
+      guild(8752);
       if (null == application) {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              tmp52[0] = application(11039);
+              tmp52[0] = application(11051);
               const tmp53 = closure_12(application(5631), tmp52);
               cResult[26] = tmp53;
               const tmp49 = tmp53;

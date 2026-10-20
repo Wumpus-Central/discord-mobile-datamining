@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef7494 from "../../../../../_runtime/metro/07494__.js";
-import _modDef7496 from "../../../../../_runtime/metro/07496__.js";
+import _modDef7497 from "../../../../../_runtime/metro/07497__.js";
+import _modDef7499 from "../../../../../_runtime/metro/07499__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -32,16 +32,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = closure_8();
       const tmp5 = useIsWindowLargeDefault();
       if (premiumType === PremiumTypes.TIER_0) {
-        const tmp4Result = importDefault(tmp5 ? 9733 : 9734);
+        const tmp4Result = importDefault(tmp5 ? 9746 : 9747);
         if (cResult[0] !== tmp4Result) {
-          const obj2 = { wumpusImageSource: _modDef7494, cloudsImageSource: tmp4Result };
+          const obj2 = { wumpusImageSource: _modDef7497, cloudsImageSource: tmp4Result };
           cResult[0] = tmp4Result;
           cResult[1] = obj2;
         }
       } else {
-        const tmp4Result2 = importDefault(tmp5 ? 9735 : 9736);
+        const tmp4Result2 = importDefault(tmp5 ? 9748 : 9749);
         if (cResult[2] !== tmp4Result2) {
-          const obj3 = { wumpusImageSource: _modDef7496, cloudsImageSource: tmp4Result2 };
+          const obj3 = { wumpusImageSource: _modDef7499, cloudsImageSource: tmp4Result2 };
           cResult[2] = tmp4Result2;
           cResult[3] = obj3;
           let tmp8 = obj3;
@@ -105,14 +105,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [premiumType, tmp2];
       const memo = noop.useMemo(() => {
         if (premiumType === PremiumTypes.TIER_0) {
-          const obj2 = { wumpusImageSource: _modDef7494, cloudsImageSource: importDefault(closure_1 ? 9733 : 9734) };
+          const obj2 = { wumpusImageSource: _modDef7497, cloudsImageSource: importDefault(closure_1 ? 9746 : 9747) };
         } else {
           if (closure_1) {
-            let tmp4 = 9735;
+            let tmp4 = 9748;
           } else {
-            tmp4 = 9736;
+            tmp4 = 9749;
           }
-          const obj = { wumpusImageSource: _modDef7496, cloudsImageSource: importDefault(tmp4) };
+          const obj = { wumpusImageSource: _modDef7499, cloudsImageSource: importDefault(tmp4) };
           return obj;
         }
       }, items);

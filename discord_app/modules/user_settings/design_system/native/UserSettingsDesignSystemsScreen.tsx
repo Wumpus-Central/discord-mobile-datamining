@@ -57,7 +57,7 @@ function getDesignSystemsSettings() {
   items1[4] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(8276).MobileUserSettings;
+const MobileUserSettings = fn(8280).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

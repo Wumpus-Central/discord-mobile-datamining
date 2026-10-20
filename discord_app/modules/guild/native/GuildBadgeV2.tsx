@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const native = Icon(1202);
 const shared = Icon(4952);
-const GuildBadgeImageSource = Icon(9158);
+const GuildBadgeImageSource = Icon(9170);
 require = fn;
 let closure_2 = ["guild", "size"];
 const jsx = fn(21).jsx;

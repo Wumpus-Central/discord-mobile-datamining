@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef11431 from "../../../../../_runtime/metro/11431__.js";
+import _modDef11442 from "../../../../../_runtime/metro/11442__.js";
 import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -206,7 +206,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp12 = tmp5;
         if (tmp5) {
-          const obj4 = { source: _modDef11431, style: tmp4.socialBadgeArrow };
+          const obj4 = { source: _modDef11442, style: tmp4.socialBadgeArrow };
           tmp12 = closure_1_14(native.Icon, obj4);
         }
         cResult[5] = tmp5;
@@ -248,7 +248,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }),
       ];
       if (tmp5Result) {
-        const obj3 = { source: _modDef11431, style: tmp.socialBadgeArrow };
+        const obj3 = { source: _modDef11442, style: tmp.socialBadgeArrow };
         tmp5Result = closure_1_14(native.Icon, obj3);
       }
       items[2] = tmp5Result;

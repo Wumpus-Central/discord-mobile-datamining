@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, PlatformTypes: closure_11, ThemeTypes: closure_12 } = Constants);
-const MetadataFields = fn(7222).MetadataFields;
+const MetadataFields = fn(7225).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const createStyles = fn(4945);
@@ -60,50 +60,50 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
     metadata = {};
   }
   if (showMetadata) {
-    const createdAtDate = tmp(7221).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], account.locale);
-    const tmpResult = tmp(7221);
+    const createdAtDate = tmp(7224).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], account.locale);
+    const tmpResult = tmp(7224);
   }
   if (showMetadata) {
     const type = account.type;
     if (constants.REDDIT === type) {
-      let redditMetadataItems = tmp(11162).generateRedditMetadataItems(metadata, tmp4.metadataItem);
-      const tmpResult11 = tmp(11162);
+      let redditMetadataItems = tmp(11173).generateRedditMetadataItems(metadata, tmp4.metadataItem);
+      const tmpResult11 = tmp(11173);
     } else if (constants.STEAM === type) {
-      redditMetadataItems = tmp(11162).generateSteamMetadataItems(metadata, tmp4.metadataItem);
-      const tmpResult12 = tmp(11162);
+      redditMetadataItems = tmp(11173).generateSteamMetadataItems(metadata, tmp4.metadataItem);
+      const tmpResult12 = tmp(11173);
     } else {
       if (constants.BLUESKY !== type) {
         if (constants.MASTODON !== type) {
           if (constants.TWITTER !== type) {
             if (constants.PAYPAL === type) {
-              redditMetadataItems = tmp(11162).generatePaypalMetadataItems(metadata, tmp4.metadataItem);
-              const tmpResult13 = tmp(11162);
+              redditMetadataItems = tmp(11173).generatePaypalMetadataItems(metadata, tmp4.metadataItem);
+              const tmpResult13 = tmp(11173);
             } else if (constants.EBAY === type) {
-              redditMetadataItems = tmp(11162).generateEbayMetadataItems(metadata, tmp4.metadataItem);
-              const tmpResult14 = tmp(11162);
+              redditMetadataItems = tmp(11173).generateEbayMetadataItems(metadata, tmp4.metadataItem);
+              const tmpResult14 = tmp(11173);
             } else if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp(11162).generateTikTokMetadataItems(metadata, tmp4.metadataItem);
-              const tmpResult15 = tmp(11162);
+              redditMetadataItems = tmp(11173).generateTikTokMetadataItems(metadata, tmp4.metadataItem);
+              const tmpResult15 = tmp(11173);
             }
           }
         }
       }
-      const twitterMetadataItems = tmp(11162).generateTwitterMetadataItems(metadata, tmp4.metadataItem);
+      const twitterMetadataItems = tmp(11173).generateTwitterMetadataItems(metadata, tmp4.metadataItem);
       redditMetadataItems = twitterMetadataItems;
       if ("1" === metadata[MetadataFields.TWITTER_VERIFIED]) {
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          value = userId(6456).get(constants.TWITTER);
+          value = userId(6459).get(constants.TWITTER);
           cResult[0] = value;
           let first = value;
-          const obj7 = userId(6456);
+          const obj7 = userId(6459);
         } else {
           first = cResult[0];
         }
         const color = first.color;
         redditMetadataItems = twitterMetadataItems;
       }
-      const tmpResult16 = tmp(11162);
+      const tmpResult16 = tmp(11173);
     }
   }
   if (cResult[1] === account) {
@@ -115,7 +115,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
     if (null != showInvisibleIcon) {
       if (showInvisibleIcon) {
         if (cResult[6] !== tmp4.connectedAccountOpenHide) {
-          let obj2 = { style: tmp4.connectedAccountOpenHide, source: userId(11165) };
+          let obj2 = { style: tmp4.connectedAccountOpenHide, source: userId(11176) };
           const tmp30 = closure_14(tmp(1202).Icon, obj2);
           cResult[6] = tmp4.connectedAccountOpenHide;
           cResult[7] = tmp30;
@@ -124,7 +124,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
     }
     if (null != tmp16) {
       if (cResult[8] !== tmp4.connectedAccountOpenLink) {
-        const obj3 = { style: tmp4.connectedAccountOpenLink, source: userId(11166) };
+        const obj3 = { style: tmp4.connectedAccountOpenLink, source: userId(11177) };
         const tmp26 = closure_14(tmp(1202).Icon, obj3);
         cResult[8] = tmp4.connectedAccountOpenLink;
         cResult[9] = tmp26;
@@ -370,9 +370,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
         }
       }
       tmp38[0] = tmp4.verifiedCheckContainer;
-      const obj5 = { style: tmp4.verifiedCheck, size: tmp(1202).Icon.Sizes.REFRESH_SMALL_16, source: userId(11167), color: token };
+      const obj5 = { style: tmp4.verifiedCheck, size: tmp(1202).Icon.Sizes.REFRESH_SMALL_16, source: userId(11178), color: token };
       const items = [closure_14(tmp(1202).Icon, obj5), ];
-      const obj6 = { style: tmp4.verifiedCheck, size: tmp(1202).Icon.Sizes.REFRESH_SMALL_16, source: userId(11168), color: WHITE };
+      const obj6 = { style: tmp4.verifiedCheck, size: tmp(1202).Icon.Sizes.REFRESH_SMALL_16, source: userId(11179), color: WHITE };
       items[1] = closure_14(tmp(1202).Icon, obj6);
       tmp38[1] = items;
       tmp36 = closure_15(closure_5, tmp38);
@@ -386,8 +386,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
     const tmpResult18 = tmp(5213);
   }
   let obj = account(576);
-  value2 = userId(6456).get(account.type);
-  const obj10 = userId(6456);
+  value2 = userId(6459).get(account.type);
+  const obj10 = userId(6459);
   const tmpResult19 = account(1417);
   if (tmpResult20.isThemeDark(theme)) {
     class H {
@@ -513,47 +513,47 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
   }
   let createdAtDate = null;
   if (showMetadata) {
-    createdAtDate = account(7221).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], locale);
-    let obj2 = account(7221);
+    createdAtDate = account(7224).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], locale);
+    let obj2 = account(7224);
   }
   if (showMetadata) {
     const type = account.type;
     if (constants.REDDIT === type) {
-      let redditMetadataItems = account(11162).generateRedditMetadataItems(metadata, tmp.metadataItem);
-      const obj8 = account(11162);
+      let redditMetadataItems = account(11173).generateRedditMetadataItems(metadata, tmp.metadataItem);
+      const obj8 = account(11173);
     } else if (constants.STEAM === type) {
-      redditMetadataItems = account(11162).generateSteamMetadataItems(metadata, tmp.metadataItem);
-      const obj7 = account(11162);
+      redditMetadataItems = account(11173).generateSteamMetadataItems(metadata, tmp.metadataItem);
+      const obj7 = account(11173);
     } else {
       if (constants.BLUESKY !== type) {
         if (constants.MASTODON !== type) {
           if (constants.TWITTER !== type) {
             if (constants.PAYPAL === type) {
-              redditMetadataItems = account(11162).generatePaypalMetadataItems(metadata, tmp.metadataItem);
-              const obj4 = account(11162);
+              redditMetadataItems = account(11173).generatePaypalMetadataItems(metadata, tmp.metadataItem);
+              const obj4 = account(11173);
             } else if (constants.EBAY === type) {
-              redditMetadataItems = account(11162).generateEbayMetadataItems(metadata, tmp.metadataItem);
-              const obj3 = account(11162);
+              redditMetadataItems = account(11173).generateEbayMetadataItems(metadata, tmp.metadataItem);
+              const obj3 = account(11173);
             } else if (constants.TIKTOK === type) {
-              redditMetadataItems = account(11162).generateTikTokMetadataItems(metadata, tmp.metadataItem);
-              const obj30 = account(11162);
+              redditMetadataItems = account(11173).generateTikTokMetadataItems(metadata, tmp.metadataItem);
+              const obj30 = account(11173);
             }
           }
         }
       }
-      const twitterMetadataItems = account(11162).generateTwitterMetadataItems(metadata, tmp.metadataItem);
+      const twitterMetadataItems = account(11173).generateTwitterMetadataItems(metadata, tmp.metadataItem);
       redditMetadataItems = twitterMetadataItems;
       if ("1" === metadata[MetadataFields.TWITTER_VERIFIED]) {
-        const color = userId(6456).get(constants.TWITTER).color;
+        const color = userId(6459).get(constants.TWITTER).color;
         redditMetadataItems = twitterMetadataItems;
-        const obj6 = userId(6456);
+        const obj6 = userId(6459);
       }
-      const obj5 = account(11162);
+      const obj5 = account(11173);
     }
   }
-  value = userId(6456).get(account.type);
+  value = userId(6459).get(account.type);
   dependencyMap = value;
-  const obj9 = userId(6456);
+  const obj9 = userId(6459);
   const obj10 = account(1417);
   if (obj11.isThemeDark(theme)) {
     let darkPNG;
@@ -574,7 +574,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
   }
   if (null != showInvisibleIcon) {
     if (showInvisibleIcon) {
-      let obj = { style: tmp.connectedAccountOpenHide, source: userId(11165) };
+      let obj = { style: tmp.connectedAccountOpenHide, source: userId(11176) };
       let tmp28 = closure_14(tmp23(1202).Icon, obj);
     }
     const token = tmp23(5213).useToken(userId(587).colors.BACKGROUND_MOD_MUTED, theme);
@@ -591,9 +591,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
     let tmp34 = null;
     if (account.verified) {
       const obj12 = { style: tmp.verifiedCheckContainer, children: null };
-      const obj13 = { style: tmp.verifiedCheck, size: tmp23(1202).Icon.Sizes.REFRESH_SMALL_16, source: userId(11167), color: tmp33 };
+      const obj13 = { style: tmp.verifiedCheck, size: tmp23(1202).Icon.Sizes.REFRESH_SMALL_16, source: userId(11178), color: tmp33 };
       const items = [closure_14(tmp23(1202).Icon, obj13), ];
-      const obj14 = { style: tmp.verifiedCheck, size: tmp23(1202).Icon.Sizes.REFRESH_SMALL_16, source: userId(11168), color: WHITE };
+      const obj14 = { style: tmp.verifiedCheck, size: tmp23(1202).Icon.Sizes.REFRESH_SMALL_16, source: userId(11179), color: WHITE };
       items[1] = closure_14(tmp23(1202).Icon, obj14);
       obj12.children = items;
       tmp34 = closure_15(closure_5, obj12);
@@ -644,7 +644,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
       }
     }, items3);
     if (null != platformUserUrl) {
-      let PressableOpacity = tmp23(6856).PressableOpacity;
+      let PressableOpacity = tmp23(6859).PressableOpacity;
     } else {
       PressableOpacity = closure_4;
     }
@@ -695,7 +695,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
   }
   tmp28 = null;
   if (null != platformUserUrl) {
-    const obj26 = { style: tmp.connectedAccountOpenLink, source: userId(11166) };
+    const obj26 = { style: tmp.connectedAccountOpenLink, source: userId(11177) };
     tmp28 = closure_14(tmp23(1202).Icon, obj26);
   }
   obj11 = account(4952);
@@ -708,11 +708,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedApp
   const tmp4 = closure_17();
   closure_1 = tmp4;
   if (cResult[0] !== applicationRoleConnection) {
-    const roleConnectionMetadataItems = tmp(11162).generateRoleConnectionMetadataItems(applicationRoleConnection);
+    const roleConnectionMetadataItems = tmp(11173).generateRoleConnectionMetadataItems(applicationRoleConnection);
     cResult[0] = applicationRoleConnection;
     cResult[1] = roleConnectionMetadataItems;
     let arr = roleConnectionMetadataItems;
-    const tmpResult = tmp(11162);
+    const tmpResult = tmp(11173);
   } else {
     arr = cResult[1];
   }
@@ -836,7 +836,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedApp
                   const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
                   let tmp5 = null;
                   if (null != applicationRoleConnection.application.bot) {
-                    const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Array" };
+                    const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "a" };
                     const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
                     obj2.user = tmp12;
                     obj2.size = native.AvatarSizes.SIZE_16;
@@ -884,7 +884,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedApp
   applicationRoleConnection = applicationRoleConnection.applicationRoleConnection;
   const tmp = closure_17();
   closure_1 = tmp;
-  const roleConnectionMetadataItems = applicationRoleConnection(11162).generateRoleConnectionMetadataItems(applicationRoleConnection);
+  const roleConnectionMetadataItems = applicationRoleConnection(11173).generateRoleConnectionMetadataItems(applicationRoleConnection);
   let obj2 = { style: null, children: null };
   let items = [tmp.connectedAccountContainer, applicationRoleConnection.style];
   obj2.style = items;
@@ -920,7 +920,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedApp
       const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
       let tmp5 = null;
       if (null != applicationRoleConnection.application.bot) {
-        const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Array" };
+        const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "a" };
         const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
         obj2.user = tmp12;
         obj2.size = native.AvatarSizes.SIZE_16;
@@ -1265,7 +1265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LegacyUs
           }
         }
         obj3.children = tmp17;
-        const tmp28 = closure_14(stateFromStores(11169), obj3);
+        const tmp28 = closure_14(stateFromStores(11180), obj3);
         cResult[12] = tmp17;
         cResult[13] = tmp28;
         let tmp25 = tmp28;
@@ -1335,8 +1335,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LegacyUs
         const intl = tmp(1128).intl;
         obj4.title = intl.string(tmp(1128).t.PHjkRE);
         obj4.children = arr6;
-        tmp10 = closure_14(stateFromStores(11169), obj4);
-        const tmp13 = stateFromStores(11169);
+        tmp10 = closure_14(stateFromStores(11180), obj4);
+        const tmp13 = stateFromStores(11180);
       }
       const obj5 = { children: null };
       const items4 = [tmp10, ];
@@ -1344,10 +1344,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LegacyUs
       const intl2 = tmp(1128).intl;
       obj6.title = intl2.string(tmp(1128).t["3fe7U5"]);
       obj6.children = tmp8;
-      items4[1] = closure_14(stateFromStores(11169), obj6);
+      items4[1] = closure_14(stateFromStores(11180), obj6);
       obj5.children = items4;
       tmp17Result = closure_15(closure_16, obj5);
-      const tmp16 = stateFromStores(11169);
+      const tmp16 = stateFromStores(11180);
     }
   }
   return tmp17Result;

@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function useChannelSafeAreaBottomStyles(arg0) {
       const token = gradientBottom(5213).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
       let obj = gradientBottom(5213);
-      gradientBottom = gradientBottom(9623).useGradientBottom();
+      gradientBottom = gradientBottom(9636).useGradientBottom();
       let backgroundColor1;
       if (gradientBottom != null) {
         backgroundColor1 = gradientBottom.backgroundColor;

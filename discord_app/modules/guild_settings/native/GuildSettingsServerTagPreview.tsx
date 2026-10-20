@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8218).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8222).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const createStyles = fn(4945);
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = Card(504).useStateFromStores(tmp3, tmp4);
       const CardResult = Card(504);
-      const name = onAdopted(5944).useName(guildId, null, stateFromStores);
+      const name = onAdopted(5947).useName(guildId, null, stateFromStores);
       if (cResult[2] === stateFromStores) {
         if (cResult[3] === guildId) {
           let tmp8 = cResult[4];
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp25 = cResult[15];
                 }
                 if (cResult[16] !== card.avatar) {
-                  const obj2 = { source: onAdopted(13584), style: card.avatar, importantForAccessibility: "no" };
+                  const obj2 = { source: onAdopted(13602), style: card.avatar, importantForAccessibility: "no" };
                   const tmp29 = closure_9(onAdopted(5631), obj2);
                   cResult[16] = card.avatar;
                   cResult[17] = tmp29;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                         if (cResult[51] !== card.avatar) {
                                           const obj8 = {
-                                            source: onAdopted(15006),
+                                            source: onAdopted(15024),
                                             style: card.avatar,
                                             importantForAccessibility: "no",
                                           };
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         } else {
                                                           if (cResult[74] === tmp99) {
                                                           }
-                                                          Card = Card(6853).Card;
+                                                          Card = Card(6856).Card;
                                                           const obj11 = {
                                                             variant: "secondary",
                                                             radius: 16,
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 const obj13 = { spacing: onAdopted(587).space.PX_12, children: null };
                                                 const items4 = [tmp40, tmp68, tmp87, tmp93];
                                                 obj13.children = items4;
-                                                const tmp98 = closure_10(Card(5932).Stack, obj13);
+                                                const tmp98 = closure_10(Card(5935).Stack, obj13);
                                                 cResult[66] = tmp40;
                                                 cResult[67] = tmp68;
                                                 cResult[68] = tmp87;
@@ -428,10 +428,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             height: null,
                           };
                           ({ SIZE_12: obj14.width, SIZE_12: obj14.height } = GuildTagBadgeSize);
-                          tmp52Result = closure_9(Card(14962).GuildBadge, size);
+                          tmp52Result = closure_9(Card(14980).GuildBadge, size);
                         }
                         obj20.guildBadge = tmp52Result;
-                        tmp52Result2 = closure_9(Card(9146).BaseGuildTagChiplet, obj20);
+                        tmp52Result2 = closure_9(Card(9158).BaseGuildTagChiplet, obj20);
                       }
                       cResult[31] = badge;
                       cResult[32] = primaryColor;
@@ -545,7 +545,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp17 = t5;
         const tmp15 = _slicedToArray(noop.useState(false), 2);
       }
-      let obj4 = onAdopted(5944);
+      let obj4 = onAdopted(5947);
       let avatarURL;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(guildId, 40);
@@ -569,8 +569,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [UserStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       let obj = guildId(504);
-      const name = onAdopted(5944).useName(guildId, null, stateFromStores);
-      let obj3 = onAdopted(5944);
+      const name = onAdopted(5947).useName(guildId, null, stateFromStores);
+      let obj3 = onAdopted(5947);
       let avatarURL;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(guildId, 40);
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap(true);
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp2(14961).adoptGuildIdentity(guildId, true), done: false };
+                  const obj5 = { value: tmp2(14979).adoptGuildIdentity(guildId, true), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -675,7 +675,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.style = items3;
       const obj7 = { source: null, style: null, importantForAccessibility: "no" };
       const tmp10 = _slicedToArray(noop.useState(false), 2);
-      obj7.source = onAdopted(13584);
+      obj7.source = onAdopted(13602);
       obj7.style = tmp.avatar;
       const items4 = [closure_9(onAdopted(5631), obj7)];
       const obj8 = { style: tmp.messageBody, children: null };
@@ -713,10 +713,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             height: null,
           };
           ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-          tmp15Result = closure_9(tmp2(14962).GuildBadge, size);
+          tmp15Result = closure_9(tmp2(14980).GuildBadge, size);
         }
         obj14.guildBadge = tmp15Result;
-        tmp15Result3 = closure_9(tmp2(9146).BaseGuildTagChiplet, obj14);
+        tmp15Result3 = closure_9(tmp2(9158).BaseGuildTagChiplet, obj14);
       }
       items8[1] = tmp15Result3;
       obj13.children = items8;
@@ -736,7 +736,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj18 = { source: null, style: null, importantForAccessibility: "no" };
       const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
       const tmp4Result = onAdopted(5631);
-      obj18.source = onAdopted(15006);
+      obj18.source = onAdopted(15024);
       obj18.style = tmp.avatar;
       const items11 = [closure_9(onAdopted(5631), obj18)];
       const obj19 = { style: tmp.messageBody, children: null };
@@ -772,13 +772,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj21.onPress = callback;
       items6[3] = closure_9(guildId(5205).Button, obj21);
       obj5.children = items6;
-      items2[1] = closure_10(guildId(5932).Stack, obj5);
+      items2[1] = closure_10(guildId(5935).Stack, obj5);
       obj22.children = items2;
       const tmp13Result = closure_10(closure_11, obj22);
       let tmp15Result4 = tmp13Result;
       if ("plain" !== variant) {
         const obj23 = { variant: "secondary", radius: 16, style: tmp.card, children: tmp13Result };
-        tmp15Result4 = closure_9(tmp2(6853).Card, obj23);
+        tmp15Result4 = closure_9(tmp2(6856).Card, obj23);
       }
       return tmp15Result4;
     };

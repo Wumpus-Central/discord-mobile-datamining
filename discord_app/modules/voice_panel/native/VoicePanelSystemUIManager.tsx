@@ -7,8 +7,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(10693).VoicePanelModes;
-const VoicePanelControlsModes = fn(10691).VoicePanelControlsModes;
+const VoicePanelModes = fn(10704).VoicePanelModes;
+const VoicePanelControlsModes = fn(10702).VoicePanelControlsModes;
 const ParticipantTypes = fn(5593).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);

@@ -15,7 +15,7 @@ const useVoicePanelCardUserStateIconsDefault = useVoicePanelCardUserStateIcons;
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8833).BackgroundBlurView);
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8845).BackgroundBlurView);
 const OPACITY_TIMING = { duration: 100 };
 const createStyles = fn(4945);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
@@ -193,7 +193,7 @@ export default noop.memo(
     ? function VoicePanelHeaderUserState(isHeaderHidden) {
         const cResult = isHeaderHidden(576).c(9);
         isHeaderHidden = isHeaderHidden.isHeaderHidden;
-        const context = noop.useContext(channelId(10692));
+        const context = noop.useContext(channelId(10703));
         channelId = context.channelId;
         const guildId = context.guildId;
         const tmp6 = closure_8();
@@ -222,7 +222,7 @@ export default noop.memo(
         let obj = isHeaderHidden(576);
         const tmp4 = channelId;
         const stateFromStores = isHeaderHidden(504).useStateFromStores(first, tmp9);
-        const tmp11 = closure_9(tmp4(18229)(stateFromStores, channelId, guildId), guildId);
+        const tmp11 = closure_9(tmp4(18252)(stateFromStores, channelId, guildId), guildId);
         const tmpResult = isHeaderHidden(504);
         class P {
           constructor() {
@@ -270,7 +270,7 @@ export default noop.memo(
     : function VoicePanelHeaderUserState(isHeaderHidden) {
         isHeaderHidden = isHeaderHidden.isHeaderHidden;
         let channelId;
-        const context = noop.useContext(channelId(10692));
+        const context = noop.useContext(channelId(10703));
         channelId = context.channelId;
         const guildId = context.guildId;
         const tmp2 = closure_8();
@@ -283,7 +283,7 @@ export default noop.memo(
           }
           return id;
         });
-        const tmp4 = closure_9(channelId(18229)(stateFromStores, channelId, guildId), guildId);
+        const tmp4 = closure_9(channelId(18252)(stateFromStores, channelId, guildId), guildId);
         isHeaderHidden(5014);
         const fn = function f() {
           let num = 0;

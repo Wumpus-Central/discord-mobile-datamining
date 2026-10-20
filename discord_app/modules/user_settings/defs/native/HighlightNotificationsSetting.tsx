@@ -27,13 +27,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [GuildStore];
       return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
     };
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(8276).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8280).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);

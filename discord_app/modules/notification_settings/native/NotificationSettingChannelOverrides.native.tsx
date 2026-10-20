@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06775_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06778_fuzzysearch.js";
 import getFlattedChannelListDefault from "../../channel/getFlattedChannelList.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";

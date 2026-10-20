@@ -3,14 +3,14 @@ import LoggerDefault from "../../../debug/Logger.tsx";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import QuestTypes from "../../../quests/QuestTypes.tsx";
+import IOSAnchoredChatScrollerExperiment from "../IOSAnchoredChatScrollerExperiment.tsx";
 import NativeChatUtilsDefault from "../../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../../chat/native/ChatChangesetUpdateTracker.tsx";
 import DimensionActionCreatorsDefault from "../../../../actions/DimensionActionCreators.tsx";
-import IOSAnchoredChatScrollerExperiment from "../IOSAnchoredChatScrollerExperiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useChatBottomManagerUIStore = fn(9697);
+const useChatBottomManagerUIStore = fn(9710);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const ReactCompilerGating = fn(558);

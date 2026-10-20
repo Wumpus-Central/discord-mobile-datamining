@@ -74,11 +74,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = subLabel(576).c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1128).intl;
-        let result = tmp(11128).isIOSAnchoredChatScrollerEnabled();
+        let result = tmp(7695).isIOSAnchoredChatScrollerEnabled();
         const t = tmp(1128).t;
         const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
         cResult[0] = stringResult;
-        const tmpResult = tmp(11128);
+        const tmpResult = tmp(7695);
       } else {
         subLabel = cResult[0];
         const _Symbol = Symbol;
@@ -100,7 +100,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               const result = ToastUtils.presentCopiedToClipboard();
             },
           };
-          const tmp12 = closure_4(tmp(7240).ActionSheetRow, obj2);
+          const tmp12 = closure_4(tmp(7243).ActionSheetRow, obj2);
           cResult[2] = tmp12;
           let tmp10 = tmp12;
         } else {
@@ -429,14 +429,14 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6788).ClipboardListIcon,
+  IconComponent: fn(6791).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_9 }), "ClientClientInfoActionSheet");
   },

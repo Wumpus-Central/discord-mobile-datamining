@@ -422,9 +422,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let formatToPlainStringResult = intl.formatToPlainString(_modDef3820.t5RWBS, obj2);
           } else {
             const intl2 = intl(1128).intl;
-            const obj4 = { creator: name, collaborators: intl(12352).getListSummaryLabel(mapped) };
+            const obj4 = { creator: name, collaborators: intl(12369).getListSummaryLabel(mapped) };
             formatToPlainStringResult = intl2.formatToPlainString(_modDef3820["b5uCe/"], obj4);
-            const intlResult = intl(12352);
+            const intlResult = intl(12369);
           }
           obj.label = formatToPlainStringResult;
         }

@@ -8,8 +8,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(9564).useGuildIndexState;
-const limit = fn(5938).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9577).useGuildIndexState;
+const limit = fn(5941).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const sortApplicationsViaFrecency = tmp(11971).useSortApplicationsViaFrecency(tmp29);
+          const sortApplicationsViaFrecency = tmp(11985).useSortApplicationsViaFrecency(tmp29);
           if (cResult[14] === stateFromStores) {
             class I {
               constructor(arg0, arg1) {
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const tmpResult2 = tmp(11971);
+          const tmpResult2 = tmp(11985);
           const obj8 = stateFromStores(12);
           const found = stateFromStores(12).compact(sortApplicationsViaFrecency.map(R)).filter(tmp32);
           mapped = found.map(E);

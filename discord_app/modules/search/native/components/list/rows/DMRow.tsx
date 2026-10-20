@@ -3,10 +3,10 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import _modDef8912 from "../../../../../../../_runtime/metro/08912__.js";
+import _modDef8924 from "../../../../../../../_runtime/metro/08924__.js";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef14610 from "../../../../../../../_runtime/metro/14610__.js";
+import _modDef14628 from "../../../../../../../_runtime/metro/14628__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -238,7 +238,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8912, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8924, disableColor: true };
         obj4.children = map1(native.Icon, obj5);
         tmp4Result = map1(timestampProducer, obj4);
       }
@@ -246,7 +246,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14610, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14628, disableColor: true };
         obj6.children = map1(native.Icon, obj7);
         tmp4Result3 = map1(timestampProducer, obj6);
       }

@@ -20,7 +20,7 @@ const Easing2 = fn(5014).Easing;
 const easing2 = Easing2.bezier(0.61, 0, 0.58, 1);
 const Easing3 = fn(5014).Easing;
 const easing3 = Easing3.bezier(0.42, 0, 0.58, 1);
-let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(7906).Circle);
+let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(7910).Circle);
 const createStyles = fn(4945);
 let obj = {
   progress: null,

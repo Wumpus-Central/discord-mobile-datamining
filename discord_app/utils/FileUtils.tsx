@@ -4,7 +4,7 @@ import util from "../intl/index.native.tsx";
 import PremiumUtils from "PremiumUtils.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import UploadUtils from "UploadUtils.tsx";
-import noConflictDefault from "../../_runtime/08095_noConflict.js";
+import noConflictDefault from "../../_runtime/08099_noConflict.js";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 

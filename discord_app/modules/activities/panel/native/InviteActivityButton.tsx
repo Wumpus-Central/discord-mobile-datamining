@@ -49,7 +49,7 @@ export default noop.memo(
             const fn2 = function y() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(18192, dependencyMap.paths),
+                asyncRequireImpl(18215, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
@@ -86,7 +86,7 @@ export default noop.memo(
               shrink: true,
               maxFontSizeMultiplier: 1,
             };
-            tmp = stateFromStores(10653);
+            tmp = stateFromStores(10664);
             obj2.icon = tmp;
             obj2.text = tmp10;
             obj2.accessibilityLabel = tmp11;
@@ -123,12 +123,12 @@ export default noop.memo(
             onPress() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(18192, dependencyMap.paths),
+                asyncRequireImpl(18215, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
             },
-            icon: stateFromStores(10653),
+            icon: stateFromStores(10664),
             text: null,
             accessibilityLabel: null,
             variant: "secondary-overlay",
@@ -144,12 +144,12 @@ export default noop.memo(
             onPress() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(18192, dependencyMap.paths),
+                asyncRequireImpl(18215, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
             },
-            icon: stateFromStores(10653),
+            icon: stateFromStores(10664),
             text: null,
             accessibilityLabel: null,
             variant: "secondary-overlay",

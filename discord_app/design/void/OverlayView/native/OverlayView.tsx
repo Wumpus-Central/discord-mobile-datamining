@@ -1,6 +1,6 @@
 // discord_app/design/void/OverlayView/native/OverlayView.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import _modDef5920 from "../../../../../_runtime/metro/05920__.js";
+import _modDef5923 from "../../../../../_runtime/metro/05923__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,12 +13,12 @@ const jsx = fn(21).jsx;
 let PlatformUtils = fn(1384);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(5871).FullWindowOverlay;
+  FullWindowOverlay = fn(5874).FullWindowOverlay;
 }
 const ReactCompilerGating = fn(558);
 PlatformUtils = fn(1384);
 if (PlatformUtils.isIOS()) {
-  View = _modDef5920;
+  View = _modDef5923;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");

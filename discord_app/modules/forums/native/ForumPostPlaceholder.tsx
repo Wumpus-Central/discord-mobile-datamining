@@ -126,7 +126,7 @@ export default noop.memo(
             }
           }
           let obj3 = { variant: "secondary", style: tmp4.postPlaceholder };
-          const tmp12 = jsx(tmp(6853).Card, { variant: "secondary", style: tmp4.postPlaceholder });
+          const tmp12 = jsx(tmp(6856).Card, { variant: "secondary", style: tmp4.postPlaceholder });
           cResult[3] = tmp4.postPlaceholder;
           cResult[4] = tmp12;
         } else {
@@ -220,12 +220,12 @@ export default noop.memo(
         let obj4 = {
           style: animatedStyle,
           pointerEvents: "none",
-          children: jsx(stateFromStores(6853).Card, { variant: "secondary", style: tmp.postPlaceholder }),
+          children: jsx(stateFromStores(6856).Card, { variant: "secondary", style: tmp.postPlaceholder }),
         };
         return jsx(timingConfig(5014).View, {
           style: animatedStyle,
           pointerEvents: "none",
-          children: jsx(stateFromStores(6853).Card, { variant: "secondary", style: tmp.postPlaceholder }),
+          children: jsx(stateFromStores(6856).Card, { variant: "secondary", style: tmp.postPlaceholder }),
         });
       },
 );

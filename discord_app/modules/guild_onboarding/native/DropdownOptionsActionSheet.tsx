@@ -144,7 +144,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
                           }
                         }
                         const obj3 = { label: tmp32, selected: tmp11, leading: tmp16, trailing: tmp27, onPress: tmp13 };
-                        const tmp37 = closure_8(onSelect(7181), obj3);
+                        const tmp37 = closure_8(onSelect(7184), obj3);
                         cResult[26] = tmp16;
                         cResult[27] = tmp13;
                         cResult[28] = tmp32;
@@ -229,9 +229,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
             str = "";
           }
           obj7.name = str;
-          obj6.children = closure_8(onSelect(7175), obj7);
+          obj6.children = closure_8(onSelect(7178), obj7);
           const tmp19Result = closure_8(tmp20, obj6);
-          const tmp22 = onSelect(7175);
+          const tmp22 = onSelect(7178);
         } else {
           const emoji6 = option.emoji;
           let name;

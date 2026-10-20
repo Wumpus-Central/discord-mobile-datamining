@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp17 = cResult[12];
             }
             if (cResult[13] !== stateFromStores) {
-              const obj4 = { guild: stateFromStores, size: tmp(6831).GuildIconSizes.XXSMALL, selected: false };
+              const obj4 = { guild: stateFromStores, size: tmp(6834).GuildIconSizes.XXSMALL, selected: false };
               const tmp22 = closure_5(GuildIconDefault, obj4);
               cResult[13] = stateFromStores;
               cResult[14] = tmp22;
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { style: tmp.guildInfo, children: null };
           const obj7 = { guild: stateFromStores, size: null, selected: false };
           const hexWithOpacityResult = tmp2(4942).hexWithOpacity(tmp.borderColor.color, 0.08);
-          obj7.size = tmp2(6831).GuildIconSizes.XXSMALL;
+          obj7.size = tmp2(6834).GuildIconSizes.XXSMALL;
           const items3 = [closure_5(GuildIconDefault, obj7)];
           const obj8 = {
             style: tmp.guildName,

@@ -11,7 +11,7 @@ import TableRadioGroup from "../../../../design/components/TableRow/native/Table
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import _modDef10084 from "../../../../../_runtime/metro/10084__.js";
+import _modDef10095 from "../../../../../_runtime/metro/10095__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const obj = { style: closure_0.nitroUpsell, children: null };
                             const items = [
                               __initData(native.Icon, {
-                                source: _modDef10084,
+                                source: _modDef10095,
                                 size: native.Icon.Sizes.SMALL,
                                 style: closure_0.nitroIcon,
                               }),

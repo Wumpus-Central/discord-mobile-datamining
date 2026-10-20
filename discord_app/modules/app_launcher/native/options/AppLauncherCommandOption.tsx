@@ -1490,9 +1490,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return onDismiss(name);
                 },
-                children: tmp13(tmp2(6966).CircleXIcon, { size: "md" }),
+                children: tmp13(tmp2(6969).CircleXIcon, { size: "md" }),
               };
-              items[1] = tmp13(tmp2(6856).PressableOpacity, obj9);
+              items[1] = tmp13(tmp2(6859).PressableOpacity, obj9);
               obj7.children = items;
               tmp62 = closure_6(View, obj7);
             }

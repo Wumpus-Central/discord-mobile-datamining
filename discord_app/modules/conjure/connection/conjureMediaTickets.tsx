@@ -58,9 +58,9 @@ export const getMediaTicket = function getMediaTicket(projectId) {
     return cleanupPromise;
   }
 };
-export const retireMediaTicket = function retireMediaTicket(projectId) {
-  map.delete(projectId);
-  ConjureWorkerTickets.forgetEarlyTicket(projectId);
+export const retireMediaTicket = function retireMediaTicket(id) {
+  map.delete(id);
+  ConjureWorkerTickets.forgetEarlyTicket(id);
 };
 export const clearMediaTickets = function clearMediaTickets() {
   map.clear();

@@ -243,7 +243,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   const items4 = [,];
                   ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp4);
                   obj11.style = items4;
-                  obj11.children = closure_7(tmp(8018).UnknownGameIcon, { size: "lg" });
+                  obj11.children = closure_7(tmp(8022).UnknownGameIcon, { size: "lg" });
                   tmp23 = closure_7(View, obj11);
                 }
                 cResult[15] = unknownCover;
@@ -329,7 +329,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [,];
         ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp);
         obj7.style = items1;
-        obj7.children = closure_7(tmp2(8018).UnknownGameIcon, { size: "lg" });
+        obj7.children = closure_7(tmp2(8022).UnknownGameIcon, { size: "lg" });
         tmp11 = closure_7(View, obj7);
       }
       const items2 = [tmp11, tmp10(CheckpointRankTagDefault, { rank, style: tmp.rank })];

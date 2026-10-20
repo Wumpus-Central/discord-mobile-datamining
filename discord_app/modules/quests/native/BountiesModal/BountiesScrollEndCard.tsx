@@ -13,7 +13,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6658).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6661).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -158,7 +158,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 showCloseButton: false,
                 disabled: !isActive,
               };
-              const tmp27 = closure_8(isScrollingInBoundsSharedValue(16104), obj6);
+              const tmp27 = closure_8(isScrollingInBoundsSharedValue(16123), obj6);
               cResult[16] = bounty;
               cResult[17] = sourceQuestContent;
               cResult[18] = !isActive;
@@ -167,7 +167,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj7 = { bounty, sourceQuestContent, disabled: !isActive };
-          const tmp21 = closure_8(isScrollingInBoundsSharedValue(16101), obj7);
+          const tmp21 = closure_8(isScrollingInBoundsSharedValue(16120), obj7);
           cResult[11] = bounty;
           cResult[12] = sourceQuestContent;
           cResult[13] = !isActive;
@@ -241,12 +241,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [tmp.overlayContent, animatedStyle];
       obj6.style = items2;
       const items3 = [
-        closure_8(isScrollingInBoundsSharedValue(16101), { bounty, sourceQuestContent, disabled: !isActive }),
+        closure_8(isScrollingInBoundsSharedValue(16120), { bounty, sourceQuestContent, disabled: !isActive }),
       ];
       const obj8 = {
         style: tmp.endedCtaButtonsContainer,
         pointerEvents: "box-none",
-        children: closure_8(isScrollingInBoundsSharedValue(16104), {
+        children: closure_8(isScrollingInBoundsSharedValue(16123), {
           bounty,
           visible,
           sourceQuestContent,

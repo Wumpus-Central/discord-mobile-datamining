@@ -205,9 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         noop.useState(obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE),
         2,
       );
-      const announceError = navigation(15860).useAnnounceError(tmp10);
+      const announceError = navigation(15879).useAnnounceError(tmp10);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp22 = closure_7(tmp(15861).KeyImage, {});
+        const tmp22 = closure_7(tmp(15880).KeyImage, {});
         cResult[4] = tmp22;
         let tmp20 = tmp22;
       } else {
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         };
                         const items = [tmp31, tmp35, tmp43];
                         rect.children = items;
-                        const tmp46 = closure_8(tmp(7169).SafeAreaPaddingView, rect);
+                        const tmp46 = closure_8(tmp(7172).SafeAreaPaddingView, rect);
                         cResult[28] = tmp5.flexContainer;
                         cResult[29] = tmp43;
                         cResult[30] = tmp31;
@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj7 = { children: null };
                     const obj8 = { text: tmp39, disabled: first, loading: first, onPress: tmp42, size: "lg" };
                     obj7.children = closure_7(tmp(5205).Button, obj8);
-                    const tmp44 = closure_7(tmp(6644).ButtonGroup, obj7);
+                    const tmp44 = closure_7(tmp(6647).ButtonGroup, obj7);
                     cResult[24] = first;
                     cResult[25] = tmp39;
                     cResult[26] = tmp42;
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp27;
         tmp26 = tmp27;
       }
-      const tmpResult = navigation(15860);
+      const tmpResult = navigation(15879);
     }
   : function WebAuthnRegisterStep() {
       navigation = navigation(1505).useNavigation();
@@ -396,10 +396,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [onRegisterSuccess, tmp11, tmp8];
       closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
       const obj3 = navigation(1384);
-      const announceError = navigation(15860).useAnnounceError(tmp10);
+      const announceError = navigation(15879).useAnnounceError(tmp10);
       const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
       obj4 = { style: tmp4.centerFlex, children: null };
-      const items3 = [closure_7(navigation(15861).KeyImage, {}), ,];
+      const items3 = [closure_7(navigation(15880).KeyImage, {}), ,];
       obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
       const intl = tmp(1128).intl;
       const string = intl.string;
@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           size: "lg",
         }),
       };
-      items4[2] = closure_7(navigation(6644).ButtonGroup, obj8);
+      items4[2] = closure_7(navigation(6647).ButtonGroup, obj8);
       rect.children = items4;
-      return closure_8(navigation(7169).SafeAreaPaddingView, rect);
+      return closure_8(navigation(7172).SafeAreaPaddingView, rect);
     };

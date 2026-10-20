@@ -700,7 +700,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[21] === tmp8) {
                   let tmp28 = cResult[22];
                 }
-                const wishlistButtonState = tmp(9340).useWishlistButtonState(tmp28);
+                const wishlistButtonState = tmp(9352).useWishlistButtonState(tmp28);
                 class I {
                   constructor() {
                     return closure_1_11.getId();
@@ -820,7 +820,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[26] = tmp5;
                 cResult[27] = t10;
                 tmp31 = t10;
-                const tmpResult4 = tmp(9340);
+                const tmpResult4 = tmp(9352);
               }
             }
           }

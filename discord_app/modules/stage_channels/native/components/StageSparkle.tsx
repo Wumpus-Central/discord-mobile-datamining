@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef8960 from "../../../../../_runtime/metro/08960__.js";
-import _modDef8961 from "../../../../../_runtime/metro/08961__.js";
+import _modDef8972 from "../../../../../_runtime/metro/08972__.js";
+import _modDef8973 from "../../../../../_runtime/metro/08973__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -39,7 +39,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(16);
       ({ style, IconComponent, icon } = arg0);
       if (undefined === icon) {
-        icon = _modDef8960;
+        icon = _modDef8972;
       }
       const tmp4 = closure_8();
       if (cResult[0] === style) {
@@ -54,7 +54,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp14 = cResult[9];
                 }
                 if (cResult[10] !== tmp4.sparkles) {
-                  const obj2 = { style: tmp4.sparkles, source: _modDef8961 };
+                  const obj2 = { style: tmp4.sparkles, source: _modDef8973 };
                   const tmp22 = timestampProducer(FastImageDefault, obj2);
                   cResult[10] = tmp4.sparkles;
                   cResult[11] = tmp22;
@@ -111,7 +111,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   : function StageSparkleInner(style) {
       ({ IconComponent, icon } = style);
       if (icon === undefined) {
-        icon = _modDef8960;
+        icon = _modDef8972;
       }
       const tmp3 = closure_8();
       const obj = { style: null, children: null };
@@ -129,7 +129,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.children = tmp6Result;
       const items1 = [timestampProducer(View, obj2)];
-      const obj5 = { style: tmp3.sparkles, source: tmp10(8961) };
+      const obj5 = { style: tmp3.sparkles, source: tmp10(8973) };
       items1[1] = timestampProducer(tmp10(5631), obj5);
       obj.children = items1;
       return React5(View, obj);

@@ -1020,7 +1020,7 @@ export default noop.memo(
                       c1 = 1;
                       c2 = 1;
                       const obj6 = {
-                        value: tmp2(11160).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                        value: tmp2(11171).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                         done: false,
                       };
                       return obj6;
@@ -1033,7 +1033,7 @@ export default noop.memo(
                     const obj = { value, done: true };
                     return obj;
                   }
-                  onPress(6778).deleteRole(guildId, tmp2.id);
+                  onPress(6781).deleteRole(guildId, tmp2.id);
                   c2 = 3;
                   return { value: "IconComponent", done: null };
                 } catch (tmp16) {
@@ -1182,7 +1182,7 @@ export default noop.memo(
                           c1 = 1;
                           c2 = 1;
                           const obj6 = {
-                            value: tmp2(11160).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                            value: tmp2(11171).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                             done: false,
                           };
                           return obj6;
@@ -1329,7 +1329,7 @@ export default noop.memo(
           if (null != prop) {
             const obj23 = {
               size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16,
-              source: require("../../../../../_runtime/metro/09779__.js"),
+              source: require("../../../../../_runtime/metro/09791__.js"),
               "aria-label": null,
               style: null,
             };

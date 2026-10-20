@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const fn = function o() {
           ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
           GuildSettingsActionCreatorsDefault.close();
-          onRequireModeratorMFAClick(7436).openUserSettings({ screen: constants.ACCOUNT });
+          onRequireModeratorMFAClick(7439).openUserSettings({ screen: constants.ACCOUNT });
         };
         cResult[0] = fn;
         let first = fn;
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onEnableMFAClick() {
               closure_1_1(5171).hideActionSheet(closure_1_7);
               const obj = closure_1_1(5171);
-              closure_1_1(8926).close();
-              const obj2 = closure_1_1(8926);
-              onRequireModeratorMFAClick(7436).openUserSettings({ screen: constants.ACCOUNT });
+              closure_1_1(8938).close();
+              const obj2 = closure_1_1(8938);
+              onRequireModeratorMFAClick(7439).openUserSettings({ screen: constants.ACCOUNT });
             },
             onRequireModeratorMFAClick() {
               ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);

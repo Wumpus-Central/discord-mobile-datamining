@@ -9,8 +9,8 @@ import LottieAnimationViewDefault from "../../../../components_native/common/Lot
 import ButtonConstants from "../../../../design/components/Button/native/ButtonConstants.native.tsx";
 import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import useAppLauncherOnboardingContentDefault from "hooks/useAppLauncherOnboardingContent.tsx";
-import _mod11900 from "../../../../../_runtime/metro/11900__.js";
-import _mod12936 from "../../../../../_runtime/metro/12936__.js";
+import _mod11914 from "../../../../../_runtime/metro/11914__.js";
+import _mod12954 from "../../../../../_runtime/metro/12954__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -145,7 +145,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = ReactCompilerGating
         tmp13 = cResult[5];
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult5 = _mod12936;
+        const tmpResult5 = _mod12954;
         cResult[6] = tmpResult5;
         let tmp15 = tmpResult5;
       } else {
@@ -176,7 +176,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = ReactCompilerGating
                 }
                 const _Symbol = Symbol;
                 if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmpResult6 = _mod11900;
+                  const tmpResult6 = _mod11914;
                   cResult[20] = tmpResult6;
                   let tmp33 = tmpResult6;
                 } else {
@@ -270,7 +270,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = ReactCompilerGating
       const items1 = [React4.absoluteFill, tmp.glowAnimation];
       obj4.style = items1;
       const obj5 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-      obj5.source = _mod12936;
+      obj5.source = _mod12954;
       obj5.autoPlay = !stateFromStores;
       const items2 = [timestampProducer(LottieAnimationViewDefault, obj5), ,];
       const obj6 = { collapsable: false, style: null };
@@ -282,7 +282,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = ReactCompilerGating
       const items4 = [React5(ReanimatedRexportDefault.View, obj4)];
       const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
       const obj7 = { collapsable: false, style: tmp.fakeButton };
-      obj8.source = _mod11900;
+      obj8.source = _mod11914;
       obj8.autoPlay = !stateFromStores;
       items4[1] = timestampProducer(LottieAnimationViewDefault, obj8);
       obj3.children = items4;

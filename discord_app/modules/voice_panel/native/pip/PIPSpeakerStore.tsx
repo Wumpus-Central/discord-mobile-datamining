@@ -65,10 +65,10 @@ const prototype = PIPSpeakerStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(RTCConnectionStore, SpeakingStore, ChannelRTCStore);
 };
-prototype["getSpeakerId"] = function getSpeakerId(channelId) {
+prototype["getSpeakerId"] = function getSpeakerId(batchedStoreListener) {
   let tmp;
-  if (null != channelId) {
-    if (channelId === c4) {
+  if (null != batchedStoreListener) {
+    if (batchedStoreListener === c4) {
       tmp = c0;
     }
   }

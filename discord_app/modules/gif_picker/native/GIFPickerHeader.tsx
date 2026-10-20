@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = SearchField(1128);
 const Text_Text = SearchField(5195);
-const Pressables = SearchField(6856);
-const SearchField2 = SearchField(7093);
-const GifProvider = SearchField(10050);
-const ChevronLargeLeftIcon = SearchField(10059);
+const Pressables = SearchField(6859);
+const SearchField2 = SearchField(7096);
+const GifProvider = SearchField(10061);
+const ChevronLargeLeftIcon = SearchField(10070);
 require = fn;
 const View = fn(17).View;
 fn(1087).GIFPickerResultTypes;
@@ -28,14 +28,14 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(10052).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10063).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10052).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10063).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6972).InputHeights.MD,
+  height: fn(6975).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -404,7 +404,7 @@ let obj5 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6972).InputHeights.MD,
+  height: fn(6975).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,

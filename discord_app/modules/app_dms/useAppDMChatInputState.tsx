@@ -10,7 +10,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const useQueryState = fn(9564).useQueryState;
+const useQueryState = fn(9577).useQueryState;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 let items = [
   fn(2000).ApplicationCommandType.PRIMARY_ENTRY_POINT,

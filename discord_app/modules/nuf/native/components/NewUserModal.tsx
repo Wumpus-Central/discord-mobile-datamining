@@ -9,7 +9,7 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9658);
+const NativeStackNavigator = fn(9671);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4945);
 let obj3 = {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             name: "enable-notification",
             getComponent() {
-              return closure_0(17149).RedesignNotificationScreen;
+              return closure_0(17168).RedesignNotificationScreen;
             },
             initialParams: null,
           };
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = {
             name: "choose-avatar",
             getComponent() {
-              return closure_0(18634).default;
+              return closure_0(18657).default;
             },
             options() {
               return {
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   obj.onPress = function onPress() {
                     closure_0 = closure_1_4;
                     const lazyResult = React.lazy(() => closure_0(paths[7])(paths[6], paths.paths));
-                    closure_2_0(5865).openAlert(
+                    closure_2_0(5868).openAlert(
                       "skip-avatar-upload",
                       closure_2_5(lazyResult, {
                         onConfirm() {
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }),
                     );
                   };
-                  return closure_2_5(closure_1(13401), obj);
+                  return closure_2_5(closure_1(13419), obj);
                 },
               };
             },
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             name: "contact-sync",
             options: { headerShown: false },
             getComponent() {
-              return closure_0(13389).ContactSyncOnboardingModal;
+              return closure_0(13407).ContactSyncOnboardingModal;
             },
             initialParams: null,
           };
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             name: "discoverability",
             options: { headerShown: false },
             getComponent() {
-              return closure_0(18635).default;
+              return closure_0(18658).default;
             },
             initialParams: null,
           };
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj11 = {
             name: "connect-guardian",
             getComponent() {
-              return closure_0(18641).default;
+              return closure_0(18664).default;
             },
             initialParams: null,
           };
@@ -316,14 +316,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_5(closure_7.Screen, {
           name: "enable-notification",
           getComponent() {
-            return closure_0(17149).RedesignNotificationScreen;
+            return closure_0(17168).RedesignNotificationScreen;
           },
           initialParams: { onComplete },
         }),
         closure_5(closure_7.Screen, {
           name: "choose-avatar",
           getComponent() {
-            return closure_0(18634).default;
+            return closure_0(18657).default;
           },
           options() {
             return {
@@ -333,7 +333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj.onPress = function onPress() {
                   closure_0 = closure_1_4;
                   const lazyResult = React.lazy(() => closure_0(paths[7])(paths[6], paths.paths));
-                  closure_2_0(5865).openAlert(
+                  closure_2_0(5868).openAlert(
                     "skip-avatar-upload",
                     closure_2_5(lazyResult, {
                       onConfirm() {
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }),
                   );
                 };
-                return closure_2_5(closure_1(13401), obj);
+                return closure_2_5(closure_1(13419), obj);
               },
             };
           },
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name: "contact-sync",
           options: { headerShown: false },
           getComponent() {
-            return closure_0(13389).ContactSyncOnboardingModal;
+            return closure_0(13407).ContactSyncOnboardingModal;
           },
           initialParams: { onComplete },
         }),
@@ -360,14 +360,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name: "discoverability",
           options: { headerShown: false },
           getComponent() {
-            return closure_0(18635).default;
+            return closure_0(18658).default;
           },
           initialParams: { onComplete },
         }),
         closure_5(closure_7.Screen, {
           name: "connect-guardian",
           getComponent() {
-            return closure_0(18641).default;
+            return closure_0(18664).default;
           },
           initialParams: { onComplete },
         }),

@@ -21,17 +21,17 @@ function parseRegisteredExperiments(stateFromStoresObject) {
       if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1(8430).getExperimentBucketName(item);
-        const obj3 = closure_1(8430);
+        experimentBucketName = closure_1(8434).getExperimentBucketName(item);
+        const obj3 = closure_1(8434);
       }
       obj.label = experimentBucketName;
-      obj.shortLabel = closure_1(8430).getExperimentBucketName(item);
+      obj.shortLabel = closure_1(8434).getExperimentBucketName(item);
       if (item === constants.CONTROL) {
-        let TREATMENT = obj(8432).Variation_Type.CONTROL;
+        let TREATMENT = obj(8436).Variation_Type.CONTROL;
       } else if (item === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = obj(8432).Variation_Type.UNSPECIFIED;
+        TREATMENT = obj(8436).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = obj(8432).Variation_Type.TREATMENT;
+        TREATMENT = obj(8436).Variation_Type.TREATMENT;
       }
       obj.type = TREATMENT;
       return obj;

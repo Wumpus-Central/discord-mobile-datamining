@@ -408,9 +408,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     };
-tmp4.Icon = fn(6859).TableRowIcon;
-tmp4.Arrow = fn(6860).TableRowArrow;
-tmp4.TrailingText = fn(6862).TableRowTrailingText;
+tmp4.Icon = fn(6862).TableRowIcon;
+tmp4.Arrow = fn(6863).TableRowArrow;
+tmp4.TrailingText = fn(6865).TableRowTrailingText;
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function TableRowInner(disabled) {

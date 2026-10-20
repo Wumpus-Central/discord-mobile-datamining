@@ -75,7 +75,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { label: tmp9, subLabel: cResult[8], value: !tmp4, onValueChange: tmp8 };
-          const tmp19 = closure_5(tmp(7241).TableSwitchRow, obj2);
+          const tmp19 = closure_5(tmp(7244).TableSwitchRow, obj2);
           cResult[9] = tmp8;
           cResult[10] = tmp9;
           cResult[11] = cResult[8];
@@ -114,7 +114,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const items = [...set];
         AdTopicOptOuts2.updateSetting(items);
       };
-      return closure_5(adTopic(7241).TableSwitchRow, obj);
+      return closure_5(adTopic(7244).TableSwitchRow, obj);
     };
 const createStyles = fn(4945);
 let obj4 = {

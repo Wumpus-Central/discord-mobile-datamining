@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef6877 from "../../../../_runtime/metro/06877__.js";
+import _modDef6880 from "../../../../_runtime/metro/06880__.js";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           size: "md",
           variant: "secondary-overlay",
-          icon: _modDef6877,
+          icon: _modDef6880,
           onPress: first,
           accessibilityLabel: null,
           maxFontSizeMultiplier: 1.5,
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         size: "md",
         variant: "secondary-overlay",
-        icon: _modDef6877,
+        icon: _modDef6880,
         onPress: callback,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1.5,

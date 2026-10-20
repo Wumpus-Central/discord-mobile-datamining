@@ -24,4 +24,5 @@ export const MessageEmbedTypes = {
   GAMING_PROFILE: "gaming_profile",
   POLL_RESULT: "poll_result",
   COMPONENTS: "components",
+  AUDIO: "audio",
 };

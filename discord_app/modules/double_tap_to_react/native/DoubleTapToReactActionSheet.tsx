@@ -1254,7 +1254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 emoji_name: closure_129_2.name,
                 emoji_animated: closure_129_2.animated,
                 recommended: closure_129_4.current,
-                location: tmp22(7224).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+                location: tmp22(7227).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
               };
               tmp22(1267).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
               const _setTimeout = setTimeout;

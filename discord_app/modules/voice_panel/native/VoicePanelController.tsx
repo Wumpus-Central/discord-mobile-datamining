@@ -397,16 +397,16 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
   tmp6 = CONTROLS_HEIGHT;
 }
 let AppState = fn(17).AppState;
-const VoicePanelConstants = fn(10693);
+const VoicePanelConstants = fn(10704);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(10691);
+const VoicePanelControlsConstants = fn(10702);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2026).OrientationLockState;
 const ActivityPanelModes = fn(5570).ActivityPanelModes;
 const isActivityParticipant = fn(5593).isActivityParticipant;
-const MorphablePanelModes = fn(10694).MorphablePanelModes;
+const MorphablePanelModes = fn(10705).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityConnected(setControlsMode) {
@@ -2756,7 +2756,7 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     tmp3 = arg1;
   };
   let obj = mode(5014);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9892).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5014).runOnJS, dismissKeyboard: mode(5120).dismissKeyboard };
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9904).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5014).runOnJS, dismissKeyboard: mode(5120).dismissKeyboard };
   fn2.__workletHash = 9634019064864;
   fn2.__initData = __initData21;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
@@ -2793,7 +2793,7 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     tmp3 = arg1;
   };
   let obj = mode(5014);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9892).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5014).runOnJS, dismissKeyboard: mode(5120).dismissKeyboard };
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9904).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5014).runOnJS, dismissKeyboard: mode(5120).dismissKeyboard };
   fn2.__workletHash = 12442886667392;
   fn2.__initData = __initData23;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);

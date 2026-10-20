@@ -11,7 +11,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildOfficialMessageUtils from "../../messages/GuildOfficialMessageUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef16371 from "../../../../_runtime/metro/16371__.js";
+import _modDef16390 from "../../../../_runtime/metro/16390__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -56,8 +56,8 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_16,
 };
-obj2.chatSection = { paddingHorizontal: fn(6847).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
-let obj5 = { paddingHorizontal: fn(6847).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+obj2.chatSection = { paddingHorizontal: fn(6850).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
+let obj5 = { paddingHorizontal: fn(6850).TABLE_ROW_PADDING, gap: nativeDefault.space.PX_8 };
 obj2.chatContainer = {
   paddingVertical: nativeDefault.space.PX_24,
   borderRadius: nativeDefault.radii.xl,
@@ -148,7 +148,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj3 = { source: _modDef16371 };
+                const obj3 = { source: _modDef16390 };
                 const tmp24 = __initData(native.Avatar, obj3);
                 cResult[15] = tmp24;
                 let tmp21 = tmp24;
@@ -340,7 +340,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef683(selectedColor).alpha(collapsed).hex() }];
       obj4.style = items1;
       const hexResult1 = _modDef683(selectedColor).alpha(collapsed).hex();
-      const items2 = [__initData(native.Avatar, { source: _modDef16371 })];
+      const items2 = [__initData(native.Avatar, { source: _modDef16390 })];
       const obj6 = { style: tmp.chatContent, children: null };
       const obj7 = { style: tmp.chatHeader, children: null };
       const obj8 = {
@@ -457,7 +457,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       navigation(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(17467, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(17486, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

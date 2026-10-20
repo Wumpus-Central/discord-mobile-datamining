@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           continue;
         }
         cResult[7] = tmp12;
-        cResult[8] = unlockedPowerups(8315)(arg0).available;
+        cResult[8] = unlockedPowerups(8319)(arg0).available;
         cResult[9] = stateFromStores1;
         cResult[10] = unlockedPowerups;
         cResult[11] = items2;

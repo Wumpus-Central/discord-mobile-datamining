@@ -9,10 +9,10 @@ import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx"
 import ConjureModelSettingsStore from "../../model_settings/ConjureModelSettingsStore.tsx";
 import ConjureProjectStore_mod from "../../projects/ConjureProjectStore.tsx";
 
-const useConjureProjectSettingsFormDefault = tmp5(11668);
+const useConjureProjectSettingsFormDefault = tmp5(11681);
 const require = fn;
 const View = fn(17).View;
-let ConjureProjectStore = fn(6721);
+let ConjureProjectStore = fn(6724);
 ({ canPublishProject: closure_9, isProjectOwner: c10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
@@ -172,7 +172,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         items,
       );
       const tmp = _slicedToArray(noop.useState(0), 2);
-      obj = tabs(8821);
+      obj = tabs(8833);
       const segmentedControlState = obj.useSegmentedControlState({
         items: memo,
         pageWidth: tmp2,
@@ -186,10 +186,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { onLayout: callback, children: null };
       if (tabs.length > 3) {
         const obj4 = { state: segmentedControlState };
-        let tmp8Result = closure_12(tmp5(11699).Tabs, obj4);
+        let tmp8Result = closure_12(tmp5(11713).Tabs, obj4);
       } else {
         const obj5 = { state: segmentedControlState };
-        tmp8Result = closure_12(tmp5(9067).SegmentedControl, obj5);
+        tmp8Result = closure_12(tmp5(9079).SegmentedControl, obj5);
       }
       obj3.children = tmp8Result;
       return closure_12(View, obj3);
@@ -481,9 +481,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (guild_id == null) {
         guild_id = guildId;
       }
-      const tmpResultResult = stateFromStores1(11668)(projectId, guild_id);
+      const tmpResultResult = stateFromStores1(11681)(projectId, guild_id);
       _slicedToArray = tmpResultResult;
-      const tmp15 = stateFromStores1(11684)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+      const tmp15 = stateFromStores1(11697)({ projectId, scopeKeys, note, notifyAgent, isPreview });
       noop = tmp15;
       isScoped = tmp15.isScoped;
       loaded = tmp15.loaded;
@@ -639,8 +639,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3820).bA4VU5);
       const intl2 = tmp4(1128).intl;
       const tmpResult2 = stateFromStores1(3820);
-      const tmpResult = stateFromStores1(11668);
-      obj5.header = saving(projectId(7194).BottomSheetTitleHeader, {
+      const tmpResult = stateFromStores1(11681);
+      obj5.header = saving(projectId(7197).BottomSheetTitleHeader, {
         title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe),
       });
       const obj7 = { style: tmp3.container, children: null };
@@ -673,9 +673,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const items10 = [fields1];
           const obj10 = { projectId, canEdit: tmp10 };
-          items10[1] = tmp22(tmp(11695), obj10, projectId);
+          items10[1] = tmp22(tmp(11708), obj10, projectId);
           obj9.children = items10;
-          tmp24Result = tmp24(tmp4(5932).Stack, obj9);
+          tmp24Result = tmp24(tmp4(5935).Stack, obj9);
         }
       }
       items9[2] = tmp24Result;
@@ -700,7 +700,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp22Result3 = null;
         if ("model" === found) {
           const obj11 = { projectId };
-          tmp22Result3 = tmp22(tmp4(11698).ConjureModelSettingsContent, obj11);
+          tmp22Result3 = tmp22(tmp4(11711).ConjureModelSettingsContent, obj11);
         }
       }
       items9[5] = tmp22Result3;
@@ -714,7 +714,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj12.children = intl3.string(tmp(3820).lJJayk);
             let tmp22Result4 = tmp22(tmp4(5195).Text, obj12);
           } else {
-            tmp22Result4 = tmp22(tmp4(6828).ActivityIndicator, {});
+            tmp22Result4 = tmp22(tmp4(6831).ActivityIndicator, {});
           }
         }
       }
@@ -736,6 +736,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       obj7.children = items9;
       obj5.children = canSave(tmp25, obj7);
-      return saving(projectId(7244).ActionSheet, obj5);
+      return saving(projectId(7247).ActionSheet, obj5);
     };
 export const CONJURE_SETTINGS_SHEET_KEY = "ConjureSettingsSheet";

@@ -33,6 +33,7 @@ let closure_0 = {
   publish_status: true,
   reply: true,
   restart_sandbox_result: true,
+  reaction: true,
   restore_proposal: true,
   saving: true,
   segment_settled: true,

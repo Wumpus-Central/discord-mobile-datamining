@@ -9,7 +9,7 @@ const require = fn;
 let closure_3 = ["children"];
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9658);
+const NativeStackNavigator = fn(9671);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4945);
 let obj3 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
@@ -38,12 +38,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { title: null, headerLeft: null };
               const intl = closure_0(1128).intl;
               obj.title = intl.string(closure_0(1128).t.jVshKt);
-              obj.headerLeft = closure_0(9614).getRenderModalCloseImage(navigation.navigation);
-              const merged = Object.assign(accessibilityNativeStackOptions(9948)());
+              obj.headerLeft = closure_0(9627).getRenderModalCloseImage(navigation.navigation);
+              const merged = Object.assign(accessibilityNativeStackOptions(9959)());
               return obj;
             },
             getComponent() {
-              return closure_0(17633).default;
+              return closure_0(17652).default;
             },
           };
           const tmp9 = closure_5(closure_7.Screen, obj3);
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = {
             name: "guild",
             options(navigation) {
-              const obj = { headerLeft: closure_0(9614).getRenderModalBackImage(navigation.navigation) };
+              const obj = { headerLeft: closure_0(9627).getRenderModalBackImage(navigation.navigation) };
               return obj;
             },
             getComponent() {
-              return closure_0(17634).default;
+              return closure_0(17653).default;
             },
           };
           const tmp13 = closure_5(closure_7.Screen, obj4);
@@ -126,22 +126,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj = { title: null, headerLeft: null };
             const intl = closure_0(1128).intl;
             obj.title = intl.string(closure_0(1128).t.jVshKt);
-            obj.headerLeft = closure_0(9614).getRenderModalCloseImage(navigation.navigation);
-            const merged = Object.assign(closure_1(9948)());
+            obj.headerLeft = closure_0(9627).getRenderModalCloseImage(navigation.navigation);
+            const merged = Object.assign(closure_1(9959)());
             return obj;
           },
           getComponent() {
-            return closure_0(17633).default;
+            return closure_0(17652).default;
           },
         }),
         closure_5(closure_7.Screen, {
           name: "guild",
           options(navigation) {
-            const obj = { headerLeft: closure_0(9614).getRenderModalBackImage(navigation.navigation) };
+            const obj = { headerLeft: closure_0(9627).getRenderModalBackImage(navigation.navigation) };
             return obj;
           },
           getComponent() {
-            return closure_0(17634).default;
+            return closure_0(17653).default;
           },
         }),
       ];

@@ -10,7 +10,7 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(6647).PremiumGuildSubscribeModalScenes;
+let closure_9 = fn(6650).PremiumGuildSubscribeModalScenes;
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -22,10 +22,10 @@ let obj2 = {
   guildName: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 };
-obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6655).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6658).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_13 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj4 = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6655).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+let obj4 = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(6658).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "components_native/premium/premium_guild_subscribe_modal/SubscribeModalGuildSelect.tsx",
@@ -416,7 +416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.onClose = BoostingActionCreatorsAll.closeApplyBoostModal;
       const items3 = [closure_11(SearchBarNavDefault, obj4)];
       const obj5 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-      obj5.children = closure_11(guildBoostSlots(7169).SafeAreaPaddingView, {
+      obj5.children = closure_11(guildBoostSlots(7172).SafeAreaPaddingView, {
         bottom: true,
         children: stateFromStoresArray.map((guild) => {
           const obj = {
@@ -446,5 +446,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       items3[1] = closure_11(memo, obj5);
       obj3.children = items3;
-      return closure_12(guildBoostSlots(7169).SafeAreaPaddingView, obj3);
+      return closure_12(guildBoostSlots(7172).SafeAreaPaddingView, obj3);
     };

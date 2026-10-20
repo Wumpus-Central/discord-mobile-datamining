@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Text_Text = BaseButton(5195);
 const Button_BaseButton = BaseButton(5215);
-const BaseIconButton = BaseButton(7904);
+const BaseIconButton = BaseButton(7908);
 require = fn;
 let closure_3 = ["label", "grow", "accessibilityLabel", "maxFontSizeMultiplier", "accessibilityHint", "ref"];
 const jsxProd = fn(21);

@@ -9,6 +9,7 @@ import useInlineFrameOAuthNavigationDefault from "../../frames/native/useInlineF
 import FrameRenderTargetDefault from "../../frames/native/FrameRenderTarget.tsx";
 import FrameStackLevel from "../../frames/FrameStackLevel.tsx";
 import useFrameLifecycle from "../../frames/useFrameLifecycle.tsx";
+import conjureBackgroundFramesDefault from "../../conjure/background_frames/conjureBackgroundFrames.tsx";
 import FrameSurfaceState from "../../frames/native/FrameSurfaceState.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -38,33 +39,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp9 = cResult[8];
             }
             const tmp10 = useFrameLifecycleDefault(tmp9);
-            let tmp12 = null;
+            conjureBackgroundFramesDefault(applicationId, tmp8);
+            let tmp13 = null;
             if (tmp10.state === useFrameLifecycle.FrameLifecycleState.Launched) {
-              tmp12 = applicationId;
+              tmp13 = applicationId;
             }
-            useInlineFrameOAuthNavigationDefault(tmp12);
+            useInlineFrameOAuthNavigationDefault(tmp13);
             const state = tmp10.state;
             if (useFrameLifecycle.FrameLifecycleState.Launched === state) {
               if (cResult[9] === tmp10.frame.id) {
                 if (cResult[10] === tmp6) {
-                  let tmp34 = cResult[11];
+                  let tmp35 = cResult[11];
                 }
-                return tmp34;
+                return tmp35;
               }
               const obj2 = {
                 frameId: tmp10.frame.id,
                 level: FrameStackLevel.FrameStackLevel.WithinCallContent,
                 presentation: tmp6,
               };
-              const tmp37 = jsx(FrameRenderTargetDefault, {
+              const tmp38 = jsx(FrameRenderTargetDefault, {
                 frameId: tmp10.frame.id,
                 level: FrameStackLevel.FrameStackLevel.WithinCallContent,
                 presentation: tmp6,
               });
               cResult[9] = tmp10.frame.id;
               cResult[10] = tmp6;
-              cResult[11] = tmp37;
-              tmp34 = tmp37;
+              cResult[11] = tmp38;
+              tmp35 = tmp38;
               const tmp4Result2 = FrameRenderTargetDefault;
             } else if (useFrameLifecycle.FrameLifecycleState.RenderingElsewhere === state) {
               const _Symbol5 = Symbol;
@@ -72,39 +74,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { description: null };
                 const intl5 = util.intl;
                 obj3.description = intl5.string(util.t["2KIDX+"]);
-                const tmp33 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
-                cResult[12] = tmp33;
-                let tmp31 = tmp33;
+                const tmp34 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
+                cResult[12] = tmp34;
+                let tmp32 = tmp34;
               } else {
-                tmp31 = cResult[12];
+                tmp32 = cResult[12];
               }
-              return tmp31;
+              return tmp32;
             } else if (useFrameLifecycle.FrameLifecycleState.NoApplication === state) {
               const _Symbol4 = Symbol;
               if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj4 = { description: null };
                 const intl4 = util.intl;
                 obj4.description = intl4.string(_modDef3918.TQptZV);
-                const tmp29 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
-                cResult[13] = tmp29;
-                let tmp27 = tmp29;
+                const tmp30 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
+                cResult[13] = tmp30;
+                let tmp28 = tmp30;
               } else {
-                tmp27 = cResult[13];
+                tmp28 = cResult[13];
               }
-              return tmp27;
+              return tmp28;
             } else if (useFrameLifecycle.FrameLifecycleState.DoesNotSupportSurface === state) {
               const _Symbol3 = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj5 = { description: null };
                 const intl3 = util.intl;
                 obj5.description = intl3.string(_modDef3918["13FYwI"]);
-                const tmp25 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
-                cResult[14] = tmp25;
-                let tmp23 = tmp25;
+                const tmp26 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
+                cResult[14] = tmp26;
+                let tmp24 = tmp26;
               } else {
-                tmp23 = cResult[14];
+                tmp24 = cResult[14];
               }
-              return tmp23;
+              return tmp24;
             } else if (useFrameLifecycle.FrameLifecycleState.Error === state) {
               const _Symbol2 = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
@@ -113,23 +115,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj6.heading = intl.string(util.t.VquUff);
                 const intl2 = util.intl;
                 obj6.error = intl2.string(util.t["Sd9D/R"]);
-                const tmp21 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { heading: null, error: null });
-                cResult[15] = tmp21;
-                let tmp19 = tmp21;
+                const tmp22 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { heading: null, error: null });
+                cResult[15] = tmp22;
+                let tmp20 = tmp22;
               } else {
-                tmp19 = cResult[15];
+                tmp20 = cResult[15];
               }
-              return tmp19;
+              return tmp20;
             } else {
               const _Symbol = Symbol;
               if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp17 = jsx(FrameSurfaceState.FrameSurfaceLoading, {});
-                cResult[16] = tmp17;
-                let tmp15 = tmp17;
+                const tmp18 = jsx(FrameSurfaceState.FrameSurfaceLoading, {});
+                cResult[16] = tmp18;
+                let tmp16 = tmp18;
               } else {
-                tmp15 = cResult[16];
+                tmp16 = cResult[16];
               }
-              return tmp15;
+              return tmp16;
             }
             const tmp4Result = useInlineFrameOAuthNavigationDefault;
           }
@@ -170,47 +172,48 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const tmp5 = guildId(left[7])({ applicationId, surface: memo1 });
-      let tmp8 = null;
+      guildId(left[8])(applicationId, memo1);
+      let tmp9 = null;
       if (tmp5.state === channelId(left[7]).FrameLifecycleState.Launched) {
-        tmp8 = applicationId;
+        tmp9 = applicationId;
       }
-      guildId(left[8])(tmp8);
+      guildId(left[9])(tmp9);
       const state = tmp5.state;
       if (channelId(left[7]).FrameLifecycleState.Launched === state) {
         const obj2 = {
           frameId: tmp5.frame.id,
-          level: channelId(tmp2[10]).FrameStackLevel.WithinCallContent,
+          level: channelId(tmp2[11]).FrameStackLevel.WithinCallContent,
           presentation: memo,
         };
-        return jsx(tmp(tmp2[9]), {
+        return jsx(tmp(tmp2[10]), {
           frameId: tmp5.frame.id,
-          level: channelId(tmp2[10]).FrameStackLevel.WithinCallContent,
+          level: channelId(tmp2[11]).FrameStackLevel.WithinCallContent,
           presentation: memo,
         });
       } else if (channelId(tmp2[7]).FrameLifecycleState.RenderingElsewhere === state) {
         const obj3 = { description: null };
-        const intl5 = channelId(tmp2[12]).intl;
-        obj3.description = intl5.string(channelId(tmp2[12]).t["2KIDX+"]);
-        return jsx(channelId(tmp2[11]).FrameSurfaceExplanation, { description: null });
+        const intl5 = channelId(tmp2[13]).intl;
+        obj3.description = intl5.string(channelId(tmp2[13]).t["2KIDX+"]);
+        return jsx(channelId(tmp2[12]).FrameSurfaceExplanation, { description: null });
       } else if (channelId(tmp2[7]).FrameLifecycleState.NoApplication === state) {
         const obj4 = { description: null };
-        const intl4 = channelId(tmp2[12]).intl;
-        obj4.description = intl4.string(tmp(tmp2[13]).TQptZV);
-        return jsx(channelId(tmp2[11]).FrameSurfaceExplanation, { description: null });
+        const intl4 = channelId(tmp2[13]).intl;
+        obj4.description = intl4.string(tmp(tmp2[14]).TQptZV);
+        return jsx(channelId(tmp2[12]).FrameSurfaceExplanation, { description: null });
       } else if (channelId(tmp2[7]).FrameLifecycleState.DoesNotSupportSurface === state) {
         const obj5 = { description: null };
-        const intl3 = channelId(tmp2[12]).intl;
-        obj5.description = intl3.string(tmp(tmp2[13])["13FYwI"]);
-        return jsx(channelId(tmp2[11]).FrameSurfaceExplanation, { description: null });
+        const intl3 = channelId(tmp2[13]).intl;
+        obj5.description = intl3.string(tmp(tmp2[14])["13FYwI"]);
+        return jsx(channelId(tmp2[12]).FrameSurfaceExplanation, { description: null });
       } else if (channelId(tmp2[7]).FrameLifecycleState.Error === state) {
         const obj = { heading: null, error: null };
-        const intl = channelId(tmp2[12]).intl;
-        obj.heading = intl.string(channelId(tmp2[12]).t.VquUff);
-        const intl2 = channelId(tmp2[12]).intl;
-        obj.error = intl2.string(channelId(tmp2[12]).t["Sd9D/R"]);
-        return jsx(channelId(tmp2[11]).FrameSurfaceExplanation, { heading: null, error: null });
+        const intl = channelId(tmp2[13]).intl;
+        obj.heading = intl.string(channelId(tmp2[13]).t.VquUff);
+        const intl2 = channelId(tmp2[13]).intl;
+        obj.error = intl2.string(channelId(tmp2[13]).t["Sd9D/R"]);
+        return jsx(channelId(tmp2[12]).FrameSurfaceExplanation, { heading: null, error: null });
       } else {
-        return jsx(channelId(tmp2[11]).FrameSurfaceLoading, {});
+        return jsx(channelId(tmp2[12]).FrameSurfaceLoading, {});
       }
-      const tmp6 = guildId(left[8]);
+      const tmp7 = guildId(left[9]);
     };

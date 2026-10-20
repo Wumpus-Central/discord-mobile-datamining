@@ -64,7 +64,7 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1087);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5812).SoundOutputChannel;
+const SoundOutputChannel = fn(5814).SoundOutputChannel;
 const MediaEngineContextTypes = fn(5680).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
@@ -689,7 +689,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(5788)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
+                value: v1(5790)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
                 done: false,
               };
               return obj4;
@@ -781,7 +781,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(5788)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
+                value: v1(5790)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
                 done: false,
               };
               return obj4;

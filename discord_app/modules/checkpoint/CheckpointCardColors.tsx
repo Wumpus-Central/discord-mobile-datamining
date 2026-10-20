@@ -1,5 +1,11 @@
 // discord_app/modules/checkpoint/CheckpointCardColors.tsx
 import CheckpointCharacterBase from "../../../discord_common/js/shared/shared-constants/CheckpointCharacterBase.tsx";
+import _modDef8574 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-purple.png.js";
+import _modDef8575 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-cyan.png.js";
+import _modDef8576 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-pink.png.js";
+import _modDef8577 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
+import _modDef8578 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
+import _modDef8579 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
@@ -8,6 +14,7 @@ const obj = {
   tertiaryBackgroundColor: "#CFC3EB",
   shadowColor: "#411D96",
   backgroundGradientStartColor: "#2F156B",
+  recapCardBackgroundImage: _modDef8574,
 };
 const obj2 = {
   primaryBackgroundColor: "#34E2F1",
@@ -15,6 +22,7 @@ const obj2 = {
   tertiaryBackgroundColor: "#A5E3E9",
   shadowColor: "#0C9BA7",
   backgroundGradientStartColor: "#12606D",
+  recapCardBackgroundImage: _modDef8575,
 };
 const obj3 = {
   primaryBackgroundColor: "#FF4CD2",
@@ -22,6 +30,7 @@ const obj3 = {
   tertiaryBackgroundColor: "#E9BBE9",
   shadowColor: "#B20086",
   backgroundGradientStartColor: "#80005F",
+  recapCardBackgroundImage: _modDef8576,
 };
 const obj4 = {
   primaryBackgroundColor: "#35ED7E",
@@ -29,6 +38,7 @@ const obj4 = {
   tertiaryBackgroundColor: "#B5DCB3",
   shadowColor: "#0FA44A",
   backgroundGradientStartColor: "#0A7535",
+  recapCardBackgroundImage: _modDef8577,
 };
 const obj5 = {
   primaryBackgroundColor: "#EF3054",
@@ -36,6 +46,7 @@ const obj5 = {
   tertiaryBackgroundColor: "#F6AFBC",
   shadowColor: "#A60D2A",
   backgroundGradientStartColor: "#76091E",
+  recapCardBackgroundImage: _modDef8578,
 };
 const obj6 = {
   primaryBackgroundColor: "#FFE047",
@@ -43,6 +54,7 @@ const obj6 = {
   tertiaryBackgroundColor: "#FFE0B8",
   shadowColor: "#B29400",
   backgroundGradientStartColor: "#806A00",
+  recapCardBackgroundImage: _modDef8579,
 };
 let closure_1 = {
   [CheckpointCharacterBase.CheckpointCharacterBase.GALACTIC]: obj,

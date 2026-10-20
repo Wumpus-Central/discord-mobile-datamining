@@ -23,9 +23,9 @@ export default noop.memo(
           str = size;
         }
         const obj = quest(576);
-        quest = quest(16199).useVideoQuestModalContext().quest;
-        const tmpResult = quest(16199);
-        const questTaskDetails = quest(9485).useQuestTaskDetails(quest);
+        quest = quest(16218).useVideoQuestModalContext().quest;
+        const tmpResult = quest(16218);
+        const questTaskDetails = quest(9498).useQuestTaskDetails(quest);
         if (cResult[0] !== quest.id) {
           const fn = function s() {
             const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
@@ -85,7 +85,7 @@ export default noop.memo(
                         };
                         const items = [tmp9, tmp17];
                         obj3.children = items;
-                        const tmp24 = closure_5(tmp(5932).Stack, obj3);
+                        const tmp24 = closure_5(tmp(5935).Stack, obj3);
                         cResult[18] = style;
                         cResult[19] = tmp9;
                         cResult[20] = tmp17;
@@ -101,7 +101,7 @@ export default noop.memo(
                     };
                     const items1 = [tmp11, tmp14];
                     obj4.children = items1;
-                    const tmp20 = closure_5(tmp(5932).Stack, obj4);
+                    const tmp20 = closure_5(tmp(5935).Stack, obj4);
                     cResult[14] = onTextBlockLayout;
                     cResult[15] = tmp11;
                     cResult[16] = tmp14;
@@ -154,7 +154,7 @@ export default noop.memo(
           onPress: tmp7,
           withAnimation: withRewardTileAnimation,
         };
-        const tmpResult2 = quest(9485);
+        const tmpResult2 = quest(9498);
       }
     : function VideoQuestModalReward(style) {
         const withQuestName = style.withQuestName;
@@ -170,14 +170,14 @@ export default noop.memo(
           str = size;
         }
         ({ withRewardTileAnimation, onTextBlockLayout } = style);
-        quest = quest(16199).useVideoQuestModalContext().quest;
-        const obj = quest(16199);
+        quest = quest(16218).useVideoQuestModalContext().quest;
+        const obj = quest(16218);
         const items = [quest.id];
-        const questTaskDetails = quest(9485).useQuestTaskDetails(quest);
+        const questTaskDetails = quest(9498).useQuestTaskDetails(quest);
         const callback = noop.useCallback(() => {
           const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
         }, items);
-        const obj2 = quest(9485);
+        const obj2 = quest(9498);
         const obj3 = {
           justify: "center",
           align: "center",
@@ -217,8 +217,8 @@ export default noop.memo(
         }
         items2[1] = tmp9Result;
         obj5.children = items2;
-        items1[1] = closure_5(quest(5932).Stack, obj5);
+        items1[1] = closure_5(quest(5935).Stack, obj5);
         obj3.children = items1;
-        return closure_5(quest(5932).Stack, obj3);
+        return closure_5(quest(5935).Stack, obj3);
       },
 );

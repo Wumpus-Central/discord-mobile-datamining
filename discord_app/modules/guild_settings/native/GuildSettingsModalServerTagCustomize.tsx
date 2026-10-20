@@ -10,8 +10,8 @@ import GuildSettingsStore from "../GuildSettingsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(8906).GuildProfileFetchStatus;
-const BADGES = fn(8218).BADGES;
+let GuildProfileFetchStatus = fn(8918).GuildProfileFetchStatus;
+const BADGES = fn(8222).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;

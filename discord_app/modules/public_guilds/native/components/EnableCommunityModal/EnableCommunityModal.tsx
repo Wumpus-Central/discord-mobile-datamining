@@ -59,10 +59,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         function headerRight() {
-          const obj = { source: closure_1_1(8058), onPress, accessibilityLabel: null };
+          const obj = { source: closure_1_1(8062), onPress, accessibilityLabel: null };
           const intl = closure_1_0(1128).intl;
           obj.accessibilityLabel = intl.string(closure_1_0(1128).t.cpT0Cq);
-          return closure_1_4(closure_1_0(7431).HeaderActionButton, obj);
+          return closure_1_4(closure_1_0(7434).HeaderActionButton, obj);
         }
         const obj2 = {};
         const obj3 = {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_4(closure_1_1(18900), {});
+            return closure_1_4(closure_1_1(18923), {});
           },
         };
         obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_1] = obj3;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_4(closure_1_1(18912), {});
+            return closure_1_4(closure_1_1(18935), {});
           },
         };
         obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_2] = obj4;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_4(closure_1_1(18913), {});
+            return closure_1_4(closure_1_1(18936), {});
           },
         };
         obj2[EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_3] = obj5;
@@ -124,10 +124,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function EnableCommunityModal() {
       const memo = noop.useMemo(() => {
         function headerRight() {
-          const obj = { source: closure_1_1(8058), onPress, accessibilityLabel: null };
+          const obj = { source: closure_1_1(8062), onPress, accessibilityLabel: null };
           const intl = closure_1_0(1128).intl;
           obj.accessibilityLabel = intl.string(closure_1_0(1128).t.cpT0Cq);
-          return closure_1_4(closure_1_0(7431).HeaderActionButton, obj);
+          return closure_1_4(closure_1_0(7434).HeaderActionButton, obj);
         }
         return {
           [closure_1_0(closure_1_2[10]).EnableCommunityModalSteps.STEP_1]: {
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_4(closure_1_1(18900), {});
+              return closure_1_4(closure_1_1(18923), {});
             },
           },
           [closure_1_0(closure_1_2[10]).EnableCommunityModalSteps.STEP_2]: {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_4(closure_1_1(18912), {});
+              return closure_1_4(closure_1_1(18935), {});
             },
           },
           [closure_1_0(closure_1_2[10]).EnableCommunityModalSteps.STEP_3]: {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_4(closure_1_1(18913), {});
+              return closure_1_4(closure_1_1(18936), {});
             },
           },
         };

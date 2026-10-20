@@ -19,8 +19,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = task(576).c(25);
       const tmp4 = closure_6();
       let obj = task(576);
-      task = task(19129).useSafetyFlowTask().task;
-      const obj2 = task(19129);
+      task = task(19153).useSafetyFlowTask().task;
+      const obj2 = task(19153);
       const navigation = task(1505).useNavigation();
       if (cResult[0] === navigation) {
         if (cResult[1] === task.task_type) {
@@ -68,8 +68,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const tasks1 = flow_context2.tasks;
             if (tasks1 != null) {
               mapped = tasks1.map((task_type, index) => {
-                const obj = { tip: task(19124).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
-                return closure_1_4(navigation(8033), obj, task_type.task_type);
+                const obj = { tip: task(19148).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+                return closure_1_4(navigation(8037), obj, task_type.task_type);
               });
             }
           }
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[9] !== tmp20) {
           const obj6 = { hasIcons: true, children: tmp20 };
-          const tmp25 = closure_4(tmp(6935).TableRowGroup, obj6);
+          const tmp25 = closure_4(tmp(6938).TableRowGroup, obj6);
           cResult[9] = tmp20;
           cResult[10] = tmp25;
           let tmp23 = tmp25;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { spacing: navigation(587).space.PX_8, children: null };
           const items = [tmp23, tmp26];
           obj8.children = items;
-          const tmp33 = closure_5(tmp(5932).Stack, obj8);
+          const tmp33 = closure_5(tmp(5935).Stack, obj8);
           cResult[12] = tmp23;
           cResult[13] = tmp33;
           let tmp30 = tmp33;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol4 = Symbol;
             if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp42 = closure_4(navigation(19131), {});
+              const tmp42 = closure_4(navigation(19155), {});
               cResult[18] = tmp42;
               let tmp39 = tmp42;
             } else {
@@ -141,9 +141,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj9 = { children: null };
               const items1 = [tmp39];
               const obj10 = { variant: "primary", text: tmp43, onPress: tmp6 };
-              items1[1] = closure_4(tmp(12746).ModalActionButton, obj10);
+              items1[1] = closure_4(tmp(12763).ModalActionButton, obj10);
               obj9.children = items1;
-              const tmp49 = closure_5(tmp(12696).ModalFooter, obj9);
+              const tmp49 = closure_5(tmp(12713).ModalFooter, obj9);
               cResult[20] = tmp6;
               cResult[21] = tmp49;
               let tmp46 = tmp49;
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj11 = { children: null };
             const items2 = [tmp34, tmp46];
             obj11.children = items2;
-            const tmp52 = closure_5(tmp(7844).ModalScreen, obj11);
+            const tmp52 = closure_5(tmp(7848).ModalScreen, obj11);
             cResult[22] = tmp34;
             cResult[23] = tmp46;
             cResult[24] = tmp52;
@@ -170,8 +170,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj13 = { spacing: navigation(587).space.PX_16, style: content, children: null };
         const items3 = [tmp11, tmp14, tmp30];
         obj13.children = items3;
-        obj12.children = closure_5(tmp(5932).Stack, obj13);
-        const tmp38 = closure_4(tmp(7845).ModalContent, obj12);
+        obj12.children = closure_5(tmp(5935).Stack, obj13);
+        const tmp38 = closure_4(tmp(7849).ModalContent, obj12);
         cResult[14] = tmp4.content;
         cResult[15] = tmp11;
         cResult[16] = tmp30;
@@ -199,8 +199,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function OverviewScreen() {
       let tmp = closure_6();
-      task = task(19129).useSafetyFlowTask().task;
-      let obj = task(19129);
+      task = task(19153).useSafetyFlowTask().task;
+      let obj = task(19153);
       const navigation = task(1505).useNavigation();
       const items = [task, navigation];
       const callback = noop.useCallback(() => {
@@ -232,32 +232,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tasks = flow_context.tasks;
         if (tasks != null) {
           mapped = tasks.map((task_type, index) => {
-            const obj = { tip: task(19124).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
-            return closure_1_4(navigation(8033), obj, task_type.task_type);
+            const obj = { tip: task(19148).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+            return closure_1_4(navigation(8037), obj, task_type.task_type);
           });
         }
       }
       const obj7 = { children: null };
       const obj8 = { children: null };
-      const items2 = [closure_4(task(6935).TableRowGroup, { hasIcons: true, children: mapped })];
+      const items2 = [closure_4(task(6938).TableRowGroup, { hasIcons: true, children: mapped })];
       const obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp2(1128).intl;
       obj9.children = intl3.string(navigation(2822)["0TnUrG"]);
       items2[1] = closure_4(task(5195).Text, obj9);
       obj6.children = items2;
-      items1[2] = closure_5(task(5932).Stack, obj6);
+      items1[2] = closure_5(task(5935).Stack, obj6);
       obj3.children = items1;
-      obj8.children = closure_5(task(5932).Stack, obj3);
-      const items3 = [closure_4(task(7845).ModalContent, obj8)];
+      obj8.children = closure_5(task(5935).Stack, obj3);
+      const items3 = [closure_4(task(7849).ModalContent, obj8)];
       const obj10 = { children: null };
-      const items4 = [closure_4(navigation(19131), {})];
+      const items4 = [closure_4(navigation(19155), {})];
       const obj11 = { variant: "primary", text: null, onPress: null };
       const intl4 = tmp2(1128).intl;
       obj11.text = intl4.string(navigation(2822).Ks6opt);
       obj11.onPress = callback;
-      items4[1] = closure_4(task(12746).ModalActionButton, obj11);
+      items4[1] = closure_4(task(12763).ModalActionButton, obj11);
       obj10.children = items4;
-      items3[1] = closure_5(task(12696).ModalFooter, obj10);
+      items3[1] = closure_5(task(12713).ModalFooter, obj10);
       obj7.children = items3;
-      return closure_5(task(7844).ModalScreen, obj7);
+      return closure_5(task(7848).ModalScreen, obj7);
     };

@@ -27,13 +27,14 @@ import shop_tab_tooltip from "shop_tab_tooltip.tsx";
 import premium_home_perk_card from "premium_home_perk_card.tsx";
 import marketing_page_bento_box from "marketing_page_bento_box.tsx";
 import outbound_promotion_popover from "outbound_promotion_popover.tsx";
+import outbound_promotion_claim_modal_card from "outbound_promotion_claim_modal_card.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
 const MessageType = fn(1212).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -260,25 +261,34 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("premium_home_perk_card").PremiumHomePerkCard;
       },
     };
-    obj = { no: 29, name: "marketing_page_rewards_bento_box", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[27]).MarketingPageBentoBox;
-      }
-    }
-    obj.T = T;
-    items[26] = obj;
-    items[27] = {
-      no: 30,
-      name: "outbound_promotion_popover",
+    items[26] = {
+      no: 29,
+      name: "marketing_page_rewards_bento_box",
       kind: "message",
       oneof: "properties",
       T() {
-        return require("outbound_promotion_popover").OutboundPromotionPopover;
+        return require("marketing_page_bento_box").MarketingPageBentoBox;
       },
     };
-    items[28] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[29] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    obj = { no: 30, name: "outbound_promotion_popover", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[28]).OutboundPromotionPopover;
+      }
+    }
+    obj.T = T;
+    items[27] = obj;
+    items[28] = {
+      no: 31,
+      name: "outbound_promotion_claim_modal_card",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("outbound_promotion_claim_modal_card").OutboundPromotionClaimModalCard;
+      },
+    };
+    items[29] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[30] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
@@ -690,13 +700,27 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
       writeUnknownFields,
     );
   }
+  if ("outboundPromotionClaimModalCard" === properties.properties.oneofKind) {
+    const OutboundPromotionClaimModalCard = outbound_promotion_claim_modal_card.OutboundPromotionClaimModalCard;
+    const tagResult28 = tag.tag(31, _mod1212.WireType.LengthDelimited);
+    const joined27 = OutboundPromotionClaimModalCard.internalBinaryWrite(
+      properties.properties.outboundPromotionClaimModalCard,
+      tag.tag(31, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult27 = OutboundPromotionClaimModalCard.internalBinaryWrite(
+      properties.properties.outboundPromotionClaimModalCard,
+      tag.tag(31, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   if ("" !== properties.contentIdentifier) {
     tag.tag(3, _mod1212.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult28 = tag.tag(3, _mod1212.WireType.LengthDelimited);
+    const tagResult29 = tag.tag(3, _mod1212.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
     tag.tag(18, _mod1212.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult29 = tag.tag(18, _mod1212.WireType.Varint);
+    const tagResult30 = tag.tag(18, _mod1212.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

@@ -432,7 +432,7 @@ export default {
     }
     return surrogates;
   },
-  convertSurrogateToName(emoji_name, arg1) {
+  convertSurrogateToName(name, arg1) {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = true;
@@ -441,7 +441,7 @@ export default {
     if (arg2 === undefined) {
       str = "";
     }
-    const tmp3 = require("../../../_runtime/metro/04896__.js").surrogateToEmoji[emoji_name];
+    const tmp3 = require("../../../_runtime/metro/04896__.js").surrogateToEmoji[name];
     let tmp4 = null;
     if (null != tmp3) {
       tmp4 = require("../../../_runtime/metro/04896__.js").emojis[tmp3];

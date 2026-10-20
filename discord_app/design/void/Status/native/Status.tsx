@@ -5,13 +5,13 @@ import spring from "../../../animation/reanimated/spring/spring.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef15214 from "../../../../../_runtime/metro/15214__.js";
-import _modDef15215 from "../../../../../_runtime/metro/15215__.js";
-import _modDef15216 from "../../../../../_runtime/metro/15216__.js";
-import _modDef15217 from "../../../../../_runtime/metro/15217__.js";
-import _modDef15218 from "../../../../../_runtime/metro/15218__.js";
-import _modDef15219 from "../../../../../_runtime/metro/15219__.js";
-import _modDef15220 from "../../../../../_runtime/metro/15220__.js";
+import _modDef15232 from "../../../../../_runtime/metro/15232__.js";
+import _modDef15233 from "../../../../../_runtime/metro/15233__.js";
+import _modDef15234 from "../../../../../_runtime/metro/15234__.js";
+import _modDef15235 from "../../../../../_runtime/metro/15235__.js";
+import _modDef15236 from "../../../../../_runtime/metro/15236__.js";
+import _modDef15237 from "../../../../../_runtime/metro/15237__.js";
+import _modDef15238 from "../../../../../_runtime/metro/15238__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1203).STATUS_PADDING;
 const StatusTypes = fn(1087).StatusTypes;
-const ChannelAnimationConstants = fn(14117);
+const ChannelAnimationConstants = fn(14135);
 ({
   TYPING_ENTERING: closure_7,
   TYPING_EXITING: closure_8,
@@ -132,23 +132,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (tmp5) {
-              let tmp14 = _modDef15214;
+              let tmp14 = _modDef15232;
             } else if (tmp4) {
-              tmp14 = _modDef15215;
+              tmp14 = _modDef15233;
             } else if (tmp3) {
-              tmp14 = _modDef15216;
+              tmp14 = _modDef15234;
             } else if (StatusTypes.IDLE === status) {
-              tmp14 = _modDef15217;
+              tmp14 = _modDef15235;
             } else {
               if (StatusTypes.DND === status) {
-                tmp14 = _modDef15218;
+                tmp14 = _modDef15236;
               } else if (StatusTypes.OFFLINE !== status) {
                 if (StatusTypes.INVISIBLE !== status) {
                   const ONLINE = StatusTypes.ONLINE;
-                  tmp14 = _modDef15220;
+                  tmp14 = _modDef15238;
                 }
               }
-              tmp14 = _modDef15219;
+              tmp14 = _modDef15237;
             }
             cResult[7] = tmp3;
             cResult[8] = tmp4;
@@ -193,23 +193,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
       const tmp = closure_12();
       if (streaming) {
-        let tmp4Result = _modDef15214;
+        let tmp4Result = _modDef15232;
       } else if (flag2) {
-        tmp4Result = _modDef15215;
+        tmp4Result = _modDef15233;
       } else if (flag) {
-        tmp4Result = _modDef15216;
+        tmp4Result = _modDef15234;
       } else if (StatusTypes.IDLE === status) {
-        tmp4Result = _modDef15217;
+        tmp4Result = _modDef15235;
       } else if (StatusTypes.DND === status) {
-        tmp4Result = _modDef15218;
+        tmp4Result = _modDef15236;
       } else {
         if (StatusTypes.OFFLINE !== status) {
           if (StatusTypes.INVISIBLE !== status) {
             const ONLINE = StatusTypes.ONLINE;
-            tmp4Result = _modDef15220;
+            tmp4Result = _modDef15238;
           }
         }
-        tmp4Result = _modDef15219;
+        tmp4Result = _modDef15237;
       }
       obj2.source = tmp4Result;
       obj.children = collapsed(FastImageDefault, obj2);

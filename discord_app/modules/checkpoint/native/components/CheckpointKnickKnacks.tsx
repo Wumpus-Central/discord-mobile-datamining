@@ -8,7 +8,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(5970).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5973).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let closure_7 = createStyles.createStyles({ rive: { width: 143, height: 32 } });

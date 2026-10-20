@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { headerLeft: undefined, title: null, headerRight: null };
-        value = tmp4(6456).get(platformType);
+        value = tmp4(6459).get(platformType);
         let name;
         if (value != null) {
           name = value.name;
@@ -444,10 +444,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp28 = tmp49;
           tmp29 = forResult;
           tmp30 = tmp43;
-          Form = tmp(8871).Form;
-          Stack = tmp(5932).Stack;
+          Form = tmp(8883).Form;
+          Stack = tmp(5935).Stack;
         }
-        const tmp4Result = tmp4(6456);
+        const tmp4Result = tmp4(6459);
       }
       cResult[4] = stateFromStores;
       cResult[5] = closeGuildSettings;
@@ -510,7 +510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           fn = () => null;
         }
         const obj3 = { headerLeft: fn, title: null, headerRight: null };
-        value = tmp3(6456).get(platformType);
+        value = tmp3(6459).get(platformType);
         let name;
         if (value != null) {
           name = value.name;
@@ -582,8 +582,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
         items2[1] = closure_10(tmp(5195).Text, obj12);
         obj9.children = items2;
-        obj8.children = closure_11(tmp(5932).Stack, obj9);
-        const items3 = [closure_10(tmp(8871).Form, obj8), closure_10(tmp(5553).NavScrim, {})];
+        obj8.children = closure_11(tmp(5935).Stack, obj9);
+        const items3 = [closure_10(tmp(8883).Form, obj8), closure_10(tmp(5553).NavScrim, {})];
         obj11.children = items3;
         return closure_11(closure_12, obj11);
       }

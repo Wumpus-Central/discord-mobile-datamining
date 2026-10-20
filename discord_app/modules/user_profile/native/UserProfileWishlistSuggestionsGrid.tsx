@@ -19,8 +19,8 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(8597).TrackUserProfileWishlistActions;
-const Constants = fn(7250);
+const constants = fn(8609).TrackUserProfileWishlistActions;
+const Constants = fn(7253);
 ({ PROFILE_SIDE_PADDING: closure_8, WISHLIST_SUGGESTION_CARD_GAP: closure_9 } = Constants);
 const SKUProductLines = fn(1087).SKUProductLines;
 const constants2 = fn(1089).CollectiblesMobileShopScreen;
@@ -223,7 +223,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       ({ userId, wishlistId, wishlist, containerWidth, maxWidth, isDismissible, markAsDismissed } = arg0);
       let obj = trackUserProfileWishlistAction(576);
       trackUserProfileWishlistAction =
-        trackUserProfileWishlistAction(8604).useUserProfileAnalyticsContext().trackUserProfileWishlistAction;
+        trackUserProfileWishlistAction(8616).useUserProfileAnalyticsContext().trackUserProfileWishlistAction;
       const tmp4 = closure_15();
       closure_18();
       if (cResult[0] === containerWidth) {
@@ -350,7 +350,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const tmp16 = closure_12(tmp(11989).ShopIcon, { size: "sm" });
+              const tmp16 = closure_12(tmp(12003).ShopIcon, { size: "sm" });
               const intl = tmp(1128).intl;
               const stringResult = intl.string(tmp(1128).t.RSyoZu);
               cResult[9] = tmp16;
@@ -510,14 +510,14 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[19] = wishlistId;
             cResult[20] = obj5;
           }
-          tmpResult = tmp(14226);
+          tmpResult = tmp(14244);
         }
         const obj6 = {
           userId,
           wishlist,
           numWishlistItemsToRecommend: 15,
           maxWishlistItemsToShow: 9,
-          source: tmp(9294).WishlistFetchSource.USER_PROFILE,
+          source: tmp(9306).WishlistFetchSource.USER_PROFILE,
         };
         cResult[4] = userId;
         cResult[5] = wishlist;
@@ -536,16 +536,16 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = maxWidth;
       cResult[2] = obj7;
       tmp6 = obj7;
-      let obj2 = trackUserProfileWishlistAction(8604);
+      let obj2 = trackUserProfileWishlistAction(8616);
     }
   : function WishlistSuggestionsGridContents(arg0) {
       ({ userId, wishlist, isDismissible } = arg0);
       let trackUserProfileWishlistAction;
       ({ wishlistId, containerWidth, maxWidth, markAsDismissed } = arg0);
       trackUserProfileWishlistAction =
-        trackUserProfileWishlistAction(8604).useUserProfileAnalyticsContext().trackUserProfileWishlistAction;
+        trackUserProfileWishlistAction(8616).useUserProfileAnalyticsContext().trackUserProfileWishlistAction;
       const tmp3 = closure_15();
-      let obj = trackUserProfileWishlistAction(8604);
+      let obj = trackUserProfileWishlistAction(8616);
       const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
       let obj2 = {
         minCardSize: 80,
@@ -557,13 +557,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp4 = closure_18();
       const tmp6 = useInitialValueDefault(() => trackUserProfileWishlistAction(dependencyMap[18]).v4());
-      const obj3 = trackUserProfileWishlistAction(14226);
+      const obj3 = trackUserProfileWishlistAction(14244);
       let items = obj3.useAddToWishlistGridItems({
         userId,
         wishlist,
         numWishlistItemsToRecommend: 15,
         maxWishlistItemsToShow: 9,
-        source: trackUserProfileWishlistAction(9294).WishlistFetchSource.USER_PROFILE,
+        source: trackUserProfileWishlistAction(9306).WishlistFetchSource.USER_PROFILE,
       }).items;
       let items1 = [trackUserProfileWishlistAction];
       const callback = noop.useCallback(() => {
@@ -588,7 +588,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = {
           size: "md",
           variant: "secondary",
-          icon: closure_12(tmp(11989).ShopIcon, { size: "sm" }),
+          icon: closure_12(tmp(12003).ShopIcon, { size: "sm" }),
           text: null,
           onPress: null,
         };
@@ -647,11 +647,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         obj12.importantForAccessibility = str2;
         const obj13 = { size: "sm", variant: "icon-only", icon: null, onPress: null, accessibilityLabel: null };
         const obj14 = { size: "sm", color: nativeDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT };
-        obj13.icon = closure_12(tmp(6879).XSmallIcon, obj14);
+        obj13.icon = closure_12(tmp(6882).XSmallIcon, obj14);
         obj13.onPress = markAsDismissed;
         const intl = tmp(1128).intl;
         obj13.accessibilityLabel = intl.string(tmp(1128).t.WAI6xu);
-        obj12.children = closure_12(tmp(7903).IconButton, obj13);
+        obj12.children = closure_12(tmp(7907).IconButton, obj13);
         items2[1] = closure_12(View, obj12);
         obj10.children = items2;
         const items4 = [closure_13(View, obj10), ,];
@@ -661,7 +661,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const obj32 = {
           size: "md",
           variant: "secondary",
-          icon: closure_12(tmp(11989).ShopIcon, { size: "sm" }),
+          icon: closure_12(tmp(12003).ShopIcon, { size: "sm" }),
           text: null,
           onPress: null,
         };
@@ -672,7 +672,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         items4[2] = closure_12(View, obj17);
         obj9.children = items4;
         obj7.children = closure_13(ReanimatedRexportDefault.View, obj9);
-        tmp11Result = closure_12(tmp(14228).WishlistAnalyticsProvider, obj7);
+        tmp11Result = closure_12(tmp(14246).WishlistAnalyticsProvider, obj7);
       }
       return tmp11Result;
     };

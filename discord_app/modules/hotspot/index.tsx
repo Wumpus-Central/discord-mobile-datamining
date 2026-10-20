@@ -5,7 +5,7 @@ const require = globalThis.__r;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hotspot/index.tsx");
-const Constants = fn(7257);
+const Constants = fn(7260);
 for (const key10022 in tmp4) {
   arg5[key10022] = Constants[key10022];
   continue;

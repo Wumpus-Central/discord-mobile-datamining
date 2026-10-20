@@ -8,7 +8,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 const util = BottomSheet(1128);
 const Text_Text = BottomSheet(5195);
 const Sheet_BottomSheet = BottomSheet(5226);
-const getSoundmojiASTFromString = BottomSheet(5960);
+const getSoundmojiASTFromString = BottomSheet(5963);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

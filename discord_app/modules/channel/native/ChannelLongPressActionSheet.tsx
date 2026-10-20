@@ -258,7 +258,7 @@ function getActionSheetButtons(channel) {
       obj8.label = intl5.string(tmp8(isOptedIn[24]).t.OQ9MKu);
       obj8.IconComponent = tmp8(isOptedIn[33]).LinkIcon;
       obj8.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10614, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10625, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj8);
     }
@@ -628,7 +628,7 @@ function getActionSheetButtons(channel) {
             obj36.IconComponent = tmp93(isOptedIn[70]).ChatIcon;
             obj36.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10673, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10684, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons18.push(obj36);
@@ -956,7 +956,7 @@ function getActionSheetButtons(channel) {
   }
   tmp31 = null != conjureProjectId && null != guildId;
 }
-const SafetyWarningTypes = fn(10611).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10622).SafetyWarningTypes;
 const ChannelRecord = fn(4804);
 ({
   isGuildTextChannelType: closure_9,
@@ -978,7 +978,7 @@ const Constants = fn(1087);
   Routes: closure_32,
   ZERO_STRING_GUILD_ID: closure_33,
 } = Constants);
-let closure_34 = fn(9941).ChannelDetailsNavigatorScreens;
+let closure_34 = fn(9952).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
@@ -987,7 +987,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const onClose = channel.onClose;
       let obj = channel(576);
-      const analyticsLocations = onClose(7199)(onClose(7224).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
+      const analyticsLocations = onClose(7202)(onClose(7227).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
       if (cResult[0] !== channel) {
         const guildId = channel.getGuildId();
         cResult[0] = channel;
@@ -997,8 +997,8 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       dependencyMap = tmp5;
-      const tmp4 = onClose(7199);
-      const isFavoritesGuildSelected = channel(10639).useIsFavoritesGuildSelected();
+      const tmp4 = onClose(7202);
+      const isFavoritesGuildSelected = channel(10650).useIsFavoritesGuildSelected();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[2] = items;
@@ -1016,7 +1016,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp10 = cResult[4];
       }
-      const tmpResult = channel(10639);
+      const tmpResult = channel(10650);
       const stateFromStores = channel(504).useStateFromStores(tmp8, tmp10);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [PermissionStore];
@@ -1069,7 +1069,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const optInEnabledForGuild = channel(6761).useOptInEnabledForGuild(tmp5);
+      const optInEnabledForGuild = channel(6764).useOptInEnabledForGuild(tmp5);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class O {
           constructor() {
@@ -1133,7 +1133,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = channel.parent_id;
       cResult[11] = tmp5;
       cResult[12] = F;
-      const tmpResult6 = channel(6761);
+      const tmpResult6 = channel(6764);
     }
   : function ChannelLongPressActionSheetConnected(channel) {
       channel = channel.channel;
@@ -1380,11 +1380,11 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
             str = "danger";
           }
           return closure_1_35(
-            channel(7240).ActionSheetRow,
+            channel(7243).ActionSheetRow,
             {
               variant: str,
               label,
-              icon: closure_1_35(channel(7240).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
+              icon: closure_1_35(channel(7243).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
               trailing,
               onPress() {
                 if (onPress != null) {

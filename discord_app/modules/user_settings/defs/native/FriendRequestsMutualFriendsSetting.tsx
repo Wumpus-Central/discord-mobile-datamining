@@ -15,7 +15,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFriendRequestsMutualFriendsSettingValue() {
       const cResult = c.c(2);
@@ -43,7 +43,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
   },
-  parent: fn(8276).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8280).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useFriendRequestsMutualFriendsSettingValue() {
         const cResult = c.c(2);

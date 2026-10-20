@@ -398,13 +398,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp37 = tmp3;
                 let deleteProject = dependencyMap;
                 if (_slicedToArray) {
-                  tmp37 = tmp37(11011);
+                  tmp37 = tmp37(11023);
                   deleteProject = tmp37.deleteProject;
                   let deleteProjectResult = deleteProject(user.id);
                 } else {
                   const obj5 = { alsoRemovePreviewBot };
-                  deleteProjectResult = tmp37(11071).unpublishProject(user.id, obj5);
-                  const tmp37Result = tmp37(11071);
+                  deleteProjectResult = tmp37(11083).unpublishProject(user.id, obj5);
+                  const tmp37Result = tmp37(11083);
                 }
                 deleteProjectResult.catch(() => null);
                 dependencyMap = 1;
@@ -440,9 +440,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 if (!closure_129_4) {
                   const obj7 = { text: null, variant: "success" };
                   const obj = tmp2(5625);
-                  obj7.text = tmp3(11662).conjureRemoveAppSuccess(closure_129_1);
+                  obj7.text = tmp3(11675).conjureRemoveAppSuccess(closure_129_1);
                   obj.open("CONJURE_APP_REMOVED", obj7);
-                  const obj3 = tmp3(11662);
+                  const obj3 = tmp3(11675);
                 }
                 c3 = 3;
                 return { value: "IconComponent", done: null };

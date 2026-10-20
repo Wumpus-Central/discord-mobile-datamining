@@ -43,7 +43,7 @@ function showForumComposerCloseAlert(arg0) {
   actions_AlertActionCreatorsDefault.show(obj3);
 }
 const View = fn(17).View;
-const DraftType = fn(7577).DraftType;
+const DraftType = fn(7580).DraftType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };

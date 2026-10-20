@@ -14,8 +14,8 @@ import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBack
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(16169).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(17458).GUILD_LIST_WIDTH;
+let closure_5 = fn(16188).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(17477).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);

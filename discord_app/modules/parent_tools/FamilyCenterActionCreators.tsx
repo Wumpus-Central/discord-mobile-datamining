@@ -396,7 +396,7 @@ let closure_15 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(7592).FamilyCenterAction;
+const FamilyCenterAction = fn(7595).FamilyCenterAction;
 const Constants = fn(1087);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);

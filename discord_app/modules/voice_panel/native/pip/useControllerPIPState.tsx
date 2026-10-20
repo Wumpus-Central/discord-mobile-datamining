@@ -10,16 +10,16 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(10693).VoicePanelModes;
+const VoicePanelModes = fn(10704).VoicePanelModes;
 const ActivityPanelModes = fn(5570).ActivityPanelModes;
-const asLaunched = fn(6724).asLaunched;
+const asLaunched = fn(6727).asLaunched;
 const ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShowSecondaryPIP(channelId) {
       const cResult = channelId(576).c(6);
       channelId = channelId.channelId;
       const mode = channelId.mode;
-      let tmp4 = mode(18202)(channelId);
+      let tmp4 = mode(18225)(channelId);
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmbeddedActivitiesStore, FramesStore, ChannelStore];
@@ -95,7 +95,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   : function useShowSecondaryPIP(channelId) {
       channelId = channelId.channelId;
       const mode = channelId.mode;
-      const tmp = mode(18202)(channelId);
+      const tmp = mode(18225)(channelId);
       dependencyMap = tmp;
       const items = [EmbeddedActivitiesStore, FramesStore, ChannelStore];
       const items1 = [channelId, tmp, mode];
@@ -166,9 +166,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   const pipAvoidanceSpecs = channelId.pipAvoidanceSpecs;
   const safeArea = channelId.safeArea;
   c7 = undefined;
-  let obj6;
-  let obj = obj6(5014);
-  const sharedValue = obj.useSharedValue(obj6(18323).getVoicePanelPIPScaleCached());
+  let obj7;
+  let obj = obj7(5014);
+  const sharedValue = obj.useSharedValue(obj7(18345).getVoicePanelPIPScaleCached());
   const ref = pipAvoidanceSpecs.useRef({
     id: "enabled",
     mode: "toCharArray$esjava$1",
@@ -178,18 +178,30 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     showSecondaryPIP: false,
     scale: sharedValue,
   });
-  let obj2 = obj6(18323);
-  const items = [obj6];
-  const stateFromStores = obj6(504).useStateFromStores(items, () => PIPSpeakerStore.getSpeakerId(obj6));
+  let obj2 = obj7(18345);
+  const items = [obj7];
+  const stateFromStores = obj7(504).useStateFromStores(items, () => PIPSpeakerStore.getSpeakerId(obj7));
   const tmp6 = closure_12({ channelId, mode });
-  const tmp8 = ref(18386)(channelId);
-  const obj4 = obj6(504);
+  const tmp8 = ref(18408)(channelId);
+  const obj4 = obj7(504);
   const tmp7 = ref;
   [tmp10, c7] = windowDimensions(
     pipAvoidanceSpecs.useState(() => closure_2.getTargetDimensions(ref)),
     2,
   );
-  const obj5 = {
+  const tmp9 = windowDimensions(
+    pipAvoidanceSpecs.useState(() => closure_2.getTargetDimensions(ref)),
+    2,
+  );
+  const pIPMode = obj7(18192).getPIPMode({
+    channelId,
+    connected,
+    manuallyFocusedId: focusedId,
+    mode,
+    selfHasVideo: tmp8,
+  });
+  const obj5 = obj7(18192);
+  const obj6 = {
     connected,
     mode,
     focusedId,
@@ -197,11 +209,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     selfHasVideo: tmp8,
     showSecondaryPIP: tmp6,
   };
-  const tmp9 = windowDimensions(
-    pipAvoidanceSpecs.useState(() => closure_2.getTargetDimensions(ref)),
-    2,
-  );
-  ({ participant, dimensions } = ref(18387)(channelId, layoutManager, focusedId, stateFromStores, {
+  ({ participant, dimensions } = ref(18409)(channelId, layoutManager, focusedId, stateFromStores, {
     connected,
     mode,
     focusedId,
@@ -209,16 +217,17 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     selfHasVideo: tmp8,
     showSecondaryPIP: tmp6,
   }));
-  obj6 = {};
+  obj7 = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
   let id;
   if (participant != null) {
     id = participant.id;
   }
-  obj6.id = id;
-  obj6.showSecondaryPIP = tmp6;
-  const tmp11 = ref(18387)(channelId, layoutManager, focusedId, stateFromStores, {
+  obj7.id = id;
+  obj7.showSecondaryPIP = tmp6;
+  obj7.mode = pIPMode;
+  const tmp12 = ref(18409)(channelId, layoutManager, focusedId, stateFromStores, {
     connected,
     mode,
     focusedId,
@@ -226,19 +235,17 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     selfHasVideo: tmp8,
     showSecondaryPIP: tmp6,
   });
-  obj6.mode = obj6(18169).getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp8 });
-  const tmpResult = obj6(18169);
-  let result = obj6(9892).cheapWorkletShallowEqual(obj6, ref.current);
+  let result = obj7(9904).cheapWorkletShallowEqual(obj7, ref.current);
   dependencyMap = !result;
   const effect = obj3.useEffect(() => {
     if (closure_2) {
-      ref.current = obj6;
+      ref.current = obj7;
     }
   });
   if (result) {
-    obj6 = ref.current;
+    obj7 = ref.current;
   }
-  const tmpResult3 = obj6(9892);
+  const tmpResult = obj7(9904);
   class C {
     constructor() {
       obj = {
@@ -256,9 +263,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   const fn = function _(scale) {
     const clampPIPScaleResult = VoicePanelPIPUtils.clampPIPScale({
       scale: scale.scale,
-      width: obj6.width,
-      containerHeight: obj6.containerHeight,
-      showSecondaryPIP: obj6.showSecondaryPIP,
+      width: obj7.width,
+      containerHeight: obj7.containerHeight,
+      showSecondaryPIP: obj7.showSecondaryPIP,
       windowDimensions: scale.windowDimensions,
       safeArea: scale.safeArea,
       pipAvoidanceSpecs: scale.pipAvoidanceSpecs,
@@ -268,19 +275,19 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     }
     const obj2 = {
       scale: scale.scale,
-      width: obj6.width,
-      containerHeight: obj6.containerHeight,
-      showSecondaryPIP: obj6.showSecondaryPIP,
+      width: obj7.width,
+      containerHeight: obj7.containerHeight,
+      showSecondaryPIP: obj7.showSecondaryPIP,
       windowDimensions: scale.windowDimensions,
       safeArea: scale.safeArea,
       pipAvoidanceSpecs: scale.pipAvoidanceSpecs,
     };
   };
-  const tmpResult4 = obj6(5014);
-  fn.__closure = { clampPIPScale: obj6(18169).clampPIPScale, pipState: obj6, scale: sharedValue };
+  const tmpResult2 = obj7(5014);
+  fn.__closure = { clampPIPScale: obj7(18192).clampPIPScale, pipState: obj7, scale: sharedValue };
   fn.__workletHash = 9660590378927;
   fn.__initData = __initData2;
-  const animatedReaction = tmpResult4.useAnimatedReaction(C, fn);
+  const animatedReaction = tmpResult2.useAnimatedReaction(C, fn);
   const items1 = [focusedId, layoutManager, tmp10];
   const effect1 = obj3.useEffect(() => {
     _undefined((safeAreaState) => {
@@ -300,6 +307,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items1);
-  tmp7(18388)(channelId, layoutManager, focusedId);
-  return obj6;
+  tmp7(18410)(channelId, layoutManager, pIPMode);
+  return obj7;
 };

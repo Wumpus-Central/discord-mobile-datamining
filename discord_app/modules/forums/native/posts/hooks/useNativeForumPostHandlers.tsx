@@ -68,16 +68,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp = endsWithResult;
               }
               if (tmp) {
-                let isAttachmentPathUrlResult = src.type === threadId(8768).ForumPostMediaTypes.ATTACHMENT;
+                let isAttachmentPathUrlResult = src.type === threadId(8780).ForumPostMediaTypes.ATTACHMENT;
                 if (isAttachmentPathUrlResult) {
-                  isAttachmentPathUrlResult = closure_2(9633).isAttachmentPathUrl(str);
-                  const obj5 = closure_2(9633);
+                  isAttachmentPathUrlResult = closure_2(9646).isAttachmentPathUrl(str);
+                  const obj5 = closure_2(9646);
                 }
                 if (!isAttachmentPathUrlResult) {
-                  let result = src.type === threadId(8768).ForumPostMediaTypes.EMBED;
+                  let result = src.type === threadId(8780).ForumPostMediaTypes.EMBED;
                   if (result) {
-                    result = closure_2(9633).isExternalProxiedAttachmentUrl(str);
-                    const obj6 = closure_2(9633);
+                    result = closure_2(9646).isExternalProxiedAttachmentUrl(str);
+                    const obj6 = closure_2(9646);
                   }
                   isAttachmentPathUrlResult = result;
                 }
@@ -561,16 +561,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp = endsWithResult;
             }
             if (tmp) {
-              let isAttachmentPathUrlResult = src.type === threadId(8768).ForumPostMediaTypes.ATTACHMENT;
+              let isAttachmentPathUrlResult = src.type === threadId(8780).ForumPostMediaTypes.ATTACHMENT;
               if (isAttachmentPathUrlResult) {
-                isAttachmentPathUrlResult = callback1(9633).isAttachmentPathUrl(str);
-                const obj5 = callback1(9633);
+                isAttachmentPathUrlResult = callback1(9646).isAttachmentPathUrl(str);
+                const obj5 = callback1(9646);
               }
               if (!isAttachmentPathUrlResult) {
-                let result = src.type === threadId(8768).ForumPostMediaTypes.EMBED;
+                let result = src.type === threadId(8780).ForumPostMediaTypes.EMBED;
                 if (result) {
-                  result = callback1(9633).isExternalProxiedAttachmentUrl(str);
-                  const obj6 = callback1(9633);
+                  result = callback1(9646).isExternalProxiedAttachmentUrl(str);
+                  const obj6 = callback1(9646);
                 }
                 isAttachmentPathUrlResult = result;
               }

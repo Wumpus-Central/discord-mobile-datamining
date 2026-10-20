@@ -39,11 +39,11 @@ let closure_5 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/connection/ConjureWorkerTickets.tsx");
 
-export const rememberCreatedProjectTicket = function rememberCreatedProjectTicket(id, ticket) {
-  const obj = { ticket: ticket.ticket, baseUrl: null };
+export const rememberCreatedProjectTicket = function rememberCreatedProjectTicket(id, ws_ticket) {
+  const obj = { ticket: ws_ticket.ticket, baseUrl: null };
   let url = conjureLocalDev.getConjureTunnelWorkerOrigin();
   if (url == null) {
-    url = ticket.url;
+    url = ws_ticket.url;
   }
   obj.baseUrl = url;
   const result = map.set(id, { ticket: Promise.resolve(obj), until: Date.now() + 30000 });
@@ -83,8 +83,8 @@ export const prefetchWorkerTicket = function prefetchWorkerTicket(projectId) {
     }
   }
 };
-export const forgetEarlyTicket = function forgetEarlyTicket(projectId) {
-  map.delete(projectId);
+export const forgetEarlyTicket = function forgetEarlyTicket(id) {
+  map.delete(id);
 };
 export const forgetEarlyTickets = function forgetEarlyTickets() {
   map.clear();

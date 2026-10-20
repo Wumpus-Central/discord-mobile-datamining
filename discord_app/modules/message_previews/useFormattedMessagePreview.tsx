@@ -454,7 +454,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
         }
         const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
         const tmpResult6 = tmp(504);
-        const tmpResult7 = tmp(6320);
+        const tmpResult7 = tmp(6323);
         const obj2 = {
           message: author,
           channel: id,

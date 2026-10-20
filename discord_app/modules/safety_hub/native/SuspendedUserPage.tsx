@@ -8,14 +8,14 @@ import LinkingDefault from "../../../lib/native/Linking.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8058 from "../../../../_runtime/metro/08058__.js";
+import _modDef8062 from "../../../../_runtime/metro/08062__.js";
 import SafetyHubPageDefault from "SafetyHubPage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7842);
+const SafetyHubConstants = fn(7846);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj4.accessibilityLabel = intl.string(util.t.cpT0Cq);
         obj4.onPress = tmp9;
-        obj4.icon = _modDef8058;
+        obj4.icon = _modDef8062;
         const items2 = [React5(IconButton.IconButton, obj4)];
         const obj5 = {
           style: tmp4.text,
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.onPress = function onClose() {
           AuthenticationActionCreatorsDefault.closeSuspendedUser();
         };
-        obj4.icon = _modDef8058;
+        obj4.icon = _modDef8062;
         const items1 = [React5(IconButton.IconButton, obj4)];
         const obj5 = {
           style: tmp.text,

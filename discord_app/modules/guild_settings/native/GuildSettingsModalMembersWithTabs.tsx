@@ -483,12 +483,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return closure_2_11(ContextMenu.ContextMenu, {
               items: membersManagementActions,
               children(ref) {
-                const obj = { source: closure_1_1(8953), accessibilityLabel: null, ref: null };
+                const obj = { source: closure_1_1(8965), accessibilityLabel: null, ref: null };
                 const intl = guildId(1128).intl;
                 obj.accessibilityLabel = intl.string(guildId(1128).t.ogxXGq);
                 obj.ref = ref.ref;
                 const merged = Object.assign(navigation(ref, stateFromStores1));
-                return closure_1_11(guildId(7431).HeaderActionButton, obj);
+                return closure_1_11(guildId(7434).HeaderActionButton, obj);
               }
             });
           };
@@ -600,12 +600,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(8953), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(8965), accessibilityLabel: null, ref: null };
         const intl = guildId(1128).intl;
         obj.accessibilityLabel = intl.string(guildId(1128).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_11(guildId(7431).HeaderActionButton, obj);
+        return closure_1_11(guildId(7434).HeaderActionButton, obj);
       }
     });
   }, items5);

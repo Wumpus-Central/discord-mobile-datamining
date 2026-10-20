@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
-import inlineStyles from "../../../../../../_runtime/07906_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07910_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 
@@ -13,7 +13,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(5970);
+const CheckpointConstants = fn(5973);
 ({ CHECKPOINT_PRIMARY: metroRequire, TRAIT_OPTION_HEIGHT } = CheckpointConstants);
 const TRAIT_OPTION_WIDTH = CheckpointConstants.TRAIT_OPTION_WIDTH;
 const jsxProd = fn(21);

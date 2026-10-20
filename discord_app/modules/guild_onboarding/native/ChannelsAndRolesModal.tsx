@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildOnboardingTab = fn(7144).GuildOnboardingTab;
+const GuildOnboardingTab = fn(7147).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = guildId(576);
       const stateFromStores = guildId(573).useStateFromStores(first, tmp6);
-      const tmp9 = defaultTab(7387)(stateFromStores);
+      const tmp9 = defaultTab(7390)(stateFromStores);
       if (cResult[3] !== tmp9) {
         const intl = tmp(1128).intl;
         const string = intl.string;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { screenKey: "channelAndRolesModal", title: tmp10, render: tmp13 };
-          const tmp15 = closure_8(tmp8(9947), obj2);
+          const tmp15 = closure_8(tmp8(9958), obj2);
           cResult[8] = tmp10;
           cResult[9] = tmp13;
           cResult[10] = tmp15;

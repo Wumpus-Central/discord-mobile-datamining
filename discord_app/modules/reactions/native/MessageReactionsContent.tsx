@@ -147,13 +147,13 @@ function EmojiOptionsButton(channelId) {
   const items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(9900)(stateFromStores);
+  const tmp3 = messageId(9912)(stateFromStores);
   dependencyMap = tmp3;
   const reaction = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3, flag];
   const obj2 = {
     onPress: noop.useCallback(() => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9901, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", { channelId, messageId, reaction, canRemoveReactions, isEmojiPack: flag }, "replaceTopSheet");
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9913, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", { channelId, messageId, reaction, canRemoveReactions, isEmojiPack: flag }, "replaceTopSheet");
     }, items2),
     style: tmp.emojiOptionsButton,
     children: null
@@ -163,13 +163,13 @@ function EmojiOptionsButton(channelId) {
   obj3.children = intl.string(channelId(1128).t.pCaYID);
   const items3 = [closure_18(channelId(5195).Text, obj3), ];
   const obj = channelId(504);
-  items3[1] = closure_18(channelId(7251).ChevronSmallRightIcon, { color: messageId(587).colors.ICON_SUBTLE, size: "xs" });
+  items3[1] = closure_18(channelId(7254).ChevronSmallRightIcon, { color: messageId(587).colors.ICON_SUBTLE, size: "xs" });
   obj2.children = items3;
   return closure_19(closure_7, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Platform, Pressable: closure_7, StyleSheet: closure_8, View: closure_9 } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(6832).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(6835).EmojiSourceDataTypes;
 const Constants = fn(1087);
 ({ DEFAULT_NUM_REACTION_USERS: closure_16, Permissions: closure_17 } = Constants);
 const jsxProd = fn(21);
@@ -881,7 +881,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRen
     let obj2 = { title: null, IconComponent: null, color: null, onPress: null, height: null };
     const intl = channelId(1128).intl;
     obj2.title = intl.string(channelId(1128).t.N86XcP);
-    obj2.IconComponent = channelId(6879).XSmallIcon;
+    obj2.IconComponent = channelId(6882).XSmallIcon;
     obj2.color = messageId(587).unsafe_rawColors.RED_400;
     obj2.onPress = function onPress() {
       const obj2 = { channelId, messageId, emoji: emoji.emoji, location: ReactionActionCreators.ReactionLocations.MESSAGE, userId: channelId.id, options: null };
@@ -890,7 +890,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRen
       return obj.removeReaction(obj2);
     };
     obj2.height = height;
-    obj.children = closure_1_18(messageId(9898), obj2);
+    obj.children = closure_1_18(messageId(9910), obj2);
     return closure_1_18(closure_1_9, obj);
   };
   cResult[0] = arg0;
@@ -920,7 +920,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRen
     let obj2 = { title: null, IconComponent: null, color: null, onPress: null, height: null };
     const intl = channelId(1128).intl;
     obj2.title = intl.string(channelId(1128).t.N86XcP);
-    obj2.IconComponent = channelId(6879).XSmallIcon;
+    obj2.IconComponent = channelId(6882).XSmallIcon;
     obj2.color = messageId(587).unsafe_rawColors.RED_400;
     obj2.onPress = function onPress() {
       const obj2 = { channelId, messageId, emoji: emoji.emoji, location: ReactionActionCreators.ReactionLocations.MESSAGE, userId: channelId.id, options: null };
@@ -929,7 +929,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRen
       return obj.removeReaction(obj2);
     };
     obj2.height = height;
-    obj.children = closure_1_18(messageId(9898), obj2);
+    obj.children = closure_1_18(messageId(9910), obj2);
     return closure_1_18(closure_1_9, obj);
   }, items);
 });
@@ -1328,7 +1328,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reacti
   }
   const obj = reactionSelectedIndex(576);
   const tmp6 = setReactionSelectedIndex;
-  const tidaWebformEnabled = setReactionSelectedIndex(7230).useExperiment(tmp4, tmp5).tidaWebformEnabled;
+  const tidaWebformEnabled = setReactionSelectedIndex(7233).useExperiment(tmp4, tmp5).tidaWebformEnabled;
   if (cResult[2] === reactionSelectedIndex) {
     if (cResult[3] === reactions) {
       if (cResult[7] !== setReactionSelectedIndex) {
@@ -1366,7 +1366,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reacti
       ({ tab: obj5.tabStyle, tabActive: obj5.tabStyleActive, tabSelected: obj5.tabStyleSelected } = tmp3);
       obj8.tabIndexSelected = reactionSelectedIndex;
       obj8.onSelect = T;
-      const tmp13 = closure_18(tmp6(9902), obj8);
+      const tmp13 = closure_18(tmp6(9914), obj8);
       cResult[9] = reactionSelectedIndex;
       cResult[10] = tmp3.tab;
       cResult[11] = tmp3.tabActive;
@@ -1401,7 +1401,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reacti
   cResult[2] = reactionSelectedIndex;
   cResult[3] = reactions;
   cResult[4] = mapped;
-  const obj4 = setReactionSelectedIndex(7230);
+  const obj4 = setReactionSelectedIndex(7233);
 }) : (function ReactionTabs(setReactionSelectedIndex) {
   const tmp = closure_22();
   ({ reactions, reactionSelectedIndex } = setReactionSelectedIndex);
@@ -1409,7 +1409,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reacti
   const emoji = reactions[reactionSelectedIndex].emoji;
   const obj2 = { style: tmp.reactionTab, children: null };
   const obj4 = { tabs: null, tabStyle: null, tabStyleActive: null, tabStyleSelected: null, tabIndexSelected: null, onSelect: null };
-  const obj = setReactionSelectedIndex(7230);
+  const obj = setReactionSelectedIndex(7233);
   obj4.tabs = reactions.map((reaction, index) => {
     let str = "normal-";
     if (reaction.burst_count > 0) {
@@ -1427,10 +1427,10 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reacti
     const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
     setReactionSelectedIndex(arg0);
   };
-  const items = [closure_18(setReactionSelectedIndex(9902), obj4), closure_18(setReactionSelectedIndex(8875), { outer: true }), ];
+  const items = [closure_18(setReactionSelectedIndex(9914), obj4), closure_18(setReactionSelectedIndex(8887), { outer: true }), ];
   const obj5 = { style: tmp.removeButtonContainer, children: null };
   const obj7 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
-  const tmp5 = setReactionSelectedIndex(9902);
+  const tmp5 = setReactionSelectedIndex(9914);
   obj7.children = reactionSelectedIndex(4892).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [closure_18(reactionSelectedIndex(5195).Text, obj7), ];
   if (obj.useExperiment({ location: "ReactionTabs" }, { autoTrackExposure: false }).tidaWebformEnabled) {
@@ -1827,8 +1827,8 @@ export const MessageReactionsContent = ReactCompilerGating.isReactCompilerEnable
   const items1 = [channelId];
   const stateFromStores = tmp7(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const tmp7Result = tmp7(504);
-  const isActiveChannelOrUnarchivableThread = tmp7(7315).useIsActiveChannelOrUnarchivableThread(stateFromStores);
-  const tmp7Result3 = tmp7(7315);
+  const isActiveChannelOrUnarchivableThread = tmp7(7318).useIsActiveChannelOrUnarchivableThread(stateFromStores);
+  const tmp7Result3 = tmp7(7318);
   let tmp18 = closure_23(channelId);
   if (tmp18) {
     tmp18 = !disableManage;
