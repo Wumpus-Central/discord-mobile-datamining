@@ -1,6 +1,6 @@
-// === Module 17460: useGuildsBarGesture ===
+// === Module 17479: useGuildsBarGesture ===
 
-// Module 17460 (useGuildsBarGesture)
+// Module 17479 (useGuildsBarGesture)
 import util from "util" /* 1128 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
@@ -9,14 +9,14 @@ import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
 import HapticUtils from "HapticUtils" /* 5173 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5228 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5258 */;
-import FastList from "FastList" /* 7115 */;
-import ContextMenuState from "ContextMenuState" /* 9677 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11931 */;
+import FastList from "FastList" /* 7118 */;
+import ContextMenuState from "ContextMenuState" /* 9690 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11945 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import SortedGuildStore from "SortedGuildStore" /* 6649 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17461 */;
+import SortedGuildStore from "SortedGuildStore" /* 6652 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17480 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -275,8 +275,8 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6649).GuildsNodeType;
-const GuildsBarConstants = fn(17458);
+const GuildsNodeType = fn(6652).GuildsNodeType;
+const GuildsBarConstants = fn(17477);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
@@ -602,7 +602,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "test" });
+    state1.setStateShallow({ dragSpecs: "userId", overSpecs: "code" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -784,10 +784,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(9677).ContextMenuStore;
+        const ContextMenuStore = tmp66(9690).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(9677).hideContextMenu();
-          const tmp66Result = tmp66(9677);
+          tmp66(9690).hideContextMenu();
+          const tmp66Result = tmp66(9690);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -824,9 +824,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(7115).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(7118).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(7115).FastListItemTypes.SECTION === type) {
+                    if (tmp66(7118).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";

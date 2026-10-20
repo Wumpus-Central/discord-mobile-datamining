@@ -1,6 +1,6 @@
-// === Module 10351: MediaKeyboardItem ===
+// === Module 10362: MediaKeyboardItem ===
 
-// Module 10351 (MediaKeyboardItem)
+// Module 10362 (MediaKeyboardItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,20 +9,20 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import ImageIcon from "ImageIcon" /* 8503 */;
-import _modDef10083 from "module_10083" /* 10083 */;
-import AttachmentIcon from "AttachmentIcon" /* 10341 */;
-import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10353 */;
-import CameraIcon from "CameraIcon" /* 10356 */;
+import ImageIcon from "ImageIcon" /* 8507 */;
+import _modDef10094 from "module_10094" /* 10094 */;
+import AttachmentIcon from "AttachmentIcon" /* 10352 */;
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10364 */;
+import CameraIcon from "CameraIcon" /* 10367 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8237 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8241 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10352);
+const DeviceConstants = fn(10363);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -177,7 +177,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewCap
       let tmp5 = cResult[2];
     }
     if (cResult[3] !== tmp4.icon) {
-      const obj2 = { source: _modDef10083, style: tmp4.icon };
+      const obj2 = { source: _modDef10094, style: tmp4.icon };
       const tmp9 = React6(native.Icon, obj2);
       cResult[3] = tmp4.icon;
       cResult[4] = tmp9;
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewCap
   const obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [React6(native.Icon, { source: _modDef10083, style: tmp.icon }), React6(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [React6(native.Icon, { source: _modDef10094, style: tmp.icon }), React6(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj.children = items1;
   return collapsed(React4, obj);
 });

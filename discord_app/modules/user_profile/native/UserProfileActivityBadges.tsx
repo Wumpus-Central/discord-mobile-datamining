@@ -1,21 +1,21 @@
-// === Module 14093: UserProfileActivityBadges ===
+// === Module 14111: UserProfileActivityBadges ===
 
-// Module 14093 (UserProfileActivityBadges)
+// Module 14111 (UserProfileActivityBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7755 */;
-import GroupIcon from "GroupIcon" /* 8505 */;
-import AppsIcon2 from "AppsIcon" /* 8522 */;
-import utils from "utils" /* 8560 */;
-import GameControllerIcon from "GameControllerIcon" /* 9530 */;
-import TvIcon from "TvIcon" /* 10559 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10564 */;
-import MusicIcon from "MusicIcon" /* 10565 */;
-import TopicsIcon from "TopicsIcon" /* 11209 */;
-import HourglassIcon from "HourglassIcon" /* 11866 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14095 */;
-import Badges from "Badges" /* 14096 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7759 */;
+import GroupIcon from "GroupIcon" /* 8509 */;
+import AppsIcon2 from "AppsIcon" /* 8526 */;
+import utils from "utils" /* 8566 */;
+import GameControllerIcon from "GameControllerIcon" /* 9543 */;
+import TvIcon from "TvIcon" /* 10570 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10575 */;
+import MusicIcon from "MusicIcon" /* 10576 */;
+import TopicsIcon from "TopicsIcon" /* 11220 */;
+import HourglassIcon from "HourglassIcon" /* 11880 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14113 */;
+import Badges from "Badges" /* 14114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

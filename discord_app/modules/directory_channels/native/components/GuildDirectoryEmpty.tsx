@@ -1,9 +1,9 @@
-// === Module 13505: GuildDirectoryEmpty ===
+// === Module 13523: GuildDirectoryEmpty ===
 
-// Module 13505 (GuildDirectoryEmpty)
+// Module 13523 (GuildDirectoryEmpty)
 import nativeDefault from "native" /* 587 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8971 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12990 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8983 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13008 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4878 */;
 
@@ -245,13 +245,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
   const obj = guild(504);
   const obj3 = { contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
-  const obj2 = guild(12989);
+  const obj2 = guild(13007);
   items1[1] = { paddingBottom: channel(1633)().bottom + 16 };
   obj3.contentContainerStyle = items1;
   const canCreateOrAddGuildInDirectory = obj2.useCanCreateOrAddGuildInDirectory(channel);
   const obj5 = { source: null, style: null };
   const obj4 = { paddingBottom: channel(1633)().bottom + 16 };
-  obj5.source = channel(13506);
+  obj5.source = channel(13524);
   obj5.style = tmp.header;
   const items2 = [closure_6(channel(5631), obj5), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", children: null };
@@ -269,12 +269,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
       onPress() {
           return GuildDirectoryAddModalActionCreatorsDefault.open({ directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id });
         },
-      iconSource: tmp2(13507),
+      iconSource: tmp2(13525),
       title: null
     };
     const intl3 = tmp4(1128).intl;
     obj9.title = intl3.string(tmp4(1128).t.hyK15i);
-    tmp8Result = closure_6(tmp4(8871).FormCTA, obj9);
+    tmp8Result = closure_6(tmp4(8883).FormCTA, obj9);
   }
   items2[3] = tmp8Result;
   const obj10 = {
@@ -282,12 +282,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
     onPress() {
       return instant_invite_InstantInviteUtils.handleOpenInviteActionsheet(guild, channel.id, closure_2, constants.HUB_EMPTY_STATE);
     },
-    iconSource: channel(13508),
+    iconSource: channel(13526),
     title: null
   };
   const intl4 = tmp4(1128).intl;
   obj10.title = intl4.string(guild(1128).t.L4bwJ9);
-  items2[4] = closure_6(guild(8871).FormCTA, obj10);
+  items2[4] = closure_6(guild(8883).FormCTA, obj10);
   obj3.children = items2;
   return closure_7(ScrollView, obj3);
 });

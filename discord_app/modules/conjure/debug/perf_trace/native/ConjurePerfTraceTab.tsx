@@ -1,24 +1,24 @@
-// === Module 12368: ConjurePerfTraceTab ===
+// === Module 12385: ConjurePerfTraceTab ===
 
-// Module 12368 (ConjurePerfTraceTab)
+// Module 12385 (ConjurePerfTraceTab)
 import nativeDefault from "native" /* 587 */;
 import v1 from "v1" /* 1281 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import Card from "Card" /* 6853 */;
-import FileManagerUtils from "FileManagerUtils" /* 8621 */;
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 11025 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12371 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12373 */;
-import ConjurePerfTraceList from "ConjurePerfTraceList" /* 12376 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import Card from "Card" /* 6856 */;
+import FileManagerUtils from "FileManagerUtils" /* 8633 */;
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 11037 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12388 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12390 */;
+import ConjurePerfTraceList from "ConjurePerfTraceList" /* 12393 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10995 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 11007 */;
 
-const ConjureHeaderIconButtonDefault = tmp5(11706);
+const ConjureHeaderIconButtonDefault = tmp5(11720);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -65,17 +65,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
     }
     ({ rowBody, rowTop } = tmp4);
     if (cResult[5] !== trace) {
-      const perfTraceStatusResult = tmp(11025).perfTraceStatus(trace);
+      const perfTraceStatusResult = tmp(11037).perfTraceStatus(trace);
       cResult[5] = trace;
       cResult[6] = perfTraceStatusResult;
       let tmp11 = perfTraceStatusResult;
-      const tmpResult = tmp(11025);
+      const tmpResult = tmp(11037);
     } else {
       tmp11 = cResult[6];
     }
     if (cResult[7] !== tmp11) {
       const obj2 = { status: tmp11 };
-      const tmp16 = closure_8(trace(12375), obj2);
+      const tmp16 = closure_8(trace(12392), obj2);
       cResult[7] = tmp11;
       cResult[8] = tmp16;
       let tmp13 = tmp16;
@@ -87,11 +87,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
         let tmp17 = cResult[11];
       }
       if (cResult[12] !== trace) {
-        const perfTraceDurationResult = tmp(12371).perfTraceDuration(trace);
+        const perfTraceDurationResult = tmp(12388).perfTraceDuration(trace);
         cResult[12] = trace;
         cResult[13] = perfTraceDurationResult;
         let tmp20 = perfTraceDurationResult;
-        const tmpResult3 = tmp(12371);
+        const tmpResult3 = tmp(12388);
       } else {
         tmp20 = cResult[13];
       }
@@ -111,11 +111,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
               let tmp25 = cResult[20];
             }
             if (cResult[21] !== trace) {
-              const perfTraceSummaryResult = tmp(12371).perfTraceSummary(trace);
+              const perfTraceSummaryResult = tmp(12388).perfTraceSummary(trace);
               cResult[21] = trace;
               cResult[22] = perfTraceSummaryResult;
               let tmp29 = perfTraceSummaryResult;
-              const tmpResult4 = tmp(12371);
+              const tmpResult4 = tmp(12388);
             } else {
               tmp29 = cResult[22];
             }
@@ -166,7 +166,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
                     }
                   }
                   const obj7 = { variant: "primary", onPress: tmp10, accessibilityLabel: trace.name, children: tmp37 };
-                  const tmp43 = closure_8(tmp(6853).Card, obj7);
+                  const tmp43 = closure_8(tmp(6856).Card, obj7);
                   cResult[32] = tmp37;
                   cResult[33] = tmp10;
                   cResult[34] = trace.name;
@@ -207,7 +207,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
     tmp17 = tmp19;
   }
   const fn = function f() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12369, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12386, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
   };
   cResult[2] = projectId;
   cResult[3] = trace.id;
@@ -227,7 +227,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const obj2 = {
     variant: "primary",
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12369, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12386, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
     },
     accessibilityLabel: trace.name,
     children: null
@@ -235,7 +235,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const obj3 = { style: tmp.rowBody, children: null };
   const obj4 = { style: tmp.rowTop, children: null };
   const obj5 = { status: null };
-  const tmp9 = trace(12375);
+  const tmp9 = trace(12392);
   obj5.status = ConjurePerfTraceLayout.perfTraceStatus(trace);
   const items = [closure_8(tmp9, obj5), closure_8(Text_Text.Text, { variant: "text-sm/semibold", color: "text-default", style: tmp.rowName, lineClamp: 1, children: trace.name }), ];
   const obj8 = { variant: "text-xs/normal", color: "text-subtle", children: null };
@@ -261,7 +261,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
 ReactCompilerGating = fn(558);
 let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 function openPerfTrace(projectId, traceId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12369, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12386, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/native/ConjurePerfTraceTab.tsx");
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     combined = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                    const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   } else {
                     c1 = 2;
                     dependencyMap = 1;
-                    const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                    const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                     return obj8;
                   }
                 } else if (arg0 === 1) {
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       cResult[8] = tmp18;
     }
     if (cResult[9] !== tmp12) {
-      const tmpResult3 = tmp(12373);
+      const tmpResult3 = tmp(12390);
       cResult[9] = tmp12;
       class F {
         constructor() {
@@ -467,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     combined = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                    const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -481,7 +481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   } else {
                     c1 = 2;
                     dependencyMap = 1;
-                    const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                    const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                     return obj8;
                   }
                 } else if (arg0 === 1) {
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           return;
         }
       }
-      const sumPerfTraceStatsResult = tmp(12373).sumPerfTraceStats(tmp12);
+      const sumPerfTraceStatsResult = tmp(12390).sumPerfTraceStats(tmp12);
     }
     if (cResult[11] === tmp12) {
       if (cResult[12] === projectId) {
@@ -583,7 +583,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       combined = tmp4;
                       c1 = 1;
                       dependencyMap = 1;
-                      const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                      const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                       return obj6;
                     }
                   } else if (1 === tmp4) {
@@ -597,7 +597,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     } else {
                       c1 = 2;
                       dependencyMap = 1;
-                      const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                      const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                       return obj8;
                     }
                   } else if (arg0 === 1) {
@@ -709,7 +709,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         combined = tmp4;
                         c1 = 1;
                         dependencyMap = 1;
-                        const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                        const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp4) {
@@ -723,7 +723,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       } else {
                         c1 = 2;
                         dependencyMap = 1;
-                        const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                        const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                         return obj8;
                       }
                     } else if (arg0 === 1) {
@@ -829,7 +829,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         combined = tmp4;
                         c1 = 1;
                         dependencyMap = 1;
-                        const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                        const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp4) {
@@ -843,7 +843,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       } else {
                         c1 = 2;
                         dependencyMap = 1;
-                        const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                        const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                         return obj8;
                       }
                     } else if (arg0 === 1) {
@@ -967,7 +967,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       combined = tmp4;
                       c1 = 1;
                       dependencyMap = 1;
-                      const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                      const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                       return obj6;
                     }
                   } else if (1 === tmp4) {
@@ -981,7 +981,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     } else {
                       c1 = 2;
                       dependencyMap = 1;
-                      const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                      const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                       return obj8;
                     }
                   } else if (arg0 === 1) {
@@ -1075,7 +1075,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         combined = tmp4;
                         c1 = 1;
                         dependencyMap = 1;
-                        const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                        const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp4) {
@@ -1089,7 +1089,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       } else {
                         c1 = 2;
                         dependencyMap = 1;
-                        const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                        const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                         return obj8;
                       }
                     } else if (arg0 === 1) {
@@ -1195,7 +1195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         combined = tmp4;
                         c1 = 1;
                         dependencyMap = 1;
-                        const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                        const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp4) {
@@ -1209,7 +1209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                       } else {
                         c1 = 2;
                         dependencyMap = 1;
-                        const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                        const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                         return obj8;
                       }
                     } else if (arg0 === 1) {
@@ -1322,7 +1322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   combined = tmp4;
                   c1 = 1;
                   dependencyMap = 1;
-                  const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+                  const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
                   return obj6;
                 }
               } else if (1 === tmp4) {
@@ -1336,7 +1336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 } else {
                   c1 = 2;
                   dependencyMap = 1;
-                  const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+                  const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -1373,12 +1373,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     tmp21 = F;
   }
   const tmp10 = _slicedToArray(noop.useState(""), 2);
-  const filterPerfTracesResult = projectId(12376).filterPerfTraces(stateFromStoresArray, first1);
+  const filterPerfTracesResult = projectId(12393).filterPerfTraces(stateFromStoresArray, first1);
   cResult[4] = first1;
   cResult[5] = stateFromStoresArray;
   cResult[6] = filterPerfTracesResult;
   tmp12 = filterPerfTracesResult;
-  const tmpResult4 = projectId(12376);
+  const tmpResult4 = projectId(12393);
 }) : (function ConjurePerfTraceTab(projectId) {
   projectId = projectId.projectId;
   let first;
@@ -1467,7 +1467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
               combined = tmp4;
               c1 = 1;
               dependencyMap = 1;
-              const obj6 = { value: combined(8621).clearFolder("cache", combined1), done: false };
+              const obj6 = { value: combined(8633).clearFolder("cache", combined1), done: false };
               return obj6;
             }
           } else if (1 === tmp4) {
@@ -1481,7 +1481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
             } else {
               c1 = 2;
               dependencyMap = 1;
-              const obj8 = { value: combined(8621).removeFile("cache", closure_128_1), done: false };
+              const obj8 = { value: combined(8633).removeFile("cache", closure_128_1), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {

@@ -1,14 +1,14 @@
-// === Module 17085: RootThemeContextProvider ===
+// === Module 17104: RootThemeContextProvider ===
 
-// Module 17085 (RootThemeContextProvider)
+// Module 17104 (RootThemeContextProvider)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import native from "native" /* 4999 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5107 */;
 import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5199 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7023 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11598 */;
-import PlainTextExperiment from "PlainTextExperiment" /* 17086 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7026 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11609 */;
+import PlainTextExperiment from "PlainTextExperiment" /* 17105 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -159,10 +159,10 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
   ({ saturation, contrast } = stateFromStoresObject);
   const tmp4 = useColorThemeBackgroundDefault();
   const obj = manaTypeConsolidationExperiment(504);
-  manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(7023).useManaTypeConsolidationExperiment("RootThemeContextProvider");
-  const obj2 = manaTypeConsolidationExperiment(7023);
+  manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(7026).useManaTypeConsolidationExperiment("RootThemeContextProvider");
+  const obj2 = manaTypeConsolidationExperiment(7026);
   [][0] = manaTypeConsolidationExperiment;
-  const plainTextExperiment = manaTypeConsolidationExperiment(17086).usePlainTextExperiment("RootThemeContextProvider");
+  const plainTextExperiment = manaTypeConsolidationExperiment(17105).usePlainTextExperiment("RootThemeContextProvider");
   if (null == tmp4) {
     let num2 = 0;
     if (1 !== saturation) {
@@ -173,7 +173,7 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
       const obj4 = { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null };
       const obj5 = { enabled: plainTextExperiment, children: children.children };
       obj4.children = jsx(tmp(5199).PlainTextExperimentProvider, { enabled: plainTextExperiment, children: children.children });
-      return jsx(tmp(11598).RootThemeContextProvider, { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null });
+      return jsx(tmp(11609).RootThemeContextProvider, { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null });
     } else {
       if (contrast > 1) {
         let REDUCED_CONTRAST_ENABLED = tmp(4999).ThemeContextFlags.INCREASED_CONTRAST_ENABLED;
@@ -190,5 +190,5 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
     setThemeFlagResult1 = tmp(4999).setThemeFlag(0, tmp(4999).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
     const tmpResult6 = tmp(4999);
   }
-  const obj3 = manaTypeConsolidationExperiment(17086);
+  const obj3 = manaTypeConsolidationExperiment(17105);
 });

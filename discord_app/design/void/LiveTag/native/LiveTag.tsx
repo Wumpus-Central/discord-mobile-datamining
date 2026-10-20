@@ -1,6 +1,6 @@
-// === Module 15227: LiveTag ===
+// === Module 15245: LiveTag ===
 
-// Module 15227 (LiveTag)
+// Module 15245 (LiveTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

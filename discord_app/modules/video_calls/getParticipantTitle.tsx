@@ -1,10 +1,10 @@
-// === Module 11570: getParticipantTitle ===
+// === Module 11581: getParticipantTitle ===
 
-// Module 11570 (getParticipantTitle)
+// Module 11581 (getParticipantTitle)
 import util from "util" /* 1128 */;
 import CallConstants from "CallConstants" /* 5593 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5944 */;
-import useIsGuestOrLurker from "useIsGuestOrLurker" /* 11571 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5947 */;
+import useIsGuestOrLurker from "useIsGuestOrLurker" /* 11582 */;
 import size from "module_2" /* 2 */;
 
 const ParticipantTypes = CallConstants.ParticipantTypes;

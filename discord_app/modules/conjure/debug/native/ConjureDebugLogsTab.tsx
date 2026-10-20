@@ -1,23 +1,23 @@
-// === Module 12378: ConjureDebugLogsTab ===
+// === Module 12395: ConjureDebugLogsTab ===
 
-// Module 12378 (ConjureDebugLogsTab)
+// Module 12395 (ConjureDebugLogsTab)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef3820 from "module_3820" /* 3820 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 12380 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 12397 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugLogStore from "ConjureDebugLogStore" /* 11000 */;
+import ConjureDebugLogStore from "ConjureDebugLogStore" /* 11012 */;
 
 const util = Text(1128);
 const Text_Text = Text(5195);
-const Card = Text(6853);
-const Pressables = Text(6856);
-const ChevronSmallRightIcon2 = Text(7251);
-const ChevronSmallDownIcon = Text(10871);
-const ConjureTimeFormat = Text(12372);
-const ConjureDebugJson = Text(12379);
+const Card = Text(6856);
+const Pressables = Text(6859);
+const ChevronSmallRightIcon2 = Text(7254);
+const ChevronSmallDownIcon = Text(10882);
+const ConjureTimeFormat = Text(12389);
+const ConjureDebugJson = Text(12396);
 require = fn;
 function keyOf(key) {
   return String(key.key);
@@ -276,15 +276,15 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(10871).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(10882).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
-    ChevronSmallRightIcon = tmp3(7251).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp3(7254).ChevronSmallRightIcon;
     tmp6 = tmp3;
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  let ts = tmp6(12372).formatClockTime(entry.ts);
+  let ts = tmp6(12389).formatClockTime(entry.ts);
   if (ts == null) {
     ts = entry.ts;
   }
@@ -348,13 +348,13 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj10.children = items5;
     items4[1] = closure_8(tmp6(5195).Text, obj10);
     obj7.children = items4;
-    items3[1] = closure_8(tmp6(6856).PressableOpacity, obj7);
+    items3[1] = closure_8(tmp6(6859).PressableOpacity, obj7);
     let tmp9Result6 = null;
     if (expanded) {
       const obj12 = { variant: "primary", children: null };
       const obj13 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.pretty };
       obj12.children = closure_7(tmp6(5195).Text, obj13);
-      tmp9Result6 = closure_7(tmp6(6853).Card, obj12);
+      tmp9Result6 = closure_7(tmp6(6856).Card, obj12);
     }
     const obj14 = { children: null };
     items3[2] = tmp9Result6;
@@ -432,7 +432,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
   const first1 = tmp18[0];
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { pageWidth: 0, items: null, onSetActiveIndex: null };
-    const DEBUG_LOG_FILTERS = tmp(12380).DEBUG_LOG_FILTERS;
+    const DEBUG_LOG_FILTERS = tmp(12397).DEBUG_LOG_FILTERS;
     obj2.items = DEBUG_LOG_FILTERS.map((id) => {
       const obj = { id, label: projectId(showSource[20]).debugLogFilterLabel(id), page: null };
       return obj;
@@ -450,7 +450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     tmp20 = cResult[8];
   }
   const tmp16 = first2(noop.useState("all"), 2);
-  const segmentedControlState = projectId(8821).useSegmentedControlState(tmp20);
+  const segmentedControlState = projectId(8833).useSegmentedControlState(tmp20);
   if (cResult[9] === tmp17) {
     if (cResult[10] === stateFromStores) {
       dependencyMap = tmp24;
@@ -535,7 +535,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
             }
           }
           const obj3 = { state: segmentedControlState, variant: "experimental_Small" };
-          const tmp31 = closure_7(tmp(9067).SegmentedControl, obj3);
+          const tmp31 = closure_7(tmp(9079).SegmentedControl, obj3);
           cResult[18] = segmentedControlState;
           cResult[19] = tmp31;
         } else {
@@ -574,7 +574,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
           const intl2 = tmp(1128).intl;
           obj5.placeholder = intl2.string(_modDef3820["m2+37Y"]);
           obj5.onChange = tmp18[1];
-          const tmp33 = closure_7(tmp(7093).SearchField, obj5);
+          const tmp33 = closure_7(tmp(7096).SearchField, obj5);
           cResult[20] = tmp33;
           const tmp32 = tmp33;
         } else {
@@ -631,7 +631,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
           cResult[27] = tmp41;
         }
         const obj7 = { state: stateFromStores1, hasRows: stateFromStores.length > 0 };
-        const tmp37 = closure_7(tmp(12382).ConjureHistoryNotice, obj7);
+        const tmp37 = closure_7(tmp(12399).ConjureHistoryNotice, obj7);
         cResult[21] = stateFromStores1;
         cResult[22] = stateFromStores.length > 0;
         cResult[23] = tmp37;
@@ -645,13 +645,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
       cResult[17] = fn3;
     }
   }
-  const tmpResult5 = projectId(8821);
-  const tmpResult6 = projectId(12380);
+  const tmpResult5 = projectId(8833);
+  const tmpResult6 = projectId(12397);
   cResult[9] = tmp17;
   cResult[10] = stateFromStores;
   cResult[11] = first1;
-  cResult[12] = projectId(12380).filterDebugLogs(stateFromStores, tmp17, first1);
-  const filterDebugLogsResult = projectId(12380).filterDebugLogs(stateFromStores, tmp17, first1);
+  cResult[12] = projectId(12397).filterDebugLogs(stateFromStores, tmp17, first1);
+  const filterDebugLogsResult = projectId(12397).filterDebugLogs(stateFromStores, tmp17, first1);
 }) : (function ConjureDebugLogsTab(projectId) {
   projectId = projectId.projectId;
   first = undefined;

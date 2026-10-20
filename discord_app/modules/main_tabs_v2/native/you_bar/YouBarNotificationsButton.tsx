@@ -1,20 +1,20 @@
-// === Module 17567: YouBarNotificationsButton ===
+// === Module 17586: YouBarNotificationsButton ===
 
-// Module 17567 (YouBarNotificationsButton)
+// Module 17586 (YouBarNotificationsButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import spring from "spring" /* 5208 */;
-import BellIcon from "BellIcon" /* 9061 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 17568 */;
+import BellIcon from "BellIcon" /* 9073 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 17587 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 9994 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10005 */;
 
 const ReanimatedRexportDefault = tmp5(5014);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16169);
+const YouBarConstants = fn(16188);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -79,7 +79,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const fn3 = function f() {
       const result = value(5173).triggerHapticFeedback(value(5173).HapticFeedbackTypes.SOFT);
       const obj = value(5173);
-      value(13620).showForLaterModal(value(9995).SavedMessageSortTypes.BOOKMARK);
+      value(13638).showForLaterModal(value(10006).SavedMessageSortTypes.BOOKMARK);
     };
     cResult[2] = fn3;
     let tmp12 = fn3;
@@ -204,8 +204,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   }
                   const obj7 = { children: null };
                   const obj9 = { accessibilityLabel: tmp19, accessibilityActions: tmp13, onAccessibilityAction: tmp14, variant: str4, size: "sm", icon: tmp30, onPress: H, onLongPress: tmp12, hitSlop };
-                  obj7.children = closure_8(tmp(7903).IconButton, obj9);
-                  const tmp38 = closure_8(tmp(17566).YouBarButtonContainer, obj7);
+                  obj7.children = closure_8(tmp(7907).IconButton, obj9);
+                  const tmp38 = closure_8(tmp(17585).YouBarButtonContainer, obj7);
                   cResult[28] = tmp19;
                   cResult[29] = str4;
                   cResult[30] = tmp30;
@@ -231,7 +231,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         const obj12 = { icon: tmp15, hasBadge: tmp11, badgeStyle: tmp4.overdueReminderDot };
-        const tmp23 = closure_8(tmp(17566).YouBarButtonIcon, obj12);
+        const tmp23 = closure_8(tmp(17585).YouBarButtonIcon, obj12);
         cResult[14] = tmp15;
         cResult[15] = tmp11;
         cResult[16] = tmp4.overdueReminderDot;
@@ -273,7 +273,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   hasNameplate = hasNameplate.hasNameplate;
   let onLongPress;
   const tmp = closure_10();
-  value = onLongPress(17568)().value;
+  value = onLongPress(17587)().value;
   _require = value;
   const fn = function u() {
     let num = 0;
@@ -309,7 +309,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   onLongPress = noop.useCallback(() => {
     const result = _undefined(5173).triggerHapticFeedback(_undefined(5173).HapticFeedbackTypes.SOFT);
     const obj = _undefined(5173);
-    _undefined(13620).showForLaterModal(_undefined(9995).SavedMessageSortTypes.BOOKMARK);
+    _undefined(13638).showForLaterModal(_undefined(10006).SavedMessageSortTypes.BOOKMARK);
   }, []);
   const items1 = [onLongPress];
   const memo = noop.useMemo(() => {

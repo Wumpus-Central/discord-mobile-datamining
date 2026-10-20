@@ -1,8 +1,8 @@
-// === Module 11672: useConjureAppIdentityDraft ===
+// === Module 11685: useConjureAppIdentityDraft ===
 
-// Module 11672 (useConjureAppIdentityDraft)
-import ConjureActionCreators from "ConjureActionCreators" /* 11011 */;
-import useConjureAppIdentityDefault from "useConjureAppIdentity" /* 11673 */;
+// Module 11685 (useConjureAppIdentityDraft)
+import ConjureActionCreators from "ConjureActionCreators" /* 11023 */;
+import useConjureAppIdentityDefault from "useConjureAppIdentity" /* 11686 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   const tmp9 = _slicedToArray(noop.useState(null), 2);
 }) : (function useConjureAppIdentityDraft(arg0) {
   closure_0 = arg0;
-  const tmp = first(11673)(arg0);
+  const tmp = first(11686)(arg0);
   const items = [arg0];
   const effect = trimmed.useEffect(() => {
     const result = ConjureActionCreators.refreshPreviewApplication(closure_0);

@@ -1,20 +1,20 @@
-// === Module 18777: GuildSettingsModalAuditLogFilter ===
+// === Module 18800: GuildSettingsModalAuditLogFilter ===
 
-// Module 18777 (GuildSettingsModalAuditLogFilter)
+// Module 18800 (GuildSettingsModalAuditLogFilter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5001 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6775 */;
-import FormRadio from "FormRadio" /* 6936 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10626 */;
-import AuditLogUtils from "AuditLogUtils" /* 18775 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 18778 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6778 */;
+import FormRadio from "FormRadio" /* 6939 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10637 */;
+import AuditLogUtils from "AuditLogUtils" /* 18798 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 18801 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18773 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18796 */;
 
 const require = globalThis.__r;
 
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          const tmp26 = closure_9(filterType(7093).SearchField, obj5);
+                          const tmp26 = closure_9(filterType(7096).SearchField, obj5);
                           cResult[25] = tmp20;
                           cResult[26] = tmp26;
                           let tmp24 = tmp26;

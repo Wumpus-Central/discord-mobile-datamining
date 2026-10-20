@@ -1,8 +1,8 @@
-// === Module 12306: ConjureClarificationCard ===
+// === Module 12325: ConjureClarificationCard ===
 
-// Module 12306 (ConjureClarificationCard)
+// Module 12325 (ConjureClarificationCard)
 import nativeDefault from "native" /* 587 */;
-import ConjureClarification from "ConjureClarification" /* 12309 */;
+import ConjureClarification from "ConjureClarification" /* 12328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -452,11 +452,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                                 const options1 = tmp23.options;
                                                                 mapped = options1.map((answer) => {
                                                                   closure_0 = answer;
-                                                                  let fn;
-                                                                  if (!closure_12) {
-                                                                    fn = () => closure_19(closure_0);
-                                                                  }
-                                                                  const obj = { onPress: fn, accessibilityLabel: null, children: null };
+                                                                  const obj = {
+                                                                    onPress() {
+                                                                      return closure_19(closure_0);
+                                                                    },
+                                                                    disabled,
+                                                                    accessibilityLabel: null,
+                                                                    children: null
+                                                                  };
                                                                   const intl = projectId(onSubmit[6]).intl;
                                                                   if (true === answer.recommended) {
                                                                     let AQbxhf = clarification(onSubmit[7])["2p6UFz"];
@@ -1057,11 +1060,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const options1 = tmp15.options;
     tmp49Result6 = options1.map((answer) => {
       closure_0 = answer;
-      let fn;
-      if (!closure_12) {
-        fn = () => callback1(closure_0);
-      }
-      const obj = { onPress: fn, accessibilityLabel: null, children: null };
+      const obj = {
+        onPress() {
+          return callback1(closure_0);
+        },
+        disabled,
+        accessibilityLabel: null,
+        children: null
+      };
       const intl = projectId(onSubmit[6]).intl;
       if (true === answer.recommended) {
         let AQbxhf = clarification(onSubmit[7])["2p6UFz"];

@@ -1,8 +1,8 @@
-// === Module 17414: ChannelListLegendList ===
+// === Module 17433: ChannelListLegendList ===
 
-// Module 17414 (ChannelListLegendList)
+// Module 17433 (ChannelListLegendList)
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
-import FastList from "FastList" /* 7115 */;
+import FastList from "FastList" /* 7118 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -310,7 +310,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   }
   const obj4 = { children: null };
   const animatedScrollHandler = obj2.useAnimatedScrollHandler(G);
-  const items6 = [onScrollWorklet(require("module_13682").AnimatedLegendList, { ref: ref1, contentContainerStyle: memo3, data: tmp3.listData, drawDistance: listViewportHeight, estimatedHeaderSize: headerSize, getFixedItemSize: callback3, getItemType: callback1, initialScrollOffset: memo, keyExtractor: callback2, ListHeaderComponent: memo2, ListHeaderComponentStyle: renderSectionHeader, onEndReached, onEndReachedThreshold: num, onScroll: obj2.useAnimatedScrollHandler(G), recycleItems: true, renderItem: callback, scrollIndicatorInsets: memo4 }), renderAccessory(memo1)];
+  const items6 = [onScrollWorklet(require("module_13700").AnimatedLegendList, { ref: ref1, contentContainerStyle: memo3, data: tmp3.listData, drawDistance: listViewportHeight, estimatedHeaderSize: headerSize, getFixedItemSize: callback3, getItemType: callback1, initialScrollOffset: memo, keyExtractor: callback2, ListHeaderComponent: memo2, ListHeaderComponentStyle: renderSectionHeader, onEndReached, onEndReachedThreshold: num, onScroll: obj2.useAnimatedScrollHandler(G), recycleItems: true, renderItem: callback, scrollIndicatorInsets: memo4 }), renderAccessory(memo1)];
   obj4.children = items6;
   return renderHeader(onScroll, obj4);
 });

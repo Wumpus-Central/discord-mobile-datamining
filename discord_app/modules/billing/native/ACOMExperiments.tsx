@@ -1,6 +1,6 @@
-// === Module 9711: ACOMExperiments ===
+// === Module 9724: ACOMExperiments ===
 
-// Module 9711 (ACOMExperiments)
+// Module 9724 (ACOMExperiments)
 import ApexExperiment_mod from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

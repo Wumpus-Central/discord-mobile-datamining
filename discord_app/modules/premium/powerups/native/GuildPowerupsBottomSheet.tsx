@@ -1,6 +1,6 @@
-// === Module 13239: GuildPowerupsBottomSheet ===
+// === Module 13257: GuildPowerupsBottomSheet ===
 
-// Module 13239 (GuildPowerupsBottomSheet)
+// Module 13257 (GuildPowerupsBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -14,22 +14,22 @@ import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5226 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5648 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8929 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13219 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13223 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13234 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13240 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13241 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13245 */;
-import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 13247 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 13248 */;
-import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 13256 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 13257 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 13258 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 13262 */;
-import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 13266 */;
-import useGuildPowerupConfigureCallbackDefault from "useGuildPowerupConfigureCallback" /* 13267 */;
-import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 13268 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8941 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13237 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13241 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13252 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13258 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 13259 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13263 */;
+import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 13265 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 13266 */;
+import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 13274 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 13275 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 13276 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 13280 */;
+import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 13284 */;
+import useGuildPowerupConfigureCallbackDefault from "useGuildPowerupConfigureCallback" /* 13285 */;
+import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 13286 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5143 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -39,8 +39,8 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const GuildPowerupsBoostGemDefault = tmp5(13242);
-const GuildPowerupsImageDefault = tmp5(13244);
+const GuildPowerupsBoostGemDefault = tmp5(13260);
+const GuildPowerupsImageDefault = tmp5(13262);
 const View = _mod17.View;
 ({ GuildPowerupType: hasOwnProperty, GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP: metroRequire } = GuildPowerupsConstants);
 let closure_7 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;

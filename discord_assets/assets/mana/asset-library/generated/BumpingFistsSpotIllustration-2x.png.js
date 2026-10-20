@@ -1,6 +1,6 @@
-// === Module 14075: ? ===
+// === Module 14093: ? ===
 
-// Module 14075
+// Module 14093
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BumpingFistsSpotIllustration-2x.png.js");

@@ -1,19 +1,19 @@
-// === Module 6452: SelfPresenceStore ===
+// === Module 6455: SelfPresenceStore ===
 
-// Module 6452 (SelfPresenceStore)
+// Module 6455 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1357 from "module_1357" /* 1357 */;
 import UserSettings from "UserSettings" /* 4776 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7453 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10569 */;
-import SpotifyStore from "SpotifyStore" /* 6453 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7456 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10580 */;
+import SpotifyStore from "SpotifyStore" /* 6456 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import DetectableGameStore from "DetectableGameStore" /* 2040 */;
-import IdleStore from "IdleStore" /* 6581 */;
+import IdleStore from "IdleStore" /* 6584 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2044 */;
-import LocalActivityStore from "LocalActivityStore" /* 10986 */;
+import LocalActivityStore from "LocalActivityStore" /* 10997 */;
 import PresenceStore from "PresenceStore" /* 5674 */;
 import SessionsStore from "SessionsStore" /* 5678 */;
 

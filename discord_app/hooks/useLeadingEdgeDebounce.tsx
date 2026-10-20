@@ -1,6 +1,6 @@
-// === Module 11376: useLeadingEdgeDebounce ===
+// === Module 11387: useLeadingEdgeDebounce ===
 
-// Module 11376 (useLeadingEdgeDebounce)
+// Module 11387 (useLeadingEdgeDebounce)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

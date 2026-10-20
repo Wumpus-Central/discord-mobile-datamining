@@ -1,6 +1,6 @@
-// === Module 7247: RoleIcon ===
+// === Module 7250: RoleIcon ===
 
-// Module 7247 (RoleIcon)
+// Module 7250 (RoleIcon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5631 */;
 import noop from "module_19" /* 19 */;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
     cResult[7] = obj5;
     roleIcon = obj5;
   }
-  const obj6 = { fontFamily: "System", fontSize: result, lineHeight: "unicodeVersion", textAlign: 6059676558461562000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, width: num, marginBottom: -311915811926054500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  const obj6 = { fontFamily: "System", fontSize: result, lineHeight: "unicodeVersion", textAlign: "<string:4268818749>", width: num, marginBottom: "Symbol" };
   cResult[2] = num;
   cResult[3] = result;
   cResult[4] = obj6;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
     size = 20;
   }
   const size1 = { height: size, width: size };
-  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "unicodeVersion", textAlign: 6059676558461562000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, width: size, marginBottom: -311915811926054500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "unicodeVersion", textAlign: "<string:4268818749>", width: size, marginBottom: "Symbol" };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
     const obj3 = { uri: src };

@@ -1,9 +1,9 @@
-// === Module 11850: UserProfileApplicationWidgetBottomStatsLayout ===
+// === Module 11864: UserProfileApplicationWidgetBottomStatsLayout ===
 
-// Module 11850 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 11864 (UserProfileApplicationWidgetBottomStatsLayout)
 import nativeDefault from "native" /* 587 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11759 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11845 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11773 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11859 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           } else {
             tmp5Result = null;
             if ("skeleton" === iter.label.status) {
-              tmp5Result = React3(Text(11846).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+              tmp5Result = React3(Text(11860).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
             }
           }
           items[1] = tmp5Result;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {
-            tmp5Result = React3(Text(11846).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+            tmp5Result = React3(Text(11860).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
           }
         }
         items[1] = tmp5Result;

@@ -1,6 +1,6 @@
-// === Module 14010: BlockedDomainModalActionCreators ===
+// === Module 14028: BlockedDomainModalActionCreators ===
 
-// Module 14010 (BlockedDomainModalActionCreators)
+// Module 14028 (BlockedDomainModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import size from "module_2" /* 2 */;
@@ -9,6 +9,6 @@ const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomain
 
 export default {
   show(url) {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14011, dependencyMap.paths), "blocked-domain", { url });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14029, dependencyMap.paths), "blocked-domain", { url });
   }
 };

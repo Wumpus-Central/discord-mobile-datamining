@@ -1,6 +1,6 @@
-// === Module 7226: useProfileThemeValues ===
+// === Module 7229: useProfileThemeValues ===
 
-// Module 7226 (useProfileThemeValues)
+// Module 7229 (useProfileThemeValues)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;

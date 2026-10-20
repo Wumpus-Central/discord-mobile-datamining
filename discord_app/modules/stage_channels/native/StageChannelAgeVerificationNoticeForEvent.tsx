@@ -1,10 +1,10 @@
-// === Module 8925: StageChannelAgeVerificationNoticeForEvent ===
+// === Module 8937: StageChannelAgeVerificationNoticeForEvent ===
 
-// Module 8925 (StageChannelAgeVerificationNoticeForEvent)
+// Module 8937 (StageChannelAgeVerificationNoticeForEvent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6635 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
   const tmp4 = closure_8();
   importDefault = tmp4;
   let obj = onConfirmPress(576);
-  let icon = onConfirmPress(6602).useIsVerifiedTeen();
+  let icon = onConfirmPress(6605).useIsVerifiedTeen();
   if (cResult[0] === icon) {
     if (cResult[1] === onConfirmPress) {
       if (cResult[2] === tmp4) {
@@ -71,7 +71,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
           if (icon) {
             let WarningIcon = tmp(5648).CircleInformationIcon;
           } else {
-            WarningIcon = tmp(7901).WarningIcon;
+            WarningIcon = tmp(7905).WarningIcon;
           }
           const obj5 = { size: "refresh_sm", color: nativeDefault.colors.TEXT_DEFAULT, style: tmp4.icon };
           const tmp11Result = closure_5(WarningIcon, obj5);
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
             return tmp7;
           }
           const obj6 = { type: str, message: tmp5, role: "status" };
-          const tmp9 = closure_5(tmp(7897).InlineNotice, obj6);
+          const tmp9 = closure_5(tmp(7901).InlineNotice, obj6);
           cResult[14] = tmp5;
           cResult[15] = str;
           cResult[16] = tmp9;
@@ -130,8 +130,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
             color: "text-default",
             style: closure_1.linkText,
             onPress() {
-              const obj = closure_1(7827);
-              const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(6605).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
+              const obj = closure_1(7831);
+              const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(6608).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
               if (closure_1_0 != null) {
                 closure_1_0();
               }
@@ -146,13 +146,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
   cResult[1] = onConfirmPress;
   cResult[2] = tmp4;
   cResult[3] = formatResult;
-  const obj2 = onConfirmPress(6602);
+  const obj2 = onConfirmPress(6605);
 }) : (function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   let contentText = closure_8();
   let Text = onConfirmPress;
   let tmp = dependencyMap;
-  const isVerifiedTeen = onConfirmPress(6602).useIsVerifiedTeen();
+  const isVerifiedTeen = onConfirmPress(6605).useIsVerifiedTeen();
   const intl = onConfirmPress(1128).intl;
   const format = intl.format;
   const t = onConfirmPress(1128).t;
@@ -183,8 +183,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
             color: "text-default",
             style: contentText.linkText,
             onPress() {
-              const obj = contentText(7827);
-              const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(6605).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
+              const obj = contentText(7831);
+              const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(6608).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
               if (closure_1_0 != null) {
                 closure_1_0();
               }
@@ -200,7 +200,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
     if (isVerifiedTeen) {
       let WarningIcon = Text(5648).CircleInformationIcon;
     } else {
-      WarningIcon = Text(7901).WarningIcon;
+      WarningIcon = Text(7905).WarningIcon;
     }
     const obj5 = { size: "refresh_sm", color: contentText(587).colors.TEXT_DEFAULT, style: contentText.icon };
     const items = [closure_5(WarningIcon, obj5), ];
@@ -219,9 +219,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
       str = "info";
     }
     const obj7 = { type: str, message: formatResult, role: "status" };
-    return closure_5(Text(7897).InlineNotice, obj7);
+    return closure_5(Text(7901).InlineNotice, obj7);
   }
-  let obj = onConfirmPress(6602);
+  let obj = onConfirmPress(6605);
 });
 const obj8 = { TOP: 0, [0]: "TOP", BOTTOM: 1, [1]: "BOTTOM" };
 ReactCompilerGating = fn(558);

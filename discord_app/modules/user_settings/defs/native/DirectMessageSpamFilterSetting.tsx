@@ -1,15 +1,15 @@
-// === Module 15911: DirectMessageSpamFilterSetting ===
+// === Module 15930: DirectMessageSpamFilterSetting ===
 
-// Module 15911 (DirectMessageSpamFilterSetting)
+// Module 15930 (DirectMessageSpamFilterSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4776 */;
-import ModerationUtils from "ModerationUtils" /* 15912 */;
+import ModerationUtils from "ModerationUtils" /* 15931 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDmSpamFilterSettingOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(8276).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8280).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (function useDmSpamFilterSettingOptions() {
     const cResult = c.c(1);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -52,7 +52,7 @@ const radio = SettingBuilders.createRadio({
       return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     }, []);
   }),
-  useValue: fn(15914).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(15933).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

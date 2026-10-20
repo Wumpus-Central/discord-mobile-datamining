@@ -1,6 +1,6 @@
-// === Module 11671: conjureLiveReloadStatus ===
+// === Module 11684: conjureLiveReloadStatus ===
 
-// Module 11671 (conjureLiveReloadStatus)
+// Module 11684 (conjureLiveReloadStatus)
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
 import size from "module_2" /* 2 */;

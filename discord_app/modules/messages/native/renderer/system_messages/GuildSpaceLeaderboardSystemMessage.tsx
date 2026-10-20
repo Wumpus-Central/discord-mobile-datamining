@@ -1,16 +1,16 @@
-// === Module 8402: GuildSpaceLeaderboardSystemMessage ===
+// === Module 8406: GuildSpaceLeaderboardSystemMessage ===
 
-// Module 8402 (GuildSpaceLeaderboardSystemMessage)
+// Module 8406 (GuildSpaceLeaderboardSystemMessage)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4868 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5944 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8221 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8262 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8264 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8266 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8300 */;
-import _modDef8403 from "module_8403" /* 8403 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5947 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8225 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8266 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8268 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8270 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8304 */;
+import _modDef8407 from "module_8407" /* 8407 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -103,7 +103,7 @@ export const createGuildSpaceLeaderboardSystemMessage = function createGuildSpac
           obj4.previousUsernameOnClick = tmp22Result2Result;
           obj7.content = intl.formatToParts(mobileLeaderboardSystemMessage.message, obj4);
           const tmp22Result3 = formatUsernameOnClickDefault;
-          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8403);
+          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8407);
           obj7.iconTintColor = tmp13.iconTintColor;
           const merged1 = Object.assign(createCommonMessageDefault(theme));
           return obj7;

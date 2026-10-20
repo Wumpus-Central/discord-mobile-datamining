@@ -1,12 +1,12 @@
-// === Module 17411: ChannelsEmpty ===
+// === Module 17430: ChannelsEmpty ===
 
-// Module 17411 (ChannelsEmpty)
+// Module 17430 (ChannelsEmpty)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8896 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8926 */;
-import _modDef17412 from "module_17412" /* 17412 */;
-import _modDef17413 from "module_17413" /* 17413 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8908 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8938 */;
+import _modDef17431 from "module_17431" /* 17431 */;
+import _modDef17432 from "module_17432" /* 17432 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 
@@ -82,7 +82,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp11 = cResult[7];
   }
   const tmpResult = guild(573);
-  const youBarTotalHeight = guild(16171).useYouBarTotalHeight(16);
+  const youBarTotalHeight = guild(16190).useYouBarTotalHeight(16);
   if (cResult[8] !== youBarTotalHeight) {
     const obj2 = { paddingBottom: youBarTotalHeight };
     cResult[8] = youBarTotalHeight;
@@ -102,7 +102,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const _Symbol = Symbol;
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { source: _modDef17413 };
+          const obj3 = { source: _modDef17432 };
           const tmp24 = closure_7(FastImageDefault, obj3);
           cResult[17] = tmp24;
           let tmp20 = tmp24;
@@ -223,12 +223,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (canCustomizeGuild) {
       const obj10 = { style: tmp4.personalizeButtonWrapper, children: null };
       const obj11 = { icon: null, label: null, onPress: null };
-      const obj12 = { source: _modDef17412, disableColor: true };
+      const obj12 = { source: _modDef17431, disableColor: true };
       obj11.icon = closure_7(tmp(1202).Icon, obj12);
       const intl = tmp(1128).intl;
       obj11.label = intl.string(tmp(1128).t["Yhi9/N"]);
       obj11.onPress = tmp10;
-      obj10.children = closure_7(tmp(8873).RowButton, obj11);
+      obj10.children = closure_7(tmp(8885).RowButton, obj11);
       tmp16 = closure_7(View, obj10);
     }
     cResult[13] = canCustomizeGuild;
@@ -242,7 +242,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[11] = tmp13;
   cResult[12] = items5;
   tmp14 = items5;
-  const tmpResult2 = guild(16171);
+  const tmpResult2 = guild(16190);
 }) : (function ChannelsEmpty(guild) {
   guild = guild.guild;
   const tmp = closure_9();
@@ -261,25 +261,25 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = guild(573);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
-  const obj2 = guild(16171);
-  items4[1] = { paddingBottom: guild(16171).useYouBarTotalHeight(16) };
+  const obj2 = guild(16190);
+  items4[1] = { paddingBottom: guild(16190).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef17412, disableColor: true };
+    const obj7 = { source: _modDef17431, disableColor: true };
     obj6.icon = closure_7(tmp2(1202).Icon, obj7);
     const intl = tmp2(1128).intl;
     obj6.label = intl.string(tmp2(1128).t["Yhi9/N"]);
     obj6.onPress = callback;
-    obj5.children = closure_7(tmp2(8873).RowButton, obj6);
+    obj5.children = closure_7(tmp2(8885).RowButton, obj6);
     canCustomizeGuild = closure_7(View, obj5);
   }
   const items5 = [canCustomizeGuild, ];
   const obj8 = { style: tmp.content, children: null };
   const obj9 = { source: null };
-  const obj4 = { paddingBottom: guild(16171).useYouBarTotalHeight(16) };
-  obj9.source = _modDef17413;
+  const obj4 = { paddingBottom: guild(16190).useYouBarTotalHeight(16) };
+  obj9.source = _modDef17432;
   const items6 = [closure_7(FastImageDefault, obj9), , , ];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items7 = [, ];

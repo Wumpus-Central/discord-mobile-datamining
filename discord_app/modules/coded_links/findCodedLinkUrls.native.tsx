@@ -1,8 +1,8 @@
 // === Module 5666: findCodedLinkUrls ===
 
 // Module 5666 (findCodedLinkUrls)
-import MarkupTypes from "MarkupTypes" /* 5935 */;
-import findCodedLinkUrlsUsingRegexDefault from "findCodedLinkUrlsUsingRegex" /* 14888 */;
+import MarkupTypes from "MarkupTypes" /* 5938 */;
+import findCodedLinkUrlsUsingRegexDefault from "findCodedLinkUrlsUsingRegex" /* 14906 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrls.native.tsx");
@@ -14,7 +14,7 @@ export default function findCodedLinkUrls(content) {
     items = [];
     const _default = tmp(5667).default;
     const parseToASTResult = tmp(5667).default.parseToAST(content, true, { allowLinks: true });
-    tmp(8290).walkAst(parseToASTResult, (type) => {
+    tmp(8294).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === MarkupTypes.AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -23,7 +23,7 @@ export default function findCodedLinkUrls(content) {
         items.push(type.target);
       }
     });
-    const tmpResult = tmp(8290);
+    const tmpResult = tmp(8294);
   }
   return items;
 };

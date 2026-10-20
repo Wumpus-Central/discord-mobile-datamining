@@ -1,6 +1,6 @@
-// === Module 11926: HighlightText ===
+// === Module 11940: HighlightText ===
 
-// Module 11926 (HighlightText)
+// Module 11940 (HighlightText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;

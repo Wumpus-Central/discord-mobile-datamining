@@ -1,18 +1,18 @@
-// === Module 13829: ChatLoadingIndicator ===
+// === Module 13847: ChatLoadingIndicator ===
 
-// Module 13829 (ChatLoadingIndicator)
+// Module 13847 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5864 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5867 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6450 */;
-import MessageStore from "MessageStore" /* 5965 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6453 */;
+import MessageStore from "MessageStore" /* 5968 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 import UserStore from "UserStore" /* 1392 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
@@ -520,7 +520,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       if (!stateFromStores1) {
         return tmp18;
       } else if (cResult[11] !== tmp18) {
-        PressableOpacity = PressableOpacity(6856).PressableOpacity;
+        PressableOpacity = PressableOpacity(6859).PressableOpacity;
         let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
         tmp = closure_13(PressableOpacity, obj4);
         cResult[11] = tmp18;
@@ -611,7 +611,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(6856).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(6859).PressableOpacity, obj8);
   }
   return tmp7Result;
 });

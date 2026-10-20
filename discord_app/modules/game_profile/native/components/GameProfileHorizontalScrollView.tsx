@@ -1,6 +1,6 @@
-// === Module 9234: GameProfileHorizontalScrollView ===
+// === Module 9246: GameProfileHorizontalScrollView ===
 
-// Module 9234 (GameProfileHorizontalScrollView)
+// Module 9246 (GameProfileHorizontalScrollView)
 import c from "c" /* 576 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5258 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

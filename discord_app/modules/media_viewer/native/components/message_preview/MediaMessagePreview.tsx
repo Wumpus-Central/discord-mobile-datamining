@@ -1,24 +1,24 @@
-// === Module 14034: MediaMessagePreview ===
+// === Module 14052: MediaMessagePreview ===
 
-// Module 14034 (MediaMessagePreview)
+// Module 14052 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5258 */;
-import RowGeneratorDefault from "RowGenerator" /* 8076 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8230 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8552 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9696 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 9925 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 9990 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 14035 */;
+import RowGeneratorDefault from "RowGenerator" /* 8080 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8234 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8558 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9709 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 9936 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 10001 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 14053 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7330 */;
-import SearchMessageStore from "SearchMessageStore" /* 6740 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7333 */;
+import SearchMessageStore from "SearchMessageStore" /* 6743 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import MessageStore from "MessageStore" /* 5965 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8770 */;
+import MessageStore from "MessageStore" /* 5968 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8782 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

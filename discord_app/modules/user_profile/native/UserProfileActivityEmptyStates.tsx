@@ -1,6 +1,6 @@
-// === Module 14201: UserProfileActivityEmptyStates ===
+// === Module 14219: UserProfileActivityEmptyStates ===
 
-// Module 14201 (UserProfileActivityEmptyStates)
+// Module 14219 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,7 +8,7 @@ import util from "util" /* 1128 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7357 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7360 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -323,7 +323,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }
   let obj = name(576);
-  name = user(5944).getName(guildId, channelId, user);
+  name = user(5947).getName(guildId, channelId, user);
   const intl = tmp(1128).intl;
   const formatToPlainStringResult = intl.formatToPlainString(name(1128).t.sjSitP, { name });
   cResult[0] = channelId;
@@ -332,15 +332,15 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   cResult[3] = name;
   cResult[4] = formatToPlainStringResult;
   tmp6 = formatToPlainStringResult;
-  let obj2 = user(5944);
+  let obj2 = user(5947);
 }) : (function UserProfileActivityEmptyOtherUser(user) {
   user = user.user;
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(5944).getName(guildId, channelId, user);
+  name = name(5947).getName(guildId, channelId, user);
   const intl = user(1128).intl;
-  let obj = name(5944);
+  let obj = name(5947);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1128).t.sjSitP, { name }),

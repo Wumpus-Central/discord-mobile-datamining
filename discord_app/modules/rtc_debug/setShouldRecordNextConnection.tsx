@@ -1,8 +1,8 @@
-// === Module 5787: setShouldRecordNextConnection ===
+// === Module 5789: setShouldRecordNextConnection ===
 
-// Module 5787 (setShouldRecordNextConnection)
+// Module 5789 (setShouldRecordNextConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5788 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5790 */;
 import RTCDebugStore from "RTCDebugStore" /* 5698 */;
 
 const size = fn(2);

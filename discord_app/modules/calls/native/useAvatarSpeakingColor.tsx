@@ -1,10 +1,10 @@
-// === Module 11316: useAvatarSpeakingColor ===
+// === Module 11327: useAvatarSpeakingColor ===
 
-// Module 11316 (useAvatarSpeakingColor)
+// Module 11327 (useAvatarSpeakingColor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useVadColorsDefault from "useVadColors" /* 11318 */;
+import useVadColorsDefault from "useVadColors" /* 11329 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
@@ -14,7 +14,7 @@ const initialize = accessibleForegroundColor(504);
 const ColorUtils = accessibleForegroundColor(4942);
 const useToken = accessibleForegroundColor(5213);
 require = fn;
-const ratio = fn(11317).VAD_COLOR_MIN_CONTRAST_RATIO;
+const ratio = fn(11328).VAD_COLOR_MIN_CONTRAST_RATIO;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/calls/native/useAvatarSpeakingColor.tsx");

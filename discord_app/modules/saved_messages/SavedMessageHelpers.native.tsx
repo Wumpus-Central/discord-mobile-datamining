@@ -1,6 +1,6 @@
-// === Module 13629: SavedMessageHelpers ===
+// === Module 13647: SavedMessageHelpers ===
 
-// Module 13629 (SavedMessageHelpers)
+// Module 13647 (SavedMessageHelpers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -32,10 +32,10 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
         const intl5 = tmp9(1128).intl;
         obj3.cancelText = intl5.string(closure_0(1128).t.ZGbTcy);
         obj3.onCancel = function onCancel() {
-          const SavedMessageSortTypes = displayToast(9995).SavedMessageSortTypes;
-          return displayToast(13620).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+          const SavedMessageSortTypes = displayToast(10006).SavedMessageSortTypes;
+          return displayToast(13638).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
         };
-        closure_1(5863).show(obj3);
+        closure_1(5866).show(obj3);
         return null;
       } else {
         let message;
@@ -129,7 +129,7 @@ let closure_8 = async function _removeSavedMessage() {
   return "test";
 };
 const AbortCodes = fn(1087).AbortCodes;
-const SavedMessagesConstants = fn(13630);
+const SavedMessagesConstants = fn(13648);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

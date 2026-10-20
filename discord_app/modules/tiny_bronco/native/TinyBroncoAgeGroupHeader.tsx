@@ -1,15 +1,15 @@
-// === Module 15799: TinyBroncoAgeGroupHeader ===
+// === Module 15818: TinyBroncoAgeGroupHeader ===
 
-// Module 15799 (TinyBroncoAgeGroupHeader)
+// Module 15818 (TinyBroncoAgeGroupHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3112 from "module_3112" /* 3112 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7827 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9936 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 15800 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7831 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9947 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 15819 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ function handleOpenBlog() {
   AgeVerificationActionCreatorsDefault.openUrl(TINY_BRONCO_BLOG_URL);
 }
 const View = fn(17).View;
-const TINY_BRONCO_BLOG_URL = fn(6613).TINY_BRONCO_BLOG_URL;
+const TINY_BRONCO_BLOG_URL = fn(6616).TINY_BRONCO_BLOG_URL;
 const ContentDismissActionType = fn(4797).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -35,9 +35,9 @@ let closure_10 = createStyles.createStyles(obj2);
 let items = [fn(4784).DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
 let obj6 = {};
-obj6[fn(9936).AgeGroupState.ADULT] = _modDef3112["8TWztV"];
-obj6[fn(9936).AgeGroupState.TEEN] = _modDef3112.qSkhZH;
-obj6[fn(9936).AgeGroupState.UNVERIFIED] = _modDef3112.vGxRDB;
+obj6[fn(9947).AgeGroupState.ADULT] = _modDef3112["8TWztV"];
+obj6[fn(9947).AgeGroupState.TEEN] = _modDef3112.qSkhZH;
+obj6[fn(9947).AgeGroupState.UNVERIFIED] = _modDef3112.vGxRDB;
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatusNotice(ageGroup) {
   const cResult = require("c").c(20);
@@ -102,7 +102,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
         }
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp28 = closure_8(tmp(6879).XSmallIcon, { size: "sm", color: "icon-strong" });
+          const tmp28 = closure_8(tmp(6882).XSmallIcon, { size: "sm", color: "icon-strong" });
           cResult[11] = tmp28;
           let tmp26 = tmp28;
         } else {
@@ -134,7 +134,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
           tmp32 = tmp35;
         }
         const obj7 = { style: tmp4.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: tmp24, hitSlop: 12, onPress: tmp8, children: tmp26 };
-        const tmp31 = closure_8(tmp(6856).PressableOpacity, obj7);
+        const tmp31 = closure_8(tmp(6859).PressableOpacity, obj7);
         cResult[12] = tmp8;
         cResult[13] = tmp4.noticeDismiss;
         cResult[14] = tmp31;
@@ -173,8 +173,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
       const intl2 = tmp2(1128).intl;
       obj7.accessibilityLabel = intl2.string(tmp2(1128).t.WAI6xu);
       obj7.onPress = tmp7;
-      obj7.children = closure_8(tmp2(6879).XSmallIcon, { size: "sm", color: "icon-strong" });
-      items[2] = closure_8(tmp2(6856).PressableOpacity, obj7);
+      obj7.children = closure_8(tmp2(6882).XSmallIcon, { size: "sm", color: "icon-strong" });
+      items[2] = closure_8(tmp2(6859).PressableOpacity, obj7);
       obj3.children = items;
       tmp8 = closure_9(View, obj3);
     }
@@ -182,9 +182,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
   return tmp8;
 });
 let obj8 = {};
-obj8[fn(9936).AgeGroupState.ADULT] = _modDef3112.t5QjmQ;
-obj8[fn(9936).AgeGroupState.TEEN] = _modDef3112["41MDhK"];
-obj8[fn(9936).AgeGroupState.UNVERIFIED] = _modDef3112.m95jW8;
+obj8[fn(9947).AgeGroupState.ADULT] = _modDef3112.t5QjmQ;
+obj8[fn(9947).AgeGroupState.TEEN] = _modDef3112["41MDhK"];
+obj8[fn(9947).AgeGroupState.UNVERIFIED] = _modDef3112.m95jW8;
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGroupDescription(ageGroup) {
   const cResult = c.c(3);

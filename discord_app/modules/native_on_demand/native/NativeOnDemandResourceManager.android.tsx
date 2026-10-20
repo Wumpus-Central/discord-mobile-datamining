@@ -1,11 +1,11 @@
-// === Module 18610: NativeOnDemandResourceManager ===
+// === Module 18633: NativeOnDemandResourceManager ===
 
-// Module 18610 (NativeOnDemandResourceManager)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5807 */;
-import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 18611 */;
+// Module 18633 (NativeOnDemandResourceManager)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5809 */;
+import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 18634 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 const AppStates = fn(1087).AppStates;
 const prototype = function NativeOnDemandResourceManager() {

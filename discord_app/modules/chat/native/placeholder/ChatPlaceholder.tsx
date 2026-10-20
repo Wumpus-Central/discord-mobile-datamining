@@ -1,19 +1,19 @@
-// === Module 13364: ChatPlaceholder ===
+// === Module 13382: ChatPlaceholder ===
 
-// Module 13364 (ChatPlaceholder)
+// Module 13382 (ChatPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5554 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13365 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 13366 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 13367 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13383 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 13384 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 13385 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = tmp14(5014);
 require = fn;
-let closure_4 = fn(9697).useChatInputContainerHeight;
+let closure_4 = fn(9710).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let obj = { placeholder: null };

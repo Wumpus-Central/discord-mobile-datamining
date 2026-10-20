@@ -1,14 +1,14 @@
-// === Module 13475: HubEmailConnectionContent ===
+// === Module 13493: HubEmailConnectionContent ===
 
-// Module 13475 (HubEmailConnectionContent)
+// Module 13493 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 13471 */;
-import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 13477 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 13489 */;
+import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 13495 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(13462);
+const HubConstants = fn(13480);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1087).MarketingURLs;
 const jsxProd = fn(21);
@@ -266,7 +266,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = closure_12(invite(6955), obj11);
+  items1[3] = closure_12(invite(6958), obj11);
   obj6.children = items1;
   const items2 = [closure_13(ref, obj6), closure_12(ref, { style: tmp.growSpacing }), ];
   const obj15 = { style: tmp.buttonContainer, children: null };

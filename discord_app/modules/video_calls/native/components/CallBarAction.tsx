@@ -1,12 +1,12 @@
-// === Module 11256: CallBarAction ===
+// === Module 11267: CallBarAction ===
 
-// Module 11256 (CallBarAction)
+// Module 11267 (CallBarAction)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import Pressables from "Pressables" /* 6856 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11258 */;
+import Pressables from "Pressables" /* 6859 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11269 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let closure_3 = ["isActive", "disableTint", "showBadge", "isSmallSize", "backgro
 let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
 const View = fn(17).View;
-const resetFocusTimer = fn(10675).resetFocusTimer;
+const resetFocusTimer = fn(10686).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ColorUtils = fn(4942);
@@ -146,7 +146,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionButton
                                                   }
                                                 }
                                                 const obj3 = { accessibilityLabel, accessibilityRole: "button", accessibilityState, onPress: tmp15, disabled: false, style: tmp16, children: tmp42 };
-                                                const tmp48 = closure_10(onPress(6856).PressableOpacity, obj3);
+                                                const tmp48 = closure_10(onPress(6859).PressableOpacity, obj3);
                                                 cResult[46] = accessibilityLabel;
                                                 cResult[47] = accessibilityState;
                                                 cResult[48] = tmp42;
@@ -177,13 +177,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionButton
                                 if (tmp5) {
                                   const obj5 = { style: null };
                                   const items1 = [tmp7.badge, ];
-                                  const size1 = { width: result1, height: result1, borderRadius: tmp11.badgeRadius, top: onPress(11258).getBadgeTop(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees), left: null };
-                                  const tmpResult = onPress(11258);
-                                  size1.left = onPress(11258).getBadgeLeft(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees);
+                                  const size1 = { width: result1, height: result1, borderRadius: tmp11.badgeRadius, top: onPress(11269).getBadgeTop(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees), left: null };
+                                  const tmpResult = onPress(11269);
+                                  size1.left = onPress(11269).getBadgeLeft(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees);
                                   items1[1] = size1;
                                   obj5.style = items1;
                                   tmp38 = closure_10(View, obj5);
-                                  const tmpResult2 = onPress(11258);
+                                  const tmpResult2 = onPress(11269);
                                 }
                                 cResult[34] = tmp11.badgeRadius;
                                 cResult[35] = tmp11.buttonRadius;

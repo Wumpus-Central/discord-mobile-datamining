@@ -1,6 +1,6 @@
-// === Module 11871: PortalKeyboardConstants ===
+// === Module 11885: PortalKeyboardConstants ===
 
-// Module 11871 (PortalKeyboardConstants)
+// Module 11885 (PortalKeyboardConstants)
 import BottomSheetModal from "BottomSheetModal" /* 5230 */;
 import size from "module_2" /* 2 */;
 

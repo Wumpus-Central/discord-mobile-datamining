@@ -1,11 +1,11 @@
-// === Module 11699: Tabs/Tabs ===
+// === Module 11713: Tabs/Tabs ===
 
-// Module 11699 (Tabs/Tabs)
+// Module 11713 (Tabs/Tabs)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
 import spring from "spring" /* 5208 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5258 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9892 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9904 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2069 */;
 
@@ -740,7 +740,7 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? (function Tab
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(11700).TabItem, obj, id);
+      return variant(state(11714).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

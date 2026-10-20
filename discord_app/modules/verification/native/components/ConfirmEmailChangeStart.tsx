@@ -1,6 +1,6 @@
-// === Module 6950: ConfirmEmailChangeStart ===
+// === Module 6953: ConfirmEmailChangeStart ===
 
-// Module 6950 (ConfirmEmailChangeStart)
+// Module 6953 (ConfirmEmailChangeStart)
 import Text_Text from "Text/Text" /* 5195 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -38,7 +38,7 @@ export default function ConfirmEmailChangeStart() {
     const obj5 = { style: tmp.container, children: null };
     let obj6 = { style: tmp.image, source: null };
     const formatResult = intl.format(tmp2(1128).t.oMFSgi, obj3);
-    obj6.source = navigation(6952);
+    obj6.source = navigation(6955);
     const items1 = [closure_9(navigation(5631), obj6), , , ];
     let obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(1128).intl;

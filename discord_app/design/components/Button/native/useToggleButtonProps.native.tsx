@@ -1,6 +1,6 @@
-// === Module 12334: useToggleButtonProps ===
+// === Module 12351: useToggleButtonProps ===
 
-// Module 12334 (useToggleButtonProps)
+// Module 12351 (useToggleButtonProps)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");

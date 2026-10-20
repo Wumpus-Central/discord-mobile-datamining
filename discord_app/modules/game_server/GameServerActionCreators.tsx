@@ -1,17 +1,17 @@
-// === Module 13205: GameServerActionCreators ===
+// === Module 13223: GameServerActionCreators ===
 
-// Module 13205 (GameServerActionCreators)
+// Module 13223 (GameServerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import StoreUtils from "StoreUtils" /* 6337 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8318 */;
-import GameServerMocks from "GameServerMocks" /* 13207 */;
-import GameServerStatus from "GameServerStatus" /* 13208 */;
-import regionResponseToRegionDefault from "regionResponseToRegion" /* 13210 */;
+import StoreUtils from "StoreUtils" /* 6340 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8322 */;
+import GameServerMocks from "GameServerMocks" /* 13225 */;
+import GameServerStatus from "GameServerStatus" /* 13226 */;
+import regionResponseToRegionDefault from "regionResponseToRegion" /* 13228 */;
 import LocaleStore from "LocaleStore" /* 2069 */;
 import UserStore from "UserStore" /* 1392 */;
-import OwnedGameServersStore from "OwnedGameServersStore" /* 13206 */;
+import OwnedGameServersStore from "OwnedGameServersStore" /* 13224 */;
 
 const require = globalThis.__r;
 
@@ -228,7 +228,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -243,7 +243,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -304,7 +304,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS" };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED" };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -317,10 +317,10 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   return HTTP.post({ url: constants.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
     body = body.body;
     let tmp3 = body;
-    if (body.status === closure_0(13208).GameServerStatus.SLEEPING) {
+    if (body.status === closure_0(13226).GameServerStatus.SLEEPING) {
       const obj2 = {};
       const merged = Object.assign(body);
-      obj2.status = closure_0(13208).GameServerStatus.STARTING;
+      obj2.status = closure_0(13226).GameServerStatus.STARTING;
       tmp3 = obj2;
     }
     const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

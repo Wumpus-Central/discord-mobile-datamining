@@ -1,6 +1,6 @@
-// === Module 5797: getMediaPerformanceClass ===
+// === Module 5799: getMediaPerformanceClass ===
 
-// Module 5797 (getMediaPerformanceClass)
+// Module 5799 (getMediaPerformanceClass)
 import DeviceUtils from "DeviceUtils" /* 4902 */;
 import size from "module_2" /* 2 */;
 

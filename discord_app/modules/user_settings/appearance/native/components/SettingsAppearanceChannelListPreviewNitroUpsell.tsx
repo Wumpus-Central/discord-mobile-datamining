@@ -1,15 +1,15 @@
-// === Module 16390: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 16409: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 16390 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 16409 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5208 */;
 import springPresets from "springPresets" /* 5209 */;
 import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9707 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9708 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9762 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9720 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9721 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9774 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
@@ -89,7 +89,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const obj3 = { theme, ThemeTypes, StyleSheet, withSpring: theme(5208).withSpring, springStandard: theme(5209).springStandard };
-  analyticsLocations = analyticsLocations(7199)(analyticsLocations(7224).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(7202)(analyticsLocations(7227).CLIENT_THEMES_EDITOR).analyticsLocations;
   if (cResult[0] !== analyticsLocations) {
     const fn2 = function l() {
       const obj = { premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING, analyticsLocation: { page: constants.USER_SETTINGS, section: constants2.SETTINGS_CLIENT_THEMES }, analyticsLocations };
@@ -154,7 +154,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   cResult[8] = tmp15;
   cResult[9] = tmp19;
   tmp18 = tmp19;
-  const tmp6 = analyticsLocations(7199);
+  const tmp6 = analyticsLocations(7202);
 }) : (function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   theme = theme.theme;
   let analyticsLocations;
@@ -175,7 +175,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   fn.__initData = __initData3;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj2 = { theme, ThemeTypes, StyleSheet, withSpring: theme(5208).withSpring, springStandard: theme(5209).springStandard };
-  analyticsLocations = analyticsLocations(7199)(analyticsLocations(7224).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(7202)(analyticsLocations(7227).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   const obj3 = { style: tmp.nitroUpsell, children: null };
   const callback = noop.useCallback(() => {

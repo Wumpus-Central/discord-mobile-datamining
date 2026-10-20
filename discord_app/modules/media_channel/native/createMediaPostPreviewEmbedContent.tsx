@@ -1,17 +1,17 @@
-// === Module 14368: createMediaPostPreviewEmbedContent ===
+// === Module 14386: createMediaPostPreviewEmbedContent ===
 
-// Module 14368 (createMediaPostPreviewEmbedContent)
+// Module 14386 (createMediaPostPreviewEmbedContent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import LinkUtils from "LinkUtils" /* 5567 */;
-import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5952 */;
-import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 5953 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5954 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6602 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8262 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8264 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8531 */;
-import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 10823 */;
+import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5955 */;
+import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 5956 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5957 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6605 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8266 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8268 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8535 */;
+import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 10834 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import DevSettingsStore from "DevSettingsStore" /* 5198 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
@@ -91,7 +91,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(14369)).uri;
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(14387)).uri;
               obj5.footer = formatToPartsResult;
               obj5.ctaButtonColor = tmp11;
               return obj5;

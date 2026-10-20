@@ -1,6 +1,6 @@
-// === Module 17382: useTotalPossibleBoostCount ===
+// === Module 17401: useTotalPossibleBoostCount ===
 
-// Module 17382 (useTotalPossibleBoostCount)
+// Module 17401 (useTotalPossibleBoostCount)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5143 */;

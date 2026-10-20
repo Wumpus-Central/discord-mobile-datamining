@@ -1,6 +1,6 @@
-// === Module 8219: getEmbedThemeColors ===
+// === Module 8223: getEmbedThemeColors ===
 
-// Module 8219 (getEmbedThemeColors)
+// Module 8223 (getEmbedThemeColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4942 */;

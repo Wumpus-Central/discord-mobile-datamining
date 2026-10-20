@@ -1,10 +1,10 @@
-// === Module 17389: ChannelItemEmbeddedActivities ===
+// === Module 17408: ChannelItemEmbeddedActivities ===
 
-// Module 17389 (ChannelItemEmbeddedActivities)
+// Module 17408 (ChannelItemEmbeddedActivities)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import GameIcon from "GameIcon" /* 7207 */;
+import GameIcon from "GameIcon" /* 7210 */;
 import noop from "module_19" /* 19 */;
 
 const GameIconDefault = GameIcon;

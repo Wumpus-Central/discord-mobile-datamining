@@ -1,12 +1,12 @@
-// === Module 16612: UserSettingsCommunityNotifications ===
+// === Module 16631: UserSettingsCommunityNotifications ===
 
-// Module 16612 (UserSettingsCommunityNotifications)
+// Module 16631 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
-import TableSwitchRow from "TableSwitchRow" /* 7241 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
+import TableSwitchRow from "TableSwitchRow" /* 7244 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11130 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11141 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -117,8 +117,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     const mapped = keys.map(tmp16);
     const container = tmp4.container;
-    const Form = tmp(8871).Form;
-    const Stack = tmp(5932).Stack;
+    const Form = tmp(8883).Form;
+    const Stack = tmp(5935).Stack;
   }
 }) : (function UserSettingsCommunityNotifications() {
   const tmp = closure_6();
@@ -159,8 +159,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
         })
     };
-    obj3.children = closure_4(tmp2(5932).Stack, obj4);
-    tmp5 = closure_4(tmp2(8871).Form, obj3);
+    obj3.children = closure_4(tmp2(5935).Stack, obj4);
+    tmp5 = closure_4(tmp2(8883).Form, obj3);
   }
   return tmp5;
 });

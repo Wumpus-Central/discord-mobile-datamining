@@ -1,18 +1,18 @@
-// === Module 17577: BackIconWithBadge ===
+// === Module 17596: BackIconWithBadge ===
 
-// Module 17577 (BackIconWithBadge)
+// Module 17596 (BackIconWithBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
-import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6876 */;
-import XSmallIcon from "XSmallIcon" /* 6879 */;
-import ClipView from "ClipView" /* 9324 */;
-import XLargeIcon from "XLargeIcon" /* 10575 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 17568 */;
+import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6879 */;
+import XSmallIcon from "XSmallIcon" /* 6882 */;
+import ClipView from "ClipView" /* 9336 */;
+import XLargeIcon from "XLargeIcon" /* 10586 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 17587 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6762 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6765 */;
 
 require = fn;
 const View = fn(17).View;
@@ -116,7 +116,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function IconWit
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(17568)().value;
+    num2 = memo(17587)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -153,7 +153,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function IconWit
     items4 = [];
   }
   const obj4 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(tmp5(9324), obj4), ];
+  const items5 = [closure_6(tmp5(9336), obj4), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };

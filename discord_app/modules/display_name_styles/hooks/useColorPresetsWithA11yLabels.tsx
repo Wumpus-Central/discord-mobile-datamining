@@ -1,6 +1,6 @@
-// === Module 16435: useColorPresetsWithA11yLabels ===
+// === Module 16454: useColorPresetsWithA11yLabels ===
 
-// Module 16435 (useColorPresetsWithA11yLabels)
+// Module 16454 (useColorPresetsWithA11yLabels)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import util from "util" /* 1128 */;

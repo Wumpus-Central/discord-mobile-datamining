@@ -1,6 +1,6 @@
-// === Module 12573: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 12590: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 12573 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 12590 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,14 +13,14 @@ import useThemeDefault from "useTheme" /* 5166 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5673 */;
-import PlatformsDefault from "Platforms" /* 6456 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6778 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6867 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 7221 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import BotTagDefault from "BotTag" /* 9055 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11151 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11155 */;
+import PlatformsDefault from "Platforms" /* 6459 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6870 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 7224 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import BotTagDefault from "BotTag" /* 9067 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11162 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11166 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
@@ -28,12 +28,12 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import GuildRoleStore from "GuildRoleStore" /* 4854 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12574 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12591 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(7222).OperatorTypes;
+const OperatorTypes = fn(7225).OperatorTypes;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
@@ -245,7 +245,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutChecks
       const items1 = [null, , , ];
       let tmp26 = null;
       if (null != tmp7) {
-        const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+        const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "a" };
         tmp26 = value3(native.Avatar, obj6);
       }
       items1[1] = tmp26;
@@ -357,7 +357,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutChecks
         const items1 = [null, , , ];
         let tmp26 = null;
         if (null != tmp7) {
-          const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+          const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "a" };
           tmp26 = value3(native.Avatar, obj6);
         }
         items1[1] = tmp26;

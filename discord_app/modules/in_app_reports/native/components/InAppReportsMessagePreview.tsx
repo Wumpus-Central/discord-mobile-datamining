@@ -1,13 +1,13 @@
-// === Module 8075: InAppReportsMessagePreview ===
+// === Module 8079: InAppReportsMessagePreview ===
 
-// Module 8075 (InAppReportsMessagePreview)
+// Module 8079 (InAppReportsMessagePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ColorUtils from "ColorUtils" /* 4942 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import RowGeneratorDefault from "RowGenerator" /* 8076 */;
-import ChatItemDefault from "ChatItem" /* 9687 */;
+import RowGeneratorDefault from "RowGenerator" /* 8080 */;
+import ChatItemDefault from "ChatItem" /* 9700 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

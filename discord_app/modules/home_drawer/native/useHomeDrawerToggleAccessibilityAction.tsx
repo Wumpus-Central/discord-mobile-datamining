@@ -1,6 +1,6 @@
-// === Module 17472: useHomeDrawerToggleAccessibilityAction ===
+// === Module 17491: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 17472 (useHomeDrawerToggleAccessibilityAction)
+// Module 17491 (useHomeDrawerToggleAccessibilityAction)
 import util from "util" /* 1128 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4954 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5111 */;

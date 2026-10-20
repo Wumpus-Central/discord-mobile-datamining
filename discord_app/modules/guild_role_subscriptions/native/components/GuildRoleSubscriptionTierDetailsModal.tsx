@@ -1,26 +1,26 @@
-// === Module 19026: GuildRoleSubscriptionTierDetailsModal ===
+// === Module 19049: GuildRoleSubscriptionTierDetailsModal ===
 
-// Module 19026 (GuildRoleSubscriptionTierDetailsModal)
+// Module 19049 (GuildRoleSubscriptionTierDetailsModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Form from "Form" /* 8871 */;
-import FormHeaderDefault from "FormHeader" /* 8965 */;
-import FormStylesDefault from "FormStyles" /* 14944 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16299 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16314 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18983 */;
-import FormImagePicker from "FormImagePicker" /* 18989 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18990 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19006 */;
-import FormPriceTierDefault from "FormPriceTier" /* 19027 */;
+import Form from "Form" /* 8883 */;
+import FormHeaderDefault from "FormHeader" /* 8977 */;
+import FormStylesDefault from "FormStyles" /* 14962 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16318 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16333 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19006 */;
+import FormImagePicker from "FormImagePicker" /* 19012 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19013 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 19029 */;
+import FormPriceTierDefault from "FormPriceTier" /* 19050 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(16292);
+const GuildRoleSubscriptionsConstants = fn(16311);
 ({ GuildRoleSubscriptionsTierScenes: hasOwnProperty, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1087).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);

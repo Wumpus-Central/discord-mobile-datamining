@@ -1,18 +1,18 @@
-// === Module 15793: TinyBroncoPromoSheet ===
+// === Module 15812: TinyBroncoPromoSheet ===
 
-// Module 15793 (TinyBroncoPromoSheet)
+// Module 15812 (TinyBroncoPromoSheet)
 import nativeDefault from "native" /* 587 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
 import _modDef3112 from "module_3112" /* 3112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6605 */;
-import openUserSettings from "openUserSettings" /* 7436 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7827 */;
-import openTinyBroncoPromoSheet from "openTinyBroncoPromoSheet" /* 15792 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6608 */;
+import openUserSettings from "openUserSettings" /* 7439 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7831 */;
+import openTinyBroncoPromoSheet from "openTinyBroncoPromoSheet" /* 15811 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const TINY_BRONCO_BLOG_URL = fn(6613).TINY_BRONCO_BLOG_URL;
+const TINY_BRONCO_BLOG_URL = fn(6616).TINY_BRONCO_BLOG_URL;
 const Constants = fn(1087);
 ({ HelpdeskArticles: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 const ContentDismissActionType = fn(4797).ContentDismissActionType;
@@ -33,9 +33,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
   closure_10();
   let obj = dismissOnce(576);
   const tmp = dismissOnce;
-  const isVerifiedTeen = dismissOnce(6602).useIsVerifiedTeen();
-  let obj2 = dismissOnce(6602);
-  dismissOnce = dismissOnce(15794).useDismissOnce(markAsDismissed.markAsDismissed);
+  const isVerifiedTeen = dismissOnce(6605).useIsVerifiedTeen();
+  let obj2 = dismissOnce(6605);
+  dismissOnce = dismissOnce(15813).useDismissOnce(markAsDismissed.markAsDismissed);
   if (cResult[0] !== dismissOnce) {
     const fn = function o() {
       dismissOnce(ContentDismissActionType.USER_DISMISS);
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
   }
   const obj4 = { text: null, onPress: null };
   const intl = tmp(1128).intl;
-  const obj3 = dismissOnce(15794);
+  const obj3 = dismissOnce(15813);
   if (isVerifiedTeen) {
     class M {
       constructor() {
@@ -225,9 +225,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
 }) : (function TinyBroncoPromoSheet(markAsDismissed) {
   let dismissOnce;
   const tmp = closure_10();
-  const isVerifiedTeen = dismissOnce(6602).useIsVerifiedTeen();
-  let obj = dismissOnce(6602);
-  dismissOnce = dismissOnce(15794).useDismissOnce(markAsDismissed.markAsDismissed);
+  const isVerifiedTeen = dismissOnce(6605).useIsVerifiedTeen();
+  let obj = dismissOnce(6605);
+  dismissOnce = dismissOnce(15813).useDismissOnce(markAsDismissed.markAsDismissed);
   const items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -277,8 +277,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(15794);
-  obj5.source = tmp14(15795);
+  let obj2 = dismissOnce(15813);
+  obj5.source = tmp14(15814);
   obj5.style = tmp.illustration;
   obj4.illustration = closure_8(tmp14(5631), obj5);
   const intl2 = tmp2(1128).intl;
@@ -303,6 +303,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
   obj10.onPress = callback1;
   items5[1] = closure_8(dismissOnce(5205).Button, obj10);
   obj8.children = items5;
-  obj4.actions = closure_9(dismissOnce(6644).ButtonGroup, obj8);
-  return closure_8(dismissOnce(10649).PromoSheet, obj4);
+  obj4.actions = closure_9(dismissOnce(6647).ButtonGroup, obj8);
+  return closure_8(dismissOnce(10660).PromoSheet, obj4);
 });

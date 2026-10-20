@@ -1,6 +1,6 @@
-// === Module 19138: ParentalConsentConnectionHeader ===
+// === Module 19162: ParentalConsentConnectionHeader ===
 
-// Module 19138 (ParentalConsentConnectionHeader)
+// Module 19162 (ParentalConsentConnectionHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,7 +8,7 @@ import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef2822 from "module_2822" /* 2822 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6616 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6619 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 

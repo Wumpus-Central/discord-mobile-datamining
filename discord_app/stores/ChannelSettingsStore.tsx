@@ -1,6 +1,6 @@
-// === Module 10011: ChannelSettingsStore ===
+// === Module 10022: ChannelSettingsStore ===
 
-// Module 10011 (ChannelSettingsStore)
+// Module 10022 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ThreadConstants from "ThreadConstants" /* 1127 */;
@@ -12,7 +12,7 @@ import ForumLayout from "ForumLayout" /* 4810 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4814 */;
 import ReactionUtils from "ReactionUtils" /* 4892 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4894 */;
-import InviteRecord from "InviteRecord" /* 8788 */;
+import InviteRecord from "InviteRecord" /* 8800 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import Constants from "Constants" /* 1087 */;

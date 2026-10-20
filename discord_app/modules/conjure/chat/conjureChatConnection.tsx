@@ -1,12 +1,13 @@
-// === Module 11008: conjureChatConnection ===
+// === Module 11020: conjureChatConnection ===
 
-// Module 11008 (conjureChatConnection)
+// Module 11020 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11009 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11010 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11011 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 11006 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 11021 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11022 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11023 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -27,7 +28,11 @@ function appendFailureStep(turnId, projectId) {
 function handleProjectEvent(event, projectId) {
   projectId = projectId.projectId;
   DispatcherDefault.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId, event });
-  if ("app_channel_deleted" !== event.type) {
+  let tmp3 = "app_channel_deleted" !== event.type;
+  if (tmp3) {
+    tmp3 = "remixed" !== event.type;
+  }
+  if (tmp3) {
     const result = ConjureActionCreators.refreshConjureInstallState(projectId);
   }
   const obj2 = { type: "CONJURE_CHAT_PROJECT_EVENT", projectId, event };
@@ -53,6 +58,7 @@ let obj = {
   bot_removed: handleProjectEvent,
   preview_bot_removed: handleProjectEvent,
   app_channel_deleted: handleProjectEvent,
+  remixed: handleProjectEvent,
   side_reply(id, projectId) {
     DispatcherDefault.dispatch({ type: "CONJURE_CHAT_SIDE_REPLY", projectId: projectId.projectId, id: id.id, inReplyTo: id.in_reply_to, content: id.content, timestamp: id.ts });
   },
@@ -67,6 +73,14 @@ let obj = {
   }
 };
 let obj2 = {
+  reaction(setting, arg1) {
+    const result = conjureAgentReaction.agentReactionFromStep(setting);
+    if (tmp3) {
+      obj3 = { type: "CONJURE_CHAT_MESSAGE_REACTION", projectId: arg1.projectId, id: setting.message_id, reaction: result };
+      DispatcherDefault.dispatch(obj3);
+    }
+    tmp3 = null != setting.message_id && null != result;
+  },
   reply(message, projectId) {
     projectId = projectId.projectId;
     let str = message.message;

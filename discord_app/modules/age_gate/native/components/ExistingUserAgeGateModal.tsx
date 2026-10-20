@@ -1,14 +1,14 @@
-// === Module 18465: ExistingUserAgeGateModal ===
+// === Module 18487: ExistingUserAgeGateModal ===
 
-// Module 18465 (ExistingUserAgeGateModal)
+// Module 18487 (ExistingUserAgeGateModal)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6615 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6778 */;
-import GuildNSFWDefault from "GuildNSFW" /* 10688 */;
-import ExistingUserAgeGateDefault from "ExistingUserAgeGate" /* 18467 */;
-import ExistingUserAgeGateConfirmDefault from "ExistingUserAgeGateConfirm" /* 18469 */;
-import AgeGateVerifyDefault from "AgeGateVerify" /* 18470 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6618 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
+import GuildNSFWDefault from "GuildNSFW" /* 10699 */;
+import ExistingUserAgeGateDefault from "ExistingUserAgeGate" /* 18489 */;
+import ExistingUserAgeGateConfirmDefault from "ExistingUserAgeGateConfirm" /* 18491 */;
+import AgeGateVerifyDefault from "AgeGateVerify" /* 18492 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
@@ -90,8 +90,8 @@ function getScreens(source, arg1, arg2) {
             return jsx(ExistingUserAgeGateDefault, { onSuccess, onClose, source: tmp });
           }
           onSuccess = () => {
-            closure_0(6615).closeAgeGateModal();
-            const obj = closure_0(6615);
+            closure_0(6618).closeAgeGateModal();
+            const obj = closure_0(6618);
             const obj3 = { text: null, variant: "success" };
             const intl = closure_0(1128).intl;
             obj3.text = intl.string(closure_0(1128).t.gUiIGZ);
@@ -172,7 +172,7 @@ function getScreens(source, arg1, arg2) {
 }
 const AgeGateConstants = fn(1112);
 ({ AgeGateAnalyticAction: metroRequire, AgeGateSource: closure_7 } = AgeGateConstants);
-let closure_8 = fn(18466).ExistingUserAgeGateScreens;
+let closure_8 = fn(18488).ExistingUserAgeGateScreens;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
   source = source.source;
   const channelId = source.channelId;
   let obj = source(576);
-  const shouldAgeVerifyForAgeGate = source(6601).useShouldAgeVerifyForAgeGate();
+  const shouldAgeVerifyForAgeGate = source(6604).useShouldAgeVerifyForAgeGate();
   dependencyMap = noop.useRef(shouldAgeVerifyForAgeGate);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
-  const obj2 = source(6601);
+  const obj2 = source(6604);
   const stateFromStores = source(504).useStateFromStores(first, tmp7, tmp8);
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === source) {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
         }
       }
     }
-    const watchAgeVerificationStatusChange = tmp(6602).useWatchAgeVerificationStatusChange(I);
+    const watchAgeVerificationStatusChange = tmp(6605).useWatchAgeVerificationStatusChange(I);
     if (cResult[9] === source) {
       class I {
         constructor() {
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
     cResult[10] = tmp10;
     cResult[11] = tmp14;
     cResult[12] = tmp19;
-    const tmpResult2 = tmp(6602);
+    const tmpResult2 = tmp(6605);
   }
   let tmp11 = null;
   if (source === constants2.NSFW_VOICE_CHANNEL) {
@@ -319,9 +319,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
   const channelId = source.channelId;
   let stateFromStores;
   closure_4 = undefined;
-  const shouldAgeVerifyForAgeGate = source(6601).useShouldAgeVerifyForAgeGate();
+  const shouldAgeVerifyForAgeGate = source(6604).useShouldAgeVerifyForAgeGate();
   dependencyMap = stateFromStores.useRef(shouldAgeVerifyForAgeGate);
-  let obj = source(6601);
+  let obj = source(6604);
   const items = [closure_4];
   const items1 = [channelId];
   stateFromStores = source(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
   closure_4 = tmp7;
   const obj3 = source(504);
   const items2 = [source];
-  const watchAgeVerificationStatusChange = source(6602).useWatchAgeVerificationStatusChange(obj2.useCallback(() => {
+  const watchAgeVerificationStatusChange = source(6605).useWatchAgeVerificationStatusChange(obj2.useCallback(() => {
     if (ref.current) {
       AgeGateModalActionCreators.closeAgeGateModal(source);
     }
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
     obj4.initialRouteName = closure_8.AgeGate;
     const intl = tmp(1128).intl;
     obj4.headerBackTitle = intl.string(tmp(1128).t["13/7kX"]);
-    return jsx(tmp(7043).Navigator, obj4);
+    return jsx(tmp(7046).Navigator, obj4);
   }
-  const tmpResult = source(6602);
+  const tmpResult = source(6605);
 });

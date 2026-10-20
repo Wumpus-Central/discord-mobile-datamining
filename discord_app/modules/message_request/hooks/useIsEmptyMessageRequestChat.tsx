@@ -1,8 +1,8 @@
-// === Module 13330: useIsEmptyMessageRequestChat ===
+// === Module 13348: useIsEmptyMessageRequestChat ===
 
-// Module 13330 (useIsEmptyMessageRequestChat)
-import useIsMessageRequest from "useIsMessageRequest" /* 10722 */;
-import MessageStore from "MessageStore" /* 5965 */;
+// Module 13348 (useIsEmptyMessageRequestChat)
+import useIsMessageRequest from "useIsMessageRequest" /* 10733 */;
+import MessageStore from "MessageStore" /* 5968 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);

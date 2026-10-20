@@ -1,6 +1,6 @@
-// === Module 14552: ReferralProgramShareConfirmationActionSheet ===
+// === Module 14570: ReferralProgramShareConfirmationActionSheet ===
 
-// Module 14552 (ReferralProgramShareConfirmationActionSheet)
+// Module 14570 (ReferralProgramShareConfirmationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,7 +9,7 @@ import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7357 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7360 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4945 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -55,7 +55,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
   } else {
     tmp7 = cResult[3];
   }
-  const tmp8 = user.trialCreationResult === user(7509).CreateReferralStatus.FAIL;
+  const tmp8 = user.trialCreationResult === user(7512).CreateReferralStatus.FAIL;
   let erroredAvatar = tmp8;
   if (tmp8) {
     erroredAvatar = tmp4.erroredAvatar;
@@ -76,7 +76,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
               const intl2 = tmp(1128).intl;
               const stringResult = intl2.string(tmp(1128).t["g33r/P"]);
               const obj3 = { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-              const tmp26 = closure_5(tmp(8487).ChatIcon, obj3);
+              const tmp26 = closure_5(tmp(8491).ChatIcon, obj3);
               cResult[14] = stringResult;
               cResult[15] = tmp26;
               let tmp22 = tmp26;
@@ -138,7 +138,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
       cResult[12] = recipientDisplayName;
       cResult[13] = tmp15;
     }
-    const obj11 = { style: tmp9, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
+    const obj11 = { style: tmp9, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
     const tmp12 = closure_5(tmp(1202).Avatar, obj11);
     cResult[7] = tmp9;
     cResult[8] = user;
@@ -155,7 +155,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
   user = user.user;
   const tmp = closure_8();
   const name = UserUtilsDefault.getName(user);
-  const tmp6 = user.trialCreationResult === user(7509).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(7512).CreateReferralStatus.FAIL;
   const obj2 = { style: tmp.recipientRow, children: null };
   const items = [tmp.avatarContainer, ];
   let erroredAvatar = tmp6;
@@ -163,7 +163,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
     erroredAvatar = tmp.erroredAvatar;
   }
   items[1] = erroredAvatar;
-  const items1 = [closure_5(user(1202).Avatar, { style: items, size: user(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" }), , ];
+  const items1 = [closure_5(user(1202).Avatar, { style: items, size: user(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" }), , ];
   if (tmp6) {
     const obj4 = { children: null };
     const obj5 = { variant: "text-md/medium", color: "text-muted", style: tmp.recipientDisplayName, children: name };
@@ -183,8 +183,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SharedU
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1128).intl;
   obj9.text = intl2.string(user(1128).t["g33r/P"]);
-  const obj3 = { style: items, size: user(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
-  obj9.icon = closure_5(user(8487).ChatIcon, { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
+  const obj3 = { style: items, size: user(1202).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
+  obj9.icon = closure_5(user(8491).ChatIcon, { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
   obj9.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id });
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Referral
     }
     const _Symbol4 = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp16 = closure_5(tmp(7194).BottomSheetTitleHeader, { title: null });
+      const tmp16 = closure_5(tmp(7197).BottomSheetTitleHeader, { title: null });
       cResult[3] = tmp16;
       let tmp14 = tmp16;
     } else {
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Referral
     }
     const _Symbol5 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_5(tmp(14553).FistBumpSpotIllustration, {});
+      const tmp19 = closure_5(tmp(14571).FistBumpSpotIllustration, {});
       cResult[4] = tmp19;
       let tmp17 = tmp19;
     } else {
@@ -302,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Referral
           const obj7 = { children: null };
           const items = [tmp20, tmp24, tmp27, tmp33];
           obj7.children = items;
-          const tmp39 = closure_7(tmp(5932).Stack, obj7);
+          const tmp39 = closure_7(tmp(5935).Stack, obj7);
           cResult[18] = tmp33;
           cResult[19] = tmp20;
           cResult[20] = tmp24;
@@ -349,17 +349,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Referral
   const obj = { helpdeskArticle: null };
   arr = Array.from(trialCreationResult.trialCreationResult.values());
   obj.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
-  const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(7194).BottomSheetTitleHeader, { title: null }), children: null };
+  const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(7197).BottomSheetTitleHeader, { title: null }), children: null };
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1128).t.AwGSWl, obj);
-  const items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(14553).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5195).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5195).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
+  const items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(14571).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5195).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5195).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(14553).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(14571).FistBumpSpotIllustration, {}) };
   const obj6 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
   const obj7 = { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult };
   obj8.children = Array.from(trialCreationResult.trialCreationResult.trialCreationResult.selectedUsers).map((user) => hasOwnProperty(closure_9, { user, trialCreationResult: trialCreationResult.get(user.id) }, user.id));
   items[3] = closure_5(View, obj8);
   obj4.children = items;
-  obj3.children = closure_7(tmp5(5932).Stack, obj4);
+  obj3.children = closure_7(tmp5(5935).Stack, obj4);
   return closure_5(tmp5(5226).BottomSheet, obj3);
 });

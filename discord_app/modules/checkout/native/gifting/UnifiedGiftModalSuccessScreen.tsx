@@ -1,10 +1,10 @@
-// === Module 13693: UnifiedGiftModalSuccessScreen ===
+// === Module 13711: UnifiedGiftModalSuccessScreen ===
 
-// Module 13693 (UnifiedGiftModalSuccessScreen)
+// Module 13711 (UnifiedGiftModalSuccessScreen)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import openUserSettings from "openUserSettings" /* 7436 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import openUserSettings from "openUserSettings" /* 7439 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     }
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13705, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13723, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];

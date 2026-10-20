@@ -1,6 +1,6 @@
-// === Module 18123: GiftingBadgesCoachmarkActionSheet ===
+// === Module 18146: GiftingBadgesCoachmarkActionSheet ===
 
-// Module 18123 (GiftingBadgesCoachmarkActionSheet)
+// Module 18146 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,12 +8,12 @@ import _modDef2622 from "module_2622" /* 2622 */;
 import RootNavigationRef from "RootNavigationRef" /* 5112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10364 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10423 */;
-import _modDef18124 from "module_18124" /* 18124 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10375 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10434 */;
+import _modDef18147 from "module_18147" /* 18147 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8606 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8618 */;
 
 const require = globalThis.__r;
 
@@ -39,11 +39,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasBad
   ({ currentTier, giftCount, variant } = markAsDismissed);
   const tmp4 = closure_9();
   if (cResult[0] !== currentTier) {
-    const giftingBadgeTierIconUrl = tmp(10420).getGiftingBadgeTierIconUrl(currentTier);
+    const giftingBadgeTierIconUrl = tmp(10431).getGiftingBadgeTierIconUrl(currentTier);
     cResult[0] = currentTier;
     cResult[1] = giftingBadgeTierIconUrl;
     let tmp5 = giftingBadgeTierIconUrl;
-    const tmpResult = tmp(10420);
+    const tmpResult = tmp(10431);
   } else {
     tmp5 = cResult[1];
   }
@@ -334,7 +334,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasBad
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ currentTier, giftCount } = markAsDismissed);
   const tmp = closure_9();
-  const giftingBadgeTierIconUrl = markAsDismissed(10420).getGiftingBadgeTierIconUrl(currentTier);
+  const giftingBadgeTierIconUrl = markAsDismissed(10431).getGiftingBadgeTierIconUrl(currentTier);
   const items = [markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
@@ -435,7 +435,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewBad
         return;
       }
     }
-    tmp8[0] = _modDef18124;
+    tmp8[0] = _modDef18147;
     cResult[4] = tmp8;
   } else {
     class C {
@@ -591,7 +591,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewBad
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
   const obj4 = { source: null, style: null };
-  const obj5 = { uri: _modDef18124 };
+  const obj5 = { uri: _modDef18147 };
   obj4.source = obj5;
   obj4.style = tmp.newBadgeImage;
   obj3.children = closure_7(FastImageDefault, obj4);
@@ -611,7 +611,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewBad
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1128).intl;
   obj10.text = intl3.string(_modDef2622.DZnomS);
-  obj10.icon = closure_7(markAsDismissed(12693).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj10.icon = closure_7(markAsDismissed(12710).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj10.onPress = callback;
   obj9.children = closure_7(markAsDismissed(5205).Button, obj10);
   items2[2] = closure_7(View, obj9);

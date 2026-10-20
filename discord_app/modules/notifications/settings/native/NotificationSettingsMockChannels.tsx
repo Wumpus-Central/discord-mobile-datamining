@@ -1,18 +1,18 @@
-// === Module 13589: NotificationSettingsMockChannels ===
+// === Module 13607: NotificationSettingsMockChannels ===
 
-// Module 13589 (NotificationSettingsMockChannels)
+// Module 13607 (NotificationSettingsMockChannels)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import TextIcon from "TextIcon" /* 8496 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13072 */;
+import TextIcon from "TextIcon" /* 8500 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13090 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6653).UnreadSetting;
+const UnreadSetting = fn(6656).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4945);

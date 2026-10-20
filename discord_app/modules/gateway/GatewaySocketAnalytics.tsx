@@ -1,6 +1,6 @@
-// === Module 14758: GatewaySocketAnalytics ===
+// === Module 14776: GatewaySocketAnalytics ===
 
-// Module 14758 (GatewaySocketAnalytics)
+// Module 14776 (GatewaySocketAnalytics)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;

@@ -1,7 +1,7 @@
-// === Module 7661: MobileAppDatabaseManager ===
+// === Module 7664: MobileAppDatabaseManager ===
 
-// Module 7661 (MobileAppDatabaseManager)
-import AppDatabaseManager from "AppDatabaseManager" /* 7662 */;
+// Module 7664 (MobileAppDatabaseManager)
+import AppDatabaseManager from "AppDatabaseManager" /* 7665 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

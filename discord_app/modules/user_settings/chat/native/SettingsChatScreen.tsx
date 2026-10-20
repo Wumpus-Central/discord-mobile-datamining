@@ -1,13 +1,13 @@
-// === Module 16548: SettingsChatScreen ===
+// === Module 16567: SettingsChatScreen ===
 
-// Module 16548 (SettingsChatScreen)
+// Module 16567 (SettingsChatScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7035 */;
-import _modDef10084 from "module_10084" /* 10084 */;
-import SettingBuilders from "SettingBuilders" /* 11099 */;
-import SettingLayoutDefault from "SettingLayout" /* 15761 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7038 */;
+import _modDef10095 from "module_10095" /* 10095 */;
+import SettingBuilders from "SettingBuilders" /* 11111 */;
+import SettingLayoutDefault from "SettingLayout" /* 15780 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 import SubscriptionStore from "SubscriptionStore" /* 2059 */;
@@ -86,7 +86,7 @@ function getChatSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8276).MobileUserSettings;
+const MobileUserSettings = fn(8280).MobileUserSettings;
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -149,7 +149,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoU
     const obj5 = { style: tmp5.card, children: null };
     const obj6 = { border: "none", shadow: "none", children: null };
     const obj7 = { style: tmp5.cardContent, children: null };
-    const obj8 = { style: tmp5.cardIcon, source: _modDef10084, size: tmp(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+    const obj8 = { style: tmp5.cardIcon, source: _modDef10095, size: tmp(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
     const items2 = [closure_9(tmp(1202).Icon, obj8), ];
     const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1128).intl;
@@ -163,7 +163,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoU
     items2[1] = closure_9(tmp(5195).Text, obj9);
     obj7.children = items2;
     obj6.children = closure_10(View, obj7);
-    obj5.children = closure_9(tmp(6853).Card, obj6);
+    obj5.children = closure_9(tmp(6856).Card, obj6);
     tmp15 = closure_9(View, obj5);
   }
   cResult[3] = stackNavigation;
@@ -191,7 +191,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoU
     const obj4 = { style: tmp3.card, children: null };
     const obj5 = { border: "none", shadow: "none", children: null };
     const obj6 = { style: tmp3.cardContent, children: null };
-    const obj7 = { style: tmp3.cardIcon, source: _modDef10084, size: tmp(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+    const obj7 = { style: tmp3.cardIcon, source: _modDef10095, size: tmp(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
     const items2 = [closure_9(tmp(1202).Icon, obj7), ];
     const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1128).intl;
@@ -205,7 +205,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoU
     items2[1] = closure_9(tmp(5195).Text, obj8);
     obj6.children = items2;
     obj5.children = closure_10(View, obj6);
-    obj4.children = closure_9(tmp(6853).Card, obj5);
+    obj4.children = closure_9(tmp(6856).Card, obj5);
     tmp7Result = closure_9(View, obj4);
   }
   children[1] = tmp7Result;

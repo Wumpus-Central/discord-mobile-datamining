@@ -1,6 +1,6 @@
-// === Module 13096: ApplicationCommandLoadingItem ===
+// === Module 13114: ApplicationCommandLoadingItem ===
 
-// Module 13096 (ApplicationCommandLoadingItem)
+// Module 13114 (ApplicationCommandLoadingItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useFontScale from "useFontScale" /* 5214 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10030).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10041).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 16;

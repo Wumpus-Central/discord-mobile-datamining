@@ -1,15 +1,15 @@
-// === Module 10915: BadgeDirectoryView ===
+// === Module 10926: BadgeDirectoryView ===
 
-// Module 10915 (BadgeDirectoryView)
+// Module 10926 (BadgeDirectoryView)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8611 */;
-import BadgeUtils from "BadgeUtils" /* 10917 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10920 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8623 */;
+import BadgeUtils from "BadgeUtils" /* 10928 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10931 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10916 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10927 */;
 import UserStore from "UserStore" /* 1392 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8606 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8618 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -560,7 +560,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
               return;
             }
           }
-          const badgeIndicatorIds = targetUsername(10918).useBadgeDirectoryBadgeIndicators(tmp42).badgeIndicatorIds;
+          const badgeIndicatorIds = targetUsername(10929).useBadgeDirectoryBadgeIndicators(tmp42).badgeIndicatorIds;
           class U {
             constructor() {
               currentUser = closure_1_7.getCurrentUser();
@@ -623,7 +623,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
           const intl = targetUsername(1128).intl;
           const obj3 = { username: targetUsername };
           stringResult = intl.formatToPlainString(targetUsername(1128).t.EIcwoe, obj3);
-          const tmpResult8 = targetUsername(10918);
+          const tmpResult8 = targetUsername(10929);
         }
         const obj4 = { badges: stateFromStoresArray, enabled: !tmp17 };
         cResult[28] = stateFromStoresArray;
@@ -767,7 +767,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
     const obj3 = { badges: stateFromStoresArray, enabled: null };
     let tmp33Result = !tmp10;
     obj3.enabled = tmp33Result;
-    const badgeIndicatorIds = targetUsername(10918).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
+    const badgeIndicatorIds = targetUsername(10929).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
     if (null != targetUserId && targetUserId !== stateFromStores) {
       if (null != targetUsername) {
         const intl2 = targetUsername(1128).intl;
@@ -818,7 +818,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
         }
       }
       if (!stateFromStores1) {
-        const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6828).ActivityIndicator, {}) };
+        const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6831).ActivityIndicator, {}) };
         closure_10(closure_5, obj10);
       }
       let result1 = (diff - result) / 4;
@@ -874,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
     }
     const intl = targetUsername(1128).intl;
     formatToPlainStringResult = intl.string(targetUsername(1128).t.UqnlQF);
-    const tmp6Result6 = targetUsername(10918);
+    const tmp6Result6 = targetUsername(10929);
   } else {
     throw new TypeError("Trying to call a non-function");
   }

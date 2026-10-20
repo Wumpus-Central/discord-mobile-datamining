@@ -1,6 +1,6 @@
-// === Module 12020: useAwaitAnimationComplete ===
+// === Module 12035: useAwaitAnimationComplete ===
 
-// Module 12020 (useAwaitAnimationComplete)
+// Module 12035 (useAwaitAnimationComplete)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

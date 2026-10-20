@@ -1,30 +1,30 @@
-// === Module 18882: GuildSettingsModalTemplate ===
+// === Module 18905: GuildSettingsModalTemplate ===
 
-// Module 18882 (GuildSettingsModalTemplate)
+// Module 18905 (GuildSettingsModalTemplate)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import ToastUtils from "ToastUtils" /* 5624 */;
 import CopyIcon2 from "CopyIcon" /* 5644 */;
-import AlertModal from "AlertModal" /* 5869 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import Card from "Card" /* 6853 */;
-import Input from "Input" /* 6957 */;
-import CircleXIcon2 from "CircleXIcon" /* 6966 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7213 */;
-import ClipboardUtils from "ClipboardUtils" /* 7231 */;
-import HeaderActionButton from "HeaderActionButton" /* 7431 */;
-import native from "native" /* 8833 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12544 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 18883 */;
+import AlertModal from "AlertModal" /* 5872 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import Card from "Card" /* 6856 */;
+import Input from "Input" /* 6960 */;
+import CircleXIcon2 from "CircleXIcon" /* 6969 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7216 */;
+import ClipboardUtils from "ClipboardUtils" /* 7234 */;
+import HeaderActionButton from "HeaderActionButton" /* 7434 */;
+import native from "native" /* 8845 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12561 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 18906 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const util = Form(1128);
 const Text_Text = Form(5195);
-const SceneLoadingIndicator = Form(7082);
-const Form2 = Form(8871);
+const SceneLoadingIndicator = Form(7085);
+const Form2 = Form(8883);
 require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
@@ -131,7 +131,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5869).showConfirmModal(obj2);
+                guildId(5872).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -166,7 +166,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5869).showConfirmModal(obj2);
+                guildId(5872).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -201,7 +201,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5869).showConfirmModal(obj2);
+                guildId(5872).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -237,7 +237,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5869).showConfirmModal(obj2);
+                guildId(5872).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -272,7 +272,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5869).showConfirmModal(obj2);
+                guildId(5872).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -305,7 +305,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                   obj2.onCloseCallback = function onCloseCallback() {
                     return closure_0(false);
                   };
-                  guildId(5869).showConfirmModal(obj2);
+                  guildId(5872).showConfirmModal(obj2);
                 });
               } else {
                 flag = true;
@@ -338,7 +338,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                     obj2.onCloseCallback = function onCloseCallback() {
                       return closure_0(false);
                     };
-                    guildId(5869).showConfirmModal(obj2);
+                    guildId(5872).showConfirmModal(obj2);
                   });
                 } else {
                   flag = true;
@@ -371,7 +371,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                       obj2.onCloseCallback = function onCloseCallback() {
                         return closure_0(false);
                       };
-                      guildId(5869).showConfirmModal(obj2);
+                      guildId(5872).showConfirmModal(obj2);
                     });
                   } else {
                     flag = true;
@@ -406,7 +406,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                       obj2.onCloseCallback = function onCloseCallback() {
                         return closure_0(false);
                       };
-                      guildId(5869).showConfirmModal(obj2);
+                      guildId(5872).showConfirmModal(obj2);
                     });
                   } else {
                     flag = true;
@@ -443,7 +443,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5869).showConfirmModal(obj2);
+                guildId(5872).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -488,7 +488,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                     closure_1_6(null);
                     closure_1_8(true);
                     c3 = 1;
-                    const obj2 = guildTemplate(12544);
+                    const obj2 = guildTemplate(12561);
                     c4 = 2;
                     c5 = 1;
                     const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -499,7 +499,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 if (1 === tmp7) {
                   c3 = 0;
                   closure_128_0 = closure_2;
-                  const aPIError = new handleSave(6328).APIError(closure_128_0);
+                  const aPIError = new handleSave(6331).APIError(closure_128_0);
                   closure_1_6(aPIError);
                 } else if (arg0 === 1) {
                   c5 = 3;
@@ -545,7 +545,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
         }
         let obj2 = { headerLeft: fn, headerRight: null };
         if (first) {
-          let fn2 = () => first(handleSave(6872).HeaderSubmittingIndicator, {});
+          let fn2 = () => first(handleSave(6875).HeaderSubmittingIndicator, {});
         } else if (closure_12) {
           fn2 = () => {
             const obj = { onPress: handleSave, text: null, disabled: null };
@@ -597,7 +597,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
             obj2.onCloseCallback = function onCloseCallback() {
               return closure_0(false);
             };
-            guildId(5869).showConfirmModal(obj2);
+            guildId(5872).showConfirmModal(obj2);
           });
         } else {
           flag = true;
@@ -715,7 +715,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(5869).showConfirmModal(obj2);
+        guildId(5872).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -780,7 +780,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(12544);
+                const obj2 = guildTemplate(12561);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -791,7 +791,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Templa
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(6328).APIError(closure_128_0);
+              const aPIError = new handleSave(6331).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -1486,7 +1486,7 @@ let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(18884)(guildTemplate.code);
+  const tmp3 = guildTemplate(18907)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(587).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

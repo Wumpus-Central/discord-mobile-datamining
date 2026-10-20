@@ -1,11 +1,11 @@
-// === Module 11883: AppLauncherOnboardingBanner ===
+// === Module 11897: AppLauncherOnboardingBanner ===
 
-// Module 11883 (AppLauncherOnboardingBanner)
+// Module 11897 (AppLauncherOnboardingBanner)
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 4784 */;
-import ActivitiesBannerDefault from "ActivitiesBanner" /* 11884 */;
-import AppsBannerDefault from "AppsBanner" /* 11901 */;
-import BotsBannerDefault from "BotsBanner" /* 11902 */;
+import ActivitiesBannerDefault from "ActivitiesBanner" /* 11898 */;
+import AppsBannerDefault from "AppsBanner" /* 11915 */;
+import BotsBannerDefault from "BotsBanner" /* 11916 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

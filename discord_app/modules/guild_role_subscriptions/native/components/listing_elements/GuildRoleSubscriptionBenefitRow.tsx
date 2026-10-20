@@ -1,12 +1,12 @@
-// === Module 16329: GuildRoleSubscriptionBenefitRow ===
+// === Module 16348: GuildRoleSubscriptionBenefitRow ===
 
-// Module 16329 (GuildRoleSubscriptionBenefitRow)
+// Module 16348 (GuildRoleSubscriptionBenefitRow)
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4894 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useChannelNameDefault from "useChannelName" /* 5565 */;
-import EmojiIconDefault from "EmojiIcon" /* 16327 */;
+import EmojiIconDefault from "EmojiIcon" /* 16346 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 
@@ -183,11 +183,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
   } else {
     ({ channelTitle: channelTitle2, channelIcon } = channelTitle);
     if (cResult[5] !== stateFromStores) {
-      const channelIcon1 = tmp(8447).getChannelIcon(stateFromStores);
+      const channelIcon1 = tmp(8451).getChannelIcon(stateFromStores);
       cResult[5] = stateFromStores;
       cResult[6] = channelIcon1;
       let tmp14 = channelIcon1;
-      const tmpResult2 = tmp(8447);
+      const tmpResult2 = tmp(8451);
     } else {
       tmp14 = cResult[6];
     }
@@ -239,13 +239,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenef
   let tmp8 = closure_5(benefit(5195).Text, obj2);
   if (null != stateFromStores) {
     const obj3 = { style: tmp.channelTitle, children: null };
-    const obj4 = { style: tmp.channelIcon, size: tmp2(1202).Icon.Sizes.CUSTOM, source: tmp2(8447).getChannelIcon(stateFromStores) };
+    const obj4 = { style: tmp.channelIcon, size: tmp2(1202).Icon.Sizes.CUSTOM, source: tmp2(8451).getChannelIcon(stateFromStores) };
     const items2 = [closure_5(tmp2(1202).Icon, obj4), ];
     const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
     items2[1] = closure_5(tmp2(5195).Text, obj5);
     obj3.children = items2;
     tmp8 = closure_6(View, obj3);
-    const tmp2Result = tmp2(8447);
+    const tmp2Result = tmp2(8451);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

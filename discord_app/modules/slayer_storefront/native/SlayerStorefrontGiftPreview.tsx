@@ -1,12 +1,12 @@
-// === Module 10845: SlayerStorefrontGiftPreview ===
+// === Module 10856: SlayerStorefrontGiftPreview ===
 
-// Module 10845 (SlayerStorefrontGiftPreview)
+// Module 10856 (SlayerStorefrontGiftPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3690 from "module_3690" /* 3690 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9336 */;
-import InfoBox from "InfoBox" /* 10846 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9348 */;
+import InfoBox from "InfoBox" /* 10857 */;
 import noop from "module_19" /* 19 */;
 
 const InfoBoxDefault = InfoBox;

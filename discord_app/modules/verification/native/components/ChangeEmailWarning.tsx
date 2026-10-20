@@ -1,6 +1,6 @@
-// === Module 6938: ChangeEmailWarning ===
+// === Module 6941: ChangeEmailWarning ===
 
-// Module 6938 (ChangeEmailWarning)
+// Module 6941 (ChangeEmailWarning)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -10,7 +10,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(6931).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const hcArticle = fn(6934).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
     } else {
       const _Symbol6 = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp15 = closure_9(tmp(6939).TrafficConeSpotIllustration, {});
+        const tmp15 = closure_9(tmp(6942).TrafficConeSpotIllustration, {});
         cResult[5] = tmp15;
         let tmp13 = tmp15;
       } else {
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
   if (null != stateFromStores) {
     const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj4 = { style: tmp.container, children: null };
-    const items2 = [closure_9(tmp2(6939).TrafficConeSpotIllustration, {}), , , ];
+    const items2 = [closure_9(tmp2(6942).TrafficConeSpotIllustration, {}), , , ];
     const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1128).intl;
     obj5.children = intl.string(tmp2(1128).t.hhR7gX);

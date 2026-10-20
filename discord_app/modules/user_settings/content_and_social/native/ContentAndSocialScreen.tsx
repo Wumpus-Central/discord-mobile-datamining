@@ -1,20 +1,20 @@
-// === Module 17003: ContentAndSocialScreen ===
+// === Module 17022: ContentAndSocialScreen ===
 
-// Module 17003 (ContentAndSocialScreen)
+// Module 17022 (ContentAndSocialScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7344 */;
-import SettingBuilders from "SettingBuilders" /* 11099 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13384 */;
-import SettingLayoutDefault from "SettingLayout" /* 15761 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 15888 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 15890 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 17004 */;
-import useUserSafetySettingsSelectedGuildId from "useUserSafetySettingsSelectedGuildId" /* 17009 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 17010 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7347 */;
+import SettingBuilders from "SettingBuilders" /* 11111 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13402 */;
+import SettingLayoutDefault from "SettingLayout" /* 15780 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 15907 */;
+import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 15909 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 17023 */;
+import useUserSafetySettingsSelectedGuildId from "useUserSafetySettingsSelectedGuildId" /* 17028 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 17029 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -145,7 +145,7 @@ function getSocialPermissions(allServersSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8276).MobileUserSettings;
+const MobileUserSettings = fn(8280).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
@@ -393,11 +393,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentA
   const first1 = _slicedToArray(noop.useState(tmp7), 1)[0];
   if (cResult[3] !== first1) {
     const obj2 = { defaultIndex: first1, settings: first };
-    const segmentedControl = route(11099).createSegmentedControl(obj2);
+    const segmentedControl = route(11111).createSegmentedControl(obj2);
     cResult[3] = first1;
     cResult[4] = segmentedControl;
     let tmp10 = segmentedControl;
-    const tmpResult = route(11099);
+    const tmpResult = route(11111);
   } else {
     tmp10 = cResult[4];
   }

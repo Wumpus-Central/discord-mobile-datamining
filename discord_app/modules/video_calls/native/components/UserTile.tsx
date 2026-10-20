@@ -1,26 +1,26 @@
-// === Module 11314: UserTile ===
+// === Module 11325: UserTile ===
 
-// Module 11314 (UserTile)
+// Module 11325 (UserTile)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import _modDef11319 from "module_11319" /* 11319 */;
-import _modDef11320 from "module_11320" /* 11320 */;
-import _modDef11321 from "module_11321" /* 11321 */;
-import _modDef11322 from "module_11322" /* 11322 */;
-import _modDef11323 from "module_11323" /* 11323 */;
-import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 11324 */;
+import _modDef11330 from "module_11330" /* 11330 */;
+import _modDef11331 from "module_11331" /* 11331 */;
+import _modDef11332 from "module_11332" /* 11332 */;
+import _modDef11333 from "module_11333" /* 11333 */;
+import _modDef11334 from "module_11334" /* 11334 */;
+import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 11335 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 11315 */;
+import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 11326 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(11315).clearVoiceChannelEffectForUser;
+let closure_7 = fn(11326).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1087).VideoToggleState;
 const ParticipantTypes = fn(5593).ParticipantTypes;
 const MediaEngineContextTypes = fn(5680).MediaEngineContextTypes;
@@ -191,7 +191,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           const items = [, ];
           ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
           obj2.style = items;
-          const obj3 = { source: _modDef11319, size: native.Icon.Sizes.SMALL, disableColor: true };
+          const obj3 = { source: _modDef11330, size: native.Icon.Sizes.SMALL, disableColor: true };
           const items1 = [closure_2_14(native.Icon, obj3), ];
           const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
           const intl = util.intl;
@@ -299,7 +299,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const items = [, ];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
       obj2.style = items;
-      const obj3 = { source: _modDef11319, size: native.Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef11330, size: native.Icon.Sizes.SMALL, disableColor: true };
       const items1 = [closure_2_14(native.Icon, obj3), ];
       const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
       const intl = util.intl;
@@ -349,11 +349,11 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmp9 = _slicedToArray(userId(504).useStateFromStoresArray(first, tmp7, tmp8), 3);
   let tmp10 = tmp9[1];
   if (tmp9[0]) {
-    let tmp11 = _modDef11320;
+    let tmp11 = _modDef11331;
   } else if (deafened) {
-    tmp11 = _modDef11321;
+    tmp11 = _modDef11332;
   } else if (muted) {
-    tmp11 = _modDef11322;
+    tmp11 = _modDef11333;
   }
   if (tmp10) {
     tmp10 = !tmp9[2];
@@ -396,7 +396,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         const obj4 = { style: null, children: null };
         items3[2] = obj3;
         obj4.style = items3;
-        const obj5 = { source: tmp11, size: tmp(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp11 === _modDef11320 };
+        const obj5 = { source: tmp11, size: tmp(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp11 === _modDef11331 };
         obj4.children = closure_14(tmp(1202).Icon, obj5);
         tmp24Result = closure_14(View, obj4);
       }
@@ -413,7 +413,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const obj6 = { style: null, children: null };
     const items4 = [tmp4.statusWrapper, style];
     obj6.style = items4;
-    const obj7 = { source: _modDef11323, size: tmp(1202).Icon.Sizes.SMALL, disableColor: true };
+    const obj7 = { source: _modDef11334, size: tmp(1202).Icon.Sizes.SMALL, disableColor: true };
     obj6.children = closure_14(tmp(1202).Icon, obj7);
     tmp17 = closure_14(View, obj6);
   }
@@ -436,11 +436,11 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = _modDef11320;
+    let tmp6 = _modDef11331;
   } else if (deafened) {
-    tmp6 = _modDef11321;
+    tmp6 = _modDef11332;
   } else if (muted) {
-    tmp6 = _modDef11322;
+    tmp6 = _modDef11333;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -451,7 +451,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const obj2 = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj2.style = items2;
-      const obj3 = { source: _modDef11323, size: tmp2(1202).Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef11334, size: tmp2(1202).Icon.Sizes.SMALL, disableColor: true };
       obj2.children = closure_14(tmp2(1202).Icon, obj3);
       tmp14 = closure_14(View, obj2);
     }
@@ -466,7 +466,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const obj5 = { style: null, children: null };
       items4[2] = obj4;
       obj5.style = items4;
-      const obj6 = { source: tmp6, size: tmp2(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef11320 };
+      const obj6 = { source: tmp6, size: tmp2(1202).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef11331 };
       obj5.children = closure_14(tmp2(1202).Icon, obj6);
       tmp19Result = closure_14(View, obj5);
     }

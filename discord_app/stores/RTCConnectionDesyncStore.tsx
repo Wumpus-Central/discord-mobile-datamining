@@ -1,12 +1,12 @@
-// === Module 14865: RTCConnectionDesyncStore ===
+// === Module 14883: RTCConnectionDesyncStore ===
 
-// Module 14865 (RTCConnectionDesyncStore)
+// Module 14883 (RTCConnectionDesyncStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 2041 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5700 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5944 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6730 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5947 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6733 */;
 import VoiceStateRecord from "VoiceStateRecord" /* 5592 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;

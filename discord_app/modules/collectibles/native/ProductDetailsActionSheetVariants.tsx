@@ -1,13 +1,13 @@
-// === Module 14269: ProductDetailsActionSheetVariants ===
+// === Module 14287: ProductDetailsActionSheetVariants ===
 
-// Module 14269 (ProductDetailsActionSheetVariants)
+// Module 14287 (ProductDetailsActionSheetVariants)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Pressables from "Pressables" /* 6856 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7178 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9352 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9386 */;
+import Pressables from "Pressables" /* 6859 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7181 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9364 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductD
   } else {
     return null;
   }
-  tmpResult = selectedVariantIndex(7607);
+  tmpResult = selectedVariantIndex(7610);
 }) : (function ProductDetailsActionSheetVariants(disabled) {
   ({ product, selectedVariantIndex } = disabled);
   let flag = disabled.disabled;

@@ -1,21 +1,21 @@
-// === Module 19139: ParentalConsentConnectionScreen ===
+// === Module 19163: ParentalConsentConnectionScreen ===
 
-// Module 19139 (ParentalConsentConnectionScreen)
+// Module 19163 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import _modDef2822 from "module_2822" /* 2822 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15953 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15972 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7591 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7594 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7592).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7595).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
@@ -194,7 +194,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2822.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2822["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(15954, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(15973, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

@@ -1,10 +1,10 @@
-// === Module 8073: InAppReportsTextLineElement ===
+// === Module 8077: InAppReportsTextLineElement ===
 
-// Module 8073 (InAppReportsTextLineElement)
+// Module 8077 (InAppReportsTextLineElement)
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 5624 */;
-import CustomMarkupAll from "CustomMarkup" /* 5934 */;
-import ClipboardUtils from "ClipboardUtils" /* 7231 */;
+import CustomMarkupAll from "CustomMarkup" /* 5937 */;
+import ClipboardUtils from "ClipboardUtils" /* 7234 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

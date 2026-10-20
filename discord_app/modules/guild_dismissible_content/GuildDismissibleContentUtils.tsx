@@ -1,6 +1,6 @@
-// === Module 13217: GuildDismissibleContentUtils ===
+// === Module 13235: GuildDismissibleContentUtils ===
 
-// Module 13217 (GuildDismissibleContentUtils)
+// Module 13235 (GuildDismissibleContentUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4783 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;

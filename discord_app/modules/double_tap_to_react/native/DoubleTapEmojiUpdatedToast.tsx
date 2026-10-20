@@ -1,6 +1,6 @@
-// === Module 9753: DoubleTapEmojiUpdatedToast ===
+// === Module 9765: DoubleTapEmojiUpdatedToast ===
 
-// Module 9753 (DoubleTapEmojiUpdatedToast)
+// Module 9765 (DoubleTapEmojiUpdatedToast)
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4954 */;

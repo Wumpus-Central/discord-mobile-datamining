@@ -1,12 +1,12 @@
-// === Module 10408: useFetchCollectiblesCategoriesAndPurchases ===
+// === Module 10419: useFetchCollectiblesCategoriesAndPurchases ===
 
-// Module 10408 (useFetchCollectiblesCategoriesAndPurchases)
+// Module 10419 (useFetchCollectiblesCategoriesAndPurchases)
 import c from "c" /* 576 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7595 */;
-import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10409 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7598 */;
+import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10420 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 5151 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7611 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7614 */;
 
 require = fn;
 const noop = fn(19);

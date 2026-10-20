@@ -1,17 +1,17 @@
-// === Module 11696: useConjurePublishSchedule ===
+// === Module 11709: useConjurePublishSchedule ===
 
-// Module 11696 (useConjurePublishSchedule)
+// Module 11709 (useConjurePublishSchedule)
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10990 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 11001 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ensureConnection = fn(10990).ensureConnection;
+const ensureConnection = fn(11001).ensureConnection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishSchedule.tsx");
 

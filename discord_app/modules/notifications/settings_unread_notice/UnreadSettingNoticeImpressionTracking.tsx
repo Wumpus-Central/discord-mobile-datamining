@@ -1,9 +1,9 @@
-// === Module 10812: UnreadSettingNoticeImpressionTracking ===
+// === Module 10823: UnreadSettingNoticeImpressionTracking ===
 
-// Module 10812 (UnreadSettingNoticeImpressionTracking)
+// Module 10823 (UnreadSettingNoticeImpressionTracking)
 import c from "c" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9279 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9291 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

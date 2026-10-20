@@ -1,9 +1,9 @@
-// === Module 9569: CommandPermissionContext ===
+// === Module 9582: CommandPermissionContext ===
 
-// Module 9569 (CommandPermissionContext)
+// Module 9582 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import Server from "Server" /* 2000 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7262 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7265 */;
 import noop from "module_19" /* 19 */;
 import ImpersonateStore from "ImpersonateStore" /* 4853 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

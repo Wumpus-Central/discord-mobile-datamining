@@ -1,11 +1,11 @@
-// === Module 18347: VoicePanelLockedIcon ===
+// === Module 18369: VoicePanelLockedIcon ===
 
-// Module 18347 (VoicePanelLockedIcon)
+// Module 18369 (VoicePanelLockedIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import NativeViewDefault from "NativeView" /* 6834 */;
-import _modDef18348 from "module_18348" /* 18348 */;
+import NativeViewDefault from "NativeView" /* 6837 */;
+import _modDef18370 from "module_18370" /* 18370 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,8 +24,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
   const cResult = c.c(5);
   const tmp4 = closure_4();
   if (cResult[0] !== tmp4.icon) {
-    const obj2 = { style: tmp4.icon, source: _modDef18348, size: native.IconSizes.LARGE };
-    const tmp8 = jsx(native.Icon, { style: tmp4.icon, source: _modDef18348, size: native.IconSizes.LARGE });
+    const obj2 = { style: tmp4.icon, source: _modDef18370, size: native.IconSizes.LARGE };
+    const tmp8 = jsx(native.Icon, { style: tmp4.icon, source: _modDef18370, size: native.IconSizes.LARGE });
     cResult[0] = tmp4.icon;
     cResult[1] = tmp8;
     let tmp5 = tmp8;
@@ -47,6 +47,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
 }) : (function VoicePanelLockedIcon() {
   const tmp = closure_4();
   const obj = { style: tmp.container, children: null };
-  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef18348, size: native.IconSizes.LARGE });
+  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef18370, size: native.IconSizes.LARGE });
   return <tmp2 style={tmp.container}>{null}</tmp2>;
 });

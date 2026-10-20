@@ -1,6 +1,6 @@
-// === Module 8838: PressableScale ===
+// === Module 8850: PressableScale ===
 
-// Module 8838 (PressableScale)
+// Module 8850 (PressableScale)
 import c from "c" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
 import ButtonHooks from "ButtonHooks" /* 5212 */;

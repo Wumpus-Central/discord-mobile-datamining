@@ -1,6 +1,6 @@
-// === Module 15778: UserSettingsChangeUsername ===
+// === Module 15797: UserSettingsChangeUsername ===
 
-// Module 15778 (UserSettingsChangeUsername)
+// Module 15797 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
@@ -12,13 +12,13 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(6438).match(showHint.usernameStatus);
-  let obj = { type: showHint(15779).NameValidationState.ERROR, message: null };
-  const P = showHint(6438).P;
+  const match = showHint(6441).match(showHint.usernameStatus);
+  let obj = { type: showHint(15798).NameValidationState.ERROR, message: null };
+  const P = showHint(6441).P;
   obj.message = P.select();
-  const str = showHint(6438);
-  const obj2 = { type: showHint(15779).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(6438).P;
+  const str = showHint(6441);
+  const obj2 = { type: showHint(15798).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(6441).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) => closure_1_11(showHint(5195).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
   return match.with(obj, (children) => closure_1_11(showHint(5195).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5195).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(7026).saveAccountChanges(user, { close: false });
+        yield closure_2_2(7029).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
           const v6OrEarlierAPIError = new closure_0(1297).V6OrEarlierAPIError(closure_129_0);

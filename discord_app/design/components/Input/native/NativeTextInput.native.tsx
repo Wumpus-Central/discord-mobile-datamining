@@ -1,11 +1,11 @@
-// === Module 6974: NativeTextInput ===
+// === Module 6977: NativeTextInput ===
 
-// Module 6974 (NativeTextInput)
+// Module 6977 (NativeTextInput)
 import c from "c" /* 576 */;
 import native from "native" /* 4999 */;
 import native2 from "native" /* 5100 */;
 import useMountEffect from "useMountEffect" /* 5224 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6976 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6979 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
 
@@ -80,7 +80,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
         const mountLayoutEffect = useMountEffect.useMountLayoutEffect(tmp8);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { value: "Array", defaultValue: "test" };
+          const obj2 = { value: "userId", defaultValue: "code" };
           cResult[8] = obj2;
           let tmp11 = obj2;
         } else {
@@ -143,7 +143,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
       current.setNativeProps(obj);
     }
   });
-  return { value: "Array", defaultValue: "test" };
+  return { value: "userId", defaultValue: "code" };
 });
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePanGestureWrapper(arg0) {

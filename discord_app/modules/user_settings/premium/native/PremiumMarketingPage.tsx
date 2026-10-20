@@ -1,6 +1,6 @@
-// === Module 14574: PremiumMarketingPage ===
+// === Module 14592: PremiumMarketingPage ===
 
-// Module 14574 (PremiumMarketingPage)
+// Module 14592 (PremiumMarketingPage)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import dismissible_content from "dismissible_content" /* 4784 */;
@@ -24,12 +24,12 @@ let items = [{ scaleX: -1 }];
 obj4.transform = items;
 obj2.backButton = obj4;
 let obj3 = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
-obj2.themedBackground = { backgroundColor: fn(6655).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-let obj5 = { backgroundColor: fn(6655).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-obj2.backButtonBackground = { backgroundColor: fn(6655).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+obj2.themedBackground = { backgroundColor: fn(6658).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+let obj5 = { backgroundColor: fn(6658).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+obj2.backButtonBackground = { backgroundColor: fn(6658).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj6 = { backgroundColor: fn(6655).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+let obj6 = { backgroundColor: fn(6658).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingPage.tsx");
 

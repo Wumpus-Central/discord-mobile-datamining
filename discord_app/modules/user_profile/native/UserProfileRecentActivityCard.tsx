@@ -1,6 +1,6 @@
-// === Module 14202: UserProfileRecentActivityCard ===
+// === Module 14220: UserProfileRecentActivityCard ===
 
-// Module 14202 (UserProfileRecentActivityCard)
+// Module 14220 (UserProfileRecentActivityCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,19 +10,19 @@ import shared from "shared" /* 4952 */;
 import native from "native" /* 4999 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import Pressables from "Pressables" /* 6856 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7199 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8018 */;
-import utils from "utils" /* 8560 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8749 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9166 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9167 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14083 */;
-import BadgesAll from "Badges" /* 14096 */;
-import TrendingType from "TrendingType" /* 14101 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14108 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14109 */;
+import Pressables from "Pressables" /* 6859 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7202 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8022 */;
+import utils from "utils" /* 8566 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8761 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9178 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9179 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 14101 */;
+import BadgesAll from "Badges" /* 14114 */;
+import TrendingType from "TrendingType" /* 14119 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 14126 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 14127 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -94,8 +94,8 @@ let obj = {
     return true;
   }
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8560).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8560).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8566).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8566).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -257,7 +257,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Gaming
   cResult[4] = "user-profile";
   cResult[5] = str.badges;
   cResult[6] = tmp10;
-  tmpResult = badgeCell(8749);
+  tmpResult = badgeCell(8761);
 }) : (function GamingEntryBadges(entry) {
   entry = entry.entry;
   const tmp = closure_9();
@@ -637,13 +637,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       if (cResult[4] === user) {
         let tmp8 = cResult[5];
       }
-      const tmp9 = tmp6(14108)(tmp8);
+      const tmp9 = tmp6(14126)(tmp8);
       _require = tmp9;
       if (cResult[6] === tmp9) {
         if (cResult[7] === user.id) {
           let tmp10 = cResult[8];
         }
-        tmp6(14109)(tmp10);
+        tmp6(14127)(tmp10);
         let application_id;
         if ("application_id" in entry.extra) {
           application_id = entry.extra.application_id;
@@ -652,7 +652,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           if (cResult[10] === user.id) {
             let tmp14 = cResult[11];
           }
-          const tmp15 = tmp6(9167)(tmp14);
+          const tmp15 = tmp6(9179)(tmp14);
           importDefault = tmp15;
           if (cResult[12] === tmp9) {
             if (cResult[13] === tmp15) {

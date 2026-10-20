@@ -1,14 +1,14 @@
-// === Module 11019: conjurePreviewSurface ===
+// === Module 11031: conjurePreviewSurface ===
 
-// Module 11019 (conjurePreviewSurface)
+// Module 11031 (conjurePreviewSurface)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11020 */;
-import FramesStore from "FramesStore" /* 6723 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11032 */;
+import FramesStore from "FramesStore" /* 6726 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(6724);
+const FramesConstants = fn(6727);
 ({ isLaunched: c3, makeFrameId: closure_4 } = FramesConstants);
 let c5 = "0";
 const CONJURE_PREVIEW_SURFACE = { type: fn(5587).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };

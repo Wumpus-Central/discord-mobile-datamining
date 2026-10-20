@@ -1,8 +1,8 @@
-// === Module 9134: SecureFramesCopyIcon ===
+// === Module 9146: SecureFramesCopyIcon ===
 
-// Module 9134 (SecureFramesCopyIcon)
+// Module 9146 (SecureFramesCopyIcon)
 import ToastUtils from "ToastUtils" /* 5624 */;
-import ClipboardUtils from "ClipboardUtils" /* 7231 */;
+import ClipboardUtils from "ClipboardUtils" /* 7234 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
   }
   if (cResult[6] !== tmp6) {
     const obj2 = { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" };
-    const tmp14 = jsx(tmp(7903).IconButton, { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" });
+    const tmp14 = jsx(tmp(7907).IconButton, { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" });
     cResult[6] = tmp6;
     cResult[7] = tmp14;
     let tmp12 = tmp14;

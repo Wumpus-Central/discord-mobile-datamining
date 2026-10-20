@@ -1,17 +1,17 @@
-// === Module 11178: GuildChannelUserList ===
+// === Module 11189: GuildChannelUserList ===
 
-// Module 11178 (GuildChannelUserList)
+// Module 11189 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1128 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4885 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5944 */;
-import GuildUtilsDefault from "GuildUtils" /* 6777 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import sortByMatchScore from "sortByMatchScore" /* 8988 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5947 */;
+import GuildUtilsDefault from "GuildUtils" /* 6780 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import sortByMatchScore from "sortByMatchScore" /* 9000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 7318 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 7321 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import GuildStore from "GuildStore" /* 4822 */;
@@ -22,7 +22,7 @@ const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7318);
+let ChannelMemberStore = fn(7321);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1087);

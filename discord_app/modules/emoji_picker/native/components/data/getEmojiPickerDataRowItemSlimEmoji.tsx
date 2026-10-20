@@ -1,6 +1,6 @@
-// === Module 9825: getEmojiPickerDataRowItemSlimEmoji ===
+// === Module 9837: getEmojiPickerDataRowItemSlimEmoji ===
 
-// Module 9825 (getEmojiPickerDataRowItemSlimEmoji)
+// Module 9837 (getEmojiPickerDataRowItemSlimEmoji)
 import EmojiTypes from "EmojiTypes" /* 4897 */;
 import size from "module_2" /* 2 */;
 

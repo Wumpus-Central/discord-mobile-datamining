@@ -1,12 +1,12 @@
-// === Module 17712: NavigationTTIRegionDebugOverlay ===
+// === Module 17731: NavigationTTIRegionDebugOverlay ===
 
-// Module 17712 (NavigationTTIRegionDebugOverlay)
+// Module 17731 (NavigationTTIRegionDebugOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12658 */;
-import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 12660 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 17710 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12675 */;
+import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 12677 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 17729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -637,12 +637,12 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
   ({ regionId, tracking, descendantTracking, includedDescendants, excludedDescendants, hierarchyDepth, violation } = name);
   const tmp4 = closure_11();
   let obj = name(576);
-  const navTTISurface = name(12657).useNavTTISurface();
-  let obj2 = name(12657);
+  const navTTISurface = name(12674).useNavTTISurface();
+  let obj2 = name(12674);
   let obj3 = noop;
   [tmp7, dependencyMap] = noop.useState(false);
   if (typeof useNavigationTTIDebugFreezeTarget === "function") {
-    const syncExternalStore = obj3.useSyncExternalStore(tmp(12660).subscribeNavigationTTIDebugFreezeTarget, tmp(12660).getNavigationTTIDebugFreezeTarget, tmp(12660).getNavigationTTIDebugFreezeTarget);
+    const syncExternalStore = obj3.useSyncExternalStore(tmp(12677).subscribeNavigationTTIDebugFreezeTarget, tmp(12677).getNavigationTTIDebugFreezeTarget, tmp(12677).getNavigationTTIDebugFreezeTarget);
     if (cResult[0] === name) {
       if (cResult[1] === regionId) {
         if (cResult[2] === tracking) {
@@ -1027,12 +1027,12 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
   noop = undefined;
   closure_5 = undefined;
   const tmp = closure_11();
-  const navTTISurface = name(12657).useNavTTISurface();
-  let obj = name(12657);
+  const navTTISurface = name(12674).useNavTTISurface();
+  let obj = name(12674);
   let obj2 = noop;
   [tmp6, c2] = noop.useState(false);
   if (typeof useNavigationTTIDebugFreezeTarget === "function") {
-    const syncExternalStore = obj2.useSyncExternalStore(tmp2(12660).subscribeNavigationTTIDebugFreezeTarget, tmp2(12660).getNavigationTTIDebugFreezeTarget, tmp2(12660).getNavigationTTIDebugFreezeTarget);
+    const syncExternalStore = obj2.useSyncExternalStore(tmp2(12677).subscribeNavigationTTIDebugFreezeTarget, tmp2(12677).getNavigationTTIDebugFreezeTarget, tmp2(12677).getNavigationTTIDebugFreezeTarget);
     let obj3 = { name, regionId: name.regionId, tracking };
     const tmp9 = closure_12(obj3);
     let tmp12 = "exclude" === tracking;

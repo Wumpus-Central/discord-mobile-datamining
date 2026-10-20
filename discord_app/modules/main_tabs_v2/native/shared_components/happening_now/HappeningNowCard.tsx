@@ -1,10 +1,10 @@
-// === Module 16384: HappeningNowCard ===
+// === Module 16403: HappeningNowCard ===
 
-// Module 16384 (HappeningNowCard)
+// Module 16403 (HappeningNowCard)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Card from "Card" /* 6853 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6986 */;
+import Card from "Card" /* 6856 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6989 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 let closure_3 = ["children", "noMargin", "displayNameFont"];
 let closure_4 = ["children", "variant"];
 const View = fn(17).View;
-const HappeningNowConstants = fn(16383);
+const HappeningNowConstants = fn(16402);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({ HAPPENING_NOW_CARD_PADDING: closure_8, HAPPENING_NOW_CARD_HEIGHT: closure_9, HAPPENING_NOW_BADGE_SIZE } = HappeningNowConstants);
 ({ HAPPENING_NOW_CARD_WIDTH_SMALL_MIN: closure_11, HAPPENING_NOW_CARD_WIDTH_SMALL_MAX: closure_12, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MIN: map1, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MAX: closure_14, HAPPENING_NOW_CARD_WIDTH_LARGE_MIN: closure_15, HAPPENING_NOW_CARD_WIDTH_LARGE_MAX: closure_16, HAPPENING_NOW_CARD_PADDING_RIGHT: closure_17, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MIN: closure_18, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MAX: closure_19, HAPPENING_NOW_CARD_WIDTH_LARGE_PANELS_MAX: closure_20, HAPPENING_NOW_PANELS_CONTAINER_PADDING } = HappeningNowConstants);

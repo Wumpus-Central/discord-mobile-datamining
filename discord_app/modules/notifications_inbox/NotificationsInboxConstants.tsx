@@ -1,6 +1,6 @@
-// === Module 8575: NotificationsInboxConstants ===
+// === Module 8587: NotificationsInboxConstants ===
 
-// Module 8575 (NotificationsInboxConstants)
+// Module 8587 (NotificationsInboxConstants)
 import Constants from "Constants" /* 1087 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;

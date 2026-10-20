@@ -1,18 +1,18 @@
-// === Module 11177: RoleMembersActionSheet ===
+// === Module 11188: RoleMembersActionSheet ===
 
-// Module 11177 (RoleMembersActionSheet)
+// Module 11188 (RoleMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7174 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7177 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import GuildRoleStore from "GuildRoleStore" /* 4854 */;
 
 require = fn;
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(7318).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(7321).EVERYONE_CHANNEL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
       }
       const tmpResult2 = tmp(504);
       const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-      const tmp22 = roleId(7172)(guildId);
+      const tmp22 = roleId(7175)(guildId);
       class I {
         constructor() {
           tmp = roleId;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
   let obj2 = guildId(504);
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(7172)(guildId);
+  const tmp11 = roleId(7175)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -262,9 +262,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMemb
     }
     obj5.channelId = channelId;
     obj5.roleId = roleId;
-    obj4.children = closure_8(tmp9(11178), obj5);
+    obj4.children = closure_8(tmp9(11189), obj5);
     tmp16Result = closure_8(tmp3(5226).BottomSheet, obj4);
-    let tmp9Result = tmp9(11178);
+    let tmp9Result = tmp9(11189);
   }
   return tmp16Result;
 });

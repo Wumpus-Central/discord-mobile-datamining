@@ -1,10 +1,10 @@
-// === Module 8096: uploader/UploadUtils ===
+// === Module 8100: uploader/UploadUtils ===
 
-// Module 8096 (uploader/UploadUtils)
+// Module 8100 (uploader/UploadUtils)
 import js_shim_shim from "js_shim/shim" /* 562 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import UploadPlatform from "UploadPlatform" /* 8088 */;
-import AttachmentFile from "AttachmentFile" /* 8097 */;
+import UploadPlatform from "UploadPlatform" /* 8092 */;
+import AttachmentFile from "AttachmentFile" /* 8101 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");

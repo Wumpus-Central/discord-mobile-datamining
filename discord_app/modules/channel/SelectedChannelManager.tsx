@@ -1,14 +1,14 @@
-// === Module 18675: SelectedChannelManager ===
+// === Module 18698: SelectedChannelManager ===
 
-// Module 18675 (SelectedChannelManager)
+// Module 18698 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6582 */;
-import transitionToGuild from "transitionToGuild" /* 7395 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6585 */;
+import transitionToGuild from "transitionToGuild" /* 7398 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 require = fn;
 const findFirstVoiceChannelId = fn(4851).findFirstVoiceChannelId;

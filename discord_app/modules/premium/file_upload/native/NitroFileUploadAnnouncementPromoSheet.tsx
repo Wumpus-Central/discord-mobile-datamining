@@ -1,6 +1,6 @@
-// === Module 18136: NitroFileUploadAnnouncementPromoSheet ===
+// === Module 18159: NitroFileUploadAnnouncementPromoSheet ===
 
-// Module 18136 (NitroFileUploadAnnouncementPromoSheet)
+// Module 18159 (NitroFileUploadAnnouncementPromoSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef2628 from "module_2628" /* 2628 */;
 import noop from "module_19" /* 19 */;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
         return;
       }
     }
-    const tmp10 = jsx(tmp(18137).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+    const tmp10 = jsx(tmp(18160).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
     cResult[6] = tmp10;
     const tmp9 = tmp10;
   } else {
@@ -176,8 +176,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
   cResult[14] = I;
   cResult[15] = tmp11;
   cResult[16] = tmp21;
-  cResult[17] = jsx(markAsDismissed(10649).PromoSheet, { illustration: tmp11, title: tmp14, description: tmp15, onDismiss: I, actions: tmp21 });
-  const tmp23 = jsx(markAsDismissed(10649).PromoSheet, { illustration: tmp11, title: tmp14, description: tmp15, onDismiss: I, actions: tmp21 });
+  cResult[17] = jsx(markAsDismissed(10660).PromoSheet, { illustration: tmp11, title: tmp14, description: tmp15, onDismiss: I, actions: tmp21 });
+  const tmp23 = jsx(markAsDismissed(10660).PromoSheet, { illustration: tmp11, title: tmp14, description: tmp15, onDismiss: I, actions: tmp21 });
 }) : (function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   importDefault = noop.useRef(false);

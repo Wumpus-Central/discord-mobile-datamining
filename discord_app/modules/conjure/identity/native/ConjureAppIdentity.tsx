@@ -1,9 +1,9 @@
-// === Module 11677: ConjureAppIdentity ===
+// === Module 11690: ConjureAppIdentity ===
 
-// Module 11677 (ConjureAppIdentity)
+// Module 11690 (ConjureAppIdentity)
 import nativeDefault from "native" /* 587 */;
 import _modDef3820 from "module_3820" /* 3820 */;
-import ImagePickerDefault from "ImagePicker" /* 8099 */;
+import ImagePickerDefault from "ImagePicker" /* 8103 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -228,7 +228,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                             tmp22 = null;
                             if (!disabled) {
                               const obj3 = { style: tmp4.editIcon };
-                              tmp22 = closure_7(onError(11680), obj3);
+                              tmp22 = closure_7(onError(11693), obj3);
                             }
                           }
                           cResult[22] = disabled;
@@ -242,7 +242,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                   }
                 }
                 const obj4 = { variant: "secondary", border: str, radius: 16, style: tmp8, accessibilityLabel: tmp9, disabled, onPress: tmp6, children: cResult[14] };
-                const tmp20 = closure_7(onChange(6853).Card, obj4);
+                const tmp20 = closure_7(onChange(6856).Card, obj4);
                 cResult[15] = disabled;
                 cResult[16] = tmp6;
                 cResult[17] = str;
@@ -256,7 +256,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           }
           if (tmp5) {
             const obj5 = { size: "md", color: onError(587).colors.ICON_MUTED };
-            let tmp13Result = closure_7(onChange(11678).ImagePlusIcon, obj5);
+            let tmp13Result = closure_7(onChange(11691).ImagePlusIcon, obj5);
           } else {
             const obj6 = { source: null, style: null, resizeMode: "cover" };
             const obj7 = { uri: iconURL };
@@ -338,7 +338,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   obj.onPress = callback;
   if (null == iconURL) {
     const obj2 = { size: "md", color: onError(587).colors.ICON_MUTED };
-    let tmp6Result = closure_7(onChange(11678).ImagePlusIcon, obj2);
+    let tmp6Result = closure_7(onChange(11691).ImagePlusIcon, obj2);
     let tmp9 = onError;
   } else {
     tmp9 = onError;
@@ -349,13 +349,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     tmp6Result = closure_7(onError(5631), obj3);
   }
   obj.children = tmp6Result;
-  const children = [closure_7(onChange(6853).Card, obj), ];
+  const children = [closure_7(onChange(6856).Card, obj), ];
   let tmp6Result2 = null;
   if (null != iconURL) {
     tmp6Result2 = null;
     if (!disabled) {
       const obj5 = { style: tmp.editIcon };
-      tmp6Result2 = closure_7(tmp9(11680), obj5);
+      tmp6Result2 = closure_7(tmp9(11693), obj5);
     }
   }
   children[1] = tmp6Result2;
@@ -472,8 +472,8 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
                             tmp45 = tmp48;
                           }
                         }
-                        const obj5 = { label: tmp37, placeholder: tmp38, value: description, onChange: onDescriptionChange, maxLength: nameError(6722).MAX_APP_DESCRIPTION_LENGTH, disabled: tmp4 };
-                        const tmp44 = closure_7(nameError(7128).TextArea, obj5);
+                        const obj5 = { label: tmp37, placeholder: tmp38, value: description, onChange: onDescriptionChange, maxLength: nameError(6725).MAX_APP_DESCRIPTION_LENGTH, disabled: tmp4 };
+                        const tmp44 = closure_7(nameError(7131).TextArea, obj5);
                         cResult[28] = description;
                         cResult[29] = tmp4;
                         cResult[30] = onDescriptionChange;
@@ -483,7 +483,7 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
                       const obj6 = { spacing: nativeDefault.space.PX_8, children: null };
                       const items1 = [tmp25, tmp29];
                       obj6.children = items1;
-                      const tmp36 = closure_8(nameError(5932).Stack, obj6);
+                      const tmp36 = closure_8(nameError(5935).Stack, obj6);
                       cResult[23] = tmp25;
                       cResult[24] = tmp29;
                       cResult[25] = tmp36;
@@ -511,8 +511,8 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
             }
           }
         }
-        const obj9 = { label: tmp15, value: name, onChange: onNameChange, maxLength: nameError(6722).MAX_PROJECT_NAME_LENGTH, disabled: tmp4, errorMessage: nameError };
-        const tmp20 = closure_7(nameError(6956).TextInput, obj9);
+        const obj9 = { label: tmp15, value: name, onChange: onNameChange, maxLength: nameError(6725).MAX_PROJECT_NAME_LENGTH, disabled: tmp4, errorMessage: nameError };
+        const tmp20 = closure_7(nameError(6959).TextInput, obj9);
         cResult[8] = tmp4;
         cResult[9] = name;
         cResult[10] = onNameChange;
@@ -558,10 +558,10 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
   obj4.label = intl.string(_modDef3820.GWBCF9);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  obj4.maxLength = nameError(6722).MAX_PROJECT_NAME_LENGTH;
+  obj4.maxLength = nameError(6725).MAX_PROJECT_NAME_LENGTH;
   obj4.disabled = flag;
   obj4.errorMessage = nameError;
-  obj3.children = closure_7(nameError(6956).TextInput, obj4);
+  obj3.children = closure_7(nameError(6959).TextInput, obj4);
   items1[1] = closure_7(View, obj3);
   obj2.children = items1;
   const items2 = [closure_8(View, obj2), ];
@@ -575,7 +575,7 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
   const obj7 = { children: null };
   items2[1] = tmp12Result;
   obj.children = items2;
-  const items3 = [closure_8(nameError(5932).Stack, obj), ];
+  const items3 = [closure_8(nameError(5935).Stack, obj), ];
   const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = tmp8(1128).intl;
   obj8.label = intl2.string(_modDef3820.ynaGa1);
@@ -583,9 +583,9 @@ export const ConjureAppIdentitySection = ReactCompilerGating.isReactCompilerEnab
   obj8.placeholder = intl3.string(_modDef3820["I+3UTL"]);
   obj8.value = description;
   obj8.onChange = onDescriptionChange;
-  obj8.maxLength = nameError(6722).MAX_APP_DESCRIPTION_LENGTH;
+  obj8.maxLength = nameError(6725).MAX_APP_DESCRIPTION_LENGTH;
   obj8.disabled = flag;
-  items3[1] = closure_7(nameError(7128).TextArea, obj8);
+  items3[1] = closure_7(nameError(7131).TextArea, obj8);
   obj7.children = items3;
   return closure_8(closure_9, obj7);
 });

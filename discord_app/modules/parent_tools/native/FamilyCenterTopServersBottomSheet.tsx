@@ -1,15 +1,15 @@
-// === Module 15973: FamilyCenterTopServersBottomSheet ===
+// === Module 15992: FamilyCenterTopServersBottomSheet ===
 
-// Module 15973 (FamilyCenterTopServersBottomSheet)
+// Module 15992 (FamilyCenterTopServersBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2526 from "module_2526" /* 2526 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import GuildIconDefault from "GuildIcon" /* 6831 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
-import ActionSheet from "ActionSheet" /* 7244 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7591 */;
+import GuildIconDefault from "GuildIcon" /* 6834 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
+import ActionSheet from "ActionSheet" /* 7247 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7594 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -61,7 +61,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
           }
         }
         const obj2 = { label: stateFromStores.name, subLabel: tmp9, icon: tmp11 };
-        const tmp17 = closure_4(tmp(6851).TableRow, obj2);
+        const tmp17 = closure_4(tmp(6854).TableRow, obj2);
         cResult[9] = tmp9;
         cResult[10] = stateFromStores.name;
         cResult[11] = tmp11;
@@ -75,12 +75,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
       cResult[8] = tmp14;
       tmp11 = tmp14;
     }
-    const topUserOrGuildDescription = tmp(8071).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp(8075).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     cResult[3] = guildActivity.call_count;
     cResult[4] = guildActivity.messages_sent;
     cResult[5] = topUserOrGuildDescription;
     tmp9 = topUserOrGuildDescription;
-    const tmpResult2 = tmp(8071);
+    const tmpResult2 = tmp(8075);
   }
   const tmpResult = guildActivity(504);
 }) : (function GuildRow(guildActivity) {
@@ -91,11 +91,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(8071).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(8075).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(6851).TableRow, obj2);
+    return closure_4(tmp2(6854).TableRow, obj2);
   }
   const obj = guildActivity(504);
 });

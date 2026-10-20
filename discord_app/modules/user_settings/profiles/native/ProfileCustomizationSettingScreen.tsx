@@ -1,23 +1,23 @@
-// === Module 15633: ProfileCustomizationSettingScreen ===
+// === Module 15652: ProfileCustomizationSettingScreen ===
 
-// Module 15633 (ProfileCustomizationSettingScreen)
+// Module 15652 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7026 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 10863 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10981 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15634 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15654 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15741 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15742 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15750 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7029 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 10874 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10992 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15653 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15673 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15760 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15761 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15769 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10916 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8574 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10927 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8586 */;
 
 const require = globalThis.__r;
 
@@ -75,7 +75,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj2 = obj5(5213);
   const nativeStackNavigation = obj5(1505).useNativeStackNavigation();
   let obj3 = obj5(1505);
-  const params = obj5(7038).useSettingNavigationRoute().params;
+  const params = obj5(7041).useSettingNavigationRoute().params;
   let autoFocusElement;
   if (params != null) {
     autoFocusElement = params.autoFocusElement;
@@ -119,7 +119,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  let obj4 = obj5(7038);
+  let obj4 = obj5(7041);
   const obj6 = { items: tmp13, pageWidth: tmp8[0], defaultIndex: null, onPageChange: null, onPageChangeStart: null };
   if (field === ProfileCustomizationSubsection.GUILD) {
     class H {
@@ -140,7 +140,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj = { location: "ProfileCustomizationSettingScreen", hasUnsavedChanges: stateFromStores, onReset: UserSettingsAccountActionCreators.resetAllPending, onContinue, onSave };
     return maybeShowUnsavedChangesAlertDefault(obj);
   };
-  const segmentedControlState = obj5(8821).useSegmentedControlState(obj6);
+  const segmentedControlState = obj5(8833).useSegmentedControlState(obj6);
   const activeIndex = segmentedControlState.activeIndex;
   const tmp18 = items[activeIndex.get(activeIndex)];
   if (tmp18 == null) {
@@ -264,7 +264,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp35 = cResult[11];
   }
-  const tmpResult = obj5(8821);
+  const tmpResult = obj5(8833);
   stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
   closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
   if (cResult[12] === tmp29) {

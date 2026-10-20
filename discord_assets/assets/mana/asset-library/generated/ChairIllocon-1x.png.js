@@ -1,6 +1,6 @@
-// === Module 13446: ? ===
+// === Module 13464: ? ===
 
-// Module 13446
+// Module 13464
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChairIllocon-1x.png.js");

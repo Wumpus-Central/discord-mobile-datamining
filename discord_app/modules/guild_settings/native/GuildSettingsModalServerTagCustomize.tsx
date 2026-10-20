@@ -1,19 +1,19 @@
-// === Module 18819: GuildSettingsModalServerTagCustomize ===
+// === Module 18842: GuildSettingsModalServerTagCustomize ===
 
-// Module 18819 (GuildSettingsModalServerTagCustomize)
+// Module 18842 (GuildSettingsModalServerTagCustomize)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8908 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8926 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8920 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8927 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8939 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(8906).GuildProfileFetchStatus;
-const BADGES = fn(8218).BADGES;
+let GuildProfileFetchStatus = fn(8918).GuildProfileFetchStatus;
+const BADGES = fn(8222).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;

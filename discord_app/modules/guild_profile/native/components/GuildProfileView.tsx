@@ -1,6 +1,6 @@
-// === Module 9150: GuildProfileView ===
+// === Module 9162: GuildProfileView ===
 
-// Module 9150 (GuildProfileView)
+// Module 9162 (GuildProfileView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
@@ -13,11 +13,11 @@ import Text_Text from "Text/Text" /* 5195 */;
 import useToken from "useToken" /* 5213 */;
 import LinearGradientDefault from "LinearGradient" /* 5219 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 9151 */;
-import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9152 */;
-import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9153 */;
-import GuildProfileGamesDefault from "GuildProfileGames" /* 9165 */;
-import GuildProfileTraitsDefault from "GuildProfileTraits" /* 13979 */;
+import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 9163 */;
+import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9164 */;
+import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9165 */;
+import GuildProfileGamesDefault from "GuildProfileGames" /* 9177 */;
+import GuildProfileTraitsDefault from "GuildProfileTraits" /* 13997 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 

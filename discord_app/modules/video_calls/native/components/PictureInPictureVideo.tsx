@@ -1,6 +1,6 @@
-// === Module 11289: PictureInPictureVideo ===
+// === Module 11300: PictureInPictureVideo ===
 
-// Module 11289 (PictureInPictureVideo)
+// Module 11300 (PictureInPictureVideo)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,24 +9,24 @@ import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useToken2 from "useToken" /* 5213 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5672 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8557 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11239 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11249 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11252 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11253 */;
-import VideoRenderer from "VideoRenderer" /* 11304 */;
-import UserTileDefault from "UserTile" /* 11314 */;
-import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 11316 */;
-import _modDef11319 from "module_11319" /* 11319 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8563 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11250 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11260 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 11263 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 11264 */;
+import VideoRenderer from "VideoRenderer" /* 11315 */;
+import UserTileDefault from "UserTile" /* 11325 */;
+import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 11327 */;
+import _modDef11330 from "module_11330" /* 11330 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6723 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import SpeakingStore from "SpeakingStore" /* 6633 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11246 */;
+import SpeakingStore from "SpeakingStore" /* 6636 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11257 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -36,7 +36,7 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10675);
+const ChannelCallStore = fn(10686);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
 const ParticipantTypes = fn(5593).ParticipantTypes;
 const jsxProd = fn(21);
@@ -920,7 +920,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       let tmp39 = null;
                       if (tmp9) {
                         const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
-                        const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11319, color: tmp4.thermalAlertIcon.color };
+                        const obj5 = { style: tmp4.thermalAlertIcon, source: _modDef11330, color: tmp4.thermalAlertIcon.color };
                         obj4.children = value3(native2.Icon, obj5);
                         tmp39 = value3(hasOwnProperty, obj4);
                       }
@@ -1039,7 +1039,7 @@ let closure_23 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp18Result = null;
       if (tmp5) {
         const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11319, color: tmp.thermalAlertIcon.color };
+        const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11330, color: tmp.thermalAlertIcon.color };
         obj8.children = tmp18(native2.Icon, obj9);
         tmp18Result = tmp18(hasOwnProperty, obj8);
       }

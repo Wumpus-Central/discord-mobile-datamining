@@ -1,6 +1,6 @@
-// === Module 8624: ProfileFrameLayerType ===
+// === Module 8636: ProfileFrameLayerType ===
 
-// Module 8624 (ProfileFrameLayerType)
+// Module 8636 (ProfileFrameLayerType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx");

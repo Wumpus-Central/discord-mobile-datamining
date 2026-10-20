@@ -1,6 +1,6 @@
-// === Module 16709: DevToolsDataStorageScreen ===
+// === Module 16728: DevToolsDataStorageScreen ===
 
-// Module 16709 (DevToolsDataStorageScreen)
+// Module 16728 (DevToolsDataStorageScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,11 +11,11 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171
 import Text_Text from "Text/Text" /* 5195 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5554 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import TableRow from "TableRow" /* 6851 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7092 */;
-import FastestListDefault from "FastestList" /* 7098 */;
-import useFastestListTableRowPlaceholderConfigDefault from "useFastestListTableRowPlaceholderConfig" /* 10542 */;
-import useScaledSectionHeightDefault from "useScaledSectionHeight" /* 10544 */;
+import TableRow from "TableRow" /* 6854 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7095 */;
+import FastestListDefault from "FastestList" /* 7101 */;
+import useFastestListTableRowPlaceholderConfigDefault from "useFastestListTableRowPlaceholderConfig" /* 10553 */;
+import useScaledSectionHeightDefault from "useScaledSectionHeight" /* 10555 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -219,7 +219,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
   }
   if (cResult[2] !== tmp4) {
     const obj2 = { title: tmp4 };
-    const tmp8 = jsx(tmp(7194).BottomSheetTitleHeader, { title: tmp4 });
+    const tmp8 = jsx(tmp(7197).BottomSheetTitleHeader, { title: tmp4 });
     cResult[2] = tmp4;
     cResult[3] = tmp8;
     let tmp6 = tmp8;
@@ -237,7 +237,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       return tmp11;
     }
     const obj3 = { header: tmp6, children: tmp9 };
-    const tmp13 = jsx(tmp(7244).ActionSheet, { header: tmp6, children: tmp9 });
+    const tmp13 = jsx(tmp(7247).ActionSheet, { header: tmp6, children: tmp9 });
     cResult[7] = tmp6;
     cResult[8] = tmp9;
     cResult[9] = tmp13;
@@ -245,7 +245,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
   }
   const obj4 = {
     hasIcons: false,
-    children: jsx(store(7240).ActionSheetRow, {
+    children: jsx(store(7243).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -256,9 +256,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   };
-  const tmp10 = jsx(store(7240).ActionSheetRow.Group, {
+  const tmp10 = jsx(store(7243).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7240).ActionSheetRow, {
+    children: jsx(store(7243).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -287,10 +287,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
 }) : (function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(7194).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(7197).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(7240).ActionSheetRow, {
+    children: jsx(store(7243).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -301,9 +301,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   };
-  obj.children = jsx(store(7240).ActionSheetRow.Group, {
+  obj.children = jsx(store(7243).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7240).ActionSheetRow, {
+    children: jsx(store(7243).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -314,7 +314,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   });
-  return jsx(store(7244).ActionSheet, { header: jsx(store(7194).BottomSheetTitleHeader, { title: store.getName() }), children: null });
+  return jsx(store(7247).ActionSheet, { header: jsx(store(7197).BottomSheetTitleHeader, { title: store.getName() }), children: null });
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx");

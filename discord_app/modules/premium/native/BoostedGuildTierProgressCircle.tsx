@@ -1,17 +1,17 @@
-// === Module 14615: BoostedGuildTierProgressCircle ===
+// === Module 14633: BoostedGuildTierProgressCircle ===
 
-// Module 14615 (BoostedGuildTierProgressCircle)
+// Module 14633 (BoostedGuildTierProgressCircle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8310 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8315 */;
-import ProgressCircleDefault from "ProgressCircle" /* 13316 */;
-import Tier048Px from "Tier048Px" /* 14616 */;
-import _modDef14620 from "module_14620" /* 14620 */;
-import _modDef14621 from "module_14621" /* 14621 */;
-import _modDef14622 from "module_14622" /* 14622 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8314 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8319 */;
+import ProgressCircleDefault from "ProgressCircle" /* 13334 */;
+import Tier048Px from "Tier048Px" /* 14634 */;
+import _modDef14638 from "module_14638" /* 14638 */;
+import _modDef14639 from "module_14639" /* 14639 */;
+import _modDef14640 from "module_14640" /* 14640 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -156,13 +156,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostedG
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tier048PxSource1 = _modDef14620;
+          let tier048PxSource1 = _modDef14638;
         } else if (constants.TIER_2 !== premiumTier) {
           if (constants.TIER_3 === premiumTier) {
-            tier048PxSource1 = _modDef14622;
+            tier048PxSource1 = _modDef14640;
           }
         }
-        tier048PxSource1 = _modDef14621;
+        tier048PxSource1 = _modDef14639;
       }
       cResult[8] = guild;
       cResult[9] = theme;
@@ -206,11 +206,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostedG
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tmp2Result4 = _modDef14620;
+          let tmp2Result4 = _modDef14638;
         } else if (constants.TIER_2 === premiumTier) {
-          tmp2Result4 = _modDef14621;
+          tmp2Result4 = _modDef14639;
         } else if (constants.TIER_3 === premiumTier) {
-          tmp2Result4 = _modDef14622;
+          tmp2Result4 = _modDef14640;
         }
       }
       const obj5 = { source: tmp2Result4, style: tmp.guildTierIcon, accessibilityElementsHidden: true, importantForAccessibility: "no" };

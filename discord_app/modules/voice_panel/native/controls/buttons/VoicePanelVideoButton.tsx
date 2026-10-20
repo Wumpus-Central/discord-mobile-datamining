@@ -1,19 +1,19 @@
-// === Module 18355: VoicePanelVideoButton ===
+// === Module 18377: VoicePanelVideoButton ===
 
-// Module 18355 (VoicePanelVideoButton)
+// Module 18377 (VoicePanelVideoButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import CameraRive from "CameraRive" /* 5068 */;
-import useAlertStore from "useAlertStore" /* 5865 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6600 */;
-import CallsUtils from "CallsUtils" /* 9074 */;
-import VideoIcon from "VideoIcon" /* 11202 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11266 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13823 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 14134 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18356 */;
+import useAlertStore from "useAlertStore" /* 5868 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6603 */;
+import CallsUtils from "CallsUtils" /* 9086 */;
+import VideoIcon from "VideoIcon" /* 11213 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11277 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13841 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 14152 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18378 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11246 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11257 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;

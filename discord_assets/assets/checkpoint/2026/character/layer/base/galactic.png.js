@@ -1,6 +1,6 @@
-// === Module 6002: ? ===
+// === Module 6005: ? ===
 
-// Module 6002
+// Module 6005
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/base/galactic.png.js");

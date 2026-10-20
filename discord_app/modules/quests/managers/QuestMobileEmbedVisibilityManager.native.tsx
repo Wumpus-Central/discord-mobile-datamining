@@ -1,33 +1,33 @@
-// === Module 19075: QuestMobileEmbedVisibilityManager ===
+// === Module 19099: QuestMobileEmbedVisibilityManager ===
 
-// Module 19075 (QuestMobileEmbedVisibilityManager)
+// Module 19099 (QuestMobileEmbedVisibilityManager)
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import privDefault from "priv" /* 1459 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5111 */;
 import RootNavigationRef from "RootNavigationRef" /* 5112 */;
-import useAlertStore2 from "useAlertStore" /* 5865 */;
-import QuestTypes from "QuestTypes" /* 6661 */;
-import AdCreativeType from "AdCreativeType" /* 6665 */;
-import getQuestLogger from "getQuestLogger" /* 7726 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7744 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 13954 */;
+import useAlertStore2 from "useAlertStore" /* 5868 */;
+import QuestTypes from "QuestTypes" /* 6664 */;
+import AdCreativeType from "AdCreativeType" /* 6668 */;
+import getQuestLogger from "getQuestLogger" /* 7730 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7748 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 13972 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ActionSheetStore from "ActionSheetStore" /* 5172 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
-import VoicePanelStore from "VoicePanelStore" /* 6752 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6723 */;
+import VoicePanelStore from "VoicePanelStore" /* 6755 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import AlertStore from "AlertStore" /* 9939 */;
+import AlertStore from "AlertStore" /* 9950 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import QuestStore from "QuestStore" /* 7719 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import QuestStore from "QuestStore" /* 7723 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 require = fn;
-const ChannelDetailsStore = fn(9627);
+const ChannelDetailsStore = fn(9640);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
 const isTextChannel = fn(4804).isTextChannel;
-let closure_16 = fn(9491).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_16 = fn(9504).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1087).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -206,7 +206,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(6750).isChannelFocused();
+      let isChannelFocusedResult = applyArgumentsResult(6753).isChannelFocused();
       applyArgumentsResult(5111);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;

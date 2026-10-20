@@ -1,6 +1,6 @@
-// === Module 15202: NewTag ===
+// === Module 15220: NewTag ===
 
-// Module 15202 (NewTag)
+// Module 15220 (NewTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

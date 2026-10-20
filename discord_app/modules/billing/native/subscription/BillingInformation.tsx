@@ -1,6 +1,6 @@
-// === Module 14502: BillingInformation ===
+// === Module 14520: BillingInformation ===
 
-// Module 14502 (BillingInformation)
+// Module 14520 (BillingInformation)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
   }
   const fractionalPremiumInfo = tmp5.fractionalPremiumInfo;
   let obj = require("c");
-  const appleSubscriptionOwnership = gknRR3(14494).useAppleSubscriptionOwnership(isPurchasedViaApple);
+  const appleSubscriptionOwnership = gknRR3(14512).useAppleSubscriptionOwnership(isPurchasedViaApple);
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
@@ -141,7 +141,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
     cResult[7] = billingInformationString;
     tmp6 = billingInformationString;
   }
-  const gknRR3Result = gknRR3(14494);
+  const gknRR3Result = gknRR3(14512);
 }) : (function useBillingInformationNative(isPurchasedViaApple, subscriptionPeriodStart, arg2) {
   let tmp = arg2;
   if (arg2 === undefined) {

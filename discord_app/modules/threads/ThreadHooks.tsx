@@ -1,25 +1,25 @@
-// === Module 7315: ThreadHooks ===
+// === Module 7318: ThreadHooks ===
 
-// Module 7315 (ThreadHooks)
+// Module 7318 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6601 */;
-import AgeGateUtils from "AgeGateUtils" /* 6610 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6764 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7321 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7323 */;
-import useIsRemoteDefault from "useIsRemote" /* 7324 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7325 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6604 */;
+import AgeGateUtils from "AgeGateUtils" /* 6613 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6767 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7324 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7326 */;
+import useIsRemoteDefault from "useIsRemote" /* 7327 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import createExperiment from "createExperiment" /* 5150 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6718 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7316 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6721 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7319 */;
 
 require = fn;
 function canUnarchiveThread(stateFromStores) {

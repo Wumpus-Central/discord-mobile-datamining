@@ -1,11 +1,11 @@
-// === Module 12791: CheckpointRankTag ===
+// === Module 12808: CheckpointRankTag ===
 
-// Module 12791 (CheckpointRankTag)
+// Module 12808 (CheckpointRankTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6316 */;
-import inlineStyles from "inlineStyles" /* 7906 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6319 */;
+import inlineStyles from "inlineStyles" /* 7910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(5970).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5973).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4945);

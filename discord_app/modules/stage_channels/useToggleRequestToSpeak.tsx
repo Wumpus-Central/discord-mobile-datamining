@@ -1,11 +1,11 @@
-// === Module 11421: useToggleRequestToSpeak ===
+// === Module 11432: useToggleRequestToSpeak ===
 
-// Module 11421 (useToggleRequestToSpeak)
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5951 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6605 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6635 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7817 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7827 */;
+// Module 11432 (useToggleRequestToSpeak)
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5954 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6608 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6638 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7821 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7831 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

@@ -1,10 +1,10 @@
-// === Module 16415: AccessibilitySetting ===
+// === Module 16434: AccessibilitySetting ===
 
-// Module 16415 (AccessibilitySetting)
+// Module 16434 (AccessibilitySetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7442 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7445 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -65,11 +65,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrailing(
   }
   return tmp5;
 });
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
   const cResult = first(576).c(3);
   const obj = first(576);
-  let tmp2 = _slicedToArray(first(7442).useSelectedDismissibleContent(items), 2);
+  let tmp2 = _slicedToArray(first(7445).useSelectedDismissibleContent(items), 2);
   first = tmp2[0];
   dependencyMap = tmp4;
   if (cResult[0] === tmp2[1]) {
@@ -97,7 +97,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavi
   cResult[2] = fn;
   tmp5 = fn;
 }) : (function usePreNavigationAction() {
-  const tmp = _slicedToArray(first(7442).useSelectedDismissibleContent(items), 2);
+  const tmp = _slicedToArray(first(7445).useSelectedDismissibleContent(items), 2);
   first = tmp[0];
   dependencyMap = tmp3;
   items = [tmp[1], first];
@@ -122,12 +122,12 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(16416).AccessibilityIcon,
+  IconComponent: fn(16435).AccessibilityIcon,
   useTrailing: tmp2,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
     const cResult = first(576).c(3);
     const obj = first(576);
-    let tmp2 = _slicedToArray(first(7442).useSelectedDismissibleContent(items), 2);
+    let tmp2 = _slicedToArray(first(7445).useSelectedDismissibleContent(items), 2);
     first = tmp2[0];
     dependencyMap = tmp4;
     if (cResult[0] === tmp2[1]) {
@@ -155,7 +155,7 @@ const route = SettingBuilders.createRoute({
     cResult[2] = fn;
     tmp5 = fn;
   }) : (function usePreNavigationAction() {
-    const tmp = _slicedToArray(first(7442).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(7445).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];

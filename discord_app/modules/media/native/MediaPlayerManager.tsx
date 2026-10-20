@@ -1,6 +1,6 @@
-// === Module 15602: MediaPlayerManager ===
+// === Module 15621: MediaPlayerManager ===
 
-// Module 15602 (MediaPlayerManager)
+// Module 15621 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -10,15 +10,15 @@ import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import RootNavigationRef from "RootNavigationRef" /* 5112 */;
 import ActivityPanelConstants from "ActivityPanelConstants" /* 5570 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7512 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7515 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
-import VoicePanelStore from "VoicePanelStore" /* 6752 */;
+import VoicePanelStore from "VoicePanelStore" /* 6755 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import MessageStore from "MessageStore" /* 5965 */;
+import MessageStore from "MessageStore" /* 5968 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15603 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15622 */;
 import module_570 from "module_570" /* 570 */;
 import LifecycleManager from "LifecycleManager" /* 2004 */;
 import size from "module_2" /* 2 */;
@@ -41,12 +41,12 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "test",
-    showPip: "1f3fb",
+    showPip: "Niue",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "+1 268"
+    currentlyDisplayedChannelId: null
   };
   return obj;
 });

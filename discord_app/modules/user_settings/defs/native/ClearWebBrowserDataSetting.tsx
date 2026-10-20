@@ -1,6 +1,6 @@
-// === Module 16569: ClearWebBrowserDataSetting ===
+// === Module 16588: ClearWebBrowserDataSetting ===
 
-// Module 16569 (ClearWebBrowserDataSetting)
+// Module 16588 (ClearWebBrowserDataSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
@@ -8,13 +8,13 @@ import BrowserManager from "BrowserManager" /* 5655 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(8276).MobileUserSettings.WEB_BROWSER,
+  parent: fn(8280).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };

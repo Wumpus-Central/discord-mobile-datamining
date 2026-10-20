@@ -1,15 +1,16 @@
-// === Module 10991: ConjureChatStore ===
+// === Module 11002: ConjureChatStore ===
 
-// Module 10991 (ConjureChatStore)
+// Module 11002 (ConjureChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
-import conjureChatTurns from "conjureChatTurns" /* 10992 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 10993 */;
-import conjureChatHistory from "conjureChatHistory" /* 10994 */;
+import conjureChatTurns from "conjureChatTurns" /* 11003 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 11004 */;
+import conjureChatHistory from "conjureChatHistory" /* 11005 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 11006 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6721 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6724 */;
 
 require = fn;
 function patchTurn(projectId, turnId, fn) {
@@ -176,9 +177,54 @@ function purgeProject(projectId) {
   }
   return deleteResult;
 }
+function applyAgentReactions(arr) {
+  map = new Map();
+  const iter = arr[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    if ("assistant" === nextResult.role) {
+      let steps = tmp2.steps;
+      for (const item10022 of steps) {
+        if ("reaction" === item10022.kind) {
+          if (null != item10022.message_id) {
+            let obj2 = map(11006);
+            let result = obj2.agentReactionFromStep(item10022);
+            if (null != result) {
+              let result1 = map.set(item10022.message_id, tmp10);
+            }
+          }
+        }
+        continue;
+      }
+    }
+    continue;
+  }
+  let mapped = arr;
+  if (0 !== map.size) {
+    mapped = arr.map((role) => {
+      value = undefined;
+      if ("user" === role.role) {
+        value = map.get(role.id);
+      }
+      let tmp3 = role;
+      if (null != value) {
+        tmp3 = role;
+        if (!obj.sameAgentReaction(role.agentReaction, value)) {
+          const obj2 = {};
+          const merged = Object.assign(role);
+          obj2.agentReaction = value;
+          tmp3 = obj2;
+        }
+        obj = conjureAgentReaction;
+      }
+      return tmp3;
+    });
+  }
+  return mapped;
+}
 let closure_3 = ["disposition"];
 let closure_4 = ["disposition"];
-const map = new Map();
+let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let closure_10 = [];
@@ -186,8 +232,7 @@ const map3 = new Map();
 const map4 = new Map();
 let set = new Set();
 const set1 = new Set();
-let width = 0;
-let closure_16 = [];
+let closure_15 = [];
 const Store = initializeDefault.Store;
 class ConjureChatStore extends Store {
 }
@@ -198,7 +243,7 @@ prototype["initialize"] = function initialize() {
 prototype["getMessages"] = function getMessages(arg0) {
   value = map.get(arg0);
   if (value == null) {
-    value = closure_16;
+    value = closure_15;
   }
   return value;
 };
@@ -253,9 +298,6 @@ prototype["isCompacting"] = function isCompacting(projectId) {
 prototype["isSaving"] = function isSaving(arg0) {
   return set1.has(arg0);
 };
-prototype["getSidebarWidth"] = function getSidebarWidth() {
-  return width;
-};
 prototype["getActivityOrderedProjectIds"] = function getActivityOrderedProjectIds() {
   return closure_10.slice();
 };
@@ -285,9 +327,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                   if (0 === map5.size) {
                     if (0 === set2.size) {
                       if (0 === closure_10.length) {
-                        if (0 === width) {
-                          return false;
-                        }
+                        return false;
                       }
                     }
                   }
@@ -308,7 +348,6 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     map5.clear();
     set2.clear();
     closure_10.length = 0;
-    width = 0;
   },
   CONJURE_CHAT_HISTORY_SET: function handleChatHistorySet(arg0) {
     ({ projectId, entries, cursor, degraded } = arg0);
@@ -371,14 +410,14 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       }
       const result1 = map5.set(projectId, value);
     }
-    let tmp19 = messagesFromHistoryResult;
+    let tmp20 = messagesFromHistoryResult;
     if (-1 !== num2) {
       const items1 = [];
       HermesBuiltin.arraySpread(messagesFromHistoryResult.slice(num), HermesBuiltin.arraySpread(items.slice(0, num2), 0));
-      tmp19 = items1;
+      tmp20 = items1;
       const arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, num2), 0);
     }
-    const result2 = map.set(projectId, conjureChatHistory.foldDividers(tmp19));
+    const result2 = map.set(projectId, applyAgentReactions(conjureChatHistory.foldDividers(tmp20)));
     recordThinkingTransition(projectId);
     const tmp15Result = conjureChatHistory;
   },
@@ -410,7 +449,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       const messagesFromHistoryResult = conjureChatHistory.messagesFromHistory(entries);
       let items = [];
       HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(found, 0));
-      const result1 = map.set(projectId, conjureChatHistory.foldDividers(items));
+      const result1 = map.set(projectId, applyAgentReactions(conjureChatHistory.foldDividers(items)));
     }
   },
   CONJURE_CHAT_MESSAGE_APPEND: function handleChatMessageAppend(optimisticId) {
@@ -560,6 +599,32 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       }
     }
   },
+  CONJURE_CHAT_MESSAGE_REACTION: function handleChatMessageReaction(arg0) {
+    ({ projectId, id: require, reaction } = arg0);
+    value = map.get(projectId);
+    if (null == value) {
+      return false;
+    } else {
+      const findIndexResult = value.findIndex((role) => {
+        let tmp = "user" === role.role;
+        if (tmp) {
+          tmp = role.id === require;
+        }
+        return tmp;
+      });
+      if (-1 !== findIndexResult) {
+        if (!obj3.sameAgentReaction(value[findIndexResult].agentReaction, reaction)) {
+          const obj2 = {};
+          const merged = Object.assign(value[findIndexResult]);
+          obj2.agentReaction = reaction;
+          const result = map.set(projectId, conjureChatTurns.replaceAt(value, findIndexResult, obj2));
+          const tmpResult = conjureChatTurns;
+        }
+        obj3 = conjureAgentReaction;
+      }
+      return false;
+    }
+  },
   CONJURE_CHAT_MESSAGE_CANCELLED: function handleChatMessageCancelled(withdrawn) {
     ({ projectId, id: require } = withdrawn);
     let id;
@@ -646,7 +711,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(10994).newMessage("assistant", content, obj3);
+      const newMessageResult = id(11005).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -664,7 +729,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(10992);
+        tmpResult = id(11003);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -691,9 +756,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(10994).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(11005).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(10994);
+          const tmpResult2 = id(11005);
         } else {
           const items1 = [, ];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(value.slice(findLastIndexResult + 1), HermesBuiltin.arraySpread(value.slice(0, findLastIndexResult), 0));
@@ -707,7 +772,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(10994);
+      const obj2 = id(11005);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -800,7 +865,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!obj.hasOpenTurn(map.get(projectId))) {
           return false;
         }
-        obj = step(10992);
+        obj = step(11003);
       }
     }
     value = map.get(projectId);
@@ -991,12 +1056,6 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
   },
   CONJURE_CHAT_USAGE_SET: function handleChatUsageSet(projectId) {
     const result = map3.set(projectId.projectId, projectId.project);
-  },
-  CONJURE_CHAT_SIDEBAR_WIDTH_SET: function handleChatSidebarWidthSet(width) {
-    width = width.width;
-    if (width === width) {
-      return false;
-    }
   },
   CONJURE_CHAT_TURN_PATCH: function handleChatTurnPatch(turnId) {
     ({ projectId, patch: require } = turnId);

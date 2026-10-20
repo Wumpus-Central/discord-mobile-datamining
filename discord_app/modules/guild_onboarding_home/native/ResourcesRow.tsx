@@ -1,16 +1,16 @@
-// === Module 17736: ResourcesRow ===
+// === Module 17755: ResourcesRow ===
 
-// Module 17736 (ResourcesRow)
+// Module 17755 (ResourcesRow)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12966 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 17738 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12984 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 17757 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(17737).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(17756).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4945);
@@ -36,7 +36,7 @@ export default function ResourcesRow(guildId) {
         },
         children: closure_1_5(guildId(5195).Text, { variant: "text-md/medium", color: "text-default", children: children.title })
       };
-      return closure_1_5(guildId(6856).PressableOpacity, obj, children.channelId);
+      return closure_1_5(guildId(6859).PressableOpacity, obj, children.channelId);
     }),
 
   ];
@@ -45,7 +45,7 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17739, dependencyMap.paths), closure_4, { guildId });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17758, dependencyMap.paths), closure_4, { guildId });
         },
       children: null
     };
@@ -54,7 +54,7 @@ export default function ResourcesRow(guildId) {
     const obj4 = { count: arr.length - 2 };
     obj3.children = intl.format(guildId(1128).t.F6iMs4, obj4);
     obj2.children = closure_5(guildId(5195).Text, obj3);
-    tmp6 = closure_5(guildId(6856).PressableOpacity, obj2);
+    tmp6 = closure_5(guildId(6859).PressableOpacity, obj2);
   }
   items[1] = tmp6;
   obj.children = items;

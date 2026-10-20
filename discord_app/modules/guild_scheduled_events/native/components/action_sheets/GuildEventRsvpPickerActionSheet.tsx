@@ -1,10 +1,10 @@
-// === Module 8970: GuildEventRsvpPickerActionSheet ===
+// === Module 8982: GuildEventRsvpPickerActionSheet ===
 
-// Module 8970 (GuildEventRsvpPickerActionSheet)
+// Module 8982 (GuildEventRsvpPickerActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 8816 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8826 */;
+import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 8828 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8838 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -177,9 +177,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   let defaultValue;
   closure_5 = undefined;
   const tmp = closure_9();
-  const tmp4 = _slicedToArray(defaultValue.useState(event(8816).ResponseOptions.SERIES), 2);
+  const tmp4 = _slicedToArray(defaultValue.useState(event(8828).ResponseOptions.SERIES), 2);
   defaultValue = tmp4[0];
-  const existingRsvp = event(8816).getExistingRsvp(event.id, null);
+  const existingRsvp = event(8828).getExistingRsvp(event.id, null);
   let response;
   if (existingRsvp != null) {
     response = existingRsvp.response;
@@ -193,13 +193,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
     const intl = tmp2(1128).intl;
     stringResult = intl.string(tmp2(1128).t["8MPCVr"]);
   }
-  let obj2 = { header: closure_7(event(7194).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  let obj2 = { header: closure_7(event(7197).BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj3 = { bottom: true, style: tmp.container, children: null };
   const obj4 = { defaultValue, onChange: tmp4[1], hasIcons: false, children: null };
-  const obj = event(8816);
-  const responseOptions = event(8816).getResponseOptions();
+  const obj = event(8828);
+  const responseOptions = event(8828).getResponseOptions();
   obj4.children = responseOptions.map((value) => closure_1_7(event(dependencyMap[14]).TableRadioRow, { value: value.value, label: value.name }, value.value));
-  const items = [closure_7(event(6933).TableRadioGroup, obj4), ];
+  const items = [closure_7(event(6936).TableRadioGroup, obj4), ];
   const obj5 = { style: tmp.buttonWrapper, children: null };
   const obj6 = {
     onPress: function handleConfirm() {
@@ -221,6 +221,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   obj5.children = closure_7(event(5205).Button, obj6);
   items[1] = closure_7(closure_5, obj5);
   obj3.children = items;
-  obj2.children = closure_8(event(7169).SafeAreaPaddingView, obj3);
+  obj2.children = closure_8(event(7172).SafeAreaPaddingView, obj3);
   return closure_7(event(5226).BottomSheet, obj2);
 });

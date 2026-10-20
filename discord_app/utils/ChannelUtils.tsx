@@ -1,6 +1,6 @@
-// === Module 5949: ChannelUtils ===
+// === Module 5952: ChannelUtils ===
 
-// Module 5949 (ChannelUtils)
+// Module 5952 (ChannelUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import util from "util" /* 1128 */;
@@ -8,9 +8,9 @@ import PremiumConstants from "PremiumConstants" /* 1394 */;
 import Server from "Server" /* 2000 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4885 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
-import ChannelListUtils from "ChannelListUtils" /* 5950 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5951 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 5956 */;
+import ChannelListUtils from "ChannelListUtils" /* 5953 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5954 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 5959 */;
 import ChannelRecord from "ChannelRecord" /* 4804 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildChannelStore from "GuildChannelStore" /* 4878 */;

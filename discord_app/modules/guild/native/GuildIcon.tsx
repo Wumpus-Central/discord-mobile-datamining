@@ -1,12 +1,12 @@
-// === Module 6831: GuildIcon ===
+// === Module 6834: GuildIcon ===
 
-// Module 6831 (GuildIcon)
+// Module 6834 (GuildIcon)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_5 = fn(6832).ExpressionSourceGuildRecord;
+let closure_5 = fn(6835).ExpressionSourceGuildRecord;
 const GuildRecord = fn(4818);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
 const Fonts = fn(1087).Fonts;

@@ -1,13 +1,13 @@
-// === Module 9188: botScopedAccess ===
+// === Module 9200: botScopedAccess ===
 
-// Module 9188 (botScopedAccess)
+// Module 9200 (botScopedAccess)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4885 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8747 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9179 */;
-import RPCErrorDefault from "RPCError" /* 9185 */;
-import validateScopeDefault from "validateScope" /* 9187 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9189 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8759 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9191 */;
+import RPCErrorDefault from "RPCError" /* 9197 */;
+import validateScopeDefault from "validateScope" /* 9199 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9201 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 

@@ -1,20 +1,20 @@
-// === Module 10335: UploadPreviewActionSheet ===
+// === Module 10346: UploadPreviewActionSheet ===
 
-// Module 10335 (UploadPreviewActionSheet)
+// Module 10346 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8098 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9579 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10336 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 13780 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8102 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9592 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10347 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 13798 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7577).DraftType;
+const DraftType = fn(7580).DraftType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const ACTION_SHEET_MAX_WIDTH = fn(5227).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);

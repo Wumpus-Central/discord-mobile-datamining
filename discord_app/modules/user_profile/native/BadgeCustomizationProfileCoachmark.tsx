@@ -1,6 +1,6 @@
-// === Module 17973: BadgeCustomizationProfileCoachmark ===
+// === Module 17996: BadgeCustomizationProfileCoachmark ===
 
-// Module 17973 (BadgeCustomizationProfileCoachmark)
+// Module 17996 (BadgeCustomizationProfileCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
                   if (cResult[19] === visible) {
                     let tmp19 = cResult[20];
                   }
-                  const coachmark = markAsDismissed(9756).useCoachmark(targetRef, tmp19);
+                  const coachmark = markAsDismissed(9768).useCoachmark(targetRef, tmp19);
                   return null;
                 }
               }

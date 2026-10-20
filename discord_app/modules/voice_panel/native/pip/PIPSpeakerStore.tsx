@@ -1,12 +1,12 @@
-// === Module 14851: PIPSpeakerStore ===
+// === Module 14869: PIPSpeakerStore ===
 
-// Module 14851 (PIPSpeakerStore)
+// Module 14869 (PIPSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import throttleDefault from "throttle" /* 550 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6723 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
-import SpeakingStore from "SpeakingStore" /* 6633 */;
+import SpeakingStore from "SpeakingStore" /* 6636 */;
 
 function resetSpeaker() {
   closure_5.cancel();
@@ -64,10 +64,10 @@ const prototype = PIPSpeakerStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(RTCConnectionStore, SpeakingStore, ChannelRTCStore);
 };
-prototype["getSpeakerId"] = function getSpeakerId(channelId) {
+prototype["getSpeakerId"] = function getSpeakerId(batchedStoreListener) {
   let tmp;
-  if (null != channelId) {
-    if (channelId === c4) {
+  if (null != batchedStoreListener) {
+    if (batchedStoreListener === c4) {
       tmp = c0;
     }
   }

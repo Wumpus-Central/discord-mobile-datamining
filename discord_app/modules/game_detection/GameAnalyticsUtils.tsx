@@ -1,8 +1,8 @@
-// === Module 7763: GameAnalyticsUtils ===
+// === Module 7767: GameAnalyticsUtils ===
 
-// Module 7763 (GameAnalyticsUtils)
+// Module 7767 (GameAnalyticsUtils)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7764 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7768 */;
 import DetectableGameStore from "DetectableGameStore" /* 2040 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 };
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
-    return { gameName: "toCharArray$esjava$1", gameId: "unicodeVersion", exe: "uri", distributor: "toCharArray$esjava$1", sku: "Array", gameMetadata: "IconComponent", rawExePath: "test" };
+    return { gameName: "Array", gameId: "unicodeVersion", exe: "guild", distributor: "values", sku: "IconComponent", gameMetadata: "emoji", rawExePath: "o" };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     const id = streamApplication.id;

@@ -1,6 +1,6 @@
-// === Module 7842: SafetyHubConstants ===
+// === Module 7846: SafetyHubConstants ===
 
-// Module 7842 (SafetyHubConstants)
+// Module 7846 (SafetyHubConstants)
 import Constants from "Constants" /* 1087 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import size from "module_2" /* 2 */;

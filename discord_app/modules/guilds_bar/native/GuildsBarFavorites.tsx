@@ -1,18 +1,18 @@
-// === Module 17487: GuildsBarFavorites ===
+// === Module 17506: GuildsBarFavorites ===
 
-// Module 17487 (GuildsBarFavorites)
+// Module 17506 (GuildsBarFavorites)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import StarIcon from "StarIcon" /* 9865 */;
-import FavoritesHooks from "FavoritesHooks" /* 10639 */;
-import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17295 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17470 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17473 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17485 */;
-import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17488 */;
-import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17489 */;
+import StarIcon from "StarIcon" /* 9877 */;
+import FavoritesHooks from "FavoritesHooks" /* 10650 */;
+import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17314 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17489 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17492 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17504 */;
+import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17507 */;
+import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17508 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 4803 */;
 
@@ -148,10 +148,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
   const memo = noop.useMemo(() => ({
     onPress() {
-      closure_1_1(17485)(closure_1_5);
+      closure_1_1(17504)(closure_1_5);
     },
     onLongPress() {
-      closure_1_1(17295)();
+      closure_1_1(17314)();
     }
   }), []);
   const memo1 = noop.useMemo(() => {

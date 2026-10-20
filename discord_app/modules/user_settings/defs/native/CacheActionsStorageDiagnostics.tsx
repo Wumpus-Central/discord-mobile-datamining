@@ -1,6 +1,6 @@
-// === Module 16665: CacheActionsStorageDiagnostics ===
+// === Module 16684: CacheActionsStorageDiagnostics ===
 
-// Module 16665 (CacheActionsStorageDiagnostics)
+// Module 16684 (CacheActionsStorageDiagnostics)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5648 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -135,5 +135,5 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
   };
   items[1] = closure_6(onBusyChange(5205).Button, obj3);
   obj.children = items;
-  return closure_7(onBusyChange(5932).Stack, obj);
+  return closure_7(onBusyChange(5935).Stack, obj);
 };

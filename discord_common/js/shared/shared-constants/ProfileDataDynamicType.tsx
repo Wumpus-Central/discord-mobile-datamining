@@ -1,6 +1,6 @@
-// === Module 11844: ProfileDataDynamicType ===
+// === Module 11858: ProfileDataDynamicType ===
 
-// Module 11844 (ProfileDataDynamicType)
+// Module 11858 (ProfileDataDynamicType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileDataDynamicType.tsx");

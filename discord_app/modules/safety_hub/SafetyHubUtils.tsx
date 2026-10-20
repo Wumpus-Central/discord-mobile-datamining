@@ -1,14 +1,14 @@
-// === Module 7841: SafetyHubUtils ===
+// === Module 7845: SafetyHubUtils ===
 
-// Module 7841 (SafetyHubUtils)
+// Module 7845 (SafetyHubUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
 import _modDef2050 from "module_2050" /* 2050 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5954 */;
-import SafetyHubModels from "SafetyHubModels" /* 7843 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5957 */;
+import SafetyHubModels from "SafetyHubModels" /* 7847 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -46,7 +46,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7842);
+const SafetyHubConstants = fn(7846);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
 const Constants = fn(1087);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);

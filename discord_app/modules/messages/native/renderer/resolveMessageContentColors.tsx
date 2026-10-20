@@ -1,6 +1,6 @@
-// === Module 8255: resolveMessageContentColors ===
+// === Module 8259: resolveMessageContentColors ===
 
-// Module 8255 (resolveMessageContentColors)
+// Module 8259 (resolveMessageContentColors)
 import nativeDefault from "native" /* 587 */;
 import shared from "shared" /* 4952 */;
 import createStyles_mod from "createStyles" /* 4945 */;

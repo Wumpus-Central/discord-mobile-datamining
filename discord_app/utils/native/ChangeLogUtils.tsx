@@ -1,14 +1,14 @@
-// === Module 8413: utils/ChangeLogUtils ===
+// === Module 8417: utils/ChangeLogUtils ===
 
-// Module 8413 (utils/ChangeLogUtils)
+// Module 8417 (utils/ChangeLogUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7023 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8415 */;
-import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8416 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7026 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8419 */;
+import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8420 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 5934 */;
+import CustomMarkup from "CustomMarkup" /* 5937 */;
 
 require = fn;
 const View = fn(17).View;
@@ -16,8 +16,8 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, container: null, text: null };
 let obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6655).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-let obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6655).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6658).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+let obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6658).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});
@@ -258,7 +258,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   }
   let obj = output(576);
   const forResult = Symbol.for("react.early_return_sentinel");
-  const result = output(8414).splitParagraphAtImages(node.content);
+  const result = output(8418).splitParagraphAtImages(node.content);
   if (true === state.changelogImagesDisabled) {
     if (cResult[9] === node.content) {
       if (cResult[10] === output) {
@@ -300,7 +300,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     cResult[12] = outputResult;
     tmp13 = outputResult;
   } else {
-    output(8414);
+    output(8418);
   }
   if (cResult[18] === Paragraph) {
     if (cResult[19] === output) {
@@ -349,7 +349,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   cResult[21] = tmp4;
   cResult[22] = T;
   tmp20 = T;
-  const tmpResult = output(8414);
+  const tmpResult = output(8418);
 }) : (function ChangeLogParagraph(state) {
   ({ node, output } = state);
   state = state.state;
@@ -363,7 +363,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   if (Paragraph == null) {
     Paragraph = output(5195).Text;
   }
-  const result = output(8414).splitParagraphAtImages(node.content);
+  const result = output(8418).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -401,7 +401,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     }
     return tmp7;
   }
-  let obj = output(8414);
+  let obj = output(8418);
   tmp7 = <Paragraph key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
 });

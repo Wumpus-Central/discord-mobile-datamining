@@ -1,12 +1,12 @@
-// === Module 6440: EmbedUtils ===
+// === Module 6443: EmbedUtils ===
 
-// Module 6440 (EmbedUtils)
+// Module 6443 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import _modDef2050 from "module_2050" /* 2050 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5969 */;
-import EmbedConstants from "EmbedConstants" /* 6441 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5972 */;
+import EmbedConstants from "EmbedConstants" /* 6444 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
@@ -80,7 +80,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
           const thumbnail3 = footer.thumbnail;
           ({ flags, content_type } = thumbnail3);
           const size = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-          ({ url: obj17.url, proxy_url: obj17.proxyURL, width: obj17.width, height: obj17.height, placeholder: obj17.placeholder, placeholder_version: obj17.placeholderVersion, description: obj17.description } = thumbnail3);
+          ({ url: obj18.url, proxy_url: obj18.proxyURL, width: obj18.width, height: obj18.height, placeholder: obj18.placeholder, placeholder_version: obj18.placeholderVersion, description: obj18.description } = thumbnail3);
           let num = flags;
           if (flags == null) {
             num = 0;
@@ -213,6 +213,13 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
       obj.video = size4;
     }
   }
+  if (tmp38) {
+    const obj11 = { url: footer.audio.url, proxyURL: footer.audio.proxy_url, contentType: null, description: null };
+    const content_type5 = footer.audio.content_type;
+    obj11.contentType = content_type5;
+    obj11.description = footer.audio.description;
+    obj.audio = obj11;
+  }
   if (set.has(obj.type)) {
     let fields = footer.fields;
     if (fields == null) {
@@ -224,11 +231,11 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   }
   if (null != footer.components) {
     const transformComponentsResult = InteractionComponentUtils.transformComponents(footer.components);
-    let tmp39;
+    let tmp40;
     if (transformComponentsResult.length > 0) {
-      tmp39 = transformComponentsResult;
+      tmp40 = transformComponentsResult;
     }
-    obj.components = tmp39;
+    obj.components = tmp40;
   }
   return obj;
 };

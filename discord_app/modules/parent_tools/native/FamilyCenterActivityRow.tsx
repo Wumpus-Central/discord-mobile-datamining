@@ -1,25 +1,25 @@
-// === Module 15975: FamilyCenterActivityRow ===
+// === Module 15994: FamilyCenterActivityRow ===
 
-// Module 15975 (FamilyCenterActivityRow)
+// Module 15994 (FamilyCenterActivityRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2526 from "module_2526" /* 2526 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
-import GuildIconDefault from "GuildIcon" /* 6831 */;
-import GuildBadgeDefault from "GuildBadge" /* 6835 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8071 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 15976 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 15979 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 15980 */;
+import GuildIconDefault from "GuildIcon" /* 6834 */;
+import GuildBadgeDefault from "GuildBadge" /* 6838 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8075 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 15995 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 15998 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 15999 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7591 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7594 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(7592).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(7595).ACTION_TO_TEXT;
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -86,7 +86,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ac
           const Text = tmp(5195).Text;
           const _Date = Date;
           const date = new Date(extractTimestampResult);
-          const result = tmp(8071).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+          const result = tmp(8075).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
           if (cResult[14] === Text) {
             if (cResult[15] === result) {
               let tmp28 = cResult[16];
@@ -137,7 +137,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ac
           cResult[15] = result;
           cResult[16] = tmp30;
           tmp28 = tmp30;
-          const tmpResult2 = tmp(8071);
+          const tmpResult2 = tmp(8075);
         }
         const obj5 = { style: text, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: tmp18 };
         const tmp22 = closure_8(tmp(5195).Text, obj5);
@@ -187,7 +187,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ac
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj7.children = tmp6(8071).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    obj7.children = tmp6(8075).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
     items2[1] = closure_8(tmp6(5195).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);
@@ -368,7 +368,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     const obj11 = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp4);
     obj11.guild = stateFromStores;
-    obj11.size = tmp(6831).GuildIconSizes.NORMAL;
+    obj11.size = tmp(6834).GuildIconSizes.NORMAL;
     const tmp18 = closure_8(GuildIconDefault, obj11);
     cResult[5] = stateFromStores;
     cResult[6] = tmp4.avatar;
@@ -398,7 +398,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
     obj4.guild = stateFromStores;
-    obj4.size = tmp2(6831).GuildIconSizes.NORMAL;
+    obj4.size = tmp2(6834).GuildIconSizes.NORMAL;
     const items1 = [closure_8(GuildIconDefault, obj4), ];
     const obj5 = { style: tmp.text, children: null };
     const obj6 = { style: tmp.headerContainer, children: null };

@@ -1,10 +1,10 @@
-// === Module 16826: ShopSkipCategoriesFilter ===
+// === Module 16845: ShopSkipCategoriesFilter ===
 
-// Module 16826 (ShopSkipCategoriesFilter)
+// Module 16845 (ShopSkipCategoriesFilter)
 import nativeDefault from "native" /* 587 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7595 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7598 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7596 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7599 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -149,7 +149,7 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
                       const obj4 = { spacing: 8, children: null };
                       const items1 = [tmp13, tmp35];
                       obj4.children = items1;
-                      const tmp41 = closure_6(tmp(5932).Stack, obj4);
+                      const tmp41 = closure_6(tmp(5935).Stack, obj4);
                       cResult[32] = tmp35;
                       cResult[33] = tmp13;
                       cResult[34] = tmp41;
@@ -265,6 +265,6 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
   obj4.children = items3;
   items1[1] = closure_6(closure_2, obj4);
   obj7.children = items1;
-  obj2.children = closure_6(stateFromStores(5932).Stack, obj7);
+  obj2.children = closure_6(stateFromStores(5935).Stack, obj7);
   return closure_5(closure_2, obj2);
 });

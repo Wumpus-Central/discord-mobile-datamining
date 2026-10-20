@@ -1,6 +1,6 @@
-// === Module 12735: ForwardPreview ===
+// === Module 12752: ForwardPreview ===
 
-// Module 12735 (ForwardPreview)
+// Module 12752 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,16 +9,16 @@ import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1498 */;
 import useThemeDefault from "useTheme" /* 5166 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5991 */;
-import ImageIcon from "ImageIcon" /* 8503 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8552 */;
-import CirclePlayIcon2 from "CirclePlayIcon" /* 9231 */;
-import ClipView from "ClipView" /* 9324 */;
-import ChatItemDefault from "ChatItem" /* 9687 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10341 */;
-import ImagesIcon2 from "ImagesIcon" /* 12353 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 12736 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 12739 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5994 */;
+import ImageIcon from "ImageIcon" /* 8507 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8558 */;
+import CirclePlayIcon2 from "CirclePlayIcon" /* 9243 */;
+import ClipView from "ClipView" /* 9336 */;
+import ChatItemDefault from "ChatItem" /* 9700 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10352 */;
+import ImagesIcon2 from "ImagesIcon" /* 12370 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 12753 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 12756 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -67,7 +67,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = new tmp4(8076)();
+        const obj3 = new tmp4(8080)();
         obj3.setOptions({ renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: true, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false });
         cResult[6] = obj3;
         let tmp10 = obj3;
@@ -85,7 +85,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
           return tmp17;
         }
         const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: tmp8, message: tmp15, rowGenerator: tmp10 };
-        const tmp19 = closure_5(tmp4(9687), obj2);
+        const tmp19 = closure_5(tmp4(9700), obj2);
         cResult[10] = tmp8;
         cResult[11] = tmp15;
         cResult[12] = tmp19;

@@ -1,6 +1,6 @@
-// === Module 5852: VoiceDuration ===
+// === Module 5854: VoiceDuration ===
 
-// Module 5852 (VoiceDuration)
+// Module 5854 (VoiceDuration)
 import TimeUtils from "TimeUtils" /* 5684 */;
 import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5717 */;
 import size from "module_2" /* 2 */;

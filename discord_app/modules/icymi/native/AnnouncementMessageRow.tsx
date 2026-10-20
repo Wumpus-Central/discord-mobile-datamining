@@ -1,25 +1,25 @@
-// === Module 17664: AnnouncementMessageRow ===
+// === Module 17683: AnnouncementMessageRow ===
 
-// Module 17664 (AnnouncementMessageRow)
+// Module 17683 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 587 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6778 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8761 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 9991 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10609 */;
-import ICYMIShared from "ICYMIShared" /* 17666 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8773 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 10002 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10620 */;
+import ICYMIShared from "ICYMIShared" /* 17685 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(17665).ITEM_PADDING;
+const ITEM_PADDING = fn(17684).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(17627);
+const createICYMIStyles = fn(17646);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset } };
   return obj;

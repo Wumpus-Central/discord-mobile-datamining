@@ -1,6 +1,6 @@
-// === Module 13227: useBoostToUnlockFeaturedPowerup ===
+// === Module 13245: useBoostToUnlockFeaturedPowerup ===
 
-// Module 13227 (useBoostToUnlockFeaturedPowerup)
+// Module 13245 (useBoostToUnlockFeaturedPowerup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBoost
       continue;
     }
     cResult[7] = tmp12;
-    cResult[8] = unlockedPowerups(8315)(arg0).available;
+    cResult[8] = unlockedPowerups(8319)(arg0).available;
     cResult[9] = stateFromStores1;
     cResult[10] = unlockedPowerups;
     cResult[11] = items2;

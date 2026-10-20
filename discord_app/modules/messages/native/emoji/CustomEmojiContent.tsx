@@ -1,6 +1,6 @@
-// === Module 9861: CustomEmojiContent ===
+// === Module 9873: CustomEmojiContent ===
 
-// Module 9861 (CustomEmojiContent)
+// Module 9873 (CustomEmojiContent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -9,12 +9,12 @@ import PremiumUtilsDefault from "PremiumUtils" /* 2054 */;
 import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 4899 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import openUserSettings from "openUserSettings" /* 7436 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9707 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9859 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9863 */;
-import StarIcon from "StarIcon" /* 9865 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9868 */;
+import openUserSettings from "openUserSettings" /* 7439 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9720 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9871 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9875 */;
+import StarIcon from "StarIcon" /* 9877 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9880 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 4900 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
@@ -23,7 +23,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(6832).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(6835).EmojiSourceDataTypes;
 const Constants = fn(1087);
 ({ UserSettingsSections: closure_11, AnalyticEvents: closure_12, AnalyticsPages: map1, AnalyticsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
@@ -277,7 +277,7 @@ export default function CustomEmojiContent(emojiNode) {
       if (sourceType !== isFavoriteEmoji.PACK) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9867, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9879, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
         }
         const intl5 = tmp2(nonce[28]).intl;
         obj22.accessibilityLabel = intl5.string(tmp2(nonce[28]).t.PdRCRg);

@@ -1,8 +1,8 @@
-// === Module 10740: SafetyTipsSection ===
+// === Module 10751: SafetyTipsSection ===
 
-// Module 10740 (SafetyTipsSection)
+// Module 10751 (SafetyTipsSection)
 import nativeDefault from "native" /* 587 */;
-import SafetyTipsRowDefault from "SafetyTipsRow" /* 8033 */;
+import SafetyTipsRowDefault from "SafetyTipsRow" /* 8037 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
   showHeader = showHeader.showHeader;
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = closure_4(safetyTips(10741).SafetyBookletSpotIllustration, {});
+    const tmp7 = closure_4(safetyTips(10752).SafetyBookletSpotIllustration, {});
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
             const obj3 = { spacing: 16, children: null };
             const items = [tmp8, tmp18, tmp26];
             obj3.children = items;
-            const tmp32 = closure_5(safetyTips(5932).Stack, obj3);
+            const tmp32 = closure_5(safetyTips(5935).Stack, obj3);
             cResult[19] = tmp8;
             cResult[20] = tmp18;
             cResult[21] = tmp26;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
       const obj5 = { spacing: 8, align: "center", justify: "center", children: null };
       const items1 = [tmp12, tmp15];
       obj5.children = items1;
-      const tmp20 = closure_5(safetyTips(5932).Stack, obj5);
+      const tmp20 = closure_5(safetyTips(5935).Stack, obj5);
       cResult[9] = tmp12;
       cResult[10] = tmp15;
       cResult[11] = tmp20;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
   const safetyTips = children.safetyTips;
   let showHeader = children.showHeader;
   const tmp = closure_6();
-  const items = [closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10741).SafetyBookletSpotIllustration, {}) }), , ];
+  const items = [closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10752).SafetyBookletSpotIllustration, {}) }), , ];
   if (showHeader) {
     const obj2 = { style: tmp.text, variant: "heading-xl/semibold", children: null };
     const intl = tmp3(1128).intl;
@@ -138,10 +138,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
   const obj4 = { spacing: 8, align: "center", justify: "center", children: null };
   const items1 = [showHeader, closure_4(safetyTips(5195).Text, { style: tmp.text, accessibilityRole: "header", variant: "text-md/medium", color: "text-default", children: children.description })];
   obj4.children = items1;
-  items[1] = closure_5(safetyTips(5932).Stack, obj4);
-  const obj = { style: tmp.image, children: closure_4(safetyTips(10741).SafetyBookletSpotIllustration, {}) };
+  items[1] = closure_5(safetyTips(5935).Stack, obj4);
+  const obj = { style: tmp.image, children: closure_4(safetyTips(10752).SafetyBookletSpotIllustration, {}) };
   const obj5 = { style: tmp.text, accessibilityRole: "header", variant: "text-md/medium", color: "text-default", children: children.description };
   items[2] = closure_4(View, { style: tmp.tips, children: safetyTips.map((tip, index) => React4(SafetyTipsRowDefault, { index: index + 1, tip, end: index === safetyTips.length - 1 }, index)) });
   obj3.children = items;
-  return closure_5(safetyTips(5932).Stack, obj3);
+  return closure_5(safetyTips(5935).Stack, obj3);
 });

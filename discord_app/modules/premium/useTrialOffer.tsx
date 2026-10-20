@@ -1,10 +1,10 @@
-// === Module 7505: useTrialOffer ===
+// === Module 7508: useTrialOffer ===
 
-// Module 7505 (useTrialOffer)
+// Module 7508 (useTrialOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import UserOfferStore from "UserOfferStore" /* 7506 */;
+import UserOfferStore from "UserOfferStore" /* 7509 */;
 
 const require = globalThis.__r;
 

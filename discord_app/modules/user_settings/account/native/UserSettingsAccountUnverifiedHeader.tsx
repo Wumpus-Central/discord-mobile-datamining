@@ -1,16 +1,16 @@
-// === Module 7041: UserSettingsAccountUnverifiedHeader ===
+// === Module 7044: UserSettingsAccountUnverifiedHeader ===
 
-// Module 7041 (UserSettingsAccountUnverifiedHeader)
+// Module 7044 (UserSettingsAccountUnverifiedHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6869 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6872 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const initialize = PressableOpacity(504);
 const Text_Text = PressableOpacity(5195);
-const Pressables = PressableOpacity(6856);
+const Pressables = PressableOpacity(6859);
 require = fn;
 function handleOpenEmailVerification() {
   EmailVerificationModalActionCreatorsDefault.open();

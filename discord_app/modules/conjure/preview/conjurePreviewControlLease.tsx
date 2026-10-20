@@ -1,6 +1,6 @@
-// === Module 11052: conjurePreviewControlLease ===
+// === Module 11064: conjurePreviewControlLease ===
 
-// Module 11052 (conjurePreviewControlLease)
+// Module 11064 (conjurePreviewControlLease)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

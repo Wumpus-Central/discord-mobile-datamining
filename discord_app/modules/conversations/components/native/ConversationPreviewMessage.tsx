@@ -1,10 +1,10 @@
-// === Module 9686: ConversationPreviewMessage ===
+// === Module 9699: ConversationPreviewMessage ===
 
-// Module 9686 (ConversationPreviewMessage)
+// Module 9699 (ConversationPreviewMessage)
 import nativeDefault from "native" /* 587 */;
 import DateUtils from "DateUtils" /* 4773 */;
-import RowGeneratorDefault from "RowGenerator" /* 8076 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8552 */;
+import RowGeneratorDefault from "RowGenerator" /* 8080 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8558 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
@@ -65,15 +65,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
     }
     const stateFromStores1 = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
     const tmpResult6 = tmp(504);
-    const name = tmp(5944).useName(guildId, message.channelId, message.author);
+    const name = tmp(5947).useName(guildId, message.channelId, message.author);
     if (cResult[7] === stateFromStores1) {
       if (cResult[8] === stateFromStores) {
         let colorStrings;
         if (stateFromStores1 != null) {
           colorStrings = stateFromStores1.colorStrings;
         }
-        const processColorStringsArray = tmp(8263).useProcessColorStringsArray(colorStrings);
-        const tmpResult9 = tmp(8263);
+        const processColorStringsArray = tmp(8267).useProcessColorStringsArray(colorStrings);
+        const tmpResult9 = tmp(8267);
         const isRoleStyleAndRoleColorsEligibleForERC = tmpResult9.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, message.author.id, stateFromStores, processColorStringsArray);
         const TimestampHourCycle = tmp(4776).TimestampHourCycle;
         const setting = TimestampHourCycle.useSetting();
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
                               }
                               if (cResult[35] !== message) {
                                 const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow, message, rowGenerator };
-                                const tmp57 = closure_7(guildId(9687), obj2);
+                                const tmp57 = closure_7(guildId(9700), obj2);
                                 cResult[35] = message;
                                 cResult[36] = tmp57;
                                 let tmp52 = tmp57;
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
           cResult[15] = tmp32;
           tmp30 = tmp32;
         }
-        const tmpResult8 = tmp(8263);
+        const tmpResult8 = tmp(8267);
         const calendarFormatResult = tmp(4773).calendarFormat(message.timestamp, true, setting);
         cResult[10] = setting;
         cResult[11] = message.timestamp;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
     }
     const obj12 = { color: stateFromStores1.colorString };
     obj10 = obj12;
-    const tmpResult7 = tmp(5944);
+    const tmpResult7 = tmp(5947);
   }
   const fn2 = function w() {
     return GuildMemberStore.getMember(guildId, message.author.id);

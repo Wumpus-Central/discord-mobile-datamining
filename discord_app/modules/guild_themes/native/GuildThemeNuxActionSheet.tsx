@@ -1,6 +1,6 @@
-// === Module 17317: GuildThemeNuxActionSheet ===
+// === Module 17336: GuildThemeNuxActionSheet ===
 
-// Module 17317 (GuildThemeNuxActionSheet)
+// Module 17336 (GuildThemeNuxActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
                 v0 = 1;
                 v2 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(17318).saveGuildThemeNuxPreference(tmp48, closure_1_6), done: false };
+                const obj5 = { value: closure_0(17337).saveGuildThemeNuxPreference(tmp48, closure_1_6), done: false };
                 return obj5;
               } else {
                 c5 = 3;
@@ -303,8 +303,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   let stateFromStores;
   let callback1;
   const tmp = closure_14();
-  [tmp5, c2] = noop.useState(guildId(17318).getInitialGuildThemeNuxSelection);
-  const tmp4 = _slicedToArray(noop.useState(guildId(17318).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = noop.useState(guildId(17337).getInitialGuildThemeNuxSelection);
+  const tmp4 = _slicedToArray(noop.useState(guildId(17337).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = noop.useState(null);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   [tmp9, c4] = noop.useState(false);
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   obj3.dismissAccessibilityLabel = intl2.string(guildId(1128).t.cpT0Cq);
   obj3.onDismiss = callback3;
   obj3.contentStyles = tmp.container;
-  const items7 = [closure_10(markAsDismissed(17319), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
+  const items7 = [closure_10(markAsDismissed(17338), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
   const obj4 = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl3 = tmp2(1128).intl;
   obj4.children = intl3.string(guildId(1128).t.Q9zFy9);
@@ -454,14 +454,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   const intl5 = tmp2(1128).intl;
   obj8.label = intl5.string(guildId(1128).t.aN3RNQ);
   obj8.value = guildId(5162).GuildThemeSourcePreference.GUILD;
-  const items8 = [closure_10(guildId(6932).TableRadioRow, obj8), ];
+  const items8 = [closure_10(guildId(6935).TableRadioRow, obj8), ];
   const obj9 = { label: null, value: null };
   const intl6 = tmp2(1128).intl;
   obj9.label = intl6.string(guildId(1128).t.js8y7t);
   obj9.value = guildId(5162).GuildThemeSourcePreference.PERSONAL;
-  items8[1] = closure_10(guildId(6932).TableRadioRow, obj9);
+  items8[1] = closure_10(guildId(6935).TableRadioRow, obj9);
   obj7.children = items8;
-  obj6.children = closure_11(guildId(6933).TableRadioGroup, obj7);
+  obj6.children = closure_11(guildId(6936).TableRadioGroup, obj7);
   items7[3] = closure_10(closure_6, obj6);
   let tmp20Result = null;
   if (tmp10) {
@@ -469,7 +469,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
     const obj11 = { type: "warning", message: null, role: "status" };
     const intl7 = tmp2(1128).intl;
     obj11.message = intl7.string(tmp2(1128).t.tTHQAy);
-    obj10.children = closure_10(tmp2(7897).InlineNotice, obj11);
+    obj10.children = closure_10(tmp2(7901).InlineNotice, obj11);
     tmp20Result = closure_10(tmp21, obj10);
   }
   items7[4] = tmp20Result;
@@ -477,7 +477,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   if (null != tmp7) {
     const obj12 = { style: tmp.warning, children: null };
     const obj13 = { type: "critical", message: tmp7, role: "alert" };
-    obj12.children = closure_10(tmp2(7897).InlineNotice, obj13);
+    obj12.children = closure_10(tmp2(7901).InlineNotice, obj13);
     tmp20Result2 = closure_10(tmp21, obj12);
   }
   items7[5] = tmp20Result2;

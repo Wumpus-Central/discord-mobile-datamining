@@ -1,8 +1,8 @@
-// === Module 11236: joinFrameActivity ===
+// === Module 11247: joinFrameActivity ===
 
-// Module 11236 (joinFrameActivity)
-import ConjureActionCreators from "ConjureActionCreators" /* 11011 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11220 */;
+// Module 11247 (joinFrameActivity)
+import ConjureActionCreators from "ConjureActionCreators" /* 11023 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11231 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import PermissionStore from "PermissionStore" /* 4880 */;

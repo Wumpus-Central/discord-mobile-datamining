@@ -1,13 +1,13 @@
-// === Module 8882: FormSwitchRow ===
+// === Module 8894: FormSwitchRow ===
 
-// Module 8882 (FormSwitchRow)
+// Module 8894 (FormSwitchRow)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import RedesignCompat from "RedesignCompat" /* 6934 */;
-import FormRowDefault from "FormRow" /* 7183 */;
-import FormLabelDefault from "FormLabel" /* 7185 */;
-import TableSwitchRow from "TableSwitchRow" /* 7241 */;
-import Form_FormSwitchDefault from "Form/FormSwitch" /* 8880 */;
+import RedesignCompat from "RedesignCompat" /* 6937 */;
+import FormRowDefault from "FormRow" /* 7186 */;
+import FormLabelDefault from "FormLabel" /* 7188 */;
+import TableSwitchRow from "TableSwitchRow" /* 7244 */;
+import Form_FormSwitchDefault from "Form/FormSwitch" /* 8892 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

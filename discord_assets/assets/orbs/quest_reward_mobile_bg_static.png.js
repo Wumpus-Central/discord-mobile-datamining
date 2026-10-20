@@ -1,6 +1,6 @@
-// === Module 13961: ? ===
+// === Module 13979: ? ===
 
-// Module 13961
+// Module 13979
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js");

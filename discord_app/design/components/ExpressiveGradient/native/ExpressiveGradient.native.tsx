@@ -1,6 +1,6 @@
-// === Module 9767: ExpressiveGradient ===
+// === Module 9779: ExpressiveGradient ===
 
-// Module 9767 (ExpressiveGradient)
+// Module 9779 (ExpressiveGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;

@@ -1,6 +1,6 @@
-// === Module 6035: ? ===
+// === Module 6038: ? ===
 
-// Module 6035
+// Module 6038
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/shoes/bionic.png.js");

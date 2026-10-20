@@ -1,6 +1,6 @@
-// === Module 8060: MenuConstants ===
+// === Module 8064: MenuConstants ===
 
-// Module 8060 (MenuConstants)
+// Module 8064 (MenuConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/in_app_reports/MenuConstants.tsx");

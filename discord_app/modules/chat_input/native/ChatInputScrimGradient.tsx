@@ -1,6 +1,6 @@
-// === Module 12952: ChatInputScrimGradient ===
+// === Module 12970: ChatInputScrimGradient ===
 
-// Module 12952 (ChatInputScrimGradient)
+// Module 12970 (ChatInputScrimGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;

@@ -1,9 +1,9 @@
-// === Module 15051: YouTabLottie ===
+// === Module 15069: YouTabLottie ===
 
-// Module 15051 (YouTabLottie)
+// Module 15069 (YouTabLottie)
 import c from "c" /* 576 */;
-import LottieIcon from "LottieIcon" /* 11459 */;
-import _mod15052 from "module_15052" /* 15052 */;
+import LottieIcon from "LottieIcon" /* 11470 */;
+import _mod15070 from "module_15070" /* 15070 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ export const YouTabLottie = ReactCompilerGating.isReactCompilerEnabled() ? (func
     tmp5 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15052;
+    const tmpResult = _mod15070;
     cResult[3] = tmpResult;
     let tmp9 = tmpResult;
   } else {
@@ -52,5 +52,5 @@ export const YouTabLottie = ReactCompilerGating.isReactCompilerEnabled() ? (func
 }) : (function YouTabLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15052, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod15070, animation: "all", ref: ref.ref, layers, markers: items });
 });

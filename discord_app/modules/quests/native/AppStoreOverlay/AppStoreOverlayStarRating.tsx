@@ -1,10 +1,10 @@
-// === Module 13922: AppStoreOverlayStarRating ===
+// === Module 13940: AppStoreOverlayStarRating ===
 
-// Module 13922 (AppStoreOverlayStarRating)
+// Module 13940 (AppStoreOverlayStarRating)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9863 */;
-import StarIcon from "StarIcon" /* 9865 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9875 */;
+import StarIcon from "StarIcon" /* 9877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

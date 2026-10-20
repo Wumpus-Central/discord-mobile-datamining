@@ -1,6 +1,6 @@
-// === Module 5818: VideoBackgroundStore ===
+// === Module 5820: VideoBackgroundStore ===
 
-// Module 5818 (VideoBackgroundStore)
+// Module 5820 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5700 */;

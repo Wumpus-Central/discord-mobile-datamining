@@ -1,6 +1,6 @@
-// === Module 9021: InstantInviteQRCodeActionSheet ===
+// === Module 9033: InstantInviteQRCodeActionSheet ===
 
-// Module 9021 (InstantInviteQRCodeActionSheet)
+// Module 9033 (InstantInviteQRCodeActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,10 +8,10 @@ import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import ToastUtils from "ToastUtils" /* 5624 */;
-import GuildIcon from "GuildIcon" /* 6831 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7194 */;
-import ActionSheet from "ActionSheet" /* 7244 */;
-import components_native_QRCodeDefault from "components_native/QRCode" /* 9022 */;
+import GuildIcon from "GuildIcon" /* 6834 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7197 */;
+import ActionSheet from "ActionSheet" /* 7247 */;
+import components_native_QRCodeDefault from "components_native/QRCode" /* 9034 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -338,12 +338,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   if (null != channel) {
     tmp9 = null;
     if (null != GuildStore.getGuild(channel.guild_id)) {
-      const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6831).GuildIconSizes.LARGE };
+      const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6834).GuildIconSizes.LARGE };
       tmp9 = React6(GuildIconDefault, obj2);
     }
   }
   closure_13(tmp5(5624).presentFriendRequestAcceptedToast);
-  const obj3 = { header: React6(tmp5(7194).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  const obj3 = { header: React6(tmp5(7197).BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
   let plainText;
@@ -369,5 +369,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   items1[1] = tmp14Result2;
   obj4.children = items1;
   obj3.children = collapsed(View, obj4);
-  return React6(tmp5(7244).ActionSheet, obj3);
+  return React6(tmp5(7247).ActionSheet, obj3);
 });

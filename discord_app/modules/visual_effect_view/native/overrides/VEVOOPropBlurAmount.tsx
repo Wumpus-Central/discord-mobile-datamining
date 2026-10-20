@@ -1,9 +1,9 @@
-// === Module 17071: VEVOOPropBlurAmount ===
+// === Module 17090: VEVOOPropBlurAmount ===
 
-// Module 17071 (VEVOOPropBlurAmount)
+// Module 17090 (VEVOOPropBlurAmount)
 import c from "c" /* 576 */;
-import FormSwitch from "FormSwitch" /* 7242 */;
-import Form from "Form" /* 8871 */;
+import FormSwitch from "FormSwitch" /* 7245 */;
+import Form from "Form" /* 8883 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -143,7 +143,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[17] = tmp29;
     }
     const obj4 = { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 };
-    const tmp25 = jsx(first1(17072), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
+    const tmp25 = jsx(first1(17091), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
     cResult[9] = !tmp7;
     cResult[10] = !tmp7;
     cResult[11] = tmp25;
@@ -205,7 +205,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(17072), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
+  obj.subLabel = jsx(first(17091), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,

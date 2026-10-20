@@ -1,6 +1,6 @@
-// === Module 11175: SuspiciousDownloadActionSheet ===
+// === Module 11186: SuspiciousDownloadActionSheet ===
 
-// Module 11175 (SuspiciousDownloadActionSheet)
+// Module 11186 (SuspiciousDownloadActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspicio
     }
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp11 = closure_3(tmp(6939).TrafficConeSpotIllustration, {});
+      const tmp11 = closure_3(tmp(6942).TrafficConeSpotIllustration, {});
       cResult[7] = tmp11;
       let tmp9 = tmp11;
     } else {
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspicio
         const obj7 = { text: tmp28, onPress: tmp5, variant: "secondary" };
         items[1] = closure_3(tmp(5205).Button, obj7);
         obj6.children = items;
-        const tmp33 = closure_4(tmp(5932).Stack, obj6);
+        const tmp33 = closure_4(tmp(5935).Stack, obj6);
         cResult[19] = tmp5;
         cResult[20] = tmp33;
         let tmp30 = tmp33;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspicio
       const obj9 = { spacing: 16, justify: "center", align: "center", style: tmp7, children: null };
       const items1 = [tmp22, tmp30];
       obj9.children = items1;
-      obj8.children = closure_4(tmp(5932).Stack, obj9);
+      obj8.children = closure_4(tmp(5935).Stack, obj9);
       const tmp37 = closure_3(tmp(5226).BottomSheet, obj8);
       cResult[21] = tmp22;
       cResult[22] = tmp30;
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspicio
     const obj10 = { spacing: 8, justify: "center", align: "center", children: null };
     const items2 = [tmp9, tmp14, tmp19];
     obj10.children = items2;
-    const tmp24 = closure_4(tmp(5932).Stack, obj10);
+    const tmp24 = closure_4(tmp(5935).Stack, obj10);
     cResult[14] = tmp19;
     cResult[15] = tmp14;
     cResult[16] = tmp24;
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspicio
   const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items;
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [closure_3(href(6939).TrafficConeSpotIllustration, {}), , ];
+  const items1 = [closure_3(href(6942).TrafficConeSpotIllustration, {}), , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1128).intl;
   obj4.children = intl.string(href(1128).t.XtDo9Z);
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspicio
   obj5.children = intl2.string(href(1128).t.L9yFko);
   items1[2] = closure_3(href(5195).Text, obj5);
   obj3.children = items1;
-  const items2 = [closure_4(href(5932).Stack, obj3), ];
+  const items2 = [closure_4(href(5935).Stack, obj3), ];
   const obj6 = { spacing: 8, children: null };
   const obj7 = { text: null, onPress: null };
   const intl3 = href(1128).intl;
@@ -201,8 +201,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspicio
   };
   items3[1] = closure_3(href(5205).Button, obj8);
   obj6.children = items3;
-  items2[1] = closure_4(href(5932).Stack, obj6);
+  items2[1] = closure_4(href(5935).Stack, obj6);
   obj2.children = items2;
-  obj.children = closure_4(href(5932).Stack, obj2);
+  obj.children = closure_4(href(5935).Stack, obj2);
   return closure_3(href(5226).BottomSheet, obj);
 });

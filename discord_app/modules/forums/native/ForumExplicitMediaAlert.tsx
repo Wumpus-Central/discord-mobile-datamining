@@ -1,8 +1,8 @@
-// === Module 13863: ForumExplicitMediaAlert ===
+// === Module 13881: ForumExplicitMediaAlert ===
 
-// Module 13863 (ForumExplicitMediaAlert)
+// Module 13881 (ForumExplicitMediaAlert)
 import nativeDefault from "native" /* 587 */;
-import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 12681 */;
+import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 12698 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

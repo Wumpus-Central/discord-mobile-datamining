@@ -1,13 +1,13 @@
-// === Module 15514: ConjureVoiceSessionCoordinator ===
+// === Module 15532: ConjureVoiceSessionCoordinator ===
 
-// Module 15514 (ConjureVoiceSessionCoordinator)
+// Module 15532 (ConjureVoiceSessionCoordinator)
 import _modDef12 from "module_12" /* 12 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5807 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5810 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6726 */;
-import RPCErrorDefault from "RPCError" /* 9185 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15516 */;
-import FramesStore from "FramesStore" /* 6723 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5809 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5812 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6729 */;
+import RPCErrorDefault from "RPCError" /* 9197 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15534 */;
+import FramesStore from "FramesStore" /* 6726 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
@@ -136,15 +136,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp39Result2 = tmp39(15515);
+            tmp39Result2 = tmp39(15533);
           }
-          tmp39Result = tmp39(15515);
+          tmp39Result = tmp39(15533);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj11 = handleFrameLifecycleChange(15515);
+        obj11 = handleFrameLifecycleChange(15533);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -213,16 +213,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15518);
+    obj2 = obj2(15536);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15518).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15536).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15518);
+      const tmp11Result = tmp11(15536);
     }
     tmp11 = obj2;
   } else {
@@ -349,7 +349,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15519).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15537).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

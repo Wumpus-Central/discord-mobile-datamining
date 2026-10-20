@@ -1,6 +1,6 @@
-// === Module 13603: BugReporterModal ===
+// === Module 13621: BugReporterModal ===
 
-// Module 13603 (BugReporterModal)
+// Module 13621 (BugReporterModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1104 */;
@@ -9,18 +9,18 @@ import AvatarUtils from "AvatarUtils" /* 1417 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import NavigatorHeader from "NavigatorHeader" /* 6872 */;
-import TableRadioRow from "TableRadioRow" /* 6932 */;
-import Navigator from "Navigator" /* 7043 */;
-import HeaderActionButton from "HeaderActionButton" /* 7431 */;
-import UploadDefault from "Upload" /* 8087 */;
-import UploadPlatform from "UploadPlatform" /* 8088 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import NavigatorHeader from "NavigatorHeader" /* 6875 */;
+import TableRadioRow from "TableRadioRow" /* 6935 */;
+import Navigator from "Navigator" /* 7046 */;
+import HeaderActionButton from "HeaderActionButton" /* 7434 */;
+import UploadDefault from "Upload" /* 8091 */;
+import UploadPlatform from "UploadPlatform" /* 8092 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import BugReportStore from "BugReportStore" /* 13602 */;
+import BugReportStore from "BugReportStore" /* 13620 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
@@ -503,7 +503,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(13605).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(13623).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp46) {
                         c6 = tmp;
@@ -546,7 +546,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(13604).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(13622).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -895,7 +895,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13614, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13632, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;
@@ -986,6 +986,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BugRepor
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(7043).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(7046).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 });
 export { BugCreateScreen };

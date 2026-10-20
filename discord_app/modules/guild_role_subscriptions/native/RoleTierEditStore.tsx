@@ -1,10 +1,10 @@
-// === Module 18988: RoleTierEditStore ===
+// === Module 19011: RoleTierEditStore ===
 
-// Module 18988 (RoleTierEditStore)
+// Module 19011 (RoleTierEditStore)
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import _mod4863 from "module_4863" /* 4863 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16299 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16318 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -44,7 +44,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     return (async () => {
       closure_1 = tmp3;
       priceTiers(1274).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
-      await closure_2_2(7302).getPriceTiers(priceTiers);
+      await closure_2_2(7305).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
         priceTiers(1274).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));

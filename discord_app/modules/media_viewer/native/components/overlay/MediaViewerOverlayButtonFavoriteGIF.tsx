@@ -1,12 +1,12 @@
-// === Module 14027: MediaViewerOverlayButtonFavoriteGIF ===
+// === Module 14045: MediaViewerOverlayButtonFavoriteGIF ===
 
-// Module 14027 (MediaViewerOverlayButtonFavoriteGIF)
+// Module 14045 (MediaViewerOverlayButtonFavoriteGIF)
 import util from "util" /* 1128 */;
 import frecency_user_settings from "frecency_user_settings" /* 1247 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10049 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10051 */;
-import GifIcon from "GifIcon" /* 10065 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10060 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10062 */;
+import GifIcon from "GifIcon" /* 10076 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

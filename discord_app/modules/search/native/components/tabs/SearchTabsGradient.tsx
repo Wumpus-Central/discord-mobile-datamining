@@ -1,11 +1,11 @@
-// === Module 17900: SearchTabsGradient ===
+// === Module 17923: SearchTabsGradient ===
 
-// Module 17900 (SearchTabsGradient)
+// Module 17923 (SearchTabsGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4942 */;
 import useToken from "useToken" /* 5213 */;
-import TabsGradientDefault from "TabsGradient" /* 13504 */;
+import TabsGradientDefault from "TabsGradient" /* 13522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

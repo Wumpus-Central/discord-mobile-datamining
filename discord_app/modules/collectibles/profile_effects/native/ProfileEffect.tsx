@@ -1,15 +1,15 @@
-// === Module 9312: ProfileEffect ===
+// === Module 9324: ProfileEffect ===
 
-// Module 9312 (ProfileEffect)
+// Module 9324 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8642 */;
-import utils from "utils" /* 9313 */;
-import constants from "constants" /* 9314 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9315 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9318 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8654 */;
+import utils from "utils" /* 9325 */;
+import constants from "constants" /* 9326 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9327 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 9330 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;

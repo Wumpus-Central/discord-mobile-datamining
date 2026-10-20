@@ -1,19 +1,19 @@
-// === Module 14401: VoiceActionSheet ===
+// === Module 14419: VoiceActionSheet ===
 
-// Module 14401 (VoiceActionSheet)
+// Module 14419 (VoiceActionSheet)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5111 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7199 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 14402 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7202 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 14420 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5679 */;
 
 const VisualEffectViewDefault = tmp5(5547);
-const NUFChannelsManagerDefault = tmp5(14403);
-const NUFVoiceChannelsTemplateDefault = tmp5(14410);
-const GuildEventVoiceBannerDefault = tmp5(14413);
-const VoiceEmptyStateDefault = tmp5(14414);
-const VoiceMemberListDefault = tmp5(14417);
+const NUFChannelsManagerDefault = tmp5(14421);
+const NUFVoiceChannelsTemplateDefault = tmp5(14428);
+const GuildEventVoiceBannerDefault = tmp5(14431);
+const VoiceEmptyStateDefault = tmp5(14432);
+const VoiceMemberListDefault = tmp5(14435);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceAct
       tmp5 = NUFVoiceChannelsTemplateDefault;
       let obj3 = { channel };
       obj2.children = closure_6(tmp5, obj3);
-      const tmp31 = closure_6(tmp(7244).ActionSheet, obj2);
+      const tmp31 = closure_6(tmp(7247).ActionSheet, obj2);
       cResult[6] = channel;
       cResult[7] = tmp31;
     }
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceAct
         const obj6 = { channel };
         items2[1] = closure_6(VoiceEmptyStateDefault, obj6);
         obj4.children = items2;
-        const tmp28 = closure_7(tmp(7244).ActionSheet, obj4);
+        const tmp28 = closure_7(tmp(7247).ActionSheet, obj4);
         cResult[8] = channel;
         cResult[9] = tmp28;
         let tmp25 = tmp28;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceAct
       const items3 = [tmp14, tmp17];
       obj10.children = items3;
       obj9.children = closure_7(closure_4, obj10);
-      const tmp24 = closure_6(tmp(7244).ActionSheet, obj9);
+      const tmp24 = closure_6(tmp(7247).ActionSheet, obj9);
       cResult[14] = tmp4.container;
       cResult[15] = tmp14;
       cResult[16] = tmp17;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceAct
       return tmp33;
     }
     const obj11 = { value: analyticsLocations, children: tmp20 };
-    const tmp35 = closure_6(tmp(7199).AnalyticsLocationProvider, obj11);
+    const tmp35 = closure_6(tmp(7202).AnalyticsLocationProvider, obj11);
     cResult[18] = analyticsLocations;
     cResult[19] = tmp20;
     cResult[20] = tmp35;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceAct
     let obj3 = { children: null };
     const obj4 = { channel };
     obj3.children = closure_6(NUFVoiceChannelsTemplateDefault, obj4);
-    let children = closure_6(tmp5(7244).ActionSheet, obj3);
+    let children = closure_6(tmp5(7247).ActionSheet, obj3);
     let tmp8 = closure_6;
   } else if (stateFromStores) {
     const obj5 = { children: null };
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceAct
     const obj7 = { channel };
     items2[1] = closure_6(VoiceEmptyStateDefault, obj7);
     obj5.children = items2;
-    children = closure_7(tmp5(7244).ActionSheet, obj5);
+    children = closure_7(tmp5(7247).ActionSheet, obj5);
     tmp8 = closure_6;
   } else {
     tmp8 = closure_6;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceAct
     items3[1] = closure_6(VoiceMemberListDefault, obj11);
     obj9.children = items3;
     obj8.children = closure_7(closure_4, obj9);
-    children = closure_6(tmp5(7244).ActionSheet, obj8);
+    children = closure_6(tmp5(7247).ActionSheet, obj8);
   }
-  return tmp8(channel(7199).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(7202).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
 });

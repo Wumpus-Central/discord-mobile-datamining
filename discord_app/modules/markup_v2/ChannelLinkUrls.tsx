@@ -1,6 +1,6 @@
-// === Module 8529: ChannelLinkUrls ===
+// === Module 8533: ChannelLinkUrls ===
 
-// Module 8529 (ChannelLinkUrls)
+// Module 8533 (ChannelLinkUrls)
 import LinkUtils from "LinkUtils" /* 5567 */;
 import _slicedToArray from "module_32" /* 32 */;
 

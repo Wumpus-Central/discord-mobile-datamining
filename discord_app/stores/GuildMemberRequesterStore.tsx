@@ -1,11 +1,11 @@
-// === Module 6637: GuildMemberRequesterStore ===
+// === Module 6640: GuildMemberRequesterStore ===
 
-// Module 6637 (GuildMemberRequesterStore)
+// Module 6640 (GuildMemberRequesterStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageTypes from "MessageTypes" /* 1103 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4868 */;
-import GuildMemberRequesterDefault from "GuildMemberRequester" /* 6638 */;
+import GuildMemberRequesterDefault from "GuildMemberRequester" /* 6641 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;

@@ -1,14 +1,14 @@
-// === Module 7756: ClipAnalyticsUtils ===
+// === Module 7760: ClipAnalyticsUtils ===
 
-// Module 7756 (ClipAnalyticsUtils)
+// Module 7760 (ClipAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import _modDef5765 from "module_5765" /* 5765 */;
-import VideoQualityStats from "VideoQualityStats" /* 5856 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6593 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5835 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
+import VideoQualityStats from "VideoQualityStats" /* 5858 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6596 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5837 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7757 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7761 */;
 import ClipsStore from "ClipsStore" /* 2020 */;
 
 require = fn;
@@ -139,7 +139,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(8092);
+const ClipsConstants = fn(8096);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);

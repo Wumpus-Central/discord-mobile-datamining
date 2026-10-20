@@ -1,6 +1,6 @@
-// === Module 6652: UserGuildSettingsStore ===
+// === Module 6655: UserGuildSettingsStore ===
 
-// Module 6652 (UserGuildSettingsStore)
+// Module 6655 (UserGuildSettingsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -211,7 +211,7 @@ const ChannelRecord = fn(4804);
 const Constants = fn(1087);
 const UserNotificationSettings = Constants.UserNotificationSettings;
 const AccountNotificationFlags = fn(4893).AccountNotificationFlags;
-const UnreadSetting = fn(6653).UnreadSetting;
+const UnreadSetting = fn(6656).UnreadSetting;
 const UserSettingsConstants = fn(1097);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};

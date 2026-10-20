@@ -1,11 +1,11 @@
-// === Module 18989: FormImagePicker ===
+// === Module 19012: FormImagePicker ===
 
-// Module 18989 (FormImagePicker)
+// Module 19012 (FormImagePicker)
 import nativeDefault from "native" /* 587 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8098 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8962 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8102 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8974 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

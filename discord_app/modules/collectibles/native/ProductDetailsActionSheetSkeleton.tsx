@@ -1,6 +1,6 @@
-// === Module 14284: ProductDetailsActionSheetSkeleton ===
+// === Module 14302: ProductDetailsActionSheetSkeleton ===
 
-// Module 14284 (ProductDetailsActionSheetSkeleton)
+// Module 14302 (ProductDetailsActionSheetSkeleton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;

@@ -1,13 +1,13 @@
-// === Module 12784: CheckpointApngPlayer ===
+// === Module 12801: CheckpointApngPlayer ===
 
-// Module 12784 (CheckpointApngPlayer)
+// Module 12801 (CheckpointApngPlayer)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import APNGPlayer from "APNGPlayer" /* 9319 */;
+import APNGPlayer from "APNGPlayer" /* 9331 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import createStyles from "createStyles" /* 4945 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

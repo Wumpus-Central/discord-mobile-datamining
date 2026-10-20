@@ -1,6 +1,6 @@
-// === Module 13874: ApplicationDetails ===
+// === Module 13892: ApplicationDetails ===
 
-// Module 13874 (ApplicationDetails)
+// Module 13892 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,16 +8,16 @@ import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import LinkIcon from "LinkIcon" /* 5640 */;
 import ClockIcon2 from "ClockIcon" /* 5653 */;
-import LockIcon from "LockIcon" /* 8511 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8747 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9409 */;
-import scopes from "scopes" /* 9545 */;
-import disclosures from "disclosures" /* 9547 */;
-import Utils from "Utils" /* 9549 */;
-import ShieldIcon from "ShieldIcon" /* 10746 */;
-import HammerIcon from "HammerIcon" /* 11642 */;
-import RobotIcon from "RobotIcon" /* 11664 */;
-import EmbedIcon from "EmbedIcon" /* 13875 */;
+import LockIcon from "LockIcon" /* 8515 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8759 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9421 */;
+import scopes from "scopes" /* 9558 */;
+import disclosures from "disclosures" /* 9560 */;
+import Utils from "Utils" /* 9562 */;
+import ShieldIcon from "ShieldIcon" /* 10757 */;
+import HammerIcon from "HammerIcon" /* 11655 */;
+import RobotIcon from "RobotIcon" /* 11677 */;
+import EmbedIcon from "EmbedIcon" /* 13893 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

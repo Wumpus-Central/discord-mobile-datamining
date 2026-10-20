@@ -1,10 +1,10 @@
-// === Module 6873: HeaderDebugOverlay ===
+// === Module 6876: HeaderDebugOverlay ===
 
-// Module 6873 (HeaderDebugOverlay)
+// Module 6876 (HeaderDebugOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6874 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

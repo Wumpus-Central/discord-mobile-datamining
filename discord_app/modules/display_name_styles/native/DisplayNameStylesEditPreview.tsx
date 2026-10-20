@@ -1,6 +1,6 @@
-// === Module 16444: DisplayNameStylesEditPreview ===
+// === Module 16463: DisplayNameStylesEditPreview ===
 
-// Module 16444 (DisplayNameStylesEditPreview)
+// Module 16463 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,15 +9,15 @@ import native from "native" /* 1202 */;
 import _modDef2918 from "module_2918" /* 2918 */;
 import DateUtils from "DateUtils" /* 4773 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6730 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8573 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8583 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8663 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10579 */;
-import types from "types" /* 10580 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6733 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8585 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8595 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8675 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10590 */;
+import types from "types" /* 10591 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8574 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8586 */;
 
 require = fn;
 const View = fn(17).View;
@@ -323,7 +323,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   dependencyMap = tmp4;
   const tmp5 = closure_9();
   const obj = user(576);
-  const guildMemberAndUserPendingNameplate = user(8580).useGuildMemberAndUserPendingNameplate(user, guildId);
+  const guildMemberAndUserPendingNameplate = user(8592).useGuildMemberAndUserPendingNameplate(user, guildId);
   ({ guildNameplate, pendingNameplate, userNameplate } = guildMemberAndUserPendingNameplate);
   if (cResult[0] !== guildNameplate) {
     const nameplateData = tmp(1992).getNameplateData(guildNameplate);
@@ -434,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                                 }
                               }
                               const obj4 = { user, nameplate: pendingNameplate, nameplateData: tmp30, guildId, pendingAvatarSrc: stateFromStores, pendingDisplayNameStyles: tmp13, pendingGlobalName: displayName };
-                              const tmp33 = closure_7(tmp(10966).NameplatePreview, obj4);
+                              const tmp33 = closure_7(tmp(10977).NameplatePreview, obj4);
                               cResult[28] = stateFromStores;
                               cResult[29] = displayName;
                               cResult[30] = tmp13;
@@ -471,7 +471,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             }
           }
           const obj7 = { user, displayName, guildId, displayNameStylesOverride: tmp13, isPremiumTryItOut: tmp4, compact: true, hideFrame: true, maxWidth: 320, accessibilityLabel: tmp14 };
-          const tmp20 = closure_7(guildId(10848), obj7);
+          const tmp20 = closure_7(guildId(10859), obj7);
           cResult[12] = displayName;
           cResult[13] = tmp13;
           cResult[14] = guildId;
@@ -503,7 +503,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   cResult[5] = user.id;
   cResult[6] = fn;
   tmp11 = fn;
-  const tmpResult = user(8580);
+  const tmpResult = user(8592);
 }) : (function DisplayNameStylesEditPreview(user) {
   user = user.user;
   ({ displayName, guildId } = user);

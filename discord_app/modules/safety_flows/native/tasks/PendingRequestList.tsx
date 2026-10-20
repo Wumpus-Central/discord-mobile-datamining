@@ -1,12 +1,12 @@
-// === Module 19142: PendingRequestList ===
+// === Module 19166: PendingRequestList ===
 
-// Module 19142 (PendingRequestList)
+// Module 19166 (PendingRequestList)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef2526 from "module_2526" /* 2526 */;
 import _modDef2822 from "module_2822" /* 2822 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 15952 */;
-import _modDef16000 from "module_16000" /* 16000 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 15971 */;
+import _modDef16019 from "module_16019" /* 16019 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -353,13 +353,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
     avatar = request.parent_avatar;
   }
   const obj = request(504);
-  const pendingRequestResolution = request(19140).usePendingRequestResolution(request.parent_id);
+  const pendingRequestResolution = request(19164).usePendingRequestResolution(request.parent_id);
   ({ isConnected, isResolved } = pendingRequestResolution);
-  const tmp2Result = request(19140);
+  const tmp2Result = request(19164);
   const obj2 = { style: tmp.row, children: null };
-  const result = request(19143).formatPendingRequestSentText(request.created_at);
+  const result = request(19167).formatPendingRequestSentText(request.created_at);
   const obj3 = { avatarStyle: tmp.avatar, source: null, disablePlaceholder: true };
-  const tmp2Result2 = request(19143);
+  const tmp2Result2 = request(19167);
   obj3.source = AvatarUtilsDefault.getUserAvatarSource({ id: request.parent_id, avatar });
   const items1 = [closure_7(request(1202).Avatar, obj3), , ];
   const obj5 = { style: tmp.details, children: null };
@@ -398,11 +398,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
         const obj12 = { size: "small", color: tmp.declineIcon.color };
         let tmp13Result6 = closure_7(closure_4, obj12);
       } else {
-        const obj13 = { size: tmp2(1202).Icon.Sizes.SMALL, color: tmp.declineIcon.color, source: _modDef16000 };
+        const obj13 = { size: tmp2(1202).Icon.Sizes.SMALL, color: tmp.declineIcon.color, source: _modDef16019 };
         tmp13Result6 = closure_7(tmp2(1202).Icon, obj13);
       }
       obj10.children = tmp13Result6;
-      items3[1] = closure_7(tmp2(6856).PressableOpacity, obj10);
+      items3[1] = closure_7(tmp2(6859).PressableOpacity, obj10);
       obj9.children = items3;
       items1[2] = closure_8(closure_5, obj9);
       obj2.children = items1;
@@ -424,10 +424,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
         let tmp13Result7 = closure_7(closure_4, obj16);
       } else {
         const obj17 = { size: "sm", color: nativeDefault.colors.WHITE };
-        tmp13Result7 = closure_7(tmp2(9137).CheckmarkLargeBoldIcon, obj17);
+        tmp13Result7 = closure_7(tmp2(9149).CheckmarkLargeBoldIcon, obj17);
       }
       obj14.children = tmp13Result7;
-      closure_7(tmp2(6856).PressableOpacity, obj14);
+      closure_7(tmp2(6859).PressableOpacity, obj14);
     }
   }
   const obj4 = { id: request.parent_id, avatar };

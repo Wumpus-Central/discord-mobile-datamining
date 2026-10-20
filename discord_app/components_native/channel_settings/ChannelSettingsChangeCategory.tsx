@@ -1,22 +1,22 @@
-// === Module 18031: ChannelSettingsChangeCategory ===
+// === Module 18054: ChannelSettingsChangeCategory ===
 
-// Module 18031 (ChannelSettingsChangeCategory)
+// Module 18054 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useChannelName from "useChannelName" /* 5565 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5863 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6778 */;
-import TableRow from "TableRow" /* 6851 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
-import Form from "Form" /* 8871 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5866 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
+import TableRow from "TableRow" /* 6854 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
+import Form from "Form" /* 8883 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7155 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7158 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   const tmpResult = channelId(504);
   const navigation = channelId(1505).useNavigation();
   const tmpResult3 = channelId(1505);
-  const appChannelBotUserId = channelId(11200).useAppChannelBotUserId(stateFromStores);
+  const appChannelBotUserId = channelId(11211).useAppChannelBotUserId(stateFromStores);
   _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   if (cResult[3] === appChannelBotUserId) {
     if (cResult[4] === stateFromStores) {
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   cResult[5] = navigation;
   cResult[6] = tmp12;
   tmp11 = tmp12;
-  const tmpResult4 = channelId(11200);
+  const tmpResult4 = channelId(11211);
 }) : (function ConnectedChannelSettingsChangeCategory(channelId) {
   channelId = channelId.channelId;
   const items = [ChannelStore];
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   const obj = channelId(504);
   const navigation = channelId(1505).useNavigation();
   const obj2 = channelId(1505);
-  const appChannelBotUserId = channelId(11200).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11211).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 });

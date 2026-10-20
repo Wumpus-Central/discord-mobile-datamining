@@ -1,18 +1,18 @@
-// === Module 13287: GuildPowerupsLevelCard ===
+// === Module 13305: GuildPowerupsLevelCard ===
 
-// Module 13287 (GuildPowerupsLevelCard)
+// Module 13305 (GuildPowerupsLevelCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7023 */;
-import BoostGemIcon from "BoostGemIcon" /* 9723 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13223 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13240 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13245 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 13248 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 13289 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 13290 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7026 */;
+import BoostGemIcon from "BoostGemIcon" /* 9736 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13241 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 13258 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 13263 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 13266 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 13307 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 13308 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const GuildPowerupsConstants = fn(5143);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1087);
 ({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(13288).TIER_CARDS;
+const TIER_CARDS = fn(13306).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4945);

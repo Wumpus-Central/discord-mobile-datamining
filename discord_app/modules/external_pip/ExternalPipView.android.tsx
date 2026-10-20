@@ -1,13 +1,13 @@
-// === Module 18161: ExternalPipView ===
+// === Module 18184: ExternalPipView ===
 
-// Module 18161 (ExternalPipView)
+// Module 18184 (ExternalPipView)
 import c from "c" /* 576 */;
 import ExternalPipDefault from "ExternalPip" /* 5784 */;
-import ExternalPipAutoEnterExperiment from "ExternalPipAutoEnterExperiment" /* 18164 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 18165 */;
+import ExternalPipAutoEnterExperiment from "ExternalPipAutoEnterExperiment" /* 18187 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 18188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8706 */;
+import AppFreezeStore from "AppFreezeStore" /* 8718 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
   } else {
     first = cResult[0];
   }
-  externalPipEnabled = setExternalPipActive(18162)(first).externalPipEnabled;
+  externalPipEnabled = setExternalPipActive(18185)(first).externalPipEnabled;
   let obj = externalPipEnabled(576);
   ({ externalPipActive, setExternalPipActive } = closure_7());
   if (cResult[1] !== externalPipEnabled) {
@@ -327,7 +327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
   return tmp16;
 }) : (function ExternalPipView() {
   let obj = { disabled: null };
-  const tmp = setExternalPipActive(18162);
+  const tmp = setExternalPipActive(18185);
   obj.disabled = !setExternalPipActive(5784).isSupported();
   const externalPipEnabled = tmp(obj).externalPipEnabled;
   const tmp2 = closure_7();

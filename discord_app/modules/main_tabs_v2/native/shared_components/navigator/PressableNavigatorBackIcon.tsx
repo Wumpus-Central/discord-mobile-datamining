@@ -1,16 +1,16 @@
-// === Module 9616: PressableNavigatorBackIcon ===
+// === Module 9629: PressableNavigatorBackIcon ===
 
-// Module 9616 (PressableNavigatorBackIcon)
+// Module 9629 (PressableNavigatorBackIcon)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import _modDef9617 from "module_9617" /* 9617 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 9618 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9620 */;
+import _modDef9630 from "module_9630" /* 9630 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 9631 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9633 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6762 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6765 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 
 const require = globalThis.__r;
@@ -132,7 +132,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
       cResult[14] = formatToPlainStringResult;
     } else {
       if (cResult[15] !== tmp12.actionButtonIcon.tintColor) {
-        const obj5 = { source: _modDef9617, style: null };
+        const obj5 = { source: _modDef9630, style: null };
         const obj6 = { tintColor: tmp12.actionButtonIcon.tintColor };
         obj5.style = obj6;
         const tmp31 = closure_10(FastImageDefault, obj5);
@@ -174,7 +174,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
               obj8.onPress = tmp23;
               obj8.style = tmp12.actionButtonPressable;
               obj8.children = tmp37;
-              obj7.children = closure_10(tmp(6856).PressableOpacity, obj8);
+              obj7.children = closure_10(tmp(6859).PressableOpacity, obj8);
               const tmp48 = closure_10(PressableNavigatorButtonWrapperDefault, obj7);
               cResult[25] = tmp23;
               cResult[26] = tmp7;

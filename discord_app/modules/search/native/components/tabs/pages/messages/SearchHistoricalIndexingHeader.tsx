@@ -1,12 +1,12 @@
-// === Module 17883: SearchHistoricalIndexingHeader ===
+// === Module 17906: SearchHistoricalIndexingHeader ===
 
-// Module 17883 (SearchHistoricalIndexingHeader)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13041 */;
+// Module 17906 (SearchHistoricalIndexingHeader)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13059 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2069 */;
 
 const require = fn;
-const SearchConstants = fn(9629);
+const SearchConstants = fn(9642);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Historic
         return tmp19;
       }
       const obj4 = { variant: "primary", border: "subtle", style: tmp13, children: tmp16 };
-      const tmp21 = jsx(tmp(6853).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
+      const tmp21 = jsx(tmp(6856).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
       cResult[13] = tmp13;
       cResult[14] = tmp16;
       cResult[15] = tmp21;

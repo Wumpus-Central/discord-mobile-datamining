@@ -1,13 +1,13 @@
-// === Module 18589: MessageCodedLinkManager ===
+// === Module 18612: MessageCodedLinkManager ===
 
-// Module 18589 (MessageCodedLinkManager)
+// Module 18612 (MessageCodedLinkManager)
 import findCodedLinksDefault from "findCodedLinks" /* 5661 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18602 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18625 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7513 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7516 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import InviteStore from "InviteStore" /* 5662 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {
@@ -25,7 +25,7 @@ function resolveMessageCodedLinks(content) {
     let item = arr.forEach((item) => {
       ({ type, code } = item);
       if (code(5665).CodedLinkType.INVITE === type) {
-        const result = code(18590).queueMessageLinkFetch(closure_3(function*() {
+        const result = code(18613).queueMessageLinkFetch(closure_3(function*() {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -71,9 +71,9 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
-        const tmpResult = code(18590);
+        const tmpResult = code(18613);
       } else if (code(5665).CodedLinkType.TEMPLATE === type) {
-        const result1 = code(18590).queueMessageLinkFetch(closure_3(function*() {
+        const result1 = code(18613).queueMessageLinkFetch(closure_3(function*() {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -119,7 +119,7 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
-        const tmpResult5 = code(18590);
+        const tmpResult5 = code(18613);
       } else if (code(5665).CodedLinkType.BUILD_OVERRIDE !== type) {
         if (code(5665).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
           if (code(5665).CodedLinkType.EVENT !== type) {
@@ -139,20 +139,20 @@ function resolveMessageCodedLinks(content) {
                                       if (code(5665).CodedLinkType.USER_PROFILE !== type) {
                                         if (code(5665).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                                           if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                            const result2 = code(18590).queueMessageLinkFetch(() => {
-                                              const useGameOrganizationInviteFetch = content(18597).useGameOrganizationInviteFetch;
+                                            const result2 = code(18613).queueMessageLinkFetch(() => {
+                                              const useGameOrganizationInviteFetch = content(18620).useGameOrganizationInviteFetch;
                                               const items = [code];
                                               return useGameOrganizationInviteFetch.fetchMany(items);
                                             });
-                                            const tmpResult7 = code(18590);
+                                            const tmpResult7 = code(18613);
                                           }
-                                          tmpResult6 = code(14347);
+                                          tmpResult6 = code(14365);
                                         } else {
                                           if (code(5665).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
                                             if (code(5665).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                                               if (code(5665).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                const embedApplication = code(11908).getEmbedApplication(code);
-                                                const tmpResult8 = code(11908);
+                                                const embedApplication = code(11922).getEmbedApplication(code);
+                                                const tmpResult8 = code(11922);
                                               } else {
                                                 const _Error = Error;
                                                 const _HermesInternal = HermesInternal;
@@ -160,7 +160,7 @@ function resolveMessageCodedLinks(content) {
                                               }
                                             }
                                           }
-                                          closure_1(18599)(type, code);
+                                          closure_1(18622)(type, code);
                                         }
                                       }
                                     }
@@ -193,7 +193,7 @@ function resolveMessageCodedLinks(content) {
         const item = arr.forEach((item) => {
           ({ type, code } = item);
           if (code(5665).CodedLinkType.INVITE === type) {
-            const result = code(18590).queueMessageLinkFetch(closure_3(function*() {
+            const result = code(18613).queueMessageLinkFetch(closure_3(function*() {
               if (c0 === 2) {
                 c0 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -239,9 +239,9 @@ function resolveMessageCodedLinks(content) {
                 }
               }
             }));
-            const tmpResult = code(18590);
+            const tmpResult = code(18613);
           } else if (code(5665).CodedLinkType.TEMPLATE === type) {
-            const result1 = code(18590).queueMessageLinkFetch(closure_3(function*() {
+            const result1 = code(18613).queueMessageLinkFetch(closure_3(function*() {
               if (c0 === 2) {
                 c0 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -287,7 +287,7 @@ function resolveMessageCodedLinks(content) {
                 }
               }
             }));
-            const tmpResult5 = code(18590);
+            const tmpResult5 = code(18613);
           } else if (code(5665).CodedLinkType.BUILD_OVERRIDE !== type) {
             if (code(5665).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (code(5665).CodedLinkType.EVENT !== type) {
@@ -307,20 +307,20 @@ function resolveMessageCodedLinks(content) {
                                           if (code(5665).CodedLinkType.USER_PROFILE !== type) {
                                             if (code(5665).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                                               if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                                const result2 = code(18590).queueMessageLinkFetch(() => {
-                                                  const useGameOrganizationInviteFetch = content(18597).useGameOrganizationInviteFetch;
+                                                const result2 = code(18613).queueMessageLinkFetch(() => {
+                                                  const useGameOrganizationInviteFetch = content(18620).useGameOrganizationInviteFetch;
                                                   const items = [code];
                                                   return useGameOrganizationInviteFetch.fetchMany(items);
                                                 });
-                                                const tmpResult7 = code(18590);
+                                                const tmpResult7 = code(18613);
                                               }
-                                              tmpResult6 = code(14347);
+                                              tmpResult6 = code(14365);
                                             } else {
                                               if (code(5665).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
                                                 if (code(5665).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                                                   if (code(5665).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                    const embedApplication = code(11908).getEmbedApplication(code);
-                                                    const tmpResult8 = code(11908);
+                                                    const embedApplication = code(11922).getEmbedApplication(code);
+                                                    const tmpResult8 = code(11922);
                                                   } else {
                                                     const _Error = Error;
                                                     const _HermesInternal = HermesInternal;
@@ -328,7 +328,7 @@ function resolveMessageCodedLinks(content) {
                                                   }
                                                 }
                                               }
-                                              closure_1(18599)(type, code);
+                                              closure_1(18622)(type, code);
                                             }
                                           }
                                         }

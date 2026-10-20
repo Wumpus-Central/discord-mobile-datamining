@@ -1,8 +1,8 @@
-// === Module 12077: usePollDurationOptions ===
+// === Module 12092: usePollDurationOptions ===
 
-// Module 12077 (usePollDurationOptions)
+// Module 12092 (usePollDurationOptions)
 import util from "util" /* 1128 */;
-import PollsConstants from "PollsConstants" /* 8254 */;
+import PollsConstants from "PollsConstants" /* 8258 */;
 import size from "module_2" /* 2 */;
 
 const PollDurations = PollsConstants.PollDurations;

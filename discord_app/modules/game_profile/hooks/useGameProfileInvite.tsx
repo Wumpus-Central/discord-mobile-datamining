@@ -1,8 +1,8 @@
-// === Module 9222: useGameProfileInvite ===
+// === Module 9234: useGameProfileInvite ===
 
-// Module 9222 (useGameProfileInvite)
+// Module 9234 (useGameProfileInvite)
 import DurationsDefault from "Durations" /* 1104 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8786 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8798 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2022 */;

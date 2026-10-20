@@ -1,11 +1,11 @@
-// === Module 18112: GooglePlayPriceChangeActionSheet ===
+// === Module 18135: GooglePlayPriceChangeActionSheet ===
 
-// Module 18112 (GooglePlayPriceChangeActionSheet)
+// Module 18135 (GooglePlayPriceChangeActionSheet)
 import nativeDefault from "native" /* 587 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2059 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 18113 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 18136 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -193,9 +193,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GooglePl
   const tmpResult9 = markAsDismissed(2054);
   const intervalStringAsNoun = markAsDismissed(2054).getIntervalStringAsNoun(tmpResult9.getInterval(str).intervalType);
   const tmpResult10 = markAsDismissed(2054);
-  const tmpResult11 = markAsDismissed(7285);
-  const formatPriceResult = markAsDismissed(7285).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
-  const tmpResult12 = markAsDismissed(7285);
+  const tmpResult11 = markAsDismissed(7288);
+  const formatPriceResult = markAsDismissed(7288).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
+  const tmpResult12 = markAsDismissed(7288);
   BottomSheet = tmp(5226).BottomSheet;
   ({ container, textContainer } = tmp4);
   const obj7 = { variant: "heading-xl/bold", style: tmp4.header, children: null };
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GooglePl
   const body = tmp4.body;
   const intl2 = tmp(1128).intl;
   const obj8 = { subscriptionName: tierDisplayNameByPlanId, changeDate: null, interval: null, newPrice: null, oldPrice: null, hc_article_url: null };
-  const formatPriceResult1 = markAsDismissed(7285).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
+  const formatPriceResult1 = markAsDismissed(7288).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
   obj8.changeDate = new Date(stateFromStores.expectedChargeTime);
   obj8.interval = intervalStringAsNoun;
   obj8.newPrice = formatPriceResult1;
@@ -265,9 +265,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GooglePl
   const tmp2Result5 = markAsDismissed(2054);
   const intervalStringAsNoun = markAsDismissed(2054).getIntervalStringAsNoun(tmp2Result5.getInterval(str).intervalType);
   const tmp2Result6 = markAsDismissed(2054);
-  const tmp2Result7 = markAsDismissed(7285);
-  const formatPriceResult = markAsDismissed(7285).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
-  const tmp2Result8 = markAsDismissed(7285);
+  const tmp2Result7 = markAsDismissed(7288);
+  const formatPriceResult = markAsDismissed(7288).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
+  const tmp2Result8 = markAsDismissed(7288);
   const obj3 = { children: null };
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.textContainer, children: null };
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GooglePl
   const obj7 = { variant: "text-md/medium", style: tmp.body, children: null };
   const intl2 = tmp2(1128).intl;
   const obj8 = { subscriptionName: tierDisplayNameByPlanId, changeDate: null, interval: null, newPrice: null, oldPrice: null, hc_article_url: null };
-  const formatPriceResult1 = markAsDismissed(7285).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
+  const formatPriceResult1 = markAsDismissed(7288).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
   obj8.changeDate = new Date(stateFromStores.expectedChargeTime);
   obj8.interval = intervalStringAsNoun;
   obj8.newPrice = formatPriceResult1;

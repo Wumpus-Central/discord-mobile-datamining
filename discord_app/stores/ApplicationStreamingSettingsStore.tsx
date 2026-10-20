@@ -1,6 +1,6 @@
-// === Module 5835: ApplicationStreamingSettingsStore ===
+// === Module 5837: ApplicationStreamingSettingsStore ===
 
-// Module 5835 (ApplicationStreamingSettingsStore)
+// Module 5837 (ApplicationStreamingSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 5680 */;

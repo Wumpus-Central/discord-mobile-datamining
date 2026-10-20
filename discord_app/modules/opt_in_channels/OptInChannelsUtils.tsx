@@ -1,19 +1,19 @@
-// === Module 11144: OptInChannelsUtils ===
+// === Module 11155: OptInChannelsUtils ===
 
-// Module 11144 (OptInChannelsUtils)
+// Module 11155 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import _modDef2050 from "module_2050" /* 2050 */;
 import useChannelName from "useChannelName" /* 5565 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6775 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7154 */;
-import ChannelListState from "ChannelListState" /* 7583 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11145 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6778 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7157 */;
+import ChannelListState from "ChannelListState" /* 7586 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11156 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7155 */;
-import ReadStateStore from "ReadStateStore" /* 6719 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7158 */;
+import ReadStateStore from "ReadStateStore" /* 6722 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -27,8 +27,8 @@ const Constants = fn(1087);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
 const ChannelConstants = fn(4807);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7589).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6653).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7592).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6656).ReadStateTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelBrowserSections(arg0, _categories, arg2, rowHeight) {

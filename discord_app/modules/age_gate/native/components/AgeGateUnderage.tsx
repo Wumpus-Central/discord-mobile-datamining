@@ -1,9 +1,9 @@
-// === Module 17136: AgeGateUnderage ===
+// === Module 17155: AgeGateUnderage ===
 
-// Module 17136 (AgeGateUnderage)
+// Module 17155 (AgeGateUnderage)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6872 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6985 */;
+import NavigatorHeader from "NavigatorHeader" /* 6875 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
         } else {
           tmp15 = cResult[7];
         }
-        tmp(6878).useNavigatorBackPressHandler(tmp15);
+        tmp(6881).useNavigatorBackPressHandler(tmp15);
         if (cResult[8] !== tmp4) {
           const intl = tmp(1128).intl;
           const string = intl.string;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
           if (cResult[10] !== tmp8) {
             let tmp22 = null;
             if (!tmp8) {
-              tmp22 = closure_6(tmp7(7016), {});
+              tmp22 = closure_6(tmp7(7019), {});
             }
             cResult[10] = tmp8;
             cResult[11] = tmp22;
@@ -80,8 +80,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp28 = closure_6(tmp7(7019), {});
-            const tmp29 = closure_6(tmp(7846).ShieldSpotIllustration, {});
+            const tmp28 = closure_6(tmp7(7022), {});
+            const tmp29 = closure_6(tmp(7850).ShieldSpotIllustration, {});
             cResult[12] = tmp29;
             cResult[13] = tmp28;
             let tmp26 = tmp28;
@@ -181,13 +181,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
             cResult[19] = stringResult1;
           }
           const obj9 = { style: tmp9.header, children: cResult[9] };
-          const tmp32 = closure_6(tmp7(7015), obj9);
+          const tmp32 = closure_6(tmp7(7018), obj9);
           cResult[14] = cResult[9];
           cResult[15] = tmp9.header;
           cResult[16] = tmp32;
           tmp30 = tmp32;
         }
-        const tmpResult2 = tmp(6878);
+        const tmpResult2 = tmp(6881);
       }
     }
   }

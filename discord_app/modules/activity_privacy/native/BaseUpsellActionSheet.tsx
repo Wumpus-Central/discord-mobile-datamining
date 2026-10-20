@@ -1,11 +1,11 @@
-// === Module 15928: BaseUpsellActionSheet ===
+// === Module 15947: BaseUpsellActionSheet ===
 
-// Module 15928 (BaseUpsellActionSheet)
+// Module 15947 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import GuildIconDefault from "GuildIcon" /* 6831 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15926 */;
+import GuildIconDefault from "GuildIcon" /* 6834 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15945 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 
@@ -56,7 +56,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function StoreG
   const obj = guildId(576);
   const stateFromStores = guildId(504).useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp(6831).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp(6834).GuildIconSizes.XSMALL };
     const tmp12 = closure_7(GuildIconDefault, obj2);
     cResult[3] = stateFromStores;
     cResult[4] = tmp12;
@@ -71,7 +71,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function StoreG
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = { guild: stateFromStores, size: null };
   const obj = guildId(504);
-  obj2.size = guildId(6831).GuildIconSizes.XSMALL;
+  obj2.size = guildId(6834).GuildIconSizes.XSMALL;
   return closure_7(GuildIconDefault, obj2);
 });
 ReactCompilerGating = fn(558);
@@ -80,11 +80,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   ({ guildIds, direction, onPress } = arg0);
   const tmp4 = closure_9();
   if (cResult[0] !== guildIds) {
-    const result = tmp(15926).sortGuildIdsByFrecency(guildIds);
+    const result = tmp(15945).sortGuildIdsByFrecency(guildIds);
     cResult[0] = guildIds;
     cResult[1] = result;
     arr = result;
-    const tmpResult = tmp(15926);
+    const tmpResult = tmp(15945);
   } else {
     arr = cResult[1];
   }
@@ -247,7 +247,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       }
     }
     const statusRow = tmp4.statusRow;
-    if (direction === tmp(15926).ChangeDirection.RESTRICTING) {
+    if (direction === tmp(15945).ChangeDirection.RESTRICTING) {
       class B {
         constructor() {
           return closure_1.map(() => { ... });

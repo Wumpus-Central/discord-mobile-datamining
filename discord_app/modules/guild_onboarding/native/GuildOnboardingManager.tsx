@@ -1,11 +1,11 @@
-// === Module 18546: GuildOnboardingManager ===
+// === Module 18569: GuildOnboardingManager ===
 
-// Module 18546 (GuildOnboardingManager)
-import doGuildOnboardingDefault from "doGuildOnboarding" /* 7138 */;
+// Module 18569 (GuildOnboardingManager)
+import doGuildOnboardingDefault from "doGuildOnboarding" /* 7141 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 let require = fn;
 const GuildFeatures = fn(1087).GuildFeatures;
@@ -56,7 +56,7 @@ const prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(7138).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(7141).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);

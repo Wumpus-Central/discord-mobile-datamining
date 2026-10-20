@@ -1,16 +1,16 @@
-// === Module 5947: MarkupChannelMentionRule ===
+// === Module 5950: MarkupChannelMentionRule ===
 
-// Module 5947 (MarkupChannelMentionRule)
+// Module 5950 (MarkupChannelMentionRule)
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef1951 from "module_1951" /* 1951 */;
 import StringUtils from "StringUtils" /* 2034 */;
 import useChannelName from "useChannelName" /* 5565 */;
 import LinkUtils from "LinkUtils" /* 5567 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5946 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5948 */;
-import ChannelUtils from "ChannelUtils" /* 5949 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 5957 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5949 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5951 */;
+import ChannelUtils from "ChannelUtils" /* 5952 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 5960 */;
 import GatedChannelStore from "GatedChannelStore" /* 4852 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildStore from "GuildStore" /* 4822 */;

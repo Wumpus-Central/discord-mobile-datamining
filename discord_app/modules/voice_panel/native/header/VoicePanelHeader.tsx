@@ -1,37 +1,37 @@
-// === Module 18224: VoicePanelHeader ===
+// === Module 18247: VoicePanelHeader ===
 
-// Module 18224 (VoicePanelHeader)
+// Module 18247 (VoicePanelHeader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
 import spring from "spring" /* 5208 */;
 import useChannelName from "useChannelName" /* 5565 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10699 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 11402 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11557 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18200 */;
-import useStableParticipant from "useStableParticipant" /* 18229 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10710 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11413 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11568 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18223 */;
+import useStableParticipant from "useStableParticipant" /* 18252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6723 */;
 import ExperimentStore from "ExperimentStore" /* 5151 */;
-import StageMusicStore from "StageMusicStore" /* 11390 */;
+import StageMusicStore from "StageMusicStore" /* 11401 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
-import SpeakingStore from "SpeakingStore" /* 6633 */;
+import SpeakingStore from "SpeakingStore" /* 6636 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10693);
+const VoicePanelConstants = fn(10704);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(10696).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(10691).VoicePanelControlsModes;
+const EDGE_GUTTER = fn(10707).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10702).VoicePanelControlsModes;
 const ParticipantTypes = fn(5593).ParticipantTypes;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
@@ -477,7 +477,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
         cResult[2] = stateFromStores;
         cResult[3] = stringResult;
       } else {
-        const tmp4Result = importDefault(stateFromStores ? 11401 : 8405);
+        const tmp4Result = importDefault(stateFromStores ? 11412 : 8409);
         if (cResult[4] !== stateFromStores) {
           const fn2 = function p() {
             return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -531,7 +531,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 11401 : 8405),
+        icon: importDefault(stateFromStores ? 11412 : 8409),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }

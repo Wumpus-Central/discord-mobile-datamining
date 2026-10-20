@@ -1,16 +1,16 @@
-// === Module 14413: GuildEventVoiceBanner ===
+// === Module 14431: GuildEventVoiceBanner ===
 
-// Module 14413 (GuildEventVoiceBanner)
+// Module 14431 (GuildEventVoiceBanner)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8803 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8826 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8815 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8838 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6732).isGuildScheduledEventActive;
+let closure_6 = fn(6735).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4945);

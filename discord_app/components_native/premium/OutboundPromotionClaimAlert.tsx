@@ -1,10 +1,10 @@
-// === Module 14670: OutboundPromotionClaimAlert ===
+// === Module 14688: OutboundPromotionClaimAlert ===
 
-// Module 14670 (OutboundPromotionClaimAlert)
+// Module 14688 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 587 */;
 import LinkingDefault from "Linking" /* 5622 */;
-import ClipboardUtils from "ClipboardUtils" /* 7231 */;
-import PromotionUtils from "PromotionUtils" /* 9475 */;
+import ClipboardUtils from "ClipboardUtils" /* 7234 */;
+import PromotionUtils from "PromotionUtils" /* 9488 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

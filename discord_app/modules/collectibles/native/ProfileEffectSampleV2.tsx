@@ -1,13 +1,13 @@
-// === Module 9310: ProfileEffectSampleV2 ===
+// === Module 9322: ProfileEffectSampleV2 ===
 
-// Module 9310 (ProfileEffectSampleV2)
+// Module 9322 (ProfileEffectSampleV2)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 9309 */;
-import _modDef9311 from "module_9311" /* 9311 */;
-import ProfileEffectDefault from "ProfileEffect" /* 9312 */;
+import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 9321 */;
+import _modDef9323 from "module_9323" /* 9323 */;
+import ProfileEffectDefault from "ProfileEffect" /* 9324 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4945 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileE
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef9311 };
+      const obj2 = { uri: _modDef9323 };
       cResult[3] = obj2;
       let tmp7 = obj2;
     } else {
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileE
   const obj = { style: items, children: null };
   items[1] = profileBackground;
   const obj2 = { style: tmp.sampleProfileImage, source: null, accessible: false, resizeMode: "cover" };
-  const obj3 = { uri: _modDef9311 };
+  const obj3 = { uri: _modDef9323 };
   obj2.source = obj3;
   const items1 = [React4(FastImageDefault, obj2), , ];
   let tmp4Result = !flag;

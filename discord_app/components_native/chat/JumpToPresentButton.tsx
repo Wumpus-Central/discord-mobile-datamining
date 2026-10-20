@@ -1,16 +1,16 @@
-// === Module 12957: JumpToPresentButton ===
+// === Module 12975: JumpToPresentButton ===
 
-// Module 12957 (JumpToPresentButton)
+// Module 12975 (JumpToPresentButton)
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 5213 */;
 import noop from "module_19" /* 19 */;
-import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9697 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6450 */;
-import MessageStore from "MessageStore" /* 5965 */;
+import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9710 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6453 */;
+import MessageStore from "MessageStore" /* 5968 */;
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9697);
+let useChatBottomManagerUIStore = fn(9710);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
 const jsx = fn(21).jsx;
@@ -208,10 +208,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JumpToPr
     return tmp;
   });
   const obj = channelId(504);
-  const isVoicePanelMounted = channelId(11439).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(11439);
-  const isVoicePanelOpen = channelId(11439).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(11439);
+  const isVoicePanelMounted = channelId(11450).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(11450);
+  const isVoicePanelOpen = channelId(11450).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(11450);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => null != MessageStore.getMessages(channelId).jumpReturnTargetId);
   if (!tmp5) {
@@ -235,11 +235,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JumpToPr
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12959), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(12958), { accessibilityLabel: stringResult, icon: screenIndex(12959), onPress: channelId.onJumpToPresent });
-    const tmp16 = screenIndex(12958);
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12977), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(12976), { accessibilityLabel: stringResult, icon: screenIndex(12977), onPress: channelId.onJumpToPresent });
+    const tmp16 = screenIndex(12976);
   } else {
-    tmp12Result = jsx(tmp3(12960).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(12978).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

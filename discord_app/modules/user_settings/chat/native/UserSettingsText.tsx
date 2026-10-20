@@ -1,19 +1,19 @@
-// === Module 16552: UserSettingsText ===
+// === Module 16571: UserSettingsText ===
 
-// Module 16552 (UserSettingsText)
+// Module 16571 (UserSettingsText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 4776 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5824 */;
-import TableRadioRow from "TableRadioRow" /* 6932 */;
-import TableRadioGroup from "TableRadioGroup" /* 6933 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7035 */;
-import TableSwitchRow from "TableSwitchRow" /* 7241 */;
-import _modDef10084 from "module_10084" /* 10084 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5826 */;
+import TableRadioRow from "TableRadioRow" /* 6935 */;
+import TableRadioGroup from "TableRadioGroup" /* 6936 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7038 */;
+import TableSwitchRow from "TableSwitchRow" /* 7244 */;
+import _modDef10095 from "module_10095" /* 10095 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 import SubscriptionStore from "SubscriptionStore" /* 2059 */;
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                       }
                       function renderNitroUpsellText() {
                         const obj = { style: closure_0.nitroUpsell, children: null };
-                        const items = [__initData(native.Icon, { source: _modDef10084, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
+                        const items = [__initData(native.Icon, { source: _modDef10095, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
                         const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
                         const intl = util.intl;
                         obj3.children = intl.format(util.t.uW1zul, {

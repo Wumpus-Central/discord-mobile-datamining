@@ -1,6 +1,6 @@
-// === Module 6802: ImpersonateActionCreators ===
+// === Module 6805: ImpersonateActionCreators ===
 
-// Module 6802 (ImpersonateActionCreators)
+// Module 6805 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -12,7 +12,7 @@ import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import GuildRoleStore from "GuildRoleStore" /* 4854 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import ImpersonateStore from "ImpersonateStore" /* 4853 */;
 
 require = fn;

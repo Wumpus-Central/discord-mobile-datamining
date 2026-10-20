@@ -1,6 +1,6 @@
-// === Module 18901: EnableCommunitySharedStyles ===
+// === Module 18924: EnableCommunitySharedStyles ===
 
-// Module 18901 (EnableCommunitySharedStyles)
+// Module 18924 (EnableCommunitySharedStyles)
 import _mod17 from "module_17" /* 17 */;
 import createStyles from "createStyles" /* 4945 */;
 import size from "module_2" /* 2 */;

@@ -1,17 +1,17 @@
-// === Module 11691: MentionableSelectOptionParts ===
+// === Module 11704: MentionableSelectOptionParts ===
 
-// Module 11691 (MentionableSelectOptionParts)
+// Module 11704 (MentionableSelectOptionParts)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5977 */;
-import RoleIconUtils from "RoleIconUtils" /* 7229 */;
-import RoleIconDefault from "RoleIcon" /* 7247 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8911 */;
-import DiscordTagDefault from "DiscordTag" /* 9054 */;
-import UserIcon from "UserIcon" /* 11692 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5980 */;
+import RoleIconUtils from "RoleIconUtils" /* 7232 */;
+import RoleIconDefault from "RoleIcon" /* 7250 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8923 */;
+import DiscordTagDefault from "DiscordTag" /* 9066 */;
+import UserIcon from "UserIcon" /* 11705 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4854 */;
 import PresenceStore from "PresenceStore" /* 5674 */;

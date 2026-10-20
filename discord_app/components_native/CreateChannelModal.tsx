@@ -1,6 +1,6 @@
-// === Module 8870: CreateChannelModal ===
+// === Module 8882: CreateChannelModal ===
 
-// Module 8870 (CreateChannelModal)
+// Module 8882 (CreateChannelModal)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,16 +11,16 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5001 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useInitialValueDefault from "useInitialValue" /* 5560 */;
-import ChannelUtils from "ChannelUtils" /* 5949 */;
-import TableRow from "TableRow" /* 6851 */;
-import NavigatorHeader from "NavigatorHeader" /* 6872 */;
-import FormRadio from "FormRadio" /* 6936 */;
-import HeaderActionButton from "HeaderActionButton" /* 7431 */;
-import Form from "Form" /* 8871 */;
-import useCreateChannelSubmitDefault from "useCreateChannelSubmit" /* 8891 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8896 */;
-import sanitizeChannelNameDefault from "sanitizeChannelName" /* 8897 */;
-import AddModeratorsDefault from "AddModerators" /* 8922 */;
+import ChannelUtils from "ChannelUtils" /* 5952 */;
+import TableRow from "TableRow" /* 6854 */;
+import NavigatorHeader from "NavigatorHeader" /* 6875 */;
+import FormRadio from "FormRadio" /* 6939 */;
+import HeaderActionButton from "HeaderActionButton" /* 7434 */;
+import Form from "Form" /* 8883 */;
+import useCreateChannelSubmitDefault from "useCreateChannelSubmit" /* 8903 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8908 */;
+import sanitizeChannelNameDefault from "sanitizeChannelName" /* 8909 */;
+import AddModeratorsDefault from "AddModerators" /* 8934 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
@@ -167,7 +167,7 @@ let isGuildOwner = fn(4818).isGuildOwner;
 const Constants = fn(1087);
 const ChannelTypes = Constants.ChannelTypes;
 ({ GuildFeatures: closure_15, Permissions: closure_16, AnalyticEvents: closure_17, HelpdeskArticles: closure_18 } = Constants);
-const RowType = fn(7819).RowType;
+const RowType = fn(7823).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 const createStyles = fn(4945);
@@ -175,34 +175,34 @@ let obj2 = { addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGR
 let closure_23 = createStyles.createStyles(obj2);
 let obj4 = {};
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj4[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(8496).TextIcon };
-let obj5 = { IconComponent: fn(8496).TextIcon };
-obj4[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(8504).ForumIcon };
-let obj6 = { IconComponent: fn(8504).ForumIcon };
-obj4[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(8517).VoiceNormalIcon };
-let obj7 = { IconComponent: fn(8517).VoiceNormalIcon };
-obj4[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(8513).StageIcon };
-let obj8 = { IconComponent: fn(8513).StageIcon };
-obj4[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(8510).AnnouncementsIcon };
-let obj9 = { IconComponent: fn(8510).AnnouncementsIcon };
-obj4[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(8503).ImageIcon };
-let obj10 = { IconComponent: fn(8503).ImageIcon };
-obj4[ChannelTypes.GUILD_APP] = { IconComponent: fn(8522).AppsIcon };
+obj4[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(8500).TextIcon };
+let obj5 = { IconComponent: fn(8500).TextIcon };
+obj4[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(8508).ForumIcon };
+let obj6 = { IconComponent: fn(8508).ForumIcon };
+obj4[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(8521).VoiceNormalIcon };
+let obj7 = { IconComponent: fn(8521).VoiceNormalIcon };
+obj4[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(8517).StageIcon };
+let obj8 = { IconComponent: fn(8517).StageIcon };
+obj4[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(8514).AnnouncementsIcon };
+let obj9 = { IconComponent: fn(8514).AnnouncementsIcon };
+obj4[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(8507).ImageIcon };
+let obj10 = { IconComponent: fn(8507).ImageIcon };
+obj4[ChannelTypes.GUILD_APP] = { IconComponent: fn(8526).AppsIcon };
 let obj12 = {};
-let obj11 = { IconComponent: fn(8522).AppsIcon };
-obj12[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(8494).TextLockIcon };
-let obj13 = { IconComponent: fn(8494).TextLockIcon };
-obj12[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(8502).ForumLockIcon };
-let obj14 = { IconComponent: fn(8502).ForumLockIcon };
-obj12[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(8514).VoiceLockIcon };
-let obj15 = { IconComponent: fn(8514).VoiceLockIcon };
-obj12[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(8512).StageLockIcon };
-let obj16 = { IconComponent: fn(8512).StageLockIcon };
-obj12[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(8509).AnnouncementsLockIcon };
-let obj17 = { IconComponent: fn(8509).AnnouncementsLockIcon };
-obj12[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(8501).ImageLockIcon };
-let obj18 = { IconComponent: fn(8501).ImageLockIcon };
-obj12[ChannelTypes.GUILD_APP] = { IconComponent: fn(8521).AppsLockIcon };
+let obj11 = { IconComponent: fn(8526).AppsIcon };
+obj12[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(8498).TextLockIcon };
+let obj13 = { IconComponent: fn(8498).TextLockIcon };
+obj12[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(8506).ForumLockIcon };
+let obj14 = { IconComponent: fn(8506).ForumLockIcon };
+obj12[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(8518).VoiceLockIcon };
+let obj15 = { IconComponent: fn(8518).VoiceLockIcon };
+obj12[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(8516).StageLockIcon };
+let obj16 = { IconComponent: fn(8516).StageLockIcon };
+obj12[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(8513).AnnouncementsLockIcon };
+let obj17 = { IconComponent: fn(8513).AnnouncementsLockIcon };
+obj12[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(8505).ImageLockIcon };
+let obj18 = { IconComponent: fn(8505).ImageLockIcon };
+obj12[ChannelTypes.GUILD_APP] = { IconComponent: fn(8525).AppsLockIcon };
 let ReactCompilerGating = fn(558);
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelTypeRow(selected) {
   const cResult = c.c(27);
@@ -1232,7 +1232,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
                     tmp42[1] = tmp6;
                     tmp42[2] = first;
                     tmp42[3] = tmp24[1];
-                    const tmp43 = closure_20(tmp(8909).AddMembersBody, tmp42);
+                    const tmp43 = closure_20(tmp(8921).AddMembersBody, tmp42);
                     cResult[24] = tmp6;
                     cResult[25] = first;
                     cResult[26] = tmp43;
@@ -1298,7 +1298,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
                         }
                       }
                       const obj7 = { type: "critical", message: tmp28.message, role: "alert" };
-                      obj6.children = closure_20(tmp(7897).InlineNotice, obj7);
+                      obj6.children = closure_20(tmp(7901).InlineNotice, obj7);
                       tmp37 = closure_20(first, obj6);
                     }
                   }
@@ -1369,11 +1369,11 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
         }
         if (tmp) {
           if (row.rowType === constants2.ROLE) {
-            result.push(channelType(5949).permissionOverwriteForRole(row.id, channelType));
-            const obj2 = channelType(5949);
+            result.push(channelType(5952).permissionOverwriteForRole(row.id, channelType));
+            const obj2 = channelType(5952);
           } else if (row.rowType === tmp2.MEMBER) {
-            result.push(channelType(5949).permissionOverwriteForUser(row.id, channelType));
-            const obj = channelType(5949);
+            result.push(channelType(5952).permissionOverwriteForUser(row.id, channelType));
+            const obj = channelType(5952);
           }
         }
       });
@@ -1513,7 +1513,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
 });
 const constants4 = { CREATE_CHANNEL: "CREATE_CHANNEL", ADD_MEMBERS: "ADD_MEMBERS", ADD_MODERATORS: "ADD_MODERATORS" };
 ReactCompilerGating = fn(558);
-let obj19 = { IconComponent: fn(8521).AppsLockIcon };
+let obj19 = { IconComponent: fn(8525).AppsLockIcon };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/CreateChannelModal.tsx");
 
@@ -1543,7 +1543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateCh
     }
     return tmp6;
   }
-  const tmp7 = closure_20(tmp(7043).Navigator, { screens, initialRouteStack: initialStack });
+  const tmp7 = closure_20(tmp(7046).Navigator, { screens, initialRouteStack: initialStack });
   cResult[2] = initialStack;
   cResult[3] = screens;
   cResult[4] = tmp7;

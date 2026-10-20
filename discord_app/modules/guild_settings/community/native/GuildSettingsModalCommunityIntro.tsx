@@ -1,20 +1,20 @@
-// === Module 18892: GuildSettingsModalCommunityIntro ===
+// === Module 18915: GuildSettingsModalCommunityIntro ===
 
-// Module 18892 (GuildSettingsModalCommunityIntro)
+// Module 18915 (GuildSettingsModalCommunityIntro)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import ToastUtils from "ToastUtils" /* 5624 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5648 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8926 */;
-import LightbulbIcon from "LightbulbIcon" /* 9877 */;
-import AnalyticsIcon from "AnalyticsIcon" /* 10068 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 18897 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8938 */;
+import LightbulbIcon from "LightbulbIcon" /* 9889 */;
+import AnalyticsIcon from "AnalyticsIcon" /* 10079 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 18920 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8927 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8939 */;
 
 const require = globalThis.__r;
 

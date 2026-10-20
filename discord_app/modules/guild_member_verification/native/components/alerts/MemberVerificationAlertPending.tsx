@@ -1,8 +1,8 @@
-// === Module 6786: MemberVerificationAlertPending ===
+// === Module 6789: MemberVerificationAlertPending ===
 
-// Module 6786 (MemberVerificationAlertPending)
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6783 */;
-import MemberVerificationAlertDefault from "MemberVerificationAlert" /* 6787 */;
+// Module 6789 (MemberVerificationAlertPending)
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6786 */;
+import MemberVerificationAlertDefault from "MemberVerificationAlert" /* 6790 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
       }
       const obj4 = {};
       const merged = Object.assign(tmp6);
-      obj4.icon = tmp(6788).ClipboardListIcon;
+      obj4.icon = tmp(6791).ClipboardListIcon;
       obj4.header = tmp12;
       obj4.subtitle = tmp13;
       obj4.buttons = tmp26;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   }, items);
   const obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = guildId(6788).ClipboardListIcon;
+  obj.icon = guildId(6791).ClipboardListIcon;
   const intl = guildId(1128).intl;
   obj.header = intl.string(guildId(1128).t.zhfXbs);
   const intl2 = guildId(1128).intl;
@@ -161,5 +161,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   items1[1] = closure_6(guildId(5205).Button, obj4);
   obj2.children = items1;
   obj.buttons = closure_8(closure_7, obj2);
-  return closure_6(onClose(6787), obj);
+  return closure_6(onClose(6790), obj);
 });

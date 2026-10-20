@@ -1,6 +1,6 @@
-// === Module 12904: ForumPostMedia ===
+// === Module 12922: ForumPostMedia ===
 
-// Module 12904 (ForumPostMedia)
+// Module 12922 (ForumPostMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1498 */;
@@ -8,9 +8,9 @@ import UserSettings from "UserSettings" /* 4776 */;
 import shared from "shared" /* 4952 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5547 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10791 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 12905 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12907 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10802 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 12923 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12925 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -243,10 +243,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
     if (cResult[0] !== isMediaPost) {
       const obj2 = {};
       const merged = Object.assign(isMediaPost);
-      const tmp29 = closure_9(ref(12906), obj2);
+      const tmp29 = closure_9(ref(12924), obj2);
       cResult[0] = isMediaPost;
       cResult[1] = tmp29;
-      const tmp25 = ref(12906);
+      const tmp25 = ref(12924);
     }
   } else {
     if (tmpResult.isAndroid()) {
@@ -272,7 +272,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
       tmp8 = cResult[5];
     }
     if (null != isMediaPost.obscureReason) {
-      const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7340).AGE_VERIFICATION_OBSCURABLE_REASONS;
+      const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7343).AGE_VERIFICATION_OBSCURABLE_REASONS;
       if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(isMediaPost.obscureReason)) {
         if (tmp7) {
           if (cResult[6] === isMediaPost.containerStyle) {
@@ -310,7 +310,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
                 }
               }
               const obj5 = { androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, activeOpacity: 0, onPress: M, children: tmp8 };
-              const tmp38 = closure_9(tmp(6856).PressableOpacity, obj5);
+              const tmp38 = closure_9(tmp(6859).PressableOpacity, obj5);
               cResult[10] = tmp8;
               cResult[11] = tmp38;
             } else {
@@ -385,9 +385,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(12906), obj2);
+    let tmp6Result = closure_9(ref(12924), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(12906);
+    const tmp19 = ref(12924);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -403,7 +403,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
     tmp3Result = tmp3(1384);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7340).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7343).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };
@@ -414,12 +414,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
           androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
           activeOpacity: 0,
           onPress() {
-                  const obj = ref(7827);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6605).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const obj = ref(7831);
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6608).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };
-        obj5.children = tmp12(tmp3(6856).PressableOpacity, obj6);
+        obj5.children = tmp12(tmp3(6859).PressableOpacity, obj6);
         let tmp12Result = tmp12(closure_5, obj5);
       }
       return tmp12Result;
@@ -443,7 +443,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
         },
       children: tmp6Result
     };
-    obj7.children = tmp12(tmp3(6856).PressableOpacity, obj8);
+    obj7.children = tmp12(tmp3(6859).PressableOpacity, obj8);
     tmp12Result = tmp12(closure_5, obj7);
   } else {
     const obj9 = { style: null, ref: null, children: null };

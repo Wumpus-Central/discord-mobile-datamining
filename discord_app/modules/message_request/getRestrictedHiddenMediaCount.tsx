@@ -1,8 +1,8 @@
-// === Module 18079: getRestrictedHiddenMediaCount ===
+// === Module 18102: getRestrictedHiddenMediaCount ===
 
-// Module 18079 (getRestrictedHiddenMediaCount)
-import StickersUtils from "StickersUtils" /* 6442 */;
-import formatMessageForwards from "formatMessageForwards" /* 8256 */;
+// Module 18102 (getRestrictedHiddenMediaCount)
+import StickersUtils from "StickersUtils" /* 6445 */;
+import formatMessageForwards from "formatMessageForwards" /* 8260 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");

@@ -1,6 +1,6 @@
-// === Module 10904: TenureBadgeWithheldStateExperiment ===
+// === Module 10915: TenureBadgeWithheldStateExperiment ===
 
-// Module 10904 (TenureBadgeWithheldStateExperiment)
+// Module 10915 (TenureBadgeWithheldStateExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

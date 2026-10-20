@@ -1,19 +1,19 @@
-// === Module 16960: CollectiblesShopCardsGrid ===
+// === Module 16979: CollectiblesShopCardsGrid ===
 
-// Module 16960 (CollectiblesShopCardsGrid)
+// Module 16979 (CollectiblesShopCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9275 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9278 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9287 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9290 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7596 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7599 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9275).COLLECTIBLES_SHOP_CARD_GAP } };
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9287).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopCardGridItem(arg0) {
@@ -69,7 +69,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopCar
   return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, { newValue: memo, children: jsx(CollectiblesShopCardV2Default, { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground }) });
 });
 ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", gap: fn(9275).COLLECTIBLES_SHOP_CARD_GAP };
+let obj3 = { flexDirection: "row", gap: fn(9287).COLLECTIBLES_SHOP_CARD_GAP };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
 
@@ -210,14 +210,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(16959).useCardLayout();
+  const cardLayout = products(16978).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   const obj2 = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, contentContainerStyle: null, children: null };
-  let obj = products(16959);
-  obj2.contentContainerStyle = { gap: products(9275).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
+  let obj = products(16978);
+  obj2.contentContainerStyle = { gap: products(9287).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
   obj2.children = memo.map((arr, index) => {
     closure_0 = index;
     return cardWidth(muteBundleStaticBackground, {

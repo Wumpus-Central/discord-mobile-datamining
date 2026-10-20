@@ -1,10 +1,10 @@
-// === Module 12897: ForumPostPinIcon ===
+// === Module 12915: ForumPostPinIcon ===
 
-// Module 12897 (ForumPostPinIcon)
+// Module 12915 (ForumPostPinIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import _modDef12898 from "module_12898" /* 12898 */;
+import _modDef12916 from "module_12916" /* 12916 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,8 +30,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
       let tmp5 = cResult[2];
     }
     if (cResult[3] !== tmp4.pinIcon) {
-      const obj2 = { source: _modDef12898, style: tmp4.pinIcon };
-      const tmp9 = jsx(native.Icon, { source: _modDef12898, style: tmp4.pinIcon });
+      const obj2 = { source: _modDef12916, style: tmp4.pinIcon };
+      const tmp9 = jsx(native.Icon, { source: _modDef12916, style: tmp4.pinIcon });
       cResult[3] = tmp4.pinIcon;
       cResult[4] = tmp9;
       let tmp6 = tmp9;
@@ -58,8 +58,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   tmp5 = items;
 }) : (function ForumPostPinIcon(containerStyle) {
   const tmp = closure_5();
-  const obj = { style: null, children: jsx(native.Icon, { source: _modDef12898, style: tmp.pinIcon }) };
+  const obj = { style: null, children: jsx(native.Icon, { source: _modDef12916, style: tmp.pinIcon }) };
   const items = [tmp.pin, containerStyle.containerStyle];
   obj.style = items;
-  return <View style={null}>{jsx(native.Icon, { source: _modDef12898, style: tmp.pinIcon })}</View>;
+  return <View style={null}>{jsx(native.Icon, { source: _modDef12916, style: tmp.pinIcon })}</View>;
 });

@@ -1,22 +1,22 @@
-// === Module 17811: MediaGridPlaceholder ===
+// === Module 17834: MediaGridPlaceholder ===
 
-// Module 17811 (MediaGridPlaceholder)
+// Module 17834 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5014 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13020 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 17810 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 17812 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13038 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 17833 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 17835 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9629);
+const SearchConstants = fn(9642);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: metroRequire, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -101,7 +101,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
     arr = cResult[3];
   }
   const obj = size(576);
-  const placeholderAnimatedStyle = size(17810).usePlaceholderAnimatedStyle(visible);
+  const placeholderAnimatedStyle = size(17833).usePlaceholderAnimatedStyle(visible);
   if (cResult[4] === placeholderAnimatedStyle) {
     if (cResult[5] === row.container) {
       if (cResult[6] === row.recentsContainer) {
@@ -293,7 +293,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
   cResult[6] = row.recentsContainer;
   cResult[7] = items2;
   tmp10 = items2;
-  const tmpResult4 = size(17810);
+  const tmpResult4 = size(17833);
 }) : (function RecentsMediaGridPlaceholder(visible) {
   ({ size: require, numRows } = visible);
   let memo;

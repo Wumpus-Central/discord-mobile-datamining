@@ -1,6 +1,6 @@
-// === Module 19028: components/StepsIndicator ===
+// === Module 19051: components/StepsIndicator ===
 
-// Module 19028 (components/StepsIndicator)
+// Module 19051 (components/StepsIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

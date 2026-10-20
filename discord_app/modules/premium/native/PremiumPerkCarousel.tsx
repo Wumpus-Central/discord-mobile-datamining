@@ -1,7 +1,7 @@
-// === Module 14564: PremiumPerkCarousel ===
+// === Module 14582: PremiumPerkCarousel ===
 
-// Module 14564 (PremiumPerkCarousel)
-import PremiumPerkCard from "PremiumPerkCard" /* 14508 */;
+// Module 14582 (PremiumPerkCarousel)
+import PremiumPerkCard from "PremiumPerkCard" /* 14526 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

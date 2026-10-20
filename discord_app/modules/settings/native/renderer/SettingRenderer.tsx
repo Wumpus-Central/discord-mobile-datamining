@@ -1,6 +1,6 @@
-// === Module 15764: SettingRenderer ===
+// === Module 15783: SettingRenderer ===
 
-// Module 15764 (SettingRenderer)
+// Module 15783 (SettingRenderer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,23 +11,23 @@ import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 
 import Text_Text from "Text/Text" /* 5195 */;
 import useToken from "useToken" /* 5213 */;
 import ToastUtils from "ToastUtils" /* 5624 */;
-import GuildIcon from "GuildIcon" /* 6831 */;
-import TableRow from "TableRow" /* 6851 */;
-import TableRadioGroup from "TableRadioGroup" /* 6933 */;
-import ClipboardUtils from "ClipboardUtils" /* 7231 */;
-import TableSwitchRow from "TableSwitchRow" /* 7241 */;
-import FormSwitch from "FormSwitch" /* 7242 */;
-import ClydeIcon from "ClydeIcon" /* 10489 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11490 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15765 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 15767 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 15768 */;
-import settings_tracking_Tracking from "settings/tracking/Tracking" /* 15769 */;
+import GuildIcon from "GuildIcon" /* 6834 */;
+import TableRow from "TableRow" /* 6854 */;
+import TableRadioGroup from "TableRadioGroup" /* 6936 */;
+import ClipboardUtils from "ClipboardUtils" /* 7234 */;
+import TableSwitchRow from "TableSwitchRow" /* 7244 */;
+import FormSwitch from "FormSwitch" /* 7245 */;
+import ClydeIcon from "ClydeIcon" /* 10500 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11501 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15784 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 15786 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 15787 */;
+import settings_tracking_Tracking from "settings/tracking/Tracking" /* 15788 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2069 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15763 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15782 */;
 import GuildStore from "GuildStore" /* 4822 */;
 
 const GuildIconDefault = GuildIcon;
@@ -100,7 +100,7 @@ function StaticSettingSearchResult(title) {
 let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11100);
+const SettingRendererConstants = fn(11112);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -638,8 +638,8 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(15767).useHighlightSettingItem(setting);
-  let obj = trailing(15767);
+  let highlightSettingItem = trailing(15786).useHighlightSettingItem(setting);
+  let obj = trailing(15786);
   const items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => _undefined.locale);
   trailing = undefined;
@@ -673,18 +673,18 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   let tmp12Result = null;
   if (null != IconComponent) {
     const obj4 = { IconComponent, variant };
-    tmp12Result = closure_14(tmp(6851).TableRow.Icon, obj4);
+    tmp12Result = closure_14(tmp(6854).TableRow.Icon, obj4);
   }
   obj3.icon = tmp12Result;
   let tmp12Result2 = null;
   if (null != trailing) {
     const obj5 = { text: trailing };
-    tmp12Result2 = closure_14(tmp(6851).TableRow.TrailingText, obj5);
+    tmp12Result2 = closure_14(tmp(6854).TableRow.TrailingText, obj5);
   }
   obj3.trailing = tmp12Result2;
   obj3.start = start;
   obj3.end = end;
-  const children = [closure_14(trailing(6851).TableRow, obj3), ];
+  const children = [closure_14(trailing(6854).TableRow, obj3), ];
   if (highlightSettingItem) {
     const obj6 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj6);

@@ -1,18 +1,18 @@
-// === Module 13705: CollectiblesShopGiftBadgePostPurchaseModal ===
+// === Module 13723: CollectiblesShopGiftBadgePostPurchaseModal ===
 
-// Module 13705 (CollectiblesShopGiftBadgePostPurchaseModal)
+// Module 13723 (CollectiblesShopGiftBadgePostPurchaseModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef2622 from "module_2622" /* 2622 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import XSmallIcon from "XSmallIcon" /* 6879 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7595 */;
-import ModalScreen from "ModalScreen" /* 7844 */;
-import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 13706 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import XSmallIcon from "XSmallIcon" /* 6882 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7598 */;
+import ModalScreen from "ModalScreen" /* 7848 */;
+import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 13724 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

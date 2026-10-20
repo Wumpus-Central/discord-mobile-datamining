@@ -1,10 +1,10 @@
-// === Module 17009: useUserSafetySettingsSelectedGuildId ===
+// === Module 17028: useUserSafetySettingsSelectedGuildId ===
 
-// Module 17009 (useUserSafetySettingsSelectedGuildId)
+// Module 17028 (useUserSafetySettingsSelectedGuildId)
 import GuildStore from "GuildStore" /* 4822 */;
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17005);
+const UserSettingsSafetySelectedGuildStore = fn(17024);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: closure_4 } = UserSettingsSafetySelectedGuildStore);
 const GuildFeatures = fn(1087).GuildFeatures;
 let ReactCompilerGating = fn(558);

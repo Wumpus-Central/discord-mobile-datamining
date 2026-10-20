@@ -1,13 +1,13 @@
-// === Module 16998: ManageSponsoredContentScreen ===
+// === Module 17017: ManageSponsoredContentScreen ===
 
-// Module 16998 (ManageSponsoredContentScreen)
+// Module 17017 (ManageSponsoredContentScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
 import _modDef2114 from "module_2114" /* 2114 */;
 import UserSettings from "UserSettings" /* 4776 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -76,7 +76,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function AdTopic
         }
       }
       const obj2 = { label: tmp9, subLabel: cResult[8], value: !tmp4, onValueChange: tmp8 };
-      const tmp19 = closure_5(tmp(7241).TableSwitchRow, obj2);
+      const tmp19 = closure_5(tmp(7244).TableSwitchRow, obj2);
       cResult[9] = tmp8;
       cResult[10] = tmp9;
       cResult[11] = cResult[8];
@@ -114,7 +114,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function AdTopic
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7241).TableSwitchRow, obj);
+  return closure_5(adTopic(7244).TableSwitchRow, obj);
 });
 const createStyles = fn(4945);
 let obj4 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 } };

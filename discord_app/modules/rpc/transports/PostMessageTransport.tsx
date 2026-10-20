@@ -1,15 +1,15 @@
-// === Module 11345: PostMessageTransport ===
+// === Module 11356: PostMessageTransport ===
 
-// Module 11345 (PostMessageTransport)
+// Module 11356 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1104 */;
-import RPCErrorDefault from "RPCError" /* 9185 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11346 */;
+import RPCErrorDefault from "RPCError" /* 9197 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 11357 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6332).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6335).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, ComponentActions: closure_8, RPCCloseCodes: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = 10 * DurationsDefault.Millis.SECOND;

@@ -1,11 +1,11 @@
-// === Module 7679: FriendSuggestionStore ===
+// === Module 7682: FriendSuggestionStore ===
 
-// Module 7679 (FriendSuggestionStore)
+// Module 7682 (FriendSuggestionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7680 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7681 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7683 */;
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7684 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import UserStore from "UserStore" /* 1392 */;
 

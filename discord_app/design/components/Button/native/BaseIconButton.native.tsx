@@ -1,6 +1,6 @@
-// === Module 7904: BaseIconButton ===
+// === Module 7908: BaseIconButton ===
 
-// Module 7904 (BaseIconButton)
+// Module 7908 (BaseIconButton)
 import c from "c" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
 import IconDefault from "Icon" /* 5207 */;

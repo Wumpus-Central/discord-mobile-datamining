@@ -1,24 +1,24 @@
-// === Module 17491: HomeDrawerGuildRow ===
+// === Module 17510: HomeDrawerGuildRow ===
 
-// Module 17491 (HomeDrawerGuildRow)
+// Module 17510 (HomeDrawerGuildRow)
 import Text_Text from "Text/Text" /* 5195 */;
 import useChannelName from "useChannelName" /* 5565 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10667 */;
-import BellZIcon from "BellZIcon" /* 13642 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 17496 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 17497 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 17498 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 17500 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 17501 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10678 */;
+import BellZIcon from "BellZIcon" /* 13660 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 17515 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 17516 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 17517 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 17519 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 17520 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4882 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildChannelStore from "GuildChannelStore" /* 4878 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6762 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6765 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import ReadStateStore from "ReadStateStore" /* 6719 */;
+import ReadStateStore from "ReadStateStore" /* 6722 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -26,7 +26,7 @@ const View = fn(17).View;
 const isThread = fn(4804).isThread;
 const Constants = fn(1087);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(6653).UnreadSetting;
+const UnreadSetting = fn(6656).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = { STREAMING: "streaming", VOICE: "voice", MENTION: "mention", TYPING: "typing", UNREAD: "unread", NONE: "none" };

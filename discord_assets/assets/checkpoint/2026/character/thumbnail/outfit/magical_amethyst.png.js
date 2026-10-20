@@ -1,6 +1,6 @@
-// === Module 6191: ? ===
+// === Module 6194: ? ===
 
-// Module 6191
+// Module 6194
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/magical_amethyst.png.js");

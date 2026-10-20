@@ -1,9 +1,9 @@
-// === Module 11683: ConjureNativeCardSurface ===
+// === Module 11696: ConjureNativeCardSurface ===
 
-// Module 11683 (ConjureNativeCardSurface)
+// Module 11696 (ConjureNativeCardSurface)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Card from "Card" /* 6853 */;
+import Card from "Card" /* 6856 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15094: ModalStepIndicator ===
+// === Module 15112: ModalStepIndicator ===
 
-// Module 15094 (ModalStepIndicator)
+// Module 15112 (ModalStepIndicator)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2082 from "module_2082" /* 2082 */;

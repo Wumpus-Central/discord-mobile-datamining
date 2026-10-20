@@ -1,6 +1,6 @@
-// === Module 12309: ConjureClarification ===
+// === Module 12328: ConjureClarification ===
 
-// Module 12309 (ConjureClarification)
+// Module 12328 (ConjureClarification)
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
 import ChannelStore from "ChannelStore" /* 4800 */;

@@ -1,20 +1,20 @@
-// === Module 18734: GuildSettingsAutoModeration ===
+// === Module 18757: GuildSettingsAutoModeration ===
 
-// Module 18734 (GuildSettingsAutoModeration)
+// Module 18757 (GuildSettingsAutoModeration)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6828 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 18739 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6831 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 18762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AutomodStore = fn(18735);
+const AutomodStore = fn(18758);
 ({ useAutomodRulesList: closure_4, useSyncAutomodRulesEffect: hasOwnProperty } = AutomodStore);
-let closure_6 = fn(18737).useAutomodEditingRuleState;
+let closure_6 = fn(18760).useAutomodEditingRuleState;
 const Constants = fn(1087);
 ({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsxProd = fn(21);

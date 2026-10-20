@@ -1,6 +1,6 @@
-// === Module 7189: Form/FormRadio ===
+// === Module 7192: Form/FormRadio ===
 
-// Module 7189 (Form/FormRadio)
+// Module 7192 (Form/FormRadio)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5631 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormRadio(selected) {
   const cResult = c.c(3);
   const tmp3 = closure_4();
-  const tmp4Result = importDefault(selected.selected ? 7190 : 7191);
+  const tmp4Result = importDefault(selected.selected ? 7193 : 7194);
   if (cResult[0] === tmp3.radio) {
     if (cResult[1] === tmp4Result) {
       let tmp6 = cResult[2];
@@ -32,6 +32,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormRadi
 }) : (function FormRadio(selected) {
   const obj = { style: closure_4().radio, source: null };
   const tmp = closure_4();
-  obj.source = importDefault(selected.selected ? 7190 : 7191);
+  obj.source = importDefault(selected.selected ? 7193 : 7194);
   return jsx(FastImageDefault, { style: closure_4().radio, source: null });
 });

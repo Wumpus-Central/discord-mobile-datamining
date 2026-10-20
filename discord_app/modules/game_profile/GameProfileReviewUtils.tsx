@@ -1,12 +1,12 @@
-// === Module 9240: GameProfileReviewUtils ===
+// === Module 9252: GameProfileReviewUtils ===
 
-// Module 9240 (GameProfileReviewUtils)
+// Module 9252 (GameProfileReviewUtils)
 import ApplicationDistributors from "ApplicationDistributors" /* 1106 */;
 import util from "util" /* 1128 */;
 import GameDetectionTypes from "GameDetectionTypes" /* 2043 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9166 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9194 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9196 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9178 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9206 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 9208 */;
 import size from "module_2" /* 2 */;
 
 const obj = { appStore: null, googlePlay: null };

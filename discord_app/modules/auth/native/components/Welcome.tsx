@@ -1,6 +1,6 @@
-// === Module 17096: Welcome ===
+// === Module 17115: Welcome ===
 
-// Module 17096 (Welcome)
+// Module 17115 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
@@ -12,21 +12,21 @@ import Link from "Link" /* 1506 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6986 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7022 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7530 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 13463 */;
-import _modDef14341 from "module_14341" /* 14341 */;
-import _mod14903 from "module_14903" /* 14903 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17093 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6989 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7025 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7533 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 13481 */;
+import _modDef14359 from "module_14359" /* 14359 */;
+import _mod14921 from "module_14921" /* 14921 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17112 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 17097 */;
+import AgeGateStore from "AgeGateStore" /* 17116 */;
 import ExperimentStore from "ExperimentStore" /* 5151 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7513 */;
-import MultiAccountStore from "MultiAccountStore" /* 13111 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7516 */;
+import MultiAccountStore from "MultiAccountStore" /* 13129 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import InviteStore from "InviteStore" /* 5662 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8976 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8988 */;
 
 const require = globalThis.__r;
 
@@ -35,8 +35,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1087);
 ({ AnalyticEvents: map1, StorageKeys: closure_14, AuthStates: closure_15, InviteStates: closure_16, ThemeTypes: closure_17 } = Constants);
-const GuildTemplateStates = fn(7373).GuildTemplateStates;
-const InviteTypes = fn(7752).InviteTypes;
+const GuildTemplateStates = fn(7376).GuildTemplateStates;
+const InviteTypes = fn(7756).InviteTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
 let createStyles = fn(4945);
@@ -284,7 +284,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: _modDef14341 };
+      const obj2 = { source: _modDef14359 };
       const tmp11 = constants2(FastImageDefault, obj2);
       cResult[3] = tmp11;
       let tmp7 = tmp11;
@@ -350,7 +350,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef14341 };
+  const obj2 = { source: _modDef14359 };
   const items1 = [constants2(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -370,7 +370,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Center
   const tmp6 = closure_22(tmp5);
   const typeConsolidationTextTransform = useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("Welcome");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14903;
+    const tmpResult = _mod14921;
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -546,7 +546,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Center
   }
   const obj2 = { style: tmp4.centerpieceContainer, children: null };
   const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  const items = [constants2(FastImageDefault, { style: tmp4.logo, source: _mod14903 }), , ];
+  const items = [constants2(FastImageDefault, { style: tmp4.logo, source: _mod14921 }), , ];
   const obj5 = { style: null, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   const items1 = [tmp4.header, typeConsolidationTextTransform];
   obj5.style = items1;

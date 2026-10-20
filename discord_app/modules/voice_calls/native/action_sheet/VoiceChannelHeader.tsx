@@ -1,21 +1,21 @@
-// === Module 14428: VoiceChannelHeader ===
+// === Module 14446: VoiceChannelHeader ===
 
-// Module 14428 (VoiceChannelHeader)
+// Module 14446 (VoiceChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useChannelNameDefault from "useChannelName" /* 5565 */;
-import Pressables from "Pressables" /* 6856 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7150 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8971 */;
-import _modDef10653 from "module_10653" /* 10653 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11180 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11429 */;
-import CallStateHooks from "CallStateHooks" /* 14429 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14430 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 14431 */;
+import Pressables from "Pressables" /* 6859 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7153 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8983 */;
+import _modDef10664 from "module_10664" /* 10664 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11191 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11440 */;
+import CallStateHooks from "CallStateHooks" /* 14447 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14448 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 14449 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
 import GuildStore from "GuildStore" /* 4822 */;
@@ -151,7 +151,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   }
   const obj = channel(576);
   const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-  const tmp10 = stateFromStores1(11429)(channel);
+  const tmp10 = stateFromStores1(11440)(channel);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [EmbeddedActivitiesStore];
     cResult[3] = items1;
@@ -414,9 +414,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { size: channel(1202).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
   if (isRoleRequiredDefault(channel)) {
-    let tmp5Result = tmp5(14433);
+    let tmp5Result = tmp5(14451);
   } else {
-    tmp5Result = tmp5(11536);
+    tmp5Result = tmp5(11547);
   }
   obj6.source = tmp5Result;
   obj6.style = tmp.icons;
@@ -466,14 +466,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
     }
     return tmp7;
   }
-  const tmp8 = collapsed(closure_15, { onPress, iconSource: _modDef10653, iconStyle: tmp4.icons, accessibilityLabel: first });
+  const tmp8 = collapsed(closure_15, { onPress, iconSource: _modDef10664, iconStyle: tmp4.icons, accessibilityLabel: first });
   cResult[1] = onPress;
   cResult[2] = tmp4.icons;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj2 = { onPress, iconSource: _modDef10653, iconStyle: tmp4.icons, accessibilityLabel: first };
+  const obj2 = { onPress, iconSource: _modDef10664, iconStyle: tmp4.icons, accessibilityLabel: first };
 }) : (function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10653, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10664, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return collapsed(closure_15, obj);

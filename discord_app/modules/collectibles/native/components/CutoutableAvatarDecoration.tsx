@@ -1,13 +1,13 @@
-// === Module 9323: CutoutableAvatarDecoration ===
+// === Module 9335: CutoutableAvatarDecoration ===
 
-// Module 9323 (CutoutableAvatarDecoration)
+// Module 9335 (CutoutableAvatarDecoration)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9320 */;
-import ClipViewDefault from "ClipView" /* 9324 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9332 */;
+import ClipViewDefault from "ClipView" /* 9336 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 

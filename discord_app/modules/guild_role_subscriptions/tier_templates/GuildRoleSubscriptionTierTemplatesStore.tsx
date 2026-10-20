@@ -1,6 +1,6 @@
-// === Module 16321: GuildRoleSubscriptionTierTemplatesStore ===
+// === Module 16340: GuildRoleSubscriptionTierTemplatesStore ===
 
-// Module 16321 (GuildRoleSubscriptionTierTemplatesStore)
+// Module 16340 (GuildRoleSubscriptionTierTemplatesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelRecord from "ChannelRecord" /* 4804 */;

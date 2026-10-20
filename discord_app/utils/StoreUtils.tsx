@@ -1,6 +1,6 @@
-// === Module 6337: StoreUtils ===
+// === Module 6340: StoreUtils ===
 
-// Module 6337 (StoreUtils)
+// Module 6340 (StoreUtils)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
@@ -9,7 +9,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import BillingInfoStore from "BillingInfoStore" /* 2055 */;
 import PaymentSourceStore from "PaymentSourceStore" /* 2056 */;
 import SubscriptionStore from "SubscriptionStore" /* 2059 */;
-import allSettled_mod from "allSettled" /* 6338 */;
+import allSettled_mod from "allSettled" /* 6341 */;
 
 require = fn;
 function fetchCountryCodeQueryDependencies() {
@@ -240,10 +240,10 @@ const Constants = fn(1087);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(5858).isMobile;
+const isMobile = fn(5860).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(5858).isTablet;
+  tmp4 = !fn(5860).isTablet;
 }
 if (tmp4) {
   tmp4 = -1 !== fn(5781).getChromeVersion();

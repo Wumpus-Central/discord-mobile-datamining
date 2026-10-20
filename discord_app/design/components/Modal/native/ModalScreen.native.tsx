@@ -1,6 +1,6 @@
-// === Module 7844: ModalScreen ===
+// === Module 7848: ModalScreen ===
 
-// Module 7844 (ModalScreen)
+// Module 7848 (ModalScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5554 */;

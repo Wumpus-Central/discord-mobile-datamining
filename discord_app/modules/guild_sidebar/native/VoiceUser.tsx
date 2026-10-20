@@ -1,9 +1,9 @@
-// === Module 17278: VoiceUser ===
+// === Module 17297: VoiceUser ===
 
-// Module 17278 (VoiceUser)
+// Module 17297 (VoiceUser)
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SessionsStore from "SessionsStore" /* 5678 */;

@@ -1,6 +1,6 @@
-// === Module 6821: MemberVerificationConstants ===
+// === Module 6824: MemberVerificationConstants ===
 
-// Module 6821 (MemberVerificationConstants)
+// Module 6824 (MemberVerificationConstants)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4974 */;
 import size from "module_2" /* 2 */;
 

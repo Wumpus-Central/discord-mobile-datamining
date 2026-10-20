@@ -1,6 +1,6 @@
-// === Module 17196: usePrivateChannelWave ===
+// === Module 17215: usePrivateChannelWave ===
 
-// Module 17196 (usePrivateChannelWave)
+// Module 17215 (usePrivateChannelWave)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

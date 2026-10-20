@@ -1,20 +1,20 @@
-// === Module 10739: MoreTipsModal ===
+// === Module 10750: MoreTipsModal ===
 
-// Module 10739 (MoreTipsModal)
+// Module 10750 (MoreTipsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6422 */;
-import MetricEvents from "MetricEvents" /* 6427 */;
-import HeaderActionButton from "HeaderActionButton" /* 7431 */;
-import _modDef8058 from "module_8058" /* 8058 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10732 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10740 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10745 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6425 */;
+import MetricEvents from "MetricEvents" /* 6430 */;
+import HeaderActionButton from "HeaderActionButton" /* 7434 */;
+import _modDef8062 from "module_8062" /* 8062 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10743 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10751 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10756 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10611 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10622 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTips
             onPress() {
               return warningId(senderId[14]).popWithKey(channelId);
             },
-            source: _modDef8058,
+            source: _modDef8062,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null
           };

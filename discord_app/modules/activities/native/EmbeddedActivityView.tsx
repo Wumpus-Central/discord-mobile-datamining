@@ -1,13 +1,13 @@
-// === Module 11333: EmbeddedActivityView ===
+// === Module 11344: EmbeddedActivityView ===
 
-// Module 11333 (EmbeddedActivityView)
+// Module 11344 (EmbeddedActivityView)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5672 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11061 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11334 */;
-import DiscordEnvironment from "DiscordEnvironment" /* 11335 */;
-import activityWebViewController from "activityWebViewController" /* 11337 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11073 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11345 */;
+import DiscordEnvironment from "DiscordEnvironment" /* 11346 */;
+import activityWebViewController from "activityWebViewController" /* 11348 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -431,7 +431,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Embedd
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
   ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0]);
   const merged1 = Object.assign(merged);
-  return closure_14(applicationId(11362).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+  return closure_14(applicationId(11373).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
 });
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmbeddedActivityViewInner(channel) {

@@ -1,6 +1,6 @@
-// === Module 9146: GuildTag ===
+// === Module 9158: GuildTag ===
 
-// Module 9146 (GuildTag)
+// Module 9158 (GuildTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,13 +8,13 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import GuildTagUtils from "GuildTagUtils" /* 8579 */;
+import GuildTagUtils from "GuildTagUtils" /* 8591 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(8218).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(8222).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);

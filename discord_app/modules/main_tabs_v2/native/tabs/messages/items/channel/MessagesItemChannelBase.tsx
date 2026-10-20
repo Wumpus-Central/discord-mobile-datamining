@@ -1,16 +1,16 @@
-// === Module 17190: MessagesItemChannelBase ===
+// === Module 17209: MessagesItemChannelBase ===
 
-// Module 17190 (MessagesItemChannelBase)
+// Module 17209 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 587 */;
 import transitionToChannel from "transitionToChannel" /* 5669 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7357 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10609 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7360 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10620 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5674 */;
-import ReadStateStore from "ReadStateStore" /* 6719 */;
+import ReadStateStore from "ReadStateStore" /* 6722 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -165,7 +165,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "test" };
+            obj4 = { status: "userId", activities: "code" };
           }
           return obj4;
         }
@@ -187,7 +187,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "test" };
+            obj4 = { status: "userId", activities: "code" };
           }
           return obj4;
         }
@@ -211,7 +211,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "test" };
+            obj4 = { status: "userId", activities: "code" };
           }
           return obj4;
         }
@@ -234,7 +234,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "test" };
+            obj4 = { status: "userId", activities: "code" };
           }
           return obj4;
         }
@@ -255,7 +255,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "test" };
+            obj4 = { status: "userId", activities: "code" };
           }
           return obj4;
         }
@@ -277,7 +277,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "test" };
+            obj4 = { status: "userId", activities: "code" };
           }
           return obj4;
         }
@@ -287,7 +287,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const stateFromStoresObject1 = tmp(504).useStateFromStoresObject(tmp15, tmp17);
     ({ mentionCount, hasUnreadMessages } = stateFromStoresObject1);
     const tmpResult9 = tmp(504);
-    ({ isIncomingCall, isOngoingCall } = setIsPressed(17191)(channel.id));
+    ({ isIncomingCall, isOngoingCall } = setIsPressed(17210)(channel.id));
     const _Symbol3 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
       class B {
@@ -304,7 +304,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "test" };
+            obj4 = { status: "userId", activities: "code" };
           }
           return obj4;
         }
@@ -327,7 +327,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "test" };
+            obj4 = { status: "userId", activities: "code" };
           }
           return obj4;
         }
@@ -350,7 +350,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    const tmp20 = setIsPressed(17191)(channel.id);
+    const tmp20 = setIsPressed(17210)(channel.id);
     const stateFromStoresObject2 = tmp(504).useStateFromStoresObject(tmp21, G);
     ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
     const _Symbol4 = Symbol;
@@ -545,7 +545,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     const tmpResult12 = tmp(504);
-    const nameplate = tmp(8632).useNameplate(tmp32);
+    const nameplate = tmp(8644).useNameplate(tmp32);
     let tmp35 = null != nameplate;
     if (tmp35) {
       class Z {
@@ -588,7 +588,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       tmp35 = tmp36;
     }
-    const tmpResult13 = tmp(8632);
+    const tmpResult13 = tmp(8644);
     if (tmpResult14.isIOS()) {
       class Z {
         constructor() {
@@ -721,7 +721,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "Array", activities: "test" };
+      obj3 = { status: "userId", activities: "code" };
     }
     return obj3;
   });

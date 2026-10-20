@@ -1,11 +1,11 @@
-// === Module 16379: SettingsAppearanceChannelRowItem ===
+// === Module 16398: SettingsAppearanceChannelRowItem ===
 
-// Module 16379 (SettingsAppearanceChannelRowItem)
+// Module 16398 (SettingsAppearanceChannelRowItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import GroupDMAvatar from "GroupDMAvatar" /* 10606 */;
+import GroupDMAvatar from "GroupDMAvatar" /* 10617 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

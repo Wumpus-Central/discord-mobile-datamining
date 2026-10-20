@@ -1,6 +1,6 @@
-// === Module 7457: GuildBoostSlotStore ===
+// === Module 7460: GuildBoostSlotStore ===
 
-// Module 7457 (GuildBoostSlotStore)
+// Module 7460 (GuildBoostSlotStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SubscriptionStore from "SubscriptionStore" /* 2059 */;

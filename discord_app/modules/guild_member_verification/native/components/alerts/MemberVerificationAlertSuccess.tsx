@@ -1,6 +1,6 @@
-// === Module 6784: MemberVerificationAlertSuccess ===
+// === Module 6787: MemberVerificationAlertSuccess ===
 
-// Module 6784 (MemberVerificationAlertSuccess)
+// Module 6787 (MemberVerificationAlertSuccess)
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5189 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -87,13 +87,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
       const _Symbol2 = Symbol;
       ({ alert: _alert, illustrationContainer } = tmp10);
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-        cResult[14] = tmp(6785);
+        cResult[14] = tmp(6788);
         class M {
           constructor() {
             return closure_1_6.useReducedMotion;
           }
         }
-        const tmpResult4 = tmp(6785);
+        const tmpResult4 = tmp(6788);
       } else {
         const tmp23 = cResult[14];
       }

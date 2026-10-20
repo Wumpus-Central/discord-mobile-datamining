@@ -1,6 +1,6 @@
-// === Module 13860: BetaTag ===
+// === Module 13878: BetaTag ===
 
-// Module 13860 (BetaTag)
+// Module 13878 (BetaTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7490).Gradients;
+const Gradients = fn(7493).Gradients;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" }, text: { textTransform: "uppercase" } };

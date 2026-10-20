@@ -1,13 +1,13 @@
-// === Module 9846: PremiumExpressionPickerFeatureUpsell ===
+// === Module 9858: PremiumExpressionPickerFeatureUpsell ===
 
-// Module 9846 (PremiumExpressionPickerFeatureUpsell)
+// Module 9858 (PremiumExpressionPickerFeatureUpsell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
-import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6975 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9847 */;
+import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6978 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9859 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

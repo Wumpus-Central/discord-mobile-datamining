@@ -1,9 +1,9 @@
-// === Module 11959: ExpandableList ===
+// === Module 11973: ExpandableList ===
 
-// Module 11959 (ExpandableList)
+// Module 11973 (ExpandableList)
 import timing from "timing" /* 5167 */;
 import timingPresets from "timingPresets" /* 5170 */;
-import usePreviousDefault from "usePrevious" /* 6608 */;
+import usePreviousDefault from "usePrevious" /* 6611 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -600,7 +600,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Expandab
         tmp4(obj);
       }
     };
-    obj12 = tmp16(tmp9(6851).TableRow, obj12);
+    obj12 = tmp16(tmp9(6854).TableRow, obj12);
     obj14.children = obj12;
     tmp16(tmp17, obj14);
   }

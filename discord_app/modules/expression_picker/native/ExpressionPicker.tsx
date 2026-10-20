@@ -1,10 +1,10 @@
-// === Module 10043: ExpressionPicker ===
+// === Module 10054: ExpressionPicker ===
 
-// Module 10043 (ExpressionPicker)
+// Module 10054 (ExpressionPicker)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 9746 */;
-import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 9772 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 9759 */;
+import trackOnEmojiPickerOpenedDefault from "trackOnEmojiPickerOpened" /* 9784 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (cResult[1] === visibleTabs) {
       let tmp5 = cResult[2];
     }
-    const tmp7 = expressionPickerViewType(10044)(tmp5);
+    const tmp7 = expressionPickerViewType(10055)(tmp5);
     ({ expressionPickerSelectedIndex, expressionPickerViewType } = tmp7);
     const prop = tmp7.expressionPickerTabStrings;
     if (cResult[3] !== channel) {
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return obj;
           }
         }
-        const segmentedControlState = tmp(8821).useSegmentedControlState(tmp19);
+        const segmentedControlState = tmp(8833).useSegmentedControlState(tmp19);
         if (cResult[15] !== expressionPickerViewType) {
           class Z {
             constructor() {
@@ -306,8 +306,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
           }
         }
-        const tmp28 = expressionPickerViewType(10045)(tmp27);
-        const tmpResult = tmp(8821);
+        const tmp28 = expressionPickerViewType(10056)(tmp27);
+        const tmpResult = tmp(8833);
         const isScreenReaderEnabled = tmp(5228).useIsScreenReaderEnabled();
         if (cResult[20] === tmp28) {
           class Z {

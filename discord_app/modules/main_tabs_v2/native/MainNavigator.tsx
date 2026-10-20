@@ -1,22 +1,22 @@
-// === Module 17088: MainNavigator ===
+// === Module 17107: MainNavigator ===
 
-// Module 17088 (MainNavigator)
+// Module 17107 (MainNavigator)
 import c from "c" /* 576 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1503 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import DeviceUtils from "DeviceUtils" /* 4902 */;
 import ChatInputUtils from "ChatInputUtils" /* 5120 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9948 */;
-import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11441 */;
-import StartupProfiler from "StartupProfiler" /* 12854 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15091 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17090 */;
-import AutoAnalytics from "AutoAnalytics" /* 17918 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 17965 */;
-import AppComponents from "AppComponents" /* 18153 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 18399 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18430 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9959 */;
+import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11452 */;
+import StartupProfiler from "StartupProfiler" /* 12872 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15109 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17109 */;
+import AutoAnalytics from "AutoAnalytics" /* 17941 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 17988 */;
+import AppComponents from "AppComponents" /* 18176 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 18421 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18452 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -76,7 +76,7 @@ function resetChatKeyboard() {
   obj = ChatInputUtils;
 }
 const View = fn(17).View;
-let closure_7 = fn(17089).StackNavigationAnimationSettings;
+let closure_7 = fn(17108).StackNavigationAnimationSettings;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -151,9 +151,9 @@ function getChannelScreen() {
       }
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(9614).renderHeader };
+      const obj = { headerShown: true, header: styles(9627).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(9614).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(9627).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -681,9 +681,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         },
         options(arg0) {
-          const obj = { headerShown: true, header: styles(9614).renderHeader };
+          const obj = { headerShown: true, header: styles(9627).renderHeader };
           ({ navigation, route } = arg0);
-          const merged = Object.assign(styles(9614).getDefaultChannelStackHeaderProps(navigation, route));
+          const merged = Object.assign(styles(9627).getDefaultChannelStackHeaderProps(navigation, route));
           const merged1 = Object.assign(animation2);
           obj.animation = animation;
           return obj;
@@ -767,9 +767,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         },
         options(arg0) {
-          const obj = { headerShown: true, header: styles(9614).renderHeader };
+          const obj = { headerShown: true, header: styles(9627).renderHeader };
           ({ navigation, route } = arg0);
-          const merged = Object.assign(styles(9614).getDefaultChannelStackHeaderProps(navigation, route));
+          const merged = Object.assign(styles(9627).getDefaultChannelStackHeaderProps(navigation, route));
           const merged1 = Object.assign(animation2);
           obj.animation = animation;
           return obj;
@@ -834,7 +834,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               if (closure_1_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(9614).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(9627).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(animation2);
               return { orientation: str, headerShown: false };
             },
@@ -883,9 +883,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             },
             options(arg0) {
-              const obj = { headerShown: true, header: styles(9614).renderHeader };
+              const obj = { headerShown: true, header: styles(9627).renderHeader };
               ({ navigation, route } = arg0);
-              const merged = Object.assign(styles(9614).getDefaultChannelStackHeaderProps(navigation, route));
+              const merged = Object.assign(styles(9627).getDefaultChannelStackHeaderProps(navigation, route));
               const merged1 = Object.assign(animation2);
               obj.animation = animation;
               return obj;
@@ -903,7 +903,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         name: "conversations",
         getComponent: getConversationsComponent,
         options() {
-          return stateFromStores(9948)();
+          return stateFromStores(9959)();
         }
       }),
     ,
@@ -921,7 +921,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "channel-secondary-view-chat",
       getComponent: getChannelSecondaryViewChatComponent,
       options() {
-        return stateFromStores(9948)();
+        return stateFromStores(9959)();
       },
       listeners: { beforeRemove: resetChatKeyboard }
     };
@@ -976,7 +976,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(stateFromStores(9948)({ presentation: str }));
+        const merged = Object.assign(stateFromStores(9959)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -1033,7 +1033,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             if (closure_1_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(9614).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(9627).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(animation2);
             return { orientation: str, headerShown: false };
           },
@@ -1082,9 +1082,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
           },
           options(arg0) {
-            const obj = { headerShown: true, header: styles(9614).renderHeader };
+            const obj = { headerShown: true, header: styles(9627).renderHeader };
             ({ navigation, route } = arg0);
-            const merged = Object.assign(styles(9614).getDefaultChannelStackHeaderProps(navigation, route));
+            const merged = Object.assign(styles(9627).getDefaultChannelStackHeaderProps(navigation, route));
             const merged1 = Object.assign(animation2);
             obj.animation = animation;
             return obj;
@@ -1102,7 +1102,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "conversations",
       getComponent: getConversationsComponent,
       options() {
-        return stateFromStores(9948)();
+        return stateFromStores(9959)();
       }
     };
     const obj9 = { beforeRemove: resetChatKeyboard };
@@ -1123,7 +1123,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     items1[8] = collapsed(closure_16.Screen, {
       name: "settings",
       options() {
-        const tmp = stateFromStores(9948);
+        const tmp = stateFromStores(9959);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -1140,13 +1140,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(9948)({ lockOrientation: false });
+        return stateFromStores(9959)({ lockOrientation: false });
       }
     });
     const obj18 = {
       name: "settings",
       options() {
-        const tmp = stateFromStores(9948);
+        const tmp = stateFromStores(9959);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -1163,7 +1163,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(9948)({ lockOrientation: false });
+        return stateFromStores(9959)({ lockOrientation: false });
       }
     };
     tmp5Result = PlatformUtils2;
@@ -1191,7 +1191,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           str2 = str3;
         }
-        const merged = Object.assign(stateFromStores(9948)({ presentation: str2 }));
+        const merged = Object.assign(stateFromStores(9959)({ presentation: str2 }));
         return obj;
       },
       getComponent: getModalComponent

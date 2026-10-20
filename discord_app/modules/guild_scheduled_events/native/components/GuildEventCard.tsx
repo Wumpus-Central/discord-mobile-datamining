@@ -1,10 +1,10 @@
-// === Module 8948: GuildEventCard ===
+// === Module 8960: GuildEventCard ===
 
-// Module 8948 (GuildEventCard)
+// Module 8960 (GuildEventCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ButtonGroup from "ButtonGroup" /* 6644 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 8822 */;
+import ButtonGroup from "ButtonGroup" /* 6647 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 8834 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(6732).isGuildScheduledEventActive;
+let closure_5 = fn(6735).isGuildScheduledEventActive;
 fn(4806).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

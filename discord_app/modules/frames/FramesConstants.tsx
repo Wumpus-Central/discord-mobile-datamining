@@ -1,6 +1,6 @@
-// === Module 6724: FramesConstants ===
+// === Module 6727: FramesConstants ===
 
-// Module 6724 (FramesConstants)
+// Module 6727 (FramesConstants)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1087 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;

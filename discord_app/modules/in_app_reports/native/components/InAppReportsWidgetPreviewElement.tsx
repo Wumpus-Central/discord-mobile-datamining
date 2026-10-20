@@ -1,18 +1,18 @@
-// === Module 14376: InAppReportsWidgetPreviewElement ===
+// === Module 14394: InAppReportsWidgetPreviewElement ===
 
-// Module 14376 (InAppReportsWidgetPreviewElement)
+// Module 14394 (InAppReportsWidgetPreviewElement)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7022 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7651 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7655 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8657 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 14181 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7025 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7654 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7658 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8669 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 14199 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfilePersonalWidgetCardDefault = tmp5(14191);
+const UserProfilePersonalWidgetCardDefault = tmp5(14209);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

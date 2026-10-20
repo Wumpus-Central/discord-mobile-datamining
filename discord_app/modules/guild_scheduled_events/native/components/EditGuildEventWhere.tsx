@@ -1,12 +1,12 @@
-// === Module 8865: EditGuildEventWhere ===
+// === Module 8877: EditGuildEventWhere ===
 
-// Module 8865 (EditGuildEventWhere)
+// Module 8877 (EditGuildEventWhere)
 import util from "util" /* 1128 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
 import _modDef2050 from "module_2050" /* 2050 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8809 */;
-import EntityUtils from "EntityUtils" /* 8813 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8926 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8821 */;
+import EntityUtils from "EntityUtils" /* 8825 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
@@ -42,7 +42,7 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(6732).isGuildScheduledEventActive;
+let closure_8 = fn(6735).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(4806);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
 const Constants = fn(1087);

@@ -1,21 +1,21 @@
-// === Module 17454: FavoritesGuildSidebarHeader ===
+// === Module 17473: FavoritesGuildSidebarHeader ===
 
-// Module 17454 (FavoritesGuildSidebarHeader)
+// Module 17473 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3402 from "module_3402" /* 3402 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import ChatIcon from "ChatIcon" /* 8487 */;
-import TextIcon from "TextIcon" /* 8496 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8517 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13669 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import ChatIcon from "ChatIcon" /* 8491 */;
+import TextIcon from "TextIcon" /* 8500 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8521 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(17359).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(17378).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";

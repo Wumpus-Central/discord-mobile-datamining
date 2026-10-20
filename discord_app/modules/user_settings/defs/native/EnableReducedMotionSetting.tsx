@@ -1,15 +1,15 @@
-// === Module 16506: EnableReducedMotionSetting ===
+// === Module 16525: EnableReducedMotionSetting ===
 
-// Module 16506 (EnableReducedMotionSetting)
+// Module 16525 (EnableReducedMotionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15494 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15512 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReducedMotionSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.e3TR1b);
   },
-  parent: fn(8276).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8280).MobileUserSettings.ACCESSIBILITY,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useReducedMotionSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

@@ -1,8 +1,8 @@
-// === Module 18162: useExternalPipEnabler ===
+// === Module 18185: useExternalPipEnabler ===
 
-// Module 18162 (useExternalPipEnabler)
-import ExternalPipEnablerState from "ExternalPipEnablerState" /* 18163 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
+// Module 18185 (useExternalPipEnabler)
+import ExternalPipEnablerState from "ExternalPipEnablerState" /* 18186 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6723 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
 

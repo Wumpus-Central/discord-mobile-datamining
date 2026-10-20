@@ -1,6 +1,6 @@
-// === Module 17665: DesignConstants ===
+// === Module 17684: DesignConstants ===
 
-// Module 17665 (DesignConstants)
+// Module 17684 (DesignConstants)
 import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 

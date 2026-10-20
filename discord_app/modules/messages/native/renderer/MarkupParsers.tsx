@@ -1,14 +1,14 @@
-// === Module 8407: MarkupParsers ===
+// === Module 8411: MarkupParsers ===
 
-// Module 8407 (MarkupParsers)
+// Module 8411 (MarkupParsers)
 import Constants from "Constants" /* 1087 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5667 */;
-import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8408 */;
-import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8409 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 8426 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 8435 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8412 */;
+import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8413 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8430 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 8439 */;
 import priv from "priv" /* 1459 */;
 import size from "module_2" /* 2 */;
 

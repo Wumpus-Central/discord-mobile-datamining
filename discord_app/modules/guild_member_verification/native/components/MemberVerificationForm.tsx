@@ -1,18 +1,18 @@
-// === Module 6841: MemberVerificationForm ===
+// === Module 6844: MemberVerificationForm ===
 
-// Module 6841 (MemberVerificationForm)
+// Module 6844 (MemberVerificationForm)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4974 */;
 import useInitialValueDefault from "useInitialValue" /* 5560 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6823 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6826 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(6823).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6826).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1087).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

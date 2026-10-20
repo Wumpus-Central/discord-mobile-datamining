@@ -1,6 +1,6 @@
-// === Module 9818: Carousel ===
+// === Module 9830: Carousel ===
 
-// Module 9818 (Carousel)
+// Module 9830 (Carousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;

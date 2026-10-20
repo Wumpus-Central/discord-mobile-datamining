@@ -1,15 +1,15 @@
-// === Module 16433: DisplayNameStylesEffectPickerSheet ===
+// === Module 16452: DisplayNameStylesEffectPickerSheet ===
 
-// Module 16433 (DisplayNameStylesEffectPickerSheet)
+// Module 16452 (DisplayNameStylesEffectPickerSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2918 from "module_2918" /* 2918 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import HapticUtils from "HapticUtils" /* 5173 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10579 */;
-import types from "types" /* 10580 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10582 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10590 */;
+import types from "types" /* 10591 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10593 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -471,10 +471,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   first = undefined;
   closure_5 = undefined;
   const tmp = closure_9();
-  let obj = userId(8584);
-  const visibleEffectOrder = userId(16427).useVisibleEffectOrder();
-  let obj2 = userId(16427);
-  const displayNameStylesNewEffects = userId(16428).useDisplayNameStylesNewEffects(visibleEffectOrder);
+  let obj = userId(8596);
+  const visibleEffectOrder = userId(16446).useVisibleEffectOrder();
+  let obj2 = userId(16446);
+  const displayNameStylesNewEffects = userId(16447).useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     obj6.text = intl2.string(tmp2(1128).t.XqMe3N);
     obj6.onPress = tmp8;
     obj5.trailing = closure_7(tmp2(5205).Button, obj6);
-    obj4.header = closure_7(onSelectEffect(16432), obj5);
+    obj4.header = closure_7(onSelectEffect(16451), obj5);
     const obj7 = { style: tmp.container, children: null };
     const obj8 = { style: tmp.contentContainer, children: null };
     const obj9 = {
@@ -516,11 +516,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
           }, effectId);
         })
     };
-    obj8.children = closure_7(tmp2(5932).Stack, obj9);
+    obj8.children = closure_7(tmp2(5935).Stack, obj9);
     obj7.children = closure_7(closure_5, obj8);
     obj4.children = closure_7(closure_5, obj7);
     tmp9 = closure_7(tmp2(5226).BottomSheet, obj4);
-    const tmp12 = onSelectEffect(16432);
+    const tmp12 = onSelectEffect(16451);
   }
   return tmp9;
 });

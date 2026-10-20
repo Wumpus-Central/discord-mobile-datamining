@@ -1,12 +1,12 @@
-// === Module 13397: ContactSyncLandingOnboardingRedesign ===
+// === Module 13415: ContactSyncLandingOnboardingRedesign ===
 
-// Module 13397 (ContactSyncLandingOnboardingRedesign)
+// Module 13415 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7829 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13390 */;
-import _modDef13398 from "module_13398" /* 13398 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 13399 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7833 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13408 */;
+import _modDef13416 from "module_13416" /* 13416 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 13417 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const NativePermissionTypes = fn(7812).NativePermissionTypes;
+const NativePermissionTypes = fn(7816).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.headerImage) {
-    const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13398 };
+    const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13416 };
     const tmp11 = closure_7(FastImageDefault, obj2);
     cResult[2] = tmp4.headerImage;
     cResult[3] = tmp11;
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
       }
     }
   }), items);
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13398 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13416 };
   const items1 = [closure_7(FastImageDefault, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1128).intl;

@@ -1,6 +1,6 @@
-// === Module 8839: CollapsibleFloatingActionButton ===
+// === Module 8851: CollapsibleFloatingActionButton ===
 
-// Module 8839 (CollapsibleFloatingActionButton)
+// Module 8851 (CollapsibleFloatingActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
@@ -8,7 +8,7 @@ import BaseTextButton from "BaseTextButton" /* 5206 */;
 import spring from "spring" /* 5208 */;
 import springPresets from "springPresets" /* 5209 */;
 import ButtonConstants2 from "ButtonConstants" /* 5211 */;
-import FloatingActionButton from "FloatingActionButton" /* 8840 */;
+import FloatingActionButton from "FloatingActionButton" /* 8852 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

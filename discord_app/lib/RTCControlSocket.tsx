@@ -7,6 +7,7 @@ import BackoffDefault from "Backoff" /* 569 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import TimeUtils from "TimeUtils" /* 5684 */;
+import DaveMessageValidator from "DaveMessageValidator" /* 5865 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 5703 */;
@@ -18,7 +19,7 @@ function noop() {
 const Constants = fn(5680);
 ({ Features: hasOwnProperty, MediaEngineContextTypes: metroRequire, MediaTypes: closure_7, SpeakingFlags: closure_8 } = Constants);
 const RTCSocketOpcode = { IDENTIFY: 0, [0]: "IDENTIFY", SELECT_PROTOCOL: 1, [1]: "SELECT_PROTOCOL", READY: 2, [2]: "READY", HEARTBEAT: 3, [3]: "HEARTBEAT", SELECT_PROTOCOL_ACK: 4, [4]: "SELECT_PROTOCOL_ACK", SPEAKING: 5, [5]: "SPEAKING", HEARTBEAT_ACK: 6, [6]: "HEARTBEAT_ACK", RESUME: 7, [7]: "RESUME", HELLO: 8, [8]: "HELLO", RESUMED: 9, [9]: "RESUMED", CLIENT_CONNECT: 11, [11]: "CLIENT_CONNECT", VIDEO: 12, [12]: "VIDEO", CLIENT_DISCONNECT: 13, [13]: "CLIENT_DISCONNECT", SESSION_UPDATE: 14, [14]: "SESSION_UPDATE", MEDIA_SINK_WANTS: 15, [15]: "MEDIA_SINK_WANTS", VOICE_BACKEND_VERSION: 16, [16]: "VOICE_BACKEND_VERSION", CHANNEL_OPTIONS_UPDATE: 17, [17]: "CHANNEL_OPTIONS_UPDATE", FLAGS: 18, [18]: "FLAGS", PLATFORM: 20, [20]: "PLATFORM", DAVE_PROTOCOL_PREPARE_TRANSITION: 21, [21]: "DAVE_PROTOCOL_PREPARE_TRANSITION", DAVE_PROTOCOL_EXECUTE_TRANSITION: 22, [22]: "DAVE_PROTOCOL_EXECUTE_TRANSITION", DAVE_PROTOCOL_READY_FOR_TRANSITION: 23, [23]: "DAVE_PROTOCOL_READY_FOR_TRANSITION", DAVE_PROTOCOL_PREPARE_EPOCH: 24, [24]: "DAVE_PROTOCOL_PREPARE_EPOCH", MLS_EXTERNAL_SENDER_PACKAGE: 25, [25]: "MLS_EXTERNAL_SENDER_PACKAGE", MLS_KEY_PACKAGE: 26, [26]: "MLS_KEY_PACKAGE", MLS_PROPOSALS: 27, [27]: "MLS_PROPOSALS", MLS_COMMIT_WELCOME: 28, [28]: "MLS_COMMIT_WELCOME", MLS_PREPARE_COMMIT_TRANSITION: 29, [29]: "MLS_PREPARE_COMMIT_TRANSITION", MLS_WELCOME: 30, [30]: "MLS_WELCOME", MLS_INVALID_COMMIT_WELCOME: 31, [31]: "MLS_INVALID_COMMIT_WELCOME", CLIENT_CANNOT_REACH_RTC_SERVER: 32, [32]: "CLIENT_CANNOT_REACH_RTC_SERVER", SFU_UPDATE: 33, [33]: "SFU_UPDATE" };
-let obj2 = { AUTHENTICATION_FAILED: 4004, [4004]: "AUTHENTICATION_FAILED", INVALID_SESSION: 4006, [4006]: "INVALID_SESSION", SERVER_NOT_FOUND: 4011, [4011]: "SERVER_NOT_FOUND", SERVER_CRASH: 4015, [4015]: "SERVER_CRASH", CANCELED: 4016, [4016]: "CANCELED", HEARTBEAT_TIMEOUT: 4800, [4800]: "HEARTBEAT_TIMEOUT", UNRESUMABLE: 4801, [4801]: "UNRESUMABLE", RESET_BACKOFF: 4802, [4802]: "RESET_BACKOFF", REPEATED_MLS_INVALID_MESSAGES: 4803, [4803]: "REPEATED_MLS_INVALID_MESSAGES", DAVE_DOWNGRADE_REFUSED: 4804, [4804]: "DAVE_DOWNGRADE_REFUSED" };
+let obj2 = { AUTHENTICATION_FAILED: 4004, [4004]: "AUTHENTICATION_FAILED", INVALID_SESSION: 4006, [4006]: "INVALID_SESSION", SERVER_NOT_FOUND: 4011, [4011]: "SERVER_NOT_FOUND", SERVER_CRASH: 4015, [4015]: "SERVER_CRASH", CANCELED: 4016, [4016]: "CANCELED", HEARTBEAT_TIMEOUT: 4800, [4800]: "HEARTBEAT_TIMEOUT", UNRESUMABLE: 4801, [4801]: "UNRESUMABLE", RESET_BACKOFF: 4802, [4802]: "RESET_BACKOFF", REPEATED_MLS_INVALID_MESSAGES: 4803, [4803]: "REPEATED_MLS_INVALID_MESSAGES", DAVE_DOWNGRADE_REFUSED: 4804, [4804]: "DAVE_DOWNGRADE_REFUSED", DAVE_INVALID_MESSAGE: 4805, [4805]: "DAVE_INVALID_MESSAGE" };
 const __initData = { DISCONNECTED: 0, [0]: "DISCONNECTED", CONNECTING: 1, [1]: "CONNECTING", IDENTIFYING: 2, [2]: "IDENTIFYING", RESUMING: 3, [3]: "RESUMING", CONNECTED: 4, [4]: "CONNECTED", RECONNECTING: 5, [5]: "RECONNECTING" };
 let closure_13 = 20 * DurationsDefault.Millis.SECOND;
 const MINUTE = DurationsDefault.Millis.MINUTE;
@@ -75,7 +76,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     self.handleClose(false, 0, "The connection timed out after " + TimeUtils.now() - self.connectionStartTime + " ms - did not receive OP_HELLO in time.");
   }, closure_13);
   let obj = self(5684);
-  obj2 = self(15187);
+  obj2 = self(15205);
   const webSocket = new WebSocket("" + self.url + "?v=" + obj2.getVoiceGatewayProtocolVersion({ location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) }));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
@@ -92,8 +93,16 @@ prototype["createWebSocket"] = function createWebSocket() {
     self.emit(obj3.Ping, Math.round(diff / 2));
   };
   webSocket.onmessage = (data) => {
-    const result = self.parseWebSocketMessage(data);
-    ({ op, seq, d } = result);
+    if (data.data instanceof ArrayBuffer) {
+      let parseBinaryMessageResult = self.parseBinaryMessage(data.data);
+      if (null == parseBinaryMessageResult) {
+        const result = self.disconnectForInvalidDaveMessage("binary frame shorter than its header");
+      }
+    } else {
+      const _JSON = JSON;
+      parseBinaryMessageResult = JSON.parse(data.data);
+    }
+    ({ op, seq, d } = parseBinaryMessageResult);
     self.emit(obj3.ReceiveMessage, op, d);
     if (seq) {
       self.lastRecvSeqNum = seq;
@@ -109,7 +118,7 @@ prototype["createWebSocket"] = function createWebSocket() {
         logger2.info("~> " + op + ": 0x" + mapped.join(""));
       } else {
         const logger = self.logger;
-        const _JSON = JSON;
+        const _JSON2 = JSON;
         const _HermesInternal = HermesInternal;
         logger.info("~> " + op + ": " + JSON.stringify(d));
       }
@@ -140,16 +149,18 @@ prototype["createWebSocket"] = function createWebSocket() {
       if (d.keyframe_interval) {
         self.emit(obj3.KeyframeInterval, d.keyframe_interval);
       }
-      let num8 = d.dave_protocol_version;
-      if (!num8) {
-        num8 = 0;
+      const parseDaveInitResult = DaveMessageValidator.parseDaveInit(d);
+      if (null == parseDaveInitResult) {
+        const _HermesInternal9 = HermesInternal;
+        const result1 = self.disconnectForInvalidDaveMessage("op " + op + " dave_protocol_version");
+      } else {
+        self.emit(obj3.SecureFramesInit, parseDaveInitResult);
+        self.resumable = true;
       }
-      self.emit(obj3.SecureFramesInit, num8);
-      self.resumable = true;
     } else if (self.SPEAKING === op) {
       const speaking = d.speaking;
       if (typeof speaking !== "boolean") {
-        self.emit(obj3.Speaking, d.user_id, d.ssrc, tmp61);
+        self.emit(obj3.Speaking, d.user_id, d.ssrc, tmp71);
       }
     } else if (self.HEARTBEAT === op) {
       self.sendHeartbeat();
@@ -190,7 +201,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     } else if (self.CLIENT_DISCONNECT === op) {
       self.emit(obj3.ClientDisconnect, d.user_id);
     } else if (self.SESSION_UPDATE === op) {
-      if (!tmp45) {
+      if (!tmp55) {
         self.emit(obj3.Codecs, d.audio_codec, d.video_codec);
       }
       if (null != d.media_session_id) {
@@ -199,52 +210,68 @@ prototype["createWebSocket"] = function createWebSocket() {
       if (d.keyframe_interval) {
         self.emit(obj3.KeyframeInterval, d.keyframe_interval);
       }
-      tmp45 = null == d.audio_codec && null == d.video_codec;
+      tmp55 = null == d.audio_codec && null == d.video_codec;
     } else if (self.MEDIA_SINK_WANTS === op) {
       self.emit(obj3.MediaSinkWants, d);
     } else if (self.VOICE_BACKEND_VERSION === op) {
-      if (tmp41) {
+      if (tmp51) {
         self.emit(obj3.VoiceBackendVersion, d.voice, d.rtc_worker);
       }
-      tmp41 = null != d.voice && null != d.rtc_worker;
+      tmp51 = null != d.voice && null != d.rtc_worker;
     } else if (self.FLAGS === op) {
-      if (tmp38) {
+      if (tmp48) {
         self.emit(obj3.Flags, d.user_id, d.flags);
       }
-      tmp38 = null != d.flags && null != d.user_id;
+      tmp48 = null != d.flags && null != d.user_id;
     } else if (self.PLATFORM === op) {
-      if (tmp35) {
+      if (tmp45) {
         self.emit(obj3.Platform, d.user_id, d.platform);
       }
-      tmp35 = null != d.platform && null != d.user_id;
+      tmp45 = null != d.platform && null != d.user_id;
     } else if (self.DAVE_PROTOCOL_PREPARE_TRANSITION === op) {
-      if (tmp32) {
-        self.emit(obj3.SecureFramesPrepareTransition, d.transition_id, d.protocol_version);
+      const result2 = DaveMessageValidator.parseDavePrepareTransition(d);
+      if (null == result2) {
+        const _HermesInternal8 = HermesInternal;
+        const result3 = self.disconnectForInvalidDaveMessage("op " + op);
+      } else {
+        self.emit(obj3.SecureFramesPrepareTransition, result2.transitionId, result2.protocolVersion);
       }
-      tmp32 = null != d.transition_id && null != d.protocol_version;
     } else if (self.DAVE_PROTOCOL_EXECUTE_TRANSITION === op) {
-      if (null != d.transition_id) {
-        self.emit(obj3.SecureFramesExecuteTransition, d.transition_id);
+      const result4 = DaveMessageValidator.parseDaveExecuteTransition(d);
+      if (null == result4) {
+        const _HermesInternal7 = HermesInternal;
+        const result5 = self.disconnectForInvalidDaveMessage("op " + op);
+      } else {
+        self.emit(obj3.SecureFramesExecuteTransition, result4);
       }
     } else if (self.DAVE_PROTOCOL_PREPARE_EPOCH === op) {
-      if (tmp28) {
-        self.emit(obj3.SecureFramesPrepareEpoch, d.epoch, d.protocol_version);
+      const result6 = DaveMessageValidator.parseDavePrepareEpoch(d);
+      if (null == result6) {
+        const _HermesInternal6 = HermesInternal;
+        const result7 = self.disconnectForInvalidDaveMessage("op " + op);
+      } else {
+        self.emit(obj3.SecureFramesPrepareEpoch, result6.epoch, result6.protocolVersion);
       }
-      tmp28 = null != d.epoch && null != d.protocol_version;
     } else if (self.MLS_EXTERNAL_SENDER_PACKAGE === op) {
       self.emit(obj3.MLSExternalSenderPackage, d);
     } else if (self.MLS_PROPOSALS === op) {
       self.emit(obj3.MLSProposals, d);
     } else if (self.MLS_PREPARE_COMMIT_TRANSITION === op) {
-      const _DataView2 = DataView;
-      const dataView = new DataView(d.buffer, d.byteOffset, 2);
-      const uint16 = dataView.getUint16(0, false);
-      self.emit(obj3.MLSPrepareCommitTransition, uint16, d.slice(2));
+      const result8 = DaveMessageValidator.parseMLSTransitionFrame(d);
+      if (null == result8) {
+        const _HermesInternal5 = HermesInternal;
+        const result9 = self.disconnectForInvalidDaveMessage("op " + op);
+      } else {
+        self.emit(obj3.MLSPrepareCommitTransition, result8.transitionId, result8.message);
+      }
     } else if (self.MLS_WELCOME === op) {
-      const _DataView = DataView;
-      const dataView1 = new DataView(d.buffer, d.byteOffset, 2);
-      const uint161 = dataView1.getUint16(0, false);
-      self.emit(obj3.MLSWelcome, uint161, d.slice(2));
+      const result10 = DaveMessageValidator.parseMLSTransitionFrame(d);
+      if (null == result10) {
+        const _HermesInternal4 = HermesInternal;
+        const result11 = self.disconnectForInvalidDaveMessage("op " + op);
+      } else {
+        self.emit(obj3.MLSWelcome, result10.transitionId, result10.message);
+      }
     } else {
       const logger3 = self.logger;
       const _HermesInternal3 = HermesInternal;
@@ -490,27 +517,22 @@ prototype["cleanupState"] = function cleanupState() {
   this.resumable = false;
   this.lastRecvSeqNum = null;
 };
-prototype["parseWebSocketMessage"] = function parseWebSocketMessage(data) {
-  if (data.data instanceof ArrayBuffer) {
-    const _Uint8Array = Uint8Array;
-    const self = this;
-    const uint8Array = new Uint8Array(data.data);
-    let uint16 = null;
-    if (this.serverVersion >= 8) {
-      const _DataView = DataView;
-      const dataView = new DataView(uint8Array.buffer);
-      uint16 = dataView.getUint16(0, false);
-    }
-    let num3 = 0;
-    if (self.serverVersion >= 8) {
-      num3 = 2;
-    }
-    const obj = { op: uint8Array[num3], seq: uint16, d: uint8Array.subarray(num3 + 1) };
-    return obj;
-  } else {
-    const _JSON = JSON;
-    return JSON.parse(data.data);
+prototype["parseBinaryMessage"] = function parseBinaryMessage(data) {
+  const uint8Array = new Uint8Array(data);
+  const parseMLSFrameHeaderResult = DaveMessageValidator.parseMLSFrameHeader(uint8Array, this.serverVersion >= 8);
+  let tmp3 = null;
+  if (null != parseMLSFrameHeaderResult) {
+    ({ opcode: obj2.op, sequenceNumber: obj2.seq, payload: obj2.d } = parseMLSFrameHeaderResult);
+    tmp3 = { op: null, seq: null, d: null };
+    obj3 = { op: null, seq: null, d: null };
   }
+  return tmp3;
+};
+prototype["disconnectForInvalidDaveMessage"] = function disconnectForInvalidDaveMessage(arg0) {
+  const logger = this.logger;
+  logger.error("[DAVE] Invalid message: " + arg0 + ".");
+  this.cleanupWebSocket((close) => close.close(constants.DAVE_INVALID_MESSAGE));
+  this.disconnect(false, obj2.DAVE_INVALID_MESSAGE, "Invalid DAVE message.");
 };
 prototype["clearHelloTimeout"] = function clearHelloTimeout() {
   const self = this;

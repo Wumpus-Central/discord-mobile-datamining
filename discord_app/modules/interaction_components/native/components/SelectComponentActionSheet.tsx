@@ -1,13 +1,13 @@
-// === Module 11694: SelectComponentActionSheet ===
+// === Module 11707: SelectComponentActionSheet ===
 
-// Module 11694 (SelectComponentActionSheet)
+// Module 11707 (SelectComponentActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5001 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import FormCheckbox from "FormCheckbox" /* 6849 */;
-import TableRow from "TableRow" /* 6851 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9056 */;
+import FormCheckbox from "FormCheckbox" /* 6852 */;
+import TableRow from "TableRow" /* 6854 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9068 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
@@ -277,7 +277,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
     tmp5Result = closure_8(tmp6(5205).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(7194).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(7197).BottomSheetTitleHeader, obj), ];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;
@@ -311,8 +311,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
         }
         onQueryChange(ref);
       };
-      tmp5Result4 = closure_8(selectedOptions(8914), obj4);
-      const tmp13 = selectedOptions(8914);
+      tmp5Result4 = closure_8(selectedOptions(8926), obj4);
+      const tmp13 = selectedOptions(8926);
     }
   }
   children[1] = tmp5Result4;

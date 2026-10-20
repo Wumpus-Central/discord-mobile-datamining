@@ -1,6 +1,6 @@
-// === Module 15672: CustomizeBadgesSheet ===
+// === Module 15691: CustomizeBadgesSheet ===
 
-// Module 15672 (CustomizeBadgesSheet)
+// Module 15691 (CustomizeBadgesSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -13,26 +13,26 @@ import HapticUtils from "HapticUtils" /* 5173 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5648 */;
-import Card from "Card" /* 6853 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 7009 */;
-import EyeIcon from "EyeIcon" /* 7011 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8605 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8611 */;
-import native from "native" /* 8833 */;
-import ContextMenu from "ContextMenu" /* 9676 */;
-import ContextMenuState from "ContextMenuState" /* 9677 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9678 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9707 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9708 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10908 */;
-import BadgeUtils from "BadgeUtils" /* 10917 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11931 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 14205 */;
-import BadgeGrid from "BadgeGrid" /* 15673 */;
+import Card from "Card" /* 6856 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 7012 */;
+import EyeIcon from "EyeIcon" /* 7014 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8617 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8623 */;
+import native from "native" /* 8845 */;
+import ContextMenu from "ContextMenu" /* 9689 */;
+import ContextMenuState from "ContextMenuState" /* 9690 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9691 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9720 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9721 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10919 */;
+import BadgeUtils from "BadgeUtils" /* 10928 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11945 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 14223 */;
+import BadgeGrid from "BadgeGrid" /* 15692 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8574 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8586 */;
 import UserStore from "UserStore" /* 1392 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8606 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8618 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -201,7 +201,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj14 = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(15673).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(15673).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(15692).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(15692).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 ReactCompilerGating = fn(558);

@@ -1,9 +1,9 @@
-// === Module 11457: CameraLottie ===
+// === Module 11468: CameraLottie ===
 
-// Module 11457 (CameraLottie)
+// Module 11468 (CameraLottie)
 import c from "c" /* 576 */;
-import _mod11458 from "module_11458" /* 11458 */;
-import LottieIcon from "LottieIcon" /* 11459 */;
+import _mod11469 from "module_11469" /* 11469 */;
+import LottieIcon from "LottieIcon" /* 11470 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ export const CameraLottie = ReactCompilerGating.isReactCompilerEnabled() ? (func
     tmp5 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11458;
+    const tmpResult = _mod11469;
     cResult[3] = tmpResult;
     let tmp9 = tmpResult;
   } else {
@@ -52,5 +52,5 @@ export const CameraLottie = ReactCompilerGating.isReactCompilerEnabled() ? (func
 }) : (function CameraLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod11458, ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod11469, ref: ref.ref, layers, markers: items });
 });

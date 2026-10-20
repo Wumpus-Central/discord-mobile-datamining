@@ -1,16 +1,16 @@
-// === Module 14828: LocalPushNotificationStore ===
+// === Module 14846: LocalPushNotificationStore ===
 
-// Module 14828 (LocalPushNotificationStore)
+// Module 14846 (LocalPushNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import _modDef2050 from "module_2050" /* 2050 */;
-import PushNotificationDefault from "PushNotification" /* 11044 */;
+import PushNotificationDefault from "PushNotification" /* 11056 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6584 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6587 */;
 
 require = fn;
-const Constants = fn(11034);
+const Constants = fn(11046);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: metroRequire } = Constants);
 const VerificationLevels = fn(1087).VerificationLevels;
 const set = new Set();
@@ -41,11 +41,11 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
               set.add(userInfo);
             }
           }
-          const result = closure_1_1(11044).cancelLocalNotifications(userInfo);
-          const obj = closure_1_1(11044);
-          const result1 = closure_1_1(11044).cancelLocalNotifications(userInfo);
+          const result = closure_1_1(11056).cancelLocalNotifications(userInfo);
+          const obj = closure_1_1(11056);
+          const result1 = closure_1_1(11056).cancelLocalNotifications(userInfo);
           set.delete(userInfo);
-          const obj2 = closure_1_1(11044);
+          const obj2 = closure_1_1(11056);
         }
       });
     });

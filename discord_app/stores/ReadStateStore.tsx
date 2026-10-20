@@ -1,6 +1,6 @@
-// === Module 6719: ReadStateStore ===
+// === Module 6722: ReadStateStore ===
 
-// Module 6719 (ReadStateStore)
+// Module 6722 (ReadStateStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -13,47 +13,47 @@ import TypeUtils from "TypeUtils" /* 4812 */;
 import ThreadActionUtils from "ThreadActionUtils" /* 4888 */;
 import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4889 */;
 import RootNavigationRef from "RootNavigationRef" /* 5112 */;
-import isMessageMentioned from "isMessageMentioned" /* 6325 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6448 */;
-import NSFWContentGate from "NSFWContentGate" /* 6629 */;
-import networkAwareRetryDefault from "networkAwareRetry" /* 6746 */;
-import OverlaySupported from "OverlaySupported" /* 6747 */;
-import OverlayVisibility from "OverlayVisibility" /* 6748 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6749 */;
-import isChannelFocused from "isChannelFocused" /* 6750 */;
-import MessageRequestUtils from "MessageRequestUtils" /* 6760 */;
-import isOptInEnabled from "isOptInEnabled" /* 6761 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6762 */;
-import visibleInlineChannels from "visibleInlineChannels" /* 6767 */;
-import ThreadNotificationSettings from "ThreadNotificationSettings" /* 6768 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6769 */;
+import isMessageMentioned from "isMessageMentioned" /* 6328 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6451 */;
+import NSFWContentGate from "NSFWContentGate" /* 6632 */;
+import networkAwareRetryDefault from "networkAwareRetry" /* 6749 */;
+import OverlaySupported from "OverlaySupported" /* 6750 */;
+import OverlayVisibility from "OverlayVisibility" /* 6751 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6752 */;
+import isChannelFocused from "isChannelFocused" /* 6753 */;
+import MessageRequestUtils from "MessageRequestUtils" /* 6763 */;
+import isOptInEnabled from "isOptInEnabled" /* 6764 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6765 */;
+import visibleInlineChannels from "visibleInlineChannels" /* 6770 */;
+import ThreadNotificationSettings from "ThreadNotificationSettings" /* 6771 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6772 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6720 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6723 */;
 import GatedChannelStore from "GatedChannelStore" /* 4852 */;
 import ExperimentStore from "ExperimentStore" /* 5151 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6732 */;
-import MessageRequestStore from "MessageRequestStore" /* 6733 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6734 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6735 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6738 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6735 */;
+import MessageRequestStore from "MessageRequestStore" /* 6736 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6737 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6738 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6741 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4882 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6739 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6742 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import DimensionStore from "DimensionStore" /* 6444 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6651 */;
+import DimensionStore from "DimensionStore" /* 6447 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6654 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import IdleStore from "IdleStore" /* 6581 */;
-import MessageStore from "MessageStore" /* 5965 */;
+import IdleStore from "IdleStore" /* 6584 */;
+import MessageStore from "MessageStore" /* 5968 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import UserStore from "UserStore" /* 1392 */;
-import WindowStore from "WindowStore" /* 6744 */;
+import WindowStore from "WindowStore" /* 6747 */;
 
 const isMessageMentionedDefault = isMessageMentioned;
 
@@ -821,7 +821,7 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6732).isEventUpcoming;
+const isEventUpcoming = fn(6735).isEventUpcoming;
 const ChannelRecord = fn(4804);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1087);
@@ -832,7 +832,7 @@ const ActivityPanelConstants = fn(5570);
 const ChannelConstants = fn(4807);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
 const GuildScheduledEventStatus = fn(4806).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6653).ReadStateTypes;
+const ReadStateTypes = fn(6656).ReadStateTypes;
 const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -948,7 +948,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -1009,7 +1009,7 @@ ReadState["get"] = function get(channelId) {
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -1926,14 +1926,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6766, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6769, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6766, dependencyMap.paths);
+          const promise = asyncRequireImpl(6769, dependencyMap.paths);
         }
       }
     });
@@ -3245,7 +3245,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "test", force: "krisp", isExplicitUserAction: true, trackAnalytics: "default" });
+    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "test", force: "noiseSuppression", isExplicitUserAction: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", trackAnalytics: null });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3632,7 +3632,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "test", isExplicitUserAction: "deaf_man_tone2", trackAnalytics: "deaf_man_medium_light_skin_tone" });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "test", isExplicitUserAction: "CONJURE_CHAT_MESSAGE_APPEND", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

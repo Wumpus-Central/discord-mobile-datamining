@@ -1,6 +1,6 @@
-// === Module 9329: Nameplate ===
+// === Module 9341: Nameplate ===
 
-// Module 9329 (Nameplate)
+// Module 9341 (Nameplate)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
@@ -98,7 +98,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
         let tmp24 = cResult[8];
       }
       if (cResult[9] !== nameplate) {
-        const nameplateAssets = APNGPlayer(9330).getNameplateAssets(nameplate);
+        const nameplateAssets = APNGPlayer(9342).getNameplateAssets(nameplate);
         cResult[9] = nameplate;
         class B {
           constructor() {
@@ -108,7 +108,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
         }
         cResult[10] = nameplateAssets;
         let tmp26 = nameplateAssets;
-        const APNGPlayerResult3 = APNGPlayer(9330);
+        const APNGPlayerResult3 = APNGPlayer(9342);
       } else {
         tmp26 = cResult[10];
       }
@@ -194,7 +194,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
                   return obj;
                 }
               }
-              APNGPlayer = APNGPlayer(9319).APNGPlayer;
+              APNGPlayer = APNGPlayer(9331).APNGPlayer;
               const obj6 = { url: str, style: img.img, autoplay: true };
               tmp37 = closure_7(APNGPlayer, obj6);
               APNGPlayerResult4 = APNGPlayer(1384);
@@ -340,7 +340,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
   const tmpResult = flag6(5014);
   const backgroundGradientColors = flag6(1992).getBackgroundGradientColors(nameplate.palette, tmp6);
   const tmpResult4 = flag6(1992);
-  const nameplateAssets = flag6(9330).getNameplateAssets(nameplate);
+  const nameplateAssets = flag6(9342).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -375,11 +375,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
     const tmp5Result = tmp5(5219);
   }
   const items4 = [tmp15Result, ];
-  const tmpResult5 = flag6(9330);
+  const tmpResult5 = flag6(9342);
   if (tmpResult6.isAndroid()) {
     if (tmp12) {
       const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp17 = closure_7(tmp(9319).APNGPlayer, obj5);
+      let tmp17 = closure_7(tmp(9331).APNGPlayer, obj5);
     }
     items4[1] = tmp17;
     obj3.children = items4;

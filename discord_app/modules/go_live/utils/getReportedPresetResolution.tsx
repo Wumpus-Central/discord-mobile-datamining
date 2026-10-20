@@ -1,7 +1,7 @@
-// === Module 5837: getReportedPresetResolution ===
+// === Module 5839: getReportedPresetResolution ===
 
-// Module 5837 (getReportedPresetResolution)
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5801 */;
+// Module 5839 (getReportedPresetResolution)
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5803 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const StreamSettingsConstants = fn(5775);

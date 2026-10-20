@@ -1,6 +1,6 @@
-// === Module 17177: HomeDrawerAnimations ===
+// === Module 17196: HomeDrawerAnimations ===
 
-// Module 17177 (HomeDrawerAnimations)
+// Module 17196 (HomeDrawerAnimations)
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import size from "module_2" /* 2 */;
 

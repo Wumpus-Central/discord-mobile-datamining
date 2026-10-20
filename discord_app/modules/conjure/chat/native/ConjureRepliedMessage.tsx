@@ -1,6 +1,6 @@
-// === Module 12192: chat/ConjureRepliedMessage ===
+// === Module 12207: chat/ConjureRepliedMessage ===
 
-// Module 12192 (chat/ConjureRepliedMessage)
+// Module 12207 (chat/ConjureRepliedMessage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,11 +8,11 @@ import native from "native" /* 1202 */;
 import _modDef3820 from "module_3820" /* 3820 */;
 import UserUtils from "UserUtils" /* 4994 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11709 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12193 */;
-import conjureMentions from "conjureMentions" /* 12194 */;
-import ConjureMessageAuthor from "ConjureMessageAuthor" /* 12196 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12201 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11723 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12208 */;
+import conjureMentions from "conjureMentions" /* 12209 */;
+import ConjureMessageAuthor from "ConjureMessageAuthor" /* 12211 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12216 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,10 +20,10 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(12182).MESSAGE_EDGE_INSET + fn(12182).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(12182).MESSAGE_CONTENT_INSET - 4 - diff;
+const diff = fn(12197).MESSAGE_EDGE_INSET + fn(12197).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(12197).MESSAGE_CONTENT_INSET - 4 - diff;
 const createStyles = fn(4945);
-let obj2 = { root: { marginLeft: diff - fn(12182).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
+let obj2 = { root: { marginLeft: diff - fn(12197).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
 const rect = { position: "absolute", left: 0, top: 9, bottom: 0, width: diff1, borderTopWidth: 2, borderLeftWidth: 2, borderColor: nativeDefault.colors.SPINE_DEFAULT, borderTopLeftRadius: Math.round(0.25 * diff1) };
 obj2.spine = rect;
 obj2.avatar = { marginRight: 4 };
@@ -31,7 +31,7 @@ obj2.name = { flexShrink: 0, marginRight: 4, maxWidth: "40%" };
 obj2.content = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginLeft: diff - fn(12182).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" };
+let obj3 = { marginLeft: diff - fn(12197).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureRepliedMessage.tsx");
 
@@ -195,8 +195,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   replied = replied.replied;
   const onJump = replied.onJump;
   const tmp = closure_8();
-  const messageAuthorUser = replied(12193).useMessageAuthorUser(replied.userId);
-  const obj = replied(12193);
+  const messageAuthorUser = replied(12208).useMessageAuthorUser(replied.userId);
+  const obj = replied(12208);
   let str = replied(4994).useName(messageAuthorUser);
   if (str == null) {
     str = "";
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   if (body == null) {
     body = replied.content;
   }
-  const tmp2Result = replied(12194);
+  const tmp2Result = replied(12209);
   const conjureMentionNames = tmp2Result.useConjureMentionNames(body.replace(/\s+/g, " ").trim());
   const obj3 = { style: tmp.root, onPress: onJump, disabled: null == onJump, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = tmp2(1128).intl;
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   if (null != messageAuthorUser) {
     const obj5 = { style: tmp.avatar, children: null };
     const obj6 = { userId: replied.userId, size: tmp2(1202).AvatarSizes.SIZE_16 };
-    obj5.children = closure_6(tmp2(12196).ConjureUserAvatar, obj6);
+    obj5.children = closure_6(tmp2(12211).ConjureUserAvatar, obj6);
     tmp11Result = closure_6(closure_5, obj5);
   }
   items1[1] = tmp11Result;

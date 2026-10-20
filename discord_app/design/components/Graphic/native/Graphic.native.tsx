@@ -1,6 +1,6 @@
-// === Module 9766: Graphic ===
+// === Module 9778: Graphic ===
 
-// Module 9766 (Graphic)
+// Module 9778 (Graphic)
 import c from "c" /* 576 */;
 import native from "native" /* 4999 */;
 import GraphicTypes from "GraphicTypes" /* 5098 */;

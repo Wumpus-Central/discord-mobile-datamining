@@ -1,6 +1,6 @@
-// === Module 17606: ForYouReadSectionHeader ===
+// === Module 17625: ForYouReadSectionHeader ===
 
-// Module 17606 (ForYouReadSectionHeader)
+// Module 17625 (ForYouReadSectionHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

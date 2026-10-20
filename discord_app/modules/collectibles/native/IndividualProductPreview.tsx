@@ -1,20 +1,20 @@
-// === Module 14251: IndividualProductPreview ===
+// === Module 14269: IndividualProductPreview ===
 
-// Module 14251 (IndividualProductPreview)
+// Module 14269 (IndividualProductPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import useCurrentUser from "useCurrentUser" /* 8592 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10847 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10965 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 14252 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 14253 */;
+import useCurrentUser from "useCurrentUser" /* 8604 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10858 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10976 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 14270 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 14271 */;
 import noop from "module_19" /* 19 */;
 
 const FractionalPremiumSKUs = FractionalNitroPreview(1090);
-const FractionalNitroPreview2 = FractionalNitroPreview(14254);
-const OrbBadgePreview = FractionalNitroPreview(14257);
+const FractionalNitroPreview2 = FractionalNitroPreview(14272);
+const OrbBadgePreview = FractionalNitroPreview(14275);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -263,7 +263,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
     }
     if (cResult[3] !== product) {
       const obj2 = { product };
-      const tmp8 = closure_7(onTrackPress(14252), obj2);
+      const tmp8 = closure_7(onTrackPress(14270), obj2);
       cResult[3] = product;
       cResult[4] = tmp8;
       let tmp5 = tmp8;

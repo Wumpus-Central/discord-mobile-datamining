@@ -1,6 +1,6 @@
-// === Module 8958: StartStageChannelModal ===
+// === Module 8970: StartStageChannelModal ===
 
-// Module 8958 (StartStageChannelModal)
+// Module 8970 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,13 +9,13 @@ import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import GuildIcon from "GuildIcon" /* 6831 */;
-import Pressables from "Pressables" /* 6856 */;
-import _modDef7132 from "module_7132" /* 7132 */;
-import HotspotStore2 from "HotspotStore" /* 7254 */;
-import Form from "Form" /* 8871 */;
-import StageSparkleDefault from "StageSparkle" /* 8959 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import GuildIcon from "GuildIcon" /* 6834 */;
+import Pressables from "Pressables" /* 6859 */;
+import _modDef7135 from "module_7135" /* 7135 */;
+import HotspotStore2 from "HotspotStore" /* 7257 */;
+import Form from "Form" /* 8883 */;
+import StageSparkleDefault from "StageSparkle" /* 8971 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ function closeModal() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(6585);
+const StageChannelsConstants = fn(6588);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let constants = fn(4806).GuildScheduledEventPrivacyLevel;
@@ -77,7 +77,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
       const _Symbol2 = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { accessibilityRole: "button", accessibilityLabel: tmp7, onPress: closeModal, children: null };
-        const obj3 = { source: _modDef7132 };
+        const obj3 = { source: _modDef7135 };
         obj2.children = closure_1_14(native.Icon, obj3);
         const tmp13 = closure_1_14(Pressables.PressableOpacity, obj2);
         cResult[4] = tmp13;
@@ -110,7 +110,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef7132 };
+    const obj3 = { source: _modDef7135 };
     obj2.children = closure_1_14(native.Icon, obj3);
     obj.children = closure_1_14(Pressables.PressableOpacity, obj2);
     tmp2 = closure_1_14(React5, obj);
@@ -334,10 +334,10 @@ export default function StartStageChannelModal(arg0) {
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(7817).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(7821).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(7817);
+                  obj5 = tmp66(7821);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -351,7 +351,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(6328).APIError(closure_128_1);
+            const aPIError = new closure_0(6331).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -366,8 +366,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(7258).hideHotspot(closure_0(7254).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(7258);
+                  tmp66(7261).hideHotspot(closure_0(7257).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(7261);
                 }
               }
             } else if (arg0 === 1) {
@@ -415,7 +415,7 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("module_7132");
+      obj.source = require("module_7135");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     }

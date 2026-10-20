@@ -1,6 +1,6 @@
-// === Module 7358: ChangelogStore ===
+// === Module 7361: ChangelogStore ===
 
-// Module 7358 (ChangelogStore)
+// Module 7361 (ChangelogStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

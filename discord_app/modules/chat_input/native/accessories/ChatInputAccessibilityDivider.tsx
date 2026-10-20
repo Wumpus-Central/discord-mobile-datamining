@@ -1,6 +1,6 @@
-// === Module 12953: ChatInputAccessibilityDivider ===
+// === Module 12971: ChatInputAccessibilityDivider ===
 
-// Module 12953 (ChatInputAccessibilityDivider)
+// Module 12971 (ChatInputAccessibilityDivider)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;

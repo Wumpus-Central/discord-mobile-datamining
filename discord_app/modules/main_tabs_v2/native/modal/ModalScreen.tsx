@@ -1,9 +1,9 @@
-// === Module 18050: modal/ModalScreen ===
+// === Module 18073: modal/ModalScreen ===
 
-// Module 18050 (modal/ModalScreen)
+// Module 18073 (modal/ModalScreen)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9279 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9291 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Modal(ro
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function h() {
-      closure_1(6620).pop();
+      closure_1(6623).pop();
     };
     cResult[6] = fn;
   }
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Modal(ro
   ({ impressionName, impressionProperties } = props);
   const tmp = closure_12();
   const callback = noop.useCallback(() => {
-    closure_1(6620).pop();
+    closure_1(6623).pop();
   }, []);
   const obj = { type: null, name: null, properties: null };
   const tmp2 = _objectWithoutProperties(props, closure_4);
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Modal(ro
     }
     return currentResult;
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => modal(7530).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = noop.useLayoutEffect(() => modal(7533).trackAppUIViewed("ModalScreen"), []);
   ({ left, right } = useSafeAreaInsetsDefault());
   const tmp13 = useSafeAreaInsetsDefault();
   const items = [absoluteFillObject.absoluteFillObject, ];
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Modal(ro
   const obj4 = { style: items, onAccessibilityEscape: null, children: null };
   items[1] = tmp16;
   if (modal.closable) {
-    let pop = tmp4(6620).pop;
+    let pop = tmp4(6623).pop;
   } else {
     pop = NOOP;
   }
@@ -319,10 +319,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Modal(ro
   obj5.transitionState = null;
   obj5.onClose = callback;
   const items2 = [<modal.modal />, ];
-  tmp7Result = modal(18051);
+  tmp7Result = modal(18074);
   let isIOSResult = modal(1384).isIOS();
   if (isIOSResult) {
-    isIOSResult = closure_10(tmp7(11868).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_10(tmp7(11882).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj4.children = items2;

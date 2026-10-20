@@ -1,17 +1,17 @@
-// === Module 18503: DiceRollLifecycleManager ===
+// === Module 18526: DiceRollLifecycleManager ===
 
-// Module 18503 (DiceRollLifecycleManager)
+// Module 18526 (DiceRollLifecycleManager)
 import util from "util" /* 1128 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7512 */;
-import MessageParserDefault from "MessageParser" /* 7698 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7515 */;
+import MessageParserDefault from "MessageParser" /* 7702 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import DiceRollStore from "DiceRollStore" /* 12856 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import DiceRollStore from "DiceRollStore" /* 12874 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 require = fn;
-const INITIAL_STATE = fn(12856).INITIAL_STATE;
-const DiceRollConstants = fn(9573);
+const INITIAL_STATE = fn(12874).INITIAL_STATE;
+const DiceRollConstants = fn(9586);
 ({ AFTER_ROLL_DELAY_MS: closure_7, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: closure_9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: closure_11, ROLL_DURATION_MS: closure_12 } = DiceRollConstants);
 const MessageSendLocation = fn(4950).MessageSendLocation;
 class DiceRollLifecycleManager extends tmp3 {

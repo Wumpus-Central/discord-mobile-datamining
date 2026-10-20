@@ -1,15 +1,15 @@
-// === Module 11579: TouchableStreamPreview ===
+// === Module 11590: TouchableStreamPreview ===
 
-// Module 11579 (TouchableStreamPreview)
+// Module 11590 (TouchableStreamPreview)
 import nativeDefault from "native" /* 587 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5672 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6582 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6593 */;
-import StreamActionCreators from "StreamActionCreators" /* 7773 */;
-import transitionToStreamDefault from "transitionToStream" /* 7810 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6585 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6596 */;
+import StreamActionCreators from "StreamActionCreators" /* 7777 */;
+import transitionToStreamDefault from "transitionToStream" /* 7814 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5677 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildStore from "GuildStore" /* 4822 */;

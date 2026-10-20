@@ -1,6 +1,6 @@
-// === Module 14273: OrbCheckoutModalComponents ===
+// === Module 14291: OrbCheckoutModalComponents ===
 
-// Module 14273 (OrbCheckoutModalComponents)
+// Module 14291 (OrbCheckoutModalComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,14 +8,14 @@ import shared from "shared" /* 4952 */;
 import useThemeDefault from "useTheme" /* 5166 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6960 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7288 */;
-import OrbsIcon from "OrbsIcon" /* 9347 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13688 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13690 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14272 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 14274 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6963 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7291 */;
+import OrbsIcon from "OrbsIcon" /* 9359 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 13706 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13708 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 14290 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 14292 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -314,7 +314,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbCheckoutL
   const obj3 = { style: tmp4.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: tmp5 };
 }) : (function OrbCheckoutLegalFinePrint() {
   const tmp = closure_8();
-  skuId = skuId(14272).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(14290).useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
   return closure_6(skuId(5195).Text, { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo });

@@ -1,8 +1,8 @@
-// === Module 14240: usePrivateChannelCall ===
+// === Module 14258: usePrivateChannelCall ===
 
-// Module 14240 (usePrivateChannelCall)
+// Module 14258 (usePrivateChannelCall)
 import util from "util" /* 1128 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10546 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10557 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
               if (null == channel) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp3(7357).ensurePrivateChannel(tmp32), done: false };
+                const obj7 = { value: tmp3(7360).ensurePrivateChannel(tmp32), done: false };
                 return obj7;
               }
               tmp32 = closure_0;
@@ -110,8 +110,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
             isPrivateResult = channel.isPrivate();
           }
           if (isPrivateResult) {
-            tmp3(10546)(channel, tmp3).onPress();
-            const obj3 = tmp3(10546)(channel, tmp3);
+            tmp3(10557)(channel, tmp3).onPress();
+            const obj3 = tmp3(10557)(channel, tmp3);
           }
           if (dependencyMap != null) {
             dependencyMap();
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
             if (null == channel) {
               dependencyMap = 1;
               c3 = 1;
-              const obj7 = { value: tmp3(7357).ensurePrivateChannel(tmp32), done: false };
+              const obj7 = { value: tmp3(7360).ensurePrivateChannel(tmp32), done: false };
               return obj7;
             }
             tmp32 = closure_0;
@@ -271,8 +271,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePriva
           isPrivateResult = channel.isPrivate();
         }
         if (isPrivateResult) {
-          tmp3(10546)(channel, closure_129_1).onPress();
-          const obj3 = tmp3(10546)(channel, closure_129_1);
+          tmp3(10557)(channel, closure_129_1).onPress();
+          const obj3 = tmp3(10557)(channel, closure_129_1);
         }
         if (closure_129_2 != null) {
           closure_129_2();

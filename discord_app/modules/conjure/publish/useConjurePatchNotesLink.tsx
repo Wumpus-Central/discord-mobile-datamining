@@ -1,16 +1,16 @@
-// === Module 12217: useConjurePatchNotesLink ===
+// === Module 12236: useConjurePatchNotesLink ===
 
-// Module 12217 (useConjurePatchNotesLink)
+// Module 12236 (useConjurePatchNotesLink)
 import router_utils from "router_utils" /* 1114 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11713 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 11727 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6721 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11005 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6724 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11017 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const canPublishProject = fn(6721).canPublishProject;
+const canPublishProject = fn(6724).canPublishProject;
 const Routes = fn(1087).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

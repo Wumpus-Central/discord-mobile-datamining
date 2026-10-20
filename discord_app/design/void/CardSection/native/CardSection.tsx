@@ -1,11 +1,11 @@
-// === Module 8886: CardSection ===
+// === Module 8898: CardSection ===
 
-// Module 8886 (CardSection)
+// Module 8898 (CardSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8887 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8899 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6599 */;
+import TextStyles from "TextStyles" /* 6602 */;
 
 require = fn;
 const View = fn(17).View;

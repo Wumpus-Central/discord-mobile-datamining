@@ -428,7 +428,7 @@ export default {
     }
     return surrogates;
   },
-  convertSurrogateToName(emoji_name, arg1) {
+  convertSurrogateToName(name, arg1) {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = true;
@@ -437,7 +437,7 @@ export default {
     if (arg2 === undefined) {
       str = "";
     }
-    const tmp3 = require("module_4896").surrogateToEmoji[emoji_name];
+    const tmp3 = require("module_4896").surrogateToEmoji[name];
     let tmp4 = null;
     if (null != tmp3) {
       tmp4 = require("module_4896").emojis[tmp3];

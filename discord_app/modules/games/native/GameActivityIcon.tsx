@@ -1,6 +1,6 @@
-// === Module 13991: GameActivityIcon ===
+// === Module 14009: GameActivityIcon ===
 
-// Module 13991 (GameActivityIcon)
+// Module 14009 (GameActivityIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4999 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 const AvatarUtils = UnknownGameIcon(1417);
 const shared = UnknownGameIcon(4952);
-const UnknownGameIcon2 = UnknownGameIcon(8018);
+const UnknownGameIcon2 = UnknownGameIcon(8022);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

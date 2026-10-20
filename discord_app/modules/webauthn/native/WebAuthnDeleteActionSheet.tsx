@@ -1,9 +1,9 @@
-// === Module 15855: WebAuthnDeleteActionSheet ===
+// === Module 15874: WebAuthnDeleteActionSheet ===
 
-// Module 15855 (WebAuthnDeleteActionSheet)
+// Module 15874 (WebAuthnDeleteActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6625 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6628 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -196,8 +196,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   let obj2 = { title: null, trailing: null };
   let intl = credential(1128).intl;
   obj2.title = intl.formatToPlainString(credential(1128).t.mI3CoL, { keyName: credential.name });
-  obj2.trailing = closure_4(credential(7239).ActionSheetCloseButton, { onPress: handleClose });
-  const items = [closure_4(credential(7194).BottomSheetTitleHeader, obj2), , , ];
+  obj2.trailing = closure_4(credential(7242).ActionSheetCloseButton, { onPress: handleClose });
+  const items = [closure_4(credential(7197).BottomSheetTitleHeader, obj2), , , ];
   const obj4 = { style: tmp.content, children: null };
   const obj5 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
   const intl2 = credential(1128).intl;

@@ -1,6 +1,6 @@
-// === Module 12012: useOptionAnimations ===
+// === Module 12027: useOptionAnimations ===
 
-// Module 12012 (useOptionAnimations)
+// Module 12027 (useOptionAnimations)
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
 import _slicedToArray from "module_32" /* 32 */;

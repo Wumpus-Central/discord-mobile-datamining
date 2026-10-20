@@ -1,6 +1,6 @@
-// === Module 18407: LaunchPad ===
+// === Module 18429: LaunchPad ===
 
-// Module 18407 (LaunchPad)
+// Module 18429 (LaunchPad)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
@@ -10,27 +10,27 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import ChatInputUtils from "ChatInputUtils" /* 5120 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Pressables from "Pressables" /* 6856 */;
-import AutocompleterDefault from "Autocompleter" /* 8989 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9000 */;
-import RouteManagerDefault from "RouteManager" /* 11607 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 13664 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15628 */;
+import Pressables from "Pressables" /* 6859 */;
+import AutocompleterDefault from "Autocompleter" /* 9001 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9012 */;
+import RouteManagerDefault from "RouteManager" /* 11618 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 13682 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15647 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 5172 */;
-import ChannelListStore from "ChannelListStore" /* 7581 */;
-import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6751 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6718 */;
+import ChannelListStore from "ChannelListStore" /* 7584 */;
+import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6754 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6721 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7737 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6762 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7741 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6765 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 14863 */;
-import ReadStateStore from "ReadStateStore" /* 6719 */;
-import SortedGuildStore from "SortedGuildStore" /* 6649 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 14881 */;
+import ReadStateStore from "ReadStateStore" /* 6722 */;
+import SortedGuildStore from "SortedGuildStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import VoiceStateStore from "VoiceStateStore" /* 5591 */;
 
 const require = globalThis.__r;
@@ -333,7 +333,7 @@ function useInitialResults(disabled) {
   return { initialResults: selectedUnreadGuild.useDeferredValue(memo1), unreadPrivateChannelIds: stateFromStores, unreadGuilds: stateFromStoresArray, guildHistory: memo, selectedUnreadGuild, setSelectedUnreadGuild: tmp3[1] };
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6751);
+let NavigationHistoryStore = fn(6754);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(4804);
@@ -1153,7 +1153,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   return closure_28(sharedValue, obj6);
 }));
 const results = [];
-let items = [fn(8988).AutocompleterResultTypes.GUILD, fn(8988).AutocompleterResultTypes.TEXT_CHANNEL, fn(8988).AutocompleterResultTypes.GROUP_DM, fn(8988).AutocompleterResultTypes.VOICE_CHANNEL, fn(8988).AutocompleterResultTypes.USER];
+let items = [fn(9000).AutocompleterResultTypes.GUILD, fn(9000).AutocompleterResultTypes.TEXT_CHANNEL, fn(9000).AutocompleterResultTypes.GROUP_DM, fn(9000).AutocompleterResultTypes.VOICE_CHANNEL, fn(9000).AutocompleterResultTypes.USER];
 ReactCompilerGating = fn(558);
 let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWrapperStyles() {
   const cResult = c.c(5);

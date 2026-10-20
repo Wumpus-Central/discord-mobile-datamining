@@ -1,12 +1,12 @@
-// === Module 13321: MessageRequestPreviewStore ===
+// === Module 13339: MessageRequestPreviewStore ===
 
-// Module 13321 (MessageRequestPreviewStore)
+// Module 13339 (MessageRequestPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5967 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5970 */;
 import UserStore from "UserStore" /* 1392 */;
-import MessageRequestStore from "MessageRequestStore" /* 6733 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6734 */;
+import MessageRequestStore from "MessageRequestStore" /* 6736 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6737 */;
 
 require = fn;
 function isMessagePreviewEnabledForChannel(id) {

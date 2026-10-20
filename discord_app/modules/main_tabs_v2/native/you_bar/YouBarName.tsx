@@ -1,21 +1,21 @@
-// === Module 17562: YouBarName ===
+// === Module 17581: YouBarName ===
 
-// Module 17562 (YouBarName)
+// Module 17581 (YouBarName)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildTagDefault from "GuildTag" /* 9146 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10554 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10555 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10579 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10871 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 17563 */;
+import GuildTagDefault from "GuildTag" /* 9158 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10565 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10566 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10590 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10882 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 17582 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import PresenceStore from "PresenceStore" /* 5674 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6452 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6455 */;
 import VoiceStateStore from "VoiceStateStore" /* 5591 */;
 
 require = fn;
@@ -115,13 +115,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj = userId(576);
   const stateFromStores = userId(504).useStateFromStores(tmp5, C);
   const tmpResult = userId(504);
-  const customStatusActivity = userId(10849).useCustomStatusActivity();
-  const tmpResult4 = userId(10849);
+  const customStatusActivity = userId(10860).useCustomStatusActivity();
+  const tmpResult4 = userId(10860);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10556).useGameMentionsAsPlainText(state);
+  const gameMentionsAsPlainText = userId(10567).useGameMentionsAsPlainText(state);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PresenceStore, , , , , ];
     class C {
@@ -176,21 +176,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[4] = userId;
   cResult[5] = M;
   tmp18 = M;
-  const tmpResult5 = userId(10556);
+  const tmpResult5 = userId(10567);
 }) : (function YouName(username) {
   const userId = username.userId;
   const tmp = closure_15();
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(10849).useCustomStatusActivity();
-  let obj2 = userId(10849);
+  const customStatusActivity = userId(10860).useCustomStatusActivity();
+  let obj2 = userId(10860);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10556).useGameMentionsAsPlainText(state);
-  let obj3 = userId(10556);
+  const gameMentionsAsPlainText = userId(10567).useGameMentionsAsPlainText(state);
+  let obj3 = userId(10567);
   const items1 = [PresenceStore, ApplicationStreamingStore, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore];
   let obj4 = { style: tmp.userText, children: null };
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => {
@@ -206,7 +206,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_12(stateFromStores(10552), obj6);
+    let tmp9Result = closure_12(stateFromStores(10563), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -215,7 +215,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_12(stateFromStores(10573), obj7);
+      tmp11Result2 = closure_12(stateFromStores(10584), obj7);
     }
     const items3 = [tmp11Result2, ];
     const obj8 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };

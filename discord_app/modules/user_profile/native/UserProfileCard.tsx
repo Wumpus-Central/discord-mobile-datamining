@@ -1,18 +1,18 @@
-// === Module 7249: UserProfileCard ===
+// === Module 7252: UserProfileCard ===
 
-// Module 7249 (UserProfileCard)
+// Module 7252 (UserProfileCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Pressables from "Pressables" /* 6856 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7251 */;
+import Pressables from "Pressables" /* 6859 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7254 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["title", "titleLeadingIcon", "titleIcon", "titleStyle", "trailingAction", "children", "style"];
 const View = fn(17).View;
-const Constants = fn(7250);
+const Constants = fn(7253);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);

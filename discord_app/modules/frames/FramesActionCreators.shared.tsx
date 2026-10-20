@@ -1,13 +1,13 @@
-// === Module 11059: _launchFrame ===
+// === Module 11071: _launchFrame ===
 
-// Module 11059 (_launchFrame)
+// Module 11071 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6726 */;
-import createProxyTicket from "createProxyTicket" /* 11021 */;
-import leaveFrame from "leaveFrame" /* 11056 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 11060 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6729 */;
+import createProxyTicket from "createProxyTicket" /* 11033 */;
+import leaveFrame from "leaveFrame" /* 11068 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 11072 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 6723 */;
+import FramesStore from "FramesStore" /* 6726 */;
 
 require = fn;
 let closure_11 = async function _launchFrame(arg0) {
@@ -206,7 +206,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(11056);
+    obj2 = obj2(11068);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -337,7 +337,7 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(6724);
+const FramesConstants = fn(6727);
 ({ FrameIntent: hasOwnProperty, FrameLayoutModes: metroRequire, getFrameIntentForSurface: closure_7, makeFrameId: closure_8 } = FramesConstants);
 const ActivityPanelModes = fn(5570).ActivityPanelModes;
 let c10 = 0;
@@ -358,8 +358,8 @@ export { clearMainFrameSlot };
 export { demoteMainFrame };
 export { promoteFrame };
 export { updateFrameLayoutMode };
-export const setFrameRunsInBackground = function setFrameRunsInBackground(frameId, enabled) {
-  DispatcherDefault.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId, enabled });
+export const setFrameRunsInBackground = function setFrameRunsInBackground(id, enabled) {
+  DispatcherDefault.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId: id, enabled });
 };
 export const updateFramePanelMode = function updateFramePanelMode(id, PIP) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP });

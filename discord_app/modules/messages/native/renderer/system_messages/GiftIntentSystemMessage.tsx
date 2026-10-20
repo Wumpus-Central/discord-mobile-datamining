@@ -1,12 +1,12 @@
-// === Module 8390: GiftIntentSystemMessage ===
+// === Module 8394: GiftIntentSystemMessage ===
 
-// Module 8390 (GiftIntentSystemMessage)
+// Module 8394 (GiftIntentSystemMessage)
 import nativeDefault from "native" /* 587 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8221 */;
-import _modDef8224 from "module_8224" /* 8224 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8266 */;
-import GiftIntentEmbed from "GiftIntentEmbed" /* 8391 */;
-import EphemeralIndication from "EphemeralIndication" /* 8398 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8225 */;
+import _modDef8228 from "module_8228" /* 8228 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8270 */;
+import GiftIntentEmbed from "GiftIntentEmbed" /* 8395 */;
+import EphemeralIndication from "EphemeralIndication" /* 8402 */;
 import createStyles from "createStyles" /* 4945 */;
 import size from "module_2" /* 2 */;
 
@@ -25,7 +25,7 @@ export const createGiftIntentSystemMessage = function createGiftIntentSystemMess
     const tmp5 = closure_3(theme);
     obj3.ephemeralIndication = EphemeralIndication.createEphemeralIndication(message);
     const tmpResult = EphemeralIndication;
-    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8224);
+    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8228);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp5);
     return obj3;
   }

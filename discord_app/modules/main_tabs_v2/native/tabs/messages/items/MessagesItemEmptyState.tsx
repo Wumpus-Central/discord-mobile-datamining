@@ -1,6 +1,6 @@
-// === Module 17253: MessagesItemEmptyState ===
+// === Module 17272: MessagesItemEmptyState ===
 
-// Module 17253 (MessagesItemEmptyState)
+// Module 17272 (MessagesItemEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

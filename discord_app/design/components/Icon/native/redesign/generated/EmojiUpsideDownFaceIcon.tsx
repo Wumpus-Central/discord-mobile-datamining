@@ -1,10 +1,10 @@
-// === Module 16486: EmojiUpsideDownFaceIcon ===
+// === Module 16505: EmojiUpsideDownFaceIcon ===
 
-// Module 16486 (EmojiUpsideDownFaceIcon)
+// Module 16505 (EmojiUpsideDownFaceIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5630 */;
-import _mod16487 from "module_16487" /* 16487 */;
+import _mod16506 from "module_16506" /* 16506 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EmojiUpsideDownFaceIcon = ReactCompilerGating.isReactCompilerEnable
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16487;
+    const tmpResult = _mod16506;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EmojiUpsideDownFaceIcon = ReactCompilerGating.isReactCompilerEnable
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16487, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16506, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

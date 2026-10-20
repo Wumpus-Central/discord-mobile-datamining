@@ -1,12 +1,12 @@
-// === Module 11038: ? ===
+// === Module 11050: ? ===
 
-// Module 11038
+// Module 11050
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import transitionToGuild from "transitionToGuild" /* 7395 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import transitionToGuild from "transitionToGuild" /* 7398 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   guild = guild.guild;
   const application = guild.application;
   const tmp4 = closure_15();
-  guild(8740);
+  guild(8752);
   if (null == application) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -475,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
               return;
             }
           }
-          tmp52[0] = application(11039);
+          tmp52[0] = application(11051);
           const tmp53 = closure_12(application(5631), tmp52);
           cResult[26] = tmp53;
           const tmp49 = tmp53;

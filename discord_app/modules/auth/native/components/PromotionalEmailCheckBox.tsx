@@ -1,6 +1,6 @@
-// === Module 17133: PromotionalEmailCheckBox ===
+// === Module 17152: PromotionalEmailCheckBox ===
 
-// Module 17133 (PromotionalEmailCheckBox)
+// Module 17152 (PromotionalEmailCheckBox)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6617);
+const PromoEmailConsentStore = fn(6620);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Promotio
         }
       }
       const obj2 = { checked: tmp6Result };
-      const tmp16 = closure_6(tmp(6849).FormCheckbox, obj2);
+      const tmp16 = closure_6(tmp(6852).FormCheckbox, obj2);
       cResult[6] = tmp6Result;
       cResult[7] = tmp16;
     } else {
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Promotio
       children: null
     };
     const obj5 = { checked: tmp3 };
-    const items = [closure_6(tmp4(6849).FormCheckbox, obj5), ];
+    const items = [closure_6(tmp4(6852).FormCheckbox, obj5), ];
     const obj6 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: promoEmailOptInLabel };
     items[1] = closure_6(tmp4(5195).Text, obj6);
     obj4.children = items;

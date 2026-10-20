@@ -1,6 +1,6 @@
-// === Module 8278: useUserCommunicationDisabled ===
+// === Module 8282: useUserCommunicationDisabled ===
 
-// Module 8278 (useUserCommunicationDisabled)
+// Module 8282 (useUserCommunicationDisabled)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4867 */;

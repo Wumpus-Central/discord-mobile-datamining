@@ -1,15 +1,15 @@
-// === Module 10367: PremiumGiftPlanSelect ===
+// === Module 10378: PremiumGiftPlanSelect ===
 
-// Module 10367 (PremiumGiftPlanSelect)
+// Module 10378 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import native from "native" /* 1202 */;
 import timing from "timing" /* 5167 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10424 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10435 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8606 */;
-import PromotionsStore from "PromotionsStore" /* 9437 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8618 */;
+import PromotionsStore from "PromotionsStore" /* 9449 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -925,7 +925,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         const tmp4Result8 = tmp4(tmp2[34]);
       }
     } else {
-      const obj44 = { style: tmp13.avatar, guildId: "r", size: "r", user: false };
+      const obj44 = { style: tmp13.avatar, guildId: "r", size: true, user: true };
       const AvatarSizes = tmp(tmp2[29]).AvatarSizes;
       obj44.size = tmp65Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

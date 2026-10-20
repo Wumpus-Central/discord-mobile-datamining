@@ -1,10 +1,10 @@
-// === Module 17889: ThreadsScreen ===
+// === Module 17912: ThreadsScreen ===
 
-// Module 17889 (ThreadsScreen)
+// Module 17912 (ThreadsScreen)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5554 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13146 */;
-import ThreadListDefault from "ThreadList" /* 17890 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13164 */;
+import ThreadListDefault from "ThreadList" /* 17913 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 
@@ -22,7 +22,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   ({ style, channel } = arg0);
   const tmp3 = closure_9();
   let obj = channel(576);
-  const canStartThread = channel(7315).useCanStartThread(channel);
+  const canStartThread = channel(7318).useCanStartThread(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { includeKeyboardHeight: true };
     cResult[0] = obj3;
@@ -103,11 +103,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   cResult[5] = tmp3.container;
   cResult[6] = items;
   tmp9 = items;
-  let obj2 = channel(7315);
+  let obj2 = channel(7318);
 }) : (function ThreadsScreen(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const canStartThread = channel(7315).useCanStartThread(channel);
+  const canStartThread = channel(7318).useCanStartThread(channel);
   const items = [channel];
   const callback = noop.useCallback(() => {
     const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
@@ -125,7 +125,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   }, []);
   const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
-  let obj = channel(7315);
+  let obj = channel(7318);
   if (canStartThread) {
     tmp10 = callback;
   }

@@ -1,15 +1,15 @@
-// === Module 17758: GuildSettingsModalMemberApplications ===
+// === Module 17777: GuildSettingsModalMemberApplications ===
 
-// Module 17758 (GuildSettingsModalMemberApplications)
+// Module 17777 (GuildSettingsModalMemberApplications)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4974 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 17759 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 17778 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6792 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6795 */;
 
 const require = globalThis.__r;
 
@@ -156,7 +156,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
       const obj5 = { arrow: true, icon: tmp8, label: tmp11, onPress: tmp4, start, end };
-      const tmp17 = closure_7(tmp(6851).TableRow, obj5);
+      const tmp17 = closure_7(tmp(6854).TableRow, obj5);
       cResult[8] = end;
       cResult[9] = tmp4;
       cResult[10] = start;
@@ -190,7 +190,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(6851).TableRow, obj2);
+      return closure_7(joinRequest(6854).TableRow, obj2);
     }
   }
 }));

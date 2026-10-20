@@ -1,13 +1,13 @@
-// === Module 12130: ConjureVersionRestoreConfirm ===
+// === Module 12145: ConjureVersionRestoreConfirm ===
 
-// Module 12130 (ConjureVersionRestoreConfirm)
+// Module 12145 (ConjureVersionRestoreConfirm)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
-import useAlertStore from "useAlertStore" /* 5865 */;
-import AlertModal from "AlertModal" /* 5869 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6848 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
+import useAlertStore from "useAlertStore" /* 5868 */;
+import AlertModal from "AlertModal" /* 5872 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6851 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,13 @@
-// === Module 12774: CheckpointCharacterStage ===
+// === Module 12791: CheckpointCharacterStage ===
 
-// Module 12774 (CheckpointCharacterStage)
+// Module 12791 (CheckpointCharacterStage)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import CheckpointTrait from "CheckpointTrait" /* 5993 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6318 */;
-import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6319 */;
-import CheckpointStore from "CheckpointStore" /* 12762 */;
+import CheckpointTrait from "CheckpointTrait" /* 5996 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6321 */;
+import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6322 */;
+import CheckpointStore from "CheckpointStore" /* 12779 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4945 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     tmp11 = cResult[4];
   }
   if (cResult[5] !== activeCustomizationOption) {
-    const customizationOptionName = tmp(6316).getCustomizationOptionName(activeCustomizationOption);
+    const customizationOptionName = tmp(6319).getCustomizationOptionName(activeCustomizationOption);
     cResult[5] = activeCustomizationOption;
     cResult[6] = customizationOptionName;
     let tmp14 = customizationOptionName;
-    const tmpResult2 = tmp(6316);
+    const tmpResult2 = tmp(6319);
   } else {
     tmp14 = cResult[6];
   }
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       }
     }
     const _Object = values.Object;
-    values = _Object.values(tmp(5993).CheckpointTrait);
+    values = _Object.values(tmp(5996).CheckpointTrait);
     flatMapResult = values.flatMap((item) => {
       if (null == stateFromStores[item]) {
         let items = [];
@@ -156,11 +156,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   let items1 = [closure_4(stateFromStores(5195).Text, { color: "text-muted", variant: "text-md/medium", children: "Character Stage" }), closure_4(stateFromStores(5195).Text, { color: "text-muted", variant: "text-md/medium", children: stage }), , ];
   const obj3 = { color: "text-muted", variant: "text-md/medium", children: null };
   const obj = stateFromStores(504);
-  const items2 = ["Trait: ", stateFromStores(6316).getCustomizationOptionName(activeCustomizationOption)];
+  const items2 = ["Trait: ", stateFromStores(6319).getCustomizationOptionName(activeCustomizationOption)];
   obj3.children = items2;
   items1[2] = closure_5(stateFromStores(5195).Heading, obj3);
-  const values = Object.values(stateFromStores(5993).CheckpointTrait);
-  const obj4 = stateFromStores(6316);
+  const values = Object.values(stateFromStores(5996).CheckpointTrait);
+  const obj4 = stateFromStores(6319);
   items1[3] = values.flatMap((item) => {
     if (null == stateFromStores[item]) {
       let items = [];

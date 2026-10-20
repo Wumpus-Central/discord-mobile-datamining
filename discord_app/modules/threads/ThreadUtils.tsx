@@ -1,17 +1,17 @@
-// === Module 8252: ThreadUtils ===
+// === Module 8256: ThreadUtils ===
 
-// Module 8252 (ThreadUtils)
+// Module 8256 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import _modDef2050 from "module_2050" /* 2050 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5673 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7158 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7554 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8241 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7161 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7557 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8245 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 6719 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import ReadStateStore from "ReadStateStore" /* 6722 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4882 */;
 
 const require = globalThis.__r;

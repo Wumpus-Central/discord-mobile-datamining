@@ -1,20 +1,20 @@
-// === Module 13471: HubEmailConnectionModal ===
+// === Module 13489: HubEmailConnectionModal ===
 
-// Module 13471 (HubEmailConnectionModal)
+// Module 13489 (HubEmailConnectionModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import useInitialValueDefault from "useInitialValue" /* 5560 */;
-import NavigatorHeader from "NavigatorHeader" /* 6872 */;
-import Navigator from "Navigator" /* 7043 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7169 */;
-import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 13472 */;
-import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 13475 */;
-import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 13482 */;
-import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 13484 */;
-import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 13485 */;
-import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 13486 */;
-import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 13489 */;
+import NavigatorHeader from "NavigatorHeader" /* 6875 */;
+import Navigator from "Navigator" /* 7046 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7172 */;
+import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 13490 */;
+import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 13493 */;
+import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 13500 */;
+import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 13502 */;
+import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 13503 */;
+import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 13504 */;
+import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 13507 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -95,7 +95,7 @@ function getScreens(pop, arg1) {
   };
   return obj2;
 }
-const HubEmailConnectionSteps = fn(13462).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13480).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
 const createStyles = fn(4945);
 let obj2 = { safeArea: { marginTop: fn(5229).NAV_BAR_HEIGHT, flex: 1 } };

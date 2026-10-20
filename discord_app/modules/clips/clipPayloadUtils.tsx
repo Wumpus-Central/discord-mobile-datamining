@@ -1,12 +1,12 @@
-// === Module 8091: clipPayloadUtils ===
+// === Module 8095: clipPayloadUtils ===
 
-// Module 8091 (clipPayloadUtils)
+// Module 8095 (clipPayloadUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ClipsConstants = fn(8092);
+const ClipsConstants = fn(8096);
 ({ CLIPS_MAX_PARTICIPANTS: closure_4, CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty, ClipSignalTypes: metroRequire, GameEventType: closure_7, CLIP_RUNTIME: closure_8 } = ClipsConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const SpeakingFlags = fn(5680).SpeakingFlags;

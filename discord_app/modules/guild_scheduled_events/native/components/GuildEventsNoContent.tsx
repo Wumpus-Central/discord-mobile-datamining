@@ -1,11 +1,11 @@
-// === Module 8947: GuildEventsNoContent ===
+// === Module 8959: GuildEventsNoContent ===
 
-// Module 8947 (GuildEventsNoContent)
+// Module 8959 (GuildEventsNoContent)
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8926 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8938 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
-import TextStyles from "TextStyles" /* 6599 */;
+import TextStyles from "TextStyles" /* 6602 */;
 
 const require = fn;
 const View = fn(17).View;

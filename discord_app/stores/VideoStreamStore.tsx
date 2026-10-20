@@ -1,6 +1,6 @@
-// === Module 6727: VideoStreamStore ===
+// === Module 6730: VideoStreamStore ===
 
-// Module 6727 (VideoStreamStore)
+// Module 6730 (VideoStreamStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1087 */;

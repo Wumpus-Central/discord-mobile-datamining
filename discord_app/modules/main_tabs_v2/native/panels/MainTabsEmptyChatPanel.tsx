@@ -1,12 +1,12 @@
-// === Module 17916: MainTabsEmptyChatPanel ===
+// === Module 17939: MainTabsEmptyChatPanel ===
 
-// Module 17916 (MainTabsEmptyChatPanel)
+// Module 17939 (MainTabsEmptyChatPanel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import FavoritesHooks from "FavoritesHooks" /* 10639 */;
-import useDrawerWidth from "useDrawerWidth" /* 11115 */;
-import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 17917 */;
+import FavoritesHooks from "FavoritesHooks" /* 10650 */;
+import useDrawerWidth from "useDrawerWidth" /* 11127 */;
+import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 17940 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

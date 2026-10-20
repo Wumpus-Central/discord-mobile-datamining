@@ -1,6 +1,6 @@
-// === Module 6726: getChannelIdForEmbeddedSurface ===
+// === Module 6729: getChannelIdForEmbeddedSurface ===
 
-// Module 6726 (getChannelIdForEmbeddedSurface)
+// Module 6729 (getChannelIdForEmbeddedSurface)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;
 import size from "module_2" /* 2 */;
 

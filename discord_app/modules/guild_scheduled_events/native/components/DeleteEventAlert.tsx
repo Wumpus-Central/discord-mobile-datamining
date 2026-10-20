@@ -1,10 +1,10 @@
-// === Module 8967: DeleteEventAlert ===
+// === Module 8979: DeleteEventAlert ===
 
-// Module 8967 (DeleteEventAlert)
+// Module 8979 (DeleteEventAlert)
 import util from "util" /* 1128 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6732 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6735 */;
 
 const require = globalThis.__r;
 
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(8808);
+            const obj8 = v1(8820);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;

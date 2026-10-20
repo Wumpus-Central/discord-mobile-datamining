@@ -1,6 +1,6 @@
-// === Module 8380: ReverseTrialUtils ===
+// === Module 8384: ReverseTrialUtils ===
 
-// Module 8380 (ReverseTrialUtils)
+// Module 8384 (ReverseTrialUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserStore from "UserStore" /* 1392 */;

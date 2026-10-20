@@ -1,15 +1,15 @@
-// === Module 11508: VoiceChatHeaderIcon ===
+// === Module 11519: VoiceChatHeaderIcon ===
 
-// Module 11508 (VoiceChatHeaderIcon)
+// Module 11519 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import native2 from "native" /* 4999 */;
-import Pressables from "Pressables" /* 6856 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11416 */;
+import Pressables from "Pressables" /* 6859 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11427 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6719 */;
+import ReadStateStore from "ReadStateStore" /* 6722 */;
 
 require = fn;
 const View = fn(17).View;

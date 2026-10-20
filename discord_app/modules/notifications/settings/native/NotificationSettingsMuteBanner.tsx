@@ -1,6 +1,6 @@
-// === Module 13578: NotificationSettingsMuteBanner ===
+// === Module 13596: NotificationSettingsMuteBanner ===
 
-// Module 13578 (NotificationSettingsMuteBanner)
+// Module 13596 (NotificationSettingsMuteBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;

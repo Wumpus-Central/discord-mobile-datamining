@@ -1,9 +1,9 @@
-// === Module 15005: GuildBadgeBee ===
+// === Module 15023: GuildBadgeBee ===
 
-// Module 15005 (GuildBadgeBee)
+// Module 15023 (GuildBadgeBee)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7906 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14964 */;
+import inlineStyles from "inlineStyles" /* 7910 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14982 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

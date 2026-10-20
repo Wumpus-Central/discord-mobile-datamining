@@ -1,11 +1,11 @@
-// === Module 9732: PremiumFeaturesWumpus ===
+// === Module 9745: PremiumFeaturesWumpus ===
 
-// Module 9732 (PremiumFeaturesWumpus)
+// Module 9745 (PremiumFeaturesWumpus)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6986 */;
-import _modDef7494 from "module_7494" /* 7494 */;
-import _modDef7496 from "module_7496" /* 7496 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6989 */;
+import _modDef7497 from "module_7497" /* 7497 */;
+import _modDef7499 from "module_7499" /* 7499 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,16 +29,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const tmp3 = closure_8();
   const tmp5 = useIsWindowLargeDefault();
   if (premiumType === PremiumTypes.TIER_0) {
-    const tmp4Result = importDefault(tmp5 ? 9733 : 9734);
+    const tmp4Result = importDefault(tmp5 ? 9746 : 9747);
     if (cResult[0] !== tmp4Result) {
-      const obj2 = { wumpusImageSource: _modDef7494, cloudsImageSource: tmp4Result };
+      const obj2 = { wumpusImageSource: _modDef7497, cloudsImageSource: tmp4Result };
       cResult[0] = tmp4Result;
       cResult[1] = obj2;
     }
   } else {
-    const tmp4Result2 = importDefault(tmp5 ? 9735 : 9736);
+    const tmp4Result2 = importDefault(tmp5 ? 9748 : 9749);
     if (cResult[2] !== tmp4Result2) {
-      const obj3 = { wumpusImageSource: _modDef7496, cloudsImageSource: tmp4Result2 };
+      const obj3 = { wumpusImageSource: _modDef7499, cloudsImageSource: tmp4Result2 };
       cResult[2] = tmp4Result2;
       cResult[3] = obj3;
       let tmp8 = obj3;
@@ -101,14 +101,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const items = [premiumType, tmp2];
   const memo = noop.useMemo(() => {
     if (premiumType === PremiumTypes.TIER_0) {
-      const obj2 = { wumpusImageSource: _modDef7494, cloudsImageSource: importDefault(closure_1 ? 9733 : 9734) };
+      const obj2 = { wumpusImageSource: _modDef7497, cloudsImageSource: importDefault(closure_1 ? 9746 : 9747) };
     } else {
       if (closure_1) {
-        let tmp4 = 9735;
+        let tmp4 = 9748;
       } else {
-        tmp4 = 9736;
+        tmp4 = 9749;
       }
-      const obj = { wumpusImageSource: _modDef7496, cloudsImageSource: importDefault(tmp4) };
+      const obj = { wumpusImageSource: _modDef7499, cloudsImageSource: importDefault(tmp4) };
       return obj;
     }
   }, items);

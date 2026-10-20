@@ -1,20 +1,20 @@
-// === Module 7260: NsfwGateGuild ===
+// === Module 7263: NsfwGateGuild ===
 
-// Module 7260 (NsfwGateGuild)
+// Module 7263 (NsfwGateGuild)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7016 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7262 */;
-import _modDef7264 from "module_7264" /* 7264 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7019 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7265 */;
+import _modDef7267 from "module_7267" /* 7267 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7261).NsfwGateSource;
+const NsfwGateSource = fn(7264).NsfwGateSource;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
     tmp19 = cResult[7];
   }
   if (cResult[8] !== tmp4.image) {
-    const obj4 = { source: _modDef7264, style: tmp4.image };
+    const obj4 = { source: _modDef7267, style: tmp4.image };
     const tmp27 = closure_10(FastImageDefault, obj4);
     cResult[8] = tmp4.image;
     cResult[9] = tmp27;
@@ -220,10 +220,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj3 = { style: tmp.container, children: null };
-  const items1 = [closure_10(currentUser(7016), {}), , , , , ];
+  const items1 = [closure_10(currentUser(7019), {}), , , , , ];
   const obj4 = { source: null, style: null };
   const formatResult = intl3.format(guildId(1128).t.Z12LNW, obj);
-  obj4.source = currentUser(7264);
+  obj4.source = currentUser(7267);
   obj4.style = tmp.image;
   items1[1] = closure_10(currentUser(5631), obj4);
   items1[2] = closure_10(guildId(5195).Heading, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult });

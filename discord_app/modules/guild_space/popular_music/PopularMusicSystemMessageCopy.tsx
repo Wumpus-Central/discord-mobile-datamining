@@ -1,8 +1,8 @@
-// === Module 8299: PopularMusicSystemMessageCopy ===
+// === Module 8303: PopularMusicSystemMessageCopy ===
 
-// Module 8299 (PopularMusicSystemMessageCopy)
+// Module 8303 (PopularMusicSystemMessageCopy)
 import _modDef2430 from "module_2430" /* 2430 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8298 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8302 */;
 import size from "module_2" /* 2 */;
 
 function getMusicSystemMessageFor(trackTitle, name2, BlHpAk) {

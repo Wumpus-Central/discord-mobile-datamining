@@ -1,6 +1,6 @@
-// === Module 10850: UserProfileCustomStatusBubble ===
+// === Module 10861: UserProfileCustomStatusBubble ===
 
-// Module 10850 (UserProfileCustomStatusBubble)
+// Module 10861 (UserProfileCustomStatusBubble)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
@@ -9,10 +9,10 @@ import UserSettings from "UserSettings" /* 4776 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import EmojiDefault from "Emoji" /* 7175 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import inlineStyles from "inlineStyles" /* 7906 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 10853 */;
+import EmojiDefault from "Emoji" /* 7178 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import inlineStyles from "inlineStyles" /* 7910 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 10864 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -108,7 +108,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status
   return __initData(inlineStylesDefault, size);
 });
 let closure_17 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-const dependencyMap = { [fn(7250).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+const dependencyMap = { [fn(7253).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiImage(arg0) {
   const cResult = c.c(14);

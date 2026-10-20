@@ -1,6 +1,6 @@
-// === Module 19071: OrbsArcadeTypes ===
+// === Module 19094: OrbsArcadeTypes ===
 
-// Module 19071 (OrbsArcadeTypes)
+// Module 19094 (OrbsArcadeTypes)
 import _slicedToArray from "module_32" /* 32 */;
 
 function _rewardFromServer(type) {
@@ -49,6 +49,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/OrbsArcadeTypes.tsx");
 
 export { OrbsArcadeRewardType };
+export const OrbsArcadeRewardStatus = { LOCKED: "locked", CLAIMABLE: "claimable", CLAIMED: "claimed" };
 export { orbsArcadeGameFromServer };
 export { orbsArcadeGameStateFromServer };
 export const orbsArcadeGamesFromServer = function orbsArcadeGamesFromServer(body) {
@@ -78,6 +79,6 @@ export const orbsArcadeApplicationGameFromServer = function orbsArcadeApplicatio
   ({ enrollment_closes_at: obj.enrollmentClosesAt, can_afford_run: obj.canAffordRun } = game);
   return obj;
 };
-export const orbsArcadeClaimedRewardFromServer = function orbsArcadeClaimedRewardFromServer(entitlements) {
-  return { gameState: orbsArcadeGameStateFromServer(entitlements.game_state), entitlements: entitlements.entitlements };
+export const orbsArcadeClaimedRewardFromServer = function orbsArcadeClaimedRewardFromServer(body) {
+  return { gameState: orbsArcadeGameStateFromServer(body.game_state), entitlements: body.entitlements };
 };

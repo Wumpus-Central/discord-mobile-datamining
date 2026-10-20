@@ -1,14 +1,14 @@
-// === Module 9574: application_commands/ApplicationCommandBuiltIns ===
+// === Module 9587: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 9574 (application_commands/ApplicationCommandBuiltIns)
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5863 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7357 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7512 */;
+// Module 9587 (application_commands/ApplicationCommandBuiltIns)
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5866 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7360 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7515 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = fn;
-let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(2000).ApplicationCommandType.CHAT, inputType: fn(5595).ApplicationCommandInputType.BUILT_IN, applicationId: fn(5938).BuiltInSectionId.BUILT_IN };
+let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(2000).ApplicationCommandType.CHAT, inputType: fn(5595).ApplicationCommandInputType.BUILT_IN, applicationId: fn(5941).BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;

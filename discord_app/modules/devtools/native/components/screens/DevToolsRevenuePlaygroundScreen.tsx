@@ -1,24 +1,24 @@
-// === Module 16789: DevToolsRevenuePlaygroundScreen ===
+// === Module 16808: DevToolsRevenuePlaygroundScreen ===
 
-// Module 16789 (DevToolsRevenuePlaygroundScreen)
+// Module 16808 (DevToolsRevenuePlaygroundScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import TableRow from "TableRow" /* 6851 */;
-import TableRowArrow from "TableRowArrow" /* 6860 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7237 */;
-import TableSwitchRow from "TableSwitchRow" /* 7241 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 12541 */;
-import IAPUtils from "IAPUtils" /* 13723 */;
+import TableRow from "TableRow" /* 6854 */;
+import TableRowArrow from "TableRowArrow" /* 6863 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7240 */;
+import TableSwitchRow from "TableSwitchRow" /* 7244 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 12558 */;
+import IAPUtils from "IAPUtils" /* 13741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8392 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7676 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8396 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7679 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
@@ -652,7 +652,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(7503).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(7506).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -666,13 +666,13 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16790, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16809, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   };
-  items = [closure_17(premiumTrialOffer(6851).TableRow, obj2), ];
+  items = [closure_17(premiumTrialOffer(6854).TableRow, obj2), ];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6851).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6854).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -685,12 +685,12 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16790, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16809, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(6935).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(6938).TableRowGroup, obj3);
 }
 function PaymentFlowTest() {
   const obj = {
@@ -802,7 +802,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
       const fn2 = function u(arg0) {
         const tmp = closure_4(arg0, 3);
         const subLabel = tmp[0];
-        return closure_17(subLabel(7241).TableSwitchRow, {
+        return closure_17(subLabel(7244).TableSwitchRow, {
           label: tmp[2].label,
           subLabel,
           value: tmp[1],
@@ -843,7 +843,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
     hasIcons: false,
     children: stateFromStores.map((item) => {
       [tmp, tmp2, ] = item;
-      return closure_17(closure_0(7241).TableSwitchRow, {
+      return closure_17(closure_0(7244).TableSwitchRow, {
         label: tmp3,
         subLabel: tmp,
         value: tmp2,

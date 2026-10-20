@@ -1,13 +1,13 @@
-// === Module 6979: FreeFormTextInput ===
+// === Module 6982: FreeFormTextInput ===
 
-// Module 6979 (FreeFormTextInput)
+// Module 6982 (FreeFormTextInput)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Pressables from "Pressables" /* 6856 */;
-import _modDef6980 from "module_6980" /* 6980 */;
+import Pressables from "Pressables" /* 6859 */;
+import _modDef6983 from "module_6983" /* 6983 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,7 +54,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearB
     tmp8 = cResult[2];
   }
   if (cResult[3] !== tmp4.closeIcon) {
-    const obj3 = { source: _modDef6980, style: tmp4.closeIcon, size: native.Icon.Sizes.MEDIUM };
+    const obj3 = { source: _modDef6983, style: tmp4.closeIcon, size: native.Icon.Sizes.MEDIUM };
     const tmp12 = React5(native.Icon, obj3);
     cResult[3] = tmp4.closeIcon;
     cResult[4] = tmp12;
@@ -80,7 +80,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearB
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_9();
-  obj.children = React5(native.Icon, { source: _modDef6980, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
+  obj.children = React5(native.Icon, { source: _modDef6983, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
   return React5(Pressables.PressableOpacity, obj);
 });
 const size = fn(2);

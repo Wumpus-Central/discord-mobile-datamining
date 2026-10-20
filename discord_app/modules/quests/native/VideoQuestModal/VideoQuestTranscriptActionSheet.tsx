@@ -1,15 +1,15 @@
-// === Module 16227: VideoQuestTranscriptActionSheet ===
+// === Module 16246: VideoQuestTranscriptActionSheet ===
 
-// Module 16227 (VideoQuestTranscriptActionSheet)
+// Module 16246 (VideoQuestTranscriptActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import QuestActionCreators from "QuestActionCreators" /* 9486 */;
-import AssetUtils from "AssetUtils" /* 9499 */;
+import QuestActionCreators from "QuestActionCreators" /* 9499 */;
+import AssetUtils from "AssetUtils" /* 9512 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const VideoQuestUIStore = fn(7721);
+const VideoQuestUIStore = fn(7725);
 ({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: metroRequire } = VideoQuestUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -70,7 +70,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   const obj2 = { title: null };
   const intl = quest(1128).intl;
   obj2.title = intl.string(quest(1128).t["1YS80z"]);
-  obj.header = closure_7(quest(7194).BottomSheetTitleHeader, obj2);
+  obj.header = closure_7(quest(7197).BottomSheetTitleHeader, obj2);
   const obj3 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj4 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -84,7 +84,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }
   const items2 = [tmp7Result, memo.length > 0 && memo.map((children, index) => closure_1_7(quest(dependencyMap[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, index))];
   obj4.children = items2;
-  obj3.children = closure_8(quest(5932).Stack, obj4);
+  obj3.children = closure_8(quest(5935).Stack, obj4);
   obj.children = closure_7(quest(5230).BottomSheetScrollView, obj3);
-  return closure_7(quest(7244).ActionSheet, obj);
+  return closure_7(quest(7247).ActionSheet, obj);
 };

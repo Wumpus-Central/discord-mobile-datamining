@@ -17,12 +17,12 @@ import _modDef3240 from "module_3240" /* 3240 */;
 import BillingUtils from "BillingUtils" /* 4764 */;
 import DateUtils from "DateUtils" /* 4773 */;
 import openURLDefault from "openURL" /* 5617 */;
-import FileSizeUtils from "FileSizeUtils" /* 6333 */;
-import PriceUtils from "PriceUtils" /* 7285 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8090 */;
-import CheckoutError from "CheckoutError" /* 10840 */;
-import useFPDurationLeft from "useFPDurationLeft" /* 14571 */;
-import ProductCatalog from "ProductCatalog" /* 15098 */;
+import FileSizeUtils from "FileSizeUtils" /* 6336 */;
+import PriceUtils from "PriceUtils" /* 7288 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8094 */;
+import CheckoutError from "CheckoutError" /* 10851 */;
+import useFPDurationLeft from "useFPDurationLeft" /* 14589 */;
+import ProductCatalog from "ProductCatalog" /* 15116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -2562,7 +2562,7 @@ obj6.isPremiumSku = function isPremiumSku(skuId) {
   return skuId === __initData10.TIER_0 || skuId === __initData10.TIER_1 || skuId === __initData10.TIER_2;
 };
 obj6.getIntervalMonths = getIntervalMonths;
-obj6.getUserMaxFileSize = fn(9816).getUserMaxFileSize;
+obj6.getUserMaxFileSize = fn(9828).getUserMaxFileSize;
 obj6.getSkuIdForPlan = getSkuIdForPlan;
 obj6.getSkuIdForPremiumType = function getSkuIdForPremiumType(premiumType) {
   if (__initData11.TIER_0 === premiumType) {

@@ -1,11 +1,11 @@
-// === Module 14693: GuildBoostingMarketingProgressBarMarker ===
+// === Module 14711: GuildBoostingMarketingProgressBarMarker ===
 
-// Module 14693 (GuildBoostingMarketingProgressBarMarker)
+// Module 14711 (GuildBoostingMarketingProgressBarMarker)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5208 */;
-import _modDef14694 from "module_14694" /* 14694 */;
-import _modDef14695 from "module_14695" /* 14695 */;
-import _modDef14696 from "module_14696" /* 14696 */;
+import _modDef14712 from "module_14712" /* 14712 */;
+import _modDef14713 from "module_14713" /* 14713 */;
+import _modDef14714 from "module_14714" /* 14714 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const BoostedGuildTiers = fn(1087).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const TierMarkerPositions = { [BoostedGuildTiers.NONE]: 0, [BoostedGuildTiers.TIER_1]: 0.3333333333333333, [BoostedGuildTiers.TIER_2]: 0.6666666666666666, [BoostedGuildTiers.TIER_3]: 1 };
-let obj2 = { [TIER_1]: _modDef14694, [TIER_2]: _modDef14695, [TIER_3]: _modDef14696 };
+let obj2 = { [TIER_1]: _modDef14712, [TIER_2]: _modDef14713, [TIER_3]: _modDef14714 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 let createStyles = fn(4945);
 let obj4 = { progressBarMarkerInnerCircle: { width: 17.5, height: 17.5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }, progressBarMarkerInnerCircleBackground: { width: "100%", height: "100%", borderRadius: 17.5, position: "absolute" }, progressBarMarkerInnerCircleIcon: { width: 16, height: 16 }, progressBarMarkerInnerCircleIconUnlocked: null };
@@ -408,11 +408,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
                                 let tmp33 = cResult[27];
                               }
                               if (cResult[28] !== tier) {
-                                const tierName = useReducedMotion(8310).getTierName(tier, { useLevels: false });
+                                const tierName = useReducedMotion(8314).getTierName(tier, { useLevels: false });
                                 cResult[28] = tier;
                                 cResult[29] = tierName;
                                 let tmp38 = tierName;
-                                const tmpResult4 = useReducedMotion(8310);
+                                const tmpResult4 = useReducedMotion(8314);
                               } else {
                                 tmp38 = cResult[29];
                               }
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
                             tmp34 = tier !== BoostedGuildTiers.NONE;
                           }
                           if (tmp34) {
-                            const obj8 = { source: tmp5(11149), style: tmp4.progressBarMarkerUnlockedIcon };
+                            const obj8 = { source: tmp5(11160), style: tmp4.progressBarMarkerUnlockedIcon };
                             tmp34 = closure_6(tmp5(5631), obj8);
                             const tmp5Result = tmp5(5631);
                           }
@@ -627,14 +627,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
       tmp20Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp20Result) {
-      const obj8 = { source: tmp2(11149), style: tmp.progressBarMarkerUnlockedIcon };
+      const obj8 = { source: tmp2(11160), style: tmp.progressBarMarkerUnlockedIcon };
       tmp20Result = closure_6(tmp2(5631), obj8);
       const tmp2Result = tmp2(5631);
     }
     const items5 = [tmp20Result, ];
     const obj9 = { variant: "text-xs/medium", children: null };
     const tmp5Result = useReducedMotion(5014);
-    obj9.children = useReducedMotion(8310).getTierName(tier, { useLevels: false });
+    obj9.children = useReducedMotion(8314).getTierName(tier, { useLevels: false });
     items5[1] = closure_6(useReducedMotion(5195).Text, obj9);
     obj7.children = items5;
     items3[2] = closure_7(PREMIUM_PERK_PINK, obj7);

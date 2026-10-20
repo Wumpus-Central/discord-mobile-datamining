@@ -1,14 +1,14 @@
-// === Module 11490: VolumeSlider ===
+// === Module 11501: VolumeSlider ===
 
-// Module 11490 (VolumeSlider)
+// Module 11501 (VolumeSlider)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
 import useToken from "useToken" /* 5213 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5815 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8517 */;
-import _modDef8694 from "module_8694" /* 8694 */;
-import VoiceXIcon from "VoiceXIcon" /* 11491 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5817 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8521 */;
+import _modDef8706 from "module_8706" /* 8706 */;
+import VoiceXIcon from "VoiceXIcon" /* 11502 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -79,16 +79,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSl
   if (cResult[9] === tmp8) {
     if (cResult[12] !== tmp15.leftIcon) {
       const obj2 = { style: tmp15.leftIcon };
-      const tmp20 = closure_7(tmp(11491).VoiceXIcon, obj2);
+      const tmp20 = closure_7(tmp(11502).VoiceXIcon, obj2);
       cResult[12] = tmp15.leftIcon;
       cResult[13] = tmp20;
     }
     if (cResult[14] !== tmp10) {
-      const result = tmp(5815).amplitudeToPerceptual(tmp10);
+      const result = tmp(5817).amplitudeToPerceptual(tmp10);
       cResult[14] = tmp10;
       cResult[15] = result;
       let tmp21 = result;
-      const tmpResult2 = tmp(5815);
+      const tmpResult2 = tmp(5817);
     } else {
       tmp21 = cResult[15];
     }
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSl
       }
     }
     const obj3 = { style: tmp15.volumerSliderNative, value: tmp21, minimumValue: 0, maximumValue: tmp9, minimumTrackTintColor: minTrackColor, maximumTrackTintColor: PRIMARY_400, accessibilityLabel: tmp23, onValueChange: L, onResponderGrant: tmp26 };
-    const tmp31 = closure_7(_modDef8694, obj3);
+    const tmp31 = closure_7(_modDef8706, obj3);
     cResult[22] = PRIMARY_400;
     cResult[23] = tmp9;
     cResult[24] = minTrackColor;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSl
   const obj4 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
   obj = useToken;
   const obj3 = { style: tmp4.leftIcon };
-  const tmp7Result = _modDef8694;
+  const tmp7Result = _modDef8706;
   obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
   obj4.maximumValue = maxVolume;
   obj4.minimumTrackTintColor = minTrackColor;

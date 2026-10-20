@@ -1,6 +1,6 @@
-// === Module 5824: UserSettingsActionCreators ===
+// === Module 5826: UserSettingsActionCreators ===
 
-// Module 5824 (UserSettingsActionCreators)
+// Module 5826 (UserSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import wrappers from "wrappers" /* 1242 */;

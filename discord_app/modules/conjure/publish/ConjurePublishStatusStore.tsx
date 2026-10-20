@@ -1,9 +1,9 @@
-// === Module 11005: ConjurePublishStatusStore ===
+// === Module 11017: ConjurePublishStatusStore ===
 
-// Module 11005 (ConjurePublishStatusStore)
+// Module 11017 (ConjurePublishStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6721 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6724 */;
 
 const map = new Map();
 const set = new Set();

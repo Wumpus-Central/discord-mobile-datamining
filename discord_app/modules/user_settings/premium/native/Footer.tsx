@@ -1,14 +1,14 @@
-// === Module 14601: Footer ===
+// === Module 14619: Footer ===
 
-// Module 14601 (Footer)
+// Module 14619 (Footer)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 14602 */;
-import _modDef14603 from "module_14603" /* 14603 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 14620 */;
+import _modDef14621 from "module_14621" /* 14621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Footer(a
               easterEggSpacing = tmp4.easterEggSpacing;
             }
             if (cResult[9] !== easterEggSpacing) {
-              const obj2 = { style: easterEggSpacing, source: _modDef14603 };
+              const obj2 = { style: easterEggSpacing, source: _modDef14621 };
               const tmp19 = React4(FastImageDefault, obj2);
               cResult[9] = easterEggSpacing;
               cResult[10] = tmp19;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Footer(a
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef14603 });
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef14621 });
   obj.children = items2;
   return timestampProducer(View, obj);
 });

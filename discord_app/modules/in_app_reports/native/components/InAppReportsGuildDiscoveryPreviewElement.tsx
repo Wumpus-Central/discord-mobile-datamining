@@ -1,6 +1,6 @@
-// === Module 14380: InAppReportsGuildDiscoveryPreviewElement ===
+// === Module 14398: InAppReportsGuildDiscoveryPreviewElement ===
 
-// Module 14380 (InAppReportsGuildDiscoveryPreviewElement)
+// Module 14398 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,8 +8,8 @@ import util from "util" /* 1128 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4814 */;
 import ColorUtils from "ColorUtils" /* 4942 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import GuildIconDefault from "GuildIcon" /* 6831 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7022 */;
+import GuildIconDefault from "GuildIcon" /* 6834 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7025 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 

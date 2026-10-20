@@ -1,6 +1,6 @@
-// === Module 16135: QuestHomeEmptyState ===
+// === Module 16154: QuestHomeEmptyState ===
 
-// Module 16135 (QuestHomeEmptyState)
+// Module 16154 (QuestHomeEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 5195 */;
 import useToken from "useToken" /* 5213 */;
 import LinearGradientDefault from "LinearGradient" /* 5219 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7169 */;
-import _modDef16136 from "module_16136" /* 16136 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7172 */;
+import _modDef16155 from "module_16155" /* 16155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
               if (!isChatLockedOpen) {
                 const obj5 = { children: null };
                 const obj6 = { style: tmp8.emptyImage, children: null };
-                const obj7 = { style: tmp8.backgroundImage, source: _modDef16136, resizeMode: "cover" };
+                const obj7 = { style: tmp8.backgroundImage, source: _modDef16155, resizeMode: "cover" };
                 obj6.children = hasOwnProperty(FastImageDefault, obj7);
                 const items1 = [hasOwnProperty(React3, obj6), ];
                 const obj8 = { style: tmp8.gradient, end: null, start: null, colors: null };
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
     const obj11 = { style: tmp5.emptyImage, children: null };
-    const obj12 = { style: tmp5.backgroundImage, source: _modDef16136, resizeMode: "cover" };
+    const obj12 = { style: tmp5.backgroundImage, source: _modDef16155, resizeMode: "cover" };
     obj11.children = hasOwnProperty(FastImageDefault, obj12);
     const items2 = [hasOwnProperty(React3, obj11), ];
     const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

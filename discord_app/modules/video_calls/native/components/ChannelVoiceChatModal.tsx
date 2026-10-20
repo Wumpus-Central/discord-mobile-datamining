@@ -1,14 +1,14 @@
-// === Module 10673: ChannelVoiceChatModal ===
+// === Module 10684: ChannelVoiceChatModal ===
 
-// Module 10673 (ChannelVoiceChatModal)
+// Module 10684 (ChannelVoiceChatModal)
 import c from "c" /* 576 */;
 import native from "native" /* 4999 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5107 */;
 import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5137 */;
 import useChannelNameDefault from "useChannelName" /* 5565 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5672 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9947 */;
-import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10674 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9958 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10685 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelV
     str = "";
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = jsx(tmp(8513).StageIcon, { size: "sm" });
+    const tmp11 = jsx(tmp(8517).StageIcon, { size: "sm" });
     cResult[3] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelV
   if (tmp2 == null) {
     str = "";
   }
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(8513).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(8517).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

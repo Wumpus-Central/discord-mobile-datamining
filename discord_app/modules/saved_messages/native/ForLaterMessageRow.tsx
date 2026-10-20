@@ -1,10 +1,10 @@
-// === Module 13647: ForLaterMessageRow ===
+// === Module 13665: ForLaterMessageRow ===
 
-// Module 13647 (ForLaterMessageRow)
+// Module 13665 (ForLaterMessageRow)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useThemeDefault from "useTheme" /* 5166 */;
-import RowGeneratorDefault from "RowGenerator" /* 8076 */;
+import RowGeneratorDefault from "RowGenerator" /* 8080 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -71,7 +71,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled() ?
     }
     const _Symbol4 = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = new tmp5(8076)();
+      const obj4 = new tmp5(8080)();
       let obj3 = { renderEmbeds: tmp11, inlineEmbedMedia: tmp13, inlineAttachmentMedia: tmp15, renderReplies: false, renderExecutedCommands: false, animateEmoji: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, shouldDisableInteractiveComponents: true };
       obj4.setOptions(obj3);
       cResult[8] = obj4;
@@ -126,7 +126,7 @@ export const ForLaterMessageRow = ReactCompilerGating.isReactCompilerEnabled() ?
         }
       }
       const obj7 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: tmp9, message, rowGenerator: tmp17, maxHeight };
-      const tmp27 = closure_5(tmp5(9687), obj7);
+      const tmp27 = closure_5(tmp5(9700), obj7);
       cResult[12] = maxHeight;
       cResult[13] = message;
       cResult[14] = tmp9;

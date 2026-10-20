@@ -1,6 +1,6 @@
-// === Module 7670: GuildVersions ===
+// === Module 7673: GuildVersions ===
 
-// Module 7670 (GuildVersions)
+// Module 7673 (GuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 4826 */;

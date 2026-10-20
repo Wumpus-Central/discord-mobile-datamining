@@ -1,6 +1,6 @@
-// === Module 14688: orderMarketablePerksForDisplay ===
+// === Module 14706: orderMarketablePerksForDisplay ===
 
-// Module 14688 (orderMarketablePerksForDisplay)
+// Module 14706 (orderMarketablePerksForDisplay)
 import Powerups from "Powerups" /* 5146 */;
 import _slicedToArray from "module_32" /* 32 */;
 

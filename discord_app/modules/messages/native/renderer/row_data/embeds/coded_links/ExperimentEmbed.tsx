@@ -1,27 +1,27 @@
-// === Module 12559: ExperimentEmbed ===
+// === Module 12576: ExperimentEmbed ===
 
-// Module 12559 (ExperimentEmbed)
+// Module 12576 (ExperimentEmbed)
 import c from "c" /* 576 */;
 import ExperimentManager from "ExperimentManager" /* 5156 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8219 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8221 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8429 */;
-import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8431 */;
-import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11108 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11109 */;
-import useApexExperiments from "useApexExperiments" /* 11110 */;
-import _modDef12560 from "module_12560" /* 12560 */;
-import _modDef12561 from "module_12561" /* 12561 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 12562 */;
-import _modDef12563 from "module_12563" /* 12563 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8223 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8225 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8433 */;
+import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8435 */;
+import useCodedLinksExperimentEmbeds from "useCodedLinksExperimentEmbeds" /* 11120 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11121 */;
+import useApexExperiments from "useApexExperiments" /* 11122 */;
+import _modDef12577 from "module_12577" /* 12577 */;
+import _modDef12578 from "module_12578" /* 12578 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 12579 */;
+import _modDef12580 from "module_12580" /* 12580 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const Image = fn(17).Image;
 const ExperimentEmbedType = fn(5152).ExperimentEmbedType;
-const InviteTypes = fn(7752).InviteTypes;
+const InviteTypes = fn(7756).InviteTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ExperimentOverrideActionSheet(id) {
@@ -331,7 +331,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
         obj5.titleColor = colors.titleColor;
         obj5.subtitle = label;
         obj5.subtitleColor = colors.subtitleColor;
-        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12563);
+        obj5.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12580);
         obj5.thumbnailBackgroundColor = colors.backgroundColor;
         obj5.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj5.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -360,7 +360,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
         }
         obj6.subtitle = combined1;
         obj6.subtitleColor = colors.subtitleColor;
-        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12563);
+        obj6.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12580);
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj6.acceptLabelText = "View Experiment Details";
         obj6.embedCanBeTapped = true;
@@ -384,9 +384,9 @@ export const createExperimentEmbed = function createExperimentEmbed(url, theme) 
   obj7.bodyText = "This client is missing this experiment. You may need to open the surface where the experiment is used first.";
   obj7.bodyTextColor = colors.bodyTextColor;
   if (tmp4Result10.isThemeDark(theme)) {
-    let tmpResult = _modDef12560;
+    let tmpResult = _modDef12577;
   } else {
-    tmpResult = _modDef12561;
+    tmpResult = _modDef12578;
   }
   obj7.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj7.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

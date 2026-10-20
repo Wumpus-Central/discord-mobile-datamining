@@ -1,10 +1,10 @@
-// === Module 12601: TransferOwnership ===
+// === Module 12618: TransferOwnership ===
 
-// Module 12601 (TransferOwnership)
+// Module 12618 (TransferOwnership)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import GuildIcon from "GuildIcon" /* 6831 */;
+import GuildIcon from "GuildIcon" /* 6834 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const TransferOwnershipConstants = fn(12600);
+const TransferOwnershipConstants = fn(12617);
 ({ TransferOwnershipModalScenes: closure_9, TransferOwnershipVerificationTypes: c10 } = TransferOwnershipConstants);
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
@@ -72,7 +72,7 @@ export default function TransferOwnership(guild) {
               if (null != mfaEnabled.email) {
                 v1 = 1;
                 dependencyMap = 1;
-                const obj6 = { value: v1(8926).sendTransferOwnershipPincode(user.id), done: false };
+                const obj6 = { value: v1(8938).sendTransferOwnershipPincode(user.id), done: false };
                 return obj6;
               }
             }
@@ -80,16 +80,16 @@ export default function TransferOwnership(guild) {
             if (mfaEnabled.mfaEnabled) {
               MFA = constants2.MFA;
             }
-            const obj4 = v1(8926);
-            v1(8926).transferOwnership(user.id, id.id, MFA).then(() => {
-              v1(12598).close();
-              const obj = v1(12598);
-              v1(8926).close();
-              const obj2 = v1(8926);
+            const obj4 = v1(8938);
+            v1(8938).transferOwnership(user.id, id.id, MFA).then(() => {
+              v1(12615).close();
+              const obj = v1(12615);
+              v1(8938).close();
+              const obj2 = v1(8938);
               const result = closure_1_0(5624).showTransferOwnershipSuccess();
             }, NOOP);
             dependencyMap = 3;
-            const transferOwnershipResult = v1(8926).transferOwnership(user.id, id.id, MFA);
+            const transferOwnershipResult = v1(8938).transferOwnership(user.id, id.id, MFA);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -150,18 +150,18 @@ export default function TransferOwnership(guild) {
   let obj3 = guild(504);
   [tmp8, c4] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  nickname = toUser(5944).getNickname(guild.id, undefined, toUser);
+  nickname = toUser(5947).getNickname(guild.id, undefined, toUser);
   const hasAvatarForGuildResult = toUser.hasAvatarForGuild(guild.id);
   c7 = hasAvatarForGuildResult;
   let obj5 = { style: tmp5.background, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
   let obj6 = { style: null, children: null };
-  let obj4 = toUser(5944);
+  let obj4 = toUser(5947);
   obj6.style = { paddingTop: toUser(587).space.PX_16, paddingHorizontal: token };
   const obj8 = { style: tmp5.header, children: null };
   const obj9 = { source: null, style: null };
   const obj7 = { paddingTop: toUser(587).space.PX_16, paddingHorizontal: token };
   const tmp12 = c7;
-  obj9.source = toUser(12602);
+  obj9.source = toUser(12619);
   obj9.style = tmp5.arrow;
   const items1 = [closure_12(toUser(5631), obj9), , , ];
   const obj10 = { style: tmp5.avatarsWrapper, children: null };
@@ -224,8 +224,8 @@ export default function TransferOwnership(guild) {
     obj18.onPress = function handleConfirmToggle(arg0) {
       _undefined(arg0);
     };
-    obj17.children = closure_12(tmp(6848).TableCheckboxRow, obj18);
-    items3[1] = closure_12(tmp(6935).TableRowGroup, obj17);
+    obj17.children = closure_12(tmp(6851).TableCheckboxRow, obj18);
+    items3[1] = closure_12(tmp(6938).TableRowGroup, obj17);
     const obj20 = {
       onPress: function handleTransfer() {
           const self = this;

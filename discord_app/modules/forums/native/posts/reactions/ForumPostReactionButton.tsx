@@ -1,6 +1,6 @@
-// === Module 10790: ForumPostReactionButton ===
+// === Module 10801: ForumPostReactionButton ===
 
-// Module 10790 (ForumPostReactionButton)
+// Module 10801 (ForumPostReactionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
@@ -10,13 +10,13 @@ import UserSettings from "UserSettings" /* 4776 */;
 import ReactionUtils from "ReactionUtils" /* 4892 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5186 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Pressables from "Pressables" /* 6856 */;
-import EmojiDefault from "Emoji" /* 7175 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9698 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 9899 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 10788 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10791 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 10807 */;
+import Pressables from "Pressables" /* 6859 */;
+import EmojiDefault from "Emoji" /* 7178 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9711 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 9911 */;
+import useReactionPermissionsDefault from "useReactionPermissions" /* 10799 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10802 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 10818 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

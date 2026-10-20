@@ -1,15 +1,15 @@
-// === Module 11747: ConjureDesignRemarkSheet ===
+// === Module 11761: ConjureDesignRemarkSheet ===
 
-// Module 11747 (ConjureDesignRemarkSheet)
+// Module 11761 (ConjureDesignRemarkSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11709 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
-const sendUserMessage = fn(10990).sendUserMessage;
+const sendUserMessage = fn(11001).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureDesignRemarkSheet = "ConjureDesignRemarkSheet";

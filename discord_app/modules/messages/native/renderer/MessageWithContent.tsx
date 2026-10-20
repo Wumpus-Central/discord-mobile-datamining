@@ -1,13 +1,13 @@
-// === Module 8081: MessageWithContent ===
+// === Module 8085: MessageWithContent ===
 
-// Module 8081 (MessageWithContent)
+// Module 8085 (MessageWithContent)
 import util from "util" /* 1128 */;
-import createMessageContentDefault from "createMessageContent" /* 8213 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8534 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8082 */;
+import createMessageContentDefault from "createMessageContent" /* 8217 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8538 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8086 */;
 
 require = fn;
-const RowType = fn(8077).RowType;
+const RowType = fn(8081).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 

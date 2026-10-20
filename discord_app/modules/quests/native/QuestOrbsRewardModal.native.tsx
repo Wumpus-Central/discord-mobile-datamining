@@ -1,18 +1,18 @@
-// === Module 13955: QuestOrbsRewardModal ===
+// === Module 13973: QuestOrbsRewardModal ===
 
-// Module 13955 (QuestOrbsRewardModal)
+// Module 13973 (QuestOrbsRewardModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1901 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import XSmallIcon from "XSmallIcon" /* 6879 */;
-import APNGPlayer from "APNGPlayer" /* 9319 */;
-import OrbsIcon from "OrbsIcon" /* 9347 */;
-import _modDef13956 from "module_13956" /* 13956 */;
-import _modDef13957 from "module_13957" /* 13957 */;
-import _modDef13958 from "module_13958" /* 13958 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import XSmallIcon from "XSmallIcon" /* 6882 */;
+import APNGPlayer from "APNGPlayer" /* 9331 */;
+import OrbsIcon from "OrbsIcon" /* 9359 */;
+import _modDef13974 from "module_13974" /* 13974 */;
+import _modDef13975 from "module_13975" /* 13975 */;
+import _modDef13976 from "module_13976" /* 13976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, StyleSheet: closure_7, View: closure_8 } = get_ActivityIndicator);
-const RewardFilterTypes = fn(6658).RewardFilterTypes;
+const RewardFilterTypes = fn(6661).RewardFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const QuestOrbsRewardModal = "QuestOrbsRewardModal";
@@ -143,7 +143,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cancel
     }
     return tmp9;
   }
-  const tmp10 = closure_13(require("module_6881").HeaderBackButton, { onPress: first, backImage: tmp6, accessibilityLabel: tmp7, displayMode: "minimal", style: tmp4.closeButton });
+  const tmp10 = closure_13(require("module_6884").HeaderBackButton, { onPress: first, backImage: tmp6, accessibilityLabel: tmp7, displayMode: "minimal", style: tmp4.closeButton });
   cResult[4] = tmp4.closeButton;
   cResult[5] = tmp6;
   cResult[6] = tmp10;
@@ -167,7 +167,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cancel
   const intl = require("util").intl;
   obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
   obj.style = tmp.closeButton;
-  return closure_13(require("module_6881").HeaderBackButton, obj);
+  return closure_13(require("module_6884").HeaderBackButton, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function OrbPlayerIOS(uri) {
@@ -355,7 +355,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Static
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13956 };
+    const obj2 = { uri: _modDef13974 };
     cResult[1] = obj2;
     let tmp5 = obj2;
   } else {
@@ -378,7 +378,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Static
   const obj2 = { source: null, style: null, fadeDuration: 0 };
   const obj3 = { uri: null };
   const tmp = closure_25();
-  obj3.uri = _modDef13956;
+  obj3.uri = _modDef13974;
   obj2.source = obj3;
   obj2.style = tmp.animatedOrb;
   obj.children = map1(FastImageDefault, obj2);
@@ -494,7 +494,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
                   return;
                 }
               }
-              const obj3 = { uri: _modDef13958, style: tmp3.animatedOrb, onLoad: first2, animate: isAppActive };
+              const obj3 = { uri: _modDef13976, style: tmp3.animatedOrb, onLoad: first2, animate: isAppActive };
               tmp28 = map1(closure_24, obj3);
             }
             cResult[19] = isAppActive;
@@ -502,7 +502,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
             cResult[21] = tmp3.animatedOrb;
             cResult[22] = tmp28;
           }
-          const obj4 = { uri: _modDef13957, style: tmp20, onLoad: L, animate: !tmp9 };
+          const obj4 = { uri: _modDef13975, style: tmp20, onLoad: L, animate: !tmp9 };
           const tmp26 = map1(closure_24, obj4);
           cResult[16] = tmp20;
           cResult[17] = !tmp9;
@@ -618,7 +618,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
     tmp13 = map1(closure_1_8, obj2);
   }
   const items1 = [tmp13, , ];
-  const obj3 = { uri: _modDef13957, style: null, onLoad: null, animate: null };
+  const obj3 = { uri: _modDef13975, style: null, onLoad: null, animate: null };
   const items2 = [tmp.animatedOrb, ];
   let obj4 = tmp15Result;
   if (!tmp15Result) {
@@ -637,7 +637,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   obj3.animate = tmp19;
   items1[1] = map1(closure_24, obj3);
   if (tmp15Result) {
-    const obj5 = { uri: _modDef13958, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
+    const obj5 = { uri: _modDef13976, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
     tmp15Result = map1(closure_24, obj5);
   }
   items1[2] = tmp15Result;
@@ -669,8 +669,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestOrb
   let obj = balance(576);
   const stateFromStores = balance(504).useStateFromStores(tmp5, tmp6);
   const tmpResult = balance(504);
-  balance = balance(9368).useFetchVirtualCurrencyBalance().balance;
-  const tmpResult5 = balance(9368);
+  balance = balance(9380).useFetchVirtualCurrencyBalance().balance;
+  const tmpResult5 = balance(9380);
   [tmp10, importDefault] = noop.useState(false);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [AppStateStore];
@@ -712,8 +712,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestOrb
     orbQuantityClaimed = userStatus.orbQuantityClaimed;
   }
   if (orbQuantityClaimed == null) {
-    orbQuantityClaimed = tmp(9504).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
-    const tmpResult8 = tmp(9504);
+    orbQuantityClaimed = tmp(9517).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
+    const tmpResult8 = tmp(9517);
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class U {
@@ -802,7 +802,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestOrb
       }
     }
     const obj3 = { style: tmp4.background, onReady: tmp23 };
-    obj2.children = closure_13(tmp(13960).OrbsRewardBackground, obj3);
+    obj2.children = closure_13(tmp(13978).OrbsRewardBackground, obj3);
     const tmp28 = closure_13(closure_8, obj2);
     cResult[10] = tmp4.background;
     cResult[11] = tmp28;
@@ -959,7 +959,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestOrb
       obj9 = tmp32(closure_8, obj15);
       items5[3] = obj9;
       rect.children = items5;
-      tmp31(tmp(7169).SafeAreaPaddingView, rect);
+      tmp31(tmp(7172).SafeAreaPaddingView, rect);
     }
   }
   let tmp30 = !tmp10;
@@ -992,8 +992,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestOrb
   const items = [AccessibilityStore];
   const stateFromStores = num(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = num(504);
-  num = num(9368).useFetchVirtualCurrencyBalance().balance;
-  let obj2 = num(9368);
+  num = num(9380).useFetchVirtualCurrencyBalance().balance;
+  let obj2 = num(9380);
   [tmp6, c1] = noop.useState(false);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   const items1 = [AppStateStore];
@@ -1007,11 +1007,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestOrb
     num2 = userStatus.orbQuantityClaimed;
   }
   if (num2 == null) {
-    num2 = tmp2(9504).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
-    const tmp2Result = tmp2(9504);
+    num2 = tmp2(9517).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
+    const tmp2Result = tmp2(9517);
   }
   const effect = noop.useEffect(() => {
-    num(13959).applyOrientationLock("PORTRAIT");
+    num(13977).applyOrientationLock("PORTRAIT");
     return () => {
       const result = num(dependencyMap[31]).restoreDefaultOrientationLock();
     };
@@ -1020,13 +1020,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestOrb
     _undefined(true);
   }, []);
   let string = noop.useCallback(() => {
-    _undefined(6620).popWithKey(QuestOrbsRewardModal);
-    const obj = _undefined(6620);
-    const obj2 = num(9482);
-    obj2.openQuestHome({ filter: constants.VIRTUAL_CURRENCY, fromContent: num(6661).QuestContent.REWARD_MODAL });
+    _undefined(6623).popWithKey(QuestOrbsRewardModal);
+    const obj = _undefined(6623);
+    const obj2 = num(9495);
+    obj2.openQuestHome({ filter: constants.VIRTUAL_CURRENCY, fromContent: num(6664).QuestContent.REWARD_MODAL });
   }, []);
   const obj6 = { style: tmp.root, children: null };
-  const obj7 = { style: absoluteFill.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_13(num(13960).OrbsRewardBackground, { style: tmp.background, onReady: callback }) };
+  const obj7 = { style: absoluteFill.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_13(num(13978).OrbsRewardBackground, { style: tmp.background, onReady: callback }) };
   const items3 = [closure_13(closure_8, obj7), , ];
   let tmp13Result = !tmp6;
   if (!tmp6) {
@@ -1103,7 +1103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestOrb
     obj13 = closure_13(closure_8, obj19);
     items4[3] = obj13;
     rect.children = items4;
-    closure_15(tmp2(7169).SafeAreaPaddingView, rect);
+    closure_15(tmp2(7172).SafeAreaPaddingView, rect);
   }
   const obj5 = num(504);
   const obj8 = { style: tmp.background, onReady: callback };

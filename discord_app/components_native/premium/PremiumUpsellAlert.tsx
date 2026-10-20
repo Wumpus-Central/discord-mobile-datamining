@@ -1,6 +1,6 @@
-// === Module 9780: PremiumUpsellAlert ===
+// === Module 9792: PremiumUpsellAlert ===
 
-// Module 9780 (PremiumUpsellAlert)
+// Module 9792 (PremiumUpsellAlert)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,23 +12,23 @@ import shared from "shared" /* 4952 */;
 import useThemeDefault from "useTheme" /* 5166 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5824 */;
-import FileSizeUtils from "FileSizeUtils" /* 6333 */;
-import TableSwitchRow from "TableSwitchRow" /* 7241 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7503 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9576 */;
-import _modDef9587 from "module_9587" /* 9587 */;
-import _modDef9588 from "module_9588" /* 9588 */;
-import _modDef9808 from "module_9808" /* 9808 */;
-import _modDef9809 from "module_9809" /* 9809 */;
-import _modDef9810 from "module_9810" /* 9810 */;
-import _modDef9811 from "module_9811" /* 9811 */;
-import _modDef9812 from "module_9812" /* 9812 */;
-import _modDef9813 from "module_9813" /* 9813 */;
-import _modDef9814 from "module_9814" /* 9814 */;
-import _modDef9815 from "module_9815" /* 9815 */;
-import PremiumFeatureUtils from "PremiumFeatureUtils" /* 9816 */;
-import _modDef9817 from "module_9817" /* 9817 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5826 */;
+import FileSizeUtils from "FileSizeUtils" /* 6336 */;
+import TableSwitchRow from "TableSwitchRow" /* 7244 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7506 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9589 */;
+import _modDef9600 from "module_9600" /* 9600 */;
+import _modDef9601 from "module_9601" /* 9601 */;
+import _modDef9820 from "module_9820" /* 9820 */;
+import _modDef9821 from "module_9821" /* 9821 */;
+import _modDef9822 from "module_9822" /* 9822 */;
+import _modDef9823 from "module_9823" /* 9823 */;
+import _modDef9824 from "module_9824" /* 9824 */;
+import _modDef9825 from "module_9825" /* 9825 */;
+import _modDef9826 from "module_9826" /* 9826 */;
+import _modDef9827 from "module_9827" /* 9827 */;
+import PremiumFeatureUtils from "PremiumFeatureUtils" /* 9828 */;
+import _modDef9829 from "module_9829" /* 9829 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
@@ -38,7 +38,7 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, UpsellTypes: closure_9 } = Constants);
-const getIcons = fn(9781).getIcons;
+const getIcons = fn(9793).getIcons;
 const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: closure_11, PremiumTypes: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -253,7 +253,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global
     tmp20 = cResult[4];
   }
   if (cResult[5] !== tmp11) {
-    const obj6 = { image: _modDef9587, title: tmp20, description: tmp11 };
+    const obj6 = { image: _modDef9600, title: tmp20, description: tmp11 };
     cResult[5] = tmp11;
     cResult[6] = obj6;
     let tmp22 = obj6;
@@ -308,7 +308,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global
     }
   }
   const obj5 = { alertWidth, upsellItem: null };
-  const obj6 = { image: _modDef9587, title: null, description: null };
+  const obj6 = { image: _modDef9600, title: null, description: null };
   const intl4 = util.intl;
   obj6.title = intl4.string(util.t.UNtcBV);
   obj6.description = formatResult1;
@@ -345,7 +345,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
     cResult[2] = formatResult;
   } else {
     if (cResult[3] !== cResult[2]) {
-      const obj2 = { image: _modDef9588, title: first, description: tmp5 };
+      const obj2 = { image: _modDef9601, title: first, description: tmp5 };
       cResult[3] = tmp5;
       cResult[4] = obj2;
       let tmp10 = obj2;
@@ -367,7 +367,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   }
 }) : (function AnimatedEmojiUpsell(alertWidth) {
   const obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  const obj2 = { image: _modDef9588, title: null, description: null };
+  const obj2 = { image: _modDef9601, title: null, description: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.F6rmyq);
   const intl2 = util.intl;
@@ -391,9 +391,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   const legacyClassComponentStyles = createStyles2.useLegacyClassComponentStyles(closure_16);
   const tmp6 = useThemeDefault();
   if (obj3.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef9808;
+    let tmp5Result = _modDef9820;
   } else {
-    tmp5Result = _modDef9809;
+    tmp5Result = _modDef9821;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -435,9 +435,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   const obj2 = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9808;
+    let tmp4Result = _modDef9820;
   } else {
-    tmp4Result = _modDef9809;
+    tmp4Result = _modDef9821;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -453,7 +453,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   alertWidth = alertWidth.alertWidth;
   const legacyClassComponentStyles = createStyles2.useLegacyClassComponentStyles(closure_16);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { image: _modDef9810, title: null, description: null };
+    const obj3 = { image: _modDef9822, title: null, description: null };
     const intl = util.intl;
     obj3.title = intl.string(util.t.rTY76D);
     const intl2 = util.intl;
@@ -477,7 +477,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   const obj4 = { alertWidth, imageStyle: legacyClassComponentStyles.customProfileUpsellImage, upsellItem: first };
 }) : (function CustomProfilesUpsell(alertWidth) {
   const obj2 = { alertWidth: alertWidth.alertWidth, imageStyle: createStyles2.useLegacyClassComponentStyles(closure_16).customProfileUpsellImage, upsellItem: null };
-  const obj3 = { image: _modDef9810, title: null, description: null };
+  const obj3 = { image: _modDef9822, title: null, description: null };
   const intl = util.intl;
   obj3.title = intl.string(util.t.rTY76D);
   const intl2 = util.intl;
@@ -608,7 +608,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global
     cResult[2] = formatResult;
   } else {
     if (cResult[3] !== cResult[2]) {
-      const obj2 = { image: _modDef9811, title: first, description: tmp5 };
+      const obj2 = { image: _modDef9823, title: first, description: tmp5 };
       cResult[3] = tmp5;
       cResult[4] = obj2;
       let tmp10 = obj2;
@@ -630,7 +630,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global
   }
 }) : (function GlobalStickerUpsell(alertWidth) {
   const obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  const obj2 = { image: _modDef9811, title: null, description: null };
+  const obj2 = { image: _modDef9823, title: null, description: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.jn2mBl);
   const intl2 = util.intl;
@@ -655,9 +655,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Longer
   const tmp7 = useMessageMaxLengthDefault();
   const tmp6 = useThemeDefault();
   if (obj3.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef9812;
+    let tmp5Result = _modDef9824;
   } else {
-    tmp5Result = _modDef9813;
+    tmp5Result = _modDef9825;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -709,9 +709,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Longer
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9812;
+    let tmp4Result = _modDef9824;
   } else {
-    tmp4Result = _modDef9813;
+    tmp4Result = _modDef9825;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -728,9 +728,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   const legacyClassComponentStyles = createStyles2.useLegacyClassComponentStyles(closure_16);
   const tmp6 = useThemeDefault();
   if (obj3.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef9814;
+    let tmp5Result = _modDef9826;
   } else {
-    tmp5Result = _modDef9815;
+    tmp5Result = _modDef9827;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
@@ -772,9 +772,9 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   const obj2 = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9814;
+    let tmp4Result = _modDef9826;
   } else {
-    tmp4Result = _modDef9815;
+    tmp4Result = _modDef9827;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -1006,7 +1006,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumUpsel
   obj6.confirmColor = initialUpsellKey(legacyClassComponentStyles[45]).ButtonColors.GREEN;
   obj6.confirmText = getNitroText;
   obj6.renderConfirmIcon = function renderConfirmIcon() {
-    const obj = { source: _modDef9817, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
+    const obj = { source: _modDef9829, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
     if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
       if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
         if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {

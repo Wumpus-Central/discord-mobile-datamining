@@ -1,11 +1,11 @@
-// === Module 16892: UserSettingsDesignSystemTooltip ===
+// === Module 16911: UserSettingsDesignSystemTooltip ===
 
-// Module 16892 (UserSettingsDesignSystemTooltip)
+// Module 16911 (UserSettingsDesignSystemTooltip)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import LayerScope from "LayerScope" /* 5558 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7169 */;
-import DeviceOrientation from "DeviceOrientation" /* 8740 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7172 */;
+import DeviceOrientation from "DeviceOrientation" /* 8752 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -103,7 +103,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     if (cResult[2] === visible) {
       let tmp14 = cResult[3];
     }
-    const tooltip = tmp(9757).useTooltip(ref, tmp14);
+    const tooltip = tmp(9769).useTooltip(ref, tmp14);
     if (cResult[4] !== visible) {
       class U {
         constructor() {
@@ -150,7 +150,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
                 return;
               }
             }
-            const mapped = closure_9.map((label) => closure_1_5(first(6932).TableRadioRow, { label, value: label }, label));
+            const mapped = closure_9.map((label) => closure_1_5(first(6935).TableRadioRow, { label, value: label }, label));
             cResult[15] = mapped;
             const tmp27 = mapped;
           } else {
@@ -169,7 +169,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
               }
             }
             const obj3 = { title: "Position", value: first1, onChange: tmp10[1], hasIcons: false, children: tmp27 };
-            const tmp30 = closure_5(tmp(6933).TableRadioGroup, obj3);
+            const tmp30 = closure_5(tmp(6936).TableRadioGroup, obj3);
             cResult[16] = first1;
             cResult[17] = tmp30;
           } else {
@@ -217,7 +217,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
           cResult[22] = tmp37;
         }
         const obj5 = { label: "Unlock Orientation", value: tmp8, onValueChange: tmp9 };
-        const tmp26 = closure_5(tmp(7241).TableSwitchRow, obj5);
+        const tmp26 = closure_5(tmp(7244).TableSwitchRow, obj5);
         cResult[12] = tmp8;
         cResult[13] = tmp9;
         cResult[14] = tmp26;
@@ -233,7 +233,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     cResult[6] = U;
     cResult[7] = str;
     cResult[8] = tmp19;
-    const tmpResult = tmp(9757);
+    const tmpResult = tmp(9769);
   }
   const obj8 = { label: "NEW", position: first1, visible, onPress: first2 };
   cResult[1] = first1;
@@ -264,7 +264,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     }
   }), items);
   const tmp4 = first1(closure_10(), 2);
-  const tooltip = visible(9757).useTooltip(ref, memo);
+  const tooltip = visible(9769).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
@@ -278,8 +278,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
       size: "md"
     })
   };
-  const items1 = [closure_5(View, obj4), closure_5(visible(7241).TableSwitchRow, { label: "Unlock Orientation", value: tmp5, onValueChange: tmp6 }), , ];
-  const obj2 = visible(9757);
+  const items1 = [closure_5(View, obj4), closure_5(visible(7244).TableSwitchRow, { label: "Unlock Orientation", value: tmp5, onValueChange: tmp6 }), , ];
+  const obj2 = visible(9769);
   const obj5 = {
     ref,
     onPress() {
@@ -289,7 +289,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     text: str,
     size: "md"
   };
-  items1[2] = closure_5(visible(6933).TableRadioGroup, { title: "Position", value: first1, onChange: tmp7[1], hasIcons: false, children: closure_9.map((label) => closure_1_5(first(6932).TableRadioRow, { label, value: label }, label)) });
+  items1[2] = closure_5(visible(6936).TableRadioGroup, { title: "Position", value: first1, onChange: tmp7[1], hasIcons: false, children: closure_9.map((label) => closure_1_5(first(6935).TableRadioRow, { label, value: label }, label)) });
   items1[3] = closure_5(closure_12, {});
   obj3.children = items1;
   return closure_7(closure_6, obj3);

@@ -1,12 +1,12 @@
-// === Module 17558: YouBarNameplate ===
+// === Module 17577: YouBarNameplate ===
 
-// Module 17558 (YouBarNameplate)
+// Module 17577 (YouBarNameplate)
 import spring from "spring" /* 5208 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(16169).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(16188).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 const __initData = { code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}" };
 const __initData2 = { code: "function YouBarNameplateTsx2(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}" };
@@ -20,7 +20,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ avatarSize, barWidth } = arg0);
   let obj = isQuestRendered(576);
   token = isQuestRendered(5213).useToken(token(587).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp6 = token(16255)(token);
+  const tmp6 = token(16274)(token);
   dependencyMap = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -88,7 +88,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             tmp19 = tmp21;
           }
           const obj5 = { nameplate, isFocused: true, animate: stateFromStores && "always" };
-          const tmp18 = jsx(tmp4(9329), { nameplate, isFocused: true, animate: stateFromStores && "always" });
+          const tmp18 = jsx(tmp4(9341), { nameplate, isFocused: true, animate: stateFromStores && "always" });
           cResult[10] = nameplate;
           cResult[11] = stateFromStores && "always";
           cResult[12] = tmp18;
@@ -116,7 +116,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let token;
   ({ nameplate, barWidth } = isQuestRendered);
   token = isQuestRendered(5213).useToken(token(587).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(16255)(token);
+  const tmp4 = token(16274)(token);
   dependencyMap = tmp4;
   let obj = isQuestRendered(5213);
   const tmp2 = token;
@@ -154,6 +154,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     str = "always";
   }
   obj6.animate = str;
-  obj5.children = jsx(tmp2(9329), { nameplate, isFocused: true, animate: null });
+  obj5.children = jsx(tmp2(9341), { nameplate, isFocused: true, animate: null });
   return jsx(token(5014).View, { style: null, pointerEvents: "none", children: null });
 }));

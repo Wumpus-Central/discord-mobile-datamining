@@ -1,9 +1,9 @@
-// === Module 17493: isHomeDrawerChannelInChannelList ===
+// === Module 17512: isHomeDrawerChannelInChannelList ===
 
-// Module 17493 (isHomeDrawerChannelInChannelList)
+// Module 17512 (isHomeDrawerChannelInChannelList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

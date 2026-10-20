@@ -1,10 +1,10 @@
-// === Module 12011: CommandOptionView ===
+// === Module 12026: CommandOptionView ===
 
-// Module 12011 (CommandOptionView)
+// Module 12026 (CommandOptionView)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5014 */;
-import _modDef10104 from "module_10104" /* 10104 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12013 */;
+import _modDef10115 from "module_10115" /* 10115 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12028 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
   const ReduceMotion = option(5014).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
   const obj = option(504);
-  const optionEnteringAnimation = option(12012).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(12027).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -147,8 +147,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     const obj5 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(12012).ExitingAnimation,
-      layout: tmp2(12012).LayoutAnimation,
+      exiting: tmp2(12027).ExitingAnimation,
+      layout: tmp2(12027).LayoutAnimation,
       onLayout(arg0) {
           importDefault(arg0, option);
         },
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     items2[2] = closure_5(tmp2(5195).Text, obj9);
     if (hasItem) {
       const obj10 = { collapsable: false, entering: reduceMotionResult1, exiting: reduceMotionResult, style: tmp.optionErrorContainer, children: null };
-      const obj11 = { style: tmp.optionErrorIcon, source: _modDef10104, size: tmp2(1202).IconSizes.REFRESH_SMALL_16 };
+      const obj11 = { style: tmp.optionErrorIcon, source: _modDef10115, size: tmp2(1202).IconSizes.REFRESH_SMALL_16 };
       const items3 = [closure_5(tmp2(1202).Icon, obj11), ];
       const obj12 = { variant: "text-xs/medium", color: "text-feedback-critical", children: optionValidationResults[option.name].error };
       items3[1] = closure_5(tmp2(5195).Text, obj12);
@@ -198,10 +198,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     obj6.children = items2;
     obj5.children = closure_6(View, obj6);
     obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-    obj3.children = closure_5(tmp2(12020).AwaitAnimationContext, obj4);
+    obj3.children = closure_5(tmp2(12035).AwaitAnimationContext, obj4);
     return closure_5(tmp2(5014).LayoutAnimationConfig, obj3);
   } else {
     return null;
   }
-  const tmp2Result = option(12012);
+  const tmp2Result = option(12027);
 });

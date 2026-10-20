@@ -1,16 +1,16 @@
-// === Module 5991: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 5994: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 5991 (checkpoint/CheckpointMessageComponentUtils)
+// Module 5994 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
 import _modDef3046 from "module_3046" /* 3046 */;
 import _modDef3078 from "module_3078" /* 3078 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4894 */;
-import CheckpointUtils from "CheckpointUtils" /* 5979 */;
-import CheckpointTrait from "CheckpointTrait" /* 5993 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5994 */;
-import CheckpointConstants from "CheckpointConstants" /* 5970 */;
+import CheckpointUtils from "CheckpointUtils" /* 5982 */;
+import CheckpointTrait from "CheckpointTrait" /* 5996 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5997 */;
+import CheckpointConstants from "CheckpointConstants" /* 5973 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -195,11 +195,11 @@ export const transformCheckpoint2026CardComponent = function transformCheckpoint
   }
   return tmp2;
 };
-export const getCharacterLayerUrls = function getCharacterLayerUrls(wearable, arg1) {
-  _require = wearable;
+export const getCharacterLayerUrls = function getCharacterLayerUrls(character, arg1) {
+  _require = character;
   closure_1 = arg1;
   const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = require("CheckpointTraitConfig").CHECKPOINT_WEARABLE_LAYER_BACKGROUND;
-  const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(wearable.wearable);
+  const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(character.wearable);
   const tmp2 = require("CheckpointTraitConfig");
   items = [];
   const item = hasItem ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.forEach((item) => {

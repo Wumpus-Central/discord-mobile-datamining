@@ -1,6 +1,6 @@
-// === Module 12018: AppLauncherCommandOptionActionSheet ===
+// === Module 12033: AppLauncherCommandOptionActionSheet ===
 
-// Module 12018 (AppLauncherCommandOptionActionSheet)
+// Module 12033 (AppLauncherCommandOptionActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -62,7 +62,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
           }
         }
     };
-    obj3.children = jsx(tmp(7239).ActionSheetCloseButton, {
+    obj3.children = jsx(tmp(7242).ActionSheetCloseButton, {
       onPress() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           onDismiss = onDismiss.onDismiss;
@@ -183,7 +183,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
   const obj3 = { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null };
   const obj4 = {
     style: { alignSelf: "flex-start" },
-    children: jsx(merged(7239).ActionSheetCloseButton, {
+    children: jsx(merged(7242).ActionSheetCloseButton, {
       onPress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         const onDismiss = merged.onDismiss;
@@ -193,7 +193,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       }
     })
   };
-  obj3.leading = <View style={{ alignSelf: "flex-start" }}>{jsx(merged(7239).ActionSheetCloseButton, {
+  obj3.leading = <View style={{ alignSelf: "flex-start" }}>{jsx(merged(7242).ActionSheetCloseButton, {
     onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       const onDismiss = merged.onDismiss;
@@ -204,7 +204,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
   })}</View>;
   ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
   obj3.trailing = jsx(merged(1202).Spacer, { size: 24 });
-  obj.header = jsx(merged(7194).BottomSheetTitleHeader, { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null });
+  obj.header = jsx(merged(7197).BottomSheetTitleHeader, { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null });
   const obj9 = { style: null, children };
   const items = [tmp2.contentContainer, contentContainerStyles];
   obj9.style = items;

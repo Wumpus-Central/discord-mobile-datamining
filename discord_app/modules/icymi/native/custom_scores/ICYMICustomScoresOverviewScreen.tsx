@@ -1,11 +1,11 @@
-// === Module 17633: ICYMICustomScoresOverviewScreen ===
+// === Module 17652: ICYMICustomScoresOverviewScreen ===
 
-// Module 17633 (ICYMICustomScoresOverviewScreen)
+// Module 17652 (ICYMICustomScoresOverviewScreen)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import SortedGuildStore from "SortedGuildStore" /* 6649 */;
-import ICYMIStore from "ICYMIStore" /* 8743 */;
+import SortedGuildStore from "SortedGuildStore" /* 6652 */;
+import ICYMIStore from "ICYMIStore" /* 8755 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;

@@ -1,6 +1,6 @@
-// === Module 15613: CollectiblesMarketingCacheExperiment ===
+// === Module 15632: CollectiblesMarketingCacheExperiment ===
 
-// Module 15613 (CollectiblesMarketingCacheExperiment)
+// Module 15632 (CollectiblesMarketingCacheExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

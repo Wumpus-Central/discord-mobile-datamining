@@ -1,13 +1,13 @@
-// === Module 16984: SettingsSecureFramesScreen ===
+// === Module 17003: SettingsSecureFramesScreen ===
 
-// Module 16984 (SettingsSecureFramesScreen)
+// Module 17003 (SettingsSecureFramesScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import UserActionCreators from "UserActionCreators" /* 8595 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9117 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import UserActionCreators from "UserActionCreators" /* 8607 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9129 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -79,7 +79,7 @@ function UserListItem(userId) {
         }
         if (cResult[14] !== stateFromStores) {
           if (null != stateFromStores) {
-            const obj4 = { user: stateFromStores, guildId: "Array", size: true };
+            const obj4 = { user: stateFromStores, guildId: "Array", size: -1 };
             const Avatar = TableRow(tmp14[15]).Avatar;
             obj4.size = TableRow(tmp14[15]).AvatarSizes.REFRESH_MEDIUM_32;
             class F {

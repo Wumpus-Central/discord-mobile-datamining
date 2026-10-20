@@ -1,10 +1,10 @@
-// === Module 6600: StreamPermissionUtils ===
+// === Module 6603: StreamPermissionUtils ===
 
-// Module 6600 (StreamPermissionUtils)
-import ChannelUtils from "ChannelUtils" /* 5949 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 6587 */;
-import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6601 */;
-import AgeGateUtils from "AgeGateUtils" /* 6610 */;
+// Module 6603 (StreamPermissionUtils)
+import ChannelUtils from "ChannelUtils" /* 5952 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 6590 */;
+import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6604 */;
+import AgeGateUtils from "AgeGateUtils" /* 6613 */;
 import GameConsoleStore from "GameConsoleStore" /* 5677 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import PermissionStore from "PermissionStore" /* 4880 */;

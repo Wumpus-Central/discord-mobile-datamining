@@ -5,7 +5,7 @@ import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import ExternalPipDefault from "ExternalPip" /* 5784 */;
-import WindowVisibilityUtilsDefault from "WindowVisibilityUtils" /* 5785 */;
+import WindowVisibilityUtilsDefault from "WindowVisibilityUtils" /* 5787 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 5703 */;
 
 const require = fn;

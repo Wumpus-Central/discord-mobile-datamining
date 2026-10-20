@@ -1,6 +1,6 @@
-// === Module 15544: internalDeepLinks ===
+// === Module 15562: internalDeepLinks ===
 
-// Module 15544 (internalDeepLinks)
+// Module 15562 (internalDeepLinks)
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import openURL from "openURL" /* 5617 */;
 import _slicedToArray from "module_32" /* 32 */;

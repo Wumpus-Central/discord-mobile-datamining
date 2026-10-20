@@ -1,10 +1,10 @@
-// === Module 16006: UserSettingsFamilyCenterParentalControls ===
+// === Module 16025: UserSettingsFamilyCenterParentalControls ===
 
-// Module 16006 (UserSettingsFamilyCenterParentalControls)
+// Module 16025 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2526 from "module_2526" /* 2526 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7593 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7596 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1087).UserSettingsSections;
-const FamilyCenterSubPages = fn(7592).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7595).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4945);
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                setOptionsResult1 = closure_0.setOptions({ title: "userId", headerRight: "code" });
                 return;
               }
             }
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "userId", headerRight: "code" });
                   return;
                 }
               }
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "userId", headerRight: "code" });
                   return;
                 }
               }
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "userId", headerRight: "code" });
                   return;
                 }
               }
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "userId", headerRight: "code" });
                   return;
                 }
               }
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "userId", headerRight: "code" });
                   return;
                 }
               }
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
+          setOptionsResult1 = closure_0.setOptions({ title: "userId", headerRight: "code" });
           return;
         }
       }
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "test" });
+    stackNavigation.setOptions({ title: "userId", headerRight: "code" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

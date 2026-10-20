@@ -1,7 +1,7 @@
-// === Module 18460: ManagerRegistry ===
+// === Module 18482: ManagerRegistry ===
 
-// Module 18460 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 19155 */;
+// Module 18482 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 19179 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -139,6 +139,12 @@ const obj = {
       return require("CommunicationDisabledManager").default;
     },
     loadAfterConnectionOpen: true
+  },
+  ConjureBackgroundFramesManager: {
+    actions: ["FRAME_LAUNCH_START"],
+    inlineRequire() {
+      return require("ConjureBackgroundFramesManager").default;
+    }
   },
   ConjureTurnNotificationManager: {
     actions: ["CONJURE_TURN_NOTIFICATION", "CONJURE_TURN_SETTLED", "LOGOUT"],

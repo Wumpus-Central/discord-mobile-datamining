@@ -1,11 +1,11 @@
-// === Module 13817: ForumChannelSearch ===
+// === Module 13835: ForumChannelSearch ===
 
-// Module 13817 (ForumChannelSearch)
-import Tracking from "Tracking" /* 8233 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9642 */;
+// Module 13835 (ForumChannelSearch)
+import Tracking from "Tracking" /* 8237 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9655 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import ForumSearchStore from "ForumSearchStore" /* 8234 */;
+import ForumSearchStore from "ForumSearchStore" /* 8238 */;
 
 require = fn;
 const View = fn(17).View;
@@ -134,7 +134,7 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
   const guildId = channelId.guildId;
   closure_8();
   let obj = channelId(576);
-  const canSearchForumPostsByChannelId = channelId(13818).useCanSearchForumPostsByChannelId(channelId);
+  const canSearchForumPostsByChannelId = channelId(13836).useCanSearchForumPostsByChannelId(channelId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ForumSearchStore];
     cResult[0] = items;
@@ -160,7 +160,7 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  let obj2 = channelId(13818);
+  let obj2 = channelId(13836);
   const stateFromStores = channelId(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ChannelStore];
@@ -277,8 +277,8 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(13818).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(13818);
+  const canSearchForumPostsByChannelId = channelId(13836).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(13836);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {

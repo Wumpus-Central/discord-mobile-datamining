@@ -1,8 +1,8 @@
-// === Module 18853: GuildSettingsRoleItem ===
+// === Module 18876: GuildSettingsRoleItem ===
 
-// Module 18853 (GuildSettingsRoleItem)
+// Module 18876 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 587 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6778 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -958,7 +958,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               } else if (closure_1_5) {
                 c1 = 1;
                 c2 = 1;
-                const obj6 = { value: tmp2(11160).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                const obj6 = { value: tmp2(11171).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                 return obj6;
               }
             } else if (arg0 === 1) {
@@ -969,7 +969,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj = { value, done: true };
               return obj;
             }
-            onPress(6778).deleteRole(guildId, tmp2.id);
+            onPress(6781).deleteRole(guildId, tmp2.id);
             c2 = 3;
             return { value: "IconComponent", done: null };
           } catch (tmp16) {
@@ -1100,7 +1100,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(11160).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(11171).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {
@@ -1224,7 +1224,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     let tmp24Result = null;
     if (null != prop) {
-      const obj23 = { size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_9779"), "aria-label": null, style: null };
+      const obj23 = { size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_9791"), "aria-label": null, style: null };
       const intl6 = tmp5(onMoveUp[13]).intl;
       obj23["aria-label"] = intl6.string(tmp5(onMoveUp[13]).t.a2Ak8b);
       obj23.style = tmp4.sparkleIcon;

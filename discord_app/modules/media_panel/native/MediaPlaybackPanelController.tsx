@@ -1,13 +1,13 @@
-// === Module 18391: MediaPlaybackPanelController ===
+// === Module 18413: MediaPlaybackPanelController ===
 
-// Module 18391 (MediaPlaybackPanelController)
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 15602 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 18392 */;
+// Module 18413 (MediaPlaybackPanelController)
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 15621 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 18414 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
-import VoicePanelStore from "VoicePanelStore" /* 6752 */;
+import VoicePanelStore from "VoicePanelStore" /* 6755 */;
 
 const require = fn;
 function useCoreState() {
@@ -51,15 +51,15 @@ function useCoreState() {
   const obj7 = sharedValue(5014);
   const obj8 = { mode: sharedValue, MediaPlaybackPanelModes, MorphablePanelModes };
   const tmp9 = sharedValue3(1633)();
-  const tmp10 = sharedValue3(18175)(sharedValue3(1633)());
+  const tmp10 = sharedValue3(18198)(sharedValue3(1633)());
   const sharedValue6 = sharedValue(5014).useSharedValue(false);
   const obj9 = sharedValue(5014);
   const obj10 = sharedValue(5014);
   return { mode: sharedValue, morphablePanelMode: derivedValue, wrapperDimensions: sharedValue1, useReducedMotion: sharedValue3, pipState: sharedValue2, pipAvoidanceSpecs: tmp10, scrollPosition: sharedValue5, canShowPIP: sharedValue4, lockScrolling: sharedValue6, wrapperOffset: sharedValue(5014).useSharedValue({ x: 0, y: 0, gestureActive: false }) };
 }
-const MediaPlaybackPanelModes = fn(15603).MediaPlaybackPanelModes;
+const MediaPlaybackPanelModes = fn(15622).MediaPlaybackPanelModes;
 const ActivityPanelModes = fn(5570).ActivityPanelModes;
-const MorphablePanelModes = fn(10694).MorphablePanelModes;
+const MorphablePanelModes = fn(10705).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let __initData = { code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}" };
 const ReactCompilerGating = fn(558);

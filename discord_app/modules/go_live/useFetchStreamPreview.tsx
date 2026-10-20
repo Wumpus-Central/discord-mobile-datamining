@@ -1,9 +1,9 @@
-// === Module 11583: useFetchStreamPreview ===
+// === Module 11594: useFetchStreamPreview ===
 
-// Module 11583 (useFetchStreamPreview)
-import StreamActionCreators from "StreamActionCreators" /* 7773 */;
+// Module 11594 (useFetchStreamPreview)
+import StreamActionCreators from "StreamActionCreators" /* 7777 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7775 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7779 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;

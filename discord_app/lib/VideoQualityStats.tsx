@@ -1,9 +1,9 @@
-// === Module 5856: VideoQualityStats ===
+// === Module 5858: VideoQualityStats ===
 
-// Module 5856 (VideoQualityStats)
+// Module 5858 (VideoQualityStats)
 import TimeUtils from "TimeUtils" /* 5684 */;
-import Histogram from "Histogram" /* 5839 */;
-import SystemResourcesDefault from "SystemResources" /* 5847 */;
+import Histogram from "Histogram" /* 5841 */;
+import SystemResourcesDefault from "SystemResources" /* 5849 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

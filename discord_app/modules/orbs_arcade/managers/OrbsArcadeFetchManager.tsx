@@ -1,10 +1,10 @@
-// === Module 19069: OrbsArcadeFetchManager ===
+// === Module 19092: OrbsArcadeFetchManager ===
 
-// Module 19069 (OrbsArcadeFetchManager)
+// Module 19092 (OrbsArcadeFetchManager)
 import DurationsDefault from "Durations" /* 1104 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 19072 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 19070 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 19095 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 19093 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 require = fn;
 const MINUTE = DurationsDefault.Millis.MINUTE;
@@ -49,15 +49,30 @@ class OrbsArcadeFetchManager extends tmp2 {
         orbsArcadeGames = OrbsArcadeActionCreators.fetchOrbsArcadeGames();
       }
     };
-    applyArgumentsResult.handleGameStateUpdate = function handleGameStateUpdate(game_id) {
-      game_id = game_id.game_id;
+    applyArgumentsResult.handleGameStateUpdate = function handleGameStateUpdate(arg0) {
+      ({ game_id: closure_0, game_state } = arg0);
       orbsArcadeGames = orbsArcadeGames.orbsArcadeGames;
-      const found = orbsArcadeGames.find((id) => id.id === game_id);
-      if (tmp2) {
-        const orbsArcadeGames1 = applyArgumentsResult(19072).fetchOrbsArcadeGames();
-        const obj = applyArgumentsResult(19072);
+      const found = orbsArcadeGames.find((id) => id.id === closure_1_0);
+      if (null != found) {
+        let tmp4 = null != found.endsAt;
+        if (tmp4) {
+          const _Date = Date;
+          const _Date2 = Date;
+          const parsed = Date.parse(found.endsAt);
+          tmp4 = parsed <= Date.now();
+        }
+        let result = !tmp4;
+        if (!tmp4) {
+          const obj = applyArgumentsResult(19096);
+          result = obj.isOrbsArcadeEnrollmentOver(applyArgumentsResult(19094).orbsArcadeGameStateFromServer(game_state));
+          const obj2 = applyArgumentsResult(19094);
+        }
+        if (tmp8) {
+          const orbsArcadeGames1 = applyArgumentsResult(19095).fetchOrbsArcadeGames();
+          const obj3 = applyArgumentsResult(19095);
+        }
+        tmp8 = found.versionId !== game_state.game_version_id || result;
       }
-      tmp2 = null != found && found.versionId !== game_id.game_state.game_version_id;
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       applyArgumentsResult.clearTimers();
@@ -109,7 +124,7 @@ class OrbsArcadeFetchManager extends tmp2 {
           applyArgumentsResult.boundaryRefetchTimerId = window.setTimeout(() => {
             closure_0.boundaryRefetchTimerId = null;
             closure_0.scheduledBoundaryAt = null;
-            orbsArcadeGames = applyArgumentsResult(19072).fetchOrbsArcadeGames();
+            orbsArcadeGames = applyArgumentsResult(19095).fetchOrbsArcadeGames();
           }, Math.min(diff + Math.floor(Math.random() * closure_5), DAY));
         }
       }
@@ -138,6 +153,6 @@ prototype["clearTimers"] = function clearTimers() {
 };
 const orbsArcadeFetchManager = new OrbsArcadeFetchManager();
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/orbs_arcade/managers/OrbsArcadeFetchManager.tsx");
+let result = size.fileFinishedImporting("modules/orbs_arcade/managers/OrbsArcadeFetchManager.tsx");
 
 export default orbsArcadeFetchManager;

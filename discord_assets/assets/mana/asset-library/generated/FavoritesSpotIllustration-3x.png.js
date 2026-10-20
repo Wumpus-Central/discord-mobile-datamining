@@ -1,6 +1,6 @@
-// === Module 10647: ? ===
+// === Module 10658: ? ===
 
-// Module 10647
+// Module 10658
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FavoritesSpotIllustration-3x.png.js");

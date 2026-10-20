@@ -1,7 +1,7 @@
-// === Module 12836: getPlayInContext ===
+// === Module 12854: getPlayInContext ===
 
-// Module 12836 (getPlayInContext)
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11286 */;
+// Module 12854 (getPlayInContext)
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11297 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
 
@@ -227,7 +227,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj3.isCurrentlyInInstance = tmp11;
-    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(11286).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(11297).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj3;
   }
 };

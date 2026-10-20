@@ -1,13 +1,13 @@
-// === Module 18108: AppIconsCoachmark ===
+// === Module 18131: AppIconsCoachmark ===
 
-// Module 18108 (AppIconsCoachmark)
+// Module 18131 (AppIconsCoachmark)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2054 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import _modDef9850 from "module_9850" /* 9850 */;
-import AppIconUtils from "AppIconUtils" /* 14565 */;
-import _modDef18109 from "module_18109" /* 18109 */;
+import _modDef9862 from "module_9862" /* 9862 */;
+import AppIconUtils from "AppIconUtils" /* 14583 */;
+import _modDef18132 from "module_18132" /* 18132 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
         return;
       }
     }
-    let obj2 = { source: _modDef18109, style: tmp4.image };
+    let obj2 = { source: _modDef18132, style: tmp4.image };
     const tmp19 = closure_7(FastImageDefault, obj2);
     cResult[10] = tmp4.image;
     cResult[11] = tmp19;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
         return;
       }
     }
-    const obj4 = { source: _modDef9850, size: tmp(1202).IconSizes.MEDIUM, style: tmp4.nitroWheel, disableColor: true };
+    const obj4 = { source: _modDef9862, size: tmp(1202).IconSizes.MEDIUM, style: tmp4.nitroWheel, disableColor: true };
     const tmp22 = closure_7(tmp(1202).Icon, obj4);
     cResult[12] = tmp4.nitroWheel;
     cResult[13] = tmp22;
@@ -343,11 +343,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
   const obj4 = { style: tmp.info, children: null };
   const obj5 = { source: null, style: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  obj5.source = _modDef18109;
+  obj5.source = _modDef18132;
   obj5.style = tmp.image;
   const items2 = [closure_7(FastImageDefault, obj5), , ];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const items3 = [closure_7(markAsDismissed(1202).Icon, { source: _modDef9850, size: markAsDismissed(1202).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
+  const items3 = [closure_7(markAsDismissed(1202).Icon, { source: _modDef9862, size: markAsDismissed(1202).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
   const obj8 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1128).intl;
   obj8.children = intl.string(markAsDismissed(1128).t.EfA4Cq);

@@ -1,10 +1,10 @@
-// === Module 9730: PremiumFeaturesLogo ===
+// === Module 9743: PremiumFeaturesLogo ===
 
-// Module 9730 (PremiumFeaturesLogo)
+// Module 9743 (PremiumFeaturesLogo)
 import c from "c" /* 576 */;
 import PremiumUtils from "PremiumUtils" /* 2054 */;
-import _modDef7493 from "module_7493" /* 7493 */;
-import _modDef9731 from "module_9731" /* 9731 */;
+import _modDef7496 from "module_7496" /* 7496 */;
+import _modDef9744 from "module_9744" /* 9744 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,10 +18,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const cResult = c.c(6);
   ({ premiumType, style } = arg0);
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp5 = _modDef9731;
+    let tmp5 = _modDef9744;
     let tmp6 = importDefault;
   } else {
-    tmp5 = _modDef7493;
+    tmp5 = _modDef7496;
     tmp6 = importDefault;
   }
   if (cResult[0] !== premiumType) {
@@ -50,11 +50,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
 }) : (function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp3 = _modDef9731;
+    let tmp3 = _modDef9744;
     let tmp = importDefault;
   } else {
     tmp = importDefault;
-    tmp3 = _modDef7493;
+    tmp3 = _modDef7496;
   }
   const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
   const tmpResult = tmp(5631);

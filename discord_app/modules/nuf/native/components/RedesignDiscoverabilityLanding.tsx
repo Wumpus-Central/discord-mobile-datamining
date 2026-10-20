@@ -1,6 +1,6 @@
-// === Module 18636: RedesignDiscoverabilityLanding ===
+// === Module 18659: RedesignDiscoverabilityLanding ===
 
-// Module 18636 (RedesignDiscoverabilityLanding)
+// Module 18659 (RedesignDiscoverabilityLanding)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,8 +8,8 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import NavigatorConstants from "NavigatorConstants" /* 5229 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13384 */;
-import LanternSpotIllustration from "LanternSpotIllustration" /* 18637 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13402 */;
+import LanternSpotIllustration from "LanternSpotIllustration" /* 18660 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

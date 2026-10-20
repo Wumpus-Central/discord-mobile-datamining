@@ -1,6 +1,6 @@
-// === Module 11860: applicationWidgetRefreshOutcome ===
+// === Module 11874: applicationWidgetRefreshOutcome ===
 
-// Module 11860 (applicationWidgetRefreshOutcome)
+// Module 11874 (applicationWidgetRefreshOutcome)
 import util from "util" /* 1128 */;
 import _modDef3208 from "module_3208" /* 3208 */;
 import size from "module_2" /* 2 */;

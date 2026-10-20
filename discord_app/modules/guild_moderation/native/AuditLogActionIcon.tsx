@@ -1,19 +1,19 @@
-// === Module 18779: AuditLogActionIcon ===
+// === Module 18802: AuditLogActionIcon ===
 
-// Module 18779 (AuditLogActionIcon)
+// Module 18802 (AuditLogActionIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import ChatIcon from "ChatIcon" /* 8487 */;
-import RobotIcon2 from "RobotIcon" /* 11664 */;
-import _modDef18784 from "module_18784" /* 18784 */;
-import _modDef18785 from "module_18785" /* 18785 */;
-import _modDef18786 from "module_18786" /* 18786 */;
+import ChatIcon from "ChatIcon" /* 8491 */;
+import RobotIcon2 from "RobotIcon" /* 11677 */;
+import _modDef18807 from "module_18807" /* 18807 */;
+import _modDef18808 from "module_18808" /* 18808 */;
+import _modDef18809 from "module_18809" /* 18809 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AuditLogRecord = fn(18774);
+const AuditLogRecord = fn(18797);
 ({ getTargetType: closure_4, getActionType: hasOwnProperty } = AuditLogRecord);
 const Constants = fn(1087);
 ({ AuditLogTargetTypes, AuditLogActionTypes: metroRequire, AuditLogActions: closure_7 } = Constants);
@@ -26,7 +26,7 @@ obj2.actionImageOverlay = size;
 obj2.iconComponent = { width: 22, height: 22 };
 obj2.actionImage = { position: "absolute" };
 let closure_10 = createStyles.createStyles(obj2);
-let obj3 = { [ALL]: fn(18780).ListBulletsIcon, [CHANNEL]: fn(18714).ChannelListIcon, [CHANNEL_OVERWRITE]: fn(18714).ChannelListIcon, [EMOJI]: fn(9268).ReactionIcon, [GUILD]: fn(5648).CircleInformationIcon, [GUILD_PROFILE]: fn(5648).CircleInformationIcon, [INTEGRATION]: fn(16032).PuzzlePieceIcon, [INVITE]: fn(5640).LinkIcon, [ROLE]: fn(9887).FlagIcon, [USER]: fn(8505).GroupIcon, [WEBHOOK]: fn(17908).WebhookIcon, [STAGE_INSTANCE]: fn(8513).StageIcon, [GUILD_SCHEDULED_EVENT]: fn(8968).CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(8968).CalendarIcon, [THREAD]: fn(8489).ThreadIcon, [STICKER]: fn(13254).StickerIcon, [APPLICATION_COMMAND]: fn(10958).SlashBoxIcon, [AUTO_MODERATION_RULE]: fn(17908).WebhookIcon, [GUILD_SOUNDBOARD]: fn(13249).SoundboardIcon, [ONBOARDING_PROMPT]: fn(8505).GroupIcon, [GUILD_ONBOARDING]: fn(8505).GroupIcon, [HOME_SETTINGS]: fn(8505).GroupIcon, [GUILD_MEMBER_VERIFICATION]: fn(8505).GroupIcon, [VOICE_CHANNEL_STATUS]: fn(18714).ChannelListIcon, [GUILD_HOME]: fn(18782).HomeIcon, [UNKNOWN]: fn(13774).CircleQuestionIcon };
+let obj3 = { [ALL]: fn(18803).ListBulletsIcon, [CHANNEL]: fn(18737).ChannelListIcon, [CHANNEL_OVERWRITE]: fn(18737).ChannelListIcon, [EMOJI]: fn(9280).ReactionIcon, [GUILD]: fn(5648).CircleInformationIcon, [GUILD_PROFILE]: fn(5648).CircleInformationIcon, [INTEGRATION]: fn(16051).PuzzlePieceIcon, [INVITE]: fn(5640).LinkIcon, [ROLE]: fn(9899).FlagIcon, [USER]: fn(8509).GroupIcon, [WEBHOOK]: fn(17931).WebhookIcon, [STAGE_INSTANCE]: fn(8517).StageIcon, [GUILD_SCHEDULED_EVENT]: fn(8980).CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(8980).CalendarIcon, [THREAD]: fn(8493).ThreadIcon, [STICKER]: fn(13272).StickerIcon, [APPLICATION_COMMAND]: fn(10969).SlashBoxIcon, [AUTO_MODERATION_RULE]: fn(17931).WebhookIcon, [GUILD_SOUNDBOARD]: fn(13267).SoundboardIcon, [ONBOARDING_PROMPT]: fn(8509).GroupIcon, [GUILD_ONBOARDING]: fn(8509).GroupIcon, [HOME_SETTINGS]: fn(8509).GroupIcon, [GUILD_MEMBER_VERIFICATION]: fn(8509).GroupIcon, [VOICE_CHANNEL_STATUS]: fn(18737).ChannelListIcon, [GUILD_HOME]: fn(18805).HomeIcon, [UNKNOWN]: fn(13792).CircleQuestionIcon };
 ({ ALL, CHANNEL, CHANNEL_OVERWRITE, EMOJI, GUILD, GUILD_PROFILE, INTEGRATION, INVITE, ROLE, USER, WEBHOOK, STAGE_INSTANCE, GUILD_SCHEDULED_EVENT, GUILD_SCHEDULED_EVENT_EXCEPTION, THREAD, STICKER, APPLICATION_COMMAND, AUTO_MODERATION_RULE, GUILD_SOUNDBOARD, ONBOARDING_PROMPT, GUILD_ONBOARDING, HOME_SETTINGS, GUILD_MEMBER_VERIFICATION, VOICE_CHANNEL_STATUS, GUILD_HOME, UNKNOWN } = AuditLogTargetTypes);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AuditIcons(action) {
@@ -36,16 +36,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AuditI
   if (cResult[0] !== action) {
     const tmp7 = hasOwnProperty(action);
     if (constants.CREATE === tmp7) {
-      let tmp9 = _modDef18784;
+      let tmp9 = _modDef18807;
       cResult[0] = action;
       cResult[1] = tmp9;
     } else if (constants.UPDATE !== tmp7) {
       tmp9 = null;
       if (constants.DELETE === tmp7) {
-        tmp9 = _modDef18786;
+        tmp9 = _modDef18809;
       }
     }
-    tmp9 = _modDef18785;
+    tmp9 = _modDef18808;
   } else if (cResult[2] !== action) {
     if (action === constants2.MESSAGE_DELETE) {
       let RobotIcon = ChatIcon.ChatIcon;
@@ -126,13 +126,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AuditI
   const tmp = closure_10();
   const tmp2 = hasOwnProperty(action);
   if (constants.CREATE === tmp2) {
-    let tmp4 = _modDef18784;
+    let tmp4 = _modDef18807;
   } else if (constants.UPDATE === tmp2) {
-    tmp4 = _modDef18785;
+    tmp4 = _modDef18808;
   } else {
     tmp4 = null;
     if (constants.DELETE === tmp2) {
-      tmp4 = _modDef18786;
+      tmp4 = _modDef18809;
     }
   }
   if (action === constants2.MESSAGE_DELETE) {

@@ -1,6 +1,6 @@
-// === Module 10561: ActivityStatusText ===
+// === Module 10572: ActivityStatusText ===
 
-// Module 10561 (ActivityStatusText)
+// Module 10572 (ActivityStatusText)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

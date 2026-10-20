@@ -1,6 +1,6 @@
-// === Module 13504: TabsGradient ===
+// === Module 13522: TabsGradient ===
 
-// Module 13504 (TabsGradient)
+// Module 13522 (TabsGradient)
 import c from "c" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
 import spring from "spring" /* 5208 */;

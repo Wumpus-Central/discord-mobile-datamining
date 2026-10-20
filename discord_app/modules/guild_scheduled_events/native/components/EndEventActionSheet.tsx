@@ -1,10 +1,10 @@
-// === Module 9073: EndEventActionSheet ===
+// === Module 9085: EndEventActionSheet ===
 
-// Module 9073 (EndEventActionSheet)
+// Module 9085 (EndEventActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8808 */;
-import CallsUtils from "CallsUtils" /* 9074 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8820 */;
+import CallsUtils from "CallsUtils" /* 9086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
   channel = channel.channel;
   const tmp4 = closure_7();
   let obj = channel(576);
-  const activeEvent = channel(8943).useActiveEvent(channel.id);
+  const activeEvent = channel(8955).useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
           const items = [tmp11, tmp16, tmp24, tmp33];
           obj8.children = items;
           obj7.children = closure_6(View, obj8);
-          const tmp43 = closure_5(activeEvent(13994), obj7);
+          const tmp43 = closure_5(activeEvent(14012), obj7);
           cResult[23] = tmp4.container;
           cResult[24] = tmp24;
           cResult[25] = tmp33;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
           cResult[27] = tmp16;
           cResult[28] = tmp43;
           tmp37 = tmp43;
-          const tmp40 = activeEvent(13994);
+          const tmp40 = activeEvent(14012);
         }
         const obj9 = { style: tmp4.confirmButtonContainer, children: tmp30 };
         const tmp36 = closure_5(View, obj9);
@@ -178,11 +178,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
     cResult[4] = handleConfirmClick;
     tmp7 = handleConfirmClick;
   }
-  const obj2 = channel(8943);
+  const obj2 = channel(8955);
 }) : (function EndEventActionSheet(channel) {
   channel = channel.channel;
   const tmp = closure_7();
-  const activeEvent = channel(8943).useActiveEvent(channel.id);
+  const activeEvent = channel(8955).useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EndEvent
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);
-    return closure_5(activeEvent(13994), obj2);
+    return closure_5(activeEvent(14012), obj2);
   }
-  let obj = channel(8943);
+  let obj = channel(8955);
 });

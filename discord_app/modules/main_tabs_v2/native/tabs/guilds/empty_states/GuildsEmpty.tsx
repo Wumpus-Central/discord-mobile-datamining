@@ -1,6 +1,6 @@
-// === Module 17442: GuildsEmpty ===
+// === Module 17461: GuildsEmpty ===
 
-// Module 17442 (GuildsEmpty)
+// Module 17461 (GuildsEmpty)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,9 +8,9 @@ import FavoritesUtils from "FavoritesUtils" /* 4825 */;
 import getInitialNavigationState from "getInitialNavigationState" /* 5113 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13413 */;
-import CheersSpotIllustration from "CheersSpotIllustration" /* 17443 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 13431 */;
+import CheersSpotIllustration from "CheersSpotIllustration" /* 17462 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -305,16 +305,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     tmp11 = cResult[2];
   }
-  selectedGuildId(9279)(tmp11);
+  selectedGuildId(9291)(tmp11);
   if (cResult[3] === selectedGuildId) {
     if (cResult[4] === navigation) {
       let tmp13 = cResult[5];
       let tmp14 = cResult[6];
     }
     const effect = noop.useEffect(tmp13, tmp14);
-    const isScreenLandscape = tmp(8616).useIsScreenLandscape();
-    const tmpResult3 = tmp(8616);
-    const youBarTotalHeight = tmp(16171).useYouBarTotalHeight();
+    const isScreenLandscape = tmp(8628).useIsScreenLandscape();
+    const tmpResult3 = tmp(8628);
+    const youBarTotalHeight = tmp(16190).useYouBarTotalHeight();
     if (!stateFromStores) {
       return null;
     } else {
@@ -395,7 +395,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[9] = items2;
       tmp20 = items2;
     }
-    const tmpResult4 = tmp(16171);
+    const tmpResult4 = tmp(16190);
   }
   const fn2 = function w() {
     if (null != selectedGuildId) {
@@ -455,7 +455,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = navigation(573);
   obj3.type = navigation(1275).ImpressionTypes.VIEW;
   obj3.name = navigation(1275).ImpressionNames.GUILDS_EMPTY_NUX;
-  selectedGuildId(9279)(obj3);
+  selectedGuildId(9291)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -489,9 +489,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }, items1);
-  const tmp7 = selectedGuildId(9279);
-  const isScreenLandscape = navigation(8616).useIsScreenLandscape();
-  navigation(16171);
+  const tmp7 = selectedGuildId(9291);
+  const isScreenLandscape = navigation(8628).useIsScreenLandscape();
+  navigation(16190);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

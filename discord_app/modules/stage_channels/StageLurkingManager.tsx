@@ -1,6 +1,6 @@
-// === Module 7823: StageLurkingManager ===
+// === Module 7827: StageLurkingManager ===
 
-// Module 7823 (StageLurkingManager)
+// Module 7827 (StageLurkingManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
@@ -29,7 +29,7 @@ class StageLurkingManager extends tmp2 {
     applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(guildId) {
       guildId = guildId.getGuildId();
       const items = [guildId, guildId];
-      applyArgumentsResult(7381).stopLurkingAll(items.filter(applyArgumentsResult(1388).isNotNullish));
+      applyArgumentsResult(7384).stopLurkingAll(items.filter(applyArgumentsResult(1388).isNotNullish));
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       applyArgumentsResult.terminate();

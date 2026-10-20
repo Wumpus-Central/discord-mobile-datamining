@@ -1,10 +1,10 @@
-// === Module 18945: EligibilityActionSheet ===
+// === Module 18968: EligibilityActionSheet ===
 
-// Module 18945 (EligibilityActionSheet)
+// Module 18968 (EligibilityActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8926 */;
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 18946 */;
-import EligibilityChecklistDefault from "EligibilityChecklist" /* 18950 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8938 */;
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 18969 */;
+import EligibilityChecklistDefault from "EligibilityChecklist" /* 18973 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Eligibil
     const fn = function o() {
       ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
       GuildSettingsActionCreatorsDefault.close();
-      onRequireModeratorMFAClick(7436).openUserSettings({ screen: constants.ACCOUNT });
+      onRequireModeratorMFAClick(7439).openUserSettings({ screen: constants.ACCOUNT });
     };
     cResult[0] = fn;
     let first = fn;
@@ -102,9 +102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Eligibil
       onEnableMFAClick() {
         closure_1_1(5171).hideActionSheet(closure_1_7);
         const obj = closure_1_1(5171);
-        closure_1_1(8926).close();
-        const obj2 = closure_1_1(8926);
-        onRequireModeratorMFAClick(7436).openUserSettings({ screen: constants.ACCOUNT });
+        closure_1_1(8938).close();
+        const obj2 = closure_1_1(8938);
+        onRequireModeratorMFAClick(7439).openUserSettings({ screen: constants.ACCOUNT });
       },
       onRequireModeratorMFAClick() {
         ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);

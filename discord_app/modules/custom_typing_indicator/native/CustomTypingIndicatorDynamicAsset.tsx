@@ -1,6 +1,6 @@
-// === Module 12871: CustomTypingIndicatorDynamicAsset ===
+// === Module 12889: CustomTypingIndicatorDynamicAsset ===
 
-// Module 12871 (CustomTypingIndicatorDynamicAsset)
+// Module 12889 (CustomTypingIndicatorDynamicAsset)
 import FastImageDefault from "FastImage" /* 5631 */;
 import noop from "module_19" /* 19 */;
 
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
                     const obj2 = { direction: "horizontal", spacing, align: "center", justify: "flex-start", style, children: null };
                     const items = [tmp10, tmp17];
                     obj2.children = items;
-                    const tmp22 = closure_5(tmp(5932).Stack, obj2);
+                    const tmp22 = closure_5(tmp(5935).Stack, obj2);
                     cResult[20] = spacing;
                     cResult[21] = style;
                     cResult[22] = tmp10;
@@ -84,12 +84,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
           }
           const intl = tmp(1128).intl;
           const obj4 = { name };
-          const formatResult = intl.format(tmp(12865).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
+          const formatResult = intl.format(tmp(12883).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
           cResult[11] = name;
           cResult[12] = suggestion;
           cResult[13] = formatResult;
           tmp15 = formatResult;
-          const tmpResult = tmp(12865);
+          const tmpResult = tmp(12883);
         }
         const items1 = [tmp4Result.text, textStyle];
         cResult[8] = tmp4Result.text;

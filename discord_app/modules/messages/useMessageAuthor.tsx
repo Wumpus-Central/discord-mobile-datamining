@@ -1,6 +1,6 @@
-// === Module 6320: useMessageAuthor ===
+// === Module 6323: useMessageAuthor ===
 
-// Module 6320 (useMessageAuthor)
+// Module 6323 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -222,7 +222,7 @@ function useNullableMessageAuthor(message) {
                 return closure_6.getGuild(guild_id);
               }
             }
-            const tmp62 = tmp45(6321)(tmp61);
+            const tmp62 = tmp45(6324)(tmp61);
             if (null == author) {
               class F {
                 constructor() {

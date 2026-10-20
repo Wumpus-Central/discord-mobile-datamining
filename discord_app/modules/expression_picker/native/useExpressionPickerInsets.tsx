@@ -1,6 +1,6 @@
-// === Module 10045: useExpressionPickerInsets ===
+// === Module 10056: useExpressionPickerInsets ===
 
-// Module 10045 (useExpressionPickerInsets)
+// Module 10056 (useExpressionPickerInsets)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;

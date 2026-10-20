@@ -1,18 +1,18 @@
-// === Module 9577: ThreadCreationHooks ===
+// === Module 9590: ThreadCreationHooks ===
 
-// Module 9577 (ThreadCreationHooks)
+// Module 9590 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ThreadHooks from "ThreadHooks" /* 7315 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7327 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7512 */;
-import MessageParserDefault from "MessageParser" /* 7698 */;
+import ThreadHooks from "ThreadHooks" /* 7318 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7330 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7515 */;
+import MessageParserDefault from "MessageParser" /* 7702 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7348 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7351 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import MessageStore from "MessageStore" /* 5965 */;
+import MessageStore from "MessageStore" /* 5968 */;
 
 const require = globalThis.__r;
 
@@ -463,8 +463,8 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7577).DraftType;
-const SlowmodeType = fn(7703).SlowmodeType;
+const DraftType = fn(7580).DraftType;
+const SlowmodeType = fn(7707).SlowmodeType;
 const ThreadConstants = fn(1127);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1087);

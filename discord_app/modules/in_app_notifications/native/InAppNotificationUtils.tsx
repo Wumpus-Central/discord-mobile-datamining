@@ -1,6 +1,6 @@
-// === Module 13557: InAppNotificationUtils ===
+// === Module 13575: InAppNotificationUtils ===
 
-// Module 13557 (InAppNotificationUtils)
+// Module 13575 (InAppNotificationUtils)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1104 */;
@@ -10,7 +10,7 @@ import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(13558).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(13576).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, ChannelTypes: metroRequire, InAppNotificationTypes: closure_7, MessageEmbedTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const ReactCompilerGating = fn(558);

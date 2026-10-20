@@ -1,6 +1,6 @@
-// === Module 6722: ConjureProjectTypes ===
+// === Module 6725: ConjureProjectTypes ===
 
-// Module 6722 (ConjureProjectTypes)
+// Module 6725 (ConjureProjectTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ APP_CHANNEL: 1, VOICE_CHANNEL: 2, PROFILE_WIDGET: 3, AUTOMOD: 4, BOT: 5, APPLICATION_COMMANDS: 6, OVERLAY: 7, ACTIVITY: 8 });

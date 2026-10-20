@@ -1,11 +1,11 @@
-// === Module 7016: BackgroundImage ===
+// === Module 7019: BackgroundImage ===
 
-// Module 7016 (BackgroundImage)
+// Module 7019 (BackgroundImage)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4952 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import _modDef7017 from "module_7017" /* 7017 */;
-import _modDef7018 from "module_7018" /* 7018 */;
+import _modDef7020 from "module_7020" /* 7020 */;
+import _modDef7021 from "module_7021" /* 7021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Backgrou
     tmp13 = obj4;
   } else {
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result2 = _modDef7017;
+      let tmp5Result2 = _modDef7020;
     } else {
-      tmp5Result2 = _modDef7018;
+      tmp5Result2 = _modDef7021;
     }
     tmpResult = shared;
   }
@@ -76,10 +76,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Backgrou
     } else {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
-        tmp2 = 7017;
+        tmp2 = 7020;
         let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = _modDef7018;
+        tmp4Result = _modDef7021;
       }
       obj2 = shared;
     }

@@ -1,6 +1,6 @@
-// === Module 7540: isLimitedChannel ===
+// === Module 7543: isLimitedChannel ===
 
-// Module 7540 (isLimitedChannel)
+// Module 7543 (isLimitedChannel)
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5155 */;
 

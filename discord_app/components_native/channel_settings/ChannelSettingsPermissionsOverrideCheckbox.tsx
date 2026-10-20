@@ -1,11 +1,11 @@
-// === Module 18013: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 18036: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 18013 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 18036 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 587 */;
 import PermissionUtils from "PermissionUtils" /* 4885 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9137 */;
-import DenyIcon from "DenyIcon" /* 9685 */;
-import SlashIcon from "SlashIcon" /* 18014 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9149 */;
+import DenyIcon from "DenyIcon" /* 9698 */;
+import SlashIcon from "SlashIcon" /* 18037 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,7 +1,7 @@
-// === Module 17164: JankChatPanelReporter ===
+// === Module 17183: JankChatPanelReporter ===
 
-// Module 17164 (JankChatPanelReporter)
-import getJankScreenName from "getJankScreenName" /* 17165 */;
+// Module 17183 (JankChatPanelReporter)
+import getJankScreenName from "getJankScreenName" /* 17184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,13 +42,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JankChat
         }
         return tmp10;
       }
-      const obj2 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp9, resolveClosedName: channelId(17165).getPanelListScreenName };
-      const tmp14 = jsx(showCreateThread(17168), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp9, resolveClosedName: channelId(17165).getPanelListScreenName });
+      const obj2 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp9, resolveClosedName: channelId(17184).getPanelListScreenName };
+      const tmp14 = jsx(showCreateThread(17187), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp9, resolveClosedName: channelId(17184).getPanelListScreenName });
       cResult[8] = maxWidth;
       cResult[9] = translateX;
       cResult[10] = tmp14;
       tmp10 = tmp14;
-      const tmp13 = showCreateThread(17168);
+      const tmp13 = showCreateThread(17187);
     }
     const fn = function v() {
       closure_2.current = { channelId, showCreateThread };
@@ -80,6 +80,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JankChat
     ({ channelId, showCreateThread } = ref.current);
     return getJankScreenName.getChatPanelScreenName(channelId, showCreateThread);
   }, []);
-  const obj = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(17165).getPanelListScreenName };
-  return jsx(showCreateThread(17168), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(17165).getPanelListScreenName });
+  const obj = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(17184).getPanelListScreenName };
+  return jsx(showCreateThread(17187), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(17184).getPanelListScreenName });
 });

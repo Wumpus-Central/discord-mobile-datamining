@@ -1,6 +1,6 @@
-// === Module 6756: ConjureGuildExperiment ===
+// === Module 6759: ConjureGuildExperiment ===
 
-// Module 6756 (ConjureGuildExperiment)
+// Module 6759 (ConjureGuildExperiment)
 import c from "c" /* 576 */;
 import GuildStore from "GuildStore" /* 4822 */;
 

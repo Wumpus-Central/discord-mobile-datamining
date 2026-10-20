@@ -1,27 +1,27 @@
-// === Module 13140: ChatInputGuardWrapper ===
+// === Module 13158: ChatInputGuardWrapper ===
 
-// Module 13140 (ChatInputGuardWrapper)
+// Module 13158 (ChatInputGuardWrapper)
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4867 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4886 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
-import MemberVerificationUtils from "MemberVerificationUtils" /* 6842 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7360 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11155 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13146 */;
+import MemberVerificationUtils from "MemberVerificationUtils" /* 6845 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7363 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11166 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13164 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4881 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6584 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6587 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const isThread = fn(4804).isThread;
-const TextAreaCta = fn(12359).TextAreaCta;
+const TextAreaCta = fn(12376).TextAreaCta;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(7086).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(7089).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");

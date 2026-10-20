@@ -1,10 +1,10 @@
-// === Module 9237: GooglePlayNeutralIcon ===
+// === Module 9249: GooglePlayNeutralIcon ===
 
-// Module 9237 (GooglePlayNeutralIcon)
+// Module 9249 (GooglePlayNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 5630 */;
-import _mod9238 from "module_9238" /* 9238 */;
+import _mod9250 from "module_9250" /* 9250 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const GooglePlayNeutralIcon = ReactCompilerGating.isReactCompilerEnabled(
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9238;
+    const tmpResult = _mod9250;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const GooglePlayNeutralIcon = ReactCompilerGating.isReactCompilerEnabled(
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9238, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9250, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

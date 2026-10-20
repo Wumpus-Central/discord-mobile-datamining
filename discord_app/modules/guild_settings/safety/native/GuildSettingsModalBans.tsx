@@ -1,17 +1,17 @@
-// === Module 18886: GuildSettingsModalBans ===
+// === Module 18909: GuildSettingsModalBans ===
 
-// Module 18886 (GuildSettingsModalBans)
+// Module 18909 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6775 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6778 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7236 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6778 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7239 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8927 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8939 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

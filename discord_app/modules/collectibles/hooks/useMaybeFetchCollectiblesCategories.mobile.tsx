@@ -1,9 +1,9 @@
-// === Module 10410: ? ===
+// === Module 10421: ? ===
 
-// Module 10410
+// Module 10421
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10411 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10422 */;
 import DevSettingsStore from "DevSettingsStore" /* 5198 */;
 
 require = fn;

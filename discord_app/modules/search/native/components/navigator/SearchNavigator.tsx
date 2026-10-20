@@ -1,25 +1,25 @@
-// === Module 18043: SearchNavigator ===
+// === Module 18066: SearchNavigator ===
 
-// Module 18043 (SearchNavigator)
+// Module 18066 (SearchNavigator)
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 9670 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13041 */;
-import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 18038 */;
+import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 9683 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13059 */;
+import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 18061 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(9628).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(17807).SearchNavigatorScreens;
+let closure_5 = fn(9641).SearchEntrypointAnalyticsLocations;
+const SearchNavigatorScreens = fn(17830).SearchNavigatorScreens;
 const SearchTypes = fn(1087).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_10 = createStyles.createStyles(obj);
-const NativeStackNavigator = fn(9658);
+const NativeStackNavigator = fn(9671);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -31,7 +31,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   searchContext = route.route.params.searchContext;
   let obj = searchContext(576);
   const tmp = searchContext;
-  const accessibilityNativeStackOptions = searchContext(7043).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = searchContext(7046).useAccessibilityNativeStackOptions();
   if (cResult[0] !== searchContext) {
     const fn = function v() {
       if (searchContext.type === SearchTypes.GUILD) {
@@ -56,7 +56,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const effect = noop.useEffect(tmp5, tmp6);
   const tmp8 = closure_10();
-  const obj2 = searchContext(7043);
+  const obj2 = searchContext(7046);
   ({ left, right } = useSafeAreaInsetsDefault());
   if (cResult[3] === left) {
     if (cResult[4] === right) {
@@ -127,8 +127,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   route = route.route;
                   const obj = {
                     headerShown: true,
-                    header: route(9614).renderHeader,
-                    headerLeft: route(9614).getRenderBackImage(route.navigation),
+                    header: route(9627).renderHeader,
+                    headerLeft: route(9627).getRenderBackImage(route.navigation),
                     headerTitle() {
                       return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
                     },
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   return obj;
                 },
           getComponent() {
-                  return searchContext(18039).default;
+                  return searchContext(18062).default;
                 }
         };
         const tmp27 = closure_8(closure_11.Screen, obj7);
@@ -215,7 +215,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return searchContext(closure_1_2[14]).default;
           }
         }
-        const obj8 = { name: tmp(9669).ConversationNavigatorScreens.FOCUS, options: H, getComponent: R };
+        const obj8 = { name: tmp(9682).ConversationNavigatorScreens.FOCUS, options: H, getComponent: R };
         const tmp31 = closure_8(closure_11.Screen, obj8);
         cResult[21] = H;
         cResult[22] = tmp31;
@@ -255,7 +255,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp9 = useSafeAreaInsetsDefault();
 }) : (function SearchNavigator(route) {
   const searchContext = route.route.params.searchContext;
-  const accessibilityNativeStackOptions = searchContext(7043).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = searchContext(7046).useAccessibilityNativeStackOptions();
   const items = [searchContext];
   const effect = noop.useEffect(() => {
     if (searchContext.type === SearchTypes.GUILD) {
@@ -268,7 +268,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       search_tracking_TrackingDefault.trackSearchClosed({ searchContext });
     };
   }, items);
-  let obj = searchContext(7043);
+  let obj = searchContext(7046);
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, children: null };
   const items1 = [closure_10().container, { paddingLeft: rect.left, paddingRight: rect.right }];
@@ -282,7 +282,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(18044).default;
+        return searchContext(18067).default;
       }
     }),
     closure_8(closure_11.Screen, {
@@ -291,8 +291,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         route = route.route;
         const obj = {
           headerShown: true,
-          header: route(9614).renderHeader,
-          headerLeft: route(9614).getRenderBackImage(route.navigation),
+          header: route(9627).renderHeader,
+          headerLeft: route(9627).getRenderBackImage(route.navigation),
           headerTitle() {
             return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
           },
@@ -301,7 +301,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return obj;
       },
       getComponent() {
-        return searchContext(18039).default;
+        return searchContext(18062).default;
       }
     }),
 
@@ -312,7 +312,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     name: SearchNavigatorScreens.SEARCH_TABS,
     options: { headerShown: false, fullScreenGestureEnabled: true },
     getComponent() {
-      return searchContext(18044).default;
+      return searchContext(18067).default;
     }
   };
   const obj6 = {
@@ -321,8 +321,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       route = route.route;
       const obj = {
         headerShown: true,
-        header: route(9614).renderHeader,
-        headerLeft: route(9614).getRenderBackImage(route.navigation),
+        header: route(9627).renderHeader,
+        headerLeft: route(9627).getRenderBackImage(route.navigation),
         headerTitle() {
           return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
         },
@@ -331,12 +331,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return obj;
     },
     getComponent() {
-      return searchContext(18039).default;
+      return searchContext(18062).default;
     }
   };
   const tmp3 = closure_10();
   items2[2] = closure_8(closure_11.Screen, {
-    name: searchContext(9669).ConversationNavigatorScreens.FOCUS,
+    name: searchContext(9682).ConversationNavigatorScreens.FOCUS,
     options(arg0) {
       ({ route, navigation } = arg0);
       const obj = ConversationNavigatorHeader;
@@ -347,7 +347,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
     },
     getComponent() {
-      return searchContext(9691).default;
+      return searchContext(9704).default;
     }
   });
   obj3.children = items2;

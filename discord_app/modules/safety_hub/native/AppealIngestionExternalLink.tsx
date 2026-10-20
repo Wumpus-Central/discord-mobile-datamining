@@ -1,12 +1,12 @@
-// === Module 12667: AppealIngestionExternalLink ===
+// === Module 12684: AppealIngestionExternalLink ===
 
-// Module 12667 (AppealIngestionExternalLink)
+// Module 12684 (AppealIngestionExternalLink)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import LinkingDefault from "Linking" /* 5622 */;
-import Pressables from "Pressables" /* 6856 */;
-import _mod8062 from "module_8062" /* 8062 */;
+import Pressables from "Pressables" /* 6859 */;
+import _mod8066 from "module_8066" /* 8066 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
         let tmp6 = cResult[5];
       }
       if (cResult[6] !== tmp4.chevron.color) {
-        const obj2 = { source: url(8062), color: tmp4.chevron.color };
+        const obj2 = { source: url(8066), color: tmp4.chevron.color };
         const tmp11 = closure_4(url(1202).Icon, obj2);
         cResult[6] = tmp4.chevron.color;
         cResult[7] = tmp11;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
             }
           }
           const obj3 = { style: tmp4.childButton, accessibilityRole: "button", onPress: tmp5, children: tmp12 };
-          const tmp18 = closure_4(url(6856).PressableHighlight, obj3);
+          const tmp18 = closure_4(url(6859).PressableHighlight, obj3);
           cResult[12] = tmp5;
           cResult[13] = tmp4.childButton;
           cResult[14] = tmp12;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
     children: null
   };
   const obj2 = { style: tmp.childContainer, children: null };
-  const items = [closure_4(Text_Text.Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text }), closure_4(native.Icon, { source: _mod8062, color: tmp.chevron.color })];
+  const items = [closure_4(Text_Text.Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text }), closure_4(native.Icon, { source: _mod8066, color: tmp.chevron.color })];
   obj2.children = items;
   obj.children = closure_5(View, obj2);
   return closure_4(Pressables.PressableHighlight, obj);

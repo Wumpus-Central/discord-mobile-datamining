@@ -1,16 +1,16 @@
-// === Module 19038: SelectEmojiRolesActionSheet ===
+// === Module 19061: SelectEmojiRolesActionSheet ===
 
-// Module 19038 (SelectEmojiRolesActionSheet)
+// Module 19061 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Pressables from "Pressables" /* 6856 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7194 */;
-import ActionSheet from "ActionSheet" /* 7244 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16299 */;
+import Pressables from "Pressables" /* 6859 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7197 */;
+import ActionSheet from "ActionSheet" /* 7247 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16318 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6599 */;
+import TextStyles_mod from "TextStyles" /* 6602 */;
 
 const require = globalThis.__r;
 
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
     tmp12 = cResult[2];
   }
   let obj = onSave(576);
-  const subscriptionListingsForGuild = onSave(16299).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
+  const subscriptionListingsForGuild = onSave(16318).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     function toggleRole(arg0) {
       closure_0 = arg0;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                           }
                           if (cResult[29] !== tmp25) {
                             let obj3 = { title: tmp28, subtitle: tmp29, trailing: tmp25 };
-                            const tmp34 = closure_6(tmp(7194).BottomSheetTitleHeader, obj3);
+                            const tmp34 = closure_6(tmp(7197).BottomSheetTitleHeader, obj3);
                             cResult[29] = tmp25;
                             cResult[30] = tmp34;
                             let tmp32 = tmp34;
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                                 }
                               }
                               let obj4 = { scrollable: true, header: tmp32, startExpanded: true, onDismiss: onCancel, children: tmp36 };
-                              const tmp43 = closure_6(tmp(7244).ActionSheet, obj4);
+                              const tmp43 = closure_6(tmp(7247).ActionSheet, obj4);
                               cResult[37] = tmp32;
                               cResult[38] = onCancel;
                               cResult[39] = tmp36;
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                             }
                           }
                           let obj5 = { inActionSheet: true, style: tmp4.list, itemSize, sections: tmp35, renderItem: tmp15 };
-                          const tmp40 = closure_6(emoji(7115), obj5);
+                          const tmp40 = closure_6(emoji(7118), obj5);
                           cResult[33] = tmp15;
                           cResult[34] = tmp4.list;
                           cResult[35] = tmp35;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                         }
                       }
                       const obj6 = { onPress: tmp14, disabled: tmp16, accessibilityRole: "button", children: tmp22 };
-                      const tmp27 = closure_6(tmp(6856).PressableOpacity, obj6);
+                      const tmp27 = closure_6(tmp(6859).PressableOpacity, obj6);
                       cResult[23] = tmp14;
                       cResult[24] = tmp22;
                       cResult[25] = tmp16;
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
   cResult[5] = first;
   cResult[6] = handleSave;
   tmp14 = handleSave;
-  const tmpResult = onSave(16299);
+  const tmpResult = onSave(16318);
 }) : (function SelectEmojiRolesActionSheet(arg0) {
   ({ onSave: require, emoji } = arg0);
   let first;
@@ -392,6 +392,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj6.sections = items1;
-  obj5.children = closure_6(emoji(7115), obj6);
+  obj5.children = closure_6(emoji(7118), obj6);
   return closure_6(ActionSheet.ActionSheet, obj5);
 });

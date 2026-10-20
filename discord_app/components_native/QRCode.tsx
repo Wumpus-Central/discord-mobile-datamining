@@ -1,12 +1,12 @@
-// === Module 9022: components_native/QRCode ===
+// === Module 9034: components_native/QRCode ===
 
-// Module 9022 (components_native/QRCode)
+// Module 9034 (components_native/QRCode)
 import nativeDefault from "native" /* 587 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5547 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8661 */;
-import QRCodeDefault from "QRCode" /* 9023 */;
-import _mod9037 from "module_9037" /* 9037 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8673 */;
+import QRCodeDefault from "QRCode" /* 9035 */;
+import _mod9049 from "module_9049" /* 9049 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -67,7 +67,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, timestampProducer.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9037 };
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9049 };
   obj3.children = React5(FastImageDefault, obj4);
   items[1] = React5(hasOwnProperty, obj3);
   let tmp6Result = null;

@@ -1,15 +1,15 @@
-// === Module 18966: CreatorHighlightSection ===
+// === Module 18989: CreatorHighlightSection ===
 
-// Module 18966 (CreatorHighlightSection)
+// Module 18989 (CreatorHighlightSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import LinkingDefault from "Linking" /* 5622 */;
-import _mod7168 from "module_7168" /* 7168 */;
-import _modDef9779 from "module_9779" /* 9779 */;
-import EmojiIconDefault from "EmojiIcon" /* 16327 */;
+import _mod7171 from "module_7171" /* 7171 */;
+import _modDef9791 from "module_9791" /* 9791 */;
+import EmojiIconDefault from "EmojiIcon" /* 16346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
           let tmp6 = cResult[6];
         }
         if (cResult[7] !== tmp4.subscriberCountIcon) {
-          const obj2 = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp4.subscriberCountIcon, source: _modDef9779 };
+          const obj2 = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp4.subscriberCountIcon, source: _modDef9791 };
           const tmp12 = hasOwnProperty(native.Icon, obj2);
           cResult[7] = tmp4.subscriberCountIcon;
           cResult[8] = tmp12;
@@ -113,7 +113,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
-  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), hasOwnProperty(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef9779 }), ];
+  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), hasOwnProperty(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef9791 }), ];
   const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["3NNXPW"]);
@@ -131,7 +131,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creator
   const typeConsolidationEyebrow = require("useTypeConsolidationTextTransform").useTypeConsolidationEyebrow("CreatorHighlightSection", "text-xs/semibold");
   const guild_id = highlightedCreatorGuild.guild_id;
   ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-  const tmp7 = guild_id(18967)(guild_id, 3, 60);
+  const tmp7 = guild_id(18990)(guild_id, 3, 60);
   dependencyMap = tmp7;
   const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
   if (cResult[0] === tmp7.details) {
@@ -141,7 +141,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creator
     if (tmp8) {
       const _Symbol2 = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp67 = closure_5(tmp6(18939), {});
+        const tmp67 = closure_5(tmp6(18962), {});
         cResult[3] = tmp67;
         let tmp65 = tmp67;
       } else {
@@ -429,12 +429,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creator
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(18967)(guild_id, 3, 60);
+  const tmp6 = guild_id(18990)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(18939), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(18962), {}) };
     return closure_5(View, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;
@@ -549,7 +549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorH
   }
   if (cResult[1] !== highlightedCreators) {
     const obj2 = { data: highlightedCreators, horizontal: true, keyExtractor: first, renderItem };
-    const tmp8 = hasOwnProperty(_mod7168.FlashList, obj2);
+    const tmp8 = hasOwnProperty(_mod7171.FlashList, obj2);
     cResult[1] = highlightedCreators;
     cResult[2] = tmp8;
     let tmp5 = tmp8;
@@ -558,7 +558,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorH
   }
   return tmp5;
 }) : (function CreatorHighlightSection(data) {
-  return hasOwnProperty(_mod7168.FlashList, {
+  return hasOwnProperty(_mod7171.FlashList, {
     data: data.highlightedCreators,
     horizontal: true,
     keyExtractor(guild_id) {

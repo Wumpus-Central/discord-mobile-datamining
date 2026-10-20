@@ -1,33 +1,33 @@
-// === Module 19061: clips/ClipsManager ===
+// === Module 19084: clips/ClipsManager ===
 
-// Module 19061 (clips/ClipsManager)
+// Module 19084 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import DiscordNativeDefault from "DiscordNative" /* 4762 */;
 import UserSettings from "UserSettings" /* 4776 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5700 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6593 */;
-import isClipsEnabled from "isClipsEnabled" /* 14435 */;
-import ClipsExperiment from "ClipsExperiment" /* 14436 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6596 */;
+import isClipsEnabled from "isClipsEnabled" /* 14453 */;
+import ClipsExperiment from "ClipsExperiment" /* 14454 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7757 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7761 */;
 import ClipsStore from "ClipsStore" /* 2020 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(7759).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8092);
+const getSystemAnalyticsInfo = fn(7763).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8096);
 ({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1, CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_14, ClipsHardwareClassification: closure_15, CLIP_RUNTIME: closure_16 } = ClipsConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(6591).StreamTypes;
+const StreamTypes = fn(6594).StreamTypes;
 const Features = fn(5680).Features;
 class ClipsManager extends tmp4 {
   constructor() {

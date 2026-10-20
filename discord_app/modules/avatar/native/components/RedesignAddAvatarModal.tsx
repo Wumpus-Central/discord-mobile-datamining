@@ -1,12 +1,12 @@
-// === Module 18634: RedesignAddAvatarModal ===
+// === Module 18657: RedesignAddAvatarModal ===
 
-// Module 18634 (RedesignAddAvatarModal)
+// Module 18657 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 587 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18613 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8574 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8586 */;
 
 const require = globalThis.__r;
 
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8098).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8102).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -550,23 +550,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(15640);
-              obj11.description = tmp2(8583).generateAvatarDescription();
+              const obj = tmp2(15659);
+              obj11.description = tmp2(8595).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(8583);
+              const obj3 = tmp2(8595);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(8578).setPendingChanges(obj12);
-            const obj4 = tmp2(8578);
+            tmp2(8590).setPendingChanges(obj12);
+            const obj4 = tmp2(8590);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8580).announcePendingAvatarChange(str);
+            const result = tmp2(8592).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8580);
+            const obj6 = tmp2(8592);
           }
           closure_129_1(true);
         }

@@ -1,6 +1,6 @@
-// === Module 10111: HorizontalAutocompleteWrapper ===
+// === Module 10122: HorizontalAutocompleteWrapper ===
 
-// Module 10111 (HorizontalAutocompleteWrapper)
+// Module 10122 (HorizontalAutocompleteWrapper)
 import timing from "timing" /* 5167 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,13 @@
-// === Module 15017: GuildAntiRaidReportModal ===
+// === Module 15035: GuildAntiRaidReportModal ===
 
-// Module 15017 (GuildAntiRaidReportModal)
+// Module 15035 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import NavigatorHeader from "NavigatorHeader" /* 6872 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
+import NavigatorHeader from "NavigatorHeader" /* 6875 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15018);
+const GuildReportRaidModalConstants = fn(15036);
 ({ getReportRaidHelpArticleURL: closure_7, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -80,7 +80,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
       }
       if (cResult[10] !== tmp13) {
         const obj4 = { hasIcons: false, children: tmp13 };
-        const tmp17 = closure_10(tmp(6935).TableRowGroup, obj4);
+        const tmp17 = closure_10(tmp(6938).TableRowGroup, obj4);
         cResult[10] = tmp13;
         cResult[11] = tmp17;
         let tmp15 = tmp17;
@@ -441,9 +441,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAnt
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(12582).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(12582);
-            tmp2(12582).handleReportRaid(guildId);
+            const result = tmp2(12599).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(12599);
+            tmp2(12599).handleReportRaid(guildId);
             const intl = tmp2(1128).intl;
             c1 = 1;
             dependencyMap = 1;

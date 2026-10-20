@@ -1,6 +1,6 @@
-// === Module 17100: AccountSwitcherListItem ===
+// === Module 17119: AccountSwitcherListItem ===
 
-// Module 17100 (AccountSwitcherListItem)
+// Module 17119 (AccountSwitcherListItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import native from "native" /* 1202 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5001 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Pressables from "Pressables" /* 6856 */;
+import Pressables from "Pressables" /* 6859 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import StreamerModeStore from "StreamerModeStore" /* 4995 */;
@@ -16,11 +16,11 @@ import UserStore from "UserStore" /* 1392 */;
 
 const initialize = CircleCheckIcon(504);
 const CircleInformationIcon = CircleCheckIcon(5648);
-const CircleCheckIcon2 = CircleCheckIcon(7213);
+const CircleCheckIcon2 = CircleCheckIcon(7216);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(13111).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(13129).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4945);

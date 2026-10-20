@@ -1,6 +1,6 @@
-// === Module 8932: getDefaultGuildSettingsSection ===
+// === Module 8944: getDefaultGuildSettingsSection ===
 
-// Module 8932 (getDefaultGuildSettingsSection)
+// Module 8944 (getDefaultGuildSettingsSection)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

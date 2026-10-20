@@ -1,13 +1,13 @@
-// === Module 17503: useGuildsBarBadges ===
+// === Module 17522: useGuildsBarBadges ===
 
-// Module 17503 (useGuildsBarBadges)
+// Module 17522 (useGuildsBarBadges)
 import native from "native" /* 1202 */;
 import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4973 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17474 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17505 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17493 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17524 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11130 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11141 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4972 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import GuildStore from "GuildStore" /* 4822 */;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     }
     const tmpResult5 = tmp(504);
     const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-    const tmp20 = stateFromStores(17504)(arg0);
+    const tmp20 = stateFromStores(17523)(arg0);
     const tmpResult6 = tmp(504);
     const token = tmp(5213).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
     const tmpResult7 = tmp(5213);

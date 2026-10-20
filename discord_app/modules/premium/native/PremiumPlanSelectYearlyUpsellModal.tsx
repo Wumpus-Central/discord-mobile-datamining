@@ -1,18 +1,18 @@
-// === Module 14664: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 14682: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 14664 (PremiumPlanSelectYearlyUpsellModal)
+// Module 14682 (PremiumPlanSelectYearlyUpsellModal)
 import FastImageDefault from "FastImage" /* 5631 */;
-import common_AlertDefault from "common/Alert" /* 5933 */;
-import TextStylesDefault from "TextStyles" /* 6599 */;
-import _modDef14665 from "module_14665" /* 14665 */;
+import common_AlertDefault from "common/Alert" /* 5936 */;
+import TextStylesDefault from "TextStyles" /* 6602 */;
+import _modDef14683 from "module_14683" /* 14683 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2069 */;
-import IAPStore from "IAPStore" /* 7470 */;
+import IAPStore from "IAPStore" /* 7473 */;
 
 const require = fn;
 const View = fn(17).View;
-const usePremiumPlanSelectStore = fn(14651).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(14669).usePremiumPlanSelectStore;
 let closure_9 = fn(1394).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -23,15 +23,15 @@ const merged = Object.assign(TextStylesDefault(fn(1098).Fonts.DISPLAY_EXTRABOLD,
 obj3.alignSelf = "center";
 obj3.textAlign = "center";
 obj3.paddingBottom = 8;
-obj3.color = fn(6655).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(6658).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(6655).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(6658).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.upsellButton = { marginBottom: 16 };
 obj2.continueButton = { marginBottom: 4 };
 obj2.cancelButton = { marginTop: 8, marginBottom: 4 };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj4 = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(6655).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(6658).DARK_WHITE_500_LIGHT_BLACK_500 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
 
@@ -254,8 +254,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
   [tmp4, c3] = noop.useState(null);
   const obj = noop;
   const tmp3 = _slicedToArray(noop.useState(null), 2);
-  const premiumBundledItemsFromProductId = productId(7464).getPremiumBundledItemsFromProductId(productId);
-  const obj2 = productId(7464);
+  const premiumBundledItemsFromProductId = productId(7467).getPremiumBundledItemsFromProductId(productId);
+  const obj2 = productId(7467);
   let items = [LocaleStore];
   const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
   const obj3 = productId(504);
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
     const tmp5Result = productId(1903);
     const obj7 = { style: tmp.image, source: null };
     const tmp19 = common_AlertDefault;
-    obj7.source = _modDef14665;
+    obj7.source = _modDef14683;
     const items2 = [closure_10(FastImageDefault, obj7), , , , , ];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1128).intl;

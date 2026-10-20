@@ -1,6 +1,6 @@
-// === Module 19201: DirectReply ===
+// === Module 19225: DirectReply ===
 
-// Module 19201 (DirectReply)
+// Module 19225 (DirectReply)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

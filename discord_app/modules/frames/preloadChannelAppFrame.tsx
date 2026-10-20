@@ -1,14 +1,14 @@
-// === Module 13666: preloadChannelAppFrame ===
+// === Module 13684: preloadChannelAppFrame ===
 
-// Module 13666 (preloadChannelAppFrame)
+// Module 13684 (preloadChannelAppFrame)
 import getURLForApplicationDefault from "getURLForApplication" /* 5584 */;
-import leaveFrame from "leaveFrame" /* 11056 */;
+import leaveFrame from "leaveFrame" /* 11068 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
-import FramesStore from "FramesStore" /* 6723 */;
+import FramesStore from "FramesStore" /* 6726 */;
 
 require = fn;
-const FramesConstants = fn(6724);
+const FramesConstants = fn(6727);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const Constants = fn(1087);
 ({ ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
@@ -109,8 +109,8 @@ export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
                 }
               });
               const obj6 = { applicationId, surface: tmp5.surface, showErrorModal: false };
-              const tmp7Result2 = frameId(11059);
-              frameId(11059).launchFrame(obj6).catch(() => {
+              const tmp7Result2 = frameId(11071);
+              frameId(11071).launchFrame(obj6).catch(() => {
                 value = map.get(frameId);
                 if (value != null) {
                   const stopTimer = value.stopTimer;
@@ -127,12 +127,12 @@ export const preloadChannelAppFrame = function preloadChannelAppFrame(id) {
                 }
                 value4.launchRequestId = launchRequestId;
               }
-              const launchFrameResult = frameId(11059).launchFrame(obj6);
+              const launchFrameResult = frameId(11071).launchFrame(obj6);
             }
           }
-          tmp7Result = frameId(6630);
+          tmp7Result = frameId(6633);
         }
-        obj3 = frameId(6610);
+        obj3 = frameId(6613);
       }
     }
   }

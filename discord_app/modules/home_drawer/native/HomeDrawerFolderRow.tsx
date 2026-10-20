@@ -1,14 +1,14 @@
-// === Module 17481: HomeDrawerFolderRow ===
+// === Module 17500: HomeDrawerFolderRow ===
 
-// Module 17481 (HomeDrawerFolderRow)
+// Module 17500 (HomeDrawerFolderRow)
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10667 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10678 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6762 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6765 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import SortedGuildStore from "SortedGuildStore" /* 6649 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import SortedGuildStore from "SortedGuildStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import VoiceStateStore from "VoiceStateStore" /* 5591 */;
 
 require = fn;

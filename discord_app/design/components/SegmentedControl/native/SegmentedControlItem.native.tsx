@@ -1,6 +1,6 @@
-// === Module 9068: SegmentedControlItem ===
+// === Module 9080: SegmentedControlItem ===
 
-// Module 9068 (SegmentedControlItem)
+// Module 9080 (SegmentedControlItem)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5208 */;
 import noop from "module_19" /* 19 */;

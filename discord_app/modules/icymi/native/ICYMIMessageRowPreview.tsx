@@ -1,6 +1,6 @@
-// === Module 17669: ICYMIMessageRowPreview ===
+// === Module 17688: ICYMIMessageRowPreview ===
 
-// Module 17669 (ICYMIMessageRowPreview)
+// Module 17688 (ICYMIMessageRowPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4776 */;
@@ -8,9 +8,9 @@ import createStyles from "createStyles" /* 4945 */;
 import useThemeDefault from "useTheme" /* 5166 */;
 import isForwardMessageDefault from "isForwardMessage" /* 5563 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5604 */;
-import RowGeneratorDefault from "RowGenerator" /* 8076 */;
-import RenderMessageOptionsContext from "RenderMessageOptionsContext" /* 8078 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8552 */;
+import RowGeneratorDefault from "RowGenerator" /* 8080 */;
+import RenderMessageOptionsContext from "RenderMessageOptionsContext" /* 8082 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8558 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -349,7 +349,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
       tmp14 = cResult[7];
     }
     if (cResult[8] !== messageOptions) {
-      const obj4 = new tmp4(8076)();
+      const obj4 = new tmp4(8080)();
       const obj3 = { renderEmbeds: tmp10, inlineEmbedMedia: tmp12, inlineAttachmentMedia: tmp14, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       const merged = Object.assign(messageOptions);
       obj4.setOptions(obj3);
@@ -374,7 +374,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
       }
     }
     const obj5 = { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight };
-    const tmp26 = jsx(tmp4(9687), { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight });
+    const tmp26 = jsx(tmp4(9700), { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight });
     cResult[10] = maxHeight;
     cResult[11] = message;
     cResult[12] = messageSizeCacheRef;
@@ -422,7 +422,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
     obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  return jsx(messageOptions(9687), {
+  return jsx(messageOptions(9700), {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
@@ -548,7 +548,7 @@ export const MessageRowPreview = noop.memo(ReactCompilerGating.isReactCompilerEn
   let obj = {};
   const merged1 = Object.assign(memo);
   const obj2 = {};
-  const merged2 = Object.assign(message(8078).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(8082).DEFAULT_OPTIONS);
   obj2.ignoreMentioned = true;
   obj2.renderReplies = false;
   obj2.renderThreadEmbeds = false;

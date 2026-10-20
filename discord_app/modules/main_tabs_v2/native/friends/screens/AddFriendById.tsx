@@ -1,6 +1,6 @@
-// === Module 14896: AddFriendById ===
+// === Module 14914: AddFriendById ===
 
-// Module 14896 (AddFriendById)
+// Module 14914 (AddFriendById)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,9 +8,9 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4954 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import ToastUtils from "ToastUtils" /* 5624 */;
-import TextField from "TextField" /* 6963 */;
-import FriendsUtils from "FriendsUtils" /* 7365 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 14897 */;
+import TextField from "TextField" /* 6966 */;
+import FriendsUtils from "FriendsUtils" /* 7368 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 14915 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -654,7 +654,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
                                 }
                               }
                               obj11.status = undefined;
-                              items5[1] = tmp36(sourcePage(7128).TextArea, obj11);
+                              items5[1] = tmp36(sourcePage(7131).TextArea, obj11);
                               if (first2.status !== constants.ERROR) {
                                 const obj12 = { style: tmp4.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
                                 class Q {
@@ -766,21 +766,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
             substr = trimmed.substring(1);
             tmp2 = substr;
           }
-          const validateDiscordTagResult = sourcePage(7365).validateDiscordTag(tmp2);
+          const validateDiscordTagResult = sourcePage(7368).validateDiscordTag(tmp2);
           if (null != validateDiscordTagResult) {
             let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
             closure_6(obj3);
           } else {
             let obj4 = { status: constants.LOADING };
             closure_6(obj4);
-            const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7360).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+            const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7363).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
             let tmp9;
             if (trimmed1.length > 0) {
               tmp9 = trimmed1;
             }
             obj6.note = tmp9;
-            const obj5 = ref(7360);
-            ref(7360).sendRequest(obj6).then(() => {
+            const obj5 = ref(7363);
+            ref(7363).sendRequest(obj6).then(() => {
               const obj = { validatedText: "", hint: null };
               const intl = util.intl;
               obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -834,9 +834,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
               }
               closure_6(obj3);
             });
-            const sendRequestResult = ref(7360).sendRequest(obj6);
+            const sendRequestResult = ref(7363).sendRequest(obj6);
           }
-          let obj = sourcePage(7365);
+          let obj = sourcePage(7368);
         }
       }
       cResult[11] = first3;
@@ -941,21 +941,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(7365).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(7368).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
       } else {
         let obj4 = { status: constants.LOADING };
         closure_6(obj4);
-        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7360).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7363).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(7360);
-        ref(7360).sendRequest(obj6).then(() => {
+        const obj5 = ref(7363);
+        ref(7363).sendRequest(obj6).then(() => {
           const obj = { validatedText: "", hint: null };
           const intl = util.intl;
           obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -1009,9 +1009,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           }
           closure_6(obj3);
         });
-        const sendRequestResult = ref(7360).sendRequest(obj6);
+        const sendRequestResult = ref(7363).sendRequest(obj6);
       }
-      let obj = sourcePage(7365);
+      let obj = sourcePage(7368);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText, ref } = arg0);
@@ -1149,7 +1149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
       }
     }
     obj10.status = str2;
-    items8[1] = closure_9(sourcePage(7128).TextArea, obj10);
+    items8[1] = closure_9(sourcePage(7131).TextArea, obj10);
     if (first1.status !== constants.ERROR) {
       const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
       let intl2 = sourcePage(1128).intl;

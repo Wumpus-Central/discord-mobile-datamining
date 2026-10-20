@@ -1,11 +1,11 @@
-// === Module 14208: useProfileSectionTabs ===
+// === Module 14226: useProfileSectionTabs ===
 
-// Module 14208 (useProfileSectionTabs)
+// Module 14226 (useProfileSectionTabs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const UserProfileSections = fn(8597).UserProfileSections;
+const UserProfileSections = fn(8609).UserProfileSections;
 const ReactCompilerGating = fn(558);
 function getProfileTabSectionIndex(initialTab, wishlistTabIndex) {
   if (UserProfileSections.WISHLIST === initialTab) {

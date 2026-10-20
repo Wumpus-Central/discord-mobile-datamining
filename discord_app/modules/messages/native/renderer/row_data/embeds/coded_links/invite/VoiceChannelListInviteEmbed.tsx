@@ -1,17 +1,17 @@
-// === Module 9919: VoiceChannelListInviteEmbed ===
+// === Module 9930: VoiceChannelListInviteEmbed ===
 
-// Module 9919 (VoiceChannelListInviteEmbed)
+// Module 9930 (VoiceChannelListInviteEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1087 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import GuildRecord from "GuildRecord" /* 4818 */;
 import UserUtilsDefault from "UserUtils" /* 4994 */;
-import Constants2 from "Constants" /* 7752 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8221 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 9921 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 9922 */;
+import Constants2 from "Constants" /* 7756 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8225 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 9932 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 9933 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9920 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9931 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import GuildStore from "GuildStore" /* 4822 */;
@@ -62,7 +62,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const guild1 = GuildStore.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild1) {
-      const channel = displayNameStylesEnabled(9922)(invite).channel;
+      const channel = displayNameStylesEnabled(9933)(invite).channel;
       tmp = null;
       if (null != channel) {
         tmp = null;
@@ -86,16 +86,16 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
   } else {
     guild = tmp.guild;
     const channel2 = tmp.channel;
-    ({ colors, baseColors } = displayNameStylesEnabled(8219)(theme));
+    ({ colors, baseColors } = displayNameStylesEnabled(8223)(theme));
     let assetUriForEmbed;
     if (null != guild.icon) {
-      assetUriForEmbed = guild(8221).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
-      let obj2 = guild(8221);
+      assetUriForEmbed = guild(8225).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
+      let obj2 = guild(8225);
     }
     const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channel2.id, guild.id);
     const items = [];
     const tmp39 = displayNameStylesEnabled;
-    const tmp41 = displayNameStylesEnabled(8219)(theme);
+    const tmp41 = displayNameStylesEnabled(8223)(theme);
     HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => !voiceState.voiceState.selfStream), HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => voiceState.voiceState.selfStream), 0));
     const substr = items.slice(0, 10);
     displayNameStylesEnabled = AccessibilityStore.displayNameStylesEnabled;
@@ -177,7 +177,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const tmp30Result = guild(5565);
     const tmp35 = currentClientVoiceChannelId === channel2.id;
     const items1 = [GuildMemberStore];
-    obj5.canBeAccepted = tmp39(9923).canAcceptInvite(items1, invite);
+    obj5.canBeAccepted = tmp39(9934).canAcceptInvite(items1, invite);
     obj5.embedCanBeTapped = true;
     obj5.type = InviteTypes.GUILD;
     obj5.voiceUsers = mapped;
@@ -185,7 +185,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const intl2 = tmp30(1128).intl;
     obj5.emptyStateText = intl2.string(guild(1128).t.zSqdrS);
     const intl3 = tmp30(1128).intl;
-    const tmp39Result = tmp39(9923);
+    const tmp39Result = tmp39(9934);
     obj5.streamingLabel = intl3.string(guild(1128).t.dI3q4h).toUpperCase();
     obj5.voiceHeaderBackgroundColor = colors.voiceHeaderBackgroundColor;
     obj5.reducedMotion = AccessibilityStore.useReducedMotion;

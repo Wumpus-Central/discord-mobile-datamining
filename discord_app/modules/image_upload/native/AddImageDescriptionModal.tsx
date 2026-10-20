@@ -1,17 +1,17 @@
-// === Module 13781: AddImageDescriptionModal ===
+// === Module 13799: AddImageDescriptionModal ===
 
-// Module 13781 (AddImageDescriptionModal)
+// Module 13799 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9947 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9958 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8237 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8241 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7577).DraftType;
+const DraftType = fn(7580).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4945);
@@ -135,9 +135,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
             const obj2 = {};
             const merged = Object.assign(dependencyMap);
             obj2.description = ref.current;
-            id(9579).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-            const obj = id(9579);
-            id(13780).close();
+            id(9592).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+            const obj = id(9592);
+            id(13798).close();
           });
           let merged = Object.assign(arg0);
           return renderHeaderTextButton({});
@@ -220,9 +220,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
           const obj2 = {};
           const merged = Object.assign(dependencyMap);
           obj2.description = ref.current;
-          id(9579).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-          const obj = id(9579);
-          id(13780).close();
+          id(9592).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+          const obj = id(9592);
+          id(13798).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});

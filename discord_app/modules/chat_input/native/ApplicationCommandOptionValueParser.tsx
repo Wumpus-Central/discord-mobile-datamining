@@ -1,14 +1,14 @@
-// === Module 11956: ApplicationCommandOptionValueParser ===
+// === Module 11970: ApplicationCommandOptionValueParser ===
 
-// Module 11956 (ApplicationCommandOptionValueParser)
+// Module 11970 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import Server from "Server" /* 2000 */;
 import useChannelName from "useChannelName" /* 5565 */;
-import MessageParser from "MessageParser" /* 7698 */;
+import MessageParser from "MessageParser" /* 7702 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6718 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6721 */;
 import GuildChannelStore from "GuildChannelStore" /* 4878 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 import GuildRoleStore from "GuildRoleStore" /* 4854 */;
@@ -78,7 +78,7 @@ function getChannels(getGuildId, arr) {
   }
 }
 let closure_6 = fn(4804).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5939);
+const ChannelAutocompleteConstants = fn(5942);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {
 

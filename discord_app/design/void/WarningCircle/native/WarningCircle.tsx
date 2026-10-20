@@ -1,8 +1,8 @@
-// === Module 15210: WarningCircle ===
+// === Module 15228: WarningCircle ===
 
-// Module 15210 (WarningCircle)
+// Module 15228 (WarningCircle)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7906 */;
+import inlineStyles from "inlineStyles" /* 7910 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

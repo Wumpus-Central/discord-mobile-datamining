@@ -1,17 +1,17 @@
-// === Module 18075: RestrictedMessagePreviewHeader ===
+// === Module 18098: RestrictedMessagePreviewHeader ===
 
-// Module 18075 (RestrictedMessagePreviewHeader)
+// Module 18098 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import ToastUtils from "ToastUtils" /* 5624 */;
-import ClipboardUtils from "ClipboardUtils" /* 7231 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
+import ClipboardUtils from "ClipboardUtils" /* 7234 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(13150).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(13168).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4945);
@@ -43,16 +43,16 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13331, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13349, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(8605).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(8605);
-        channel(7395).transitionToGuild(arg0);
-        const obj2 = channel(7395);
+        const result = channel(8617).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = channel(8617);
+        channel(7398).transitionToGuild(arg0);
+        const obj2 = channel(7398);
         user(5171).hideActionSheet();
         const obj3 = user(5171);
-        user(6620).popWithKey(closure_1_5);
+        user(6623).popWithKey(closure_1_5);
       }
     });
   }, items2);

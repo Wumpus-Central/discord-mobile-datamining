@@ -1,6 +1,6 @@
-// === Module 8844: ActionSheetDragHandle ===
+// === Module 8856: ActionSheetDragHandle ===
 
-// Module 8844 (ActionSheetDragHandle)
+// Module 8856 (ActionSheetDragHandle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: c3, View: closure_4 } = get_ActivityIndicator);
-const ActionSheetDragHandleConstants = fn(8834);
+const ActionSheetDragHandleConstants = fn(8846);
 ({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = ActionSheetDragHandleConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);

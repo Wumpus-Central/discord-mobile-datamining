@@ -1,16 +1,16 @@
-// === Module 18336: VoicePanelFloatingCTAContainer ===
+// === Module 18358: VoicePanelFloatingCTAContainer ===
 
-// Module 18336 (VoicePanelFloatingCTAContainer)
+// Module 18358 (VoicePanelFloatingCTAContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4999 */;
 import spring from "spring" /* 5208 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import RowButton from "RowButton" /* 8873 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11931 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12058 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12961 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18232 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import RowButton from "RowButton" /* 8885 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11945 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12073 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12979 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18255 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -18,8 +18,8 @@ import ChannelStore from "ChannelStore" /* 4800 */;
 
 require = fn;
 let closure_3 = ["trailing"];
-const UI_SHOW_HIDE_PHYSICS = fn(10693).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(10696).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(10704).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(10707).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);

@@ -1,13 +1,13 @@
-// === Module 8936: EditGuildEventPreview ===
+// === Module 8948: EditGuildEventPreview ===
 
-// Module 8936 (EditGuildEventPreview)
+// Module 8948 (EditGuildEventPreview)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5864 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8809 */;
-import ScheduleUtils from "ScheduleUtils" /* 8810 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 8938 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5867 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8821 */;
+import ScheduleUtils from "ScheduleUtils" /* 8822 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 8950 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 
@@ -127,7 +127,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
   }
   const f55NX0Result = f55NX0(504);
   const tmp7 = channel_id;
-  let locationFromEvent = f55NX0(8813).getLocationFromEvent(str);
+  let locationFromEvent = f55NX0(8825).getLocationFromEvent(str);
   let tmp19 = tmp8;
   if (tmp8 == null) {
     tmp19 = locationFromEvent;
@@ -165,7 +165,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
         const intl2 = f55NX0(1128).intl;
         const obj6 = { channelName: null };
         const obj7 = { channel: stateFromStores };
-        obj6.channelName = tmp7(8939)(obj7);
+        obj6.channelName = tmp7(8951)(obj7);
         formatToPlainStringResult = intl2.formatToPlainString(f55NX0(1128).t.sxcQPE, obj6);
       }
       cResult[27] = stateFromStores;
@@ -232,13 +232,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
     cResult[19] = formatResult;
     cResult[20] = header;
   }
-  const f55NX0Result1 = f55NX0(8813);
-  const eventLocationIconSource = f55NX0(8937).getEventLocationIconSource(str, stateFromStores, true);
+  const f55NX0Result1 = f55NX0(8825);
+  const eventLocationIconSource = f55NX0(8949).getEventLocationIconSource(str, stateFromStores, true);
   cResult[21] = stateFromStores;
   cResult[22] = str;
   cResult[23] = eventLocationIconSource;
   tmp20 = eventLocationIconSource;
-  const f55NX0Result2 = f55NX0(8937);
+  const f55NX0Result2 = f55NX0(8949);
 }) : (function PreviewBody(event) {
   event = event.event;
   let eventLocationIconSource;
@@ -271,7 +271,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
     const intl2 = tmp2(1128).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(8939)(obj7);
+    obj6.channelName = tmp5(8951)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1128).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;

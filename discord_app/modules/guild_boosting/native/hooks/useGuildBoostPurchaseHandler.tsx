@@ -1,6 +1,6 @@
-// === Module 13261: useGuildBoostPurchaseHandler ===
+// === Module 13279: useGuildBoostPurchaseHandler ===
 
-// Module 13261 (useGuildBoostPurchaseHandler)
+// Module 13279 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -54,8 +54,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             } else {
               let newAnalyticsLoadId = tmp2;
               newAnalyticsLoadId = undefined;
-              newAnalyticsLoadId = args(10366).getNewAnalyticsLoadId();
-              const obj7 = args(7460);
+              newAnalyticsLoadId = args(10377).getNewAnalyticsLoadId();
+              const obj7 = args(7463);
               c3 = 1;
               c4 = 1;
               const obj4 = {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            args(6645).closeApplyBoostModal();
+            args(6648).closeApplyBoostModal();
             c4 = 3;
             return { value: "IconComponent", done: null };
           }
@@ -153,8 +153,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10366).getNewAnalyticsLoadId();
-            const obj7 = args(7460);
+            newAnalyticsLoadId = args(10377).getNewAnalyticsLoadId();
+            const obj7 = args(7463);
             c3 = 1;
             c4 = 1;
             const obj4 = {
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(6645).closeApplyBoostModal();
+          args(6648).closeApplyBoostModal();
           c4 = 3;
           return { value: "IconComponent", done: null };
         }

@@ -1,15 +1,15 @@
-// === Module 7757: StreamRTCConnectionStore ===
+// === Module 7761: StreamRTCConnectionStore ===
 
-// Module 7757 (StreamRTCConnectionStore)
+// Module 7761 (StreamRTCConnectionStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5700 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6593 */;
-import canSpectateDefault from "canSpectate" /* 6632 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7754 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 7758 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6596 */;
+import canSpectateDefault from "canSpectate" /* 6635 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7758 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 7762 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
@@ -22,7 +22,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1087);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6591).StreamTypes;
+const StreamTypes = fn(6594).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};

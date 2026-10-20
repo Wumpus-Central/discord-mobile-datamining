@@ -1,6 +1,6 @@
-// === Module 9541: TwoWayLinkDiscordConsent ===
+// === Module 9554: TwoWayLinkDiscordConsent ===
 
-// Module 9541 (TwoWayLinkDiscordConsent)
+// Module 9554 (TwoWayLinkDiscordConsent)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

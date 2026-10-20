@@ -1,6 +1,6 @@
-// === Module 13849: NitroLimitUpsellBar ===
+// === Module 13867: NitroLimitUpsellBar ===
 
-// Module 13849 (NitroLimitUpsellBar)
+// Module 13867 (NitroLimitUpsellBar)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,9 +8,9 @@ import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import WarningIcon from "WarningIcon" /* 7901 */;
-import _modDef9850 from "module_9850" /* 9850 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10095 */;
+import WarningIcon from "WarningIcon" /* 7905 */;
+import _modDef9862 from "module_9862" /* 9862 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10106 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4945 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroLim
     const obj6 = { color: "text-feedback-warning", style: tmp4.icon };
     let tmp6Result = React4(WarningIcon.WarningIcon, obj6);
   } else {
-    const obj7 = { source: _modDef9850, style: tmp4.icon };
+    const obj7 = { source: _modDef9862, style: tmp4.icon };
     tmp6Result = React4(FastImageDefault, obj7);
   }
   cResult[0] = isAtLimit;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroLim
     let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
     let tmp9 = React4;
   } else {
-    const obj3 = { source: _modDef9850, style: tmp.icon };
+    const obj3 = { source: _modDef9862, style: tmp.icon };
     tmp4Result = React4(FastImageDefault, obj3);
     tmp9 = React4;
   }

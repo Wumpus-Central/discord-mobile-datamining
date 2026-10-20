@@ -1,8 +1,8 @@
-// === Module 10972: GiftModalEmojis ===
+// === Module 10983: GiftModalEmojis ===
 
-// Module 10972 (GiftModalEmojis)
+// Module 10983 (GiftModalEmojis)
 import EmojiUtilsDefault from "EmojiUtils" /* 4898 */;
-import EmojiDefault from "Emoji" /* 7175 */;
+import EmojiDefault from "Emoji" /* 7178 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 9563: AppLauncherUtils ===
+// === Module 9576: AppLauncherUtils ===
 
-// Module 9563 (AppLauncherUtils)
+// Module 9576 (AppLauncherUtils)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
@@ -8,15 +8,15 @@ import Server from "Server" /* 2000 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2032 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;
 import getPlatformDefault from "getPlatform" /* 5594 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6759 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7576 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10961 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11276 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6762 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7579 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10972 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11287 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9564 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9577 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import AppLauncherStore from "AppLauncherStore" /* 11936 */;
+import AppLauncherStore from "AppLauncherStore" /* 11950 */;
 
 const require = globalThis.__r;
 
@@ -67,7 +67,7 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1087).ApplicationFlags;
-const BuiltInSectionId = fn(5938).BuiltInSectionId;
+const BuiltInSectionId = fn(5941).BuiltInSectionId;
 const MessageSendLocation = fn(4950).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");

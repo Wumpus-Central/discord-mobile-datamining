@@ -1,6 +1,6 @@
-// === Module 13695: PremiumGiftingConstants ===
+// === Module 13713: PremiumGiftingConstants ===
 
-// Module 13695 (PremiumGiftingConstants)
+// Module 13713 (PremiumGiftingConstants)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import _modDef2590 from "module_2590" /* 2590 */;
 import size from "module_2" /* 2 */;

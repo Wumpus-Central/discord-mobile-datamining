@@ -1,6 +1,6 @@
-// === Module 14042: MediaModalSpoilerOverlay ===
+// === Module 14060: MediaModalSpoilerOverlay ===
 
-// Module 14042 (MediaModalSpoilerOverlay)
+// Module 14060 (MediaModalSpoilerOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,8 +9,8 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 5014 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useToken from "useToken" /* 5213 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5547 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8497 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14025 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8501 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 14043 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

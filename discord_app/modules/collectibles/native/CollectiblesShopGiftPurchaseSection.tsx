@@ -1,20 +1,20 @@
-// === Module 13691: CollectiblesShopGiftPurchaseSection ===
+// === Module 13709: CollectiblesShopGiftPurchaseSection ===
 
-// Module 13691 (CollectiblesShopGiftPurchaseSection)
+// Module 13709 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5864 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5867 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8606 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8618 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7482).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7485).useNativeCheckoutStore;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
 const PremiumConstants = fn(1394);

@@ -1,6 +1,6 @@
-// === Module 15043: MenuGroup ===
+// === Module 15061: MenuGroup ===
 
-// Module 15043 (MenuGroup)
+// Module 15061 (MenuGroup)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 

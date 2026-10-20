@@ -1,8 +1,8 @@
-// === Module 6711: IAPEligibility ===
+// === Module 6714: IAPEligibility ===
 
-// Module 6711 (IAPEligibility)
+// Module 6714 (IAPEligibility)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import getSystemVersion from "getSystemVersion" /* 6712 */;
+import getSystemVersion from "getSystemVersion" /* 6715 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 
@@ -79,7 +79,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
   _require = arg0;
   const cResult = require("c").c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const str = tmp(6712).getSystemVersion();
+    const str = tmp(6715).getSystemVersion();
     let tmp6 = null != str;
     if (tmp6) {
       const parts = str.split(".");
@@ -124,7 +124,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
     }
     cResult[0] = tmp6;
     let first = tmp6;
-    const tmpResult = tmp(6712);
+    const tmpResult = tmp(6715);
   } else {
     first = cResult[0];
   }
@@ -172,7 +172,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
 }) : (function useCanUseRoleSubscriptionIAP(arg0) {
   _require = arg0;
   const memo = noop.useMemo(() => {
-    const str = closure_0(6712).getSystemVersion();
+    const str = closure_0(6715).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");

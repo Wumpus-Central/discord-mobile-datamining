@@ -1,13 +1,13 @@
-// === Module 16348: AppearanceSetting ===
+// === Module 16367: AppearanceSetting ===
 
-// Module 16348 (AppearanceSetting)
+// Module 16367 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
 import _modDef2758 from "module_2758" /* 2758 */;
 import useThemeDefault from "useTheme" /* 5166 */;
-import useActiveTheme from "useActiveTheme" /* 9625 */;
+import useActiveTheme from "useActiveTheme" /* 9638 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4969 */;
 
 require = fn;
@@ -115,14 +115,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
     return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
   }
 });
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(16349).PaintPaletteIcon,
+  IconComponent: fn(16368).PaintPaletteIcon,
   useTrailing: tmp2,
   screen: {
     route: fn(1087).UserSettingsSections.APPEARANCE,

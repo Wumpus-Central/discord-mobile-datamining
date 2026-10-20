@@ -1,10 +1,10 @@
-// === Module 14956: useMessageRequestPrivacyOption ===
+// === Module 14974: useMessageRequestPrivacyOption ===
 
-// Module 14956 (useMessageRequestPrivacyOption)
+// Module 14974 (useMessageRequestPrivacyOption)
 import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 4776 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7039 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13152 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7042 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13170 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -153,7 +153,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
         }
       }
       const obj2 = { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 };
-      const tmp17 = jsx(tmp(7240).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 });
+      const tmp17 = jsx(tmp(7243).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 });
       cResult[10] = S;
       cResult[11] = tmp6;
       cResult[12] = !tmp6;
@@ -202,7 +202,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7240).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(7243).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

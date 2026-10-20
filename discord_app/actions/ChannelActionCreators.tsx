@@ -1,6 +1,6 @@
-// === Module 7357: ChannelActionCreators ===
+// === Module 7360: ChannelActionCreators ===
 
-// Module 7357 (ChannelActionCreators)
+// Module 7360 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
@@ -10,13 +10,13 @@ import shared from "shared" /* 4952 */;
 import RootNavigationRef from "RootNavigationRef" /* 5112 */;
 import transitionToChannel from "transitionToChannel" /* 5669 */;
 import preloadChannelDefault from "preloadChannel" /* 5671 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6582 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6769 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6585 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6772 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7358 */;
+import ChangelogStore from "ChangelogStore" /* 7361 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import ReadStateStore from "ReadStateStore" /* 6719 */;
+import ReadStateStore from "ReadStateStore" /* 6722 */;
 
 const require = globalThis.__r;
 
@@ -519,8 +519,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7370).checkGuildTemplateDirty(closure_128_2);
-        name(7370);
+        const result = name(7373).checkGuildTemplateDirty(closure_128_2);
+        name(7373);
       }
       return closure_128_1;
     })();

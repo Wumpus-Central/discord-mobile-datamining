@@ -1,13 +1,13 @@
-// === Module 18668: RTCLatencyTestManager ===
+// === Module 18691: RTCLatencyTestManager ===
 
-// Module 18668 (RTCLatencyTestManager)
+// Module 18691 (RTCLatencyTestManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 18669 */;
+import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 18692 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RTCRegionStore from "RTCRegionStore" /* 5774 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7162 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
 
 require = fn;
 const Features = fn(5680).Features;

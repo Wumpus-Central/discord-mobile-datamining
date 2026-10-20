@@ -1,6 +1,6 @@
-// === Module 10579: UsernameWithEffects ===
+// === Module 10590: UsernameWithEffects ===
 
-// Module 10579 (UsernameWithEffects)
+// Module 10590 (UsernameWithEffects)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
@@ -11,12 +11,12 @@ import shared_getNodeText from "shared/getNodeText" /* 5101 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useTypographyVariantRemap from "useTypographyVariantRemap" /* 5200 */;
 import useToken2 from "useToken" /* 5213 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6321 */;
-import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6322 */;
-import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9142 */;
-import types from "types" /* 10580 */;
-import useDisplayNameStylesAccessibleColors from "useDisplayNameStylesAccessibleColors" /* 10581 */;
-import PerLetterEffectDefault from "PerLetterEffect" /* 10584 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6324 */;
+import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6325 */;
+import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9154 */;
+import types from "types" /* 10591 */;
+import useDisplayNameStylesAccessibleColors from "useDisplayNameStylesAccessibleColors" /* 10592 */;
+import PerLetterEffectDefault from "PerLetterEffect" /* 10595 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -706,7 +706,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
   if (STATIC === undefined) {
-    STATIC = userName(10580).EffectDisplayType.STATIC;
+    STATIC = userName(10591).EffectDisplayType.STATIC;
   }
   ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
   if (ignoreDisabledStylesSetting === undefined) {
@@ -714,10 +714,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const merged = Object.assign(userName, Object.assign({ userId: 0, guildId: 0, userName: 0, effectDisplayType: 0, pendingDisplayNameStyles: 0, defaultColor: 0, containerStyle: 0, ignoreDisabledStylesSetting: 0 }));
   let num2;
-  const tmp6 = num2(6321)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
-  const displayNameStylesEnabled = userName(6322).useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
-  const obj = userName(6322);
-  const displayNameStylesFont = userName(9142).useDisplayNameStylesFont({ displayNameStyles: tmp6, ignoreDisabledStylesSetting });
+  const tmp6 = num2(6324)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
+  const displayNameStylesEnabled = userName(6325).useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
+  const obj = userName(6325);
+  const displayNameStylesFont = userName(9154).useDisplayNameStylesFont({ displayNameStyles: tmp6, ignoreDisabledStylesSetting });
   let tmp10;
   if (null != displayNameStylesFont) {
     const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
@@ -736,12 +736,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp11 = tmp12;
   }
-  const obj2 = userName(9142);
+  const obj2 = userName(9154);
   const token = userName(5213).useToken(tmp4(587).colors.BACKGROUND_BASE_LOW);
   const tmp7Result = userName(5213);
   const token1 = userName(5213).useToken(tmp4(587).colors.WHITE);
   const tmp7Result7 = userName(5213);
-  const displayNameStylesAccessibleColors = userName(10581).useDisplayNameStylesAccessibleColors({ displayNameStyles: tmp6, backgroundColor: token });
+  const displayNameStylesAccessibleColors = userName(10592).useDisplayNameStylesAccessibleColors({ displayNameStyles: tmp6, backgroundColor: token });
   let first;
   if (displayNameStylesAccessibleColors.length > 0) {
     first = displayNameStylesAccessibleColors[0];
@@ -814,14 +814,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp26Result = closure_14(str, num2);
   if (displayNameStylesEnabled) {
     if (null != tmp6) {
-      if (STATIC !== tmp7(10580).EffectDisplayType.PLAIN) {
+      if (STATIC !== tmp7(10591).EffectDisplayType.PLAIN) {
         if (null != colorVariants) {
           const items1 = [merged.style, tmp11];
           if (tmp7Result11.doesEffectImpactLayout(effectId)) {
             const layoutImpact = tmp26Result.layoutImpact;
           }
           if (effectId === tmp7(1411).DisplayNameEffect.GUMMY) {
-            const tmp4Result = tmp4(10584);
+            const tmp4Result = tmp4(10595);
             let str3 = tmp7(5101).getNodeText(userName);
             if (str3 == null) {
               str3 = "";

@@ -1,42 +1,42 @@
-// === Module 18306: VoicePanelCardFloatingControls ===
+// === Module 18328: VoicePanelCardFloatingControls ===
 
-// Module 18306 (VoicePanelCardFloatingControls)
+// Module 18328 (VoicePanelCardFloatingControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 4999 */;
 import spring from "spring" /* 5208 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6593 */;
-import NativeViewDefault from "NativeView" /* 6834 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6960 */;
-import StreamActionCreators from "StreamActionCreators" /* 7773 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9086 */;
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9087 */;
-import usePlayingGameActivitiesDefault from "usePlayingGameActivities" /* 9143 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9166 */;
-import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 9168 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10692 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11061 */;
-import VoiceXIcon from "VoiceXIcon" /* 11491 */;
-import _modDef11585 from "module_11585" /* 11585 */;
-import useStableParticipant from "useStableParticipant" /* 18229 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 18231 */;
-import _modDef18257 from "module_18257" /* 18257 */;
-import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 18292 */;
-import _modDef18307 from "module_18307" /* 18307 */;
-import _modDef18308 from "module_18308" /* 18308 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6596 */;
+import NativeViewDefault from "NativeView" /* 6837 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6963 */;
+import StreamActionCreators from "StreamActionCreators" /* 7777 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9098 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9099 */;
+import usePlayingGameActivitiesDefault from "usePlayingGameActivities" /* 9155 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9178 */;
+import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 9180 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10703 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11073 */;
+import VoiceXIcon from "VoiceXIcon" /* 11502 */;
+import _modDef11596 from "module_11596" /* 11596 */;
+import useStableParticipant from "useStableParticipant" /* 18252 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 18254 */;
+import _modDef18280 from "module_18280" /* 18280 */;
+import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 18314 */;
+import _modDef18329 from "module_18329" /* 18329 */;
+import _modDef18330 from "module_18330" /* 18330 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
 import ReanimatedRexport_mod from "ReanimatedRexport" /* 5014 */;
 
-const useGameProfileObscuredDefault = tmp3(8526);
-const GuildTagDefault = tmp3(9146);
-const useResolveGameForProfileDefault = tmp3(9170);
-const GameTagChipletDefault = tmp3(18312);
+const useGameProfileObscuredDefault = tmp3(8530);
+const GuildTagDefault = tmp3(9158);
+const useResolveGameForProfileDefault = tmp3(9182);
+const GameTagChipletDefault = tmp3(18334);
 require = fn;
 function getAccessibilityLabel(tmp4ResultResult, label) {
   if (null != tmp4ResultResult.find((type) => type.type === require("useVoicePanelCardUserStateIcons").VoicePanelCardUserStateIconType.STREAM_ICON)) {
@@ -64,10 +64,10 @@ function getAccessibilityLabel(tmp4ResultResult, label) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, Platform, Pressable } = get_ActivityIndicator);
-const VoicePanelConstants = fn(10693);
+const VoicePanelConstants = fn(10704);
 ({ MODE_CHANGE_PHYSICS: closure_9, VoicePanelModes: c10 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10691).VoicePanelControlsModes;
-const VOICE_PANEL_CARD_INNER_PADDING = fn(10696).VOICE_PANEL_CARD_INNER_PADDING;
+const VoicePanelControlsModes = fn(10702).VoicePanelControlsModes;
+const VOICE_PANEL_CARD_INNER_PADDING = fn(10707).VOICE_PANEL_CARD_INNER_PADDING;
 const ThemeTypes = fn(1087).ThemeTypes;
 const CallConstants = fn(5593);
 ({ ParticipantTypes: closure_14, VoicePlatforms: closure_15 } = CallConstants);
@@ -126,13 +126,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
   const animatedStyle = controlsSpecs(5014).useAnimatedStyle(fn);
-  let tmp4Result = _modDef18257;
+  let tmp4Result = _modDef18280;
   if (voicePlatform === constants2.XBOX) {
-    tmp4Result = _modDef18307;
+    tmp4Result = _modDef18329;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp4Result = _modDef11585;
+    tmp4Result = _modDef11596;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp4Result = _modDef18308;
+    tmp4Result = _modDef18330;
   }
   if (cResult[0] === animatedStyle) {
     if (cResult[1] === tmp3.iconWithoutBackground) {
@@ -180,13 +180,13 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
   fn.__workletHash = 15914667672663;
   fn.__initData = __initData2;
   const animatedStyle = controlsSpecs(5014).useAnimatedStyle(fn);
-  let tmp2Result = _modDef18257;
+  let tmp2Result = _modDef18280;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef18307;
+    tmp2Result = _modDef18329;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp2Result = _modDef11585;
+    tmp2Result = _modDef11596;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef18308;
+    tmp2Result = _modDef18330;
   }
   const obj3 = { source: tmp2Result, style: null };
   const items = [tmp.iconWithoutBackground, animatedStyle];
@@ -451,7 +451,7 @@ let closure_32 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const cResult = participant(576).c(11);
   participant = participant.participant;
   ({ isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(10692)).guildId;
+  guildId = noop.useContext(guildId(10703)).guildId;
   const tmp5 = closure_31(participant.controlsHidden);
   if (cResult[0] === guildId) {
     if (cResult[1] === participant) {
@@ -469,18 +469,18 @@ let closure_32 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
         }
-        let obj2 = { icon: tmp4(18309), onPress: tmp6, style: tmp5, layout, accessibilityLabel: cResult[5] };
-        const tmp15 = closure_16(tmp4(18200), obj2);
+        let obj2 = { icon: tmp4(18331), onPress: tmp6, style: tmp5, layout, accessibilityLabel: cResult[5] };
+        const tmp15 = closure_16(tmp4(18223), obj2);
         cResult[6] = tmp6;
         cResult[7] = layout;
         cResult[8] = cResult[5];
         cResult[9] = tmp5;
         cResult[10] = tmp15;
         tmp12 = tmp15;
-        const tmp4Result = tmp4(18200);
+        const tmp4Result = tmp4(18223);
       }
     }
-    let result = tmp(18229).isStableActivityParticipant(participant);
+    let result = tmp(18252).isStableActivityParticipant(participant);
     const intl = tmp(1128).intl;
     const string = intl.string;
     let t = tmp(1128).t;
@@ -495,7 +495,7 @@ let closure_32 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[3] = isSelf;
     cResult[4] = participant;
     cResult[5] = stringResult;
-    let tmpResult = tmp(18229);
+    let tmpResult = tmp(18252);
   }
   const fn = function o() {
     if (obj.isStableStreamParticipant(participant)) {
@@ -528,7 +528,7 @@ let closure_32 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   participant = participant.participant;
   let guildId;
   ({ controlsHidden, isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(10692)).guildId;
+  guildId = noop.useContext(guildId(10703)).guildId;
   const items = [guildId, participant];
   const callback = noop.useCallback(() => {
     if (obj.isStableStreamParticipant(participant)) {
@@ -554,12 +554,12 @@ let closure_32 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }, items);
   let obj = { icon: null, onPress: null, style: null, layout: null, accessibilityLabel: null };
   const tmp = closure_31(controlsHidden);
-  obj.icon = guildId(18309);
+  obj.icon = guildId(18331);
   obj.onPress = callback;
   obj.style = tmp;
   obj.layout = layout;
-  const tmp4 = guildId(18200);
-  let result = participant(18229).isStableActivityParticipant(participant);
+  const tmp4 = guildId(18223);
+  let result = participant(18252).isStableActivityParticipant(participant);
   const intl = participant(1128).intl;
   const string = intl.string;
   const t = participant(1128).t;
@@ -1101,11 +1101,11 @@ let closure_51 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   if (null != gameRecord) {
     if (!tmp6) {
       let obj = { game: gameRecord, userId, textColor };
-      let tmp9 = closure_16(tmp(18312), obj);
+      let tmp9 = closure_16(tmp(18334), obj);
     }
     return tmp9;
   }
-  tmp9 = closure_16(tmp(9146), { userId, textColor });
+  tmp9 = closure_16(tmp(9158), { userId, textColor });
 }));
 const __initData15 = { code: "function VoicePanelCardFloatingControlsTsx19(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
 const __initData16 = { code: "function VoicePanelCardFloatingControlsTsx20(){const{isPillHidden}=this.__closure;return isPillHidden.get();}" };

@@ -1,11 +1,11 @@
-// === Module 13051: NewMessagesTagListInput ===
+// === Module 13069: NewMessagesTagListInput ===
 
-// Module 13051 (NewMessagesTagListInput)
+// Module 13069 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4954 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10537 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10548 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -44,7 +44,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const mapped = items.map(UserStore.getUser);
     const found = mapped.filter(onSelectUser(1388).isNotNullish);
-    const mapped1 = found.map(tags(10537));
+    const mapped1 = found.map(tags(10548));
     cResult[0] = selectedUserIds;
     cResult[1] = mapped1;
     tags = mapped1;
@@ -119,7 +119,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
             const obj4 = { autoFocus, focusOnAdd: true, footer: tmp10, icon: tmp18, onChangeText, onFocus, onRemove: tmp21, placeholder: tmp22, tags, ref: tagListInputRef };
-            const tmp27 = jsx(tags(8914), { autoFocus, focusOnAdd: true, footer: tmp10, icon: tmp18, onChangeText, onFocus, onRemove: tmp21, placeholder: tmp22, tags, ref: tagListInputRef });
+            const tmp27 = jsx(tags(8926), { autoFocus, focusOnAdd: true, footer: tmp10, icon: tmp18, onChangeText, onFocus, onRemove: tmp21, placeholder: tmp22, tags, ref: tagListInputRef });
             cResult[15] = autoFocus;
             cResult[16] = onChangeText;
             cResult[17] = onFocus;
@@ -163,12 +163,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       const obj5 = { accessibilityRole: "button", accessibilityLabel: stringResult2, onPress: onForceSearchResults, style: tmp4.showSearchButton, children: null };
       if (forceSearchResults) {
-        let CirclePlusIcon = onSelectUser(13052).ChevronLargeRightIcon;
+        let CirclePlusIcon = onSelectUser(13070).ChevronLargeRightIcon;
       } else {
-        CirclePlusIcon = onSelectUser(10948).CirclePlusIcon;
+        CirclePlusIcon = onSelectUser(10959).CirclePlusIcon;
       }
       obj5.children = <CirclePlusIcon size="xs" />;
-      jsx(onSelectUser(6856).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: stringResult2, onPress: onForceSearchResults, style: tmp4.showSearchButton, children: null });
+      jsx(onSelectUser(6859).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: stringResult2, onPress: onForceSearchResults, style: tmp4.showSearchButton, children: null });
     }
   }
   cResult[2] = forceSearchResults;

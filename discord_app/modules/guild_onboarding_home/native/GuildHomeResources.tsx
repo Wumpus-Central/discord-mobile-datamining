@@ -1,17 +1,17 @@
-// === Module 17744: GuildHomeResources ===
+// === Module 17763: GuildHomeResources ===
 
-// Module 17744 (GuildHomeResources)
+// Module 17763 (GuildHomeResources)
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1114 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7512 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12966 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 17738 */;
-import _modDef17746 from "module_17746" /* 17746 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7515 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12984 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 17757 */;
+import _modDef17765 from "module_17765" /* 17765 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildChannelStore from "GuildChannelStore" /* 4878 */;
-import MessageStore from "MessageStore" /* 5965 */;
+import MessageStore from "MessageStore" /* 5968 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 
 require = fn;
@@ -135,9 +135,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Resour
     }
   }
   const tmpResult7 = channelId(504);
-  const forumPostMediaProperties = channelId(8768).useForumPostMediaProperties(tmp15, false);
-  const tmpResult8 = channelId(8768);
-  const firstMediaIsEmbed = channelId(8768).useFirstMediaIsEmbed(tmp15, false);
+  const forumPostMediaProperties = channelId(8780).useForumPostMediaProperties(tmp15, false);
+  const tmpResult8 = channelId(8780);
+  const firstMediaIsEmbed = channelId(8780).useFirstMediaIsEmbed(tmp15, false);
   if (forumPostMediaProperties != null) {
     class F {
       constructor() {
@@ -158,8 +158,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Resour
         return closure_7.getMessages(channelId);
       }
     }
-    const shouldObscure = tmp(12904).useSharedMediaProps(obj2).shouldObscure;
-    stateFromStores(17745)(tmp15);
+    const shouldObscure = tmp(12922).useSharedMediaProps(obj2).shouldObscure;
+    stateFromStores(17764)(tmp15);
     if (cResult[14] === stateFromStores) {
       class F {
         constructor() {
@@ -216,13 +216,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Resour
     cResult[14] = stateFromStores;
     cResult[15] = stateFromStores2;
     cResult[16] = tmp22;
-    const tmpResult10 = tmp(12904);
+    const tmpResult10 = tmp(12922);
   }
   obj2 = { channel: stateFromStores, media: null };
   cResult[11] = stateFromStores;
   cResult[12] = null;
   cResult[13] = obj2;
-  const tmpResult9 = channelId(8768);
+  const tmpResult9 = channelId(8780);
 }) : (function ResourceChannelRow(channelId) {
   channelId = channelId.channelId;
   ({ icon, description } = channelId);
@@ -238,10 +238,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Resour
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => MessageStore.getMessages(channelId));
   const firstResult = stateFromStores2.first();
   const obj3 = channelId(504);
-  const forumPostMediaProperties = channelId(8768).useForumPostMediaProperties(firstResult, false);
-  const obj5 = channelId(8768);
+  const forumPostMediaProperties = channelId(8780).useForumPostMediaProperties(firstResult, false);
+  const obj5 = channelId(8780);
   let length;
-  const firstMediaIsEmbed = channelId(8768).useFirstMediaIsEmbed(firstResult, false);
+  const firstMediaIsEmbed = channelId(8780).useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
     length = forumPostMediaProperties.length;
   }
@@ -249,9 +249,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Resour
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  const obj6 = channelId(8768);
-  let flag = channelId(12904).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(17745)(firstResult);
+  const obj6 = channelId(8780);
+  let flag = channelId(12922).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  const tmp11 = stateFromStores(17764)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -323,22 +323,22 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Resour
               if (flag == null) {
                 flag = false;
               }
-              obj17.embedLeftBorderColor = tmp2(8768).getEmbedColor(firstResult, flag);
+              obj17.embedLeftBorderColor = tmp2(8780).getEmbedColor(firstResult, flag);
               let id;
               if (firstResult != null) {
                 id = firstResult.id;
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = closure_11(tmp2(12904).ForumPostMediaThumbnail, obj17);
-              const tmp2Result2 = tmp2(8768);
+              tmp19Result6 = closure_11(tmp2(12922).ForumPostMediaThumbnail, obj17);
+              const tmp2Result2 = tmp2(8780);
             }
           }
         }
       }
       items5[2] = tmp19Result6;
       obj7.children = items5;
-      return closure_12(tmp2(6856).PressableOpacity, obj7);
+      return closure_12(tmp2(6859).PressableOpacity, obj7);
     }
   }
   return null;
@@ -379,7 +379,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildHom
       tmp17 = cResult[2];
     }
     if (cResult[3] !== tmp4.emptyStateImage) {
-      const obj3 = { style: tmp4.emptyStateImage, source: _modDef17746 };
+      const obj3 = { style: tmp4.emptyStateImage, source: _modDef17765 };
       const tmp23 = closure_11(FastImageDefault, obj3);
       cResult[3] = tmp4.emptyStateImage;
       cResult[4] = tmp23;
@@ -478,7 +478,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildHom
     const intl = guildId(1128).intl;
     obj3.children = intl.string(guildId(1128).t.owvC9U);
     const items = [closure_11(guildId(5195).Text, obj3), , ];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef17746 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef17765 };
     items[1] = closure_11(FastImageDefault, obj4);
     const obj5 = {
       onPress() {

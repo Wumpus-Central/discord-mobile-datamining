@@ -1,15 +1,15 @@
-// === Module 18476: AutomodRemovedContentSheet ===
+// === Module 18498: AutomodRemovedContentSheet ===
 
-// Module 18476 (AutomodRemovedContentSheet)
+// Module 18498 (AutomodRemovedContentSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5967 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7194 */;
-import ActionSheet from "ActionSheet" /* 7244 */;
-import RowGeneratorDefault from "RowGenerator" /* 8076 */;
-import ChatItemDefault from "ChatItem" /* 9687 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5970 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7197 */;
+import ActionSheet from "ActionSheet" /* 7247 */;
+import RowGeneratorDefault from "RowGenerator" /* 8080 */;
+import ChatItemDefault from "ChatItem" /* 9700 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
   if (thread != null) {
     name = thread.name;
   }
-  let obj2 = { header: jsx(message(7194).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
+  let obj2 = { header: jsx(message(7197).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
   obj.subtitle = name;
   const obj3 = { style: tmp.content, children: null };
   if (null != memo) {
@@ -195,5 +195,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(7244).ActionSheet, { header: jsx(message(7194).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
+  return jsx(message(7247).ActionSheet, { header: jsx(message(7197).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
 });

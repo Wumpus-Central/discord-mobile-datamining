@@ -1,6 +1,6 @@
-// === Module 7083: KeyboardAwareView ===
+// === Module 7086: KeyboardAwareView ===
 
-// Module 7083 (KeyboardAwareView)
+// Module 7086 (KeyboardAwareView)
 import useKeyboardDuration from "useKeyboardDuration" /* 5555 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5556 */;
 import _slicedToArray from "module_32" /* 32 */;

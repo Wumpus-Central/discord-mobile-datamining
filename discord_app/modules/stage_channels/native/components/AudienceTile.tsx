@@ -1,11 +1,11 @@
-// === Module 11592: AudienceTile ===
+// === Module 11603: AudienceTile ===
 
-// Module 11592 (AudienceTile)
+// Module 11603 (AudienceTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5951 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7822 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5954 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7826 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 
@@ -61,7 +61,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function RaisedH
       cResult[8] = tmp14;
       tmp11 = tmp14;
     }
-    const obj3 = { style: tmp4.raisedHand, source: tmp6(11428), color: PRIMARY_800 };
+    const obj3 = { style: tmp4.raisedHand, source: tmp6(11439), color: PRIMARY_800 };
     const tmp10 = hasOwnProperty(native.Icon, obj3);
     cResult[3] = PRIMARY_800;
     cResult[4] = tmp4.raisedHand;
@@ -88,7 +88,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function RaisedH
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11428), color: PRIMARY_800 }) };
+  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11439), color: PRIMARY_800 }) };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
 });
@@ -131,11 +131,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const stateFromStores = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
     if (cResult[7] !== rtsState) {
-      const result = tmp(6636).isRequestedToSpeakAll(rtsState);
+      const result = tmp(6639).isRequestedToSpeakAll(rtsState);
       cResult[7] = rtsState;
       cResult[8] = result;
       let tmp14 = result;
-      const tmpResult3 = tmp(6636);
+      const tmpResult3 = tmp(6639);
     } else {
       tmp14 = cResult[8];
     }
@@ -188,7 +188,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             if (cResult[38] !== blocked) {
                               let tmp41 = blocked;
                               if (blocked) {
-                                tmp41 = closure_5(tmp(11572).BlockedStatus, {});
+                                tmp41 = closure_5(tmp(11583).BlockedStatus, {});
                               }
                               cResult[38] = blocked;
                               cResult[39] = tmp41;
@@ -199,7 +199,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             if (cResult[40] !== ignored) {
                               let tmp44 = ignored;
                               if (ignored) {
-                                tmp44 = closure_5(tmp(11572).IgnoredStatus, {});
+                                tmp44 = closure_5(tmp(11583).IgnoredStatus, {});
                               }
                               cResult[40] = ignored;
                               cResult[41] = tmp44;
@@ -240,7 +240,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                       if (cResult[55] !== stateFromStores) {
                                         let tmp58 = stateFromStores;
                                         if (stateFromStores) {
-                                          const obj3 = { source: tmp5(11593), size: tmp(1202).Icon.Sizes.SMALL, color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK };
+                                          const obj3 = { source: tmp5(11604), size: tmp(1202).Icon.Sizes.SMALL, color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK };
                                           tmp58 = closure_5(tmp(1202).Icon, obj3);
                                         }
                                         cResult[55] = stateFromStores;
@@ -378,7 +378,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
       }
-      const name = tmp5(5944).getName(tmp7, channel.id, user);
+      const name = tmp5(5947).getName(tmp7, channel.id, user);
       let tmp22 = blocked;
       if (!blocked) {
         tmp22 = ignored;
@@ -386,7 +386,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const LegacyPressable = tmp(5258).LegacyPressable;
       const intl = tmp(1128).intl;
       const obj11 = { name };
-      const tmp5Result = tmp5(5944);
+      const tmp5Result = tmp5(5947);
       cResult[12] = blocked;
       cResult[13] = channel.id;
       cResult[14] = tmp7;

@@ -1,6 +1,6 @@
-// === Module 12922: ForumPostPlaceholder ===
+// === Module 12940: ForumPostPlaceholder ===
 
-// Module 12922 (ForumPostPlaceholder)
+// Module 12940 (ForumPostPlaceholder)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     let obj3 = { variant: "secondary", style: tmp4.postPlaceholder };
-    const tmp12 = jsx(tmp(6853).Card, { variant: "secondary", style: tmp4.postPlaceholder });
+    const tmp12 = jsx(tmp(6856).Card, { variant: "secondary", style: tmp4.postPlaceholder });
     cResult[3] = tmp4.postPlaceholder;
     cResult[4] = tmp12;
   } else {
@@ -176,6 +176,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn.__workletHash = 13857107900577;
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj4 = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6853).Card, { variant: "secondary", style: tmp.postPlaceholder }) };
-  return jsx(timingConfig(5014).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6853).Card, { variant: "secondary", style: tmp.postPlaceholder }) });
+  let obj4 = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6856).Card, { variant: "secondary", style: tmp.postPlaceholder }) };
+  return jsx(timingConfig(5014).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6856).Card, { variant: "secondary", style: tmp.postPlaceholder }) });
 }));

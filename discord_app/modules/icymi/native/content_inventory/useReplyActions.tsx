@@ -1,12 +1,12 @@
-// === Module 17679: useReplyActions ===
+// === Module 17698: useReplyActions ===
 
-// Module 17679 (useReplyActions)
+// Module 17698 (useReplyActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5186 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8556 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8761 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9740 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8562 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8773 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1392 */;
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7577).DraftType;
+const DraftType = fn(7580).DraftType;
 const EmojiIntention = fn(1395).EmojiIntention;
 const MessageSendLocation = fn(4950).MessageSendLocation;
 const size = fn(2);
@@ -229,7 +229,7 @@ export const useReplyActions = function useReplyActions(cResult) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17680, dependencyMap.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17699, dependencyMap.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

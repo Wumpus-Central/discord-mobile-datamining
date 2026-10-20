@@ -1,20 +1,20 @@
-// === Module 12645: AutomatedUnderageAppealActionSheet ===
+// === Module 12662: AutomatedUnderageAppealActionSheet ===
 
-// Module 12645 (AutomatedUnderageAppealActionSheet)
+// Module 12662 (AutomatedUnderageAppealActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6605 */;
-import TableRow from "TableRow" /* 6851 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7827 */;
-import SafetyHubActionCreators from "SafetyHubActionCreators" /* 12642 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12644 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6608 */;
+import TableRow from "TableRow" /* 6854 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7831 */;
+import SafetyHubActionCreators from "SafetyHubActionCreators" /* 12659 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12661 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7866 */;
+import SafetyHubStore from "SafetyHubStore" /* 7870 */;
 
 require = fn;
 let View = fn(17).View;
-const SafetyHubConstants = fn(7842);
+const SafetyHubConstants = fn(7846);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: metroRequire, SafetyHubLinks: closure_7 } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
           }
         }
         tmp37[1] = tmp33;
-        obj4.children = closure_8(tmp(6935).TableRowGroup, tmp37);
+        obj4.children = closure_8(tmp(6938).TableRowGroup, tmp37);
         const tmp38 = closure_8(View, obj4);
         cResult[22] = tmp33;
         cResult[23] = tmp38;
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
         const intl2 = tmp(1128).intl;
         obj7.subLabel = intl2.string(tmp(1128).t.NHq382);
         obj7.onPress = tmp18;
-        obj5.children = closure_8(tmp(6851).TableRow, obj7);
+        obj5.children = closure_8(tmp(6854).TableRow, obj7);
         const tmp43 = closure_8(tmp42, obj5);
         cResult[25] = tmp43;
         const tmp41 = tmp43;
@@ -702,7 +702,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   const items6 = [closure_9(callback, obj7), , , ];
   const obj10 = { children: null };
   let obj2 = onClose(504);
-  obj10.children = closure_8(onClose(6935).TableRowGroup, {
+  obj10.children = closure_8(onClose(6938).TableRowGroup, {
     hasIcons: true,
     children: items.map((item, index) => {
       ({ title, description } = item);
@@ -725,8 +725,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Automate
   obj14.onPress = function openForm() {
     return classificationId(number[16]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  obj13.children = closure_8(onClose(6851).TableRow, obj14);
-  obj12.children = closure_8(onClose(6935).TableRowGroup, obj13);
+  obj13.children = closure_8(onClose(6854).TableRow, obj14);
+  obj12.children = closure_8(onClose(6938).TableRowGroup, obj13);
   items6[2] = closure_8(callback, obj12);
   const obj15 = { style: tmp.footer, children: null };
   const obj16 = {

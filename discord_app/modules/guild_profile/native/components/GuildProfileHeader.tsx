@@ -1,13 +1,13 @@
-// === Module 9153: GuildProfileHeader ===
+// === Module 9165: GuildProfileHeader ===
 
-// Module 9153 (GuildProfileHeader)
+// Module 9165 (GuildProfileHeader)
 import nativeDefault from "native" /* 587 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4814 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import transitionToGuild from "transitionToGuild" /* 7395 */;
-import GuildTraits from "GuildTraits" /* 9155 */;
-import BadgeCategory from "BadgeCategory" /* 9156 */;
+import transitionToGuild from "transitionToGuild" /* 7398 */;
+import GuildTraits from "GuildTraits" /* 9167 */;
+import BadgeCategory from "BadgeCategory" /* 9168 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2069 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -15,7 +15,7 @@ import GuildMemberStore from "GuildMemberStore" /* 4860 */;
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9154).getBadgeTooltip;
+const getBadgeTooltip = fn(9166).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4945);

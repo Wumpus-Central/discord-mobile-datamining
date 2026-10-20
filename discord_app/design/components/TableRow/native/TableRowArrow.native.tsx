@@ -1,10 +1,10 @@
-// === Module 6860: TableRowArrow ===
+// === Module 6863: TableRowArrow ===
 
-// Module 6860 (TableRowArrow)
+// Module 6863 (TableRowArrow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Icon from "Icon" /* 5207 */;
-import _modDef6861 from "module_6861" /* 6861 */;
+import _modDef6864 from "module_6864" /* 6864 */;
 import noop from "module_19" /* 19 */;
 
 const IconDefault = Icon;
@@ -32,7 +32,7 @@ export const TableRowArrow = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     return tmp5;
   }
   const obj2 = { style: tmp4.icon, color: tmp4.iconColor.color, source: null, size: null };
-  obj2.source = _modDef6861;
+  obj2.source = _modDef6864;
   obj2.size = Icon.IconSizes.CUSTOM;
   const tmp7 = jsx(IconDefault, { style: tmp4.icon, color: tmp4.iconColor.color, source: null, size: null });
   cResult[0] = tmp4.icon;
@@ -41,6 +41,6 @@ export const TableRowArrow = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   tmp5 = tmp7;
 }) : (function TableRowArrow() {
   const tmp = closure_4();
-  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef6861, size: Icon.IconSizes.CUSTOM };
-  return jsx(IconDefault, { style: tmp.icon, color: tmp.iconColor.color, source: _modDef6861, size: Icon.IconSizes.CUSTOM });
+  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef6864, size: Icon.IconSizes.CUSTOM };
+  return jsx(IconDefault, { style: tmp.icon, color: tmp.iconColor.color, source: _modDef6864, size: Icon.IconSizes.CUSTOM });
 });

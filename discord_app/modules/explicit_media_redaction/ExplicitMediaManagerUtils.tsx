@@ -1,6 +1,6 @@
-// === Module 18518: ExplicitMediaManagerUtils ===
+// === Module 18541: ExplicitMediaManagerUtils ===
 
-// Module 18518 (ExplicitMediaManagerUtils)
+// Module 18541 (ExplicitMediaManagerUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");

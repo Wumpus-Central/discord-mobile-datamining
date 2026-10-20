@@ -1,9 +1,9 @@
-// === Module 12769: useCheckpointSound ===
+// === Module 12786: useCheckpointSound ===
 
-// Module 12769 (useCheckpointSound)
-import SoundUtils from "SoundUtils" /* 11393 */;
+// Module 12786 (useCheckpointSound)
+import SoundUtils from "SoundUtils" /* 11404 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12762 */;
+import CheckpointStore from "CheckpointStore" /* 12779 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

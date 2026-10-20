@@ -1,11 +1,11 @@
-// === Module 17537: usePrivateProfileCoachmarkProps ===
+// === Module 17556: usePrivateProfileCoachmarkProps ===
 
-// Module 17537 (usePrivateProfileCoachmarkProps)
+// Module 17556 (usePrivateProfileCoachmarkProps)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import dismissible_content from "dismissible_content" /* 4784 */;
-import openUserSettings from "openUserSettings" /* 7436 */;
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 17538 */;
+import openUserSettings from "openUserSettings" /* 7439 */;
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 17557 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
   const cResult = markAsDismissed(576).c(15);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const obj = markAsDismissed(576);
-  let userIsTeen = markAsDismissed(8067).useUserIsTeen();
+  let userIsTeen = markAsDismissed(8071).useUserIsTeen();
   const ProfileVisibility = markAsDismissed(4776).ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
   if (userIsTeen) {
@@ -156,7 +156,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
     }
     obj4.string(tmp(1128).t["6hEfm1"]);
   }
-  const obj2 = markAsDismissed(8067);
+  const obj2 = markAsDismissed(8071);
 }) : (function usePrivateProfileCoachmarkProps(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   const markAsDismissed = visibleContent.markAsDismissed;

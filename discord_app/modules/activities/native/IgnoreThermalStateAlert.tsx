@@ -1,8 +1,8 @@
-// === Module 11267: IgnoreThermalStateAlert ===
+// === Module 11278: IgnoreThermalStateAlert ===
 
-// Module 11267 (IgnoreThermalStateAlert)
-import common_AlertDefault from "common/Alert" /* 5933 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11268 */;
+// Module 11278 (IgnoreThermalStateAlert)
+import common_AlertDefault from "common/Alert" /* 5936 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11279 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

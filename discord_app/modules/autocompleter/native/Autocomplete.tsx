@@ -1,6 +1,6 @@
-// === Module 13079: Autocomplete ===
+// === Module 13097: Autocomplete ===
 
-// Module 13079 (Autocomplete)
+// Module 13097 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,19 +11,19 @@ import StringUtils from "StringUtils" /* 2034 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useChannelName from "useChannelName" /* 5565 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import TableRow from "TableRow" /* 6851 */;
-import Pressables from "Pressables" /* 6856 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6862 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8018 */;
-import TimestampUtils from "TimestampUtils" /* 8444 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8447 */;
-import _modDef8550 from "module_8550" /* 8550 */;
-import Form from "Form" /* 8871 */;
-import StickersHooks from "StickersHooks" /* 10071 */;
-import StickerDefault from "Sticker" /* 10087 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 13080 */;
-import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 13081 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13082 */;
+import TableRow from "TableRow" /* 6854 */;
+import Pressables from "Pressables" /* 6859 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6865 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8022 */;
+import TimestampUtils from "TimestampUtils" /* 8448 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8451 */;
+import _modDef8556 from "module_8556" /* 8556 */;
+import Form from "Form" /* 8883 */;
+import StickersHooks from "StickersHooks" /* 10082 */;
+import StickerDefault from "Sticker" /* 10098 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 13098 */;
+import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 13099 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13100 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
@@ -36,8 +36,8 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4945);
-let obj2 = { row: { height: fn(10030).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
-let obj3 = { height: fn(10030).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj2 = { row: { height: fn(10041).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
+let obj3 = { height: fn(10041).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.leading = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let obj4 = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.trailing = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
@@ -140,7 +140,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function User(user) {
                     }
                   }
                   const obj4 = { DEPRECATED_style: tmp4.row, onPress, accessibilityRole: "menuitem", label: tmp13, leading: tmp17, trailing: tmp21 };
-                  const tmp27 = closure_9(tmp(8871).FormRow, obj4);
+                  const tmp27 = closure_9(tmp(8883).FormRow, obj4);
                   cResult[21] = onPress;
                   cResult[22] = tmp4.row;
                   cResult[23] = tmp13;
@@ -151,7 +151,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function User(user) {
                 }
               }
               const obj5 = { user, usernameStyle: tmp20, discriminatorStyle: tmp4.trailing };
-              const tmp24 = closure_9(guildId(9054), obj5);
+              const tmp24 = closure_9(guildId(9066), obj5);
               cResult[17] = tmp4.trailing;
               cResult[18] = tmp20;
               cResult[19] = user;
@@ -230,8 +230,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function User(user) {
   const items1 = [, ];
   ({ trailing: arr2[0], username: arr2[1] } = tmp);
   obj5.usernameStyle = items1;
-  obj2.trailing = closure_9(guildId(9054), obj5);
-  return closure_9(user(8871).FormRow, obj2);
+  obj2.trailing = closure_9(guildId(9066), obj5);
+  return closure_9(user(8883).FormRow, obj2);
 });
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Global(arg0) {
@@ -405,7 +405,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel(arg0
   if (cResult[0] !== channel) {
     const getGuild = GuildStore.getGuild;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8550;
+      let channelIconWithGuild = _modDef8556;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp7);
       const tmpResult = utils_ChannelUtils;
@@ -476,7 +476,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel(arg0
   ({ channel, category } = onPress);
   const tmp = closure_11();
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8550;
+    let channelIconWithGuild = _modDef8556;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
   }

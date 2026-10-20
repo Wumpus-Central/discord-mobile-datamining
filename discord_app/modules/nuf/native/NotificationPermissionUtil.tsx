@@ -1,14 +1,14 @@
-// === Module 13109: NotificationPermissionUtil ===
+// === Module 13127: NotificationPermissionUtil ===
 
-// Module 13109 (NotificationPermissionUtil)
+// Module 13127 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7835 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 13117 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7839 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 13135 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13107 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13125 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0) {
@@ -149,9 +149,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(13108).EventActionType;
+const EventActionType = fn(13126).EventActionType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_10 = fn(7812).NotificationAuthorizationStatus;
+let closure_10 = fn(7816).NotificationAuthorizationStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSeePushNotificationNudge() {

@@ -1,14 +1,14 @@
-// === Module 12351: useConjureProjectCreator ===
+// === Module 12368: useConjureProjectCreator ===
 
-// Module 12351 (useConjureProjectCreator)
+// Module 12368 (useConjureProjectCreator)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12193 */;
-import ListUtils from "ListUtils" /* 12352 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12208 */;
+import ListUtils from "ListUtils" /* 12369 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureChatStore from "ConjureChatStore" /* 10991 */;
+import ConjureChatStore from "ConjureChatStore" /* 11002 */;
 
 const require = globalThis.__r;
 
@@ -400,9 +400,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
         let formatToPlainStringResult = intl.formatToPlainString(_modDef3820.t5RWBS, obj2);
       } else {
         const intl2 = intl(1128).intl;
-        const obj4 = { creator: name, collaborators: intl(12352).getListSummaryLabel(mapped) };
+        const obj4 = { creator: name, collaborators: intl(12369).getListSummaryLabel(mapped) };
         formatToPlainStringResult = intl2.formatToPlainString(_modDef3820["b5uCe/"], obj4);
-        const intlResult = intl(12352);
+        const intlResult = intl(12369);
       }
       obj.label = formatToPlainStringResult;
     }

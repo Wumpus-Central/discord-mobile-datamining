@@ -1,9 +1,9 @@
-// === Module 7778: GuildRoomStore ===
+// === Module 7782: GuildRoomStore ===
 
-// Module 7778 (GuildRoomStore)
+// Module 7782 (GuildRoomStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 7779 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 7783 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;

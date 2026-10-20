@@ -1,12 +1,12 @@
-// === Module 15451: ShareStore ===
+// === Module 15469: ShareStore ===
 
-// Module 15451 (ShareStore)
+// Module 15469 (ShareStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8772 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8784 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildStore from "GuildStore" /* 4822 */;

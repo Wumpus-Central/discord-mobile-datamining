@@ -1,13 +1,13 @@
-// === Module 17740: HomeWelcomeMessage ===
+// === Module 17759: HomeWelcomeMessage ===
 
-// Module 17740 (HomeWelcomeMessage)
+// Module 17759 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8601 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8613 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7271 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7274 */;
 
 require = fn;
 function replaceUsernameVariable(message, str, username) {

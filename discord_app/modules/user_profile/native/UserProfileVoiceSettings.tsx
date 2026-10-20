@@ -1,14 +1,14 @@
-// === Module 14131: UserProfileVoiceSettings ===
+// === Module 14149: UserProfileVoiceSettings ===
 
-// Module 14131 (UserProfileVoiceSettings)
+// Module 14149 (UserProfileVoiceSettings)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5807 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9121 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13345 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5809 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9133 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13363 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 5961 */;
+import SoundboardStore from "SoundboardStore" /* 5964 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
@@ -391,7 +391,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
   const style = channel.style;
   const tmp4 = closure_13();
   const obj = channel(576);
-  const trackUserProfileAction = channel(8604).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = channel(8616).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
     const fn = function n() {
@@ -404,7 +404,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj2 = channel(8604);
+  const obj2 = channel(8616);
   const stateFromStores = channel(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PermissionStore];
@@ -616,8 +616,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
         }
         const obj3 = { children: null };
         const obj4 = { label: tmp16, icon: tmp19, onPress: P };
-        obj3.children = closure_11(tmp(7249).UserProfileFormRow, obj4, "mute");
-        const tmp23 = closure_11(tmp(7249).UserProfileCardRows, obj3);
+        obj3.children = closure_11(tmp(7252).UserProfileFormRow, obj4, "mute");
+        const tmp23 = closure_11(tmp(7252).UserProfileCardRows, obj3);
         cResult[13] = tmp16;
         cResult[14] = tmp19;
         cResult[15] = P;
@@ -635,8 +635,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
   ({ user, style } = channel);
   const tmp = closure_13();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(8604).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(8604);
+  const trackUserProfileAction = channel(8616).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(8616);
   const items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -669,9 +669,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9094).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9106).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(11513).MicrophoneIcon;
+      MicrophoneIcon = tmp2(11524).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -679,11 +679,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_11(tmp2(7249).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_11(tmp2(7249).UserProfileCardRows, obj6);
+    obj6.children = closure_11(tmp2(7252).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_11(tmp2(7252).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_11(trackUserProfileAction(7249), obj4);
-    const tmp6Result = trackUserProfileAction(7249);
+    closure_11(trackUserProfileAction(7252), obj4);
+    const tmp6Result = trackUserProfileAction(7252);
   }
   return tmp8;
 });

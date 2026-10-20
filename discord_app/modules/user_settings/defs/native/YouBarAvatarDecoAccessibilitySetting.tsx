@@ -1,19 +1,19 @@
-// === Module 16499: YouBarAvatarDecoAccessibilitySetting ===
+// === Module 16518: YouBarAvatarDecoAccessibilitySetting ===
 
-// Module 16499 (YouBarAvatarDecoAccessibilitySetting)
+// Module 16518 (YouBarAvatarDecoAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1128 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15494 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15512 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 require = fn;
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["34XN2f"]);
   },
-  parent: fn(8276).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8280).MobileUserSettings.ACCESSIBILITY,
   useValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarAvatarDeco);

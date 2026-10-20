@@ -1,6 +1,6 @@
-// === Module 8704: MediaModalSheetWrapper ===
+// === Module 8716: MediaModalSheetWrapper ===
 
-// Module 8704 (MediaModalSheetWrapper)
+// Module 8716 (MediaModalSheetWrapper)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -92,11 +92,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaMod
   const obj = require("c");
   const merged = Object.assign(tmp4);
   obj3.onClose = M;
-  tmp16 = jsx(context(8705), {});
+  tmp16 = jsx(context(8717), {});
   cResult[8] = M;
   cResult[9] = tmp4;
   cResult[10] = tmp16;
-  const tmp8Result = context(8705);
+  const tmp8Result = context(8717);
 }) : (function MediaModalSheetWrapper(onCloseCallback) {
   onCloseCallback = onCloseCallback.onCloseCallback;
   const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
@@ -122,5 +122,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaMod
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.onClose = callback;
-  return jsx(context(8705), {});
+  return jsx(context(8717), {});
 });

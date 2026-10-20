@@ -1,10 +1,10 @@
-// === Module 15449: MobileNativeUpdateStore ===
+// === Module 15467: MobileNativeUpdateStore ===
 
-// Module 15449 (MobileNativeUpdateStore)
+// Module 15467 (MobileNativeUpdateStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MobileNativeUpdateUtils from "MobileNativeUpdateUtils" /* 14953 */;
+import MobileNativeUpdateUtils from "MobileNativeUpdateUtils" /* 14971 */;
 import MobileNativeUpdateConstants from "MobileNativeUpdateConstants" /* 5659 */;
 import size from "module_2" /* 2 */;
 

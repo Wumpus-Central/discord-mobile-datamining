@@ -1,6 +1,6 @@
-// === Module 13223: usePowerupActiveStatus ===
+// === Module 13241: usePowerupActiveStatus ===
 
-// Module 13223 (usePowerupActiveStatus)
+// Module 13241 (usePowerupActiveStatus)
 import c from "c" /* 576 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5142 */;
@@ -88,7 +88,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePowerupsA
         if (null != stateFromStores) {
           if (null != stateFromStores1) {
             if (null == dependencyMap[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "enumerable" };
             } else {
               obj = { isActiveFromLevel: tmp17.premiumTier >= tmp20, levelEntitlement: null, levelPowerup: null };
               let tmp3;
@@ -142,7 +142,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePowerupsA
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "enumerable" };
     }
   });
   cResult[6] = stateFromStores;
@@ -189,7 +189,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePowerupsA
         if (null != stateFromStores) {
           if (null != unlockedPowerups) {
             if (null == dependencyMap[skuId.skuId]) {
-              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+              let obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "enumerable" };
             } else {
               let tmp4;
               if (null != dependencyMap2[tmp22]) {
@@ -242,7 +242,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePowerupsA
           return obj3;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "unicodeVersion" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "enumerable" };
     }
   });
 });

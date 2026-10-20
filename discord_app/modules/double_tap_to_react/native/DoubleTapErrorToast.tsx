@@ -1,6 +1,6 @@
-// === Module 8274: DoubleTapErrorToast ===
+// === Module 8278: DoubleTapErrorToast ===
 
-// Module 8274 (DoubleTapErrorToast)
+// Module 8278 (DoubleTapErrorToast)
 import util from "util" /* 1128 */;
 import EmojiConstants from "EmojiConstants" /* 1395 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;

@@ -1,6 +1,6 @@
-// === Module 17820: guild_channels/VoiceOrStageSummaryRow ===
+// === Module 17843: guild_channels/VoiceOrStageSummaryRow ===
 
-// Module 17820 (guild_channels/VoiceOrStageSummaryRow)
+// Module 17843 (guild_channels/VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
@@ -574,7 +574,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj5.style = items3;
-    let obj6 = { size: tmp(tmp2[9]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_17821") };
+    let obj6 = { size: tmp(tmp2[9]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_17844") };
     const items4 = [closure_4(tmp(tmp2[9]).Icon, obj6), ];
     let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(tmp(tmp2[8]).Text, obj7);

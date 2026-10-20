@@ -1,6 +1,6 @@
-// === Module 7242: FormSwitch ===
+// === Module 7245: FormSwitch ===
 
-// Module 7242 (FormSwitch)
+// Module 7245 (FormSwitch)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
 import HapticUtils from "HapticUtils" /* 5173 */;

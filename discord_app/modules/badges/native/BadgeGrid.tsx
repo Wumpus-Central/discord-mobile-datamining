@@ -1,6 +1,6 @@
-// === Module 15673: BadgeGrid ===
+// === Module 15692: BadgeGrid ===
 
-// Module 15673 (BadgeGrid)
+// Module 15692 (BadgeGrid)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetConstants from "ActionSheetConstants" /* 5227 */;
 import size from "module_2" /* 2 */;

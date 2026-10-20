@@ -1,6 +1,6 @@
-// === Module 16563: TimestampHourCycleSetting ===
+// === Module 16582: TimestampHourCycleSetting ===
 
-// Module 16563 (TimestampHourCycleSetting)
+// Module 16582 (TimestampHourCycleSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDMsMessagePreviewsOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -59,7 +59,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(8276).MobileUserSettings.APPEARANCE,
+  parent: fn(8280).MobileUserSettings.APPEARANCE,
   useValue: fn(4776).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;

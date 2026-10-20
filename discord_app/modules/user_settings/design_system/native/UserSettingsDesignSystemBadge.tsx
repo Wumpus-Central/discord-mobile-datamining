@@ -1,21 +1,21 @@
-// === Module 16907: UserSettingsDesignSystemBadge ===
+// === Module 16926: UserSettingsDesignSystemBadge ===
 
-// Module 16907 (UserSettingsDesignSystemBadge)
+// Module 16926 (UserSettingsDesignSystemBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import Card from "Card" /* 6853 */;
-import TableRadioGroup from "TableRadioGroup" /* 6933 */;
-import TextInput from "TextInput" /* 6956 */;
-import TableSwitchRow from "TableSwitchRow" /* 7241 */;
-import StarIcon3 from "StarIcon" /* 9865 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10927 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10929 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10931 */;
-import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 10933 */;
-import Badge_Badge from "Badge/Badge" /* 13130 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import Card from "Card" /* 6856 */;
+import TableRadioGroup from "TableRadioGroup" /* 6936 */;
+import TextInput from "TextInput" /* 6959 */;
+import TableSwitchRow from "TableSwitchRow" /* 7244 */;
+import StarIcon3 from "StarIcon" /* 9877 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10938 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10940 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10942 */;
+import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 10944 */;
+import Badge_Badge from "Badge/Badge" /* 13148 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -324,8 +324,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
     let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
     items = [tmp5, tmp6, tmp10];
     obj3.children = items;
-    obj2.children = closure_8(tmp(5932).Stack, obj3);
-    const tmp17 = closure_7(tmp(6853).Card, obj2);
+    obj2.children = closure_8(tmp(5935).Stack, obj3);
+    const tmp17 = closure_7(tmp(6856).Card, obj2);
     cResult[4] = tmp10;
     cResult[5] = tmp17;
     let tmp13 = tmp17;

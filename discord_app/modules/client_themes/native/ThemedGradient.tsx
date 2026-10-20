@@ -1,6 +1,6 @@
-// === Module 10543: ThemedGradient ===
+// === Module 10554: ThemedGradient ===
 
-// Module 10543 (ThemedGradient)
+// Module 10554 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

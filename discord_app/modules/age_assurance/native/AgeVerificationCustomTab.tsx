@@ -1,6 +1,6 @@
-// === Module 7860: AgeVerificationCustomTab ===
+// === Module 7864: AgeVerificationCustomTab ===
 
-// Module 7860 (AgeVerificationCustomTab)
+// Module 7864 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;

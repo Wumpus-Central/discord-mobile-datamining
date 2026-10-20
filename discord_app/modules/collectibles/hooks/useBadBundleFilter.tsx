@@ -1,11 +1,11 @@
-// === Module 16148: useBadBundleFilter ===
+// === Module 16167: useBadBundleFilter ===
 
-// Module 16148 (useBadBundleFilter)
+// Module 16167 (useBadBundleFilter)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2054 */;
 import UserStore from "UserStore" /* 1392 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7611 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7614 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -46,17 +46,17 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
           found = arg0;
           if (0 !== arg0.length) {
             found = arg0.filter((product) => {
-              const obj = hasShopDiscount(9352);
+              const obj = hasShopDiscount(9364);
               if (obj2.isBundleProduct(product)) {
                 if (!tmpResult.isFreeCollectiblesProduct(product)) {
                   if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                     if (tmpResult5.isOrbsExclusiveProduct(product)) {
                       const obj3 = { product, hasShopDiscount };
-                      return null != hasShopDiscount(7607).getProductOrbPrice(obj3);
+                      return null != hasShopDiscount(7610).getProductOrbPrice(obj3);
                     } else {
-                      const defaultPriceSetAssignmentPurchaseType = hasShopDiscount(7608).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                      const tmpResult7 = hasShopDiscount(7608);
-                      let result = hasShopDiscount(7608).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                      const defaultPriceSetAssignmentPurchaseType = hasShopDiscount(7611).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                      const tmpResult7 = hasShopDiscount(7611);
+                      let result = hasShopDiscount(7611).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                       if (null != result) {
                         if (0 !== result.amount) {
                           let num2 = 0;
@@ -69,10 +69,10 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
                       }
                       return true;
                     }
-                    tmpResult5 = hasShopDiscount(7607);
+                    tmpResult5 = hasShopDiscount(7610);
                   }
                 }
-                tmpResult = hasShopDiscount(7608);
+                tmpResult = hasShopDiscount(7611);
               }
               return true;
             });
@@ -92,17 +92,17 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
           found = arg0;
           if (0 !== arg0.length) {
             found = arg0.filter((product) => {
-              const obj = hasShopDiscount(9352);
+              const obj = hasShopDiscount(9364);
               if (obj2.isBundleProduct(product)) {
                 if (!tmpResult.isFreeCollectiblesProduct(product)) {
                   if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                     if (tmpResult5.isOrbsExclusiveProduct(product)) {
                       const obj3 = { product, hasShopDiscount };
-                      return null != hasShopDiscount(7607).getProductOrbPrice(obj3);
+                      return null != hasShopDiscount(7610).getProductOrbPrice(obj3);
                     } else {
-                      const defaultPriceSetAssignmentPurchaseType = hasShopDiscount(7608).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                      const tmpResult7 = hasShopDiscount(7608);
-                      let result = hasShopDiscount(7608).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                      const defaultPriceSetAssignmentPurchaseType = hasShopDiscount(7611).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                      const tmpResult7 = hasShopDiscount(7611);
+                      let result = hasShopDiscount(7611).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                       if (null != result) {
                         if (0 !== result.amount) {
                           let num2 = 0;
@@ -115,10 +115,10 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
                       }
                       return true;
                     }
-                    tmpResult5 = hasShopDiscount(7607);
+                    tmpResult5 = hasShopDiscount(7610);
                   }
                 }
-                tmpResult = hasShopDiscount(7608);
+                tmpResult = hasShopDiscount(7611);
               }
               return true;
             });
@@ -141,17 +141,17 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          const obj = canUseShopDiscountsResult(9352);
+          const obj = canUseShopDiscountsResult(9364);
           if (obj2.isBundleProduct(product)) {
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                 if (tmpResult5.isOrbsExclusiveProduct(product)) {
                   const obj3 = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(7607).getProductOrbPrice(obj3);
+                  return null != canUseShopDiscountsResult(7610).getProductOrbPrice(obj3);
                 } else {
-                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7608).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult7 = canUseShopDiscountsResult(7608);
-                  let result = canUseShopDiscountsResult(7608).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+                  const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7611).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult7 = canUseShopDiscountsResult(7611);
+                  let result = canUseShopDiscountsResult(7611).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                   if (null != result) {
                     if (0 !== result.amount) {
                       let num2 = 0;
@@ -174,10 +174,10 @@ export const useBadBundleFilter = ReactCompilerGating.isReactCompilerEnabled() ?
                   }
                   return true;
                 }
-                tmpResult5 = canUseShopDiscountsResult(7607);
+                tmpResult5 = canUseShopDiscountsResult(7610);
               }
             }
-            tmpResult = canUseShopDiscountsResult(7608);
+            tmpResult = canUseShopDiscountsResult(7611);
           }
           return true;
         });

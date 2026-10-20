@@ -1,6 +1,6 @@
-// === Module 14584: PremiumFeaturesTable ===
+// === Module 14602: PremiumFeaturesTable ===
 
-// Module 14584 (PremiumFeaturesTable)
+// Module 14602 (PremiumFeaturesTable)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
@@ -8,8 +8,8 @@ import shared from "shared" /* 4952 */;
 import useThemeDefault from "useTheme" /* 5166 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import _modDef14585 from "module_14585" /* 14585 */;
-import _modDef14586 from "module_14586" /* 14586 */;
+import _modDef14603 from "module_14603" /* 14603 */;
+import _modDef14604 from "module_14604" /* 14604 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ obj2.cell = { paddingVertical: 12 };
 obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
 obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-obj2.themedHighlightedCell = { backgroundColor: fn(6655).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.themedHighlightedCell = { backgroundColor: fn(6658).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj2.nitroHomeHightlightedBorderLeftRight = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
 obj2.premiumGroupCard = { marginTop: 16 };
 obj2.priceContainer = { alignItems: "center" };
@@ -44,7 +44,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CheckI
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const tmp7 = shared.isThemeDark(tmp5) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   if (cResult[0] !== tmp7) {
-    const obj3 = { source: _modDef14585, color: tmp7, size: native.IconSizes.SMALL };
+    const obj3 = { source: _modDef14603, color: tmp7, size: native.IconSizes.SMALL };
     const tmp10 = closure_1_11(native.Icon, obj3);
     cResult[0] = tmp7;
     cResult[1] = tmp10;
@@ -58,11 +58,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CheckI
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  return closure_1_11(native.Icon, { source: _modDef14585, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef14603, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
 });
 createStyles = fn(4945);
 let obj8 = { icon: null };
-let obj5 = { backgroundColor: fn(6655).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj5 = { backgroundColor: fn(6658).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj8.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj8);
 ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseI
   const cResult = c.c(2);
   const tmp4 = closure_16();
   if (cResult[0] !== tmp4.icon) {
-    const obj2 = { source: _modDef14586, style: tmp4.icon, size: native.IconSizes.SMALL };
+    const obj2 = { source: _modDef14604, style: tmp4.icon, size: native.IconSizes.SMALL };
     const tmp8 = closure_1_11(native.Icon, obj2);
     cResult[0] = tmp4.icon;
     cResult[1] = tmp8;
@@ -81,7 +81,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseI
   return tmp5;
 }) : (function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef14586, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef14604, style: closure_16().icon, size: native.IconSizes.SMALL });
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function CellText(text) {
@@ -604,8 +604,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   dependencyMap = tmp5;
   const tmp6 = closure_14();
   const tmp8 = str(5166)();
-  const tmp9 = str(9710)(closure_10.PREMIUM_MONTH_TIER_0);
-  const tmp10 = str(9710)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp9 = str(9723)(closure_10.PREMIUM_MONTH_TIER_0);
+  const tmp10 = str(9723)(closure_10.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp9 != null) {
     priceString = tmp9.priceString;
@@ -638,9 +638,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   }
   if (cResult[2] !== tmp6.logo) {
     const size = { style: tmp6.logo, width: 48, height: 9 };
-    const tmp22 = closure_11(tmp7(14587), size);
+    const tmp22 = closure_11(tmp7(14605), size);
     const size1 = { style: tmp6.logo, width: 50, height: 9 };
-    const tmp23 = closure_11(tmp7(14588), size1);
+    const tmp23 = closure_11(tmp7(14606), size1);
     cResult[2] = tmp6.logo;
     cResult[3] = tmp22;
     cResult[4] = tmp23;
@@ -665,9 +665,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         tmp26 = cResult[9];
       }
       if (tmpResult5.isThemeDark(tmp8)) {
-        let tmp7Result = tmp7(14589);
+        let tmp7Result = tmp7(14607);
       } else {
-        tmp7Result = tmp7(14590);
+        tmp7Result = tmp7(14608);
       }
       if (cResult[10] === tmp6.logo) {
         if (cResult[11] === tmp7Result) {
@@ -683,9 +683,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
           tmp32 = cResult[13];
         }
         if (tmpResult6.isThemeDark(tmp8)) {
-          let tmp7Result2 = tmp7(14591);
+          let tmp7Result2 = tmp7(14609);
         } else {
-          tmp7Result2 = tmp7(14592);
+          tmp7Result2 = tmp7(14610);
         }
         if (cResult[14] === tmp6.logo) {
           if (cResult[15] === tmp7Result2) {
@@ -1055,7 +1055,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                         }
                                         if (tmp136) {
                                           const obj24 = { style: tmp6.premiumGroupCard, premiumGroupRole };
-                                          tmp136 = closure_11(tmp7(14593), obj24);
+                                          tmp136 = closure_11(tmp7(14611), obj24);
                                         }
                                         cResult[79] = tmp5;
                                         cResult[80] = premiumGroupRole;

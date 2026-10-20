@@ -1,6 +1,6 @@
-// === Module 15705: ? ===
+// === Module 15724: ? ===
 
-// Module 15705
+// Module 15724
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/upsells/profiles/banners/above_the_clouds_banner.gif.js");

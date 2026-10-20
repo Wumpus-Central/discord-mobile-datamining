@@ -1,6 +1,6 @@
-// === Module 13485: HubEmailConnectionGuildSelect ===
+// === Module 13503: HubEmailConnectionGuildSelect ===
 
-// Module 13485 (HubEmailConnectionGuildSelect)
+// Module 13503 (HubEmailConnectionGuildSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,15 +9,15 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4814 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import GuildIconDefault from "GuildIcon" /* 6831 */;
-import Form from "Form" /* 8871 */;
+import GuildIconDefault from "GuildIcon" /* 6834 */;
+import Form from "Form" /* 8883 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13462).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13480).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -347,7 +347,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(13476).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(13494).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {
@@ -358,7 +358,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6328).APIError(closure_128_0);
+                  const aPIError = new id(6331).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);

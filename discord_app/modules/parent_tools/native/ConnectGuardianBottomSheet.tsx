@@ -1,6 +1,6 @@
-// === Module 15954: ConnectGuardianBottomSheet ===
+// === Module 15973: ConnectGuardianBottomSheet ===
 
-// Module 15954 (ConnectGuardianBottomSheet)
+// Module 15973 (ConnectGuardianBottomSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,14 +10,14 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5226 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 15955 */;
-import ConnectGuardianCard from "ConnectGuardianCard" /* 15956 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 15974 */;
+import ConnectGuardianCard from "ConnectGuardianCard" /* 15975 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7591 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7594 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7592).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_6 = fn(7595).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "https://support.discord.com/hc/articles/14155060633623";

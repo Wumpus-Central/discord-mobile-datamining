@@ -1,7 +1,7 @@
-// === Module 5924: useAccessibilityViewIsModalToggle ===
+// === Module 5927: useAccessibilityViewIsModalToggle ===
 
-// Module 5924 (useAccessibilityViewIsModalToggle)
-import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5925 */;
+// Module 5927 (useAccessibilityViewIsModalToggle)
+import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5928 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

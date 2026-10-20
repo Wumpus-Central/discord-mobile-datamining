@@ -1,9 +1,9 @@
-// === Module 14499: SubscriptionAccountHoldNotice ===
+// === Module 14517: SubscriptionAccountHoldNotice ===
 
-// Module 14499 (SubscriptionAccountHoldNotice)
+// Module 14517 (SubscriptionAccountHoldNotice)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtils from "PremiumUtils" /* 2054 */;
-import _modDef14500 from "module_14500" /* 14500 */;
+import _modDef14518 from "module_14518" /* 14518 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Subscrip
   } else {
     ({ container, textContainer } = tmp4);
     if (cResult[0] !== tmp4.icon) {
-      const obj2 = { size: tmp(1202).IconSizes.MEDIUM, style: tmp4.icon, source: _modDef14500 };
+      const obj2 = { size: tmp(1202).IconSizes.MEDIUM, style: tmp4.icon, source: _modDef14518 };
       const tmp8 = closure_6(tmp(1202).Icon, obj2);
       cResult[0] = tmp4.icon;
       cResult[1] = tmp8;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Subscrip
   if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.textContainer, children: null };
-    const obj3 = { size: subscription(1202).IconSizes.MEDIUM, style: tmp.icon, source: _modDef14500 };
+    const obj3 = { size: subscription(1202).IconSizes.MEDIUM, style: tmp.icon, source: _modDef14518 };
     const items = [closure_6(subscription(1202).Icon, obj3), ];
     const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
     const intl = subscription(1128).intl;

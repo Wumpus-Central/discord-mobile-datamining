@@ -1,6 +1,6 @@
-// === Module 15018: GuildReportRaidModalConstants ===
+// === Module 15036: GuildReportRaidModalConstants ===
 
-// Module 15018 (GuildReportRaidModalConstants)
+// Module 15036 (GuildReportRaidModalConstants)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;

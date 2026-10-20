@@ -306,8 +306,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenModal
   }, []);
   return tmp[0];
 });
-function routesBelowFirstRemoved(routes, arg1) {
-  const findIndexResult = routes.findIndex(arg1);
+function routesBelowFirstRemoved(routes, items) {
+  const findIndexResult = routes.findIndex(items);
   if (-1 !== findIndexResult) {
     return routes.slice(0, findIndexResult);
   }

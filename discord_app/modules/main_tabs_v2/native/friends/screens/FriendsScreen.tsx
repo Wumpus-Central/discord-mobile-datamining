@@ -1,18 +1,18 @@
-// === Module 17926: FriendsScreen ===
+// === Module 17949: FriendsScreen ===
 
-// Module 17926 (FriendsScreen)
+// Module 17949 (FriendsScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import SendMessageIcon from "SendMessageIcon" /* 5642 */;
-import TableRow from "TableRow" /* 6851 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import NoResultsDefault from "NoResults" /* 12732 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16185 */;
-import _modDef17615 from "module_17615" /* 17615 */;
+import TableRow from "TableRow" /* 6854 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import NoResultsDefault from "NoResults" /* 12749 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 16204 */;
+import _modDef17634 from "module_17634" /* 17634 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7675 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7678 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
 
 const require = globalThis.__r;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsS
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef17615, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef17634, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsS
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef17615 };
+      const obj8 = { source: _modDef17634 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

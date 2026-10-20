@@ -1,8 +1,8 @@
-// === Module 15882: IgnoredUserRow ===
+// === Module 15901: IgnoredUserRow ===
 
-// Module 15882 (IgnoredUserRow)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7360 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
+// Module 15901 (IgnoredUserRow)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7363 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -12,7 +12,7 @@ let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function IgnoredUserRow(userRecord) {
   const cResult = userRecord(576).c(31);
   userRecord = userRecord.userRecord;
-  analyticsLocations = analyticsLocations(7199)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7202)().analyticsLocations;
   if (cResult[0] === userRecord.globalName) {
     if (cResult[1] === userRecord.username) {
       let tmp4 = cResult[2];
@@ -112,7 +112,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Ignored
                 }
               }
               const obj5 = { accessible: false, icon: tmp10, label: tmp16, onPress: tmp6, trailing: tmp22 };
-              const tmp27 = jsx(tmp(6851).TableRow, { accessible: false, icon: tmp10, label: tmp16, onPress: tmp6, trailing: tmp22 });
+              const tmp27 = jsx(tmp(6854).TableRow, { accessible: false, icon: tmp10, label: tmp16, onPress: tmp6, trailing: tmp22 });
               cResult[26] = tmp6;
               cResult[27] = tmp22;
               cResult[28] = tmp10;
@@ -127,7 +127,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Ignored
           }
         }
         const obj7 = { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 };
-        const tmp18 = jsx(tmp(15879).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 });
+        const tmp18 = jsx(tmp(15898).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 });
         cResult[16] = tmp7;
         cResult[17] = tmp15;
         cResult[18] = userRecord;
@@ -175,7 +175,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Ignored
 }) : (function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7199)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7202)().analyticsLocations;
   const intl = userRecord(1128).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -201,7 +201,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Ignored
   };
   const items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(15879).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(15898).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -222,7 +222,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Ignored
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
   obj.trailing = jsx(userRecord(5205).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(6851).TableRow, { accessible: false, icon: jsx(userRecord(1202).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1202).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
+  return jsx(userRecord(6854).TableRow, { accessible: false, icon: jsx(userRecord(1202).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1202).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 13795: AppInteractionInfoActionSheet ===
+// === Module 13813: AppInteractionInfoActionSheet ===
 
-// Module 13795 (AppInteractionInfoActionSheet)
+// Module 13813 (AppInteractionInfoActionSheet)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import UserActionCreators from "UserActionCreators" /* 8595 */;
-import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 13796 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import UserActionCreators from "UserActionCreators" /* 8607 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 13814 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import GuildStore from "GuildStore" /* 4822 */;
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   const bottom = useSafeAreaInsetsDefault().bottom;
   if (cResult[0] !== onBack) {
     const obj2 = { onBack };
-    const tmp8 = closure_8(tmp5(13796), obj2);
+    const tmp8 = closure_8(tmp5(13814), obj2);
     cResult[0] = onBack;
     cResult[1] = tmp8;
   }
@@ -163,11 +163,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
             return closure_7.getUser(id);
           }
         }
-        const obj3 = { guild: stateFromStores1, size: tmp(6831).GuildIconSizes.SMALL_32 };
-        const tmp37 = closure_8(tmp5(6831), obj3);
+        const obj3 = { guild: stateFromStores1, size: tmp(6834).GuildIconSizes.SMALL_32 };
+        const tmp37 = closure_8(tmp5(6834), obj3);
         cResult[15] = stateFromStores1;
         cResult[16] = tmp37;
-        const tmp5Result = tmp5(6831);
+        const tmp5Result = tmp5(6834);
       } else {
         class F {
           constructor() {
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
         items4[1] = closure_9(stateFromStores, obj11);
         obj9.children = items4;
         tmp52[1] = closure_9(stateFromStores, obj9);
-        tmp51 = closure_8(tmp(6856).PressableOpacity, tmp52);
+        tmp51 = closure_8(tmp(6859).PressableOpacity, tmp52);
       }
       cResult[56] = guildId;
       cResult[57] = tmp25;
@@ -413,8 +413,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   }
   if (null != stateFromStores1) {
     const obj5 = { style: tmp.itemContainer, children: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(6831).GuildIconSizes.SMALL_32 };
-    const items5 = [closure_8(onBack(6831), obj6), ];
+    const obj6 = { guild: stateFromStores1, size: tmp10(6834).GuildIconSizes.SMALL_32 };
+    const items5 = [closure_8(onBack(6834), obj6), ];
     const obj7 = { style: tmp.itemLabel, children: null };
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
     const items6 = [closure_8(tmp10(5195).Text, obj8), ];
@@ -427,7 +427,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
     items5[1] = closure_9(id, obj7);
     obj5.children = items5;
     let tmp26 = closure_9(id, obj5);
-    const tmp2Result = onBack(6831);
+    const tmp2Result = onBack(6834);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
@@ -452,7 +452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
       items7[1] = closure_9(id, obj14);
       obj12.children = items7;
       obj11.children = closure_9(id, obj12);
-      tmp26 = closure_8(tmp10(6856).PressableOpacity, obj11);
+      tmp26 = closure_8(tmp10(6859).PressableOpacity, obj11);
     }
   }
   const obj18 = { header: memo, bodyStyles: { paddingBottom: onBack(1633)().bottom }, children: null };
@@ -479,7 +479,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
     items10[1] = closure_9(id, obj22);
     obj20.children = items10;
     obj19.children = closure_9(id, obj20);
-    tmp32 = closure_8(tmp10(6856).PressableOpacity, obj19);
+    tmp32 = closure_8(tmp10(6859).PressableOpacity, obj19);
   }
   items9[1] = tmp32;
   obj18.children = items9;

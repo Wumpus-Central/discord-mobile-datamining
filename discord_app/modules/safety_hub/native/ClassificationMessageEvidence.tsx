@@ -1,20 +1,20 @@
-// === Module 12652: ClassificationMessageEvidence ===
+// === Module 12669: ClassificationMessageEvidence ===
 
-// Module 12652 (ClassificationMessageEvidence)
-import MediaFormatTesters from "MediaFormatTesters" /* 5954 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7841 */;
-import RowGeneratorDefault from "RowGenerator" /* 8076 */;
-import openMediaModal from "openMediaModal" /* 8676 */;
+// Module 12669 (ClassificationMessageEvidence)
+import MediaFormatTesters from "MediaFormatTesters" /* 5957 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7845 */;
+import RowGeneratorDefault from "RowGenerator" /* 8080 */;
+import openMediaModal from "openMediaModal" /* 8688 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import UserStore from "UserStore" /* 1392 */;
-import SafetyHubStore from "SafetyHubStore" /* 7866 */;
+import SafetyHubStore from "SafetyHubStore" /* 7870 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, findNodeHandle: metroRequire, Image: closure_7, ActivityIndicator: closure_8 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7842);
+const SafetyHubConstants = fn(7846);
 ({ DEFAULT_MEDIA_MAX_WIDTH: closure_12, DEFAULT_MEDIA_MAX_HEIGHT: map1, VIDEO_PLACEHOLDER_WIDTH: closure_14, VIDEO_PLACEHOLDER_HEIGHT: closure_15, VIDEO_PLACEHOLDER_FILENAME: closure_16 } = SafetyHubConstants);
 const MessageTypes = fn(1087).MessageTypes;
 const jsxProd = fn(21);
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
                         }
                       }
                       obj4.onTapImage = tmp36;
-                      const tmp47 = closure_18(reactTag(12655), obj4);
+                      const tmp47 = closure_18(reactTag(12672), obj4);
                       cResult[38] = tmp36;
                       cResult[39] = tmp47;
                       let tmp44 = tmp47;
@@ -284,7 +284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
                               }
                             }
                             const obj6 = { rowGenerator, message: tmp48, modifyRow: tmp38, pointerEvents: "none" };
-                            const tmp61 = closure_18(reactTag(9687), obj6);
+                            const tmp61 = closure_18(reactTag(9700), obj6);
                             cResult[46] = tmp38;
                             cResult[47] = tmp48;
                             cResult[48] = tmp61;
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
                     }
                     tmp49[0] = first2.id;
                     const _Date = Date;
-                    const tmpResult6 = tmp(5967);
+                    const tmpResult6 = tmp(5970);
                     const date = new Date(reactTag(11).extractTimestamp(first2.id));
                     tmp49[1] = date.toUTCString();
                     tmp49[2] = c20;
@@ -427,10 +427,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
   if (obj3.useStateFromStores(items1, () => ref(4952).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(12653));
+    let assetSource = resolveAssetSource(tmp11(12670));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(12654));
+    assetSource = resolveAssetSource(tmp11(12671));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -452,10 +452,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
         str = "";
       }
       obj.filename = str;
-      obj.flags = ref(7841).getSpoilerFlagsForAttachment(filename);
+      obj.flags = ref(7845).getSpoilerFlagsForAttachment(filename);
       obj.size = 0;
       obj.proxy_url = filename.url;
-      const obj2 = ref(7841);
+      const obj2 = ref(7845);
       if (obj3.isImageFile(filename.filename)) {
         const obj4 = {};
         const merged1 = Object.assign(obj);
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
           obj5.filename = filename;
           tmp4 = obj5;
         }
-        tmp2Result = ref(5954);
+        tmp2Result = ref(5957);
       }
       return tmp4;
     });
@@ -582,10 +582,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
     const items8 = [closure_18(closure_8, {}), ];
     let obj5 = { style: attachments.dummyVideoAttachments, children: null };
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(5954).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(5957).isVideoFile(filename.filename));
     obj5.children = first2.map((uri, index) => {
       closure_0 = uri;
-      return closure_1_18(first(8716), {
+      return closure_1_18(first(8728), {
         source: { uri: uri.url },
         onLoad(arg0) {
           closure_0 = arg0;
@@ -608,12 +608,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Classifi
     let obj10 = obj4;
   } else {
     const obj6 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(12655), obj6), ];
+    const items9 = [closure_18(tmp13(12672), obj6), ];
     const obj7 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
-    const tmp13Result = tmp13(9687);
+    const tmp13Result = tmp13(9700);
     const obj8 = { id: first2.id, timestamp: null, channel_id: null, type: null, author: null, content: null, attachments: null };
     const _Date = Date;
-    const tmpResult2 = tmp(5967);
+    const tmpResult2 = tmp(5970);
     const date = new Date(tmp13(11).extractTimestamp(first2.id));
     obj8.timestamp = date.toUTCString();
     obj8.channel_id = channel_id;

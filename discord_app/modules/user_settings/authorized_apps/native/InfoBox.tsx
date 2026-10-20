@@ -1,11 +1,11 @@
-// === Module 10846: InfoBox ===
+// === Module 10857: InfoBox ===
 
-// Module 10846 (InfoBox)
+// Module 10857 (InfoBox)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5648 */;
-import CircleErrorIcon2 from "CircleErrorIcon" /* 6960 */;
+import CircleErrorIcon2 from "CircleErrorIcon" /* 6963 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

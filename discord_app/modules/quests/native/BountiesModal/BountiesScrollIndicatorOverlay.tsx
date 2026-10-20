@@ -1,6 +1,6 @@
-// === Module 16121: BountiesScrollIndicatorOverlay ===
+// === Module 16140: BountiesScrollIndicatorOverlay ===
 
-// Module 16121 (BountiesScrollIndicatorOverlay)
+// Module 16140 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;

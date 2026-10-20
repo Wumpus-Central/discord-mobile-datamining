@@ -1,9 +1,9 @@
-// === Module 9490: BrandSafetyContext ===
+// === Module 9503: BrandSafetyContext ===
 
-// Module 9490 (BrandSafetyContext)
+// Module 9503 (BrandSafetyContext)
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 9491 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9487 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 9504 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9500 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;

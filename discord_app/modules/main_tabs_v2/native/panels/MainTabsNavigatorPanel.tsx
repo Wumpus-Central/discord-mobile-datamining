@@ -1,15 +1,15 @@
-// === Module 17156: MainTabsNavigatorPanel ===
+// === Module 17175: MainTabsNavigatorPanel ===
 
-// Module 17156 (MainTabsNavigatorPanel)
+// Module 17175 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
 import RootNavigationRef from "RootNavigationRef" /* 5112 */;
 import ChatInputUtils from "ChatInputUtils" /* 5120 */;
 import transitionToChannel from "transitionToChannel" /* 5669 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7357 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17157 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17158 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17162 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7360 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17176 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17177 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17181 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -54,7 +54,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let obj = require;
         let result = dependencyMap;
         if (isChatLockedOpen) {
-          obj = obj(17157);
+          obj = obj(17176);
           result = obj.convertPortraitToLandscapeScreens();
         } else {
           obj(5120).dismissKeyboard();
@@ -510,7 +510,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(17157);
+        obj = obj(17176);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
         obj(5120).dismissKeyboard();

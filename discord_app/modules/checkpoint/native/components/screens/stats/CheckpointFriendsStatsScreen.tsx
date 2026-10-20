@@ -1,24 +1,24 @@
-// === Module 12813: CheckpointFriendsStatsScreen ===
+// === Module 12830: CheckpointFriendsStatsScreen ===
 
-// Module 12813 (CheckpointFriendsStatsScreen)
+// Module 12830 (CheckpointFriendsStatsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3046 from "module_3046" /* 3046 */;
 import FriendsIcon from "FriendsIcon" /* 5628 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6317 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import ChatIcon from "ChatIcon" /* 8487 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10364 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11513 */;
-import CheckpointTextDefault from "CheckpointText" /* 12780 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12815 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6320 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import ChatIcon from "ChatIcon" /* 8491 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10375 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11524 */;
+import CheckpointTextDefault from "CheckpointText" /* 12797 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 import UserStore from "UserStore" /* 1392 */;
-import CheckpointStore from "CheckpointStore" /* 12762 */;
+import CheckpointStore from "CheckpointStore" /* 12779 */;
 
 require = fn;
 function SidekickMessageInput(user) {
@@ -154,7 +154,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1128).intl;
     obj5.accessibilityLabel = intl2.string(user(1128).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(12693).GiftIcon, obj6);
+    obj5.children = closure_13(user(12710).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5), ];
     const obj7 = {
       onPress: function handleSend() {
@@ -195,7 +195,7 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointConstants = fn(5970);
+const CheckpointConstants = fn(5973);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);

@@ -1,17 +1,17 @@
-// === Module 12846: createChannelStream ===
+// === Module 12864: createChannelStream ===
 
-// Module 12846 (createChannelStream)
+// Module 12864 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 9924 */;
-import tryInjectMessage from "tryInjectMessage" /* 12847 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 10826 */;
-import EditMessageStore from "EditMessageStore" /* 7697 */;
-import UploadStore from "UploadStore" /* 8217 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 9935 */;
+import tryInjectMessage from "tryInjectMessage" /* 12865 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 10837 */;
+import EditMessageStore from "EditMessageStore" /* 7701 */;
+import UploadStore from "UploadStore" /* 8221 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8077);
+const RowGeneratorConstants = fn(8081);
 ({ Changeset: metroRequire, LoadingType: closure_7, RowType: closure_8, SeparatorType: closure_9 } = RowGeneratorConstants);
 const MessageFlags = fn(1087).MessageFlags;
 const size = fn(2);

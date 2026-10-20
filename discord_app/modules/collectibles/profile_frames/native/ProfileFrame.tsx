@@ -1,18 +1,18 @@
-// === Module 8636: ProfileFrame ===
+// === Module 8648: ProfileFrame ===
 
-// Module 8636 (ProfileFrame)
+// Module 8648 (ProfileFrame)
 import c from "c" /* 576 */;
 import timing from "timing" /* 5167 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import useProfileFrameLayerAsset from "useProfileFrameLayerAsset" /* 8638 */;
-import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8641 */;
+import useProfileFrameLayerAsset from "useProfileFrameLayerAsset" /* 8650 */;
+import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8653 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(8619).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8637);
+let closure_5 = fn(8631).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8649);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } = ProfileFrameConstants);
 let jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
@@ -788,7 +788,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
   c9 = undefined;
   c10 = undefined;
   const tmp = c10();
-  const settled = frame(8638).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
+  const settled = frame(8650).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
   const items = [frame.layers, frameOrder, profileThemeType, filterLayer];
   const memo = profileThemeType.useMemo(() => {
     const layers = frame.layers;
@@ -801,7 +801,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
       return result;
     });
   }, items);
-  let obj = frame(8638);
+  let obj = frame(8650);
   let num = 0;
   if (settled) {
     num = 1;
@@ -819,7 +819,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
   if (0 !== memo.length) {
     if (0 !== containerWidth) {
       if (settled) {
-        ({ overflowTop: c8, overflowBottom: c9, overflowHorizontal: c10 } = containerWidth(8640)(frame, containerWidth));
+        ({ overflowTop: c8, overflowBottom: c9, overflowHorizontal: c10 } = containerWidth(8652)(frame, containerWidth));
         const obj4 = { style: null, children: null };
         const items2 = [tmp.container, ];
         const obj5 = { opacity: sharedValue };

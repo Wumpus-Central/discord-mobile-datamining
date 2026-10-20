@@ -1,6 +1,6 @@
-// === Module 9557: ConnectAccountStep ===
+// === Module 9570: ConnectAccountStep ===
 
-// Module 9557 (ConnectAccountStep)
+// Module 9570 (ConnectAccountStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,10 +9,10 @@ import AvatarUtils from "AvatarUtils" /* 1417 */;
 import shared from "shared" /* 4952 */;
 import useThemeDefault from "useTheme" /* 5166 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import PlatformsDefault from "Platforms" /* 6456 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6757 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6867 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9523 */;
+import PlatformsDefault from "Platforms" /* 6459 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6760 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6870 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9536 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2046 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -256,7 +256,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
         }
       }
       const obj4 = { color: tmp5(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-      const tmp35 = closure_8(tmp(9558).MoreHorizontalIcon, obj4);
+      const tmp35 = closure_8(tmp(9571).MoreHorizontalIcon, obj4);
       class E {
         constructor() {
           currentUser = null;
@@ -329,7 +329,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     cResult[26] = tmp41;
   }
   const tmpResult3 = clientId(504);
-  value = platformType(6456).get(platformType);
+  value = platformType(6459).get(platformType);
   if (null == value) {
     class G {
       constructor() {
@@ -362,7 +362,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     const source = obj5.makeSource(tmp(4952).isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
     const tmpResult4 = tmp(4952);
   }
-  const tmp5Result4 = platformType(6456);
+  const tmp5Result4 = platformType(6459);
 }) : (function ConnectAccountStep(clientId) {
   clientId = clientId.clientId;
   const platformType = clientId.platformType;
@@ -382,7 +382,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     return currentUser;
   });
   const obj2 = clientId(504);
-  value = platformType(6456).get(platformType);
+  value = platformType(6459).get(platformType);
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
@@ -413,7 +413,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     const obj9 = { source: applicationIconSource, size: tmp5(1202).AvatarSizes.XLARGE };
     const items4 = [closure_8(tmp5(1202).Avatar, obj9), , ];
     const obj10 = { color: tmp2(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(9558).MoreHorizontalIcon, obj10);
+    items4[1] = closure_8(tmp5(9571).MoreHorizontalIcon, obj10);
     const obj11 = { source: userAvatarSource, size: tmp5(1202).AvatarSizes.XLARGE };
     items4[2] = closure_8(tmp5(1202).Avatar, obj11);
     obj8.children = items4;
@@ -471,7 +471,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     const source = tmp5Result.makeSource(tmp5(4952).isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
     const tmp5Result2 = tmp5(4952);
   }
-  const obj3 = platformType(6456);
+  const obj3 = platformType(6459);
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");

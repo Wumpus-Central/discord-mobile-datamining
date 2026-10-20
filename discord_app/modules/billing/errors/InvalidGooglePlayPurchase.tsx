@@ -1,6 +1,6 @@
-// === Module 10374: InvalidGooglePlayPurchase ===
+// === Module 10385: InvalidGooglePlayPurchase ===
 
-// Module 10374 (InvalidGooglePlayPurchase)
+// Module 10385 (InvalidGooglePlayPurchase)
 import BillingError from "BillingError" /* 4771 */;
 
 const prototype = function InvalidGooglePlayPurchase() {

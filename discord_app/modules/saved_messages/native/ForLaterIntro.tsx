@@ -1,6 +1,6 @@
-// === Module 13648: ForLaterIntro ===
+// === Module 13666: ForLaterIntro ===
 
-// Module 13648 (ForLaterIntro)
+// Module 13666 (ForLaterIntro)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,12 +8,12 @@ import Text_Text from "Text/Text" /* 5195 */;
 import ActionSheetConstants from "ActionSheetConstants" /* 5227 */;
 import FastImageDefault from "FastImage" /* 5631 */;
 import ClockIcon from "ClockIcon" /* 5653 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7251 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 9995 */;
-import BookmarkIcon from "BookmarkIcon" /* 13631 */;
-import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 13649 */;
-import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 13653 */;
-import _modDef13657 from "module_13657" /* 13657 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7254 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 10006 */;
+import BookmarkIcon from "BookmarkIcon" /* 13649 */;
+import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 13667 */;
+import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 13671 */;
+import _modDef13675 from "module_13675" /* 13675 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4945 */;
@@ -55,7 +55,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IntroDe
   isReminder = isReminder.isReminder;
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13657 };
+    const obj2 = { uri: _modDef13675 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -224,7 +224,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IntroDe
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef13657 };
+  const obj4 = { uri: _modDef13675 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
   const items = [hasOwnProperty(FastImageDefault, obj3), ];

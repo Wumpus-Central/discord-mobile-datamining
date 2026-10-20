@@ -1,21 +1,21 @@
-// === Module 13794: EditAttachmentActionSheet ===
+// === Module 13812: EditAttachmentActionSheet ===
 
-// Module 13794 (EditAttachmentActionSheet)
+// Module 13812 (EditAttachmentActionSheet)
 import util from "util" /* 1128 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4954 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6848 */;
-import TextArea from "TextArea" /* 7128 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 7194 */;
-import ActionSheet from "ActionSheet" /* 7244 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8584 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6851 */;
+import TextArea from "TextArea" /* 7131 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 7197 */;
+import ActionSheet from "ActionSheet" /* 7247 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8596 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5965 */;
+import MessageStore from "MessageStore" /* 5968 */;
 
 const require = globalThis.__r;
 
@@ -486,7 +486,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditAtta
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8683)(attachment);
+  const tmp5 = attachment(8695)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

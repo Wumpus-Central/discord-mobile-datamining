@@ -1,18 +1,18 @@
-// === Module 13750: PremiumGiftPurchaseSuccess ===
+// === Module 13768: PremiumGiftPurchaseSuccess ===
 
-// Module 13750 (PremiumGiftPurchaseSuccess)
+// Module 13768 (PremiumGiftPurchaseSuccess)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2054 */;
 import ToastUtils from "ToastUtils" /* 5624 */;
 import _modDef5645 from "module_5645" /* 5645 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6326 */;
-import ClipboardUtils from "ClipboardUtils" /* 7231 */;
-import showShareActionSheet from "showShareActionSheet" /* 8771 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10365 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6329 */;
+import ClipboardUtils from "ClipboardUtils" /* 7234 */;
+import showShareActionSheet from "showShareActionSheet" /* 8783 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10376 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6772 */;
+import SKUStore from "SKUStore" /* 6775 */;
 
-const PremiumGiftBackgroundAnimationDefault = tmp15(10504);
+const PremiumGiftBackgroundAnimationDefault = tmp15(10515);
 require = fn;
 const View = fn(17).View;
 const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
@@ -229,14 +229,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp4 = closure_11();
   let obj = giftCodeRecord(576);
-  const nativeGiftContext = giftCodeRecord(10368).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10379).useNativeGiftContext();
   ({ premiumType, planInterval, giftStyle } = nativeGiftContext);
   if (cResult[0] !== giftCodeRecord.code) {
-    const giftCodeURL = tmp(6326).getGiftCodeURL(giftCodeRecord.code);
+    const giftCodeURL = tmp(6329).getGiftCodeURL(giftCodeRecord.code);
     cResult[0] = giftCodeRecord.code;
     cResult[1] = giftCodeURL;
     let tmp6 = giftCodeURL;
-    const tmpResult = tmp(6326);
+    const tmpResult = tmp(6329);
   } else {
     tmp6 = cResult[1];
   }
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
                         tmp51 = tmp54;
                       }
                       const obj8 = { text: tmp6, icon: _modDef5645, iconPosition: "end", onPress: tmp9 };
-                      const tmp50 = closure_8(tmp(8833).InputButton, obj8);
+                      const tmp50 = closure_8(tmp(8845).InputButton, obj8);
                       cResult[32] = tmp6;
                       cResult[33] = tmp9;
                       cResult[34] = tmp50;
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
     subscriptionPlanId = tmp(2054).getPlanIdForPremiumType(premiumType, planInterval);
     const tmpResult2 = tmp(2054);
   }
-  let obj2 = giftCodeRecord(10368);
+  let obj2 = giftCodeRecord(10379);
   const tierDisplayNameByPlanId = PremiumUtilsDefault.getTierDisplayNameByPlanId(subscriptionPlanId);
   PremiumUtilsDefault;
   if (cResult[16] === giftCodeRecord) {
@@ -487,10 +487,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
 }) : (function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(10368).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10379).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(10368);
-  const giftCodeURL = giftCodeRecord(6326).getGiftCodeURL(giftCodeRecord.code);
+  let obj = giftCodeRecord(10379);
+  const giftCodeURL = giftCodeRecord(6329).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
   }
@@ -500,7 +500,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
     subscriptionPlanId = tmp2(2054).getPlanIdForPremiumType(premiumType, planInterval);
     const tmp2Result = tmp2(2054);
   }
-  let obj2 = giftCodeRecord(6326);
+  let obj2 = giftCodeRecord(6329);
   const tmp6 = giftCodeURL;
   const tierDisplayNameByPlanId = giftCodeURL(2054).getTierDisplayNameByPlanId(subscriptionPlanId);
   const obj4 = giftCodeURL(2054);
@@ -514,7 +514,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(10504), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(10515), { giftStyle });
   const items1 = [closure_8(View, obj3), , , , ];
   const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1128).intl;
@@ -536,7 +536,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   obj10.children = intl3.string(giftCodeRecord(1128).t["qS+yMo"]);
   const items2 = [closure_8(giftCodeRecord(5195).Text, obj10), ];
   obj5 = giftCodeURL(2054);
-  items2[1] = closure_8(giftCodeRecord(8833).InputButton, { text: giftCodeURL, icon: tmp6(5645), iconPosition: "end", onPress: callback });
+  items2[1] = closure_8(giftCodeRecord(8845).InputButton, { text: giftCodeURL, icon: tmp6(5645), iconPosition: "end", onPress: callback });
   obj9.children = items2;
   items1[3] = closure_10(View, obj9);
   const obj12 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };

@@ -1,12 +1,12 @@
-// === Module 15228: RoleDot ===
+// === Module 15246: RoleDot ===
 
-// Module 15228 (RoleDot)
+// Module 15246 (RoleDot)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import useFontScale from "useFontScale" /* 5214 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5943 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5946 */;
 import noop from "module_19" /* 19 */;
 
 const LinearGradientDefault = tmp5(5219);

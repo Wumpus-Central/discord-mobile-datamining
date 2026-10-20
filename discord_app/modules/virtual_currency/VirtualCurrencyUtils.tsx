@@ -1,6 +1,6 @@
-// === Module 9493: VirtualCurrencyUtils ===
+// === Module 9506: VirtualCurrencyUtils ===
 
-// Module 9493 (VirtualCurrencyUtils)
+// Module 9506 (VirtualCurrencyUtils)
 import Constants from "Constants" /* 1087 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1089 */;
 import PremiumConstants from "PremiumConstants" /* 1394 */;

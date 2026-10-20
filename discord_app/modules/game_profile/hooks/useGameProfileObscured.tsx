@@ -1,6 +1,6 @@
-// === Module 8526: useGameProfileObscured ===
+// === Module 8530: useGameProfileObscured ===
 
-// Module 8526 (useGameProfileObscured)
+// Module 8530 (useGameProfileObscured)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import utils from "utils" /* 5573 */;

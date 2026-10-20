@@ -1,6 +1,6 @@
-// === Module 10332: ImageCarousel ===
+// === Module 10343: ImageCarousel ===
 
-// Module 10332 (ImageCarousel)
+// Module 10343 (ImageCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,21 +9,21 @@ import useWindowDimensions from "useWindowDimensions" /* 1499 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
 import spring from "spring" /* 5208 */;
-import Pressables from "Pressables" /* 6856 */;
-import _modDef6980 from "module_6980" /* 6980 */;
-import Upload from "Upload" /* 8087 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9579 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10334 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10336 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 12030 */;
+import Pressables from "Pressables" /* 6859 */;
+import _modDef6983 from "module_6983" /* 6983 */;
+import Upload from "Upload" /* 8091 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9592 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10345 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10347 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 12045 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8237 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8241 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7577).DraftType;
-const ImageCarouselConstants = fn(10333);
+const DraftType = fn(7580).DraftType;
+const ImageCarouselConstants = fn(10344);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
@@ -1072,7 +1072,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageCarouse
                                           let tmp30 = cResult[36];
                                         }
                                         if (cResult[37] !== tmp4.closeButtonIcon) {
-                                          const obj3 = { source: _modDef6980, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp4.closeButtonIcon };
+                                          const obj3 = { source: _modDef6983, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp4.closeButtonIcon };
                                           const tmp34 = closure_1_11(native.Icon, obj3);
                                           cResult[37] = tmp4.closeButtonIcon;
                                           cResult[38] = tmp34;
@@ -1248,7 +1248,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageCarouse
   const obj6 = { style: null, children: null };
   const items6 = [tmp.closeContainer, tmp8];
   obj6.style = items6;
-  obj6.children = closure_1_11(native.Icon, { source: _modDef6980, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon });
+  obj6.children = closure_1_11(native.Icon, { source: _modDef6983, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon });
   obj5.children = closure_1_11(ReanimatedRexportDefault.View, obj6);
   items5[1] = closure_1_11(Pressables.PressableOpacity, obj5);
   obj3.children = items5;

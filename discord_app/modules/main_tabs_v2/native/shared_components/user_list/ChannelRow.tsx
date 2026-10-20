@@ -1,20 +1,20 @@
-// === Module 10608: ChannelRow ===
+// === Module 10619: ChannelRow ===
 
-// Module 10608 (ChannelRow)
+// Module 10619 (ChannelRow)
 import nativeDefault from "native" /* 587 */;
 import _modDef2050 from "module_2050" /* 2050 */;
 import DateUtils from "DateUtils" /* 4773 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useChannelName from "useChannelName" /* 5565 */;
-import TextIcon2 from "TextIcon" /* 8496 */;
-import ForumIcon from "ForumIcon" /* 8504 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10609 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 12749 */;
+import TextIcon2 from "TextIcon" /* 8500 */;
+import ForumIcon from "ForumIcon" /* 8508 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10620 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 12766 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import ReadStateStore from "ReadStateStore" /* 6719 */;
+import ReadStateStore from "ReadStateStore" /* 6722 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -24,8 +24,8 @@ const useChannelNameDefault = useChannelName;
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress", "onLongPress", "trailing", "subLabel", "label"];
 const View = fn(17).View;
-const UserRowModes = fn(10534).UserRowModes;
-const ReadStateTypes = fn(6653).ReadStateTypes;
+const UserRowModes = fn(10545).UserRowModes;
+const ReadStateTypes = fn(6656).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(4945);
@@ -232,8 +232,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         obj2.guild = stateFromStores;
         obj2.channel = tmp4;
-        obj2.size = tmp(12749).GuildIconWithChannelTypeSizes.SMALL_32;
-        const tmp34 = closure_14(tmp(12749).GuildIconWithChannelType, obj2);
+        obj2.size = tmp(12766).GuildIconWithChannelTypeSizes.SMALL_32;
+        const tmp34 = closure_14(tmp(12766).GuildIconWithChannelType, obj2);
       }
       cResult[26] = tmp4;
       cResult[27] = stateFromStores;

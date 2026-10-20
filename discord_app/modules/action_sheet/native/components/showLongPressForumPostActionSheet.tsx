@@ -1,6 +1,6 @@
-// === Module 10792: showLongPressForumPostActionSheet ===
+// === Module 10803: showLongPressForumPostActionSheet ===
 
-// Module 10792 (showLongPressForumPostActionSheet)
+// Module 10803 (showLongPressForumPostActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import size from "module_2" /* 2 */;
@@ -12,6 +12,6 @@ export default function showLongPressForumPostActionSheet(thread, parentChannel)
   if (arg2 === undefined) {
     hideActionSheet = ActionSheetActionCreatorsDefault.hideActionSheet;
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10793, dependencyMap.paths), "ForumPostLongPressActionSheet", { thread, parentChannel, onClose: hideActionSheet });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10804, dependencyMap.paths), "ForumPostLongPressActionSheet", { thread, parentChannel, onClose: hideActionSheet });
   const obj2 = { thread, parentChannel, onClose: hideActionSheet };
 };

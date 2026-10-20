@@ -1,6 +1,6 @@
-// === Module 9196: SteamReleaseStatus ===
+// === Module 9208: SteamReleaseStatus ===
 
-// Module 9196 (SteamReleaseStatus)
+// Module 9208 (SteamReleaseStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx");

@@ -1,13 +1,13 @@
-// === Module 9291: CollectiblesWishlistItemRecord ===
+// === Module 9303: CollectiblesWishlistItemRecord ===
 
-// Module 9291 (CollectiblesWishlistItemRecord)
+// Module 9303 (CollectiblesWishlistItemRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7601 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7604 */;
 import NameplateRecord from "NameplateRecord" /* 1993 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7602 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7603 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7605 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7606 */;
 import SKURecord from "SKURecord" /* 2048 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9290 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9302 */;
 
 require = fn;
 function createCollectiblesItemFromServerResponse(collectibles_item) {
@@ -24,7 +24,7 @@ function createCollectiblesItemFromServerResponse(collectibles_item) {
     return null;
   }
 }
-let closure_3 = fn(7600).transformSKUToCollectiblesItem;
+let closure_3 = fn(7603).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1087).SKUProductLines;
 const prototype = function CollectiblesWishlistItemRecord(bundle_items) {
   const tmp2 = new prototype(bundle_items, tmp);

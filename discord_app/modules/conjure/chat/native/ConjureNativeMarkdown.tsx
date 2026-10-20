@@ -1,12 +1,12 @@
-// === Module 12224: ConjureNativeMarkdown ===
+// === Module 12243: ConjureNativeMarkdown ===
 
-// Module 12224 (ConjureNativeMarkdown)
+// Module 12243 (ConjureNativeMarkdown)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12225 */;
-import conjureMarkup from "conjureMarkup" /* 12226 */;
-import useConjureRevealedText from "useConjureRevealedText" /* 12227 */;
+import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 12244 */;
+import conjureMarkup from "conjureMarkup" /* 12245 */;
+import useConjureRevealedText from "useConjureRevealedText" /* 12246 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,11 +34,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
   let tmp4 = closure_9();
   _require = tmp4;
   if (cResult[0] !== source) {
-    const splitMarkdownBlocksResult = tmp(12225).splitMarkdownBlocks(source);
+    const splitMarkdownBlocksResult = tmp(12244).splitMarkdownBlocks(source);
     cResult[0] = source;
     cResult[1] = splitMarkdownBlocksResult;
     marker = splitMarkdownBlocksResult;
-    const tmpResult = tmp(12225);
+    const tmpResult = tmp(12244);
   } else {
     marker = cResult[1];
   }
@@ -94,7 +94,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
         const obj3 = { style: list.marker, children: closure_2_4(closure_0(5195).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
         const items1 = [closure_2_4(View, obj3), ];
         const obj5 = { style: list.itemText, children: null };
-        const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_0(12226).parseConjureMarkup(children.text, true, obj2) };
+        const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_0(12245).parseConjureMarkup(children.text, true, obj2) };
         obj5.children = closure_2_4(closure_0(5195).Text, obj6);
         items1[1] = closure_2_4(View, obj5);
         obj.children = items1;

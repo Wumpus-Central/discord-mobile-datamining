@@ -1,6 +1,6 @@
-// === Module 11711: conjurePublishBlockedReason ===
+// === Module 11725: conjurePublishBlockedReason ===
 
-// Module 11711 (conjurePublishBlockedReason)
+// Module 11725 (conjurePublishBlockedReason)
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
 import size from "module_2" /* 2 */;

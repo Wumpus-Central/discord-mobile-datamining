@@ -1,11 +1,11 @@
-// === Module 11520: GameConsoleActionCreators ===
+// === Module 11531: GameConsoleActionCreators ===
 
-// Module 11520 (GameConsoleActionCreators)
+// Module 11531 (GameConsoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5813 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 11521 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5815 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 11532 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
 import SessionsStore from "SessionsStore" /* 5678 */;

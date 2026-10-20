@@ -1,15 +1,15 @@
-// === Module 17964: CustomTypingIndicatorProfileCoachmark ===
+// === Module 17987: CustomTypingIndicatorProfileCoachmark ===
 
-// Module 17964 (CustomTypingIndicatorProfileCoachmark)
+// Module 17987 (CustomTypingIndicatorProfileCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import user from "user" /* 1400 */;
 import _modDef3822 from "module_3822" /* 3822 */;
-import openUserSettings from "openUserSettings" /* 7436 */;
-import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 12871 */;
-import _modDef12872 from "module_12872" /* 12872 */;
-import _modDef12873 from "module_12873" /* 12873 */;
+import openUserSettings from "openUserSettings" /* 7439 */;
+import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 12889 */;
+import _modDef12890 from "module_12890" /* 12890 */;
+import _modDef12891 from "module_12891" /* 12891 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const cResult = c.c(6);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [_modDef12872, _modDef12873, _modDef12872];
+    const items = [_modDef12890, _modDef12891, _modDef12890];
     cResult[0] = items;
     let first = items;
   } else {
@@ -58,7 +58,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const tmp = closure_8();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
-  const items = [_modDef12872, _modDef12873, _modDef12872];
+  const items = [_modDef12890, _modDef12891, _modDef12890];
   obj2.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   }
   const obj = markAsDismissed(576);
   const tmp10 = analyticsLocations;
-  analyticsLocations = analyticsLocations(7199)(analyticsLocations(7224).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK).analyticsLocations;
+  analyticsLocations = analyticsLocations(7202)(analyticsLocations(7227).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK).analyticsLocations;
   if (cResult[2] !== markAsDismissed) {
     class P {
       constructor() {
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   cResult[6] = analyticsLocations;
   cResult[7] = markAsDismissed;
   cResult[8] = fn;
-  const tmp11 = analyticsLocations(7199);
+  const tmp11 = analyticsLocations(7202);
 }) : (function CustomTypingIndicatorProfileCoachmark(visible) {
   visible = visible.visible;
   const markAsDismissed = visible.markAsDismissed;

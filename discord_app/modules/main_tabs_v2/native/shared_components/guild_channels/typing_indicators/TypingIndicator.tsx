@@ -1,6 +1,6 @@
-// === Module 17242: typing_indicators/TypingIndicator ===
+// === Module 17261: typing_indicators/TypingIndicator ===
 
-// Module 17242 (typing_indicators/TypingIndicator)
+// Module 17261 (typing_indicators/TypingIndicator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;

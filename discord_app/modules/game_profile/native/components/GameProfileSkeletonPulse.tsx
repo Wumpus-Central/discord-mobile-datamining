@@ -1,6 +1,6 @@
-// === Module 9254: GameProfileSkeletonPulse ===
+// === Module 9266: GameProfileSkeletonPulse ===
 
-// Module 9254 (GameProfileSkeletonPulse)
+// Module 9266 (GameProfileSkeletonPulse)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 

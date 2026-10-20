@@ -1,38 +1,38 @@
-// === Module 18285: VoicePanelCard ===
+// === Module 18307: VoicePanelCard ===
 
-// Module 18285 (VoicePanelCard)
+// Module 18307 (VoicePanelCard)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4999 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
 import spring from "spring" /* 5208 */;
 import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6593 */;
-import StreamActionCreators from "StreamActionCreators" /* 7773 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9892 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11931 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18169 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18288 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18289 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6596 */;
+import StreamActionCreators from "StreamActionCreators" /* 7777 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9904 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11945 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18192 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 18310 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 18311 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6590 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5676 */;
-import SpeakingStore from "SpeakingStore" /* 6633 */;
+import SpeakingStore from "SpeakingStore" /* 6636 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(10693);
+const VoicePanelConstants = fn(10704);
 ({ VoicePanelCTACard: closure_9, VoicePanelModes: c10, MODE_CHANGE_PHYSICS: closure_11, SPEAKING_PHYSICS: closure_12, VoicePanelCardItemType: map1 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10691).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18170).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(10696).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10702).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18193).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(10707).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
 const ParticipantTypes = fn(5593).ParticipantTypes;
-let SCALE_PHYSICS = fn(10694).SCALE_PHYSICS;
+let SCALE_PHYSICS = fn(10705).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
@@ -1943,7 +1943,7 @@ let closure_74 = { code: "function VoicePanelCardTsx38(finished_0){const{runOnJS
 const __initData35 = { code: "function VoicePanelCardTsx39(values){const{pipState,lastPIPScale,withSpring,layoutPhysics,wrapperOffset}=this.__closure;const scaleAdjustment=pipState.scale.get()/lastPIPScale.get();const initialValues={originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth*scaleAdjustment,height:values.currentHeight*scaleAdjustment};return{animations:{originX:withSpring(values.targetOriginX,layoutPhysics,'respect-motion-settings'),originY:withSpring(values.targetOriginY,layoutPhysics,'respect-motion-settings'),width:withSpring(values.targetWidth,layoutPhysics,'respect-motion-settings'),height:withSpring(values.targetHeight,layoutPhysics,'respect-motion-settings')},initialValues:initialValues,callback:function(){const _wrapperOffset=wrapperOffset.get();if(!_wrapperOffset.gestureActive&&_wrapperOffset.y!==0){wrapperOffset.set({gestureActive:false,x:0,y:0});}lastPIPScale.set(pipState.scale.get());}};}" };
 ReactCompilerGating = fn(558);
 let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedWrapper(coords) {
-  const cResult = cleanUp(id[21]).c(64);
+  const cResult = cleanUp(id[21]).c(67);
   ({ children, cleanUp } = coords);
   coords = coords.coords;
   id = coords.id;
@@ -2591,7 +2591,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   fn2.__workletHash = 1094240470006;
   fn2.__initData = __initData31;
   derivedValue1 = cleanUp(id[14]).useDerivedValue(fn2);
-  const tmp5Result9 = cleanUp(id[14]);
+  const tmp5Result10 = cleanUp(id[14]);
   class C {
     constructor() {
       if (connected.get()) {
@@ -2619,9 +2619,9 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   sharedTransitionState = tmp12.sharedTransitionState;
   closure_31 = tmp13;
   let obj5 = { connected, EDGE_GUTTER: safeArea, safeArea, windowDimensions, contentDimensions, wrapperDimensions };
-  const tmp5Result10 = cleanUp(id[14]);
+  const tmp5Result11 = cleanUp(id[14]);
   token = cleanUp(id[42]).useToken(tmp(tmp2[19]).modules.mobile.VOICE_TILE_BORDER_RADIUS);
-  const tmp5Result11 = cleanUp(id[42]);
+  const tmp5Result12 = cleanUp(id[42]);
   class E {
     constructor() {
       value = coords.get();
@@ -2840,11 +2840,11 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
       return size1;
     }
   }
-  const tmp5Result12 = cleanUp(id[14]);
+  const tmp5Result13 = cleanUp(id[14]);
   E.__closure = { coords, focused, id, isPIP: pIPState.mode === pipAvoidanceSpecs.IN_APP, pipState: pIPState, getScaledPIPContainerHeight: cleanUp(id[51]).getScaledPIPContainerHeight, getClampedPIPPosition: cleanUp(id[51]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: coords(id[52]), contentDimensions, sharedTransitionState, TransitionStates: cleanUp(id[47]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: coords(id[44]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: cleanUp(id[14]).withDelay, withTiming: cleanUp(id[37]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: cleanUp(id[14]).runOnJS, cleanUp, withSpring: cleanUp(id[38]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS };
   E.__workletHash = 12967186727989;
   E.__initData = __initData33;
-  const animatedStyle = tmp5Result12.useAnimatedStyle(E);
+  const animatedStyle = tmp5Result13.useAnimatedStyle(E);
   let obj7 = {
     gesturesEnabled: tmp12.cardGestureEnabled,
     onSingleTap() {
@@ -2859,7 +2859,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   };
   let obj6 = { coords, focused, id, isPIP: pIPState.mode === pipAvoidanceSpecs.IN_APP, pipState: pIPState, getScaledPIPContainerHeight: cleanUp(id[51]).getScaledPIPContainerHeight, getClampedPIPPosition: cleanUp(id[51]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: coords(id[52]), contentDimensions, sharedTransitionState, TransitionStates: cleanUp(id[47]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: coords(id[44]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: cleanUp(id[14]).withDelay, withTiming: cleanUp(id[37]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: cleanUp(id[14]).runOnJS, cleanUp, withSpring: cleanUp(id[38]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS };
   const tmpResult = coords(id[54]);
-  if (tmp5Result13.isStableActivityParticipant(tmp7)) {
+  if (tmp5Result14.isStableActivityParticipant(tmp7)) {
     const fn3 = () => {
       value = focused.get();
       id = undefined;
@@ -2873,7 +2873,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
       }
     };
   } else if (isSelf) {
-    const tmp5Result14 = tmp5(tmp2[50]);
+    const tmp5Result15 = tmp5(tmp2[50]);
   }
   obj7.onDoubleTap = fn3;
   let fn4;
@@ -2882,7 +2882,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   }
   obj7.onLongPress = fn4;
   let items = [pipHandoff, id, pIPState.mode === pipAvoidanceSpecs.IN_APP];
-  tmp5Result13 = cleanUp(id[50]);
+  tmp5Result14 = cleanUp(id[50]);
   const layoutEffect = obj.useLayoutEffect(() => {
     pipHandoff.syncCardPIPLayout(id, closure_31);
   }, items);
@@ -2911,7 +2911,7 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
       return () => cleanUp(id[14]).cancelAnimation(sharedValue);
     }
   }, items3);
-  const tmp5Result15 = cleanUp(id[14]);
+  const tmp5Result16 = cleanUp(id[14]);
   let scale = pIPState.scale;
   sharedValue1 = cleanUp(id[14]).useSharedValue(scale.get());
   function me(currentOriginX) {
@@ -2940,18 +2940,23 @@ let closure_76 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
     };
     return obj;
   }
-  const tmp5Result16 = cleanUp(id[14]);
+  const tmp5Result17 = cleanUp(id[14]);
   me.__closure = { pipState: pIPState, lastPIPScale: sharedValue1, withSpring: cleanUp(id[38]).withSpring, layoutPhysics, wrapperOffset };
   me.__workletHash = 12776532702151;
   me.__initData = __initData35;
   const items4 = [layoutPhysics, wrapperOffset, sharedValue1, pIPState.scale];
   const callback1 = obj.useCallback(me, items4);
   let obj9 = { gesture: tmpResultResult, children: null };
-  let obj10 = { style: null, layout: callback1, children };
+  let obj10 = { nativeID: null, style: null, layout: null, children: null };
+  const obj8 = { pipState: pIPState, lastPIPScale: sharedValue1, withSpring: cleanUp(id[38]).withSpring, layoutPhysics, wrapperOffset };
+  const tmpResult2 = coords(id[41]);
+  obj10.nativeID = cleanUp(id[55]).getExternalPipTileNativeId("card", id);
   const items5 = [tmp3.positionWrapper, animatedStyle];
   obj10.style = items5;
-  obj9.children = windowDimensions(coords(id[41]), obj10);
-  return windowDimensions(cleanUp(id[55]).GestureDetector, obj9);
+  obj10.layout = callback1;
+  obj10.children = children;
+  obj9.children = windowDimensions(tmpResult2, obj10);
+  return windowDimensions(cleanUp(id[56]).GestureDetector, obj9);
 });
 const __initData36 = { code: "function VoicePanelCardTsx40(){const{EDGE_GUTTER,coords,scrollPosition,windowDimensions}=this.__closure;const yPos=EDGE_GUTTER+coords.get().y;return yPos>scrollPosition.get()-coords.get().height&&yPos<scrollPosition.get()+windowDimensions.get().height;}" };
 const __initData37 = { code: "function layoutTransition_VoicePanelCardTsx41(values,t10){const{layoutTransitionFunction,physics,pipState,lastPipScale}=this.__closure;const disableAnimation=t10===undefined?false:t10;return layoutTransitionFunction(values,physics,pipState.scale,lastPipScale,disableAnimation);}" };
@@ -3034,7 +3039,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     DEFAULT = scrollPosition(tmp2[30]).MediaEngineContextTypes.DEFAULT;
   }
   windowDimensions(id2[29])(DEFAULT, str);
-  windowDimensions(id2[56])(str);
+  windowDimensions(id2[57])(str);
   const tmp4Result = windowDimensions(id2[29]);
   if (transitionState === scrollPosition(id2[47]).TransitionStates.MOUNTED) {
     let num7 = 1;
@@ -3054,7 +3059,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp25 = cResult[9];
     }
     const layoutEffect = obj2.useLayoutEffect(tmp24, tmp25);
-    scrollPosition(tmp2[57]);
+    scrollPosition(tmp2[58]);
     class N {
       constructor() {
         return closure_7.isConnected();
@@ -3089,8 +3094,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return closure_7.isConnected();
         }
       }
-      obj4.damping = tmp4(tmp2[58])(closure_11.damping - 2, closure_11.damping + 2);
-      obj4.stiffness = tmp4(tmp2[58])(closure_11.stiffness - 20, closure_11.stiffness + 20);
+      obj4.damping = tmp4(tmp2[59])(closure_11.damping - 2, closure_11.damping + 2);
+      obj4.stiffness = tmp4(tmp2[59])(closure_11.stiffness - 20, closure_11.stiffness + 20);
       cResult[10] = obj4;
       let tmp34 = obj4;
     } else {
@@ -3117,7 +3122,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 return closure_7.isConnected();
               }
             }
-            const tmp63 = closure_20(tmp4(tmp2[59]), {});
+            const tmp63 = closure_20(tmp4(tmp2[60]), {});
           }
           class N {
             constructor() {
@@ -3133,7 +3138,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   return closure_7.isConnected();
                 }
               }
-              const tmp60 = closure_20(tmp4(tmp2[60]), {});
+              const tmp60 = closure_20(tmp4(tmp2[61]), {});
             }
             class N {
               constructor() {
@@ -3339,7 +3344,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           obj9.applicationId = tmp6.applicationId;
           obj9.layout = layoutTransition2;
-          const tmp41 = closure_20(tmp4(tmp2[62]), obj9, tmp6.id);
+          const tmp41 = closure_20(tmp4(tmp2[63]), obj9, tmp6.id);
           cResult[49] = layoutTransition2;
           cResult[50] = tmp6.applicationId;
           cResult[51] = tmp6.id;
@@ -3453,7 +3458,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     DEFAULT = tmp5(tmp2[30]).MediaEngineContextTypes.DEFAULT;
   }
   const tmpResultResult = windowDimensions(id2[29])(DEFAULT, str);
-  windowDimensions(id2[56])(str);
+  windowDimensions(id2[57])(str);
   const tmpResult = windowDimensions(id2[29]);
   if (transitionState === scrollPosition(id2[47]).TransitionStates.MOUNTED) {
     let num = 1;
@@ -3487,8 +3492,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     };
   }, items1);
   const tmp5Result12 = scrollPosition(id2[14]);
-  cardLayoutCoordsSubscription = scrollPosition(id2[57]).useCardLayoutCoordsSubscription(id, layoutManager);
-  const tmp5Result13 = scrollPosition(id2[57]);
+  cardLayoutCoordsSubscription = scrollPosition(id2[58]).useCardLayoutCoordsSubscription(id, layoutManager);
+  const tmp5Result13 = scrollPosition(id2[58]);
   class F {
     constructor() {
       sum = EDGE_GUTTER + closure_4.get().y;
@@ -3515,7 +3520,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   sharedValue2 = scrollPosition(id2[14]).useSharedValue(scale.get());
   const items2 = [pIPState.scale, sharedValue2];
   const memo = obj.useMemo(() => {
-    const physics = { mass: closure_1_11.mass, damping: windowDimensions(id2[58])(closure_1_11.damping - 2, closure_1_11.damping + 2), stiffness: windowDimensions(id2[58])(closure_1_11.stiffness - 20, closure_1_11.stiffness + 20) };
+    const physics = { mass: closure_1_11.mass, damping: windowDimensions(id2[59])(closure_1_11.damping - 2, closure_1_11.damping + 2), stiffness: windowDimensions(id2[59])(closure_1_11.stiffness - 20, closure_1_11.stiffness + 20) };
     const obj2 = { physics, layoutTransition: null };
     function layoutTransition(originX) {
       if (flag === undefined) {
@@ -3533,10 +3538,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (item.type === constants2.CTA) {
     const id3 = item.id;
     if (constants.NO_VIDEO_PARTICIPANTS === id3) {
-      let tmp29Result = closure_20(tmp(tmp2[59]), {});
+      let tmp29Result = closure_20(tmp(tmp2[60]), {});
       let tmp27 = closure_20;
     } else if (tmp38.CALLER_DISCONNECTED === id3) {
-      tmp29Result = closure_20(tmp(tmp2[60]), {});
+      tmp29Result = closure_20(tmp(tmp2[61]), {});
       tmp27 = closure_20;
     }
     const obj4 = { cleanUp: cleanUp.cleanUp, coords: cardLayoutCoordsSubscription, id, isRTCConnected: stateFromStores, isScrollVisible: derivedValue, layoutPhysics: physics, transitionState, sharedVisible: sharedValue, children: null };
@@ -3544,7 +3549,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let tmp27Result = null != tmp4;
     if (tmp27Result) {
       const obj5 = { isRinging: tmp8, participant: tmp4, label: null, layout: null, speaking: null };
-      const tmpResult3 = tmp(tmp2[63]);
+      const tmpResult3 = tmp(tmp2[64]);
       let userNick;
       if (tmp5Result17.isStableParticipantWithUser(tmp4)) {
         userNick = tmp4.userNick;
@@ -3594,7 +3599,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const obj8 = { avError: tmpResultResult, userId: user.id, style: null };
             user = pIPState.absoluteFill;
             obj8.style = user;
-            tmp31Result = closure_20(tmp(tmp2[61]), obj8);
+            tmp31Result = closure_20(tmp(tmp2[62]), obj8);
             tmp31 = closure_20;
           }
         }
@@ -3619,7 +3624,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       tmp27 = closure_20;
     } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj11 = { sharedVisible: sharedValue, applicationId: tmp4.applicationId, layout: layoutTransition };
-      tmp29Result = closure_20(tmp(tmp2[62]), obj11, tmp4.id);
+      tmp29Result = closure_20(tmp(tmp2[63]), obj11, tmp4.id);
       tmp27 = closure_20;
     }
   }

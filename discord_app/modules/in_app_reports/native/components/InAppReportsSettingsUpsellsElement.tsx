@@ -1,13 +1,13 @@
-// === Module 14390: InAppReportsSettingsUpsellsElement ===
+// === Module 14408: InAppReportsSettingsUpsellsElement ===
 
-// Module 14390 (InAppReportsSettingsUpsellsElement)
+// Module 14408 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 587 */;
 import useMountEffectDefault from "useMountEffect" /* 5224 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
-import SettingsIcon from "SettingsIcon" /* 7434 */;
-import openUserSettings from "openUserSettings" /* 7436 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8055 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14384 */;
+import SettingsIcon from "SettingsIcon" /* 7437 */;
+import openUserSettings from "openUserSettings" /* 7439 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8059 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14402 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
@@ -49,7 +49,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp13 = closure_9(onButtonClick(7434).SettingsIcon, {});
+      const tmp13 = closure_9(onButtonClick(7437).SettingsIcon, {});
       cResult[5] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -68,7 +68,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
       }
     }
     const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-    const tmp16 = closure_9(tmp7(14384), obj2);
+    const tmp16 = closure_9(tmp7(14402), obj2);
     cResult[6] = description;
     cResult[7] = disabledTitle;
     cResult[8] = tmp5;

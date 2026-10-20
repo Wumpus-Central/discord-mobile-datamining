@@ -1,9 +1,9 @@
-// === Module 8315: useGuildPowerupsBoostCount ===
+// === Module 8319: useGuildPowerupsBoostCount ===
 
-// Module 8315 (useGuildPowerupsBoostCount)
+// Module 8319 (useGuildPowerupsBoostCount)
 import GameServerExperiment from "GameServerExperiment" /* 5161 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8316 */;
+import GameServerStore from "GameServerStore" /* 8320 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5142 */;
 

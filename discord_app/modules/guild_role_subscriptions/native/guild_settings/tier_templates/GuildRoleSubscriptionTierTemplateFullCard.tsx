@@ -1,14 +1,14 @@
-// === Module 19041: GuildRoleSubscriptionTierTemplateFullCard ===
+// === Module 19064: GuildRoleSubscriptionTierTemplateFullCard ===
 
-// Module 19041 (GuildRoleSubscriptionTierTemplateFullCard)
+// Module 19064 (GuildRoleSubscriptionTierTemplateFullCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 16324 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17289 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 19044 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 16343 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 17308 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 19067 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                       if (cResult[40] !== cResult[36]) {
                         const obj9 = { sectionTitle: tmp49, children: null };
                         const obj10 = { gap: 14, children: tmp51 };
-                        obj9.children = closure_4(tmp(9873).GappedList, obj10);
+                        obj9.children = closure_4(tmp(9885).GappedList, obj10);
                         const tmp58 = closure_4(closure_10, obj9);
                         cResult[40] = tmp51;
                         cResult[41] = tmp58;
@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                         if (cResult[47] !== cResult[45]) {
                           const obj11 = { sectionTitle: tmp63, children: null };
                           const obj12 = { gap: 14, children: tmp65 };
-                          obj11.children = closure_4(tmp(9873).GappedList, obj12);
+                          obj11.children = closure_4(tmp(9885).GappedList, obj12);
                           const tmp72 = closure_4(closure_10, obj11);
                           cResult[47] = tmp65;
                           cResult[48] = tmp72;
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
             }
           }
           const obj16 = { roleColor: role_color, roleImage: image, roleName: name, guildId };
-          const tmp44 = closure_4(tmp(19043).GuildRoleSubscriptionRolePreview, obj16);
+          const tmp44 = closure_4(tmp(19066).GuildRoleSubscriptionRolePreview, obj16);
           cResult[26] = guildId;
           cResult[27] = image;
           cResult[28] = name;

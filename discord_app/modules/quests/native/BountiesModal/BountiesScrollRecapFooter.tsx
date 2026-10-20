@@ -1,14 +1,14 @@
-// === Module 16125: BountiesScrollRecapFooter ===
+// === Module 16144: BountiesScrollRecapFooter ===
 
-// Module 16125 (BountiesScrollRecapFooter)
+// Module 16144 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 5064 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7022 */;
-import OrbsIcon from "OrbsIcon" /* 9347 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7025 */;
+import OrbsIcon from "OrbsIcon" /* 9359 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 

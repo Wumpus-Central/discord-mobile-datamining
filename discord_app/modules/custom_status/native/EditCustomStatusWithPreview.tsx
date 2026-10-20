@@ -1,6 +1,6 @@
-// === Module 10854: EditCustomStatusWithPreview ===
+// === Module 10865: EditCustomStatusWithPreview ===
 
-// Module 10854 (EditCustomStatusWithPreview)
+// Module 10865 (EditCustomStatusWithPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,16 +10,16 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import shared from "shared" /* 4952 */;
 import ChatInputUtils from "ChatInputUtils" /* 5120 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5926 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import Pressables from "Pressables" /* 6856 */;
-import NavigatorHeader from "NavigatorHeader" /* 6872 */;
-import _modDef6980 from "module_6980" /* 6980 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9740 */;
-import setCustomStatusDefault from "setCustomStatus" /* 10858 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 10860 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 10863 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 10865 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5929 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import Pressables from "Pressables" /* 6859 */;
+import NavigatorHeader from "NavigatorHeader" /* 6875 */;
+import _modDef6983 from "module_6983" /* 6983 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9753 */;
+import setCustomStatusDefault from "setCustomStatus" /* 10869 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 10871 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 10874 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 10876 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -259,7 +259,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[12]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10945, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10956, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[41])(first2) };
     obj18.trailing = callback1(tmp6(tmp7[32]).Text, obj19);
@@ -297,7 +297,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(10855).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(10866).STATUS_MAX_LENGTH;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1395).EmojiIntention;
@@ -346,7 +346,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
     tmp8 = cResult[2];
   }
   if (cResult[3] !== tmp4.closeIcon) {
-    const obj3 = { source: _modDef6980, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
+    const obj3 = { source: _modDef6983, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
     const tmp12 = map1(native.Icon, obj3);
     cResult[3] = tmp4.closeIcon;
     cResult[4] = tmp12;
@@ -372,7 +372,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_15();
-  obj.children = map1(native.Icon, { source: _modDef6980, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
+  obj.children = map1(native.Icon, { source: _modDef6983, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
   return map1(Pressables.PressableOpacity, obj);
 });
 ReactCompilerGating = fn(558);
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
       analyticsLocations(1385);
       obj3.headerStatusBarHeight = 12;
       obj3.headerStyle = tmp6;
-      const tmp8Result = closure_13(analyticsLocations(7043).Navigator, obj3);
+      const tmp8Result = closure_13(analyticsLocations(7046).Navigator, obj3);
       cResult[4] = tmp4;
       cResult[5] = tmp8Result;
       let tmp7 = tmp8Result;
@@ -421,10 +421,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     const obj = { title: null };
     const intl = analyticsLocations(1128).intl;
     obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-    return closure_1_13(analyticsLocations(9614).GenericHeaderTitle, obj);
+    return closure_1_13(analyticsLocations(9627).GenericHeaderTitle, obj);
   };
   const obj = analyticsLocations(576);
-  obj5.headerLeft = analyticsLocations(6872).getHeaderCloseButton(_prompt(6620).pop);
+  obj5.headerLeft = analyticsLocations(6875).getHeaderCloseButton(_prompt(6623).pop);
   obj5.render = function render(arg0, navigation) {
     return closure_2_13(EditCustomStatusWithPreview, { navigation, onClose: _prompt(dependencyMap[45]).pop, analyticsLocations, prompt: _prompt });
   };
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
   cResult[1] = _prompt;
   cResult[2] = obj4;
   tmp4 = obj4;
-  const tmpResult4 = analyticsLocations(6872);
+  const tmpResult4 = analyticsLocations(6875);
 }) : (function EditCustomStatusWithPreviewModal(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const _prompt = analyticsLocations.prompt;
@@ -447,7 +447,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
       const obj = { title: null };
       const intl = analyticsLocations(1128).intl;
       obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(9614).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(9627).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {
@@ -464,5 +464,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     obj3 = { height: 56 };
   }
   obj.headerStyle = obj3;
-  return closure_13(analyticsLocations(7043).Navigator, obj);
+  return closure_13(analyticsLocations(7046).Navigator, obj);
 });

@@ -1,24 +1,22 @@
-// === Module 12327: ConjureIdeaCards ===
+// === Module 12344: ConjureIdeaCards ===
 
-// Module 12327 (ConjureIdeaCards)
+// Module 12344 (ConjureIdeaCards)
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import Card from "Card" /* 6853 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import Card from "Card" /* 6856 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4945);
-let obj2 = { ideaCards: { gap: fn(12191).BLOCK_GAP } };
+let obj2 = { ideaCards: { gap: fn(12206).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { gap: fn(12191).BLOCK_GAP };
+let obj3 = { gap: fn(12206).BLOCK_GAP };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");
 
@@ -59,22 +57,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
       closure_0 = title;
       const obj = {
         onPress() {
-          return onPick(closure_0);
+          let tmpResult;
+          if (onPick != null) {
+            tmpResult = tmp(closure_0);
+          }
+          return tmpResult;
         },
+        disabled: null == closure_0,
         accessibilityLabel: null,
         children: null
       };
+      let tmpResult = null;
       const intl = onPick(1128).intl;
       obj.accessibilityLabel = intl.formatToPlainString(_modDef3820.H8G39M, { title: title.title });
       const items = [closure_1_4(onPick(5195).Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
-      let tmpResult = null;
       if ("" !== title.value) {
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
         tmpResult = closure_1_4(onPick(5195).Text, obj4);
       }
       items[1] = tmpResult;
-      obj.children = closure_1_5(onPick(5932).Stack, { direction: "vertical", spacing: 4, children: items });
-      return closure_1_4(onPick(6853).Card, obj, title.id);
+      obj.children = closure_1_5(onPick(5935).Stack, { direction: "vertical", spacing: 4, children: items });
+      return closure_1_4(onPick(6856).Card, obj, title.id);
     };
     cResult[4] = onPick;
     cResult[5] = fn;
@@ -99,15 +102,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
       closure_0 = title;
       const obj = {
         onPress() {
-          return require(closure_0);
+          let tmpResult;
+          if (require != null) {
+            tmpResult = tmp(closure_0);
+          }
+          return tmpResult;
         },
+        disabled: null == closure_0,
         accessibilityLabel: null,
         children: null
       };
+      let tmpResult = null;
       const intl = util.intl;
       obj.accessibilityLabel = intl.formatToPlainString(_modDef3820.H8G39M, { title: title.title });
       const items = [closure_1_4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
-      let tmpResult = null;
       if ("" !== title.value) {
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
         tmpResult = closure_1_4(Text_Text.Text, obj4);

@@ -1,6 +1,6 @@
-// === Module 12185: ConjureShimmer ===
+// === Module 12200: ConjureShimmer ===
 
-// Module 12185 (ConjureShimmer)
+// Module 12200 (ConjureShimmer)
 import _modDef683 from "module_683" /* 683 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import timing from "timing" /* 5167 */;
@@ -240,9 +240,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                 const obj10 = { style: tmp4.fill, start, end, colors: tmp22, locations };
                 obj8.children = closure_8(require("LinearGradient"), obj10);
                 obj6.children = closure_8(require("ReanimatedRexport").View, obj8);
-                obj4.children = closure_8(require("module_6914"), obj6);
+                obj4.children = closure_8(require("module_6917"), obj6);
                 tmp29 = closure_8(closure_6, obj4);
-                const tmp32 = require("module_6914");
+                const tmp32 = require("module_6917");
               }
               cResult[22] = live;
               cResult[23] = tmp22;
@@ -437,9 +437,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(width(5219), obj10);
     obj6.children = closure_8(width(5014).View, obj8);
-    obj5.children = closure_8(width(6914), obj6);
+    obj5.children = closure_8(width(6917), obj6);
     tmp14 = closure_8(closure_6, obj5);
-    const tmp18 = width(6914);
+    const tmp18 = width(6917);
   }
   items3[1] = tmp14;
   obj4.children = items3;

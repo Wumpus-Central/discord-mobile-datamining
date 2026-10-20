@@ -1,13 +1,13 @@
-// === Module 9341: CollectiblesBadges ===
+// === Module 9353: CollectiblesBadges ===
 
-// Module 9341 (CollectiblesBadges)
+// Module 9353 (CollectiblesBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import LockIcon from "LockIcon" /* 8511 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9342 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9343 */;
+import LockIcon from "LockIcon" /* 8515 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9354 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9355 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 9082: VoicePanelHeaderConstants ===
+// === Module 9094: VoicePanelHeaderConstants ===
 
-// Module 9082 (VoicePanelHeaderConstants)
+// Module 9094 (VoicePanelHeaderConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderConstants.tsx");

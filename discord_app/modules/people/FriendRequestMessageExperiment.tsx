@@ -1,6 +1,6 @@
-// === Module 14897: FriendRequestMessageExperiment ===
+// === Module 14915: FriendRequestMessageExperiment ===
 
-// Module 14897 (FriendRequestMessageExperiment)
+// Module 14915 (FriendRequestMessageExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

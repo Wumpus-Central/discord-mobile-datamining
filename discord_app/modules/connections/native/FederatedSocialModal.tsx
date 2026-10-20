@@ -1,7 +1,7 @@
-// === Module 13912: FederatedSocialModal ===
+// === Module 13930: FederatedSocialModal ===
 
-// Module 13912 (FederatedSocialModal)
-import PlatformsDefault from "Platforms" /* 6456 */;
+// Module 13930 (FederatedSocialModal)
+import PlatformsDefault from "Platforms" /* 6459 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -177,11 +177,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Federate
     tmp4 = cResult[1];
   }
   if (cResult[2] !== platformType.onClose) {
-    const headerBackButton = tmp(6872).getHeaderBackButton(platformType.onClose);
+    const headerBackButton = tmp(6875).getHeaderBackButton(platformType.onClose);
     cResult[2] = platformType.onClose;
     cResult[3] = headerBackButton;
     let tmp10 = headerBackButton;
-    const tmpResult = tmp(6872);
+    const tmpResult = tmp(6875);
   } else {
     tmp10 = cResult[3];
   }

@@ -1,6 +1,6 @@
-// === Module 9349: WishlistButton ===
+// === Module 9361: WishlistButton ===
 
-// Module 9349 (WishlistButton)
+// Module 9361 (WishlistButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -9,9 +9,9 @@ import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
 import spring from "spring" /* 5208 */;
 import springPresets from "springPresets" /* 5209 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 9280 */;
-import useWishlistNUXActionSheetDefault from "useWishlistNUXActionSheet" /* 9281 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9352 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 9292 */;
+import useWishlistNUXActionSheetDefault from "useWishlistNUXActionSheet" /* 9293 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9364 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -611,7 +611,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
             if (cResult[21] === tmp8) {
               let tmp28 = cResult[22];
             }
-            const wishlistButtonState = tmp(9340).useWishlistButtonState(tmp28);
+            const wishlistButtonState = tmp(9352).useWishlistButtonState(tmp28);
             class I {
               constructor() {
                 return closure_1_11.getId();
@@ -731,7 +731,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
             cResult[26] = tmp5;
             cResult[27] = t10;
             tmp31 = t10;
-            const tmpResult4 = tmp(9340);
+            const tmpResult4 = tmp(9352);
           }
         }
       }

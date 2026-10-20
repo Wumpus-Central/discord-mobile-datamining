@@ -1,6 +1,6 @@
-// === Module 19088: GlobalDiscoveryServersUtils ===
+// === Module 19112: GlobalDiscoveryServersUtils ===
 
-// Module 19088 (GlobalDiscoveryServersUtils)
+// Module 19112 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1128 */;
 import v1 from "v1" /* 1281 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -20,7 +20,7 @@ let closure_13 = async function _navigateToGuild() {
   ({ loadId: closure_129_0, guildId: closure_129_1, index: closure_129_2, categoryId: closure_129_3, analyticsLocation: closure_129_4, options: closure_129_5 } = closure_0);
   return "test";
 };
-const GlobalDiscoveryServersConstants = fn(8928);
+const GlobalDiscoveryServersConstants = fn(8940);
 ({ GlobalDiscoveryServerTab: metroRequire, FEATURED_GUILDS_CACHE_DURATION: closure_7, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: c10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);

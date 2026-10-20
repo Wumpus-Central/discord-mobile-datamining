@@ -1,10 +1,10 @@
-// === Module 17473: useGuildsBarBottomRightBadge ===
+// === Module 17492: useGuildsBarBottomRightBadge ===
 
-// Module 17473 (useGuildsBarBottomRightBadge)
+// Module 17492 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1202 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17474 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17475 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17479 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17493 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17494 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17498 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         cResult[16] = tmp27;
       }
       const obj4 = { position: "bottom-right", containerSize: token, width: diff1 };
-      const tmp23 = tmp8(17474)(obj4);
+      const tmp23 = tmp8(17493)(obj4);
       cResult[7] = token;
       cResult[8] = diff1;
       cResult[9] = tmp23;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const tmp20 = obj5;
         }
         const obj6 = { style: tmp13, joinRequestState };
-        const tmp17 = jsx(tmp8(17475), { style: tmp13, joinRequestState });
+        const tmp17 = jsx(tmp8(17494), { style: tmp13, joinRequestState });
         cResult[25] = tmp13;
         cResult[26] = joinRequestState;
         cResult[27] = tmp17;

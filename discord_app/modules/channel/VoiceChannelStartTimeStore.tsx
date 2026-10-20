@@ -1,11 +1,11 @@
-// === Module 9920: VoiceChannelStartTimeStore ===
+// === Module 9931: VoiceChannelStartTimeStore ===
 
-// Module 9920 (VoiceChannelStartTimeStore)
+// Module 9931 (VoiceChannelStartTimeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import ChannelTypes from "ChannelTypes" /* 1108 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6450 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6453 */;
 
 require = fn;
 function _toTimestampMs(arg0) {

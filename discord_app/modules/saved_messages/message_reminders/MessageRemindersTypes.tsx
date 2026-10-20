@@ -1,6 +1,6 @@
-// === Module 13637: MessageRemindersTypes ===
+// === Module 13655: MessageRemindersTypes ===
 
-// Module 13637 (MessageRemindersTypes)
+// Module 13655 (MessageRemindersTypes)
 import util from "util" /* 1128 */;
 import _modDef2050 from "module_2050" /* 2050 */;
 import size from "module_2" /* 2 */;

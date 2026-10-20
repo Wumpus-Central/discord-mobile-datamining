@@ -1,6 +1,6 @@
-// === Module 7370: GuildTemplateTooltipActionCreators ===
+// === Module 7373: GuildTemplateTooltipActionCreators ===
 
-// Module 7370 (GuildTemplateTooltipActionCreators)
+// Module 7373 (GuildTemplateTooltipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PermissionStore from "PermissionStore" /* 4880 */;

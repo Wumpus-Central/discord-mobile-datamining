@@ -1,10 +1,10 @@
-// === Module 6809: Spellchecker ===
+// === Module 6812: Spellchecker ===
 
-// Module 6809 (Spellchecker)
+// Module 6812 (Spellchecker)
 import LoggerDefault from "Logger" /* 3 */;
 import DOMUtils from "DOMUtils" /* 2037 */;
-import fallbackLocalesDefault from "fallbackLocales" /* 6810 */;
-import _mod6811 from "module_6811" /* 6811 */;
+import fallbackLocalesDefault from "fallbackLocales" /* 6813 */;
+import _mod6814 from "module_6814" /* 6814 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2069 */;
@@ -59,7 +59,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod6811;
+      obj = _mod6814;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -222,7 +222,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod6811.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod6814.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {

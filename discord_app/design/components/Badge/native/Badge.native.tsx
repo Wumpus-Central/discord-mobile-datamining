@@ -1,13 +1,13 @@
-// === Module 13130: Badge/Badge ===
+// === Module 13148: Badge/Badge ===
 
-// Module 13130 (Badge/Badge)
+// Module 13148 (Badge/Badge)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useBadgeTextVariant from "useBadgeTextVariant" /* 5000 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import BadgeShared from "BadgeShared" /* 13131 */;
+import BadgeShared from "BadgeShared" /* 13149 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4945 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

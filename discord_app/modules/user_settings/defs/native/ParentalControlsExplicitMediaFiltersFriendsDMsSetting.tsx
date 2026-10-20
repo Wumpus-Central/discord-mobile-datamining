@@ -1,20 +1,20 @@
-// === Module 17035: ParentalControlsExplicitMediaFiltersFriendsDMsSetting ===
+// === Module 17054: ParentalControlsExplicitMediaFiltersFriendsDMsSetting ===
 
-// Module 17035 (ParentalControlsExplicitMediaFiltersFriendsDMsSetting)
+// Module 17054 (ParentalControlsExplicitMediaFiltersFriendsDMsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15892 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15896 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7591 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15911 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15915 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7594 */;
 
-const ExplicitMediaRedactionUtils = obj(8531);
+const ExplicitMediaRedactionUtils = obj(8535);
 require = fn;
 const ReactCompilerGating = fn(558);
 function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["+uI23H"]);
 }
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useObscuredContentFriendsDmSettingValue() {
   let obj = require;
   let tmp = dependencyMap;
@@ -47,7 +47,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useObscure
 });
 const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
-  parent: fn(8276).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8280).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useObscuredContentFriendsDmSettingValue() {
     let obj = require;
     let tmp = dependencyMap;
@@ -82,7 +82,7 @@ const pressable = SettingBuilders.createPressable({
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       const intl = selectedTeenId(1128).intl;
-      const obj = selectedTeenId(15896);
+      const obj = selectedTeenId(15915);
       const stringResult = intl.string(selectedTeenId(1128).t.GYpoAq);
       const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl2 = selectedTeenId(1128).intl;
@@ -93,8 +93,8 @@ const pressable = SettingBuilders.createPressable({
       obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
       const items = [selectedTeenId(1211).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(15901).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(15901);
+      const result = selectedTeenId(15920).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(15920);
     }
   },
   unsearchable: true

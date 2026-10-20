@@ -1,6 +1,6 @@
-// === Module 13092: ApplicationCommandDiscovery ===
+// === Module 13110: ApplicationCommandDiscovery ===
 
-// Module 13092 (ApplicationCommandDiscovery)
+// Module 13110 (ApplicationCommandDiscovery)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,11 +8,11 @@ import native from "native" /* 1202 */;
 import Server from "Server" /* 2000 */;
 import useFontScale from "useFontScale" /* 5214 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5673 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9570 */;
-import _modDef10108 from "module_10108" /* 10108 */;
-import ApplicationSectionHeader from "ApplicationSectionHeader" /* 13094 */;
-import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 13095 */;
-import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 13098 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9583 */;
+import _modDef10119 from "module_10119" /* 10119 */;
+import ApplicationSectionHeader from "ApplicationSectionHeader" /* 13112 */;
+import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 13113 */;
+import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 13116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,10 +22,10 @@ const ApplicationSectionHeaderDefault = ApplicationSectionHeader;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
-const ApplicationCommandConstants = fn(5938);
+const ApplicationCommandConstants = fn(5941);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(13093).ITEM_HEIGHT;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10030).AUTOCOMPLETE_ROW_HEIGHT;
+const ITEM_HEIGHT = fn(13111).ITEM_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10041).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
 const jsxProd = fn(21);
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     first = cResult[0];
   }
   let tmp7 = bound(ref.useState(0), 2);
-  const commandDiscoveryManager = onPressSlashItem(13095).useCommandDiscoveryManager(first);
+  const commandDiscoveryManager = onPressSlashItem(13113).useCommandDiscoveryManager(first);
   if (cResult[1] !== channel) {
     const obj4 = { channel, type: "channel" };
     cResult[1] = channel;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   } else {
     tmp12 = cResult[3];
   }
-  const BuiltInCommandFilter = onPressSlashItem(9570).BuiltInCommandFilter;
+  const BuiltInCommandFilter = onPressSlashItem(9583).BuiltInCommandFilter;
   let tmp13 = canOnlyUseTextCommands ? BuiltInCommandFilter.ONLY_TEXT : BuiltInCommandFilter.ALLOW;
   if (cResult[4] === tmp13) {
     if (cResult[5] === tmp14) {
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       if (cResult[9] === tmp15) {
         let tmp18 = cResult[10];
       }
-      const discovery = channel(10121).useDiscovery(tmp18);
+      const discovery = channel(10132).useDiscovery(tmp18);
       sectionDescriptors = discovery.sectionDescriptors;
       const activeSections = discovery.activeSections;
       commandsByActiveSection = discovery.commandsByActiveSection;
@@ -528,7 +528,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
                                     const children = [closure_2_14(ApplicationSectionHeaderDefault, { section: section.section, guildId: channel.guild_id }, section.section.id), ];
                                     let tmp3Result = 0 === section.data.length;
                                     if (tmp3Result) {
-                                      const obj3 = { lightSource: _modDef10108, darkSource: _modDef10108, body: null, containerStyle: null, imageStyle: null };
+                                      const obj3 = { lightSource: _modDef10119, darkSource: _modDef10119, body: null, containerStyle: null, imageStyle: null };
                                       const intl = util.intl;
                                       const obj5 = { applicationName: section.section.name };
                                       obj3.body = intl.format(util.t.WoQXT6, obj5);
@@ -822,7 +822,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       cResult[15] = X;
       tmp22 = X;
       tmp21 = items4;
-      const obj9 = channel(10121);
+      const obj9 = channel(10132);
     }
     const obj6 = { context: tmp11, filters: tmp15, options: tmp16, allowFetch: true };
     cResult[8] = tmp11;
@@ -835,7 +835,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   cResult[5] = !canOnlyUseTextCommands;
   cResult[6] = obj7;
   tmp15 = obj7;
-  let tmpResult = onPressSlashItem(13095);
+  let tmpResult = onPressSlashItem(13113);
 }) : (function ApplicationCommandDiscovery(channel) {
   ({ onPressSlashItem: require, onHeightChange } = channel);
   channel = channel.channel;
@@ -866,7 +866,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   obj6.applicationCommands = !canOnlyUseTextCommands;
   obj5.filters = obj6;
   obj5.options = { placeholderCount: 3, limit: commandDiscoveryManager, includeFrecency: true };
-  const discovery = channel(10121).useDiscovery(obj5);
+  const discovery = channel(10132).useDiscovery(obj5);
   const sectionDescriptors = discovery.sectionDescriptors;
   ({ activeSections: c11, commandsByActiveSection } = discovery);
   ({ hasMoreAfter: c13, filteredSectionId } = discovery);
@@ -1107,7 +1107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     const section = item.section;
     let found;
     if (item.inputType === require("ApplicationCommandTypes").ApplicationCommandInputType.PLACEHOLDER) {
-      return filteredSectionId(onHeightChange(13096), {});
+      return filteredSectionId(onHeightChange(13114), {});
     } else {
       found = sectionDescriptors.find((id) => id.id === item.applicationId);
       const obj = {
@@ -1123,7 +1123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
         showIcon: item.applicationId !== section.section.id,
         guildId: found.guild_id
       };
-      return filteredSectionId(onHeightChange(13097), obj);
+      return filteredSectionId(onHeightChange(13115), obj);
     }
   };
   obj9.renderSectionHeader = function renderSectionHeader(section) {
@@ -1131,7 +1131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     const children = [closure_2_14(ApplicationSectionHeaderDefault, { section: section.section, guildId: channel.guild_id }, section.section.id), ];
     let tmp3Result = 0 === section.data.length;
     if (tmp3Result) {
-      const obj3 = { lightSource: _modDef10108, darkSource: _modDef10108, body: null, containerStyle: null, imageStyle: null };
+      const obj3 = { lightSource: _modDef10119, darkSource: _modDef10119, body: null, containerStyle: null, imageStyle: null };
       const intl = util.intl;
       const obj5 = { applicationName: section.section.name };
       obj3.body = intl.format(util.t.WoQXT6, obj5);

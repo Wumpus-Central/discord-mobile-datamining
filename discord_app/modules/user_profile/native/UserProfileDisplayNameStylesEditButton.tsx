@@ -1,14 +1,14 @@
-// === Module 15664: UserProfileDisplayNameStylesEditButton ===
+// === Module 15683: UserProfileDisplayNameStylesEditButton ===
 
-// Module 15664 (UserProfileDisplayNameStylesEditButton)
+// Module 15683 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10579 */;
-import _modDef14293 from "module_14293" /* 14293 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15666 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15667 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10590 */;
+import _modDef14311 from "module_14311" /* 14311 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15685 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15686 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -234,8 +234,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                 }
                 const fn = function x() {
                   if (null == closure_6) {
-                    const obj2 = { source: _modDef14293, style: closure_3.noneIcon };
-                    let tmp10 = jsx(native.Icon, { source: _modDef14293, style: closure_3.noneIcon });
+                    const obj2 = { source: _modDef14311, style: closure_3.noneIcon };
+                    let tmp10 = jsx(native.Icon, { source: _modDef14311, style: closure_3.noneIcon });
                   } else {
                     const obj = { style: closure_3.ggContainer, children: null };
                     const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
@@ -357,8 +357,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }, items2);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef14293, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef14293, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef14311, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef14311, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

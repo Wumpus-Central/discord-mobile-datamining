@@ -1,6 +1,6 @@
-// === Module 8591: ProductDetailsActionSheet ===
+// === Module 8603: ProductDetailsActionSheet ===
 
-// Module 8591 (ProductDetailsActionSheet)
+// Module 8603 (ProductDetailsActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,18 +9,18 @@ import native2 from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5226 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7607 */;
-import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 8588 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import generated_NoResults from "generated/NoResults" /* 8648 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9278 */;
-import useCollectiblesShopProducts from "useCollectiblesShopProducts" /* 9394 */;
-import useFetchCollectiblesCategoriesAndPurchases from "useFetchCollectiblesCategoriesAndPurchases" /* 10408 */;
-import ProductDetailsActionSheetSkeletonDefault from "ProductDetailsActionSheetSkeleton" /* 14284 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7610 */;
+import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 8600 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import generated_NoResults from "generated/NoResults" /* 8660 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9290 */;
+import useCollectiblesShopProducts from "useCollectiblesShopProducts" /* 9406 */;
+import useFetchCollectiblesCategoriesAndPurchases from "useFetchCollectiblesCategoriesAndPurchases" /* 10419 */;
+import ProductDetailsActionSheetSkeletonDefault from "ProductDetailsActionSheetSkeleton" /* 14302 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7596 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7599 */;
 
 require = fn;
 let closure_3 = ["shopAnalyticsContext"];
@@ -90,7 +90,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
               const intl = tmp(1128).intl;
               const stringResult = intl.string(tmp(1128).t["3Qcx6K"]);
               const obj4 = { size: "md", color: onTrackPress(587).colors.INTERACTIVE_ICON_DEFAULT };
-              const tmp17 = closure_15(tmp(7011).EyeIcon, obj4);
+              const tmp17 = closure_15(tmp(7014).EyeIcon, obj4);
               cResult[9] = stringResult;
               cResult[10] = tmp17;
               let tmp13 = tmp17;
@@ -184,7 +184,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   const intl = tmp2(1128).intl;
   obj3.accessibilityLabel = intl.string(handlePreviewPress(1128).t["3Qcx6K"]);
   const obj2 = handlePreviewPress(4952);
-  obj3.children = closure_15(handlePreviewPress(7011).EyeIcon, { size: "md", color: onTrackPress(587).colors.INTERACTIVE_ICON_DEFAULT });
+  obj3.children = closure_15(handlePreviewPress(7014).EyeIcon, { size: "md", color: onTrackPress(587).colors.INTERACTIVE_ICON_DEFAULT });
   return closure_15(closure_9, obj3);
 });
 ReactCompilerGating = fn(558);
@@ -1353,14 +1353,14 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  const collectiblesShopProduct = skuId(9394).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
+  const collectiblesShopProduct = skuId(9406).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  const obj = skuId(9394);
-  const getOrFetchPurchases = skuId(10408).useGetOrFetchPurchases();
+  const obj = skuId(9406);
+  const getOrFetchPurchases = skuId(10419).useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const obj2 = skuId(10408);
+  const obj2 = skuId(10419);
   const ref1 = noop.useRef(null);
   const items = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
@@ -1394,7 +1394,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
     }
   }
   if ("error" === state) {
-    const obj5 = { Illustration: tmp(8648).NoResults, body: null, children: null };
+    const obj5 = { Illustration: tmp(8660).NoResults, body: null, children: null };
     const intl = tmp(1128).intl;
     obj5.body = intl.string(tmp(1128).t.eAn6z2);
     const obj6 = { text: null, onPress: null };
@@ -1404,7 +1404,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
     obj5.children = closure_15(tmp(5205).Button, obj6);
     closure_15(tmp(1202).EmptyState, obj5);
   } else {
-    closure_15(initialVariantIndex(14284), {});
+    closure_15(initialVariantIndex(14302), {});
   }
   ref = noop.useRef(null);
 });

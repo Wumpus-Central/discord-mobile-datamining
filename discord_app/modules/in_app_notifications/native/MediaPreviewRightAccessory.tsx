@@ -1,6 +1,6 @@
-// === Module 13598: MediaPreviewRightAccessory ===
+// === Module 13616: MediaPreviewRightAccessory ===
 
-// Module 13598 (MediaPreviewRightAccessory)
+// Module 13616 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,25 +10,25 @@ import Text_Text from "Text/Text" /* 5195 */;
 import useToken from "useToken" /* 5213 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5547 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7335 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7341 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8531 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8551 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8682 */;
-import PlayIcon from "PlayIcon" /* 8690 */;
-import common_VideoDefault from "common/Video" /* 8715 */;
-import ClipView from "ClipView" /* 9324 */;
-import StickerDefault from "Sticker" /* 10087 */;
-import useContentHarmTypes from "useContentHarmTypes" /* 12635 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 13569 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7338 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7344 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8535 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8557 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8694 */;
+import PlayIcon from "PlayIcon" /* 8702 */;
+import common_VideoDefault from "common/Video" /* 8727 */;
+import ClipView from "ClipView" /* 9336 */;
+import StickerDefault from "Sticker" /* 10098 */;
+import useContentHarmTypes from "useContentHarmTypes" /* 12652 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 13587 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
 
 const ClipViewDefault = ClipView;
 
 const PlatformUtils = ImageWarningIcon(1384);
-const EyeIcon = ImageWarningIcon(7011);
-const ImageWarningIcon2 = ImageWarningIcon(8497);
+const EyeIcon = ImageWarningIcon(7014);
+const ImageWarningIcon2 = ImageWarningIcon(8501);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -66,7 +66,7 @@ createStyles = fn(4945);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
 createStyles = fn(4945);
 let obj11 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(13558).RIGHT_ACCESSORY_LEFT_MARGIN } });
+let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(13576).RIGHT_ACCESSORY_LEFT_MARGIN } });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBadge() {
   const cResult = c.c(5);
@@ -910,7 +910,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaP
   return tmp4;
 });
 ReactCompilerGating = fn(558);
-let obj12 = { rightAccessoryContainer: { marginLeft: fn(13558).RIGHT_ACCESSORY_LEFT_MARGIN } };
+let obj12 = { rightAccessoryContainer: { marginLeft: fn(13576).RIGHT_ACCESSORY_LEFT_MARGIN } };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

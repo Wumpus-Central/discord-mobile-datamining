@@ -1,13 +1,13 @@
-// === Module 11297: VideoEmptyState ===
+// === Module 11308: VideoEmptyState ===
 
-// Module 11297 (VideoEmptyState)
+// Module 11308 (VideoEmptyState)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useMountEffectDefault from "useMountEffect" /* 5224 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6593 */;
-import StreamActionCreators from "StreamActionCreators" /* 7773 */;
-import StreamEnded from "StreamEnded" /* 11298 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6596 */;
+import StreamActionCreators from "StreamActionCreators" /* 7777 */;
+import StreamEnded from "StreamEnded" /* 11309 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
@@ -95,13 +95,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoEmp
           }
         }
         if (null != tmp4) {
-          let errorCode = tmp(5853).getErrorInfo(tmp4).errorCode;
-          const tmpResult = tmp(5853);
+          let errorCode = tmp(5855).getErrorInfo(tmp4).errorCode;
+          const tmpResult = tmp(5855);
         } else {
           errorCode = null;
           if (tmp10 === tmp17.STREAM_FAILED) {
-            errorCode = tmp(5853).getErrorInfo(tmp(5853).AVError.STREAM_FAILED_TO_START).errorCode;
-            const tmpResult3 = tmp(5853);
+            errorCode = tmp(5855).getErrorInfo(tmp(5855).AVError.STREAM_FAILED_TO_START).errorCode;
+            const tmpResult3 = tmp(5855);
           }
         }
         const _Symbol = Symbol;
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoEmp
     let tmp10 = !removeSplashImage;
     if (!removeSplashImage) {
       let obj2 = { style: tmp2.placeholderImage };
-      tmp10 = closure_7(stream(11298).StreamEnded, obj2);
+      tmp10 = closure_7(stream(11309).StreamEnded, obj2);
     }
     let obj3 = { children: null };
     const items = [tmp10, ];
@@ -300,13 +300,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoEmp
     tmp8Result = null;
   }
   if (null != avError) {
-    let errorCode = stream(5853).getErrorInfo(avError).errorCode;
-    const obj6 = stream(5853);
+    let errorCode = stream(5855).getErrorInfo(avError).errorCode;
+    const obj6 = stream(5855);
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      errorCode = stream(5853).getErrorInfo(stream(5853).AVError.STREAM_FAILED_TO_START).errorCode;
-      const obj5 = stream(5853);
+      errorCode = stream(5855).getErrorInfo(stream(5855).AVError.STREAM_FAILED_TO_START).errorCode;
+      const obj5 = stream(5855);
     }
   }
   const items1 = [ChannelStore];

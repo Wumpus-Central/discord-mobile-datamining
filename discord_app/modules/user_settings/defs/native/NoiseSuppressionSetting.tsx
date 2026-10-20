@@ -1,10 +1,10 @@
-// === Module 16343: NoiseSuppressionSetting ===
+// === Module 16362: NoiseSuppressionSetting ===
 
-// Module 16343 (NoiseSuppressionSetting)
+// Module 16362 (NoiseSuppressionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11497 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11508 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 require = fn;
@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoiseSu
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
 });
-const SettingBuilders = fn(11099);
+const SettingBuilders = fn(11111);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasNoiseSuppressionSetting() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(8276).MobileUserSettings.VOICE,
+  parent: fn(8280).MobileUserSettings.VOICE,
   useValue: tmp2,
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
     const NoiseSuppressionOpt = UserSettingsVoiceUtils.NoiseSuppressionOpt;

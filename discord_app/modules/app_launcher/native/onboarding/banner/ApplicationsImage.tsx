@@ -1,10 +1,10 @@
-// === Module 11885: ApplicationsImage ===
+// === Module 11899: ApplicationsImage ===
 
-// Module 11885 (ApplicationsImage)
+// Module 11899 (ApplicationsImage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11886 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11900 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

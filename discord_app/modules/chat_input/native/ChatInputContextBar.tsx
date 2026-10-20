@@ -1,6 +1,6 @@
-// === Module 13119: ChatInputContextBar ===
+// === Module 13137: ChatInputContextBar ===
 
-// Module 13119 (ChatInputContextBar)
+// Module 13137 (ChatInputContextBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1114 */;
@@ -9,22 +9,22 @@ import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import useToken from "useToken" /* 5213 */;
-import Pressables from "Pressables" /* 6856 */;
-import _modDef6980 from "module_6980" /* 6980 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8248 */;
-import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9609 */;
-import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9611 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10002 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10004 */;
+import Pressables from "Pressables" /* 6859 */;
+import _modDef6983 from "module_6983" /* 6983 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8252 */;
+import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9622 */;
+import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9624 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 10013 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 10015 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
-import DraftStore from "DraftStore" /* 7577 */;
+import DraftStore from "DraftStore" /* 7580 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7577).DraftType;
+const DraftType = fn(7580).DraftType;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -95,7 +95,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
     tmp15 = bound;
   }
   if (cResult[4] !== tmp4.floatingCloseIcon) {
-    const obj5 = { source: _modDef6980, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
+    const obj5 = { source: _modDef6983, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
     const tmp18 = __initData(native.Icon, obj5);
     cResult[4] = tmp4.floatingCloseIcon;
     cResult[5] = tmp18;
@@ -163,7 +163,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
   }
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
-  obj6.children = __initData(native.Icon, { source: _modDef6980, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj6.children = __initData(native.Icon, { source: _modDef6983, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   obj5.children = __initData(Pressables.PressableOpacity, obj6);
   items[1] = __initData(component, obj5);
   obj3.children = items;
@@ -811,7 +811,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
     tmp15 = bound;
   }
   if (cResult[4] !== tmp4.floatingCloseIcon) {
-    const obj5 = { source: _modDef6980, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
+    const obj5 = { source: _modDef6983, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
     const tmp18 = __initData(native.Icon, obj5);
     cResult[4] = tmp4.floatingCloseIcon;
     cResult[5] = tmp18;
@@ -885,11 +885,11 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
   obj4.hitSlop = tmp9;
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = __initData(Text_Text.Text, obj3);
-  obj4.children = __initData(native.Icon, { source: _modDef6980, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj4.children = __initData(native.Icon, { source: _modDef6983, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   const items = [tmp8, ];
-  const obj5 = { source: _modDef6980, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef6983, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = __initData(component, { style: tmp.floatingRightActions, children: __initData(Pressables.PressableOpacity, obj4) });
   obj7.children = items;
   obj6.children = map1(closure_1_14, obj7);
@@ -951,7 +951,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
         tmp23 = bound;
       }
       if (cResult[10] !== tmp4.floatingCloseIcon) {
-        const obj6 = { source: _modDef6980, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
+        const obj6 = { source: _modDef6983, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
         const tmp26 = __initData(native.Icon, obj6);
         cResult[10] = tmp4.floatingCloseIcon;
         cResult[11] = tmp26;
@@ -1043,11 +1043,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
   obj6.hitSlop = tmp9;
   obj6.onPress = onCancelScheduling;
   const tmp8 = __initData(Pressables.PressableOpacity, obj3);
-  obj6.children = __initData(native.Icon, { source: _modDef6980, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj6.children = __initData(native.Icon, { source: _modDef6983, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   const obj8 = { style: tmp.contextBarRow, children: null };
   const obj9 = { children: null };
   const items = [tmp8, ];
-  const obj7 = { source: _modDef6980, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj7 = { source: _modDef6983, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = __initData(component, { style: tmp.floatingRightActions, children: __initData(Pressables.PressableOpacity, obj6) });
   obj9.children = items;
   obj8.children = map1(closure_1_14, obj9);

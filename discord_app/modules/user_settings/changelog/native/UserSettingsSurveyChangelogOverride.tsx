@@ -1,23 +1,23 @@
-// === Module 16812: UserSettingsSurveyChangelogOverride ===
+// === Module 16831: UserSettingsSurveyChangelogOverride ===
 
-// Module 16812 (UserSettingsSurveyChangelogOverride)
+// Module 16831 (UserSettingsSurveyChangelogOverride)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import usePreviousDefault from "usePrevious" /* 6608 */;
-import TableRow from "TableRow" /* 6851 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7194 */;
-import ActionSheetRow from "ActionSheetRow" /* 7240 */;
-import ActionSheet from "ActionSheet" /* 7244 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8411 */;
-import SurveyActionCreatorsAll from "SurveyActionCreators" /* 16813 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import usePreviousDefault from "usePrevious" /* 6611 */;
+import TableRow from "TableRow" /* 6854 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7197 */;
+import ActionSheetRow from "ActionSheetRow" /* 7243 */;
+import ActionSheet from "ActionSheet" /* 7247 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8415 */;
+import SurveyActionCreatorsAll from "SurveyActionCreators" /* 16832 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChangelogStore from "ChangelogStore" /* 7358 */;
-import SurveyStore from "SurveyStore" /* 7801 */;
+import ChangelogStore from "ChangelogStore" /* 7361 */;
+import SurveyStore from "SurveyStore" /* 7805 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
@@ -61,7 +61,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Survey
         }
         require("ClipboardUtils").copy(str);
       };
-      return closure_9(closure_0(7240).ActionSheetRow, obj, tmp2);
+      return closure_9(closure_0(7243).ActionSheetRow, obj, tmp2);
     });
     obj2.children = React6(ActionSheetRow.ActionSheetRow.Group, obj3);
     const tmp9 = React6(ActionSheet.ActionSheet, obj2);
@@ -94,7 +94,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Survey
       }
       require("ClipboardUtils").copy(str);
     };
-    return closure_9(closure_0(7240).ActionSheetRow, obj, tmp);
+    return closure_9(closure_0(7243).ActionSheetRow, obj, tmp);
   });
   obj.children = React6(ActionSheetRow.ActionSheetRow.Group, obj2);
   return React6(ActionSheet.ActionSheet, obj);
@@ -118,9 +118,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Survey
   const tmp5 = _slicedToArray(noop.useState(first), 2);
   first1 = tmp5[0];
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp10 = closure_9(tmp(7194).BottomSheetTitleHeader, { title: "Survey Override" });
+    const tmp10 = closure_9(tmp(7197).BottomSheetTitleHeader, { title: "Survey Override" });
     let obj2 = { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp5[1], clearable: true };
-    const tmp11 = closure_9(tmp(6956).TextInput, obj2);
+    const tmp11 = closure_9(tmp(6959).TextInput, obj2);
     cResult[1] = tmp10;
     cResult[2] = tmp11;
     let tmp8 = tmp11;
@@ -212,8 +212,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Survey
   cResult[5] = str;
   cResult[6] = str2;
   cResult[7] = C;
-  cResult[8] = closure_10(first1(7244).ActionSheet, obj3);
-  const tmp15 = closure_10(first1(7244).ActionSheet, obj3);
+  cResult[8] = closure_10(first1(7247).ActionSheet, obj3);
+  const tmp15 = closure_10(first1(7247).ActionSheet, obj3);
 }) : (function SurveyOverrideActionSheet() {
   const tmp = _slicedToArray(noop.useState(() => {
     surveyOverride = surveyOverride.getSurveyOverride();
@@ -223,8 +223,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Survey
     return surveyOverride;
   }), 2);
   const first = tmp[0];
-  let obj = { header: closure_9(first(7194).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
-  const items = [closure_9(first(6956).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], clearable: true }), ];
+  let obj = { header: closure_9(first(7197).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  const items = [closure_9(first(6959).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], clearable: true }), ];
   let str = "Fetch Survey";
   if ("" === first) {
     str = "Reset Survey Override";
@@ -249,7 +249,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Survey
   };
   items[1] = closure_9(first(5205).Button, obj2);
   obj.children = items;
-  return closure_10(first(7244).ActionSheet, obj);
+  return closure_10(first(7247).ActionSheet, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function SurveyInfo() {
@@ -279,7 +279,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Survey
           ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_1_13 }), "SurveyOverrideActionSheet");
         }
     };
-    const tmp11 = closure_9(tmp(6851).TableRow, obj2);
+    const tmp11 = closure_9(tmp(6854).TableRow, obj2);
     cResult[2] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -396,9 +396,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   const tmp5 = _slicedToArray(noop.useState(first), 2);
   first1 = tmp5[0];
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp10 = closure_9(tmp(7194).BottomSheetTitleHeader, { title: "Changelog Override" });
+    const tmp10 = closure_9(tmp(7197).BottomSheetTitleHeader, { title: "Changelog Override" });
     let obj2 = { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp5[1], clearable: true };
-    const tmp11 = closure_9(tmp(6956).TextInput, obj2);
+    const tmp11 = closure_9(tmp(6959).TextInput, obj2);
     cResult[1] = tmp10;
     cResult[2] = tmp11;
     let tmp8 = tmp11;
@@ -490,13 +490,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   cResult[5] = str;
   cResult[6] = str2;
   cResult[7] = C;
-  cResult[8] = closure_10(first1(7244).ActionSheet, obj3);
-  const tmp15 = closure_10(first1(7244).ActionSheet, obj3);
+  cResult[8] = closure_10(first1(7247).ActionSheet, obj3);
+  const tmp15 = closure_10(first1(7247).ActionSheet, obj3);
 }) : (function ChangelogOverrideActionSheet() {
   const tmp = _slicedToArray(noop.useState(() => ChangelogStore.overrideId()), 2);
   const first = tmp[0];
-  let obj = { header: closure_9(first(7194).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
-  const items = [closure_9(first(6956).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], clearable: true }), ];
+  let obj = { header: closure_9(first(7197).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  const items = [closure_9(first(6959).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], clearable: true }), ];
   let str = "Fetch Changelog";
   if ("" === first) {
     str = "Reset Changelog Override";
@@ -521,7 +521,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   };
   items[1] = closure_9(first(5205).Button, obj2);
   obj.children = items;
-  return closure_10(first(7244).ActionSheet, obj);
+  return closure_10(first(7247).ActionSheet, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChangelogInfo() {

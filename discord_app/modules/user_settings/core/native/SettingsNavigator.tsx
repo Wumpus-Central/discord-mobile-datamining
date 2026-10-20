@@ -1,21 +1,21 @@
-// === Module 18082: SettingsNavigator ===
+// === Module 18105: SettingsNavigator ===
 
-// Module 18082 (SettingsNavigator)
+// Module 18105 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Pressables from "Pressables" /* 6856 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7039 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15765 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 17577 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 18083 */;
+import Pressables from "Pressables" /* 6859 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7042 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15784 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 17596 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 18106 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2069 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15763 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15782 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ const Constants = fn(1087);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9658);
+const NativeStackNavigator = fn(9671);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4945);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };

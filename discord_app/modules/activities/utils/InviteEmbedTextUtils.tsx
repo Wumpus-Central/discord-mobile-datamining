@@ -1,9 +1,9 @@
-// === Module 14357: InviteEmbedTextUtils ===
+// === Module 14375: InviteEmbedTextUtils ===
 
-// Module 14357 (InviteEmbedTextUtils)
+// Module 14375 (InviteEmbedTextUtils)
 import util from "util" /* 1128 */;
 import _modDef3014 from "module_3014" /* 3014 */;
-import NicknameUtils from "NicknameUtils" /* 5944 */;
+import NicknameUtils from "NicknameUtils" /* 5947 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

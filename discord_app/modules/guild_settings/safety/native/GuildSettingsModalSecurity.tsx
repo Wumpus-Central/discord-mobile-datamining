@@ -1,12 +1,12 @@
-// === Module 18833: GuildSettingsModalSecurity ===
+// === Module 18856: GuildSettingsModalSecurity ===
 
-// Module 18833 (GuildSettingsModalSecurity)
+// Module 18856 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8926 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8938 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8927 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8939 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          tmp58[0] = stateFromStores(15841);
+                          tmp58[0] = stateFromStores(15860);
                           tmp58[1] = tmp4.image;
                           const tmp59 = closure_12(stateFromStores(5631), tmp58);
                           cResult[35] = tmp4.image;
@@ -785,7 +785,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(15841);
+  obj11.source = stateFromStores(15860);
   obj11.style = tmp.image;
   const items6 = [closure_12(stateFromStores(5631), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };

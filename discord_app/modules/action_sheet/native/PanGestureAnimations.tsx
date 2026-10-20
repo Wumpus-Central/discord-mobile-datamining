@@ -1,6 +1,6 @@
-// === Module 11599: PanGestureAnimations ===
+// === Module 11610: PanGestureAnimations ===
 
-// Module 11599 (PanGestureAnimations)
+// Module 11610 (PanGestureAnimations)
 import native from "native" /* 1202 */;
 import timing from "timing" /* 5167 */;
 import spring from "spring" /* 5208 */;

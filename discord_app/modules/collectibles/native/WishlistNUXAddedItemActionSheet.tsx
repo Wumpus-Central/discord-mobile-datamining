@@ -1,20 +1,20 @@
-// === Module 9282: WishlistNUXAddedItemActionSheet ===
+// === Module 9294: WishlistNUXAddedItemActionSheet ===
 
-// Module 9282 (WishlistNUXAddedItemActionSheet)
+// Module 9294 (WishlistNUXAddedItemActionSheet)
 import nativeDefault from "native" /* 587 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
-import SKUPreview from "SKUPreview" /* 9283 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 9284 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+import SKUPreview from "SKUPreview" /* 9295 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 9296 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8597).UserProfileSections;
+const UserProfileSections = fn(8609).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4945);
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
           const obj10 = { text: tmp35, onPress: B, variant: "secondary", size: "lg", grow: true };
           items2[1] = closure_8(tmp(5205).Button, obj10);
           obj9.children = items2;
-          const tmp39 = closure_9(tmp(6644).ButtonGroup, obj9);
+          const tmp39 = closure_9(tmp(6647).ButtonGroup, obj9);
           cResult[24] = B;
           cResult[25] = tmp39;
         } else {

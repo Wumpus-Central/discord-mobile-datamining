@@ -1,6 +1,6 @@
-// === Module 9050: InstantInviteFriendsList ===
+// === Module 9062: InstantInviteFriendsList ===
 
-// Module 9050 (InstantInviteFriendsList)
+// Module 9062 (InstantInviteFriendsList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -8,10 +8,10 @@ import native from "native" /* 1202 */;
 import RootNavigationRef from "RootNavigationRef" /* 5112 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Pressables from "Pressables" /* 6856 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 9051 */;
+import Pressables from "Pressables" /* 6859 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 9063 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6599 */;
+import TextStyles_mod from "TextStyles" /* 6602 */;
 
 require = fn;
 function keyExtractor(item) {

@@ -1,17 +1,17 @@
-// === Module 12052: AppLauncherMentionableOption ===
+// === Module 12067: AppLauncherMentionableOption ===
 
-// Module 12052 (AppLauncherMentionableOption)
+// Module 12067 (AppLauncherMentionableOption)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import UserCircleIcon from "UserCircleIcon" /* 10612 */;
-import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 12049 */;
-import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12050 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12051 */;
-import UsernameTextDefault from "UsernameText" /* 12053 */;
+import UserCircleIcon from "UserCircleIcon" /* 10623 */;
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 12064 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12065 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12066 */;
+import UsernameTextDefault from "UsernameText" /* 12068 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4946 */;
@@ -198,7 +198,7 @@ export default function AppLauncherMentionableOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12049, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(12064, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onMentionablePress(mentionable) {

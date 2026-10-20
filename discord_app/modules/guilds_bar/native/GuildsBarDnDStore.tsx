@@ -1,11 +1,11 @@
-// === Module 17461: GuildsBarDnDStore ===
+// === Module 17480: GuildsBarDnDStore ===
 
-// Module 17461 (GuildsBarDnDStore)
+// Module 17480 (GuildsBarDnDStore)
 import c from "c" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
 import _mod4863 from "module_4863" /* 4863 */;
-import SortedGuildStore from "SortedGuildStore" /* 6649 */;
+import SortedGuildStore from "SortedGuildStore" /* 6652 */;
 import identity from "module_1269" /* 1269 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

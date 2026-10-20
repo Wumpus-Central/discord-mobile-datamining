@@ -1,9 +1,9 @@
-// === Module 12975: VocalChannelJoinButton ===
+// === Module 12993: VocalChannelJoinButton ===
 
-// Module 12975 (VocalChannelJoinButton)
+// Module 12993 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 587 */;
-import StageIcon from "StageIcon" /* 8513 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8517 */;
+import StageIcon from "StageIcon" /* 8517 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8521 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4880 */;
 import VoiceStateStore from "VoiceStateStore" /* 5591 */;
@@ -225,20 +225,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     small = false;
   }
   let VJlc0S = dependencyMap;
-  const tmp = voiceStates(9624)();
+  const tmp = voiceStates(9637)();
   const tmp2 = voiceStates(5166)();
   let joinButtonText = closure_11(tmp, channel(4952).isThemeLight(tmp2));
   const obj = channel(4952);
-  const isConnectedToVoiceChannel = channel(10679).useIsConnectedToVoiceChannel(channel);
-  const obj2 = channel(10679);
+  const isConnectedToVoiceChannel = channel(10690).useIsConnectedToVoiceChannel(channel);
+  const obj2 = channel(10690);
   const items = [PermissionStore];
   const stateFromStores = channel(573).useStateFromStores(items, () => !PermissionStore.can(constants.CONNECT, channel));
   const obj3 = channel(573);
-  const stageParticipantsCount = channel(6642).useStageParticipantsCount(channel.id, channel(6636).StageChannelParticipantNamedIndex.AUDIENCE);
+  const stageParticipantsCount = channel(6645).useStageParticipantsCount(channel.id, channel(6639).StageChannelParticipantNamedIndex.AUDIENCE);
   const isGuildStageVoiceResult = channel.isGuildStageVoice();
-  const obj4 = channel(6642);
-  const obj5 = channel(6588);
-  const tmp8 = channel(6588).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
+  const obj4 = channel(6645);
+  const obj5 = channel(6591);
+  const tmp8 = channel(6591).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
   const items1 = [VoiceStateStore];
   const stateFromStores1 = channel(573).useStateFromStores(items1, () => VoiceStateStore.hasVideo(channel.id));
   const sum = stageParticipantsCount + voiceStates.length;
@@ -255,9 +255,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = tmp8;
   }
   const tmp3Result = channel(573);
-  const connectedUserLimit = channel(12976).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(12976);
-  let connectedUserLimitFormatted = channel(12976).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  const connectedUserLimit = channel(12994).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(12994);
+  let connectedUserLimitFormatted = channel(12994).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -297,9 +297,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const items3 = [joinButtonIconActive, { marginRight: 3, marginLeft: -1 }];
         if (isGuildStageVoiceResult) {
-          let VoiceNormalIcon = tmp3(8513).StageIcon;
+          let VoiceNormalIcon = tmp3(8517).StageIcon;
         } else {
-          VoiceNormalIcon = tmp3(8517).VoiceNormalIcon;
+          VoiceNormalIcon = tmp3(8521).VoiceNormalIcon;
         }
         const obj10 = { size: "xs", style: items3 };
         <VoiceNormalIcon size="xs" style={items3} />;
@@ -326,5 +326,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result4 = channel(12976);
+  const tmp3Result4 = channel(12994);
 }));

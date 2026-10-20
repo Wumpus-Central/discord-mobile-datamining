@@ -1,6 +1,6 @@
-// === Module 13260: useAvailableBoostCountForPowerup ===
+// === Module 13278: useAvailableBoostCountForPowerup ===
 
-// Module 13260 (useAvailableBoostCountForPowerup)
+// Module 13278 (useAvailableBoostCountForPowerup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4822 */;

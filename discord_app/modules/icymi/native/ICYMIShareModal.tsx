@@ -1,15 +1,15 @@
-// === Module 17677: ICYMIShareModal ===
+// === Module 17696: ICYMIShareModal ===
 
-// Module 17677 (ICYMIShareModal)
+// Module 17696 (ICYMIShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5554 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import ShareEventUtils from "ShareEventUtils" /* 8825 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 12734 */;
-import ShareChatInputDefault from "ShareChatInput" /* 12743 */;
+import ShareEventUtils from "ShareEventUtils" /* 8837 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 12751 */;
+import ShareChatInputDefault from "ShareChatInput" /* 12760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AbortCodes = fn(1087).AbortCodes;
-const UserRowModes = fn(10534).UserRowModes;
+const UserRowModes = fn(10545).UserRowModes;
 const MessageSendLocation = fn(4950).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -745,7 +745,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
               const obj5 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
               c5 = 2;
               c6 = 1;
-              const obj6 = { value: entry(17678).sendMessageWithEmbed(obj5), done: false };
+              const obj6 = { value: entry(17697).sendMessageWithEmbed(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
@@ -845,7 +845,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(17678).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(17697).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

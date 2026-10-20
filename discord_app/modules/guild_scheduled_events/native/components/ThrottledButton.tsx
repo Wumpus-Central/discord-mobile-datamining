@@ -1,6 +1,6 @@
-// === Module 9062: ThrottledButton ===
+// === Module 9074: ThrottledButton ===
 
-// Module 9062 (ThrottledButton)
+// Module 9074 (ThrottledButton)
 import c from "c" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

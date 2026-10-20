@@ -1,17 +1,17 @@
-// === Module 12892: AddMediaToOriginalForumPostActionSheet ===
+// === Module 12910: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 12892 (AddMediaToOriginalForumPostActionSheet)
+// Module 12910 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8098 */;
-import Tracking from "Tracking" /* 8233 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8102 */;
+import Tracking from "Tracking" /* 8237 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import MessageStore from "MessageStore" /* 5965 */;
+import MessageStore from "MessageStore" /* 5968 */;
 
 require = fn;
 function _upload() {
@@ -82,18 +82,18 @@ let closure_17 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(8094).maxFileSize(id.id);
-            const obj = closure_0(8094);
-            const effectiveUploadLimit = closure_0(8110).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(8098).maxFileSize(id.id);
+            const obj = closure_0(8098);
+            const effectiveUploadLimit = closure_0(8114).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
               closure_1(5171).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(9582)(obj4);
+              closure_1(9595)(obj4);
               const obj3 = closure_1(5171);
             }
-            const obj2 = closure_0(8110);
+            const obj2 = closure_0(8114);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
@@ -101,8 +101,8 @@ let closure_17 = async function _upload2(arg0) {
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9579).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9579);
+            closure_1(9592).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9592);
             closure_1(5171).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
@@ -151,7 +151,7 @@ let closure_17 = async function _upload2(arg0) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(8089).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(8093).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -237,7 +237,7 @@ let closure_17 = async function _upload2(arg0) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(7577).DraftType;
+const DraftType = fn(7580).DraftType;
 const Constants = fn(1087);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);

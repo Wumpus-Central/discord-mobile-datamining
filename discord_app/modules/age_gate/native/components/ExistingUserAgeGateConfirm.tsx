@@ -1,13 +1,13 @@
-// === Module 18469: ExistingUserAgeGateConfirm ===
+// === Module 18491: ExistingUserAgeGateConfirm ===
 
-// Module 18469 (ExistingUserAgeGateConfirm)
+// Module 18491 (ExistingUserAgeGateConfirm)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import components_Button_Button from "components/Button/Button" /* 5205 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7169 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7172 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -217,5 +217,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
   obj7.children = closure_8(onConfirm(5205).Button, obj8);
   items[2] = closure_8(View, obj7);
   obj2.children = items;
-  return closure_9(onConfirm(7169).SafeAreaPaddingView, obj2);
+  return closure_9(onConfirm(7172).SafeAreaPaddingView, obj2);
 });

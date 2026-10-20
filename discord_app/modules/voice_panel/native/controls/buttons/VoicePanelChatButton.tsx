@@ -1,11 +1,11 @@
-// === Module 18351: VoicePanelChatButton ===
+// === Module 18373: VoicePanelChatButton ===
 
-// Module 18351 (VoicePanelChatButton)
+// Module 18373 (VoicePanelChatButton)
 import nativeDefault from "native" /* 587 */;
-import NativeViewDefault from "NativeView" /* 6834 */;
-import ChatIcon from "ChatIcon" /* 8487 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18330 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 18352 */;
+import NativeViewDefault from "NativeView" /* 6837 */;
+import ChatIcon from "ChatIcon" /* 8491 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 18352 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 18374 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,12 +25,12 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/but
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatButton(wrapperSpecs) {
   const cResult = openTab(576).c(25);
   ({ props, openTab } = wrapperSpecs);
-  const context = noop.useContext(connected(10692));
+  const context = noop.useContext(connected(10703));
   connected = context.connected;
   const tmp6 = closure_7();
   let obj = openTab(576);
-  const voicePanelButtonStyles = openTab(18343).useVoicePanelButtonStyles(wrapperSpecs.wrapperSpecs);
-  const tmp8 = connected(18283)(context.channelId);
+  const voicePanelButtonStyles = openTab(18365).useVoicePanelButtonStyles(wrapperSpecs.wrapperSpecs);
+  const tmp8 = connected(18305)(context.channelId);
   const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
   if (cResult[0] === connected) {
     if (cResult[1] === openTab) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatButt
         }
         if (cResult[8] !== voicePanelButtonStyles.iconFill.color) {
           const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-          const tmp21 = closure_4(openTab(8487).ChatIcon, obj3);
+          const tmp21 = closure_4(openTab(8491).ChatIcon, obj3);
           cResult[8] = voicePanelButtonStyles.iconFill.color;
           cResult[9] = tmp21;
           let tmp19 = tmp21;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatButt
                     }
                   }
                   const element = { onPress: tmp9, props, accessibilityLabel: tmp11, children: tmp28 };
-                  const tmp34 = closure_4(tmp4(18344), element);
+                  const tmp34 = closure_4(tmp4(18366), element);
                   cResult[21] = tmp9;
                   cResult[22] = props;
                   cResult[23] = tmp28;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatButt
             const items1 = [, ];
             ({ badge: arr[0], notificationBadge: arr[1] } = tmp6);
             obj5.style = items1;
-            tmp26 = closure_4(tmp4(6834), obj5);
+            tmp26 = closure_4(tmp4(6837), obj5);
           }
           cResult[13] = tmp8;
           cResult[14] = tmp6.badge;
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatButt
           tmp25 = tmp26;
         }
         const obj6 = { style: tmp6.iconContainer, children: tmp19 };
-        const tmp24 = closure_4(tmp4(6834), obj6);
+        const tmp24 = closure_4(tmp4(6837), obj6);
         cResult[10] = tmp6.iconContainer;
         cResult[11] = tmp19;
         cResult[12] = tmp24;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatButt
       }
     }
     const obj7 = { fill: backgroundColor, circleRadius: result, cutoutRadius: 8, enableCutout: null != tmp8, cutoutPositionInDegrees: 45, alignBadgeEdgeWithCircleEdge: true, badgeRadius: 5, scaleToPixelDensity: true };
-    const tmp18 = closure_4(tmp4(18352), obj7);
+    const tmp18 = closure_4(tmp4(18374), obj7);
     cResult[4] = backgroundColor;
     cResult[5] = result;
     cResult[6] = null != tmp8;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatButt
   cResult[1] = openTab;
   cResult[2] = fn;
   tmp9 = fn;
-  const obj2 = openTab(18343);
+  const obj2 = openTab(18365);
 }) : (function ChatButton(props) {
   props = props.props;
   const openTab = props.openTab;

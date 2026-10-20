@@ -1,8 +1,8 @@
-// === Module 13464: InviteRolesList ===
+// === Module 13482: InviteRolesList ===
 
-// Module 13464 (InviteRolesList)
+// Module 13482 (InviteRolesList)
 import GuildRoleUtils from "GuildRoleUtils" /* 4858 */;
-import RolePillDefault from "RolePill" /* 10631 */;
+import RolePillDefault from "RolePill" /* 10642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
             const obj3 = { spacing: 4, style, children: null };
             const items2 = [tmp12, tmp20];
             obj3.children = items2;
-            const tmp26 = closure_6(tmp(5932).Stack, obj3);
+            const tmp26 = closure_6(tmp(5935).Stack, obj3);
             cResult[15] = style;
             cResult[16] = tmp20;
             cResult[17] = tmp26;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
       const obj3 = { style: tmp.rolesRow, children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)) };
       items1[1] = closure_5(View, obj3);
       obj.children = items1;
-      tmp2 = closure_6(guild(5932).Stack, obj);
+      tmp2 = closure_6(guild(5935).Stack, obj);
     }
   }
   return tmp2;

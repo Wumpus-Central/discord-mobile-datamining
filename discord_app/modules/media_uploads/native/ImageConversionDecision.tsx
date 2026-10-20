@@ -1,8 +1,8 @@
-// === Module 8107: ImageConversionDecision ===
+// === Module 8111: ImageConversionDecision ===
 
-// Module 8107 (ImageConversionDecision)
+// Module 8111 (ImageConversionDecision)
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import IosImageTypesManagerDefault from "IosImageTypesManager" /* 8108 */;
+import IosImageTypesManagerDefault from "IosImageTypesManager" /* 8112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");

@@ -1,10 +1,10 @@
-// === Module 14986: GuildBadgeBunny ===
+// === Module 15004: GuildBadgeBunny ===
 
-// Module 14986 (GuildBadgeBunny)
+// Module 15004 (GuildBadgeBunny)
 import c from "c" /* 576 */;
 import v1 from "v1" /* 1281 */;
-import inlineStyles from "inlineStyles" /* 7906 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14964 */;
+import inlineStyles from "inlineStyles" /* 7910 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14982 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

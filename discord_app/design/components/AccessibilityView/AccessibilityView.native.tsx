@@ -1,8 +1,8 @@
-// === Module 5923: AccessibilityView ===
+// === Module 5926: AccessibilityView ===
 
-// Module 5923 (AccessibilityView)
+// Module 5926 (AccessibilityView)
 import c from "c" /* 576 */;
-import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 5924 */;
+import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 5927 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;

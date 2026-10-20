@@ -1,15 +1,15 @@
-// === Module 17715: GuildRoleSubscriptionPurchasePage ===
+// === Module 17734: GuildRoleSubscriptionPurchasePage ===
 
-// Module 17715 (GuildRoleSubscriptionPurchasePage)
+// Module 17734 (GuildRoleSubscriptionPurchasePage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import LinkingDefault from "Linking" /* 5622 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8447 */;
-import _modDef11431 from "module_11431" /* 11431 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 17725 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8451 */;
+import _modDef11442 from "module_11442" /* 11442 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 17744 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
@@ -140,7 +140,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     }
     let tmp12 = tmp5;
     if (tmp5) {
-      const obj4 = { source: _modDef11431, style: tmp4.socialBadgeArrow };
+      const obj4 = { source: _modDef11442, style: tmp4.socialBadgeArrow };
       tmp12 = closure_1_14(native.Icon, obj4);
     }
     cResult[5] = tmp5;
@@ -168,7 +168,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   obj.onPress = onPress;
   const items = [closure_1_14(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef11431, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef11442, style: tmp.socialBadgeArrow };
     tmp5Result = closure_1_14(native.Icon, obj3);
   }
   items[2] = tmp5Result;

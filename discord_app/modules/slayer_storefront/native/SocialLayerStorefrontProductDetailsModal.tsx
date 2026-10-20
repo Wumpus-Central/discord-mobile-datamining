@@ -1,6 +1,6 @@
-// === Module 10475: SocialLayerStorefrontProductDetailsModal ===
+// === Module 10486: SocialLayerStorefrontProductDetailsModal ===
 
-// Module 10475 (SocialLayerStorefrontProductDetailsModal)
+// Module 10486 (SocialLayerStorefrontProductDetailsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
@@ -10,27 +10,27 @@ import StringUtils from "StringUtils" /* 2034 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2066 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import StoreUtils from "StoreUtils" /* 6337 */;
-import XSmallIcon from "XSmallIcon" /* 6879 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7224 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7276 */;
-import common_Video from "common/Video" /* 8715 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10473 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10474 */;
-import carouselMediaItems from "carouselMediaItems" /* 10477 */;
-import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10478 */;
-import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 10479 */;
-import NativePaymentContext from "NativePaymentContext" /* 10493 */;
+import StoreUtils from "StoreUtils" /* 6340 */;
+import XSmallIcon from "XSmallIcon" /* 6882 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7279 */;
+import common_Video from "common/Video" /* 8727 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10484 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10485 */;
+import carouselMediaItems from "carouselMediaItems" /* 10488 */;
+import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10489 */;
+import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 10490 */;
+import NativePaymentContext from "NativePaymentContext" /* 10504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6772 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7278 */;
+import SKUStore from "SKUStore" /* 6775 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7281 */;
 import n_mod from "module_683" /* 683 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SlayerShopPDPCTAType = fn(10476).SlayerShopPDPCTAType;
+const SlayerShopPDPCTAType = fn(10487).SlayerShopPDPCTAType;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -91,9 +91,9 @@ obj.availabilityCopy = { textAlign: "center" };
 let obj18 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
 let obj19 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
-obj.hero = { marginHorizontal: nativeDefault.space.PX_16, height: fn(10477).MOBILE_HERO_HEIGHT_PX, borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "apply" };
-let obj20 = { marginHorizontal: nativeDefault.space.PX_16, height: fn(10477).MOBILE_HERO_HEIGHT_PX, borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.hero = { marginHorizontal: nativeDefault.space.PX_16, height: fn(10488).MOBILE_HERO_HEIGHT_PX, borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "unicodeVersion" };
+let obj20 = { marginHorizontal: nativeDefault.space.PX_16, height: fn(10488).MOBILE_HERO_HEIGHT_PX, borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj.priceSection = { width: "100%", gap: nativeDefault.space.PX_8 };
 obj.heroImage = { width: "100%", height: "100%" };
 let obj21 = { width: "100%", gap: nativeDefault.space.PX_8 };
@@ -1299,10 +1299,10 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   const tmp = closure_18();
   dependencyMap = tmp;
   const rect = analyticsLocations(1633)();
-  const isScreenLandscape = skuId(8616).useIsScreenLandscape();
-  let obj = skuId(8616);
-  const mobileStoreFront = analyticsLocations(9712).useMobileStoreFront();
-  let obj2 = analyticsLocations(9712);
+  const isScreenLandscape = skuId(8628).useIsScreenLandscape();
+  let obj = skuId(8628);
+  const mobileStoreFront = analyticsLocations(9725).useMobileStoreFront();
+  let obj2 = analyticsLocations(9725);
   let items = [trackPDPClick];
   const stateFromStores = skuId(504).useStateFromStores(items, () => SKUStore.get(skuId));
   let obj3 = skuId(504);
@@ -1313,13 +1313,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   if (stateFromStores != null) {
     applicationId1 = stateFromStores.applicationId;
   }
-  const getOrFetchApplication = skuId(7203).useGetOrFetchApplication(applicationId1);
+  const getOrFetchApplication = skuId(7206).useGetOrFetchApplication(applicationId1);
   let tmp12 = getOrFetchApplication;
-  const obj5 = skuId(7203);
+  const obj5 = skuId(7206);
   if (getOrFetchApplication == null) {
     tmp12 = null;
   }
-  const tmp2Result = analyticsLocations(7200);
+  const tmp2Result = analyticsLocations(7203);
   const items2 = [skuAssets];
   stateFromStores2 = skuId(504).useStateFromStores(items2, () => skuAssets.getSkuAssets());
   const items3 = [stateFromStores];
@@ -1539,7 +1539,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     }
     obj = BillingPlatformUtils;
   }, items9);
-  const OTPACOMOrderExperiment = tmp4(9711).OTPACOMOrderExperiment;
+  const OTPACOMOrderExperiment = tmp4(9724).OTPACOMOrderExperiment;
   let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
   const tmp15Result6 = mobileStoreFront(stateFromStores.useState(0), 2);
   if (tmp4Result6.isIOS()) {
@@ -1558,7 +1558,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     obj6.orderRequired = enabled;
     const items10 = [skuId];
     obj6.skuIds = items10;
-    obj6.onOrderRetryCancellation = tmp4(10473).closeSocialLayerStorefrontProductDetailsModal;
+    obj6.onOrderRetryCancellation = tmp4(10484).closeSocialLayerStorefrontProductDetailsModal;
     const obj8 = { is_gift: false, location_stack: memo1, payment_type: "sku", sku_id: skuId, sku_type: null, sku_product_line: null, application_id: null };
     let type;
     if (stateFromStores != null) {
@@ -1577,18 +1577,18 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     obj8.application_id = applicationId4;
     obj6.checkoutAnalyticsFields = obj8;
     const obj9 = { attempt: tmp32, skuId, sku: stateFromStores, analyticsLocations: memo1, onPurchaseComplete: callback2, onPurchaseError: callback1 };
-    obj6.children = closure_14(tmp4(10484).HeadlessSlayerStorefrontPurchaseRunner, obj9);
-    tmp43Result = closure_14(tmp2(10480), obj6, skuId);
-    const tmp2Result2 = tmp2(10480);
+    obj6.children = closure_14(tmp4(10495).HeadlessSlayerStorefrontPurchaseRunner, obj9);
+    tmp43Result = closure_14(tmp2(10491), obj6, skuId);
+    const tmp2Result2 = tmp2(10491);
   }
   const items11 = [skuId, memo1, trackPDPClick];
   if (null == stateFromStores) {
     return null;
   } else {
-    let result = tmp4(7281).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
+    let result = tmp4(7284).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
     const intl4 = tmp4(1128).intl;
     const stringResult = intl4.string(tmp4(1128).t.boqtTA);
-    const tmp4Result7 = tmp4(7281);
+    const tmp4Result7 = tmp4(7284);
     let result1 = tmp4(2066).isSocialLayerStorefrontGiftingSupported();
     if (null != tmp25) {
       const obj10 = { mediaItem: tmp25, landscape: isScreenLandscape };
@@ -1597,12 +1597,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       tmp49 = null;
       if (null != memo) {
         const obj11 = { sku: stateFromStores };
-        tmp49 = closure_14(tmp2(9336), obj11);
+        tmp49 = closure_14(tmp2(9348), obj11);
       }
     }
     let tmp53 = null;
     if (stateFromStores.exclusive) {
-      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10488).ExclusiveBadge, {}) };
+      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10499).ExclusiveBadge, {}) };
       tmp53 = closure_14(memo1, obj12);
     }
     let tmp56 = null;
@@ -1650,11 +1650,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     obj20.children = closure_14(tmp4(5205).Button, obj21);
     const items14 = [closure_14(memo1, obj20), ];
     if (result1) {
-      const obj22 = { icon: tmp2(8396), variant: "primary", size: "lg", disabled: tmp28, accessibilityLabel: null, onPress: null };
+      const obj22 = { icon: tmp2(8400), variant: "primary", size: "lg", disabled: tmp28, accessibilityLabel: null, onPress: null };
       const intl2 = tmp4(1128).intl;
       obj22.accessibilityLabel = intl2.string(tmp4(1128).t.QAZA5f);
       obj22.onPress = tmp48;
-      result1 = closure_14(tmp4(7903).IconButton, obj22);
+      result1 = closure_14(tmp4(7907).IconButton, obj22);
     }
     items14[1] = result1;
     obj19.children = items14;
@@ -1662,10 +1662,10 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     if (result) {
       const obj23 = { style: tmp.legalCopy, children: null };
       const obj24 = { shouldAppendDisclaimer: false === tmp2Result(tmp12).hasAlreadyLinked };
-      const mobileFinePrintMessageForApplication = tmp4(10491).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj24);
+      const mobileFinePrintMessageForApplication = tmp4(10502).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj24);
       obj23.children = mobileFinePrintMessageForApplication.map((children, index) => closure_1_14(skuId(closeButtonIcon[17]).Text, { variant: "text-xs/normal", color: "text-muted", includeFontPadding: true, children }, index));
       result = closure_14(tmp64, obj23);
-      const tmp4Result9 = tmp4(10491);
+      const tmp4Result9 = tmp4(10502);
     }
     items13[3] = result;
     obj15.children = items13;
@@ -1683,7 +1683,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     const items16 = [tmp43Result, , , ];
     const obj27 = { style: tmp.header, children: null };
     const obj28 = {
-      onPress: tmp4(10473).closeSocialLayerStorefrontProductDetailsModal,
+      onPress: tmp4(10484).closeSocialLayerStorefrontProductDetailsModal,
       backImage() {
           return closure_2_14(XSmallIcon.XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
         },
@@ -1692,7 +1692,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     };
     const intl3 = tmp4(1128).intl;
     obj28.accessibilityLabel = intl3.string(tmp4(1128).t.cpT0Cq);
-    const items17 = [closure_14(tmp4(6881).HeaderBackButton, obj28), ];
+    const items17 = [closure_14(tmp4(6884).HeaderBackButton, obj28), ];
     const obj29 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.headerTitle, children: null };
     let name;
     if (getOrFetchApplication != null) {

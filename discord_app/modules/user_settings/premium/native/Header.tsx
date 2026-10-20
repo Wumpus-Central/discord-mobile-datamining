@@ -1,14 +1,14 @@
-// === Module 14576: premium/Header ===
+// === Module 14594: premium/Header ===
 
-// Module 14576 (premium/Header)
+// Module 14594 (premium/Header)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4952 */;
 import useThemeDefault from "useTheme" /* 5166 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import _modDef14577 from "module_14577" /* 14577 */;
-import _modDef14578 from "module_14578" /* 14578 */;
+import _modDef14595 from "module_14595" /* 14595 */;
+import _modDef14596 from "module_14596" /* 14596 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,9 +39,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(s
       tmp9 = cResult[3];
     }
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result = _modDef14577;
+      let tmp5Result = _modDef14595;
     } else {
-      tmp5Result = _modDef14578;
+      tmp5Result = _modDef14596;
     }
     if (cResult[4] !== tmp5Result) {
       const obj2 = { accessible: true, accessibilityLabel: tmp9, accessibilityRole: "header", source: tmp5Result };
@@ -105,9 +105,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(s
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef14577;
+    let tmp2Result = _modDef14595;
   } else {
-    tmp2Result = _modDef14578;
+    tmp2Result = _modDef14596;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2), ];

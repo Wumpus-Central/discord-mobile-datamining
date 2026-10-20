@@ -1,6 +1,6 @@
-// === Module 7344: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 7347: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 7344 (SensitiveMediaGoreRedactionSettingsUtils)
+// Module 7347 (SensitiveMediaGoreRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
 import UserSettings from "UserSettings" /* 4776 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5605 */;

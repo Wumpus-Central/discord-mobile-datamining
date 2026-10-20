@@ -1,12 +1,12 @@
-// === Module 19165: LocalPushNotificationActionCreators ===
+// === Module 19189: LocalPushNotificationActionCreators ===
 
-// Module 19165 (LocalPushNotificationActionCreators)
+// Module 19189 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ChannelConstants from "ChannelConstants" /* 4807 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6778 */;
-import Constants2 from "Constants" /* 11034 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
+import Constants2 from "Constants" /* 11046 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/local_push_notification/native/
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7530).trackAppOpened("notification");
+    data(7533).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -37,8 +37,8 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(2002)(12536, dependencyMap.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(2002)(12536, dependencyMap.paths);
+        data(2002)(12553, dependencyMap.paths).then((result) => result.default(channelId.channelId));
+        const promise2 = data(2002)(12553, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
         data(2002)(5669, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_1_0);
@@ -53,7 +53,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         }
       }
     }
-    let obj2 = data(7530);
+    let obj2 = data(7533);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

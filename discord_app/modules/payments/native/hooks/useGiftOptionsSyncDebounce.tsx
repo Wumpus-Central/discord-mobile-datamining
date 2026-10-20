@@ -1,6 +1,6 @@
-// === Module 10370: useGiftOptionsSyncDebounce ===
+// === Module 10381: useGiftOptionsSyncDebounce ===
 
-// Module 10370 (useGiftOptionsSyncDebounce)
+// Module 10381 (useGiftOptionsSyncDebounce)
 import _modDef12 from "module_12" /* 12 */;
 import useInitialValueDefault from "useInitialValue" /* 5560 */;
 import noop from "module_19" /* 19 */;

@@ -1,15 +1,15 @@
-// === Module 8954: StartEventModal ===
+// === Module 8966: StartEventModal ===
 
-// Module 8954 (StartEventModal)
+// Module 8966 (StartEventModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6620 */;
-import Pressables from "Pressables" /* 6856 */;
-import _modDef7132 from "module_7132" /* 7132 */;
-import GuildEventCardDefault from "GuildEventCard" /* 8948 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
+import Pressables from "Pressables" /* 6859 */;
+import _modDef7135 from "module_7135" /* 7135 */;
+import GuildEventCardDefault from "GuildEventCard" /* 8960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(4806);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(8804).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(8816).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(4945);
@@ -62,7 +62,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
     tmp6 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef7132 };
+    const obj2 = { source: _modDef7135 };
     const tmp10 = __initData(native.Icon, obj2);
     cResult[3] = tmp10;
     let tmp7 = tmp10;
@@ -90,7 +90,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = __initData(native.Icon, { source: _modDef7132 });
+  obj2.children = __initData(native.Icon, { source: _modDef7135 });
   obj.children = __initData(Pressables.PressableOpacity, obj2);
   return __initData(View, obj);
 });

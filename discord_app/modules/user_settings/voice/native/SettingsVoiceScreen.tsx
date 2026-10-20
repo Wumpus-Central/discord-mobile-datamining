@@ -1,6 +1,6 @@
-// === Module 16334: SettingsVoiceScreen ===
+// === Module 16353: SettingsVoiceScreen ===
 
-// Module 16334 (SettingsVoiceScreen)
+// Module 16353 (SettingsVoiceScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import shared from "shared" /* 4952 */;
@@ -8,12 +8,12 @@ import useThemeDefault from "useTheme" /* 5166 */;
 import Text_Text from "Text/Text" /* 5195 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5258 */;
 import FastImageDefault from "FastImage" /* 5631 */;
-import SettingBuilders from "SettingBuilders" /* 11099 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11498 */;
-import KrispLogo from "KrispLogo" /* 11501 */;
-import _modDef11502 from "module_11502" /* 11502 */;
-import _modDef11503 from "module_11503" /* 11503 */;
-import SettingLayoutDefault from "SettingLayout" /* 15761 */;
+import SettingBuilders from "SettingBuilders" /* 11111 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11509 */;
+import KrispLogo from "KrispLogo" /* 11512 */;
+import _modDef11513 from "module_11513" /* 11513 */;
+import _modDef11514 from "module_11514" /* 11514 */;
+import SettingLayoutDefault from "SettingLayout" /* 15780 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2068 */;
@@ -85,7 +85,7 @@ function getVoiceSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8276).MobileUserSettings;
+const MobileUserSettings = fn(8280).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
@@ -98,9 +98,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispL
   const tmp4 = closure_12();
   const tmp6 = useThemeDefault();
   if (obj2.isThemeLight(tmp6)) {
-    let tmp5Result = _modDef11502;
+    let tmp5Result = _modDef11513;
   } else {
-    tmp5Result = _modDef11503;
+    tmp5Result = _modDef11514;
   }
   ({ krisp, logo } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -162,9 +162,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispL
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef11502;
+    let tmp2Result = _modDef11513;
   } else {
-    tmp2Result = _modDef11503;
+    tmp2Result = _modDef11514;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

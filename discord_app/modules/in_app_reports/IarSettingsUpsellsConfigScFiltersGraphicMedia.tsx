@@ -1,10 +1,10 @@
-// === Module 8066: IarSettingsUpsellsConfigScFiltersGraphicMedia ===
+// === Module 8070: IarSettingsUpsellsConfigScFiltersGraphicMedia ===
 
-// Module 8066 (IarSettingsUpsellsConfigScFiltersGraphicMedia)
+// Module 8070 (IarSettingsUpsellsConfigScFiltersGraphicMedia)
 import util from "util" /* 1128 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7344 */;
-import MenuTypes from "MenuTypes" /* 8052 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7347 */;
+import MenuTypes from "MenuTypes" /* 8056 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

@@ -1,6 +1,6 @@
-// === Module 7579: IntegrationPermissionUtils ===
+// === Module 7582: IntegrationPermissionUtils ===
 
-// Module 7579 (IntegrationPermissionUtils)
+// Module 7582 (IntegrationPermissionUtils)
 import Server from "Server" /* 2000 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5595 */;
 import _slicedToArray from "module_32" /* 32 */;

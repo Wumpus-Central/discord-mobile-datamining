@@ -1,17 +1,17 @@
-// === Module 16903: UserSettingsDesignSystemPile ===
+// === Module 16922: UserSettingsDesignSystemPile ===
 
-// Module 16903 (UserSettingsDesignSystemPile)
+// Module 16922 (UserSettingsDesignSystemPile)
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1420 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import GuildIconDefault from "GuildIcon" /* 6831 */;
-import Card from "Card" /* 6853 */;
-import ClipView from "ClipView" /* 9324 */;
-import ListUtils from "ListUtils" /* 12352 */;
-import Pile from "Pile" /* 12750 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 15096 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import GuildIconDefault from "GuildIcon" /* 6834 */;
+import Card from "Card" /* 6856 */;
+import ClipView from "ClipView" /* 9336 */;
+import ListUtils from "ListUtils" /* 12369 */;
+import Pile from "Pile" /* 12767 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 15114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4945);
 let closure_8 = createStyles.createStyles({ container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 } });
 let items = [fn(1202).AvatarSizes.XSMALL, fn(1202).AvatarSizes.REFRESH_MEDIUM_32, fn(1202).AvatarSizes.NORMAL, fn(1202).AvatarSizes.LARGE_48, fn(1202).AvatarSizes.XLARGE];
-let items1 = [fn(6831).GuildIconSizes.XSMALL, fn(6831).GuildIconSizes.SMALL_32, fn(6831).GuildIconSizes.NORMAL, fn(6831).GuildIconSizes.LARGE, fn(6831).GuildIconSizes.XLARGE];
+let items1 = [fn(6834).GuildIconSizes.XSMALL, fn(6834).GuildIconSizes.SMALL_32, fn(6834).GuildIconSizes.NORMAL, fn(6834).GuildIconSizes.LARGE, fn(6834).GuildIconSizes.XLARGE];
 let closure_11 = ["Clyde", "Phibi", "Cap"];
 let closure_12 = ["test", "cats", "Evil Marcus", "robot overlords", "not a bug", "O M G"];
 let ReactCompilerGating = fn(558);
@@ -111,9 +111,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           const obj3 = { size: children, names, totalCount: size(1420).DEFAULT_AVATARS.length, children: null };
           const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
           obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14115).AvatarPile, obj3);
+          items[1] = closure_6(size(14133).AvatarPile, obj3);
           obj.children = items;
-          return closure_7(size(5932).Stack, obj, children);
+          return closure_7(size(5935).Stack, obj, children);
         })
     };
     const tmp9 = timestampProducer(closure_13, obj2);
@@ -132,9 +132,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           const obj3 = { size: children, names, totalCount: 9500, children: null };
           const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
           obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14115).AvatarPile, obj3);
+          items[1] = closure_6(size(14133).AvatarPile, obj3);
           obj.children = items;
-          return closure_7(size(5932).Stack, obj, children);
+          return closure_7(size(5935).Stack, obj, children);
         })
     };
     const tmp14 = timestampProducer(closure_13, obj3);
@@ -154,9 +154,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
           const substr = DEFAULT_AVATARS.slice(0, 2);
           obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(15096).AvatarDuoPile, obj3);
+          items[1] = closure_6(size(15114).AvatarDuoPile, obj3);
           obj.children = items;
-          return closure_7(size(5932).Stack, obj, children);
+          return closure_7(size(5935).Stack, obj, children);
         })
     };
     const tmp19 = timestampProducer(closure_13, obj4);
@@ -198,9 +198,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           const obj = { children: null };
           items = [closure_6(size(5195).Text, { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() }), ];
           const obj2 = { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() };
-          items[1] = closure_6(size(13344).GuildIconPile, { size, names: names2, totalCount: 128, children: names2.map((value, index) => closure_2_6(GuildIconDefault, { value, size }, index)) });
+          items[1] = closure_6(size(13362).GuildIconPile, { size, names: names2, totalCount: 128, children: names2.map((value, index) => closure_2_6(GuildIconDefault, { value, size }, index)) });
           obj.children = items;
-          return closure_7(size(5932).Stack, obj, size);
+          return closure_7(size(5935).Stack, obj, size);
         })
     };
     const tmp29 = timestampProducer(closure_13, obj6);
@@ -244,8 +244,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       obj3.depthX = tmp2;
       obj3.depthY = tmp3;
       obj3.children = names2.map((value, index) => {
-        const obj = { value, size: closure_1_0(6831).GuildIconSizes.LARGE };
-        return closure_1_6(closure_1_1(6831), obj, index);
+        const obj = { value, size: closure_1_0(6834).GuildIconSizes.LARGE };
+        return closure_1_6(closure_1_1(6834), obj, index);
       });
       items1[2] = closure_1_6(Pile.Pile, obj3);
       obj.children = items1;
@@ -285,9 +285,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj3 = { size: children, names, totalCount: size(1420).DEFAULT_AVATARS.length, children: null };
       const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
       obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-      items[1] = closure_6(size(14115).AvatarPile, obj3);
+      items[1] = closure_6(size(14133).AvatarPile, obj3);
       obj.children = items;
-      return closure_7(size(5932).Stack, obj, children);
+      return closure_7(size(5935).Stack, obj, children);
     })
   });
   let obj3 = {
@@ -299,9 +299,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj3 = { size: children, names, totalCount: size(1420).DEFAULT_AVATARS.length, children: null };
       const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
       obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-      items[1] = closure_6(size(14115).AvatarPile, obj3);
+      items[1] = closure_6(size(14133).AvatarPile, obj3);
       obj.children = items;
-      return closure_7(size(5932).Stack, obj, children);
+      return closure_7(size(5935).Stack, obj, children);
     })
   };
   items[1] = timestampProducer(closure_13, {
@@ -313,9 +313,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj3 = { size: children, names, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
       obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-      items[1] = closure_6(size(14115).AvatarPile, obj3);
+      items[1] = closure_6(size(14133).AvatarPile, obj3);
       obj.children = items;
-      return closure_7(size(5932).Stack, obj, children);
+      return closure_7(size(5935).Stack, obj, children);
     })
   });
   let obj4 = {
@@ -327,9 +327,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj3 = { size: children, names, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
       obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-      items[1] = closure_6(size(14115).AvatarPile, obj3);
+      items[1] = closure_6(size(14133).AvatarPile, obj3);
       obj.children = items;
-      return closure_7(size(5932).Stack, obj, children);
+      return closure_7(size(5935).Stack, obj, children);
     })
   };
   items[2] = timestampProducer(closure_13, {
@@ -342,9 +342,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-      items[1] = closure_6(size(15096).AvatarDuoPile, obj3);
+      items[1] = closure_6(size(15114).AvatarDuoPile, obj3);
       obj.children = items;
-      return closure_7(size(5932).Stack, obj, children);
+      return closure_7(size(5935).Stack, obj, children);
     })
   });
   const obj5 = {
@@ -357,9 +357,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const DEFAULT_AVATARS = size(1420).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-      items[1] = closure_6(size(15096).AvatarDuoPile, obj3);
+      items[1] = closure_6(size(15114).AvatarDuoPile, obj3);
       obj.children = items;
-      return closure_7(size(5932).Stack, obj, children);
+      return closure_7(size(5935).Stack, obj, children);
     })
   };
   items[3] = timestampProducer(closure_13, {
@@ -406,9 +406,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj = { children: null };
       items = [closure_6(size(5195).Text, { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() }), ];
       const obj2 = { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() };
-      items[1] = closure_6(size(13344).GuildIconPile, { size, names: names2, totalCount: 128, children: names2.map((value, index) => closure_2_6(GuildIconDefault, { value, size }, index)) });
+      items[1] = closure_6(size(13362).GuildIconPile, { size, names: names2, totalCount: 128, children: names2.map((value, index) => closure_2_6(GuildIconDefault, { value, size }, index)) });
       obj.children = items;
-      return closure_7(size(5932).Stack, obj, size);
+      return closure_7(size(5935).Stack, obj, size);
     })
   });
   const obj8 = { title: "Weird Piles", noScroll: true, children: null };
@@ -439,8 +439,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj3.depthX = tmp;
     obj3.depthY = tmp2;
     obj3.children = names2.map((value, index) => {
-      const obj = { value, size: closure_1_0(6831).GuildIconSizes.LARGE };
-      return closure_1_6(closure_1_1(6831), obj, index);
+      const obj = { value, size: closure_1_0(6834).GuildIconSizes.LARGE };
+      return closure_1_6(closure_1_1(6834), obj, index);
     });
     items1[2] = closure_1_6(Pile.Pile, obj3);
     obj.children = items1;

@@ -1,9 +1,9 @@
-// === Module 9324: ClipView ===
+// === Module 9336: ClipView ===
 
-// Module 9324 (ClipView)
+// Module 9336 (ClipView)
 import c from "c" /* 576 */;
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9325 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9327 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9337 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9339 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;

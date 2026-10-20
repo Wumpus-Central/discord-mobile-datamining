@@ -1,10 +1,10 @@
-// === Module 7508: ReferralTrialStore ===
+// === Module 7511: ReferralTrialStore ===
 
-// Module 7508 (ReferralTrialStore)
+// Module 7511 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageTypes from "MessageTypes" /* 1103 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7509 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7512 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

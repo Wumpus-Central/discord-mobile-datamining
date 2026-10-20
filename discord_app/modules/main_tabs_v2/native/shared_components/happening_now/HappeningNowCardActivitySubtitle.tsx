@@ -1,13 +1,13 @@
-// === Module 17238: HappeningNowCardActivitySubtitle ===
+// === Module 17257: HappeningNowCardActivitySubtitle ===
 
-// Module 17238 (HappeningNowCardActivitySubtitle)
+// Module 17257 (HappeningNowCardActivitySubtitle)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useChannelNameDefault from "useChannelName" /* 5565 */;
-import isStreamingDefault from "isStreaming" /* 8674 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8939 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10569 */;
-import HappeningNowCard from "HappeningNowCard" /* 16384 */;
+import isStreamingDefault from "isStreaming" /* 8686 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8951 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10580 */;
+import HappeningNowCard from "HappeningNowCard" /* 16403 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
 
@@ -121,7 +121,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       cResult[10] = tmp33;
     }
     const obj4 = { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 };
-    const tmp29 = jsx(voiceState(16384).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 });
+    const tmp29 = jsx(voiceState(16403).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 });
     cResult[5] = tmp23;
     cResult[6] = tmp24;
     cResult[7] = tmp29;
@@ -140,7 +140,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       tmp12 = getChannelA11yLabelDefault(obj7);
     }
     const obj8 = { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) };
-    obj6.children = jsx(voiceState(16384).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) });
+    obj6.children = jsx(voiceState(16403).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) });
     return <View style={tmp2.cardDetails}>{null}</View>;
   }
 };
@@ -155,7 +155,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp8) {
-        HappeningNowCardSubtitle = HappeningNowCardSubtitle(16384).HappeningNowCardSubtitle;
+        HappeningNowCardSubtitle = HappeningNowCardSubtitle(16403).HappeningNowCardSubtitle;
         const obj3 = { lineClamp: 1, children: tmp8 };
         tmp6 = <HappeningNowCardSubtitle lineClamp={1}>{tmp8}</HappeningNowCardSubtitle>;
         cResult[3] = tmp8;

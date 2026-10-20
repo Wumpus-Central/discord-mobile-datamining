@@ -1,6 +1,6 @@
-// === Module 12600: TransferOwnershipConstants ===
+// === Module 12617: TransferOwnershipConstants ===
 
-// Module 12600 (TransferOwnershipConstants)
+// Module 12617 (TransferOwnershipConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_settings/safety/TransferOwnershipConstants.tsx");

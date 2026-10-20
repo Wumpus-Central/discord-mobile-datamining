@@ -1,11 +1,11 @@
-// === Module 16450: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 16469: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 16450 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 16469 (CustomTypingIndicatorAnimationPickerSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import Card from "Card" /* 6853 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import Card from "Card" /* 6856 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   const intl4 = map(1128).intl;
   obj7.label = intl4.string(content(3822)["8t5EiI"]);
   items1[3] = obj7;
-  const ActionSheet = map(7244).ActionSheet;
+  const ActionSheet = map(7247).ActionSheet;
   const content2 = previewRow.content;
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
     const intl5 = map(1128).intl;
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
       if (cResult[17] === tmp13) {
         let tmp16 = cResult[18];
       }
-      Stack = map(5932).Stack;
+      Stack = map(5935).Stack;
       const items2 = [items1.slice(0, num), items1.slice(num, 4)];
       map = items2.map;
       const mapped = map((arr, arg1) => timestampProducer(Stack_Stack.Stack, {
@@ -240,12 +240,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   const obj = onChange(576);
   obj10.typingSuggestion = map(1400).TypingSuggestion.UNSPECIFIED;
   obj9.config = obj10;
-  const tmp15 = closure_6(content(12878), obj9);
+  const tmp15 = closure_6(content(12896), obj9);
   cResult[13] = emojis;
   cResult[14] = content;
   cResult[15] = tmp15;
   tmp13 = tmp15;
-  const tmp10Result = content(12878);
+  const tmp10Result = content(12896);
 }) : (function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   onChange = onChange.onChange;
   animation = undefined;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   const obj7 = { config: null, size: 54 };
   const obj8 = { emojis, animation, typingSuggestion: onChange(1400).TypingSuggestion.UNSPECIFIED };
   obj7.config = obj8;
-  obj6.children = closure_6(animation(12878), obj7);
+  obj6.children = closure_6(animation(12896), obj7);
   const items1 = [closure_6(View, obj6), ];
   const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
       }
     }, label.label))
   }, index));
-  items1[1] = closure_6(onChange(5932).Stack, obj9);
+  items1[1] = closure_6(onChange(5935).Stack, obj9);
   obj5.children = items1;
-  return closure_7(onChange(7244).ActionSheet, obj5);
+  return closure_7(onChange(7247).ActionSheet, obj5);
 });

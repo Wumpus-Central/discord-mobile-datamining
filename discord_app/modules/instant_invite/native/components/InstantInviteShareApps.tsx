@@ -1,6 +1,6 @@
-// === Module 9012: InstantInviteShareApps ===
+// === Module 9024: InstantInviteShareApps ===
 
-// Module 9012 (InstantInviteShareApps)
+// Module 9024 (InstantInviteShareApps)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InstantInviteConstants = fn(9013);
+const InstantInviteConstants = fn(9025);
 ({ SHARE_ITEMS: closure_7, SHARE_ITEMS_DEFAULT: closure_8 } = InstantInviteConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4945);

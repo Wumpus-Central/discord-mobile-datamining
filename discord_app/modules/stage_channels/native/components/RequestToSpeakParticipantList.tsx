@@ -1,9 +1,9 @@
-// === Module 11414: RequestToSpeakParticipantList ===
+// === Module 11425: RequestToSpeakParticipantList ===
 
-// Module 11414 (RequestToSpeakParticipantList)
+// Module 11425 (RequestToSpeakParticipantList)
 import nativeDefault from "native" /* 587 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7817 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8593 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7821 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

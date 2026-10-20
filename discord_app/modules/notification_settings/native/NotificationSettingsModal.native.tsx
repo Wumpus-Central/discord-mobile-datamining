@@ -1,6 +1,6 @@
-// === Module 19049: NotificationSettingsModal ===
+// === Module 19072: NotificationSettingsModal ===
 
-// Module 19049 (NotificationSettingsModal)
+// Module 19072 (NotificationSettingsModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,39 +12,39 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171
 import Text_Text from "Text/Text" /* 5195 */;
 import useChannelName from "useChannelName" /* 5565 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
-import Stack_Stack from "Stack/Stack" /* 5932 */;
-import TableRow from "TableRow" /* 6851 */;
-import TableRowIcon from "TableRowIcon" /* 6859 */;
-import NavigatorHeader from "NavigatorHeader" /* 6872 */;
-import TableRadioRow from "TableRadioRow" /* 6932 */;
-import TableRadioGroup from "TableRadioGroup" /* 6933 */;
-import TableRowGroup from "TableRowGroup" /* 6935 */;
-import Navigator from "Navigator" /* 7043 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7156 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7158 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7163 */;
-import TableSwitchRow from "TableSwitchRow" /* 7241 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8243 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8447 */;
-import Form2 from "Form" /* 8871 */;
-import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10782 */;
-import MutedUntilTextDefault from "MutedUntilText" /* 10802 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 10943 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 13576 */;
-import NotificationSettingsMuteBanner from "NotificationSettingsMuteBanner" /* 13578 */;
-import NotificationSettingsPresets from "NotificationSettingsPresets" /* 13579 */;
-import NotificationSettingsMessageNotification from "NotificationSettingsMessageNotification" /* 13581 */;
-import NotificationSettingsMessageUnread from "NotificationSettingsMessageUnread" /* 13588 */;
-import NotificationSettingChannelOverridesDefault from "NotificationSettingChannelOverrides" /* 19050 */;
+import Stack_Stack from "Stack/Stack" /* 5935 */;
+import TableRow from "TableRow" /* 6854 */;
+import TableRowIcon from "TableRowIcon" /* 6862 */;
+import NavigatorHeader from "NavigatorHeader" /* 6875 */;
+import TableRadioRow from "TableRadioRow" /* 6935 */;
+import TableRadioGroup from "TableRadioGroup" /* 6936 */;
+import TableRowGroup from "TableRowGroup" /* 6938 */;
+import Navigator from "Navigator" /* 7046 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7159 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7161 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7166 */;
+import TableSwitchRow from "TableSwitchRow" /* 7244 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8247 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8451 */;
+import Form2 from "Form" /* 8883 */;
+import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10793 */;
+import MutedUntilTextDefault from "MutedUntilText" /* 10813 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 10954 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 13594 */;
+import NotificationSettingsMuteBanner from "NotificationSettingsMuteBanner" /* 13596 */;
+import NotificationSettingsPresets from "NotificationSettingsPresets" /* 13597 */;
+import NotificationSettingsMessageNotification from "NotificationSettingsMessageNotification" /* 13599 */;
+import NotificationSettingsMessageUnread from "NotificationSettingsMessageUnread" /* 13606 */;
+import NotificationSettingChannelOverridesDefault from "NotificationSettingChannelOverrides" /* 19073 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7155 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7158 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 4822 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 18702 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 18725 */;
 import RelationshipStore from "RelationshipStore" /* 4890 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6652 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -106,8 +106,8 @@ class NotificationSettings extends PureComponent {
         const _HermesInternal = HermesInternal;
         const tmpResult2 = ActionSheetActionCreatorsDefault;
         const obj2 = { guildId };
-        tmpResult2.openLazy(asyncRequireImpl(10800, dependencyMap.paths), "muteSettings" + guildId, obj2);
-        const tmp7 = asyncRequireImpl(10800, dependencyMap.paths);
+        tmpResult2.openLazy(asyncRequireImpl(10811, dependencyMap.paths), "muteSettings" + guildId, obj2);
+        const tmp7 = asyncRequireImpl(10811, dependencyMap.paths);
       }
     };
     applyArgumentsResult.handleToggleChange = function handleToggleChange(mobile_push, arg1, NotificationLabel) {
@@ -331,11 +331,11 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const intl2 = tmp7(1128).intl;
     obj4.helperText = intl2.string(tmp7(1128).t["8wbTQ6"]);
     const obj5 = { label: formatResult, onPress: self.handleMutePress, arrow: !muted };
-    obj4.children = closure_1_27(tmp7(6851).TableRow, obj5);
-    const items = [closure_1_27(tmp7(6935).TableRowGroup, obj4, "mute"), ];
+    obj4.children = closure_1_27(tmp7(6854).TableRow, obj5);
+    const items = [closure_1_27(tmp7(6938).TableRowGroup, obj4, "mute"), ];
     let tmp10Result = null;
     if (muted) {
-      const obj6 = { muteConfig, type: tmp7(10802).MuteSettingType.SERVER };
+      const obj6 = { muteConfig, type: tmp7(10813).MuteSettingType.SERVER };
       tmp10Result = closure_1_27(MutedUntilTextDefault, obj6, "muted-until");
     }
     items[1] = tmp10Result;
@@ -544,7 +544,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
     }
   }
   const tmpResult = guildId(504);
-  const shouldUseNewNotificationSystem = guildId(10782).useShouldUseNewNotificationSystem("NotificationSettingsModalNative");
+  const shouldUseNewNotificationSystem = guildId(10793).useShouldUseNewNotificationSystem("NotificationSettingsModalNative");
   if (cResult[9] === tmp18) {
     class E {
       constructor(arg0) {
@@ -560,7 +560,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
   }
   const merged = Object.assign(tmp13);
   const obj3 = { guildId, channels: tmp18, navigation, shouldUseNewNotificationSystem };
-  const tmpResult2 = guildId(10782);
+  const tmpResult2 = guildId(10793);
   cResult[9] = tmp18;
   cResult[10] = guildId;
   cResult[11] = navigation;
@@ -587,9 +587,9 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
   }), items1);
   const tmp3 = _objectWithoutProperties(stateFromStoresObject, closure_4);
   const obj4 = { children: null };
-  const obj3 = guildId(10782);
+  const obj3 = guildId(10793);
   const merged = Object.assign(tmp3);
-  const items2 = [closure_27(NotificationSettings, { guildId, channels: memo, navigation, shouldUseNewNotificationSystem: guildId(10782).useShouldUseNewNotificationSystem("NotificationSettingsModalNative") }), closure_27(guildId(5553).NavScrim, {})];
+  const items2 = [closure_27(NotificationSettings, { guildId, channels: memo, navigation, shouldUseNewNotificationSystem: guildId(10793).useShouldUseNewNotificationSystem("NotificationSettingsModalNative") }), closure_27(guildId(5553).NavScrim, {})];
   obj4.children = items2;
   return closure_28(closure_29, obj4);
 });

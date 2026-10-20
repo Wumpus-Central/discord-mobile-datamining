@@ -1,14 +1,14 @@
-// === Module 12384: ConjureDebugWorkerTab ===
+// === Module 12401: ConjureDebugWorkerTab ===
 
-// Module 12384 (ConjureDebugWorkerTab)
+// Module 12401 (ConjureDebugWorkerTab)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3820 from "module_3820" /* 3820 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 12380 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12381 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12383 */;
-import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 12385 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 12397 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12398 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12400 */;
+import ConjureDebugAnalytics from "ConjureDebugAnalytics" /* 12402 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -568,21 +568,21 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Runtim
   let schedules = env.runtime;
   if (cResult[0] !== env) {
     let intl = tmp(1128).intl;
-    const obj2 = { env: tmp(12380).debugEnvLabel(env) };
+    const obj2 = { env: tmp(12397).debugEnvLabel(env) };
     let formatToPlainStringResult = intl.formatToPlainString(_modDef3820["92gVTm"], obj2);
     cResult[0] = env;
     cResult[1] = formatToPlainStringResult;
     let tmp4 = formatToPlainStringResult;
-    const tmpResult = tmp(12380);
+    const tmpResult = tmp(12397);
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] !== schedules.connections) {
-    const formatCountResult = tmp(12381).formatCount(schedules.connections);
+    const formatCountResult = tmp(12398).formatCount(schedules.connections);
     cResult[2] = schedules.connections;
     cResult[3] = formatCountResult;
     let tmp7 = formatCountResult;
-    const tmpResult2 = tmp(12381);
+    const tmpResult2 = tmp(12398);
   } else {
     tmp7 = cResult[3];
   }
@@ -645,7 +645,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Runtim
     cResult[8] = schedules;
     cResult[9] = mapped;
   }
-  const tmp10 = closure_5(env(12383).DebugStatRow, { label: tmp4, value: tmp7 });
+  const tmp10 = closure_5(env(12400).DebugStatRow, { label: tmp4, value: tmp7 });
   cResult[4] = tmp4;
   cResult[5] = tmp7;
   cResult[6] = tmp10;
@@ -657,11 +657,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Runtim
   let obj = { children: null };
   const obj2 = { label: null, value: null };
   let intl = env(1128).intl;
-  let obj3 = { env: env(12380).debugEnvLabel(env) };
+  let obj3 = { env: env(12397).debugEnvLabel(env) };
   obj2.label = intl.formatToPlainString(_modDef3820["92gVTm"], obj3);
-  let obj4 = env(12380);
-  obj2.value = env(12381).formatCount(runtime.connections);
-  const items = [closure_5(env(12383).DebugStatRow, obj2), ];
+  let obj4 = env(12397);
+  obj2.value = env(12398).formatCount(runtime.connections);
+  const items = [closure_5(env(12400).DebugStatRow, obj2), ];
   const schedules = runtime.schedules;
   items[1] = schedules.map((id) => {
     const obj = { label: null, value: null, hint: null };
@@ -1162,14 +1162,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Storag
     let items = [obj2];
     let items1 = items;
   } else {
-    let obj3 = { key: "preview", label: DebugSection(12380).debugEnvLabel("preview"), metrics: preview };
+    let obj3 = { key: "preview", label: DebugSection(12397).debugEnvLabel("preview"), metrics: preview };
     items1 = [obj3, ];
     let obj4 = { key: "stable", label: null, metrics: null };
-    const DebugSectionResult = DebugSection(12380);
-    obj4.label = DebugSection(12380).debugEnvLabel("stable");
+    const DebugSectionResult = DebugSection(12397);
+    obj4.label = DebugSection(12397).debugEnvLabel("stable");
     obj4.metrics = stable;
     items1[1] = obj4;
-    const DebugSectionResult1 = DebugSection(12380);
+    const DebugSectionResult1 = DebugSection(12397);
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     let intl2 = DebugSection(1128).intl;
@@ -1179,7 +1179,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Storag
   } else {
     tmp4 = cResult[5];
   }
-  DebugSection = DebugSection(12383).DebugSection;
+  DebugSection = DebugSection(12400).DebugSection;
   let obj = limits(576);
   tmp = closure_5(DebugSection, {
     title: tmp4,
@@ -1278,15 +1278,15 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Storag
     let tmp4 = limits;
     let items1 = items;
   } else {
-    let obj = { key: "preview", label: limits(12380).debugEnvLabel("preview"), metrics: tmp };
+    let obj = { key: "preview", label: limits(12397).debugEnvLabel("preview"), metrics: tmp };
     items1 = [obj, ];
     let obj5 = { key: "stable", label: null, metrics: null };
-    let obj2 = limits(12380);
-    obj5.label = limits(12380).debugEnvLabel("stable");
+    let obj2 = limits(12397);
+    obj5.label = limits(12397).debugEnvLabel("stable");
     obj5.metrics = stable;
     items1[1] = obj5;
     tmp4 = limits;
-    let obj4 = limits(12380);
+    let obj4 = limits(12397);
   }
   let obj6 = { title: null, children: null };
   let intl2 = tmp4(1128).intl;
@@ -1327,7 +1327,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Storag
     }
     return tmp18Result;
   });
-  return closure_5(tmp4(12383).DebugSection, obj6);
+  return closure_5(tmp4(12400).DebugSection, obj6);
 });
 ReactCompilerGating = fn(558);
 let obj3 = { gap: nativeDefault.space.PX_24 };
