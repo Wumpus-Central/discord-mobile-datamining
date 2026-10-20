@@ -2,42 +2,31 @@
 
 // Module 6389
 import _mod1308 from "module_1308" /* 1308 */;
-import _mod1309 from "module_1309" /* 1309 */;
-import callBindBasic from "callBindBasic" /* 1318 */;
+import _mod6390 from "module_6390" /* 6390 */;
+import _mod6391 from "module_6391" /* 6391 */;
+import _mod6392 from "module_6392" /* 6392 */;
 
-const obj = {};
-try {
-  obj.__proto__ = null;
-  let _module = _mod1309;
-  if (_module) {
-    const _Object = Object;
-    _module = _mod1309(Object.prototype, "__proto__");
+if (_mod6390) {
+  function setProto(arg0, arg1) {
+    if (_mod6390(arg0, arg1)) {
+      return arg0;
+    } else {
+      const tmp5 = new _mod1308("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      throw tmp5;
+    }
   }
-  let tmp6 = !("toString" in obj);
-  if (tmp6) {
-    let setDunder = _module;
-    if (setDunder) {
-      setDunder = typeof _module.set === "function";
-    }
-    if (setDunder) {
-      const items = [_module.set];
-      setDunder = callBindBasic(items);
-    }
-    if (!setDunder) {
-      setDunder = function setDunder(arg0, arg1) {
-        if (null == arg0) {
-          const tmp6 = new _mod1308("set Object.prototype.__proto__ called on null or undefined");
-          throw tmp6;
-        } else {
-          arg0.__proto__ = arg1;
-          return arg1;
-        }
+} else {
+  setProto = _mod6391;
+  if (!setProto) {
+    let setProto2 = null;
+    if (_mod6392) {
+      setProto2 = function setProto(arg0, arg1) {
+        _mod6392(arg0, arg1);
+        return arg0;
       };
     }
-    tmp6 = setDunder;
+    setProto = setProto2;
   }
-  module.exports = tmp6;
-  const tmp3 = "toString" in obj;
-} catch (tmp2) {
-  throw tmp2;
 }
+
+export default setProto;

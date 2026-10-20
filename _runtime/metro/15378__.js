@@ -1,21 +1,17 @@
 // === Module 15378: ? ===
 
 // Module 15378
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
+import _mod15374 from "module_15374" /* 15374 */;
+
+
+export default !_mod15374(() => {
+  const fn = () => {
+
+  };
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
   }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+  return hasOwnPropertyResult;
+});

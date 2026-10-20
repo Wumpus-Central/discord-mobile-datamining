@@ -1,37 +1,10 @@
 // === Module 7235: ? ===
 
 // Module 7235
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod7237 from "module_7237" /* 7237 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
-const enforcing = TurboModuleRegistry.getEnforcing("RNCClipboard");
-const RNCClipboard_TEXT_CHANGED = "RNCClipboard_TEXT_CHANGED";
-const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcing);
-const listenerCount = nativeEventEmitter.listenerCount;
-let fn = listenerCount;
-if (listenerCount) {
-  const listenerCount2 = nativeEventEmitter.listenerCount;
-  fn = listenerCount2.bind(nativeEventEmitter);
-} else {
-  fn = (arg0) => nativeEventEmitter.listeners(arg0).length;
-}
+const require = globalThis.__r;
 
-export default enforcing;
-export const addListener = (arg0) => {
-  if (0 === fn(RNCClipboard_TEXT_CHANGED)) {
-    enforcing.setListener();
-  }
-  const addListenerResult = nativeEventEmitter.addListener(RNCClipboard_TEXT_CHANGED, arg0);
-  addListenerResult._remove = addListenerResult.remove;
-  addListenerResult.remove = function() {
-    this._remove();
-    if (0 === fn(RNCClipboard_TEXT_CHANGED)) {
-      enforcing.removeListener();
-    }
-  };
-  return addListenerResult;
-};
-export const removeAllListeners = () => {
-  nativeEventEmitter.removeAllListeners(RNCClipboard_TEXT_CHANGED);
-  enforcing.removeListener();
-};
+
+export const useClipboard = require("module_7236").useClipboard;
+export default _mod7237.Clipboard;

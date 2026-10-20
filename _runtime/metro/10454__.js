@@ -1,63 +1,50 @@
 // === Module 10454: ? ===
 
 // Module 10454
+import cancelAnimation from "cancelAnimation" /* 1658 */;
 import noop from "module_19" /* 19 */;
 
+require = fn;
+const jsx = fn(21).jsx;
+let context = noop.createContext({});
+const __initData = { code: "function pnpm_indexTsx1(index,dimensions){const{itemDimensions}=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};}" };
+const __initData2 = { code: "function pnpm_indexTsx2(dimensions){const{containerSize}=this.__closure;containerSize.value=dimensions;}" };
 
-export const useAutoPlay = function useAutoPlay(autoPlay) {
-  autoPlay = autoPlay.autoPlay;
-  closure_0 = tmp;
-  const autoPlayReverse = autoPlay.autoPlayReverse;
-  closure_1 = tmp2;
-  const autoPlayInterval = autoPlay.autoPlayInterval;
-  const prev = iter.prev;
-  const next = iter.next;
-  noop.useRef();
-  noop.useRef(!(undefined !== autoPlay && autoPlay));
-  const items = [undefined !== autoPlayReverse && autoPlayReverse, autoPlayInterval, prev, next];
-  const callback = noop.useCallback(() => {
-    if (!ref2.current) {
-      if (ref.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref.current);
-      }
-      const _setTimeout = setTimeout;
-      ref.current = setTimeout(() => {
-        if (closure_1_1) {
-          const obj2 = { onFinished };
-          prev(obj2);
-        } else {
-          const obj = { onFinished };
-          next(obj);
-        }
-      }, autoPlayInterval);
-    }
-  }, items);
-  const items1 = [undefined !== autoPlay && autoPlay];
-  const pause = noop.useCallback(() => {
-    if (closure_0) {
-      if (ref.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-      }
-      closure_6.current = true;
-    }
-  }, items1);
-  const items2 = [callback, undefined !== autoPlay && autoPlay];
-  const start = noop.useCallback(() => {
-    if (closure_0) {
-      closure_6.current = false;
-      callback();
-    }
-  }, items2);
-  const items3 = [pause, start, undefined !== autoPlay && autoPlay];
-  const effect = noop.useEffect(() => {
-    if (closure_0) {
-      start();
-    } else {
-      pause();
-    }
-    return pause;
-  }, items3);
-  return { pause, start };
+export const GlobalStateContext = context;
+export const GlobalStateProvider = (arg0) => {
+  ({ children, value } = arg0);
+  const sharedValue = cancelAnimation.useSharedValue({ width: 0, height: 0 });
+  const sharedValue1 = cancelAnimation.useSharedValue({});
+  const fn = function c(arg0, arg1) {
+    const obj = {};
+    const merged = Object.assign(sharedValue1.value);
+    obj[arg0] = arg1;
+    sharedValue1.value = obj;
+  };
+  fn.__closure = { itemDimensions: sharedValue1 };
+  fn.__workletHash = 9846581158902;
+  fn.__initData = __initData;
+  const fn2 = function _(value) {
+    sharedValue.value = value;
+  };
+  fn2.__closure = { containerSize: sharedValue };
+  fn2.__workletHash = 5978604737778;
+  fn2.__initData = __initData2;
+  const obj3 = { value: null, children: null };
+  const obj4 = {};
+  let merged = Object.assign(value);
+  obj4.layout = { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: fn, updateContainerSize: fn2 };
+  obj3.value = obj4;
+  obj3.children = children;
+  return <context.Provider value={null}>{null}</context.Provider>;
+};
+export const useGlobalState = () => {
+  context = noop.useContext(context);
+  if (context) {
+    return context;
+  } else {
+    const _Error = Error;
+    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
+    throw error;
+  }
 };

@@ -1,326 +1,176 @@
 // === Module 12517: ? ===
 
 // Module 12517
-import _mod12404 from "module_12404" /* 12404 */;
-import _mod12407 from "module_12407" /* 12407 */;
-import _mod12412 from "module_12412" /* 12412 */;
-import _mod12420 from "module_12420" /* 12420 */;
-import supportsFetch from "supportsFetch" /* 12518 */;
-import _slicedToArray from "module_32" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _mod12430 from "module_12430" /* 12430 */;
+import _mod12432 from "module_12432" /* 12432 */;
+import setupIntegration from "module_12479" /* 12479 */;
 
-const require = globalThis.__r;
-
-let closure_4 = async function _resolveResponse(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
+function flattenIssue(path) {
+  const obj = {};
+  const merged = Object.assign(path);
+  let joined;
+  if ("path" in path) {
+    const _Array = Array;
+    if (Array.isArray(path.path)) {
+      path = path.path;
+      joined = path.join(".");
     }
+  }
+  obj.path = joined;
+  let json;
+  if ("keys" in path) {
+    const _JSON = JSON;
+    json = JSON.stringify(path.keys);
+  }
+  obj.keys = json;
+  let json1;
+  if ("unionErrors" in path) {
+    const _JSON2 = JSON;
+    json1 = JSON.stringify(path.unionErrors);
+  }
+  obj.unionErrors = json1;
+  return obj;
+}
+function flattenIssuePath(arr) {
+  const mapped = arr.map((item) => {
+    let str = "<array>";
+    if (typeof item !== "number") {
+      str = item;
+    }
+    return str;
+  });
+  return mapped.join(".");
+}
+function formatIssueMessage(issues) {
+  const set = new Set();
+  while (tmp !== undefined) {
+    let arr = flattenIssuePath(tmp2.path);
+    if (arr.length > 0) {
+      let addResult = set.add(tmp4);
+    }
+    continue;
+  }
+  const arr2 = Array.from(set);
+  if (0 === arr2.length) {
+    let str4 = "variable";
+    if (issues.issues.length > 0) {
+      const first = issues.issues[0];
+      let tmp10 = undefined !== first;
+      if (tmp10) {
+        tmp10 = "expected" in first;
+      }
+      if (tmp10) {
+        tmp10 = typeof first.expected === "string";
+      }
+      str4 = "variable";
+      if (tmp10) {
+        str4 = first.expected;
+      }
+    }
+    const _HermesInternal2 = HermesInternal;
+    return "Failed to validate " + str4;
   } else {
-    try {
-      c6 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp7;
-          closure_130_0 = closure_1;
-          closure_130_1 = undefined;
-          let reader;
-          let timeout;
-          closure_130_4 = undefined;
-          let timeout2;
-          let done;
-          if (_require) {
-            if (_require.body) {
-              const body = _require.body;
-              closure_130_1 = body;
-              reader = body.getReader();
-              const _setTimeout = setTimeout;
-              timeout = setTimeout(() => {
-                closure_1_1.cancel().then(null, () => {
-
-                });
-              }, 90000);
-              closure_130_4 = true;
-              if (closure_130_4) {
-                timeout2 = undefined;
-                c5 = 2;
-                const _setTimeout2 = setTimeout;
-                timeout2 = setTimeout(() => {
-                  closure_1_1.cancel().then(null, () => {
-
-                  });
-                }, 5000);
-                c3 = 3;
-                c6 = 1;
-                const obj4 = { value: reader.read(), done: false };
-                return obj4;
-              } else {
-                const _clearTimeout5 = clearTimeout;
-                clearTimeout(timeout);
-                reader.releaseLock();
-                closure_130_1.cancel().then(null, () => {
-
-                });
-                const cancelResult = closure_130_1.cancel();
+    const _HermesInternal = HermesInternal;
+    return "Failed to validate keys: " + _mod12432.truncate(arr2.join(", "), 100);
+  }
+  tmp = issues.issues[Symbol.iterator]();
+}
+function applyZodErrorsToEvent(arg0, arg1) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  if (exception.exception) {
+    if (exception.exception.values) {
+      if (originalException) {
+        if (originalException.originalException) {
+          if ((function originalExceptionIsZodError(originalException) {
+            let isErrorResult = _mod12430.isError(originalException);
+            if (isErrorResult) {
+              isErrorResult = "ZodError" === originalException.name;
+            }
+            if (isErrorResult) {
+              const _Array = Array;
+              isErrorResult = Array.isArray(originalException.issues);
+            }
+            return isErrorResult;
+          })(originalException.originalException)) {
+            if (0 !== originalException.originalException.issues.length) {
+              try {
+                const issues = originalException.originalException.issues;
+                if (flag) {
+                  let substr = issues;
+                } else {
+                  substr = issues.slice(0, arg0);
+                }
+                const mapped = substr.map(flattenIssue);
+                if (flag) {
+                  let _Array = Array;
+                  if (!Array.isArray(originalException.attachments)) {
+                    originalException.attachments = [];
+                  }
+                  const attachments = originalException.attachments;
+                  const obj = { filename: "zod_issues.json", data: null };
+                  const _JSON = JSON;
+                  const obj2 = { issues: mapped };
+                  obj.data = JSON.stringify(obj2);
+                  attachments.push(obj);
+                }
+                const obj3 = {};
+                const merged = Object.assign(exception);
+                const obj4 = {};
+                const merged1 = Object.assign(exception.exception);
+                const obj5 = {};
+                const merged2 = Object.assign(exception.exception.values[0]);
+                obj5.value = formatIssueMessage(originalException.originalException);
+                const items = [obj5];
+                const values = exception.exception.values;
+                HermesBuiltin.arraySpread(values.slice(1), 1);
+                obj4.values = items;
+                obj3.exception = obj4;
+                const obj6 = {};
+                const merged3 = Object.assign(exception.extra);
+                obj6["zoderror.issues"] = mapped.slice(0, arg0);
+                obj3.extra = obj6;
+                return obj3;
+              } catch (error) {
+                const obj7 = {};
+                const merged4 = Object.assign(tmp);
+                const obj8 = {};
+                const merged5 = Object.assign(tmp.extra);
+                const _Error = Error;
+                let str = "unknown";
+                if (error instanceof Error) {
+                  const _HermesInternal = HermesInternal;
+                  str = "" + error.name + ": " + error.message + "\n" + error.stack;
+                }
+                const obj9 = { message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()", error: str };
+                obj8["zoderrors sentry integration parse error"] = obj9;
+                obj7.extra = obj8;
+                return obj7;
               }
             }
           }
-          c6 = 3;
-          return { value: "IconComponent", done: null };
         }
-      } else if (1 !== tmp7) {
-        if (2 === tmp7) {
-          c5 = 1;
-          closure_130_4 = false;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          const _clearTimeout2 = clearTimeout;
-          clearTimeout(timeout2);
-          c6 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          done = value.done;
-          const _clearTimeout = clearTimeout;
-          clearTimeout(timeout2);
-          if (done) {
-            closure_130_0();
-            closure_130_4 = false;
-          }
-          c5 = 1;
-        }
-        c5 = 0;
-        const _clearTimeout3 = clearTimeout;
-        clearTimeout(timeout2);
-      }
-      c5 = 0;
-      const _clearTimeout4 = clearTimeout;
-      clearTimeout(timeout2);
-      throw closure_4;
-    } catch (tmp40) {
-      closure_4 = tmp40;
-      if (tmp4 === c5) {
-        c6 = tmp3;
-        throw tmp40;
-      } else if (tmp2 === tmp42) {
-        c3 = tmp2;
-      } else {
-        c3 = tmp;
       }
     }
   }
-};
-function streamHandler(clone) {
-  const response = clone;
-  try {
-    !(function resolveResponse(clone, arg1) {
-      const self = this;
-      const apply = closure_1_4.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(clone.clone(), () => {
-      const obj2 = { endTimestamp: null, response: null };
-      const obj = _mod12404;
-      obj2.endTimestamp = 1000 * _mod12420.timestampInSeconds();
-      obj2.response = response;
-      obj.triggerHandlers("fetch-body-resolved", obj2);
-    });
-  } catch (err) {
-    return tmp;
-  }
-}
-function parseFetchArgs(arg0) {
-  if (0 === arg0.length) {
-    return { method: "GET", url: "" };
-  } else if (2 === arg0.length) {
-    [str4, tmp8] = arg0;
-    let tmp9 = str4;
-    if (typeof str4 !== "string") {
-      let str5 = "";
-      if (!str4) {
-        tmp9 = str5;
-      } else {
-        if (tmp10) {
-          str5 = str4.url;
-        } else if (str4.toString) {
-          str5 = str4.toString();
-        }
-        tmp10 = str4 && typeof str4 === "object" && str4.url;
-      }
-    }
-    const request = { url: tmp9, method: null };
-    let str6 = "GET";
-    if (tmp12) {
-      const _String2 = String;
-      str6 = String(tmp8.method).toUpperCase();
-      const str7 = String(tmp8.method);
-    }
-    request.method = str6;
-    return request;
-  } else {
-    let tmp3 = str8;
-    if (typeof arg0[0] !== "string") {
-      let str = "";
-      if (!str8) {
-        tmp3 = str;
-      } else {
-        if (tmp) {
-          str = str8.url;
-        } else if (str8.toString) {
-          str = str8.toString();
-        }
-        tmp = str8 && typeof str8 === "object" && str8.url;
-      }
-    }
-    const request1 = { url: tmp3, method: null };
-    let str2 = "GET";
-    if (tmp4) {
-      const _String = String;
-      str2 = String(str8.method).toUpperCase();
-      const str3 = String(str8.method);
-    }
-    request1.method = str2;
-    return request1;
-  }
+  return exception;
 }
 
-export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(errorCallback) {
-  _mod12404.addHandler("fetch-body-resolved", errorCallback);
-  _mod12404.maybeInstrument("fetch-body-resolved", () => {
-    closure_0 = closure_5;
-    {
-      closure_0(12412).fill(closure_0(12407).GLOBAL_OBJ, "fetch", (arg0) => {
-        closure_0 = arg0;
-        return () => {
-          const items = [...arguments];
-          const error = new Error();
-          let stack = error;
-          const request = parseFetchArgs(items);
-          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
-          if (!closure_2_0) {
-            let obj3 = {};
-            let merged = Object.assign(obj);
-            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
-            const tmp2Result = tmp2(dependencyMap[2]);
-          }
-          let obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (response) => {
-            c1 = 0;
-            return (/* F160806 */ function*() { ... })();
-          });
-          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          }, (error) => {
-            obj = closure_3_0(12404);
-            const obj2 = {};
-            const merged = Object.assign(obj);
-            obj2.endTimestamp = 1000 * closure_3_0(12420).timestampInSeconds();
-            obj2.error = error;
-            obj.triggerHandlers("fetch", obj2);
-            const obj3 = closure_3_0(12420);
-            const obj4 = closure_3_0(12413);
-            if (tmp5) {
-              error.stack = stack.stack;
-              const result = closure_3_0(12412).addNonEnumerableProperty(error, "framesToPop", 1);
-              const tmpResult = closure_3_0(12412);
-            }
-            throw error;
-          });
-        };
-      });
-      const obj = closure_0(12412);
+export { applyZodErrorsToEvent };
+export { flattenIssue };
+export { flattenIssuePath };
+export { formatIssueMessage };
+export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  return {
+    name: "ZodErrors",
+    processEvent(arg0, arg1) {
+      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
     }
-  });
-};
-export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(errorCallback, arg1) {
-  _require = arg1;
-  require("module_12404").addHandler("fetch", errorCallback);
-  let obj = require("module_12404");
-  require("module_12404").maybeInstrument("fetch", () => {
-    let flag = closure_0;
-    if (closure_0 === undefined) {
-      flag = false;
-    }
-    if (flag) {
-      flag = !supportsFetch.supportsNativeFetch();
-    }
-    if (!flag) {
-      _mod12412.fill(_mod12407.GLOBAL_OBJ, "fetch", (arg0) => {
-        closure_0 = arg0;
-        return () => {
-          const items = [...arguments];
-          const error = new Error();
-          let stack = error;
-          const request = parseFetchArgs(items);
-          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
-          if (!closure_2_0) {
-            let obj3 = {};
-            let merged = Object.assign(obj);
-            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
-            const tmp2Result = tmp2(dependencyMap[2]);
-          }
-          let obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (response) => {
-            c1 = 0;
-            return (/* F160806 */ function*() { ... })();
-          });
-          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          }, (error) => {
-            obj = closure_3_0(12404);
-            const obj2 = {};
-            const merged = Object.assign(obj);
-            obj2.endTimestamp = 1000 * closure_3_0(12420).timestampInSeconds();
-            obj2.error = error;
-            obj.triggerHandlers("fetch", obj2);
-            const obj3 = closure_3_0(12420);
-            const obj4 = closure_3_0(12413);
-            if (tmp5) {
-              error.stack = stack.stack;
-              const result = closure_3_0(12412).addNonEnumerableProperty(error, "framesToPop", 1);
-              const tmpResult = closure_3_0(12412);
-            }
-            throw error;
-          });
-        };
-      });
-    }
-  });
-};
-export { parseFetchArgs };
+  };
+});

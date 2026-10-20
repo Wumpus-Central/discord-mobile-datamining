@@ -1,20 +1,18 @@
 // === Module 6412: ? ===
 
 // Module 6412
-import _mod6395 from "module_6395" /* 6395 */;
+import _mod1307 from "module_1307" /* 1307 */;
+import _mod6360 from "module_6360" /* 6360 */;
 
+let closure_2 = _mod1307("%Object.isExtensible%", true);
 
-export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
-  let tmp = _mod6395(arg1);
-  if (tmp) {
-    tmp = "[[Enumerable]]" in arg1;
+export default _mod1307("%Object.preventExtensions%", true) ? (function IsExtensible(arg0) {
+  const tmp = _mod6360(arg0);
+  let tmp2 = !tmp;
+  if (!tmp) {
+    tmp2 = closure_2(arg0);
   }
-  if (tmp) {
-    tmp = "[[Configurable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-  }
-  return tmp;
-};
+  return tmp2;
+}) : (function IsExtensible(arg0) {
+  return !_mod6360(arg0);
+});

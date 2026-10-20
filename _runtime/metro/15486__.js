@@ -38,7 +38,7 @@ if (typeof WeakMap === "function") {
   const weakMap1 = new WeakMap();
 }
 if (!noop) {
-  const merged = Object.assign({ default: null });
+  let merged = Object.assign({ default: null });
   merged[0] = noop;
   let value = merged;
   if (null !== noop) {
@@ -89,14 +89,15 @@ if (!noop) {
 } else {
   value = noop;
 }
-class StorybookSwitcher {
+const container = { container: { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, zIndex: 1000, opacity: 0.25 }, debugContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", zIndex: 2000 }, debugTextContainer: { backgroundColor: "lightgray", margin: 50, padding: 20 }, debugText: { color: "red", fontSize: 16, marginBottom: 10 } };
+class FullScreenOverlay {
   constructor(arg0) {
     self = this;
-    tmp = closure_0(this, StorybookSwitcher);
+    tmp = closure_0(this, FullScreenOverlay);
     items = [];
     items[0] = global;
     tmp2 = c2;
-    obj = c2(StorybookSwitcher);
+    obj = c2(FullScreenOverlay);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -107,28 +108,104 @@ class StorybookSwitcher {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.state = { showStorybook: false };
+    obj1 = { opacity: metroRequire.container.opacity, uri: null, justifyContent: "center", alignItems: "center" };
+    tmp3Result.state = obj1;
     emitter = global.emitter;
-    onResult = emitter.on("storybook", (showStorybook) => {
-      state.setState({ showStorybook });
+    onResult = emitter.on("overlay", (arg0) => {
+      const merged = Object.assign(state.state);
+      const merged1 = Object.assign(arg0);
+      state.setState({});
     });
     return tmp3Result;
   }
 }
-_classCallCheck = StorybookSwitcher;
-_inherits(StorybookSwitcher, value.Component);
+_classCallCheck = FullScreenOverlay;
+_inherits(FullScreenOverlay, value.Component);
 const entry = {
-  key: "render",
-  value: function render() {
-    let children = this.props.children;
-    const obj = { style: { flex: 1 }, children: null };
-    if (this.state.showStorybook) {
-      children = <tmp />;
-    }
-    obj.children = children;
-    return <get ActivityIndicator.View style={{ flex: 1 }}>{null}</get ActivityIndicator.View>;
+  key: "createContainerStyle",
+  value: function createContainerStyle() {
+    const Dimensions = get_ActivityIndicator.Dimensions;
+    ({ opacity, justifyContent, alignItems } = this.state);
+    value = Dimensions.get("window");
+    const obj = {};
+    ({ width, height } = value);
+    const merged = Object.assign(container.container);
+    obj.opacity = opacity;
+    obj.width = width;
+    obj.height = height;
+    obj.justifyContent = justifyContent;
+    obj.alignItems = alignItems;
+    return obj;
   }
 };
-let items = [entry];
+let items = [
+  entry,
+  {
+    key: "renderDebug",
+    value: function renderDebug() {
+      return null;
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const state = this.state;
+      ({ uri, growToWindow, marginLeft } = state);
+      let num = 0;
+      ({ width, height, resizeMode } = state);
+      if (undefined !== marginLeft) {
+        num = marginLeft;
+      }
+      const marginRight = state.marginRight;
+      let num2 = 0;
+      if (undefined !== marginRight) {
+        num2 = marginRight;
+      }
+      const marginTop = state.marginTop;
+      let num3 = 0;
+      if (undefined !== marginTop) {
+        num3 = marginTop;
+      }
+      const marginBottom = state.marginBottom;
+      const size = { width, height, marginTop: num3, marginRight: num2, marginBottom: null, marginLeft: null };
+      let num4 = 0;
+      if (undefined !== marginBottom) {
+        num4 = marginBottom;
+      }
+      size.marginBottom = num4;
+      size.marginLeft = num;
+      if (growToWindow) {
+        const Dimensions = get_ActivityIndicator.Dimensions;
+        value = Dimensions.get("window");
+        ({ width: obj.width, height: obj.height } = value);
+      }
+      const jsx = jsxProd.jsx;
+      if (uri) {
+        const obj2 = { source: null, style: null, resizeMode: null };
+        const obj3 = { uri };
+        obj2.source = obj3;
+        obj2.style = size;
+        let tmp8 = null;
+        if (growToWindow) {
+          tmp8 = resizeMode;
+        }
+        obj2.resizeMode = tmp8;
+        let jsxResult = <get ActivityIndicator.Image source={null} style={null} resizeMode={null} />;
+        let tmp6 = get_ActivityIndicator;
+        let tmp7 = jsxProd;
+      } else {
+        jsxResult = <get ActivityIndicator.View />;
+        tmp6 = get_ActivityIndicator;
+        tmp7 = jsxProd;
+      }
+      const obj4 = { children: null };
+      ({ jsxs, Fragment, jsx: jsx2 } = tmp7);
+      const items = [jsx2(tmp6.View, { style: self.createContainerStyle(), pointerEvents: "none", children: jsxResult }), self.renderDebug()];
+      obj4.children = items;
+      return <>{null}</>;
+    }
+  }
+];
 
-export default _createClass(StorybookSwitcher, items);
+export default _createClass(FullScreenOverlay, items);

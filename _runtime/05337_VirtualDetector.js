@@ -66,7 +66,7 @@ export const VirtualDetector = function VirtualDetector(children) {
           if (tmp2.gesture.config.shouldUseReanimatedDetector) {
             setMode(children(register[4]).InterceptingDetectorMode.REANIMATED);
           }
-          obj = { viewTag: tmp, handlerTags, methods: tmp2.gesture.detectorCallbacks, viewRef: "a", userSelect: null, touchAction: null, enableContextMenu: null };
+          obj = { viewTag: tmp, handlerTags, methods: tmp2.gesture.detectorCallbacks, viewRef: "a", userSelect: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010533469459535055, touchAction: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011674544427165033, enableContextMenu: -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033293295934316456 };
           ({ userSelect: obj.userSelect, touchAction: obj.touchAction, enableContextMenu: obj.enableContextMenu } = tmp2);
           register(obj);
           return () => {

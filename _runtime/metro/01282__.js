@@ -9,10 +9,10 @@ importDefault = arg2;
 const dependencyMap = arg6;
 let msecs = 0;
 
-export default function v1(COLLAPSED, arg1, arg2) {
-  let unsafeStringifyResult = arg1;
-  let num = arg1;
-  if (arg1) {
+export default function v1(COLLAPSED, guildId, arg2) {
+  let unsafeStringifyResult = guildId;
+  let num = guildId;
+  if (guildId) {
     num = arg2;
   }
   if (!num) {

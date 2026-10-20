@@ -1,0 +1,25 @@
+// === Module 6377: truncate ===
+
+// Module 6377 (truncate)
+import _mod1308 from "module_1308" /* 1308 */;
+import floor from "floor" /* 6378 */;
+
+
+export default function truncate(num) {
+  if (typeof num !== "number") {
+    if (typeof num !== "bigint") {
+      const tmp10 = new _mod1308("argument must be a Number or a BigInt");
+      throw tmp10;
+    }
+  }
+  if (num < 0) {
+    let tmp3 = -floor(-num);
+  } else {
+    tmp3 = floor(num);
+  }
+  num = 0;
+  if (0 !== tmp3) {
+    num = tmp3;
+  }
+  return num;
+};

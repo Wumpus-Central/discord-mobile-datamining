@@ -1,33 +1,23 @@
 // === Module 10445: ? ===
 
 // Module 10445
-import Layouts5 from "Layouts" /* 10446 */;
+import _mod10446 from "module_10446" /* 10446 */;
+import _mod10449 from "module_10449" /* 10449 */;
+import _mod10453 from "module_10453" /* 10453 */;
+import _mod10454 from "module_10454" /* 10454 */;
+import CarouselLayout from "CarouselLayout" /* 10455 */;
 import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
 
-export const useLayoutConfig = function useLayoutConfig(size) {
-  size = size.size;
-  const vertical = size.vertical;
-  const items = [, , , ];
-  ({ mode: arr[0], modeConfig: arr[1] } = size);
-  items[2] = size;
-  items[3] = vertical;
-  return vertical.useMemo(() => {
-    const obj = { size, vertical };
-    const mode = size.mode;
-    if ("parallax" === mode) {
-      const Layouts4 = Layouts5.Layouts;
-      return Layouts4.parallax(obj, size.modeConfig);
-    } else if ("horizontal-stack" === mode) {
-      const Layouts3 = Layouts5.Layouts;
-      return Layouts3.horizontalStack(size.modeConfig);
-    } else if ("vertical-stack" === mode) {
-      const Layouts2 = Layouts5.Layouts;
-      return Layouts2.verticalStack(size.modeConfig);
-    } else {
-      const Layouts = Layouts5.Layouts;
-      return Layouts.normal(obj);
-    }
-  }, items);
-};
+export default noop.forwardRef((defaultIndex, ref) => {
+  const initProps = _mod10446.useInitProps(defaultIndex);
+  const commonVariables = _mod10449.useCommonVariables(initProps);
+  const obj4 = {};
+  const merged = Object.assign(initProps);
+  obj4.dataLength = initProps.dataLength;
+  const propsErrorBoundary = _mod10453.usePropsErrorBoundary(obj4);
+  const obj5 = { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) };
+  return jsx(_mod10454.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) });
+});

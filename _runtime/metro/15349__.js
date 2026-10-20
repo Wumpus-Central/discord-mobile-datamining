@@ -1,8 +1,10 @@
 // === Module 15349: ? ===
 
 // Module 15349
-import _mod15418 from "module_15418" /* 15418 */;
-import module_15350 from "module_15350" /* 15350 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default _mod15418.Object.assign;
+export const shouldPolyfill = require("module_15350").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

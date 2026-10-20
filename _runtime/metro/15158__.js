@@ -1,34 +1,7 @@
 // === Module 15158: ? ===
 
 // Module 15158
-import _mod15125 from "module_15125" /* 15125 */;
-
-const require = globalThis.__r;
+import _mod15157 from "module_15157" /* 15157 */;
 
 
-export default (arr, arg1, arg2) => {
-  _require = arg2;
-  dependencyMap = null;
-  closure_2 = null;
-  let regex = null;
-  try {
-    let tmp9 = new require("module_15154")(arg1, arg2);
-    regex = tmp9;
-    const item = arr.forEach((item) => {
-      if (regex.test(item)) {
-        let tmp = closure_1;
-        if (closure_1) {
-          tmp = -1 !== closure_2.compare(item);
-        }
-        if (!tmp) {
-          closure_1 = item;
-          const tmp9 = new _mod15125(closure_1, closure_0);
-          closure_2 = tmp9;
-        }
-      }
-    });
-    return dependencyMap;
-  } catch (err) {
-    return tmp;
-  }
-};
+export default (arg0, arg1, arg2) => _mod15157(arg1, arg0, arg2);

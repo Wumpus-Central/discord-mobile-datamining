@@ -1,29 +1,29 @@
 // === Module 8166: ? ===
 
 // Module 8166
-import findOffsets from "findOffsets" /* 8167 */;
+import _modDef8165 from "module_8165" /* 8165 */;
+import _modDef8167 from "module_8167" /* 8167 */;
 
-require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  isHeicFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
-          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
-    } else {
-      return false;
+  isTiffFile(byteLength) {
+    let tmp = byteLength;
+    if (tmp) {
+      tmp = byteLength.byteLength >= 4;
     }
+    if (tmp) {
+      const uint16 = byteLength.getUint16(0);
+      tmp = byteLength.getUint16(2, uint16 === _modDef8167.LITTLE_ENDIAN) === 42;
+    }
+    return tmp;
   },
-  findHeicOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
+  findTiffOffsets() {
+    if (_modDef8165.USE_EXIF) {
+      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
+    } else {
+      return {};
+    }
   }
 };

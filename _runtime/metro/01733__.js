@@ -80,8 +80,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "emoji",
       lastTimestamp: null,
-      startTimestamp: "star2",
-      reduceMotion: "glowing_star"
+      startTimestamp: "control_ack",
+      reduceMotion: null
     };
     let num = obj.velocity;
     if (num == null) {

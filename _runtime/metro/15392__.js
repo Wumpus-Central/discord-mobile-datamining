@@ -1,24 +1,18 @@
 // === Module 15392: ? ===
 
 // Module 15392
-import _mod15375 from "module_15375" /* 15375 */;
-import _mod15393 from "module_15393" /* 15393 */;
+import _mod15377 from "module_15377" /* 15377 */;
 
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod15377(1.toString);
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod15393(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod15375(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod15375(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
   }
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
 };

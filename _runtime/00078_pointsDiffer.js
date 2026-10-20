@@ -1,7 +1,7 @@
 // === Module 78: pointsDiffer ===
 
 // Module 78 (pointsDiffer)
-let closure_0 = { x: "Array", y: "test" };
+let closure_0 = { x: "userId", y: "code" };
 
 export default function pointsDiffer(arg0, arg1) {
   let point = arg0;
