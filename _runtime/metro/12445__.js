@@ -1,72 +1,17 @@
 // _runtime/metro/12445__.js
-import _mod12406 from "12406__.js";
-import _mod12433 from "12433__.js";
-import _mod12434 from "12434__.js";
-import _mod12438 from "12438__.js";
-import _mod12446 from "12446__.js";
+import _mod12429 from "12429__.js";
 
 require = arg1;
 const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
 
-export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
-  if (obj.hasTracingEnabled(tracesSampler)) {
-    const isolationScope = _mod12433.getIsolationScope();
-    const obj2 = {};
-    const merged = Object.assign(normalizedRequest);
-    obj2.normalizedRequest =
-      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
-    if (typeof tracesSampler.tracesSampler === "function") {
-      let num = tracesSampler.tracesSampler(obj2);
-    } else if (undefined !== obj2.parentSampled) {
-      num = obj2.parentSampled;
-    } else {
-      num = 1;
-      if (undefined !== tracesSampler.tracesSampleRate) {
-        num = tracesSampler.tracesSampleRate;
-      }
-    }
-    const tmpResult = _mod12433;
-    const parseSampleRateResult = _mod12446.parseSampleRate(num);
-    if (undefined === parseSampleRateResult) {
-      if (_mod12434.DEBUG_BUILD) {
-        const logger3 = _mod12406.logger;
-        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
-      }
-      const items = [false];
-      let items3 = items;
-    } else if (parseSampleRateResult) {
-      const _Math = Math;
-      if (Math.random() < parseSampleRateResult) {
-        const items1 = [true, parseSampleRateResult];
-        let items2 = items1;
-      } else {
-        if (_mod12434.DEBUG_BUILD) {
-          const logger2 = _mod12406.logger;
-          const _Number = Number;
-          const _HermesInternal = HermesInternal;
-          logger2.log(
-            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
-              Number(num) +
-              ")",
-          );
-        }
-        items2 = [false, parseSampleRateResult];
-      }
-    } else {
-      if (_mod12434.DEBUG_BUILD) {
-        const logger = _mod12406.logger;
-        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
-        if (typeof tracesSampler.tracesSampler === "function") {
-          str = "tracesSampler returned 0 or false";
-        }
-        logger.log(`[Tracing] Discarding transaction because ${str}`);
-      }
-      items3 = [false, parseSampleRateResult];
-    }
-    return items3;
+export const _getSpanForScope = function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
+};
+export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod12429.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
   } else {
-    const items4 = [false];
-    return items4;
+    delete tmp2[tmp];
   }
-  obj = _mod12438;
 };

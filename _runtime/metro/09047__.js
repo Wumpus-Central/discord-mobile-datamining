@@ -1,13 +1,3 @@
 // _runtime/metro/09047__.js
-import registerAsset from "01134__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "36751208c860de1cbd5435bad168b075",
-  name: "line",
-  type: "png",
-});
+export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";

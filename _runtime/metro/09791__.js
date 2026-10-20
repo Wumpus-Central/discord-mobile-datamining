@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "766fd7e004517bb3fbea8bf5121a6049",
-  name: "MatteLightIcon",
+  hash: "f5a4357d7c0b7e1db64214ae6f5682c3",
+  name: "ic_premium_channel_16px",
   type: "png",
 });

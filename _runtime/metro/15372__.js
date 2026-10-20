@@ -1,46 +1,28 @@
 // _runtime/metro/15372__.js
-import _mod15352 from "15352__.js";
 import _mod15373 from "15373__.js";
+import _mod15375 from "15375__.js";
+import text from "../15382_text.js";
+import _mod15393 from "15393__.js";
+import _mod15403 from "15403__.js";
+import _mod15405 from "15405__.js";
+import _mod15407 from "15407__.js";
+import _mod15408 from "15408__.js";
 
-let tmp = _mod15352.process && _mod15352.process.versions;
-if (!tmp) {
-  tmp = _mod15352.Deno && _mod15352.Deno.version;
-  const tmp2 = _mod15352.Deno && _mod15352.Deno.version;
-}
-let str = tmp;
-if (tmp) {
-  str = tmp.v8;
-}
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
-  }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod15373;
-}
-if (_module) {
-  const match = _mod15373.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
-  }
-  _module = tmp8;
-  tmp4 = match;
-}
-if (_module) {
-  _module = _mod15373.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
-}
-if (_module) {
-  tmp3 = +tmp4[1];
+if (!_mod15373) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod15375(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod15405) {
+      if (_mod15393(tmp3, tmp4)) {
+        const tmpResult = _mod15407;
+        return tmpResult(!_mod15403(_mod15408.f, tmp3, tmp4), tmp3[tmp4]);
+      }
+    } else {
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {}
+    }
+  };
 }
 
-export default tmp3;
+export const f = getOwnPropertyDescriptor;

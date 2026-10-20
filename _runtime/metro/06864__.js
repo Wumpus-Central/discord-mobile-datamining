@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c1eae5d24a46f9d36a9168ec38445f00",
-  name: "DragIcon",
+  hash: "7726a7882d06e6e78ae64010f2194cb2",
+  name: "ChevronSmallRightIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 12,
-  height: 12,
+  httpServerLocation: "/assets/modules/game_console/images",
+  width: 126,
+  height: 118,
   scales: [2, 3],
-  hash: "b28329d7d2ebd0b330f6112973e5d746",
-  name: "ic_sparkle",
+  hash: "02b1067b85b45dd047c8c944ed8c1d6e",
+  name: "devices_not_found",
   type: "png",
 });

@@ -384,7 +384,7 @@ let items = [
                   throw value;
                 } else if (arg0 !== 2) {
                   messages[closure_1] = value.default;
-                  closure_3._localeLoadingPromises[closure_132_0] = { initialized: true, current: "a" };
+                  closure_3._localeLoadingPromises[closure_132_0] = { initialized: true, current: "Array" };
                   closure_3.emitChange();
                 }
               } else if (arg0 === 1) {

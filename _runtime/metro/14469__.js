@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
-  scales: [2, 3],
-  hash: "f2d705f9d582bb6c65065afe8639e152",
-  name: "img_classic_error_mobile",
+  httpServerLocation: "/assets/modules/virtual_currency/images/native",
+  width: 576,
+  height: 324,
+  scales: [1],
+  hash: "83d6f52e41f68a6a0f493020b6be93e9",
+  name: "hero-orbs",
   type: "png",
 });

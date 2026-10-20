@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1998c882c99c2bfa1f4c01d3c0fdc31d",
-  name: "XSmallIcon",
+  hash: "24def842b7fc85d108b018aef0f23eb6",
+  name: "ArrowLargeLeftIcon",
   type: "png",
 });

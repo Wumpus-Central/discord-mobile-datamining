@@ -1,45 +1,66 @@
 // _runtime/metro/08201__.js
-import _mod8158 from "08158__.js";
-import get0thIfdOffset from "../08178_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../08179_IFD_TYPE_0TH.js";
+import _mod8162 from "08162__.js";
+import _modDef8179 from "08179__.js";
+import _modDef8202 from "08202__.js";
+import _slicedToArray from "00032__.js";
 
 require = arg1;
-const dependencyMap = arg6;
+function getTagName(dataView, sum1) {
+  const tmp = _slicedToArray(_mod8162.getPascalStringFromDataView(dataView, sum1), 2);
+  const first = tmp[0];
+  const obj2 = { tagName: tmp[1], tagNameSize: null };
+  let num = 0;
+  const sum = 1 + first;
+  if (first % 2 === 0) {
+    num = 1;
+  }
+  obj2.tagNameSize = sum + num;
+  return obj2;
+}
+let c4 = "8BIM";
+let c5 = 2;
+let c6 = 4;
+({ length, length: closure_7 } = "8BIM");
 
 export default {
-  read(byteLength, sum, arg2, byteOrder, arg4) {
-    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
-    let tmp6 = ifd;
-    if (ifd.ShotInfo) {
-      value = ifd.ShotInfo.value;
-      const obj2 = {};
-      if (undefined !== value[27]) {
-        const obj3 = { value: value[27], description: null };
-        let str = "None";
-        if (0 !== value[27]) {
-          let str2 = "Rotate 90 CW";
-          if (1 !== tmp7) {
-            let str3 = "Rotate 180";
-            if (2 !== tmp7) {
-              let str4 = "Unknown";
-              if (3 === tmp7) {
-                str4 = "Rotate 270 CW";
-              }
-              str3 = str4;
+  read(arg0, arg1) {
+    const uint8Array = new Uint8Array(arg0);
+    const dataView = _mod8162.getDataView(uint8Array.buffer);
+    const obj2 = {};
+    let num = 0;
+    if (0 < arg0.length) {
+      const sum = num + React5;
+      const stringFromDataView = _mod8162.getStringFromDataView(dataView, num, React5);
+      const shortAt = _modDef8179.getShortAt(dataView, sum);
+      const sum1 = sum + c5;
+      const tmp15 = getTagName(dataView, sum1);
+      let name = tmp15.tagName;
+      const sum2 = sum1 + tmp15.tagNameSize;
+      const longAt = _modDef8179.getLongAt(dataView, sum2);
+      const sum3 = sum2 + c6;
+      if (stringFromDataView === c4) {
+        const dataView1 = _mod8162.getDataView(dataView.buffer, sum3, longAt);
+        const obj7 = { id: shortAt, value: null };
+        const tmp5Result = _mod8162;
+        obj7.value = _mod8162.getStringFromDataView(dataView1, 0, longAt);
+        if (_modDef8202[shortAt]) {
+          try {
+            obj7.description = _modDef8202[shortAt].description(dataView1);
+            if (!name) {
+              name = _modDef8202[shortAt].name;
             }
-            str2 = str3;
+            obj2[name] = obj7;
+          } catch (err) {
+            tmp.description = tmp2;
           }
-          str = str2;
+        } else if (arg1) {
+          const _HermesInternal = HermesInternal;
+          obj2["undefined-" + shortAt] = obj7;
         }
-        obj3.description = str;
-        obj2.AutoRotate = obj3;
+        const tmp5Result2 = _mod8162;
       }
-      const tmp3Result = _mod8158;
-      delete tmp[tmp2];
-      tmp6 = _mod8158.objectAssign({}, ifd, obj2);
-      const objectAssignResult = _mod8158.objectAssign({}, ifd, obj2);
+      num = sum3 + (longAt + (longAt % 2));
     }
-    return tmp6;
+    return obj2;
   },
-  SHOT_INFO_AUTO_ROTATE: 27,
 };

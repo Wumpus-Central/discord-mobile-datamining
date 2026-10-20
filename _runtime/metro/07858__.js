@@ -1,9 +1,12 @@
 // _runtime/metro/07858__.js
-import _modDef7859 from "07859__.js";
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default function getWebViewProxy(iframeId) {
-  return new _modDef7859(iframeId);
-}
+export default (str) => {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
+  }
+};

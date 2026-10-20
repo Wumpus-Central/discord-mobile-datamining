@@ -1,12 +1,38 @@
 // _runtime/metro/15383__.js
-import _mod15378 from "15378__.js";
-import _mod15384 from "15384__.js";
+import withoutSetter from "../15384_withoutSetter.js";
+import _mod15395 from "15395__.js";
+import _mod15397 from "15397__.js";
+import _mod15400 from "15400__.js";
+import _mod15403 from "15403__.js";
+import _mod15404 from "15404__.js";
 
-export default (arg0) => {
-  if (_mod15378(arg0)) {
-    return arg0;
-  } else {
-    const tmp6 = new TypeError(_mod15384(arg0) + " is not a function");
-    throw tmp6;
+let closure_3 = withoutSetter("toPrimitive");
+
+export default (arg0, arg1) => {
+  if (_mod15395(arg0)) {
+    if (!_mod15397(arg0)) {
+      let str = arg1;
+      const tmp4 = _mod15400(arg0, closure_3);
+      if (tmp4) {
+        if (undefined === str) {
+          str = "default";
+        }
+        const tmp5 = _mod15403(tmp4, arg0, str);
+        if (_mod15395(tmp5)) {
+          if (!_mod15397(tmp5)) {
+            const tmp9 = new TypeError("Can't convert object to primitive value");
+            throw tmp9;
+          }
+        }
+        return tmp5;
+      } else {
+        let str2 = str;
+        if (undefined === str) {
+          str2 = "number";
+        }
+        return _mod15404(arg0, str2);
+      }
+    }
   }
+  return arg0;
 };

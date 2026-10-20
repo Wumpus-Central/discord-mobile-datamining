@@ -27,14 +27,14 @@ class XXH64 {
       num = 0;
     }
     tmp = closure_0(this, XXH64);
-    definePropertyResult = Object.defineProperty(this, closure_9, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(this, c10, { writable: true, value: "a" });
-    definePropertyResult2 = Object.defineProperty(this, closure_11, { writable: true, value: "a" });
-    definePropertyResult3 = Object.defineProperty(this, closure_12, { writable: true, value: "a" });
-    definePropertyResult4 = Object.defineProperty(this, closure_13, { writable: true, value: "a" });
-    definePropertyResult5 = Object.defineProperty(this, closure_2_14, { writable: true, value: "a" });
-    definePropertyResult6 = Object.defineProperty(this, closure_2_15, { writable: true, value: "a" });
-    definePropertyResult7 = Object.defineProperty(this, closure_2_16, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(this, closure_9, { writable: true, value: "Array" });
+    definePropertyResult1 = Object.defineProperty(this, c10, { writable: true, value: "Array" });
+    definePropertyResult2 = Object.defineProperty(this, closure_11, { writable: true, value: "Array" });
+    definePropertyResult3 = Object.defineProperty(this, closure_12, { writable: true, value: "Array" });
+    definePropertyResult4 = Object.defineProperty(this, closure_13, { writable: true, value: "Array" });
+    definePropertyResult5 = Object.defineProperty(this, closure_2_14, { writable: true, value: "Array" });
+    definePropertyResult6 = Object.defineProperty(this, closure_2_15, { writable: true, value: "Array" });
+    definePropertyResult7 = Object.defineProperty(this, closure_2_16, { writable: true, value: "Array" });
     resetResult = this.reset(num);
     return;
   }

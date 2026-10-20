@@ -1,4 +1,4 @@
 // _runtime/metro/06382__.js
-import _mod6383 from "06383__.js";
+import _mod1475 from "01475__.js";
 
-export default _mod6383;
+export default _mod1475;

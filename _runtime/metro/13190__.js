@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/channel_following/light",
+  width: 280,
+  height: 120,
   scales: [2, 3],
-  hash: "76fb8109cdd9e459537ee050fc2f3187",
-  name: "ic_header_members_24px",
+  hash: "634e3e2f609abec6ee1af702b841050e",
+  name: "channel_following_success_3",
   type: "png",
 });

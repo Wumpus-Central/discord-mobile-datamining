@@ -3,12 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation:
-    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_2hzotq2fhhtzqjz6caubttu6v4/node_modules/@react-navigation/elements/lib/module/assets",
-  width: 50,
-  height: 85,
-  scales: [1],
-  hash: "0a328cd9c1afd0afe8e3b1ec5165b1b4",
-  name: "back-icon-mask",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "1998c882c99c2bfa1f4c01d3c0fdc31d",
+  name: "XSmallIcon",
   type: "png",
 });

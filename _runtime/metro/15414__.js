@@ -1,12 +1,38 @@
 // _runtime/metro/15414__.js
-import _mod15352 from "15352__.js";
-import all from "15378__.js";
+import _mod15375 from "15375__.js";
+import _mod15377 from "15377__.js";
+import _mod15393 from "15393__.js";
+import _mod15415 from "15415__.js";
+import _mod15416 from "15416__.js";
 
-let _moduleResult = all(_mod15352.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod15352.WeakMap));
-  const obj = /native code/;
-}
+let closure_2 = _mod15377([].push);
 
-export default _moduleResult;
+export default (arg0, arg1) => {
+  const tmp = _mod15375(arg0);
+  const items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod15393;
+    let tmp14Result = tmp14(_mod15415, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod15393(tmp, key10010);
+    }
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
+  }
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod15393(tmp, tmp7)) {
+      let tmp5Result = _mod15416;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
+      }
+    }
+  }
+  return items;
+};

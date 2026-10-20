@@ -1,13 +1,40 @@
 // _runtime/metro/08869__.js
-import registerAsset from "01134__.js";
+import _mod8870 from "08870__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
-  width: 216,
-  height: 80,
-  scales: [2, 3],
-  hash: "0e2ac412c416f1e5e277ac37a8dd593a",
-  name: "stage-channel-upsell",
-  type: "png",
-});
+({
+  NativeModules: c3,
+  Platform,
+  TurboModuleRegistry: closure_4,
+  requireNativeComponent: hasOwnProperty,
+} = get_ActivityIndicator);
+
+export const getNativeComponent = () => {
+  try {
+    return hasOwnProperty("RNDatePicker");
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8870.getInstallationErrorMessage());
+    }
+  }
+};
+export const getNativeModule = () => {
+  try {
+    if (React4) {
+      RNDatePicker = React4.get("RNDatePicker");
+    } else {
+      RNDatePicker = RNDatePicker.RNDatePicker;
+    }
+    return RNDatePicker;
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8870.getInstallationErrorMessage());
+    }
+  }
+};

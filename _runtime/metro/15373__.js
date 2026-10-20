@@ -1,11 +1,12 @@
 // _runtime/metro/15373__.js
-import _mod15352 from "15352__.js";
+import _mod15374 from "15374__.js";
 
-const tmp = _mod15352.navigator && _mod15352.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
-
-export default str;
+export default !_mod15374(
+  () =>
+    7 !==
+    Object.defineProperty({}, 1, {
+      get() {
+        return 7;
+      },
+    })[1],
+);

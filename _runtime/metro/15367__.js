@@ -1,16 +1,6 @@
 // _runtime/metro/15367__.js
-import _mod15368 from "15368__.js";
+import _mod15436 from "15436__.js";
+import 15368__ from "15368__.js";
 
-export default (arg0, arg1) => {
-  let tmp3 = _mod15368[arg0];
-  if (!tmp3) {
-    let obj = arg1;
-    if (!arg1) {
-      obj = {};
-    }
-    _mod15368[arg0] = obj;
-    tmp3 = obj;
-    const tmpResult = _mod15368;
-  }
-  return tmp3;
-};
+
+export default _mod15436.Object.assign;

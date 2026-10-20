@@ -1,55 +1,40 @@
 // _runtime/metro/08737__.js
-import colorPropType from "../08722_colorPropType.js";
-import _mod8724 from "08724__.js";
 import _mod8738 from "08738__.js";
-import flattenStyle from "08727__.js";
+import _mod8746 from "08746__.js";
+import flattenStyle from "08739__.js";
+import "module_4979";
 import emptyFunction_mod from "04979__.js";
 
-const obj = {
-  ellipsizeMode: null,
-  numberOfLines: null,
-  textBreakStrategy: null,
-  onLayout: null,
-  onPress: null,
-  onLongPress: null,
-  pressRetentionOffset: null,
-  selectable: null,
-  selectionColor: null,
-  suppressHighlighting: null,
-  style: null,
-  testID: null,
-  nativeID: null,
-  allowFontScaling: null,
-  maxFontSizeMultiplier: null,
-  accessible: null,
-  adjustsFontSizeToFit: null,
-  minimumFontScale: null,
-  disabled: null,
-  dataDetectorType: null,
-};
-const module_8738 = flattenStyle(_mod8738);
+const obj = {};
+const module_8738 = Object.assign(_mod8738);
+obj.style = flattenStyle(_mod8746);
 let emptyFunction = emptyFunction_mod;
-obj.ellipsizeMode = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
-obj.numberOfLines = emptyFunction.number;
+const obj2 = { uri: emptyFunction.string, headers: null };
 let emptyFunction = emptyFunction_mod;
-obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
-obj.onLayout = emptyFunction.func;
-obj.onPress = emptyFunction.func;
-obj.onLongPress = emptyFunction.func;
-obj.pressRetentionOffset = _mod8724;
-obj.selectable = emptyFunction.bool;
-obj.selectionColor = colorPropType;
-obj.suppressHighlighting = emptyFunction.bool;
-obj.style = module_8738;
+obj2.headers = emptyFunction.objectOf(emptyFunction.string);
+const items = [emptyFunction.shape(obj2), emptyFunction.number];
+let emptyFunction = emptyFunction_mod;
+const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
+let emptyFunction = emptyFunction_mod;
+size.headers = emptyFunction.objectOf(emptyFunction.string);
+items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
+obj.source = emptyFunction.oneOfType(items);
+obj.blurRadius = emptyFunction.number;
+obj.defaultSource = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
+obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
+obj.progressiveRenderingEnabled = emptyFunction.bool;
+obj.fadeDuration = emptyFunction.number;
+obj.internal_analyticTag = emptyFunction.string;
+obj.onLoadStart = emptyFunction.func;
+obj.onError = emptyFunction.func;
+obj.onLoad = emptyFunction.func;
+obj.onLoadEnd = emptyFunction.func;
 obj.testID = emptyFunction.string;
-obj.nativeID = emptyFunction.string;
-obj.allowFontScaling = emptyFunction.bool;
-obj.maxFontSizeMultiplier = emptyFunction.number;
-obj.accessible = emptyFunction.bool;
-obj.adjustsFontSizeToFit = emptyFunction.bool;
-obj.minimumFontScale = emptyFunction.number;
-obj.disabled = emptyFunction.bool;
 let emptyFunction = emptyFunction_mod;
-obj.dataDetectorType = emptyFunction.oneOf(["phoneNumber", "link", "email", "none", "all"]);
+obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
 
 export default obj;

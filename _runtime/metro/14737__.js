@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 213.5,
-  height: 19,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5c483e491c3f377ab1cb686f9a6d4d3b",
-  name: "img_subscription_activated_light",
+  hash: "f6824e7bd3f8a83813ab333cc29423f8",
+  name: "yellow-alert",
   type: "png",
 });

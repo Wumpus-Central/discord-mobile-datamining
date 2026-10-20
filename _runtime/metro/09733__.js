@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 188.5,
-  height: 121,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "a1c720960ae9ac46d7d61ad850607231",
-  name: "img_tier_0_clouds_bigger",
+  hash: "67f86c057cc3cdebb258af63ee3c92db",
+  name: "UploadIcon",
   type: "png",
 });

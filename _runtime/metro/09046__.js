@@ -1,13 +1,46 @@
 // _runtime/metro/09046__.js
-import registerAsset from "01134__.js";
+function emptyFunction() {}
+function emptyFunctionWithReset() {}
+emptyFunctionWithReset.resetWarningCache = emptyFunction;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "bc9640d059e4504fae6e197e103e15f0",
-  name: "whatsapp",
-  type: "png",
-});
+export default () => {
+  function shim(arg0, arg1, arg2, arg3, arg4, arg5) {
+    if (arg5 !== shim(dependencyMap[0])) {
+      const _Error = Error;
+      const error = new Error(
+        "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
+      );
+      error.name = "Invariant Violation";
+      throw error;
+    }
+  }
+  function getShim() {
+    return shim;
+  }
+  shim.isRequired = shim;
+  const obj = {
+    array: shim,
+    bigint: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    elementType: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim,
+    exact: getShim,
+    checkPropTypes: emptyFunctionWithReset,
+    resetWarningCache: emptyFunction,
+  };
+  obj.PropTypes = obj;
+  return obj;
+};

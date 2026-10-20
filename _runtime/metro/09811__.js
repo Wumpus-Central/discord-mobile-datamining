@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
-  width: 77.5,
-  height: 72,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "215c6cf6cc2b74cad508b12b0e602266",
-  name: "empty",
+  hash: "5ed4f057d69445a6e4a7fd8ca936d32a",
+  name: "BeanieIcon",
   type: "png",
 });

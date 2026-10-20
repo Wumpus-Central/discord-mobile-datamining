@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 343,
-  height: 112,
+  width: 87,
+  height: 100,
   scales: [2, 3],
-  hash: "a236f8cc27bca615087c819a6d4db4e6",
-  name: "img_clouds_header_tier_2",
+  hash: "fea63c35d752daa1f371f2069e1b5793",
+  name: "img_wumpus_lightro",
   type: "png",
 });

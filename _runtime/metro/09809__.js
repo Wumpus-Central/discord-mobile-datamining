@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_identity/images",
-  width: 303,
-  height: 198,
+  httpServerLocation: "/assets/images/native/custom_app_icons/Y2KIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "af6f5b1f2e3f6f41820436ec96e0f065",
-  name: "guild_identity_education_light",
+  hash: "0e26d39cd35df5b70db021fff662c44e",
+  name: "Y2KIcon",
   type: "png",
 });

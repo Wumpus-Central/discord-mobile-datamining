@@ -1,42 +1,89 @@
 // _runtime/metro/08738__.js
-import colorPropType from "../08722_colorPropType.js";
-import _mod8729 from "08729__.js";
+import _mod8736 from "08736__.js";
+import _mod8741 from "08741__.js";
+import _mod8745 from "08745__.js";
+import flattenStyle from "08739__.js";
 import emptyFunction_mod from "04979__.js";
-import "module_4979";
 
-const obj = {};
-const module_8729 = Object.assign(_mod8729);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
+const obj = {
+  accessible: null,
+  accessibilityLabel: null,
+  accessibilityHint: null,
+  accessibilityActions: null,
+  accessibilityIgnoresInvertColors: null,
+  accessibilityRole: null,
+  accessibilityState: null,
+  accessibilityValue: null,
+  accessibilityLiveRegion: null,
+  importantForAccessibility: null,
+  accessibilityViewIsModal: null,
+  accessibilityElementsHidden: null,
+  onAccessibilityAction: null,
+  onAccessibilityTap: null,
+  onMagicTap: null,
+  testID: null,
+  nativeID: null,
+  onResponderGrant: null,
+  onResponderMove: null,
+  onResponderReject: null,
+  onResponderRelease: null,
+  onResponderTerminate: null,
+  onResponderTerminationRequest: null,
+  onStartShouldSetResponder: null,
+  onStartShouldSetResponderCapture: null,
+  onMoveShouldSetResponder: null,
+  onMoveShouldSetResponderCapture: null,
+  hitSlop: null,
+  onLayout: null,
+  pointerEvents: null,
+  style: null,
+  removeClippedSubviews: null,
+  renderToHardwareTextureAndroid: null,
+  shouldRasterizeIOS: null,
+  collapsable: null,
+  needsOffscreenAlphaCompositing: null,
+};
+const module_8741 = flattenStyle(_mod8741);
+obj.accessible = emptyFunction.bool;
+obj.accessibilityLabel = emptyFunction.node;
+obj.accessibilityHint = emptyFunction.string;
 let emptyFunction = emptyFunction_mod;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
+obj.accessibilityActions = emptyFunction.arrayOf(emptyFunction.string);
+obj.accessibilityIgnoresInvertColors = emptyFunction.bool;
 let emptyFunction = emptyFunction_mod;
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
+obj.accessibilityRole = emptyFunction.oneOf(_mod8745.DeprecatedAccessibilityRoles);
+obj.accessibilityState = emptyFunction.object;
+obj.accessibilityValue = emptyFunction.object;
 let emptyFunction = emptyFunction_mod;
-obj.fontVariant = emptyFunction.arrayOf(
-  emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]),
-);
+obj.accessibilityLiveRegion = emptyFunction.oneOf(["none", "polite", "assertive"]);
 let emptyFunction = emptyFunction_mod;
-const size = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(size);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
+obj.importantForAccessibility = emptyFunction.oneOf(["auto", "yes", "no", "no-hide-descendants"]);
+obj.accessibilityViewIsModal = emptyFunction.bool;
+obj.accessibilityElementsHidden = emptyFunction.bool;
+obj.onAccessibilityAction = emptyFunction.func;
+obj.onAccessibilityTap = emptyFunction.func;
+obj.onMagicTap = emptyFunction.func;
+obj.testID = emptyFunction.string;
+obj.nativeID = emptyFunction.string;
+obj.onResponderGrant = emptyFunction.func;
+obj.onResponderMove = emptyFunction.func;
+obj.onResponderReject = emptyFunction.func;
+obj.onResponderRelease = emptyFunction.func;
+obj.onResponderTerminate = emptyFunction.func;
+obj.onResponderTerminationRequest = emptyFunction.func;
+obj.onStartShouldSetResponder = emptyFunction.func;
+obj.onStartShouldSetResponderCapture = emptyFunction.func;
+obj.onMoveShouldSetResponder = emptyFunction.func;
+obj.onMoveShouldSetResponderCapture = emptyFunction.func;
+obj.hitSlop = _mod8736;
+obj.onLayout = emptyFunction.func;
 let emptyFunction = emptyFunction_mod;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-let emptyFunction = emptyFunction_mod;
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-let emptyFunction = emptyFunction_mod;
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
+obj.pointerEvents = emptyFunction.oneOf(["box-none", "none", "box-only", "auto"]);
+obj.style = module_8741;
+obj.removeClippedSubviews = emptyFunction.bool;
+obj.renderToHardwareTextureAndroid = emptyFunction.bool;
+obj.shouldRasterizeIOS = emptyFunction.bool;
+obj.collapsable = emptyFunction.bool;
+obj.needsOffscreenAlphaCompositing = emptyFunction.bool;
 
 export default obj;

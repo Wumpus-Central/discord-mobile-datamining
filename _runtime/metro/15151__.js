@@ -1,57 +1,20 @@
 // _runtime/metro/15151__.js
-import _mod15145 from "15145__.js";
-import _mod15146 from "15146__.js";
-import _mod15147 from "15147__.js";
-import _mod15148 from "15148__.js";
-import _mod15149 from "15149__.js";
-import _mod15150 from "15150__.js";
+import _mod15143 from "15143__.js";
 
-export default (version, arg1, version2, arg3) => {
-  switch (arg1) {
-    case "===":
-      let version3 = version;
-      if (typeof version === "object") {
-        version3 = version.version;
-      }
-      let version4 = version2;
-      if (typeof version2 === "object") {
-        version4 = version2.version;
-      }
-      return version3 === version4;
-    case "!==":
-      if (typeof version === "object") {
-        version = version.version;
-      }
-      if (typeof version2 === "object") {
-        version2 = version2.version;
-      }
-      return version !== version2;
-    case "":
-      let tmp13 = _mod15147;
-      let tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    case "=":
-      tmp13 = _mod15147;
-      tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    case "==":
-      tmp13 = _mod15147;
-      tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    case "!=":
-      return _mod15148(version, version2, arg3);
-    case ">":
-      return _mod15145(version, version2, arg3);
-    case ">=":
-      return _mod15149(version, version2, arg3);
-    case "<":
-      return _mod15146(version, version2, arg3);
-    case "<=":
-      return _mod15150(version, version2, arg3);
-    default:
-      const _TypeError = TypeError;
-      const _HermesInternal = HermesInternal;
-      const typeError = new TypeError("Invalid operator: " + arg1);
-      throw typeError;
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
+  }
+  try {
+    if (version instanceof _mod15143) {
+      version = version.version;
+    }
+    const tmp72 = new _mod15143(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
   }
 };

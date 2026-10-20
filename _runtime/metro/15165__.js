@@ -1,7 +1,4 @@
 // _runtime/metro/15165__.js
-import _mod15154 from "15154__.js";
+import _mod15157 from "15157__.js";
 
-export default (arg0, arg1, arg2) => {
-  const obj = new _mod15154(arg0, arg2);
-  return obj.intersects(new _mod15154(arg1, arg2), arg2);
-};
+export default (arg0, arg1, arg2) => 0 === _mod15157(arg0, arg1, arg2);

@@ -1,36 +1,11 @@
 // _runtime/metro/12492__.js
-import _mod12404 from "12404__.js";
-import _mod12406 from "12406__.js";
-import _mod12407 from "12407__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod12407.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod12406.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(12407).GLOBAL_OBJ.console) {
-        tmp(12412).fill(tmp(12407).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod12406.originalConsoleMethods[level] = arg0;
-          return () => {
-            const items = [...arguments];
-            level(12404).triggerHandlers("console", { args: items, level });
-            const obj3 = level(12406).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(12407).GLOBAL_OBJ.console, items);
-            }
-            const obj = { args: items, level };
-            const obj2 = level(12404);
-          };
-        });
-        const tmpResult = tmp(12412);
-      }
-    });
-  }
-}
-
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
-  _mod12404.addHandler("console", errorCallback);
-  _mod12404.maybeInstrument("console", instrumentConsole);
+export const parameterize = function parameterize(join) {
+  const substr = [...arguments].slice();
+  const items = [join, ...substr];
+  const string = new String(String.raw.apply(items));
+  const str = join.join("\0");
+  string.__sentry_template_string__ = join.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s");
+  string.__sentry_template_values__ = substr;
+  return string;
 };
