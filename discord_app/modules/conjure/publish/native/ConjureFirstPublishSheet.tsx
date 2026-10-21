@@ -1,8 +1,8 @@
-// === Module 11726: ConjureFirstPublishSheet ===
+// === Module 11770: ConjureFirstPublishSheet ===
 
-// Module 11726 (ConjureFirstPublishSheet)
+// Module 11770 (ConjureFirstPublishSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5171 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,45 +14,48 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureFirstPublishSheet = "ConjureFirstPublishSheet";
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureFirstPublishSheet(projectId) {
-  const cResult = trimmed(name[8]).c(51);
+  const cResult = trimmed(name[8]).c(54);
   projectId = projectId.projectId;
   name = projectId.name;
   let description = projectId.description;
   const onDone = projectId.onDone;
   closure_10();
   let obj = trimmed(name[8]);
+  const tmp = name;
+  const tmp4 = projectId;
   [str, r10027] = onDone(first.useState(name), 2);
-  const tmp3 = onDone(first.useState(name), 2);
+  let tmp5 = onDone(first.useState(name), 2);
   first = onDone(first.useState(description), 2)[0];
-  const tmp6 = onDone(first.useState(null), 2);
-  const first1 = tmp6[0];
-  closure_7 = tmp6[1];
-  const tmp4 = onDone(first.useState(description), 2);
+  const tmp8 = onDone(first.useState(null), 2);
+  const first1 = tmp8[0];
+  closure_7 = tmp8[1];
+  const tmp6 = onDone(first.useState(description), 2);
   [r10042, closure_8] = onDone(first.useState(null), 2);
-  const tmp9 = onDone(first.useState(false), 2);
-  const first2 = tmp9[0];
-  closure_10 = tmp9[1];
+  const tmp11 = onDone(first.useState(false), 2);
+  const first2 = tmp11[0];
+  closure_10 = tmp11[1];
   if (cResult[0] === name) {
     if (cResult[1] === str) {
-      let tmp11 = cResult[2];
+      let tmp13 = cResult[2];
       trimmed = cResult[3];
     }
-    closure_11 = tmp11;
+    closure_11 = tmp13;
     let iconURL = first1;
     if (first1 == null) {
       iconURL = projectId(name[9])(projectId).iconURL;
     }
+    tmp4(tmp[11])(projectId);
     if (cResult[4] !== onDone) {
       class H {
         constructor() {
-          obj = closure_1(closure_2[11]);
+          obj = closure_1(closure_2[12]);
           hideActionSheetResult = obj.hideActionSheet(ConjureFirstPublishSheet);
           tmp2 = onDone(true);
           return;
@@ -63,7 +66,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     } else {
       class H {
         constructor() {
-          obj = closure_1(closure_2[11]);
+          obj = closure_1(closure_2[12]);
           hideActionSheetResult = obj.hideActionSheet(ConjureFirstPublishSheet);
           tmp2 = onDone(true);
           return;
@@ -73,7 +76,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     if (cResult[6] === first) {
       class H {
         constructor() {
-          obj = closure_1(closure_2[11]);
+          obj = closure_1(closure_2[12]);
           hideActionSheetResult = obj.hideActionSheet(ConjureFirstPublishSheet);
           tmp2 = onDone(true);
           return;
@@ -116,7 +119,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                   const obj6 = { name: name2, description };
                   name2 = 1;
                   description = 1;
-                  const obj7 = { value: trimmed(name[12]).saveConjureFirstPublishDetails(closure_1, obj4, obj6), done: false };
+                  const obj7 = { value: trimmed(name[13]).saveConjureFirstPublishDetails(closure_1, obj4, obj6), done: false };
                   return obj7;
                 }
               }
@@ -133,8 +136,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
             closure_128_0 = value;
             closure_1_10(false);
             if (!closure_128_0) {
-              const intl = trimmed(name[13]).intl;
-              closure_1_8(intl.string(projectId(name[14]).Fi7boI));
+              const intl = trimmed(name[14]).intl;
+              closure_1_8(intl.string(projectId(name[15]).Fi7boI));
             }
           }
           H();
@@ -160,10 +163,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     cResult[8] = first1;
     cResult[9] = description;
     cResult[10] = name;
-    cResult[11] = tmp11;
+    cResult[11] = tmp13;
     cResult[12] = projectId;
     cResult[13] = first2;
-    cResult[14] = tmp12;
+    cResult[14] = tmp14;
     cResult[15] = publish;
   }
   trimmed = str.trim();
@@ -171,7 +174,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   if (trimmed !== name) {
     class H {
       constructor() {
-        obj = closure_1(closure_2[11]);
+        obj = closure_1(closure_2[12]);
         hideActionSheetResult = obj.hideActionSheet(ConjureFirstPublishSheet);
         tmp2 = onDone(true);
         return;
@@ -183,9 +186,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   cResult[1] = str;
   cResult[2] = result;
   cResult[3] = trimmed;
-  tmp11 = result;
-  tmp12 = trimmed;
-  const tmp8 = onDone(first.useState(null), 2);
+  tmp13 = result;
+  const tmp10 = onDone(first.useState(null), 2);
+  tmp14 = trimmed;
 }) : (function ConjureFirstPublishSheet(projectId) {
   projectId = projectId.projectId;
   const name = projectId.name;
@@ -230,7 +233,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                 const obj6 = { name, description };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp5(11727).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
+                const obj7 = { value: tmp5(11772).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
                 return obj7;
               }
             }
@@ -248,7 +251,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           closure_129_9(false);
           if (!closure_128_0) {
             const intl = tmp5(1128).intl;
-            closure_129_7(intl.string(tmp2(3820).Fi7boI));
+            closure_129_7(intl.string(tmp2(3830).Fi7boI));
           }
         }
         closure_129_12();
@@ -279,6 +282,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   }
   c11 = result;
   const items = [onDone];
+  const tmp9 = description(iconURL.useState(null), 2);
   onPress = obj.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjureFirstPublishSheet);
     onDone(true);
@@ -293,17 +297,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     children: null
   };
   let obj4 = { title: null, subtitle: null };
-  let intl = projectId(tmp3[13]).intl;
-  obj4.title = intl.string(name(description[14]).OmOWDq);
-  const intl2 = projectId(tmp3[13]).intl;
-  obj4.subtitle = intl2.string(name(description[14]).Gzmlyg);
-  obj3.header = c7(projectId(description[15]).BottomSheetTitleHeader, obj4);
+  let intl = projectId(tmp3[14]).intl;
+  obj4.title = intl.string(name(description[15]).OmOWDq);
+  const intl2 = projectId(tmp3[14]).intl;
+  obj4.subtitle = intl2.string(name(description[15]).Gzmlyg);
+  obj3.header = c7(projectId(description[16]).BottomSheetTitleHeader, obj4);
   const obj5 = { style: tmp.content, children: null };
   if (iconURL == null) {
     iconURL = name(description[9])(projectId).iconURL;
   }
   const items1 = [
-    c7(projectId(description[16]).ConjureAppIdentitySection, {
+    c7(projectId(description[17]).ConjureAppIdentitySection, {
       iconURL,
       onIconChange(arg0) {
         closure_6(arg0);
@@ -316,27 +320,28 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       onDescriptionChange: tmp6[1],
       disabled: first1
     }),
+    c7(name(description[18]), { permissions: name(description[11])(projectId) }),
   ,
 
   ];
-  let tmp17Result = null;
+  let tmp18Result = null;
   if (null != tmp10) {
     let obj7 = { accessibilityRole: "alert", children: null };
     const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: tmp10 };
-    obj7.children = tmp17(tmp18(tmp3[17]).Text, obj8);
-    tmp17Result = tmp17(tmp20, obj7);
+    obj7.children = tmp18(tmp19(tmp3[19]).Text, obj8);
+    tmp18Result = tmp18(tmp21, obj7);
   }
-  items1[1] = tmp17Result;
+  items1[2] = tmp18Result;
   const obj9 = { style: tmp.actions, children: null };
   const obj10 = { variant: "secondary", grow: true, text: null, disabled: null, onPress: null };
-  const intl3 = tmp18(tmp3[13]).intl;
-  obj10.text = intl3.string(name(description[14])["bz/M68"]);
+  const intl3 = tmp19(tmp3[14]).intl;
+  obj10.text = intl3.string(name(description[15])["bz/M68"]);
   obj10.disabled = first1;
   obj10.onPress = onPress;
-  const items2 = [c7(projectId(description[18]).Button, obj10), ];
+  const items2 = [c7(projectId(description[20]).Button, obj10), ];
   const obj11 = { variant: "primary", grow: true, text: null, loading: null, disabled: null, onPress: null };
-  const intl4 = tmp18(tmp3[13]).intl;
-  obj11.text = intl4.string(name(description[14]).dyIV6M);
+  const intl4 = tmp19(tmp3[14]).intl;
+  obj11.text = intl4.string(name(description[15]).dyIV6M);
   obj11.loading = first1;
   obj11.disabled = null != result;
   obj11.onPress = function onPress() {
@@ -353,12 +358,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
 
     });
   };
-  items2[1] = c7(projectId(description[18]).Button, obj11);
+  items2[1] = c7(projectId(description[20]).Button, obj11);
   obj9.children = items2;
-  items1[2] = first1(closure_6, obj9);
+  items1[3] = first1(closure_6, obj9);
   obj5.children = items1;
   obj3.children = first1(closure_6, obj5);
-  return c7(projectId(description[19]).ActionSheet, obj3);
+  return c7(projectId(description[21]).ActionSheet, obj3);
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/native/ConjureFirstPublishSheet.tsx");

@@ -1,10 +1,10 @@
-// === Module 12146: useConjureHistoryData ===
+// === Module 12194: useConjureHistoryData ===
 
-// Module 12146 (useConjureHistoryData)
+// Module 12194 (useConjureHistoryData)
 import c from "c" /* 576 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11733 */;
-import conjureHistoryRequests from "conjureHistoryRequests" /* 12135 */;
-import ConjureRestorePanelOp from "ConjureRestorePanelOp" /* 12147 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11778 */;
+import conjureHistoryRequests from "conjureHistoryRequests" /* 12183 */;
+import ConjureRestorePanelOp from "ConjureRestorePanelOp" /* 12195 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHistoryLoad(arg0) {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHistoryLoad(arg0) {
   closure_0 = arg0;
   const cResult = c.c(12);
   [tmp3, dependencyMap] = noop.useState(0);
@@ -144,6 +144,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHist
     return obj;
   }
 });
+let closure_4 = tmp2;
 let closure_5 = [];
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -308,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
               cResult[22] = mapped;
             }
           }
-          const fn5 = function j(environment) {
+          const fn5 = function _(environment) {
             const obj = { environment, backups: null };
             if ("preview" === environment) {
               closure_0 = state;
@@ -513,3 +514,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     }, items6)
   };
 });
+export const useHistoryLoad = tmp2;

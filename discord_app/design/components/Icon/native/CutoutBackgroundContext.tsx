@@ -1,13 +1,13 @@
-// === Module 9337: CutoutBackgroundContext ===
+// === Module 9365: CutoutBackgroundContext ===
 
-// Module 9337 (CutoutBackgroundContext)
+// Module 9365 (CutoutBackgroundContext)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 5213 */;
+import useToken from "useToken" /* 5234 */;
 import noop from "module_19" /* 19 */;
 
-const shared_colors = obj(9338);
+const shared_colors = obj(9366);
 require = fn;
 const jsx = fn(21).jsx;
 let context = noop.createContext(undefined);

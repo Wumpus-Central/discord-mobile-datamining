@@ -1,9 +1,9 @@
-// === Module 15194: KeyboardLayoutMapUtils ===
+// === Module 15267: KeyboardLayoutMapUtils ===
 
-// Module 15194 (KeyboardLayoutMapUtils)
+// Module 15267 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 15193 */;
+import keyCodeDefault from "keyCode" /* 15266 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
@@ -137,83 +137,81 @@ function getNormalizedEvent(keyCode) {
   obj.code = keyCode.code;
   return obj;
 }
+let closure_19 = async function _createKeyboardMapper() {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp4;
+          closure_0 = tmp4;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value: syncKeyboardLayoutMap(), done: false };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_129_17 = new closure_129_16(closure_129_6);
+        const _document = document;
+        const listener = document.addEventListener("keydown", (event) => {
+          try {
+            if (closure_1_17 != null) {
+              closure_1_17.addEvent(event);
+            }
+          } catch (tmp4) {
+            const obj2 = { event: tmp, error: tmp4 };
+            logger.error("KeyboardMapper - Error adding event", obj2);
+          }
+        });
+        c3 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } catch (tmp13) {
+      c3 = tmp;
+      throw tmp13;
+    }
+  }
+};
 function getKeyboardMapper() {
   if (null == c17) {
     let tmp = null;
-    if (null == promise) {
-      closure_0 = asyncGeneratorStep(async (arg0) => {
-        if (c4 === 2) {
-          c4 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            let obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === c3) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_2 = tmp5;
-                closure_1 = tmp2;
-                closure_129_0 = closure_0;
-                c3 = 1;
-                c4 = 1;
-                const obj4 = { value: syncKeyboardLayoutMap(), done: false };
-                return obj4;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              closure_17 = new KeyboardMapper(LinuxKeyToCode);
-              const _document = document;
-              const listener = document.addEventListener("keydown", (event) => {
-                try {
-                  if (closure_1_17 != null) {
-                    closure_1_17.addEvent(event);
-                  }
-                } catch (tmp4) {
-                  const obj2 = { event: tmp, error: tmp4 };
-                  logger.error("KeyboardMapper - Error adding event", obj2);
-                }
-              });
-              closure_129_0();
-              c4 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          } catch (tmp17) {
-            c4 = tmp;
-            throw tmp17;
-          }
-        }
-      });
-      promise = new Promise(function() {
+    if (null == closure_18) {
+      closure_18 = (function createKeyboardMapper() {
         const self = this;
-        const apply = closure_0.apply;
+        const apply = closure_1_19.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      });
+      })();
       tmp = null;
     }
   } else {
@@ -221,7 +219,7 @@ function getKeyboardMapper() {
   }
   return tmp;
 }
-let closure_20 = async function _resetKeyboardMapper() {
+let closure_21 = async function _resetKeyboardMapper() {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -260,7 +258,7 @@ let closure_20 = async function _resetKeyboardMapper() {
         obj5 = { value, done: true };
         return obj5;
       } else {
-        const obj = closure_128_19();
+        const obj = closure_128_20();
         if (obj != null) {
           obj.reset();
         }
@@ -285,80 +283,17 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
   if (null != tmp) {
     if (null == c17) {
       let tmp4 = null;
-      if (null == promise) {
-        closure_0 = asyncGeneratorStep(async (arg0) => {
-          if (c4 === 2) {
-            c4 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              let obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c4 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_2 = tmp5;
-                  closure_1 = tmp2;
-                  closure_129_0 = closure_0;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj4 = { value: syncKeyboardLayoutMap(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                closure_17 = new KeyboardMapper(LinuxKeyToCode);
-                const _document = document;
-                const listener = document.addEventListener("keydown", (event) => {
-                  try {
-                    if (closure_1_17 != null) {
-                      closure_1_17.addEvent(event);
-                    }
-                  } catch (tmp4) {
-                    const obj2 = { event: tmp, error: tmp4 };
-                    logger.error("KeyboardMapper - Error adding event", obj2);
-                  }
-                });
-                closure_129_0();
-                c4 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp17) {
-              c4 = tmp;
-              throw tmp17;
-            }
-          }
-        });
-        promise = new Promise(function() {
+      if (null == closure_18) {
+        closure_18 = (function createKeyboardMapper() {
           const self = this;
-          const apply = closure_0.apply;
+          const apply = closure_1_19.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        });
+        })();
         tmp4 = null;
       }
     } else {
@@ -384,80 +319,17 @@ function getExactKeyboardEventMatchFromAny(key) {
   if (null != tmp) {
     if (null == c17) {
       let tmp6 = null;
-      if (null == promise) {
-        closure_0 = asyncGeneratorStep(async (arg0) => {
-          if (c4 === 2) {
-            c4 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              let obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c4 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_2 = tmp5;
-                  closure_1 = tmp2;
-                  closure_129_0 = closure_0;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj4 = { value: syncKeyboardLayoutMap(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                closure_17 = new KeyboardMapper(LinuxKeyToCode);
-                const _document = document;
-                const listener = document.addEventListener("keydown", (event) => {
-                  try {
-                    if (closure_1_17 != null) {
-                      closure_1_17.addEvent(event);
-                    }
-                  } catch (tmp4) {
-                    const obj2 = { event: tmp, error: tmp4 };
-                    logger.error("KeyboardMapper - Error adding event", obj2);
-                  }
-                });
-                closure_129_0();
-                c4 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp17) {
-              c4 = tmp;
-              throw tmp17;
-            }
-          }
-        });
-        promise = new Promise(function() {
+      if (null == closure_18) {
+        closure_18 = (function createKeyboardMapper() {
           const self = this;
-          const apply = closure_0.apply;
+          const apply = closure_1_19.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        });
+        })();
         tmp6 = null;
       }
     } else {
@@ -474,7 +346,7 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(7562);
+const KeyboardConstants = fn(7590);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
 const PlatformUtils = fn(1384);
@@ -490,82 +362,19 @@ if (!PlatformUtils.isLinux()) {
   obj2 = fn(1384);
 }
 function initializeKeyboardMapper() {
-  if (null == promise) {
-    closure_0 = asyncGeneratorStep(async (arg0) => {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_2 = tmp5;
-              closure_1 = tmp2;
-              closure_129_0 = closure_0;
-              c3 = 1;
-              c4 = 1;
-              const obj4 = { value: syncKeyboardLayoutMap(), done: false };
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            closure_17 = new KeyboardMapper(LinuxKeyToCode);
-            const _document = document;
-            const listener = document.addEventListener("keydown", (event) => {
-              try {
-                if (closure_1_17 != null) {
-                  closure_1_17.addEvent(event);
-                }
-              } catch (tmp4) {
-                const obj2 = { event: tmp, error: tmp4 };
-                logger.error("KeyboardMapper - Error adding event", obj2);
-              }
-            });
-            closure_129_0();
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp17) {
-          c4 = tmp;
-          throw tmp17;
-        }
-      }
-    });
-    promise = new Promise(function() {
+  if (null == closure_18) {
+    closure_18 = (function createKeyboardMapper() {
       const self = this;
-      const apply = closure_0.apply;
+      const apply = closure_1_19.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    });
+    })();
   }
-  return promise;
+  return closure_18;
 }
 let tmp3 = new LoggerDefault("KeyboardLayoutMapUtils");
 const frozen = Object.freeze({ KeyA: "a", KeyB: "b", KeyC: "c", KeyD: "d", KeyE: "e", KeyF: "f", KeyG: "g", KeyH: "h", KeyI: "i", KeyJ: "j", KeyK: "k", KeyL: "l", KeyM: "m", KeyN: "n", KeyO: "o", KeyP: "p", KeyQ: "q", KeyR: "r", KeyS: "s", KeyT: "t", KeyU: "u", KeyV: "v", KeyW: "w", KeyX: "x", KeyY: "y", KeyZ: "z", Digit0: "0", Digit1: "1", Digit2: "2", Digit3: "3", Digit4: "4", Digit5: "5", Digit6: "6", Digit7: "7", Digit8: "8", Digit9: "9", Backquote: "`", Backslash: "\\", Quote: "'", Slash: "/", Comma: ",", Period: ".", Semicolon: ";", Equal: "=", Minus: "-", BracketLeft: "[", BracketRight: "]", IntlBackslash: "\u00A7" });
@@ -1155,7 +964,7 @@ prototype3["getDefaultKeyboardEventShape"] = function getDefaultKeyboardEventSha
   }
 };
 let c17 = null;
-let c18 = null;
+let closure_18 = null;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/web/KeyboardLayoutMapUtils.tsx");
 
@@ -1175,7 +984,7 @@ export const __DEV_overrideLayoutMapKey = function __DEV_overrideLayoutMapKey(ar
 export { getKeyboardMapper };
 export const resetKeyboardMapper = function resetKeyboardMapper() {
   const self = this;
-  const apply = closure_20.apply;
+  const apply = closure_21.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1193,80 +1002,17 @@ export const getLayoutMap = function getLayoutMap() {
   } else {
     if (null == c17) {
       let tmp3 = null;
-      if (null == promise) {
-        closure_0 = asyncGeneratorStep(async (arg0) => {
-          if (c4 === 2) {
-            c4 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              let obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c4 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_2 = tmp5;
-                  closure_1 = tmp2;
-                  closure_129_0 = closure_0;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj4 = { value: syncKeyboardLayoutMap(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                closure_17 = new KeyboardMapper(LinuxKeyToCode);
-                const _document = document;
-                const listener = document.addEventListener("keydown", (event) => {
-                  try {
-                    if (closure_1_17 != null) {
-                      closure_1_17.addEvent(event);
-                    }
-                  } catch (tmp4) {
-                    const obj2 = { event: tmp, error: tmp4 };
-                    logger.error("KeyboardMapper - Error adding event", obj2);
-                  }
-                });
-                closure_129_0();
-                c4 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp17) {
-              c4 = tmp;
-              throw tmp17;
-            }
-          }
-        });
-        promise = new Promise(function() {
+      if (null == closure_18) {
+        closure_18 = (function createKeyboardMapper() {
           const self = this;
-          const apply = closure_0.apply;
+          const apply = closure_1_19.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        });
+        })();
         tmp3 = null;
       }
     } else {
@@ -1291,80 +1037,17 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
   } else {
     if (null == c17) {
       let tmp2 = null;
-      if (null == promise) {
-        closure_0 = asyncGeneratorStep(async (arg0) => {
-          if (c4 === 2) {
-            c4 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              let obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c4 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_2 = tmp5;
-                  closure_1 = tmp2;
-                  closure_129_0 = closure_0;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj4 = { value: syncKeyboardLayoutMap(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                closure_17 = new KeyboardMapper(LinuxKeyToCode);
-                const _document = document;
-                const listener = document.addEventListener("keydown", (event) => {
-                  try {
-                    if (closure_1_17 != null) {
-                      closure_1_17.addEvent(event);
-                    }
-                  } catch (tmp4) {
-                    const obj2 = { event: tmp, error: tmp4 };
-                    logger.error("KeyboardMapper - Error adding event", obj2);
-                  }
-                });
-                closure_129_0();
-                c4 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp17) {
-              c4 = tmp;
-              throw tmp17;
-            }
-          }
-        });
-        promise = new Promise(function() {
+      if (null == closure_18) {
+        closure_18 = (function createKeyboardMapper() {
           const self = this;
-          const apply = closure_0.apply;
+          const apply = closure_1_19.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        });
+        })();
         tmp2 = null;
       }
     } else {
@@ -1374,17 +1057,17 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
       return null;
     } else {
       keyCode = keyCode.keyCode;
-      let tmp10;
+      let tmp4;
       if (null != keyCode.key) {
         let toLocaleLowerCaseResult = key;
         if (null != keyCode.key) {
           toLocaleLowerCaseResult = key.toLocaleLowerCase();
         }
-        tmp10 = toLocaleLowerCaseResult;
+        tmp4 = toLocaleLowerCaseResult;
       }
       const code = keyCode.code;
-      if (null != tmp10) {
-        const result = tmp2.findKeyboardEventByKey(tmp10, code, keyCode);
+      if (null != tmp4) {
+        const result = tmp2.findKeyboardEventByKey(tmp4, code, keyCode);
         if (null != result) {
           return result;
         }

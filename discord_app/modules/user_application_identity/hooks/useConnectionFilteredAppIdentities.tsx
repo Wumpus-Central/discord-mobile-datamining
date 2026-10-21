@@ -1,6 +1,6 @@
-// === Module 14235: useConnectionFilteredAppIdentities ===
+// === Module 14310: useConnectionFilteredAppIdentities ===
 
-// Module 14235 (useConnectionFilteredAppIdentities)
+// Module 14310 (useConnectionFilteredAppIdentities)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -57,13 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConne
   }
   if (cResult[7] !== (undefined !== includeHidden && includeHidden)) {
     const fn = function c(profile) {
-      let someResult = closure_3.some((applicationId) => {
-        let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
-        if (migrationExperimentEnabled) {
-          migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities");
-        }
-        return migrationExperimentEnabled;
-      });
+      let someResult = closure_3.some((applicationId) => applicationId.applicationId === profile.application_id);
       if (someResult) {
         someResult = null != profile.profile;
       }
@@ -105,13 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConne
       items = [];
     }
     return items.filter((profile) => {
-      let someResult = closure_2_3.some((applicationId) => {
-        let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
-        if (migrationExperimentEnabled) {
-          migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities");
-        }
-        return migrationExperimentEnabled;
-      });
+      let someResult = closure_2_3.some((applicationId) => applicationId.applicationId === profile.application_id);
       if (someResult) {
         someResult = null != profile.profile;
       }

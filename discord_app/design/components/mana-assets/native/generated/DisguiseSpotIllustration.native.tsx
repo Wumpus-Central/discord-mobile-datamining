@@ -1,23 +1,23 @@
-// === Module 18471: DisguiseSpotIllustration ===
+// === Module 18550: DisguiseSpotIllustration ===
 
-// Module 18471 (DisguiseSpotIllustration)
+// Module 18550 (DisguiseSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import assetHelpers from "assetHelpers" /* 6946 */;
-import _modDef18472 from "module_18472" /* 18472 */;
-import _modDef18473 from "module_18473" /* 18473 */;
-import _modDef18474 from "module_18474" /* 18474 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import assetHelpers from "assetHelpers" /* 6974 */;
+import _modDef18551 from "module_18551" /* 18551 */;
+import _modDef18552 from "module_18552" /* 18552 */;
+import _modDef18553 from "module_18553" /* 18553 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18472 }, 3: null };
-let obj2 = { uri: _modDef18472 };
-obj[2] = { uri: _modDef18473 };
-const obj3 = { uri: _modDef18473 };
-obj[3] = { uri: _modDef18474 };
+let obj = { 1: null, 2: { uri: _modDef18551 }, 3: null };
+let obj2 = { uri: _modDef18551 };
+obj[2] = { uri: _modDef18552 };
+const obj3 = { uri: _modDef18552 };
+obj[3] = { uri: _modDef18553 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18474 };
+const obj4 = { uri: _modDef18553 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisguiseSpotIllustration.native.tsx");
 

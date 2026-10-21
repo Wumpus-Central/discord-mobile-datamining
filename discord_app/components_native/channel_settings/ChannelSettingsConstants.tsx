@@ -1,6 +1,6 @@
-// === Module 18006: ChannelSettingsConstants ===
+// === Module 18087: ChannelSettingsConstants ===
 
-// Module 18006 (ChannelSettingsConstants)
+// Module 18087 (ChannelSettingsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsConstants.tsx");

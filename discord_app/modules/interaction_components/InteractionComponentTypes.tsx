@@ -1,6 +1,6 @@
-// === Module 5980: InteractionComponentTypes ===
+// === Module 6002: InteractionComponentTypes ===
 
-// Module 5980 (InteractionComponentTypes)
+// Module 6002 (InteractionComponentTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");

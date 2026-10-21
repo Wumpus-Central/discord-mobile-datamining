@@ -1,7 +1,7 @@
-// === Module 17947: getGamePlatform ===
+// === Module 18028: getGamePlatform ===
 
-// Module 17947 (getGamePlatform)
-import isOnXboxDefault from "isOnXbox" /* 14108 */;
+// Module 18028 (getGamePlatform)
+import isOnXboxDefault from "isOnXbox" /* 14183 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

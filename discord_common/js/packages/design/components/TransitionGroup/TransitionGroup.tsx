@@ -1,6 +1,6 @@
-// === Module 5005: TransitionGroup/TransitionGroup ===
+// === Module 5026: TransitionGroup/TransitionGroup ===
 
-// Module 5005 (TransitionGroup/TransitionGroup)
+// Module 5026 (TransitionGroup/TransitionGroup)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

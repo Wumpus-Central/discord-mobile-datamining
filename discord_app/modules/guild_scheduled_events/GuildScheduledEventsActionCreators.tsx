@@ -1,20 +1,20 @@
-// === Module 8820: GuildScheduledEventsActionCreators ===
+// === Module 8847: GuildScheduledEventsActionCreators ===
 
-// Module 8820 (GuildScheduledEventsActionCreators)
+// Module 8847 (GuildScheduledEventsActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1114 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6585 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8821 */;
-import guildEventEmbedFetchQueue from "guildEventEmbedFetchQueue" /* 8827 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6613 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8848 */;
+import guildEventEmbedFetchQueue from "guildEventEmbedFetchQueue" /* 8854 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6735 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6763 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4806);
+const GuildScheduledEventsConstants = fn(4827);
 ({ ENTITY_TYPES_REQUIRED_CHANNEL_ID: metroRequire, ENTITY_TYPES_REQUIRED_ENTITY_METADATA: closure_7, GuildScheduledEventStatus: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const Constants = fn(1087);
 ({ Endpoints: c10, Routes: closure_11 } = Constants);
@@ -81,7 +81,7 @@ export default {
       return applyArgumentsResult;
     }
     closure_4 = async function _fetch() {
-      await tmp5(6340).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENT(closure_2_0, closure_2_1), rejectWithError: tmp5(1297).rejectWithMigratedError() });
+      await tmp5(6362).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENT(closure_2_0, closure_2_1), rejectWithError: tmp5(1297).rejectWithMigratedError() });
       const body = value.body;
       tmp2(584).dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: body });
       return body;
@@ -107,7 +107,7 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(6340).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1297).rejectWithMigratedError() });
+      await tmp5(6362).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1297).rejectWithMigratedError() });
       const body = value.body;
       tmp2(584).dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: closure_129_0, guildScheduledEvents: body });
       return body;

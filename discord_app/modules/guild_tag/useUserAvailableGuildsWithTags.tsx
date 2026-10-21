@@ -1,10 +1,10 @@
-// === Module 15715: useUserAvailableGuildsWithTags ===
+// === Module 15791: useUserAvailableGuildsWithTags ===
 
-// Module 15715 (useUserAvailableGuildsWithTags)
+// Module 15791 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildMemberStore from "GuildMemberStore" /* 4860 */;
-import GuildStore from "GuildStore" /* 4822 */;
+import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

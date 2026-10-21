@@ -1,10 +1,10 @@
-// === Module 17318: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 17394: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 17318 (useFavoritesGuildAutoAddedThreadsAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10649 */;
+// Module 17394 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10792 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import FavoriteStore from "FavoriteStore" /* 4803 */;
+import FavoriteStore from "FavoriteStore" /* 4824 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -57,9 +57,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1128).intl;
-      const stringResult = intl.string(stateFromStores1(3402).DIyQIF);
+      const stringResult = intl.string(stateFromStores1(3412).DIyQIF);
       const intl2 = tmp(1128).intl;
-      const stringResult1 = intl2.string(stateFromStores1(3402).g2vHYJ);
+      const stringResult1 = intl2.string(stateFromStores1(3412).g2vHYJ);
       cResult[7] = stringResult;
       cResult[8] = stringResult1;
       let tmp14 = stringResult1;
@@ -124,9 +124,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     }
   }, items2);
   const intl = stateFromStores(1128).intl;
-  obj3.label = intl.string(stateFromStores1(3402).DIyQIF);
+  obj3.label = intl.string(stateFromStores1(3412).DIyQIF);
   const intl2 = stateFromStores(1128).intl;
-  obj3.subLabel = intl2.string(stateFromStores1(3402).g2vHYJ);
+  obj3.subLabel = intl2.string(stateFromStores1(3412).g2vHYJ);
   obj3.toggle = callback;
   return obj3;
 });

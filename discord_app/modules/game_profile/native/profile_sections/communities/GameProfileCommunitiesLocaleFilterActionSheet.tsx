@@ -1,16 +1,16 @@
-// === Module 9441: GameProfileCommunitiesLocaleFilterActionSheet ===
+// === Module 9470: GameProfileCommunitiesLocaleFilterActionSheet ===
 
-// Module 9441 (GameProfileCommunitiesLocaleFilterActionSheet)
+// Module 9470 (GameProfileCommunitiesLocaleFilterActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import useGameProfileCommunitiesLocaleOptionsDefault from "useGameProfileCommunitiesLocaleOptions" /* 9442 */;
+import useGameProfileCommunitiesLocaleOptionsDefault from "useGameProfileCommunitiesLocaleOptions" /* 9471 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { content: { paddingBottom: arg0 + nativeDefault.space.PX_16 } };
   return obj;
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { title: first };
-    const tmp10 = jsx(toggleLocale(7197).BottomSheetTitleHeader, { title: first });
+    const tmp10 = jsx(toggleLocale(7225).BottomSheetTitleHeader, { title: first });
     cResult[1] = tmp10;
     let tmp8 = tmp10;
   } else {
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     if (cResult[3] === toggleLocale) {
       if (cResult[7] !== cResult[4]) {
         const obj3 = { hasIcons: false, children: tmp12 };
-        const tmp17 = jsx(toggleLocale(6938).TableRowGroup, { hasIcons: false, children: tmp12 });
+        const tmp17 = jsx(toggleLocale(6966).TableRowGroup, { hasIcons: false, children: tmp12 });
         cResult[7] = tmp12;
         cResult[8] = tmp17;
         let tmp15 = tmp17;
@@ -60,8 +60,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       }
       const obj4 = { scrollable: true, header: tmp8, dismissAccessibilityLabel: first, children: null };
       const obj5 = { contentContainerStyle: tmp11, children: tmp15 };
-      obj4.children = jsx(toggleLocale(5230).BottomSheetScrollView, { contentContainerStyle: tmp11, children: tmp15 });
-      const tmp20 = jsx(toggleLocale(7247).ActionSheet, { scrollable: true, header: tmp8, dismissAccessibilityLabel: first, children: null });
+      obj4.children = jsx(toggleLocale(5251).BottomSheetScrollView, { contentContainerStyle: tmp11, children: tmp15 });
+      const tmp20 = jsx(toggleLocale(7275).ActionSheet, { scrollable: true, header: tmp8, dismissAccessibilityLabel: first, children: null });
       cResult[9] = tmp4.content;
       cResult[10] = tmp15;
       cResult[11] = tmp20;

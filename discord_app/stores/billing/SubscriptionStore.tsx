@@ -1,6 +1,6 @@
-// === Module 2059: SubscriptionStore ===
+// === Module 2058: SubscriptionStore ===
 
-// Module 2059 (SubscriptionStore)
+// Module 2058 (SubscriptionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1393 */;
@@ -17,8 +17,8 @@ function reset() {
   c16 = false;
   c17 = null;
 }
-const isNoneSubscription = fn(2052).isNoneSubscription;
-const SubscriptionRecord = fn(2060).SubscriptionRecord;
+const isNoneSubscription = fn(2051).isNoneSubscription;
+const SubscriptionRecord = fn(2059).SubscriptionRecord;
 const Constants = fn(1087);
 ({ SubscriptionStatusTypes: closure_4, SubscriptionTypes: hasOwnProperty } = Constants);
 let obj = null;

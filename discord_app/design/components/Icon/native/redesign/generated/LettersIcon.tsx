@@ -1,10 +1,10 @@
-// === Module 16778: LettersIcon ===
+// === Module 16854: LettersIcon ===
 
-// Module 16778 (LettersIcon)
+// Module 16854 (LettersIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5630 */;
-import _mod16779 from "module_16779" /* 16779 */;
+import BaseIconImage from "BaseIconImage" /* 5650 */;
+import _mod16855 from "module_16855" /* 16855 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const LettersIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16779;
+    const tmpResult = _mod16855;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const LettersIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16779, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16855, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

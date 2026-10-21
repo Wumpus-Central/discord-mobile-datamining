@@ -1,14 +1,14 @@
-// === Module 9712: SuperReactionUpsellActionSheet ===
+// === Module 9742: SuperReactionUpsellActionSheet ===
 
-// Module 9712 (SuperReactionUpsellActionSheet)
+// Module 9742 (SuperReactionUpsellActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import _mod4914 from "module_4914" /* 4914 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9720 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9721 */;
-import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 9751 */;
+import _mod4935 from "module_4935" /* 4935 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9750 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9751 */;
+import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 9781 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -19,9 +19,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const AnalyticsPages = fn(1087).AnalyticsPages;
 const jsx = fn(21).jsx;
-const dismissibleContent = fn(4784).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
-let items = [fn(9713), fn(9714), fn(9715), fn(9716), fn(9714), fn(9717), fn(9718), fn(9719)];
-const createStyles = fn(4945);
+const dismissibleContent = fn(4805).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
+let items = [fn(9743), fn(9744), fn(9745), fn(9746), fn(9744), fn(9747), fn(9748), fn(9749)];
+const createStyles = fn(4966);
 let obj2 = { fill: null, nitroIcon: null, description: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

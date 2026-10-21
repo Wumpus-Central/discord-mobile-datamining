@@ -1,13 +1,13 @@
-// === Module 8329: NewThreadSystemMessage ===
+// === Module 8357: NewThreadSystemMessage ===
 
-// Module 8329 (NewThreadSystemMessage)
+// Module 8357 (NewThreadSystemMessage)
 import util from "util" /* 1128 */;
-import useChannelName from "useChannelName" /* 5565 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8266 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8268 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8270 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
+import useChannelName from "useChannelName" /* 5586 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8294 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8296 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8298 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

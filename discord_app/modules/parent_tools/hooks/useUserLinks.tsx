@@ -1,16 +1,16 @@
-// === Module 8072: useUserLinks ===
+// === Module 8100: useUserLinks ===
 
-// Module 8072 (useUserLinks)
+// Module 8100 (useUserLinks)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7594 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7622 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FamilyCenterConstants = fn(7595);
+const FamilyCenterConstants = fn(7623);
 ({ ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER: metroRequire, FAMILY_CENTER_REQUEST_QR_CODE_URL: closure_7, MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_8, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: closure_9, PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER: c10, UserLinkStatus: closure_11, UserLinkType: closure_12 } = FamilyCenterConstants);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserIdsForLinkStatus(arg0) {
@@ -463,7 +463,7 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivity
     } else {
       tmp9 = cResult[7];
     }
-    tmp = tmp(8075);
+    tmp = tmp(8103);
     formatUserActivityTimestamp = tmp.formatUserActivityTimestamp;
     const date = new result.Date(stateFromStores);
     result = formatUserActivityTimestamp(date.getTime(), tmp9, 7);
@@ -489,8 +489,8 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivity
   if (null != stateFromStores) {
     const _Date = Date;
     const date = new Date(stateFromStores);
-    result = tmp(8075).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
-    const tmpResult = tmp(8075);
+    result = tmp(8103).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
+    const tmpResult = tmp(8103);
   }
   return result;
 });
@@ -578,8 +578,8 @@ export const useLinkTimestampText = ReactCompilerGating.isReactCompilerEnabled()
     tmp8 = null;
   } else {
     const _Date = Date;
-    tmp(8075).formatLinkTimestamp(Date.parse(stateFromStores), arg1 === constants.PENDING ? closure_10 : closure_6);
-    const tmpResult2 = tmp(8075);
+    tmp(8103).formatLinkTimestamp(Date.parse(stateFromStores), arg1 === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult2 = tmp(8103);
   }
   const tmpResult = require("useStateFromStores");
 }) : (function useLinkTimestampText(arg0, arg1) {
@@ -590,8 +590,8 @@ export const useLinkTimestampText = ReactCompilerGating.isReactCompilerEnabled()
     return null;
   } else {
     const _Date = Date;
-    tmp(8075).formatLinkTimestamp(Date.parse(stateFromStores), arg1 === constants.PENDING ? closure_10 : closure_6);
-    const tmpResult = tmp(8075);
+    tmp(8103).formatLinkTimestamp(Date.parse(stateFromStores), arg1 === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult = tmp(8103);
   }
   const obj = require("useStateFromStores");
   tmp = _require;

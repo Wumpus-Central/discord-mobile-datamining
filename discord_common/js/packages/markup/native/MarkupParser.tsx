@@ -1,12 +1,12 @@
-// === Module 8293: markup/MarkupParser ===
+// === Module 8321: markup/MarkupParser ===
 
-// Module 8293 (markup/MarkupParser)
+// Module 8321 (markup/MarkupParser)
 import _modDef1951 from "module_1951" /* 1951 */;
-import MarkupASTUtils from "MarkupASTUtils" /* 8294 */;
+import MarkupASTUtils from "MarkupASTUtils" /* 8322 */;
 import size from "module_2" /* 2 */;
 
-function saferParse(fn, value, inline, arg3, arg4) {
-  let text = value;
+function saferParse(fn, arg1, inline, arg3, arg4) {
+  let text = arg1;
   let tmp6 = arg3;
   if (arg3 === undefined) {
     tmp6 = null;
@@ -38,9 +38,9 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/markup/na
 export default {
   astParserFor(importDefaultResultResult) {
     closure_0 = _modDef1951.parserFor(importDefaultResultResult);
-    return () => {
-      let str = value;
-      if (value === undefined) {
+    return (arg0) => {
+      let str = arg0;
+      if (arg0 === undefined) {
         str = "";
       }
       let obj = arg2;
@@ -69,8 +69,8 @@ export default {
     let obj2 = _modDef1951;
     importDefault = obj2.reactFor(_modDef1951.ruleOutput(importDefaultResultResult, "react"));
     return () => {
-      let str = value;
-      if (value === undefined) {
+      let str = arg0;
+      if (arg0 === undefined) {
         str = "";
       }
       let flag = arg1;

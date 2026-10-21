@@ -1,27 +1,27 @@
-// === Module 18110: SuspendedUserPage ===
+// === Module 18191: SuspendedUserPage ===
 
-// Module 18110 (SuspendedUserPage)
+// Module 18191 (SuspendedUserPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import LinkingDefault from "Linking" /* 5622 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6619 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7172 */;
-import IconButton from "IconButton" /* 7907 */;
-import _modDef8062 from "module_8062" /* 8062 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 15833 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import LinkingDefault from "Linking" /* 5642 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6647 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7200 */;
+import IconButton from "IconButton" /* 7935 */;
+import _modDef8090 from "module_8090" /* 8090 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 15909 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7870 */;
+import SafetyHubStore from "SafetyHubStore" /* 7898 */;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7846);
+const SafetyHubConstants = fn(7874);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" }, header: null, text: null, link: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" };
 obj2.header = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: nativeDefault.space.PX_8, alignItems: "center" };
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspende
     const intl = util.intl;
     obj4.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj4.onPress = tmp9;
-    obj4.icon = _modDef8062;
+    obj4.icon = _modDef8090;
     const items2 = [React5(IconButton.IconButton, obj4), ];
     const obj5 = { style: tmp4.text, onPress: tmp10, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
     const intl2 = util.intl;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspende
     obj4.onPress = function onClose() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj4.icon = _modDef8062;
+    obj4.icon = _modDef8090;
     const items1 = [React5(IconButton.IconButton, obj4), ];
     const obj5 = {
       style: tmp.text,

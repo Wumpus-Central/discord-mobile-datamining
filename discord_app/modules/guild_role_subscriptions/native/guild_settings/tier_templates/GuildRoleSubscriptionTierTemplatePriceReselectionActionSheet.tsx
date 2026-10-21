@@ -1,15 +1,15 @@
-// === Module 19068: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 19145: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 19068 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 19145 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5001 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import PriceUtils from "PriceUtils" /* 7288 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8974 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16337 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5022 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import PriceUtils from "PriceUtils" /* 7316 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9001 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1098).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md }, rowContainer: null, containerSelected: null, rowStatusIcon: null, confirmButton: null, backToTemplates: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md };
 obj2.rowContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignSelf: "stretch", justifyContent: "flex-start", padding: 12, marginBottom: 12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
@@ -56,7 +56,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
     if (cResult[3] === containerSelected) {
       let tmp8 = cResult[4];
     }
-    const tmp9Result = importDefault(selected ? 18974 : 17761);
+    const tmp9Result = importDefault(selected ? 19051 : 17842);
     if (cResult[5] === tmp4.rowStatusIcon) {
       if (cResult[6] === tmp9Result) {
         let tmp11 = cResult[7];
@@ -139,7 +139,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
   items[1] = containerSelected;
   const obj3 = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj3.source = importDefault(selected ? 18974 : 17761);
+  obj3.source = importDefault(selected ? 19051 : 17842);
   const items1 = [React6(FastImageDefault, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = util.intl;

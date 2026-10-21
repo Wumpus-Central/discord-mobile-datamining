@@ -1,12 +1,12 @@
-// === Module 16939: ProfileCustomizationTryItOutSettingScreen ===
+// === Module 17015: ProfileCustomizationTryItOutSettingScreen ===
 
-// Module 16939 (ProfileCustomizationTryItOutSettingScreen)
+// Module 17015 (ProfileCustomizationTryItOutSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1409 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7611 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8593 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8613 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7639 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8620 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8640 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -17,7 +17,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, AnalyticsPages: closure_8 } = Constants);
 const PremiumUpsellTypes = fn(1394).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: null, activityIndicator: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

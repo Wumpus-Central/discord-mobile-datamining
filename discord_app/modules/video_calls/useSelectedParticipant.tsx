@@ -1,7 +1,7 @@
-// === Module 10689: useSelectedParticipant ===
+// === Module 10833: useSelectedParticipant ===
 
-// Module 10689 (useSelectedParticipant)
-import ChannelRTCStore from "ChannelRTCStore" /* 6723 */;
+// Module 10833 (useSelectedParticipant)
+import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
 
 const require = globalThis.__r;
 

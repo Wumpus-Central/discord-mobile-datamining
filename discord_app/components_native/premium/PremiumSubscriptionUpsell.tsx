@@ -1,34 +1,34 @@
-// === Module 14665: PremiumSubscriptionUpsell ===
+// === Module 14739: PremiumSubscriptionUpsell ===
 
-// Module 14665 (PremiumSubscriptionUpsell)
+// Module 14739 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1107 */;
 import util from "util" /* 1128 */;
 import NumberUtils from "NumberUtils" /* 1903 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2054 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import components_Button_Button from "components/Button/Button" /* 5205 */;
-import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6870 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9750 */;
-import _modDef14666 from "module_14666" /* 14666 */;
-import _modDef14667 from "module_14667" /* 14667 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import components_Button_Button from "components/Button/Button" /* 5226 */;
+import LinearGradientDefault from "LinearGradient" /* 5240 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6898 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9780 */;
+import _modDef14740 from "module_14740" /* 14740 */;
+import _modDef14741 from "module_14741" /* 14741 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2069 */;
+import LocaleStore from "LocaleStore" /* 2068 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7493).Gradients;
+const Gradients = fn(7521).Gradients;
 const PremiumConstants = fn(1394);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { title: { textAlign: "center" }, subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" }, upsell: { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, upsellCard: null, upsellFeatures: null, upsellFeatureSubLogo: null, upsellFeatureList: null, upsellButton: null, upsellFeatureLogoTier2: null, upsellLabel: null, upsellRow: null };
 let obj3 = { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.upsellCard = { borderRadius: nativeDefault.radii.xs, padding: 16, alignItems: "center" };
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
         if (cResult[6] === tmp4.subtitle) {
           if (cResult[7] === tmp4.title) {
             if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-              const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef14666 };
+              const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef14740 };
               const tmp22 = React6(FastImageDefault, obj2);
               cResult[9] = tmp4.upsellFeatureSubLogo;
               cResult[10] = tmp22;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
               tmp19 = cResult[10];
             }
             if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-              const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef14667 };
+              const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef14741 };
               const tmp26 = React6(FastImageDefault, obj4);
               cResult[11] = tmp4.upsellFeatureLogoTier2;
               cResult[12] = tmp26;
@@ -286,11 +286,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     intlResult1 = PremiumUtilsDefault;
-    obj11.source = _modDef14666;
+    obj11.source = _modDef14740;
     const items4 = [React6(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const intlResult2 = FastImageDefault;
-    obj12.source = _modDef14667;
+    obj12.source = _modDef14741;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const intlResult3 = FastImageDefault;

@@ -1,10 +1,10 @@
-// === Module 14234: useVisibleUserProfileConnectionsAndAppIdentities ===
+// === Module 14309: useVisibleUserProfileConnectionsAndAppIdentities ===
 
-// Module 14234 (useVisibleUserProfileConnectionsAndAppIdentities)
-import PlatformsDefault from "Platforms" /* 6459 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7206 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14235 */;
-import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 14236 */;
+// Module 14309 (useVisibleUserProfileConnectionsAndAppIdentities)
+import PlatformsDefault from "Platforms" /* 6481 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7234 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 14310 */;
+import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 14311 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -71,17 +71,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVisib
         }
       }
       if (cResult[15] !== tmp5) {
-        const fn3 = function y(type) {
+        const fn3 = function h(type) {
           value = PlatformsDefault.get(type.type);
-          let migrationExperimentEnabled;
+          let migrationData;
           if (value != null) {
-            const migrationData = value.migrationData;
-            if (migrationData != null) {
-              migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-            }
+            migrationData = value.migrationData;
           }
-          let tmp3 = !migrationExperimentEnabled;
-          if (migrationExperimentEnabled) {
+          let tmp3 = null == migrationData;
+          if (!tmp3) {
             tmp3 = !set.has(value.migrationData.replacedBy);
           }
           return tmp3;
@@ -99,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVisib
     }
   }
   if (cResult[9] !== tmp17) {
-    const fn = function v(identity) {
+    const fn = function _(identity) {
       return { identity, application: closure_1.find((id) => id.id === identity.application_id) };
     };
     cResult[9] = tmp17;
@@ -109,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVisib
     mapped1 = cResult[10];
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function _(application) {
+    const fn2 = function y(application) {
       return null != application.application;
     };
     cResult[11] = fn2;
@@ -152,15 +149,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVisib
   const items3 = [tmp, memo];
   obj.connections = found.useMemo(() => closure_1.filter((type) => {
     value = closure_1(memo[7]).get(type.type);
-    let migrationExperimentEnabled;
+    let migrationData;
     if (value != null) {
-      const migrationData = value.migrationData;
-      if (migrationData != null) {
-        migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-      }
+      migrationData = value.migrationData;
     }
-    let tmp3 = !migrationExperimentEnabled;
-    if (migrationExperimentEnabled) {
+    let tmp3 = null == migrationData;
+    if (!tmp3) {
       tmp3 = !set.has(value.migrationData.replacedBy);
     }
     return tmp3;

@@ -1,11 +1,11 @@
-// === Module 10478: PremiumGiftWishlistBanner ===
+// === Module 10507: PremiumGiftWishlistBanner ===
 
-// Module 10478 (PremiumGiftWishlistBanner)
+// Module 10507 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
-import useWishlistHooks from "useWishlistHooks" /* 9299 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10483 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8632 */;
+import useWishlistHooks from "useWishlistHooks" /* 9327 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10512 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,17 +14,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let constants = fn(7280).WishlistRecommendationReason;
+let constants = fn(7308).WishlistRecommendationReason;
 const PremiumConstants = fn(1394);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1089).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8609).UserProfileSections;
+const UserProfileSections = fn(8636).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = { title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 }, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 };

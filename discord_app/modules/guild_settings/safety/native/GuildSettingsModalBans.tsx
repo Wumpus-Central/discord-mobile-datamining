@@ -1,17 +1,17 @@
-// === Module 18909: GuildSettingsModalBans ===
+// === Module 18986: GuildSettingsModalBans ===
 
-// Module 18909 (GuildSettingsModalBans)
+// Module 18986 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6778 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7239 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6806 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6809 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8939 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8966 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const Permissions = fn(1087).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchField: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj2.searchField = { paddingVertical: nativeDefault.space.PX_16 };

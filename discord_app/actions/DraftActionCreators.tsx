@@ -1,6 +1,6 @@
-// === Module 8252: DraftActionCreators ===
+// === Module 8280: DraftActionCreators ===
 
-// Module 8252 (DraftActionCreators)
+// Module 8280 (DraftActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

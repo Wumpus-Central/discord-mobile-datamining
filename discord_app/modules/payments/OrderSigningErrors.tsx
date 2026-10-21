@@ -1,8 +1,8 @@
-// === Module 9391: OrderSigningErrors ===
+// === Module 9419: OrderSigningErrors ===
 
-// Module 9391 (OrderSigningErrors)
-import BillingErrorDefault from "BillingError" /* 4771 */;
-import PaymentConstants from "PaymentConstants" /* 5660 */;
+// Module 9419 (OrderSigningErrors)
+import BillingErrorDefault from "BillingError" /* 4792 */;
+import PaymentConstants from "PaymentConstants" /* 5680 */;
 import size from "module_2" /* 2 */;
 
 const OrderClientErrorCode = PaymentConstants.OrderClientErrorCode;

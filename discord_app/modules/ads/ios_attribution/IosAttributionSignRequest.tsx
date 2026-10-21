@@ -1,6 +1,6 @@
-// === Module 13953: IosAttributionSignRequest ===
+// === Module 14028: IosAttributionSignRequest ===
 
-// Module 13953 (IosAttributionSignRequest)
+// Module 14028 (IosAttributionSignRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -38,7 +38,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
           ({ metadataSealed: closure_130_0, impressionId: closure_130_1, specs: closure_130_2, signal: closure_130_3 } = closure_0);
           c6 = 1;
           c7 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

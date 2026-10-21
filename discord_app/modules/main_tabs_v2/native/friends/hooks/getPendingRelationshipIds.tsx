@@ -1,7 +1,7 @@
-// === Module 17977: getPendingRelationshipIds ===
+// === Module 18058: getPendingRelationshipIds ===
 
-// Module 17977 (getPendingRelationshipIds)
-import RelationshipStore from "RelationshipStore" /* 4890 */;
+// Module 18058 (getPendingRelationshipIds)
+import RelationshipStore from "RelationshipStore" /* 4911 */;
 
 function filterFromPending(arg0) {
   return RelationshipStore.isSpam(arg0) || RelationshipStore.isIgnored(arg0);

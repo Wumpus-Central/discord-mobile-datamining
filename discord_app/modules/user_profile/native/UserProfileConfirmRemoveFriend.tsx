@@ -1,9 +1,9 @@
-// === Module 13365: UserProfileConfirmRemoveFriend ===
+// === Module 13432: UserProfileConfirmRemoveFriend ===
 
-// Module 13365 (UserProfileConfirmRemoveFriend)
+// Module 13432 (UserProfileConfirmRemoveFriend)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import AlertModal from "AlertModal" /* 5872 */;
+import AlertModal from "AlertModal" /* 5894 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

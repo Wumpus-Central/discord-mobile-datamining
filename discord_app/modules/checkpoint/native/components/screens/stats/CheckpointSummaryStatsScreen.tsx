@@ -1,27 +1,27 @@
-// === Module 12834: CheckpointSummaryStatsScreen ===
+// === Module 12902: CheckpointSummaryStatsScreen ===
 
-// Module 12834 (CheckpointSummaryStatsScreen)
+// Module 12902 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import _modDef3046 from "module_3046" /* 3046 */;
-import _modDef3078 from "module_3078" /* 3078 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4894 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import GuildIcon from "GuildIcon" /* 6834 */;
-import EmojiDefault from "Emoji" /* 7178 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8022 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 8573 */;
-import CheckpointTextDefault from "CheckpointText" /* 12797 */;
-import CheckpointScreen from "CheckpointScreen" /* 12799 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12832 */;
-import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 12835 */;
+import _modDef3056 from "module_3056" /* 3056 */;
+import _modDef3088 from "module_3088" /* 3088 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import GuildIcon from "GuildIcon" /* 6862 */;
+import EmojiDefault from "Emoji" /* 7206 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8050 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 8600 */;
+import CheckpointTextDefault from "CheckpointText" /* 12861 */;
+import CheckpointScreen from "CheckpointScreen" /* 12863 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12868 */;
+import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 12903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4946 */;
-import CheckpointStore from "CheckpointStore" /* 12779 */;
+import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import CheckpointStore from "CheckpointStore" /* 12843 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -32,8 +32,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(5973).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4945);
+const sum = fn(5995).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(4966);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, stats: { alignSelf: "stretch", gap: nativeDefault.space.PX_24 }, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_24 };
 obj2.row = { flexDirection: "row", columnGap: nativeDefault.space.PX_16 };
@@ -505,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj9 = { style: tmp.row, children: null };
   const obj10 = { label: null, value: null, color: null };
   const intl = util.intl;
-  obj10.label = intl.string(_modDef3078.MSrV9z);
+  obj10.label = intl.string(_modDef3088.MSrV9z);
   let num;
   if (voice != null) {
     num = voice.totalVoiceMinutes;
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items3 = [closure_8(closure_13, obj10), ];
   const obj11 = { label: null, value: null, color: null };
   const intl2 = util.intl;
-  obj11.label = intl2.string(_modDef3046.wWKySP);
+  obj11.label = intl2.string(_modDef3056.wWKySP);
   let num2;
   if (messages != null) {
     num2 = messages.numMessagesSent;
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj12 = { style: tmp.row, children: null };
   const obj13 = { label: null, value: null, color: null };
   const intl3 = util.intl;
-  obj13.label = intl3.string(_modDef3078["f5S+pt"]);
+  obj13.label = intl3.string(_modDef3088["f5S+pt"]);
   let num3;
   if (first != null) {
     num3 = first.numDaysInteracted;
@@ -547,12 +547,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items5 = [closure_8(closure_13, obj13), ];
   const obj14 = { label: null, name: null, color: null, icon: null };
   const intl4 = util.intl;
-  obj14.label = intl4.string(_modDef3046["8XPMJj"]);
+  obj14.label = intl4.string(_modDef3056["8XPMJj"]);
   if (null != first) {
     let name = first.guild.name;
   } else {
     const intl5 = util.intl;
-    name = intl5.string(_modDef3078.GultYJ);
+    name = intl5.string(_modDef3088.GultYJ);
   }
   obj14.name = name;
   obj14.color = primaryBackgroundColor;
@@ -569,7 +569,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj16 = { style: tmp.row, children: null };
   const obj17 = { label: null, value: null, color: null };
   const intl6 = util.intl;
-  obj17.label = intl6.string(_modDef3078.xVSlv3);
+  obj17.label = intl6.string(_modDef3088.xVSlv3);
   let num4;
   if (emojis != null) {
     num4 = emojis.numEmojisSent;
@@ -582,7 +582,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items6 = [closure_8(closure_13, obj17), ];
   const obj18 = { label: null, name: null, color: null, icon: null };
   const intl7 = util.intl;
-  obj18.label = intl7.string(_modDef3046["3sARW7"]);
+  obj18.label = intl7.string(_modDef3056["3sARW7"]);
   if (null == first1) {
     const intl8 = util.intl;
     let stringResult = intl8.string(util.t.PoWNfe);
@@ -613,7 +613,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj20 = { style: tmp.row, children: null };
   const obj21 = { label: null, value: null, color: null };
   const intl9 = util.intl;
-  obj21.label = intl9.string(_modDef3078.y2Y1DD);
+  obj21.label = intl9.string(_modDef3088.y2Y1DD);
   let num5;
   if (games != null) {
     num5 = games.totalDaysPlayed;
@@ -626,7 +626,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items7 = [closure_8(closure_13, obj21), ];
   const obj23 = { label: null, name: null, color: null, icon: null };
   const intl10 = util.intl;
-  obj23.label = intl10.string(_modDef3046.RbT4Zq);
+  obj23.label = intl10.string(_modDef3056.RbT4Zq);
   if (null != game) {
     let name2 = game.name;
   } else {

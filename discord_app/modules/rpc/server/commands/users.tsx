@@ -1,14 +1,14 @@
-// === Module 15583: users ===
+// === Module 15655: users ===
 
-// Module 15583 (users)
-import transformUserDefault from "transformUser" /* 9195 */;
+// Module 15655 (users)
+import transformUserDefault from "transformUser" /* 9222 */;
 import UserStore from "UserStore" /* 1392 */;
 
-const Constants = fn(6335);
+const Constants = fn(6357);
 ({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1087).RPCCommands;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15549);
+const CONTEXT_MENU_ICON_NAMES = fn(15621);
 const obj3 = {
   scope: null,
   handler(args) {

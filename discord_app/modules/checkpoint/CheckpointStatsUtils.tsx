@@ -1,14 +1,52 @@
-// === Module 12782: CheckpointStatsUtils ===
+// === Module 12846: CheckpointStatsUtils ===
 
-// Module 12782 (CheckpointStatsUtils)
+// Module 12846 (CheckpointStatsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4814 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
 import UserRecord from "UserRecord" /* 1406 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointStatsUtils.tsx");
 
+export const getCheckpointTopPercent = function getCheckpointTopPercent(prop) {
+  let bound = null;
+  if (null != prop) {
+    bound = null;
+    if (prop >= 50) {
+      const _Math = Math;
+      const _Math2 = Math;
+      bound = Math.max(1, Math.ceil(100 - prop));
+    }
+  }
+  return bound;
+};
+export const hasCheckpointVoiceMinutes = function hasCheckpointVoiceMinutes(voice) {
+  let num;
+  if (voice != null) {
+    voice = voice.voice;
+    if (voice != null) {
+      num = voice.totalVoiceMinutes;
+    }
+  }
+  if (num == null) {
+    num = 0;
+  }
+  return Math.round(num) > 0;
+};
+export const hasCheckpointGuilds = function hasCheckpointGuilds(guilds) {
+  let num;
+  if (guilds != null) {
+    guilds = guilds.guilds;
+    if (guilds != null) {
+      num = guilds.guilds.length;
+    }
+  }
+  if (num == null) {
+    num = 0;
+  }
+  return num > 0;
+};
 export const statsFromServer = function statsFromServer(stats) {
   ({ voice, messages, emojis, games, sidekick, users, power } = stats);
   let obj = { voice: { totalVoiceMinutes: voice.total_voice_minutes, totalVoiceMinutesPercentile: voice.total_voice_minutes_percentile }, messages: { numMessagesSent: messages.num_messages_sent, numMessagesSentPercentile: messages.num_messages_sent_percentile }, guilds: null, emojis: null, games: null, sidekick: null, users: null, power: null };
@@ -45,5 +83,75 @@ export const statsFromServer = function statsFromServer(stats) {
   obj.sidekick = tmp;
   obj.users = users.map((user) => new UserRecord(user.user));
   obj.power = { powerLevel: power.power_level, powerLevelPercentile: power.power_level_percentile };
+  return obj;
+};
+export const globalStatsFromServer = function globalStatsFromServer(global_stats) {
+  ({ emojis, games } = global_stats);
+  let obj = { voice: { peakHourUtc: global_stats.voice.peak_hour_utc }, messages: { numWordsSent: global_stats.messages.num_words_sent }, guilds: null, emojis: null, games: null };
+  const obj2 = { guildsByMembers: null };
+  const guilds_by_members = global_stats.guilds.guilds_by_members;
+  obj2.guildsByMembers = guilds_by_members.map((guild) => GuildRecordUtils.fromGuildBasic(guild.guild));
+  obj.guilds = obj2;
+  const obj3 = { numEmojisSent: emojis.num_emojis_sent, numReactionsAdded: emojis.num_reactions_added, emojis: null };
+  const emojis1 = emojis.emojis;
+  obj3.emojis = emojis1.map((emoji) => emoji.emoji);
+  obj.emojis = obj3;
+  const obj4 = { gamesByPlayers: null, newGamesByPlayers: null, indieGamesByPlayers: null, gamesByStreamWatchMinutes: null, gamesByCoplayUsers: null, numUsersPlayedEveryDay: games.num_users_played_every_day };
+  const games_by_players = games.games_by_players;
+  obj4.gamesByPlayers = games_by_players.map((game) => {
+    game = game.game;
+    const obj = { id: SnowflakeUtilsDefault.cast(game.id), name: null, iconHash: icon_hash, bannerHash: null, coverImageHash: null };
+    ({ name: obj.name, icon_hash } = game);
+    const banner_hash = game.banner_hash;
+    obj.bannerHash = banner_hash;
+    const cover_image_hash = game.cover_image_hash;
+    obj.coverImageHash = cover_image_hash;
+    return obj;
+  });
+  const new_games_by_players = games.new_games_by_players;
+  obj4.newGamesByPlayers = new_games_by_players.map((game) => {
+    game = game.game;
+    const obj = { id: SnowflakeUtilsDefault.cast(game.id), name: null, iconHash: icon_hash, bannerHash: null, coverImageHash: null };
+    ({ name: obj.name, icon_hash } = game);
+    const banner_hash = game.banner_hash;
+    obj.bannerHash = banner_hash;
+    const cover_image_hash = game.cover_image_hash;
+    obj.coverImageHash = cover_image_hash;
+    return obj;
+  });
+  const prop = games.indie_games_by_players;
+  obj4.indieGamesByPlayers = prop.map((game) => {
+    game = game.game;
+    const obj = { id: SnowflakeUtilsDefault.cast(game.id), name: null, iconHash: icon_hash, bannerHash: null, coverImageHash: null };
+    ({ name: obj.name, icon_hash } = game);
+    const banner_hash = game.banner_hash;
+    obj.bannerHash = banner_hash;
+    const cover_image_hash = game.cover_image_hash;
+    obj.coverImageHash = cover_image_hash;
+    return obj;
+  });
+  const prop1 = games.games_by_stream_watch_minutes;
+  obj4.gamesByStreamWatchMinutes = prop1.map((game) => {
+    game = game.game;
+    const obj = { id: SnowflakeUtilsDefault.cast(game.id), name: null, iconHash: icon_hash, bannerHash: null, coverImageHash: null };
+    ({ name: obj.name, icon_hash } = game);
+    const banner_hash = game.banner_hash;
+    obj.bannerHash = banner_hash;
+    const cover_image_hash = game.cover_image_hash;
+    obj.coverImageHash = cover_image_hash;
+    return obj;
+  });
+  const prop2 = games.games_by_coplay_users;
+  obj4.gamesByCoplayUsers = prop2.map((game) => {
+    game = game.game;
+    const obj = { id: SnowflakeUtilsDefault.cast(game.id), name: null, iconHash: icon_hash, bannerHash: null, coverImageHash: null };
+    ({ name: obj.name, icon_hash } = game);
+    const banner_hash = game.banner_hash;
+    obj.bannerHash = banner_hash;
+    const cover_image_hash = game.cover_image_hash;
+    obj.coverImageHash = cover_image_hash;
+    return obj;
+  });
+  obj.games = obj4;
   return obj;
 };

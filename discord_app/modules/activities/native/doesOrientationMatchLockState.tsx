@@ -1,6 +1,6 @@
-// === Module 11345: doesOrientationMatchLockState ===
+// === Module 11389: doesOrientationMatchLockState ===
 
-// Module 11345 (doesOrientationMatchLockState)
+// Module 11389 (doesOrientationMatchLockState)
 import Constants from "Constants" /* 2026 */;
 import size from "module_2" /* 2 */;
 

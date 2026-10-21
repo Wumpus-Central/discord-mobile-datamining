@@ -1,10 +1,10 @@
-// === Module 5667: MarkupUtils ===
+// === Module 5687: MarkupUtils ===
 
-// Module 5667 (MarkupUtils)
-import MarkupReactRules from "MarkupReactRules" /* 5668 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5939 */;
-import MarkupRulesDefault from "MarkupRules" /* 5940 */;
-import MarkupParserAll from "MarkupParser" /* 8292 */;
+// Module 5687 (MarkupUtils)
+import MarkupReactRules from "MarkupReactRules" /* 5688 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5961 */;
+import MarkupRulesDefault from "MarkupRules" /* 5962 */;
+import MarkupParserAll from "MarkupParser" /* 8320 */;
 import apply_mod from "module_12" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;
@@ -21,6 +21,13 @@ let closure_6 = apply.once(() => {
 });
 let apply = apply_mod;
 let closure_7 = apply.once(() => {
+  const items = [closure_6(), ];
+  const tmp = combineMarkupRulesDefault;
+  items[1] = MarkupReactRules.createFetchingGameMentionRule();
+  return tmp(items);
+});
+let apply = apply_mod;
+let closure_8 = apply.once(() => {
   const obj = apply;
   const items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.RULES, ];
@@ -28,7 +35,7 @@ let closure_7 = apply.once(() => {
   return obj.omit(combineMarkupRulesDefault(items1), "paragraph", "newline");
 });
 let apply = apply_mod;
-let closure_8 = apply.once(() => {
+let closure_9 = apply.once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.emojiTooltipPosition = "bottom";
@@ -46,7 +53,7 @@ let closure_8 = apply.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_9 = apply.once(() => {
+let closure_10 = apply.once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.emojiTooltipPosition = "bottom";
@@ -64,7 +71,7 @@ let closure_9 = apply.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_10 = apply.once(() => {
+let closure_11 = apply.once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.enableEmojiClick = false;
@@ -74,14 +81,14 @@ let closure_10 = apply.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_11 = apply.once(() => {
+let closure_12 = apply.once(() => {
   const items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.EMBED_TITLE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_12 = apply.once(() => {
+let closure_13 = apply.once(() => {
   const obj = apply;
   const items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.EMBED_TITLE_RULES, ];
@@ -89,21 +96,21 @@ let closure_12 = apply.once(() => {
   return obj.omit(combineMarkupRulesDefault(items1), closure_4);
 });
 let apply = apply_mod;
-let closure_13 = apply.once(() => {
+let closure_14 = apply.once(() => {
   const items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.INLINE_REPLY_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_14 = apply.once(() => {
+let closure_15 = apply.once(() => {
   const items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.GUILD_VERIFICATION_FORM_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_15 = apply.once(() => {
+let closure_16 = apply.once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.shouldStopPropagation = true;
@@ -113,16 +120,16 @@ let closure_15 = apply.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_16 = apply.once(() => apply.omit(closure_15(), "subtext"));
+let closure_17 = apply.once(() => apply.omit(closure_16(), "subtext"));
 let apply = apply_mod;
-let closure_17 = apply.once(() => {
+let closure_18 = apply.once(() => {
   const items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_18 = apply.once(() => {
+let closure_19 = apply.once(() => {
   const items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.RULES, ];
   const tmp = apply;
@@ -131,39 +138,41 @@ let closure_18 = apply.once(() => {
   return tmp.omit.apply(items2);
 });
 let apply = apply_mod;
-let closure_19 = apply.once(() => MarkupParserAll.reactParserFor(closure_6()));
+let closure_20 = apply.once(() => MarkupParserAll.reactParserFor(closure_6()));
 let apply = apply_mod;
-let closure_20 = apply.once(() => MarkupParserAll.reactParserFor(closure_8()));
+let closure_21 = apply.once(() => MarkupParserAll.reactParserFor(closure_7()));
 let apply = apply_mod;
-let closure_21 = apply.once(() => MarkupParserAll.reactParserFor(closure_9()));
+let closure_22 = apply.once(() => MarkupParserAll.reactParserFor(closure_9()));
 let apply = apply_mod;
-let closure_22 = apply.once(() => MarkupParserAll.reactParserFor(closure_10()));
+let closure_23 = apply.once(() => MarkupParserAll.reactParserFor(closure_10()));
 let apply = apply_mod;
-let closure_23 = apply.once(() => MarkupParserAll.reactParserFor(closure_11()));
+let closure_24 = apply.once(() => MarkupParserAll.reactParserFor(closure_11()));
 let apply = apply_mod;
-let closure_24 = apply.once(() => MarkupParserAll.reactParserFor(closure_12()));
+let closure_25 = apply.once(() => MarkupParserAll.reactParserFor(closure_12()));
 let apply = apply_mod;
-let closure_25 = apply.once(() => MarkupParserAll.reactParserFor(closure_13()));
+let closure_26 = apply.once(() => MarkupParserAll.reactParserFor(closure_13()));
 let apply = apply_mod;
-let closure_26 = apply.once(() => MarkupParserAll.reactParserFor(closure_14()));
+let closure_27 = apply.once(() => MarkupParserAll.reactParserFor(closure_14()));
 let apply = apply_mod;
-let closure_27 = apply.once(() => MarkupParserAll.reactParserFor(closure_15()));
+let closure_28 = apply.once(() => MarkupParserAll.reactParserFor(closure_15()));
 let apply = apply_mod;
-let closure_28 = apply.once(() => MarkupParserAll.reactParserFor(closure_17()));
+let closure_29 = apply.once(() => MarkupParserAll.reactParserFor(closure_16()));
 let apply = apply_mod;
-let closure_29 = apply.once(() => MarkupParserAll.reactParserFor(closure_7()));
+let closure_30 = apply.once(() => MarkupParserAll.reactParserFor(closure_18()));
 let apply = apply_mod;
-let closure_30 = apply.once(() => MarkupParserAll.astParserFor(closure_6()));
+let closure_31 = apply.once(() => MarkupParserAll.reactParserFor(closure_8()));
 let apply = apply_mod;
-let closure_31 = apply.once(() => MarkupParserAll.astParserFor(closure_8()));
+let closure_32 = apply.once(() => MarkupParserAll.astParserFor(closure_6()));
 let apply = apply_mod;
-let closure_32 = apply.once(() => MarkupParserAll.astParserFor(closure_11()));
+let closure_33 = apply.once(() => MarkupParserAll.astParserFor(closure_9()));
 let apply = apply_mod;
-let closure_33 = apply.once(() => MarkupParserAll.astParserFor(closure_12()));
+let closure_34 = apply.once(() => MarkupParserAll.astParserFor(closure_12()));
 let apply = apply_mod;
-let closure_34 = apply.once(() => MarkupParserAll.astParserFor(closure_13()));
+let closure_35 = apply.once(() => MarkupParserAll.astParserFor(closure_13()));
 let apply = apply_mod;
-let closure_35 = apply.once(() => MarkupParserAll.astParserFor(closure_17()));
+let closure_36 = apply.once(() => MarkupParserAll.astParserFor(closure_14()));
+let apply = apply_mod;
+let closure_37 = apply.once(() => MarkupParserAll.astParserFor(closure_18()));
 let obj3 = {
   combineAndInjectMentionRule(arg0, arg1) {
     const items = [arg0, ];
@@ -174,79 +183,83 @@ let obj3 = {
   defaultReactRuleOptions
 };
 Object.defineProperty(obj3, "defaultRules", { get: () => closure_6(), set: undefined });
-Object.defineProperty(obj3, "guildEventRules", { get: () => closure_15(), set: undefined });
-Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_16(), set: undefined });
-Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_18(), set: undefined });
+Object.defineProperty(obj3, "guildEventRules", { get: () => closure_16(), set: undefined });
+Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_17(), set: undefined });
+Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_19(), set: undefined });
 obj3.lockscreenWidgetMessageRules = { text: MarkupRulesDefault.RULES.text };
 obj3.astParserFor = MarkupParserAll.astParserFor;
 obj3.reactParserFor = MarkupParserAll.reactParserFor;
 obj3.parse = function parse() {
   const items = [...arguments];
-  return closure_19()(...items);
+  return closure_20()(...items);
+};
+obj3.parseRichEmbedText = function parseRichEmbedText(arg0, arg1, arg2, arg3) {
+  const merged = Object.assign(arg2);
+  return closure_21()(arg0, arg1, { allowGameMentions: true }, arg3);
 };
 obj3.parseTopic = function parseTopic(topic, arg1, arg2, arg3) {
   const merged = Object.assign(arg2);
-  return closure_20()(topic, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
+  return closure_22()(topic, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
 };
 obj3.parseTruncatedTopic = function parseTruncatedTopic(arg0, arg1, arg2, arg3) {
   const merged = Object.assign(arg2);
-  return closure_21()(arg0, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
+  return closure_23()(arg0, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
 };
 obj3.parseVoiceChannelStatus = function parseVoiceChannelStatus() {
   const items = [...arguments];
-  return closure_22()(...items);
+  return closure_24()(...items);
 };
 obj3.parseEmbedTitle = function parseEmbedTitle() {
   const items = [...arguments];
-  return closure_23()(...items);
+  return closure_25()(...items);
 };
 obj3.parseEmbedTitleWithoutLinks = function parseEmbedTitleWithoutLinks() {
   const items = [...arguments];
-  return closure_24()(...items);
+  return closure_26()(...items);
 };
 obj3.parseInlineReply = function parseInlineReply() {
   const items = [...arguments];
-  return closure_25()(...items);
+  return closure_27()(...items);
 };
 obj3.parseGuildVerificationFormRule = function parseGuildVerificationFormRule() {
   const items = [...arguments];
-  return closure_26()(...items);
+  return closure_28()(...items);
 };
 obj3.parseGuildEventDescription = function parseGuildEventDescription() {
   const items = [...arguments];
-  return closure_27()(...items);
+  return closure_29()(...items);
 };
 obj3.parseAutoModerationSystemMessage = function parseAutoModerationSystemMessage() {
   const items = [...arguments];
-  return closure_28()(...items);
+  return closure_30()(...items);
 };
 obj3.parseForumPostGuidelines = function parseForumPostGuidelines() {
   const items = [...arguments];
-  return closure_29()(...items);
+  return closure_31()(...items);
 };
 obj3.parseToAST = function parseToAST() {
   const items = [...arguments];
-  return closure_30()(...items);
+  return closure_32()(...items);
 };
 obj3.parseTopicToAST = function parseTopicToAST() {
   const items = [...arguments];
-  return closure_31()(...items);
+  return closure_33()(...items);
 };
 obj3.parseEmbedTitleToAST = function parseEmbedTitleToAST() {
   const items = [...arguments];
-  return closure_32()(...items);
+  return closure_34()(...items);
 };
 obj3.parseEmbedTitleWithoutLinksToAST = function parseEmbedTitleWithoutLinksToAST() {
   const items = [...arguments];
-  return closure_33()(...items);
+  return closure_35()(...items);
 };
 obj3.parseInlineReplyToAST = function parseInlineReplyToAST() {
   const items = [...arguments];
-  return closure_34()(...items);
+  return closure_36()(...items);
 };
 obj3.parseAutoModerationSystemMessageToAST = function parseAutoModerationSystemMessageToAST() {
   const items = [...arguments];
-  return closure_35()(...items);
+  return closure_37()(...items);
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/MarkupUtils.tsx");

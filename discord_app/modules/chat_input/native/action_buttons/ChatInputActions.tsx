@@ -1,20 +1,20 @@
-// === Module 12947: ChatInputActions ===
+// === Module 13015: ChatInputActions ===
 
-// Module 12947 (ChatInputActions)
+// Module 13015 (ChatInputActions)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import mergeProps from "mergeProps" /* 5102 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 8104 */;
-import ImageIcon from "ImageIcon" /* 8507 */;
-import AppsIcon from "AppsIcon" /* 8526 */;
-import PollsIcon from "PollsIcon" /* 10350 */;
-import AttachmentIcon from "AttachmentIcon" /* 10352 */;
-import CameraIcon from "CameraIcon" /* 10367 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12114 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12372 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 12948 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12950 */;
+import mergeProps from "mergeProps" /* 5123 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 8132 */;
+import ImageIcon from "ImageIcon" /* 8534 */;
+import AppsIcon from "AppsIcon" /* 8553 */;
+import PollsIcon from "PollsIcon" /* 10379 */;
+import AttachmentIcon from "AttachmentIcon" /* 10381 */;
+import CameraIcon from "CameraIcon" /* 10396 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12162 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12428 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 13016 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 13018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -314,16 +314,16 @@ class ChatInputActions {
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(12376);
+const ChatInputConstants = fn(12432);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { actions: { flexDirection: "row", alignItems: "center" }, themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG }, buttonWrapper: null, activeBrand: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5211).SMALL_BUTTON_HEIGHT + fn(5211).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5211).SMALL_BUTTON_HEIGHT + fn(5211).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5232).SMALL_BUTTON_HEIGHT + fn(5232).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5232).SMALL_BUTTON_HEIGHT + fn(5232).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
 let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };

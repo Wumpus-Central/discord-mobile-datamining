@@ -1,19 +1,19 @@
-// === Module 17745: GuildRoleSubscriptionPurchaseCard ===
+// === Module 17826: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 17745 (GuildRoleSubscriptionPurchaseCard)
+// Module 17826 (GuildRoleSubscriptionPurchaseCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5226 */;
-import BottomSheetModal from "BottomSheetModal" /* 5230 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7025 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16333 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 16343 */;
-import Elements from "Elements" /* 17740 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 17746 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5247 */;
+import BottomSheetModal from "BottomSheetModal" /* 5251 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7053 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16409 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 16419 */;
+import Elements from "Elements" /* 17821 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 17827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { padding: 16, paddingBottom: 24 }, content: null, headerText: null, headerDot: null, seperator: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 obj2.content = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

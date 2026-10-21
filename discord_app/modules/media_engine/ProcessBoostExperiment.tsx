@@ -1,7 +1,7 @@
-// === Module 5802: ProcessBoostExperiment ===
+// === Module 5824: ProcessBoostExperiment ===
 
-// Module 5802 (ProcessBoostExperiment)
-import Constants from "Constants" /* 5680 */;
+// Module 5824 (ProcessBoostExperiment)
+import Constants from "Constants" /* 5700 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

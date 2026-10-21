@@ -1,25 +1,25 @@
-// === Module 11117: MessagesHooks ===
+// === Module 11161: MessagesHooks ===
 
-// Module 11117 (MessagesHooks)
+// Module 11161 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6760 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7755 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9709 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11118 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11119 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6788 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7783 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9739 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11162 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11163 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9931 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6654 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PresenceStore from "PresenceStore" /* 5674 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9961 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6682 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PresenceStore from "PresenceStore" /* 5694 */;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9710).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9740).updateShouldShowJumpToPresentButton;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageAuthorActivities(arr) {

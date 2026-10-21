@@ -1,6 +1,6 @@
-// === Module 15736: ? ===
+// === Module 15812: ? ===
 
-// Module 15736
+// Module 15812
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/upsells/profiles/banners/future_galaxy_banner.gif.js");

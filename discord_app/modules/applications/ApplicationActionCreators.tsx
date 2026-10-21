@@ -1,10 +1,10 @@
-// === Module 6760: ApplicationActionCreators ===
+// === Module 6788: ApplicationActionCreators ===
 
-// Module 6760 (ApplicationActionCreators)
+// Module 6788 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6761 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6789 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import ApplicationStore from "ApplicationStore" /* 2046 */;
+import ApplicationStore from "ApplicationStore" /* 2045 */;
 
 const require = globalThis.__r;
 
@@ -58,7 +58,7 @@ let closure_10 = async function _fetchApplication(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

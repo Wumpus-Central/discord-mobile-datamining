@@ -1,14 +1,14 @@
-// === Module 16682: DiskUsageManager ===
+// === Module 16758: DiskUsageManager ===
 
-// Module 16682 (DiskUsageManager)
+// Module 16758 (DiskUsageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import NativeClientInfoModule from "NativeClientInfoModule" /* 1369 */;
-import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 10026 */;
-import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 16683 */;
+import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 10056 */;
+import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 16759 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
 
 require = fn;
 function isStable() {

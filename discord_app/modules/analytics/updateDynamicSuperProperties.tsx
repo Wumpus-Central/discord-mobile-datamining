@@ -1,9 +1,9 @@
-// === Module 18460: updateDynamicSuperProperties ===
+// === Module 18539: updateDynamicSuperProperties ===
 
-// Module 18460 (updateDynamicSuperProperties)
+// Module 18539 (updateDynamicSuperProperties)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6752 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7520 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6780 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7548 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");

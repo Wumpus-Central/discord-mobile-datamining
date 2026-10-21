@@ -1,9 +1,9 @@
-// === Module 17516: VoiceSubtitle ===
+// === Module 17597: VoiceSubtitle ===
 
-// Module 17516 (VoiceSubtitle)
+// Module 17597 (VoiceSubtitle)
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5947 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSub
     if (cResult[1] === voiceUsers) {
       if (cResult[5] !== cResult[2]) {
         const obj2 = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 };
-        const tmp9 = jsx(tmp(5195).Text, { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 });
+        const tmp9 = jsx(tmp(5216).Text, { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 });
         cResult[5] = tmp4;
         cResult[6] = tmp9;
         let tmp7 = tmp9;

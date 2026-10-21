@@ -1,12 +1,12 @@
-// === Module 15821: AccountAgeGroupAssignedAdultSetting ===
+// === Module 15897: AccountAgeGroupAssignedAdultSetting ===
 
-// Module 15821 (AccountAgeGroupAssignedAdultSetting)
+// Module 15897 (AccountAgeGroupAssignedAdultSetting)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
-import _modDef3080 from "module_3080" /* 3080 */;
-import SettingsConstants from "SettingsConstants" /* 8280 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 15822 */;
-import SettingBuilders from "SettingBuilders" /* 11111 */;
+import _modDef3090 from "module_3090" /* 3090 */;
+import SettingsConstants from "SettingsConstants" /* 8308 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 15898 */;
+import SettingBuilders from "SettingBuilders" /* 11155 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const route = SettingBuilders.createRoute({
   useTrailing() {
     const intl = util.intl;
     const intl2 = util.intl;
-    return "" + intl.string(util.t.XxRj7f) + " \u2022 " + intl2.string(_modDef3080.FTawSP);
+    return "" + intl.string(util.t.XxRj7f) + " \u2022 " + intl2.string(_modDef3090.FTawSP);
   },
   usePredicate: AgeGroupScreenRowProps.useShowAssignedAdultAgeGroupRow,
   screen: {

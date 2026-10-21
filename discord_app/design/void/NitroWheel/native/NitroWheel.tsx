@@ -1,9 +1,9 @@
-// === Module 15247: NitroWheel ===
+// === Module 15319: NitroWheel ===
 
-// Module 15247 (NitroWheel)
+// Module 15319 (NitroWheel)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import _modDef9829 from "module_9829" /* 9829 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import _modDef9859 from "module_9859" /* 9859 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,8 +16,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroWhe
   const cResult = c.c(2);
   style = style.style;
   if (cResult[0] !== style) {
-    const obj2 = { source: _modDef9829, style, resizeMode: "contain" };
-    const tmp7 = jsx(FastImageDefault, { source: _modDef9829, style, resizeMode: "contain" });
+    const obj2 = { source: _modDef9859, style, resizeMode: "contain" };
+    const tmp7 = jsx(FastImageDefault, { source: _modDef9859, style, resizeMode: "contain" });
     cResult[0] = style;
     cResult[1] = tmp7;
     let tmp3 = tmp7;
@@ -26,6 +26,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroWhe
   }
   return tmp3;
 }) : (function NitroWheel(style) {
-  const obj = { source: _modDef9829, style: style.style, resizeMode: "contain" };
-  return jsx(FastImageDefault, { source: _modDef9829, style: style.style, resizeMode: "contain" });
+  const obj = { source: _modDef9859, style: style.style, resizeMode: "contain" };
+  return jsx(FastImageDefault, { source: _modDef9859, style: style.style, resizeMode: "contain" });
 });

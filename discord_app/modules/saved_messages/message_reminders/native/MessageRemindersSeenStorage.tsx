@@ -1,6 +1,6 @@
-// === Module 13639: MessageRemindersSeenStorage ===
+// === Module 13706: MessageRemindersSeenStorage ===
 
-// Module 13639 (MessageRemindersSeenStorage)
+// Module 13706 (MessageRemindersSeenStorage)
 import Storage2 from "Storage" /* 510 */;
 import size from "module_2" /* 2 */;
 

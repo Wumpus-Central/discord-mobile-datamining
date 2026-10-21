@@ -1,11 +1,11 @@
-// === Module 8612: useDisplayProfile ===
+// === Module 8639: useDisplayProfile ===
 
-// Module 8612 (useDisplayProfile)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8613 */;
-import DisplayProfileDefault from "DisplayProfile" /* 8615 */;
+// Module 8639 (useDisplayProfile)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8640 */;
+import DisplayProfileDefault from "DisplayProfile" /* 8642 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import UserProfileStore from "UserProfileStore" /* 7652 */;
+import UserProfileStore from "UserProfileStore" /* 7680 */;
 
 const require = globalThis.__r;
 
@@ -107,7 +107,7 @@ function getDisplayProfile(id1, guildId) {
     return tmp8;
   }
 }
-const FunctionUtils = fn(2042);
+const FunctionUtils = fn(2041);
 let closure_7 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");

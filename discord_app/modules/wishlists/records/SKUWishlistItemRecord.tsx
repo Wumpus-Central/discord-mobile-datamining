@@ -1,8 +1,8 @@
-// === Module 9305: SKUWishlistItemRecord ===
+// === Module 9333: SKUWishlistItemRecord ===
 
-// Module 9305 (SKUWishlistItemRecord)
-import SKURecord from "SKURecord" /* 2048 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9302 */;
+// Module 9333 (SKUWishlistItemRecord)
+import SKURecord from "SKURecord" /* 2047 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 9330 */;
 
 const prototype = function SKUWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target);

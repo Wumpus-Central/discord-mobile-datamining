@@ -1,9 +1,9 @@
-// === Module 16438: getSettingsOverrideReason ===
+// === Module 16514: getSettingsOverrideReason ===
 
-// Module 16438 (getSettingsOverrideReason)
+// Module 16514 (getSettingsOverrideReason)
 import util from "util" /* 1128 */;
-import _modDef4002 from "module_4002" /* 4002 */;
-import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4777 */;
+import _modDef4023 from "module_4023" /* 4023 */;
+import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4798 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetting
         formatResult = intl.string(util.t["2ExvRu"]);
       } else if (constants.GAME_MODE === appliedOverrideReasonKey) {
         const intl3 = util.intl;
-        formatResult = intl3.string(_modDef4002.VGcdxP);
+        formatResult = intl3.string(_modDef4023.VGcdxP);
       }
       return formatResult;
     };
@@ -57,7 +57,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetting
       formatResult = intl.string(util.t["2ExvRu"]);
     } else if (constants.GAME_MODE === appliedOverrideReasonKey) {
       const intl3 = util.intl;
-      formatResult = intl3.string(_modDef4002.VGcdxP);
+      formatResult = intl3.string(_modDef4023.VGcdxP);
     }
     return formatResult;
   });
@@ -71,7 +71,7 @@ function getSettingsOverrideReason(arg0) {
     return intl2.string(util.t["2ExvRu"]);
   } else if (constants.GAME_MODE === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef4002.VGcdxP);
+    return intl.string(_modDef4023.VGcdxP);
   }
 }
 const size = fn(2);

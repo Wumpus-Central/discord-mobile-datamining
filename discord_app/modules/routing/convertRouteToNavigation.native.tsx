@@ -1,14 +1,14 @@
-// === Module 11620: convertRouteToNavigation ===
+// === Module 11670: convertRouteToNavigation ===
 
-// Module 11620 (convertRouteToNavigation)
+// Module 11670 (convertRouteToNavigation)
 import Constants from "Constants" /* 1087 */;
-import matchPathCompat from "matchPathCompat" /* 4976 */;
-import RouteUtils from "RouteUtils" /* 4989 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5111 */;
-import RootNavigationRef from "RootNavigationRef" /* 5112 */;
-import useChatLayout from "useChatLayout" /* 5114 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9644 */;
-import handleConjureRouteDefault from "handleConjureRoute" /* 11621 */;
+import matchPathCompat from "matchPathCompat" /* 4997 */;
+import RouteUtils from "RouteUtils" /* 5010 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5132 */;
+import RootNavigationRef from "RootNavigationRef" /* 5133 */;
+import useChatLayout from "useChatLayout" /* 5135 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9674 */;
+import handleConjureRouteDefault from "handleConjureRoute" /* 11671 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -90,7 +90,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                     const tmpResult22 = NavigationRouteUtils;
                   }
                   if (tmp17) {
-                    const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "a" };
+                    const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "Array" };
                     NavigationRouteUtils.navigateToChannel(obj10);
                     const tmpResult23 = NavigationRouteUtils;
                   }

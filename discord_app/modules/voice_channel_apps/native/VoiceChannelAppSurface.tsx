@@ -1,18 +1,18 @@
-// === Module 18343: VoiceChannelAppSurface ===
+// === Module 18422: VoiceChannelAppSurface ===
 
-// Module 18343 (VoiceChannelAppSurface)
+// Module 18422 (VoiceChannelAppSurface)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import _modDef3918 from "module_3918" /* 3918 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11752 */;
-import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11753 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11754 */;
-import FrameStackLevel from "FrameStackLevel" /* 11758 */;
-import useFrameLifecycle from "useFrameLifecycle" /* 17790 */;
-import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 17793 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 17800 */;
+import _modDef3928 from "module_3928" /* 3928 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5608 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11800 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11801 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11802 */;
+import FrameStackLevel from "FrameStackLevel" /* 11806 */;
+import useFrameLifecycle from "useFrameLifecycle" /* 17871 */;
+import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 17874 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 17881 */;
 import noop from "module_19" /* 19 */;
 
 const useFrameLifecycleDefault = useFrameLifecycle;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { description: null };
             const intl4 = util.intl;
-            obj4.description = intl4.string(_modDef3918.TQptZV);
+            obj4.description = intl4.string(_modDef3928.TQptZV);
             const tmp30 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
             cResult[13] = tmp30;
             let tmp28 = tmp30;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceCha
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
             const obj5 = { description: null };
             const intl3 = util.intl;
-            obj5.description = intl3.string(_modDef3918["13FYwI"]);
+            obj5.description = intl3.string(_modDef3928["13FYwI"]);
             const tmp26 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
             cResult[14] = tmp26;
             let tmp24 = tmp26;

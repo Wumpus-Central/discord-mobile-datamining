@@ -1,12 +1,12 @@
-// === Module 17079: DeclarativeSystemNotifPermissionHelpers ===
+// === Module 17155: DeclarativeSystemNotifPermissionHelpers ===
 
-// Module 17079 (DeclarativeSystemNotifPermissionHelpers)
+// Module 17155 (DeclarativeSystemNotifPermissionHelpers)
 import _mod17 from "module_17" /* 17 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1383 */;
-import DeviceUtils from "DeviceUtils" /* 4902 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6987 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15518 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15522 */;
+import DeviceUtils from "DeviceUtils" /* 4923 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7015 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15590 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15594 */;
 import size from "module_2" /* 2 */;
 
 function refreshSystemNotifPermissions() {

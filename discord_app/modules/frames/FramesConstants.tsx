@@ -1,9 +1,9 @@
-// === Module 6727: FramesConstants ===
+// === Module 6755: FramesConstants ===
 
-// Module 6727 (FramesConstants)
+// Module 6755 (FramesConstants)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1087 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5608 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
@@ -94,14 +94,14 @@ export const getFrameLaunchChannelId = function getFrameLaunchChannelId(surface)
   }
   return channelId;
 };
-export const asLaunched = function asLaunched(mainFrame) {
+export const asLaunched = function asLaunched(frame) {
   let state;
-  if (mainFrame != null) {
-    state = mainFrame.state;
+  if (frame != null) {
+    state = frame.state;
   }
   let tmp2 = null;
   if ("launched" === state) {
-    tmp2 = mainFrame;
+    tmp2 = frame;
   }
   return tmp2;
 };

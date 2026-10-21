@@ -1,18 +1,18 @@
-// === Module 11695: ConjureAwaitingUser ===
+// === Module 11741: ConjureAwaitingUser ===
 
-// Module 11695 (ConjureAwaitingUser)
+// Module 11741 (ConjureAwaitingUser)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
-import timing from "timing" /* 5167 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
+import timing from "timing" /* 5188 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4946 */;
+import AccessibilityStore from "AccessibilityStore" /* 4967 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { ring: null };
-const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(11696).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
+const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(11742).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
 obj2.ring = rect;
 let closure_6 = createStyles.createStyles(obj2);
 const __initData = { code: "function ConjureAwaitingUserTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
@@ -39,7 +39,7 @@ export const ConjureAwaitingPulseRing = ReactCompilerGating.isReactCompilerEnabl
   let obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
   const tmpResult = stateFromStores(504);
-  const sharedValue = stateFromStores(5014).useSharedValue(0);
+  const sharedValue = stateFromStores(5035).useSharedValue(0);
   if (cResult[2] === sharedValue) {
     if (cResult[3] === stateFromStores) {
       let tmp10 = cResult[4];
@@ -56,7 +56,7 @@ export const ConjureAwaitingPulseRing = ReactCompilerGating.isReactCompilerEnabl
     R.__closure = obj2;
     R.__workletHash = 8512415125100;
     R.__initData = __initData;
-    const animatedStyle = tmp(5014).useAnimatedStyle(R);
+    const animatedStyle = tmp(5035).useAnimatedStyle(R);
     if (cResult[6] === animatedStyle) {
       if (cResult[7] === tmp4.ring) {
         let tmp16 = cResult[8];
@@ -66,12 +66,12 @@ export const ConjureAwaitingPulseRing = ReactCompilerGating.isReactCompilerEnabl
     let obj3 = { pointerEvents: "none", style: null };
     const items1 = [tmp4.ring, animatedStyle];
     obj3.style = items1;
-    const tmp19 = jsx(sharedValue(5014).View, { pointerEvents: "none", style: null });
+    const tmp19 = jsx(sharedValue(5035).View, { pointerEvents: "none", style: null });
     cResult[6] = animatedStyle;
     cResult[7] = tmp4.ring;
     cResult[8] = tmp19;
     tmp16 = tmp19;
-    const tmpResult4 = tmp(5014);
+    const tmpResult4 = tmp(5035);
   }
   const fn2 = function y() {
     if (stateFromStores) {
@@ -94,13 +94,13 @@ export const ConjureAwaitingPulseRing = ReactCompilerGating.isReactCompilerEnabl
   cResult[5] = items2;
   tmp11 = items2;
   tmp10 = fn2;
-  const tmpResult3 = stateFromStores(5014);
+  const tmpResult3 = stateFromStores(5035);
 }) : (function ConjureAwaitingPulseRing() {
   const tmp = closure_6();
   const items = [AccessibilityStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = stateFromStores(504);
-  const sharedValue = stateFromStores(5014).useSharedValue(0);
+  const sharedValue = stateFromStores(5035).useSharedValue(0);
   const items1 = [sharedValue, stateFromStores];
   const effect = noop.useEffect(() => {
     if (stateFromStores) {
@@ -116,16 +116,16 @@ export const ConjureAwaitingPulseRing = ReactCompilerGating.isReactCompilerEnabl
     }
     return fn;
   }, items1);
-  let obj2 = stateFromStores(5014);
+  let obj2 = stateFromStores(5035);
   let fn = function p() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 4491518532559;
   fn.__initData = __initData2;
-  const animatedStyle = stateFromStores(5014).useAnimatedStyle(fn);
+  const animatedStyle = stateFromStores(5035).useAnimatedStyle(fn);
   let obj4 = { pointerEvents: "none", style: null };
   const items2 = [tmp.ring, animatedStyle];
   obj4.style = items2;
-  return jsx(sharedValue(5014).View, { pointerEvents: "none", style: null });
+  return jsx(sharedValue(5035).View, { pointerEvents: "none", style: null });
 });

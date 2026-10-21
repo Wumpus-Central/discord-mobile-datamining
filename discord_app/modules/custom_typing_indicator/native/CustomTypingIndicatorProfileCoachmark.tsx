@@ -1,23 +1,23 @@
-// === Module 17987: CustomTypingIndicatorProfileCoachmark ===
+// === Module 18068: CustomTypingIndicatorProfileCoachmark ===
 
-// Module 17987 (CustomTypingIndicatorProfileCoachmark)
+// Module 18068 (CustomTypingIndicatorProfileCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import user from "user" /* 1400 */;
-import _modDef3822 from "module_3822" /* 3822 */;
-import openUserSettings from "openUserSettings" /* 7439 */;
-import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 12889 */;
-import _modDef12890 from "module_12890" /* 12890 */;
-import _modDef12891 from "module_12891" /* 12891 */;
+import _modDef3832 from "module_3832" /* 3832 */;
+import openUserSettings from "openUserSettings" /* 7467 */;
+import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 12957 */;
+import _modDef12958 from "module_12958" /* 12958 */;
+import _modDef12959 from "module_12959" /* 12959 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1087).UserSettingsSections;
-const ContentDismissActionType = fn(4797).ContentDismissActionType;
+const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { coachmarkImageContainer: { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 }, typingText: { maxWidth: 100 } };
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);
@@ -27,7 +27,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const cResult = c.c(6);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [_modDef12890, _modDef12891, _modDef12890];
+    const items = [_modDef12958, _modDef12959, _modDef12958];
     cResult[0] = items;
     let first = items;
   } else {
@@ -58,7 +58,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const tmp = closure_8();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
-  const items = [_modDef12890, _modDef12891, _modDef12890];
+  const items = [_modDef12958, _modDef12959, _modDef12958];
   obj2.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = markAsDismissed(1128).intl;
-    const stringResult = intl.string(analyticsLocations(3822).Eq5jIA);
+    const stringResult = intl.string(analyticsLocations(3832).Eq5jIA);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl2 = markAsDismissed(1128).intl;
-    const stringResult1 = intl2.string(analyticsLocations(3822).lSBp2M);
+    const stringResult1 = intl2.string(analyticsLocations(3832).lSBp2M);
     cResult[1] = stringResult1;
     let tmp7 = stringResult1;
   } else {
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   }
   const obj = markAsDismissed(576);
   const tmp10 = analyticsLocations;
-  analyticsLocations = analyticsLocations(7202)(analyticsLocations(7227).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK).analyticsLocations;
+  analyticsLocations = analyticsLocations(7230)(analyticsLocations(7255).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK).analyticsLocations;
   if (cResult[2] !== markAsDismissed) {
     class P {
       constructor() {
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
       }
     }
     const intl3 = markAsDismissed(1128).intl;
-    const stringResult2 = intl3.string(tmp10(3822)["6NP6ic"]);
+    const stringResult2 = intl3.string(tmp10(3832)["6NP6ic"]);
     cResult[4] = tmp16;
     cResult[5] = stringResult2;
     let tmp15 = stringResult2;
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
   cResult[6] = analyticsLocations;
   cResult[7] = markAsDismissed;
   cResult[8] = fn;
-  const tmp11 = analyticsLocations(7202);
+  const tmp11 = analyticsLocations(7230);
 }) : (function CustomTypingIndicatorProfileCoachmark(visible) {
   visible = visible.visible;
   const markAsDismissed = visible.markAsDismissed;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
       return closure_1_7(closure_1_9, {});
     };
     const intl = util.intl;
-    obj.buttonLabel = intl.string(_modDef3822["6NP6ic"]);
+    obj.buttonLabel = intl.string(_modDef3832["6NP6ic"]);
     obj.onButtonPress = function onButtonPress() {
       const obj2 = { screen: analyticsLocations.TYPING_INDICATOR, params: { analyticsLocations } };
       visible(str[13]).openUserSettings(obj2, () => {

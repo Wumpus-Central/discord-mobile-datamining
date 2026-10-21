@@ -1,6 +1,6 @@
-// === Module 14474: APBRequestOperations ===
+// === Module 14548: APBRequestOperations ===
 
-// Module 14474 (APBRequestOperations)
+// Module 14548 (APBRequestOperations)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/APBRequestOperations.tsx");

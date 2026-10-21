@@ -1,6 +1,6 @@
-// === Module 9349: DominantColorUtils ===
+// === Module 9377: DominantColorUtils ===
 
-// Module 9349 (DominantColorUtils)
+// Module 9377 (DominantColorUtils)
 import nativeDefault from "native" /* 587 */;
 import privDefault from "priv" /* 1459 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -37,8 +37,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDominan
       hexToRgbResult = closure_6.get(arg0);
     }
     if (hexToRgbResult == null) {
-      hexToRgbResult = tmp(4942).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
-      const tmpResult = tmp(4942);
+      hexToRgbResult = tmp(4963).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+      const tmpResult = tmp(4963);
     }
     cResult[2] = arg0;
     cResult[3] = hexToRgbResult;

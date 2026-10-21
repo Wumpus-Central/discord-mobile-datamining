@@ -1,10 +1,10 @@
-// === Module 7866: AgeVerificationQuestUnsupportedAlertModal ===
+// === Module 7894: AgeVerificationQuestUnsupportedAlertModal ===
 
-// Module 7866 (AgeVerificationQuestUnsupportedAlertModal)
+// Module 7894 (AgeVerificationQuestUnsupportedAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import _modDef3080 from "module_3080" /* 3080 */;
-import AlertModal from "AlertModal" /* 5872 */;
+import _modDef3090 from "module_3090" /* 3090 */;
+import AlertModal from "AlertModal" /* 5894 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3080.gUqXQN);
+    const stringResult = intl.string(_modDef3090.gUqXQN);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3080.yBHwMy);
+    const stringResult1 = intl2.string(_modDef3090.yBHwMy);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp4 = stringResult;
@@ -45,9 +45,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
 }) : (function AgeVerificationQuestUnsupportedAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3080.gUqXQN);
+  obj.title = intl.string(_modDef3090.gUqXQN);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3080.yBHwMy);
+  obj.content = intl2.string(_modDef3090.yBHwMy);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

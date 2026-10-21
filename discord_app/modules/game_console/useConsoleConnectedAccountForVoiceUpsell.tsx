@@ -1,12 +1,12 @@
-// === Module 18294: useConsoleConnectedAccountForVoiceUpsell ===
+// === Module 18375: useConsoleConnectedAccountForVoiceUpsell ===
 
-// Module 18294 (useConsoleConnectedAccountForVoiceUpsell)
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6457 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6455 */;
-import GameConsoleStore from "GameConsoleStore" /* 5677 */;
+// Module 18375 (useConsoleConnectedAccountForVoiceUpsell)
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6479 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6477 */;
+import GameConsoleStore from "GameConsoleStore" /* 5697 */;
 
 const require = fn;
-const CONSOLE_VOICE_PLATFORMS = fn(9553).CONSOLE_VOICE_PLATFORMS;
+const CONSOLE_VOICE_PLATFORMS = fn(9583).CONSOLE_VOICE_PLATFORMS;
 const ActivityTypes = fn(1087).ActivityTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,18 +1,18 @@
-// === Module 6854: TableRow ===
+// === Module 6882: TableRow ===
 
-// Module 6854 (TableRow)
+// Module 6882 (TableRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import useToken from "useToken" /* 5213 */;
-import useFontScale from "useFontScale" /* 5214 */;
-import TableRowDivider from "TableRowDivider" /* 6849 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6855 */;
-import Card from "Card" /* 6856 */;
-import TableRowArrow from "TableRowArrow" /* 6863 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6865 */;
-import DragIcon from "DragIcon" /* 6866 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import useToken from "useToken" /* 5234 */;
+import useFontScale from "useFontScale" /* 5235 */;
+import TableRowDivider from "TableRowDivider" /* 6877 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6883 */;
+import Card from "Card" /* 6884 */;
+import TableRowArrow from "TableRowArrow" /* 6891 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6893 */;
+import DragIcon from "DragIcon" /* 6894 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const style = { padding: 0 };
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
@@ -291,9 +291,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRow(arg
   }
   return tmp11;
 });
-tmp4.Icon = fn(6862).TableRowIcon;
-tmp4.Arrow = fn(6863).TableRowArrow;
-tmp4.TrailingText = fn(6865).TableRowTrailingText;
+tmp4.Icon = fn(6890).TableRowIcon;
+tmp4.Arrow = fn(6891).TableRowArrow;
+tmp4.TrailingText = fn(6893).TableRowTrailingText;
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInner(disabled) {
   const cResult = c.c(53);

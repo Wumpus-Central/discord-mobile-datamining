@@ -1,10 +1,10 @@
-// === Module 12156: ExperimentalDirectSelectIcon ===
+// === Module 12219: ExperimentalDirectSelectIcon ===
 
-// Module 12156 (ExperimentalDirectSelectIcon)
+// Module 12219 (ExperimentalDirectSelectIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5630 */;
-import _mod12157 from "module_12157" /* 12157 */;
+import BaseIconImage from "BaseIconImage" /* 5650 */;
+import _mod12220 from "module_12220" /* 12220 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ExperimentalDirectSelectIcon = ReactCompilerGating.isReactCompilerE
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12157;
+    const tmpResult = _mod12220;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ExperimentalDirectSelectIcon = ReactCompilerGating.isReactCompilerE
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12157, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12220, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

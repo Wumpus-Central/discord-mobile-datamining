@@ -1,6 +1,6 @@
-// === Module 12779: CheckpointStore ===
+// === Module 12843: CheckpointStore ===
 
-// Module 12779 (CheckpointStore)
+// Module 12843 (CheckpointStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 
@@ -11,8 +11,9 @@ let merged = Object.assign(obj2);
 obj = {};
 let c4 = null;
 let c5 = null;
+let c6 = null;
 let INIT = obj.INIT;
-let c7 = null;
+let c8 = null;
 const PersistedStore = initializeDefault.PersistedStore;
 class CheckpointStore extends PersistedStore {
 }
@@ -39,9 +40,15 @@ Object.defineProperty(prototype, "stats", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "globalStats", {
+  get: function globalStats() {
+    return c5;
+  },
+  set: undefined
+});
 Object.defineProperty(prototype, "character", {
   get: function character() {
-    return c5;
+    return c6;
   },
   set: undefined
 });
@@ -53,9 +60,9 @@ Object.defineProperty(prototype, "fetchState", {
 });
 Object.defineProperty(prototype, "selectedCharacterTraits", {
   get: function selectedCharacterTraits() {
-    let tmp = c7;
-    if (c7 == null) {
-      tmp = c5;
+    let tmp = c8;
+    if (c8 == null) {
+      tmp = c6;
     }
     if (tmp == null) {
       tmp = closure_2;
@@ -74,7 +81,7 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     INIT = obj.FETCHING;
   },
   CHECKPOINT_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    ({ stats: c4, character: c5 } = arg0);
+    ({ stats: c4, globalStats: c5, character: c6 } = arg0);
     INIT = obj.SUCCESS;
   },
   CHECKPOINT_FETCH_FAILED: function handleFetchFailed() {
@@ -82,16 +89,16 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
   },
   CHECKPOINT_COMPLETE_SUCCESS: function handleCompleteSuccess(character) {
     character = character.character;
-    c7 = null;
+    c8 = null;
   },
   CHECKPOINT_RESET_SUCCESS: function handleResetSuccess() {
-    c5 = null;
-    c7 = null;
+    c6 = null;
+    c8 = null;
   },
   CHECKPOINT_SELECT_CHARACTER_TRAIT: function handleSelectCharacterTrait(trait) {
-    let tmp = c7;
-    if (c7 == null) {
-      tmp = c5;
+    let tmp = c8;
+    if (c8 == null) {
+      tmp = c6;
     }
     if (tmp == null) {
       tmp = closure_2;
@@ -99,18 +106,19 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     obj = {};
     const merged = Object.assign(tmp);
     obj[trait.trait] = trait.optionId;
-    c7 = obj;
+    c8 = obj;
   },
   CHECKPOINT_RESET_EDITED_CHARACTER: function handleResetEditedCharacter() {
-    c7 = null;
+    c8 = null;
   },
   LOGOUT: function handleLogout() {
     obj = {};
     const merged = Object.assign(obj2);
     c4 = null;
     c5 = null;
+    c6 = null;
     INIT = obj.INIT;
-    c7 = null;
+    c8 = null;
   }
 });
 const size = fn(2);

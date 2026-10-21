@@ -1,14 +1,14 @@
-// === Module 16601: IOSNativePhoneIntegrationSetting ===
+// === Module 16677: IOSNativePhoneIntegrationSetting ===
 
-// Module 16601 (IOSNativePhoneIntegrationSetting)
+// Module 16677 (IOSNativePhoneIntegrationSetting)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import UserSettings from "UserSettings" /* 4776 */;
-import SettingsConstants from "SettingsConstants" /* 8280 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16597 */;
-import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 16602 */;
+import UserSettings from "UserSettings" /* 4797 */;
+import SettingsConstants from "SettingsConstants" /* 8308 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16673 */;
+import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 16678 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11111 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11155 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;

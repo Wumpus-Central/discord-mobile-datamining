@@ -1,16 +1,16 @@
-// === Module 14408: InAppReportsSettingsUpsellsElement ===
+// === Module 14482: InAppReportsSettingsUpsellsElement ===
 
-// Module 14408 (InAppReportsSettingsUpsellsElement)
+// Module 14482 (InAppReportsSettingsUpsellsElement)
 import nativeDefault from "native" /* 587 */;
-import useMountEffectDefault from "useMountEffect" /* 5224 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
-import SettingsIcon from "SettingsIcon" /* 7437 */;
-import openUserSettings from "openUserSettings" /* 7439 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8059 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14402 */;
+import useMountEffectDefault from "useMountEffect" /* 5245 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5693 */;
+import SettingsIcon from "SettingsIcon" /* 7465 */;
+import openUserSettings from "openUserSettings" /* 7467 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8087 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 14476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, settingsContainer: null, goToSettingsText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.settingsContainer = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
@@ -42,14 +42,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   } else {
     tmp6 = cResult[1];
   }
-  trackSettingsUpsellsAction(5224)(tmp6);
+  trackSettingsUpsellsAction(5245)(tmp6);
   if (cResult[2] === onButtonClick) {
     if (cResult[3] === trackSettingsUpsellsAction) {
       let tmp9 = cResult[4];
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp13 = closure_9(onButtonClick(7437).SettingsIcon, {});
+      const tmp13 = closure_9(onButtonClick(7465).SettingsIcon, {});
       cResult[5] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -68,7 +68,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
       }
     }
     const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-    const tmp16 = closure_9(tmp7(14402), obj2);
+    const tmp16 = closure_9(tmp7(14476), obj2);
     cResult[6] = description;
     cResult[7] = disabledTitle;
     cResult[8] = tmp5;

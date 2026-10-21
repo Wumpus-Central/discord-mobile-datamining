@@ -1,17 +1,17 @@
-// === Module 7536: SaveableChannelsStore ===
+// === Module 7564: SaveableChannelsStore ===
 
-// Module 7536 (SaveableChannelsStore)
-import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7538 */;
-import Lru from "Lru" /* 7539 */;
-import isPrivateChannel from "isPrivateChannel" /* 7541 */;
-import isReadableChannel from "isReadableChannel" /* 7542 */;
-import isLimitedChannel from "isLimitedChannel" /* 7543 */;
-import withFallbacks from "withFallbacks" /* 7544 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5155 */;
+// Module 7564 (SaveableChannelsStore)
+import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7566 */;
+import Lru from "Lru" /* 7567 */;
+import isPrivateChannel from "isPrivateChannel" /* 7569 */;
+import isReadableChannel from "isReadableChannel" /* 7570 */;
+import isLimitedChannel from "isLimitedChannel" /* 7571 */;
+import withFallbacks from "withFallbacks" /* 7572 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5176 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1086 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import FileSystemStore from "FileSystemStore" /* 7537 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
+import FileSystemStore from "FileSystemStore" /* 7565 */;
 
 require = fn;
 function handleSelectedChannelStoreChanged() {
@@ -85,9 +85,9 @@ function handleCacheLoadedLazyNoCache() {
 }
 let lastChannel = null;
 const bound = Math.max(25, 25, 1);
-let extendedMemoryLru = new fn(7538).ExtendedMemoryLru(750, 500);
+let extendedMemoryLru = new fn(7566).ExtendedMemoryLru(750, 500);
 let global = extendedMemoryLru;
-let lru = new fn(7539).Lru(15);
+let lru = new fn(7567).Lru(15);
 let c9 = false;
 let SaveableChannelsStore;
 class SaveableChannelsStore extends tmp3 {

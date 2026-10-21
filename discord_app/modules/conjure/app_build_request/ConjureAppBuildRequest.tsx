@@ -1,350 +1,543 @@
-// === Module 12338: ConjureAppBuildRequest ===
+// === Module 12237: ConjureAppBuildRequest ===
 
-// Module 12338 (ConjureAppBuildRequest)
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12335 */;
+// Module 12237 (ConjureAppBuildRequest)
+import util from "util" /* 1128 */;
+import _modDef3830 from "module_3830" /* 3830 */;
+import createNonce from "createNonce" /* 10161 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12233 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12238 */;
+import conjureSendToProject from "conjureSendToProject" /* 12239 */;
 import _slicedToArray from "module_32" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
 
 const require = globalThis.__r;
 
-const require = fn;
-function sendAppBuildRequest() {
-  const self = this;
-  const apply = closure_7.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+require = fn;
+function sentMessage(arr) {
+  const map = new Map();
+  const iter = arr[Symbol.iterator]();
+  while (iter !== undefined) {
+    ({ target, prompt: _prompt } = nextResult);
+    let items1 = map.get(_prompt);
+    if (items1 == null) {
+      items1 = [];
+    }
+    let items = [];
+    items[HermesBuiltin.arraySpread(items1, 0)] = target;
+    let result = map.set(_prompt, items);
+    continue;
   }
-  return applyArgumentsResult;
+  arr = Array.from(map, (arg0) => {
+    [tmp, arr] = arg0;
+    const mapped = arr.map((name) => {
+      const intl = closure_1_0(1128).intl;
+      return intl.formatToPlainString(closure_1_1(3830).tcDZw9, { name: name.name, projectId: name.projectId });
+    });
+    const targets = mapped.join(", ");
+    let intl = require("util").intl;
+    return "" + intl.formatToPlainString(_modDef3830.jZlNst, { targets }) + "\n\n" + tmp;
+  });
+  return arr.join("\n\n");
 }
-let closure_7 = async function _sendAppBuildRequest(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_0 = closure_2;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          closure_131_4 = undefined;
-          closure_131_5 = undefined;
-          const items = [require("ConjureWorkerTickets").mintWorkerTicket(closure_1), ];
-          const obj10 = require("ConjureWorkerTickets");
-          items[1] = require("ConjureWorkerTickets").mintWorkerTicket(closure_0);
-          c5 = 1;
-          c6 = 1;
-          const obj4 = { value: Promise.all(items), done: false };
-          return obj4;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_131_1 = value;
-          closure_131_2 = closure_132_3(closure_131_1, 2);
-          closure_131_3 = closure_131_2[0];
-          closure_131_4 = closure_131_2[1];
-          const _fetch = fetch;
-          const _URLSearchParams = URLSearchParams;
-          const obj6 = { ticket: closure_131_3.ticket };
-          const uRLSearchParams = new URLSearchParams(obj6);
-          const _HermesInternal2 = HermesInternal;
-          const request = { method: "POST", body: null };
-          const _JSON = JSON;
-          const obj7 = { caller_ticket: closure_131_4.ticket, prompt: closure_131_0 };
-          const combined = "" + closure_131_3.baseUrl + "/agent/app-build-request?" + uRLSearchParams;
-          request.body = JSON.stringify(obj7);
-          c5 = 2;
-          c6 = 1;
-          const obj8 = { value: fetch(combined, request), done: false };
-          return obj8;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        closure_131_5 = value;
-        if (closure_131_5.ok) {
-          c6 = 3;
-          return { value: "IconComponent", done: null };
-        } else {
-          const _Error = Error;
-          const _HermesInternal = HermesInternal;
-          const error = new Error("app build request failed: " + closure_131_5.status);
-          throw error;
-        }
-      }
-    } catch (tmp15) {
-      c6 = tmp;
-      throw tmp15;
-    }
-  }
-};
 const ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/app_build_request/ConjureAppBuildRequest.tsx");
+let result = size.fileFinishedImporting("modules/conjure/app_build_request/ConjureAppBuildRequest.tsx");
 
 export const CONJURE_APP_BUILD_PROMPT_MAX_LENGTH = 4000;
-export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAppBuildRequestForm(arg0, prompt, arg2) {
+export const CONJURE_APP_BUILD_MAX_TARGETS = 10;
+export const appBuildRequestSentToast = function appBuildRequestSentToast(arr) {
+  const intl = util.intl;
+  const obj = { names: null };
+  const mapped = arr.map((name) => name.name);
+  obj.names = mapped.join(", ");
+  return intl.formatToPlainString(_modDef3830.RZO35O, obj);
+};
+export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAppBuildRequestForm(arg0, prompt, arg2, arg3, arg4) {
   _require = arg0;
-  importDefault = prompt;
-  const cResult = require("c").c(18);
+  importDefault = arg3;
+  dependencyMap = arg4;
+  const cResult = require("c").c(47);
   const arr = useConjureProjectPickerOptionsDefault(arg0);
-  const obj = require("c");
-  [tmp3, tmp4] = noop.useState(null);
-  const tmp5 = _slicedToArray(noop.useState(prompt.prompt), 2);
-  const tmp2 = _slicedToArray(noop.useState(null), 2);
-  [tmp7, dependencyMap] = noop.useState(false);
-  const tmp6 = _slicedToArray(noop.useState(false), 2);
-  [tmp9, _slicedToArray] = noop.useState(false);
-  let project_id = null;
-  if (arr.some((projectId) => projectId.projectId === _prompt.project_id)) {
-    project_id = prompt.project_id;
+  let num = 2;
+  let obj = require("c");
+  [tmp4, _slicedToArray] = first1.useState(null);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
   }
-  if (tmp3 == null) {
-    tmp3 = project_id;
+  [first1, project] = first1.useState(first);
+  const tmp3 = _slicedToArray(first1.useState(null), 2);
+  const first2 = _slicedToArray(first1.useState(prompt.prompt), num)[0];
+  [closure_6, closure_7] = first1.useState(false);
+  const tmp2Result4 = _slicedToArray(first1.useState(prompt.prompt), num);
+  [r10054, closure_8] = first1.useState(false);
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const _Map = Map;
+    const map = new Map();
+    cResult[1] = map;
+    let tmp12 = map;
+  } else {
+    tmp12 = cResult[1];
   }
-  if (tmp3 == null) {
-    tmp3 = null;
-  }
-  c4 = tmp3;
-  if (cResult[0] === arr) {
-    if (cResult[1] === tmp3) {
-      let tmp11 = cResult[2];
-    }
-    noop = tmp11;
-    if (cResult[3] !== str) {
-      const trimmed = str.trim();
-      cResult[3] = str;
-      cResult[4] = trimmed;
-      let tmp13 = trimmed;
-    } else {
-      tmp13 = cResult[4];
-    }
-    let tmp15 = arg2;
-    closure_6 = tmp13;
-    if (arg2) {
-      tmp15 = !tmp7;
-    }
-    if (tmp15) {
-      tmp15 = null != tmp11;
-    }
-    if (tmp15) {
-      tmp15 = "" !== tmp13;
-    }
-    closure_7 = tmp15;
-    if (cResult[5] === tmp15) {
-      if (cResult[6] === arg0) {
-        if (cResult[7] === tmp11) {
-          if (cResult[8] === tmp13) {
-            let tmp16 = cResult[9];
-          }
-          if (cResult[10] === tmp15) {
-            if (cResult[11] === tmp9) {
-              if (cResult[12] === arr) {
-                if (cResult[13] === str) {
-                  if (cResult[14] === tmp7) {
-                    if (cResult[15] === tmp16) {
-                      if (cResult[16] === tmp3) {
-                        let tmp17 = cResult[17];
+  closure_9 = obj2.useRef(tmp12);
+  closure_10 = obj2.useRef(false);
+  first1.useRef(false);
+  if (cResult[2] === first1) {
+    if (cResult[3] === arr) {
+      if (cResult[7] !== prompt) {
+        if (null != prompt.project_ids) {
+          let project_ids = prompt.project_ids;
+        } else if (null != prompt.project_id) {
+          const items1 = [prompt.project_id];
+          project_ids = items1;
+        } else {
+          project_ids = [];
+        }
+        cResult[7] = prompt;
+        cResult[8] = project_ids;
+      } else {
+        closure_12 = tmp4;
+        if (cResult[9] === tmp4) {
+          if (cResult[10] === arr3) {
+            closure_13 = tmp20;
+            if (cResult[15] === arr3) {
+              if (cResult[16] === tmp20) {
+                const _Symbol2 = Symbol;
+                if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+                  class W {
+                    constructor(arg0) {
+                      tmp = closure_3(arg0.slice(0, 10));
+                      return;
+                    }
+                  }
+                  cResult[20] = W;
+                } else {
+                  class W {
+                    constructor(arg0) {
+                      tmp = closure_3(arg0.slice(0, 10));
+                      return;
+                    }
+                  }
+                }
+                if (cResult[21] !== first2) {
+                  class W {
+                    constructor(arg0) {
+                      tmp = closure_3(arg0.slice(0, 10));
+                      return;
+                    }
+                  }
+                  cResult[21] = first2;
+                  cResult[22] = tmp30;
+                } else {
+                  class W {
+                    constructor(arg0) {
+                      tmp = closure_3(arg0.slice(0, 10));
+                      return;
+                    }
+                  }
+                }
+                closure_15 = tmp30;
+                if (arg2) {
+                  class W {
+                    constructor(arg0) {
+                      tmp = closure_3(arg0.slice(0, 10));
+                      return;
+                    }
+                  }
+                }
+                if (!arg2) {
+                  class W {
+                    constructor(arg0) {
+                      tmp = closure_3(arg0.slice(0, 10));
+                      return;
+                    }
+                  }
+                  if (cResult[23] === arg4) {
+                    class W {
+                      constructor(arg0) {
+                        tmp = closure_3(arg0.slice(0, 10));
+                        return;
                       }
-                      return tmp17;
+                    }
+                    if (cResult[26] === tmp31) {
+                      class W {
+                        constructor(arg0) {
+                          tmp = closure_3(arg0.slice(0, 10));
+                          return;
+                        }
+                      }
+                    }
+                    function ae() {
+                      if (closure_16) {
+                        if (0 !== arr7.length) {
+                          closure_7(true);
+                          closure_8(false);
+                          project = project.getProject(content);
+                          let name;
+                          if (project != null) {
+                            name = project.name;
+                          }
+                          if (name == null) {
+                            name = tmp8;
+                          }
+                          const intl = content(1128).intl;
+                          let obj = { name, projectId: content };
+                          const _HermesInternal = HermesInternal;
+                          content = "" + closure_15 + "\n\n" + intl.formatToPlainString(closure_1(3830).ScoZLp, obj);
+                          Promise.allSettled(arr7.map((projectId) => {
+                            const current = ref.current;
+                            value = current.get(projectId.projectId);
+                            content = undefined;
+                            if (value != null) {
+                              content = value.content;
+                            }
+                            if (content !== content) {
+                              const obj = { content, nonce: createNonce.createNonce() };
+                              const current2 = ref.current;
+                              const result = current2.set(projectId.projectId, obj);
+                              value = obj;
+                            }
+                            return conjureSendToProject.sendConjureMessageToProject(projectId.projectId, content, value.nonce);
+                          })).then((result) => {
+                            closure_0 = result;
+                            const found = closure_14.filter((item, index) => "fulfilled" === closure_0[index].status);
+                            const items = [...closure_4, ...found.map((target) => ({ target, prompt: _prompt }))];
+                            if (found.length !== closure_14.length) {
+                              if (!ref2.current) {
+                                closure_5(items);
+                                const found1 = closure_14.filter((item) => !found.includes(item));
+                                closure_3(found1.map((projectId) => projectId.projectId));
+                                closure_7(false);
+                                closure_8(true);
+                              }
+                            }
+                            if (items.length > 0) {
+                              closure_17(items);
+                            }
+                          });
+                          const allSettledResult = Promise.allSettled(arr7.map((projectId) => {
+                            const current = ref.current;
+                            value = current.get(projectId.projectId);
+                            content = undefined;
+                            if (value != null) {
+                              content = value.content;
+                            }
+                            if (content !== content) {
+                              const obj = { content, nonce: createNonce.createNonce() };
+                              const current2 = ref.current;
+                              const result = current2.set(projectId.projectId, obj);
+                              value = obj;
+                            }
+                            return conjureSendToProject.sendConjureMessageToProject(projectId.projectId, content, value.nonce);
+                          }));
+                        } else {
+                          tmp34(first1);
+                        }
+                      }
+                    }
+                    cResult[26] = tmp31;
+                    cResult[27] = tmp34;
+                    cResult[28] = first1;
+                    cResult[29] = arg0;
+                    cResult[30] = arr7;
+                    cResult[31] = tmp30;
+                    cResult[32] = ae;
+                  }
+                  function re(arr) {
+                    if (!ref.current) {
+                      tmp.current = true;
+                      closure_7(true);
+                      if (null != closure_2) {
+                        tmp5(arr.map((target) => target.target));
+                      } else {
+                        conjureAttachmentDrafts.sendConjureCardReply(closure_0, sentMessage(arr));
+                      }
+                    }
+                  }
+                  cResult[23] = arg4;
+                  cResult[24] = arg0;
+                  cResult[25] = re;
+                  tmp34 = re;
+                } else {
+                  class W {
+                    constructor(arg0) {
+                      tmp = closure_3(arg0.slice(0, 10));
+                      return;
+                    }
+                  }
+                  if (arr7.length > 0) {
+                    class W {
+                      constructor(arg0) {
+                        tmp = closure_3(arg0.slice(0, 10));
+                        return;
+                      }
+                    }
+                    const tmp32 = "" !== tmp30;
+                  } else {
+                    class W {
+                      constructor(arg0) {
+                        tmp = closure_3(arg0.slice(0, 10));
+                        return;
+                      }
                     }
                   }
                 }
               }
             }
+            if (cResult[18] !== cResult[11]) {
+              class W {
+                constructor(arg0) {
+                  tmp = closure_3(arg0.slice(0, 10));
+                  return;
+                }
+              }
+              cResult[18] = tmp20;
+              cResult[19] = Q;
+            } else {
+              class W {
+                constructor(arg0) {
+                  tmp = closure_3(arg0.slice(0, 10));
+                  return;
+                }
+              }
+            }
+            let found = arr3.filter(Q);
+            cResult[15] = arr3;
+            cResult[16] = cResult[11];
+            cResult[17] = found;
           }
-          const obj2 = { projects: arr, targetId: tmp3, setTargetId: tmp4, prompt: str, setPrompt: tmp5[1], sending: tmp7, failed: tmp9, canSubmit: null, submit: null };
-          class E {
-            constructor() {
-              tmp = closure_7;
-              if (closure_7) {
-                tmp2 = closure_5;
-                tmp3 = null;
-                tmp = null != closure_5;
-              }
-              if (tmp) {
-                tmp4 = closure_2;
-                flag = true;
-                tmp5 = closure_2(true);
-                tmp6 = closure_3;
-                flag2 = false;
-                tmp7 = closure_3(false);
-                tmp8 = sendAppBuildRequest;
-                tmp9 = closure_0;
-                tmp10 = closure_5;
-                tmp11 = closure_6;
-                promise = sendAppBuildRequest(closure_0, closure_5.projectId, closure_6);
-                nextPromise = promise.then(() => {
-                  const intl = closure_0(1128).intl;
-                  return closure_0(12171).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3820).jZlNst, { name: projectId.name, projectId: projectId.projectId }) + "\n\n" + closure_1_6);
-                }, () => {
-                  dependencyMap(false);
-                  closure_1_3(true);
-                });
-              }
+        }
+        if (cResult[12] !== tmp4) {
+          class W {
+            constructor(arg0) {
+              tmp = closure_3(arg0.slice(0, 10));
               return;
             }
           }
-          obj2.submit = tmp16;
-          cResult[10] = tmp15;
-          cResult[11] = tmp9;
-          cResult[12] = arr;
-          cResult[13] = str;
-          cResult[14] = tmp7;
-          cResult[15] = tmp16;
-          cResult[16] = tmp3;
-          cResult[17] = obj2;
-          tmp17 = obj2;
+          cResult[12] = tmp4;
+          cResult[13] = tmp21;
+          let found1 = tmp21;
+        } else {
+          class W {
+            constructor(arg0) {
+              tmp = closure_3(arg0.slice(0, 10));
+              return;
+            }
+          }
         }
+        const _Symbol = Symbol;
+        if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+          class W {
+            constructor(arg0) {
+              tmp = closure_3(arg0.slice(0, 10));
+              return;
+            }
+          }
+          cResult[14] = H;
+        } else {
+          class W {
+            constructor(arg0) {
+              tmp = closure_3(arg0.slice(0, 10));
+              return;
+            }
+          }
+        }
+        found1 = arr3.filter(found1);
+        const mapped = found1.map(H);
+        cResult[9] = tmp4;
+        cResult[10] = arr3;
+        cResult[11] = mapped;
       }
     }
-    class E {
-      constructor() {
-        tmp = closure_7;
-        if (closure_7) {
-          tmp2 = closure_5;
-          tmp3 = null;
-          tmp = null != closure_5;
-        }
-        if (tmp) {
-          tmp4 = closure_2;
-          flag = true;
-          tmp5 = closure_2(true);
-          tmp6 = closure_3;
-          flag2 = false;
-          tmp7 = closure_3(false);
-          tmp8 = sendAppBuildRequest;
-          tmp9 = closure_0;
-          tmp10 = closure_5;
-          tmp11 = closure_6;
-          promise = sendAppBuildRequest(closure_0, closure_5.projectId, closure_6);
-          nextPromise = promise.then(() => {
-            const intl = closure_0(1128).intl;
-            return closure_0(12171).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3820).jZlNst, { name: projectId.name, projectId: projectId.projectId }) + "\n\n" + closure_1_6);
-          }, () => {
-            dependencyMap(false);
-            closure_1_3(true);
-          });
-        }
+  }
+  if (cResult[5] !== first1) {
+    class W {
+      constructor(arg0) {
+        tmp = closure_3(arg0.slice(0, 10));
         return;
       }
     }
-    cResult[5] = tmp15;
-    cResult[6] = arg0;
-    cResult[7] = tmp11;
-    cResult[8] = tmp13;
-    cResult[9] = E;
-    tmp16 = E;
+    cResult[5] = first1;
+    cResult[6] = U;
+  } else {
+    class W {
+      constructor(arg0) {
+        tmp = closure_3(arg0.slice(0, 10));
+        return;
+      }
+    }
   }
-  let found = arr.find((projectId) => projectId.projectId === c4);
-  if (found == null) {
-    found = null;
-  }
-  cResult[0] = arr;
-  cResult[1] = tmp3;
-  cResult[2] = found;
-  tmp11 = found;
-}) : (function useConjureAppBuildRequestForm(arg0, prompt, arg2) {
+  const found2 = arr.filter(U);
+  cResult[num] = first1;
+  cResult[3] = arr;
+  num = 4;
+  cResult[4] = found2;
+  const tmp2Result6 = _slicedToArray(first1.useState(false), num);
+}) : (function useConjureAppBuildRequestForm(arg0, prompt, arg2, arg3, arg4) {
   closure_0 = arg0;
   importDefault = prompt;
-  const arr = useConjureProjectPickerOptionsDefault(arg0);
-  [tmp2, tmp3] = found.useState(null);
-  const tmp4 = _slicedToArray(found.useState(prompt.prompt), 2);
-  const obj = found;
-  let tmp = _slicedToArray(found.useState(null), 2);
-  [tmp6, dependencyMap] = found.useState(false);
-  const tmp5 = _slicedToArray(found.useState(false), 2);
-  [tmp8, _slicedToArray] = found.useState(false);
-  let project_id = null;
-  if (arr.some((projectId) => projectId.projectId === _prompt.project_id)) {
-    project_id = prompt.project_id;
-  }
-  if (tmp2 == null) {
-    tmp2 = project_id;
-  }
-  if (tmp2 == null) {
-    tmp2 = null;
-  }
-  c4 = tmp2;
-  found = arr.find((projectId) => projectId.projectId === c4);
-  if (found == null) {
-    found = null;
-  }
-  let tmp11 = arg2;
+  let tmp = arg2;
+  dependencyMap = arg3;
+  _slicedToArray = arg4;
+  let tmp2 = useConjureProjectPickerOptionsDefault(arg0);
+  noop = tmp2;
+  [first, closure_6] = noop.useState(null);
+  [first1, closure_8] = noop.useState([]);
+  const tmp6 = _slicedToArray(noop.useState(prompt.prompt), 2);
+  [first2, closure_10] = noop.useState(false);
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
+  closure_11 = tmp9[1];
+  closure_12 = noop.useRef(new Map());
+  closure_13 = noop.useRef(false);
+  noop.useRef(false);
+  let items = [tmp2, first1];
+  const memo = noop.useMemo(() => closure_4.filter((item) => !first1.some((target) => target.target.projectId === item.projectId)), items);
+  const items1 = [prompt];
+  const memo1 = noop.useMemo(() => {
+    if (null != _prompt.project_ids) {
+      let project_ids = _prompt.project_ids;
+    } else if (null != _prompt.project_id) {
+      const items = [_prompt.project_id];
+      project_ids = items;
+    } else {
+      project_ids = [];
+    }
+    return project_ids;
+  }, items1);
+  const items2 = [first, memo1, memo];
+  const memo2 = noop.useMemo(() => {
+    const found = memo.filter((projectId) => {
+      let obj = first;
+      if (first == null) {
+        obj = memo1;
+      }
+      return obj.includes(projectId.projectId);
+    });
+    return found.map((projectId) => projectId.projectId);
+  }, items2);
+  const items3 = [memo, memo2];
+  const memo3 = noop.useMemo(() => memo.filter((projectId) => memo2.includes(projectId.projectId)), items3);
+  const callback = noop.useCallback((arr) => {
+    closure_6(arr.slice(0, 10));
+  }, []);
   const trimmed = str.trim();
   if (arg2) {
-    tmp11 = !tmp6;
+    tmp = !first2;
   }
-  if (tmp11) {
-    tmp11 = null != found;
-  }
-  if (tmp11) {
-    tmp11 = "" !== trimmed;
-  }
-  closure_7 = tmp11;
-  const items = [tmp11, arg0, found, trimmed];
-  const tmp7 = _slicedToArray(found.useState(false), 2);
-  return {
-    projects: arr,
-    targetId: tmp2,
-    setTargetId: tmp3,
-    prompt: tmp4[0],
-    setPrompt: tmp4[1],
-    sending: tmp6,
-    failed: tmp8,
-    canSubmit: tmp11,
-    submit: obj.useCallback(() => {
-      let tmp = closure_7;
-      if (closure_7) {
-        tmp = null != found;
+  if (!tmp) {
+    closure_20 = tmp;
+    const items4 = [arg4, arg0];
+    const callback1 = obj.useCallback((arr) => {
+      if (!ref.current) {
+        tmp.current = true;
+        closure_10(true);
+        if (null != closure_3) {
+          tmp5(arr.map((target) => target.target));
+        } else {
+          conjureAttachmentDrafts.sendConjureCardReply(closure_0, sentMessage(arr));
+        }
       }
-      if (tmp) {
-        dependencyMap(true);
-        _slicedToArray(false);
-        sendAppBuildRequest(closure_0, found.projectId, trimmed).then(() => {
-          const intl = closure_0(1128).intl;
-          return closure_0(12171).sendConjureCardReply(closure_1_0, "" + intl.formatToPlainString(closure_1(3820).jZlNst, { name: found.name, projectId: found.projectId }) + "\n\n" + trimmed);
-        }, () => {
-          dependencyMap(false);
-          closure_1_3(true);
-        });
-        const promise = sendAppBuildRequest(closure_0, found.projectId, trimmed);
+    }, items4);
+    const items5 = [tmp, callback1, first1, arg0, memo3, trimmed];
+    const items6 = [callback1, first1, arg3, first2];
+    const callback2 = obj.useCallback(() => {
+      if (closure_20) {
+        if (0 !== memo3.length) {
+          closure_10(true);
+          closure_11(false);
+          const project = first.getProject(content);
+          let name;
+          if (project != null) {
+            name = project.name;
+          }
+          if (name == null) {
+            name = tmp8;
+          }
+          const intl = content(1128).intl;
+          let obj = { name, projectId: content };
+          const _HermesInternal = HermesInternal;
+          content = "" + trimmed + "\n\n" + intl.formatToPlainString(_prompt(3830).ScoZLp, obj);
+          Promise.allSettled(memo3.map((projectId) => {
+            const current = ref.current;
+            value = current.get(projectId.projectId);
+            content = undefined;
+            if (value != null) {
+              content = value.content;
+            }
+            if (content !== content) {
+              const obj = { content, nonce: createNonce.createNonce() };
+              const current2 = ref.current;
+              const result = current2.set(projectId.projectId, obj);
+              value = obj;
+            }
+            return conjureSendToProject.sendConjureMessageToProject(projectId.projectId, content, value.nonce);
+          })).then((result) => {
+            closure_0 = result;
+            const found = closure_18.filter((item, index) => "fulfilled" === closure_0[index].status);
+            const items = [...closure_7, ...found.map((target) => ({ target, prompt: _prompt }))];
+            if (found.length !== closure_18.length) {
+              if (!ref2.current) {
+                closure_8(items);
+                const found1 = closure_18.filter((item) => !found.includes(item));
+                closure_6(found1.map((projectId) => projectId.projectId));
+                closure_10(false);
+                closure_11(true);
+              }
+            }
+            if (items.length > 0) {
+              closure_21(items);
+            }
+          });
+          const allSettledResult = Promise.allSettled(memo3.map((projectId) => {
+            const current = ref.current;
+            value = current.get(projectId.projectId);
+            content = undefined;
+            if (value != null) {
+              content = value.content;
+            }
+            if (content !== content) {
+              const obj = { content, nonce: createNonce.createNonce() };
+              const current2 = ref.current;
+              const result = current2.set(projectId.projectId, obj);
+              value = obj;
+            }
+            return conjureSendToProject.sendConjureMessageToProject(projectId.projectId, content, value.nonce);
+          }));
+        } else {
+          callback1(first1);
+        }
       }
-    }, items)
-  };
+    }, items5);
+    let obj2 = {
+      projects: memo,
+      targetIds: memo2,
+      setTargetIds: callback,
+      prompt: str,
+      setPrompt: tmp6[1],
+      sending: first2,
+      failed: tmp9[0],
+      canSubmit: tmp,
+      submit: callback2,
+      dismiss: obj.useCallback(() => {
+          closure_13.current = true;
+          let tmp2 = first1.length > 0;
+          if (tmp2) {
+            tmp2 = !first2;
+          }
+          if (tmp2) {
+            callback1(first1);
+          }
+          dependencyMap();
+        }, items6)
+    };
+    return obj2;
+  } else if (memo3.length > 0) {
+    let tmp16 = "" !== trimmed;
+  } else {
+    tmp16 = first1.length > 0;
+  }
 });

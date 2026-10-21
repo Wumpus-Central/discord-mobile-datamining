@@ -1,15 +1,15 @@
-// === Module 7466: LinkButton ===
+// === Module 7494: LinkButton ===
 
-// Module 7466 (LinkButton)
+// Module 7494 (LinkButton)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import Pressables from "Pressables" /* 6859 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import Pressables from "Pressables" /* 6887 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_4 = createStyles.createStyles({ defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }, disabledContainerStyle: { opacity: 0.5 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

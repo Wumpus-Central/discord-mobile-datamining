@@ -1,13 +1,13 @@
-// === Module 19087: FriendOnlineTimer ===
+// === Module 19164: FriendOnlineTimer ===
 
-// Module 19087 (FriendOnlineTimer)
+// Module 19164 (FriendOnlineTimer)
 import DurationsDefault from "Durations" /* 1104 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import UserSettings from "UserSettings" /* 4776 */;
+import UserSettings from "UserSettings" /* 4797 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6455 */;
-import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 19088 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6477 */;
+import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 19165 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
 
 require = fn;
 let closure_9 = async function _reportSessionMeaningfullyOnline() {

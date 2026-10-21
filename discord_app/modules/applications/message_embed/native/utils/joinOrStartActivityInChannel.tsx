@@ -1,10 +1,10 @@
-// === Module 12856: joinOrStartActivityInChannel ===
+// === Module 12924: joinOrStartActivityInChannel ===
 
-// Module 12856 (joinOrStartActivityInChannel)
+// Module 12924 (joinOrStartActivityInChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
 
 const require = fn;
 let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
@@ -48,7 +48,7 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
           closure_130_10 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {

@@ -1,8 +1,8 @@
-// === Module 18522: ConjureBackgroundFramesManager ===
+// === Module 18601: ConjureBackgroundFramesManager ===
 
-// Module 18522 (ConjureBackgroundFramesManager)
+// Module 18601 (ConjureBackgroundFramesManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
 
 const require = fn;
 function handleFrameLaunchStart() {
@@ -48,7 +48,7 @@ let closure_4 = async function _handleFrameLaunchStart(arg0) {
           ({ applicationId: closure_129_0, frameId: closure_129_1, surface: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {

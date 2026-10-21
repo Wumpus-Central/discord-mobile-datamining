@@ -1,27 +1,27 @@
-// === Module 7360: ChannelActionCreators ===
+// === Module 7388: ChannelActionCreators ===
 
-// Module 7360 (ChannelActionCreators)
+// Module 7388 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import shared from "shared" /* 4952 */;
-import RootNavigationRef from "RootNavigationRef" /* 5112 */;
-import transitionToChannel from "transitionToChannel" /* 5669 */;
-import preloadChannelDefault from "preloadChannel" /* 5671 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6585 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6772 */;
+import shared from "shared" /* 4973 */;
+import RootNavigationRef from "RootNavigationRef" /* 5133 */;
+import transitionToChannel from "transitionToChannel" /* 5689 */;
+import preloadChannelDefault from "preloadChannel" /* 5691 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6613 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6800 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7361 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import ReadStateStore from "ReadStateStore" /* 6722 */;
+import ChangelogStore from "ChangelogStore" /* 7389 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import ReadStateStore from "ReadStateStore" /* 6750 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4804).createChannelRecordFromServer;
+let closure_6 = fn(4825).createChannelRecordFromServer;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AbortCodes: c10, Endpoints: closure_11, Routes: closure_12, ChannelTypes: map1 } = Constants);
 const size = fn(2);
@@ -40,6 +40,10 @@ export default {
     ({ location: _slicedToArray, onBeforeTransition: asyncGeneratorStep, navigateToChannel } = joinCallVideo);
     if (navigateToChannel === undefined) {
       navigateToChannel = true;
+    }
+    let flag2 = joinCallVideo.navigationReplace;
+    if (flag2 === undefined) {
+      flag2 = true;
     }
     const self = this;
     return (async () => {
@@ -88,7 +92,7 @@ export default {
               closure_128_0 = joinCallIfRequested;
               const _getRecipientsResult = self._getRecipients(_require);
               if (1 === _getRecipientsResult.length) {
-                const _openCachedDMChannelResult = self._openCachedDMChannel(v0(_getRecipientsResult, 1)[0], asyncGeneratorStep, navigateToChannel);
+                const _openCachedDMChannelResult = self._openCachedDMChannel(v0(_getRecipientsResult, 1)[0], asyncGeneratorStep, navigateToChannel, flag2);
                 if (null != _openCachedDMChannelResult) {
                   joinCallIfRequested(_openCachedDMChannelResult);
                   c5 = 3;
@@ -137,7 +141,7 @@ export default {
               if (closure_129_4 != null) {
                 closure_129_4();
               }
-              closure_128_0(closure_129_6._openPrivateChannel(closure_128_1.body));
+              closure_128_0(closure_129_7._openPrivateChannel(closure_128_1.body, closure_129_6));
             }
             v0 = 0;
             c5 = 3;
@@ -252,6 +256,9 @@ export default {
     if (navigateToChannel === undefined) {
       flag = true;
     }
+    if (flag2 === undefined) {
+      flag2 = true;
+    }
     const dMFromUserId = ChannelStore.getDMFromUserId(id);
     let channel = null;
     if (null != dMFromUserId) {
@@ -265,7 +272,8 @@ export default {
           fn();
         }
         if (null != obj2.getRootNavigationRef()) {
-          transitionToChannel.transitionToChannel(channel.id, { navigationReplace: true });
+          const obj4 = { navigationReplace: flag2 };
+          transitionToChannel.transitionToChannel(channel.id, obj4);
           tmp3 = channel;
           const tmp6Result = transitionToChannel;
         } else {
@@ -374,11 +382,16 @@ export default {
     }
     return items1;
   },
-  _openPrivateChannel(body) {
+  _openPrivateChannel(body, arg1) {
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = true;
+    }
     const tmp = closure_6(body);
     DispatcherDefault.dispatch({ type: "CHANNEL_CREATE", channel: tmp });
     if (null != obj2.getRootNavigationRef()) {
-      transitionToChannel.transitionToChannel(tmp.id, { navigationReplace: true });
+      const obj3 = { navigationReplace: flag };
+      transitionToChannel.transitionToChannel(tmp.id, obj3);
       const tmp5Result = transitionToChannel;
     } else {
       const privateChannel = SelectedChannelActionCreatorsDefault.selectPrivateChannel(tmp.id);
@@ -400,13 +413,13 @@ export default {
       AnalyticsUtilsDefault.track(constants.CHANGE_LOG_DM_REMOVED, obj);
       const tmpResult = AnalyticsUtilsDefault;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
     if (flag) {
       router_utils.transitionTo(constants2.FRIENDS);
     }
     const HTTP = HTTPUtils.HTTP;
     const request = { url: closure_1_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
@@ -519,8 +532,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7373).checkGuildTemplateDirty(closure_128_2);
-        name(7373);
+        const result = name(7401).checkGuildTemplateDirty(closure_128_2);
+        name(7401);
       }
       return closure_128_1;
     })();

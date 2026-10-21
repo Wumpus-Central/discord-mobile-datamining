@@ -1,6 +1,6 @@
-// === Module 18537: passThrough ===
+// === Module 11429: passThrough ===
 
-// Module 18537 (passThrough)
+// Module 11429 (passThrough)
 import size from "module_2" /* 2 */;
 
 function passThrough(arg0) {

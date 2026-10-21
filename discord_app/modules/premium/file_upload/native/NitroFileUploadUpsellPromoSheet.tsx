@@ -1,9 +1,9 @@
-// === Module 18164: NitroFileUploadUpsellPromoSheet ===
+// === Module 18247: NitroFileUploadUpsellPromoSheet ===
 
-// Module 18164 (NitroFileUploadUpsellPromoSheet)
+// Module 18247 (NitroFileUploadUpsellPromoSheet)
 import nativeDefault from "native" /* 587 */;
-import openUserSettings from "openUserSettings" /* 7439 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9844 */;
+import openUserSettings from "openUserSettings" /* 7467 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9874 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,9 +12,9 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticsPages: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
-const ContentDismissActionType = fn(4797).ContentDismissActionType;
+const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
     }
   }
   const obj = markAsDismissed(576);
-  const unmountEffect = markAsDismissed(5224).useUnmountEffect(tmp7);
+  const unmountEffect = markAsDismissed(5245).useUnmountEffect(tmp7);
   if (cResult[4] !== U) {
     class A {
       constructor() {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
       }
     }
   }
-  const tmpResult = markAsDismissed(5224);
+  const tmpResult = markAsDismissed(5245);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, A, constants.PREMIUM_UPSELL_FILE_UPLOAD));
   if (cResult[6] !== onPress) {
     class M {
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
         return;
       }
     }
-    const tmp16 = jsx(tmp(18160).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+    const tmp16 = jsx(tmp(18243).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
     cResult[10] = tmp16;
     const tmp15 = tmp16;
   } else {
@@ -201,9 +201,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
         return;
       }
     }
-    const stringResult = obj5.string(tmp10(2628)["Uty2/X"]);
+    const stringResult = obj5.string(tmp10(2638)["Uty2/X"]);
     const intl = tmp(1128).intl;
-    const stringResult1 = intl.string(tmp10(2628).VAgI8Q);
+    const stringResult1 = intl.string(tmp10(2638).VAgI8Q);
     cResult[13] = stringResult;
     cResult[14] = stringResult1;
     let tmp21 = stringResult1;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
         return;
       }
     }
-    const stringResult2 = obj6.string(tmp10(2628).mRy6sO);
+    const stringResult2 = obj6.string(tmp10(2638).mRy6sO);
     cResult[15] = stringResult2;
     const tmp24 = stringResult2;
   } else {
@@ -265,13 +265,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
       }
     }
     const obj4 = { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 };
-    const tmp31 = jsx(tmp(10660).PromoSheet, { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 });
+    const tmp31 = jsx(tmp(10803).PromoSheet, { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 });
     cResult[19] = tmp14;
     cResult[20] = tmp27;
     cResult[21] = tmp17;
     cResult[22] = tmp31;
   }
-  const tmp28 = jsx(markAsDismissed(5205).Button, { grow: true, size: "lg", variant: "primary", loading, text: tmp24, onPress: null });
+  const tmp28 = jsx(markAsDismissed(5226).Button, { grow: true, size: "lg", variant: "primary", loading, text: tmp24, onPress: null });
   cResult[16] = loading;
   cResult[17] = null;
   cResult[18] = tmp28;
@@ -313,13 +313,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroFil
   const tmp5 = require("usePremiumFeatureUpsellGetNitro")(false, callback1, constants.PREMIUM_UPSELL_FILE_UPLOAD);
   obj2.illustration = <onPress style={tmp.illustration}>{jsx(markAsDismissed(callback[12]).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}</onPress>;
   const intl = markAsDismissed(callback[13]).intl;
-  obj2.title = intl.string(require("module_2628")["Uty2/X"]);
+  obj2.title = intl.string(require("module_2638")["Uty2/X"]);
   const intl2 = markAsDismissed(callback[13]).intl;
-  obj2.description = intl2.string(require("module_2628").VAgI8Q);
+  obj2.description = intl2.string(require("module_2638").VAgI8Q);
   obj2.onDismiss = callback3;
   const obj4 = { grow: true, size: "lg", variant: "primary", loading, text: null, onPress: null };
   const intl3 = markAsDismissed(callback[13]).intl;
-  obj4.text = intl3.string(require("module_2628").mRy6sO);
+  obj4.text = intl3.string(require("module_2638").mRy6sO);
   let tmp9 = null;
   if (!loading) {
     tmp9 = callback2;

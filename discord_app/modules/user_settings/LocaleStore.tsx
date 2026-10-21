@@ -1,9 +1,9 @@
-// === Module 2069: LocaleStore ===
+// === Module 2068: LocaleStore ===
 
-// Module 2069 (LocaleStore)
+// Module 2068 (LocaleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DiscordNativeDefault from "DiscordNative" /* 4762 */;
+import DiscordNativeDefault from "DiscordNative" /* 4783 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 
@@ -101,7 +101,7 @@ function handleUpdate() {
   }
   return flag;
 }
-const setAppLocale = fn(2070).setAppLocale;
+const setAppLocale = fn(2069).setAppLocale;
 let locale = fn(1128).intl.currentLocale;
 let global = fn(1128).systemLocale;
 (function getSystemLocale() {

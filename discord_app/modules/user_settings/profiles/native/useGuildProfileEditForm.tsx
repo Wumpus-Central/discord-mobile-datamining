@@ -1,13 +1,13 @@
-// === Module 15761: useGuildProfileEditForm ===
+// === Module 15837: useGuildProfileEditForm ===
 
-// Module 15761 (useGuildProfileEditForm)
+// Module 15837 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8586 */;
-import UserProfileStore from "UserProfileStore" /* 7652 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import SortedGuildStore from "SortedGuildStore" /* 6652 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8613 */;
+import UserProfileStore from "UserProfileStore" /* 7680 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import SortedGuildStore from "SortedGuildStore" /* 6680 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8586).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8613).IGNORE_GUILD_IDS;
 let FormStates = fn(1087).FormStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -560,14 +560,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       closure_3 = tmp3;
       if (!closure_15) {
         if (null != stateFromStores) {
-          const guildMemberChangesForUpdateRequest = stateFromStores(10988).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
+          const guildMemberChangesForUpdateRequest = stateFromStores(11132).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
           closure_131_0 = guildMemberChangesForUpdateRequest;
-          stateFromStores(10988);
+          stateFromStores(11132);
           let id;
           if (selectedGuild != null) {
             id = selectedGuild.id;
           }
-          const profileChangesForUpdateRequest = stateFromStores(10988).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
+          const profileChangesForUpdateRequest = stateFromStores(11132).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
           closure_131_2 = true;
           closure_131_3 = false;
           const _Object = Object;
@@ -578,9 +578,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             }
             const v2 = 1;
             c6 = 1;
-            return { value: stateFromStores(10992).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
+            return { value: stateFromStores(11136).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
           }
-          stateFromStores(10988);
+          stateFromStores(11132);
         }
       }
       yield "IconComponent";
@@ -602,8 +602,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                 assetOrigin = closure_132_1.assetOrigin;
               }
               obj12.avatarAssetOrigin = assetOrigin;
-              const result = stateFromStores(7036).trackUserAvatarUpdated(obj12);
-              stateFromStores(7036);
+              const result = stateFromStores(7064).trackUserAvatarUpdated(obj12);
+              stateFromStores(7064);
             }
           } else {
             let avatar;
@@ -614,16 +614,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
               }
             }
             if (null != avatar) {
-              const aPIError = new stateFromStores(6331).APIError(closure_131_4);
+              const aPIError = new stateFromStores(6353).APIError(closure_131_4);
               const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("avatar");
               stateFromStores = firstFieldErrorMessage;
               if (firstFieldErrorMessage == null) {
                 const intl = stateFromStores(1128).intl;
                 stateFromStores = intl.string(stateFromStores(1128).t.s35OuK);
               }
-              const result1 = stateFromStores(15674).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+              const result1 = stateFromStores(15750).showGenericGuildProfileUpdateFailureToast(stateFromStores);
               closure_131_3 = true;
-              stateFromStores(15674);
+              stateFromStores(15750);
             }
           }
           let tmp50 = closure_131_2;
@@ -653,12 +653,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           ok1 = closure_131_8.ok;
         }
         if (!ok1) {
-          const aPIError1 = new stateFromStores(6331).APIError(closure_131_8);
+          const aPIError1 = new stateFromStores(6353).APIError(closure_131_8);
           const firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
           if (null != firstFieldErrorMessage2) {
-            const result2 = stateFromStores(15674).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+            const result2 = stateFromStores(15750).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
             closure_131_3 = true;
-            stateFromStores(15674);
+            stateFromStores(15750);
           }
         }
         let tmp24 = closure_131_2;
@@ -681,8 +681,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       }
       if (!tmp62) {
         const intl2 = stateFromStores(1128).intl;
-        const result3 = stateFromStores(15674).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1128).t.s35OuK));
-        stateFromStores(15674);
+        const result3 = stateFromStores(15750).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1128).t.s35OuK));
+        stateFromStores(15750);
       }
       if (closure_131_2) {
         closure_132_13.delay();

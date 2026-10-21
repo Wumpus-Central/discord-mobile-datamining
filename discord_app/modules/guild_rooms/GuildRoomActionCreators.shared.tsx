@@ -1,16 +1,16 @@
-// === Module 7781: _guildRoomConnect ===
+// === Module 7809: _guildRoomConnect ===
 
-// Module 7781 (_guildRoomConnect)
+// Module 7809 (_guildRoomConnect)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 7783 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 7784 */;
-import GuildRoomAnalytics from "GuildRoomAnalytics" /* 7803 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 7813 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 7811 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 7812 */;
+import GuildRoomAnalytics from "GuildRoomAnalytics" /* 7831 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 7841 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 7782 */;
+import GuildRoomStore from "GuildRoomStore" /* 7810 */;
 
 require = fn;
 let closure_8 = async function _guildRoomConnect(arg0) {

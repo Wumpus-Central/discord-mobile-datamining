@@ -1,8 +1,8 @@
-// === Module 10922: useCanOpenBadgeDirectoryFromProfile ===
+// === Module 11066: useCanOpenBadgeDirectoryFromProfile ===
 
-// Module 10922 (useCanOpenBadgeDirectoryFromProfile)
+// Module 11066 (useCanOpenBadgeDirectoryFromProfile)
 import c from "c" /* 576 */;
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10921 */;
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 11065 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// === Module 7152: GuildOnboardingUtils ===
+// === Module 7180: GuildOnboardingUtils ===
 
-// Module 7152 (GuildOnboardingUtils)
+// Module 7180 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
-import StringUtils from "StringUtils" /* 2034 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4885 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7148 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7153 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6457 */;
-import GuildChannelStore from "GuildChannelStore" /* 4878 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+import StringUtils from "StringUtils" /* 2033 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4906 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7176 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7181 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6479 */;
+import GuildChannelStore from "GuildChannelStore" /* 4899 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 
 const require = globalThis.__r;
 
@@ -79,11 +79,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4878).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7147).OnboardingConnectionType;
+let closure_7 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(7175).OnboardingConnectionType;
 const Constants = fn(1087);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4866).GuildMemberFlags;
+const GuildMemberFlags = fn(4887).GuildMemberFlags;
 let date = new Date(1682488800000);
 fn(558);
 let ReactCompilerGating = fn(558);

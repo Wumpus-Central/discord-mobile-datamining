@@ -1,6 +1,6 @@
-// === Module 5600: CollectiblesShopHomeStore ===
+// === Module 5621: CollectiblesShopHomeStore ===
 
-// Module 5600 (CollectiblesShopHomeStore)
+// Module 5621 (CollectiblesShopHomeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 
@@ -15,7 +15,6 @@ const map5 = new Map();
 const map6 = new Map();
 const map7 = new Map();
 let c10;
-let c11;
 const Store = initializeDefault.Store;
 class CollectiblesShopHomesStore extends Store {
 }
@@ -55,9 +54,6 @@ prototype["getHasKnownStaleData"] = function getHasKnownStaleData(arg0) {
 prototype["getShopHomeConfigOverride"] = function getShopHomeConfigOverride() {
   return c10;
 };
-prototype["getShopLayoutUrlOverride"] = function getShopLayoutUrlOverride() {
-  return c11;
-};
 CollectiblesShopHomesStore.displayName = "CollectiblesShopHomesStore";
 const collectiblesShopHomesStore = new CollectiblesShopHomesStore(DispatcherDefault, {
   COLLECTIBLES_SHOP_HOME_FETCH: function handleFetchShopHome(tab) {
@@ -88,9 +84,6 @@ const collectiblesShopHomesStore = new CollectiblesShopHomesStore(DispatcherDefa
   COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE: function handleSetShopHomeConfigOverride(shopHomeConfigOverride) {
     c10 = shopHomeConfigOverride.shopHomeConfigOverride;
   },
-  COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE: function handleSetShopLayoutUrlOverride(shopLayoutUrlOverride) {
-    c11 = shopLayoutUrlOverride.shopLayoutUrlOverride;
-  },
   LOGOUT: function reset() {
     map6.clear();
     map7.clear();
@@ -101,7 +94,6 @@ const collectiblesShopHomesStore = new CollectiblesShopHomesStore(DispatcherDefa
     map1.clear();
     map5.clear();
     c10 = undefined;
-    c11 = undefined;
   }
 });
 const size = fn(2);

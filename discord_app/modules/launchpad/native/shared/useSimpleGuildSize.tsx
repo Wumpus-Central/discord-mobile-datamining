@@ -1,6 +1,6 @@
-// === Module 18435: useSimpleGuildSize ===
+// === Module 18514: useSimpleGuildSize ===
 
-// Module 18435 (useSimpleGuildSize)
+// Module 18514 (useSimpleGuildSize)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

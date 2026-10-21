@@ -1,18 +1,18 @@
-// === Module 6873: EmailVerificationModal ===
+// === Module 6901: EmailVerificationModal ===
 
-// Module 6873 (EmailVerificationModal)
+// Module 6901 (EmailVerificationModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import useInitialValueDefault from "useInitialValue" /* 5560 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6872 */;
-import NavigatorHeader from "NavigatorHeader" /* 6875 */;
-import ChangeEmailCollectReasonsDefault from "ChangeEmailCollectReasons" /* 6933 */;
-import ChangeEmailWarningDefault from "ChangeEmailWarning" /* 6941 */;
-import ConfirmEmailChangeCodeDefault from "ConfirmEmailChangeCode" /* 6956 */;
-import EnterEmailDefault from "EnterEmail" /* 7027 */;
-import Navigator from "Navigator" /* 7046 */;
+import useInitialValueDefault from "useInitialValue" /* 5581 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6900 */;
+import NavigatorHeader from "NavigatorHeader" /* 6903 */;
+import ChangeEmailCollectReasonsDefault from "ChangeEmailCollectReasons" /* 6961 */;
+import ChangeEmailWarningDefault from "ChangeEmailWarning" /* 6969 */;
+import ConfirmEmailChangeCodeDefault from "ConfirmEmailChangeCode" /* 6984 */;
+import EnterEmailDefault from "EnterEmail" /* 7055 */;
+import Navigator from "Navigator" /* 7074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -106,7 +106,7 @@ function getScreens(initiallyVerified) {
   obj2[VerificationModalScenes.CHANGE_EMAIL_COMPLETE] = obj25;
   return obj2;
 }
-const resetChangeEmailStore = fn(6874).resetChangeEmailStore;
+const resetChangeEmailStore = fn(6902).resetChangeEmailStore;
 const VerificationModalScenes = fn(1087).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

@@ -1,8 +1,8 @@
-// === Module 15935: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 16011: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 15935 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 16011 (StaffOnlyFindYourFriendsDeletionSetting)
 import c from "c" /* 576 */;
-import _mod4863 from "module_4863" /* 4863 */;
+import _mod4884 from "module_4884" /* 4884 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -109,9 +109,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFind
   } else {
     first = cResult[0];
   }
-  return closure_6(first, _mod4863.shallow);
+  return closure_6(first, _mod4884.shallow);
 }) : (function useFindYourFriendsDeletionIsLoading() {
-  return closure_6((isLoading) => isLoading.isLoading, _mod4863.shallow);
+  return closure_6((isLoading) => isLoading.isLoading, _mod4884.shallow);
 });
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
@@ -119,7 +119,7 @@ ReactCompilerGating = fn(558);
 function useIsFindYourFriendsDeletionDisabled() {
   return closure_8();
 }
-const SettingBuilders = fn(11111);
+const SettingBuilders = fn(11155);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
   const cResult = c.c(2);
   const tmp2 = closure_8();
@@ -146,7 +146,7 @@ const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(8280).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8308).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: useIsFindYourFriendsDeletionDisabled,
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -158,7 +158,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(15936).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16012).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
     const cResult = c.c(2);
     const tmp2 = closure_8();

@@ -1,12 +1,12 @@
-// === Module 8309: WelcomeCTAUtils ===
+// === Module 8337: WelcomeCTAUtils ===
 
-// Module 8309 (WelcomeCTAUtils)
+// Module 8337 (WelcomeCTAUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7515 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7543 */;
 import UserStore from "UserStore" /* 1392 */;
 
-const WELCOME_STICKERS = fn(8310).WELCOME_STICKERS;
+const WELCOME_STICKERS = fn(8338).WELCOME_STICKERS;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_cta/WelcomeCTAUtils.tsx");

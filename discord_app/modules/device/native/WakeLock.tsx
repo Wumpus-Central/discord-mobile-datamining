@@ -1,7 +1,7 @@
-// === Module 11382: WakeLock ===
+// === Module 11432: WakeLock ===
 
-// Module 11382 (WakeLock)
-import NativeScreenWakeLockModuleDefault from "NativeScreenWakeLockModule" /* 11383 */;
+// Module 11432 (WakeLock)
+import NativeScreenWakeLockModuleDefault from "NativeScreenWakeLockModule" /* 11433 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

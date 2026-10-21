@@ -1,17 +1,17 @@
-// === Module 14275: OrbBadgePreview ===
+// === Module 14350: OrbBadgePreview ===
 
-// Module 14275 (OrbBadgePreview)
+// Module 14350 (OrbBadgePreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import useCurrentUser from "useCurrentUser" /* 8604 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9378 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10859 */;
+import useCurrentUser from "useCurrentUser" /* 8631 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9406 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11003 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

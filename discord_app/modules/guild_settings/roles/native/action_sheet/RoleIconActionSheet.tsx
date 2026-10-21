@@ -1,18 +1,18 @@
-// === Module 18881: RoleIconActionSheet ===
+// === Module 18958: RoleIconActionSheet ===
 
-// Module 18881 (RoleIconActionSheet)
+// Module 18958 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import TableRow from "TableRow" /* 6854 */;
-import TableRowGroup from "TableRowGroup" /* 6938 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7197 */;
-import ActionSheet from "ActionSheet" /* 7247 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 18878 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import TableRow from "TableRow" /* 6882 */;
+import TableRowGroup from "TableRowGroup" /* 6966 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7225 */;
+import ActionSheet from "ActionSheet" /* 7275 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 18955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 18864 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 18941 */;
 
 const require = globalThis.__r;
 
@@ -134,12 +134,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
               closure_129_0 = undefined;
               let base64;
               let mimeType;
-              roleId(5171).hideActionSheet();
-              const obj8 = roleId(5171);
+              roleId(5192).hideActionSheet();
+              const obj8 = roleId(5192);
               const obj6 = { size, preferredMimeType: "image/png" };
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: _var(8102).openImagePicker(obj6), done: false };
+              const obj7 = { value: _var(8130).openImagePicker(obj6), done: false };
               return obj7;
             }
           } else if (arg0 === 1) {
@@ -162,16 +162,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
               }
               if (closure_2_9.includes(c0)) {
                 const obj = _var(1496);
-                if (dataUriFileSizeResult <= _var(18882).ROLE_ICON_MAX_FILE_SIZE) {
-                  _var(18878).updateRoleIcon(closure_1, base64, null);
-                  const obj2 = _var(18878);
+                if (dataUriFileSizeResult <= _var(18959).ROLE_ICON_MAX_FILE_SIZE) {
+                  _var(18955).updateRoleIcon(closure_1, base64, null);
+                  const obj2 = _var(18955);
                 }
                 dataUriFileSizeResult = _var(1496).dataUriFileSize(base64);
               }
             }
             const intl = _var(1128).intl;
-            _var(5624).presentError(intl.string(_var(1128).t.HFyKsa));
-            const obj3 = _var(5624);
+            _var(5644).presentError(intl.string(_var(1128).t.HFyKsa));
+            const obj3 = _var(5644);
           }
         } catch (tmp30) {
           c4 = tmp;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
       let obj2 = { title: null };
       let intl = tmp(1128).intl;
       obj2.title = intl.string(tmp(1128).t.B9grJw);
-      const tmp14 = closure_7(tmp(7197).BottomSheetTitleHeader, obj2);
+      const tmp14 = closure_7(tmp(7225).BottomSheetTitleHeader, obj2);
       cResult[11] = tmp14;
       const tmp13 = tmp14;
     } else {
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
       let obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl2 = tmp(1128).intl;
       obj3.children = intl2.string(tmp(1128).t.I3YQeV);
-      const tmp16 = closure_7(tmp(5195).Text, obj3);
+      const tmp16 = closure_7(tmp(5216).Text, obj3);
       cResult[12] = tmp16;
       const tmp15 = tmp16;
     } else {
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
         }
       }
       let obj4 = { label: tmp18, subLabel: tmp17, onPress: tmp9 };
-      let tmp22 = closure_7(tmp(6854).TableRow, obj4);
+      let tmp22 = closure_7(tmp(6882).TableRow, obj4);
       cResult[15] = tmp9;
       cResult[16] = tmp22;
     } else {
@@ -517,7 +517,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
         }
       }
       let obj6 = { label: tmp23, onPress: tmp10 };
-      const tmp26 = closure_7(tmp(6854).TableRow, obj6);
+      const tmp26 = closure_7(tmp(6882).TableRow, obj6);
       cResult[18] = tmp10;
       cResult[19] = tmp26;
     } else {
@@ -584,9 +584,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
       const obj9 = { hasIcons: false, children: null };
       const items3 = [tmp21, tmp25, tmp27];
       obj9.children = items3;
-      items2[2] = closure_8(tmp(6938).TableRowGroup, obj9);
+      items2[2] = closure_8(tmp(6966).TableRowGroup, obj9);
       obj8.children = items2;
-      const tmp31 = closure_8(tmp(7247).ActionSheet, obj8);
+      const tmp31 = closure_8(tmp(7275).ActionSheet, obj8);
       cResult[23] = tmp21;
       cResult[24] = tmp25;
       cResult[25] = tmp27;
@@ -616,7 +616,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
       const intl4 = tmp(1128).intl;
       obj10.label = intl4.string(tmp(1128).t["uY+Nk/"]);
       obj10.onPress = tmp12;
-      tmp28 = closure_7(tmp(6854).TableRow, obj10);
+      tmp28 = closure_7(tmp(6882).TableRow, obj10);
     }
     cResult[20] = tmp12;
     cResult[21] = stateFromStores;
@@ -657,18 +657,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(18878).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(18878);
+                  closure_0(18955).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(18955);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(18878);
+                const tmp22 = closure_0(18955);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(18882).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(18959).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -676,8 +676,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
             if (1 === tmp7) {
               c6 = 0;
               const intl = closure_0(1128).intl;
-              closure_0(5624).presentError(intl.string(closure_0(1128).t.R0RpRX));
-              const obj2 = closure_0(5624);
+              closure_0(5644).presentError(intl.string(closure_0(1128).t.R0RpRX));
+              const obj2 = closure_0(5644);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -711,7 +711,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
       }
       return applyArgumentsResult;
     };
-    const result = guildId(9753).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(9783).openEmojiPickerActionSheet(obj2, "stack");
   }
   cResult[6] = guildId;
   cResult[7] = roleId;
@@ -872,18 +872,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(18878).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(18878);
+                  closure_0(18955).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(18955);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(18878);
+                const tmp22 = closure_0(18955);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(18882).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(18959).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -891,8 +891,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
             if (1 === tmp7) {
               c6 = 0;
               const intl = closure_0(1128).intl;
-              closure_0(5624).presentError(intl.string(closure_0(1128).t.R0RpRX));
-              const obj2 = closure_0(5624);
+              closure_0(5644).presentError(intl.string(closure_0(1128).t.R0RpRX));
+              const obj2 = closure_0(5644);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -926,7 +926,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
       }
       return applyArgumentsResult;
     };
-    const result = guildId(9753).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(9783).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;

@@ -1,15 +1,15 @@
-// === Module 18433: SimpleGuildContainer ===
+// === Module 18512: SimpleGuildContainer ===
 
-// Module 18433 (SimpleGuildContainer)
+// Module 18512 (SimpleGuildContainer)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
-import spring from "spring" /* 5208 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 9631 */;
-import GuildsBarActivityIndicatorDefault from "GuildsBarActivityIndicator" /* 17524 */;
-import CutoutImageDefault from "CutoutImage" /* 18434 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
+import spring from "spring" /* 5229 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 9661 */;
+import GuildsBarActivityIndicatorDefault from "GuildsBarActivityIndicator" /* 17605 */;
+import CutoutImageDefault from "CutoutImage" /* 18513 */;
 import noop from "module_19" /* 19 */;
 
-const GuildsBarActivityIndicator = isCurrentUserConnected(17524);
+const GuildsBarActivityIndicator = isCurrentUserConnected(17605);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
 const springConfig = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true, restSpeedThreshold: 1 };
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_11 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleGuildContainerBadge(arg0) {

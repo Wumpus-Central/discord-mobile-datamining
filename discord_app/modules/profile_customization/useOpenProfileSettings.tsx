@@ -1,14 +1,14 @@
-// === Module 10990: useOpenProfileSettings ===
+// === Module 11134: useOpenProfileSettings ===
 
-// Module 10990 (useOpenProfileSettings)
+// Module 11134 (useOpenProfileSettings)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1087 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1097 */;
-import openUserSettings from "openUserSettings" /* 7439 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10992 */;
+import openUserSettings from "openUserSettings" /* 7467 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11136 */;
 import UserStore from "UserStore" /* 1392 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10927 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8586 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11071 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8613 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

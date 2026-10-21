@@ -1,30 +1,30 @@
-// === Module 13586: ChannelRowPreview ===
+// === Module 13653: ChannelRowPreview ===
 
-// Module 13586 (ChannelRowPreview)
+// Module 13653 (ChannelRowPreview)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 4776 */;
-import createStyles from "createStyles" /* 4945 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import useToken from "useToken" /* 5213 */;
-import useFontScale from "useFontScale" /* 5214 */;
-import LinkIcon from "LinkIcon" /* 5640 */;
-import RowGeneratorDefault from "RowGenerator" /* 8080 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8084 */;
-import ImageIcon from "ImageIcon" /* 8507 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8558 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 9648 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9650 */;
-import AttachmentIcon from "AttachmentIcon" /* 10352 */;
-import MusicIcon from "MusicIcon" /* 10576 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10862 */;
-import VideoIcon from "VideoIcon" /* 11213 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11932 */;
-import ChannelListLayout from "ChannelListLayout" /* 11935 */;
-import StickerIcon from "StickerIcon" /* 13272 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 13574 */;
+import UserSettings from "UserSettings" /* 4797 */;
+import createStyles from "createStyles" /* 4966 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import useToken from "useToken" /* 5234 */;
+import useFontScale from "useFontScale" /* 5235 */;
+import LinkIcon from "LinkIcon" /* 5660 */;
+import RowGeneratorDefault from "RowGenerator" /* 8108 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8112 */;
+import ImageIcon from "ImageIcon" /* 8534 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8585 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9678 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9680 */;
+import AttachmentIcon from "AttachmentIcon" /* 10381 */;
+import MusicIcon from "MusicIcon" /* 10605 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11006 */;
+import VideoIcon from "VideoIcon" /* 11257 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11980 */;
+import ChannelListLayout from "ChannelListLayout" /* 11983 */;
+import StickerIcon from "StickerIcon" /* 13340 */;
+import useFormattedMessagePreview from "useFormattedMessagePreview" /* 13641 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
 
 const require = globalThis.__r;
 
@@ -556,7 +556,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function NativeChanne
     gifAutoPlay = false;
   }
   ({ textColor, gradientStyles, gradientColors } = arg0);
-  const tmp = gifAutoPlay(5166)();
+  const tmp = gifAutoPlay(5187)();
   let obj = createStyles;
   dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT })(tmp);
   const obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
@@ -573,7 +573,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function NativeChanne
     obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  return closure_8(gifAutoPlay(9700), {
+  return closure_8(gifAutoPlay(9730), {
     pointerEvents: "none",
     horizontalOffset: 0,
     modifyRow(message) {

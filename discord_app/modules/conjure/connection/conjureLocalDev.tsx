@@ -1,6 +1,6 @@
-// === Module 11029: conjureLocalDev ===
+// === Module 10684: conjureLocalDev ===
 
-// Module 11029 (conjureLocalDev)
+// Module 10684 (conjureLocalDev)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/connection/conjureLocalDev.tsx");

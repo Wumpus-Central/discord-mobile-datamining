@@ -1,9 +1,9 @@
-// === Module 9099: VoiceStateIconUtils ===
+// === Module 9126: VoiceStateIconUtils ===
 
-// Module 9099 (VoiceStateIconUtils)
+// Module 9126 (VoiceStateIconUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import VoiceStateStore from "VoiceStateStore" /* 5591 */;
+import VoiceStateStore from "VoiceStateStore" /* 5612 */;
 
 const require = fn;
 function isStableVoiceStateEqual(arg0, arg1) {

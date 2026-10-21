@@ -1,35 +1,35 @@
-// === Module 18042: IntegrationsSettingsWebhooksOverview ===
+// === Module 18123: IntegrationsSettingsWebhooksOverview ===
 
-// Module 18042 (IntegrationsSettingsWebhooksOverview)
+// Module 18123 (IntegrationsSettingsWebhooksOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
-import NavScrim from "NavScrim" /* 5553 */;
-import Stack_Stack from "Stack/Stack" /* 5935 */;
-import Form from "Form" /* 8883 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 18044 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
+import NavScrim from "NavScrim" /* 5574 */;
+import Stack_Stack from "Stack/Stack" /* 5957 */;
+import Form from "Form" /* 8910 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 18125 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4878 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4899 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
-import WebhooksStore from "WebhooksStore" /* 18043 */;
+import WebhooksStore from "WebhooksStore" /* 18124 */;
 
 require = fn;
 let closure_3 = ["channelId", "user"];
-let GuildChannelStore = fn(4878);
+let GuildChannelStore = fn(4899);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1087);
 ({ HelpdeskArticles: closure_15, ChannelSettingsSections: closure_16, NON_USER_BOT_DISCRIMINATOR: closure_17, Permissions: closure_18, WebhookTypes: closure_19 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -559,7 +559,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
-  const items = [closure_20(webhookType(5195).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
+  const items = [closure_20(webhookType(5216).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
   let tmp4Result = webhookType === constants3.INCOMING;
   if (tmp4Result) {
     let obj = { guild: self.props.guild, channel: self.props.channel };
@@ -567,7 +567,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(18047).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(18128).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1128).intl;
       dkHRkE = webhookType(1128).t.dkHRkE;
@@ -589,7 +589,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
         })
     };
     const obj4 = { children: null };
-    items[2] = closure_20(webhookType(6938).TableRowGroup, obj3);
+    items[2] = closure_20(webhookType(6966).TableRowGroup, obj3);
     obj4.children = items;
     return closure_22(closure_21, obj4);
   }
@@ -602,7 +602,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return closure_1_22(guild, obj);
 };
-WebhooksOverview.contextType = fn(4999).ThemeContext;
+WebhooksOverview.contextType = fn(5020).ThemeContext;
 let closure_28 = [];
 ReactCompilerGating = fn(558);
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

@@ -1,10 +1,10 @@
-// === Module 9106: MicrophoneSlashIcon ===
+// === Module 9133: MicrophoneSlashIcon ===
 
-// Module 9106 (MicrophoneSlashIcon)
+// Module 9133 (MicrophoneSlashIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5630 */;
-import _mod9107 from "module_9107" /* 9107 */;
+import BaseIconImage from "BaseIconImage" /* 5650 */;
+import _mod9134 from "module_9134" /* 9134 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const MicrophoneSlashIcon = ReactCompilerGating.isReactCompilerEnabled() 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9107;
+    const tmpResult = _mod9134;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const MicrophoneSlashIcon = ReactCompilerGating.isReactCompilerEnabled() 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9107, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9134, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,12 +1,12 @@
-// === Module 13371: ApplicationIconAndName ===
+// === Module 13438: ApplicationIconAndName ===
 
-// Module 13371 (ApplicationIconAndName)
+// Module 13438 (ApplicationIconAndName)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5195 */;
+import Text_Text from "Text/Text" /* 5216 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4945 */;
+import createStyles from "createStyles" /* 4966 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 18485: FriendInviteUtils ===
+// === Module 18564: FriendInviteUtils ===
 
-// Module 18485 (FriendInviteUtils)
+// Module 18564 (FriendInviteUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8798 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8825 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
 
 require = fn;
 const size = fn(2);

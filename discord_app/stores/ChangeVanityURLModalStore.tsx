@@ -1,6 +1,6 @@
-// === Module 18899: ChangeVanityURLModalStore ===
+// === Module 18976: ChangeVanityURLModalStore ===
 
-// Module 18899 (ChangeVanityURLModalStore)
+// Module 18976 (ChangeVanityURLModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1087 */;

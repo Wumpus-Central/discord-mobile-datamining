@@ -1,26 +1,27 @@
-// === Module 12828: CheckpointGameTimeStatsScreen ===
+// === Module 12896: CheckpointGameTimeStatsScreen ===
 
-// Module 12828 (CheckpointGameTimeStatsScreen)
+// Module 12896 (CheckpointGameTimeStatsScreen)
 import _mod17 from "module_17" /* 17 */;
+import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3078 from "module_3078" /* 3078 */;
-import CheckpointConstants from "CheckpointConstants" /* 5973 */;
-import CheckpointTextDefault from "CheckpointText" /* 12797 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12799 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12801 */;
-import NumberAnimationDefault from "NumberAnimation" /* 12803 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12804 */;
-import _modDef12829 from "module_12829" /* 12829 */;
-import CheckpointStore from "CheckpointStore" /* 12779 */;
+import util from "util" /* 1128 */;
+import _modDef3088 from "module_3088" /* 3088 */;
+import CheckpointConstants from "CheckpointConstants" /* 5995 */;
+import CalendarIcon from "CalendarIcon" /* 9007 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 12846 */;
+import CheckpointTextDefault from "CheckpointText" /* 12861 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12863 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12866 */;
+import NumberAnimationDefault from "NumberAnimation" /* 12870 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12871 */;
+import _modDef12897 from "module_12897" /* 12897 */;
+import CheckpointStore from "CheckpointStore" /* 12843 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4945 */;
+import createStyles from "createStyles" /* 4966 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const initialize = prop1(504);
-const util = prop1(1128);
-const CalendarIcon = prop1(8980);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -38,8 +39,7 @@ let obj4 = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/CheckpointGameTimeStatsScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointGameTimeStatsScreen() {
-  let prop1 = require;
-  const cResult = c.c(69);
+  const cResult = c.c(53);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [CheckpointStore];
@@ -73,174 +73,93 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         if (cResult[5] === tmp4.copy) {
           if (cResult[6] === tmp4.image) {
             if (cResult[7] === tmp4.imageContainer) {
-              if (cResult[8] === tmp4.title) {
-                if (cResult[9] === tmp4.titleText) {
-                  let tmp11 = cResult[10];
-                  let tmp12 = cResult[11];
-                  let tmp13 = cResult[12];
-                  let tmp14 = cResult[13];
-                  let tmp15 = cResult[14];
-                  let tmp16 = cResult[15];
-                  let tmp17 = cResult[16];
-                  let str = cResult[17];
-                  let tmp18 = cResult[18];
-                  let tmp19 = cResult[19];
-                  let tmp20 = cResult[20];
-                  let tmp21 = cResult[21];
-                  let tmp22 = cResult[22];
-                  let tmp23 = cResult[23];
-                  let tmp24 = cResult[24];
-                  let tmp25 = cResult[25];
-                  let tmp26 = cResult[26];
-                }
-                if (cResult[33] === tmp11) {
-                  if (cResult[34] === str) {
-                    if (cResult[35] === tmp18) {
-                      if (cResult[36] === tmp19) {
-                        let tmp48 = cResult[37];
-                      }
-                      if (cResult[38] === tmp12) {
-                        if (cResult[39] === tmp48) {
-                          if (cResult[40] === tmp20) {
-                            if (cResult[41] === tmp21) {
-                              let tmp51 = cResult[42];
-                            }
-                            const _HermesInternal = HermesInternal;
-                            const combined = "" + tmp16 + " " + tmp25;
-                            if (cResult[43] !== tmp16) {
-                              const obj2 = { end: tmp16 };
-                              const tmp58 = timestampProducer(NumberAnimationDefault, obj2);
-                              cResult[43] = tmp16;
-                              cResult[44] = tmp58;
-                              let tmp55 = tmp58;
-                            } else {
-                              tmp55 = cResult[44];
-                            }
-                            if (cResult[45] === tmp4.number) {
-                              if (cResult[46] === combined) {
-                                if (cResult[47] === tmp55) {
-                                  let tmp59 = cResult[48];
+              if (cResult[8] === tmp4.number) {
+                if (cResult[9] === tmp4.title) {
+                  if (cResult[10] === tmp4.titleText) {
+                    let tmp11 = cResult[11];
+                    let tmp12 = cResult[12];
+                    let tmp13 = cResult[13];
+                    let tmp14 = cResult[14];
+                    let str = cResult[15];
+                    let tmp15 = cResult[16];
+                    let tmp16 = cResult[17];
+                    let tmp17 = cResult[18];
+                    let tmp18 = cResult[19];
+                    let tmp19 = cResult[20];
+                    let tmp20 = cResult[21];
+                    let tmp21 = cResult[22];
+                  }
+                  if (cResult[34] === tmp11) {
+                    if (cResult[35] === str) {
+                      if (cResult[36] === tmp15) {
+                        if (cResult[37] === tmp16) {
+                          let tmp52 = cResult[38];
+                        }
+                        if (cResult[39] === tmp12) {
+                          if (cResult[40] === tmp52) {
+                            if (cResult[41] === tmp17) {
+                              if (cResult[42] === tmp18) {
+                                if (cResult[43] === tmp19) {
+                                  let tmp55 = cResult[44];
                                 }
-                                if (cResult[49] === tmp16) {
-                                  if (cResult[50] === tmp26) {
-                                    if (cResult[52] === tmp17) {
-                                      if (cResult[53] === tmp63) {
-                                        let tmp68 = cResult[54];
+                                if (cResult[45] === tmp13) {
+                                  if (cResult[46] === tmp55) {
+                                    if (cResult[47] === tmp20) {
+                                      if (cResult[48] === tmp21) {
+                                        let tmp58 = cResult[49];
                                       }
-                                      if (cResult[55] === tmp13) {
-                                        if (cResult[56] === tmp51) {
-                                          if (cResult[57] === tmp59) {
-                                            if (cResult[58] === tmp68) {
-                                              if (cResult[59] === tmp22) {
-                                                let tmp72 = cResult[60];
-                                              }
-                                              if (cResult[61] === tmp14) {
-                                                if (cResult[62] === tmp72) {
-                                                  if (cResult[63] === tmp23) {
-                                                    if (cResult[64] === tmp24) {
-                                                      let tmp75 = cResult[65];
-                                                    }
-                                                    if (cResult[66] === tmp15) {
-                                                      if (cResult[67] === tmp75) {
-                                                        let tmp78 = cResult[68];
-                                                      }
-                                                      return tmp78;
-                                                    }
-                                                    const obj3 = { children: tmp75 };
-                                                    const tmp80 = timestampProducer(tmp15, obj3);
-                                                    cResult[66] = tmp15;
-                                                    cResult[67] = tmp75;
-                                                    cResult[68] = tmp80;
-                                                    tmp78 = tmp80;
-                                                  }
-                                                }
-                                              }
-                                              const obj4 = { style: tmp23, children: null };
-                                              const items1 = [tmp24, tmp72];
-                                              obj4.children = items1;
-                                              const tmp77 = React5(tmp14, obj4);
-                                              cResult[61] = tmp14;
-                                              cResult[62] = tmp72;
-                                              cResult[63] = tmp23;
-                                              cResult[64] = tmp24;
-                                              cResult[65] = tmp77;
-                                              tmp75 = tmp77;
-                                            }
-                                          }
+                                      if (cResult[50] === tmp14) {
+                                        if (cResult[51] === tmp58) {
+                                          let tmp61 = cResult[52];
                                         }
+                                        return tmp61;
                                       }
-                                      const obj5 = { style: tmp22, children: null };
-                                      const items2 = [tmp51, tmp59, tmp68];
-                                      obj5.children = items2;
-                                      const tmp74 = React5(tmp13, obj5);
-                                      cResult[55] = tmp13;
-                                      cResult[56] = tmp51;
-                                      cResult[57] = tmp59;
-                                      cResult[58] = tmp68;
-                                      cResult[59] = tmp22;
-                                      cResult[60] = tmp74;
-                                      tmp72 = tmp74;
+                                      const obj2 = { children: tmp58 };
+                                      const tmp63 = timestampProducer(tmp14, obj2);
+                                      cResult[50] = tmp14;
+                                      cResult[51] = tmp58;
+                                      cResult[52] = tmp63;
+                                      tmp61 = tmp63;
                                     }
-                                    const obj6 = { variant: "heading-lg/medium", accessibilityLabel: tmp17, children: cResult[51] };
-                                    const tmp71 = timestampProducer(CheckpointTextDefault, obj6);
-                                    cResult[52] = tmp17;
-                                    cResult[53] = cResult[51];
-                                    cResult[54] = tmp71;
-                                    tmp68 = tmp71;
                                   }
                                 }
-                                if (null != tmp26) {
-                                  const intl4 = util.intl;
-                                  prop1 = _modDef3078["4FXB/m"];
-                                  const obj7 = {
-                                    numDays: tmp16,
-                                    percent: tmp26,
-                                    percentHook(children, arg1) {
-                                                                      return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
-                                                                    }
-                                  };
-                                  let formatResult = intl4.format(prop1, obj7);
-                                } else {
-                                  const intl3 = util.intl;
-                                  const obj8 = { numDays: tmp16 };
-                                  formatResult = intl3.format(_modDef3078.iCKjh6, obj8);
-                                }
-                                cResult[49] = tmp16;
-                                cResult[50] = tmp26;
-                                cResult[51] = formatResult;
+                                const obj3 = { style: tmp20, children: null };
+                                const items1 = [tmp21, tmp55];
+                                obj3.children = items1;
+                                const tmp60 = React5(tmp13, obj3);
+                                cResult[45] = tmp13;
+                                cResult[46] = tmp55;
+                                cResult[47] = tmp20;
+                                cResult[48] = tmp21;
+                                cResult[49] = tmp60;
+                                tmp58 = tmp60;
                               }
                             }
-                            const obj9 = { accessible: true, accessibilityLabel: combined, style: tmp4.number, children: tmp55 };
-                            const tmp62 = timestampProducer(View, obj9);
-                            cResult[45] = tmp4.number;
-                            cResult[46] = combined;
-                            cResult[47] = tmp55;
-                            cResult[48] = tmp62;
-                            tmp59 = tmp62;
                           }
                         }
+                        const obj4 = { style: tmp17, children: null };
+                        const items2 = [tmp18, tmp19, tmp52];
+                        obj4.children = items2;
+                        const tmp57 = React5(tmp12, obj4);
+                        cResult[39] = tmp12;
+                        cResult[40] = tmp52;
+                        cResult[41] = tmp17;
+                        cResult[42] = tmp18;
+                        cResult[43] = tmp19;
+                        cResult[44] = tmp57;
+                        tmp55 = tmp57;
                       }
-                      const obj10 = { style: tmp20, children: null };
-                      const items3 = [tmp21, tmp48];
-                      obj10.children = items3;
-                      const tmp53 = React5(tmp12, obj10);
-                      cResult[38] = tmp12;
-                      cResult[39] = tmp48;
-                      cResult[40] = tmp20;
-                      cResult[41] = tmp21;
-                      cResult[42] = tmp53;
-                      tmp51 = tmp53;
                     }
                   }
+                  const obj5 = { variant: str, accessibilityLabel: tmp15, children: tmp16 };
+                  const tmp54 = timestampProducer(tmp11, obj5);
+                  cResult[34] = tmp11;
+                  cResult[35] = str;
+                  cResult[36] = tmp15;
+                  cResult[37] = tmp16;
+                  cResult[38] = tmp54;
+                  tmp52 = tmp54;
                 }
-                const obj11 = { variant: str, style: tmp18, children: tmp19 };
-                const tmp50 = timestampProducer(tmp11, obj11);
-                cResult[33] = tmp11;
-                cResult[34] = str;
-                cResult[35] = tmp18;
-                cResult[36] = tmp19;
-                cResult[37] = tmp50;
-                tmp48 = tmp50;
               }
             }
           }
@@ -256,119 +175,146 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     num3 = 0;
   }
   const rounded = Math.round(num3);
-  let prop2;
+  const tmpResult = initialize;
+  let prop1;
   if (stateFromStores != null) {
-    prop2 = stateFromStores.totalDaysPlayedPercentile;
+    prop1 = stateFromStores.totalDaysPlayedPercentile;
   }
-  let bound = null;
-  if (null != prop2) {
-    bound = null;
-    if (prop2 >= 50) {
-      const _Math = Math;
-      const _Math2 = Math;
-      bound = Math.max(1, Math.ceil(100 - prop2));
-    }
-  }
+  const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop1);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3078["4N5p4D"]);
-  if (null != bound) {
+  const stringResult = intl.string(_modDef3088["4N5p4D"]);
+  if (null != checkpointTopPercent) {
     const intl2 = util.intl;
-    const obj12 = {
+    const obj6 = {
       numDays: rounded,
-      percent: bound,
+      percent: checkpointTopPercent,
       percentHook(arg0) {
           return arg0;
         }
     };
-    const formatToPlainStringResult = intl2.formatToPlainString(_modDef3078["4FXB/m"], obj12);
+    const formatToPlainStringResult = intl2.formatToPlainString(_modDef3088["4FXB/m"], obj6);
   }
-  const tmp30Result = CheckpointScreenDefault;
+  const tmp25Result = CheckpointScreenDefault;
   const container = tmp4.container;
-  if (cResult[27] !== tmp4.image) {
-    const obj13 = { uri: _modDef12829, style: tmp4.image };
-    const tmp37 = timestampProducer(CheckpointApngPlayerDefault, obj13);
-    cResult[27] = tmp4.image;
-    cResult[28] = tmp37;
-    let tmp34 = tmp37;
-    const tmp30Result3 = CheckpointApngPlayerDefault;
+  if (cResult[23] !== tmp4.image) {
+    const obj7 = { uri: _modDef12897, style: tmp4.image };
+    const tmp32 = timestampProducer(CheckpointApngPlayerDefault, obj7);
+    cResult[23] = tmp4.image;
+    cResult[24] = tmp32;
+    let tmp29 = tmp32;
+    const tmp25Result4 = CheckpointApngPlayerDefault;
   } else {
-    tmp34 = cResult[28];
+    tmp29 = cResult[24];
   }
-  if (cResult[29] === tmp4.imageContainer) {
-    if (cResult[30] === tmp34) {
-      let tmp38 = cResult[31];
+  if (cResult[25] === tmp4.imageContainer) {
+    if (cResult[26] === tmp29) {
+      let tmp33 = cResult[27];
     }
-    ({ copy, title } = tmp4);
+    const copy = tmp4.copy;
     const _Symbol = Symbol;
-    if (cResult[32] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj14 = { size: "xs", color: CHECKPOINT_PRIMARY };
-      const tmp43 = timestampProducer(CalendarIcon.CalendarIcon, obj14);
-      cResult[32] = tmp43;
-      let tmp40 = tmp43;
+    if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj8 = { size: "xs", color: CHECKPOINT_PRIMARY };
+      const tmp38 = timestampProducer(CalendarIcon.CalendarIcon, obj8);
+      cResult[28] = tmp38;
+      let tmp35 = tmp38;
     } else {
-      tmp40 = cResult[32];
+      tmp35 = cResult[28];
     }
-    const tmp30Result4 = CheckpointTextDefault;
-    const titleText = tmp4.titleText;
-    const toLocaleUpperCaseResult = stringResult.toLocaleUpperCase();
-    let totalDaysPlayed1;
-    if (stateFromStores != null) {
-      totalDaysPlayed1 = stateFromStores.totalDaysPlayed;
+    if (cResult[29] !== tmp4.titleText) {
+      const obj9 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: stringResult.toLocaleUpperCase() };
+      const tmp42 = timestampProducer(CheckpointTextDefault, obj9);
+      cResult[29] = tmp4.titleText;
+      cResult[30] = tmp42;
+      let tmp39 = tmp42;
+      const tmp25Result5 = CheckpointTextDefault;
+    } else {
+      tmp39 = cResult[30];
     }
-    cResult[2] = totalDaysPlayed1;
-    let prop3;
-    if (stateFromStores != null) {
-      prop3 = stateFromStores.totalDaysPlayedPercentile;
+    if (cResult[31] === tmp4.title) {
+      if (cResult[32] === tmp39) {
+        let tmp43 = cResult[33];
+      }
+      const obj10 = { accessible: true, accessibilityLabel: null, style: null, children: null };
+      const _HermesInternal = HermesInternal;
+      obj10.accessibilityLabel = "" + rounded + " " + stringResult;
+      obj10.style = tmp4.number;
+      const obj11 = { end: rounded };
+      obj10.children = timestampProducer(NumberAnimationDefault, obj11);
+      const tmp47 = timestampProducer(View, obj10);
+      const tmp25Result6 = CheckpointTextDefault;
+      if (null != checkpointTopPercent) {
+        const intl4 = util.intl;
+        const obj12 = {
+          numDays: rounded,
+          percent: checkpointTopPercent,
+          percentHook(children, arg1) {
+                  return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
+                }
+        };
+        let formatResult = intl4.format(_modDef3088["4FXB/m"], obj12);
+      } else {
+        const intl3 = util.intl;
+        const obj13 = { numDays: rounded };
+        formatResult = intl3.format(_modDef3088.iCKjh6, obj13);
+      }
+      let totalDaysPlayed1;
+      if (stateFromStores != null) {
+        totalDaysPlayed1 = stateFromStores.totalDaysPlayed;
+      }
+      cResult[2] = totalDaysPlayed1;
+      let prop2;
+      if (stateFromStores != null) {
+        prop2 = stateFromStores.totalDaysPlayedPercentile;
+      }
+      cResult[3] = prop2;
+      cResult[4] = tmp4.container;
+      cResult[5] = tmp4.copy;
+      cResult[6] = tmp4.image;
+      cResult[7] = tmp4.imageContainer;
+      cResult[8] = tmp4.number;
+      cResult[9] = tmp4.title;
+      cResult[10] = tmp4.titleText;
+      cResult[11] = tmp25Result6;
+      cResult[12] = View;
+      cResult[13] = View;
+      cResult[14] = tmp25Result;
+      cResult[15] = "heading-lg/medium";
+      cResult[16] = formatToPlainStringResult;
+      cResult[17] = formatResult;
+      cResult[18] = copy;
+      cResult[19] = tmp43;
+      cResult[20] = tmp47;
+      cResult[21] = container;
+      cResult[22] = tmp33;
+      tmp21 = tmp33;
+      tmp20 = container;
+      tmp19 = tmp47;
+      tmp18 = tmp43;
+      tmp17 = copy;
+      tmp16 = formatResult;
+      tmp15 = formatToPlainStringResult;
+      str = "heading-lg/medium";
+      tmp14 = tmp25Result;
+      tmp13 = View;
+      tmp12 = View;
+      tmp11 = tmp25Result6;
     }
-    cResult[3] = prop3;
-    cResult[4] = tmp4.container;
-    cResult[5] = tmp4.copy;
-    cResult[6] = tmp4.image;
-    cResult[7] = tmp4.imageContainer;
-    cResult[8] = tmp4.title;
-    cResult[9] = tmp4.titleText;
-    cResult[10] = tmp30Result4;
-    cResult[11] = View;
-    cResult[12] = View;
-    cResult[13] = View;
-    cResult[14] = tmp30Result;
-    cResult[15] = rounded;
-    cResult[16] = formatToPlainStringResult;
-    cResult[17] = "heading-md/extrabold";
-    cResult[18] = titleText;
-    cResult[19] = toLocaleUpperCaseResult;
-    cResult[20] = title;
-    cResult[21] = tmp40;
-    cResult[22] = copy;
-    cResult[23] = container;
-    cResult[24] = tmp38;
-    cResult[25] = stringResult;
-    cResult[26] = bound;
-    tmp26 = bound;
-    tmp25 = stringResult;
-    tmp24 = tmp38;
-    tmp23 = container;
-    tmp22 = copy;
-    tmp21 = tmp40;
-    tmp20 = title;
-    tmp19 = toLocaleUpperCaseResult;
-    tmp18 = titleText;
-    str = "heading-md/extrabold";
-    tmp17 = formatToPlainStringResult;
-    tmp16 = rounded;
-    tmp15 = tmp30Result;
-    tmp14 = View;
-    tmp13 = View;
-    tmp12 = View;
-    tmp11 = tmp30Result4;
+    const obj14 = { style: tmp4.title, children: null };
+    const items3 = [tmp35, tmp39];
+    obj14.children = items3;
+    const tmp45 = React5(View, obj14);
+    cResult[31] = tmp4.title;
+    cResult[32] = tmp39;
+    cResult[33] = tmp45;
+    tmp43 = tmp45;
   }
-  const tmp39 = timestampProducer(View, { style: tmp4.imageContainer, children: tmp34 });
-  cResult[29] = tmp4.imageContainer;
-  cResult[30] = tmp34;
-  cResult[31] = tmp39;
-  tmp38 = tmp39;
-  const obj15 = { style: tmp4.imageContainer, children: tmp34 };
-  const prop1Result = initialize;
+  const tmp34 = timestampProducer(View, { style: tmp4.imageContainer, children: tmp29 });
+  cResult[25] = tmp4.imageContainer;
+  cResult[26] = tmp29;
+  cResult[27] = tmp34;
+  tmp33 = tmp34;
+  const obj15 = { style: tmp4.imageContainer, children: tmp29 };
+  const tmpResult2 = CheckpointStatsUtils;
 }) : (function CheckpointGameTimeStatsScreen() {
   const tmp = closure_8();
   const items = [CheckpointStore];
@@ -392,34 +338,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (stateFromStores != null) {
     prop = stateFromStores.totalDaysPlayedPercentile;
   }
-  let bound = null;
-  if (null != prop) {
-    bound = null;
-    if (prop >= 50) {
-      const _Math = Math;
-      const _Math2 = Math;
-      bound = Math.max(1, Math.ceil(100 - prop));
-    }
-  }
+  const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3078["4N5p4D"]);
+  const stringResult = intl.string(_modDef3088["4N5p4D"]);
   let formatToPlainStringResult;
-  if (null != bound) {
+  if (null != checkpointTopPercent) {
     const intl2 = util.intl;
     const obj2 = {
       numDays: rounded,
-      percent: bound,
+      percent: checkpointTopPercent,
       percentHook(arg0) {
           return arg0;
         }
     };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3078["4FXB/m"], obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3088["4FXB/m"], obj2);
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
+  const tmp2Result = CheckpointStatsUtils;
   const obj5 = { uri: null, style: null };
   const tmp8Result = CheckpointScreenDefault;
-  obj5.uri = _modDef12829;
+  obj5.uri = _modDef12897;
   obj5.style = tmp.image;
   obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
   const items1 = [timestampProducer(View, obj4), ];
@@ -437,20 +376,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   items3[1] = timestampProducer(View, { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(NumberAnimationDefault, { end: rounded }) });
   const obj11 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
   const obj10 = { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(NumberAnimationDefault, { end: rounded }) };
-  if (null != bound) {
+  if (null != checkpointTopPercent) {
     const intl4 = util.intl;
     const obj12 = {
       numDays: rounded,
-      percent: bound,
+      percent: checkpointTopPercent,
       percentHook(children, arg1) {
           return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    let formatResult = intl4.format(_modDef3078["4FXB/m"], obj12);
+    let formatResult = intl4.format(_modDef3088["4FXB/m"], obj12);
   } else {
     const intl3 = util.intl;
     const obj13 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3078.iCKjh6, obj13);
+    formatResult = intl3.format(_modDef3088.iCKjh6, obj13);
   }
   const obj14 = { children: null };
   obj11.children = formatResult;

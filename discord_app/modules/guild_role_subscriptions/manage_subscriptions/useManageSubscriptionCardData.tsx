@@ -1,13 +1,13 @@
-// === Module 16329: useManageSubscriptionCardData ===
+// === Module 16405: useManageSubscriptionCardData ===
 
-// Module 16329 (useManageSubscriptionCardData)
+// Module 16405 (useManageSubscriptionCardData)
 import util from "util" /* 1128 */;
-import _modDef2050 from "module_2050" /* 2050 */;
-import PriceUtils from "PriceUtils" /* 7288 */;
+import _modDef2049 from "module_2049" /* 2049 */;
+import PriceUtils from "PriceUtils" /* 7316 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4873 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4894 */;
 
 const require = globalThis.__r;
 
@@ -15,12 +15,12 @@ require = fn;
 function computeSubscriptionInfo(subscription) {
   subscription = subscription.subscription;
   let str = "";
-  const obj = _modDef2050(subscription.currentPeriodEnd);
+  const obj = _modDef2049(subscription.currentPeriodEnd);
   if (null != subscription.price) {
     str = PriceUtils.formatPrice(subscription.price, subscription.currency);
   }
-  const formatResult = _modDef2050(subscription.currentPeriodEnd).format("M/D/YY");
-  const obj4 = { memberSince: _modDef2050(subscription.createdAt).format("M/D/YY"), nextRenewalDate: formatResult, nextRenewalLabel: null, subscriptionPrice: null, isCancelled: null, isPastDue: null, isTrial: null };
+  const formatResult = _modDef2049(subscription.currentPeriodEnd).format("M/D/YY");
+  const obj4 = { memberSince: _modDef2049(subscription.createdAt).format("M/D/YY"), nextRenewalDate: formatResult, nextRenewalLabel: null, subscriptionPrice: null, isCancelled: null, isPastDue: null, isTrial: null };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;

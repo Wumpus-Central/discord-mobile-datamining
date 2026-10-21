@@ -1,8 +1,8 @@
-// === Module 7253: Constants ===
+// === Module 7281: Constants ===
 
-// Module 7253 (Constants)
+// Module 7281 (Constants)
 import native from "native" /* 1202 */;
-import IconSize from "IconSize" /* 6973 */;
+import IconSize from "IconSize" /* 7001 */;
 import size from "module_2" /* 2 */;
 
 const XXLARGE = native.AvatarSizes.XXLARGE;

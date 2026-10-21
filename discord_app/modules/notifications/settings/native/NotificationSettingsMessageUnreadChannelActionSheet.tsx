@@ -1,18 +1,18 @@
-// === Module 13610: NotificationSettingsMessageUnreadChannelActionSheet ===
+// === Module 13677: NotificationSettingsMessageUnreadChannelActionSheet ===
 
-// Module 13610 (NotificationSettingsMessageUnreadChannelActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7161 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7166 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10796 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 13609 */;
+// Module 13677 (NotificationSettingsMessageUnreadChannelActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7189 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7194 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10940 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 13676 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1087).UserNotificationSettings;
-const UnreadSetting = fn(6656).UnreadSetting;
+const UnreadSetting = fn(6684).UnreadSetting;
 let closure_6 = fn(1097).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

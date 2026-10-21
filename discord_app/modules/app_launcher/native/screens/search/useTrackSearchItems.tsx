@@ -1,6 +1,6 @@
-// === Module 11971: useTrackSearchItems ===
+// === Module 12019: useTrackSearchItems ===
 
-// Module 11971 (useTrackSearchItems)
+// Module 12019 (useTrackSearchItems)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -59,10 +59,10 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled() 
             ({ applicationId, commandId } = dependencyMap(isViewable.item));
             const tmp5 = dependencyMap(isViewable.item);
             const obj2 = { type: closure_0(1275).ImpressionTypes.VIEW, name: closure_0(1275).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM, properties: null };
-            const obj3 = { location: closure_0(5595).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
+            const obj3 = { location: closure_0(5616).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
             obj2.properties = obj3;
-            closure_0(9291).trackImpression(obj2, false);
-            const obj = closure_0(9291);
+            closure_0(9319).trackImpression(obj2, false);
+            const obj = closure_0(9319);
           }
         }
       }
@@ -98,10 +98,10 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled() 
             ({ applicationId, commandId } = dependencyMap(isViewable.item));
             const tmp5 = dependencyMap(isViewable.item);
             const obj2 = { type: closure_0(1275).ImpressionTypes.VIEW, name: closure_0(1275).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM, properties: null };
-            const obj3 = { location: closure_0(5595).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
+            const obj3 = { location: closure_0(5616).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
             obj2.properties = obj3;
-            closure_0(9291).trackImpression(obj2, false);
-            const obj = closure_0(9291);
+            closure_0(9319).trackImpression(obj2, false);
+            const obj = closure_0(9319);
           }
         }
       }

@@ -1,10 +1,10 @@
-// === Module 9914: TabBar ===
+// === Module 9944: TabBar ===
 
-// Module 9914 (TabBar)
+// Module 9944 (TabBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5258 */;
-import _mod7171 from "module_7171" /* 7171 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5279 */;
+import _mod7199 from "module_7199" /* 7199 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ let closure_2 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, TouchableWithoutFeedback: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { tab: { flexBasis: "auto", flexShrink: 0, alignItems: "center", justifyContent: "center", marginBottom: 1, marginHorizontal: 1, padding: 10, borderBottomWidth: 2, borderBottomColor: "transparent" }, tabActive: { backgroundColor: "rgba(0,0,0,0.1)" }, tabSelected: { borderBottomColor: nativeDefault.unsafe_rawColors.BRAND_600 }, container: { flex: 0 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -32,8 +32,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tab(ar
   } else {
     tmp5 = cResult[1];
   }
-  const tmpResult = _mod7171;
-  [tmp7, tmp8] = _mod7171.useRecyclingState(false, tmp5);
+  const tmpResult = _mod7199;
+  [tmp7, tmp8] = _mod7199.useRecyclingState(false, tmp5);
   if (cResult[2] !== tmp8) {
     const fn = function k() {
       return tmp8(true);
@@ -136,14 +136,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tab(ar
   cResult[7] = onSelect;
   cResult[8] = E;
   tmp11 = E;
-  const tmp6 = _slicedToArray(_mod7171.useRecyclingState(false, tmp5), 2);
+  const tmp6 = _slicedToArray(_mod7199.useRecyclingState(false, tmp5), 2);
 }) : (function Tab(index) {
   index = index.index;
   ({ isSelected, onSelect } = index);
   ({ children, tabKey, tabStyle, tabStyleActive, tabStyleSelected } = index);
   const tmp = closure_10();
   const items = [tabKey];
-  [tmp3, tmp4] = _mod7171.useRecyclingState(false, items);
+  [tmp3, tmp4] = _mod7199.useRecyclingState(false, items);
   c2 = tmp4;
   const items1 = [tmp4];
   const items2 = [tmp4];

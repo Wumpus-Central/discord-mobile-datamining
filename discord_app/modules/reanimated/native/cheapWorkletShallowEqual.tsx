@@ -1,6 +1,6 @@
-// === Module 9904: cheapWorkletShallowEqual ===
+// === Module 9934: cheapWorkletShallowEqual ===
 
-// Module 9904 (cheapWorkletShallowEqual)
+// Module 9934 (cheapWorkletShallowEqual)
 import size from "module_2" /* 2 */;
 
 function cheapWorkletShallowEqual(safeAreaState, safeAreaState2) {

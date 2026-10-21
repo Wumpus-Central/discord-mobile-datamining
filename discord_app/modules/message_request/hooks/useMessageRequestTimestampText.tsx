@@ -1,9 +1,9 @@
-// === Module 18079: useMessageRequestTimestampText ===
+// === Module 18160: useMessageRequestTimestampText ===
 
-// Module 18079 (useMessageRequestTimestampText)
+// Module 18160 (useMessageRequestTimestampText)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef2050 from "module_2050" /* 2050 */;
-import ReadStateStore from "ReadStateStore" /* 6722 */;
+import _modDef2049 from "module_2049" /* 2049 */;
+import ReadStateStore from "ReadStateStore" /* 6750 */;
 
 const require = globalThis.__r;
 
@@ -57,9 +57,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessage
     let str = "";
     let calendarResult;
     if (null != extractTimestampResult) {
-      calendarResult = _modDef2050(extractTimestampResult).calendar();
+      calendarResult = _modDef2049(extractTimestampResult).calendar();
       str = forResult;
-      const obj7 = _modDef2050(extractTimestampResult);
+      const obj7 = _modDef2049(extractTimestampResult);
     }
     cResult[3] = stateFromStores;
     cResult[4] = messageRequestPreview;
@@ -88,8 +88,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessage
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = _modDef2050(extractTimestampResult).calendar();
-      const obj6 = _modDef2050(extractTimestampResult);
+      str = _modDef2049(extractTimestampResult).calendar();
+      const obj6 = _modDef2049(extractTimestampResult);
     }
     return str;
   }
@@ -149,9 +149,9 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
     let str = "";
     let timestampString;
     if (null != extractTimestampResult) {
-      timestampString = tmp(8256).getTimestampString(extractTimestampResult);
+      timestampString = tmp(8284).getTimestampString(extractTimestampResult);
       str = forResult;
-      const tmpResult2 = tmp(8256);
+      const tmpResult2 = tmp(8284);
     }
     cResult[3] = stateFromStores;
     cResult[4] = messageRequestPreview;
@@ -181,8 +181,8 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tmp(8256).getTimestampString(extractTimestampResult);
-      const tmpResult = tmp(8256);
+      str = tmp(8284).getTimestampString(extractTimestampResult);
+      const tmpResult = tmp(8284);
     }
     return str;
   }

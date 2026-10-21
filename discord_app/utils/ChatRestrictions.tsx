@@ -1,9 +1,9 @@
-// === Module 10035: ChatRestrictions ===
+// === Module 10065: ChatRestrictions ===
 
-// Module 10035 (ChatRestrictions)
+// Module 10065 (ChatRestrictions)
 import Constants from "Constants" /* 1087 */;
 import util from "util" /* 1128 */;
-import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10036 */;
+import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10066 */;
 import size from "module_2" /* 2 */;
 
 const TOKEN_REGEX = Constants.TOKEN_REGEX;

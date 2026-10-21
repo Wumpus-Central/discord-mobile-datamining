@@ -1,8 +1,8 @@
-// === Module 18623: getStorefrontSkuFetchOptions ===
+// === Module 18700: getStorefrontSkuFetchOptions ===
 
-// Module 18623 (getStorefrontSkuFetchOptions)
+// Module 18700 (getStorefrontSkuFetchOptions)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
-import GenericIAPStore from "GenericIAPStore" /* 18624 */;
+import GenericIAPStore from "GenericIAPStore" /* 18701 */;
 
 require = fn;
 const PaymentGateways = fn(1087).PaymentGateways;

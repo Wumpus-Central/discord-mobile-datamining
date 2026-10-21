@@ -1,6 +1,6 @@
-// === Module 6142: ? ===
+// === Module 6164: ? ===
 
-// Module 6142
+// Module 6164
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/goth_vamp.png.js");

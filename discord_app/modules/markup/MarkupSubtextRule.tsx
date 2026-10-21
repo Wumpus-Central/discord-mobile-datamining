@@ -1,6 +1,6 @@
-// === Module 8423: MarkupSubtextRule ===
+// === Module 8451: MarkupSubtextRule ===
 
-// Module 8423 (MarkupSubtextRule)
+// Module 8451 (MarkupSubtextRule)
 import _mod1951 from "module_1951" /* 1951 */;
 import size from "module_2" /* 2 */;
 

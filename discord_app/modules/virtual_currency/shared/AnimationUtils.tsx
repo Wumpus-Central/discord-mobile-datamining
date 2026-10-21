@@ -1,6 +1,6 @@
-// === Module 13786: AnimationUtils ===
+// === Module 13861: AnimationUtils ===
 
-// Module 13786 (AnimationUtils)
+// Module 13861 (AnimationUtils)
 import size from "module_2" /* 2 */;
 
 const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = { EARN: 0.25, SPEND: 0.3 };

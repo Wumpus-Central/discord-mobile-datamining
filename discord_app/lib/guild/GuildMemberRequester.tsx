@@ -1,8 +1,8 @@
-// === Module 6641: GuildMemberRequester ===
+// === Module 6669: GuildMemberRequester ===
 
-// Module 6641 (GuildMemberRequester)
+// Module 6669 (GuildMemberRequester)
 import _modDef12 from "module_12" /* 12 */;
-import Timers from "Timers" /* 4795 */;
+import Timers from "Timers" /* 4816 */;
 import size from "module_2" /* 2 */;
 
 class GuildMemberRequestState {
@@ -23,10 +23,23 @@ class GuildMemberRequestState {
 }
 const prototype = GuildMemberRequestState.prototype;
 prototype["acknowledge"] = function acknowledge(arg0) {
-  const _unacknowledgedRequests = this._unacknowledgedRequests;
-  _unacknowledgedRequests.delete(arg0);
-  const _pendingRequests = this._pendingRequests;
+  ({ _unacknowledgedRequests, _pendingRequests } = this);
   _pendingRequests.delete(arg0);
+  return _unacknowledgedRequests.delete(arg0);
+};
+prototype["isSettled"] = function isSettled(arg0) {
+  const self = this;
+  const _sentRequests = this._sentRequests;
+  let hasItem = _sentRequests.has(arg0);
+  if (hasItem) {
+    const _unacknowledgedRequests = self._unacknowledgedRequests;
+    hasItem = !_unacknowledgedRequests.has(arg0);
+  }
+  if (hasItem) {
+    const _pendingRequests = self._pendingRequests;
+    hasItem = !_pendingRequests.has(arg0);
+  }
+  return hasItem;
 };
 prototype["flushRequests"] = function flushRequests(fn) {
   const self = this;
@@ -108,7 +121,17 @@ prototype2["request"] = function request(_guildId, arg1) {
   }
 };
 prototype2["acknowledge"] = function acknowledge(_guildId, arg1) {
-  this._getGuildState(_guildId).acknowledge(arg1);
+  return this._getGuildState(_guildId).acknowledge(arg1);
+};
+prototype2["isSettled"] = function isSettled(arg0, arg1) {
+  let flag;
+  if (this._guildStates[arg0] != null) {
+    flag = obj.isSettled(arg1);
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
 };
 prototype2["flushRequests"] = function flushRequests() {
   const self = this;

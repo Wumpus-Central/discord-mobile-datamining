@@ -1,8 +1,8 @@
-// === Module 9657: ForumChannelSeenManager ===
+// === Module 9687: ForumChannelSeenManager ===
 
-// Module 9657 (ForumChannelSeenManager)
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9656 */;
-import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 9658 */;
+// Module 9687 (ForumChannelSeenManager)
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 9686 */;
+import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 9688 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -15,8 +15,8 @@ const prototype = function ForumChannelSeenManager(channelId) {
   obj.id = concat(FORUM_CHANNEL, "_", channelId);
   const tmp4 = new tmp(obj, tmp3, tmp2, FORUM_CHANNEL, concat, "_", new.target);
   _require = tmp4;
-  tmp4.createFlushSeenItemsFunction = function createFlushSeenItemsFunction(IMMEDIATE) {
-    let obj = { guildId: closure_0.guildId, channelId: closure_0.channelId, sessionId: closure_0.sessionId, trackedFeedItems: closure_0.trackedFeedItems, isForcedFlush: null != IMMEDIATE };
+  tmp4.createFlushSeenItemsFunction = function createFlushSeenItemsFunction(arg0) {
+    let obj = { guildId: closure_0.guildId, channelId: closure_0.channelId, sessionId: closure_0.sessionId, trackedFeedItems: closure_0.trackedFeedItems, isForcedFlush: null != arg0 };
     return () => {
       (function flushSeenItems(trackedFeedItems) {
         trackedFeedItems = trackedFeedItems.trackedFeedItems;

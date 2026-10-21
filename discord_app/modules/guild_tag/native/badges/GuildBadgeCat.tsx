@@ -1,9 +1,9 @@
-// === Module 15008: GuildBadgeCat ===
+// === Module 15082: GuildBadgeCat ===
 
-// Module 15008 (GuildBadgeCat)
+// Module 15082 (GuildBadgeCat)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7910 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14982 */;
+import inlineStyles from "inlineStyles" /* 7938 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15056 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

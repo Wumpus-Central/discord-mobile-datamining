@@ -1,23 +1,23 @@
-// === Module 15991: FamilyCenterTopUsersBottomSheet ===
+// === Module 16067: FamilyCenterTopUsersBottomSheet ===
 
-// Module 15991 (FamilyCenterTopUsersBottomSheet)
+// Module 16067 (FamilyCenterTopUsersBottomSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import _modDef2526 from "module_2526" /* 2526 */;
-import UserUtilsDefault from "UserUtils" /* 4994 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import TableRow2 from "TableRow" /* 6854 */;
-import TableRowGroup from "TableRowGroup" /* 6938 */;
-import ActionSheet from "ActionSheet" /* 7247 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8075 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import UserUtilsDefault from "UserUtils" /* 5015 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import TableRow2 from "TableRow" /* 6882 */;
+import TableRowGroup from "TableRowGroup" /* 6966 */;
+import ActionSheet from "ActionSheet" /* 7275 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8103 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow(userActivity) {
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2526.BxbvS7);
+    const stringResult = intl.string(_modDef2536.BxbvS7);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const obj = { children: null };
   const obj2 = { variant: "text-md/bold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2526.BxbvS7);
+  obj2.children = intl.string(_modDef2536.BxbvS7);
   const items = [React4(Text_Text.Text, obj2), ];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, { hasIcons: true, children: topUserActivities.map((userActivity) => closure_1_4(closure_1_7, { userActivity }, userActivity.user_id)) });

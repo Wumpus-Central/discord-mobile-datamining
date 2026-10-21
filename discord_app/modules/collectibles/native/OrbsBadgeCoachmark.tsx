@@ -1,11 +1,11 @@
-// === Module 10916: OrbsBadgeCoachmark ===
+// === Module 11060: OrbsBadgeCoachmark ===
 
-// Module 10916 (OrbsBadgeCoachmark)
+// Module 11060 (OrbsBadgeCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import useCoachmark from "useCoachmark" /* 9768 */;
-import _modDef10917 from "module_10917" /* 10917 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import useCoachmark from "useCoachmark" /* 9798 */;
+import _modDef11061 from "module_11061" /* 11061 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,14 +13,14 @@ require = fn;
 let closure_3 = ["badgeRef"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 80, height: 80 }, coachmarkDescription: { marginBottom: -10 } });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsBadgeCoachmarkImg() {
   const cResult = c.c(6);
   const tmp3 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef10917 };
+    const obj2 = { uri: _modDef11061 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -51,7 +51,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsBad
   const tmp = closure_8();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef10917 };
+  const obj3 = { uri: _modDef11061 };
   obj2.source = obj3;
   obj2.style = tmp.coachmarkImage;
   obj.children = jsx(FastImageDefault, { source: null, style: null });
@@ -80,7 +80,7 @@ export default function OrbsBadgeCoachmark(badgeRef) {
       tmp9 = cResult[1];
       tmp10 = cResult[2];
     }
-    obj3 = obj3(9768);
+    obj3 = obj3(9798);
     coachmark = obj3.useCoachmark(tmp9, tmp10);
   } else {
     const merged = Object.assign(badgeRef, Object.assign({ badgeRef: 0 }));

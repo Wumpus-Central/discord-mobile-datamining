@@ -1,8 +1,8 @@
-// === Module 18107: OpenUserSettingsTriggerPoint ===
+// === Module 18188: OpenUserSettingsTriggerPoint ===
 
-// Module 18107 (OpenUserSettingsTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 5152 */;
-import Helpers from "Helpers" /* 10493 */;
+// Module 18188 (OpenUserSettingsTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 5173 */;
+import Helpers from "Helpers" /* 10522 */;
 import size from "module_2" /* 2 */;
 
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.OPEN_USER_SETTINGS, { location: "open user settings" });

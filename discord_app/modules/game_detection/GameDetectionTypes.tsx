@@ -1,6 +1,6 @@
-// === Module 2043: GameDetectionTypes ===
+// === Module 2042: GameDetectionTypes ===
 
-// Module 2043 (GameDetectionTypes)
+// Module 2042 (GameDetectionTypes)
 import Record from "Record" /* 1407 */;
 
 const createExecutable = fn(2024).createExecutable;

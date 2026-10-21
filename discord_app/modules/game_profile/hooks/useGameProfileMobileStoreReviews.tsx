@@ -1,8 +1,8 @@
-// === Module 9261: useGameProfileMobileStoreReviews ===
+// === Module 9289: useGameProfileMobileStoreReviews ===
 
-// Module 9261 (useGameProfileMobileStoreReviews)
+// Module 9289 (useGameProfileMobileStoreReviews)
 import c from "c" /* 576 */;
-import GameProfileMobileReviewsExperiment from "GameProfileMobileReviewsExperiment" /* 9262 */;
+import GameProfileMobileReviewsExperiment from "GameProfileMobileReviewsExperiment" /* 9290 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

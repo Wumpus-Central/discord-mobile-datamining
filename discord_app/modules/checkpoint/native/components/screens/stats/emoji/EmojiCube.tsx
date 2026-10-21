@@ -1,16 +1,16 @@
-// === Module 12814: EmojiCube ===
+// === Module 12882: EmojiCube ===
 
-// Module 12814 (EmojiCube)
+// Module 12882 (EmojiCube)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import CheckpointConstants from "CheckpointConstants" /* 5973 */;
-import EmojiDefault from "Emoji" /* 7178 */;
-import _mod12815 from "module_12815" /* 12815 */;
-import AccessibilityStore from "AccessibilityStore" /* 4946 */;
-import createStyles from "createStyles" /* 4945 */;
+import CheckpointConstants from "CheckpointConstants" /* 5995 */;
+import EmojiDefault from "Emoji" /* 7206 */;
+import _mod12883 from "module_12883" /* 12883 */;
+import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import createStyles from "createStyles" /* 4966 */;
 import PlatformUtils_mod from "utils/PlatformUtils" /* 1385 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -28,22 +28,22 @@ function transformMatrix(items, rotation) {
   if (point2 === undefined) {
     point2 = { x: 0, y: 0, z: 0 };
   }
-  const mat4 = _mod12815.mat4;
+  const mat4 = _mod12883.mat4;
   const obj = mat4.create();
-  const mat42 = _mod12815.mat4;
+  const mat42 = _mod12883.mat4;
   mat42.copy(obj, items);
-  const mat43 = _mod12815.mat4;
+  const mat43 = _mod12883.mat4;
   mat43.rotateX(obj, obj, point.x);
-  const mat44 = _mod12815.mat4;
+  const mat44 = _mod12883.mat4;
   mat44.rotateY(obj, obj, point.y);
-  const mat45 = _mod12815.mat4;
+  const mat45 = _mod12883.mat4;
   mat45.rotateZ(obj, obj, point.z);
-  const mat46 = _mod12815.mat4;
+  const mat46 = _mod12883.mat4;
   items = [, , ];
   ({ x: arr[0], y: arr[1], z: arr[2] } = translation);
   mat46.translate(obj, obj, items);
-  const mat47 = _mod12815.mat4;
-  const mat48 = _mod12815.mat4;
+  const mat47 = _mod12883.mat4;
+  const mat48 = _mod12883.mat4;
   mat48.multiply(obj, obj, mat47.fromValues(1, point2.y, 0, 0, point2.x, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));
   return Array.from(obj);
 }

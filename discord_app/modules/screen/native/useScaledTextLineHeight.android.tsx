@@ -1,10 +1,10 @@
-// === Module 10862: useScaledTextLineHeight ===
+// === Module 11006: useScaledTextLineHeight ===
 
-// Module 10862 (useScaledTextLineHeight)
+// Module 11006 (useScaledTextLineHeight)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import useFontScale from "useFontScale" /* 5214 */;
-import NativeFontModuleDefault from "NativeFontModule" /* 10863 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import useFontScale from "useFontScale" /* 5235 */;
+import NativeFontModuleDefault from "NativeFontModule" /* 11007 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

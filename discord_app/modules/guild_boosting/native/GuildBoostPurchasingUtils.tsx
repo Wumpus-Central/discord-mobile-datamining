@@ -1,11 +1,11 @@
-// === Module 7461: GuildBoostPurchasingUtils ===
+// === Module 7489: GuildBoostPurchasingUtils ===
 
-// Module 7461 (GuildBoostPurchasingUtils)
+// Module 7489 (GuildBoostPurchasingUtils)
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5867 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5889 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 2059 */;
+import SubscriptionStore from "SubscriptionStore" /* 2058 */;
 
 require = fn;
 function alertUnableToManageSub(body, source) {
@@ -57,7 +57,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
           closure_130_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp6) {
@@ -158,10 +158,10 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(2054).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(2054);
-                      num3 = numPremiumGuildSubscriptions + c1(2054).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(2054);
+                      const numPremiumGuildSubscriptions = closure_0(2053).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(2053);
+                      num3 = numPremiumGuildSubscriptions + c1(2053).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(2053);
                     }
                     tmp = sum > num3;
                   }

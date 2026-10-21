@@ -1,6 +1,6 @@
-// === Module 7797: ? ===
+// === Module 7825: ? ===
 
-// Module 7797
+// Module 7825
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/guild-room/guild-room-bg-2.webp.js");

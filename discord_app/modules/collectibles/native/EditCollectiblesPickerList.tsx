@@ -1,8 +1,8 @@
-// === Module 14314: EditCollectiblesPickerList ===
+// === Module 14389: EditCollectiblesPickerList ===
 
-// Module 14314 (EditCollectiblesPickerList)
+// Module 14389 (EditCollectiblesPickerList)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5195 */;
+import Text_Text from "Text/Text" /* 5216 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,8 +10,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
-let obj = { list: { flex: 1 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(14309).GUTTER_SIZE, paddingBottom: 5 } };
+const createStyles = fn(4966);
+let obj = { list: { flex: 1 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(14384).GUTTER_SIZE, paddingBottom: 5 } };
 let closure_7 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_8 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DefaultHeader(header) {
@@ -43,7 +43,7 @@ let closure_8 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functi
   return <hasOwnProperty style={closure_7().header}>{jsx(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: children.header })}</hasOwnProperty>;
 }));
 ReactCompilerGating = fn(558);
-let obj3 = { paddingHorizontal: fn(14309).GUTTER_SIZE, paddingBottom: 5 };
+let obj3 = { paddingHorizontal: fn(14384).GUTTER_SIZE, paddingBottom: 5 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
@@ -373,7 +373,7 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(12);
-        const item = items(12).chunk(header.items, items(14309).ROW_SIZE).forEach((items, index) => {
+        const item = items(12).chunk(header.items, items(14384).ROW_SIZE).forEach((items, index) => {
           items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
         });
       });

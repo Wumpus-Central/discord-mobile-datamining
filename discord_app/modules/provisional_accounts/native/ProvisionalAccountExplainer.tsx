@@ -1,21 +1,21 @@
-// === Module 13370: ProvisionalAccountExplainer ===
+// === Module 13437: ProvisionalAccountExplainer ===
 
-// Module 13370 (ProvisionalAccountExplainer)
+// Module 13437 (ProvisionalAccountExplainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import Card from "Card" /* 6856 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6963 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7252 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13371 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import Card from "Card" /* 6884 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6991 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7280 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 13438 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { chatContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 }, header: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 };
@@ -35,7 +35,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNati
       if (cResult[4] === userId) {
         let tmp5 = cResult[5];
       }
-      return iconSize(13372).useProvisionalAccountExplanationText(tmp5);
+      return iconSize(13439).useProvisionalAccountExplanationText(tmp5);
     }
     const obj2 = { userId, renderApplicationName: tmp4 };
     cResult[3] = tmp4;
@@ -56,7 +56,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNati
   const textVariant = userId.textVariant;
   const items = [iconSize, textVariant];
   const renderApplicationName = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  return iconSize(13372).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
+  return iconSize(13439).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
 });
 fn(558);
 ReactCompilerGating = fn(558);

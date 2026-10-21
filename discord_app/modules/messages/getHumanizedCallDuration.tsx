@@ -1,6 +1,6 @@
-// === Module 8285: getHumanizedCallDuration ===
+// === Module 8313: getHumanizedCallDuration ===
 
-// Module 8285 (getHumanizedCallDuration)
+// Module 8313 (getHumanizedCallDuration)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/getHumanizedCallDuration.tsx");

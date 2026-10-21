@@ -1,6 +1,6 @@
-// === Module 15962: ParentalConsentWarningTypes ===
+// === Module 16038: ParentalConsentWarningTypes ===
 
-// Module 15962 (ParentalConsentWarningTypes)
+// Module 16038 (ParentalConsentWarningTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ BANNER: "banner", MODAL: "modal" });

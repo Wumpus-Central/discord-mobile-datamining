@@ -1,11 +1,11 @@
-// === Module 16954: useOpenDeepLinkedProduct ===
+// === Module 17030: useOpenDeepLinkedProduct ===
 
-// Module 16954 (useOpenDeepLinkedProduct)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7610 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8602 */;
+// Module 17030 (useOpenDeepLinkedProduct)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7638 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8629 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesShopStore from "CollectiblesShopStore" /* 7615 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7666 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

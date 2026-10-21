@@ -1,14 +1,14 @@
-// === Module 7845: SafetyHubUtils ===
+// === Module 7873: SafetyHubUtils ===
 
-// Module 7845 (SafetyHubUtils)
+// Module 7873 (SafetyHubUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import util from "util" /* 1128 */;
-import _modDef2050 from "module_2050" /* 2050 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5957 */;
-import SafetyHubModels from "SafetyHubModels" /* 7847 */;
+import _modDef2049 from "module_2049" /* 2049 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5979 */;
+import SafetyHubModels from "SafetyHubModels" /* 7875 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -46,7 +46,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7846);
+const SafetyHubConstants = fn(7874);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
 const Constants = fn(1087);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
@@ -57,7 +57,7 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef2050().to(_modDef2050(timestamp));
+  return _modDef2049().to(_modDef2049(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {

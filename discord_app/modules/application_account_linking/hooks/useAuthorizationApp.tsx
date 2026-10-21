@@ -1,10 +1,10 @@
-// === Module 7205: useAuthorizationApp ===
+// === Module 7233: useAuthorizationApp ===
 
-// Module 7205 (useAuthorizationApp)
+// Module 7233 (useAuthorizationApp)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7206 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7234 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2046 */;
+import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 
 const require = globalThis.__r;
@@ -12,18 +12,18 @@ const require = globalThis.__r;
 require = fn;
 const ApplicationTypes = fn(1375).ApplicationTypes;
 const ReactCompilerGating = fn(558);
-function getAuthorizationApp(type) {
-  if (null == type) {
+function getAuthorizationApp(application) {
+  if (null == application) {
     return null;
-  } else if (type.type !== ApplicationTypes.GAME) {
-    return type;
+  } else if (application.type !== ApplicationTypes.GAME) {
+    return application;
   } else {
-    const linkedGames = type.linkedGames;
+    const linkedGames = application.linkedGames;
     let found;
     if (linkedGames != null) {
       found = linkedGames.find((type) => type.type === getOfficialApplicationId(getOrFetchApplication[4]).GameLinkTypes.OFFICIAL);
     }
-    let application;
+    application = undefined;
     if (found != null) {
       application = found.application;
     }

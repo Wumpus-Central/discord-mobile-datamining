@@ -1,27 +1,27 @@
-// === Module 13158: ChatInputGuardWrapper ===
+// === Module 13226: ChatInputGuardWrapper ===
 
-// Module 13158 (ChatInputGuardWrapper)
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4867 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4886 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5673 */;
-import MemberVerificationUtils from "MemberVerificationUtils" /* 6845 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7363 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11166 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13164 */;
+// Module 13226 (ChatInputGuardWrapper)
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4888 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4907 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5693 */;
+import MemberVerificationUtils from "MemberVerificationUtils" /* 6873 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7391 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11210 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13232 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4881 */;
-import GuildMemberStore from "GuildMemberStore" /* 4860 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6587 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
+import LurkingStore from "LurkingStore" /* 4902 */;
+import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6615 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
-const isThread = fn(4804).isThread;
-const TextAreaCta = fn(12376).TextAreaCta;
+const isThread = fn(4825).isThread;
+const TextAreaCta = fn(12432).TextAreaCta;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(7089).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(7117).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");

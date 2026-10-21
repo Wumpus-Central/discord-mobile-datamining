@@ -1,6 +1,6 @@
-// === Module 4769: importWithRetry ===
+// === Module 4790: importWithRetry ===
 
-// Module 4769 (importWithRetry)
+// Module 4790 (importWithRetry)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -39,7 +39,7 @@ let closure_4 = async function _importWithRetry(arg0) {
           closure_129_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {

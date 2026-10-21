@@ -1,8 +1,8 @@
-// === Module 13817: useEmojisForReactionRow ===
+// === Module 13892: useEmojisForReactionRow ===
 
-// Module 13817 (useEmojisForReactionRow)
+// Module 13892 (useEmojisForReactionRow)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4898 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4919 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

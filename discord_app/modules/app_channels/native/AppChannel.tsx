@@ -1,41 +1,41 @@
-// === Module 17789: AppChannel ===
+// === Module 17870: AppChannel ===
 
-// Module 17789 (AppChannel)
+// Module 17870 (AppChannel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1899 */;
-import components_Button_Button from "components/Button/Button" /* 5205 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5554 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import transitionToChannel from "transitionToChannel" /* 5669 */;
-import conjureDMAppChannel from "conjureDMAppChannel" /* 6758 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6760 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9644 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11749 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11752 */;
-import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11753 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11754 */;
-import useFrameLifecycleDefault from "useFrameLifecycle" /* 17790 */;
-import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 17793 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 17800 */;
-import useAppChannelClosedDefault from "useAppChannelClosed" /* 17801 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 17802 */;
+import components_Button_Button from "components/Button/Button" /* 5226 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5575 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5608 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import transitionToChannel from "transitionToChannel" /* 5689 */;
+import conjureDMAppChannel from "conjureDMAppChannel" /* 6786 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6788 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9674 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11797 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11800 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 11801 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11802 */;
+import useFrameLifecycleDefault from "useFrameLifecycle" /* 17871 */;
+import conjureBackgroundFramesDefault from "conjureBackgroundFrames" /* 17874 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 17881 */;
+import useAppChannelClosedDefault from "useAppChannelClosed" /* 17882 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 17883 */;
 import noop from "module_19" /* 19 */;
 
-const useChannelContentGate = obj(10696);
+const useChannelContentGate = obj(10840);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4945);
+let createStyles = fn(4966);
 let obj2 = { icon: null };
 let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg };
 obj2.icon = size;
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4945);
+createStyles = fn(4966);
 let closure_8 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;
@@ -60,15 +60,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
             ({ frame, state } = useFrameLifecycleDefault(tmp9));
             conjureBackgroundFramesDefault(applicationId, surface);
             const tmp10 = useFrameLifecycleDefault(tmp9);
-            useEdgeOnlySwipeExitDefault(state === tmp(17790).FrameLifecycleState.Launched);
+            useEdgeOnlySwipeExitDefault(state === tmp(17871).FrameLifecycleState.Launched);
             const tmp5Result = useEdgeOnlySwipeExitDefault;
             let tmp15 = null;
-            if (state === tmp(17790).FrameLifecycleState.Launched) {
+            if (state === tmp(17871).FrameLifecycleState.Launched) {
               tmp15 = applicationId;
             }
             useInlineFrameOAuthNavigationDefault(tmp15);
             const tmp5Result3 = useInlineFrameOAuthNavigationDefault;
-            const isConjureChannelCandidate = tmp(7294).useIsConjureChannelCandidate(channel, "AppChannel");
+            const isConjureChannelCandidate = tmp(7322).useIsConjureChannelCandidate(channel, "AppChannel");
             id = channel.id;
             if (cResult[9] !== id) {
               class M {
@@ -89,7 +89,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
                 }
               }
             }
-            if (tmp(17790).FrameLifecycleState.Launched === state) {
+            if (tmp(17871).FrameLifecycleState.Launched === state) {
               class M {
                 constructor(arg0) {
                   obj = closure_0(closure_2[15]);
@@ -97,7 +97,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
                   return;
                 }
               }
-              const obj2 = { frameId: frame.id, level: tmp(11758).FrameStackLevel.WithinAppContent, presentation: tmp7 };
+              const obj2 = { frameId: frame.id, level: tmp(11806).FrameStackLevel.WithinAppContent, presentation: tmp7 };
               const tmp22 = closure_5(FrameRenderTargetDefault, obj2);
               cResult[11] = frame.id;
               cResult[12] = tmp7;
@@ -112,7 +112,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OpenApp
                 }
               }
             }
-            const tmpResult = tmp(7294);
+            const tmpResult = tmp(7322);
           }
           const obj3 = { applicationId, surface };
           cResult[6] = applicationId;
@@ -363,7 +363,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppCha
     cResult[8] = obj4;
     tmp6 = obj4;
   }
-  const obj5 = { type: channel(5587).EmbeddedSurfaceType.APP_CHANNEL, channelId: channel.id, guildId: channel.guild_id };
+  const obj5 = { type: channel(5608).EmbeddedSurfaceType.APP_CHANNEL, channelId: channel.id, guildId: channel.guild_id };
   cResult[0] = channel.guild_id;
   cResult[1] = channel.id;
   cResult[2] = obj5;

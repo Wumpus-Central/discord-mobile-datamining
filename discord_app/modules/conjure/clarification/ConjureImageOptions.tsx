@@ -1,9 +1,9 @@
-// === Module 12326: ConjureImageOptions ===
+// === Module 12381: ConjureImageOptions ===
 
-// Module 12326 (ConjureImageOptions)
+// Module 12381 (ConjureImageOptions)
 import util from "util" /* 1128 */;
-import _modDef3820 from "module_3820" /* 3820 */;
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8795 */;
+import _modDef3830 from "module_3830" /* 3830 */;
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8822 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -57,7 +57,7 @@ export const imageOptionViewerSize = function imageOptionViewerSize(value) {
 export const ownImageOption = function ownImageOption(image) {
   const obj = { id: "own:" + image.attachment.id, label: null, image: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef3820.SUdqCQ);
+  obj.label = intl.string(_modDef3830.SUdqCQ);
   obj.image = { attachment_id: image.attachment.id };
   return obj;
 };
@@ -141,6 +141,6 @@ export const imageOptionCaption = function imageOptionCaption(option) {
 export const ownImageUploadText = function ownImageUploadText(question) {
   const intl = util.intl;
   const isMatch = /\bicons?\b/i.test(question.question);
-  const tmp2 = _modDef3820;
+  const tmp2 = _modDef3830;
   return intl.string(isMatch ? tmp2.qU4WN6 : tmp2.cbMDDB);
 };

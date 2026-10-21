@@ -1,33 +1,33 @@
-// === Module 11551: FocusedExpandedControls ===
+// === Module 11601: FocusedExpandedControls ===
 
-// Module 11551 (FocusedExpandedControls)
+// Module 11601 (FocusedExpandedControls)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import Form from "Form" /* 8883 */;
-import CallsUtils from "CallsUtils" /* 9086 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 9093 */;
-import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11472 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11501 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11522 */;
-import _modDef11552 from "module_11552" /* 11552 */;
-import _modDef11553 from "module_11553" /* 11553 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11554 */;
-import useDeafStatesDefault from "useDeafStates" /* 11555 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import Form from "Form" /* 8910 */;
+import CallsUtils from "CallsUtils" /* 9113 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9120 */;
+import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11522 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11551 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11572 */;
+import _modDef11602 from "module_11602" /* 11602 */;
+import _modDef11603 from "module_11603" /* 11603 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11604 */;
+import useDeafStatesDefault from "useDeafStates" /* 11605 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6621 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const View = fn(17).View;
-const MediaEngineContextTypes = fn(5680).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5700).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { formTintColor: { tintColor: nativeDefault.colors.ICON_STRONG }, formColor: null, sparkle: null, sparkle2: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_STRONG };
 obj2.formColor = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -50,7 +50,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
         return tmp5;
       } else {
         if (cResult[3] !== tmp4.sparkle2) {
-          const obj2 = { style: tmp4.sparkle2, source: _modDef11552 };
+          const obj2 = { style: tmp4.sparkle2, source: _modDef11602 };
           const tmp13 = React5(FastImageDefault, obj2);
           cResult[3] = tmp4.sparkle2;
           cResult[4] = tmp13;
@@ -59,7 +59,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
           tmp9 = cResult[4];
         }
         if (cResult[5] !== tmp4.sparkle) {
-          const obj3 = { style: tmp4.sparkle, source: _modDef11553 };
+          const obj3 = { style: tmp4.sparkle, source: _modDef11603 };
           const tmp18 = React5(FastImageDefault, obj3);
           cResult[5] = tmp4.sparkle;
           cResult[6] = tmp18;
@@ -100,10 +100,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
     if (iconSource.showIconSparkle) {
       const obj = { children: null };
       const items = [tmp11, , ];
-      const obj3 = { style: tmp.sparkle2, source: _modDef11552 };
+      const obj3 = { style: tmp.sparkle2, source: _modDef11602 };
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.sparkle, source: null };
-      obj4.source = _modDef11553;
+      obj4.source = _modDef11603;
       items[2] = React5(FastImageDefault, obj4);
       obj.children = items;
       tmp7 = closure_1_8(View, obj);
@@ -364,7 +364,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudioRouteBu
   channelId = channelId.channelId;
   const isConnectedToVoiceChannel = channelId.isConnectedToVoiceChannel;
   const obj = channelId(576);
-  const routeSource = channelId(9086).useMaskedSpeakerStates().routeSource;
+  const routeSource = channelId(9113).useMaskedSpeakerStates().routeSource;
   if (cResult[0] === channelId) {
     if (cResult[1] === isConnectedToVoiceChannel) {
       let tmp4 = cResult[2];
@@ -398,7 +398,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudioRouteBu
   cResult[1] = isConnectedToVoiceChannel;
   cResult[2] = fn;
   tmp4 = fn;
-  const obj2 = channelId(9086);
+  const obj2 = channelId(9113);
 }) : (function AudioRouteButton(arg0) {
   ({ channelId: require, isConnectedToVoiceChannel: importDefault } = arg0);
   const obj2 = {
@@ -473,7 +473,7 @@ export const DeafenButton = ReactCompilerGating.isReactCompilerEnabled() ? (func
     tmp7 = cResult[1];
   }
   const onPress = tmp7.onPress;
-  const tmp5Result = importDefault(tmp7.deaf ? 11556 : 11557);
+  const tmp5Result = importDefault(tmp7.deaf ? 11606 : 11607);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
     const stringResult = intl.string(util.t.wjcRFX);
@@ -503,7 +503,7 @@ export const DeafenButton = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const tmp3 = useDeafStatesDefault(disabled.channel);
   const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
-  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11556 : 11557), label: null };
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11606 : 11607), label: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t.wjcRFX);
   return React5(closure_12, obj2);

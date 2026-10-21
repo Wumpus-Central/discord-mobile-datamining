@@ -1,10 +1,10 @@
-// === Module 10617: GroupDMAvatar ===
+// === Module 10646: GroupDMAvatar ===
 
-// Module 10617 (GroupDMAvatar)
+// Module 10646 (GroupDMAvatar)
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ClipView from "ClipView" /* 9336 */;
+import ClipView from "ClipView" /* 9364 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -21,7 +21,7 @@ obj[fn(1202).AvatarSizes.REFRESH_MEDIUM_32] = fn(1202).AvatarSizes.XSMALL_20;
 obj[fn(1202).AvatarSizes.XSMALL] = fn(1202).AvatarSizes.SIZE_16;
 obj[fn(1202).AvatarSizes.SIZE_16] = fn(1202).AvatarSizes.XXSMALL_10;
 obj[fn(1202).AvatarSizes.NORMAL] = fn(1202).AvatarSizes.XSMALL;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_8 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function FacepileGroupDMAvatar(arg0) {
@@ -204,6 +204,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function FacepileGr
     obj.nativeCutouts = items;
     return obj;
   }, items1);
+  const obj3 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: memo1, animate };
   if (null == users) {
     const obj4 = { source: sources[0] };
     let obj5 = obj4;
@@ -211,7 +212,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function FacepileGr
     obj5 = { user: users[0] };
   }
   const merged = Object.assign(obj5);
-  const items3 = [closure_5(require("native").Avatar, { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: memo1, animate }), ];
+  const items3 = [closure_5(require("native").Avatar, obj3), ];
   const obj6 = { status, statusSizeOverride: require("native").StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate };
   if (null == users) {
     const obj7 = { source: sources[1] };

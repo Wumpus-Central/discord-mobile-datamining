@@ -1,7 +1,7 @@
-// === Module 18113: getPIPBottomOffsetForPIPMode ===
+// === Module 18200: getPIPBottomOffsetForPIPMode ===
 
-// Module 18113 (getPIPBottomOffsetForPIPMode)
-import MorphablePanelConstants from "MorphablePanelConstants" /* 10705 */;
+// Module 18200 (getPIPBottomOffsetForPIPMode)
+import MorphablePanelConstants from "MorphablePanelConstants" /* 10849 */;
 import size from "module_2" /* 2 */;
 
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;

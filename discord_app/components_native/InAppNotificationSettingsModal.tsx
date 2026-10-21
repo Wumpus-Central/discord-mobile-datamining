@@ -1,23 +1,23 @@
-// === Module 13593: InAppNotificationSettingsModal ===
+// === Module 13660: InAppNotificationSettingsModal ===
 
-// Module 13593 (InAppNotificationSettingsModal)
+// Module 13660 (InAppNotificationSettingsModal)
 import util from "util" /* 1128 */;
-import useChannelName from "useChannelName" /* 5565 */;
-import NavigatorHeader from "NavigatorHeader" /* 6875 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7161 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7166 */;
-import Form from "Form" /* 8883 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 13594 */;
+import useChannelName from "useChannelName" /* 5586 */;
+import NavigatorHeader from "NavigatorHeader" /* 6903 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7189 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7194 */;
+import Form from "Form" /* 8910 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 13661 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isMultiUserDM = fn(4804).isMultiUserDM;
+const isMultiUserDM = fn(4825).isMultiUserDM;
 const Constants = fn(1087);
 ({ ChannelTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
@@ -183,7 +183,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[3] !== tmp4) {
       const obj2 = { screens: tmp4, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" };
-      const tmp7 = closure_11(tmp(7046).Navigator, obj2);
+      const tmp7 = closure_11(tmp(7074).Navigator, obj2);
       cResult[3] = tmp4;
       cResult[4] = tmp7;
       let tmp5 = tmp7;
@@ -201,11 +201,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj.title = intl.string(channelId(1128).t.h850Ss);
       let channelName = null;
       if (null != closure_0) {
-        const tmp3Result = channelId(5565);
+        const tmp3Result = channelId(5586);
         channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
       }
       obj.subtitle = channelName;
-      return closure_2_11(channelId(6875).NavigatorHeader, obj);
+      return closure_2_11(channelId(6903).NavigatorHeader, obj);
     },
     headerLeft: null,
     render: null
@@ -235,11 +235,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         obj.title = intl.string(channelId(1128).t.h850Ss);
         let channelName = null;
         if (null != closure_0) {
-          const tmp3Result = channelId(5565);
+          const tmp3Result = channelId(5586);
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(6875).NavigatorHeader, obj);
+        return closure_2_11(channelId(6903).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -249,5 +249,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
     return obj;
   }, items);
-  return closure_11(channelId(7046).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(7074).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 }));

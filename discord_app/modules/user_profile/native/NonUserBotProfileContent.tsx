@@ -1,22 +1,22 @@
-// === Module 8668: NonUserBotProfileContent ===
+// === Module 8695: NonUserBotProfileContent ===
 
-// Module 8668 (NonUserBotProfileContent)
-import UserUtilsDefault from "UserUtils" /* 4994 */;
-import ToastUtils from "ToastUtils" /* 5624 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5947 */;
-import ClipboardUtils from "ClipboardUtils" /* 7234 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8655 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8658 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8669 */;
-import useBadgesDefault from "useBadges" /* 8670 */;
-import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8671 */;
+// Module 8695 (NonUserBotProfileContent)
+import UserUtilsDefault from "UserUtils" /* 5015 */;
+import ToastUtils from "ToastUtils" /* 5644 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5969 */;
+import ClipboardUtils from "ClipboardUtils" /* 7262 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8682 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8685 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8696 */;
+import useBadgesDefault from "useBadges" /* 8697 */;
+import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8698 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7253);
+const Constants = fn(7281);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5227).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5248).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -26,10 +26,10 @@ let result = size.fileFinishedImporting("modules/user_profile/native/NonUserBotP
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function NonUserBotProfileContent(arg0) {
   const cResult = trackUserProfileAction(576).c(70);
   ({ user, channel, displayProfile, scrollPosition } = arg0);
-  const tmp5 = userTag(8669)();
+  const tmp5 = userTag(8696)();
   let obj = trackUserProfileAction(576);
-  trackUserProfileAction = trackUserProfileAction(8616).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj2 = trackUserProfileAction(8616);
+  trackUserProfileAction = trackUserProfileAction(8643).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj2 = trackUserProfileAction(8643);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -38,27 +38,27 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (channel != null) {
     id = channel.id;
   }
-  const name = userTag(5947).useName(guild_id, id, user);
-  const obj3 = userTag(5947);
-  userTag = userTag(4994).useUserTag(user);
-  const tmp10 = userTag(8670)(displayProfile);
-  const tmp11 = userTag(8658)(ACTION_SHEET_MAX_WIDTH);
+  const name = userTag(5969).useName(guild_id, id, user);
+  const obj3 = userTag(5969);
+  userTag = userTag(5015).useUserTag(user);
+  const tmp10 = userTag(8697)(displayProfile);
+  const tmp11 = userTag(8685)(ACTION_SHEET_MAX_WIDTH);
   if (cResult[0] === tmp11) {
     if (cResult[1] === scrollPosition) {
       let tmp12 = cResult[2];
     }
-    ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = tmp4(8671)(tmp12));
+    ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = tmp4(8698)(tmp12));
     if (cResult[3] === displayProfile) {
       if (cResult[4] === user) {
         let tmp15 = cResult[5];
       }
-      ({ theme, primaryColor, secondaryColor } = tmp4(8655)(tmp15));
+      ({ theme, primaryColor, secondaryColor } = tmp4(8682)(tmp15));
       if (cResult[6] === primaryColor) {
         if (cResult[7] === secondaryColor) {
           if (cResult[8] === theme) {
             let tmp17 = cResult[9];
           }
-          const userProfileColors = tmp(8666).useUserProfileColors(tmp17);
+          const userProfileColors = tmp(8693).useUserProfileColors(tmp17);
           ({ avatarBackground, containerBackground } = userProfileColors);
           if (null == user) {
             return null;
@@ -192,7 +192,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                 const obj7 = { style: contentAnimatedStyle, children: null };
                                                                 const items1 = [tmp25, tmp54];
                                                                 obj7.children = items1;
-                                                                const tmp60 = closure_8(tmp4(5014).View, obj7);
+                                                                const tmp60 = closure_8(tmp4(5035).View, obj7);
                                                                 cResult[63] = contentAnimatedStyle;
                                                                 cResult[64] = tmp54;
                                                                 cResult[65] = tmp25;
@@ -220,7 +220,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                       }
                                                     }
                                                     const obj10 = { userId: user.id, displayProfile, channel, style: tmp46 };
-                                                    const tmp49 = closure_7(tmp4(10962), obj10);
+                                                    const tmp49 = closure_7(tmp4(11106), obj10);
                                                     cResult[51] = channel;
                                                     cResult[52] = displayProfile;
                                                     cResult[53] = tmp46;
@@ -248,7 +248,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                     }
                                   }
                                   const obj12 = { user, guildId: guild_id1, displayName: name, pronouns, badges: tmp10, badgeContainerBackground: containerBackground, displayNameAccessibilityHint: tmp36, onPressDisplayName: tmp19, onPressUserTag: tmp19, onPressPronouns: tmp20, showBadgeToastOnPress: true };
-                                  const tmp40 = closure_7(tmp4(10881), obj12);
+                                  const tmp40 = closure_7(tmp4(11025), obj12);
                                   cResult[34] = tmp10;
                                   cResult[35] = containerBackground;
                                   cResult[36] = name;
@@ -272,7 +272,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             }
                           }
                           const obj13 = { user, guildId, backgroundColor: avatarBackground, disableStatus: true };
-                          const tmp27 = closure_7(tmp(8683).OpenableUserProfileAvatar, obj13);
+                          const tmp27 = closure_7(tmp(8710).OpenableUserProfileAvatar, obj13);
                           cResult[23] = avatarBackground;
                           cResult[24] = guildId;
                           cResult[25] = user;
@@ -285,7 +285,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
               const obj14 = { user, displayProfile, bannerHeight: tmp11, bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur };
-              const tmp23 = closure_7(tmp4(8672), obj14);
+              const tmp23 = closure_7(tmp4(8699), obj14);
               cResult[15] = bannerAnimatedStyle;
               cResult[16] = tmp11;
               cResult[17] = bannerImageAnimatedStyle;
@@ -306,7 +306,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             cResult[12] = handleCopyUsername;
             tmp19 = handleCopyUsername;
           }
-          const tmpResult = tmp(8666);
+          const tmpResult = tmp(8693);
         }
       }
       const obj15 = { theme, primaryColor, secondaryColor };
@@ -315,28 +315,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[8] = theme;
       cResult[9] = obj15;
       tmp17 = obj15;
-      const tmp16 = tmp4(8655)(tmp15);
+      const tmp16 = tmp4(8682)(tmp15);
     }
     const obj16 = { user, displayProfile };
     cResult[3] = displayProfile;
     cResult[4] = user;
     cResult[5] = obj16;
     tmp15 = obj16;
-    const tmp13 = tmp4(8671)(tmp12);
+    const tmp13 = tmp4(8698)(tmp12);
   }
   const obj17 = { scrollPosition, bannerHeight: tmp11 };
   cResult[0] = tmp11;
   cResult[1] = scrollPosition;
   cResult[2] = obj17;
   tmp12 = obj17;
-  const tmp4Result = userTag(4994);
+  const tmp4Result = userTag(5015);
 }) : (function NonUserBotProfileContent(scrollPosition) {
   ({ user, channel, displayProfile } = scrollPosition);
   let trackUserProfileAction;
   importDefault = undefined;
   const tmp3 = UserProfileSharedStylesDefault();
-  trackUserProfileAction = trackUserProfileAction(8616).useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj = trackUserProfileAction(8616);
+  trackUserProfileAction = trackUserProfileAction(8643).useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = trackUserProfileAction(8643);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -354,13 +354,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp10 = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
   ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
   const tmp11 = useProfileThemeDefault({ user, displayProfile });
-  const userProfileColors = trackUserProfileAction(8666).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const userProfileColors = trackUserProfileAction(8693).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {
     return null;
   } else {
     const obj3 = { user, displayProfile, bannerHeight: tmp9, bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur };
-    const items = [closure_7(tmp(8672), obj3), ];
+    const items = [closure_7(tmp(8699), obj3), ];
     const obj4 = { style: contentAnimatedStyle, children: null };
     const obj5 = { user, guildId: null, backgroundColor: null, disableStatus: true };
     let guildId;
@@ -369,7 +369,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     obj5.guildId = guildId;
     obj5.backgroundColor = tmp13;
-    const items1 = [closure_7(tmp4(8683).OpenableUserProfileAvatar, obj5), ];
+    const items1 = [closure_7(tmp4(8710).OpenableUserProfileAvatar, obj5), ];
     const obj6 = { style: null, children: null };
     const items2 = [, , ];
     ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
@@ -405,7 +405,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       trackUserProfileAction({ action: "PRESS_PRONOUNS" });
       ToastUtils.presentUserPronouns();
     };
-    obj8.children = closure_7(tmp(10881), obj9);
+    obj8.children = closure_7(tmp(11025), obj9);
     const items3 = [closure_7(View, obj8), ];
     const obj11 = { style: tmp3.cards, children: null };
     const obj12 = { userId: user.id, displayProfile, channel, style: null };
@@ -413,14 +413,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj13 = { backgroundColor: containerBackground };
     items4[1] = obj13;
     obj12.style = items4;
-    obj11.children = closure_7(tmp(10962), obj12);
+    obj11.children = closure_7(tmp(11106), obj12);
     items3[1] = closure_7(View, obj11);
     obj6.children = items3;
     items1[1] = closure_8(View, obj6);
     obj4.children = items1;
-    items[1] = closure_8(tmp(5014).View, obj4);
+    items[1] = closure_8(tmp(5035).View, obj4);
     obj10.children = items;
     return closure_8(closure_9, obj10);
   }
-  const tmp4Result = trackUserProfileAction(8666);
+  const tmp4Result = trackUserProfileAction(8693);
 }));

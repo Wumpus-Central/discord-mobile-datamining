@@ -1,6 +1,6 @@
-// === Module 7709: MessageEmbedConstants ===
+// === Module 7737: MessageEmbedConstants ===
 
-// Module 7709 (MessageEmbedConstants)
+// Module 7737 (MessageEmbedConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/MessageEmbedConstants.tsx");

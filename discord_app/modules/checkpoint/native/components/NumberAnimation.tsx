@@ -1,16 +1,16 @@
-// === Module 12803: NumberAnimation ===
+// === Module 12870: NumberAnimation ===
 
-// Module 12803 (NumberAnimation)
+// Module 12870 (NumberAnimation)
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4946 */;
+import AccessibilityStore from "AccessibilityStore" /* 4967 */;
 
 const require = fn;
 const noop = fn(19);
 ({ useEffect: closure_4, useState: hasOwnProperty } = noop);
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(5973).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5995).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_10 = createStyles.createStyles({ animation: { height: 100, justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -26,19 +26,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NumberAn
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    class M {
+    class S {
       constructor() {
         return closure_1_7.useReducedMotion;
       }
     }
     cResult[0] = items;
-    cResult[1] = M;
+    cResult[1] = S;
     tmp5 = items;
   } else {
     [tmp5, tmp6] = cResult;
   }
   const obj = end(stateFromStores[8]);
-  stateFromStores = end(stateFromStores[9]).useStateFromStores(tmp5, M);
+  stateFromStores = end(stateFromStores[9]).useStateFromStores(tmp5, S);
   const tmpResult = end(stateFromStores[9]);
   [tmp10, _slicedToArray] = closure_5(num);
   if (cResult[2] === end) {
@@ -48,19 +48,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NumberAn
         let tmp12 = cResult[6];
       }
       closure_4(tmp11, tmp12);
-      class M {
+      class S {
         constructor() {
           return closure_1_7.useReducedMotion;
         }
       }
-      if (cResult[7] !== end) {
-        const obj2 = { DisplayValue: end, TextColor: null };
-        class M {
+      const StringResult = String(end);
+      if (cResult[7] !== StringResult) {
+        const obj2 = { DisplayValueString: StringResult, TextColor: null };
+        class S {
           constructor() {
             return closure_1_7.useReducedMotion;
           }
         }
-        cResult[7] = end;
+        cResult[7] = StringResult;
         cResult[8] = obj2;
         let tmp16 = obj2;
       } else {
@@ -69,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NumberAn
       if (cResult[9] !== end) {
         const toLocaleStringResult = end.toLocaleString();
         cResult[9] = end;
-        class M {
+        class S {
           constructor() {
             return closure_1_7.useReducedMotion;
           }
@@ -80,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NumberAn
         tmp18 = cResult[10];
       }
       if (cResult[11] !== tmp18) {
-        class M {
+        class S {
           constructor() {
             return closure_1_7.useReducedMotion;
           }
@@ -93,8 +94,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NumberAn
       } else {
         tmp20 = cResult[12];
       }
-      if (cResult[13] === tmp16) {
-        if (cResult[14] === tmp20) {
+      if (cResult[13] === tmp20) {
+        if (cResult[14] === tmp16) {
           let tmp24 = cResult[15];
         }
         if (cResult[16] === tmp4.animation) {
@@ -103,13 +104,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NumberAn
           }
           return tmp27;
         }
-        class M {
+        class S {
           constructor() {
             return closure_1_7.useReducedMotion;
           }
         }
-        const obj4 = { style: tmp15, children: tmp24 };
-        const tmp29 = <View style={tmp15}>{tmp24}</View>;
+        const obj4 = { style: tmp4.animation, children: tmp24 };
+        const tmp29 = <View style={tmp4.animation}>{tmp24}</View>;
         cResult[16] = tmp4.animation;
         cResult[17] = tmp24;
         cResult[18] = tmp29;
@@ -117,8 +118,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NumberAn
       }
       const obj5 = { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: tmp16, fallback: tmp20 };
       const tmp26 = jsx(end(tmp2[11]).CheckpointNumbersRive, { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: tmp16, fallback: tmp20 });
-      cResult[13] = tmp16;
-      cResult[14] = tmp20;
+      cResult[13] = tmp20;
+      cResult[14] = tmp16;
       cResult[15] = tmp26;
       tmp24 = tmp26;
     }
@@ -188,12 +189,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NumberAn
     }
   }, items1);
   const obj2 = { style: tmp.animation, children: null };
-  const obj3 = { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: { DisplayValue: tmp6, TextColor: CHECKPOINT_PRIMARY }, fallback: null };
-  const obj5 = { variant: "display-lg", children: null };
-  const obj4 = { DisplayValue: tmp6, TextColor: CHECKPOINT_PRIMARY };
+  const obj3 = { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: null, fallback: null };
   const tmp5 = _slicedToArray(closure_5(num), 2);
+  obj3.dataBinding = { DisplayValueString: String(tmp6), TextColor: CHECKPOINT_PRIMARY };
+  const obj5 = { variant: "display-lg", children: null };
+  const obj4 = { DisplayValueString: String(tmp6), TextColor: CHECKPOINT_PRIMARY };
   obj5.children = end.toLocaleString();
   obj3.fallback = jsx(end(stateFromStores[10]), { variant: "display-lg", children: null });
-  obj2.children = jsx(tmp2(stateFromStores[11]).CheckpointNumbersRive, { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: { DisplayValue: tmp6, TextColor: CHECKPOINT_PRIMARY }, fallback: null });
+  obj2.children = jsx(tmp2(stateFromStores[11]).CheckpointNumbersRive, { stateMachine: "State Machine 1", fit: "contain", alignment: "center-left", dataBinding: null, fallback: null });
   return <View style={tmp.animation}>{null}</View>;
 });

@@ -1,10 +1,11 @@
-// === Module 9658: AnalyticsFeedItemSeenManager ===
+// === Module 9688: AnalyticsFeedItemSeenManager ===
 
-// Module 9658 (AnalyticsFeedItemSeenManager)
+// Module 9688 (AnalyticsFeedItemSeenManager)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const require = fn;
 const ForceFlushType = { IMMEDIATE: 0, [0]: "IMMEDIATE", IMMEDIATE_WITH_COOLDOWN: 1, [1]: "IMMEDIATE_WITH_COOLDOWN", IMMEDIATE_WITH_DELAY: 2, [2]: "IMMEDIATE_WITH_DELAY" };
 class TrackedFeedItem {
   constructor() {
@@ -239,143 +240,100 @@ class AnalyticsFeedItemSeenManager {
   }
 }
 AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFlushSeenItems(IMMEDIATE) {
-  let self = this;
-  if (null == IMMEDIATE) {
-    const _Date = Date;
-    if (Date.now() - self._lastFlushTimeMillis < 60000) {
-      return Promise.resolve();
-    }
-  }
-  if (IMMEDIATE === obj.IMMEDIATE_WITH_COOLDOWN) {
-    const _Date2 = Date;
-    if (Date.now() - self._lastFlushTimeMillis < 3000) {
-      return Promise.resolve();
-    }
-  }
-  const flushSeenItemsFunction = self.createFlushSeenItemsFunction(IMMEDIATE);
-  closure_0 = flushSeenItemsFunction;
-  if (null == flushSeenItemsFunction) {
-    let resolved = Promise.resolve();
-  } else {
-    const _Date3 = Date;
-    self._lastFlushTimeMillis = Date.now();
-    if (IMMEDIATE !== obj.IMMEDIATE) {
-      if (IMMEDIATE !== obj.IMMEDIATE_WITH_COOLDOWN) {
-        resolved = new Promise((arg0) => {
-          closure_0 = arg0;
-          const timerId = setTimeout(asyncGeneratorStep(async () => {
-            if (c2 === 2) {
-              c2 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c2 = 2;
-                if (0 === c1) {
-                  if (arg0 === 1) {
-                    c2 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c2 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    c1 = 1;
-                    c2 = 1;
-                    const obj4 = { value: tmp4(), done: false };
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
-                  c2 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c2 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_128_0();
-                  c2 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              } catch (tmp9) {
-                c2 = tmp;
-                throw tmp9;
-              }
-            }
-          }), 100);
-        });
-      }
-    }
-    closure_0 = asyncGeneratorStep(async (arg0) => {
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  closure_0 = IMMEDIATE;
+  const self = this;
+  return (async () => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_1 = tmp2;
-              closure_129_0 = closure_0;
-              c2 = 1;
-              c3 = 1;
-              const obj4 = { value: closure_0(), done: false };
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c2 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c3 = 3;
-            const obj = { value, done: true };
-            return obj;
+            c2 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            closure_129_0();
-            c3 = 3;
-            return { value: "IconComponent", done: null };
+            closure_128_0 = undefined;
+            if (null != tmp2) {
+              if (tmp2 !== constants.IMMEDIATE_WITH_COOLDOWN) {
+                const flushSeenItemsFunction = self.createFlushSeenItemsFunction(tmp2);
+                closure_128_0 = flushSeenItemsFunction;
+                if (null != flushSeenItemsFunction) {
+                  const _Date3 = Date;
+                  self._lastFlushTimeMillis = Date.now();
+                  if (tmp2 !== constants.IMMEDIATE) {
+                    if (tmp2 !== constants.IMMEDIATE_WITH_COOLDOWN) {
+                      c1 = 2;
+                      c2 = 1;
+                      const obj4 = { value: tmp2(c2[3]).sleep(100), done: false };
+                      return obj4;
+                    }
+                  }
+                  c1 = 1;
+                  c2 = 1;
+                  const obj5 = { value: flushSeenItemsFunction(), done: false };
+                  return obj5;
+                }
+              } else {
+                const _Date2 = Date;
+              }
+            } else {
+              const _Date = Date;
+            }
           }
-        } catch (tmp11) {
-          c3 = tmp;
-          throw tmp11;
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else {
+            c1 = 3;
+            c2 = 1;
+            const obj9 = { value: closure_128_0(), done: false };
+            return obj9;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
         }
+        c2 = 3;
+        return { value: "IconComponent", done: null };
+      } catch (tmp17) {
+        c2 = tmp;
+        throw tmp17;
       }
-    });
-    resolved = new Promise(function() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    });
-  }
-  return resolved;
+    }
+  })();
 };
 
 export const AnalyticsFeedTypes = { FORUM_CHANNEL: "forum_channel" };

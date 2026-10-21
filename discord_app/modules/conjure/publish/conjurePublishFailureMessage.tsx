@@ -1,8 +1,8 @@
-// === Module 11729: conjurePublishFailureMessage ===
+// === Module 11774: conjurePublishFailureMessage ===
 
-// Module 11729 (conjurePublishFailureMessage)
+// Module 11774 (conjurePublishFailureMessage)
 import util from "util" /* 1128 */;
-import _modDef3820 from "module_3820" /* 3820 */;
+import _modDef3830 from "module_3830" /* 3830 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishFailureMessage.tsx");
@@ -10,10 +10,10 @@ const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublis
 export default function conjurePublishFailureMessage(code) {
   if (20088 === code.code) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef3820.UXEDPw);
+    let stringResult = intl2.string(_modDef3830.UXEDPw);
   } else {
     const intl = util.intl;
-    stringResult = intl.string(_modDef3820.gMWZeG);
+    stringResult = intl.string(_modDef3830.gMWZeG);
   }
   return stringResult;
 };

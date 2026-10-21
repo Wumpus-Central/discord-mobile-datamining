@@ -1,55 +1,37 @@
-// === Module 9252: GameProfileReviewUtils ===
+// === Module 9279: GameProfileReviewUtils ===
 
-// Module 9252 (GameProfileReviewUtils)
-import ApplicationDistributors from "ApplicationDistributors" /* 1106 */;
+// Module 9279 (GameProfileReviewUtils)
 import util from "util" /* 1128 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2043 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9178 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9206 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9208 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2042 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9205 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 9235 */;
+import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9280 */;
 import size from "module_2" /* 2 */;
 
-const obj = { appStore: null, googlePlay: null };
+const obj = {
+  appStore: {
+    getTitle() {
+      const intl = util.intl;
+      return intl.string(util.t.LVy7Ug);
+    },
+    action: GameProfileAnalyticUtils.GameProfileTrackActionActions.AppStoreReviews
+  },
+  googlePlay: null
+};
 let obj2 = {
   getTitle() {
     const intl = util.intl;
     return intl.string(util.t.LVy7Ug);
   },
-  websiteCategories: null,
-  websiteHostnames: null,
-  distributor: null,
-  buildUrl: null,
-  action: null
+  action: GameProfileAnalyticUtils.GameProfileTrackActionActions.AppStoreReviews
 };
-let items = [ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.IPHONE, ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.IPAD];
-obj2.websiteCategories = items;
-obj2.websiteHostnames = ["apps.apple.com", "itunes.apple.com"];
-obj2.distributor = ApplicationDistributors.ApplicationDistributors.APPLE_APP_STORE;
-obj2.buildUrl = function buildUrl(arg0) {
-  return "https://apps.apple.com/app/id" + arg0;
-};
-obj2.action = GameProfileAnalyticUtils.GameProfileTrackActionActions.AppStoreReviews;
-obj.appStore = obj2;
-let obj3 = {
+obj.googlePlay = {
   getTitle() {
     const intl = util.intl;
     return intl.string(util.t.V6rllO);
   },
-  websiteCategories: null,
-  websiteHostnames: null,
-  distributor: null,
-  buildUrl: null,
-  action: null
+  action: GameProfileAnalyticUtils.GameProfileTrackActionActions.GooglePlayReviews
 };
-let items1 = [ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.ANDROID];
-obj3.websiteCategories = items1;
-obj3.websiteHostnames = ["play.google.com"];
-obj3.distributor = ApplicationDistributors.ApplicationDistributors.GOOGLE_PLAY;
-obj3.buildUrl = function buildUrl(arg0) {
-  return "https://play.google.com/store/apps/details?id=" + encodeURIComponent(arg0);
-};
-obj3.action = GameProfileAnalyticUtils.GameProfileTrackActionActions.GooglePlayReviews;
-obj.googlePlay = obj3;
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
 
 export const getMobileStoreReviews = function getMobileStoreReviews(reviews) {
@@ -70,43 +52,13 @@ export const getMobileStoreReviews = function getMobileStoreReviews(reviews) {
     }
     if (null != rating) {
       if (null != ratingCount) {
-        const websites = tmp2.websites;
-        const found = websites.find((url) => {
-          url = url.url;
-          try {
-            const websiteCategories = obj.websiteCategories;
-            let hasItem = websiteCategories.includes(tmp);
-            if (hasItem) {
-              const websiteHostnames = obj.websiteHostnames;
-              const _URL = URL;
-              const uRL = new URL(url);
-              hasItem = websiteHostnames.includes(uRL.hostname);
-            }
-            return hasItem;
-          } catch (err) {
-            return false;
-          }
-        });
-        if (null != found) {
-          let url = found.url;
-        } else {
-          const thirdPartySkus = tmp2.thirdPartySkus;
-          const found1 = thirdPartySkus.find((distributor) => distributor.distributor === obj.distributor);
-          let id;
-          if (found1 != null) {
-            id = found1.id;
-          }
-          url = null;
-          if (null != id) {
-            url = obj.buildUrl(id);
-          }
-        }
-        if (null != url) {
+        const mobileStoreLink = GameProfileMobileStoreLinkUtils.getMobileStoreLink(reviews, GameProfileMobileStoreLinkUtils.MOBILE_STORES[tmp]);
+        if (null != mobileStoreLink) {
           const title = obj.getTitle();
           const _Intl = Intl;
           const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
           const formatResult = numberFormat.format(rating);
-          const obj2 = { key: tmp, url, title, ratingText: null, ratingCountText: null, accessibilityLabel: null, action: null };
+          const obj2 = { key: tmp, url: mobileStoreLink.url, title, ratingText: null, ratingCountText: null, accessibilityLabel: null, action: null };
           const intl = util.intl;
           const obj3 = { rating: formatResult };
           obj2.ratingText = intl.format(util.t["zdL4/T"], obj3).toString();

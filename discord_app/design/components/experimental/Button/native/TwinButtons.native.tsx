@@ -1,8 +1,8 @@
-// === Module 8847: TwinButtons ===
+// === Module 8874: TwinButtons ===
 
-// Module 8847 (TwinButtons)
+// Module 8874 (TwinButtons)
 import nativeDefault from "native" /* 587 */;
-import components_Button_Button from "components/Button/Button" /* 5205 */;
+import components_Button_Button from "components/Button/Button" /* 5226 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_6 = createStyles.createStyles((arg0) => {
   let str = "row";
   if (arg0) {

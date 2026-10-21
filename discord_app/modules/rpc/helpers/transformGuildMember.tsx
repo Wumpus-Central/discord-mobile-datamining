@@ -1,7 +1,7 @@
-// === Module 15602: transformGuildMember ===
+// === Module 15678: transformGuildMember ===
 
-// Module 15602 (transformGuildMember)
-import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 9196 */;
+// Module 15678 (transformGuildMember)
+import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 9223 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/helpers/transformGuildMember.tsx");

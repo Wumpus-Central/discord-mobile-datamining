@@ -1,17 +1,17 @@
-// === Module 17833: usePlaceholderStyles ===
+// === Module 17914: usePlaceholderStyles ===
 
-// Module 17833 (usePlaceholderStyles)
+// Module 17914 (usePlaceholderStyles)
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5014 */;
-import timing from "timing" /* 5167 */;
-import AccessibilityStore from "AccessibilityStore" /* 4946 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
+import timing from "timing" /* 5188 */;
+import AccessibilityStore from "AccessibilityStore" /* 4967 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FADE_LAYOUT_ANIMATION_DURATION = fn(9642).FADE_LAYOUT_ANIMATION_DURATION;
+const FADE_LAYOUT_ANIMATION_DURATION = fn(9672).FADE_LAYOUT_ANIMATION_DURATION;
 fn(558);
 const __initData = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
 const __initData2 = { code: "function usePlaceholderStylesTsx2(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };

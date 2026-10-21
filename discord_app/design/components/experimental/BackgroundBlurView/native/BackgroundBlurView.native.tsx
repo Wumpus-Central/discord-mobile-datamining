@@ -1,17 +1,17 @@
-// === Module 8854: BackgroundBlurView ===
+// === Module 8881: BackgroundBlurView ===
 
-// Module 8854 (BackgroundBlurView)
+// Module 8881 (BackgroundBlurView)
 import c from "c" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const BackgroundBlurFill = BackgroundBlurFillWithPress(8855);
+const BackgroundBlurFill = BackgroundBlurFillWithPress(8882);
 require = fn;
 let closure_2 = ["children", "style", "blurTheme", "pressed", "android_blurTargetViewNativeId", "ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_7 = createStyles.createStyles({ container: { position: "relative", overflow: "hidden" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

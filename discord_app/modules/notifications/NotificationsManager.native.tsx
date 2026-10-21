@@ -1,19 +1,19 @@
-// === Module 18666: NotificationsManager ===
+// === Module 18743: NotificationsManager ===
 
-// Module 18666 (NotificationsManager)
+// Module 18743 (NotificationsManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import _modDef2050 from "module_2050" /* 2050 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7839 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13128 */;
+import _modDef2049 from "module_2049" /* 2049 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7867 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13196 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4882 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13125 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13193 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
 
 require = fn;
 function haveNotSeenPromptSince(arg0, arg1) {
@@ -22,8 +22,8 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      tmp4 = _modDef2050().diff(tmp, "days") >= 1;
-      const obj = _modDef2050();
+      tmp4 = _modDef2049().diff(tmp, "days") >= 1;
+      const obj = _modDef2049();
     }
     tmp2 = tmp4;
   }
@@ -89,7 +89,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(18667, dependencyMap.paths), closure_2_14, obj3);
+    obj2.openLazy(asyncRequireImpl(18744, dependencyMap.paths), closure_2_14, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -164,11 +164,11 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
     }
   }
 };
-const PermissionPromptType = fn(13125).PermissionPromptType;
+const PermissionPromptType = fn(13193).PermissionPromptType;
 const Constants = fn(1087);
 ({ RelationshipTypes: c10, GuildFeatures: closure_11, AnalyticEvents: closure_12 } = Constants);
-let closure_13 = fn(7816).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13126);
+let closure_13 = fn(7844).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13194);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_14, EventActionLocation: closure_15 } = NotificationPermissionConstants);
 const items = [, ];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
@@ -296,7 +296,7 @@ class NotificationsManager extends tmp4 {
               ({ message: closure_129_0, optimistic: closure_129_1, isPushNotification: closure_129_2, sendMessageOptions: closure_129_3 } = closure_0);
               c3 = 1;
               c4 = 1;
-              return { value: "test", done: true };
+              return { value: "Reflect", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -397,7 +397,7 @@ class NotificationsManager extends tmp4 {
                 invite2 = invite.invite;
                 c4 = 1;
                 c5 = 1;
-                return { value: "test", done: true };
+                return { value: "Reflect", done: true };
               }
             } else {
               if (1 === tmp5) {
@@ -530,7 +530,7 @@ class NotificationsManager extends tmp4 {
         await "IconComponent";
         closure_1 = tmp2;
         relationship2 = relationship.relationship;
-        return "test";
+        return "Reflect";
       })();
       iter.next();
       return iter;
@@ -580,7 +580,7 @@ class NotificationsManager extends tmp4 {
               closure_129_2 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "test", done: true };
+              return { value: "Reflect", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -678,7 +678,7 @@ class NotificationsManager extends tmp4 {
               closure_128_0 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(7839).getNotificationAuthorizationStatus(), done: false };
+              const obj5 = { value: tmp5(7867).getNotificationAuthorizationStatus(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -690,7 +690,7 @@ class NotificationsManager extends tmp4 {
             return obj6;
           } else {
             closure_128_0 = value;
-            const result = tmp2(13128).updateNotificationAuthorizationStatus(closure_128_0);
+            const result = tmp2(13196).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
             return { value: "IconComponent", done: null };
           }

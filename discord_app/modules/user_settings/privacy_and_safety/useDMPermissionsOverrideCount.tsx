@@ -1,7 +1,7 @@
-// === Module 17026: useDMPermissionsOverrideCount ===
+// === Module 17102: useDMPermissionsOverrideCount ===
 
-// Module 17026 (useDMPermissionsOverrideCount)
-import GuildStore from "GuildStore" /* 4822 */;
+// Module 17102 (useDMPermissionsOverrideCount)
+import GuildStore from "GuildStore" /* 4843 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

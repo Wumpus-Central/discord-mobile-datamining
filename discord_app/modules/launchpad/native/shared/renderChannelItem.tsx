@@ -1,19 +1,19 @@
-// === Module 17848: renderChannelItem ===
+// === Module 17929: renderChannelItem ===
 
-// Module 17848 (renderChannelItem)
+// Module 17929 (renderChannelItem)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useChannelName from "useChannelName" /* 5565 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6740 */;
-import GuildIconDefault from "GuildIcon" /* 6834 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8951 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10617 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17849 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 17850 */;
-import renderChannelContentDefault from "renderChannelContent" /* 17852 */;
+import useChannelName from "useChannelName" /* 5586 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6768 */;
+import GuildIconDefault from "GuildIcon" /* 6862 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8978 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10646 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17930 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 17931 */;
+import renderChannelContentDefault from "renderChannelContent" /* 17933 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -66,7 +66,7 @@ function LaunchpadChannelIcon(channel) {
       }
       if (cResult[9] !== channel2) {
         const obj3 = { channel: channel2, size: "sm", wrapperSize: 32 };
-        const tmp36 = closure_8(tmp13(12077).ChannelIcon, obj3);
+        const tmp36 = closure_8(tmp13(12125).ChannelIcon, obj3);
         cResult[9] = channel2;
         cResult[10] = tmp36;
         let tmp34 = tmp36;
@@ -102,16 +102,16 @@ function LaunchpadChannelIcon(channel) {
     obj8.children = closure_8(GuildIconDefault, obj9);
     const items3 = [closure_8(View, obj8), ];
     const obj10 = { channel, size: "sm", wrapperSize: 32 };
-    items3[1] = closure_8(channel(12077).ChannelIcon, obj10);
+    items3[1] = closure_8(channel(12125).ChannelIcon, obj10);
     obj7.children = items3;
     return closure_10(closure_9, obj7);
   }
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6656).UnreadSetting;
+const UnreadSetting = fn(6684).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { guildBadgeIcon: null };
   const rect = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: 6 };

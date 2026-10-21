@@ -1,9 +1,9 @@
-// === Module 16350: PremiumRestorationAlert ===
+// === Module 16426: PremiumRestorationAlert ===
 
-// Module 16350 (PremiumRestorationAlert)
-import UntouchableAlertDefault from "UntouchableAlert" /* 16351 */;
+// Module 16426 (PremiumRestorationAlert)
+import UntouchableAlertDefault from "UntouchableAlert" /* 16427 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7473 */;
+import IAPStore from "IAPStore" /* 7501 */;
 import initialize from "initialize" /* 504 */;
 
 const jsx = fn(21).jsx;

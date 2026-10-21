@@ -1,18 +1,18 @@
-// === Module 11343: handlePressJoinActivity ===
+// === Module 11387: handlePressJoinActivity ===
 
-// Module 11343 (handlePressJoinActivity)
+// Module 11387 (handlePressJoinActivity)
 import util from "util" /* 1128 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5866 */;
-import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 11298 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11340 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5888 */;
+import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 11342 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11384 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
-import VoiceStateStore from "VoiceStateStore" /* 5591 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
+import VoiceStateStore from "VoiceStateStore" /* 5612 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 
 require = fn;
 function handlePressJoinActivity(arg0) {
@@ -190,7 +190,7 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
     }
     return applyArgumentsResult;
   };
-  return "test";
+  return "Reflect";
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/handlePressJoinActivity.tsx");

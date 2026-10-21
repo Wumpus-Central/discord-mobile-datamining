@@ -1,19 +1,19 @@
-// === Module 7561: ConnectionsHooks ===
+// === Module 7589: ConnectionsHooks ===
 
-// Module 7561 (ConnectionsHooks)
+// Module 7589 (ConnectionsHooks)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import PlatformsDefault from "Platforms" /* 6459 */;
+import PlatformsDefault from "Platforms" /* 6481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6457 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6479 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const Constants = fn(1087);
 ({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7562).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(7590).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -56,35 +56,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlatformA
   }
   const fn2 = function p(type) {
     if (type.type === PlatformTypes.PLAYSTATION_STAGING) {
-      let tmp5 = allowPlayStationStaging;
+      let tmp6 = allowPlayStationStaging;
     } else {
-      let tmp4 = undefined === stateFromStores;
-      if (!tmp4) {
+      let tmp2 = undefined === stateFromStores;
+      if (!tmp2) {
         let hasItem;
         if (closure_10[type.type] != null) {
-          hasItem = obj.includes(tmp10.id);
+          hasItem = obj.includes(tmp.id);
         }
-        tmp4 = !hasItem;
+        tmp2 = !hasItem;
       }
-      tmp5 = !tmp4;
-      if (tmp4) {
-        let tmp7 = forUserProfile;
-        if (!tmp7) {
-          const migrationData = type.migrationData;
-          let migrationExperimentEnabled;
-          if (migrationData != null) {
-            migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("ConnectionsHooks");
-          }
-          let enabled = !migrationExperimentEnabled;
-          if (!migrationExperimentEnabled) {
-            enabled = type.enabled;
-          }
-          tmp7 = enabled;
+      tmp6 = !tmp2;
+      if (tmp2) {
+        let tmp8 = forUserProfile;
+        if (!tmp8) {
+          tmp8 = null == type.migrationData && type.enabled;
+          const tmp10 = null == type.migrationData && type.enabled;
         }
-        tmp5 = tmp7;
+        tmp6 = tmp8;
       }
     }
-    return tmp5;
+    return tmp6;
   };
   cResult[3] = allowPlayStationStaging;
   cResult[4] = stateFromStores;
@@ -101,35 +93,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlatformA
   allowPlayStationStaging = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   return (type) => {
     if (type.type === PlatformTypes.PLAYSTATION_STAGING) {
-      let tmp5 = allowPlayStationStaging;
+      let tmp6 = allowPlayStationStaging;
     } else {
-      let tmp4 = undefined === closure_1;
-      if (!tmp4) {
+      let tmp2 = undefined === closure_1;
+      if (!tmp2) {
         let hasItem;
         if (closure_10[type.type] != null) {
-          hasItem = obj.includes(tmp10.id);
+          hasItem = obj.includes(tmp.id);
         }
-        tmp4 = !hasItem;
+        tmp2 = !hasItem;
       }
-      tmp5 = !tmp4;
-      if (tmp4) {
-        let tmp7 = forUserProfile;
-        if (!tmp7) {
-          const migrationData = type.migrationData;
-          let migrationExperimentEnabled;
-          if (migrationData != null) {
-            migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("ConnectionsHooks");
-          }
-          let enabled = !migrationExperimentEnabled;
-          if (!migrationExperimentEnabled) {
-            enabled = type.enabled;
-          }
-          tmp7 = enabled;
+      tmp6 = !tmp2;
+      if (tmp2) {
+        let tmp8 = forUserProfile;
+        if (!tmp8) {
+          tmp8 = null == type.migrationData && type.enabled;
+          const tmp10 = null == type.migrationData && type.enabled;
         }
-        tmp5 = tmp7;
+        tmp6 = tmp8;
       }
     }
-    return tmp5;
+    return tmp6;
   };
 });
 let closure_13 = tmp4;
@@ -224,20 +208,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlatforms
     const fn5 = function v(type) {
       return !set2.has(type.type);
     };
-    class E {
+    class A {
       constructor(arg0) {
         return arg0.name;
       }
     }
     cResult[11] = fn4;
     cResult[12] = fn5;
-    cResult[13] = E;
+    cResult[13] = A;
     let tmp18 = fn5;
     let tmp17 = fn4;
   } else {
     tmp17 = cResult[11];
     tmp18 = cResult[12];
-    class E {
+    class A {
       constructor(arg0) {
         return arg0.name;
       }
@@ -245,12 +229,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlatforms
   }
   const tmpResult = require("initialize");
   const obj4 = set(12);
-  const items1 = [tmp15, tmp16, tmp17, tmp18, E];
-  sortByResult = obj4.sortBy(set(6459).filter(tmp8), items1);
+  const items1 = [tmp15, tmp16, tmp17, tmp18, A];
+  sortByResult = obj4.sortBy(set(6481).filter(tmp8), items1);
   cResult[5] = tmp9;
   cResult[6] = tmp8;
   cResult[7] = sortByResult;
-  const arr3 = set(6459);
+  const arr3 = set(6481);
 }) : (function usePlatforms() {
   let items = [ConnectedAccountsStore];
   stateFromStores = stateFromStores(memo[9]).useStateFromStores(items, () => accounts.getAccounts());

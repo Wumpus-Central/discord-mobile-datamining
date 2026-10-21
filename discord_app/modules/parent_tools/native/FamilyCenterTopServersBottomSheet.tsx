@@ -1,20 +1,20 @@
-// === Module 15992: FamilyCenterTopServersBottomSheet ===
+// === Module 16068: FamilyCenterTopServersBottomSheet ===
 
-// Module 15992 (FamilyCenterTopServersBottomSheet)
+// Module 16068 (FamilyCenterTopServersBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef2526 from "module_2526" /* 2526 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import GuildIconDefault from "GuildIcon" /* 6834 */;
-import TableRowGroup from "TableRowGroup" /* 6938 */;
-import ActionSheet from "ActionSheet" /* 7247 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7594 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import GuildIconDefault from "GuildIcon" /* 6862 */;
+import TableRowGroup from "TableRowGroup" /* 6966 */;
+import ActionSheet from "ActionSheet" /* 7275 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7622 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { header: { textAlign: "center" }, guildIcon: { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -61,7 +61,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
           }
         }
         const obj2 = { label: stateFromStores.name, subLabel: tmp9, icon: tmp11 };
-        const tmp17 = closure_4(tmp(6854).TableRow, obj2);
+        const tmp17 = closure_4(tmp(6882).TableRow, obj2);
         cResult[9] = tmp9;
         cResult[10] = stateFromStores.name;
         cResult[11] = tmp11;
@@ -75,12 +75,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
       cResult[8] = tmp14;
       tmp11 = tmp14;
     }
-    const topUserOrGuildDescription = tmp(8075).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp(8103).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     cResult[3] = guildActivity.call_count;
     cResult[4] = guildActivity.messages_sent;
     cResult[5] = topUserOrGuildDescription;
     tmp9 = topUserOrGuildDescription;
-    const tmpResult2 = tmp(8075);
+    const tmpResult2 = tmp(8103);
   }
   const tmpResult = guildActivity(504);
 }) : (function GuildRow(guildActivity) {
@@ -91,11 +91,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(8075).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(8103).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(6854).TableRow, obj2);
+    return closure_4(tmp2(6882).TableRow, obj2);
   }
   const obj = guildActivity(504);
 });
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2526.Lq9Set);
+    const stringResult = intl.string(_modDef2536.Lq9Set);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const obj = { children: null };
   const obj2 = { variant: "text-md/bold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2526.Lq9Set);
+  obj2.children = intl.string(_modDef2536.Lq9Set);
   const items = [React4(Text_Text.Text, obj2), ];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, { hasIcons: true, children: topGuildActivities.map((guildActivity) => closure_1_4(closure_1_7, { guildActivity }, guildActivity.guild_id)) });

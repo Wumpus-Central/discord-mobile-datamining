@@ -1,10 +1,10 @@
-// === Module 16623: UpcomingServerEventNotificationUtils ===
+// === Module 16699: UpcomingServerEventNotificationUtils ===
 
-// Module 16623 (UpcomingServerEventNotificationUtils)
+// Module 16699 (UpcomingServerEventNotificationUtils)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserSettings from "UserSettings" /* 4776 */;
-import NotificationConstants from "NotificationConstants" /* 4893 */;
+import UserSettings from "UserSettings" /* 4797 */;
+import NotificationConstants from "NotificationConstants" /* 4914 */;
 import size from "module_2" /* 2 */;
 
 const constants = NotificationConstants.NotificationSettingsUpdateType;

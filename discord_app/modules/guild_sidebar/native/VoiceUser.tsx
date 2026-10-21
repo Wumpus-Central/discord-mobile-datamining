@@ -1,13 +1,13 @@
-// === Module 17297: VoiceUser ===
+// === Module 17373: VoiceUser ===
 
-// Module 17297 (VoiceUser)
+// Module 17373 (VoiceUser)
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4799 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6621 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import SessionsStore from "SessionsStore" /* 5678 */;
-import VoiceStateStore from "VoiceStateStore" /* 5591 */;
+import SessionsStore from "SessionsStore" /* 5698 */;
+import VoiceStateStore from "VoiceStateStore" /* 5612 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

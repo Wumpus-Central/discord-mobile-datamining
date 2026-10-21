@@ -1,8 +1,8 @@
-// === Module 11040: conjureLiveReloadConnection ===
+// === Module 10695: conjureLiveReloadConnection ===
 
-// Module 11040 (conjureLiveReloadConnection)
+// Module 10695 (conjureLiveReloadConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11022 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10677 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/live_reload/conjureLiveReloadConnection.tsx");

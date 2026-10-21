@@ -1,15 +1,15 @@
-// === Module 14196: ConjureCustomWidgetAddOption ===
+// === Module 14271: ConjureCustomWidgetAddOption ===
 
-// Module 14196 (ConjureCustomWidgetAddOption)
+// Module 14271 (ConjureCustomWidgetAddOption)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3820 from "module_3820" /* 3820 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5171 */;
-import RowButton from "RowButton" /* 8885 */;
-import MagicWandIcon from "MagicWandIcon" /* 12198 */;
-import ConjureCustomWidget from "ConjureCustomWidget" /* 14197 */;
-import ConjureCustomWidgetSheet from "ConjureCustomWidgetSheet" /* 14198 */;
+import _modDef3830 from "module_3830" /* 3830 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
+import RowButton from "RowButton" /* 8912 */;
+import MagicWandIcon from "MagicWandIcon" /* 12264 */;
+import ConjureCustomWidget from "ConjureCustomWidget" /* 14272 */;
+import ConjureCustomWidgetSheet from "ConjureCustomWidgetSheet" /* 14273 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureCustomWidgetSheetDefault = ConjureCustomWidgetSheet;
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const ConjureCustomWidgetAddOption = "ConjureCustomWidgetAddOption";
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -49,9 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       const obj4 = { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" };
       obj3.icon = jsx(RowButton.RowButton.Icon, { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" });
       const intl = util.intl;
-      obj3.label = intl.string(_modDef3820["5WHmVU"]);
+      obj3.label = intl.string(_modDef3830["5WHmVU"]);
       const intl2 = util.intl;
-      obj3.subLabel = intl2.string(_modDef3820.yI85oV);
+      obj3.subLabel = intl2.string(_modDef3830.yI85oV);
       obj3.onPress = first;
       const tmp9 = jsx(RowButton.RowButton, { icon: null, label: null, subLabel: null, onPress: null });
       cResult[1] = tmp9;
@@ -77,9 +77,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const obj4 = { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" };
     obj3.icon = jsx(RowButton.RowButton.Icon, { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" });
     const intl = util.intl;
-    obj3.label = intl.string(_modDef3820["5WHmVU"]);
+    obj3.label = intl.string(_modDef3830["5WHmVU"]);
     const intl2 = util.intl;
-    obj3.subLabel = intl2.string(_modDef3820.yI85oV);
+    obj3.subLabel = intl2.string(_modDef3830.yI85oV);
     obj3.onPress = tmp5;
     obj2.children = jsx(RowButton.RowButton, { icon: null, label: null, subLabel: null, onPress: null });
     tmp6 = <View style={tmp.container}>{null}</View>;

@@ -1,15 +1,15 @@
-// === Module 12927: ForumPostTimestamp ===
+// === Module 12995: ForumPostTimestamp ===
 
-// Module 12927 (ForumPostTimestamp)
+// Module 12995 (ForumPostTimestamp)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import ForumHooks from "ForumHooks" /* 9653 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import ForumHooks from "ForumHooks" /* 9683 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useForumChannelStore = fn(12913).useForumChannelStore;
+const useForumChannelStore = fn(12981).useForumChannelStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

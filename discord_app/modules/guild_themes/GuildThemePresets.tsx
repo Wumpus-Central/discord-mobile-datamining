@@ -1,9 +1,9 @@
-// === Module 5108: GuildThemePresets ===
+// === Module 5129: GuildThemePresets ===
 
-// Module 5108 (GuildThemePresets)
+// Module 5129 (GuildThemePresets)
 import _modDef683 from "module_683" /* 683 */;
 import Constants from "Constants" /* 1098 */;
-import CustomThemesRandomUtils from "CustomThemesRandomUtils" /* 5109 */;
+import CustomThemesRandomUtils from "CustomThemesRandomUtils" /* 5130 */;
 import size from "module_2" /* 2 */;
 
 const ThemeTypes = Constants.ThemeTypes;
@@ -124,7 +124,7 @@ export const getGuildThemePreset = function getGuildThemePreset(presetId) {
   return tmp;
 };
 export const getDefaultGuildThemePresetSettings = function getDefaultGuildThemePresetSettings() {
-  return { presetId: mapped[0].id, customUserThemeSettings: "r" };
+  return { presetId: mapped[0].id, customUserThemeSettings: "Array" };
 };
 export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, stateFromStores) {
   return stateFromStores === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;

@@ -1,9 +1,9 @@
-// === Module 11021: ConjureAnalytics ===
+// === Module 10676: ConjureAnalytics ===
 
-// Module 11021 (ConjureAnalytics)
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5673 */;
-import ConjureUtils from "ConjureUtils" /* 7294 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6724 */;
+// Module 10676 (ConjureAnalytics)
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5693 */;
+import ConjureUtils from "ConjureUtils" /* 7322 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
 
 require = fn;
 function projectFields(project_id) {

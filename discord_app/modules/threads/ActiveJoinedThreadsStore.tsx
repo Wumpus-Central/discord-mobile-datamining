@@ -1,20 +1,20 @@
-// === Module 6721: ActiveJoinedThreadsStore ===
+// === Module 6749: ActiveJoinedThreadsStore ===
 
-// Module 6721 (ActiveJoinedThreadsStore)
+// Module 6749 (ActiveJoinedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelConstants from "ChannelConstants" /* 4807 */;
-import AgeGateUtils from "AgeGateUtils" /* 6613 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6773 */;
-import ChannelRecord from "ChannelRecord" /* 4804 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import ReadStateStore from "ReadStateStore" /* 6722 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6741 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4882 */;
+import ChannelConstants from "ChannelConstants" /* 4828 */;
+import AgeGateUtils from "AgeGateUtils" /* 6641 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6801 */;
+import ChannelRecord from "ChannelRecord" /* 4825 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import ReadStateStore from "ReadStateStore" /* 6750 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6769 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
 import size from "module_2" /* 2 */;
 
 function rebuild() {

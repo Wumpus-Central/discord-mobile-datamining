@@ -1,7 +1,7 @@
-// === Module 18201: useActivityWebViewLockManager ===
+// === Module 18284: useActivityWebViewLockManager ===
 
-// Module 18201 (useActivityWebViewLockManager)
-import native from "native" /* 4999 */;
+// Module 18284 (useActivityWebViewLockManager)
+import native from "native" /* 5020 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

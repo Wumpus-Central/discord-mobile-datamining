@@ -1,11 +1,11 @@
-// === Module 9383: VirtualCurrencyActionCreators ===
+// === Module 9411: VirtualCurrencyActionCreators ===
 
-// Module 9383 (VirtualCurrencyActionCreators)
+// Module 9411 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SKUStore from "SKUStore" /* 6775 */;
+import SKUStore from "SKUStore" /* 6803 */;
 
 require = fn;
 function fetchVirtualCurrencyBalance() {
@@ -228,7 +228,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           closure_129_13 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

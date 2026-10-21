@@ -1,7 +1,7 @@
-// === Module 7661: TieredTenureBadgeUtils ===
+// === Module 7689: TieredTenureBadgeUtils ===
 
-// Module 7661 (TieredTenureBadgeUtils)
-import _modDef2050 from "module_2050" /* 2050 */;
+// Module 7689 (TieredTenureBadgeUtils)
+import _modDef2049 from "module_2049" /* 2049 */;
 import PremiumConstants from "PremiumConstants" /* 1394 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ export const getEarnedOnDate = function getEarnedOnDate(earnedOnDate2, premiumSi
   } else if (null == dependencyMap[earnedOnDate2]) {
     return null;
   } else {
-    const obj = _modDef2050(premiumSince);
+    const obj = _modDef2049(premiumSince);
     obj.add(tmp3.tenureReqNumMonths, "months");
     obj.add(1, "days");
     return obj.toDate();
@@ -43,7 +43,7 @@ export const getEarnedTenureBadge = function getEarnedTenureBadge(premiumSince) 
           let tmp6 = dependencyMap[length[diff]];
           toDateResult = null;
           if (null != tmp6) {
-            let obj = _modDef2050(premiumSince);
+            let obj = _modDef2049(premiumSince);
             let addResult = obj.add(tmp6.tenureReqNumMonths, "months");
             let addResult1 = obj.add(1, "days");
             toDateResult = obj.toDate();

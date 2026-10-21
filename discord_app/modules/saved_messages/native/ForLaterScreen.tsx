@@ -1,16 +1,16 @@
-// === Module 13641: ForLaterScreen ===
+// === Module 13708: ForLaterScreen ===
 
-// Module 13641 (ForLaterScreen)
+// Module 13708 (ForLaterScreen)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5014 */;
-import spring from "spring" /* 5208 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7202 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9291 */;
-import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 13642 */;
-import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 13646 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5035 */;
+import spring from "spring" /* 5229 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7230 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9319 */;
+import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 13709 */;
+import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 13713 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10005 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10035 */;
 
 require = fn;
 function keyExtractor(saveData) {
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 }, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.headerBorder = size;
@@ -54,11 +54,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
   const tmp5 = useSavedMessagesForPageDefault(type);
   const stateFromStoresObject = throttledNow(504).useStateFromStoresObject(tmp6, tmp7);
   ({ overdueReminderCount, bookmarkCount } = stateFromStoresObject);
-  if (type !== throttledNow(10006).SavedMessageSortTypes.BOOKMARK) {
+  if (type !== throttledNow(10036).SavedMessageSortTypes.BOOKMARK) {
     bookmarkCount = savedMessages.length;
   }
   const tmpResult = throttledNow(504);
-  const analyticsLocations = useAnalyticsLocationsDefault(tmp4(7227).FOR_LATER_POPOUT).analyticsLocations;
+  const analyticsLocations = useAnalyticsLocationsDefault(tmp4(7255).FOR_LATER_POPOUT).analyticsLocations;
   if (cResult[2] === overdueReminderCount) {
     if (cResult[3] === bookmarkCount) {
       if (cResult[4] === type) {
@@ -76,7 +76,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
         if (cResult[8] === bookmarkCount) {
           let tmp13 = cResult[9];
         }
-        tmp4(9291)(tmp11, tmp12, tmp13);
+        tmp4(9319)(tmp11, tmp12, tmp13);
         const _Symbol2 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const _Date = Date;
@@ -122,7 +122,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
             }
           }
         }
-        const tmp27 = fetchState === throttledNow(10006).BookmarksFetchState.LOADING;
+        const tmp27 = fetchState === throttledNow(10036).BookmarksFetchState.LOADING;
         if (0 === savedMessages.length) {
           class P {
             constructor(arg0) {
@@ -197,12 +197,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
   const items = [SavedMessagesStore];
   const stateFromStoresObject = throttledNow(504).useStateFromStoresObject(items, () => ({ overdueReminderCount: SavedMessagesStore.getOverdueMessageReminderCount(), bookmarkCount: SavedMessagesStore.getBookmarkCount() }));
   ({ overdueReminderCount, bookmarkCount } = stateFromStoresObject);
-  if (type !== throttledNow(10006).SavedMessageSortTypes.BOOKMARK) {
+  if (type !== throttledNow(10036).SavedMessageSortTypes.BOOKMARK) {
     bookmarkCount = savedMessages.length;
   }
-  const tmp6 = fetchState === throttledNow(10006).BookmarksFetchState.LOADING;
+  const tmp6 = fetchState === throttledNow(10036).BookmarksFetchState.LOADING;
   const obj = throttledNow(504);
-  const analyticsLocations = useAnalyticsLocationsDefault(tmp(7227).FOR_LATER_POPOUT).analyticsLocations;
+  const analyticsLocations = useAnalyticsLocationsDefault(tmp(7255).FOR_LATER_POPOUT).analyticsLocations;
   const obj2 = { type: null, name: null, properties: null };
   const tmpResult = useAnalyticsLocationsDefault;
   obj2.type = throttledNow(1275).ImpressionTypes.MODAL;
@@ -221,11 +221,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
   [][0] = throttledNow;
   if (0 === savedMessages.length) {
     if (!tmp6) {
-      if (fetchState !== tmp4(10006).BookmarksFetchState.LOADED_HAS_MORE) {
+      if (fetchState !== tmp4(10036).BookmarksFetchState.LOADED_HAS_MORE) {
         const obj3 = { value: analyticsLocations, children: null };
         const obj4 = { type };
-        obj3.children = closure_8(tmp(13666), obj4);
-        let tmp18 = closure_8(tmp4(7202).AnalyticsLocationProvider, obj3);
+        obj3.children = closure_8(tmp(13731), obj4);
+        let tmp18 = closure_8(tmp4(7230).AnalyticsLocationProvider, obj3);
       }
     }
     const obj5 = { style: null };
@@ -242,9 +242,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLat
       tmp22Result = closure_8(closure_5, obj9);
     }
     obj8.ListFooterComponent = tmp22Result;
-    obj7.children = closure_8(tmp4(7171).FlashList, obj8);
+    obj7.children = closure_8(tmp4(7199).FlashList, obj8);
     obj6.children = closure_8(closure_6, obj7);
-    return closure_8(tmp4(7202).AnalyticsLocationProvider, obj6);
+    return closure_8(tmp4(7230).AnalyticsLocationProvider, obj6);
   }
   const date = new Date();
 });
@@ -257,7 +257,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp4 = closure_10();
   let obj = sharedValue(576);
   const tmp = sharedValue;
-  sharedValue = sharedValue(5014).useSharedValue(0);
+  sharedValue = sharedValue(5035).useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function o(nativeEvent) {
       let num = 0;
@@ -272,7 +272,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     tmp6 = cResult[1];
   }
-  const obj2 = sharedValue(5014);
+  const obj2 = sharedValue(5035);
   class S {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -282,7 +282,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   S.__closure = { borderOpacity: sharedValue };
   S.__workletHash = 16693192032676;
   S.__initData = __initData;
-  const animatedStyle = tmp(5014).useAnimatedStyle(S);
+  const animatedStyle = tmp(5035).useAnimatedStyle(S);
   if (cResult[2] === animatedStyle) {
     if (cResult[3] === tmp4.headerBorder) {
       let tmp8 = cResult[4];
@@ -329,11 +329,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[3] = tmp4.headerBorder;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-  const tmpResult = tmp(5014);
+  const tmpResult = tmp(5035);
 }) : (function ForLaterScreen(type) {
   let sharedValue;
   const tmp = closure_10();
-  sharedValue = sharedValue(5014).useSharedValue(0);
+  sharedValue = sharedValue(5035).useSharedValue(0);
   const items = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -342,7 +342,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const result = sharedValue.set(spring.withSpring(num));
   }, items);
-  let obj = sharedValue(5014);
+  let obj = sharedValue(5035);
   const fn = function n() {
     return { opacity: sharedValue.get() };
   };
@@ -350,7 +350,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn.__workletHash = 14855800666151;
   fn.__initData = __initData2;
   const obj3 = { style: tmp.container, children: null };
-  const animatedStyle = sharedValue(5014).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(5035).useAnimatedStyle(fn);
   const obj4 = { style: null };
   const items1 = [tmp.headerBorder, animatedStyle];
   obj4.style = items1;

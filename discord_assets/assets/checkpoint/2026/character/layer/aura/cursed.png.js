@@ -1,6 +1,6 @@
-// === Module 6305: ? ===
+// === Module 6327: ? ===
 
-// Module 6305
+// Module 6327
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/aura/cursed.png.js");

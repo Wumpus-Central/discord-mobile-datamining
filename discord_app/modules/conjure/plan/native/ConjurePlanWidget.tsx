@@ -1,18 +1,18 @@
-// === Module 12313: ConjurePlanWidget ===
+// === Module 12368: ConjurePlanWidget ===
 
-// Module 12313 (ConjurePlanWidget)
+// Module 12368 (ConjurePlanWidget)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7657 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8669 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11770 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7685 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8696 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11818 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

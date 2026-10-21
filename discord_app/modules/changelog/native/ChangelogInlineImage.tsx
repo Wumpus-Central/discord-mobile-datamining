@@ -1,14 +1,14 @@
-// === Module 8420: ChangelogInlineImage ===
+// === Module 8448: ChangelogInlineImage ===
 
-// Module 8420 (ChangelogInlineImage)
+// Module 8448 (ChangelogInlineImage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import UserSettings from "UserSettings" /* 4776 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import ChangelogImageUtils from "ChangelogImageUtils" /* 8418 */;
-import GifTagDefault from "GifTag" /* 8421 */;
+import UserSettings from "UserSettings" /* 4797 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import ChangelogImageUtils from "ChangelogImageUtils" /* 8446 */;
+import GifTagDefault from "GifTag" /* 8449 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 }, image: null, gifTag: null };
 let obj3 = { alignSelf: "center", marginBottom: nativeDefault.space.PX_8 };
 obj2.image = { borderRadius: nativeDefault.radii.xs };

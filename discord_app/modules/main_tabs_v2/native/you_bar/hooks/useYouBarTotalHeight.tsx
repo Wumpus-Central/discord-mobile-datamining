@@ -1,9 +1,9 @@
-// === Module 16190: useYouBarTotalHeight ===
+// === Module 16266: useYouBarTotalHeight ===
 
-// Module 16190 (useYouBarTotalHeight)
-import useYouBarMargins from "useYouBarMargins" /* 16187 */;
-import YouBarConstants from "YouBarConstants" /* 16188 */;
-import useConnectionBannerHeight from "useConnectionBannerHeight" /* 16191 */;
+// Module 16266 (useYouBarTotalHeight)
+import useYouBarMargins from "useYouBarMargins" /* 16263 */;
+import YouBarConstants from "YouBarConstants" /* 16264 */;
+import useConnectionBannerHeight from "useConnectionBannerHeight" /* 16267 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

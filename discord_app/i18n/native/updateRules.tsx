@@ -1,10 +1,10 @@
-// === Module 18457: updateRules ===
+// === Module 18536: updateRules ===
 
-// Module 18457 (updateRules)
+// Module 18536 (updateRules)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import _modDef1951 from "module_1951" /* 1951 */;
-import LinkingDefault from "Linking" /* 5622 */;
+import LinkingDefault from "Linking" /* 5642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
   ({ output, state } = node);
   let obj = node(576);
   const tmp = node;
-  const token = node(5213).useToken(nativeDefault.colors.TEXT_LINK);
+  const token = node(5234).useToken(nativeDefault.colors.TEXT_LINK);
   let str = "none";
-  if (noop.useContext(node(4959).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
+  if (noop.useContext(node(4980).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
     str = "underline";
   }
   if (cResult[0] === token) {
@@ -71,7 +71,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
   cResult[1] = str;
   cResult[2] = obj5;
   tmp5 = obj5;
-  const obj2 = node(5213);
+  const obj2 = node(5234);
 }) : (function I18nLink(node) {
   node = node.node;
   let token;

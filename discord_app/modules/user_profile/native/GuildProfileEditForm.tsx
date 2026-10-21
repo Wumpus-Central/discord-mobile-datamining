@@ -1,29 +1,29 @@
-// === Module 15766: GuildProfileEditForm ===
+// === Module 15842: GuildProfileEditForm ===
 
-// Module 15766 (GuildProfileEditForm)
+// Module 15842 (GuildProfileEditForm)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2054 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7202 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7227 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8590 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8592 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9599 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9720 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9721 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15670 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15672 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15676 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 15693 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15747 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7230 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8617 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8619 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9629 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9750 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9751 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15746 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15748 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15752 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 15769 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15823 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4860 */;
-import UserProfileStore from "UserProfileStore" /* 7652 */;
+import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import UserProfileStore from "UserProfileStore" /* 7680 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       let obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null, onGifBannerSelect: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(15658, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(15734, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -81,7 +81,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1128).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(7202).AnalyticsLocationProvider, obj2);
+  return closure_17(user(7230).AnalyticsLocationProvider, obj2);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 let closure_4 = ["nick", "bio", "guild_tag"];

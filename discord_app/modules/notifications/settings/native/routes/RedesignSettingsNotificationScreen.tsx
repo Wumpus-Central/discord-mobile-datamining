@@ -1,20 +1,20 @@
-// === Module 17075: RedesignSettingsNotificationScreen ===
+// === Module 17151: RedesignSettingsNotificationScreen ===
 
-// Module 17075 (RedesignSettingsNotificationScreen)
+// Module 17151 (RedesignSettingsNotificationScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import _modDef2854 from "module_2854" /* 2854 */;
-import useMountEffectDefault from "useMountEffect" /* 5224 */;
-import SettingBuilders from "SettingBuilders" /* 11111 */;
-import SettingLayoutDefault from "SettingLayout" /* 15780 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16592 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16594 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17076 */;
+import _modDef2864 from "module_2864" /* 2864 */;
+import useMountEffectDefault from "useMountEffect" /* 5245 */;
+import SettingBuilders from "SettingBuilders" /* 11155 */;
+import SettingLayoutDefault from "SettingLayout" /* 15856 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16668 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 16670 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17152 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(16591).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8280).MobileUserSettings;
+let closure_4 = fn(16667).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8308).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -36,7 +36,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection(), ];
     const obj5 = { label: null, settings: null };
     const intl = util.intl;
-    obj5.label = intl.string(_modDef2854.nvBHcD);
+    obj5.label = intl.string(_modDef2864.nvBHcD);
     const items1 = [, , , , , , ];
     ({ REDESIGN_IN_APP_NOTIFICATIONS: arr2[0], REDESIGN_IN_APP_MESSAGE_SOUNDS: arr2[1], REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS: arr2[2], REDESIGN_IOS_NATIVE_PHONE_INTEGRATION: arr2[3], REDESIGN_ANDROID_NOTIFICATION_LIGHTS: arr2[4], REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[5], REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[6] } = MobileUserSettings);
     obj5.settings = items1;
@@ -111,7 +111,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection(), ];
     const obj4 = { label: null, settings: null };
     const intl = util.intl;
-    obj4.label = intl.string(_modDef2854.nvBHcD);
+    obj4.label = intl.string(_modDef2864.nvBHcD);
     const items1 = [, , , , , , ];
     ({ REDESIGN_IN_APP_NOTIFICATIONS: arr2[0], REDESIGN_IN_APP_MESSAGE_SOUNDS: arr2[1], REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS: arr2[2], REDESIGN_IOS_NATIVE_PHONE_INTEGRATION: arr2[3], REDESIGN_ANDROID_NOTIFICATION_LIGHTS: arr2[4], REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[5], REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[6] } = MobileUserSettings);
     obj4.settings = items1;

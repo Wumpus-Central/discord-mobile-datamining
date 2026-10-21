@@ -1,24 +1,24 @@
-// === Module 11579: SpeakerTile ===
+// === Module 11629: SpeakerTile ===
 
-// Module 11579 (SpeakerTile)
+// Module 11629 (SpeakerTile)
 import nativeDefault from "native" /* 587 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7826 */;
-import StageTileTypes from "StageTileTypes" /* 11580 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7854 */;
+import StageTileTypes from "StageTileTypes" /* 11630 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6723 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
 
 require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(5593).ParticipantTypes;
+const ParticipantTypes = fn(5614).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let obj = { FULL: 212, [212]: "FULL", HALF: 112, [112]: "HALF", THIRD: 112, [112]: "THIRD" };
 const result = obj.FULL * 1.7777777777777777;
 const result1 = obj.HALF * 1.7777777777777777;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { marginHorizontal: 4, marginVertical: 4, alignItems: "center", flex: 1 }, full: { height: obj.FULL }, half: { height: obj.HALF }, third: { height: obj.THIRD }, avatarContainer: { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.sm }, imageBackground: { flex: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch" }, nameplateContainer: null, nameplateText: null, restricted: null, blocked: null };
 let obj5 = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", bottom: 4, marginHorizontal: 4, paddingVertical: 4, paddingHorizontal: 8, backgroundColor: null, borderRadius: 6 };
-const ColorUtils = fn(4942);
+const ColorUtils = fn(4963);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj2.nameplateContainer = obj5;
 let obj4 = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.sm };

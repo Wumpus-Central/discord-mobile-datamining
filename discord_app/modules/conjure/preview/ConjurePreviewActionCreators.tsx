@@ -1,15 +1,29 @@
-// === Module 11043: ConjurePreviewActionCreators ===
+// === Module 10698: ConjurePreviewActionCreators ===
 
-// Module 11043 (ConjurePreviewActionCreators)
+// Module 10698 (ConjurePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6725 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11045 */;
-import leaveFrame from "leaveFrame" /* 11068 */;
-import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 11081 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6724 */;
-import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 11044 */;
+import HTTPUtils from "HTTPUtils" /* 1297 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6753 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10700 */;
+import leaveFrame from "leaveFrame" /* 10723 */;
+import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 10741 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 10699 */;
 
 require = fn;
+let closure_8 = async function _loadConjurePreviewDm() {
+  closure_2 = tmp2;
+  closure_1 = tmp5;
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.post({ url: Endpoints.CONJURE_PROJECT_PREVIEW_DM(closure_0), rejectWithError: true });
+  const body = value.body;
+  closure_129_1 = closure_130_4(body);
+  closure_130_1(closure_130_2[7]).dispatch({ type: "CHANNEL_CREATE", channel: closure_129_1 });
+  return closure_129_1.id;
+};
+let closure_4 = fn(4825).createChannelRecordFromServer;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");
 
@@ -59,4 +73,14 @@ export const wakeConjurePreview = function wakeConjurePreview(projectId) {
     }
   }
   obj = conjurePausedPreviewViews;
+};
+export const loadConjurePreviewDm = function loadConjurePreviewDm() {
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

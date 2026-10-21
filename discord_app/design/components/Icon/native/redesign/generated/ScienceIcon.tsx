@@ -1,10 +1,10 @@
-// === Module 17674: ScienceIcon ===
+// === Module 17755: ScienceIcon ===
 
-// Module 17674 (ScienceIcon)
+// Module 17755 (ScienceIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5630 */;
-import _mod12580 from "module_12580" /* 12580 */;
+import BaseIconImage from "BaseIconImage" /* 5650 */;
+import _mod12644 from "module_12644" /* 12644 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ScienceIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12580;
+    const tmpResult = _mod12644;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ScienceIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12580, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12644, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

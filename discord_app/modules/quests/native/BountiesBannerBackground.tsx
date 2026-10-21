@@ -1,12 +1,12 @@
-// === Module 16172: BountiesBannerBackground ===
+// === Module 16248: BountiesBannerBackground ===
 
-// Module 16172 (BountiesBannerBackground)
+// Module 16248 (BountiesBannerBackground)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import common_Video from "common/Video" /* 8727 */;
+import LinearGradientDefault from "LinearGradient" /* 5240 */;
+import common_Video from "common/Video" /* 8754 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4946 */;
+import AccessibilityStore from "AccessibilityStore" /* 4967 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

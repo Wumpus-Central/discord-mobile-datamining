@@ -1,8 +1,8 @@
-// === Module 19147: openSafetyFlow ===
+// === Module 19222: openSafetyFlow ===
 
-// Module 19147 (openSafetyFlow)
+// Module 19222 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4794 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4815 */;
 
 const require = fn;
 let closure_6 = async function _openSafetyFlow() {
@@ -42,7 +42,7 @@ let closure_6 = async function _openSafetyFlow() {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {

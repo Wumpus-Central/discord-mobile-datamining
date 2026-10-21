@@ -1,35 +1,35 @@
-// === Module 9722: PremiumFeaturesCard ===
+// === Module 9752: PremiumFeaturesCard ===
 
-// Module 9722 (PremiumFeaturesCard)
+// Module 9752 (PremiumFeaturesCard)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import PremiumUtils from "PremiumUtils" /* 2054 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7202 */;
-import PriceUtils from "PriceUtils" /* 7288 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7454 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7483 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8368 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9354 */;
-import usePremiumPlanPrice from "usePremiumPlanPrice" /* 9723 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9731 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9742 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9743 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9745 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9750 */;
+import PremiumUtils from "PremiumUtils" /* 2053 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7230 */;
+import PriceUtils from "PriceUtils" /* 7316 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7482 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7511 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8396 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9382 */;
+import usePremiumPlanPrice from "usePremiumPlanPrice" /* 9753 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9761 */;
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9772 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9773 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9775 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9780 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4946 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2058 */;
-import SubscriptionStore from "SubscriptionStore" /* 2059 */;
-import TextStyles_mod from "TextStyles" /* 6602 */;
+import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2057 */;
+import SubscriptionStore from "SubscriptionStore" /* 2058 */;
+import TextStyles_mod from "TextStyles" /* 6630 */;
 
 const usePremiumPlanPriceDefault = usePremiumPlanPrice;
 
-const PremiumUtilsDefault = percentage(2054);
-const _modDef3240 = percentage(3240);
+const PremiumUtilsDefault = percentage(2053);
+const _modDef3250 = percentage(3250);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1087);
@@ -43,7 +43,7 @@ const jsxProd = fn(21);
 let items = [, ];
 ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
 const set = new Set(items);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { containerWrapper: { position: "relative" }, card: { display: "flex", justifyContent: "flex-start", width: "100%", padding: 24, backgroundColor: "transparent", overflow: "hidden", borderRadius: nativeDefault.radii.lg }, logoContainer: { marginBottom: 8 }, logo: { marginRight: 4 }, priceContainer: { display: "flex", flexWrap: "wrap", flexDirection: "row", maxWidth: "50%" }, discountPriceText: { maxWidth: "62%", includeFontPadding: true }, featureList: { marginTop: 8 }, featureLabel: null, featureRow: null, featureIcon: null, button: null, currentPlanLabel: null, trialSubTextContainer: null, trialSubText: null, pill: null, buttonIcon: null };
 let obj4 = {};
 let TextStyles = TextStyles_mod;
@@ -331,7 +331,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             priceString5 = __initData;
           }
           obj12.regularPrice = priceString5;
-          const formatResult1 = intl5.format(_modDef3240.FwjZzr, obj12);
+          const formatResult1 = intl5.format(_modDef3250.FwjZzr, obj12);
           percentage = activeDiscountInfo.percentage;
           cResult[13] = percentage;
           cResult[14] = premiumSubscription;
@@ -484,7 +484,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             priceString1 = __initData;
           }
           obj7.regularPrice = priceString1;
-          formatResult = intl6.format(_modDef3240.FwjZzr, obj7);
+          formatResult = intl6.format(_modDef3250.FwjZzr, obj7);
           const tmp7Result6 = PremiumGroupUtils;
         }
       }
@@ -589,19 +589,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const obj = premiumType(576);
   const tmp6 = undefined !== hidePrice && hidePrice;
   _modDef38(set.has(premiumType), "only Tier 0 and Tier 2 are supported");
-  const premiumTrialOffer = premiumType(7506).usePremiumTrialOffer();
-  const tmpResult = premiumType(7506);
-  const premiumDiscountOffer = premiumType(8379).usePremiumDiscountOffer();
-  const tmpResult13 = premiumType(8379);
-  const activeDiscountInfo = premiumType(8377).useActiveDiscountInfo();
+  const premiumTrialOffer = premiumType(7534).usePremiumTrialOffer();
+  const tmpResult = premiumType(7534);
+  const premiumDiscountOffer = premiumType(8407).usePremiumDiscountOffer();
+  const tmpResult13 = premiumType(8407);
+  const activeDiscountInfo = premiumType(8405).useActiveDiscountInfo();
   const tmp14 = useFractionalPremiumInfoDefault();
-  const tmpResult14 = premiumType(8377);
+  const tmpResult14 = premiumType(8405);
   let subscriptionTrial;
-  const premiumTrialOfferPremiumType = premiumType(7505).usePremiumTrialOfferPremiumType();
+  const premiumTrialOfferPremiumType = premiumType(7533).usePremiumTrialOfferPremiumType();
   if (premiumTrialOffer != null) {
     subscriptionTrial = premiumTrialOffer.subscriptionTrial;
   }
-  premiumType(2054);
+  premiumType(2053);
   let interval;
   if (subscriptionTrial != null) {
     interval = subscriptionTrial.interval;
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       } else {
         tmp56 = cResult[13];
       }
-      const discountedPriceString = tmp(9740).useDiscountedPremiumProductInfo(premiumDiscountOffer, tmp56).discountedPriceString;
+      const discountedPriceString = tmp(9770).useDiscountedPremiumProductInfo(premiumDiscountOffer, tmp56).discountedPriceString;
       if (cResult[14] !== premiumType) {
         function getCTA() {
           if (premiumType === PremiumTypes.TIER_0) {
@@ -796,8 +796,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
           const planIdFromItems = first.planIdFromItems;
           let tmp60 = null != planIdFromItems;
           if (tmp60) {
-            tmp60 = tmp(2054).getPremiumType(planIdFromItems) === premiumType;
-            const tmpResult22 = tmp(2054);
+            tmp60 = tmp(2053).getPremiumType(planIdFromItems) === premiumType;
+            const tmpResult22 = tmp(2053);
           }
           class K {
             constructor() {
@@ -894,7 +894,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                                                 }
                                                                 obj4.price = priceString;
                                                                 tmp99[2] = intl4.format(tmp(1128).t.pC4tcv, obj4);
-                                                                obj3.children = closure_20(tmp(5195).Text, tmp99);
+                                                                obj3.children = closure_20(tmp(5216).Text, tmp99);
                                                                 tmp98Result = closure_20(tmp62, obj3);
                                                               }
                                                               if (cResult[56] === tmp8Result) {
@@ -1016,7 +1016,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                                             return items;
                                                           }
                                                         }
-                                                        closure_20(tmp(9355).NitroWheelIcon, obj11);
+                                                        closure_20(tmp(9383).NitroWheelIcon, obj11);
                                                       }
                                                       class K {
                                                         constructor() {
@@ -1181,7 +1181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         }
       }
       const obj15 = { style: tmp7.pill, discountOffer: premiumDiscountOffer, isActiveDiscount: null != activeDiscountInfo, shouldShowDiscountUpsell: null != premiumDiscountOffer && null != discountedPriceString, premiumType, trialOffer: premiumTrialOffer };
-      const tmp66 = closure_20(tmp(7502).PremiumPill, obj15);
+      const tmp66 = closure_20(tmp(7530).PremiumPill, obj15);
       cResult[16] = premiumDiscountOffer;
       cResult[17] = premiumType;
       cResult[18] = null != premiumDiscountOffer && null != discountedPriceString;
@@ -1190,10 +1190,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       cResult[21] = premiumTrialOffer;
       cResult[22] = tmp66;
       tmp64 = tmp66;
-      const tmpResult21 = tmp(9740);
+      const tmpResult21 = tmp(9770);
     }
     const tmpResult19 = tmp(504);
-    const premiumBundleWithPredicate = tmp(7467).getPremiumBundleWithPredicate((additionalPlans) => {
+    const premiumBundleWithPredicate = tmp(7495).getPremiumBundleWithPredicate((additionalPlans) => {
       let tmp = 0 === additionalPlans.additionalPlans.length;
       ({ numPremiumGuild, premiumTier, interval } = additionalPlans);
       if (tmp) {
@@ -1214,7 +1214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     cResult[10] = premiumType;
     cResult[11] = premiumBundleWithPredicate;
     tmp54 = premiumBundleWithPredicate;
-    const tmpResult23 = tmp(7467);
+    const tmpResult23 = tmp(7495);
   } else {
     class K {
       constructor() {
@@ -1224,10 +1224,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         return items;
       }
     }
-    const trialCtaOverride = tmp(9729).getTrialCtaOverride(premiumTrialOffer, tmp24);
-    const tmpResult24 = tmp(9729);
+    const trialCtaOverride = tmp(9759).getTrialCtaOverride(premiumTrialOffer, tmp24);
+    const tmpResult24 = tmp(9759);
   }
-  const tmpResult15 = premiumType(7505);
+  const tmpResult15 = premiumType(7533);
 }) : (function PremiumFeaturesCard(premiumType) {
   premiumType = premiumType.premiumType;
   ({ applicationId: importDefault, onPaymentSuccess: dependencyMap, onPaymentDismiss: _slicedToArray, hideButton } = premiumType);
@@ -1257,19 +1257,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   let premiumBundleWithPredicate;
   const tmp3 = closure_23();
   _modDef38(set.has(premiumType), "only Tier 0 and Tier 2 are supported");
-  const premiumTrialOffer = premiumType(7506).usePremiumTrialOffer();
-  const obj = premiumType(7506);
-  const premiumDiscountOffer = premiumType(8379).usePremiumDiscountOffer();
-  const obj2 = premiumType(8379);
-  const activeDiscountInfo = premiumType(8377).useActiveDiscountInfo();
-  const obj3 = premiumType(8377);
+  const premiumTrialOffer = premiumType(7534).usePremiumTrialOffer();
+  const obj = premiumType(7534);
+  const premiumDiscountOffer = premiumType(8407).usePremiumDiscountOffer();
+  const obj2 = premiumType(8407);
+  const activeDiscountInfo = premiumType(8405).useActiveDiscountInfo();
+  const obj3 = premiumType(8405);
   const tmp12 = useFractionalPremiumInfoDefault();
   let subscriptionTrial;
-  const premiumTrialOfferPremiumType = premiumType(7505).usePremiumTrialOfferPremiumType();
+  const premiumTrialOfferPremiumType = premiumType(7533).usePremiumTrialOfferPremiumType();
   if (premiumTrialOffer != null) {
     subscriptionTrial = premiumTrialOffer.subscriptionTrial;
   }
-  premiumType(2054);
+  premiumType(2053);
   let interval;
   if (subscriptionTrial != null) {
     interval = subscriptionTrial.interval;
@@ -1327,7 +1327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       interval1 = constants.MONTH;
     }
     const tmp34 = usePremiumFeaturesDefault(premiumType, flag, UNSPECIFIED);
-    premiumBundleWithPredicate = tmp8(7467).getPremiumBundleWithPredicate((additionalPlans) => {
+    premiumBundleWithPredicate = tmp8(7495).getPremiumBundleWithPredicate((additionalPlans) => {
       let tmp = 0 === additionalPlans.additionalPlans.length;
       ({ numPremiumGuild, premiumTier, interval } = additionalPlans);
       if (tmp) {
@@ -1345,9 +1345,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       return tmp;
     });
     _modDef38(null != premiumBundleWithPredicate, "could not find a premium item");
-    const tmp8Result13 = tmp8(7467);
+    const tmp8Result13 = tmp8(7495);
     const items3 = [premiumBundleWithPredicate];
-    const discountedPriceString = tmp8(9740).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
+    const discountedPriceString = tmp8(9770).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
     let tmp43 = tmp35;
     if (null != first && stateFromStores && tmp27[1] && !isBoostOnly) {
       let flag4 = false;
@@ -1355,8 +1355,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         const planIdFromItems = first.planIdFromItems;
         let tmp44 = null != planIdFromItems;
         if (tmp44) {
-          tmp44 = tmp8(2054).getPremiumType(planIdFromItems) === premiumType;
-          const tmp8Result15 = tmp8(2054);
+          tmp44 = tmp8(2053).getPremiumType(planIdFromItems) === premiumType;
+          const tmp8Result15 = tmp8(2053);
         }
         flag4 = tmp44;
       }
@@ -1365,11 +1365,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     const tmp45 = usePremiumPlanPriceDefault(premiumBundleWithPredicate.basePlanId);
     const obj5 = { style: tmp3.containerWrapper, onLayout, children: null };
     const obj6 = { style: tmp3.pill, discountOffer: premiumDiscountOffer, isActiveDiscount: null != activeDiscountInfo, shouldShowDiscountUpsell: null != premiumDiscountOffer && null != discountedPriceString, premiumType, trialOffer: premiumTrialOffer };
-    const items4 = [closure_20(tmp8(7502).PremiumPill, obj6), ];
+    const items4 = [closure_20(tmp8(7530).PremiumPill, obj6), ];
     const obj7 = { premiumType, style, children: null };
     const obj8 = { style: tmp3.card, children: null };
     const obj9 = { style: tmp3.logoContainer, children: null };
-    const tmp8Result14 = tmp8(9740);
+    const tmp8Result14 = tmp8(9770);
     if (flag3) {
       let tmp48Result = closure_20(PremiumGroupWordmarkDefault, { width: 185, height: 20, alwaysWhite: true });
     } else {
@@ -1416,7 +1416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         }
         obj16.price = priceString;
         obj15.children = intl6.format(tmp8(1128).t.pC4tcv, obj16);
-        obj14.children = closure_20(tmp8(5195).Text, obj15);
+        obj14.children = closure_20(tmp8(5216).Text, obj15);
         tmp48Result6 = closure_20(tmp47, obj14);
       }
       items6[1] = tmp48Result6;
@@ -1430,7 +1430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         const obj18 = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
         const intl5 = tmp8(1128).intl;
         obj18.children = intl5.string(tmp8(1128).t["j+wlhy"]);
-        obj17.children = closure_20(tmp8(5195).Text, obj18);
+        obj17.children = closure_20(tmp8(5216).Text, obj18);
         let obj19 = obj17;
       } else {
         obj19 = { style: tmp3.button, children: null };
@@ -1438,7 +1438,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
           const obj20 = { text: stringResult, icon: null, iconPosition: null, variant: null, size: "md", grow: true, shiny: null, disabled: null, onPress: null };
           if (null != premiumDiscountOffer) {
             const obj22 = { style: tmp3.buttonIcon, color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, size: "sm" };
-            const tmp48Result7 = closure_20(tmp8(9355).NitroWheelIcon, obj22);
+            const tmp48Result7 = closure_20(tmp8(9383).NitroWheelIcon, obj22);
           }
           obj20.icon = tmp48Result7;
           let str2;
@@ -1479,8 +1479,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     } else {
       TIER_2 = closure_13.TIER_2;
     }
-    const trialCtaOverride = tmp8(9729).getTrialCtaOverride(premiumTrialOffer, TIER_2);
-    const tmp8Result16 = tmp8(9729);
+    const trialCtaOverride = tmp8(9759).getTrialCtaOverride(premiumTrialOffer, TIER_2);
+    const tmp8Result16 = tmp8(9759);
   }
-  const obj4 = premiumType(7505);
+  const obj4 = premiumType(7533);
 });

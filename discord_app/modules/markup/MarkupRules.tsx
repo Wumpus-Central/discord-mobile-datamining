@@ -1,32 +1,32 @@
-// === Module 5940: MarkupRules ===
+// === Module 5962: MarkupRules ===
 
-// Module 5940 (MarkupRules)
+// Module 5962 (MarkupRules)
 import util from "util" /* 1128 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4857 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4894 */;
-import UserUtilsDefault from "UserUtils" /* 4994 */;
-import MarkupLinkRule from "MarkupLinkRule" /* 5943 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5946 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5947 */;
-import StaticRouteRendering from "StaticRouteRendering" /* 5948 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5949 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5950 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5961 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5963 */;
-import MarkupListRuleDefault from "MarkupListRule" /* 8422 */;
-import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8423 */;
-import HighlightJsAnsiLanguage from "HighlightJsAnsiLanguage" /* 8444 */;
-import TimestampUtils from "TimestampUtils" /* 8448 */;
-import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8450 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 14894 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4878 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
+import UserUtilsDefault from "UserUtils" /* 5015 */;
+import MarkupLinkRule from "MarkupLinkRule" /* 5965 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5968 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5969 */;
+import StaticRouteRendering from "StaticRouteRendering" /* 5970 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5971 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5972 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5983 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5985 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8447 */;
+import MarkupListRuleDefault from "MarkupListRule" /* 8450 */;
+import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8451 */;
+import TimestampUtils from "TimestampUtils" /* 8475 */;
+import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8477 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 14968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildRoleStore from "GuildRoleStore" /* 4854 */;
-import GuildStore from "GuildStore" /* 4822 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import GuildRoleStore from "GuildRoleStore" /* 4875 */;
+import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;
 import t_mod from "module_1951" /* 1951 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 5939 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5961 */;
 import "module_12";
 import apply_mod from "module_12" /* 12 */;
 
@@ -218,8 +218,8 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
 }
 const Constants = fn(1087);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5941).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5942).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5963).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5964).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;
@@ -880,7 +880,7 @@ let items1 = [
             formatted = str3.toLowerCase();
           }
           if ("ansi" === formatted) {
-            match[2] = match[2].replaceAll(HighlightJsAnsiLanguage.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
+            match[2] = match[2].replaceAll(MarkupRulesUtils.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
           }
           return match;
         } else {
@@ -905,7 +905,7 @@ const obj24 = {
           formatted = str3.toLowerCase();
         }
         if ("ansi" === formatted) {
-          match[2] = match[2].replaceAll(HighlightJsAnsiLanguage.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
+          match[2] = match[2].replaceAll(MarkupRulesUtils.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
         }
         return match;
       } else {

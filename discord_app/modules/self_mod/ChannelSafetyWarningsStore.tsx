@@ -1,10 +1,10 @@
-// === Module 10622: ChannelSafetyWarningsStore ===
+// === Module 10651: ChannelSafetyWarningsStore ===
 
-// Module 10622 (ChannelSafetyWarningsStore)
+// Module 10651 (ChannelSafetyWarningsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
 
 function handleConnectionOpen() {
   closure_4 = {};

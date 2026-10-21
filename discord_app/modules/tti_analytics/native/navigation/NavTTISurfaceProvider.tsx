@@ -1,14 +1,14 @@
-// === Module 17804: NavTTISurfaceProvider ===
+// === Module 17885: NavTTISurfaceProvider ===
 
-// Module 17804 (NavTTISurfaceProvider)
+// Module 17885 (NavTTISurfaceProvider)
 import c from "c" /* 576 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12675 */;
-import useComponentRenderSpan from "useComponentRenderSpan" /* 17728 */;
-import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 17730 */;
-import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 17731 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12739 */;
+import useComponentRenderSpan from "useComponentRenderSpan" /* 17809 */;
+import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 17811 */;
+import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 17812 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5198 */;
+import DevSettingsStore from "DevSettingsStore" /* 5219 */;
 
 const require = globalThis.__r;
 
@@ -267,7 +267,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
           tmp5 = closure_1;
           fn = obj.subscribe(closure_0, closure_1, definition);
         } else {
-          fn = /* F152024 */ function() { ... };
+          fn = /* F152540 */ function() { ... };
         }
         return fn;
       }
@@ -291,10 +291,10 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
     tmp10 = cResult[7];
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    const result = tmp(17722).isNavigationTTIEnabled();
+    const result = tmp(17803).isNavigationTTIEnabled();
     cResult[8] = result;
     let tmp14 = result;
-    const tmpResult = tmp(17722);
+    const tmpResult = tmp(17803);
   } else {
     tmp14 = cResult[8];
   }
@@ -402,7 +402,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
                       }
                       tmp35[0] = tmp21;
                       tmp35[1] = cResult[27];
-                      const tmp36 = closure_11(tmp(12674).NavTTISurfaceContext.Provider, tmp35);
+                      const tmp36 = closure_11(tmp(12738).NavTTISurfaceContext.Provider, tmp35);
                       cResult[28] = cResult[27];
                       cResult[29] = tmp21;
                       cResult[30] = tmp36;
@@ -474,7 +474,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
                     tmp5 = closure_1;
                     fn = obj.subscribe(closure_0, closure_1, definition);
                   } else {
-                    fn = /* F152024 */ function() { ... };
+                    fn = /* F152540 */ function() { ... };
                   }
                   return fn;
                 }
@@ -500,7 +500,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
             tmp5 = closure_1;
             fn = obj.subscribe(closure_0, closure_1, definition);
           } else {
-            fn = /* F152024 */ function() { ... };
+            fn = /* F152540 */ function() { ... };
           }
           return fn;
         }
@@ -538,7 +538,7 @@ export const NavTTISurfaceProvider = ReactCompilerGating.isReactCompilerEnabled(
         tmp5 = closure_1;
         fn = obj.subscribe(closure_0, closure_1, definition);
       } else {
-        fn = /* F152024 */ function() { ... };
+        fn = /* F152540 */ function() { ... };
       }
       return fn;
     }

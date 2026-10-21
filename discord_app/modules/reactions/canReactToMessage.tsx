@@ -1,12 +1,12 @@
-// === Module 8276: canReactToMessage ===
+// === Module 8304: canReactToMessage ===
 
-// Module 8276 (canReactToMessage)
+// Module 8304 (canReactToMessage)
 import FlagUtils from "FlagUtils" /* 1405 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4867 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8277 */;
-import GuildMemberStore from "GuildMemberStore" /* 4860 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6587 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4888 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8305 */;
+import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6615 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;

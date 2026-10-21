@@ -1,9 +1,9 @@
-// === Module 16915: DesignSystemStackSetting ===
+// === Module 16991: DesignSystemStackSetting ===
 
-// Module 16915 (DesignSystemStackSetting)
+// Module 16991 (DesignSystemStackSetting)
 import Constants from "Constants" /* 1087 */;
-import SettingsConstants from "SettingsConstants" /* 8280 */;
-import SettingBuilders from "SettingBuilders" /* 11111 */;
+import SettingsConstants from "SettingsConstants" /* 8308 */;
+import SettingBuilders from "SettingBuilders" /* 11155 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,21 +1,21 @@
-// === Module 12771: SoundmojiActionSheet ===
+// === Module 12835: SoundmojiActionSheet ===
 
-// Module 12771 (SoundmojiActionSheet)
+// Module 12835 (SoundmojiActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import EmojiDefault from "Emoji" /* 7178 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12772 */;
+import EmojiDefault from "Emoji" /* 7206 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 12836 */;
 import noop from "module_19" /* 19 */;
 
 const util = BottomSheet(1128);
-const Text_Text = BottomSheet(5195);
-const Sheet_BottomSheet = BottomSheet(5226);
-const getSoundmojiASTFromString = BottomSheet(5963);
+const Text_Text = BottomSheet(5216);
+const Sheet_BottomSheet = BottomSheet(5247);
+const getSoundmojiASTFromString = BottomSheet(5985);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 }, soundmojiContainer: { flexDirection: "row", alignItems: "center" }, emoji: null, textContainer: null };
 const PlatformUtils = fn(1384);
 let num;

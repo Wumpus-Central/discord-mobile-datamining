@@ -1,6 +1,6 @@
-// === Module 8578: ? ===
+// === Module 8605: ? ===
 
-// Module 8578
+// Module 8605
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js");

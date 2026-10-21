@@ -1,11 +1,11 @@
-// === Module 4872: CreatorMonetizationRestrictionsUtils ===
+// === Module 4893: CreatorMonetizationRestrictionsUtils ===
 
-// Module 4872 (CreatorMonetizationRestrictionsUtils)
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4873 */;
-import GuildStore from "GuildStore" /* 4822 */;
+// Module 4893 (CreatorMonetizationRestrictionsUtils)
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4894 */;
+import GuildStore from "GuildStore" /* 4843 */;
 
-const FetchState = fn(4873).FetchState;
-const constants = fn(4874).CreatorMonetizationRestrictions;
+const FetchState = fn(4894).FetchState;
+const constants = fn(4895).CreatorMonetizationRestrictions;
 const GuildFeatures = fn(1087).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx");

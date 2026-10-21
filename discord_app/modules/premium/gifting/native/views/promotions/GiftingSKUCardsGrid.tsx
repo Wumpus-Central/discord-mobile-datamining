@@ -1,22 +1,22 @@
-// === Module 13736: GiftingSKUCardsGrid ===
+// === Module 13811: GiftingSKUCardsGrid ===
 
-// Module 13736 (GiftingSKUCardsGrid)
+// Module 13811 (GiftingSKUCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5001 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import useCurrentUser from "useCurrentUser" /* 8604 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9149 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9347 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10854 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5022 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import useCurrentUser from "useCurrentUser" /* 8631 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9176 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9375 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7604).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7632).isAvatarDecorationRecord;
 const isNameplateRecord = fn(1993).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -24,7 +24,7 @@ let c9 = 100;
 let c10 = 150;
 const PX_12 = nativeDefault.space.PX_12;
 let closure_12 = 2 * nativeDefault.space.PX_24;
-let createStyles = fn(4945);
+let createStyles = fn(4966);
 let obj = { card: { width: 150, display: "flex", flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden", borderColor: nativeDefault.colors.BORDER_SUBTLE }, previewContainer: { display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: 100, overflow: "hidden" }, preview: null, selected: null, claimed: null, checkmark: null, textContainer: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -296,7 +296,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const obj3 = rewardSkuId(isSelected[11]);
 }));
-createStyles = fn(4945);
+createStyles = fn(4966);
 let closure_15 = createStyles.createStyles({ grid: { flexDirection: "column", alignSelf: "center", gap: PX_12 }, row: { flexDirection: "row", gap: PX_12 } });
 ReactCompilerGating = fn(558);
 let obj6 = { alignSelf: "stretch", paddingHorizontal: nativeDefault.space.PX_16, alignItems: "flex-start" };

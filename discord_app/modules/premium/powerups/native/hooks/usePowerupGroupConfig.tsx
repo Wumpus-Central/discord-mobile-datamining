@@ -1,14 +1,14 @@
-// === Module 13290: usePowerupGroupConfig ===
+// === Module 13358: usePowerupGroupConfig ===
 
-// Module 13290 (usePowerupGroupConfig)
+// Module 13358 (usePowerupGroupConfig)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import _modDef2558 from "module_2558" /* 2558 */;
-import GuildTagUtils from "GuildTagUtils" /* 8591 */;
-import _modDef13291 from "module_13291" /* 13291 */;
-import _modDef13292 from "module_13292" /* 13292 */;
+import _modDef2568 from "module_2568" /* 2568 */;
+import GuildTagUtils from "GuildTagUtils" /* 8618 */;
+import _modDef13359 from "module_13359" /* 13359 */;
+import _modDef13360 from "module_13360" /* 13360 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4822 */;
+import GuildStore from "GuildStore" /* 4843 */;
 
 const require = globalThis.__r;
 
@@ -51,10 +51,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const intl = tmp(1128).intl;
-      const stringResult = intl.string(_modDef2558.KC9HRW);
+      const stringResult = intl.string(_modDef2568.KC9HRW);
       const intl2 = tmp(1128).intl;
-      const stringResult1 = intl2.string(_modDef2558.GJiSmP);
-      const obj2 = { staticUrl: _modDef13291, animatedUrl: _modDef13292 };
+      const stringResult1 = intl2.string(_modDef2568.GJiSmP);
+      const obj2 = { staticUrl: _modDef13359, animatedUrl: _modDef13360 };
       cResult[3] = stringResult;
       cResult[4] = stringResult1;
       cResult[5] = obj2;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       let stringResult2;
       if (!stateFromStores) {
         const intl3 = tmp(1128).intl;
-        stringResult2 = intl3.string(_modDef2558.lvk1Gc);
+        stringResult2 = intl3.string(_modDef2568.lvk1Gc);
       }
       cResult[6] = stateFromStores;
       cResult[7] = stringResult2;
@@ -105,15 +105,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
     if ("guildTagsBadgePacks" === group.group) {
       const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: "IconComponent" };
       const intl = util.intl;
-      obj2.title = intl.string(_modDef2558.KC9HRW);
+      obj2.title = intl.string(_modDef2568.KC9HRW);
       const intl2 = util.intl;
-      obj2.description = intl2.string(_modDef2558.GJiSmP);
-      const obj3 = { staticUrl: _modDef13291, animatedUrl: _modDef13292 };
+      obj2.description = intl2.string(_modDef2568.GJiSmP);
+      const obj3 = { staticUrl: _modDef13359, animatedUrl: _modDef13360 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {
         const intl3 = util.intl;
-        stringResult = intl3.string(_modDef2558.lvk1Gc);
+        stringResult = intl3.string(_modDef2568.lvk1Gc);
       }
       obj2.disabledReason = stringResult;
       return obj2;

@@ -1,11 +1,11 @@
-// === Module 12604: GuildMemberUtils ===
+// === Module 12668: GuildMemberUtils ===
 
-// Module 12604 (GuildMemberUtils)
+// Module 12668 (GuildMemberUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import GuildMemberStore from "GuildMemberStore" /* 4860 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
@@ -103,7 +103,7 @@ function canBanMember(user, guild) {
   }
   return tmp4;
 }
-const GuildMemberFlags = fn(4866).GuildMemberFlags;
+const GuildMemberFlags = fn(4887).GuildMemberFlags;
 const Permissions = fn(1087).Permissions;
 let c9 = 86400000;
 let ReactCompilerGating = fn(558);

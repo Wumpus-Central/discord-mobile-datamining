@@ -1,8 +1,8 @@
-// === Module 13680: useChannelStylesShared ===
+// === Module 13745: useChannelStylesShared ===
 
-// Module 13680 (useChannelStylesShared)
+// Module 13745 (useChannelStylesShared)
 import nativeDefault from "native" /* 587 */;
-import createStyles_mod from "createStyles" /* 4945 */;
+import createStyles_mod from "createStyles" /* 4966 */;
 import size from "module_2" /* 2 */;
 
 let createStyles = createStyles_mod;

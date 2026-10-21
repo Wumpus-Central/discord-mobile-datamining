@@ -1,9 +1,9 @@
-// === Module 10816: useFavoritesGuildChannelActions ===
+// === Module 10960: useFavoritesGuildChannelActions ===
 
-// Module 10816 (useFavoritesGuildChannelActions)
+// Module 10960 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4860 */;
-import FavoriteStore from "FavoriteStore" /* 4803 */;
+import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import FavoriteStore from "FavoriteStore" /* 4824 */;
 
 const require = globalThis.__r;
 
@@ -16,11 +16,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   _require = channelId;
   const cResult = require("c").c(13);
   if (cResult[0] !== channelId) {
-    const isFavoritableChannelResult = tmp(4825).isFavoritableChannel(channelId);
+    const isFavoritableChannelResult = tmp(4846).isFavoritableChannel(channelId);
     cResult[0] = channelId;
     cResult[1] = isFavoritableChannelResult;
     let stateFromStores1 = isFavoritableChannelResult;
-    const tmpResult = tmp(4825);
+    const tmpResult = tmp(4846);
   } else {
     stateFromStores1 = cResult[1];
   }

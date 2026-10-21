@@ -1,6 +1,6 @@
-// === Module 5786: getExternalPipTileNativeId ===
+// === Module 5806: getExternalPipTileNativeId ===
 
-// Module 5786 (getExternalPipTileNativeId)
+// Module 5806 (getExternalPipTileNativeId)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/external_pip/getExternalPipTileNativeId.tsx");

@@ -1,18 +1,18 @@
-// === Module 15794: SettingSearchBar ===
+// === Module 15870: SettingSearchBar ===
 
-// Module 15794 (SettingSearchBar)
+// Module 15870 (SettingSearchBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
-import SearchField from "SearchField" /* 7096 */;
-import settings_tracking_Tracking from "settings/tracking/Tracking" /* 15788 */;
+import SearchField from "SearchField" /* 7124 */;
+import settings_tracking_Tracking from "settings/tracking/Tracking" /* 15864 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15782 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15858 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { marginTop: nativeDefault.modules.mobile.SETTINGS_PADDING_TOP } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingS
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function f() {
+    const fn2 = function h() {
       const result = settings_tracking_Tracking.trackSettingSearchInputFocused();
       UserSettingSearchStore.setState({ isActive: true, isFocused: true });
     };
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingS
     tmp7 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn3 = function b() {
+    const fn3 = function y() {
       UserSettingSearchStore.setState({ isFocused: false });
     };
     cResult[2] = fn3;
@@ -78,8 +78,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingS
         return;
       }
     }
-    const obj2 = { ref, size: "md", onFocus: tmp7, onBlur: tmp8, onClear: first, defaultValue: UserSettingSearchStore.getField("query"), onChange: F };
-    const tmp12 = jsx(SearchField.SearchField, { ref, size: "md", onFocus: tmp7, onBlur: tmp8, onClear: first, defaultValue: UserSettingSearchStore.getField("query"), onChange: F });
+    const obj2 = { ref, testID: "user_settings_search_input", size: "md", onFocus: tmp7, onBlur: tmp8, onClear: first, defaultValue: UserSettingSearchStore.getField("query"), onChange: F };
+    const tmp12 = jsx(SearchField.SearchField, { ref, testID: "user_settings_search_input", size: "md", onFocus: tmp7, onBlur: tmp8, onClear: first, defaultValue: UserSettingSearchStore.getField("query"), onChange: F });
     cResult[4] = tmp12;
     const tmp10 = tmp12;
   } else {
@@ -132,6 +132,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingS
     UserSettingSearchStore.setState({ query });
   }, []);
   const ref = noop.useRef(null);
-  obj.children = jsx(SearchField.SearchField, { ref: noop.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: UserSettingSearchStore.getField("query"), onChange: callback3 });
+  obj.children = jsx(SearchField.SearchField, { ref: noop.useRef(null), testID: "user_settings_search_input", size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: UserSettingSearchStore.getField("query"), onChange: callback3 });
   return <View style={tmp.container}>{null}</View>;
 });

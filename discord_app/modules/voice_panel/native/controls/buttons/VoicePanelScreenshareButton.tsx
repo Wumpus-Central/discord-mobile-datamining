@@ -1,13 +1,13 @@
-// === Module 18381: VoicePanelScreenshareButton ===
+// === Module 18460: VoicePanelScreenshareButton ===
 
-// Module 18381 (VoicePanelScreenshareButton)
+// Module 18460 (VoicePanelScreenshareButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import useAlertStore from "useAlertStore" /* 5868 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13841 */;
+import useAlertStore from "useAlertStore" /* 5890 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13916 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
 
 const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 
@@ -17,11 +17,11 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const MetaQuestUtils = fn(1630);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13271).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13339).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18382).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18461).MobilePhoneShareIcon;
 }
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj3 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj3.circle = size;

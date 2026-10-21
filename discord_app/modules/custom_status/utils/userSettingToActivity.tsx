@@ -1,10 +1,10 @@
-// === Module 10860: userSettingToActivity ===
+// === Module 11004: userSettingToActivity ===
 
-// Module 10860 (userSettingToActivity)
+// Module 11004 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1087 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4894 */;
-import EmojiStore from "EmojiStore" /* 6676 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
+import EmojiStore from "EmojiStore" /* 6704 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -68,7 +68,7 @@ export const getActivityFromCustomStatus = function getActivityFromCustomStatus(
 };
 export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomStatusActivity() {
   const cResult = emojiId(576).c(7);
-  const CustomStatusSetting = emojiId(4776).CustomStatusSetting;
+  const CustomStatusSetting = emojiId(4797).CustomStatusSetting;
   const setting = CustomStatusSetting.useSetting();
   emojiId = undefined;
   if (setting != null) {

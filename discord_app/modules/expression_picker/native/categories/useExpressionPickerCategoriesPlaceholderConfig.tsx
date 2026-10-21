@@ -1,14 +1,14 @@
-// === Module 9901: useExpressionPickerCategoriesPlaceholderConfig ===
+// === Module 9931: useExpressionPickerCategoriesPlaceholderConfig ===
 
-// Module 9901 (useExpressionPickerCategoriesPlaceholderConfig)
+// Module 9931 (useExpressionPickerCategoriesPlaceholderConfig)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7108 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7136 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const CATEGORY_ICON_SIZE = fn(1087).CATEGORY_ICON_SIZE;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

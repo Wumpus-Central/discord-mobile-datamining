@@ -1,11 +1,11 @@
-// === Module 9093: showAudioOutputSelector ===
+// === Module 9120: showAudioOutputSelector ===
 
-// Module 9093 (showAudioOutputSelector)
+// Module 9120 (showAudioOutputSelector)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import VoicePanelHeaderConstants from "VoicePanelHeaderConstants" /* 9094 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import VoicePanelHeaderConstants from "VoicePanelHeaderConstants" /* 9121 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/voice_calls/native/audio_outp
 export const showAudioOutputSelector = function showAudioOutputSelector(channelId, isConnectedToVoiceChannel) {
   if (obj.isAndroid()) {
     const obj3 = { channelId, isConnectedToVoiceChannel };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9095, dependencyMap.paths), closure_4, obj3);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9122, dependencyMap.paths), closure_4, obj3);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {

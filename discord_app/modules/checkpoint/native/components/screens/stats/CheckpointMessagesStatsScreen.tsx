@@ -1,27 +1,28 @@
-// === Module 12805: CheckpointMessagesStatsScreen ===
+// === Module 12872: CheckpointMessagesStatsScreen ===
 
-// Module 12805 (CheckpointMessagesStatsScreen)
+// Module 12872 (CheckpointMessagesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
+import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3046 from "module_3046" /* 3046 */;
-import _modDef3078 from "module_3078" /* 3078 */;
-import CheckpointConstants from "CheckpointConstants" /* 5973 */;
-import CheckpointTextDefault from "CheckpointText" /* 12797 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12799 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12801 */;
-import NumberAnimationDefault from "NumberAnimation" /* 12803 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12804 */;
-import _modDef12806 from "module_12806" /* 12806 */;
-import CheckpointStore from "CheckpointStore" /* 12779 */;
+import util from "util" /* 1128 */;
+import _modDef3056 from "module_3056" /* 3056 */;
+import _modDef3088 from "module_3088" /* 3088 */;
+import CheckpointConstants from "CheckpointConstants" /* 5995 */;
+import ChatIcon from "ChatIcon" /* 8518 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 12846 */;
+import CheckpointTextDefault from "CheckpointText" /* 12861 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12863 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12866 */;
+import NumberAnimationDefault from "NumberAnimation" /* 12870 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12871 */;
+import _modDef12873 from "module_12873" /* 12873 */;
+import CheckpointStore from "CheckpointStore" /* 12843 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4945 */;
+import createStyles from "createStyles" /* 4966 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const initialize = TOMBAW(504);
-const util = TOMBAW(1128);
-const ChatIcon = TOMBAW(8491);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -39,12 +40,11 @@ let obj4 = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/CheckpointMessagesStatsScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointMessagesStatsScreen() {
-  let TOMBAW = require;
-  const cResult = c.c(69);
-  const tmp3 = closure_8();
+  const cResult = c.c(53);
+  const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [CheckpointStore];
-    const fn = function h() {
+    const fn = function u() {
       stats = stats.stats;
       let messages;
       if (stats != null) {
@@ -54,12 +54,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
+    tmp5 = items;
+    tmp6 = fn;
   } else {
-    [tmp4, tmp5] = cResult;
+    [tmp5, tmp6] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
   let numMessagesSent;
   if (stateFromStores != null) {
     numMessagesSent = stateFromStores.numMessagesSent;
@@ -70,178 +70,97 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       prop = stateFromStores.numMessagesSentPercentile;
     }
     if (cResult[3] === prop) {
-      if (cResult[4] === tmp3.container) {
-        if (cResult[5] === tmp3.copy) {
-          if (cResult[6] === tmp3.image) {
-            if (cResult[7] === tmp3.imageContainer) {
-              if (cResult[8] === tmp3.title) {
-                if (cResult[9] === tmp3.titleText) {
-                  let tmp10 = cResult[10];
-                  let tmp11 = cResult[11];
-                  let tmp12 = cResult[12];
-                  let tmp13 = cResult[13];
-                  let tmp14 = cResult[14];
-                  let tmp15 = cResult[15];
-                  let tmp16 = cResult[16];
-                  let str = cResult[17];
-                  let tmp17 = cResult[18];
-                  let tmp18 = cResult[19];
-                  let tmp19 = cResult[20];
-                  let tmp20 = cResult[21];
-                  let tmp21 = cResult[22];
-                  let tmp22 = cResult[23];
-                  let tmp23 = cResult[24];
-                  let tmp24 = cResult[25];
-                  let tmp25 = cResult[26];
-                }
-                if (cResult[33] === tmp10) {
-                  if (cResult[34] === str) {
-                    if (cResult[35] === tmp17) {
-                      if (cResult[36] === tmp18) {
-                        let tmp47 = cResult[37];
-                      }
-                      if (cResult[38] === tmp11) {
-                        if (cResult[39] === tmp47) {
-                          if (cResult[40] === tmp19) {
-                            if (cResult[41] === tmp20) {
-                              let tmp50 = cResult[42];
-                            }
-                            const _HermesInternal = HermesInternal;
-                            const combined = "" + tmp15 + " " + tmp24;
-                            if (cResult[43] !== tmp15) {
-                              const obj2 = { end: tmp15 };
-                              const tmp57 = timestampProducer(NumberAnimationDefault, obj2);
-                              cResult[43] = tmp15;
-                              cResult[44] = tmp57;
-                              let tmp54 = tmp57;
-                            } else {
-                              tmp54 = cResult[44];
-                            }
-                            if (cResult[45] === tmp3.number) {
-                              if (cResult[46] === combined) {
-                                if (cResult[47] === tmp54) {
-                                  let tmp58 = cResult[48];
+      if (cResult[4] === tmp4.container) {
+        if (cResult[5] === tmp4.copy) {
+          if (cResult[6] === tmp4.image) {
+            if (cResult[7] === tmp4.imageContainer) {
+              if (cResult[8] === tmp4.number) {
+                if (cResult[9] === tmp4.title) {
+                  if (cResult[10] === tmp4.titleText) {
+                    let tmp11 = cResult[11];
+                    let tmp12 = cResult[12];
+                    let tmp13 = cResult[13];
+                    let tmp14 = cResult[14];
+                    let str = cResult[15];
+                    let tmp15 = cResult[16];
+                    let tmp16 = cResult[17];
+                    let tmp17 = cResult[18];
+                    let tmp18 = cResult[19];
+                    let tmp19 = cResult[20];
+                    let tmp20 = cResult[21];
+                    let tmp21 = cResult[22];
+                  }
+                  if (cResult[34] === tmp11) {
+                    if (cResult[35] === str) {
+                      if (cResult[36] === tmp15) {
+                        if (cResult[37] === tmp16) {
+                          let tmp52 = cResult[38];
+                        }
+                        if (cResult[39] === tmp12) {
+                          if (cResult[40] === tmp52) {
+                            if (cResult[41] === tmp17) {
+                              if (cResult[42] === tmp18) {
+                                if (cResult[43] === tmp19) {
+                                  let tmp55 = cResult[44];
                                 }
-                                if (cResult[49] === tmp15) {
-                                  if (cResult[50] === tmp25) {
-                                    if (cResult[52] === tmp16) {
-                                      if (cResult[53] === tmp62) {
-                                        let tmp67 = cResult[54];
+                                if (cResult[45] === tmp13) {
+                                  if (cResult[46] === tmp55) {
+                                    if (cResult[47] === tmp20) {
+                                      if (cResult[48] === tmp21) {
+                                        let tmp58 = cResult[49];
                                       }
-                                      if (cResult[55] === tmp12) {
-                                        if (cResult[56] === tmp50) {
-                                          if (cResult[57] === tmp58) {
-                                            if (cResult[58] === tmp67) {
-                                              if (cResult[59] === tmp21) {
-                                                let tmp71 = cResult[60];
-                                              }
-                                              if (cResult[61] === tmp13) {
-                                                if (cResult[62] === tmp71) {
-                                                  if (cResult[63] === tmp22) {
-                                                    if (cResult[64] === tmp23) {
-                                                      let tmp74 = cResult[65];
-                                                    }
-                                                    if (cResult[66] === tmp14) {
-                                                      if (cResult[67] === tmp74) {
-                                                        let tmp77 = cResult[68];
-                                                      }
-                                                      return tmp77;
-                                                    }
-                                                    const obj3 = { children: tmp74 };
-                                                    const tmp79 = timestampProducer(tmp14, obj3);
-                                                    cResult[66] = tmp14;
-                                                    cResult[67] = tmp74;
-                                                    cResult[68] = tmp79;
-                                                    tmp77 = tmp79;
-                                                  }
-                                                }
-                                              }
-                                              const obj4 = { style: tmp22, children: null };
-                                              const items1 = [tmp23, tmp71];
-                                              obj4.children = items1;
-                                              const tmp76 = React5(tmp13, obj4);
-                                              cResult[61] = tmp13;
-                                              cResult[62] = tmp71;
-                                              cResult[63] = tmp22;
-                                              cResult[64] = tmp23;
-                                              cResult[65] = tmp76;
-                                              tmp74 = tmp76;
-                                            }
-                                          }
+                                      if (cResult[50] === tmp14) {
+                                        if (cResult[51] === tmp58) {
+                                          let tmp61 = cResult[52];
                                         }
+                                        return tmp61;
                                       }
-                                      const obj5 = { style: tmp21, children: null };
-                                      const items2 = [tmp50, tmp58, tmp67];
-                                      obj5.children = items2;
-                                      const tmp73 = React5(tmp12, obj5);
-                                      cResult[55] = tmp12;
-                                      cResult[56] = tmp50;
-                                      cResult[57] = tmp58;
-                                      cResult[58] = tmp67;
-                                      cResult[59] = tmp21;
-                                      cResult[60] = tmp73;
-                                      tmp71 = tmp73;
+                                      const obj2 = { children: tmp58 };
+                                      const tmp63 = timestampProducer(tmp14, obj2);
+                                      cResult[50] = tmp14;
+                                      cResult[51] = tmp58;
+                                      cResult[52] = tmp63;
+                                      tmp61 = tmp63;
                                     }
-                                    const obj6 = { variant: "heading-lg/medium", accessibilityLabel: tmp16, children: cResult[51] };
-                                    const tmp70 = timestampProducer(CheckpointTextDefault, obj6);
-                                    cResult[52] = tmp16;
-                                    cResult[53] = cResult[51];
-                                    cResult[54] = tmp70;
-                                    tmp67 = tmp70;
                                   }
                                 }
-                                if (null != tmp25) {
-                                  const intl4 = util.intl;
-                                  TOMBAW = _modDef3078.TOMBAW;
-                                  const obj7 = {
-                                    numMessages: tmp15,
-                                    percent: tmp25,
-                                    percentHook(children, arg1) {
-                                                                      return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
-                                                                    }
-                                  };
-                                  let formatResult = intl4.format(TOMBAW, obj7);
-                                } else {
-                                  const intl3 = util.intl;
-                                  const obj8 = { numMessages: tmp15 };
-                                  formatResult = intl3.format(_modDef3078.cYCqz8, obj8);
-                                }
-                                cResult[49] = tmp15;
-                                cResult[50] = tmp25;
-                                cResult[51] = formatResult;
+                                const obj3 = { style: tmp20, children: null };
+                                const items1 = [tmp21, tmp55];
+                                obj3.children = items1;
+                                const tmp60 = React5(tmp13, obj3);
+                                cResult[45] = tmp13;
+                                cResult[46] = tmp55;
+                                cResult[47] = tmp20;
+                                cResult[48] = tmp21;
+                                cResult[49] = tmp60;
+                                tmp58 = tmp60;
                               }
                             }
-                            const obj9 = { accessible: true, accessibilityLabel: combined, style: tmp3.number, children: tmp54 };
-                            const tmp61 = timestampProducer(View, obj9);
-                            cResult[45] = tmp3.number;
-                            cResult[46] = combined;
-                            cResult[47] = tmp54;
-                            cResult[48] = tmp61;
-                            tmp58 = tmp61;
                           }
                         }
+                        const obj4 = { style: tmp17, children: null };
+                        const items2 = [tmp18, tmp19, tmp52];
+                        obj4.children = items2;
+                        const tmp57 = React5(tmp12, obj4);
+                        cResult[39] = tmp12;
+                        cResult[40] = tmp52;
+                        cResult[41] = tmp17;
+                        cResult[42] = tmp18;
+                        cResult[43] = tmp19;
+                        cResult[44] = tmp57;
+                        tmp55 = tmp57;
                       }
-                      const obj10 = { style: tmp19, children: null };
-                      const items3 = [tmp20, tmp47];
-                      obj10.children = items3;
-                      const tmp52 = React5(tmp11, obj10);
-                      cResult[38] = tmp11;
-                      cResult[39] = tmp47;
-                      cResult[40] = tmp19;
-                      cResult[41] = tmp20;
-                      cResult[42] = tmp52;
-                      tmp50 = tmp52;
                     }
                   }
+                  const obj5 = { variant: str, accessibilityLabel: tmp15, children: tmp16 };
+                  const tmp54 = timestampProducer(tmp11, obj5);
+                  cResult[34] = tmp11;
+                  cResult[35] = str;
+                  cResult[36] = tmp15;
+                  cResult[37] = tmp16;
+                  cResult[38] = tmp54;
+                  tmp52 = tmp54;
                 }
-                const obj11 = { variant: str, style: tmp17, children: tmp18 };
-                const tmp49 = timestampProducer(tmp10, obj11);
-                cResult[33] = tmp10;
-                cResult[34] = str;
-                cResult[35] = tmp17;
-                cResult[36] = tmp18;
-                cResult[37] = tmp49;
-                tmp47 = tmp49;
               }
             }
           }
@@ -257,119 +176,146 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     num3 = 0;
   }
   const rounded = Math.round(num3);
+  const tmpResult = initialize;
   let prop1;
   if (stateFromStores != null) {
     prop1 = stateFromStores.numMessagesSentPercentile;
   }
-  let bound = null;
-  if (null != prop1) {
-    bound = null;
-    if (prop1 >= 50) {
-      const _Math = Math;
-      const _Math2 = Math;
-      bound = Math.max(1, Math.ceil(100 - prop1));
-    }
-  }
+  const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop1);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3046.wWKySP);
-  if (null != bound) {
+  const stringResult = intl.string(_modDef3056.wWKySP);
+  if (null != checkpointTopPercent) {
     const intl2 = util.intl;
-    const obj12 = {
+    const obj6 = {
       numMessages: rounded,
-      percent: bound,
+      percent: checkpointTopPercent,
       percentHook(arg0) {
           return arg0;
         }
     };
-    const formatToPlainStringResult = intl2.formatToPlainString(_modDef3078.TOMBAW, obj12);
+    const formatToPlainStringResult = intl2.formatToPlainString(_modDef3088.TOMBAW, obj6);
   }
-  const tmp29Result = CheckpointScreenDefault;
-  const container = tmp3.container;
-  if (cResult[27] !== tmp3.image) {
-    const obj13 = { uri: _modDef12806, style: tmp3.image };
-    const tmp36 = timestampProducer(CheckpointApngPlayerDefault, obj13);
-    cResult[27] = tmp3.image;
-    cResult[28] = tmp36;
-    let tmp33 = tmp36;
-    const tmp29Result3 = CheckpointApngPlayerDefault;
+  const tmp25Result = CheckpointScreenDefault;
+  const container = tmp4.container;
+  if (cResult[23] !== tmp4.image) {
+    const obj7 = { uri: _modDef12873, style: tmp4.image };
+    const tmp32 = timestampProducer(CheckpointApngPlayerDefault, obj7);
+    cResult[23] = tmp4.image;
+    cResult[24] = tmp32;
+    let tmp29 = tmp32;
+    const tmp25Result4 = CheckpointApngPlayerDefault;
   } else {
-    tmp33 = cResult[28];
+    tmp29 = cResult[24];
   }
-  if (cResult[29] === tmp3.imageContainer) {
-    if (cResult[30] === tmp33) {
-      let tmp37 = cResult[31];
+  if (cResult[25] === tmp4.imageContainer) {
+    if (cResult[26] === tmp29) {
+      let tmp33 = cResult[27];
     }
-    ({ copy, title } = tmp3);
+    const copy = tmp4.copy;
     const _Symbol = Symbol;
-    if (cResult[32] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj14 = { size: "xs", color: CHECKPOINT_PRIMARY };
-      const tmp42 = timestampProducer(ChatIcon.ChatIcon, obj14);
-      cResult[32] = tmp42;
-      let tmp39 = tmp42;
+    if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj8 = { size: "xs", color: CHECKPOINT_PRIMARY };
+      const tmp38 = timestampProducer(ChatIcon.ChatIcon, obj8);
+      cResult[28] = tmp38;
+      let tmp35 = tmp38;
     } else {
-      tmp39 = cResult[32];
+      tmp35 = cResult[28];
     }
-    const tmp29Result4 = CheckpointTextDefault;
-    const titleText = tmp3.titleText;
-    const toLocaleUpperCaseResult = stringResult.toLocaleUpperCase();
-    let numMessagesSent1;
-    if (stateFromStores != null) {
-      numMessagesSent1 = stateFromStores.numMessagesSent;
+    if (cResult[29] !== tmp4.titleText) {
+      const obj9 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: stringResult.toLocaleUpperCase() };
+      const tmp42 = timestampProducer(CheckpointTextDefault, obj9);
+      cResult[29] = tmp4.titleText;
+      cResult[30] = tmp42;
+      let tmp39 = tmp42;
+      const tmp25Result5 = CheckpointTextDefault;
+    } else {
+      tmp39 = cResult[30];
     }
-    cResult[2] = numMessagesSent1;
-    let prop2;
-    if (stateFromStores != null) {
-      prop2 = stateFromStores.numMessagesSentPercentile;
+    if (cResult[31] === tmp4.title) {
+      if (cResult[32] === tmp39) {
+        let tmp43 = cResult[33];
+      }
+      const obj10 = { accessible: true, accessibilityLabel: null, style: null, children: null };
+      const _HermesInternal = HermesInternal;
+      obj10.accessibilityLabel = "" + rounded + " " + stringResult;
+      obj10.style = tmp4.number;
+      const obj11 = { end: rounded };
+      obj10.children = timestampProducer(NumberAnimationDefault, obj11);
+      const tmp47 = timestampProducer(View, obj10);
+      const tmp25Result6 = CheckpointTextDefault;
+      if (null != checkpointTopPercent) {
+        const intl4 = util.intl;
+        const obj12 = {
+          numMessages: rounded,
+          percent: checkpointTopPercent,
+          percentHook(children, arg1) {
+                  return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
+                }
+        };
+        let formatResult = intl4.format(_modDef3088.TOMBAW, obj12);
+      } else {
+        const intl3 = util.intl;
+        const obj13 = { numMessages: rounded };
+        formatResult = intl3.format(_modDef3088.cYCqz8, obj13);
+      }
+      let numMessagesSent1;
+      if (stateFromStores != null) {
+        numMessagesSent1 = stateFromStores.numMessagesSent;
+      }
+      cResult[2] = numMessagesSent1;
+      let prop2;
+      if (stateFromStores != null) {
+        prop2 = stateFromStores.numMessagesSentPercentile;
+      }
+      cResult[3] = prop2;
+      cResult[4] = tmp4.container;
+      cResult[5] = tmp4.copy;
+      cResult[6] = tmp4.image;
+      cResult[7] = tmp4.imageContainer;
+      cResult[8] = tmp4.number;
+      cResult[9] = tmp4.title;
+      cResult[10] = tmp4.titleText;
+      cResult[11] = tmp25Result6;
+      cResult[12] = View;
+      cResult[13] = View;
+      cResult[14] = tmp25Result;
+      cResult[15] = "heading-lg/medium";
+      cResult[16] = formatToPlainStringResult;
+      cResult[17] = formatResult;
+      cResult[18] = copy;
+      cResult[19] = tmp43;
+      cResult[20] = tmp47;
+      cResult[21] = container;
+      cResult[22] = tmp33;
+      tmp21 = tmp33;
+      tmp20 = container;
+      tmp19 = tmp47;
+      tmp18 = tmp43;
+      tmp17 = copy;
+      tmp16 = formatResult;
+      tmp15 = formatToPlainStringResult;
+      str = "heading-lg/medium";
+      tmp14 = tmp25Result;
+      tmp13 = View;
+      tmp12 = View;
+      tmp11 = tmp25Result6;
     }
-    cResult[3] = prop2;
-    cResult[4] = tmp3.container;
-    cResult[5] = tmp3.copy;
-    cResult[6] = tmp3.image;
-    cResult[7] = tmp3.imageContainer;
-    cResult[8] = tmp3.title;
-    cResult[9] = tmp3.titleText;
-    cResult[10] = tmp29Result4;
-    cResult[11] = View;
-    cResult[12] = View;
-    cResult[13] = View;
-    cResult[14] = tmp29Result;
-    cResult[15] = rounded;
-    cResult[16] = formatToPlainStringResult;
-    cResult[17] = "heading-md/extrabold";
-    cResult[18] = titleText;
-    cResult[19] = toLocaleUpperCaseResult;
-    cResult[20] = title;
-    cResult[21] = tmp39;
-    cResult[22] = copy;
-    cResult[23] = container;
-    cResult[24] = tmp37;
-    cResult[25] = stringResult;
-    cResult[26] = bound;
-    tmp25 = bound;
-    tmp24 = stringResult;
-    tmp23 = tmp37;
-    tmp22 = container;
-    tmp21 = copy;
-    tmp20 = tmp39;
-    tmp19 = title;
-    tmp18 = toLocaleUpperCaseResult;
-    tmp17 = titleText;
-    str = "heading-md/extrabold";
-    tmp16 = formatToPlainStringResult;
-    tmp15 = rounded;
-    tmp14 = tmp29Result;
-    tmp13 = View;
-    tmp12 = View;
-    tmp11 = View;
-    tmp10 = tmp29Result4;
+    const obj14 = { style: tmp4.title, children: null };
+    const items3 = [tmp35, tmp39];
+    obj14.children = items3;
+    const tmp45 = React5(View, obj14);
+    cResult[31] = tmp4.title;
+    cResult[32] = tmp39;
+    cResult[33] = tmp45;
+    tmp43 = tmp45;
   }
-  const tmp38 = timestampProducer(View, { style: tmp3.imageContainer, children: tmp33 });
-  cResult[29] = tmp3.imageContainer;
-  cResult[30] = tmp33;
-  cResult[31] = tmp38;
-  tmp37 = tmp38;
-  const TOMBAWResult = initialize;
-  const obj15 = { style: tmp3.imageContainer, children: tmp33 };
+  const tmp34 = timestampProducer(View, { style: tmp4.imageContainer, children: tmp29 });
+  cResult[25] = tmp4.imageContainer;
+  cResult[26] = tmp29;
+  cResult[27] = tmp34;
+  tmp33 = tmp34;
+  const obj15 = { style: tmp4.imageContainer, children: tmp29 };
+  const tmpResult2 = CheckpointStatsUtils;
 }) : (function CheckpointMessagesStatsScreen() {
   const tmp = closure_8();
   const items = [CheckpointStore];
@@ -393,34 +339,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (stateFromStores != null) {
     prop = stateFromStores.numMessagesSentPercentile;
   }
-  let bound = null;
-  if (null != prop) {
-    bound = null;
-    if (prop >= 50) {
-      const _Math = Math;
-      const _Math2 = Math;
-      bound = Math.max(1, Math.ceil(100 - prop));
-    }
-  }
+  const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3046.wWKySP);
+  const stringResult = intl.string(_modDef3056.wWKySP);
   let formatToPlainStringResult;
-  if (null != bound) {
+  if (null != checkpointTopPercent) {
     const intl2 = util.intl;
     const obj2 = {
       numMessages: rounded,
-      percent: bound,
+      percent: checkpointTopPercent,
       percentHook(arg0) {
           return arg0;
         }
     };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3078.TOMBAW, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3088.TOMBAW, obj2);
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
+  const tmp2Result = CheckpointStatsUtils;
   const obj5 = { uri: null, style: null };
   const tmp8Result = CheckpointScreenDefault;
-  obj5.uri = _modDef12806;
+  obj5.uri = _modDef12873;
   obj5.style = tmp.image;
   obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
   const items1 = [timestampProducer(View, obj4), ];
@@ -438,20 +377,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   items3[1] = timestampProducer(View, { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(NumberAnimationDefault, { end: rounded }) });
   const obj11 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
   const obj10 = { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(NumberAnimationDefault, { end: rounded }) };
-  if (null != bound) {
+  if (null != checkpointTopPercent) {
     const intl4 = util.intl;
     const obj12 = {
       numMessages: rounded,
-      percent: bound,
+      percent: checkpointTopPercent,
       percentHook(children, arg1) {
           return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    let formatResult = intl4.format(_modDef3078.TOMBAW, obj12);
+    let formatResult = intl4.format(_modDef3088.TOMBAW, obj12);
   } else {
     const intl3 = util.intl;
     const obj13 = { numMessages: rounded };
-    formatResult = intl3.format(_modDef3078.cYCqz8, obj13);
+    formatResult = intl3.format(_modDef3088.cYCqz8, obj13);
   }
   const obj14 = { children: null };
   obj11.children = formatResult;

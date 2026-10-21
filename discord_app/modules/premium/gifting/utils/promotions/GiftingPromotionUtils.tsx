@@ -1,13 +1,13 @@
-// === Module 10418: GiftingPromotionUtils ===
+// === Module 10447: GiftingPromotionUtils ===
 
-// Module 10418 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 4784 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4970 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10423 */;
-import MarketingComponentType from "MarketingComponentType" /* 10424 */;
+// Module 10447 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 4805 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4991 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10452 */;
+import MarketingComponentType from "MarketingComponentType" /* 10453 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9449 */;
+import PromotionsStore from "PromotionsStore" /* 9478 */;
 
 require = fn;
 const SubscriptionPlans = fn(1394).SubscriptionPlans;

@@ -1,18 +1,18 @@
-// === Module 12792: CheckpointBackground ===
+// === Module 12856: CheckpointBackground ===
 
-// Module 12792 (CheckpointBackground)
+// Module 12856 (CheckpointBackground)
 import c from "c" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import _modDef12793 from "module_12793" /* 12793 */;
+import LinearGradientDefault from "LinearGradient" /* 5240 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import _modDef12857 from "module_12857" /* 12857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const dependencyMap = fn(5973).CHECKPOINT_BACKGROUND_GRADIENT;
+const dependencyMap = fn(5995).CHECKPOINT_BACKGROUND_GRADIENT;
 const VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_9 = createStyles.createStyles({ background: { position: "absolute", width: "100%", height: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   const tmp4 = closure_9();
   if (cResult[0] !== gradientStartColor) {
-    const items = [gradientStartColor, 5973];
+    const items = [gradientStartColor, 5995];
     cResult[0] = gradientStartColor;
     cResult[1] = items;
     let tmp5 = items;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef12793 };
+      const obj2 = { uri: _modDef12857 };
       cResult[5] = obj2;
       let tmp10 = obj2;
     } else {
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }, items);
   const items1 = [closure_6(LinearGradientDefault, { colors: memo, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp2.background }), ];
   const obj3 = { source: null, style: null, resizeMode: "cover" };
-  const obj4 = { uri: _modDef12793 };
+  const obj4 = { uri: _modDef12857 };
   obj3.source = obj4;
   obj3.style = tmp2.background;
   items1[1] = closure_6(FastImageDefault, obj3);

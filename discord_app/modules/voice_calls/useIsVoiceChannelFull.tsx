@@ -1,10 +1,10 @@
-// === Module 11440: useIsVoiceChannelFull ===
+// === Module 11490: useIsVoiceChannelFull ===
 
-// Module 11440 (useIsVoiceChannelFull)
-import ChannelUtils from "ChannelUtils" /* 5952 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
-import VoiceStateStore from "VoiceStateStore" /* 5591 */;
+// Module 11490 (useIsVoiceChannelFull)
+import ChannelUtils from "ChannelUtils" /* 5974 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
+import VoiceStateStore from "VoiceStateStore" /* 5612 */;
 
 const require = globalThis.__r;
 

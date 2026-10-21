@@ -1,20 +1,20 @@
-// === Module 12765: DestinationFailedAlertModal ===
+// === Module 12829: DestinationFailedAlertModal ===
 
-// Module 12765 (DestinationFailedAlertModal)
+// Module 12829 (DestinationFailedAlertModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import UserUtilsDefault from "UserUtils" /* 4994 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import useChannelNameDefault from "useChannelName" /* 5565 */;
-import AlertModal from "AlertModal" /* 5872 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10617 */;
+import UserUtilsDefault from "UserUtils" /* 5015 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import useChannelNameDefault from "useChannelName" /* 5586 */;
+import AlertModal from "AlertModal" /* 5894 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10646 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PresenceStore from "PresenceStore" /* 5674 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PresenceStore from "PresenceStore" /* 5694 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -22,7 +22,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1098).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 }, row: null, label: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 };
 obj2.row = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, height: 40, marginHorizontal: nativeDefault.space.PX_16 };
@@ -179,7 +179,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
       name = UserUtilsDefault.getName(user);
     }
     obj3.children = name;
-    items2[1] = closure_10(tmp(5195).Text, obj3);
+    items2[1] = closure_10(tmp(5216).Text, obj3);
     tmp16[1] = items2;
     tmp14Result = closure_11(View, tmp16);
   }
@@ -219,7 +219,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(5195).Text, obj5);
+    items2[1] = closure_10(tmp2(5216).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -289,19 +289,19 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
       tmp17 = tmp20;
     }
     const obj3 = { style: tmp4.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp11 };
-    const tmp16 = closure_10(tmp(5195).Text, obj3);
+    const tmp16 = closure_10(tmp(5216).Text, obj3);
     cResult[6] = tmp11;
     cResult[7] = tmp4.label;
     cResult[8] = tmp16;
     tmp14 = tmp16;
   }
   const tmpResult = channel(504);
-  const tmp13 = closure_10(channel(12766).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12766).GuildIconWithChannelTypeSizes.SMALL_32 });
+  const tmp13 = closure_10(channel(12830).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12830).GuildIconWithChannelTypeSizes.SMALL_32 });
   cResult[3] = channel;
   cResult[4] = stateFromStores;
   cResult[5] = tmp13;
   tmp12 = tmp13;
-  const obj4 = { "aria-label": "", guild: stateFromStores, channel, size: channel(12766).GuildIconWithChannelTypeSizes.SMALL_32 };
+  const obj4 = { "aria-label": "", guild: stateFromStores, channel, size: channel(12830).GuildIconWithChannelTypeSizes.SMALL_32 };
 }) : (function FailedChannelRow(channel) {
   channel = channel.channel;
   const tmp = closure_13();
@@ -316,7 +316,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(12766).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12766).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5195).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(12830).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12830).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5216).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 });

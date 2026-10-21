@@ -1,9 +1,9 @@
-// === Module 11746: conjurePreviewTargets ===
+// === Module 11794: conjurePreviewTargets ===
 
-// Module 11746 (conjurePreviewTargets)
+// Module 11794 (conjurePreviewTargets)
 import util from "util" /* 1128 */;
-import _modDef3820 from "module_3820" /* 3820 */;
-import ConjurePreviewMode from "ConjurePreviewMode" /* 11732 */;
+import _modDef3830 from "module_3830" /* 3830 */;
+import ConjurePreviewMode from "ConjurePreviewMode" /* 11777 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
@@ -69,18 +69,18 @@ export const getPreviewTargetLabel = function getPreviewTargetLabel(memo1) {
     } else {
       const intl4 = util.intl;
       const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface), channel: memo1.appChannel };
-      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3820["6xVl+N"], obj);
+      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3830["6xVl+N"], obj);
     }
     return previewFrameSurfaceLabel;
   } else if ("widget" === mode) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3820.y5GiL1);
+    return intl3.string(_modDef3830.y5GiL1);
   } else if ("overlay" === mode) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3820["2940LX"]);
+    return intl2.string(_modDef3830["2940LX"]);
   } else if ("bot" === mode) {
     const intl = util.intl;
-    return intl.string(_modDef3820.tjpaGN);
+    return intl.string(_modDef3830.tjpaGN);
   }
 };
 export const selectPreviewTarget = function selectPreviewTarget(mode, fn, fn2, fn3) {

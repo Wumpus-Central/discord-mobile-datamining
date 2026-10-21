@@ -1,13 +1,13 @@
-// === Module 15789: useAutoScrollToSetting ===
+// === Module 15865: useAutoScrollToSetting ===
 
-// Module 15789 (useAutoScrollToSetting)
+// Module 15865 (useAutoScrollToSetting)
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15782 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15858 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const NodeType = fn(11112).NodeType;
+const NodeType = fn(11156).NodeType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
@@ -23,14 +23,14 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(15650).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(15784).getInitialScrollIndex(current, memo);
+    if (tmp(15726).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(15860).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(15784);
+      const tmpResult = tmp(15860);
     }
   }
   const items = [memo, flag, ref, navigation, current];
@@ -42,7 +42,7 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
           if (ref != null) {
             current = ref.current;
             if (current != null) {
-              const obj2 = { index: initialScrollIndex, animated: false, viewOffset: 300 };
+              const obj2 = { index: initialScrollIndex, animated: false, viewOffset: -300 };
               current.scrollToIndex(obj2);
             }
           }

@@ -1,16 +1,16 @@
-// === Module 7302: CreatorMonetizationRestrictionsHooks ===
+// === Module 7330: CreatorMonetizationRestrictionsHooks ===
 
-// Module 7302 (CreatorMonetizationRestrictionsHooks)
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7303 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7304 */;
+// Module 7330 (CreatorMonetizationRestrictionsHooks)
+import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7331 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7332 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4873 */;
-import GuildStore from "GuildStore" /* 4822 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4894 */;
+import GuildStore from "GuildStore" /* 4843 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(4873).FetchState;
+const FetchState = fn(4894).FetchState;
 const Constants = fn(1087);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, GuildFeatures: closure_9 } = Constants);
 let ReactCompilerGating = fn(558);
@@ -284,8 +284,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldHid
     }
     let result = flag;
   } else {
-    result = tmp(4872).isRestrictedFromShowingGuildPurchaseEntryPoints(restrictions);
-    const tmpResult2 = tmp(4872);
+    result = tmp(4893).isRestrictedFromShowingGuildPurchaseEntryPoints(restrictions);
+    const tmpResult2 = tmp(4893);
   }
   const tmp9 = closure_10(stateFromStores);
 }) : (function useShouldHideGuildPurchaseEntryPoints(arg0) {
@@ -323,8 +323,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldHid
     }
     let result = flag;
   } else {
-    result = tmp(4872).isRestrictedFromShowingGuildPurchaseEntryPoints(tmp3.restrictions);
-    const tmpResult = tmp(4872);
+    result = tmp(4893).isRestrictedFromShowingGuildPurchaseEntryPoints(tmp3.restrictions);
+    const tmpResult = tmp(4893);
   }
   const obj = require("initialize");
   tmp = _require;
@@ -418,8 +418,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldRes
     }
     let result = flag;
   } else {
-    result = tmp(4872).isRestrictedFromUpdatingCreatorMonetizationSettings(restrictions);
-    const tmpResult2 = tmp(4872);
+    result = tmp(4893).isRestrictedFromUpdatingCreatorMonetizationSettings(restrictions);
+    const tmpResult2 = tmp(4893);
   }
   let features5;
   if (stateFromStores != null) {
@@ -450,8 +450,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldRes
     }
     let result = flag;
   } else {
-    result = tmp(4872).isRestrictedFromUpdatingCreatorMonetizationSettings(tmp5);
-    const tmpResult = tmp(4872);
+    result = tmp(4893).isRestrictedFromUpdatingCreatorMonetizationSettings(tmp5);
+    const tmpResult = tmp(4893);
   }
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;
@@ -496,11 +496,11 @@ export const useIsMonetizationReapplicationDisabled = ReactCompilerGating.isReac
   const tmpResult = require("initialize");
   ({ restrictions, restrictionsLoading } = closure_10(require("initialize").useStateFromStores(first, tmp6, tmp7)));
   if (cResult[4] !== restrictions) {
-    const result = tmp(4872).isRestrictedFromMonetizationReapplication(restrictions);
+    const result = tmp(4893).isRestrictedFromMonetizationReapplication(restrictions);
     cResult[4] = restrictions;
     cResult[5] = result;
     let tmp9 = result;
-    const tmpResult2 = tmp(4872);
+    const tmpResult2 = tmp(4893);
   } else {
     tmp9 = cResult[5];
   }

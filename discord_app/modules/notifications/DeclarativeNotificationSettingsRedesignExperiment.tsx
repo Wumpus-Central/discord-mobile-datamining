@@ -1,6 +1,6 @@
-// === Module 15525: DeclarativeNotificationSettingsRedesignExperiment ===
+// === Module 15597: DeclarativeNotificationSettingsRedesignExperiment ===
 
-// Module 15525 (DeclarativeNotificationSettingsRedesignExperiment)
+// Module 15597 (DeclarativeNotificationSettingsRedesignExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

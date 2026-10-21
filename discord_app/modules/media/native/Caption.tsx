@@ -1,14 +1,14 @@
-// === Module 10365: Caption ===
+// === Module 10394: Caption ===
 
-// Module 10365 (Caption)
+// Module 10394 (Caption)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1087 */;
 import native from "native" /* 1202 */;
-import createStyles from "createStyles" /* 4945 */;
-import ColorUtils from "ColorUtils" /* 4942 */;
+import createStyles from "createStyles" /* 4966 */;
+import ColorUtils from "ColorUtils" /* 4963 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

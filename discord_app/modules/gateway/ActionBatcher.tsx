@@ -1,6 +1,6 @@
-// === Module 14779: ActionBatcher ===
+// === Module 14853: ActionBatcher ===
 
-// Module 14779 (ActionBatcher)
+// Module 14853 (ActionBatcher)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

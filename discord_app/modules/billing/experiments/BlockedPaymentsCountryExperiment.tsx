@@ -1,6 +1,6 @@
-// === Module 7478: BlockedPaymentsCountryExperiment ===
+// === Module 7506: BlockedPaymentsCountryExperiment ===
 
-// Module 7478 (BlockedPaymentsCountryExperiment)
+// Module 7506 (BlockedPaymentsCountryExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import "ReactCompilerGating";

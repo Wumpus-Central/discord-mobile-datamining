@@ -1,14 +1,14 @@
-// === Module 9442: useGameProfileCommunitiesLocaleOptions ===
+// === Module 9471: useGameProfileCommunitiesLocaleOptions ===
 
-// Module 9442 (useGameProfileCommunitiesLocaleOptions)
+// Module 9471 (useGameProfileCommunitiesLocaleOptions)
 import util from "util" /* 1128 */;
 import noop from "module_19" /* 19 */;
-import GameProfileCommunitiesLocaleFilterStore from "GameProfileCommunitiesLocaleFilterStore" /* 9440 */;
+import GameProfileCommunitiesLocaleFilterStore from "GameProfileCommunitiesLocaleFilterStore" /* 9469 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9440).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9469).useGameProfileCommunitiesLocaleFilterExclusions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleOptions.tsx");

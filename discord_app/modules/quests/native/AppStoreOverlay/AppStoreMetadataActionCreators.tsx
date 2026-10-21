@@ -1,11 +1,18 @@
-// === Module 13934: AppStoreMetadataActionCreators ===
+// === Module 14009: AppStoreMetadataActionCreators ===
 
-// Module 13934 (AppStoreMetadataActionCreators)
+// Module 14009 (AppStoreMetadataActionCreators)
 import DurationsDefault from "Durations" /* 1104 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import LocaleStore from "LocaleStore" /* 2068 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
 const require = fn;
+function clearMetadataCache() {
+  map.clear();
+  map1.clear();
+  map2.clear();
+  map3.clear();
+}
 function clearRetryState(arg0) {
   map2.delete(arg0);
   map3.delete(arg0);
@@ -17,11 +24,8 @@ const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 const map3 = new Map();
-const subscription = Dispatcher.subscribe("LOGOUT", () => {
-  map.clear();
-  map1.clear();
-  map3.clear();
-});
+const subscription = Dispatcher.subscribe("LOGOUT", clearMetadataCache);
+LocaleStore.addChangeListener(clearMetadataCache);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreMetadataActionCreators.tsx");
 
@@ -79,7 +83,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
                 let body;
                 closure_128_1 = undefined;
                 c3 = 2;
-                const HTTP = os(tmp71[4]).HTTP;
+                const HTTP = os(tmp71[5]).HTTP;
                 const request = { url: constants.QUESTS_APP_STORE_METADATA, query: null, rejectWithError: true };
                 const obj4 = { os, app_id: storeAppId };
                 request.query = obj4;
@@ -105,7 +109,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
               } else {
                 closure_128_1 = map2.get(closure_129_2);
                 if (null == closure_128_1) {
-                  const tmp39 = new tmp4(tmp71[5])(c5, closure_1_6);
+                  const tmp39 = new tmp4(tmp71[6])(c5, closure_1_6);
                   closure_128_1 = tmp39;
                   const result1 = map2.set(closure_129_2, closure_128_1);
                 }

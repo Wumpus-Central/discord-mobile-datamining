@@ -1,12 +1,12 @@
-// === Module 11267: CallBarAction ===
+// === Module 11311: CallBarAction ===
 
-// Module 11267 (CallBarAction)
+// Module 11311 (CallBarAction)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import Pressables from "Pressables" /* 6859 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11269 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import Pressables from "Pressables" /* 6887 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11313 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,16 +17,16 @@ let closure_3 = ["isActive", "disableTint", "showBadge", "isSmallSize", "backgro
 let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
 const View = fn(17).View;
-const resetFocusTimer = fn(10686).resetFocusTimer;
+const resetFocusTimer = fn(10830).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const ColorUtils = fn(4942);
+const ColorUtils = fn(4963);
 let closure_12 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let c13 = 45;
 let closure_14 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_16 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj3 = { buttonContainer: { position: "absolute" }, iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" }, badge: { backgroundColor: "white", position: "absolute" }, notificationArea: null, notificationText: null, notificationAreaMentioned: null, notificationAreaUnread: null };
 const rect = { position: "absolute", top: -4, right: -4, height: 24, minWidth: 24, paddingHorizontal: 4, borderRadius: 12, borderWidth: 4, borderColor: nativeDefault.unsafe_rawColors.PRIMARY_760, alignItems: "center", justifyContent: "center" };
 obj3.notificationArea = rect;
@@ -146,7 +146,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionButton
                                                   }
                                                 }
                                                 const obj3 = { accessibilityLabel, accessibilityRole: "button", accessibilityState, onPress: tmp15, disabled: false, style: tmp16, children: tmp42 };
-                                                const tmp48 = closure_10(onPress(6859).PressableOpacity, obj3);
+                                                const tmp48 = closure_10(onPress(6887).PressableOpacity, obj3);
                                                 cResult[46] = accessibilityLabel;
                                                 cResult[47] = accessibilityState;
                                                 cResult[48] = tmp42;
@@ -177,13 +177,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActionButton
                                 if (tmp5) {
                                   const obj5 = { style: null };
                                   const items1 = [tmp7.badge, ];
-                                  const size1 = { width: result1, height: result1, borderRadius: tmp11.badgeRadius, top: onPress(11269).getBadgeTop(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees), left: null };
-                                  const tmpResult = onPress(11269);
-                                  size1.left = onPress(11269).getBadgeLeft(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees);
+                                  const size1 = { width: result1, height: result1, borderRadius: tmp11.badgeRadius, top: onPress(11313).getBadgeTop(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees), left: null };
+                                  const tmpResult = onPress(11313);
+                                  size1.left = onPress(11313).getBadgeLeft(tmp11.badgeRadius, tmp11.buttonRadius, cutoutPositionInDegrees);
                                   items1[1] = size1;
                                   obj5.style = items1;
                                   tmp38 = closure_10(View, obj5);
-                                  const tmpResult2 = onPress(11269);
+                                  const tmpResult2 = onPress(11313);
                                 }
                                 cResult[34] = tmp11.badgeRadius;
                                 cResult[35] = tmp11.buttonRadius;

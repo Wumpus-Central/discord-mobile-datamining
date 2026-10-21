@@ -1,14 +1,14 @@
-// === Module 13251: useGuildPowerupRollbackModalConfig ===
+// === Module 13319: useGuildPowerupRollbackModalConfig ===
 
-// Module 13251 (useGuildPowerupRollbackModalConfig)
+// Module 13319 (useGuildPowerupRollbackModalConfig)
 import util from "util" /* 1128 */;
-import _modDef2558 from "module_2558" /* 2558 */;
-import dismissible_content from "dismissible_content" /* 4784 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13239 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13252 */;
+import _modDef2568 from "module_2568" /* 2568 */;
+import dismissible_content from "dismissible_content" /* 4805 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13307 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13320 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5142 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5163 */;
 
 const require = globalThis.__r;
 
@@ -24,11 +24,11 @@ function getGuildThemeRollbackModalConfig(storeRemovalDate) {
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
       const _HermesInternal = HermesInternal;
-      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2558["6e2ry1"], obj2);
+      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2568["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      const items = [intl2.formatToPlainString(_modDef2558.jd8fki, obj5)];
+      const items = [intl2.formatToPlainString(_modDef2568.jd8fki, obj5)];
       obj.bodies = items;
       return obj;
     }

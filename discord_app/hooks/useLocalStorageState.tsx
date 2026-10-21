@@ -1,8 +1,8 @@
-// === Module 11433: useLocalStorageState ===
+// === Module 11483: useLocalStorageState ===
 
-// Module 11433 (useLocalStorageState)
+// Module 11483 (useLocalStorageState)
 import Storage3 from "Storage" /* 510 */;
-import useMountEffectDefault from "useMountEffect" /* 5224 */;
+import useMountEffectDefault from "useMountEffect" /* 5245 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 17878: SmartSearchTip ===
+// === Module 17959: SmartSearchTip ===
 
-// Module 17878 (SmartSearchTip)
+// Module 17959 (SmartSearchTip)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import _modDef4064 from "module_4064" /* 4064 */;
+import _modDef4085 from "module_4085" /* 4085 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ function getCitationAuthors(citations) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_12 }, header: null, titleContainer: null, title: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_12 };
 obj.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_20 };
@@ -53,7 +53,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ container, header, titleContainer, title } = tmp4);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = guildId(1128).intl;
-    const stringResult = intl.string(_modDef4064.ydAwWi);
+    const stringResult = intl.string(_modDef4085.ydAwWi);
     cResult[2] = stringResult;
     let tmp7 = stringResult;
   } else {
@@ -61,7 +61,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   if (cResult[3] !== tmp4.title) {
     const obj2 = { variant: "text-sm/semibold", color: "text-subtle", lineClamp: 1, style: title, accessibilityRole: "header", children: tmp7 };
-    const tmp12 = closure_5(guildId(5195).Text, obj2);
+    const tmp12 = closure_5(guildId(5216).Text, obj2);
     cResult[3] = tmp4.title;
     cResult[4] = tmp12;
     let tmp10 = tmp12;
@@ -71,8 +71,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
     const intl2 = guildId(1128).intl;
-    obj3.children = intl2.string(_modDef4064.QIdSmb);
-    const tmp16 = closure_5(guildId(5195).Text, obj3);
+    obj3.children = intl2.string(_modDef4085.QIdSmb);
+    const tmp16 = closure_5(guildId(5216).Text, obj3);
     cResult[5] = tmp16;
     let tmp13 = tmp16;
   } else {
@@ -93,7 +93,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           if (cResult[16] !== answerText) {
             const obj4 = { variant: "text-md/normal", color: "text-default", children: answerText };
-            const tmp28 = closure_5(guildId(5195).Text, obj4);
+            const tmp28 = closure_5(guildId(5216).Text, obj4);
             cResult[16] = answerText;
             cResult[17] = tmp28;
             let tmp26 = tmp28;
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
         return hasOwnProperty(native.Avatar, obj, user.id);
       });
-      tmp20 = closure_5(guildId(14133).AvatarPile, obj7);
+      tmp20 = closure_5(guildId(14208).AvatarPile, obj7);
     }
     cResult[9] = arr;
     cResult[10] = guildId;
@@ -164,12 +164,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj3 = { style: tmp.titleContainer, children: null };
   const obj4 = { variant: "text-sm/semibold", color: "text-subtle", lineClamp: 1, style: tmp.title, accessibilityRole: "header", children: null };
   const intl = citations(1128).intl;
-  obj4.children = intl.string(guildId(4064).ydAwWi);
-  const items1 = [closure_5(citations(5195).Text, obj4), ];
+  obj4.children = intl.string(guildId(4085).ydAwWi);
+  const items1 = [closure_5(citations(5216).Text, obj4), ];
   const obj5 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
   const intl2 = citations(1128).intl;
-  obj5.children = intl2.string(guildId(4064).QIdSmb);
-  items1[1] = closure_5(citations(5195).Text, obj5);
+  obj5.children = intl2.string(guildId(4085).QIdSmb);
+  items1[1] = closure_5(citations(5216).Text, obj5);
   obj3.children = items1;
   const items2 = [closure_6(View, obj3), ];
   let tmp4Result = memo.length > 0;
@@ -180,11 +180,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
       return hasOwnProperty(native.Avatar, obj, user.id);
     });
-    tmp4Result = closure_5(tmp5(14133).AvatarPile, obj6);
+    tmp4Result = closure_5(tmp5(14208).AvatarPile, obj6);
   }
   items2[1] = tmp4Result;
   obj2.children = items2;
-  const items3 = [closure_6(View, obj2), closure_5(citations(5195).Text, { variant: "text-md/normal", color: "text-default", children: children.answerText })];
+  const items3 = [closure_6(View, obj2), closure_5(citations(5216).Text, { variant: "text-md/normal", color: "text-default", children: children.answerText })];
   obj.children = items3;
   return closure_6(View, obj);
 }));

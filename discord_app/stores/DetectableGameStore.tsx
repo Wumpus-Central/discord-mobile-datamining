@@ -1,6 +1,6 @@
-// === Module 2040: DetectableGameStore ===
+// === Module 2039: DetectableGameStore ===
 
-// Module 2040 (DetectableGameStore)
+// Module 2039 (DetectableGameStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -10,8 +10,8 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import ApplicationConstants from "ApplicationConstants" /* 1375 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import CachedEntriesMapDefault from "CachedEntriesMap" /* 2041 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2043 */;
+import CachedEntriesMapDefault from "CachedEntriesMap" /* 2040 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2042 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import size from "module_2" /* 2 */;
 

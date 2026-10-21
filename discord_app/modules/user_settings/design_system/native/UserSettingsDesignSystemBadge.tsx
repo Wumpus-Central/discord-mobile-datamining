@@ -1,21 +1,21 @@
-// === Module 16926: UserSettingsDesignSystemBadge ===
+// === Module 17002: UserSettingsDesignSystemBadge ===
 
-// Module 16926 (UserSettingsDesignSystemBadge)
+// Module 17002 (UserSettingsDesignSystemBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5935 */;
-import Card from "Card" /* 6856 */;
-import TableRadioGroup from "TableRadioGroup" /* 6936 */;
-import TextInput from "TextInput" /* 6959 */;
-import TableSwitchRow from "TableSwitchRow" /* 7244 */;
-import StarIcon3 from "StarIcon" /* 9877 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10938 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10940 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10942 */;
-import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 10944 */;
-import Badge_Badge from "Badge/Badge" /* 13148 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import Stack_Stack from "Stack/Stack" /* 5957 */;
+import Card from "Card" /* 6884 */;
+import TableRadioGroup from "TableRadioGroup" /* 6964 */;
+import TextInput from "TextInput" /* 6987 */;
+import TableSwitchRow from "TableSwitchRow" /* 7272 */;
+import StarIcon3 from "StarIcon" /* 9907 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11082 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11084 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11086 */;
+import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 11088 */;
+import Badge_Badge from "Badge/Badge" /* 13216 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, preview: null, badgeRow: null, narrow: null, comparisonLabel: null, comparisonCell: null, layoutCase: null, inlineRow: null, trailingRow: null, inlineBadge: null, selfStart: null, selfStartParent: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.preview = { minHeight: nativeDefault.space.PX_32, alignItems: "center", justifyContent: "center" };
@@ -265,8 +265,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
   const tmp4 = closure_9();
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp8 = closure_7(tmp(5195).Heading, { variant: "text-lg/bold", children: "Variants" });
-    const tmp9 = closure_7(tmp(5195).Text, { variant: "text-sm/normal", color: "text-subtle", children: "Every variant with built-in types, custom text, and a leading icon. With no variant, a badge uses the grey default." });
+    const tmp8 = closure_7(tmp(5216).Heading, { variant: "text-lg/bold", children: "Variants" });
+    const tmp9 = closure_7(tmp(5216).Text, { variant: "text-sm/normal", color: "text-subtle", children: "Every variant with built-in types, custom text, and a leading icon. With no variant, a badge uses the grey default." });
     cResult[0] = tmp8;
     cResult[1] = tmp9;
     tmp5 = tmp8;
@@ -324,8 +324,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
     let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
     items = [tmp5, tmp6, tmp10];
     obj3.children = items;
-    obj2.children = closure_8(tmp(5935).Stack, obj3);
-    const tmp17 = closure_7(tmp(6856).Card, obj2);
+    obj2.children = closure_8(tmp(5957).Stack, obj3);
+    const tmp17 = closure_7(tmp(6884).Card, obj2);
     cResult[4] = tmp10;
     cResult[5] = tmp17;
     let tmp13 = tmp17;

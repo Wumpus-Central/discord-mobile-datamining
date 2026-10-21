@@ -1,21 +1,21 @@
-// === Module 16891: UserSettingsDesignSystemExperimentalButtons ===
+// === Module 16967: UserSettingsDesignSystemExperimentalButtons ===
 
-// Module 16891 (UserSettingsDesignSystemExperimentalButtons)
+// Module 16967 (UserSettingsDesignSystemExperimentalButtons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4999 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import components_Button_Button from "components/Button/Button" /* 5205 */;
-import useToken from "useToken" /* 5213 */;
-import LinearGradientDefault from "LinearGradient" /* 5219 */;
-import _modDef5645 from "module_5645" /* 5645 */;
-import Stack_Stack from "Stack/Stack" /* 5935 */;
-import _modDef6864 from "module_6864" /* 6864 */;
-import TableRowGroup from "TableRowGroup" /* 6938 */;
-import _modDef7098 from "module_7098" /* 7098 */;
-import _modDef7438 from "module_7438" /* 7438 */;
-import native2 from "native" /* 8845 */;
-import RowButton from "RowButton" /* 8885 */;
+import native from "native" /* 5020 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import components_Button_Button from "components/Button/Button" /* 5226 */;
+import useToken from "useToken" /* 5234 */;
+import LinearGradientDefault from "LinearGradient" /* 5240 */;
+import _modDef5665 from "module_5665" /* 5665 */;
+import Stack_Stack from "Stack/Stack" /* 5957 */;
+import _modDef6892 from "module_6892" /* 6892 */;
+import TableRowGroup from "TableRowGroup" /* 6966 */;
+import _modDef7126 from "module_7126" /* 7126 */;
+import _modDef7466 from "module_7466" /* 7466 */;
+import native2 from "native" /* 8872 */;
+import RowButton from "RowButton" /* 8912 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
 
         },
       text: "Channel Name",
-      icon: _modDef6864,
+      icon: _modDef6892,
       iconPosition: "end",
       accessibilityHint: "double-tap for more options",
       iconOpticalOffsetMargin: -6
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         },
       size: "lg",
       text: "Search",
-      icon: _modDef7098,
+      icon: _modDef7126,
       round: true
     };
     const tmp16 = timestampProducer(native2.InputButton, obj10);
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         },
       size: "lg",
       text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      icon: _modDef5645,
+      icon: _modDef5665,
       iconPosition: "end",
       accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     };
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj25 = { theme: ThemeTypes.DARK, children: null };
     const obj26 = { style: tmp42, start: tmp43, end: tmp44, colors: tmp45, children: null };
     const obj27 = {
-      icon: _modDef7438,
+      icon: _modDef7466,
       label: "Row Button",
       subLabel: "With a blur background",
       experimental_withBlurBackground: true,
@@ -255,7 +255,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         tmp61 = cResult[27];
       }
       if (cResult[28] !== collapsibleFloatingActionButtonState) {
-        const obj30 = { icon: _modDef7438, onPress: tmp61, positionBottom: 32, text: "Floating Action Button", state: collapsibleFloatingActionButtonState };
+        const obj30 = { icon: _modDef7466, onPress: tmp61, positionBottom: 32, text: "Floating Action Button", state: collapsibleFloatingActionButtonState };
         const tmp64 = timestampProducer(native2.CollapsibleFloatingActionButton, obj30);
         cResult[28] = collapsibleFloatingActionButtonState;
         cResult[29] = tmp64;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
 
     },
     text: "Channel Name",
-    icon: _modDef6864,
+    icon: _modDef6892,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
 
     },
     text: "Channel Name",
-    icon: _modDef6864,
+    icon: _modDef6892,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6
@@ -334,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       },
       size: "lg",
       text: "Search",
-      icon: _modDef7098,
+      icon: _modDef7126,
       round: true
     }),
 
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     },
     size: "lg",
     text: "Search",
-    icon: _modDef7098,
+    icon: _modDef7126,
     round: true
   };
   items1[1] = timestampProducer(native2.InputButton, {
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     },
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef5645,
+    icon: _modDef5665,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   });
@@ -394,7 +394,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     },
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef5645,
+    icon: _modDef5665,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   };
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   const obj23 = { title: "Experimental Blur Background Row Button", description: "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page.", hasIcons: false, children: timestampProducer(React3, {}) };
   const tmp3 = LinearGradientDefault;
   obj25.children = timestampProducer(RowButton.RowButton, {
-    icon: _modDef7438,
+    icon: _modDef7466,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -432,7 +432,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   obj24.children = timestampProducer(tmp3, obj25);
   items[5] = timestampProducer(native.ThemeContextProvider, obj24);
   const obj26 = {
-    icon: _modDef7438,
+    icon: _modDef7466,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -446,7 +446,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   const items3 = [timestampProducer(React4, obj5), ];
   const obj27 = { title: "Collapsible Floating Action Button", description: "A variation of the FloatingActionButton which will display some text until the user scrolls. We currently recommend the use of the FloatingActionButton over the CollapsibleFloatingActionButton, as a singular icon button without animation is more compact, understandable, and predictable.", hasIcons: false, children: timestampProducer(React3, { style: { padding: 48 } }) };
   items3[1] = timestampProducer(native2.CollapsibleFloatingActionButton, {
-    icon: _modDef7438,
+    icon: _modDef7466,
     onPress() {
 
     },

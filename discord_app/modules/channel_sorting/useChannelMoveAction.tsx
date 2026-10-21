@@ -1,16 +1,16 @@
-// === Module 13692: useChannelMoveAction ===
+// === Module 13760: useChannelMoveAction ===
 
-// Module 13692 (useChannelMoveAction)
-import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 13694 */;
-import ChannelSortingUtils from "ChannelSortingUtils" /* 13696 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7158 */;
-import GuildStore from "GuildStore" /* 4822 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
+// Module 13760 (useChannelMoveAction)
+import getChannelMoveBlockerDefault from "getChannelMoveBlocker" /* 13762 */;
+import ChannelSortingUtils from "ChannelSortingUtils" /* 13764 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7186 */;
+import GuildStore from "GuildStore" /* 4843 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
 import UserStore from "UserStore" /* 1392 */;
-import getChannelListRecord from "getChannelListRecord" /* 13693 */;
+import getChannelListRecord from "getChannelListRecord" /* 13761 */;
 
 require = fn;
 function areDestinationsEqual(arr, arg1) {
@@ -38,11 +38,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const isFavoritesGuildIdResult = tmp(4825).isFavoritesGuildId(stateFromStores);
+    const isFavoritesGuildIdResult = tmp(4846).isFavoritesGuildId(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = isFavoritesGuildIdResult;
     let tmp8 = isFavoritesGuildIdResult;
-    const tmpResult3 = tmp(4825);
+    const tmpResult3 = tmp(4846);
   } else {
     tmp8 = cResult[3];
   }

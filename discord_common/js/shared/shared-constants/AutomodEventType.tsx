@@ -1,6 +1,6 @@
-// === Module 12637: AutomodEventType ===
+// === Module 12701: AutomodEventType ===
 
-// Module 12637 (AutomodEventType)
+// Module 12701 (AutomodEventType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodEventType.tsx");

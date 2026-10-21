@@ -1,18 +1,18 @@
-// === Module 9590: ThreadCreationHooks ===
+// === Module 9620: ThreadCreationHooks ===
 
-// Module 9590 (ThreadCreationHooks)
+// Module 9620 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ThreadHooks from "ThreadHooks" /* 7318 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7330 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7515 */;
-import MessageParserDefault from "MessageParser" /* 7702 */;
+import ThreadHooks from "ThreadHooks" /* 7346 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7358 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7543 */;
+import MessageParserDefault from "MessageParser" /* 7730 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7351 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7379 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import MessageStore from "MessageStore" /* 5968 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import MessageStore from "MessageStore" /* 5990 */;
 
 const require = globalThis.__r;
 
@@ -147,11 +147,11 @@ function buildMessageActivity(activity) {
   }
   return tmp3;
 }
-function sendMessage(id, arr, items, key, fn) {
+function sendMessage(id, arg1, items, arg3, fn) {
   if (null != fn) {
-    if (null != key) {
-      if (key.length > 0) {
-        fn(id, key, arr, items);
+    if (null != arg3) {
+      if (arg3.length > 0) {
+        fn(id, arg3, arg1, items);
       }
     }
   }
@@ -160,12 +160,12 @@ function sendMessage(id, arr, items, key, fn) {
       const obj4 = MessageActionCreatorsDefault;
       id = id.id;
       const obj3 = { location: MessageSendLocation.THREAD_CREATION };
-      let sendStickersResult = obj4.sendStickers(id, items, MessageParserDefault.parse(id, arr), obj3);
+      let sendStickersResult = obj4.sendStickers(id, items, MessageParserDefault.parse(id, arg1), obj3);
     }
     return sendStickersResult;
   }
   obj = MessageActionCreatorsDefault;
-  sendStickersResult = obj.sendMessage(id.id, MessageParserDefault.parse(id, arr), undefined, { location: MessageSendLocation.THREAD_CREATION });
+  sendStickersResult = obj.sendMessage(id.id, MessageParserDefault.parse(id, arg1), undefined, { location: MessageSendLocation.THREAD_CREATION });
   const obj6 = { location: MessageSendLocation.THREAD_CREATION };
 }
 function createThread_() {
@@ -463,13 +463,13 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7580).DraftType;
-const SlowmodeType = fn(7707).SlowmodeType;
+const DraftType = fn(7608).DraftType;
+const SlowmodeType = fn(7735).SlowmodeType;
 const ThreadConstants = fn(1127);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1087);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(4950).MessageSendLocation;
+const MessageSendLocation = fn(4971).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 fn(558);
 let ReactCompilerGating = fn(558);

@@ -1,6 +1,6 @@
-// === Module 9088: NativeAudioManagerModule ===
+// === Module 9115: NativeAudioManagerModule ===
 
-// Module 9088 (NativeAudioManagerModule)
+// Module 9115 (NativeAudioManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

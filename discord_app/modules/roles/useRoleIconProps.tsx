@@ -1,10 +1,10 @@
-// === Module 7231: useRoleIconProps ===
+// === Module 7259: useRoleIconProps ===
 
-// Module 7231 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 7232 */;
+// Module 7259 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 7260 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4854 */;
-import GuildStore from "GuildStore" /* 4822 */;
+import GuildRoleStore from "GuildRoleStore" /* 4875 */;
+import GuildStore from "GuildStore" /* 4843 */;
 
 const require = globalThis.__r;
 
@@ -225,14 +225,14 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
     if (cResult[5] !== stateFromStores) {
       let tmp12;
       if (null != stateFromStores) {
-        const roleIconData = tmp(7232).getRoleIconData(stateFromStores, undefined);
+        const roleIconData = tmp(7260).getRoleIconData(stateFromStores, undefined);
         if (null != roleIconData) {
-          const obj2 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 0 };
+          const obj2 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: "scales" };
           ({ name: obj4.name, id: obj4.roleId } = stateFromStores);
           obj2.unicodeEmoji = roleIconData.unicodeEmoji;
           tmp12 = obj2;
         }
-        const tmpResult2 = tmp(7232);
+        const tmpResult2 = tmp(7260);
       }
       cResult[5] = stateFromStores;
       cResult[6] = tmp12;
@@ -321,7 +321,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
     if (null != stateFromStores) {
       const roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, undefined);
       if (null != roleIconData) {
-        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 0 };
+        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: "scales" };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
         obj3.unicodeEmoji = roleIconData.unicodeEmoji;
         tmp2 = obj3;

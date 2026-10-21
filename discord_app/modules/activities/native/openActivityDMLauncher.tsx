@@ -1,6 +1,6 @@
-// === Module 15052: openActivityDMLauncher ===
+// === Module 15127: openActivityDMLauncher ===
 
-// Module 15052 (openActivityDMLauncher)
+// Module 15127 (openActivityDMLauncher)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -47,7 +47,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
           let customId;
           c7 = 1;
           c8 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

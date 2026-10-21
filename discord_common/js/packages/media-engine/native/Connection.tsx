@@ -1,23 +1,23 @@
-// === Module 5712: Connection ===
+// === Module 5732: Connection ===
 
-// Module 5712 (Connection)
+// Module 5732 (Connection)
 import inject from "inject" /* 2016 */;
-import VideoQualityManager from "VideoQualityManager" /* 5714 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5717 */;
-import _modDef5718 from "module_5718" /* 5718 */;
-import VideoCodecUtils from "VideoCodecUtils" /* 5761 */;
-import transformStatsDefault from "transformStats" /* 5763 */;
-import _modDef5765 from "module_5765" /* 5765 */;
-import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 5766 */;
-import reduceDefault from "reduce" /* 5767 */;
-import _modDef5770 from "module_5770" /* 5770 */;
+import VideoQualityManager from "VideoQualityManager" /* 5734 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5737 */;
+import _modDef5738 from "module_5738" /* 5738 */;
+import VideoCodecUtils from "VideoCodecUtils" /* 5781 */;
+import transformStatsDefault from "transformStats" /* 5783 */;
+import _modDef5785 from "module_5785" /* 5785 */;
+import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 5786 */;
+import reduceDefault from "reduce" /* 5787 */;
+import _modDef5790 from "module_5790" /* 5790 */;
 import _slicedToArray from "module_32" /* 32 */;
-import BaseConnection from "BaseConnection" /* 5713 */;
+import BaseConnection from "BaseConnection" /* 5733 */;
 
 require = fn;
-let Constants = fn(5680);
+let Constants = fn(5700);
 ({ StatsFilter: closure_4, ExperimentFlags: hasOwnProperty, DESKTOP_BITRATE_ENHANCED: metroRequire, DESKTOP_BITRATE: closure_7, MEDIA_SINK_WANTS_PROPERTIES: closure_8, MediaTypes: closure_9, SIMULCAST_HQ_QUALITY: c10 } = Constants);
-Constants = fn(5702);
+Constants = fn(5722);
 ({ NATIVE_MODE_VALUES: closure_11, InputModes: closure_12, ConnectionStates: map1, Codecs: closure_14, MediaEngineContextTypes: closure_15, SpeakingFlags: closure_16, ResolutionTypes: closure_17, NativeFeatures: closure_18, NoiseCancellerError: closure_19, DEFAULT_VOLUME: closure_20, DEFAULT_STREAM_VOLUME: closure_21, DEFAULT_SOUNDSHARE_VOICE_BITRATE: closure_22, DEFAULT_CALL_BITRATE: closure_23, DEFAULT_CALL_MIN_BITRATE: closure_24, DEFAULT_CALL_MAX_BITRATE: closure_25, DEFAULT_PRIORITY_SPEAKER_DUCKING: closure_26, PING_INTERVAL: closure_27 } = Constants);
 let c28 = 0;
 let Connection;
@@ -223,7 +223,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5718(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5738(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -371,8 +371,8 @@ class Connection extends tmp4 {
               closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
             } else if (diff > 0) {
               if (diff1 >= 0) {
-                closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef5770(diff1 / (diff + diff1), 0, 1));
-                const tmp6 = _modDef5770(diff1 / (diff + diff1), 0, 1);
+                closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef5790(diff1 / (diff + diff1), 0, 1));
+                const tmp6 = _modDef5790(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -790,13 +790,13 @@ prototype["getStats"] = function getStats() {
         const obj = self(2016);
       }
     });
-    let obj = self(5762);
-    resolved = self(5762).timeout(promise, self(5711).STATS_INTERVAL).catch((error) => {
-      if (!(error instanceof self(5762).TimeoutError)) {
+    let obj = self(5782);
+    resolved = self(5782).timeout(promise, self(5731).STATS_INTERVAL).catch((error) => {
+      if (!(error instanceof self(5782).TimeoutError)) {
         throw error;
       }
     });
-    const timeoutResult = self(5762).timeout(promise, self(5711).STATS_INTERVAL);
+    const timeoutResult = self(5782).timeout(promise, self(5731).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -827,7 +827,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef5765(sorted, sorted1);
+  _modDef5785(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1629,7 +1629,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         return { v: "r" };
       } else {
         const items = [];
-        if (!_modDef5765(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5785(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;

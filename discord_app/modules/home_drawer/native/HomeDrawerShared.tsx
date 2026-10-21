@@ -1,6 +1,6 @@
-// === Module 17501: HomeDrawerShared ===
+// === Module 17582: HomeDrawerShared ===
 
-// Module 17501 (HomeDrawerShared)
+// Module 17582 (HomeDrawerShared)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 }, titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 }, rightContainer: { overflow: "hidden" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

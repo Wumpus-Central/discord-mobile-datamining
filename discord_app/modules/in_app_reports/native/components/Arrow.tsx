@@ -1,15 +1,15 @@
-// === Module 8065: Arrow ===
+// === Module 8093: Arrow ===
 
-// Module 8065 (Arrow)
+// Module 8093 (Arrow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import _modDef8066 from "module_8066" /* 8066 */;
+import _modDef8094 from "module_8094" /* 8094 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { tintColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -21,8 +21,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Arrow() 
   const cResult = c.c(2);
   const tmp4 = closure_4();
   if (cResult[0] !== tmp4.tintColor) {
-    const obj2 = { source: _modDef8066, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor };
-    const tmp8 = jsx(native.Icon, { source: _modDef8066, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor });
+    const obj2 = { source: _modDef8094, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor };
+    const tmp8 = jsx(native.Icon, { source: _modDef8094, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor });
     cResult[0] = tmp4.tintColor;
     cResult[1] = tmp8;
     let tmp5 = tmp8;
@@ -32,5 +32,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Arrow() 
   return tmp5;
 }) : (function Arrow() {
   const tmp = closure_4();
-  return jsx(native.Icon, { source: _modDef8066, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+  return jsx(native.Icon, { source: _modDef8094, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 });

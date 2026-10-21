@@ -1,19 +1,19 @@
-// === Module 9033: InstantInviteQRCodeActionSheet ===
+// === Module 9060: InstantInviteQRCodeActionSheet ===
 
-// Module 9033 (InstantInviteQRCodeActionSheet)
+// Module 9060 (InstantInviteQRCodeActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import ToastUtils from "ToastUtils" /* 5624 */;
-import GuildIcon from "GuildIcon" /* 6834 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7197 */;
-import ActionSheet from "ActionSheet" /* 7247 */;
-import components_native_QRCodeDefault from "components_native/QRCode" /* 9034 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import ToastUtils from "ToastUtils" /* 5644 */;
+import GuildIcon from "GuildIcon" /* 6862 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7225 */;
+import ActionSheet from "ActionSheet" /* 7275 */;
+import components_native_QRCodeDefault from "components_native/QRCode" /* 9061 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4822 */;
+import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const GuildIconDefault = GuildIcon;
@@ -24,7 +24,7 @@ const Constants = fn(1087);
 ({ InstantInviteSources: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { padding: nativeDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_24 }, iconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }, icon: null, code: null };
 let obj3 = { padding: nativeDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_24 };
 obj2.icon = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.lg + nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.WHITE };
@@ -338,12 +338,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   if (null != channel) {
     tmp9 = null;
     if (null != GuildStore.getGuild(channel.guild_id)) {
-      const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6834).GuildIconSizes.LARGE };
+      const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6862).GuildIconSizes.LARGE };
       tmp9 = React6(GuildIconDefault, obj2);
     }
   }
-  closure_13(tmp5(5624).presentFriendRequestAcceptedToast);
-  const obj3 = { header: React6(tmp5(7197).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  closure_13(tmp5(5644).presentFriendRequestAcceptedToast);
+  const obj3 = { header: React6(tmp5(7225).BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
   let plainText;
@@ -364,10 +364,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   let tmp14Result2 = null != tmp8;
   if (tmp14Result2) {
     const obj8 = { variant: "text-md/normal", children: tmp8.visible };
-    tmp14Result2 = React6(tmp5(5195).Text, obj8);
+    tmp14Result2 = React6(tmp5(5216).Text, obj8);
   }
   items1[1] = tmp14Result2;
   obj4.children = items1;
   obj3.children = collapsed(View, obj4);
-  return React6(tmp5(7247).ActionSheet, obj3);
+  return React6(tmp5(7275).ActionSheet, obj3);
 });

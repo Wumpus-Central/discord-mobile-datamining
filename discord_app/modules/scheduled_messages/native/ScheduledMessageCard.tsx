@@ -1,24 +1,24 @@
-// === Module 13864: ScheduledMessageCard ===
+// === Module 13939: ScheduledMessageCard ===
 
-// Module 13864 (ScheduledMessageCard)
+// Module 13939 (ScheduledMessageCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9623 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12114 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 13663 */;
-import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 13865 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9653 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12162 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 13728 */;
+import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 13940 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;
 const View = fn(17).View;
 const Routes = fn(1087).Routes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, attachmentCount: { flexDirection: "row", alignItems: "center", gap: 4 }, pendingRemoval: { alignItems: "center", paddingVertical: 16 } };
 let closure_9 = createStyles.createStyles(obj);
 fn(558);
@@ -232,7 +232,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
           }
         }
         let obj2 = { channel: stateFromStores, actions: null };
-        const tmp15 = closure_7(tmp(13664).ForLaterCardHeader, obj2);
+        const tmp15 = closure_7(tmp(13729).ForLaterCardHeader, obj2);
         cResult[8] = stateFromStores;
         cResult[9] = tmp15;
       } else {
@@ -327,7 +327,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
             return;
           }
         }
-        const obj4 = { style: tmp4.pendingRemoval, children: closure_7(tmp(6831).ActivityIndicator, { size: "small" }) };
+        const obj4 = { style: tmp4.pendingRemoval, children: closure_7(tmp(6859).ActivityIndicator, { size: "small" }) };
         let tmp19Result = closure_7(View, obj4);
       } else {
         class I {
@@ -367,17 +367,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
           }
           const obj5 = { style: tmp4.attachmentCount, children: null };
           const obj6 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-          const items1 = [closure_7(tmp(10352).AttachmentIcon, obj6), ];
+          const items1 = [closure_7(tmp(10381).AttachmentIcon, obj6), ];
           const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl = tmp(1128).intl;
           const obj8 = { count: tmp26 };
           obj7.children = intl.format(tmp(1128).t.ZJ1tPW, obj8);
-          items1[1] = closure_7(tmp(5195).Text, obj7);
+          items1[1] = closure_7(tmp(5216).Text, obj7);
           obj5.children = items1;
           tmp21 = closure_8(View, obj5);
         }
         tmp20[3] = tmp21;
-        tmp19Result = closure_7(tmp(13665).ForLaterMessageRow, tmp20);
+        tmp19Result = closure_7(tmp(13730).ForLaterMessageRow, tmp20);
       }
       cResult[12] = tmp26;
       cResult[13] = isPendingRemoval;
@@ -407,11 +407,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(closure_10, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(13664).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(13729).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
-      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(6831).ActivityIndicator, { size: "small" }) };
+      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(6859).ActivityIndicator, { size: "small" }) };
       let tmp10Result = closure_7(View, obj6);
     } else {
       const obj7 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: null };
@@ -419,21 +419,21 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledM
       if (length > 0) {
         const obj8 = { style: tmp.attachmentCount, children: null };
         const obj9 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-        const items2 = [closure_7(tmp2(10352).AttachmentIcon, obj9), ];
+        const items2 = [closure_7(tmp2(10381).AttachmentIcon, obj9), ];
         const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1128).intl;
         const obj11 = { count: length };
         obj10.children = intl.format(tmp2(1128).t.ZJ1tPW, obj11);
-        items2[1] = closure_7(tmp2(5195).Text, obj10);
+        items2[1] = closure_7(tmp2(5216).Text, obj10);
         obj8.children = items2;
         tmp9Result = closure_8(View, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = closure_7(tmp2(13665).ForLaterMessageRow, obj7);
+      tmp10Result = closure_7(tmp2(13730).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;
-    return closure_8(tmp2(6856).Card, obj2);
+    return closure_8(tmp2(6884).Card, obj2);
   }
   const obj = scheduledMessage(504);
 });
@@ -570,7 +570,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         let obj2 = { channel: stateFromStores, actions: null };
-        const tmp15 = closure_7(tmp(13664).ForLaterCardHeader, obj2);
+        const tmp15 = closure_7(tmp(13729).ForLaterCardHeader, obj2);
         cResult[8] = stateFromStores;
         cResult[9] = tmp15;
       } else {
@@ -665,7 +665,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return;
           }
         }
-        const obj4 = { style: tmp4.pendingRemoval, children: closure_7(tmp(6831).ActivityIndicator, { size: "small" }) };
+        const obj4 = { style: tmp4.pendingRemoval, children: closure_7(tmp(6859).ActivityIndicator, { size: "small" }) };
         let tmp19Result = closure_7(View, obj4);
       } else {
         class I {
@@ -705,17 +705,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           const obj5 = { style: tmp4.attachmentCount, children: null };
           const obj6 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-          const items1 = [closure_7(tmp(10352).AttachmentIcon, obj6), ];
+          const items1 = [closure_7(tmp(10381).AttachmentIcon, obj6), ];
           const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl = tmp(1128).intl;
           const obj8 = { count: tmp26 };
           obj7.children = intl.format(tmp(1128).t.ZJ1tPW, obj8);
-          items1[1] = closure_7(tmp(5195).Text, obj7);
+          items1[1] = closure_7(tmp(5216).Text, obj7);
           obj5.children = items1;
           tmp21 = closure_8(View, obj5);
         }
         tmp20[3] = tmp21;
-        tmp19Result = closure_7(tmp(13665).ForLaterMessageRow, tmp20);
+        tmp19Result = closure_7(tmp(13730).ForLaterMessageRow, tmp20);
       }
       cResult[12] = tmp26;
       cResult[13] = isPendingRemoval;
@@ -745,11 +745,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj3 = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(closure_10, obj3), , , ];
     const obj4 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(13664).ForLaterCardHeader, obj4);
+    items1[1] = closure_7(tmp2(13729).ForLaterCardHeader, obj4);
     const obj5 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj5);
     if (isPendingRemoval) {
-      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(6831).ActivityIndicator, { size: "small" }) };
+      const obj6 = { style: tmp.pendingRemoval, children: closure_7(tmp2(6859).ActivityIndicator, { size: "small" }) };
       let tmp10Result = closure_7(View, obj6);
     } else {
       const obj7 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: null };
@@ -757,21 +757,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (length > 0) {
         const obj8 = { style: tmp.attachmentCount, children: null };
         const obj9 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-        const items2 = [closure_7(tmp2(10352).AttachmentIcon, obj9), ];
+        const items2 = [closure_7(tmp2(10381).AttachmentIcon, obj9), ];
         const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1128).intl;
         const obj11 = { count: length };
         obj10.children = intl.format(tmp2(1128).t.ZJ1tPW, obj11);
-        items2[1] = closure_7(tmp2(5195).Text, obj10);
+        items2[1] = closure_7(tmp2(5216).Text, obj10);
         obj8.children = items2;
         tmp9Result = closure_8(View, obj8);
       }
       obj7.footer = tmp9Result;
-      tmp10Result = closure_7(tmp2(13665).ForLaterMessageRow, obj7);
+      tmp10Result = closure_7(tmp2(13730).ForLaterMessageRow, obj7);
     }
     items1[3] = tmp10Result;
     obj2.children = items1;
-    return closure_8(tmp2(6856).Card, obj2);
+    return closure_8(tmp2(6884).Card, obj2);
   }
   const obj = scheduledMessage(504);
 }));

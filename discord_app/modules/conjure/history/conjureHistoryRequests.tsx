@@ -1,7 +1,7 @@
-// === Module 12135: conjureHistoryRequests ===
+// === Module 12183: conjureHistoryRequests ===
 
-// Module 12135 (conjureHistoryRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11089 */;
+// Module 12183 (conjureHistoryRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10749 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -179,13 +179,13 @@ let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
             closure_2 = tmp2;
             closure_130_0 = undefined;
             closure_130_1 = undefined;
-            const obj5 = { query: null };
-            const obj6 = { environment };
-            obj5.query = obj6;
+            const obj4 = { query: null };
+            const obj5 = { environment };
+            obj4.query = obj5;
             c3 = 1;
             c4 = 1;
-            const obj7 = { value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/database/restore-points", obj5), done: false };
-            return obj7;
+            const obj6 = { value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/database/restore-points", obj4), done: false };
+            return obj6;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -226,9 +226,9 @@ let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
           }
           c4 = 3;
         }
-      } catch (tmp22) {
+      } catch (tmp18) {
         c4 = tmp;
-        throw tmp22;
+        throw tmp18;
       }
     }
   })();

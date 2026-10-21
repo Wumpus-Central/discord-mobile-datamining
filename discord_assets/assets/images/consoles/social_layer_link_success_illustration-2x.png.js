@@ -1,6 +1,6 @@
-// === Module 14944: ? ===
+// === Module 15018: ? ===
 
-// Module 14944
+// Module 15018
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js");

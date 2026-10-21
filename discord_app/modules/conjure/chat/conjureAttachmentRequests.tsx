@@ -1,7 +1,7 @@
-// === Module 11646: conjureAttachmentRequests ===
+// === Module 11696: conjureAttachmentRequests ===
 
-// Module 11646 (conjureAttachmentRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11089 */;
+// Module 11696 (conjureAttachmentRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10749 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -260,7 +260,7 @@ let closure_9 = async function _getAttachmentUrl(arg0) {
           closure_131_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

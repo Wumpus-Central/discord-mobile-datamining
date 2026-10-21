@@ -1,9 +1,9 @@
-// === Module 17707: CaughtUpRow ===
+// === Module 17788: CaughtUpRow ===
 
-// Module 17707 (CaughtUpRow)
+// Module 17788 (CaughtUpRow)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5014 */;
-import timing from "timing" /* 5167 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5035 */;
+import timing from "timing" /* 5188 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,8 +15,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5195).Text);
-const createICYMIStyles = fn(17646);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5216).Text);
+const createICYMIStyles = fn(17727);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -86,14 +86,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
                 return obj3;
               } else {
                 v3(true);
-                sharedValue(8773).itemInteracted("caught_up", "caught_up", "press_explore");
-                const obj5 = sharedValue(8773);
+                sharedValue(8800).itemInteracted("caught_up", "caught_up", "press_explore");
+                const obj5 = sharedValue(8800);
                 const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-                sharedValue(8773).feedItemActioned(obj4);
-                const obj6 = sharedValue(8773);
+                sharedValue(8800).feedItemActioned(obj4);
+                const obj6 = sharedValue(8800);
                 c1 = 1;
                 v3 = 1;
-                const obj7 = { value: tmp4(17665).maybeFetchGuildDiscoveryCategories(), done: false };
+                const obj7 = { value: tmp4(17746).maybeFetchGuildDiscoveryCategories(), done: false };
                 return obj7;
               }
             } else if (arg0 === 1) {
@@ -219,12 +219,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
         return obj7;
       }
     }
-    let obj3 = { visibleSharedValue: sharedValue, withTiming: tmp(5167).withTiming, Easing: tmp(5014).Easing };
+    let obj3 = { visibleSharedValue: sharedValue, withTiming: tmp(5188).withTiming, Easing: tmp(5035).Easing };
     R.__closure = obj3;
     R.__workletHash = 6575188656069;
     R.__initData = __initData;
-    const animatedStyle = tmp(5014).useAnimatedStyle(R);
-    const tmpResult = tmp(5014);
+    const animatedStyle = tmp(5035).useAnimatedStyle(R);
+    const tmpResult = tmp(5035);
     class Y {
       constructor() {
         num = 0;
@@ -253,12 +253,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
         return obj9;
       }
     }
-    let obj4 = { visibleSharedValue: sharedValue, withDelay: tmp(5014).withDelay, withSequence: tmp(5014).withSequence, withTiming: tmp(5167).withTiming, Easing: tmp(5014).Easing };
+    let obj4 = { visibleSharedValue: sharedValue, withDelay: tmp(5035).withDelay, withSequence: tmp(5035).withSequence, withTiming: tmp(5188).withTiming, Easing: tmp(5035).Easing };
     Y.__closure = obj4;
     Y.__workletHash = 469742746264;
     Y.__initData = __initData2;
-    const animatedStyle1 = tmp(5014).useAnimatedStyle(Y);
-    const tmpResult4 = tmp(5014);
+    const animatedStyle1 = tmp(5035).useAnimatedStyle(Y);
+    const tmpResult4 = tmp(5035);
     const fn2 = function k() {
       let num = 0;
       if (sharedValue.get()) {
@@ -278,13 +278,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
       obj7.transform = items;
       return obj7;
     };
-    let obj5 = { visibleSharedValue: sharedValue, withDelay: tmp(5014).withDelay, withSequence: tmp(5014).withSequence, withTiming: tmp(5167).withTiming, Easing: tmp(5014).Easing };
+    let obj5 = { visibleSharedValue: sharedValue, withDelay: tmp(5035).withDelay, withSequence: tmp(5035).withSequence, withTiming: tmp(5188).withTiming, Easing: tmp(5035).Easing };
     fn2.__closure = obj5;
     fn2.__workletHash = 14933607481025;
     fn2.__initData = __initData3;
-    const animatedStyle2 = tmp(5014).useAnimatedStyle(fn2);
-    const tmpResult5 = tmp(5014);
-    const token = tmp(5213).useToken(sharedValue(587).colors.BACKGROUND_BRAND);
+    const animatedStyle2 = tmp(5035).useAnimatedStyle(fn2);
+    const tmpResult5 = tmp(5035);
+    const token = tmp(5234).useToken(sharedValue(587).colors.BACKGROUND_BRAND);
     if (cResult[6] === animatedStyle) {
       class A {
         constructor() {
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
           }
         }
         let obj6 = { size: "custom", style: tmp4.icon, color: "background-brand" };
-        const tmp28 = closure_7(tmp(14117).FlashIcon, obj6);
+        const tmp28 = closure_7(tmp(14192).FlashIcon, obj6);
         cResult[9] = tmp4.icon;
         cResult[10] = tmp28;
       } else {
@@ -622,7 +622,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
         cResult[16] = items2;
       }
       const obj10 = { style: tmp26, children: tmp27 };
-      const tmp31 = closure_7(tmp23(5014).View, obj10);
+      const tmp31 = closure_7(tmp23(5035).View, obj10);
       cResult[11] = tmp26;
       cResult[12] = tmp27;
       cResult[13] = tmp31;
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
     cResult[7] = tmp4.iconWrapper;
     cResult[8] = items3;
     tmp23 = sharedValue;
-    const tmpResult6 = tmp(5213);
+    const tmpResult6 = tmp(5234);
   }
   const fn = function y() {
     let tmp2 = closure_0;
@@ -659,7 +659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
   visible = visible.visible;
   dependencyMap = undefined;
   const tmp = closure_10();
-  const sharedValue = visible(5014).useSharedValue(false);
+  const sharedValue = visible(5035).useSharedValue(false);
   let items = [visible, sharedValue];
   const effect = noop.useEffect(() => {
     let tmp2 = visible;
@@ -700,14 +700,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
             return obj3;
           } else {
             dependencyMap(true);
-            v1(8773).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(8773);
+            v1(8800).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(8800);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(8773).feedItemActioned(obj4);
-            const obj6 = v1(8773);
+            v1(8800).feedItemActioned(obj4);
+            const obj6 = v1(8800);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(17665).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(17746).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -735,16 +735,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
     }
   }), []);
   const callback1 = noop.useCallback(() => {
-    sharedValue(8773).itemInteracted("caught_up", "caught_up", "press_home");
-    const obj = sharedValue(8773);
-    sharedValue(8773).feedItemActioned({ itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "back_to_home_button", actionIntentType: "navigate", actionDestinationType: "guild_home" } });
-    const obj2 = sharedValue(8773);
-    const rootNavigationRef = visible(5112).getRootNavigationRef();
+    sharedValue(8800).itemInteracted("caught_up", "caught_up", "press_home");
+    const obj = sharedValue(8800);
+    sharedValue(8800).feedItemActioned({ itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "back_to_home_button", actionIntentType: "navigate", actionDestinationType: "guild_home" } });
+    const obj2 = sharedValue(8800);
+    const rootNavigationRef = visible(5133).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("tabs", { screen: "guilds" });
     }
   }, []);
-  let obj = visible(5014);
+  let obj = visible(5035);
   class T {
     constructor() {
       obj = closure_1;
@@ -796,12 +796,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
       return obj7;
     }
   }
-  let obj2 = visible(5014);
-  T.__closure = { visibleSharedValue: sharedValue, withTiming: visible(5167).withTiming, Easing: visible(5014).Easing };
+  let obj2 = visible(5035);
+  T.__closure = { visibleSharedValue: sharedValue, withTiming: visible(5188).withTiming, Easing: visible(5035).Easing };
   T.__workletHash = 14991314358816;
   T.__initData = __initData4;
   const animatedStyle = obj2.useAnimatedStyle(T);
-  let obj3 = { visibleSharedValue: sharedValue, withTiming: visible(5167).withTiming, Easing: visible(5014).Easing };
+  let obj3 = { visibleSharedValue: sharedValue, withTiming: visible(5188).withTiming, Easing: visible(5035).Easing };
   const fn = function f() {
     let num = 0;
     if (sharedValue.get()) {
@@ -821,12 +821,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
     obj7.transform = items;
     return obj7;
   };
-  let obj4 = visible(5014);
-  fn.__closure = { visibleSharedValue: sharedValue, withDelay: visible(5014).withDelay, withSequence: visible(5014).withSequence, withTiming: visible(5167).withTiming, Easing: visible(5014).Easing };
+  let obj4 = visible(5035);
+  fn.__closure = { visibleSharedValue: sharedValue, withDelay: visible(5035).withDelay, withSequence: visible(5035).withSequence, withTiming: visible(5188).withTiming, Easing: visible(5035).Easing };
   fn.__workletHash = 3574961372927;
   fn.__initData = __initData5;
   const animatedStyle1 = obj4.useAnimatedStyle(fn);
-  let obj5 = { visibleSharedValue: sharedValue, withDelay: visible(5014).withDelay, withSequence: visible(5014).withSequence, withTiming: visible(5167).withTiming, Easing: visible(5014).Easing };
+  let obj5 = { visibleSharedValue: sharedValue, withDelay: visible(5035).withDelay, withSequence: visible(5035).withSequence, withTiming: visible(5188).withTiming, Easing: visible(5035).Easing };
   class S {
     constructor() {
       num = 0;
@@ -855,20 +855,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
       return obj9;
     }
   }
-  let obj6 = visible(5014);
-  S.__closure = { visibleSharedValue: sharedValue, withDelay: visible(5014).withDelay, withSequence: visible(5014).withSequence, withTiming: visible(5167).withTiming, Easing: visible(5014).Easing };
+  let obj6 = visible(5035);
+  S.__closure = { visibleSharedValue: sharedValue, withDelay: visible(5035).withDelay, withSequence: visible(5035).withSequence, withTiming: visible(5188).withTiming, Easing: visible(5035).Easing };
   S.__workletHash = 9492925527076;
   S.__initData = __initData6;
   const animatedStyle2 = obj6.useAnimatedStyle(S);
-  let obj7 = { visibleSharedValue: sharedValue, withDelay: visible(5014).withDelay, withSequence: visible(5014).withSequence, withTiming: visible(5167).withTiming, Easing: visible(5014).Easing };
-  const token = visible(5213).useToken(sharedValue(587).colors.BACKGROUND_BRAND);
+  let obj7 = { visibleSharedValue: sharedValue, withDelay: visible(5035).withDelay, withSequence: visible(5035).withSequence, withTiming: visible(5188).withTiming, Easing: visible(5035).Easing };
+  const token = visible(5234).useToken(sharedValue(587).colors.BACKGROUND_BRAND);
   const obj9 = { children: null };
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { style: tmp.textContainer, children: null };
-  const obj12 = { style: null, children: closure_7(visible(14117).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
+  const obj12 = { style: null, children: closure_7(visible(14192).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
   const items1 = [tmp.iconWrapper, animatedStyle];
   obj12.style = items1;
-  const items2 = [closure_7(sharedValue(5014).View, obj12), , ];
+  const items2 = [closure_7(sharedValue(5035).View, obj12), , ];
   const obj14 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: null, children: null };
   const items3 = [tmp.headerText, animatedStyle1];
   obj14.style = items3;
@@ -888,22 +888,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
   const intl3 = visible(1128).intl;
   obj17.text = intl3.string(visible(1128).t.lNJYV8);
   obj17.onPress = callback;
-  const items6 = [closure_7(visible(5205).Button, obj17), ];
+  const items6 = [closure_7(visible(5226).Button, obj17), ];
   const obj18 = { size: "md", text: null, grow: true, variant: "secondary", onPress: null };
   const intl4 = visible(1128).intl;
   obj18.text = intl4.string(visible(1128).t.AGrUbj);
   obj18.onPress = callback1;
-  items6[1] = closure_7(visible(5205).Button, obj18);
+  items6[1] = closure_7(visible(5226).Button, obj18);
   obj16.children = items6;
   items5[1] = closure_8(View, obj16);
   obj10.children = items5;
-  const items7 = [closure_8(View, obj10), closure_7(visible(17685).Separator, {}), ];
+  const items7 = [closure_8(View, obj10), closure_7(visible(17766).Separator, {}), ];
   const obj19 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
   const obj13 = { size: "custom", style: tmp.icon, color: "background-brand" };
-  const obj8 = visible(5213);
+  const obj8 = visible(5234);
   obj19.start = visible(1107).VerticalGradient.START;
   obj19.end = visible(1107).VerticalGradient.END;
-  const tmp11 = sharedValue(5219);
+  const tmp11 = sharedValue(5240);
   const obj20 = sharedValue(683)(token);
   const items8 = [sharedValue(683)(token).alpha(0.2).hex(), ];
   const alphaResult = sharedValue(683)(token).alpha(0.2);

@@ -1,19 +1,19 @@
-// === Module 15958: FamilyCenterSetting ===
+// === Module 16034: FamilyCenterSetting ===
 
-// Module 15958 (FamilyCenterSetting)
+// Module 16034 (FamilyCenterSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef2526 from "module_2526" /* 2526 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 15959 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 15960 */;
+import _modDef2536 from "module_2536" /* 2536 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16035 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 16036 */;
 import noop from "module_19" /* 19 */;
 
 const util = intl(1128);
-const WarningIcon = intl(7905);
+const WarningIcon = intl(7933);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11111);
+const SettingBuilders = fn(11155);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyCenterTrailing() {
   let intl = require;
   let stringResult = dependencyMap;
@@ -37,7 +37,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyC
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
           intl = util.intl;
-          stringResult = intl.string(_modDef2526.wucWfE);
+          stringResult = intl.string(_modDef2536.wucWfE);
           obj4.accessibilityLabel = stringResult;
           const tmp11 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
           cResult[0] = tmp11;
@@ -67,7 +67,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyC
       if (daysRemaining >= 0) {
         const obj3 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
         const intl = util.intl;
-        obj3.accessibilityLabel = intl.string(_modDef2526.wucWfE);
+        obj3.accessibilityLabel = intl.string(_modDef2536.wucWfE);
         tmp6 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
       }
     }
@@ -77,10 +77,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyC
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2526.RZqaJn);
+    return intl.string(_modDef2536.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(8509).GroupIcon,
+  IconComponent: fn(8536).GroupIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyCenterTrailing() {
     let intl = require;
     let stringResult = dependencyMap;
@@ -104,7 +104,7 @@ const route = SettingBuilders.createRoute({
           if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
             intl = util.intl;
-            stringResult = intl.string(_modDef2526.wucWfE);
+            stringResult = intl.string(_modDef2536.wucWfE);
             obj4.accessibilityLabel = stringResult;
             const tmp11 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
             cResult[0] = tmp11;
@@ -134,7 +134,7 @@ const route = SettingBuilders.createRoute({
         if (daysRemaining >= 0) {
           const obj3 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
           const intl = util.intl;
-          obj3.accessibilityLabel = intl.string(_modDef2526.wucWfE);
+          obj3.accessibilityLabel = intl.string(_modDef2536.wucWfE);
           tmp6 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
         }
       }

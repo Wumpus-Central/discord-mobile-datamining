@@ -1,6 +1,6 @@
-// === Module 15243: AccessibilityFocusNativeComponent ===
+// === Module 15315: AccessibilityFocusNativeComponent ===
 
-// Module 15243 (AccessibilityFocusNativeComponent)
+// Module 15315 (AccessibilityFocusNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

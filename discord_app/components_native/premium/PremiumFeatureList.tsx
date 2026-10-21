@@ -1,16 +1,16 @@
-// === Module 9750: PremiumFeatureList ===
+// === Module 9780: PremiumFeatureList ===
 
-// Module 9750 (PremiumFeatureList)
+// Module 9780 (PremiumFeatureList)
 import nativeDefault from "native" /* 587 */;
-import Form from "Form" /* 8883 */;
+import Form from "Form" /* 8910 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6602 */;
+import TextStyles from "TextStyles" /* 6630 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { item: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 8, flexDirection: "row", alignItems: "center" }, label: null, iconMargin: null };
 const merged = Object.assign(TextStyles(fn(1087).Fonts.PRIMARY_NORMAL, nativeDefault.colors.TEXT_DEFAULT, 14));
 obj2.label = {};

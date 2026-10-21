@@ -1,6 +1,6 @@
-// === Module 16100: BountiesModalConstants ===
+// === Module 16176: BountiesModalConstants ===
 
-// Module 16100 (BountiesModalConstants)
+// Module 16176 (BountiesModalConstants)
 import size from "module_2" /* 2 */;
 
 function getBountyVideoEndPeekScale(value, c14) {

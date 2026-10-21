@@ -1,11 +1,11 @@
-// === Module 11247: joinFrameActivity ===
+// === Module 11291: joinFrameActivity ===
 
-// Module 11247 (joinFrameActivity)
-import ConjureActionCreators from "ConjureActionCreators" /* 11023 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11231 */;
+// Module 11291 (joinFrameActivity)
+import ConjureActionCreators from "ConjureActionCreators" /* 10678 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11275 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 
 require = fn;
 let closure_11 = async function _joinFrameActivity(arg0) {
@@ -62,7 +62,7 @@ let closure_11 = async function _joinFrameActivity(arg0) {
           };
           c7 = 1;
           c8 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp10) {

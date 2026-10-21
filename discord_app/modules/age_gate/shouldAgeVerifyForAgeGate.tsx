@@ -1,9 +1,9 @@
-// === Module 6604: shouldAgeVerifyForAgeGate ===
+// === Module 6632: shouldAgeVerifyForAgeGate ===
 
-// Module 6604 (shouldAgeVerifyForAgeGate)
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5605 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6605 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6610 */;
+// Module 6632 (shouldAgeVerifyForAgeGate)
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5626 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6633 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6638 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

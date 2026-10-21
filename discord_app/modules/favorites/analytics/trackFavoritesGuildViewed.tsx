@@ -1,11 +1,11 @@
-// === Module 17944: trackFavoritesGuildViewed ===
+// === Module 18025: trackFavoritesGuildViewed ===
 
-// Module 17944 (trackFavoritesGuildViewed)
+// Module 18025 (trackFavoritesGuildViewed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1991 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10659 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10802 */;
 import UserStore from "UserStore" /* 1392 */;
-import FavoriteStore from "FavoriteStore" /* 4803 */;
+import FavoriteStore from "FavoriteStore" /* 4824 */;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;

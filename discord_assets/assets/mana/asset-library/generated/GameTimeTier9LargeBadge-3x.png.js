@@ -1,6 +1,6 @@
-// === Module 14178: ? ===
+// === Module 14253: ? ===
 
-// Module 14178
+// Module 14253
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameTimeTier9LargeBadge-3x.png.js");

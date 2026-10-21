@@ -1,12 +1,12 @@
-// === Module 6838: GuildBadge ===
+// === Module 6866: GuildBadge ===
 
-// Module 6838 (GuildBadge)
+// Module 6866 (GuildBadge)
 import c from "c" /* 576 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4814 */;
-import _modDef6839 from "module_6839" /* 6839 */;
-import _modDef6840 from "module_6840" /* 6840 */;
-import _modDef6841 from "module_6841" /* 6841 */;
-import _modDef6842 from "module_6842" /* 6842 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
+import _modDef6867 from "module_6867" /* 6867 */;
+import _modDef6868 from "module_6868" /* 6868 */;
+import _modDef6869 from "module_6869" /* 6869 */;
+import _modDef6870 from "module_6870" /* 6870 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -71,7 +71,7 @@ let closure_2 = ["guild", "monocolored", "size"];
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsx = fn(21).jsx;
 let obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", PARTNERED_BLACK: 2, [2]: "PARTNERED_BLACK", VERIFIED_BLACK: 3, [3]: "VERIFIED_BLACK", NONE: 4, [4]: "NONE" };
-let obj2 = { [VERIFIED]: _modDef6839, [PARTNERED]: _modDef6840, [VERIFIED_BLACK]: _modDef6841, [PARTNERED_BLACK]: _modDef6842, [obj.NONE]: null };
+let obj2 = { [VERIFIED]: _modDef6867, [PARTNERED]: _modDef6868, [VERIFIED_BLACK]: _modDef6869, [PARTNERED_BLACK]: _modDef6870, [obj.NONE]: null };
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
 const ReactCompilerGating = fn(558);
 if (ReactCompilerGating.isReactCompilerEnabled()) {

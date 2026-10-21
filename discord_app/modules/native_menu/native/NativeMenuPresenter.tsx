@@ -1,9 +1,9 @@
-// === Module 18116: NativeMenuPresenter ===
+// === Module 18203: NativeMenuPresenter ===
 
-// Module 18116 (NativeMenuPresenter)
+// Module 18203 (NativeMenuPresenter)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NativeMenuStore from "NativeMenuStore" /* 10018 */;
+import NativeMenuStore from "NativeMenuStore" /* 10048 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,13 +1,13 @@
-// === Module 18612: MessageCodedLinkManager ===
+// === Module 18689: MessageCodedLinkManager ===
 
-// Module 18612 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 5661 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18625 */;
+// Module 18689 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 5681 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18702 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7516 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import InviteStore from "InviteStore" /* 5662 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7544 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import InviteStore from "InviteStore" /* 5682 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {
@@ -24,8 +24,8 @@ function resolveMessageCodedLinks(content) {
   if (tmp2) {
     let item = arr.forEach((item) => {
       ({ type, code } = item);
-      if (code(5665).CodedLinkType.INVITE === type) {
-        const result = code(18613).queueMessageLinkFetch(closure_3(function*() {
+      if (code(dependencyMap[6]).CodedLinkType.INVITE === type) {
+        const result = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -52,7 +52,7 @@ function resolveMessageCodedLinks(content) {
                 } else if (null == invite.getInvite(code)) {
                   v1 = 1;
                   c0 = 1;
-                  const obj5 = { value: v1(dependencyMap[7]).resolveInvite(code), done: false };
+                  const obj5 = { value: v1(dependencyMap[8]).resolveInvite(code), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -71,9 +71,9 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
-        const tmpResult = code(18613);
-      } else if (code(5665).CodedLinkType.TEMPLATE === type) {
-        const result1 = code(18613).queueMessageLinkFetch(closure_3(function*() {
+        const tmpResult = code(dependencyMap[7]);
+      } else if (code(dependencyMap[6]).CodedLinkType.TEMPLATE === type) {
+        const result1 = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -100,7 +100,7 @@ function resolveMessageCodedLinks(content) {
                 } else if (null == guildTemplate.getGuildTemplate(code)) {
                   v1 = 1;
                   c0 = 1;
-                  const obj5 = { value: v1(dependencyMap[8]).resolveGuildTemplate(code), done: false };
+                  const obj5 = { value: v1(dependencyMap[9]).resolveGuildTemplate(code), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -119,40 +119,85 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
-        const tmpResult5 = code(18613);
-      } else if (code(5665).CodedLinkType.BUILD_OVERRIDE !== type) {
-        if (code(5665).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
-          if (code(5665).CodedLinkType.EVENT !== type) {
-            if (code(5665).CodedLinkType.CHANNEL_LINK !== type) {
-              if (code(5665).CodedLinkType.ACTIVITY_BOOKMARK !== type) {
-                if (code(5665).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
-                  if (code(5665).CodedLinkType.GUILD_PRODUCT !== type) {
-                    if (code(5665).CodedLinkType.SERVER_SHOP !== type) {
-                      if (code(5665).CodedLinkType.QUESTS_EMBED !== type) {
-                        if (code(5665).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-                          if (code(5665).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
-                            if (code(5665).CodedLinkType.APP_OAUTH2_LINK !== type) {
-                              if (code(5665).CodedLinkType.COLLECTIBLES_SHOP !== type) {
-                                if (code(5665).CodedLinkType.EXPERIMENT !== type) {
-                                  if (code(5665).CodedLinkType.GAME_PROFILE !== type) {
-                                    if (code(5665).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                      if (code(5665).CodedLinkType.USER_PROFILE !== type) {
-                                        if (code(5665).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+        const tmpResult5 = code(dependencyMap[7]);
+      } else if (code(dependencyMap[6]).CodedLinkType.BUILD_OVERRIDE !== type) {
+        if (code(dependencyMap[6]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
+          if (code(dependencyMap[6]).CodedLinkType.EVENT !== type) {
+            if (code(dependencyMap[6]).CodedLinkType.CHANNEL_LINK !== type) {
+              if (code(dependencyMap[6]).CodedLinkType.ACTIVITY_BOOKMARK !== type) {
+                if (code(dependencyMap[6]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
+                  if (code(dependencyMap[6]).CodedLinkType.GUILD_PRODUCT !== type) {
+                    if (code(dependencyMap[6]).CodedLinkType.SERVER_SHOP !== type) {
+                      if (code(dependencyMap[6]).CodedLinkType.QUESTS_EMBED !== type) {
+                        if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+                          if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
+                            if (code(dependencyMap[6]).CodedLinkType.APP_OAUTH2_LINK !== type) {
+                              if (code(dependencyMap[6]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
+                                if (code(dependencyMap[6]).CodedLinkType.EXPERIMENT !== type) {
+                                  if (code(dependencyMap[6]).CodedLinkType.GAME_PROFILE !== type) {
+                                    if (code(dependencyMap[6]).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                                      if (code(dependencyMap[6]).CodedLinkType.USER_PROFILE !== type) {
+                                        if (code(dependencyMap[6]).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                                           if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                            const result2 = code(18613).queueMessageLinkFetch(() => {
-                                              const useGameOrganizationInviteFetch = content(18620).useGameOrganizationInviteFetch;
-                                              const items = [code];
-                                              return useGameOrganizationInviteFetch.fetchMany(items);
-                                            });
-                                            const tmpResult7 = code(18613);
+                                            const result2 = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
+                                              if (dependencyMap === 2) {
+                                                dependencyMap = 3;
+                                                throw new TypeError("Generator functions may not be called on executing generators");
+                                              } else if (tmp3 === 3) {
+                                                if (arg0 === 1) {
+                                                  throw value;
+                                                } else if (arg0 === 2) {
+                                                  const obj2 = { value, done: true };
+                                                  return obj2;
+                                                } else {
+                                                  return { value: "IconComponent", done: null };
+                                                }
+                                              } else {
+                                                try {
+                                                  dependencyMap = 2;
+                                                  if (0 === v1) {
+                                                    if (arg0 === 1) {
+                                                      dependencyMap = 3;
+                                                      throw value;
+                                                    } else if (arg0 === 2) {
+                                                      dependencyMap = 3;
+                                                      const obj3 = { value, done: true };
+                                                      return obj3;
+                                                    } else {
+                                                      const useGameOrganizationInviteFetch = tmp4(18697).useGameOrganizationInviteFetch;
+                                                      const items = [code];
+                                                      v1 = 1;
+                                                      dependencyMap = 1;
+                                                      const obj4 = { value: useGameOrganizationInviteFetch.fetchMany(items), done: false };
+                                                      return obj4;
+                                                    }
+                                                  } else if (arg0 === 1) {
+                                                    dependencyMap = 3;
+                                                    throw value;
+                                                  } else if (arg0 === 2) {
+                                                    dependencyMap = 3;
+                                                    const obj = { value, done: true };
+                                                    return obj;
+                                                  } else {
+                                                    v1(12622)(closure_128_0).catch(closure_1_6);
+                                                    dependencyMap = 3;
+                                                    return { value: "IconComponent", done: null };
+                                                  }
+                                                } catch (tmp14) {
+                                                  dependencyMap = tmp;
+                                                  throw tmp14;
+                                                }
+                                              }
+                                            }));
+                                            const tmpResult7 = code(dependencyMap[7]);
                                           }
-                                          tmpResult6 = code(14365);
+                                          tmpResult6 = code(dependencyMap[10]);
                                         } else {
-                                          if (code(5665).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                                            if (code(5665).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                                              if (code(5665).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                const embedApplication = code(11922).getEmbedApplication(code);
-                                                const tmpResult8 = code(11922);
+                                          if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                                            if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                                              if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
+                                                const embedApplication = code(dependencyMap[14]).getEmbedApplication(code);
+                                                const tmpResult8 = code(dependencyMap[14]);
                                               } else {
                                                 const _Error = Error;
                                                 const _HermesInternal = HermesInternal;
@@ -160,7 +205,7 @@ function resolveMessageCodedLinks(content) {
                                               }
                                             }
                                           }
-                                          closure_1(18622)(type, code);
+                                          closure_1(dependencyMap[13])(type, code);
                                         }
                                       }
                                     }
@@ -192,8 +237,8 @@ function resolveMessageCodedLinks(content) {
       if (tmp) {
         const item = arr.forEach((item) => {
           ({ type, code } = item);
-          if (code(5665).CodedLinkType.INVITE === type) {
-            const result = code(18613).queueMessageLinkFetch(closure_3(function*() {
+          if (code(dependencyMap[6]).CodedLinkType.INVITE === type) {
+            const result = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
               if (c0 === 2) {
                 c0 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -220,7 +265,7 @@ function resolveMessageCodedLinks(content) {
                     } else if (null == invite.getInvite(code)) {
                       v1 = 1;
                       c0 = 1;
-                      const obj5 = { value: v1(dependencyMap[7]).resolveInvite(code), done: false };
+                      const obj5 = { value: v1(dependencyMap[8]).resolveInvite(code), done: false };
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -239,9 +284,9 @@ function resolveMessageCodedLinks(content) {
                 }
               }
             }));
-            const tmpResult = code(18613);
-          } else if (code(5665).CodedLinkType.TEMPLATE === type) {
-            const result1 = code(18613).queueMessageLinkFetch(closure_3(function*() {
+            const tmpResult = code(dependencyMap[7]);
+          } else if (code(dependencyMap[6]).CodedLinkType.TEMPLATE === type) {
+            const result1 = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
               if (c0 === 2) {
                 c0 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -268,7 +313,7 @@ function resolveMessageCodedLinks(content) {
                     } else if (null == guildTemplate.getGuildTemplate(code)) {
                       v1 = 1;
                       c0 = 1;
-                      const obj5 = { value: v1(dependencyMap[8]).resolveGuildTemplate(code), done: false };
+                      const obj5 = { value: v1(dependencyMap[9]).resolveGuildTemplate(code), done: false };
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -287,40 +332,85 @@ function resolveMessageCodedLinks(content) {
                 }
               }
             }));
-            const tmpResult5 = code(18613);
-          } else if (code(5665).CodedLinkType.BUILD_OVERRIDE !== type) {
-            if (code(5665).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
-              if (code(5665).CodedLinkType.EVENT !== type) {
-                if (code(5665).CodedLinkType.CHANNEL_LINK !== type) {
-                  if (code(5665).CodedLinkType.ACTIVITY_BOOKMARK !== type) {
-                    if (code(5665).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
-                      if (code(5665).CodedLinkType.GUILD_PRODUCT !== type) {
-                        if (code(5665).CodedLinkType.SERVER_SHOP !== type) {
-                          if (code(5665).CodedLinkType.QUESTS_EMBED !== type) {
-                            if (code(5665).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-                              if (code(5665).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
-                                if (code(5665).CodedLinkType.APP_OAUTH2_LINK !== type) {
-                                  if (code(5665).CodedLinkType.COLLECTIBLES_SHOP !== type) {
-                                    if (code(5665).CodedLinkType.EXPERIMENT !== type) {
-                                      if (code(5665).CodedLinkType.GAME_PROFILE !== type) {
-                                        if (code(5665).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                          if (code(5665).CodedLinkType.USER_PROFILE !== type) {
-                                            if (code(5665).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+            const tmpResult5 = code(dependencyMap[7]);
+          } else if (code(dependencyMap[6]).CodedLinkType.BUILD_OVERRIDE !== type) {
+            if (code(dependencyMap[6]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
+              if (code(dependencyMap[6]).CodedLinkType.EVENT !== type) {
+                if (code(dependencyMap[6]).CodedLinkType.CHANNEL_LINK !== type) {
+                  if (code(dependencyMap[6]).CodedLinkType.ACTIVITY_BOOKMARK !== type) {
+                    if (code(dependencyMap[6]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
+                      if (code(dependencyMap[6]).CodedLinkType.GUILD_PRODUCT !== type) {
+                        if (code(dependencyMap[6]).CodedLinkType.SERVER_SHOP !== type) {
+                          if (code(dependencyMap[6]).CodedLinkType.QUESTS_EMBED !== type) {
+                            if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+                              if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
+                                if (code(dependencyMap[6]).CodedLinkType.APP_OAUTH2_LINK !== type) {
+                                  if (code(dependencyMap[6]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
+                                    if (code(dependencyMap[6]).CodedLinkType.EXPERIMENT !== type) {
+                                      if (code(dependencyMap[6]).CodedLinkType.GAME_PROFILE !== type) {
+                                        if (code(dependencyMap[6]).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                                          if (code(dependencyMap[6]).CodedLinkType.USER_PROFILE !== type) {
+                                            if (code(dependencyMap[6]).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                                               if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                                const result2 = code(18613).queueMessageLinkFetch(() => {
-                                                  const useGameOrganizationInviteFetch = content(18620).useGameOrganizationInviteFetch;
-                                                  const items = [code];
-                                                  return useGameOrganizationInviteFetch.fetchMany(items);
-                                                });
-                                                const tmpResult7 = code(18613);
+                                                const result2 = code(dependencyMap[7]).queueMessageLinkFetch(closure_3(function*() {
+                                                  if (dependencyMap === 2) {
+                                                    dependencyMap = 3;
+                                                    throw new TypeError("Generator functions may not be called on executing generators");
+                                                  } else if (tmp3 === 3) {
+                                                    if (arg0 === 1) {
+                                                      throw value;
+                                                    } else if (arg0 === 2) {
+                                                      const obj2 = { value, done: true };
+                                                      return obj2;
+                                                    } else {
+                                                      return { value: "IconComponent", done: null };
+                                                    }
+                                                  } else {
+                                                    try {
+                                                      dependencyMap = 2;
+                                                      if (0 === v1) {
+                                                        if (arg0 === 1) {
+                                                          dependencyMap = 3;
+                                                          throw value;
+                                                        } else if (arg0 === 2) {
+                                                          dependencyMap = 3;
+                                                          const obj3 = { value, done: true };
+                                                          return obj3;
+                                                        } else {
+                                                          const useGameOrganizationInviteFetch = tmp4(18697).useGameOrganizationInviteFetch;
+                                                          const items = [code];
+                                                          v1 = 1;
+                                                          dependencyMap = 1;
+                                                          const obj4 = { value: useGameOrganizationInviteFetch.fetchMany(items), done: false };
+                                                          return obj4;
+                                                        }
+                                                      } else if (arg0 === 1) {
+                                                        dependencyMap = 3;
+                                                        throw value;
+                                                      } else if (arg0 === 2) {
+                                                        dependencyMap = 3;
+                                                        const obj = { value, done: true };
+                                                        return obj;
+                                                      } else {
+                                                        v1(12622)(closure_128_0).catch(closure_1_6);
+                                                        dependencyMap = 3;
+                                                        return { value: "IconComponent", done: null };
+                                                      }
+                                                    } catch (tmp14) {
+                                                      dependencyMap = tmp;
+                                                      throw tmp14;
+                                                    }
+                                                  }
+                                                }));
+                                                const tmpResult7 = code(dependencyMap[7]);
                                               }
-                                              tmpResult6 = code(14365);
+                                              tmpResult6 = code(dependencyMap[10]);
                                             } else {
-                                              if (code(5665).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                                                if (code(5665).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                                                  if (code(5665).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                    const embedApplication = code(11922).getEmbedApplication(code);
-                                                    const tmpResult8 = code(11922);
+                                              if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                                                if (code(dependencyMap[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                                                  if (code(dependencyMap[6]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
+                                                    const embedApplication = code(dependencyMap[14]).getEmbedApplication(code);
+                                                    const tmpResult8 = code(dependencyMap[14]);
                                                   } else {
                                                     const _Error = Error;
                                                     const _HermesInternal = HermesInternal;
@@ -328,7 +418,7 @@ function resolveMessageCodedLinks(content) {
                                                   }
                                                 }
                                               }
-                                              closure_1(18622)(type, code);
+                                              closure_1(dependencyMap[13])(type, code);
                                             }
                                           }
                                         }
@@ -352,10 +442,11 @@ function resolveMessageCodedLinks(content) {
     });
   }
 }
+const NOOP = fn(1098).NOOP;
 class MessageCodedLinkManager extends tmp7 {
   constructor() {
     tmp3 = new MessageCodedLinkManager(tmp2, tmp, new.target);
-    tmp4 = closure_1(closure_2[14])(tmp3, resolveMessageCodedLinks);
+    tmp4 = closure_1(closure_2[16])(tmp3, resolveMessageCodedLinks);
     return tmp3;
   }
 }

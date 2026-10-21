@@ -1,10 +1,10 @@
-// === Module 8675: profile_customization/ProfileCustomizationUtils ===
+// === Module 8702: profile_customization/ProfileCustomizationUtils ===
 
-// Module 8675 (profile_customization/ProfileCustomizationUtils)
+// Module 8702 (profile_customization/ProfileCustomizationUtils)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import VideoBackground from "VideoBackground" /* 8676 */;
+import VideoBackground from "VideoBackground" /* 8703 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

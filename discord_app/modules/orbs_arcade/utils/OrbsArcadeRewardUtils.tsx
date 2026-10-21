@@ -1,7 +1,7 @@
-// === Module 19096: OrbsArcadeRewardUtils ===
+// === Module 19171: OrbsArcadeRewardUtils ===
 
-// Module 19096 (OrbsArcadeRewardUtils)
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 19094 */;
+// Module 19171 (OrbsArcadeRewardUtils)
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 18196 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/orbs_arcade/utils/OrbsArcadeRewardUtils.tsx");

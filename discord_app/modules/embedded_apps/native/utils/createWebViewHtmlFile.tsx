@@ -1,10 +1,10 @@
-// === Module 11370: createWebViewHtmlFile ===
+// === Module 11414: createWebViewHtmlFile ===
 
-// Module 11370 (createWebViewHtmlFile)
+// Module 11414 (createWebViewHtmlFile)
 import NativeFileModuleDefault from "NativeFileModule" /* 1164 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import bridgeProtocol from "bridgeProtocol" /* 11353 */;
-import _modDef11371 from "module_11371" /* 11371 */;
+import bridgeProtocol from "bridgeProtocol" /* 11397 */;
+import _modDef11415 from "module_11415" /* 11415 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -12,17 +12,22 @@ function webViewShellFileName(arg0) {
   return "iframe--" + arg0 + ".html";
 }
 function generateWebViewHtml(arg0) {
-  ({ iframeUri, iframeSandboxAttributes, referrerPolicy, shimBridgeSecret } = arg0);
+  ({ iframeUri, iframeSandboxAttributes, referrerPolicy, shimBridgeSecret, iframeCsp } = arg0);
   let str = "";
+  let str2 = "";
+  if (null != iframeCsp) {
+    const _HermesInternal = HermesInternal;
+    str2 = " csp=\"" + iframeCsp + "\"";
+  }
   if (null != shimBridgeSecret) {
-    const tmp3 = _modDef11371;
+    const tmp4 = _modDef11415;
     const _JSON = JSON;
     const _JSON2 = JSON;
     const json = JSON.stringify(shimBridgeSecret);
-    const _HermesInternal = HermesInternal;
-    str = "<script type=\"text/javascript\">" + tmp3 + "</script>\n      <script type=\"text/javascript\">" + bridgeProtocol.SHELL_BRIDGE_GLOBAL + ".start(" + json + ", " + JSON.stringify(closure_4) + ");</script>";
+    const _HermesInternal2 = HermesInternal;
+    str = "<script type=\"text/javascript\">" + tmp4 + "</script>\n      <script type=\"text/javascript\">" + bridgeProtocol.SHELL_BRIDGE_GLOBAL + ".start(" + json + ", " + JSON.stringify(closure_4) + ");</script>";
   }
-  return "\n  <html>\n  <head>\n      <style>\n      body {\n          padding: 0;\n          margin: 0;\n          width: 100vw;\n          min-height: 100vh; /* This keeps a small white gap at the bottom of the screen, the options below help prevent this. */\n          min-height: -moz-available; /* See: https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487 for more info */\n          min-height: -webkit-fill-available;\n          min-height: fill-available;\n      }\n      </style>\n      <meta\n      name=\"viewport\"\n      content=\"width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover\"\n      />\n  </head>\n  <body>\n      " + str + "\n      <script type=\"text/javascript\">\n          window.addEventListener('message', e => {\n            window.ReactNativeWebView.postMessage(JSON.stringify(e.data));\n          });\n      </script>\n      <iframe id=\"" + closure_4 + "\" width=\"100%\" height=\"100%\" src=\"" + iframeUri + "\" frameborder=\"0\" allow=\"autoplay; encrypted-media; accelerometer; gyroscope; camera 'none'; microphone 'none'; display-capture 'none'\" allowfullscreen sandbox=\"" + iframeSandboxAttributes + "\" referrerPolicy=\"" + referrerPolicy + "\">\n      </iframe>\n  </body>\n  </html>\n";
+  return "\n  <html>\n  <head>\n      <style>\n      body {\n          padding: 0;\n          margin: 0;\n          width: 100vw;\n          min-height: 100vh; /* This keeps a small white gap at the bottom of the screen, the options below help prevent this. */\n          min-height: -moz-available; /* See: https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487 for more info */\n          min-height: -webkit-fill-available;\n          min-height: fill-available;\n      }\n      </style>\n      <meta\n      name=\"viewport\"\n      content=\"width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover\"\n      />\n  </head>\n  <body>\n      " + str + "\n      <script type=\"text/javascript\">\n          window.addEventListener('message', e => {\n            window.ReactNativeWebView.postMessage(JSON.stringify(e.data));\n          });\n      </script>\n      <iframe id=\"" + closure_4 + "\" width=\"100%\" height=\"100%\" src=\"" + iframeUri + "\" frameborder=\"0\" allow=\"autoplay; encrypted-media; accelerometer; gyroscope; camera 'none'; microphone 'none'; display-capture 'none'\" allowfullscreen sandbox=\"" + iframeSandboxAttributes + "\" referrerPolicy=\"" + referrerPolicy + "\"" + str2 + ">\n      </iframe>\n  </body>\n  </html>\n";
 }
 let closure_9 = async function _createWebViewHtmlFile(arg0) {
   if (c6 === 2) {
@@ -57,12 +62,13 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
           closure_129_3 = undefined;
           closure_129_4 = undefined;
           closure_129_5 = undefined;
-          ({ iframeId: closure_129_0, iframeUri: closure_129_1, iframeSandboxAttributes: closure_129_2, referrerPolicy: closure_129_3, shimVersion: closure_129_4, shellBridgeSecret: closure_129_5 } = closure_0);
           closure_129_6 = undefined;
+          ({ iframeId: closure_129_0, iframeUri: closure_129_1, iframeSandboxAttributes: closure_129_2, referrerPolicy: closure_129_3, shimVersion: closure_129_4, shellBridgeSecret: closure_129_5, iframeCsp: closure_129_6 } = closure_0);
           closure_129_7 = undefined;
+          closure_129_8 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -74,14 +80,15 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
           return obj6;
         } else {
           const _HermesInternal = HermesInternal;
-          closure_129_6 = "" + closure_130_5 + "/" + closure_130_6(closure_129_0);
-          const obj7 = { iframeUri: closure_129_1, iframeSandboxAttributes: closure_129_2, referrerPolicy: closure_129_3, shimBridgeSecret: null };
+          closure_129_7 = "" + closure_130_5 + "/" + closure_130_6(closure_129_0);
+          const obj7 = { iframeUri: closure_129_1, iframeSandboxAttributes: closure_129_2, referrerPolicy: closure_129_3, shimBridgeSecret: null, iframeCsp: null };
           let tmp23 = null;
           if (2 === closure_129_4) {
             tmp23 = closure_129_5;
           }
           obj7.shimBridgeSecret = tmp23;
-          closure_129_7 = closure_130_8(obj7);
+          obj7.iframeCsp = closure_129_6;
+          closure_129_8 = closure_130_8(obj7);
           c5 = 2;
           c6 = 1;
           const obj8 = {
@@ -123,13 +130,13 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
           const obj4 = closure_130_1(closure_130_2[2]);
           c5 = 4;
           c6 = 1;
-          const obj10 = { value: obj4.writeFile("cache", closure_129_6, closure_129_7, "utf8"), done: false };
+          const obj10 = { value: obj4.writeFile("cache", closure_129_7, closure_129_8, "utf8"), done: false };
           return obj10;
         }
       } else if (3 === tmp6) {
         c4 = 0;
-        closure_129_8 = closure_3;
-        closure_130_1(closure_130_2[3]).captureException(closure_129_8);
+        closure_129_9 = closure_3;
+        closure_130_1(closure_130_2[3]).captureException(closure_129_9);
         c6 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -146,18 +153,18 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp25) {
-      closure_3 = tmp25;
+    } catch (tmp26) {
+      closure_3 = tmp26;
       if (tmp3 === c4) {
         c6 = tmp;
-        throw tmp25;
+        throw tmp26;
       } else {
         c5 = tmp;
       }
     }
   }
 };
-let closure_4 = fn(11062).EMBEDDED_APP_FRAME_ELEMENT_ID;
+let closure_4 = fn(10717).EMBEDDED_APP_FRAME_ELEMENT_ID;
 const discord_activity_data = "discord_activity_data";
 let c7 = null;
 const size = fn(2);

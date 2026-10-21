@@ -1,15 +1,15 @@
-// === Module 13922: CrunchyrollLinkPreConnect ===
+// === Module 13997: CrunchyrollLinkPreConnect ===
 
-// Module 13922 (CrunchyrollLinkPreConnect)
-import _modDef13923 from "module_13923" /* 13923 */;
+// Module 13997 (CrunchyrollLinkPreConnect)
+import _modDef13998 from "module_13998" /* 13998 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const constants = fn(13919).CrunchyrollLinkModalScenes;
+const constants = fn(13994).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1087).PlatformTypes;
-const redirectDestination = fn(8758).CRUNCHYROLL_LINK_DEST_ORIGIN;
+const redirectDestination = fn(8785).CRUNCHYROLL_LINK_DEST_ORIGIN;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_8 = createStyles.createStyles({ image: { width: 152, height: 123 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -79,12 +79,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
     }
   }
   const obj2 = navigation(1505);
-  const obj4 = { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef13923, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination };
+  const obj4 = { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef13998, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination };
   cResult[6] = N;
   cResult[7] = tmp6;
   cResult[8] = tmp4.image;
-  cResult[9] = jsx(navigation(9550).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef13923, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination });
-  const tmp12 = jsx(navigation(9550).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef13923, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination });
+  cResult[9] = jsx(navigation(9580).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef13998, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination });
+  const tmp12 = jsx(navigation(9580).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: N, onNext: tmp6, img: _modDef13998, imgStyle: tmp4.image, title: tmp8, body: tmp9, redirectDestination });
 }) : (function CrunchyrollLinkPreConnect() {
   const tmp = closure_8();
   navigation = navigation(1505).useNavigation();
@@ -96,11 +96,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR);
   }, items1);
-  const obj2 = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef13923, imgStyle: tmp.image, title: null, body: null, redirectDestination: null };
+  const obj2 = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef13998, imgStyle: tmp.image, title: null, body: null, redirectDestination: null };
   const intl = navigation(1128).intl;
   obj2.title = intl.string(navigation(1128).t.siPkNp);
   const intl2 = navigation(1128).intl;
   obj2.body = intl2.string(navigation(1128).t.oS4NEH);
   obj2.redirectDestination = redirectDestination;
-  return jsx(navigation(9550).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef13923, imgStyle: tmp.image, title: null, body: null, redirectDestination: null });
+  return jsx(navigation(9580).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef13998, imgStyle: tmp.image, title: null, body: null, redirectDestination: null });
 });

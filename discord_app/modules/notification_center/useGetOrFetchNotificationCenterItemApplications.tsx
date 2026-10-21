@@ -1,13 +1,13 @@
-// === Module 17607: useGetOrFetchNotificationCenterItemApplications ===
+// === Module 17688: useGetOrFetchNotificationCenterItemApplications ===
 
-// Module 17607 (useGetOrFetchNotificationCenterItemApplications)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7206 */;
+// Module 17688 (useGetOrFetchNotificationCenterItemApplications)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7234 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let items = [fn(6739).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, fn(6739).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, fn(6739).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, fn(6739).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
+let items = [fn(6767).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, fn(6767).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, fn(6767).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, fn(6767).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
 let set = new Set(items);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -39,7 +39,7 @@ export const useGetOrFetchNotificationCenterItemsApplications = ReactCompilerGat
   } else {
     _require = cResult[1];
   }
-  return set(7206)(tmp3);
+  return set(7234)(tmp3);
 }) : (function useGetOrFetchNotificationCenterItemsApplications(arg0) {
   closure_0 = arg0;
   let items = [arg0];

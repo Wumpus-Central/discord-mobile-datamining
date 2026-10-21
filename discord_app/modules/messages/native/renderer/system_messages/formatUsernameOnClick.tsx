@@ -1,8 +1,8 @@
-// === Module 8268: formatUsernameOnClick ===
+// === Module 8296: formatUsernameOnClick ===
 
-// Module 8268 (formatUsernameOnClick)
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8267 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8269 */;
+// Module 8296 (formatUsernameOnClick)
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8295 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 8297 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;

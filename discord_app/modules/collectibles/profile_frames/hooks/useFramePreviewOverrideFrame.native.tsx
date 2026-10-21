@@ -1,13 +1,13 @@
-// === Module 8630: useFramePreviewOverrideFrame ===
+// === Module 8657: useFramePreviewOverrideFrame ===
 
-// Module 8630 (useFramePreviewOverrideFrame)
+// Module 8657 (useFramePreviewOverrideFrame)
 import c from "c" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import noop from "module_19" /* 19 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7606 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7634 */;
 
 require = fn;
-let closure_4 = fn(8631).useFramePreviewOverrideStore;
+let closure_4 = fn(8658).useFramePreviewOverrideStore;
 let c5 = "frame-preview-override";
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 15016: GuildBadgePottedPlant ===
+// === Module 15090: GuildBadgePottedPlant ===
 
-// Module 15016 (GuildBadgePottedPlant)
+// Module 15090 (GuildBadgePottedPlant)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7910 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14982 */;
+import inlineStyles from "inlineStyles" /* 7938 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15056 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

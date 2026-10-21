@@ -1,25 +1,25 @@
-// === Module 19163: ParentalConsentConnectionScreen ===
+// === Module 19238: ParentalConsentConnectionScreen ===
 
-// Module 19163 (ParentalConsentConnectionScreen)
+// Module 19238 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import _modDef2822 from "module_2822" /* 2822 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15972 */;
+import _modDef2832 from "module_2832" /* 2832 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16048 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7594 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7622 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7595).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7623).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { body: { marginTop: nativeDefault.space.PX_24 }, cardSection: { alignItems: "center" }, cardTitle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.cardTitle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_24, textAlign: "center" };
@@ -191,10 +191,10 @@ export default function ParentalConsentConnectionScreen() {
     const obj2 = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: null, body: null };
     const obj = ActionSheetActionCreatorsDefault;
     const intl = util.intl;
-    obj2.title = intl.string(_modDef2822.dMMSA0);
+    obj2.title = intl.string(_modDef2832.dMMSA0);
     const intl2 = util.intl;
-    obj2.body = intl2.format(_modDef2822["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(15973, dependencyMap.paths), closure_9, obj2);
+    obj2.body = intl2.format(_modDef2832["6GaRTu"], { link });
+    obj.openLazy(asyncRequireImpl(16049, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

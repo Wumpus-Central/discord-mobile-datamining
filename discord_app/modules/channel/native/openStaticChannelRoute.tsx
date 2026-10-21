@@ -1,21 +1,21 @@
-// === Module 11144: openStaticChannelRoute ===
+// === Module 11188: openStaticChannelRoute ===
 
-// Module 11144 (openStaticChannelRoute)
+// Module 11188 (openStaticChannelRoute)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6623 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 7296 */;
-import GuildMemberStore from "GuildMemberStore" /* 4860 */;
-import GuildRoleStore from "GuildRoleStore" /* 4854 */;
-import GuildStore from "GuildStore" /* 4822 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 7324 */;
+import GuildMemberStore from "GuildMemberStore" /* 4881 */;
+import GuildRoleStore from "GuildRoleStore" /* 4875 */;
+import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;
-const StaticChannelRoute = fn(4807).StaticChannelRoute;
+const StaticChannelRoute = fn(4828).StaticChannelRoute;
 const Constants = fn(1087);
 ({ GuildFeatures: closure_7, Routes: closure_8 } = Constants);
-const GuildOnboardingTab = fn(7147).GuildOnboardingTab;
-let closure_10 = fn(7143).CHANNELS_AND_ROLES_MODAL_KEY;
+const GuildOnboardingTab = fn(7175).GuildOnboardingTab;
+let closure_10 = fn(7171).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/openStaticChannelRoute.tsx");
 
@@ -31,13 +31,13 @@ export default function openStaticChannelRoute(arg0) {
         const features3 = guild.features;
         if (features3.has(constants.COMMUNITY)) {
           const obj3 = { guildId, defaultTab: GuildOnboardingTab.BROWSE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11145, dependencyMap.paths), obj3, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11189, dependencyMap.paths), obj3, closure_10);
         }
       } else if ("customize" === staticRoute) {
         const features2 = guild.features;
         if (features2.has(constants.COMMUNITY)) {
           const obj5 = { guildId, defaultTab: GuildOnboardingTab.CUSTOMIZE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11145, dependencyMap.paths), obj5, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11189, dependencyMap.paths), obj5, closure_10);
         }
       } else {
         if ("home" !== staticRoute) {
@@ -53,14 +53,14 @@ export default function openStaticChannelRoute(arg0) {
                       const _HermesInternal = HermesInternal;
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj6 = { role, guildId };
-                      obj2.openLazy(asyncRequireImpl(11158, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id, obj6);
-                      const tmp9 = asyncRequireImpl(11158, dependencyMap.paths);
+                      obj2.openLazy(asyncRequireImpl(11202, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id, obj6);
+                      const tmp9 = asyncRequireImpl(11202, dependencyMap.paths);
                     }
                   }
                 }
               }
               const obj8 = { guildId };
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11167, dependencyMap.paths), obj8);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11211, dependencyMap.paths), obj8);
             } else {
               GlobalUtils.assertNever(staticRoute);
             }

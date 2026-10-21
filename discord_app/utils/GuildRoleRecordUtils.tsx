@@ -1,11 +1,11 @@
-// === Module 4856: GuildRoleRecordUtils ===
+// === Module 4877: GuildRoleRecordUtils ===
 
-// Module 4856 (GuildRoleRecordUtils)
+// Module 4877 (GuildRoleRecordUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4855 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4857 */;
-import PlainRecord from "PlainRecord" /* 4815 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4876 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4878 */;
+import PlainRecord from "PlainRecord" /* 4836 */;
 import size from "module_2" /* 2 */;
 
 function fromServerArray(id, roles) {

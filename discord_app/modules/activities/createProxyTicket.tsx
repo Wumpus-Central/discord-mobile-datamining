@@ -1,6 +1,6 @@
-// === Module 11033: createProxyTicket ===
+// === Module 10688: createProxyTicket ===
 
-// Module 11033 (createProxyTicket)
+// Module 10688 (createProxyTicket)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -147,26 +147,34 @@ export const createProxyTicket = function createProxyTicket() {
   }
   return applyArgumentsResult;
 };
-export const prefetchProxyTicket = function prefetchProxyTicket(prop, arg1, type) {
+export const prefetchProxyTicket = function prefetchProxyTicket(application_id, arg1, type) {
+  const items = [AuthenticationStore.getId(), application_id, , ];
   let str = arg1;
-  let str2 = type;
-  const promise = mintProxyTicket(prop, arg1, type);
-  promise.catch(() => {
-
-  });
-  const items = [AuthenticationStore.getId(), prop, , ];
   if (arg1 == null) {
     str = "";
   }
   items[2] = str;
-  if (str2 == null) {
+  let str2 = type;
+  if (type == null) {
     str2 = "";
   }
   items[3] = str2;
-  const obj = { ticket: promise, expiresAt: null };
   const joined = items.join(":");
-  obj.expiresAt = Date.now() + 60000;
-  const result = map.set(joined, obj);
+  value = map.get(joined);
+  if (null == value) {
+    const promise = mintProxyTicket(application_id, arg1, type);
+    const obj2 = { ticket: promise, expiresAt: null };
+    const _Date2 = Date;
+    obj2.expiresAt = Date.now() + 60000;
+    const result = map.set(joined, obj2);
+    promise.catch(() => {
+      if (map.get(joined) === obj2) {
+        map.delete(joined);
+      }
+    });
+  } else {
+    const _Date = Date;
+  }
 };
 export const rememberProxyTicket = function rememberProxyTicket(proxy_ticket, id, CONJURE_UNKNOWN_CHANNEL, APP_CHANNEL) {
   let str = CONJURE_UNKNOWN_CHANNEL;

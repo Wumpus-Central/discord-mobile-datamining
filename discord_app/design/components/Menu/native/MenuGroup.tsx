@@ -1,6 +1,6 @@
-// === Module 15061: MenuGroup ===
+// === Module 15136: MenuGroup ===
 
-// Module 15061 (MenuGroup)
+// Module 15136 (MenuGroup)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { divider: { marginLeft: 0, height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

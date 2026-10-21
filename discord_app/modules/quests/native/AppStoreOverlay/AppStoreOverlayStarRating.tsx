@@ -1,17 +1,17 @@
-// === Module 13940: AppStoreOverlayStarRating ===
+// === Module 14015: AppStoreOverlayStarRating ===
 
-// Module 13940 (AppStoreOverlayStarRating)
+// Module 14015 (AppStoreOverlayStarRating)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9875 */;
-import StarIcon from "StarIcon" /* 9877 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9905 */;
+import StarIcon from "StarIcon" /* 9907 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: 2 }, star: null, starIcon: null, starFillMask: null };
 let size = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "relative" };
 obj2.star = size;

@@ -1,19 +1,19 @@
-// === Module 18526: DiceRollLifecycleManager ===
+// === Module 18605: DiceRollLifecycleManager ===
 
-// Module 18526 (DiceRollLifecycleManager)
+// Module 18605 (DiceRollLifecycleManager)
 import util from "util" /* 1128 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7515 */;
-import MessageParserDefault from "MessageParser" /* 7702 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import DiceRollStore from "DiceRollStore" /* 12874 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7543 */;
+import MessageParserDefault from "MessageParser" /* 7730 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
+import DiceRollStore from "DiceRollStore" /* 12942 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
 
 require = fn;
-const INITIAL_STATE = fn(12874).INITIAL_STATE;
-const DiceRollConstants = fn(9586);
+const INITIAL_STATE = fn(12942).INITIAL_STATE;
+const DiceRollConstants = fn(9616);
 ({ AFTER_ROLL_DELAY_MS: closure_7, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: closure_9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: closure_11, ROLL_DURATION_MS: closure_12 } = DiceRollConstants);
-const MessageSendLocation = fn(4950).MessageSendLocation;
+const MessageSendLocation = fn(4971).MessageSendLocation;
 class DiceRollLifecycleManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

@@ -1,19 +1,19 @@
-// === Module 13853: ForumChannelHeader ===
+// === Module 13928: ForumChannelHeader ===
 
-// Module 13853 (ForumChannelHeader)
+// Module 13928 (ForumChannelHeader)
 import c from "c" /* 576 */;
-import ForumChannelSearch from "ForumChannelSearch" /* 13835 */;
-import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13854 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13855 */;
+import ForumChannelSearch from "ForumChannelSearch" /* 13910 */;
+import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13929 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
-let closure_5 = createStyles.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9628).MIN_HEADER_HEIGHT } });
+const createStyles = fn(4966);
+let closure_5 = createStyles.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9658).MIN_HEADER_HEIGHT } });
 const ReactCompilerGating = fn(558);
-let obj = { search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9628).MIN_HEADER_HEIGHT } };
+let obj = { search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: fn(9658).MIN_HEADER_HEIGHT } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx");
 

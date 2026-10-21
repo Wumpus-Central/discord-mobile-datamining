@@ -1,9 +1,9 @@
-// === Module 13295: getGuildPowerupsBoostInfoText ===
+// === Module 13363: getGuildPowerupsBoostInfoText ===
 
-// Module 13295 (getGuildPowerupsBoostInfoText)
+// Module 13363 (getGuildPowerupsBoostInfoText)
 import util from "util" /* 1128 */;
-import _modDef2558 from "module_2558" /* 2558 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5143 */;
+import _modDef2568 from "module_2568" /* 2568 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5164 */;
 import size from "module_2" /* 2 */;
 
 const BoostInfoType = GuildPowerupsConstants.BoostInfoType;
@@ -13,13 +13,13 @@ export const getGuildPowerupsBoostInfoText = function getGuildPowerupsBoostInfoT
   if (BoostInfoType.AVAILABLE === type) {
     const intl3 = util.intl;
     const obj2 = { boostCount: count };
-    return intl3.formatToPlainString(_modDef2558.BdRXZA, obj2);
+    return intl3.formatToPlainString(_modDef2568.BdRXZA, obj2);
   } else if (BoostInfoType.SPENT === type) {
     const intl2 = util.intl;
     const obj = { boostCount: count };
-    return intl2.formatToPlainString(_modDef2558.xvgIVG, obj);
+    return intl2.formatToPlainString(_modDef2568.xvgIVG, obj);
   } else if (BoostInfoType.TOTAL === type) {
     const intl = util.intl;
-    return intl.string(_modDef2558["/F7Z2y"]);
+    return intl.string(_modDef2568["/F7Z2y"]);
   }
 };

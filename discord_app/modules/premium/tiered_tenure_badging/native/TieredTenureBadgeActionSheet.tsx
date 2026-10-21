@@ -1,17 +1,17 @@
-// === Module 10886: TieredTenureBadgeActionSheet ===
+// === Module 11030: TieredTenureBadgeActionSheet ===
 
-// Module 10886 (TieredTenureBadgeActionSheet)
+// Module 11030 (TieredTenureBadgeActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import FastImageDefault from "FastImage" /* 5631 */;
-import openUserSettings from "openUserSettings" /* 7439 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7661 */;
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8605 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 10887 */;
-import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 10912 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import FastImageDefault from "FastImage" /* 5651 */;
+import openUserSettings from "openUserSettings" /* 7467 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7689 */;
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8632 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11031 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11056 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -26,7 +26,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { headerContainer: { paddingHorizontal: 24, alignItems: "center" }, title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 }, rowContainer: { flexDirection: "row", width: "100%", height: 160, gap: 8, justifyContent: "center", alignItems: "center", marginTop: 24 }, rowContainerWithUsersBadge: { height: 186 }, badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 }, usersBadgeContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.sm }, badgeName: { marginTop: 8 }, badgeRequirement: { marginTop: 4 }, badgePremiumSince: { width: 90, marginTop: 4, textAlign: "center" }, footer: { marginHorizontal: 24 } };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

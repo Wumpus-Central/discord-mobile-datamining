@@ -1,21 +1,21 @@
-// === Module 14111: UserProfileActivityBadges ===
+// === Module 14186: UserProfileActivityBadges ===
 
-// Module 14111 (UserProfileActivityBadges)
+// Module 14186 (UserProfileActivityBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7759 */;
-import GroupIcon from "GroupIcon" /* 8509 */;
-import AppsIcon2 from "AppsIcon" /* 8526 */;
-import utils from "utils" /* 8566 */;
-import GameControllerIcon from "GameControllerIcon" /* 9543 */;
-import TvIcon from "TvIcon" /* 10570 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10575 */;
-import MusicIcon from "MusicIcon" /* 10576 */;
-import TopicsIcon from "TopicsIcon" /* 11220 */;
-import HourglassIcon from "HourglassIcon" /* 11880 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14113 */;
-import Badges from "Badges" /* 14114 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7787 */;
+import GroupIcon from "GroupIcon" /* 8536 */;
+import AppsIcon2 from "AppsIcon" /* 8553 */;
+import utils from "utils" /* 8593 */;
+import GameControllerIcon from "GameControllerIcon" /* 9573 */;
+import TvIcon from "TvIcon" /* 10599 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10604 */;
+import MusicIcon from "MusicIcon" /* 10605 */;
+import TopicsIcon from "TopicsIcon" /* 11264 */;
+import HourglassIcon from "HourglassIcon" /* 11928 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14188 */;
+import Badges from "Badges" /* 14189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1087).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_7 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
 fn(558);
 let ReactCompilerGating = fn(558);

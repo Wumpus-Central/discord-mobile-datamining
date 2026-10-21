@@ -1,9 +1,9 @@
-// === Module 11098: conjureProjectConnection ===
+// === Module 10763: conjureProjectConnection ===
 
-// Module 11098 (conjureProjectConnection)
+// Module 10763 (conjureProjectConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11023 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6724 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10678 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
 
 require = fn;
 const size = fn(2);

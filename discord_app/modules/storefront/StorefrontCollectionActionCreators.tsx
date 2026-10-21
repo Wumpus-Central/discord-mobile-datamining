@@ -1,13 +1,13 @@
-// === Module 9409: StorefrontCollectionActionCreators ===
+// === Module 9437: StorefrontCollectionActionCreators ===
 
-// Module 9409 (StorefrontCollectionActionCreators)
+// Module 9437 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import StoreUtils from "StoreUtils" /* 6340 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8647 */;
+import StoreUtils from "StoreUtils" /* 6362 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8674 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2069 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9407 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7617 */;
+import LocaleStore from "LocaleStore" /* 2068 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9435 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7644 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
@@ -66,7 +66,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
           closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -228,7 +228,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
           closure_130_18 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -542,7 +542,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {

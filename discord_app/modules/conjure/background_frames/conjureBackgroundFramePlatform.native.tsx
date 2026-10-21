@@ -1,12 +1,12 @@
-// === Module 17796: conjureBackgroundFramePlatform ===
+// === Module 17877: conjureBackgroundFramePlatform ===
 
-// Module 17796 (conjureBackgroundFramePlatform)
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5570 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5587 */;
-import transitionToChannel from "transitionToChannel" /* 5669 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11069 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 11756 */;
-import FramesConstants from "FramesConstants" /* 6727 */;
+// Module 17877 (conjureBackgroundFramePlatform)
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5591 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5608 */;
+import transitionToChannel from "transitionToChannel" /* 5689 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10724 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 11804 */;
+import FramesConstants from "FramesConstants" /* 6755 */;
 import size from "module_2" /* 2 */;
 
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;

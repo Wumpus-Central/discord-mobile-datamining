@@ -1,6 +1,6 @@
-// === Module 8300: ApplicationSubscriptionSystemMessageUtils ===
+// === Module 8328: ApplicationSubscriptionSystemMessageUtils ===
 
-// Module 8300 (ApplicationSubscriptionSystemMessageUtils)
+// Module 8328 (ApplicationSubscriptionSystemMessageUtils)
 import util from "util" /* 1128 */;
 import size from "module_2" /* 2 */;
 

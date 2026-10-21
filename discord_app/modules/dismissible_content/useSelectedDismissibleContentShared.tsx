@@ -1,13 +1,13 @@
-// === Module 7448: useSelectedDismissibleContentShared ===
+// === Module 7476: useSelectedDismissibleContentShared ===
 
-// Module 7448 (useSelectedDismissibleContentShared)
+// Module 7476 (useSelectedDismissibleContentShared)
 import noop from "module_19" /* 19 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4787 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4808 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(4797).ContentDismissActionType;
+const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
@@ -88,7 +88,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
       }
       let tmp6 = content !== closure_1_0;
       if (!tmp6) {
-        let result = closure_0(4791).isGuildDismissibleContent(tmp5);
+        let result = closure_0(4812).isGuildDismissibleContent(tmp5);
         if (result) {
           const lastDismissed2 = tmp2.lastDismissed;
           let guildId;
@@ -98,7 +98,7 @@ export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCo
           result = guildId !== closure_1_2;
         }
         tmp6 = result;
-        const obj = closure_0(4791);
+        const obj = closure_0(4812);
       }
       tmp = tmp6;
       tmp2 = lastDismissed;

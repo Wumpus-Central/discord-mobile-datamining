@@ -1,6 +1,6 @@
-// === Module 4949: GameModeExperiment ===
+// === Module 4970: GameModeExperiment ===
 
-// Module 4949 (GameModeExperiment)
+// Module 4970 (GameModeExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

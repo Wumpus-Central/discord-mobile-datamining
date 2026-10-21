@@ -1,6 +1,6 @@
-// === Module 19060: getMaxRoleSubscriptionEmojiSlots ===
+// === Module 19137: getMaxRoleSubscriptionEmojiSlots ===
 
-// Module 19060 (getMaxRoleSubscriptionEmojiSlots)
+// Module 19137 (getMaxRoleSubscriptionEmojiSlots)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/getMaxRoleSubscriptionEmojiSlots.tsx");

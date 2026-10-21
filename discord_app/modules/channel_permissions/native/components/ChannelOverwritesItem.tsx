@@ -1,18 +1,18 @@
-// === Module 8922: ChannelOverwritesItem ===
+// === Module 8949: ChannelOverwritesItem ===
 
-// Module 8922 (ChannelOverwritesItem)
+// Module 8949 (ChannelOverwritesItem)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5001 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import AlertModal from "AlertModal" /* 5872 */;
-import FormCheckbox from "FormCheckbox" /* 6852 */;
-import TableRow from "TableRow" /* 6854 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8905 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8923 */;
-import _modDef8924 from "module_8924" /* 8924 */;
-import _modDef8925 from "module_8925" /* 8925 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5022 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import AlertModal from "AlertModal" /* 5894 */;
+import FormCheckbox from "FormCheckbox" /* 6880 */;
+import TableRow from "TableRow" /* 6882 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8932 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8950 */;
+import _modDef8951 from "module_8951" /* 8951 */;
+import _modDef8952 from "module_8952" /* 8952 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -21,10 +21,10 @@ require = fn;
 let closure_4 = ["item"];
 let closure_5 = ["checked"];
 const View = fn(17).View;
-const RowType = fn(7823).RowType;
+const RowType = fn(7851).RowType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_12 = createStyles.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function RemoveIcon(item) {
@@ -89,8 +89,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
               }
             }
           }
-          let tmp9 = closure_10(tmp(6969).CircleXIcon, obj2);
-          const tmp11 = closure_10(tmp(6969).CircleXIcon, obj2);
+          let tmp9 = closure_10(tmp(6997).CircleXIcon, obj2);
+          const tmp11 = closure_10(tmp(6997).CircleXIcon, obj2);
         } else {
           tmp9 = cResult[6];
         }
@@ -138,7 +138,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
         obj3.accessibilityLabel = first;
         obj3.onPress = tmp7;
         obj3.children = tmp9;
-        const tmp14 = closure_10(tmp(6859).PressableOpacity, obj3);
+        const tmp14 = closure_10(tmp(6887).PressableOpacity, obj3);
         cResult[7] = item.disabled;
         cResult[8] = tmp7;
         cResult[9] = tmp9;
@@ -224,8 +224,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_10(item(6969).CircleXIcon, obj2);
-    tmp3Result = closure_10(item(6859).PressableOpacity, obj);
+    obj.children = closure_10(item(6997).CircleXIcon, obj2);
+    tmp3Result = closure_10(item(6887).PressableOpacity, obj);
   }
   return tmp3Result;
 });
@@ -460,7 +460,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
       }
       let tmp11 = null;
       if (item.rowType === RowType.OWNER) {
-        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8924, disableColor: true, style: tmp4.ownerIcon };
+        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8951, disableColor: true, style: tmp4.ownerIcon };
         tmp11 = collapsed(native.Icon, obj6);
       }
       cResult[6] = item.rowType;
@@ -493,7 +493,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   const items1 = [collapsed(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8924, disableColor: true, style: tmp.ownerIcon };
+    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8951, disableColor: true, style: tmp.ownerIcon };
     tmp4Result = collapsed(native.Icon, obj3);
   }
   items1[1] = tmp4Result;
@@ -544,17 +544,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyR
     cResult[5] = tmp9;
     tmp7 = tmp9;
   }
-  const tmp6 = collapsed(native.Icon, { source: _modDef8925, color: item.colorString, size: native.IconSizes.MEDIUM, style: tmp4.roleIcon });
+  const tmp6 = collapsed(native.Icon, { source: _modDef8952, color: item.colorString, size: native.IconSizes.MEDIUM, style: tmp4.roleIcon });
   cResult[0] = item.colorString;
   cResult[1] = tmp4.roleIcon;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-  const obj3 = { source: _modDef8925, color: item.colorString, size: native.IconSizes.MEDIUM, style: tmp4.roleIcon };
+  const obj3 = { source: _modDef8952, color: item.colorString, size: native.IconSizes.MEDIUM, style: tmp4.roleIcon };
 }) : (function EmptyRoleItem(item) {
   item = item.item;
   const obj = { icon: null, label: null };
   const tmp = closure_12();
-  obj.icon = collapsed(native.Icon, { source: _modDef8925, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_12().roleIcon });
+  obj.icon = collapsed(native.Icon, { source: _modDef8952, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_12().roleIcon });
   obj.label = item.name;
   return collapsed(TableRow.TableRow, obj);
 });

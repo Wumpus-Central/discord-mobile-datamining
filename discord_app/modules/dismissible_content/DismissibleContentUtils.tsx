@@ -1,21 +1,21 @@
-// === Module 4785: DismissibleContentUtils ===
+// === Module 4806: DismissibleContentUtils ===
 
-// Module 4785 (DismissibleContentUtils)
+// Module 4806 (DismissibleContentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4781 */;
-import dismissible_content from "dismissible_content" /* 4784 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4788 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 4791 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4798 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4992 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5602 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5603 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4802 */;
+import dismissible_content from "dismissible_content" /* 4805 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4809 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 4812 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4819 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5013 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5623 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4787 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4808 */;
 
 const require = globalThis.__r;
 
@@ -439,10 +439,10 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4786).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4792);
+const DCFEventTypes = fn(4807).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4813);
 ({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: c10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4797).ContentDismissActionType;
+const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let c14 = 2592000000;
 const ReactCompilerGating = fn(558);
@@ -492,7 +492,7 @@ function getGuildNextNumTimesDismissed(arg0, stateFromStores) {
   }
   return num + 1;
 }
-let items = [fn(4784).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(4784).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
+let items = [fn(4805).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(4805).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");

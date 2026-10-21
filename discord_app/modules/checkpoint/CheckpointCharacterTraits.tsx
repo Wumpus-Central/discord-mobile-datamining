@@ -1,17 +1,17 @@
-// === Module 6321: CheckpointCharacterTraits ===
+// === Module 6343: CheckpointCharacterTraits ===
 
-// Module 6321 (CheckpointCharacterTraits)
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5974 */;
-import CheckpointTrait from "CheckpointTrait" /* 5996 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5997 */;
-import CheckpointCharacterBase from "CheckpointCharacterBase" /* 5998 */;
-import CheckpointCharacterShoes from "CheckpointCharacterShoes" /* 6029 */;
-import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 6058 */;
-import CheckpointCharacterFace from "CheckpointCharacterFace" /* 6199 */;
-import CheckpointCharacterHat from "CheckpointCharacterHat" /* 6230 */;
-import CheckpointCharacterWearable from "CheckpointCharacterWearable" /* 6259 */;
-import CheckpointCharacterAura from "CheckpointCharacterAura" /* 6288 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6317 */;
+// Module 6343 (CheckpointCharacterTraits)
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5996 */;
+import CheckpointTrait from "CheckpointTrait" /* 6018 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6019 */;
+import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6020 */;
+import CheckpointCharacterShoes from "CheckpointCharacterShoes" /* 6051 */;
+import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 6080 */;
+import CheckpointCharacterFace from "CheckpointCharacterFace" /* 6221 */;
+import CheckpointCharacterHat from "CheckpointCharacterHat" /* 6252 */;
+import CheckpointCharacterWearable from "CheckpointCharacterWearable" /* 6281 */;
+import CheckpointCharacterAura from "CheckpointCharacterAura" /* 6310 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6339 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -154,7 +154,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, st
         prop = null;
       }
       tmp = prop;
-    } else if (tmp3(5996).CheckpointTrait.OUTFIT === arg0) {
+    } else if (tmp3(6018).CheckpointTrait.OUTFIT === arg0) {
       const messages = stateFromStores.messages;
       let prop1;
       if (messages != null) {
@@ -164,7 +164,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, st
         prop1 = null;
       }
       tmp = prop1;
-    } else if (tmp3(5996).CheckpointTrait.HAT === arg0) {
+    } else if (tmp3(6018).CheckpointTrait.HAT === arg0) {
       const guilds = stateFromStores.guilds;
       let prop2;
       if (guilds != null) {
@@ -177,7 +177,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, st
         prop2 = null;
       }
       tmp = prop2;
-    } else if (tmp3(5996).CheckpointTrait.SHOES === arg0) {
+    } else if (tmp3(6018).CheckpointTrait.SHOES === arg0) {
       const emojis = stateFromStores.emojis;
       let prop3;
       if (emojis != null) {
@@ -187,7 +187,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, st
         prop3 = null;
       }
       tmp = prop3;
-    } else if (tmp3(5996).CheckpointTrait.WEARABLE === arg0) {
+    } else if (tmp3(6018).CheckpointTrait.WEARABLE === arg0) {
       const games2 = stateFromStores.games;
       let prop4;
       if (games2 != null) {
@@ -197,7 +197,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, st
         prop4 = null;
       }
       tmp = prop4;
-    } else if (tmp3(5996).CheckpointTrait.AURA === arg0) {
+    } else if (tmp3(6018).CheckpointTrait.AURA === arg0) {
       const games = stateFromStores.games;
       let prop5;
       if (games != null) {
@@ -207,7 +207,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, st
         prop5 = null;
       }
       tmp = prop5;
-    } else if (tmp3(5996).CheckpointTrait.BASE === arg0) {
+    } else if (tmp3(6018).CheckpointTrait.BASE === arg0) {
       tmp = null;
     }
   }

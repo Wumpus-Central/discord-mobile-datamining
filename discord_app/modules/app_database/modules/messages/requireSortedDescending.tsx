@@ -1,6 +1,6 @@
-// === Module 6452: requireSortedDescending ===
+// === Module 6474: requireSortedDescending ===
 
-// Module 6452 (requireSortedDescending)
+// Module 6474 (requireSortedDescending)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;

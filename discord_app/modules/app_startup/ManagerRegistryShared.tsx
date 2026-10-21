@@ -1,6 +1,6 @@
-// === Module 19179: ManagerRegistryShared ===
+// === Module 19256: ManagerRegistryShared ===
 
-// Module 19179 (ManagerRegistryShared)
+// Module 19256 (ManagerRegistryShared)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

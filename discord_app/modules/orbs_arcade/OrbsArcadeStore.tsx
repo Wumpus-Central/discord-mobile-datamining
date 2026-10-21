@@ -1,9 +1,9 @@
-// === Module 19093: OrbsArcadeStore ===
+// === Module 18195: OrbsArcadeStore ===
 
-// Module 19093 (OrbsArcadeStore)
+// Module 18195 (OrbsArcadeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 19094 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 18196 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -12,6 +12,7 @@ let fetchedAt = null;
 let c4 = false;
 let orbsArcadeGames = [];
 let map = new Map();
+new Set();
 let set = new Set();
 const Store = initializeDefault.Store;
 class OrbsArcadeStore extends Store {
@@ -53,6 +54,9 @@ prototype["getGameStateForGame"] = function getGameStateForGame(id) {
 };
 prototype["isClaimingRewards"] = function isClaimingRewards(gameId) {
   return set.has(gameId);
+};
+prototype["isLaunchingGame"] = function isLaunchingGame(arg0) {
+  return set.has(arg0);
 };
 OrbsArcadeStore.displayName = "OrbsArcadeStore";
 const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
@@ -113,12 +117,21 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
       set.delete(gameId);
     }
   },
+  ORBS_ARCADE_LAUNCH_GAME_BEGIN: function handleLaunchGameBegin(gameId) {
+    set = new Set(set);
+    set = set.add(gameId.gameId);
+  },
+  ORBS_ARCADE_LAUNCH_GAME_END: function handleLaunchGameEnd(gameId) {
+    set = new Set(set);
+    set.delete(gameId.gameId);
+  },
   LOGOUT: function initializeState() {
     c2 = false;
     fetchedAt = null;
     c4 = false;
     orbsArcadeGames = [];
     map = new Map();
+    new Set();
     set = new Set();
   }
 });

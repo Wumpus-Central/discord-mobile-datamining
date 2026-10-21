@@ -1,17 +1,17 @@
-// === Module 8888: FormHint ===
+// === Module 8915: FormHint ===
 
-// Module 8888 (FormHint)
+// Module 8915 (FormHint)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import RedesignCompat from "RedesignCompat" /* 6937 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import RedesignCompat from "RedesignCompat" /* 6965 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { formHintText: { fontSize: 14, marginBottom: 0, color: nativeDefault.colors.TEXT_MUTED }, redesignHorizontalPadding: { paddingHorizontal: 12 }, horizonatalPadding: { paddingHorizontal: 16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -1,9 +1,9 @@
-// === Module 6773: getThreadAutoArchiveTimeOnce ===
+// === Module 6801: getThreadAutoArchiveTimeOnce ===
 
-// Module 6773 (getThreadAutoArchiveTimeOnce)
+// Module 6801 (getThreadAutoArchiveTimeOnce)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import ReadStateStore from "ReadStateStore" /* 6722 */;
+import ReadStateStore from "ReadStateStore" /* 6750 */;
 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");

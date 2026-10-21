@@ -1,19 +1,19 @@
-// === Module 13490: HubEmailConnectionStudentPrompt ===
+// === Module 13557: HubEmailConnectionStudentPrompt ===
 
-// Module 13490 (HubEmailConnectionStudentPrompt)
+// Module 13557 (HubEmailConnectionStudentPrompt)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6602 */;
+import TextStyles from "TextStyles" /* 6630 */;
 
 const require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13480).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13547).HubEmailConnectionSteps;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }, header: null, row: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
@@ -173,10 +173,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   const obj5 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, subLabel: null, onPress: null };
   const obj = onClose(1505);
   const obj6 = { source: null };
-  const tmp2 = invite(7186);
-  obj6.source = invite(13491);
-  obj5.leading = closure_6(invite(5631), obj6);
-  obj5.trailing = invite(7186).Arrow;
+  const tmp2 = invite(7214);
+  obj6.source = invite(13558);
+  obj5.leading = closure_6(invite(5651), obj6);
+  obj5.trailing = invite(7214).Arrow;
   const intl2 = onClose(1128).intl;
   obj5.label = intl2.string(onClose(1128).t["a7a/D+"]);
   const intl3 = onClose(1128).intl;
@@ -187,17 +187,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   };
   items[1] = closure_6(tmp2, obj5);
   const obj7 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
-  const tmp3 = invite(5631);
+  const tmp3 = invite(5651);
   const obj8 = { source: null };
-  const tmp4 = invite(7186);
-  obj8.source = invite(13492);
-  obj7.leading = closure_6(invite(5631), obj8);
-  obj7.trailing = invite(7186).Arrow;
+  const tmp4 = invite(7214);
+  obj8.source = invite(13559);
+  obj7.leading = closure_6(invite(5651), obj8);
+  obj7.trailing = invite(7214).Arrow;
   const intl4 = onClose(1128).intl;
   obj7.label = intl4.string(onClose(1128).t.GLG9n4);
   obj7.onPress = onClose;
   items[2] = closure_6(tmp4, obj7);
   obj3.children = items;
   obj2.children = closure_7(View, obj3);
-  return closure_6(onClose(13489).HubEmailConnectionScreen, obj2);
+  return closure_6(onClose(13556).HubEmailConnectionScreen, obj2);
 });

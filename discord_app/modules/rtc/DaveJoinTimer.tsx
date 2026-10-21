@@ -1,7 +1,7 @@
-// === Module 5777: DaveJoinTimer ===
+// === Module 5797: DaveJoinTimer ===
 
-// Module 5777 (DaveJoinTimer)
-import TimeUtils from "TimeUtils" /* 5684 */;
+// Module 5797 (DaveJoinTimer)
+import TimeUtils from "TimeUtils" /* 5704 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rtc/DaveJoinTimer.tsx");
@@ -65,7 +65,7 @@ prototype["joinSucceeded"] = function joinSucceeded(joinTransitionId, joinIsGrou
     }
   }
 };
-prototype["executed"] = function executed(transition_id, flag) {
+prototype["executed"] = function executed(_secureFramesLastExecutedTransitionId, flag) {
   const self = this;
   if (!tmp) {
     timestampProducer = self.timestampProducer;

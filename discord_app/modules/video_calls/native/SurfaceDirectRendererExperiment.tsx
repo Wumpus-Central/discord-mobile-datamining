@@ -1,6 +1,6 @@
-// === Module 5797: SurfaceDirectRendererExperiment ===
+// === Module 5819: SurfaceDirectRendererExperiment ===
 
-// Module 5797 (SurfaceDirectRendererExperiment)
+// Module 5819 (SurfaceDirectRendererExperiment)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;

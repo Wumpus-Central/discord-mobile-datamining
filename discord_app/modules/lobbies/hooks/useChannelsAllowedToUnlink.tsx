@@ -1,13 +1,13 @@
-// === Module 18742: useChannelsAllowedToUnlink ===
+// === Module 18819: useChannelsAllowedToUnlink ===
 
-// Module 18742 (useChannelsAllowedToUnlink)
-import GuildChannelStore from "GuildChannelStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+// Module 18819 (useChannelsAllowedToUnlink)
+import GuildChannelStore from "GuildChannelStore" /* 4899 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(4878).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_3 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
 const ReactCompilerGating = fn(558);
 function getChannelsAllowedToUnlink(arg0) {
   let obj = arg1;

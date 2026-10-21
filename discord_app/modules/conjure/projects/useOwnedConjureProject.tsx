@@ -1,8 +1,8 @@
-// === Module 13347: useOwnedConjureProject ===
+// === Module 13414: useOwnedConjureProject ===
 
-// Module 13347 (useOwnedConjureProject)
-import useIsOwnedConjureApplicationDefault from "useIsOwnedConjureApplication" /* 11870 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6724 */;
+// Module 13414 (useOwnedConjureProject)
+import useIsOwnedConjureApplicationDefault from "useIsOwnedConjureApplication" /* 11918 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
 
 const require = globalThis.__r;
 

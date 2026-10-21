@@ -1,13 +1,13 @@
-// === Module 9636: ClientThemesOverrides ===
+// === Module 9666: ClientThemesOverrides ===
 
-// Module 9636 (ClientThemesOverrides)
+// Module 9666 (ClientThemesOverrides)
 import c from "c" /* 576 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5105 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9637 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5126 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_4 = createStyles.createStyles({ none: { backgroundColor: "transparent" } });
 fn(558);
 let ReactCompilerGating = fn(558);

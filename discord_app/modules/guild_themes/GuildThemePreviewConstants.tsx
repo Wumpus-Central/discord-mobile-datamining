@@ -1,6 +1,6 @@
-// === Module 5140: GuildThemePreviewConstants ===
+// === Module 5161: GuildThemePreviewConstants ===
 
-// Module 5140 (GuildThemePreviewConstants)
+// Module 5161 (GuildThemePreviewConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_themes/GuildThemePreviewConstants.tsx");

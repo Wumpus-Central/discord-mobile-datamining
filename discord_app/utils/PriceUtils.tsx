@@ -1,10 +1,10 @@
-// === Module 7288: PriceUtils ===
+// === Module 7316: PriceUtils ===
 
-// Module 7288 (PriceUtils)
+// Module 7316 (PriceUtils)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 7289 */;
-import LocaleStore from "LocaleStore" /* 2069 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7317 */;
+import LocaleStore from "LocaleStore" /* 2068 */;
 
 require = fn;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {

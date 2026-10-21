@@ -1,10 +1,10 @@
-// === Module 16527: AutoplayGifSetting ===
+// === Module 16603: AutoplayGifSetting ===
 
-// Module 16527 (AutoplayGifSetting)
+// Module 16603 (AutoplayGifSetting)
 import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 4776 */;
-import SettingsConstants from "SettingsConstants" /* 8280 */;
-import SettingBuilders from "SettingBuilders" /* 11111 */;
+import UserSettings from "UserSettings" /* 4797 */;
+import SettingsConstants from "SettingsConstants" /* 8308 */;
+import SettingBuilders from "SettingBuilders" /* 11155 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

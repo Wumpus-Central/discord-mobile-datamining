@@ -1,13 +1,13 @@
-// === Module 17978: SpamRequestsScreen ===
+// === Module 18059: SpamRequestsScreen ===
 
-// Module 17978 (SpamRequestsScreen)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
+// Module 18059 (SpamRequestsScreen)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8632 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4890 */;
+import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = fn;
-const UserRowModes = fn(10545).UserRowModes;
+const UserRowModes = fn(10574).UserRowModes;
 const RelationshipTypes = fn(1087).RelationshipTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

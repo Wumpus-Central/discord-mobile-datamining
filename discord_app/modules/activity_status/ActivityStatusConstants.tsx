@@ -1,6 +1,6 @@
-// === Module 10564: ActivityStatusConstants ===
+// === Module 10593: ActivityStatusConstants ===
 
-// Module 10564 (ActivityStatusConstants)
+// Module 10593 (ActivityStatusConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activity_status/ActivityStatusConstants.tsx");

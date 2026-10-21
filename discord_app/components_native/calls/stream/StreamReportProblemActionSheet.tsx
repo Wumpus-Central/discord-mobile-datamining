@@ -1,26 +1,26 @@
-// === Module 18399: StreamReportProblemActionSheet ===
+// === Module 18478: StreamReportProblemActionSheet ===
 
-// Module 18399 (StreamReportProblemActionSheet)
+// Module 18478 (StreamReportProblemActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import useMountEffectDefault from "useMountEffect" /* 5224 */;
-import BottomSheetModal from "BottomSheetModal" /* 5230 */;
-import ToastUtils from "ToastUtils" /* 5624 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7197 */;
-import ActionSheetRow from "ActionSheetRow" /* 7243 */;
-import ActionSheet from "ActionSheet" /* 7247 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7758 */;
-import trackStreamProblemDefault from "trackStreamProblem" /* 18400 */;
-import getStreamIssueReportOptionsDefault from "getStreamIssueReportOptions" /* 18401 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import useMountEffectDefault from "useMountEffect" /* 5245 */;
+import BottomSheetModal from "BottomSheetModal" /* 5251 */;
+import ToastUtils from "ToastUtils" /* 5644 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7225 */;
+import ActionSheetRow from "ActionSheetRow" /* 7271 */;
+import ActionSheet from "ActionSheet" /* 7275 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7786 */;
+import trackStreamProblemDefault from "trackStreamProblem" /* 18479 */;
+import getStreamIssueReportOptionsDefault from "getStreamIssueReportOptions" /* 18480 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5674 */;
+import PresenceStore from "PresenceStore" /* 5694 */;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReportPr
   } else {
     tmp5 = cResult[1];
   }
-  analyticsData(5224)(tmp5);
+  analyticsData(5245)(tmp5);
   if (cResult[2] === analyticsData) {
     if (cResult[3] === stream) {
       let tmp8 = cResult[4];
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReportPr
       let obj2 = { title: null };
       const intl = tmp(1128).intl;
       obj2.title = intl.string(tmp(1128).t.XuqqwI);
-      const tmp13 = jsx(tmp(7197).BottomSheetTitleHeader, { title: null });
+      const tmp13 = jsx(tmp(7225).BottomSheetTitleHeader, { title: null });
       cResult[5] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReportPr
     }
     if (cResult[6] !== tmp8) {
       let obj3 = { hasIcons: false, children: tmp8 };
-      const tmp16 = jsx(tmp(7243).ActionSheetRow.Group, { hasIcons: false, children: tmp8 });
+      const tmp16 = jsx(tmp(7271).ActionSheetRow.Group, { hasIcons: false, children: tmp8 });
       cResult[6] = tmp8;
       cResult[7] = tmp16;
       let tmp14 = tmp16;
@@ -93,15 +93,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReportPr
     }
     const obj4 = { scrollable: true, header: tmp11, children: null };
     const obj5 = { style: tmp4.container, children: tmp14 };
-    obj4.children = jsx(tmp(5230).BottomSheetScrollView, { style: tmp4.container, children: tmp14 });
-    const tmp19 = jsx(tmp(7247).ActionSheet, { scrollable: true, header: tmp11, children: null });
+    obj4.children = jsx(tmp(5251).BottomSheetScrollView, { style: tmp4.container, children: tmp14 });
+    const tmp19 = jsx(tmp(7275).ActionSheet, { scrollable: true, header: tmp11, children: null });
     cResult[8] = tmp4.container;
     cResult[9] = tmp14;
     cResult[10] = tmp19;
     tmp17 = tmp19;
   }
   let obj = stream(576);
-  const mapped = analyticsData(18401)({ isStreamer: false, isEndStream: false }).map((label, index) => {
+  const mapped = analyticsData(18480)({ isStreamer: false, isEndStream: false }).map((label, index) => {
     stream = label.value;
     return jsx(stream(dependencyMap[15]).ActionSheetRow, {
       label: label.label,
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReportPr
   cResult[3] = stream;
   cResult[4] = mapped;
   tmp8 = mapped;
-  const arr = analyticsData(18401)({ isStreamer: false, isEndStream: false });
+  const arr = analyticsData(18480)({ isStreamer: false, isEndStream: false });
 }) : (function ReportProblem(arg0) {
   ({ stream: require, analyticsData: importDefault } = arg0);
   useMountEffectDefault(() => {

@@ -1,9 +1,9 @@
-// === Module 10010: isMessagePinnable ===
+// === Module 10040: isMessagePinnable ===
 
-// Module 10010 (isMessagePinnable)
-import isSystemMessageDefault from "isSystemMessage" /* 6767 */;
-import ThreadHooks from "ThreadHooks" /* 7318 */;
-import PermissionStore from "PermissionStore" /* 4880 */;
+// Module 10040 (isMessagePinnable)
+import isSystemMessageDefault from "isSystemMessage" /* 6795 */;
+import ThreadHooks from "ThreadHooks" /* 7346 */;
+import PermissionStore from "PermissionStore" /* 4901 */;
 
 require = fn;
 const Constants = fn(1087);

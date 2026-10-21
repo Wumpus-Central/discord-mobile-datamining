@@ -1,20 +1,20 @@
-// === Module 11003: conjureChatTurns ===
+// === Module 10658: conjureChatTurns ===
 
-// Module 11003 (conjureChatTurns)
-import conjureStepTimeline from "conjureStepTimeline" /* 11004 */;
-import conjureChatHistory from "conjureChatHistory" /* 11005 */;
+// Module 10658 (conjureChatTurns)
+import conjureStepTimeline from "conjureStepTimeline" /* 10659 */;
+import conjureChatHistory from "conjureChatHistory" /* 10660 */;
 import size from "module_2" /* 2 */;
 
-function findOpenTurn(arr) {
+function findOpenTurn(map) {
   let tmp;
-  if (null == arr) {
+  if (null == map) {
     return null;
   } else {
-    let diff = arr.length - 1;
+    let diff = map.length - 1;
     let flag2 = false;
     if (0 <= diff) {
       while (true) {
-        tmp = arr[diff];
+        tmp = map[diff];
         let tmp4 = flag2;
         if ("assistant" === tmp.role) {
           let tmp5 = "side_reply" === tmp.kind || "publish_notice" === tmp.kind || "project_event" === tmp.kind || "context_boundary" === tmp.kind;
@@ -76,26 +76,6 @@ export const turnSettled = function turnSettled(message) {
   return hasTerminalStepResult;
 };
 export { findOpenTurn };
-export const openTurnRequesterId = function openTurnRequesterId(arr) {
-  const tmp = findOpenTurn(arr);
-  if (null != arr) {
-    if (null != tmp) {
-      let diff = arr.indexOf(tmp) - 1;
-      if (0 <= diff) {
-        while ("user" !== arr[diff].role) {
-          diff = diff - 1;
-        }
-        let user_id = arr[diff].user_id;
-        if (user_id == null) {
-          user_id = null;
-        }
-        return user_id;
-      }
-      return null;
-    }
-  }
-  return null;
-};
 export const hasOpenTurn = function hasOpenTurn(map) {
   return null != findOpenTurn(map);
 };

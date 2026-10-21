@@ -1,6 +1,6 @@
-// === Module 11989: getCollectionItemAssetUrl ===
+// === Module 12037: getCollectionItemAssetUrl ===
 
-// Module 11989 (getCollectionItemAssetUrl)
+// Module 12037 (getCollectionItemAssetUrl)
 import Constants from "Constants" /* 1087 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;

@@ -1,12 +1,12 @@
-// === Module 6974: InputFieldContainer ===
+// === Module 7002: InputFieldContainer ===
 
-// Module 6974 (InputFieldContainer)
+// Module 7002 (InputFieldContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import spring from "spring" /* 5208 */;
-import useToken from "useToken" /* 5213 */;
-import InputTypes from "InputTypes" /* 6975 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import spring from "spring" /* 5229 */;
+import useToken from "useToken" /* 5234 */;
+import InputTypes from "InputTypes" /* 7003 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -102,7 +102,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputStyl
   return closure_9(str, flag2, flag3, token, token1, useToken.useToken(nativeDefault.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
 });
 let closure_8 = tmp5;
-let createStyles = fn(4945);
+let createStyles = fn(4966);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -186,7 +186,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.splitBorder = obj15;
   return obj9;
 });
-createStyles = fn(4945);
+createStyles = fn(4966);
 let closure_10 = createStyles.createStyleProperties({ error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE });
 const __initData = { code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor=\"transparent\";if(status!==\"default\"){borderWidth=2;borderColor=ringColors.error;}else{if(isFocused){borderWidth=1;borderColor=ringColors.focused;}}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
 const __initData2 = { code: "function InputFieldContainerNativeTsx2(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };

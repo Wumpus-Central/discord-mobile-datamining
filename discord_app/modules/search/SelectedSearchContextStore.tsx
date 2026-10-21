@@ -1,13 +1,13 @@
-// === Module 13048: SelectedSearchContextStore ===
+// === Module 13116: SelectedSearchContextStore ===
 
-// Module 13048 (SelectedSearchContextStore)
+// Module 13116 (SelectedSearchContextStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _modDef5765 from "module_5765" /* 5765 */;
+import _modDef5785 from "module_5785" /* 5785 */;
 
 function handleSearchContextUpdate(searchContext) {
   searchContext = searchContext.searchContext;
-  if (_modDef5765(c2, searchContext)) {
+  if (_modDef5785(c2, searchContext)) {
     return false;
   } else {
     c2 = searchContext;

@@ -1,17 +1,17 @@
-// === Module 19115: AVErrorManager ===
+// === Module 19190: AVErrorManager ===
 
-// Module 19115 (AVErrorManager)
+// Module 19190 (AVErrorManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AVError from "AVError" /* 5855 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 19116 */;
-import AVErrorAnalytics from "AVErrorAnalytics" /* 19136 */;
+import AVError from "AVError" /* 5877 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 19191 */;
+import AVErrorAnalytics from "AVErrorAnalytics" /* 19211 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4851 */;
-import VoiceStateStore from "VoiceStateStore" /* 5591 */;
-import AVErrorStore from "AVErrorStore" /* 11307 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7165 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6621 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
+import VoiceStateStore from "VoiceStateStore" /* 5612 */;
+import AVErrorStore from "AVErrorStore" /* 11351 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
 
 require = fn;
 function setDifference(set, set2) {

@@ -1,14 +1,14 @@
-// === Module 11732: ConjurePreviewMode ===
+// === Module 11777: ConjurePreviewMode ===
 
-// Module 11732 (ConjurePreviewMode)
+// Module 11777 (ConjurePreviewMode)
 import util from "util" /* 1128 */;
-import _modDef3820 from "module_3820" /* 3820 */;
+import _modDef3830 from "module_3830" /* 3830 */;
 
 require = fn;
 const obj = {};
-obj[fn(5587).EmbeddedSurfaceType.APP_CHANNEL] = _modDef3820.xI4N6Q;
-obj[fn(5587).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef3820.oWMDh6;
-obj[fn(5587).EmbeddedSurfaceType.MAIN] = _modDef3820["0ICBnS"];
+obj[fn(5608).EmbeddedSurfaceType.APP_CHANNEL] = _modDef3830.xI4N6Q;
+obj[fn(5608).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef3830.oWMDh6;
+obj[fn(5608).EmbeddedSurfaceType.MAIN] = _modDef3830["0ICBnS"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewMode.tsx");
 

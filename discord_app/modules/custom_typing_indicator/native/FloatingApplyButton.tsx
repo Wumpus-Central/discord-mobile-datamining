@@ -1,11 +1,11 @@
-// === Module 16515: FloatingApplyButton ===
+// === Module 16591: FloatingApplyButton ===
 
-// Module 16515 (FloatingApplyButton)
+// Module 16591 (FloatingApplyButton)
 import nativeDefault from "native" /* 587 */;
-import HapticUtils from "HapticUtils" /* 5173 */;
-import spring from "spring" /* 5208 */;
+import HapticUtils from "HapticUtils" /* 5194 */;
+import spring from "spring" /* 5229 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4946 */;
+import AccessibilityStore from "AccessibilityStore" /* 4967 */;
 
 require = fn;
 const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1629).MEDIA_PICKER_SEND_BUTTON_SPRING;

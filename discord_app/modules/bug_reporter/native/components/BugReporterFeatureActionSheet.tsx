@@ -1,12 +1,12 @@
-// === Module 13632: BugReporterFeatureActionSheet ===
+// === Module 13699: BugReporterFeatureActionSheet ===
 
-// Module 13632 (BugReporterFeatureActionSheet)
+// Module 13699 (BugReporterFeatureActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6778 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6806 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { list: { paddingHorizontal: nativeDefault.space.PX_12 }, searchBar: null, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.searchBar = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -80,29 +80,29 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ({ feature, setFeature } = item);
   ({ start, end } = item);
   if (cResult[0] !== item) {
-    const featureId = tmp(13623).getFeatureId(item);
+    const featureId = tmp(13690).getFeatureId(item);
     cResult[0] = item;
     cResult[1] = featureId;
     let tmp4 = featureId;
-    const tmpResult = tmp(13623);
+    const tmpResult = tmp(13690);
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] !== item) {
-    const featureId1 = tmp(13623).getFeatureId(item);
+    const featureId1 = tmp(13690).getFeatureId(item);
     cResult[2] = item;
     cResult[3] = featureId1;
     let tmp6 = featureId1;
-    const tmpResult3 = tmp(13623);
+    const tmpResult3 = tmp(13690);
   } else {
     tmp6 = cResult[3];
   }
   if (cResult[4] !== feature) {
-    const featureId2 = tmp(13623).getFeatureId(feature);
+    const featureId2 = tmp(13690).getFeatureId(feature);
     cResult[4] = feature;
     cResult[5] = featureId2;
     let tmp8 = featureId2;
-    const tmpResult4 = tmp(13623);
+    const tmpResult4 = tmp(13690);
   } else {
     tmp8 = cResult[5];
   }
@@ -125,7 +125,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const obj2 = { start, end, value: tmp4, label: item.name, legacyCompat_selected: tmp6 === tmp8, legacyCompat_onPress: tmp10 };
-    const tmp14 = closure_6(tmp(6935).TableRadioRow, obj2);
+    const tmp14 = closure_6(tmp(6963).TableRadioRow, obj2);
     cResult[9] = end;
     cResult[10] = item.name;
     cResult[11] = start;
@@ -148,16 +148,16 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  const obj = { start, end, value: item(13623).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
-  const obj2 = item(13623);
-  const featureId = item(13623).getFeatureId(item);
-  const obj3 = item(13623);
-  obj.legacyCompat_selected = featureId === item(13623).getFeatureId(feature);
+  const obj = { start, end, value: item(13690).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
+  const obj2 = item(13690);
+  const featureId = item(13690).getFeatureId(item);
+  const obj3 = item(13690);
+  obj.legacyCompat_selected = featureId === item(13690).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_6(item(6935).TableRadioRow, obj);
+  return closure_6(item(6963).TableRadioRow, obj);
 }));
 ReactCompilerGating = fn(558);
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };

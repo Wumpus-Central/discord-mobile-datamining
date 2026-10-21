@@ -1,12 +1,12 @@
-// === Module 15706: useProfileFrameSections ===
+// === Module 15782: useProfileFrameSections ===
 
-// Module 15706 (useProfileFrameSections)
+// Module 15782 (useProfileFrameSections)
 import util from "util" /* 1128 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7611 */;
-import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 14304 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7639 */;
+import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 14379 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7599 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7614 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7627 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7642 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
     }
   }
   const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-  const profileFrames = stateFromStores(7611).getProfileFrames(stateFromStores, tmp12);
+  const profileFrames = stateFromStores(7639).getProfileFrames(stateFromStores, tmp12);
   if (cResult[11] === tmp13) {
     if (cResult[12] === stateFromStores) {
       let tmp18 = cResult[13];
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
   cResult[12] = stateFromStores;
   cResult[13] = fn3;
   tmp18 = fn3;
-  const tmpResult4 = stateFromStores(7611);
+  const tmpResult4 = stateFromStores(7639);
 }) : (function useProfileFrameSections() {
   let obj = stateFromStores(573);
   let items = [CollectiblesPurchaseStore];
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(14304)(useMemo(() => {
+  return first(14379)(useMemo(() => {
     let obj = CollectiblesUtils;
     const profileFrames = obj.getProfileFrames(stateFromStores, first);
     const reduced = profileFrames.reduce((premium_purchase, skuId) => {

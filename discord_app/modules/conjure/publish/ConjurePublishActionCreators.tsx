@@ -1,16 +1,16 @@
-// === Module 11083: ConjurePublishActionCreators ===
+// === Module 10743: ConjurePublishActionCreators ===
 
-// Module 11083 (ConjurePublishActionCreators)
+// Module 10743 (ConjurePublishActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11021 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11023 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11043 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11084 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 11087 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10676 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10678 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10698 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10744 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10747 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6724 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11017 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10672 */;
 
 require = fn;
 function unpublishProject() {
@@ -56,7 +56,7 @@ let closure_9 = async function _unpublishProject(arg0) {
           ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2 } = closure_1);
           c6 = 1;
           c7 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -122,7 +122,7 @@ let closure_10 = async function _unpublishUserApp() {
   }
   const publishStatus = closure_130_6.getPublishStatus(closure_129_0);
   if (null != publishStatus) {
-    closure_130_1(closure_130_2[8]).dispatch({ type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: closure_129_0, published: false, hasUnpublishedChanges: false, surface: publishStatus.surface, previewAppChannels: publishStatus.previewAppChannels });
+    closure_130_1(closure_130_2[8]).dispatch({ type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: closure_129_0, published: false, hasUnpublishedChanges: false, surface: publishStatus.surface, previewAppChannels: publishStatus.previewAppChannels, previewDevicePermissions: publishStatus.previewDevicePermissions });
     closure_130_1(closure_130_2[8]);
   }
   const currentUser = closure_130_4.getCurrentUser();
@@ -182,7 +182,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
           closure_130_12 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

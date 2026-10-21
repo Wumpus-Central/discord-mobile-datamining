@@ -1,13 +1,13 @@
-// === Module 7206: useGetOrFetchApplications ===
+// === Module 7234: useGetOrFetchApplications ===
 
-// Module 7206 (useGetOrFetchApplications)
+// Module 7234 (useGetOrFetchApplications)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6760 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6788 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2046 */;
+import ApplicationStore from "ApplicationStore" /* 2045 */;
 
 require = fn;
 const NOOP = fn(1087).NOOP;

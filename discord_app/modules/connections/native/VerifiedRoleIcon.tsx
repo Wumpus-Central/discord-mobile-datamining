@@ -1,12 +1,12 @@
-// === Module 7248: VerifiedRoleIcon ===
+// === Module 7276: VerifiedRoleIcon ===
 
-// Module 7248 (VerifiedRoleIcon)
+// Module 7276 (VerifiedRoleIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinkIcon from "LinkIcon" /* 5640 */;
-import useRoleIconProps from "useRoleIconProps" /* 7231 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 7249 */;
-import RoleIconDefault from "RoleIcon" /* 7250 */;
+import LinkIcon from "LinkIcon" /* 5660 */;
+import useRoleIconProps from "useRoleIconProps" /* 7259 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 7277 */;
+import RoleIconDefault from "RoleIcon" /* 7278 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const Constants = fn(1087);
 const jsx = fn(21).jsx;
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { iconContainer: { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

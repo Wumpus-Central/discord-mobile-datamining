@@ -1,15 +1,15 @@
-// === Module 9309: StorefrontActionCreators ===
+// === Module 9337: StorefrontActionCreators ===
 
-// Module 9309 (StorefrontActionCreators)
+// Module 9337 (StorefrontActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingInfoStore from "BillingInfoStore" /* 2055 */;
-import SKUPricesStore from "SKUPricesStore" /* 7285 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9310 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9311 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 9312 */;
+import BillingInfoStore from "BillingInfoStore" /* 2054 */;
+import SKUPricesStore from "SKUPricesStore" /* 7313 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9338 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9339 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 9340 */;
 
 require = fn;
 function shouldFetchStorefrontPromotions(arg0) {
@@ -278,7 +278,7 @@ let closure_16 = async function _fetchStorefrontPricesForApplicationId(arg0) {
     await "IconComponent";
     closure_1 = tmp2;
     applicationId2 = applicationId.applicationId;
-    return "test";
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -292,7 +292,7 @@ let closure_17 = async function _fetchStorefrontPricesForSkuIds(arg0) {
     await "IconComponent";
     closure_1 = tmp2;
     skuIds2 = skuIds.skuIds;
-    return "test";
+    return "Reflect";
   })();
   iter.next();
   return iter;

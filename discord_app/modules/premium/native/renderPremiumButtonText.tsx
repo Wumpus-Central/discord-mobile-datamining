@@ -1,10 +1,10 @@
-// === Module 14698: renderPremiumButtonText ===
+// === Module 14772: renderPremiumButtonText ===
 
-// Module 14698 (renderPremiumButtonText)
+// Module 14772 (renderPremiumButtonText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2054 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,10 +13,10 @@ const PremiumConstants = fn(1394);
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4, PRICE_PLACEHOLDER: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { discount: null, premiumText: null };
 let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-const ColorUtils = fn(4942);
+const ColorUtils = fn(4963);
 obj3.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
 obj2.discount = obj3;
 obj2.premiumText = { flexDirection: "row" };
@@ -31,11 +31,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   const text = isGift.text;
   const tmp4 = closure_9();
   if (cResult[0] !== basePlanId) {
-    const interval = isGift(2054).getInterval(basePlanId);
+    const interval = isGift(2053).getInterval(basePlanId);
     cResult[0] = basePlanId;
     cResult[1] = interval;
     let tmp5 = interval;
-    let obj2 = isGift(2054);
+    let obj2 = isGift(2053);
   } else {
     tmp5 = cResult[1];
   }

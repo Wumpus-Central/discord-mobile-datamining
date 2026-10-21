@@ -1,6 +1,6 @@
-// === Module 7568: AutomodQuarantineUserActionMessageEmbedKeys ===
+// === Module 7596: AutomodQuarantineUserActionMessageEmbedKeys ===
 
-// Module 7568 (AutomodQuarantineUserActionMessageEmbedKeys)
+// Module 7596 (AutomodQuarantineUserActionMessageEmbedKeys)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineUserActionMessageEmbedKeys.tsx");

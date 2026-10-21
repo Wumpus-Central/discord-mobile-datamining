@@ -1,21 +1,21 @@
-// === Module 12234: ConjurePublishNoticeLine ===
+// === Module 12295: ConjurePublishNoticeLine ===
 
-// Module 12234 (ConjurePublishNoticeLine)
+// Module 12295 (ConjurePublishNoticeLine)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5171 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import conjurePublishCard from "conjurePublishCard" /* 12163 */;
-import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 12230 */;
-import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12235 */;
-import useConjurePatchNotesLink from "useConjurePatchNotesLink" /* 12236 */;
-import ConjurePublishNotesSheet from "ConjurePublishNotesSheet" /* 12237 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import conjurePublishCard from "conjurePublishCard" /* 12225 */;
+import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 12291 */;
+import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12296 */;
+import useConjurePatchNotesLink from "useConjurePatchNotesLink" /* 12297 */;
+import ConjurePublishNotesSheet from "ConjurePublishNotesSheet" /* 12298 */;
 import noop from "module_19" /* 19 */;
 
 const useConjurePatchNotesLinkDefault = useConjurePatchNotesLink;
 const ConjurePublishNotesSheetDefault = ConjurePublishNotesSheet;
 
-const _modDef3820 = v35VEu5(3820);
+const _modDef3830 = v35VEu5(3830);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
@@ -46,7 +46,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function PatchNo
     }
     if ("sent" === tmp3.state) {
       intl = intl(1128).intl;
-      v35VEu5 = _modDef3820["35VEu5"];
+      v35VEu5 = _modDef3830["35VEu5"];
       obj = {
         sentHook(children, arg1) {
               return React3(Text_Text.Text, {
@@ -77,7 +77,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function PatchNo
               }
             }
       };
-      formatResult = intl2.format(_modDef3820["6/zJpD"], obj4);
+      formatResult = intl2.format(_modDef3830["6/zJpD"], obj4);
     }
     cResult[0] = tmp3;
     cResult[1] = projectId;
@@ -109,7 +109,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function PatchNo
               }, arg1);
             }
       };
-      let formatResult = intl2.format(_modDef3820["35VEu5"], obj2);
+      let formatResult = intl2.format(_modDef3830["35VEu5"], obj2);
     } else {
       const intl = projectId(1128).intl;
       let obj3 = {
@@ -126,7 +126,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function PatchNo
               }
             }
       };
-      formatResult = intl.format(_modDef3820["6/zJpD"], obj3);
+      formatResult = intl.format(_modDef3830["6/zJpD"], obj3);
     }
     obj = { children: null };
     items = [" ", formatResult];

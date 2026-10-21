@@ -1,19 +1,19 @@
-// === Module 17583: YouBarICYMIButton ===
+// === Module 17664: YouBarICYMIButton ===
 
-// Module 17583 (YouBarICYMIButton)
+// Module 17664 (YouBarICYMIButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import RootNavigationRef from "RootNavigationRef" /* 5112 */;
-import FlashIcon from "FlashIcon" /* 14117 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 17584 */;
-import YouBarButtonDefault from "YouBarButton" /* 17585 */;
+import RootNavigationRef from "RootNavigationRef" /* 5133 */;
+import FlashIcon from "FlashIcon" /* 14192 */;
+import useICYMITabBadgeDefault from "useICYMITabBadge" /* 17665 */;
+import YouBarButtonDefault from "YouBarButton" /* 17666 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(16188).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(16264).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_4 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

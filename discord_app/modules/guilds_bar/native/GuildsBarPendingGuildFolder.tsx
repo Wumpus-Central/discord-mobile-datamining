@@ -1,13 +1,13 @@
-// === Module 17502: GuildsBarPendingGuildFolder ===
+// === Module 17583: GuildsBarPendingGuildFolder ===
 
-// Module 17502 (GuildsBarPendingGuildFolder)
-import HapticUtils from "HapticUtils" /* 5173 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6781 */;
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 12560 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 17482 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17489 */;
+// Module 17583 (GuildsBarPendingGuildFolder)
+import HapticUtils from "HapticUtils" /* 5194 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6809 */;
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 12624 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 17563 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17570 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4971 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
 
 const require = globalThis.__r;
 
@@ -186,9 +186,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
 }) : (function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(17489);
+  let obj = id(17570);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(17489).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
+  const guildsBarAnimatedWrapperStyles = id(17570).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   const items = [SelectedGuildStore];
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => {
@@ -217,16 +217,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ accessibilityActions, onAccessibilityAction } = memo);
   const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(5014).useSharedValue("" + id);
+  const sharedValue = id(5035).useSharedValue("" + id);
   const memo1 = noop.useMemo(() => ({
     onPress() {
-      const result = id(5173).triggerHapticFeedback(id(5173).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj = id(5173);
-      const result1 = closure_1(6781).toggleGuildFolderExpand(closure_1_0);
+      const result = id(5194).triggerHapticFeedback(id(5194).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj = id(5194);
+      const result1 = closure_1(6809).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "IconComponent", overState: "a", preventClipping: "\u091A\u092E\u0915\u0926\u093E\u0930 \u0926\u093F\u0932", config: "\u091A\u092E\u0915\u0928\u093E", externalChildren: "\u092A\u094D\u092F\u093E\u0930", children: "\u092D\u093E\u0935\u0928\u093E" };
-  const obj3 = id(5014);
+  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "IconComponent", overState: "a", preventClipping: 0, config: 10, externalChildren: 0, children: "Smoke" };
+  const obj3 = id(5035);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
   obj4.onAccessibilityAction = onAccessibilityAction;
@@ -239,9 +239,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(17488).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(17569).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(11880).HourglassIcon, {});
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "IconComponent", overState: "a", preventClipping: "\u091A\u092E\u0915\u0926\u093E\u0930 \u0926\u093F\u0932", config: "\u091A\u092E\u0915\u0928\u093E", externalChildren: "\u092A\u094D\u092F\u093E\u0930", children: "\u092D\u093E\u0935\u0928\u093E" });
+  obj4.children = jsx(id(11928).HourglassIcon, {});
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "IconComponent", overState: "a", preventClipping: 0, config: 10, externalChildren: 0, children: "Smoke" });
 }));

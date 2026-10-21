@@ -1,13 +1,13 @@
-// === Module 8362: ChannelLinkedToLobbySystemMessage ===
+// === Module 8390: ChannelLinkedToLobbySystemMessage ===
 
-// Module 8362 (ChannelLinkedToLobbySystemMessage)
+// Module 8390 (ChannelLinkedToLobbySystemMessage)
 import util from "util" /* 1128 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2068 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8259 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8266 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8268 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8270 */;
-import ApplicationStore from "ApplicationStore" /* 2046 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8287 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8294 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8296 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8298 */;
+import ApplicationStore from "ApplicationStore" /* 2045 */;
 
 require = fn;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;

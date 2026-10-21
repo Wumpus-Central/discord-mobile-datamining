@@ -1,38 +1,38 @@
-// === Module 11589: CallTile ===
+// === Module 11639: CallTile ===
 
-// Module 11589 (CallTile)
+// Module 11639 (CallTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5014 */;
-import timing from "timing" /* 5167 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5672 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8605 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11590 */;
-import _modDef11595 from "module_11595" /* 11595 */;
-import _modDef11596 from "module_11596" /* 11596 */;
-import _modDef11597 from "module_11597" /* 11597 */;
-import _modDef11598 from "module_11598" /* 11598 */;
-import _modDef11599 from "module_11599" /* 11599 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 11600 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5035 */;
+import timing from "timing" /* 5188 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5692 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8632 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11640 */;
+import _modDef11645 from "module_11645" /* 11645 */;
+import _modDef11646 from "module_11646" /* 11646 */;
+import _modDef11647 from "module_11647" /* 11647 */;
+import _modDef11648 from "module_11648" /* 11648 */;
+import _modDef11649 from "module_11649" /* 11649 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 11650 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6593 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6621 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10686);
+const ChannelCallStore = fn(10830);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5593);
+const CallConstants = fn(5614);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(4942);
+const ColorUtils = fn(4963);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;
@@ -58,7 +58,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamPrevie
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { aspectRatio: "duration", borderRadius: false };
+      const obj2 = { aspectRatio: "enabled", borderRadius: false };
       cResult[3] = obj2;
       let tmp6 = obj2;
     } else {
@@ -111,7 +111,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamPrevie
   obj.children = map1(TouchableStreamPreviewDefault, {
     guildId: participant.stream.guildId,
     userId: participant.user.id,
-    style: { aspectRatio: "duration", borderRadius: false },
+    style: { aspectRatio: "enabled", borderRadius: false },
     disableTransition: true,
     onPress() {
       return closure_1_8();
@@ -127,17 +127,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
   participant = participant.participant;
   let titleIcon2 = closure_16();
   if (participant.type === constants.STREAM) {
-    let tmp4 = _modDef11595;
+    let tmp4 = _modDef11645;
   } else if (participant.type === tmp3.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp4 = _modDef11596;
+      tmp4 = _modDef11646;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp4 = _modDef11597;
+      tmp4 = _modDef11647;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp4 = _modDef11598;
+      tmp4 = _modDef11648;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp4 = _modDef11599;
+      tmp4 = _modDef11649;
     }
   }
   if (null == tmp4) {
@@ -157,17 +157,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
 }) : (function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef11595;
+    let tmp3 = _modDef11645;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef11596;
+      tmp3 = _modDef11646;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef11597;
+      tmp3 = _modDef11647;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef11598;
+      tmp3 = _modDef11648;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef11599;
+      tmp3 = _modDef11649;
     }
   }
   let tmp14 = null;
@@ -188,7 +188,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   let obj = reveal(576);
   const tmp = reveal;
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(11253).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11297).RevealContext).reveal;
   const tmp6 = useSafeAreaInsetsDefault();
   const fn = function l() {
     let num = 0;
@@ -200,8 +200,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
     obj2.opacity = obj.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 });
     return obj2;
   };
-  let obj2 = reveal(5014);
-  fn.__closure = { withTiming: reveal(5167).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
+  let obj2 = reveal(5035);
+  fn.__closure = { withTiming: reveal(5188).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
   fn.__workletHash = 15640123774063;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -325,14 +325,14 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   cResult[3] = num4;
   cResult[4] = rect;
   tmp8 = rect;
-  const obj3 = { withTiming: reveal(5167).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
+  const obj3 = { withTiming: reveal(5188).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
 }) : (function TileOverlay(arg0) {
   ({ participant, isActiveStream } = arg0);
   let reveal;
   ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
   const tmp = closure_16();
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(11253).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11297).RevealContext).reveal;
   const tmp4 = useSafeAreaInsetsDefault();
   const tmp5 = reveal;
   class A {
@@ -350,8 +350,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
       return obj1;
     }
   }
-  let obj = reveal(5014);
-  A.__closure = { withTiming: reveal(5167).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
+  let obj = reveal(5035);
+  A.__closure = { withTiming: reveal(5188).withTiming, reveal, STANDARD_EASING: reveal(1202).STANDARD_EASING };
   A.__workletHash = 1463196379948;
   A.__initData = __initData2;
   let num = 0;

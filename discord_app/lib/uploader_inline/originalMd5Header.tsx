@@ -1,6 +1,6 @@
-// === Module 7033: originalMd5Header ===
+// === Module 7061: originalMd5Header ===
 
-// Module 7033 (originalMd5Header)
+// Module 7061 (originalMd5Header)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/uploader_inline/originalMd5Header.tsx");

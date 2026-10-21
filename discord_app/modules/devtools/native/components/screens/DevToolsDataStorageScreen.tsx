@@ -1,21 +1,21 @@
-// === Module 16728: DevToolsDataStorageScreen ===
+// === Module 16804: DevToolsDataStorageScreen ===
 
-// Module 16728 (DevToolsDataStorageScreen)
+// Module 16804 (DevToolsDataStorageScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Link from "Link" /* 1506 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4826 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 4843 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5171 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5554 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5625 */;
-import TableRow from "TableRow" /* 6854 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7095 */;
-import FastestListDefault from "FastestList" /* 7101 */;
-import useFastestListTableRowPlaceholderConfigDefault from "useFastestListTableRowPlaceholderConfig" /* 10553 */;
-import useScaledSectionHeightDefault from "useScaledSectionHeight" /* 10555 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4847 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 4864 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5575 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
+import TableRow from "TableRow" /* 6882 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7123 */;
+import FastestListDefault from "FastestList" /* 7129 */;
+import useFastestListTableRowPlaceholderConfigDefault from "useFastestListTableRowPlaceholderConfig" /* 10582 */;
+import useScaledSectionHeightDefault from "useScaledSectionHeight" /* 10584 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -26,7 +26,7 @@ require = fn;
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, sectionHeader: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.sectionHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
@@ -219,7 +219,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
   }
   if (cResult[2] !== tmp4) {
     const obj2 = { title: tmp4 };
-    const tmp8 = jsx(tmp(7197).BottomSheetTitleHeader, { title: tmp4 });
+    const tmp8 = jsx(tmp(7225).BottomSheetTitleHeader, { title: tmp4 });
     cResult[2] = tmp4;
     cResult[3] = tmp8;
     let tmp6 = tmp8;
@@ -237,7 +237,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       return tmp11;
     }
     const obj3 = { header: tmp6, children: tmp9 };
-    const tmp13 = jsx(tmp(7247).ActionSheet, { header: tmp6, children: tmp9 });
+    const tmp13 = jsx(tmp(7275).ActionSheet, { header: tmp6, children: tmp9 });
     cResult[7] = tmp6;
     cResult[8] = tmp9;
     cResult[9] = tmp13;
@@ -245,7 +245,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
   }
   const obj4 = {
     hasIcons: false,
-    children: jsx(store(7243).ActionSheetRow, {
+    children: jsx(store(7271).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -256,9 +256,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   };
-  const tmp10 = jsx(store(7243).ActionSheetRow.Group, {
+  const tmp10 = jsx(store(7271).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7243).ActionSheetRow, {
+    children: jsx(store(7271).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -287,10 +287,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
 }) : (function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(7197).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(7225).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(7243).ActionSheetRow, {
+    children: jsx(store(7271).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -301,9 +301,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   };
-  obj.children = jsx(store(7243).ActionSheetRow.Group, {
+  obj.children = jsx(store(7271).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7243).ActionSheetRow, {
+    children: jsx(store(7271).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -314,7 +314,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   });
-  return jsx(store(7247).ActionSheet, { header: jsx(store(7197).BottomSheetTitleHeader, { title: store.getName() }), children: null });
+  return jsx(store(7275).ActionSheet, { header: jsx(store(7225).BottomSheetTitleHeader, { title: store.getName() }), children: null });
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx");

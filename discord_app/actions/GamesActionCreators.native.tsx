@@ -1,7 +1,7 @@
-// === Module 11245: GamesActionCreators ===
+// === Module 11289: GamesActionCreators ===
 
-// Module 11245 (GamesActionCreators)
-import LinkingDefault from "Linking" /* 5622 */;
+// Module 11289 (GamesActionCreators)
+import LinkingDefault from "Linking" /* 5642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -114,8 +114,8 @@ export default {
                       const join_url = body.body.join_url;
                       const secret = body.body.secret;
                       if (null != join_url) {
-                        activityChannelId(5622).openURL(join_url, constants2.SAFARI);
-                        const obj3 = activityChannelId(5622);
+                        activityChannelId(5642).openURL(join_url, constants2.SAFARI);
+                        const obj3 = activityChannelId(5642);
                         const obj2 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
                         ({ id: obj5.applicationId, parent_id: obj5.parentApplicationId } = application);
                         obj2.secret = secret;
@@ -136,8 +136,8 @@ export default {
                       } else {
                         const _HermesInternal = HermesInternal;
                         const combined = "" + deeplink_uri.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-                        activityChannelId(5622).openURL(combined, constants2.SAFARI);
-                        const obj6 = activityChannelId(5622);
+                        activityChannelId(5642).openURL(combined, constants2.SAFARI);
+                        const obj6 = activityChannelId(5642);
                         const obj12 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
                         ({ id: obj8.applicationId, parent_id: obj8.parentApplicationId } = application);
                         obj12.secret = secret;

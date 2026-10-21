@@ -1,9 +1,9 @@
-// === Module 2038: ImageProxyUtils ===
+// === Module 2037: ImageProxyUtils ===
 
-// Module 2038 (ImageProxyUtils)
+// Module 2037 (ImageProxyUtils)
 import URLUtilsDefault from "URLUtils" /* 1386 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
-import UrlHostUtils from "UrlHostUtils" /* 2039 */;
+import UrlHostUtils from "UrlHostUtils" /* 2038 */;
 import size from "module_2" /* 2 */;
 
 function getSizedImageProxyURL(value, size) {

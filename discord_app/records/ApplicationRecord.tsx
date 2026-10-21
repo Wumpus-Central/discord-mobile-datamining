@@ -4,7 +4,7 @@
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2031 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2030 */;
 import Record from "Record" /* 1407 */;
 import CompanyRecord from "CompanyRecord" /* 2025 */;
 import UserRecord from "UserRecord" /* 1406 */;
@@ -100,18 +100,12 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
 };
 Object.defineProperty(prototype, "connectionEntrypointUrl", {
   get: function connectionEntrypointUrl() {
-    const obj = require("UserApplicationIdentityConstants").APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
+    const tmp = require("UserApplicationIdentityConstants").APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
     let prop;
-    if (obj != null) {
-      prop = obj.connectionEntrypointUrlOverride;
+    if (tmp != null) {
+      prop = tmp.connectionEntrypointUrlOverride;
     }
-    if (null != prop) {
-      if (obj.getMigrationExperimentEnabled("ApplicationRecord")) {
-        let _connectionEntrypointUrl = obj.connectionEntrypointUrlOverride;
-      }
-      return _connectionEntrypointUrl;
-    }
-    _connectionEntrypointUrl = this._connectionEntrypointUrl;
+    return null != prop ? tmp.connectionEntrypointUrlOverride : this._connectionEntrypointUrl;
   },
   set: undefined
 });

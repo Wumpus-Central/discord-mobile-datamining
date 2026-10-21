@@ -1,21 +1,21 @@
-// === Module 7896: AgeVerificationOtherWindowScreen ===
+// === Module 7924: AgeVerificationOtherWindowScreen ===
 
-// Module 7896 (AgeVerificationOtherWindowScreen)
+// Module 7924 (AgeVerificationOtherWindowScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import _modDef3080 from "module_3080" /* 3080 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5935 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7004 */;
-import ModalScreen from "ModalScreen" /* 7848 */;
-import ModalContent from "ModalContent" /* 7849 */;
+import _modDef3090 from "module_3090" /* 3090 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import Stack_Stack from "Stack/Stack" /* 5957 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7032 */;
+import ModalScreen from "ModalScreen" /* 7876 */;
+import ModalContent from "ModalContent" /* 7877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch" }, text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     }
     if (title1 == null) {
       const intl = util.intl;
-      title1 = intl.string(_modDef3080.MLPgsX);
+      title1 = intl.string(_modDef3090.MLPgsX);
     }
     let title2;
     if (copy != null) {
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     }
     if (description1 == null) {
       const intl2 = util.intl;
-      description1 = intl2.string(_modDef3080.VcZF1q);
+      description1 = intl2.string(_modDef3090.VcZF1q);
     }
     let description2;
     if (copy != null) {
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   }
   if (title == null) {
     const intl = util.intl;
-    title = intl.string(_modDef3080.MLPgsX);
+    title = intl.string(_modDef3090.MLPgsX);
   }
   let description;
   if (copy != null) {
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   }
   if (description == null) {
     const intl2 = util.intl;
-    description = intl2.string(_modDef3080.VcZF1q);
+    description = intl2.string(_modDef3090.VcZF1q);
   }
   const obj = { children: null };
   const obj2 = { children: null };

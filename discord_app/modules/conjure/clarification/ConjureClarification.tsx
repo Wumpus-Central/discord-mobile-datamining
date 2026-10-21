@@ -1,9 +1,9 @@
-// === Module 12328: ConjureClarification ===
+// === Module 12383: ConjureClarification ===
 
-// Module 12328 (ConjureClarification)
+// Module 12383 (ConjureClarification)
 import util from "util" /* 1128 */;
-import _modDef3820 from "module_3820" /* 3820 */;
-import ChannelStore from "ChannelStore" /* 4800 */;
+import _modDef3830 from "module_3830" /* 3830 */;
+import ChannelStore from "ChannelStore" /* 4821 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -11,13 +11,13 @@ const ChannelTypes = fn(1087).ChannelTypes;
 let closure_5 = { [ChannelTypes.GUILD_TEXT]: "text", [ChannelTypes.GUILD_VOICE]: "voice", [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement", [ChannelTypes.GUILD_STAGE_VOICE]: "stage", [ChannelTypes.GUILD_FORUM]: "forum", [ChannelTypes.GUILD_MEDIA]: "media" };
 let closure_6 = { channel: "#", role: "@", user: "@", project: "" };
 let obj = { channel: null, role: null, user: null, project: null };
-let items = [_modDef3820["9+dfPT"], _modDef3820.pGSJqE];
+let items = [_modDef3830["9+dfPT"], _modDef3830.pGSJqE];
 obj.channel = items;
-let items1 = [_modDef3820["2VkCoD"], _modDef3820.c8YlX8];
+let items1 = [_modDef3830["2VkCoD"], _modDef3830.c8YlX8];
 obj.role = items1;
-let items2 = [_modDef3820.GZIAxl, _modDef3820["4bptbQ"]];
+let items2 = [_modDef3830.GZIAxl, _modDef3830["4bptbQ"]];
 obj.user = items2;
-const items3 = [_modDef3820.twlOb6, _modDef3820.twlOb6];
+const items3 = [_modDef3830.twlOb6, _modDef3830.twlOb6];
 obj.project = items3;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
@@ -35,7 +35,7 @@ export const clarificationDraftPlaceholder = function clarificationDraftPlacehol
   if (tmp2) {
     tmp2 = null == options.input;
   }
-  const tmp4 = _modDef3820;
+  const tmp4 = _modDef3830;
   return intl.string(tmp2 ? tmp4.yLN1x6 : tmp4["tOC+tn"]);
 };
 export const isClarificationComplete = function isClarificationComplete(questions, arg1) {

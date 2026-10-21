@@ -1,15 +1,15 @@
-// === Module 18109: SettingsOverviewScreen ===
+// === Module 18190: SettingsOverviewScreen ===
 
-// Module 18109 (SettingsOverviewScreen)
+// Module 18190 (SettingsOverviewScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import PremiumUtils from "PremiumUtils" /* 2054 */;
-import SettingBuilders from "SettingBuilders" /* 11111 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16597 */;
+import PremiumUtils from "PremiumUtils" /* 2053 */;
+import SettingBuilders from "SettingBuilders" /* 11155 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16673 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2069 */;
+import LocaleStore from "LocaleStore" /* 2068 */;
 
 require = fn;
 function getOverviewSettings(isPremiumUser) {
@@ -90,7 +90,7 @@ function getOverviewSettings(isPremiumUser) {
   items1[9] = obj10;
   return items1;
 }
-const MobileUserSettings = fn(8280).MobileUserSettings;
+const MobileUserSettings = fn(8308).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,22 +1,22 @@
-// === Module 9412: GameProfileDetails ===
+// === Module 9440: GameProfileDetails ===
 
-// Module 9412 (GameProfileDetails)
+// Module 9440 (GameProfileDetails)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
-import DateUtilsAll from "DateUtils" /* 4773 */;
-import Text_Text from "Text/Text" /* 5195 */;
-import LinkingDefault from "Linking" /* 5622 */;
-import SKUUtils from "SKUUtils" /* 9236 */;
+import DateUtilsAll from "DateUtils" /* 4794 */;
+import Text_Text from "Text/Text" /* 5216 */;
+import LinkingDefault from "Linking" /* 5642 */;
+import SKUUtils from "SKUUtils" /* 9263 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8771).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8798).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -94,119 +94,123 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileDetails.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileDetails(arg0) {
-  const cResult = trackAction(576).c(71);
-  ({ game: platformsContainer, trackAction } = arg0);
+  const cResult = trackAction(576).c(74);
+  ({ game, trackAction } = arg0);
   const tmp4 = closure_10();
-  closure_1 = tmp4;
-  if (null != platformsContainer) {
-    if (cResult[1] === platformsContainer) {
-      if (cResult[2] === tmp4.linksContainer) {
-        if (cResult[3] === tmp4.platformsContainer) {
+  importDefault = tmp4;
+  let obj = trackAction(576);
+  const gameProfileLinks = trackAction(9441).useGameProfileLinks(game);
+  if (null != game) {
+    if (cResult[1] === game) {
+      if (cResult[2] === gameProfileLinks) {
+        if (cResult[3] === tmp4.linksContainer) {
+          if (cResult[4] === tmp4.platformsContainer) {
+          }
         }
       }
     }
     let genres;
-    if (platformsContainer != null) {
-      genres = platformsContainer.genres;
+    if (game != null) {
+      genres = game.genres;
     }
-    if (cResult[6] !== genres) {
+    if (cResult[7] !== genres) {
       let joined;
-      if (platformsContainer != null) {
-        const genres1 = platformsContainer.genres;
-        const mapped = genres1.map(trackAction(9236).getGenreText);
+      if (game != null) {
+        const genres1 = game.genres;
+        const mapped = genres1.map(trackAction(9263).getGenreText);
         joined = mapped.join(", ");
       }
       let genres2;
-      if (platformsContainer != null) {
-        genres2 = platformsContainer.genres;
+      if (game != null) {
+        genres2 = game.genres;
       }
-      cResult[6] = genres2;
-      cResult[7] = joined;
+      cResult[7] = genres2;
+      cResult[8] = joined;
       let tmp8 = joined;
     } else {
-      tmp8 = cResult[7];
+      tmp8 = cResult[8];
     }
     let items = [];
     if (null != tmp8) {
       if ("" !== tmp8) {
-        if (cResult[8] !== platformsContainer.genres.length) {
-          if (1 !== platformsContainer.genres.length) {
+        if (cResult[9] !== game.genres.length) {
+          if (1 !== game.genres.length) {
             const intl2 = trackAction(1128).intl;
             let stringResult = intl2.string(trackAction(1128).t.pDgwYB);
           } else {
             const intl = trackAction(1128).intl;
             stringResult = intl.string(trackAction(1128).t.mjFKqn);
           }
-          cResult[8] = platformsContainer.genres.length;
-          cResult[9] = stringResult;
+          cResult[9] = game.genres.length;
+          cResult[10] = stringResult;
         } else {
-          if (cResult[10] === tmp8) {
-            if (cResult[11] === tmp11) {
-              let tmp14 = cResult[12];
+          if (cResult[11] === tmp8) {
+            if (cResult[12] === tmp11) {
+              let tmp14 = cResult[13];
             }
             items.push(tmp14);
           }
-          const obj2 = { label: cResult[9], value: tmp8 };
-          cResult[10] = tmp8;
-          cResult[11] = cResult[9];
-          cResult[12] = obj2;
-          tmp14 = obj2;
+          let obj3 = { label: cResult[10], value: tmp8 };
+          cResult[11] = tmp8;
+          cResult[12] = cResult[10];
+          cResult[13] = obj3;
+          tmp14 = obj3;
         }
       }
     }
-    if (cResult[13] !== platformsContainer) {
+    if (cResult[14] !== game) {
       let companyByRole;
-      if (platformsContainer != null) {
-        companyByRole = platformsContainer.getCompanyByRole(trackAction(2000).GameCompanyRole.PUBLISHER);
+      if (game != null) {
+        companyByRole = game.getCompanyByRole(trackAction(2000).GameCompanyRole.PUBLISHER);
       }
       const _Symbol2 = Symbol;
-      if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-        class P {
+      if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+        class T {
           constructor(arg0) {
             return arg0.name;
           }
         }
-        cResult[16] = P;
+        cResult[17] = T;
       } else {
-        class P {
+        class T {
           constructor(arg0) {
             return arg0.name;
           }
         }
       }
-      const mapped1 = companyByRole.map(P);
+      const mapped1 = companyByRole.map(T);
       const joined1 = mapped1.join(", ");
-      cResult[13] = platformsContainer;
-      cResult[14] = companyByRole;
-      cResult[15] = joined1;
+      cResult[14] = game;
+      cResult[15] = companyByRole;
+      cResult[16] = joined1;
     } else {
-      class P {
+      class T {
         constructor(arg0) {
           return arg0.name;
         }
       }
-      if (null != cResult[15]) {
-        class P {
+      if (null != cResult[16]) {
+        class T {
           constructor(arg0) {
             return arg0.name;
           }
         }
         if ("" !== tmp16) {
-          class P {
+          class T {
             constructor(arg0) {
               return arg0.name;
             }
           }
         }
       }
-      if (cResult[22] !== platformsContainer) {
-        class P {
+      if (cResult[23] !== game) {
+        class T {
           constructor(arg0) {
             return arg0.name;
           }
         }
-        if (platformsContainer != null) {
-          class P {
+        if (game != null) {
+          class T {
             constructor(arg0) {
               return arg0.name;
             }
@@ -214,112 +218,112 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           const tmp24Result = tmp24(trackAction(2000).GameCompanyRole.DEVELOPER);
         }
         const _Symbol3 = Symbol;
-        if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-          class S {
+        if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
+          class D {
             constructor(arg0) {
               return arg0.name;
             }
           }
-          cResult[25] = S;
+          cResult[26] = D;
         } else {
-          class S {
+          class D {
             constructor(arg0) {
               return arg0.name;
             }
           }
         }
-        const mapped2 = tmp24Result.map(S);
+        const mapped2 = tmp24Result.map(D);
         const joined2 = mapped2.join(", ");
-        cResult[22] = platformsContainer;
-        cResult[23] = tmp24Result;
-        cResult[24] = joined2;
+        cResult[23] = game;
+        cResult[24] = tmp24Result;
+        cResult[25] = joined2;
       } else {
-        class S {
+        class D {
           constructor(arg0) {
             return arg0.name;
           }
         }
-        if (null != cResult[24]) {
-          class S {
+        if (null != cResult[25]) {
+          class D {
             constructor(arg0) {
               return arg0.name;
             }
           }
           if ("" !== tmp23) {
-            class S {
+            class D {
               constructor(arg0) {
                 return arg0.name;
               }
             }
           }
         }
-        if (platformsContainer != null) {
-          class S {
+        if (game != null) {
+          class D {
             constructor(arg0) {
               return arg0.name;
             }
           }
         }
         if (null != undefined) {
-          class S {
+          class D {
             constructor(arg0) {
               return arg0.name;
             }
           }
           if ("" !== tmp30) {
-            class S {
+            class D {
               constructor(arg0) {
                 return arg0.name;
               }
             }
-            const _Symbol4 = Symbol;
-            if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
-              class S {
+            const _Symbol6 = Symbol;
+            if (cResult[32] === Symbol.for("react.memo_cache_sentinel")) {
+              class D {
                 constructor(arg0) {
                   return arg0.name;
                 }
               }
-              const stringResult1 = obj6.string(trackAction(1128).t.H3mPDT);
-              cResult[31] = stringResult1;
+              const stringResult1 = obj7.string(trackAction(1128).t.H3mPDT);
+              cResult[32] = stringResult1;
               const tmp31 = stringResult1;
             } else {
-              class S {
+              class D {
                 constructor(arg0) {
                   return arg0.name;
                 }
               }
             }
-            if (cResult[32] !== tmp30) {
-              class S {
+            if (cResult[33] !== tmp30) {
+              class D {
                 constructor(arg0) {
                   return arg0.name;
                 }
               }
               const _Date = Date;
               const date = new Date(tmp30);
-              const dateFormatResult = tmp5(4773).dateFormat(date, "LL");
-              cResult[32] = tmp30;
-              cResult[33] = dateFormatResult;
-              const obj7 = tmp5(4773);
+              const dateFormatResult = tmp5(4794).dateFormat(date, "LL");
+              cResult[33] = tmp30;
+              cResult[34] = dateFormatResult;
+              const obj8 = tmp5(4794);
             } else {
-              class S {
+              class D {
                 constructor(arg0) {
                   return arg0.name;
                 }
               }
             }
-            if (cResult[34] !== tmp33) {
-              class S {
+            if (cResult[35] !== tmp33) {
+              class D {
                 constructor(arg0) {
                   return arg0.name;
                 }
               }
               tmp41[0] = tmp31;
               tmp41[1] = tmp33;
-              cResult[34] = tmp33;
-              cResult[35] = tmp41;
+              cResult[35] = tmp33;
+              cResult[36] = tmp41;
             } else {
-              class S {
+              class D {
                 constructor(arg0) {
                   return arg0.name;
                 }
@@ -328,296 +332,206 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             items.push(tmp41);
           }
         }
-        if (platformsContainer != null) {
-          class S {
+        if (game != null) {
+          class D {
             constructor(arg0) {
               return arg0.name;
             }
           }
         }
         if (null != undefined) {
-          class S {
+          class D {
             constructor(arg0) {
               return arg0.name;
             }
           }
           if (tmp43.length > 0) {
-            class S {
+            class D {
               constructor(arg0) {
                 return arg0.name;
               }
             }
           }
         }
-        let found;
-        if (platformsContainer != null) {
-          class S {
+        const _Symbol4 = Symbol;
+        if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
+          class X {
             constructor(arg0) {
-              return arg0.name;
+              tmp = closure_1(closure_1_3[15]);
+              return tmp(arg0, closure_1(closure_1_3[5]).colors.ICON_SUBTLE);
             }
           }
-          if (tmp45 != null) {
-            class S {
-              constructor(arg0) {
-                return arg0.name;
-              }
-            }
-            found = arr5.filter((item) => null != item);
-          }
-        }
-        if (found == null) {
-          class S {
-            constructor(arg0) {
-              return arg0.name;
-            }
-          }
-        }
-        if (null != found) {
-          class S {
-            constructor(arg0) {
-              return arg0.name;
-            }
-          }
-          if (found.length > 0) {
-            class S {
-              constructor(arg0) {
-                return arg0.name;
-              }
-            }
-            const _Symbol5 = Symbol;
-            if (cResult[47] === Symbol.for("react.memo_cache_sentinel")) {
-              class S {
-                constructor(arg0) {
-                  return arg0.name;
-                }
-              }
-              const stringResult2 = obj8.string(trackAction(1128).t["Oj3o1/"]);
-              cResult[47] = stringResult2;
-              const tmp46 = stringResult2;
-            } else {
-              class S {
-                constructor(arg0) {
-                  return arg0.name;
-                }
-              }
-            }
-            if (cResult[48] !== trackAction) {
-              class Z {
-                constructor(arg0) {
-                  url = arg0.url;
-                  obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                  return jsx(GameProfileWebsiteButton, obj, url);
-                }
-              }
-              cResult[48] = trackAction;
-              cResult[49] = Z;
-            } else {
-              class Z {
-                constructor(arg0) {
-                  url = arg0.url;
-                  obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                  return jsx(GameProfileWebsiteButton, obj, url);
-                }
-              }
-            }
-            let obj3 = { style: tmp4.linksContainer, children: found.map(Z) };
-            const tmp51 = closure_8(closure_5, obj3);
-            if (cResult[50] !== tmp51) {
-              class Z {
-                constructor(arg0) {
-                  url = arg0.url;
-                  obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                  return jsx(GameProfileWebsiteButton, obj, url);
-                }
-              }
-              tmp53[0] = tmp46;
-              tmp53[1] = tmp51;
-              cResult[50] = tmp51;
-              cResult[51] = tmp53;
-            } else {
-              class Z {
-                constructor(arg0) {
-                  url = arg0.url;
-                  obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                  return jsx(GameProfileWebsiteButton, obj, url);
-                }
-              }
-            }
-            items.push(tmp53);
-          }
-        }
-        if (items.length <= 0) {
-          class Z {
-            constructor(arg0) {
-              url = arg0.url;
-              obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-              return jsx(GameProfileWebsiteButton, obj, url);
-            }
-          }
-          cResult[1] = platformsContainer;
-          ({ linksContainer: tmp3[2], platformsContainer } = tmp4);
-          cResult[3] = platformsContainer;
-          cResult[4] = trackAction;
-          cResult[5] = items;
+          cResult[48] = X;
         } else {
-          class Z {
+          class X {
             constructor(arg0) {
-              url = arg0.url;
-              obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-              return jsx(GameProfileWebsiteButton, obj, url);
+              tmp = closure_1(closure_1_3[15]);
+              return tmp(arg0, closure_1(closure_1_3[5]).colors.ICON_SUBTLE);
             }
           }
-          const _Symbol6 = Symbol;
-          if (cResult[52] === Symbol.for("react.memo_cache_sentinel")) {
-            class Z {
+        }
+        const _Symbol5 = Symbol;
+        if (cResult[49] === Symbol.for("react.memo_cache_sentinel")) {
+          class H {
+            constructor(arg0) {
+              return null != arg0;
+            }
+          }
+          cResult[49] = H;
+        } else {
+          class H {
+            constructor(arg0) {
+              return null != arg0;
+            }
+          }
+        }
+        const mapped3 = gameProfileLinks.map(X);
+        const found = mapped3.filter(H);
+        if (found.length <= 0) {
+          class H {
+            constructor(arg0) {
+              return null != arg0;
+            }
+          }
+        } else {
+          class H {
+            constructor(arg0) {
+              return null != arg0;
+            }
+          }
+          if (cResult[50] === Symbol.for("react.memo_cache_sentinel")) {
+            class H {
               constructor(arg0) {
-                url = arg0.url;
-                obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(GameProfileWebsiteButton, obj, url);
+                return null != arg0;
               }
             }
-            const stringResult3 = obj10.string(trackAction(1128).t["BwQ+9e"]);
-            const intl3 = trackAction(1128).intl;
-            const obj4 = { igdbLink: IGDB_ATTRIBUTION_LINK };
-            const formatResult = intl3.format(trackAction(1128).t.XPFZVl, obj4);
-            cResult[52] = stringResult3;
-            cResult[53] = formatResult;
-            let tmp56 = formatResult;
-            const tmp55 = stringResult3;
+            const stringResult2 = obj9.string(trackAction(1128).t["Oj3o1/"]);
+            cResult[50] = stringResult2;
+            const tmp47 = stringResult2;
           } else {
-            class Z {
+            class H {
               constructor(arg0) {
-                url = arg0.url;
-                obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(GameProfileWebsiteButton, obj, url);
+                return null != arg0;
               }
             }
-            tmp56 = cResult[53];
           }
-          if (cResult[54] !== tmp56) {
-            class Z {
+          if (cResult[51] !== trackAction) {
+            class H {
               constructor(arg0) {
-                url = arg0.url;
-                obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(GameProfileWebsiteButton, obj, url);
+                return null != arg0;
               }
             }
-            tmp61[0] = tmp55;
-            tmp61[1] = tmp56;
-            cResult[54] = tmp56;
-            cResult[55] = tmp61;
+            cResult[51] = trackAction;
+            cResult[52] = tmp50;
           } else {
-            class Z {
+            class H {
               constructor(arg0) {
-                url = arg0.url;
-                obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-                return jsx(GameProfileWebsiteButton, obj, url);
+                return null != arg0;
               }
             }
           }
-          items.push(tmp61);
+          const obj4 = { style: tmp4.linksContainer, children: found.map(tmp50) };
+          const tmp53 = closure_8(closure_5, obj4);
+          if (cResult[53] !== tmp53) {
+            class H {
+              constructor(arg0) {
+                return null != arg0;
+              }
+            }
+            tmp55[0] = tmp47;
+            tmp55[1] = tmp53;
+            cResult[53] = tmp53;
+            cResult[54] = tmp55;
+          } else {
+            class H {
+              constructor(arg0) {
+                return null != arg0;
+              }
+            }
+          }
+          items.push(tmp55);
         }
       }
     }
   } else {
-    class Z {
+    class H {
       constructor(arg0) {
-        url = arg0.url;
-        obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-        return jsx(GameProfileWebsiteButton, obj, url);
+        return null != arg0;
       }
     }
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      class Z {
+      class H {
         constructor(arg0) {
-          url = arg0.url;
-          obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-          return jsx(GameProfileWebsiteButton, obj, url);
+          return null != arg0;
         }
       }
       cResult[0] = tmp5;
     } else {
-      class Z {
+      class H {
         constructor(arg0) {
-          url = arg0.url;
-          obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-          return jsx(GameProfileWebsiteButton, obj, url);
+          return null != arg0;
         }
       }
     }
     if (0 === tmp5.length) {
-      class Z {
+      class H {
         constructor(arg0) {
-          url = arg0.url;
-          obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-          return jsx(GameProfileWebsiteButton, obj, url);
+          return null != arg0;
         }
       }
     } else {
-      class Z {
+      class H {
         constructor(arg0) {
-          url = arg0.url;
-          obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-          return jsx(GameProfileWebsiteButton, obj, url);
+          return null != arg0;
         }
       }
       const _Symbol7 = Symbol;
       ({ container, headerText } = tmp4);
-      if (cResult[56] === Symbol.for("react.memo_cache_sentinel")) {
-        class Z {
+      if (cResult[59] === Symbol.for("react.memo_cache_sentinel")) {
+        class H {
           constructor(arg0) {
-            url = arg0.url;
-            obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-            return jsx(GameProfileWebsiteButton, obj, url);
+            return null != arg0;
           }
         }
-        const stringResult4 = obj12.string(trackAction(1128).t["7OjmmH"]);
-        cResult[56] = stringResult4;
-        const tmp64 = stringResult4;
+        const stringResult3 = obj11.string(trackAction(1128).t["7OjmmH"]);
+        cResult[59] = stringResult3;
+        const tmp58 = stringResult3;
       } else {
-        class Z {
+        class H {
           constructor(arg0) {
-            url = arg0.url;
-            obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-            return jsx(GameProfileWebsiteButton, obj, url);
+            return null != arg0;
           }
         }
       }
-      if (cResult[57] !== tmp4.headerText) {
-        class Z {
+      if (cResult[60] !== tmp4.headerText) {
+        class H {
           constructor(arg0) {
-            url = arg0.url;
-            obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-            return jsx(GameProfileWebsiteButton, obj, url);
+            return null != arg0;
           }
         }
-        const obj5 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: headerText, children: tmp64 };
-        const tmp67 = closure_8(trackAction(5195).Text, obj5);
-        cResult[57] = tmp4.headerText;
-        cResult[58] = tmp67;
+        const obj5 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: headerText, children: tmp58 };
+        const tmp61 = closure_8(trackAction(5216).Text, obj5);
+        cResult[60] = tmp4.headerText;
+        cResult[61] = tmp61;
       } else {
-        class Z {
+        class H {
           constructor(arg0) {
-            url = arg0.url;
-            obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-            return jsx(GameProfileWebsiteButton, obj, url);
+            return null != arg0;
           }
         }
       }
-      if (cResult[59] === tmp5) {
-        class Z {
+      if (cResult[62] === tmp5) {
+        class H {
           constructor(arg0) {
-            url = arg0.url;
-            obj = { icon: arg0.icon, action: arg0.action, title: arg0.title, url, trackAction };
-            return jsx(GameProfileWebsiteButton, obj, url);
+            return null != arg0;
           }
         }
       }
-      const mapped3 = tmp5.map((children, index) => {
+      const mapped4 = tmp5.map((children, index) => {
         const items = [closure_1.detailsRow, ];
         let prop = null;
-        if (arr.length > 1) {
+        if (arr2.length > 1) {
           prop = null;
           if (index < arr2.length - 1) {
             prop = closure_1.detailsRowBottomBorder;
@@ -636,24 +550,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
         obj.children = items1;
         return React6(hasOwnProperty, obj, children.label);
       });
-      cResult[59] = tmp5;
-      cResult[60] = tmp4.detailsRow;
-      cResult[61] = tmp4.detailsRowBottomBorder;
-      cResult[62] = tmp4.detailsRowValue;
-      cResult[63] = mapped3;
+      cResult[62] = tmp5;
+      cResult[63] = tmp4.detailsRow;
+      cResult[64] = tmp4.detailsRowBottomBorder;
+      cResult[65] = tmp4.detailsRowValue;
+      cResult[66] = mapped4;
     }
   }
-  let obj = trackAction(576);
+  const obj2 = trackAction(9441);
 }) : (function GameProfileDetails(game) {
   game = game.game;
   const trackAction = game.trackAction;
+  let gameProfileLinks;
+  let memo;
   const tmp = closure_10();
   closure_2 = tmp;
-  let items = [, , , ];
+  gameProfileLinks = game(gameProfileLinks[9]).useGameProfileLinks(game);
+  let items = [, , , , ];
   ({ linksContainer: arr[0], platformsContainer: arr[1] } = tmp);
   items[2] = game;
-  items[3] = trackAction;
-  const memo = noop.useMemo(() => {
+  items[3] = gameProfileLinks;
+  items[4] = trackAction;
+  memo = memo.useMemo(() => {
     if (null == game) {
       return [];
     } else {
@@ -717,22 +635,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               tmp61 = platforms.length > 0;
             }
             if (!tmp61) {
-              let found;
-              if (game != null) {
-                const websites = game.websites;
-                if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(9420)(item, trackAction(587).colors.ICON_SUBTLE));
-                  found = mapped3.filter((item) => null != item);
-                }
-              }
-              if (found == null) {
-                found = [];
-              }
-              let tmp75 = null != found;
-              if (tmp75) {
-                tmp75 = found.length > 0;
-              }
-              if (tmp75) {
+              const mapped3 = gameProfileLinks.map((item) => trackAction(9449)(item, trackAction(587).colors.ICON_SUBTLE));
+              const found = mapped3.filter((item) => null != item);
+              if (found.length > 0) {
                 const obj3 = { label: null, value: null };
                 const intl10 = util.intl;
                 obj3.label = intl10.string(util.t["Oj3o1/"]);
@@ -765,7 +670,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                 stringResult = intl8.string(util.t["UxAag+"]);
               }
               const obj7 = { label: stringResult, value: null };
-              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9413).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE }, platform)) };
+              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9442).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE }, platform)) };
               obj7.value = closure_2_8(hasOwnProperty, obj8);
               items.push(obj7);
             }
@@ -804,14 +709,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       }
     }
   }, items);
-  let tmp2 = null;
+  let tmp5 = null;
   if (0 !== memo.length) {
-    let obj = { style: tmp.container, children: null };
-    let obj2 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
-    let intl = game(memo[10]).intl;
-    obj2.children = intl.string(game(memo[10]).t["7OjmmH"]);
-    let items1 = [closure_8(game(memo[15]).Text, obj2), ];
-    let obj3 = {
+    let obj2 = { style: tmp.container, children: null };
+    let obj3 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
+    let intl = tmp2(tmp3[11]).intl;
+    obj3.children = intl.string(tmp2(tmp3[11]).t["7OjmmH"]);
+    let items1 = [closure_8(tmp2(tmp3[16]).Text, obj3), ];
+    let obj4 = {
       style: tmp.detailsContainer,
       children: memo.map((children, index) => {
           const items = [closure_2.detailsRow, ];
@@ -836,9 +741,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           return React6(hasOwnProperty, obj, children.label);
         })
     };
-    items1[1] = closure_8(closure_5, obj3);
-    obj.children = items1;
-    tmp2 = closure_9(closure_5, obj);
+    items1[1] = closure_8(closure_5, obj4);
+    obj2.children = items1;
+    tmp5 = closure_9(closure_5, obj2);
   }
-  return tmp2;
+  return tmp5;
 });

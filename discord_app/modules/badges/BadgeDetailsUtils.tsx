@@ -1,12 +1,12 @@
-// === Module 10936: BadgeDetailsUtils ===
+// === Module 11080: BadgeDetailsUtils ===
 
-// Module 10936 (BadgeDetailsUtils)
+// Module 11080 (BadgeDetailsUtils)
 import util from "util" /* 1128 */;
 import PremiumConstants from "PremiumConstants" /* 1394 */;
-import BadgeId from "BadgeId" /* 8610 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8618 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8619 */;
-import BadgeUtils from "BadgeUtils" /* 10928 */;
+import BadgeId from "BadgeId" /* 8637 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8645 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8646 */;
+import BadgeUtils from "BadgeUtils" /* 11072 */;
 import size from "module_2" /* 2 */;
 
 const getObtainedAtFromBadge = BadgeDirectoryStore.getObtainedAtFromBadge;
@@ -74,7 +74,7 @@ export const getBadgeTitle = function getBadgeTitle(badge, displayTier) {
     name2 = badge.name;
   }
   if (tmp3) {
-    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: -1 };
+    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: "p\u0314" };
     let combined = name2;
     if (null != name) {
       const _HermesInternal = HermesInternal;

@@ -1,16 +1,16 @@
-// === Module 9488: PromotionUtils ===
+// === Module 9518: PromotionUtils ===
 
-// Module 9488 (PromotionUtils)
+// Module 9518 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import dismissible_content from "dismissible_content" /* 4784 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4785 */;
-import constants from "constants" /* 9486 */;
+import dismissible_content from "dismissible_content" /* 4805 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4806 */;
+import constants from "constants" /* 9516 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import PromotionRecord from "PromotionRecord" /* 9450 */;
-import PromotionsStore from "PromotionsStore" /* 9449 */;
+import PromotionRecord from "PromotionRecord" /* 9479 */;
+import PromotionsStore from "PromotionsStore" /* 9478 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -53,7 +53,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           closure_131_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

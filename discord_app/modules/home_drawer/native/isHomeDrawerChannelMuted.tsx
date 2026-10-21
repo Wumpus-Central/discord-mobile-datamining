@@ -1,13 +1,13 @@
-// === Module 17511: isHomeDrawerChannelMuted ===
+// === Module 17592: isHomeDrawerChannelMuted ===
 
-// Module 17511 (isHomeDrawerChannelMuted)
+// Module 17592 (isHomeDrawerChannelMuted)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4882 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6655 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
 
 require = fn;
-const isThread = fn(4804).isThread;
+const isThread = fn(4825).isThread;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");

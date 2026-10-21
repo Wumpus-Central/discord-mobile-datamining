@@ -1,7 +1,7 @@
-// === Module 9251: calculateSteamReviewScoreDescription ===
+// === Module 9278: calculateSteamReviewScoreDescription ===
 
-// Module 9251 (calculateSteamReviewScoreDescription)
-import GameDetectionTypes from "GameDetectionTypes" /* 2043 */;
+// Module 9278 (calculateSteamReviewScoreDescription)
+import GameDetectionTypes from "GameDetectionTypes" /* 2042 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
