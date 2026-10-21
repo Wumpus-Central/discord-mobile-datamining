@@ -1,62 +1,50 @@
 // _runtime/metro/12521__.js
-import _mod12423 from "12423__.js";
-import _mod12450 from "12450__.js";
-import _mod12451 from "12451__.js";
+import _mod12479 from "12479__.js";
+import spanTimeInputToSeconds from "../12484_spanTimeInputToSeconds.js";
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../12494_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
+import _mod12507 from "12507__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const profiler = {
-  startProfiler() {
-    const client = _mod12450.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod12451.DEBUG_BUILD) {
-          const logger3 = _mod12423.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod12451.DEBUG_BUILD) {
-        const logger2 = _mod12423.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod12451.DEBUG_BUILD) {
-      const logger = _mod12423.logger;
-      logger.warn("No Sentry client available, profiling is not started");
+export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  if (activeSpan === undefined) {
+    activeSpan = spanTimeInputToSeconds.getActiveSpan();
+  }
+  let rootSpan = activeSpan;
+  if (activeSpan) {
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+  }
+  if (rootSpan) {
+    if (_mod12507.DEBUG_BUILD) {
+      const logger = _mod12479.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
-  },
-  stopProfiler() {
-    const client = _mod12450.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod12451.DEBUG_BUILD) {
-          const logger3 = _mod12423.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
+    const obj2 = {};
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj2);
+  }
+};
+export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
+  if (arr) {
+    if (0 !== arr.length) {
+      let obj = {};
+      const item = arr.forEach((attributes) => {
+        const tmp = attributes.attributes || {};
+        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
         }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod12451.DEBUG_BUILD) {
-        const logger2 = _mod12423.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod12451.DEBUG_BUILD) {
-      const logger = _mod12423.logger;
-      logger.warn("No Sentry client available, profiling is not started");
+        if (tmp4) {
+          obj = { value: tmp3, unit: tmp2 };
+          obj[attributes.name] = obj;
+        }
+      });
+      return obj;
     }
-  },
+  }
 };

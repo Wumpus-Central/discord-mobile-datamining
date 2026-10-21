@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/gifting",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=",
   scales: [1],
-  hash: "567fc188c37481444191c0dbf1996c76",
-  name: "GiftingBadgeTier.compiled.messages",
+  hash: "41192515601e5735aab0fd7db87ebf8f",
+  name: "th.messages.41192515601e5735aab0fd7db87ebf8f.compiled.messages",
   type: "jsona",
 });

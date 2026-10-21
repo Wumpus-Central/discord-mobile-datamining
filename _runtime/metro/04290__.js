@@ -1,38 +1,28 @@
 // _runtime/metro/04290__.js
-let closure_0 = { about: "k\u00F6r\u00FClbel\u00FCl", over: "t\u00F6bb mint", almost: "majdnem", lessthan: "kevesebb mint" };
-let closure_1 = { xseconds: " m\u00E1sodperc", halfaminute: "f\u00E9l perc", xminutes: " perc", xhours: " \u00F3ra", xdays: " nap", xweeks: " h\u00E9t", xmonths: " h\u00F3nap", xyears: " \u00E9v" };
-let closure_2 = { xseconds: { "-1": " m\u00E1sodperccel ezel\u0151tt", 1: " m\u00E1sodperc m\u00FAlva", 0: " m\u00E1sodperce" }, halfaminute: { "-1": "f\u00E9l perccel ezel\u0151tt", 1: "f\u00E9l perc m\u00FAlva", 0: "f\u00E9l perce" }, xminutes: { "-1": " perccel ezel\u0151tt", 1: " perc m\u00FAlva", 0: " perce" }, xhours: { "-1": " \u00F3r\u00E1val ezel\u0151tt", 1: " \u00F3ra m\u00FAlva", 0: " \u00F3r\u00E1ja" }, xdays: { "-1": " nappal ezel\u0151tt", 1: " nap m\u00FAlva", 0: " napja" }, xweeks: { "-1": " h\u00E9ttel ezel\u0151tt", 1: " h\u00E9t m\u00FAlva", 0: " hete" }, xmonths: { "-1": " h\u00F3nappal ezel\u0151tt", 1: " h\u00F3nap m\u00FAlva", 0: " h\u00F3napja" }, xyears: { "-1": " \u00E9vvel ezel\u0151tt", 1: " \u00E9v m\u00FAlva", 0: " \u00E9ve" } };
+import 02076__ from "02076__.js";
 
-export default function formatDistance(str, arg1, addSuffix) {
-  const match = str.match(/about|over|almost|lessthan/i);
-  if (match) {
-    str = str.replace(match[0], "");
-  }
-  addSuffix = undefined;
-  if (null != addSuffix) {
-    addSuffix = addSuffix.addSuffix;
-  }
-  const formatted = str.toLowerCase();
-  let num;
-  if (null != addSuffix) {
-    num = addSuffix.comparison;
-  }
-  if (!num) {
-    num = 0;
-  }
-  if (true === addSuffix) {
-    let tmp5 = closure_2[formatted][num];
-  } else {
-    tmp5 = closure_1[formatted];
-  }
-  let sum = tmp5;
-  if ("halfaminute" !== formatted) {
-    sum = arg1 + tmp5;
-  }
-  let text = sum;
-  if (match) {
-    text = `${closure_0[str3.toLowerCase(str3)]} ${tmp7}`;
-  }
-  return text;
+if (!module_2076) {
+  const obj2 = { default: module_2076 };
+  let obj = obj2;
+} else {
+  obj = module_2076;
+}
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + "\u00BA";
+  },
+  era: obj.default({ values: { narrow: ["AC", "DC"], abbreviated: ["AC", "DC"], wide: ["antes de cristo", "despu\u00E9s de cristo"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["1\u00BA trimestre", "2\u00BA trimestre", "3\u00BA trimestre", "4\u00BA trimestre"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return Number(arg0) - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["e", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], abbreviated: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"], wide: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["d", "l", "m", "m", "j", "v", "s"], short: ["do", "lu", "ma", "mi", "ju", "vi", "s\u00E1"], abbreviated: ["dom", "lun", "mar", "mi\u00E9", "jue", "vie", "s\u00E1b"], wide: ["domingo", "lunes", "martes", "mi\u00E9rcoles", "jueves", "viernes", "s\u00E1bado"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "ma\u00F1ana", afternoon: "tarde", evening: "tarde", night: "noche" }, abbreviated: { am: "AM", pm: "PM", midnight: "medianoche", noon: "mediodia", morning: "ma\u00F1ana", afternoon: "tarde", evening: "tarde", night: "noche" }, wide: { am: "a.m.", pm: "p.m.", midnight: "medianoche", noon: "mediodia", morning: "ma\u00F1ana", afternoon: "tarde", evening: "tarde", night: "noche" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "de la ma\u00F1ana", afternoon: "de la tarde", evening: "de la tarde", night: "de la noche" }, abbreviated: { am: "AM", pm: "PM", midnight: "medianoche", noon: "mediodia", morning: "de la ma\u00F1ana", afternoon: "de la tarde", evening: "de la tarde", night: "de la noche" }, wide: { am: "a.m.", pm: "p.m.", midnight: "medianoche", noon: "mediodia", morning: "de la ma\u00F1ana", afternoon: "de la tarde", evening: "de la tarde", night: "de la noche" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 12,
-  height: 12,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b28329d7d2ebd0b330f6112973e5d746",
-  name: "ic_sparkle",
+  hash: "b749a15e15191bd4c7ec2a36a9470ea1",
+  name: "VoiceXIcon",
   type: "png",
 });

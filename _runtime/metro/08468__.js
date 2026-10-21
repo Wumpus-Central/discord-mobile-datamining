@@ -1,13 +1,21 @@
 // _runtime/metro/08468__.js
-import registerAsset from "01134__.js";
+import reviveBigInts from "../08469_reviveBigInts.js";
+import DiscordMarkdownDefault from "../08470_DiscordMarkdown.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "9ca1aab40b1d1dec8d5caf0688317d98",
-  name: "TextSpoilerIcon",
-  type: "png",
-});
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export const parse = function parse(arg0, arg1, arg2) {
+  const obj = reviveBigInts;
+  let json;
+  if (null != arg1) {
+    const _JSON = JSON;
+    json = JSON.stringify(arg1);
+  }
+  return obj.decodeAstJson(DiscordMarkdownDefault.parseToAstString(arg0, json, arg2));
+};
+export const unparse = function unparse(arg0) {
+  const obj = DiscordMarkdownDefault;
+  return obj.unparseFromAstString(reviveBigInts.encodeAstJson(arg0));
+};

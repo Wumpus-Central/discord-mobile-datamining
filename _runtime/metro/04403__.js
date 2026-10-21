@@ -1,32 +1,7 @@
 // _runtime/metro/04403__.js
-import _typeof_mod from "04231__.js";
-import requiredArgs_mod from "../04232_requiredArgs.js";
+import _typeof_mod from "04252__.js";
+import requiredArgs_mod from "../04253_requiredArgs.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj = { default: _typeof };
@@ -44,36 +19,13 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function max(arg0) {
+export default function isWeekend(arg0) {
   requiredArgs.default(1, arguments);
-  if (!arg0) {
-    if ("object" === _typeof(arg0)) {
-      if (null !== arg0) {
-        const _Array = Array;
-        const call = slice.call;
-        let arr = typeof call === "unknown" ? slice() : call(arg0);
-      }
-    }
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else {
-    arr = arg0;
+  const day = _typeof.default(arg0).getDay();
+  let tmp3 = 0 === day;
+  if (!tmp3) {
+    tmp3 = 6 === day;
   }
-  const item = arr.forEach((item) => {
-    defaultResult = _typeof.default(item);
-    let isNaNResult = undefined === defaultResult || defaultResult < defaultResult;
-    if (!isNaNResult) {
-      const _isNaN = isNaN;
-      const _Number = Number;
-      isNaNResult = isNaN(Number(defaultResult));
-    }
-  });
-  let date1 = _typeof;
-  if (!_typeof) {
-    const _Date2 = Date;
-    date1 = new Date(NaN);
-  }
-  return date1;
+  return tmp3;
 };
 export default exports.default;

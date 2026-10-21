@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0450d9d5bb66be25511dd04ee055abfd",
-  name: "EmojiDisguisedFaceIcon",
+  hash: "2847796c0590926d37bd1a974db48307",
+  name: "ic_controller_24px",
   type: "png",
 });

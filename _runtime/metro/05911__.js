@@ -1,9 +1,29 @@
 // _runtime/metro/05911__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-const jsxProd = fn(21);
-({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
-const context = noop.createContext((children) => framebus(React, { children: children.children }));
+const Image = _mod17.Image;
 
-export const GHContext = context;
-export const RNSScreensRefContext = noop.createContext(null);
+export const parseAndroidIconToNativeProps = function parseAndroidIconToNativeProps(icon) {
+  if (icon) {
+    if ("imageSource" === icon.type) {
+      const assetSource = Image.resolveAssetSource(icon.imageSource);
+      if (!assetSource) {
+        const _console = console;
+        console.error("[RNScreens] Failed to resolve an asset.");
+      }
+      const obj2 = { imageIconResource: assetSource };
+      return obj2;
+    } else if ("drawableResource" === icon.type) {
+      const obj = { drawableIconResourceName: icon.name };
+      return obj;
+    } else {
+      const _Error = Error;
+      const error = new Error(
+        "[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.",
+      );
+      throw error;
+    }
+  } else {
+    return {};
+  }
+};

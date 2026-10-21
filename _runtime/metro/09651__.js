@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b5ac530e11705d268a2dd9d0cf020b0a",
-  name: "PhoneHangUpIcon",
+  httpServerLocation: "/assets/modules/premium/roadblocks/images",
+  width: 488,
+  height: 240,
+  scales: [1],
+  hash: "1653812d24f945a581bfdacd052d1cd9",
+  name: "app_icons_upsell",
   type: "png",
 });

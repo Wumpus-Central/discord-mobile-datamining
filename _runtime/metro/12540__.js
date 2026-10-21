@@ -1,49 +1,32 @@
 // _runtime/metro/12540__.js
+import _mod12485 from "12485__.js";
+import _mod12523 from "12523__.js";
+import _mod12526 from "12526__.js";
 
-export function makeFifoCache(arg0) {
-  closure_0 = arg0;
-  closure_1 = [];
-  dependencyMap = {};
-  return {
-    add(arg0, arg1) {
-      if (closure_1.length >= closure_0) {
-        do {
-          if (undefined !== closure_1.shift()) {
-            delete tmp[tmp2];
-          }
-        } while (closure_1.length >= closure_0);
-      }
-      if (dependencyMap[arg0]) {
-        const self = this;
-        this.delete(arg0);
-      }
-      closure_1.push(arg0);
-      dependencyMap[arg0] = arg1;
-    },
-    clear() {
-      closure_2 = {};
-      closure_1 = [];
-    },
-    get(arg0) {
-      return dependencyMap[arg0];
-    },
-    size() {
-      return closure_1.length;
-    },
-    delete(arg0) {
-      if (dependencyMap[arg0]) {
-        delete tmp[tmp2];
-        let num = 0;
-        if (0 < closure_1.length) {
-          while (closure_1[num] !== arg0) {
-            num = num + 1;
-          }
-          closure_1.splice(num, 1);
-        }
-        return true;
-      } else {
-        return false;
-      }
-    },
-  };
-}
+require = arg1;
+const dependencyMap = arg6;
+
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod12526.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod12485.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod12523.createEnvelope(obj, items1);
+};

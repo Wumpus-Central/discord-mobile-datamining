@@ -1,89 +1,114 @@
 // _runtime/metro/08208__.js
-import _modDef8179 from "08179__.js";
+import _modDef8207 from "08207__.js";
 
 importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  read(byteLength, sum) {
-    let tmp;
-    if (sum + 4 <= byteLength.byteLength) {
-      const longAt = _modDef8179.getLongAt(byteLength, sum);
-      const obj2 = { value: longAt, description: null };
-      const _HermesInternal = HermesInternal;
-      obj2.description = "" + longAt + "px";
-      tmp = obj2;
-    }
-    const obj3 = {
-      "Image Width": tmp,
-      "Image Height": null,
-      "Bit Depth": null,
-      "Color Type": null,
-      Compression: null,
-      Filter: null,
-      Interlace: null,
-    };
+  read(buffer, sum) {
+    const shortAt = _modDef8207.getShortAt(buffer, sum);
     let tmp6;
-    if (sum + 4 + 4 <= byteLength.byteLength) {
-      const longAt1 = _modDef8179.getLongAt(byteLength, sum + 4);
-      const obj5 = { value: longAt1, description: null };
+    if (15 <= shortAt) {
+      const byteAt = _modDef8207.getByteAt(buffer, sum + 14);
+      const obj2 = { value: byteAt, description: null };
+      const _HermesInternal = HermesInternal;
+      obj2.description = "" + byteAt + "px";
+      tmp6 = obj2;
+      const tmp3Result = _modDef8207;
+    }
+    let tmp9;
+    if (16 <= shortAt) {
+      const byteAt1 = _modDef8207.getByteAt(buffer, sum + 15);
+      const obj3 = { value: byteAt1, description: null };
       const _HermesInternal2 = HermesInternal;
-      obj5.description = "" + longAt1 + "px";
-      tmp6 = obj5;
+      obj3.description = "" + byteAt1 + "px";
+      tmp9 = obj3;
+      const tmp3Result7 = _modDef8207;
     }
-    obj3["Image Height"] = tmp6;
-    let tmp11;
-    if (sum + 8 + 1 <= byteLength.byteLength) {
-      const byteAt = _modDef8179.getByteAt(byteLength, sum + 8);
-      const obj7 = { value: byteAt, description: null };
-      const _HermesInternal3 = HermesInternal;
-      obj7.description = "" + byteAt;
-      tmp11 = obj7;
+    let tmp12;
+    if (9 <= shortAt) {
+      const byteAt2 = _modDef8207.getByteAt(buffer, sum + 7);
+      const tmp3Result8 = _modDef8207;
+      const byteAt3 = _modDef8207.getByteAt(buffer, sum + 7 + 1);
+      const obj4 = { value: 256 * byteAt2 + byteAt3, description: `${tmp13}.${tmp14}` };
+      tmp12 = obj4;
+      const tmp3Result9 = _modDef8207;
     }
-    obj3["Bit Depth"] = tmp11;
-    let tmp16;
-    if (sum + 9 + 1 <= byteLength.byteLength) {
-      const byteAt1 = _modDef8179.getByteAt(byteLength, sum + 9);
-      const obj9 = {
-        value: byteAt1,
-        description:
-          { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] ||
-          "Unknown",
-      };
-      tmp16 = obj9;
-    }
-    obj3["Color Type"] = tmp16;
-    let tmp20;
-    if (sum + 10 + 1 <= byteLength.byteLength) {
-      const byteAt2 = _modDef8179.getByteAt(byteLength, sum + 10);
-      const obj11 = { value: byteAt2, description: null };
-      let str6 = "Unknown";
-      if (0 === byteAt2) {
-        str6 = "Deflate/Inflate";
+    const obj5 = {
+      "JFIF Version": tmp12,
+      "Resolution Unit": null,
+      XResolution: null,
+      YResolution: null,
+      "JFIF Thumbnail Width": null,
+      "JFIF Thumbnail Height": null,
+    };
+    let tmp15;
+    if (10 <= shortAt) {
+      const byteAt4 = _modDef8207.getByteAt(buffer, sum + 9);
+      const obj6 = { value: byteAt4, description: null };
+      let str6 = "None";
+      if (0 !== byteAt4) {
+        let str7 = "inches";
+        if (1 !== byteAt4) {
+          let str8 = "Unknown";
+          if (2 === byteAt4) {
+            str8 = "cm";
+          }
+          str7 = str8;
+        }
+        str6 = str7;
       }
-      obj11.description = str6;
-      tmp20 = obj11;
+      obj6.description = str6;
+      tmp15 = obj6;
+      const tmp3Result10 = _modDef8207;
     }
-    obj3.Compression = tmp20;
-    let tmp24;
-    if (sum + 11 + 1 <= byteLength.byteLength) {
-      const byteAt3 = _modDef8179.getByteAt(byteLength, sum + 11);
-      const obj13 = { value: byteAt3, description: null };
-      let str7 = "Unknown";
-      if (0 === byteAt3) {
-        str7 = "Adaptive";
+    obj5["Resolution Unit"] = tmp15;
+    let tmp17;
+    if (12 <= shortAt) {
+      const shortAt1 = _modDef8207.getShortAt(buffer, sum + 10);
+      const obj7 = { value: shortAt1, description: "" + shortAt1 };
+      tmp17 = obj7;
+      const tmp3Result11 = _modDef8207;
+    }
+    obj5.XResolution = tmp17;
+    let tmp19;
+    if (14 <= shortAt) {
+      const shortAt2 = _modDef8207.getShortAt(buffer, sum + 12);
+      const obj8 = { value: shortAt2, description: "" + shortAt2 };
+      tmp19 = obj8;
+      const tmp3Result12 = _modDef8207;
+    }
+    obj5.YResolution = tmp19;
+    obj5["JFIF Thumbnail Width"] = tmp6;
+    obj5["JFIF Thumbnail Height"] = tmp9;
+    if (undefined !== tmp6) {
+      if (undefined !== tmp9) {
+        const result = 3 * tmp6.value * tmp9.value;
+        let tmp22;
+        if (0 !== result) {
+          if (16 + result <= shortAt) {
+            buffer = buffer.buffer;
+            const obj9 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
+            tmp22 = obj9;
+          }
+        }
+        if (tmp22) {
+          obj5["JFIF Thumbnail"] = tmp22;
+        }
       }
-      obj13.description = str7;
-      tmp24 = obj13;
     }
-    obj3.Filter = tmp24;
-    let tmp28;
-    if (sum + 12 + 1 <= byteLength.byteLength) {
-      const byteAt4 = _modDef8179.getByteAt(byteLength, sum + 12);
-      const obj15 = { value: byteAt4, description: { 0: "Noninterlaced", 1: "Adam7 Interlace" }[byteAt4] || "Unknown" };
-      tmp28 = obj15;
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      while (keys[16] !== undefined) {
+        if (undefined !== obj5[tmp24]) {
+          continue;
+        } else {
+          delete tmp[tmp2];
+          continue;
+        }
+        continue;
+      }
     }
-    obj3.Interlace = tmp28;
-    return obj3;
+    return obj5;
   },
 };

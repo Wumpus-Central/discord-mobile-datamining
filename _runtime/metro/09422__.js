@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1d8ebef8a3957ec5bd51e54121ce2c75",
-  name: "GlobeEarthIcon",
+  hash: "ea051c7bb088368772b9e8a5e140622d",
+  name: "TagIcon",
   type: "png",
 });

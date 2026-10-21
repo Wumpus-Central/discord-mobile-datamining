@@ -1,8 +1,19 @@
 // _runtime/metro/05465__.js
+import _mod19 from "00019__.js";
+import _mod5256 from "05256__.js";
 
-export default function _nonIterableRest() {
-  const typeError = new TypeError(
-    "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
-  );
-  throw typeError;
-}
+_mod19.useCallback;
+
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod5256.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
+    }
+  }, items);
+  return obj2;
+};

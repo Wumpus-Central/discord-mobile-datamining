@@ -1,23 +1,3 @@
 // _runtime/metro/12481__.js
-import _mod12437 from "12437__.js";
-import _mod12467 from "12467__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
-  let result = arg2;
-  const items = [{ type: "client_report" }];
-  if (!arg2) {
-    result = _mod12437.dateTimestampInSeconds();
-  }
-  items[1] = { timestamp: result, discarded_events };
-  if (dsn) {
-    const obj3 = { dsn };
-    let obj4 = obj3;
-  } else {
-    obj4 = {};
-  }
-  const items1 = [items];
-  return _mod12467.createEnvelope(obj4, items1);
-};
+export const SDK_VERSION = "8.55.0";

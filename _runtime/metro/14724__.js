@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_boosting/native/images",
-  width: 23,
-  height: 45,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "05cd5f5720d5fb81034c2d2412372f33",
-  name: "sparkle_star_elongated",
+  hash: "6d92319c85fd42e305e389df8a64c64a",
+  name: "badge",
   type: "png",
 });

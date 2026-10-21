@@ -1,27 +1,51 @@
 // _runtime/metro/08166__.js
-import _modDef8165 from "08165__.js";
-import _modDef8167 from "08167__.js";
+import _mod8162 from "08162__.js";
+import _mod8163 from "08163__.js";
 
-importDefault = arg2;
+require = arg1;
 const dependencyMap = arg6;
 
-export default {
-  isTiffFile(byteLength) {
-    let tmp = byteLength;
-    if (tmp) {
-      tmp = byteLength.byteLength >= 4;
+export const isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
+  if (!checkByFileTypeResult1) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
     }
-    if (tmp) {
-      const uint16 = byteLength.getUint16(0);
-      tmp = byteLength.getUint16(2, uint16 === _modDef8167.LITTLE_ENDIAN) === 42;
+    let checkByFileTypeResult = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod8162.getFileChunk(fileChunk);
+      const FileTypes2 = _mod8163.FileTypes;
+      checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
     }
-    return tmp;
-  },
-  findTiffOffsets() {
-    if (_modDef8165.USE_EXIF) {
-      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
-    } else {
-      return {};
-    }
-  },
+    checkByFileTypeResult1 = checkByFileTypeResult;
+  }
+  return checkByFileTypeResult1;
+};
+export const isAMR = function isAMR(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "amr");
+};
+export const isFLAC = function isFLAC(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flac");
+};
+export const isM4A = function isM4A(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4a");
+};
+export const isMP3 = function isMP3(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mp3");
+};
+export const isWAV = function isWAV(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "wav");
 };

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3, 4],
-  hash: "3b3008631d50089085453fd7d277929c",
-  name: "stack-nav-close",
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 49,
+  height: 48.5,
+  scales: [2, 3],
+  hash: "6922badb2f007833b3becc6f00bcb5a4",
+  name: "img_custom_app_icons",
   type: "png",
 });

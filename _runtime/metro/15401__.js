@@ -1,12 +1,25 @@
 // _runtime/metro/15401__.js
-import _mod15396 from "15396__.js";
-import _mod15402 from "15402__.js";
+import e from "../01174_e.js";
 
-export default (arg0) => {
-  if (_mod15396(arg0)) {
-    return arg0;
+e.__extends(function MissingLocaleDataError() {
+  const self = this;
+  let tmp2 = null !== Error;
+  if (!tmp2) {
+    if (!tmp2) {
+      tmp2 = self;
+    }
+    tmp2.type = "MISSING_LOCALE_DATA";
+    return tmp2;
   } else {
-    const tmp6 = new TypeError(_mod15402(arg0) + " is not a function");
-    throw tmp6;
+    const apply = Error.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
   }
+}, Error);
+
+export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
+  return "MISSING_LOCALE_DATA" === type.type;
 };

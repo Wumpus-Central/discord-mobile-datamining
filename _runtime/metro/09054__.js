@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "cc6b65382ac11a7c39e085140d379e5a",
-  name: "messenger",
+  hash: "59ef37b759831ec882fc480e1d1185da",
+  name: "ic_share_ios",
   type: "png",
 });

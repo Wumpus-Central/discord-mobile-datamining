@@ -1,4 +1,11 @@
 // _runtime/metro/15153__.js
-import _mod15143 from "15143__.js";
+import registerAsset from "01134__.js";
 
-export default (arg0, arg1) => new _mod15143(arg0, arg1).major;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "bc4f103d29d98767eb7ae693f67ae198",
+  name: "NitroGem2",
+  type: "lottie",
+});

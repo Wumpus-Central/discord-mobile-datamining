@@ -1,45 +1,38 @@
 // _runtime/metro/15455__.js
-import _typeof from "15456__.js";
+import withoutSetter from "../15456_withoutSetter.js";
+import _mod15467 from "15467__.js";
+import _mod15469 from "15469__.js";
+import _mod15472 from "15472__.js";
+import _mod15475 from "15475__.js";
+import _mod15476 from "15476__.js";
 
-if (_typeof) {
-  if (typeof _typeof === "object") {
-    let _default = _typeof;
-  }
-  let obj = globalThis;
-  const _Intl = Intl;
-  if (typeof Intl === "undefined") {
-    if (undefined !== global) {
-      obj = { PluralRules: _default.default };
-      global.Intl = obj;
-      _default = _default.default;
-      _default.polyfill = true;
-    } else {
-      const _window = window;
-      if (typeof window === "undefined") {
-        const self = this;
-        const obj2 = { PluralRules: _default.default };
-        this.Intl = obj2;
-      }
-    }
-    obj = { PluralRules: _default.default };
-    obj.window.Intl = obj;
-  } else {
-    const _Intl5 = Intl;
-    if (Intl.PluralRules) {
-      const _Intl2 = Intl;
-      if (Intl.PluralRules.prototype.selectRange) {
-        const items = ["en", "es", "ru", "zh"];
-        const _Intl4 = Intl;
-        if (PluralRules.supportedLocalesOf(items).length < items.length) {
-          const _Intl6 = Intl;
-          Intl.PluralRules = _default.default;
-          _default.default.polyfill = true;
+let closure_3 = withoutSetter("toPrimitive");
+
+export default (arg0, arg1) => {
+  if (_mod15467(arg0)) {
+    if (!_mod15469(arg0)) {
+      let str = arg1;
+      const tmp4 = _mod15472(arg0, closure_3);
+      if (tmp4) {
+        if (undefined === str) {
+          str = "default";
         }
+        const tmp5 = _mod15475(tmp4, arg0, str);
+        if (_mod15467(tmp5)) {
+          if (!_mod15469(tmp5)) {
+            const tmp9 = new TypeError("Can't convert object to primitive value");
+            throw tmp9;
+          }
+        }
+        return tmp5;
+      } else {
+        let str2 = str;
+        if (undefined === str) {
+          str2 = "number";
+        }
+        return _mod15476(arg0, str2);
       }
     }
-    const _Intl3 = Intl;
-    Intl.PluralRules = _default.default;
-    _default.default.polyfill = true;
   }
-}
-_default = { default: _typeof };
+  return arg0;
+};

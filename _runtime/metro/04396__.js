@@ -1,36 +1,12 @@
 // _runtime/metro/04396__.js
-import module_4235_mod from "04235__.js";
-import module_4386_mod from "04386__.js";
-import requiredArgs_mod from "../04232_requiredArgs.js";
+import 02073__ from "02073__.js";
 
-let module_4235 = module_4235_mod;
-if (!module_4235) {
-  const obj = { default: module_4235 };
-  let tmp3 = obj;
+if (!module_2073) {
+  const obj2 = { default: module_2073 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4235;
+  obj = module_2073;
 }
-module_4235 = tmp3;
-let module_4386 = module_4386_mod;
-if (!module_4386) {
-  const obj2 = { default: module_4386 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4386;
-}
-module_4386 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-let c3 = 60000;
 
-export default function addMinutes(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4386.default(interval, module_4235.default(arg1) * c3);
-};
+export default { date: obj.default({ formats: { full: "EEEE, do MMMM y '\u0440.'", long: "do MMMM y '\u0440.'", medium: "d MMM y '\u0440.'", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u043E' {{time}}", long: "{{date}} '\u043E' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

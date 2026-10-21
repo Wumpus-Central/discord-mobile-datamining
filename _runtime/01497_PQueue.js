@@ -55,7 +55,7 @@ class VBox {
 }
 class CMap {
   constructor() {
-    f140016 = (vbox, vbox2) => {
+    f140485 = (vbox, vbox2) => {
       vbox = vbox.vbox;
       vbox2 = vbox.vbox;
       const vbox3 = vbox2.vbox;
@@ -364,11 +364,11 @@ export default function quantize(arr, arg1) {
   if (arr.length) {
     if (arg1 >= 2) {
       if (arg1 <= 256) {
-        function iter(activeDotStyle, arg1) {
+        function iter(dependencyMap, arg1) {
           let num = 0;
           let num2 = 1;
           while (true) {
-            let arr = activeDotStyle.pop();
+            let arr = dependencyMap.pop();
             if (arr.count()) {
               let tmp7;
               if (arr.count()) {
@@ -548,10 +548,10 @@ export default function quantize(arr, arg1) {
               if (!tmp56) {
                 break;
               } else {
-                let arr2 = activeDotStyle.push(tmp56);
+                let arr2 = dependencyMap.push(tmp56);
                 let sum11 = num2;
                 if (tmp57) {
-                  let arr3 = activeDotStyle.push(tmp57);
+                  let arr3 = dependencyMap.push(tmp57);
                   sum11 = num2 + 1;
                 }
                 if (sum11 < arg1) {
@@ -560,7 +560,7 @@ export default function quantize(arr, arg1) {
                 }
               }
             } else {
-              let arr4 = activeDotStyle.push(arr);
+              let arr4 = dependencyMap.push(arr);
               sum12 = num + 1;
               tmp5 = num2;
             }

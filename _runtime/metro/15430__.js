@@ -1,26 +1,29 @@
 // _runtime/metro/15430__.js
-import _mod15393 from "15393__.js";
-import getOwnPropertyDescriptor_mod from "15373__.js";
+const require = globalThis.__r;
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod15393(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {}.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-  }
-  tmp3 = tmp5;
-}
+const require = arg1;
+const dependencyMap = arg6;
 
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) =>
+    (function isSupportedNumberingSystem(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-nu-");
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+          if ("123" === memoizedNumberFormat.format(123)) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
+  );
+};

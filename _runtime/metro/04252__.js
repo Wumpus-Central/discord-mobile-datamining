@@ -1,30 +1,73 @@
 // _runtime/metro/04252__.js
-const obj = { lessThanXSeconds: { standalone: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" }, withPreposition: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" } }, xSeconds: { standalone: { one: "1 Sekunde", other: "{{count}} Sekunden" }, withPreposition: { one: "1 Sekunde", other: "{{count}} Sekunden" } }, halfAMinute: { standalone: "halbe Minute", withPreposition: "halben Minute" }, lessThanXMinutes: { standalone: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" }, withPreposition: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" } }, xMinutes: { standalone: { one: "1 Minute", other: "{{count}} Minuten" }, withPreposition: { one: "1 Minute", other: "{{count}} Minuten" } }, aboutXHours: { standalone: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" }, withPreposition: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" } }, xHours: { standalone: { one: "1 Stunde", other: "{{count}} Stunden" }, withPreposition: { one: "1 Stunde", other: "{{count}} Stunden" } }, xDays: { standalone: { one: "1 Tag", other: "{{count}} Tage" }, withPreposition: { one: "1 Tag", other: "{{count}} Tagen" } }, aboutXWeeks: { standalone: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" }, withPreposition: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" } }, xWeeks: { standalone: { one: "1 Woche", other: "{{count}} Wochen" }, withPreposition: { one: "1 Woche", other: "{{count}} Wochen" } }, aboutXMonths: { standalone: { one: "etwa 1 Monat", other: "etwa {{count}} Monate" }, withPreposition: { one: "etwa 1 Monat", other: "etwa {{count}} Monaten" } }, xMonths: { standalone: { one: "1 Monat", other: "{{count}} Monate" }, withPreposition: { one: "1 Monat", other: "{{count}} Monaten" } }, aboutXYears: { standalone: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahre" }, withPreposition: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahren" } }, xYears: { standalone: { one: "1 Jahr", other: "{{count}} Jahre" }, withPreposition: { one: "1 Jahr", other: "{{count}} Jahren" } }, overXYears: { standalone: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahre" }, withPreposition: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahren" } }, almostXYears: { standalone: { one: "fast 1 Jahr", other: "fast {{count}} Jahre" }, withPreposition: { one: "fast 1 Jahr", other: "fast {{count}} Jahren" } } };
+import requiredArgs_mod from "../04253_requiredArgs.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (null != addSuffix) {
-    if (addSuffix.addSuffix) {
-      let standalone = obj[arg0].withPreposition;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
     }
-    if (typeof standalone === "string") {
-      let tmp5 = standalone;
-      if (null != addSuffix) {
-        tmp5 = standalone;
-        if (addSuffix.addSuffix) {
-          if (!addSuffix.comparison) {
-            let text = `vor ${standalone}`;
-          }
-          text = `in ${standalone}`;
-        }
-      }
-      return tmp5;
-    } else if (1 === arg1) {
-      let one = standalone.one;
-    } else {
-      const _String = String;
-      one = standalone.other.replace("{{count}}", String(arg1));
-    }
+    return _typeof(arg0);
   }
-  standalone = obj[arg0].standalone;
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
+}
+requiredArgs = tmp3;
+
+export default function toDate(getTime) {
+  requiredArgs.default(1, arguments);
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(getTime);
+  if (!(getTime instanceof Date)) {
+    if ("object" === _typeof(getTime)) {
+      return date;
+    }
+    if (typeof getTime !== "number") {
+      if ("[object Number]" !== tmp2) {
+        let tmp4 = typeof getTime !== "string";
+        if (typeof getTime !== "string") {
+          tmp4 = "[object String]" !== tmp2;
+        }
+        if (!tmp4) {
+          const _console = console;
+          tmp4 = typeof console === "undefined";
+        }
+        if (!tmp4) {
+          const _console2 = console;
+          console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
+          const _console3 = console;
+          const _Error = Error;
+          const error = new Error();
+          console.warn(error.stack);
+        }
+        const _Date = Date;
+        date = new Date(NaN);
+      }
+    }
+    const _Date2 = Date;
+    date = new Date(getTime);
+  }
+  date = new Date(getTime.getTime());
 };
 export default exports.default;

@@ -1,94 +1,47 @@
 // _runtime/metro/05270__.js
-import GestureDetectorType from "../05271_GestureDetectorType.js";
-import NativeDetector2 from "../05313_NativeDetector.js";
-import VirtualDetector from "../05337_VirtualDetector.js";
-import transformLongPressProps from "../05339_transformLongPressProps.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import noop from "00019__.js";
+import value2 from "../05252_value2.js";
 
-const require = globalThis.__r;
-
+const cancelAnimation = tmp3(1658);
 require = fn;
-let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
-const useEffect = fn(19).useEffect;
-const jsx = fn(21).jsx;
-
-export default function createNativeWrapper(displayName, arg1) {
-  _require = displayName;
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
+const dependencyMap = arg6;
+fn = function n(arg0) {
+  ({ point, configs, velocity } = arg0);
+  if (velocity === undefined) {
+    velocity = 0;
   }
-  let Native = Intercepting;
-  if (Intercepting === undefined) {
-    Native = require("GestureDetectorType").GestureDetectorType.Native;
+  ({ overrideReduceMotion, onComplete } = arg0);
+  if (!configs) {
+    configs = value2.ANIMATION_CONFIGS;
   }
-  let str;
-  if (displayName != null) {
-    str = displayName.displayName;
+  if (overrideReduceMotion) {
+    configs.reduceMotion = overrideReduceMotion;
   }
-  if (!str) {
-    let name;
-    if (displayName != null) {
-      const render = displayName.render;
-      if (render != null) {
-        name = render.name;
-      }
+  if (!("duration" in configs)) {
+    if (!("easing" in configs)) {
+      let TIMING = value2.ANIMATION_METHOD.SPRING;
     }
-    str = name;
-  }
-  if (!str) {
-    let tmp4 = typeof displayName === "string";
-    if (typeof displayName === "string") {
-      tmp4 = displayName;
+    if (TIMING === value2.ANIMATION_METHOD.TIMING) {
+      let withTimingResult = cancelAnimation.withTiming(point, configs, onComplete);
+      const tmp3Result = cancelAnimation;
+    } else {
+      const _Object = Object;
+      const obj = { velocity };
+      withTimingResult = cancelAnimation.withSpring(point, Object.assign(obj, configs), onComplete);
+      const tmp3Result2 = cancelAnimation;
     }
-    str = tmp4;
+    return withTimingResult;
   }
-  if (!str) {
-    str = "ComponentWrapper";
-  }
-  class ComponentWrapper {
-    constructor(arg0) {
-      closure_0 = displayName;
-      onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      keys = Object.keys(closure_3(displayName, closure_2));
-      obj = { gestureHandlerProps: null, childProps: null };
-      obj1 = {};
-      merged = Object.assign(closure_1);
-      obj.gestureHandlerProps = obj1;
-      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
-      reduced = keys.reduce(() => { ... }, obj);
-      ({ gestureHandlerProps, childProps } = reduced);
-      if (undefined === gestureHandlerProps.disableReanimated) {
-        flag = true;
-        gestureHandlerProps.disableReanimated = true;
-      }
-      tmp3 = closure_0;
-      tmp4 = closure_1;
-      obj3 = closure_0(closure_1[5]);
-      nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
-      closure_2 = nativeGesture;
-      items = [, ];
-      items[0] = nativeGesture;
-      items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      tmp6 = useEffect(() => { ... }, items);
-      tmp7 = Native;
-      if (Native === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
-        NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
-      } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
-        NativeDetector = tmp3(tmp4[6]).VirtualDetector;
-      } else {
-        NativeDetector = tmp3(tmp4[7]).NativeDetector;
-      }
-      obj6 = { gesture: nativeGesture, children: null };
-      obj7 = {};
-      merged1 = Object.assign(childProps);
-      obj7.ref = displayName.ref;
-      obj6.children = jsx(closure_0, obj7);
-      return jsx(NativeDetector, obj6);
-    }
-  }
-  ComponentWrapper.displayName = str;
-  return ComponentWrapper;
+  TIMING = value2.ANIMATION_METHOD.TIMING;
 };
+fn.__closure = {
+  ANIMATION_CONFIGS: fn(5252).ANIMATION_CONFIGS,
+  ANIMATION_METHOD: fn(5252).ANIMATION_METHOD,
+  withTiming: fn(1658).withTiming,
+  withSpring: fn(1658).withSpring,
+};
+fn.__workletHash = 17032227615993;
+fn.__initData = {
+  code: "function pnpm_animateTs1({point:point,configs:configs,velocity=0,overrideReduceMotion:overrideReduceMotion,onComplete:onComplete}){const{ANIMATION_CONFIGS,ANIMATION_METHOD,withTiming,withSpring}=this.__closure;if(!configs){configs=ANIMATION_CONFIGS;}if(overrideReduceMotion){configs.reduceMotion=overrideReduceMotion;}const type='duration'in configs||'easing'in configs?ANIMATION_METHOD.TIMING:ANIMATION_METHOD.SPRING;if(type===ANIMATION_METHOD.TIMING){return withTiming(point,configs,onComplete);}return withSpring(point,Object.assign({velocity:velocity},configs),onComplete);}",
+};
+
+export const animate = fn;

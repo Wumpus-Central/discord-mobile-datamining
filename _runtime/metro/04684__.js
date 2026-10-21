@@ -1,24 +1,105 @@
 // _runtime/metro/04684__.js
-let closure_0 = { lessThanXSeconds: { one: "\u4E0D\u5230 1 \u79D2", other: "\u4E0D\u5230 {{count}} \u79D2" }, xSeconds: { one: "1 \u79D2", other: "{{count}} \u79D2" }, halfAMinute: "\u534A\u5206\u949F", lessThanXMinutes: { one: "\u4E0D\u5230 1 \u5206\u949F", other: "\u4E0D\u5230 {{count}} \u5206\u949F" }, xMinutes: { one: "1 \u5206\u949F", other: "{{count}} \u5206\u949F" }, xHours: { one: "1 \u5C0F\u65F6", other: "{{count}} \u5C0F\u65F6" }, aboutXHours: { one: "\u5927\u7EA6 1 \u5C0F\u65F6", other: "\u5927\u7EA6 {{count}} \u5C0F\u65F6" }, xDays: { one: "1 \u5929", other: "{{count}} \u5929" }, aboutXWeeks: { one: "\u5927\u7EA6 1 \u4E2A\u661F\u671F", other: "\u5927\u7EA6 {{count}} \u4E2A\u661F\u671F" }, xWeeks: { one: "1 \u4E2A\u661F\u671F", other: "{{count}} \u4E2A\u661F\u671F" }, aboutXMonths: { one: "\u5927\u7EA6 1 \u4E2A\u6708", other: "\u5927\u7EA6 {{count}} \u4E2A\u6708" }, xMonths: { one: "1 \u4E2A\u6708", other: "{{count}} \u4E2A\u6708" }, aboutXYears: { one: "\u5927\u7EA6 1 \u5E74", other: "\u5927\u7EA6 {{count}} \u5E74" }, xYears: { one: "1 \u5E74", other: "{{count}} \u5E74" }, overXYears: { one: "\u8D85\u8FC7 1 \u5E74", other: "\u8D85\u8FC7 {{count}} \u5E74" }, almostXYears: { one: "\u5C06\u8FD1 1 \u5E74", other: "\u5C06\u8FD1 {{count}} \u5E74" } };
+import subDays_mod from "../04623_subDays.js";
+import subMonths_mod from "../04685_subMonths.js";
+import requiredArgs_mod from "../04253_requiredArgs.js";
+import module_4256_mod from "04256__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp}前`;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
         }
-        text = `${tmp}内`;
+        return str;
       }
     }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
+    str = typeof arg0;
+  };
+}
+let subDays = subDays_mod;
+if (!subDays) {
+  const obj = { default: subDays };
+  let tmp3 = obj;
+} else {
+  tmp3 = subDays;
+}
+subDays = tmp3;
+let subMonths = subMonths_mod;
+if (!subMonths) {
+  const obj2 = { default: subMonths };
+  let tmp5 = obj2;
+} else {
+  tmp5 = subMonths;
+}
+subMonths = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let module_4256 = module_4256_mod;
+if (!module_4256) {
+  const obj4 = { default: module_4256 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_4256;
+}
+module_4256 = tmp9;
+
+export default function sub(arg0, years) {
+  requiredArgs.default(2, arguments);
+  if (years) {
+    if ("object" === _typeof(years)) {
+      let num = 0;
+      if (years.years) {
+        num = module_4256.default(years.years);
+      }
+      let num2 = 0;
+      if (years.months) {
+        num2 = module_4256.default(years.months);
+      }
+      let num3 = 0;
+      if (years.weeks) {
+        num3 = module_4256.default(years.weeks);
+      }
+      let num4 = 0;
+      if (years.days) {
+        num4 = module_4256.default(years.days);
+      }
+      let num5 = 0;
+      if (years.hours) {
+        num5 = module_4256.default(years.hours);
+      }
+      let num6 = 0;
+      if (years.minutes) {
+        num6 = module_4256.default(years.minutes);
+      }
+      let num7 = 0;
+      if (years.seconds) {
+        num7 = module_4256.default(years.seconds);
+      }
+      const _Date = Date;
+      const sum = num7 + 60 * (num6 + 60 * num5);
+      const date = new Date(subDays.default(subMonths.default(arg0, num2 + 12 * num), num4 + 7 * num3).getTime() - 1000 * sum);
+      return date;
+    }
   }
+  return new Date(NaN);
 };
 export default exports.default;

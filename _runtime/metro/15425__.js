@@ -1,6 +1,23 @@
 // _runtime/metro/15425__.js
-import _mod15373 from "15373__.js";
-import _mod15374 from "15374__.js";
 
-export default _mod15373 &&
-  _mod15374(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);
+export const calendars = [
+  "buddhist",
+  "chinese",
+  "coptic",
+  "dangi",
+  "ethioaa",
+  "ethiopic",
+  "gregory",
+  "hebrew",
+  "indian",
+  "islamic",
+  "islamic-civil",
+  "islamic-rgsa",
+  "islamic-tbla",
+  "islamic-umalqura",
+  "islamicc",
+  "iso8601",
+  "japanese",
+  "persian",
+  "roc",
+];

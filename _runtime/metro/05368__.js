@@ -1,12 +1,32 @@
 // _runtime/metro/05368__.js
-import ComposedGestureName from "../05317_ComposedGestureName.js";
-import _mod5366 from "05366__.js";
+import ComposedGestureName from "../05338_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../05347_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod5362 from "05362__.js";
 
 require = arg1;
 const dependencyMap = arg6;
+function transformLongPressProps(shouldCancelWhenOutside) {
+  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
+    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
+  }
+  return shouldCancelWhenOutside;
+}
+const items = [
+  ["minDuration", "minDurationMs"],
+  ["maxDistance", "maxDist"],
+];
+const map = new Map(items);
+let closure_4 = {};
 
-export const useSimultaneousGestures = function useSimultaneousGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
-  return _mod5366.useComposedGesture.apply(items1);
+export const useLongPressGesture = function useLongPressGesture() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = closure_4;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(
+    tmp,
+    map,
+    transformLongPressProps,
+  );
+  return _mod5362.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
 };

@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
+  httpServerLocation: "/assets/modules/premium/promotions/third_party/code_blurple",
   scales: [1],
-  hash: "7842db8768a6fffa531f69edeeb4ab2b",
-  name: "pl.messages.7842db8768a6fffa531f69edeeb4ab2b.compiled.messages",
+  hash: "b59878279e93cc37a1ec280690b41dfd",
+  name: "CodeBlurple.compiled.messages",
   type: "jsona",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "6a44051f0a6b82f14b7f681cb1af8576",
-  name: "img_classic_mobile",
+  hash: "dcf38117e5a3cdcdf164b333d0b65b5d",
+  name: "LinkExternalMediumIcon",
   type: "png",
 });

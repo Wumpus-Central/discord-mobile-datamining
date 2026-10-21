@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/gifting",
+  width: 270,
+  height: 134,
   scales: [2, 3],
-  hash: "aa9c26c29990ba7a6584e51ab5c56efa",
-  name: "debug",
+  hash: "05b73f8565eab54ae61e59eb9ff991a8",
+  name: "img_premium_embed_background_dark",
   type: "png",
 });

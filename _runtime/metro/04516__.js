@@ -1,33 +1,33 @@
 // _runtime/metro/04516__.js
-import differenceInCalendarWeeks_mod from "../04420_differenceInCalendarWeeks.js";
-import lastDayOfMonth_mod from "../04517_lastDayOfMonth.js";
-import startOfMonth_mod from "../04447_startOfMonth.js";
-import requiredArgs_mod from "../04232_requiredArgs.js";
+import _typeof_mod from "04252__.js";
+import startOfYear_mod from "../04471_startOfYear.js";
+import differenceInCalendarDays_mod from "../04414_differenceInCalendarDays.js";
+import requiredArgs_mod from "../04253_requiredArgs.js";
 
-let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
-if (!differenceInCalendarWeeks) {
-  const obj = { default: differenceInCalendarWeeks };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarWeeks;
+  tmp3 = _typeof;
 }
-differenceInCalendarWeeks = tmp3;
-let lastDayOfMonth = lastDayOfMonth_mod;
-if (!lastDayOfMonth) {
-  const obj2 = { default: lastDayOfMonth };
+_typeof = tmp3;
+let startOfYear = startOfYear_mod;
+if (!startOfYear) {
+  const obj2 = { default: startOfYear };
   let tmp5 = obj2;
 } else {
-  tmp5 = lastDayOfMonth;
+  tmp5 = startOfYear;
 }
-lastDayOfMonth = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
+startOfYear = tmp5;
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  const obj3 = { default: differenceInCalendarDays };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfMonth;
+  tmp7 = differenceInCalendarDays;
 }
-startOfMonth = tmp7;
+differenceInCalendarDays = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -37,8 +37,9 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp9;
 
-export default function getWeeksInMonth(arg0, arg1) {
+export default function getDayOfYear(arg0) {
   requiredArgs.default(1, arguments);
-  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+  const defaultResult1 = _typeof.default(arg0);
+  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
 };
 export default exports.default;

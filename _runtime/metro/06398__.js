@@ -1,46 +1,19 @@
 // _runtime/metro/06398__.js
-import _mod1308 from "01308__.js";
-import _mod1340 from "01340__.js";
+import _mod1339 from "01339__.js";
 
-let closure_2 = Object.assign({
-  "[[Configurable]]": true,
-  "[[Enumerable]]": true,
-  "[[Get]]": true,
-  "[[Set]]": true,
-  "[[Value]]": true,
-  "[[Writable]]": true,
-});
-
-export default function isPropertyDescriptor(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      for (const key10001 in arg0) {
-        if (!_mod1340(arg0, key10001)) {
-          continue;
-        } else if (closure_2[key10001]) {
-          continue;
-        } else {
-          let flag = false;
-          return false;
-        }
-        continue;
-      }
-      let tmp4 = _mod1340(obj, "[[Value]]");
-      if (!tmp4) {
-        tmp4 = _mod1340(obj, "[[Writable]]");
-      }
-      let tmp5 = _mod1340(obj, "[[Get]]");
-      if (!tmp5) {
-        tmp5 = _mod1340(obj, "[[Set]]");
-      }
-      if (tmp4) {
-        if (tmp5) {
-          const tmp8 = new _mod1308("Property Descriptors may not be both accessor and data descriptors");
-          throw tmp8;
-        }
-      }
-      return true;
-    }
+export default function isFinite(num) {
+  let tmp = typeof num === "number";
+  if (typeof num !== "number") {
+    tmp = typeof num === "bigint";
   }
-  return false;
+  if (tmp) {
+    tmp = !_mod1339(num);
+  }
+  if (tmp) {
+    tmp = num !== Infinity;
+  }
+  if (tmp) {
+    tmp = num !== -Infinity;
+  }
+  return tmp;
 }

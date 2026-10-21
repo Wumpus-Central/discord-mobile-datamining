@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/polls/native/images",
-  width: 138,
-  height: 130,
-  scales: [2, 3],
-  hash: "2b9e354438218d1560976bef68047eb2",
-  name: "load-issue-dark",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "2650502107a79cae01df0fa151a7570a",
+  name: "ic_file_small_video",
   type: "png",
 });

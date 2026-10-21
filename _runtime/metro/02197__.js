@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/virtual_currency/web/orb_wallet/messages",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
   scales: [1],
-  hash: "8b653ad07b8967a77e48f82288144586",
-  name: "OrbWallet.compiled.messages",
+  hash: "c31581375cc5475ee96c255bc929dc10",
+  name: "pt-BR.messages.c31581375cc5475ee96c255bc929dc10.compiled.messages",
   type: "jsona",
 });

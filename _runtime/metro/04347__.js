@@ -1,28 +1,24 @@
 // _runtime/metro/04347__.js
-import 02077__ from "02077__.js";
+let closure_0 = { lessThanXSeconds: { one: "mindre enn ett sekund", other: "mindre enn {{count}} sekunder" }, xSeconds: { one: "ett sekund", other: "{{count}} sekunder" }, halfAMinute: "et halvt minutt", lessThanXMinutes: { one: "mindre enn ett minutt", other: "mindre enn {{count}} minutter" }, xMinutes: { one: "ett minutt", other: "{{count}} minutter" }, aboutXHours: { one: "omtrent en time", other: "omtrent {{count}} timer" }, xHours: { one: "en time", other: "{{count}} timer" }, xDays: { one: "en dag", other: "{{count}} dager" }, aboutXWeeks: { one: "omtrent en uke", other: "omtrent {{count}} uker" }, xWeeks: { one: "en uke", other: "{{count}} uker" }, aboutXMonths: { one: "omtrent en m\u00E5ned", other: "omtrent {{count}} m\u00E5neder" }, xMonths: { one: "en m\u00E5ned", other: "{{count}} m\u00E5neder" }, aboutXYears: { one: "omtrent ett \u00E5r", other: "omtrent {{count}} \u00E5r" }, xYears: { one: "ett \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "over ett \u00E5r", other: "over {{count}} \u00E5r" }, almostXYears: { one: "nesten ett \u00E5r", other: "nesten {{count}} \u00E5r" } };
 
-if (!module_2077) {
-  const obj2 = { default: module_2077 };
-  let obj = obj2;
-} else {
-  obj = module_2077;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return String(arg0);
-  },
-  era: obj.default({ values: { narrow: ["\u00CE", "D"], abbreviated: ["\u00CE.d.C.", "D.C."], wide: ["\u00CEnainte de Cristos", "Dup\u0103 Cristos"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["primul trimestru", "al doilea trimestru", "al treilea trimestru", "al patrulea trimestru"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} siden`;
+        }
+        text = `om ${tmp}`;
+      }
     }
-  }),
-  month: obj.default({ values: { narrow: ["I", "F", "M", "A", "M", "I", "I", "A", "S", "O", "N", "D"], abbreviated: ["ian", "feb", "mar", "apr", "mai", "iun", "iul", "aug", "sep", "oct", "noi", "dec"], wide: ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["d", "l", "m", "m", "j", "v", "s"], short: ["du", "lu", "ma", "mi", "jo", "vi", "s\u00E2"], abbreviated: ["dum", "lun", "mar", "mie", "joi", "vin", "s\u00E2m"], wide: ["duminic\u0103", "luni", "mar\u021Bi", "miercuri", "joi", "vineri", "s\u00E2mb\u0103t\u0103"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "ami", morning: "dim", afternoon: "da", evening: "s", night: "n" }, abbreviated: { am: "AM", pm: "PM", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, wide: { am: "a.m.", pm: "p.m.", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, abbreviated: { am: "AM", pm: "PM", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, wide: { am: "a.m.", pm: "p.m.", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" } }, defaultFormattingWidth: "wide" })
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
+  }
 };
-
-export default date;
 export default exports.default;

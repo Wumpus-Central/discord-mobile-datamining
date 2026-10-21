@@ -1,13 +1,33 @@
 // _runtime/metro/05912__.js
-import _mod17 from "00017__.js";
-import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import get_ActivityIndicator from "00017__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onFinishTransitioning: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { nativeContainerBackgroundColor: _mod26.colorAttribute };
+({ Platform, UIManager: closure_0 } = get_ActivityIndicator);
 
-export default module_65.get("RNSScreenStack", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const isNativePlatformSupported = true;
+export const enableScreens = function enableScreens() {
+  flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+  if (flag) {
+    flag = !viewManagerConfig.getViewManagerConfig("RNSScreen");
+  }
+  if (flag) {
+    const _console = console;
+    console.error(
+      "Screen native module hasn't been linked. Please check the react-native-screens README for more details",
+    );
+  }
+};
+export function enableFreeze() {
+  flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+}
+export function screensEnabled() {
+  return flag;
+}
+export function freezeEnabled() {
+  return flag;
+}

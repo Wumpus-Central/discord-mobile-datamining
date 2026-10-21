@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e0c0be280ef4e57b36ea99cdd95bd9e8",
-  name: "AppsSpoilerIcon",
+  hash: "e06e2e681624b5a052b477a4af8dc512",
+  name: "ThreadLockIcon",
   type: "png",
 });

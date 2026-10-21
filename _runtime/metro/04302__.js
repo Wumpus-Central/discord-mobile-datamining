@@ -1,35 +1,48 @@
 // _runtime/metro/04302__.js
-let closure_0 = { lessThanXSeconds: { one: "1\u79D2\u672A\u6E80", other: "{{count}}\u79D2\u672A\u6E80", oneWithSuffix: "\u7D041\u79D2", otherWithSuffix: "\u7D04{{count}}\u79D2" }, xSeconds: { one: "1\u79D2", other: "{{count}}\u79D2" }, halfAMinute: "30\u79D2", lessThanXMinutes: { one: "1\u5206\u672A\u6E80", other: "{{count}}\u5206\u672A\u6E80", oneWithSuffix: "\u7D041\u5206", otherWithSuffix: "\u7D04{{count}}\u5206" }, xMinutes: { one: "1\u5206", other: "{{count}}\u5206" }, aboutXHours: { one: "\u7D041\u6642\u9593", other: "\u7D04{{count}}\u6642\u9593" }, xHours: { one: "1\u6642\u9593", other: "{{count}}\u6642\u9593" }, xDays: { one: "1\u65E5", other: "{{count}}\u65E5" }, aboutXWeeks: { one: "\u7D041\u9031\u9593", other: "\u7D04{{count}}\u9031\u9593" }, xWeeks: { one: "1\u9031\u9593", other: "{{count}}\u9031\u9593" }, aboutXMonths: { one: "\u7D041\u304B\u6708", other: "\u7D04{{count}}\u304B\u6708" }, xMonths: { one: "1\u304B\u6708", other: "{{count}}\u304B\u6708" }, aboutXYears: { one: "\u7D041\u5E74", other: "\u7D04{{count}}\u5E74" }, xYears: { one: "1\u5E74", other: "{{count}}\u5E74" }, overXYears: { one: "1\u5E74\u4EE5\u4E0A", other: "{{count}}\u5E74\u4EE5\u4E0A" }, almostXYears: { one: "1\u5E74\u8FD1\u304F", other: "{{count}}\u5E74\u8FD1\u304F" } };
+import 02076__ from "02076__.js";
 
-export default function formatDistance(arg0, arg1, arg2) {
-  let obj = arg2;
-  if (!arg2) {
-    obj = {};
-  }
-  if (typeof closure_0[arg0] === "string") {
-    if (!obj.addSuffix) {
-      return tmp2;
+if (!module_2076) {
+  const obj2 = { default: module_2076 };
+  let obj = obj2;
+} else {
+  obj = module_2076;
+}
+const date = {
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    if (0 === NumberResult) {
+      return "0";
     } else {
-      if (!obj.comparison) {
-        let text = `${tmp}前`;
-      }
-      text = `${tmp}後`;
-    }
-  } else {
-    if (1 !== arg1) {
-      if (obj.addSuffix) {
-        if (tmp.otherWithSuffix) {
-          const _String2 = String;
-          let replaced = tmp.otherWithSuffix.replace("{{count}}", String(arg1));
+      let str = "\u00E8me";
+      if (1 === NumberResult) {
+        let str3 = "er";
+        if (unit) {
+          const items = ["year", "week", "hour", "minute", "second"];
+          str3 = "er";
+          if (items.includes(unit)) {
+            str3 = "\u00E8re";
+          }
         }
+        str = str3;
       }
-      const _String = String;
-      replaced = tmp.other.replace("{{count}}", String(arg1));
+      return NumberResult + str;
     }
-    if (!obj.addSuffix) {
-      const one = tmp.one;
+  },
+  era: obj.default({ values: { narrow: ["av. J.-C", "ap. J.-C"], abbreviated: ["av. J.-C", "ap. J.-C"], wide: ["avant J\u00E9sus-Christ", "apr\u00E8s J\u00E9sus-Christ"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["T1", "T2", "T3", "T4"], abbreviated: ["1er trim.", "2\u00E8me trim.", "3\u00E8me trim.", "4\u00E8me trim."], wide: ["1er trimestre", "2\u00E8me trimestre", "3\u00E8me trimestre", "4\u00E8me trimestre"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    const oneWithSuffix = tmp.oneWithSuffix;
-  }
+  }),
+  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["janv.", "f\u00E9vr.", "mars", "avr.", "mai", "juin", "juil.", "ao\u00FBt", "sept.", "oct.", "nov.", "d\u00E9c."], wide: ["janvier", "f\u00E9vrier", "mars", "avril", "mai", "juin", "juillet", "ao\u00FBt", "septembre", "octobre", "novembre", "d\u00E9cembre"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["D", "L", "M", "M", "J", "V", "S"], short: ["di", "lu", "ma", "me", "je", "ve", "sa"], abbreviated: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."], wide: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "mat.", afternoon: "ap.m.", evening: "soir", night: "mat." }, abbreviated: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "matin", afternoon: "apr\u00E8s-midi", evening: "soir", night: "matin" }, wide: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "du matin", afternoon: "de l\u2019apr\u00E8s-midi", evening: "du soir", night: "du matin" } }, defaultWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

@@ -1,13 +1,5 @@
 // _runtime/metro/10782__.js
-import registerAsset from "01134__.js";
+import baseRest from "../08832_baseRest.js";
+import baseDelay from "../10783_baseDelay.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "88df5c832b935fed96e52c66883efce1",
-  name: "CircleXIcon",
-  type: "png",
-});
+export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));

@@ -1,35 +1,71 @@
 // _runtime/metro/04697__.js
-import 02077__ from "02077__.js";
+import 02078__ from "02078__.js";
+import 02079__ from "02079__.js";
 
-if (!module_2077) {
-  const obj2 = { default: module_2077 };
+if (!module_2078) {
+  const obj2 = { default: module_2078 };
   let obj = obj2;
 } else {
-  obj = module_2077;
+  obj = module_2078;
 }
-let closure_0 = { locale: { 1: "\u0967", 2: "\u0968", 3: "\u0969", 4: "\u096A", 5: "\u096B", 6: "\u096C", 7: "\u096D", 8: "\u096E", 9: "\u096F", 0: "\u0966" }, number: { "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9", "०": "0" } };
+if (!module_2079) {
+  const obj4 = { default: module_2079 };
+  let obj3 = obj4;
+} else {
+  obj3 = module_2079;
+}
 const date = {
-  ordinalNumber(arg0, arg1) {
-    const str = Number(arg0);
-    return Number(arg0).toString().replace(/\d/g, (arg0) => locale.locale[arg0]);
-  },
-  era: obj.default({ values: { narrow: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u094D\u0935\u0940"], abbreviated: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u094D\u0935\u0940"], wide: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u0935\u0940 \u0938\u0928"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["\u0924\u093F1", "\u0924\u093F2", "\u0924\u093F3", "\u0924\u093F4"], wide: ["\u092A\u0939\u0932\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u0926\u0942\u0938\u0930\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u0924\u0940\u0938\u0930\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u091A\u094C\u0925\u0940 \u0924\u093F\u092E\u093E\u0939\u0940"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)(-?(е|й|є|а|я))?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
   }),
-  month: obj.default({ values: { narrow: ["\u091C", "\u092B\u093C", "\u092E\u093E", "\u0905", "\u092E\u0908", "\u091C\u0942", "\u091C\u0941", "\u0905\u0917", "\u0938\u093F", "\u0905\u0915\u094D\u091F\u0942", "\u0928", "\u0926\u093F"], abbreviated: ["\u091C\u0928", "\u092B\u093C\u0930", "\u092E\u093E\u0930\u094D\u091A", "\u0905\u092A\u094D\u0930\u0948\u0932", "\u092E\u0908", "\u091C\u0942\u0928", "\u091C\u0941\u0932", "\u0905\u0917", "\u0938\u093F\u0924", "\u0905\u0915\u094D\u091F\u0942", "\u0928\u0935", "\u0926\u093F\u0938"], wide: ["\u091C\u0928\u0935\u0930\u0940", "\u092B\u093C\u0930\u0935\u0930\u0940", "\u092E\u093E\u0930\u094D\u091A", "\u0905\u092A\u094D\u0930\u0948\u0932", "\u092E\u0908", "\u091C\u0942\u0928", "\u091C\u0941\u0932\u093E\u0908", "\u0905\u0917\u0938\u094D\u0924", "\u0938\u093F\u0924\u0902\u092C\u0930", "\u0905\u0915\u094D\u091F\u0942\u092C\u0930", "\u0928\u0935\u0902\u092C\u0930", "\u0926\u093F\u0938\u0902\u092C\u0930"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["\u0930", "\u0938\u094B", "\u092E\u0902", "\u092C\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], short: ["\u0930", "\u0938\u094B", "\u092E\u0902", "\u092C\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], abbreviated: ["\u0930\u0935\u093F", "\u0938\u094B\u092E", "\u092E\u0902\u0917\u0932", "\u092C\u0941\u0927", "\u0917\u0941\u0930\u0941", "\u0936\u0941\u0915\u094D\u0930", "\u0936\u0928\u093F"], wide: ["\u0930\u0935\u093F\u0935\u093E\u0930", "\u0938\u094B\u092E\u0935\u093E\u0930", "\u092E\u0902\u0917\u0932\u0935\u093E\u0930", "\u092C\u0941\u0927\u0935\u093E\u0930", "\u0917\u0941\u0930\u0941\u0935\u093E\u0930", "\u0936\u0941\u0915\u094D\u0930\u0935\u093E\u0930", "\u0936\u0928\u093F\u0935\u093E\u0930"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, abbreviated: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, wide: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, abbreviated: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, wide: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" } }, defaultFormattingWidth: "wide" })
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
 };
+const obj6 = { matchPatterns: { narrow: /^((до )?н\.?\s?е\.?)/i, abbreviated: /^((до )?н\.?\s?е\.?)/i, wide: /^(до нашої ери|нашої ери|наша ера)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^д/i, /^н/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234](-?[иі]?й?)? кв.?/i, wide: /^[1234](-?[иі]?й?)? квартал/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[слбктчвжг]/i, abbreviated: /^(січ|лют|бер(ез)?|квіт|трав|черв|лип|серп|вер(ес)?|жовт|лис(топ)?|груд)\.?/i, wide: /^(січень|січня|лютий|лютого|березень|березня|квітень|квітня|травень|травня|червня|червень|липень|липня|серпень|серпня|вересень|вересня|жовтень|жовтня|листопад[а]?|грудень|грудня)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^с/i, /^л/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^л/i, /^с/i, /^в/i, /^ж/i, /^л/i, /^г/i];
+obj11.narrow = items2;
+const items3 = [/^сі/i, /^лю/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^лип/i, /^се/i, /^в/i, /^ж/i, /^лис/i, /^г/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[нпвсч]/i, short: /^(нд|пн|вт|ср|чт|пт|сб)\.?/i, abbreviated: /^(нед|пон|вів|сер|че?тв|птн?|суб)\.?/i, wide: /^(неділ[яі]|понеділ[ок][ка]|вівтор[ок][ка]|серед[аи]|четвер(га)?|п\W*?ятниц[яі]|субот[аи])/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, any: null };
+const items4 = [/^н/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
+obj13.narrow = items4;
+const items5 = [/^н/i, /^п[он]/i, /^в/i, /^с[ер]/i, /^ч/i, /^п\W*?[ят]/i, /^с[уб]/i];
+obj13.any = items5;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^([дп]п|півн\.?|пол\.?|ранок|ранку|день|дня|веч\.?|ніч|ночі)/i, abbreviated: /^([дп]п|півн\.?|пол\.?|ранок|ранку|день|дня|веч\.?|ніч|ночі)/i, wide: /^([дп]п|північ|полудень|ранок|ранку|день|дня|вечір|вечора|ніч|ночі)/i }, defaultMatchWidth: "wide", parsePatterns: { any: { am: /^дп/i, pm: /^пп/i, midnight: /^півн/i, noon: /^пол/i, morning: /^р/i, afternoon: /^д[ен]/i, evening: /^в/i, night: /^н/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
 
-export const localeToNumber = function localeToNumber(arg0) {
-  return Number(arg0.toString().replace(/[१२३४५६७८९०]/g, (arg0) => number.number[arg0]));
-};
-export const numberToLocale = function numberToLocale(arg0) {
-  return arg0.toString().replace(/\d/g, (arg0) => locale.locale[arg0]);
-};
 export default date;
+export default exports.default;

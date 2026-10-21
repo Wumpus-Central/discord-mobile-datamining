@@ -1,15 +1,15 @@
 // _runtime/metro/04600__.js
-import _typeof_mod from "04231__.js";
-import requiredArgs_mod from "../04232_requiredArgs.js";
+import startOfWeek_mod from "../04411_startOfWeek.js";
+import requiredArgs_mod from "../04253_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfWeek;
 }
-_typeof = tmp3;
+startOfWeek = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,20 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isWithinInterval(arg0, start) {
+export default function isSameWeek(arg0, arg1, arg2) {
   requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  const time1 = _typeof.default(start.start).getTime();
-  const defaultResult2 = _typeof.default(start.start);
-  const time2 = _typeof.default(start.end).getTime();
-  if (time1 <= time2) {
-    return time >= time1 && time <= time2;
-  } else {
-    const _RangeError = RangeError;
-    const rangeError = new RangeError("Invalid interval");
-    throw rangeError;
-  }
-  const defaultResult3 = _typeof.default(start.end);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

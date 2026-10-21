@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/light",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 45.5,
+  height: 8.5,
   scales: [2, 3],
-  hash: "1b5f32142ab22998fa2540426f00d327",
-  name: "tier_0_24px",
+  hash: "8d16389f341b45c184ca21d1deb5fd2e",
+  name: "img_logo_discord",
   type: "png",
 });

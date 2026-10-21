@@ -1,31 +1,42 @@
 // _runtime/metro/04382__.js
-import _typeof_mod from "04231__.js";
-import requiredArgs_mod from "../04232_requiredArgs.js";
+import 04383__ from "04383__.js";
+import 04384__ from "04384__.js";
+import 04385__ from "04385__.js";
+import date_mod from "04386__.js";
+import date_mod from "04387__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+if (!module_4383) {
+  const obj = { default: module_4383 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4383;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+if (!module_4384) {
+  const obj2 = { default: module_4384 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4384;
 }
-requiredArgs = tmp5;
+if (!module_4385) {
+  const obj3 = { default: module_4385 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4385;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function isWeekend(arg0) {
-  requiredArgs.default(1, arguments);
-  const day = _typeof.default(arg0).getDay();
-  let tmp3 = 0 === day;
-  if (!tmp3) {
-    tmp3 = 6 === day;
-  }
-  return tmp3;
-};
+export default { code: "th", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
 export default exports.default;

@@ -1,6 +1,12 @@
 // _runtime/metro/15443__.js
-import _mod15444 from "15444__.js";
-import _mod15451 from "15451__.js";
+import _mod15442 from "15442__.js";
 
-export const URL = _mod15444;
-export const URLSearchParams = _mod15451;
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod15442, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod15442[tmp2] = tmp;
+  }
+};

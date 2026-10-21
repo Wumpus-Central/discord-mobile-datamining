@@ -1,43 +1,23 @@
 // _runtime/metro/12537__.js
-import _mod12538 from "12538__.js";
+import _mod12493 from "12493__.js";
+import _mod12523 from "12523__.js";
 
 require = arg1;
-const module = arg4;
 const dependencyMap = arg6;
-function dynamicRequire(require, arg1) {
-  return require.require(arg1);
-}
 
-export { dynamicRequire };
-export const isNodeEnv = function isNodeEnv() {
-  const isBrowserBundleResult = _mod12538.isBrowserBundle();
-  if (isBrowserBundleResult) {
-    return !isBrowserBundleResult;
+export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let result = arg2;
+  const items = [{ type: "client_report" }];
+  if (!arg2) {
+    result = _mod12493.dateTimestampInSeconds();
+  }
+  items[1] = { timestamp: result, discarded_events };
+  if (dsn) {
+    const obj3 = { dsn };
+    let obj4 = obj3;
   } else {
-    const _Object = Object;
-    const call = toString.call;
-    const _process = process;
-    let str = 0;
-    if (typeof process !== "undefined") {
-      str = process;
-    }
-    str = "[object process]";
-    const tmp3 = typeof call === "unknown" ? toString() : call(str);
+    obj4 = {};
   }
-};
-export const loadModule = function loadModule(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = module;
-  }
-  try {
-    let tmp3 = dynamicRequire(tmp, arg0);
-    if (!tmp3) {
-      try {
-        const _HermesInternal = HermesInternal;
-        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
-      } catch (err) {}
-    }
-    return tmp3;
-  } catch (err) {}
+  const items1 = [items];
+  return _mod12523.createEnvelope(obj4, items1);
 };

@@ -1,6 +1,7 @@
 // _runtime/metro/05540__.js
-import LegacyBaseButton from "../05258_LegacyBaseButton.js";
+import _mod17 from "00017__.js";
+import FlashList from "../05479_FlashList.js";
 
-export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
-export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
-export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;
+const Animated = _mod17.Animated;
+
+export default Animated.createAnimatedComponent(FlashList.FlashList);

@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHk=",
+  httpServerLocation: "/assets/modules/premium/rust_3pp",
   scales: [1],
-  hash: "dec414c79c2678982c20a3e4b85368a1",
-  name: "fi.messages.dec414c79c2678982c20a3e4b85368a1.compiled.messages",
+  hash: "354571feac5b6fb5fc9502ef0519a4c8",
+  name: "Rust3PP.compiled.messages",
   type: "jsona",
 });

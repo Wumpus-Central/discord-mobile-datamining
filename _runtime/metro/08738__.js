@@ -1,89 +1,43 @@
 // _runtime/metro/08738__.js
-import _mod8736 from "08736__.js";
-import _mod8741 from "08741__.js";
-import _mod8745 from "08745__.js";
-import flattenStyle from "08739__.js";
-import emptyFunction_mod from "04979__.js";
+import get_ActivityIndicator from "00017__.js";
 
+const StyleSheet = get_ActivityIndicator.StyleSheet;
 const obj = {
-  accessible: null,
-  accessibilityLabel: null,
-  accessibilityHint: null,
-  accessibilityActions: null,
-  accessibilityIgnoresInvertColors: null,
-  accessibilityRole: null,
-  accessibilityState: null,
-  accessibilityValue: null,
-  accessibilityLiveRegion: null,
-  importantForAccessibility: null,
-  accessibilityViewIsModal: null,
-  accessibilityElementsHidden: null,
-  onAccessibilityAction: null,
-  onAccessibilityTap: null,
-  onMagicTap: null,
-  testID: null,
-  nativeID: null,
-  onResponderGrant: null,
-  onResponderMove: null,
-  onResponderReject: null,
-  onResponderRelease: null,
-  onResponderTerminate: null,
-  onResponderTerminationRequest: null,
-  onStartShouldSetResponder: null,
-  onStartShouldSetResponderCapture: null,
-  onMoveShouldSetResponder: null,
-  onMoveShouldSetResponderCapture: null,
-  hitSlop: null,
-  onLayout: null,
-  pointerEvents: null,
-  style: null,
-  removeClippedSubviews: null,
-  renderToHardwareTextureAndroid: null,
-  shouldRasterizeIOS: null,
-  collapsable: null,
-  needsOffscreenAlphaCompositing: null,
+  stepNumber: { marginTop: 20, alignItems: "center", position: "absolute" },
+  sliderMainContainer: { zIndex: 1, width: "100%" },
+  defaultSlideriOS: { height: 40 },
+  defaultSlider: {},
+  stepsIndicator: null,
+  trackMarkContainer: null,
+  thumbImageContainer: null,
+  thumbImage: null,
+  stepIndicatorElement: null,
+  defaultIndicatorMarked: null,
+  defaultIndicatorIdle: null,
 };
-const module_8741 = flattenStyle(_mod8741);
-obj.accessible = emptyFunction.bool;
-obj.accessibilityLabel = emptyFunction.node;
-obj.accessibilityHint = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.accessibilityActions = emptyFunction.arrayOf(emptyFunction.string);
-obj.accessibilityIgnoresInvertColors = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.accessibilityRole = emptyFunction.oneOf(_mod8745.DeprecatedAccessibilityRoles);
-obj.accessibilityState = emptyFunction.object;
-obj.accessibilityValue = emptyFunction.object;
-let emptyFunction = emptyFunction_mod;
-obj.accessibilityLiveRegion = emptyFunction.oneOf(["none", "polite", "assertive"]);
-let emptyFunction = emptyFunction_mod;
-obj.importantForAccessibility = emptyFunction.oneOf(["auto", "yes", "no", "no-hide-descendants"]);
-obj.accessibilityViewIsModal = emptyFunction.bool;
-obj.accessibilityElementsHidden = emptyFunction.bool;
-obj.onAccessibilityAction = emptyFunction.func;
-obj.onAccessibilityTap = emptyFunction.func;
-obj.onMagicTap = emptyFunction.func;
-obj.testID = emptyFunction.string;
-obj.nativeID = emptyFunction.string;
-obj.onResponderGrant = emptyFunction.func;
-obj.onResponderMove = emptyFunction.func;
-obj.onResponderReject = emptyFunction.func;
-obj.onResponderRelease = emptyFunction.func;
-obj.onResponderTerminate = emptyFunction.func;
-obj.onResponderTerminationRequest = emptyFunction.func;
-obj.onStartShouldSetResponder = emptyFunction.func;
-obj.onStartShouldSetResponderCapture = emptyFunction.func;
-obj.onMoveShouldSetResponder = emptyFunction.func;
-obj.onMoveShouldSetResponderCapture = emptyFunction.func;
-obj.hitSlop = _mod8736;
-obj.onLayout = emptyFunction.func;
-let emptyFunction = emptyFunction_mod;
-obj.pointerEvents = emptyFunction.oneOf(["box-none", "none", "box-only", "auto"]);
-obj.style = module_8741;
-obj.removeClippedSubviews = emptyFunction.bool;
-obj.renderToHardwareTextureAndroid = emptyFunction.bool;
-obj.shouldRasterizeIOS = emptyFunction.bool;
-obj.collapsable = emptyFunction.bool;
-obj.needsOffscreenAlphaCompositing = emptyFunction.bool;
+let num = 0;
+if ("ios" === get_ActivityIndicator.Platform.OS) {
+  num = 10;
+}
+obj.stepsIndicator = { flex: 1, flexDirection: "row", justifyContent: "space-between", top: num, zIndex: 2 };
+obj.trackMarkContainer = {
+  alignItems: "center",
+  alignContent: "center",
+  alignSelf: "center",
+  justifyContent: "center",
+  position: "absolute",
+  zIndex: 3,
+};
+obj.thumbImageContainer = {
+  position: "absolute",
+  zIndex: 3,
+  justifyContent: "center",
+  alignItems: "center",
+  alignContent: "center",
+};
+obj.thumbImage = { alignContent: "center", alignItems: "center", position: "absolute" };
+obj.stepIndicatorElement = { alignItems: "center", alignContent: "center" };
+obj.defaultIndicatorMarked = { height: 20, width: 5, backgroundColor: "#CCCCCC" };
+obj.defaultIndicatorIdle = { height: 10, width: 2, backgroundColor: "#C0C0C0" };
 
-export default obj;
+export const styles = StyleSheet.create(obj);

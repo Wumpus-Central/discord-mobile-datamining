@@ -1,12 +1,25 @@
 // _runtime/metro/15432__.js
-import _mod15370 from "15370__.js";
-import all from "15396__.js";
+const require = globalThis.__r;
 
-let _moduleResult = all(_mod15370.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod15370.WeakMap));
-  const obj = /native code/;
-}
+const require = arg1;
+const dependencyMap = arg6;
 
-export default _moduleResult;
+export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
+  _require = locale;
+  const timezones = require("15433__.js").timezones;
+  return timezones.filter((item) =>
+    (function isSupported(timeZone, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const obj = { timeZone };
+        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+        return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
+};

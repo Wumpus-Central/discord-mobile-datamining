@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c1eae5d24a46f9d36a9168ec38445f00",
-  name: "DragIcon",
+  hash: "e4080f713973c251e1438e7043339acb",
+  name: "ic_verified_guild_icon_green_24px",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 16,
   height: 16,
   scales: [2, 3],
-  hash: "6b37e553071b3a1f760426253196e13f",
-  name: "ic_radio_circle_checked_green",
+  hash: "e71bfb9b43d4bbd3706e078113315f40",
+  name: "ic_image",
   type: "png",
 });

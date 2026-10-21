@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 160,
+  height: 160,
   scales: [2, 3],
-  hash: "cb57655a680893ff0ad8eb9c16157cda",
-  name: "EnvelopeIcon",
+  hash: "b7eca7761481c5ff3cc170b16fbdff57",
+  name: "img_no_results",
   type: "png",
 });

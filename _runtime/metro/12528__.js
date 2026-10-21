@@ -1,260 +1,320 @@
 // _runtime/metro/12528__.js
-import errorCallback from "../12419_errorCallback.js";
-import _mod12430 from "12430__.js";
-import _mod12447 from "12447__.js";
-import _mod12455 from "12455__.js";
-import _mod12494 from "12494__.js";
-import _toArray from "../00729__toArray.js";
-import "module_12422";
-import consoleSandbox from "12423__.js";
-import dateTimestampInSeconds from "12437__.js";
-import __SENTRY_DEBUG__ from "12451__.js";
+import _mod12488 from "12488__.js";
+import _mod12516 from "12516__.js";
+import _mod12524 from "12524__.js";
+import _mod12531 from "12531__.js";
 
-function _addTracingHeadersToFetchRequest(headers, headers2, span) {
-  const traceData = _mod12494.getTraceData({ span });
-  ({ sentry-trace: tmp4, baggage } = traceData);
+require = arg1;
+const dependencyMap = arg6;
+function applyClientOptions(environment, environment2) {
+  ({ release, dist, maxValueLength } = environment2);
+  let num = 250;
+  if (undefined !== maxValueLength) {
+    num = maxValueLength;
+  }
+  let DEFAULT_ENVIRONMENT = environment.environment || environment2.environment;
+  if (!DEFAULT_ENVIRONMENT) {
+    DEFAULT_ENVIRONMENT = _mod12516.DEFAULT_ENVIRONMENT;
+  }
+  environment.environment = DEFAULT_ENVIRONMENT;
+  const release2 = environment.release;
+  let tmp3 = !release2;
+  if (!release2) {
+    tmp3 = release;
+  }
+  if (tmp3) {
+    environment.release = release;
+  }
+  const dist2 = environment.dist;
+  let tmp4 = !dist2;
+  if (!dist2) {
+    tmp4 = dist;
+  }
   if (tmp4) {
-    headers = headers2.headers;
-    if (!headers) {
-      const _Request = Request;
-      let isInstanceOfResult = typeof Request !== "undefined";
-      if (typeof Request !== "undefined") {
-        const _Request2 = Request;
-        isInstanceOfResult = _mod12430.isInstanceOf(headers, Request);
-        const tmpResult = _mod12430;
-      }
-      let headers1;
-      if (isInstanceOfResult) {
-        headers1 = headers.headers;
-      }
-      headers = headers1;
-    }
-    if (headers) {
-      const _Headers = Headers;
-      let isInstanceOfResult1 = typeof Headers !== "undefined";
-      if (typeof Headers !== "undefined") {
-        const _Headers3 = Headers;
-        isInstanceOfResult1 = _mod12430.isInstanceOf(headers, Headers);
-        const tmpResult2 = _mod12430;
-      }
-      if (isInstanceOfResult1) {
-        const _Headers2 = Headers;
-        headers2 = new Headers(headers);
-        const result = headers2.set("sentry-trace", tmp4);
-        if (baggage) {
-          const str6 = headers2.get("baggage");
-          if (str6) {
-            let parts = str6.split(",");
-            let found = parts.filter((item) => {
-              const first = item.split("=")[0];
-              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-            });
-            let joined = found.join(",");
-            let combined = baggage;
-            if (joined) {
-              const _HermesInternal = HermesInternal;
-              combined = "" + joined + "," + baggage;
-            }
-            const result1 = headers2.set("baggage", combined);
-          } else {
-            const result2 = headers2.set("baggage", baggage);
-          }
-        }
-        return headers2;
-      } else {
-        const _Array = Array;
-        if (Array.isArray(headers)) {
-          const found1 = headers.filter((item) => {
-            let isArray = Array.isArray(item);
-            if (isArray) {
-              isArray = "sentry-trace" === item[0];
-            }
-            return !isArray;
-          });
-          let items = [];
-          const items1 = ["sentry-trace", tmp4];
-          items[HermesBuiltin.arraySpread(found1.map((item) => {
-            if (Array.isArray(item)) {
-              if ("baggage" === item[0]) {
-                if (typeof item[1] === "string") {
-                  const arr = _toArray(item);
-                  const items = [arr[0], ];
-                  const substr = arr.slice(2);
-                  const parts = arr[1].split(",");
-                  const found = parts.filter((item) => {
-                    const first = item.split("=")[0];
-                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                  });
-                  items[1] = found.join(",");
-                  HermesBuiltin.arraySpread(substr, 2);
-                  return items;
-                }
-              }
-            }
-            return item;
-          }), 0)] = items1;
-          if (baggage) {
-            const items2 = ["baggage", baggage];
-            items.push(items2);
-          }
-          return items;
-        } else {
-          let baggage1;
-          if ("baggage" in headers) {
-            baggage1 = headers.baggage;
-          }
-          const _Array2 = Array;
-          if (Array.isArray(baggage1)) {
-            const mapped = baggage1.map((item) => {
-              let joined = item;
-              if (typeof item === "string") {
-                const parts = item.split(",");
-                const found = parts.filter((item) => {
-                  const first = item.split("=")[0];
-                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                });
-                joined = found.join(",");
-              }
-              return joined;
-            });
-            let found2 = mapped.filter((item) => "" === item);
-          } else {
-            const items3 = [];
-            found2 = items3;
-            if (baggage1) {
-              const parts1 = baggage1.split(",");
-              const found3 = parts1.filter((item) => {
-                const first = item.split("=")[0];
-                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-              });
-              items3.push(found3.join(","));
-              found2 = items3;
-            }
-          }
-          if (baggage) {
-            found2.push(baggage);
-          }
-          const obj3 = {};
-          const merged = Object.assign(headers);
-          obj3["sentry-trace"] = tmp4;
-          let joined1;
-          if (found2.length > 0) {
-            joined1 = found2.join(",");
-          }
-          obj3.baggage = joined1;
-          return obj3;
-        }
-      }
-    } else {
-      const obj4 = {};
-      const merged1 = Object.assign(traceData);
-      return obj4;
-    }
+    environment.dist = dist;
   }
-  const obj2 = { span };
+  if (environment.message) {
+    environment.message = _mod12488.truncate(environment.message, num);
+  }
+  value = iter;
+  if (environment.exception && environment.exception.values && environment.exception.values[0]) {
+    value = iter.value;
+  }
+  if (value) {
+    iter.value = _mod12488.truncate(iter.value, num);
+  }
+  const request = environment.request;
+  let url = request;
+  if (request) {
+    url = request.url;
+  }
+  if (url) {
+    request.url = _mod12488.truncate(request.url, num);
+  }
 }
-errorCallback;
-_mod12447;
+function applyDebugIds(exception, arg1) {
+  const filenameToDebugIdMap = _mod12531.getFilenameToDebugIdMap(arg1);
+  try {
+    const values = exception.exception.values;
+    let item = values.forEach((stacktrace) => {
+      const frames = stacktrace.stacktrace.frames;
+      const item = frames.forEach((filename) => {
+        filename = closure_1_0;
+        if (closure_1_0) {
+          filename = filename.filename;
+        }
+        if (filename) {
+          filename.debug_id = closure_1_0[filename.filename];
+        }
+      });
+    });
+  } catch (err) {}
+}
+function applyDebugMeta(exception) {
+  const obj = {};
+  try {
+    const values = exception.exception.values;
+    let item = values.forEach((stacktrace) => {
+      const frames = stacktrace.stacktrace.frames;
+      const item = frames.forEach((debug_id) => {
+        if (debug_id.debug_id) {
+          if (debug_id.abs_path) {
+            obj[debug_id.abs_path] = debug_id.debug_id;
+          } else if (debug_id.filename) {
+            obj[debug_id.filename] = debug_id.debug_id;
+          }
+          delete tmp2[tmp];
+        }
+      });
+    });
+    const _Object = Object;
+    if (0 !== Object.keys(obj).length) {
+      let debug_meta = exception.debug_meta;
+      if (!debug_meta) {
+        debug_meta = {};
+      }
+      exception.debug_meta = debug_meta;
+      let images = exception.debug_meta.images;
+      if (!images) {
+        images = [];
+      }
+      exception.debug_meta.images = images;
+      images = exception.debug_meta.images;
+      const _Object2 = Object;
+      const entries = Object.entries(obj);
+      const item1 = entries.forEach((item) => {
+        [tmp, tmp2] = item;
+        images.push({ type: "sourcemap", code_file: tmp, debug_id: tmp2 });
+      });
+    }
+  } catch (err) {}
+}
+let closure_5 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "requestSession", "propagationContext"];
 
-export const addTracingHeadersToFetchRequest = function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
-  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
-};
-export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
-  let str = arg4;
-  if (arg4 === undefined) {
-    str = "auto.http.browser";
+export { applyClientOptions };
+export { applyDebugIds };
+export { applyDebugMeta };
+export const parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(captureContext) {
+  if (captureContext) {
+    if (tmp3) {
+      const obj = { captureContext };
+      let tmp5 = obj;
+    } else {
+      const _Object = Object;
+      const keys = Object.keys(captureContext);
+      tmp5 = captureContext;
+    }
+    return tmp5;
   }
-  let endResult = fetchData;
-  if (fetchData.fetchData) {
-    let setHttpStatus = require;
-    let headers = dependencyMap;
-    let hasTracingEnabledResult = _mod12455.hasTracingEnabled();
-    if (hasTracingEnabledResult) {
-      hasTracingEnabledResult = fn(endResult.fetchData.url);
+};
+export const prepareEvent = function prepareEvent(
+  normalizeDepth,
+  event_id,
+  event_id2,
+  getScopeData,
+  emit,
+  getScopeData2,
+) {
+  normalizeDepth = normalizeDepth.normalizeDepth;
+  let num = 3;
+  if (undefined !== normalizeDepth) {
+    num = normalizeDepth;
+  }
+  const normalizeMaxBreadth = normalizeDepth.normalizeMaxBreadth;
+  let num2 = 1000;
+  if (undefined !== normalizeMaxBreadth) {
+    num2 = normalizeMaxBreadth;
+  }
+  let obj = {};
+  let merged = Object.assign(event_id);
+  let uuid4Result = event_id.event_id || event_id2.event_id;
+  if (!uuid4Result) {
+    uuid4Result = num(num2[0]).uuid4();
+    let obj2 = num(num2[0]);
+  }
+  obj.event_id = uuid4Result;
+  let timestamp = event_id.timestamp;
+  if (!timestamp) {
+    timestamp = num(num2[1]).dateTimestampInSeconds();
+    let obj3 = num(num2[1]);
+  }
+  obj.timestamp = timestamp;
+  let integrations = event_id2.integrations;
+  if (!integrations) {
+    const integrations1 = normalizeDepth.integrations;
+    integrations = integrations1.map((name) => name.name);
+  }
+  applyClientOptions(obj, normalizeDepth);
+  if (integrations.length > 0) {
+    obj.sdk = obj.sdk || {};
+    let integrations2 = obj.sdk.integrations;
+    if (!integrations2) {
+      integrations2 = [];
     }
-    if (endResult.endTimestamp) {
-      if (hasTracingEnabledResult) {
-        const __span = endResult.fetchData.__span;
-        if (__span) {
-          if (arg3[__span]) {
-            if (endResult.response) {
-              setHttpStatus = setHttpStatus(12440).setHttpStatus;
-              setHttpStatus(obj10, endResult.response.status);
-              headers = endResult.response;
-              if (headers) {
-                headers = endResult.response.headers;
-              }
-              if (headers) {
-                const headers2 = endResult.response.headers;
-                headers = headers2.get("content-length");
-              }
-              if (headers) {
-                const _parseInt = parseInt;
-                setHttpStatus = parseInt(headers);
-                if (setHttpStatus > 0) {
-                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
+    const items = [];
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(integrations2, 0));
+    obj.sdk.integrations = items;
+  }
+  if (emit) {
+    emit.emit("applyFrameMetadata", event_id);
+  }
+  if (undefined === event_id.type) {
+    applyDebugIds(obj, normalizeDepth.stackParser);
+  }
+  const captureContext = event_id2.captureContext;
+  if (!captureContext) {
+    if (event_id2.mechanism) {
+      const result = num(num2[0]).addExceptionMechanism(obj, event_id2.mechanism);
+      let obj5 = num(num2[0]);
+    }
+    if (emit) {
+      let eventProcessors = emit.getEventProcessors();
+    } else {
+      eventProcessors = [];
+    }
+    const globalScope = num(num2[2]).getGlobalScope();
+    const scopeData = globalScope.getScopeData();
+    if (getScopeData2) {
+      const scopeData1 = getScopeData2.getScopeData();
+      tmp26(tmp27[3]).mergeScopeData(scopeData, scopeData1);
+      const tmp26Result = tmp26(tmp27[3]);
+    }
+    if (getScopeData) {
+      const scopeData2 = getScopeData.getScopeData();
+      tmp26(tmp27[3]).mergeScopeData(scopeData, scopeData2);
+      const tmp26Result4 = tmp26(tmp27[3]);
+    }
+    const tmp33 = event_id2.attachments || [];
+    const items1 = [];
+    HermesBuiltin.arraySpread(scopeData.attachments, HermesBuiltin.arraySpread(tmp33, 0));
+    if (items1.length) {
+      event_id2.attachments = items1;
+    }
+    const obj6 = num(num2[2]);
+    const result1 = num(num2[3]).applyScopeDataToEvent(obj, scopeData);
+    const items2 = [];
+    HermesBuiltin.arraySpread(scopeData.eventProcessors, HermesBuiltin.arraySpread(eventProcessors, 0));
+    const tmp26Result5 = num(num2[3]);
+    const result2 = num(num2[4]).notifyEventProcessors(items2, obj, event_id2);
+    return result2.then((breadcrumbs) => {
+      if (breadcrumbs) {
+        applyDebugMeta(breadcrumbs);
+      }
+      let tmp4 = breadcrumbs;
+      if (typeof num === "number") {
+        tmp4 = breadcrumbs;
+        if (tmp3 > 0) {
+          closure_0 = tmp3;
+          closure_1 = num2;
+          let tmp30 = null;
+          if (breadcrumbs) {
+            const obj = {};
+            let merged = Object.assign(breadcrumbs);
+            breadcrumbs = breadcrumbs.breadcrumbs;
+            if (breadcrumbs) {
+              let obj2 = { breadcrumbs: null };
+              const breadcrumbs1 = breadcrumbs.breadcrumbs;
+              obj2.breadcrumbs = breadcrumbs1.map((data) => {
+                const merged = Object.assign(data);
+                data = data.data;
+                if (data) {
+                  const obj2 = { data: null };
+                  const normalizer = num(num2[8]);
+                  obj2.data = normalizer.normalize(data.data, closure_0, closure_1);
+                  data = obj2;
                 }
-              }
-              const setHttpStatusResult = setHttpStatus(12440);
-            } else if (endResult.error) {
-              const obj2 = { code: setHttpStatus(12440).SPAN_STATUS_ERROR, message: "internal_error" };
-              obj10.setStatus(obj2);
+                const merged1 = Object.assign(data);
+                return {};
+              });
+              breadcrumbs = obj2;
             }
-            endResult = obj10.end();
-            delete tmp2[tmp];
+            let merged1 = Object.assign(breadcrumbs);
+            let user = breadcrumbs.user;
+            if (user) {
+              const obj3 = { user: null };
+              let normalizer = _mod12524;
+              obj3.user = normalizer.normalize(breadcrumbs.user, tmp3, tmp33);
+              user = obj3;
+            }
+            const merged2 = Object.assign(user);
+            let contexts = breadcrumbs.contexts;
+            if (contexts) {
+              const obj4 = { contexts: null };
+              const normalizer2 = _mod12524;
+              obj4.contexts = normalizer2.normalize(breadcrumbs.contexts, tmp3, tmp33);
+              contexts = obj4;
+            }
+            const merged3 = Object.assign(contexts);
+            let extra = breadcrumbs.extra;
+            if (extra) {
+              const obj5 = { extra: null };
+              const normalizer3 = _mod12524;
+              obj5.extra = normalizer3.normalize(breadcrumbs.extra, tmp3, tmp33);
+              extra = obj5;
+            }
+            const merged4 = Object.assign(extra);
+            if (tmp26) {
+              obj.contexts.trace = breadcrumbs.contexts.trace;
+              if (breadcrumbs.contexts.trace.data) {
+                const normalizer4 = _mod12524;
+                obj.contexts.trace.data = normalizer4.normalize(breadcrumbs.contexts.trace.data, tmp3, tmp33);
+              }
+            }
+            if (breadcrumbs.spans) {
+              const spans = breadcrumbs.spans;
+              obj.spans = spans.map((data) => {
+                const merged = Object.assign(data);
+                data = data.data;
+                if (data) {
+                  const obj2 = { data: null };
+                  const normalizer = num(num2[8]);
+                  obj2.data = normalizer.normalize(data.data, closure_0, closure_1);
+                  data = obj2;
+                }
+                const merged1 = Object.assign(data);
+                return {};
+              });
+            }
+            tmp30 = obj;
+            if (tmp29) {
+              const normalizer5 = _mod12524;
+              obj.contexts.flags = normalizer5.normalize(breadcrumbs.contexts.flags, 3, tmp33);
+              tmp30 = obj;
+            }
+            tmp26 = breadcrumbs.contexts && breadcrumbs.contexts.trace && obj.contexts;
+            tmp29 = breadcrumbs.contexts && breadcrumbs.contexts.flags && obj.contexts;
           }
+          tmp4 = tmp30;
         }
       }
+      return tmp4;
+    });
+  } else {
+    if (getScopeData) {
+      let cloneResult = getScopeData.clone();
+    } else {
+      cloneResult = new num(num2[9]).Scope();
     }
-    ({ method, url } = endResult.fetchData);
-    const tmp7 = (function getFullURL(url) {
-      try {
-        const _URL = URL;
-        const uRL = new URL(url);
-        return uRL.href;
-      } catch (err) {
-      }
-    })(url);
-    if (tmp7) {
-      const host = setHttpStatus(12505).parseUrl(tmp7).host;
-      const setHttpStatusResult2 = setHttpStatus(12505);
-    }
-    const activeSpan = setHttpStatus(12428).getActiveSpan();
-    if (hasTracingEnabledResult) {
-      if (activeSpan) {
-        const obj3 = { name: null, attributes: null };
-        const _HermesInternal = HermesInternal;
-        obj3.name = "" + method + " " + url;
-        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
-        obj4[setHttpStatus(12438).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
-        obj4[setHttpStatus(12438).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
-        obj3.attributes = obj4;
-        let startInactiveSpanResult = setHttpStatus(12457).startInactiveSpan(obj3);
-        const setHttpStatusResult4 = setHttpStatus(12457);
-      }
-      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
-      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
-      if (fn2(endResult.fetchData.url)) {
-        let obj5 = endResult.args[1];
-        if (!obj5) {
-          obj5 = {};
-        }
-        let tmp14;
-        if (setHttpStatusResult5.hasTracingEnabled()) {
-          if (activeSpan) {
-            tmp14 = startInactiveSpanResult;
-          }
-        }
-        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
-        if (tmp13Result) {
-          endResult.args[1] = obj5;
-          obj5.headers = tmp13Result;
-        }
-        setHttpStatusResult5 = setHttpStatus(12455);
-      }
-      return startInactiveSpanResult;
-    }
-    startInactiveSpanResult = new setHttpStatus(12456).SentryNonRecordingSpan();
-    const setHttpStatusResult3 = setHttpStatus(12428);
+    cloneResult.update(captureContext);
   }
 };

@@ -1,73 +1,69 @@
 // _runtime/metro/12506__.js
-const items = [
-  "X-Client-IP",
-  "X-Forwarded-For",
-  "Fly-Client-IP",
-  "CF-Connecting-IP",
-  "Fastly-Client-Ip",
-  "True-Client-Ip",
-  "X-Real-IP",
-  "X-Cluster-Client-IP",
-  "X-Forwarded",
-  "Forwarded-For",
-  "Forwarded",
-  "X-Vercel-Forwarded-For",
-];
+import _mod12480 from "12480__.js";
+import _mod12485 from "12485__.js";
+import _mod12497 from "12497__.js";
+import _mod12498 from "12498__.js";
+import ScopeClass from "../12500_ScopeClass.js";
 
-export const getClientIPAddress = function getClientIPAddress(headers) {
-  let mapped = items.map((item) => {
-    let str = obj;
-    if (Array.isArray(headers[item])) {
-      str = obj.join(";");
-    }
-    if ("Forwarded" === item) {
-      let mapped = (function parseForwardedHeader(str) {
-        if (str) {
-          const parts = str.split(";");
-          const iter = parts[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let arr = nextResult;
-            if (nextResult.startsWith("for=")) {
-              let substr = arr.slice(4);
-              iter.return();
-              return substr;
-            }
-          }
-          return null;
-        } else {
-          return null;
-        }
-      })(str);
-    } else {
-      mapped = str;
-      if (str) {
-        let parts = str.split(",");
-        mapped = parts.map((item) => item.trim());
-      }
-    }
-    return mapped;
-  });
-  const reduced = mapped.reduce((arr, item) => {
-    let combined = arr;
-    if (item) {
-      combined = arr.concat(item);
-    }
-    return combined;
-  }, []);
-  return (
-    reduced.find((item) => {
-      let isMatch = null !== item;
-      if (isMatch) {
-        isMatch =
-          /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(
-            item,
-          );
-        const obj =
-          /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
-      }
-      return isMatch;
-    }) || null
-  );
+require = arg1;
+const dependencyMap = arg6;
+
+export const getClient = function getClient() {
+  const mainCarrier = _mod12497.getMainCarrier();
+  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
 };
-export const ipHeaderNames = items;
+export const getCurrentScope = function getCurrentScope() {
+  const mainCarrier = _mod12497.getMainCarrier();
+  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+};
+export const getGlobalScope = function getGlobalScope() {
+  return _mod12480.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getIsolationScope = function getIsolationScope() {
+  const mainCarrier = _mod12497.getMainCarrier();
+  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+};
+export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod12485.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+};
+export const withIsolationScope = function withIsolationScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12497.getMainCarrier();
+  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
+    }
+    return result;
+  } else {
+    return asyncContextStrategy.withIsolationScope(items[0]);
+  }
+};
+export const withScope = function withScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12497.getMainCarrier();
+  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+    }
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
+  }
+};

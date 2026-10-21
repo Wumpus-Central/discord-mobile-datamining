@@ -1,13 +1,7 @@
 // _runtime/metro/15235__.js
-import registerAsset from "01134__.js";
+import _mod15233 from "15233__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/status",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "b452f17f7046013be582dffe125561c0",
-  name: "StatusIdle",
-  type: "png",
-});
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod15233(arg1, arg0, closure_0));
+};

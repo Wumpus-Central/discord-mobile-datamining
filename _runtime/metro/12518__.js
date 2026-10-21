@@ -1,82 +1,72 @@
 // _runtime/metro/12518__.js
-import stackParserFromStackParserOptions from "../12426_stackParserFromStackParserOptions.js";
-import setupIntegration from "12479__.js";
+import _mod12479 from "12479__.js";
+import _mod12506 from "12506__.js";
+import _mod12507 from "12507__.js";
+import _mod12511 from "12511__.js";
+import _mod12519 from "12519__.js";
 
-let c2 = "_sentryBundlerPluginAppKey:";
+require = arg1;
+const dependencyMap = arg6;
 
-export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
-  const behaviour = arg0;
-  return {
-    name: "ThirdPartyErrorsFilter",
-    setup(on) {
-      const options = on;
-      on.on("beforeEnvelope", (arg0) => {
-        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp3;
-            if (Array.isArray(arg0)) {
-              tmp3 = arg0[1];
-            }
-            if (tmp3) {
-              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-              arg0[1] = tmp3;
-              const obj = options(dependencyMap[2]);
-            }
-          }
-        });
-      });
-      on.on("applyFrameMetadata", (type) => {
-        if (!type.type) {
-          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-          const obj = options(dependencyMap[2]);
-        }
-      });
-    },
-    processEvent(tags) {
-      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
-      let mapped;
-      if (framesFromEvent) {
-        let found = framesFromEvent.filter((filename) => filename.filename);
-        mapped = found.map((module_metadata) => {
-          if (module_metadata.module_metadata) {
-            const _Object = Object;
-            const keys = Object.keys(module_metadata.module_metadata);
-            const found = keys.filter((item) => item.startsWith(length));
-            let mapped = found.map((arr) => arr.slice(length.length));
-          } else {
-            mapped = [];
-          }
-          return mapped;
-        });
+export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
+  if (obj.hasTracingEnabled(tracesSampler)) {
+    const isolationScope = _mod12506.getIsolationScope();
+    const obj2 = {};
+    const merged = Object.assign(normalizedRequest);
+    obj2.normalizedRequest =
+      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    if (typeof tracesSampler.tracesSampler === "function") {
+      let num = tracesSampler.tracesSampler(obj2);
+    } else if (undefined !== obj2.parentSampled) {
+      num = obj2.parentSampled;
+    } else {
+      num = 1;
+      if (undefined !== tracesSampler.tracesSampleRate) {
+        num = tracesSampler.tracesSampleRate;
       }
-      if (mapped) {
-        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
-          let str2 = "some";
-        } else {
-          str2 = "every";
-        }
-        if (
-          mapped[str2](
-            (arr) =>
-              !arr.some((item) => {
-                filterKeys = filterKeys.filterKeys;
-                return filterKeys.includes(item);
-              }),
-          )
-        ) {
-          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
-            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
-              const obj2 = {};
-              const merged = Object.assign(tags.tags);
-              obj2.third_party_code = true;
-              tags.tags = obj2;
-            }
-          }
-          return null;
-        }
+    }
+    const tmpResult = _mod12506;
+    const parseSampleRateResult = _mod12519.parseSampleRate(num);
+    if (undefined === parseSampleRateResult) {
+      if (_mod12507.DEBUG_BUILD) {
+        const logger3 = _mod12479.logger;
+        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
       }
-      return tags;
-    },
-  };
-});
+      const items = [false];
+      let items3 = items;
+    } else if (parseSampleRateResult) {
+      const _Math = Math;
+      if (Math.random() < parseSampleRateResult) {
+        const items1 = [true, parseSampleRateResult];
+        let items2 = items1;
+      } else {
+        if (_mod12507.DEBUG_BUILD) {
+          const logger2 = _mod12479.logger;
+          const _Number = Number;
+          const _HermesInternal = HermesInternal;
+          logger2.log(
+            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
+              Number(num) +
+              ")",
+          );
+        }
+        items2 = [false, parseSampleRateResult];
+      }
+    } else {
+      if (_mod12507.DEBUG_BUILD) {
+        const logger = _mod12479.logger;
+        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        if (typeof tracesSampler.tracesSampler === "function") {
+          str = "tracesSampler returned 0 or false";
+        }
+        logger.log(`[Tracing] Discarding transaction because ${str}`);
+      }
+      items3 = [false, parseSampleRateResult];
+    }
+    return items3;
+  } else {
+    const items4 = [false];
+    return items4;
+  }
+  obj = _mod12511;
+};

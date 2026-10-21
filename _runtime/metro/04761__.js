@@ -1,163 +1,150 @@
 // _runtime/metro/04761__.js
-import _mod2050 from "02050__.js";
+import _mod2049 from "02049__.js";
 
-const fn = function _(moment) {
-  closure_0 = {
-    1: "\u0967",
-    2: "\u0968",
-    3: "\u0969",
-    4: "\u096A",
-    5: "\u096B",
-    6: "\u096C",
-    7: "\u096D",
-    8: "\u096E",
-    9: "\u096F",
-    0: "\u0966",
-  };
-  closure_1 = { "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9", "०": "0" };
-  const items = [
-    /^जन/i,
-    /^फ़र|फर/i,
-    /^मार्च/i,
-    /^अप्रै/i,
-    /^मई/i,
-    /^जून/i,
-    /^जुल/i,
-    /^अग/i,
-    /^सितं|सित/i,
-    /^अक्टू/i,
-    /^नव|नवं/i,
-    /^दिसं|दिस/i,
-  ];
-  const obj = {
-    months: {
-      format:
-        "\u091C\u0928\u0935\u0930\u0940_\u092B\u093C\u0930\u0935\u0930\u0940_\u092E\u093E\u0930\u094D\u091A_\u0905\u092A\u094D\u0930\u0948\u0932_\u092E\u0908_\u091C\u0942\u0928_\u091C\u0941\u0932\u093E\u0908_\u0905\u0917\u0938\u094D\u0924_\u0938\u093F\u0924\u092E\u094D\u092C\u0930_\u0905\u0915\u094D\u091F\u0942\u092C\u0930_\u0928\u0935\u092E\u094D\u092C\u0930_\u0926\u093F\u0938\u092E\u094D\u092C\u0930".split(
-          "_",
-        ),
-      standalone:
-        "\u091C\u0928\u0935\u0930\u0940_\u092B\u0930\u0935\u0930\u0940_\u092E\u093E\u0930\u094D\u091A_\u0905\u092A\u094D\u0930\u0948\u0932_\u092E\u0908_\u091C\u0942\u0928_\u091C\u0941\u0932\u093E\u0908_\u0905\u0917\u0938\u094D\u0924_\u0938\u093F\u0924\u0902\u092C\u0930_\u0905\u0915\u094D\u091F\u0942\u092C\u0930_\u0928\u0935\u0902\u092C\u0930_\u0926\u093F\u0938\u0902\u092C\u0930".split(
-          "_",
-        ),
-    },
-    monthsShort:
-      "\u091C\u0928._\u092B\u093C\u0930._\u092E\u093E\u0930\u094D\u091A_\u0905\u092A\u094D\u0930\u0948._\u092E\u0908_\u091C\u0942\u0928_\u091C\u0941\u0932._\u0905\u0917._\u0938\u093F\u0924._\u0905\u0915\u094D\u091F\u0942._\u0928\u0935._\u0926\u093F\u0938.".split(
+const fn = function n(moment) {
+  function translate(arg0, arg1, arg2, arg3) {
+    let str = "";
+    switch (arg2) {
+      case "s":
+        let str13 = "muutama sekunti";
+        if (arg3) {
+          str13 = "muutaman sekunnin";
+        }
+        return str13;
+      case "ss":
+        let str12 = "sekuntia";
+        if (arg3) {
+          str12 = "sekunnin";
+        }
+        str = str12;
+        if (arg0 >= 10) {
+          return arg0 + " " + str;
+        }
+        break;
+      case "m":
+        let str11 = "minuutti";
+        if (arg3) {
+          str11 = "minuutin";
+        }
+        return str11;
+      case "mm":
+        let str10 = "minuuttia";
+        if (arg3) {
+          str10 = "minuutin";
+        }
+        str = str10;
+        break;
+      case "h":
+        let str9 = "tunti";
+        if (arg3) {
+          str9 = "tunnin";
+        }
+        return str9;
+      case "hh":
+        let str8 = "tuntia";
+        if (arg3) {
+          str8 = "tunnin";
+        }
+        str = str8;
+        break;
+      case "d":
+        let str7 = "p\u00E4iv\u00E4";
+        if (arg3) {
+          str7 = "p\u00E4iv\u00E4n";
+        }
+        return str7;
+      case "dd":
+        let str6 = "p\u00E4iv\u00E4\u00E4";
+        if (arg3) {
+          str6 = "p\u00E4iv\u00E4n";
+        }
+        str = str6;
+        break;
+      case "M":
+        let str5 = "kuukausi";
+        if (arg3) {
+          str5 = "kuukauden";
+        }
+        return str5;
+      case "MM":
+        let str4 = "kuukautta";
+        if (arg3) {
+          str4 = "kuukauden";
+        }
+        str = str4;
+        break;
+      case "y":
+        let str3 = "vuosi";
+        if (arg3) {
+          str3 = "vuoden";
+        }
+        return str3;
+      case "yy":
+        let str2 = "vuotta";
+        if (arg3) {
+          str2 = "vuoden";
+        }
+        str = str2;
+        break;
+    }
+  }
+  const parts = "nolla yksi kaksi kolme nelj\u00E4 viisi kuusi seitsem\u00E4n kahdeksan yhdeks\u00E4n".split(" ");
+  const items = ["nolla", "yhden", "kahden", "kolmen", "nelj\u00E4n", "viiden", "kuuden", parts[7], parts[8], parts[9]];
+  ({ split, split: split2 } = "su_ma_ti_ke_to_pe_la");
+  return moment.defineLocale("fi", {
+    months:
+      "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kes\u00E4kuu_hein\u00E4kuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split(
         "_",
       ),
-    weekdays:
-      "\u0930\u0935\u093F\u0935\u093E\u0930_\u0938\u094B\u092E\u0935\u093E\u0930_\u092E\u0902\u0917\u0932\u0935\u093E\u0930_\u092C\u0941\u0927\u0935\u093E\u0930_\u0917\u0941\u0930\u0942\u0935\u093E\u0930_\u0936\u0941\u0915\u094D\u0930\u0935\u093E\u0930_\u0936\u0928\u093F\u0935\u093E\u0930".split(
-        "_",
-      ),
-    weekdaysShort:
-      "\u0930\u0935\u093F_\u0938\u094B\u092E_\u092E\u0902\u0917\u0932_\u092C\u0941\u0927_\u0917\u0941\u0930\u0942_\u0936\u0941\u0915\u094D\u0930_\u0936\u0928\u093F".split(
-        "_",
-      ),
-    weekdaysMin: "\u0930_\u0938\u094B_\u092E\u0902_\u092C\u0941_\u0917\u0941_\u0936\u0941_\u0936".split("_"),
+    monthsShort: "tammi_helmi_maalis_huhti_touko_kes\u00E4_hein\u00E4_elo_syys_loka_marras_joulu".split("_"),
+    weekdays: "sunnuntai_maanantai_tiistai_keskiviikko_torstai_perjantai_lauantai".split("_"),
+    weekdaysShort: "su_ma_ti_ke_to_pe_la".split("_"),
+    weekdaysMin: "su_ma_ti_ke_to_pe_la".split("_"),
     longDateFormat: {
-      LT: "A h:mm \u092C\u091C\u0947",
-      LTS: "A h:mm:ss \u092C\u091C\u0947",
-      L: "DD/MM/YYYY",
-      LL: "D MMMM YYYY",
-      LLL: "D MMMM YYYY, A h:mm \u092C\u091C\u0947",
-      LLLL: "dddd, D MMMM YYYY, A h:mm \u092C\u091C\u0947",
+      LT: "HH.mm",
+      LTS: "HH.mm.ss",
+      L: "DD.MM.YYYY",
+      LL: "Do MMMM[ta] YYYY",
+      LLL: "Do MMMM[ta] YYYY, [klo] HH.mm",
+      LLLL: "dddd, Do MMMM[ta] YYYY, [klo] HH.mm",
+      l: "D.M.YYYY",
+      ll: "Do MMM YYYY",
+      lll: "Do MMM YYYY, [klo] HH.mm",
+      llll: "ddd, Do MMM YYYY, [klo] HH.mm",
     },
-    monthsParse: items,
-    longMonthsParse: items,
-    shortMonthsParse: null,
-    monthsRegex:
-      /^(जनवरी|जन\.?|फ़रवरी|फरवरी|फ़र\.?|मार्च?|अप्रैल|अप्रै\.?|मई?|जून?|जुलाई|जुल\.?|अगस्त|अग\.?|सितम्बर|सितंबर|सित\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर|नव\.?|दिसम्बर|दिसंबर|दिस\.?)/i,
-    monthsShortRegex:
-      /^(जनवरी|जन\.?|फ़रवरी|फरवरी|फ़र\.?|मार्च?|अप्रैल|अप्रै\.?|मई?|जून?|जुलाई|जुल\.?|अगस्त|अग\.?|सितम्बर|सितंबर|सित\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर|नव\.?|दिसम्बर|दिसंबर|दिस\.?)/i,
-    monthsStrictRegex:
-      /^(जनवरी?|फ़रवरी|फरवरी?|मार्च?|अप्रैल?|मई?|जून?|जुलाई?|अगस्त?|सितम्बर|सितंबर|सित?\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर?|दिसम्बर|दिसंबर?)/i,
-    monthsShortStrictRegex: /^(जन\.?|फ़र\.?|मार्च?|अप्रै\.?|मई?|जून?|जुल\.?|अग\.?|सित\.?|अक्टू\.?|नव\.?|दिस\.?)/i,
     calendar: {
-      sameDay: "[\u0906\u091C] LT",
-      nextDay: "[\u0915\u0932] LT",
-      nextWeek: "dddd, LT",
-      lastDay: "[\u0915\u0932] LT",
-      lastWeek: "[\u092A\u093F\u091B\u0932\u0947] dddd, LT",
+      sameDay: "[t\u00E4n\u00E4\u00E4n] [klo] LT",
+      nextDay: "[huomenna] [klo] LT",
+      nextWeek: "dddd [klo] LT",
+      lastDay: "[eilen] [klo] LT",
+      lastWeek: "[viime] dddd[na] [klo] LT",
       sameElse: "L",
     },
     relativeTime: {
-      future: "%s \u092E\u0947\u0902",
-      past: "%s \u092A\u0939\u0932\u0947",
-      s: "\u0915\u0941\u091B \u0939\u0940 \u0915\u094D\u0937\u0923",
-      ss: "%d \u0938\u0947\u0915\u0902\u0921",
-      m: "\u090F\u0915 \u092E\u093F\u0928\u091F",
-      mm: "%d \u092E\u093F\u0928\u091F",
-      h: "\u090F\u0915 \u0918\u0902\u091F\u093E",
-      hh: "%d \u0918\u0902\u091F\u0947",
-      d: "\u090F\u0915 \u0926\u093F\u0928",
-      dd: "%d \u0926\u093F\u0928",
-      M: "\u090F\u0915 \u092E\u0939\u0940\u0928\u0947",
-      MM: "%d \u092E\u0939\u0940\u0928\u0947",
-      y: "\u090F\u0915 \u0935\u0930\u094D\u0937",
-      yy: "%d \u0935\u0930\u094D\u0937",
+      future: "%s p\u00E4\u00E4st\u00E4",
+      past: "%s sitten",
+      s: translate,
+      ss: translate,
+      m: translate,
+      mm: translate,
+      h: translate,
+      hh: translate,
+      d: translate,
+      dd: translate,
+      M: translate,
+      MM: translate,
+      y: translate,
+      yy: translate,
     },
-    preparse(_i) {
-      return _i.replace(/[१२३४५६७८९०]/g, (arg0) => closure_1_1[arg0]);
-    },
-    postformat(pastFutureResult) {
-      return pastFutureResult.replace(/\d/g, (arg0) => closure_1_0[arg0]);
-    },
-    meridiemParse: /रात|सुबह|दोपहर|शाम/,
-    meridiemHour(arg0, arg1) {
-      let num = arg0;
-      if (12 === arg0) {
-        num = 0;
-      }
-      if ("\u0930\u093E\u0924" === arg1) {
-        let sum = num;
-        if (num >= 4) {
-          sum = num + 12;
-        }
-        let tmp = sum;
-      } else {
-        tmp = num;
-        if ("\u0938\u0941\u092C\u0939" !== arg1) {
-          if ("\u0926\u094B\u092A\u0939\u0930" === arg1) {
-            let sum1 = num;
-            if (num < 10) {
-              sum1 = num + 12;
-            }
-            let sum2 = sum1;
-          } else if ("\u0936\u093E\u092E" === arg1) {
-            sum2 = num + 12;
-          }
-        }
-      }
-      return tmp;
-    },
-    meridiem(arg0, arg1, arg2) {
-      let str = "\u0930\u093E\u0924";
-      let str2 = "\u0930\u093E\u0924";
-      if (arg0 >= 4) {
-        let str3 = "\u0938\u0941\u092C\u0939";
-        if (arg0 >= 10) {
-          let str4 = "\u0926\u094B\u092A\u0939\u0930";
-          if (arg0 >= 17) {
-            if (arg0 < 20) {
-              str = "\u0936\u093E\u092E";
-            }
-            str4 = str;
-          }
-          str3 = str4;
-        }
-        str2 = str3;
-      }
-      return str2;
-    },
-    week: { dow: 0, doy: 6 },
-  };
-  const items1 = [/^जन/i, /^फ़र/i, /^मार्च/i, /^अप्रै/i, /^मई/i, /^जून/i, /^जुल/i, /^अग/i, /^सित/i, /^अक्टू/i, /^नव/i, /^दिस/i];
-  obj.shortMonthsParse = items1;
-  return moment.defineLocale("hi", obj);
+    dayOfMonthOrdinalParse: /\d{1,2}\./,
+    ordinal: "%d.",
+    week: { dow: 1, doy: 4 },
+  });
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(_mod2050);
+      fn(_mod2049);
     }
   }
 }

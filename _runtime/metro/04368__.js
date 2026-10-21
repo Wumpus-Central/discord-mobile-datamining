@@ -1,23 +1,28 @@
 // _runtime/metro/04368__.js
-let closure_0 = { lessThanXSeconds: { one: "bir saniyeden az", other: "{{count}} saniyeden az" }, xSeconds: { one: "1 saniye", other: "{{count}} saniye" }, halfAMinute: "yar\u0131m dakika", lessThanXMinutes: { one: "bir dakikadan az", other: "{{count}} dakikadan az" }, xMinutes: { one: "1 dakika", other: "{{count}} dakika" }, aboutXHours: { one: "yakla\u015F\u0131k 1 saat", other: "yakla\u015F\u0131k {{count}} saat" }, xHours: { one: "1 saat", other: "{{count}} saat" }, xDays: { one: "1 g\u00FCn", other: "{{count}} g\u00FCn" }, aboutXWeeks: { one: "yakla\u015F\u0131k 1 hafta", other: "yakla\u015F\u0131k {{count}} hafta" }, xWeeks: { one: "1 hafta", other: "{{count}} hafta" }, aboutXMonths: { one: "yakla\u015F\u0131k 1 ay", other: "yakla\u015F\u0131k {{count}} ay" }, xMonths: { one: "1 ay", other: "{{count}} ay" }, aboutXYears: { one: "yakla\u015F\u0131k 1 y\u0131l", other: "yakla\u015F\u0131k {{count}} y\u0131l" }, xYears: { one: "1 y\u0131l", other: "{{count}} y\u0131l" }, overXYears: { one: "1 y\u0131ldan fazla", other: "{{count}} y\u0131ldan fazla" }, almostXYears: { one: "neredeyse 1 y\u0131l", other: "neredeyse {{count}} y\u0131l" } };
+import 02076__ from "02076__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp5 = tmp;
-    if (null != addSuffix) {
-      tmp5 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} önce`;
-        }
-        text = `${tmp} sonra`;
-      }
+if (!module_2076) {
+  const obj2 = { default: module_2076 };
+  let obj = obj2;
+} else {
+  obj = module_2076;
+}
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return String(arg0);
+  },
+  era: obj.default({ values: { narrow: ["\u00CE", "D"], abbreviated: ["\u00CE.d.C.", "D.C."], wide: ["\u00CEnainte de Cristos", "Dup\u0103 Cristos"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["primul trimestru", "al doilea trimestru", "al treilea trimestru", "al patrulea trimestru"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    return tmp5;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    one = tmp.other.replace("{{count}}", arg1.toString());
-  }
+  }),
+  month: obj.default({ values: { narrow: ["I", "F", "M", "A", "M", "I", "I", "A", "S", "O", "N", "D"], abbreviated: ["ian", "feb", "mar", "apr", "mai", "iun", "iul", "aug", "sep", "oct", "noi", "dec"], wide: ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["d", "l", "m", "m", "j", "v", "s"], short: ["du", "lu", "ma", "mi", "jo", "vi", "s\u00E2"], abbreviated: ["dum", "lun", "mar", "mie", "joi", "vin", "s\u00E2m"], wide: ["duminic\u0103", "luni", "mar\u021Bi", "miercuri", "joi", "vineri", "s\u00E2mb\u0103t\u0103"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "ami", morning: "dim", afternoon: "da", evening: "s", night: "n" }, abbreviated: { am: "AM", pm: "PM", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, wide: { am: "a.m.", pm: "p.m.", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, abbreviated: { am: "AM", pm: "PM", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, wide: { am: "a.m.", pm: "p.m.", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

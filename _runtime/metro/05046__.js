@@ -1,43 +1,49 @@
 // _runtime/metro/05046__.js
-import noop from "00019__.js";
+import _mod5038 from "05038__.js";
 
-({ useRef: closure_0, useEffect: closure_1 } = noop);
-let deps = Symbol("UNINITIALIZED");
+require = arg1;
+const dependencyMap = arg6;
+const map = new Map();
 
-export const useDisposableMemo = function useDisposableMemo(fn2, _temp, items, current2) {
-  const obj = { value: "r", deps, pendingDisposal: null };
-  const tmp2 = React(obj);
-  closure_0 = tmp2;
-  const obj2 = React(_temp);
-  obj2.current = _temp;
-  const tmp3 = React(current2);
-  deps = tmp3;
-  tmp3.current = current2;
-  if (tmp2.current.deps === deps) {
-    if (tmp2.current.deps !== deps) {
-      if (tmp3.current) {
-        tmp3.current.current = undefined;
+export const getHybridObjectConstructor = function getHybridObjectConstructor(arg0) {
+  closure_0 = arg0;
+  if (map.has(arg0)) {
+    return map.get(arg0);
+  } else {
+    function constructorFunc() {
+      const NitroModules = _mod5038.NitroModules;
+      const hybridObject = NitroModules.createHybridObject(closure_0);
+      const prototypeOf = Object.getPrototypeOf(hybridObject);
+      if (constructorFunc.prototype !== prototypeOf) {
+        constructorFunc.prototype = prototypeOf;
+        constructorFunc.prototypeInitialized = true;
       }
-      try {
-        obj2.current(tmp2.current.value);
-      } catch (err) {}
+      return hybridObject;
     }
-    const obj3 = { value: fn2(), deps: items, pendingDisposal: null };
-    tmp2.current = obj3;
-    if (tmp3.current) {
-      tmp3.current.current = tmp2.current.value;
-    }
+    constructorFunc.prototypeInitialized = false;
+    let _Object = Object;
+    const _Symbol = Symbol;
+    const obj2 = {
+      value(arg0) {
+        if (!constructorFunc.prototypeInitialized) {
+          const NitroModules = _mod5038.NitroModules;
+          const _Object = Object;
+          constructorFunc.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(closure_0));
+          constructorFunc.prototypeInitialized = true;
+        }
+        let prototypeOf = Object.getPrototypeOf(arg0);
+        if (null != prototypeOf) {
+          while (prototypeOf !== constructorFunc.prototype) {
+            let _Object2 = Object;
+            prototypeOf = Object.getPrototypeOf(prototypeOf);
+          }
+          return true;
+        }
+        return false;
+      },
+    };
+    Object.defineProperty(constructorFunc, Symbol.hasInstance, obj2);
+    const result = map.set(arg0, constructorFunc);
+    return constructorFunc;
   }
-  framebus(
-    () => () => {
-      if (ref3.current) {
-        ref3.current.current = undefined;
-      }
-      try {
-        ref2.current(ref.current.value);
-      } catch (err) {}
-    },
-    [],
-  );
-  return tmp2.current.value;
 };

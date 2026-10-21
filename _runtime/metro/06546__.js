@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 267,
-  height: 267,
+  width: 628,
+  height: 167,
   scales: [1],
-  hash: "898dc79e0285b8e9855531eeca36bf84",
-  name: "img_roblox_dark",
+  hash: "87dcaca9679ceb1e78d3b15aba4c2917",
+  name: "img_account_sync_samsung_white",
   type: "svg",
 });

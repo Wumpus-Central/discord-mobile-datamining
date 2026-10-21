@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 16,
-  height: 16,
-  scales: [1, 2, 3],
-  hash: "084857b96e411731cfaceba379b8db2a",
-  name: "ic_group",
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
+  scales: [2, 3],
+  hash: "19a79c674ca352a1b9c59552160bbdc6",
+  name: "telegram",
   type: "png",
 });

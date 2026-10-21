@@ -1,13 +1,19 @@
 // _runtime/metro/15215__.js
-import registerAsset from "01134__.js";
+import _mod15216 from "15216__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "727899a26eec90f323c88c339b15535a",
-  name: "ic_radio_square_24px",
-  type: "png",
-});
+export default (arg0, arg1) => {
+  if (arg0 instanceof _mod15216) {
+    return arg0;
+  } else {
+    try {
+      const tmp8 = new _mod15216(arg0, arg1);
+      return tmp8;
+    } catch (tmp10) {
+      if (tmp) {
+        throw tmp10;
+      } else {
+        return null;
+      }
+    }
+  }
+};

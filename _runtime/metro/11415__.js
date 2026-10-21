@@ -1,13 +1,3 @@
 // _runtime/metro/11415__.js
-import registerAsset from "01134__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "adb011bbeb7f189fa87848559cc4fbc7",
-  name: "ic_leave_stage",
-  type: "png",
-});
+export default '"use strict";(()=>{var l="discordEmbeddedAppShim";function g(e){return e!=null&&typeof e=="object"&&Object.getOwnPropertyDescriptor(e,l)!=null}function E(e){let t=Object.getOwnPropertyDescriptor(e,"nonce")?.value;return typeof t=="string"?t:null}function S(e,t,o,a){let s=new globalThis.MessageChannel,{port1:n,port2:d}=s;a({post(r){n.postMessage(r)},listen(r){n.onmessage=C=>r(C.data)},close(){n.close()}});let i={[l]:"connection_open",nonce:o};e.postMessage(i,t,[d])}var c="discordEmbeddedAppShimBridge",h="DiscordEmbeddedAppShimBridge";var p=new Map,u=0;function m(e){let{ReactNativeWebView:t}=window;t.postMessage(JSON.stringify(e))}window[h]={start(e,t){window.addEventListener("message",o=>{if(!g(o.data))return;o.stopImmediatePropagation();let a=document.getElementById(t),s=a instanceof HTMLIFrameElement?a.contentWindow:null,n=E(o.data);s==null||o.source!==s||o.origin==="null"||o.data[l]!=="hello"||n==null||S(s,o.origin,n,d=>{let i=++u;p.set(i,d),m({[c]:e,event:"open",pipeId:i}),d.listen(r=>m({[c]:e,event:"message",pipeId:i,message:r}))})},!0)},post(e,t){p.get(e)?.post(t)},close(e){p.get(e)?.close(),p.delete(e)}};})();';

@@ -1,196 +1,342 @@
 // _runtime/metro/05913__.js
-import _modDef5891 from "05891__.js";
-import _modDef5910 from "05910__.js";
-import styleDefault from "../05915_style.js";
+import get_synchronousScreenUpdatesEnabledDefault from "../05903_get_synchronousScreenUpdatesEnabled.js";
+import _mod5912 from "05912__.js";
+import _modDef5914 from "05914__.js";
+import _modDef5915 from "05915__.js";
+import _mod5916 from "05916__.js";
+import SHEET_FIT_TO_CONTENTS from "../05917_SHEET_FIT_TO_CONTENTS.js";
+import DelayedFreezeDefault from "../05918_DelayedFreeze.js";
+import _mod5920 from "05920__.js";
+import _modDef5921 from "05921__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
-const require = fn;
+require = fn;
+let closure_3 = ["enabled", "freezeOnBlur", "shouldFreeze"];
+let closure_4 = [
+  "active",
+  "activityState",
+  "children",
+  "isNativeStack",
+  "fullScreenSwipeEnabled",
+  "gestureResponseDistance",
+  "scrollEdgeEffects",
+  "onGestureCancel",
+  "style",
+];
+let closure_5 = ["active", "activityState", "style", "onComponentRef"];
 get_ActivityIndicator = fn(17);
-({ Platform, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-  absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 },
-});
-
-export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
-  ({ children, headerConfig, stackPresentation, sheetAllowedDetents, screenId } = arg0);
-  ({ scrollEdgeEffects, unstable_sheetFooter } = arg0);
-  ({ activityState, shouldFreeze, contentStyle, style, onHeaderHeightChange } = arg0);
-  const merged = Object.assign(
-    arg0,
-    Object.assign({
-      children: 0,
-      headerConfig: 0,
-      activityState: 0,
-      shouldFreeze: 0,
-      stackPresentation: 0,
-      sheetAllowedDetents: 0,
-      contentStyle: 0,
-      style: 0,
-      screenId: 0,
-      onHeaderHeightChange: 0,
-      scrollEdgeEffects: 0,
-      unstable_sheetFooter: 0,
-    }),
-  );
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let flag5;
-  closure_4 = undefined;
-  let hidden;
-  if (headerConfig != null) {
-    hidden = headerConfig.hidden;
+const Animated = get_ActivityIndicator.Animated;
+const jsx = fn(21).jsx;
+const __INTERNAL_VIEW_CONFIG = Animated.createAnimatedComponent(_modDef5914);
+const animatedComponent = Animated.createAnimatedComponent(_modDef5915);
+const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg1) {
+  noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current, []);
+  const previous = _mod5916.usePrevious(activityState.activityState);
+  function setRef(current) {
+    closure_1.current = current;
+    const onComponentRef = activityState.onComponentRef;
+    if (onComponentRef != null) {
+      onComponentRef(current);
+    }
   }
-  let flag;
-  if (headerConfig != null) {
-    flag = headerConfig.disableTopInsetApplication;
+  value = new Animated.Value(0);
+  const current = noop.useRef(value).current;
+  value3 = new Animated.Value(0);
+  const current2 = noop.useRef(value3).current;
+  value4 = new Animated.Value(0);
+  const current3 = noop.useRef(value4).current;
+  let enabled = activityState.enabled;
+  if (undefined === enabled) {
+    enabled = _mod5912.screensEnabled();
+    const tmp2Result = _mod5912;
   }
-  if (flag == null) {
-    flag = false;
+  let freezeOnBlur = activityState.freezeOnBlur;
+  if (undefined === freezeOnBlur) {
+    freezeOnBlur = _mod5912.freezeEnabled();
+    const tmp2Result6 = _mod5912;
   }
-  let flag2;
-  if (headerConfig != null) {
-    flag2 = headerConfig.disableLeftInsetApplication;
+  let shouldFreeze = activityState.shouldFreeze;
+  const tmp9 = _objectWithoutProperties(activityState, closure_3);
+  let sheetAllowedDetents = tmp9.sheetAllowedDetents;
+  if (undefined === sheetAllowedDetents) {
+    sheetAllowedDetents = [1];
   }
-  if (flag2 == null) {
-    flag2 = false;
+  let SHEET_DIMMED_ALWAYS = tmp9.sheetLargestUndimmedDetentIndex;
+  if (undefined === SHEET_DIMMED_ALWAYS) {
+    SHEET_DIMMED_ALWAYS = SHEET_FIT_TO_CONTENTS.SHEET_DIMMED_ALWAYS;
   }
-  let flag3;
-  if (headerConfig != null) {
-    flag3 = headerConfig.disableRightInsetApplication;
+  const sheetGrabberVisible = tmp9.sheetGrabberVisible;
+  const sheetCornerRadius = tmp9.sheetCornerRadius;
+  let num = -1;
+  if (undefined !== sheetCornerRadius) {
+    num = sheetCornerRadius;
   }
-  if (flag3 == null) {
-    flag3 = false;
+  const sheetExpandsWhenScrolledToEdge = tmp9.sheetExpandsWhenScrolledToEdge;
+  const sheetElevation = tmp9.sheetElevation;
+  let num2 = 24;
+  if (undefined !== sheetElevation) {
+    num2 = sheetElevation;
   }
-  let flag4;
-  if (headerConfig != null) {
-    flag4 = headerConfig.disableBottomInsetApplication;
+  const sheetInitialDetentIndex = tmp9.sheetInitialDetentIndex;
+  let num3 = 0;
+  if (undefined !== sheetInitialDetentIndex) {
+    num3 = sheetInitialDetentIndex;
   }
-  if (flag4 == null) {
-    flag4 = false;
-  }
-  importDefault = flag5.useRef(null);
-  dependencyMap = flag5.useContext(screenId(5911).RNSScreensRefContext);
-  const imperativeHandle = flag5.useImperativeHandle(arg1, () => ref.current);
-  if (stackPresentation == null) {
-    stackPresentation = "push";
-  }
-  flag5 = undefined;
-  if (headerConfig != null) {
-    flag5 = headerConfig.hidden;
-  }
-  if (flag5 == null) {
-    flag5 = false;
-  }
-  closure_4 = obj2.useRef(flag5);
-  const items = [flag5, stackPresentation];
-  const effect = obj2.useEffect(() => {
-    _modDef5910(
-      false,
-      "Dynamically changing header's visibility in modals will result in remounting the screen and losing all local state.",
-    );
-    closure_4.current = flag5;
-  }, items);
-  let isIOS26OrHigher = undefined === scrollEdgeEffects;
-  if (!isIOS26OrHigher) {
-    const _Object = Object;
-    const values = Object.values(scrollEdgeEffects);
-    isIOS26OrHigher = values.some((item) => "hidden" !== item);
-  }
-  let blurEffect;
-  if (headerConfig != null) {
-    blurEffect = headerConfig.blurEffect;
-  }
-  let tmp10 = undefined !== blurEffect;
-  if (tmp10) {
-    tmp10 = "none" !== headerConfig.blurEffect;
-  }
-  let obj = screenId(5901);
-  const tmp3 = !hidden;
-  if (isIOS26OrHigher) {
-    isIOS26OrHigher = tmp10;
-  }
-  if (isIOS26OrHigher) {
-    isIOS26OrHigher = screenId(5914).isIOS26OrHigher;
-  }
-  _modDef5910(
-    isIOS26OrHigher,
-    "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.",
-  );
-  if ("formSheet" !== stackPresentation) {
-    let container = closure_7.container;
-  } else if ("fitToContents" === sheetAllowedDetents) {
-    container = closure_7.absoluteWithNoBottom;
-  } else {
-    container = closure_7.container;
-  }
-  const obj3 = { value: obj.useEdgeInsetApplication(tmp3, flag, flag2, flag3, flag4).nextContextValue, children: null };
-  const obj4 = { contentStyle, style: container, stackPresentation, children: null };
-  let tmp19Result = children;
-  if (screenId(5914).isIOS26OrHigher) {
-    const obj5 = { edges: {}, children };
-    tmp19Result = tmp19(screenId(5918).SafeAreaView, obj5);
-  }
-  obj4.children = tmp19Result;
-  obj3.children = closure_4(styleDefault, obj4);
-  const items1 = [closure_4(screenId(5901).EdgeInsetApplicationContext.Provider, obj3), ,];
-  const merged1 = Object.assign(headerConfig);
-  items1[1] = closure_4(screenId(5900).ScreenStackHeaderConfig, {});
-  let tmp19Result2 = "formSheet" === stackPresentation && unstable_sheetFooter;
-  if (tmp19Result2) {
-    const obj7 = { children: unstable_sheetFooter() };
-    tmp19Result2 = tmp19(screenId(5920).FooterComponent, obj7);
-  }
-  items1[2] = tmp19Result2;
-  const obj6 = {};
-  const tmp11Result = styleDefault;
-  const obj8 = {
-    ref(current) {
-      closure_1.current = current;
-      if (null !== closure_2) {
-        if (null === current) {
-          delete tmp2[tmp];
-        } else {
-          const obj = { current };
-          tmp5[screenId] = obj;
-        }
-      } else {
+  const sheetShouldOverflowTopInset = tmp9.sheetShouldOverflowTopInset;
+  const sheetDefaultResizeAnimationEnabled = tmp9.sheetDefaultResizeAnimationEnabled;
+  if (enabled) {
+    if (_mod5912.isNativePlatformSupported) {
+      const sheetAllowedDetents1 = SHEET_FIT_TO_CONTENTS.resolveSheetAllowedDetents(sheetAllowedDetents);
+      const tmp2Result7 = SHEET_FIT_TO_CONTENTS;
+      const sheetLargestUndimmedDetent = SHEET_FIT_TO_CONTENTS.resolveSheetLargestUndimmedDetent(
+        SHEET_DIMMED_ALWAYS,
+        sheetAllowedDetents1.length - 1,
+      );
+      const tmp2Result8 = SHEET_FIT_TO_CONTENTS;
+      ({
+        active: active2,
+        activityState: activityState2,
+        children,
+        isNativeStack,
+        gestureResponseDistance,
+        scrollEdgeEffects,
+        onGestureCancel,
+      } = tmp9);
+      const sheetInitialDetentIndex1 = SHEET_FIT_TO_CONTENTS.resolveSheetInitialDetentIndex(
+        num3,
+        sheetAllowedDetents1.length - 1,
+      );
+      ({ fullScreenSwipeEnabled, style } = tmp9);
+      const tmp8Result = _objectWithoutProperties(tmp9, closure_4);
+      if (tmp28) {
         const _console = console;
         console.warn(
-          "Looks like RNSScreensRefContext is missing. Make sure the ScreenStack component is wrapped in it",
+          "It appears that you are using old version of react-navigation library. Please update @react-navigation/bottom-tabs, @react-navigation/stack and @react-navigation/drawer to version 5.10.0 or above to take full advantage of new functionality added to react-native-screens",
         );
+        let num6 = 0;
+        if (0 !== active2) {
+          num6 = 2;
+        }
+        activityState2 = num6;
       }
-    },
-    enabled: true,
-    isNativeStack: true,
-    activityState,
-    shouldFreeze,
-    screenId,
-    stackPresentation,
-    hasLargeHeader: null,
-    sheetAllowedDetents: null,
-    style: null,
-    scrollEdgeEffects: null,
-    onHeaderHeightChange: null,
-  };
-  let flag6;
-  const tmp17Result = closure_6(closure_5, { children: items1 });
-  if (headerConfig != null) {
-    flag6 = headerConfig.largeTitle;
+      if (isNativeStack) {
+        if (undefined !== previous) {
+          if (undefined !== activityState2) {
+            if (previous > activityState2) {
+              const _Error = Error;
+              const error = new Error("[RNScreens] activityState cannot be decreased in NativeStack");
+              throw error;
+            }
+          }
+        }
+      }
+      if (freezeOnBlur) {
+        if (undefined === shouldFreeze) {
+          shouldFreeze = 0 === activityState2;
+        }
+        freezeOnBlur = shouldFreeze;
+      }
+      let obj3 = { freeze: freezeOnBlur, children: null };
+      const obj4 = {};
+      tmp28 = undefined !== active2 && undefined === activityState2;
+      const tmp2Result9 = SHEET_FIT_TO_CONTENTS;
+      let merged = Object.assign(tmp8Result);
+      obj4.onAppear = tmp15;
+      obj4.onDisappear = tmp16;
+      obj4.onWillAppear = tmp17;
+      obj4.onWillDisappear = tmp18;
+      if (onGestureCancel == null) {
+        onGestureCancel = () => {};
+      }
+      obj4.onGestureCancel = onGestureCancel;
+      const items = [style, { zIndex: "r" }];
+      obj4.style = items;
+      obj4.activityState = activityState2;
+      obj4.screenId = tmp14;
+      obj4.sheetAllowedDetents = sheetAllowedDetents1;
+      obj4.sheetLargestUndimmedDetent = sheetLargestUndimmedDetent;
+      obj4.sheetElevation = num2;
+      obj4.sheetShouldOverflowTopInset = tmp12;
+      obj4.sheetDefaultResizeAnimationEnabled = tmp13;
+      obj4.sheetGrabberVisible = tmp10;
+      obj4.sheetCornerRadius = num;
+      obj4.sheetExpandsWhenScrolledToEdge = tmp11;
+      obj4.sheetInitialDetent = sheetInitialDetentIndex1;
+      obj4.fullScreenSwipeEnabled = _mod5920.parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled);
+      let num7;
+      if (gestureResponseDistance != null) {
+        num7 = gestureResponseDistance.start;
+      }
+      if (num7 == null) {
+        num7 = -1;
+      }
+      const rect = { start: num7, end: null, top: null, bottom: null };
+      let num8;
+      if (gestureResponseDistance != null) {
+        num8 = gestureResponseDistance.end;
+      }
+      if (num8 == null) {
+        num8 = -1;
+      }
+      rect.end = num8;
+      let num9;
+      if (gestureResponseDistance != null) {
+        num9 = gestureResponseDistance.top;
+      }
+      if (num9 == null) {
+        num9 = -1;
+      }
+      rect.top = num9;
+      let num10;
+      if (gestureResponseDistance != null) {
+        num10 = gestureResponseDistance.bottom;
+      }
+      if (num10 == null) {
+        num10 = -1;
+      }
+      rect.bottom = num10;
+      obj4.gestureResponseDistance = rect;
+      obj4.ref = function ref(viewConfig) {
+        let style;
+        if (viewConfig != null) {
+          viewConfig = viewConfig.viewConfig;
+          if (viewConfig != null) {
+            const validAttributes = viewConfig.validAttributes;
+            if (validAttributes != null) {
+              style = validAttributes.style;
+            }
+          }
+        }
+        if (style) {
+          const obj2 = {};
+          const merged = Object.assign(viewConfig.viewConfig.validAttributes.style);
+          obj2.display = null;
+          viewConfig.viewConfig.validAttributes.style = obj2;
+        } else {
+          let style1;
+          if (viewConfig != null) {
+            const _viewConfig = viewConfig._viewConfig;
+            if (_viewConfig != null) {
+              const validAttributes2 = _viewConfig.validAttributes;
+              if (validAttributes2 != null) {
+                style1 = validAttributes2.style;
+              }
+            }
+          }
+          if (style1) {
+            const obj3 = {};
+            const merged1 = Object.assign(viewConfig._viewConfig.validAttributes.style);
+            obj3.display = null;
+            viewConfig._viewConfig.validAttributes.style = obj3;
+          } else {
+            let style2;
+            if (viewConfig != null) {
+              const __viewConfig = viewConfig.__viewConfig;
+              if (__viewConfig != null) {
+                const validAttributes3 = __viewConfig.validAttributes;
+                if (validAttributes3 != null) {
+                  style2 = validAttributes3.style;
+                }
+              }
+            }
+            if (style2) {
+              const obj = {};
+              const merged2 = Object.assign(viewConfig.__viewConfig.validAttributes.style);
+              obj.display = null;
+              viewConfig.__viewConfig.validAttributes.style = obj;
+            }
+          }
+        }
+        if (typeof setRef === "function") {
+          closure_1.current = viewConfig;
+          const onComponentRef = activityState.onComponentRef;
+          if (onComponentRef != null) {
+            onComponentRef(viewConfig);
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      };
+      let eventResult;
+      if (isNativeStack) {
+        const obj5 = { nativeEvent: null };
+        const obj6 = { progress: current2, closing: current, goingForward: current3 };
+        obj5.nativeEvent = obj6;
+        const items1 = [obj5];
+        eventResult = Animated.event(items1, { useNativeDriver: true });
+      }
+      obj4.onTransitionProgress = eventResult;
+      let bottom;
+      if (scrollEdgeEffects != null) {
+        bottom = scrollEdgeEffects.bottom;
+      }
+      obj4.bottomScrollEdgeEffect = bottom;
+      let left;
+      if (scrollEdgeEffects != null) {
+        left = scrollEdgeEffects.left;
+      }
+      obj4.leftScrollEdgeEffect = left;
+      let right;
+      if (scrollEdgeEffects != null) {
+        right = scrollEdgeEffects.right;
+      }
+      obj4.rightScrollEdgeEffect = right;
+      let top;
+      if (scrollEdgeEffects != null) {
+        top = scrollEdgeEffects.top;
+      }
+      obj4.topScrollEdgeEffect = top;
+      obj4.synchronousShadowStateUpdatesEnabled =
+        get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousScreenUpdatesEnabled;
+      obj4.androidResetScreenShadowStateOnOrientationChangeEnabled =
+        get_synchronousScreenUpdatesEnabledDefault.experiment.androidResetScreenShadowStateOnOrientationChangeEnabled;
+      obj4.iosOrientationInheritanceFixEnabled =
+        get_synchronousScreenUpdatesEnabledDefault.experiment.iosOrientationInheritanceFixEnabled;
+      let tmp31Result = children;
+      if (isNativeStack) {
+        const obj7 = { value: null, children: null };
+        const obj8 = { progress: current2, closing: current, goingForward: current3 };
+        obj7.value = obj8;
+        obj7.children = children;
+        tmp31Result = jsx(_modDef5921.Provider, { value: null, children: null });
+      }
+      obj4.children = tmp31Result;
+      obj3.children = <__INTERNAL_VIEW_CONFIG />;
+      return <tmp33 freeze={freezeOnBlur}>{null}</tmp33>;
+    }
   }
-  if (flag6 == null) {
-    flag6 = false;
+  ({ active, activityState, onComponentRef } = tmp9);
+  tmp10 = undefined !== sheetGrabberVisible && sheetGrabberVisible;
+  tmp11 = undefined === sheetExpandsWhenScrolledToEdge || sheetExpandsWhenScrolledToEdge;
+  tmp12 = undefined !== sheetShouldOverflowTopInset && sheetShouldOverflowTopInset;
+  tmp13 = undefined === sheetDefaultResizeAnimationEnabled || sheetDefaultResizeAnimationEnabled;
+  if (tmp20) {
+    let num4 = 0;
+    if (0 !== active) {
+      num4 = 2;
+    }
+    activityState = num4;
   }
-  obj8.hasLargeHeader = flag6;
-  obj8.sheetAllowedDetents = sheetAllowedDetents;
-  const items2 = [style, undefined];
-  obj8.style = items2;
-  obj8.scrollEdgeEffects = scrollEdgeEffects;
-  obj8.onHeaderHeightChange = onHeaderHeightChange;
-  const merged2 = Object.assign(merged);
-  obj8.children = tmp17Result;
-  return closure_4(_modDef5891, obj8);
+  const items2 = [tmp9.style];
+  let str = "none";
+  if (0 !== activityState) {
+    str = "flex";
+  }
+  items2[1] = { display: str };
+  let merged1 = Object.assign(_objectWithoutProperties(tmp9, closure_5));
+  return <Animated.View style={items2} ref={setRef} />;
 });
+const context = noop.createContext(forwardRefResult);
+const forwardRefResult1 = noop.forwardRef((arg0, ref) => {
+  const obj = {};
+  const merged = Object.assign(arg0);
+  obj.ref = ref;
+  return jsx(noop.useContext(context) || forwardRefResult, {});
+});
+forwardRefResult1.displayName = "Screen";
+
+export default forwardRefResult1;
+export const InnerScreen = forwardRefResult;
+export const ScreenContext = context;

@@ -1,13 +1,21 @@
 // _runtime/metro/08226__.js
-import registerAsset from "01134__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
-  scales: [1, 2, 3],
-  hash: "a340f3b58cfcad04aa087b4d005eb5bd",
-  name: "ic_archived_thread_embed_16px",
-  type: "png",
-});
+export default {
+  get(arg0) {
+    if (arg0) {
+      return arg0;
+    } else {
+      if (typeof globalThis.DOMParser !== "undefined") {
+        const dOMParser = new globalThis.DOMParser();
+        return dOMParser;
+      } else {
+        try {
+          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
+          const obj = { onError: result.onErrorStopParsing };
+          const dOMParser1 = new result.DOMParser(obj);
+          return dOMParser1;
+        } catch (err) {}
+      }
+    }
+  },
+};

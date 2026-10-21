@@ -3,11 +3,11 @@ if (Intl.ListFormat) {
   const _Intl = Intl;
   if (typeof Intl.ListFormat.__addLocaleData === "function") {
     const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "ru" };
+    const obj2 = { data: null, locale: "bg" };
     const obj3 = { conjunction: null, disjunction: null, unit: null };
     const obj4 = {
       long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
       short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
     };
     obj3.conjunction = obj4;
@@ -33,9 +33,9 @@ if (Intl.ListFormat) {
     };
     obj3.disjunction = obj5;
     const obj6 = {
-      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
     };
     obj3.unit = obj6;
     obj2.data = obj3;
@@ -51,7 +51,7 @@ const obj = {
   data: {
     conjunction: {
       long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
       short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
     },
     disjunction: {
@@ -75,11 +75,11 @@ const obj = {
       },
     },
     unit: {
-      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
     },
   },
-  locale: "ru",
+  locale: "bg",
 };
 prop.push(obj);

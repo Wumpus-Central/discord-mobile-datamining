@@ -1,117 +1,69 @@
 // _runtime/metro/04381__.js
-import module_4382_mod from "04382__.js";
-import _typeof_mod from "04231__.js";
-import module_4235_mod from "04235__.js";
-import requiredArgs_mod from "../04232_requiredArgs.js";
-import module_4383_mod from "04383__.js";
-import module_4384_mod from "04384__.js";
+import 02078__ from "02078__.js";
+import 02079__ from "02079__.js";
 
-let module_4382 = module_4382_mod;
-if (!module_4382) {
-  const obj = { default: module_4382 };
-  let tmp3 = obj;
+if (!module_2078) {
+  const obj2 = { default: module_2078 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4382;
+  obj = module_2078;
 }
-module_4382 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  let obj2 = { default: _typeof };
-  let tmp5 = obj2;
+if (!module_2079) {
+  const obj4 = { default: module_2079 };
+  let obj3 = obj4;
 } else {
-  tmp5 = _typeof;
+  obj3 = module_2079;
 }
-_typeof = tmp5;
-let module_4235 = module_4235_mod;
-if (!module_4235) {
-  const obj3 = { default: module_4235 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4235;
-}
-module_4235 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-let module_4383 = module_4383_mod;
-if (!module_4383) {
-  const obj5 = { default: module_4383 };
-  let tmp11 = obj5;
-} else {
-  tmp11 = module_4383;
-}
-module_4383 = tmp11;
-let module_4384 = module_4384_mod;
-if (!module_4384) {
-  const obj6 = { default: module_4384 };
-  let tmp13 = obj6;
-} else {
-  tmp13 = module_4384;
-}
-module_4384 = tmp13;
-
-export default function addBusinessDays(arg0, arg1) {
-  let diff;
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  let obj2 = module_4382;
-  let defaultResult2 = module_4382.default(defaultResult1);
-  const defaultResult3 = module_4235.default(arg1);
-  if (isNaN(defaultResult3)) {
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else {
-    let num3 = 1;
-    const hours = defaultResult1.getHours();
-    if (defaultResult3 < 0) {
-      num3 = -1;
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)(:a|:e)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
-    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_4235.default(defaultResult3 / 5));
-    const _Math = Math;
-    let absolute = Math.abs(defaultResult3 % 5);
-    if (absolute > 0) {
-      do {
-        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
-        diff = absolute;
-        if (!module_4382.default(defaultResult1)) {
-          diff = absolute - 1;
-        }
-        absolute = diff;
-        obj2 = module_4382;
-      } while (diff > 0);
-    }
-    if (defaultResult2) {
-      defaultResult2 = obj2.default(defaultResult1);
-    }
-    if (defaultResult2) {
-      defaultResult2 = 0 !== defaultResult3;
-    }
-    if (defaultResult2) {
-      if (module_4384.default(defaultResult1)) {
-        let num6 = -1;
-        if (num3 < 0) {
-          num6 = 2;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num6);
-        const date1 = defaultResult1.getDate();
-      }
-      if (module_4383.default(defaultResult1)) {
-        let num7 = -2;
-        if (num3 < 0) {
-          num7 = 1;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num7);
-        const date2 = defaultResult1.getDate();
-      }
-    }
-    defaultResult1.setHours(hours);
-    return defaultResult1;
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+const obj6 = { matchPatterns: { narrow: /^(f\.? ?Kr\.?|f\.? ?v\.? ?t\.?|e\.? ?Kr\.?|v\.? ?t\.?)/i, abbreviated: /^(f\.? ?Kr\.?|f\.? ?v\.? ?t\.?|e\.? ?Kr\.?|v\.? ?t\.?)/i, wide: /^(före Kristus|före vår tid|efter Kristus|vår tid)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^f/i, /^[ev]/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](:a|:e)? kvartalet/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
 };
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(jan|feb|mar[s]?|apr|maj|jun[i]?|jul[i]?|aug|sep|okt|nov|dec)\.?/i, wide: /^(januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.narrow = items2;
+const items3 = [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^maj/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[smtofl]/i, short: /^(sö|må|ti|on|to|fr|lö)/i, abbreviated: /^(sön|mån|tis|ons|tors|fre|lör)/i, wide: /^(söndag|måndag|tisdag|onsdag|torsdag|fredag|lördag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { any: null };
+const items4 = [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i];
+obj13.any = items4;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { any: /^([fe]\.?\s?m\.?|midn(att)?|midd(ag)?|(på) (morgonen|eftermiddagen|kvällen|natten))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^f/i, pm: /^e/i, midnight: /^midn/i, noon: /^midd/i, morning: /morgon/i, afternoon: /eftermiddag/i, evening: /kväll/i, night: /natt/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
 export default exports.default;

@@ -1,145 +1,140 @@
 // _runtime/metro/12486__.js
-import _mod12423 from "12423__.js";
-import _mod12447 from "12447__.js";
-import _mod12451 from "12451__.js";
-import _mod12467 from "12467__.js";
-import _mod12480 from "12480__.js";
-import _mod12488 from "12488__.js";
-
-const require = globalThis.__r;
-
-require = arg1;
-let dependencyMap = arg6;
-
-export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export const createTransport = function createTransport(bufferSize, arg1) {
-  _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
-    let num = bufferSize.bufferSize;
-    if (!num) {
-      num = 64;
-    }
-    promiseBuffer = require("12487__.js").makePromiseBuffer(num);
-    let obj = require("12487__.js");
+function isInstanceOf(arg0, arg1) {
+  try {
+    return arg0 instanceof arg1;
+  } catch (err) {
+    return false;
   }
-  closure_3 = {};
-  return {
-    send(arg0) {
-      const items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        const result = _mod12467.envelopeItemTypeToDataCategory(arg1);
-        if (obj2.isRateLimited(closure_3, result)) {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp6;
-            if (Array.isArray(arg0)) {
-              tmp6 = arg0[1];
-            }
-            const tmp4 = tmp6;
-          }
-          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
-        } else {
-          items.push(arg0);
+}
+
+export const isDOMError = function isDOMError(arg0) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMError" + "]";
+};
+export const isDOMException = function isDOMException(arg0) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMException" + "]";
+};
+export const isElement = function isElement(arg0) {
+  let tmp = typeof globalThis.Element !== "undefined";
+  if (typeof globalThis.Element !== "undefined") {
+    tmp = isInstanceOf(arg0, globalThis.Element);
+  }
+  return tmp;
+};
+export const isError = function isError(originalException) {
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(originalException);
+  if ("[object Error]" !== tmp2) {
+    if ("[object Exception]" !== tmp2) {
+      if ("[object DOMException]" !== tmp2) {
+        if ("[object WebAssembly.Exception]" !== tmp2) {
+          const _Error = Error;
+          return isInstanceOf(originalException, Error);
         }
-        obj2 = _mod12488;
-      });
-      if (0 === items.length) {
-        return bufferSize(tmp2[3]).resolvedSyncPromise({});
-      } else {
-        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
-        function recordEnvelopeLoss(arg0) {}
-        const tmpResult2 = bufferSize(tmp2[1]);
-        return recordEnvelopeLoss
-          .add(() => {
-            const obj = { body: _mod12467.serializeEnvelope(dependencyMap) };
-            return dependencyMap(obj).then(
-              (statusCode) => {
-                let DEBUG_BUILD = undefined !== statusCode.statusCode;
-                if (DEBUG_BUILD) {
-                  let tmp = statusCode.statusCode < 200;
-                  if (!tmp) {
-                    tmp = statusCode.statusCode >= 300;
-                  }
-                  DEBUG_BUILD = tmp;
-                }
-                if (DEBUG_BUILD) {
-                  DEBUG_BUILD = items(12451).DEBUG_BUILD;
-                }
-                if (DEBUG_BUILD) {
-                  const logger = items(12423).logger;
-                  const _HermesInternal = HermesInternal;
-                  logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
-                }
-                closure_3 = items(12488).updateRateLimits(closure_3, statusCode);
-                return statusCode;
-              },
-              (arg0) => {
-                if (typeof recordEnvelopeLoss === "function") {
-                  const network_error = "network_error";
-                  closure_0(12467).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
-                    if ("event" === arg1) {
-                      const _Array = Array;
-                      let tmp4;
-                      if (Array.isArray(arg0)) {
-                        tmp4 = arg0[1];
-                      }
-                      const tmp = tmp4;
-                    }
-                    closure_2_0.recordDroppedEvent(
-                      network_error,
-                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
-                      tmp,
-                    );
-                  });
-                  throw arg0;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              },
-            );
-          })
-          .then(
-            (result) => result,
-            (arg0) => {
-              if (arg0 instanceof _mod12480.SentryError) {
-                if (_mod12451.DEBUG_BUILD) {
-                  const logger = _mod12423.logger;
-                  logger.error("Skipped sending event because buffer is full.");
-                }
-                if (typeof recordEnvelopeLoss === "function") {
-                  const queue_overflow = "queue_overflow";
-                  _mod12467.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
-                    if ("event" === arg1) {
-                      const _Array = Array;
-                      let tmp4;
-                      if (Array.isArray(arg0)) {
-                        tmp4 = arg0[1];
-                      }
-                      const tmp = tmp4;
-                    }
-                    closure_2_0.recordDroppedEvent(
-                      network_error,
-                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
-                      tmp,
-                    );
-                  });
-                  const tmpResult = _mod12467;
-                  return _mod12447.resolvedSyncPromise({});
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw arg0;
-              }
-            },
-          );
       }
-      let obj = bufferSize(dependencyMap[1]);
-    },
-    flush(arg0) {
-      return promiseBuffer.drain(arg0);
-    },
-  };
+    }
+  }
+  return true;
+};
+export const isErrorEvent = function isErrorEvent(name) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(name)) === "[object " + "ErrorEvent" + "]";
+};
+export const isEvent = function isEvent(type) {
+  let tmp = typeof Event !== "undefined";
+  if (typeof Event !== "undefined") {
+    const _Event = Event;
+    tmp = isInstanceOf(type, Event);
+  }
+  return tmp;
+};
+export { isInstanceOf };
+export const isParameterizedString = function isParameterizedString(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
+  }
+  if (tmp) {
+    tmp = "__sentry_template_string__" in obj;
+  }
+  if (tmp) {
+    tmp = "__sentry_template_values__" in obj;
+  }
+  return tmp;
+};
+export const isPlainObject = function isPlainObject(user) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(user)) === "[object " + "Object" + "]";
+};
+export const isPrimitive = function isPrimitive(obj) {
+  let tmp = null === obj;
+  if (!tmp) {
+    let tmp2 = typeof obj === "object";
+    if (typeof obj === "object") {
+      tmp2 = null !== obj;
+    }
+    if (tmp2) {
+      tmp2 = "__sentry_template_string__" in obj;
+    }
+    if (tmp2) {
+      tmp2 = "__sentry_template_values__" in obj;
+    }
+    tmp = tmp2;
+  }
+  if (!tmp) {
+    let tmp3 = typeof obj !== "object";
+    if (typeof obj !== "object") {
+      tmp3 = typeof obj !== "function";
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
+export const isRegExp = function isRegExp(test) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(test)) === "[object " + "RegExp" + "]";
+};
+export const isString = function isString(body) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(body)) === "[object " + "String" + "]";
+};
+export const isSyntheticEvent = function isSyntheticEvent(arg0) {
+  const call = toString.call;
+  let tmp3 = (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "Object" + "]";
+  if (tmp3) {
+    tmp3 = "nativeEvent" in arg0;
+  }
+  if (tmp3) {
+    tmp3 = "preventDefault" in arg0;
+  }
+  if (tmp3) {
+    tmp3 = "stopPropagation" in arg0;
+  }
+  return tmp3;
+};
+export const isThenable = function isThenable(arg0) {
+  let then = arg0;
+  if (arg0) {
+    then = arg0.then;
+  }
+  if (then) {
+    then = typeof arg0.then === "function";
+  }
+  return Boolean(then);
+};
+export const isVueViewModel = function isVueViewModel(__isVue) {
+  let tmp = typeof __isVue !== "object";
+  if (typeof __isVue === "object") {
+    tmp = null === __isVue;
+  }
+  if (!tmp) {
+    __isVue = __isVue.__isVue;
+    let tmp2 = !__isVue;
+    if (!__isVue) {
+      tmp2 = !__isVue._isVue;
+    }
+    tmp = tmp2;
+  }
+  return !tmp;
 };

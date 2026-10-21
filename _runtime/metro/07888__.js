@@ -1,13 +1,4 @@
 // _runtime/metro/07888__.js
-import registerAsset from "01134__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "f6beefc7c46ba35914164c9b6ddbe0f6",
-  name: "GoogleNeutralIcon",
-  type: "png",
-});
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

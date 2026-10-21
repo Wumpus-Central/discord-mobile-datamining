@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "dd8d766f206aa0428d60e8eb67864f3d",
-  name: "img_account_sync_x_light",
-  type: "svg",
+  hash: "25ba997e1d3e8344c193637ad6eeccd3",
+  name: "img_account_sync_league_of_legends_white",
+  type: "png",
 });

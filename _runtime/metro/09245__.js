@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4ff7b09e67486edcd0ad75a5131670be",
-  name: "CirclePlayIcon-primary",
+  hash: "0a2944e427275918c323a5aa7d658085",
+  name: "BattlenetNeutralIcon",
   type: "png",
 });

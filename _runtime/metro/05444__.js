@@ -1,19 +1,4 @@
 // _runtime/metro/05444__.js
-import _mod19 from "00019__.js";
-import _mod5235 from "05235__.js";
+import _modDef5445 from "05445__.js";
 
-_mod19.useCallback;
-
-export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
-  const bottomSheetInternal = _mod5235.useBottomSheetInternal();
-  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj2 = { setContentSize: null };
-  const items = [enableDynamicSizing, animatedContentHeight];
-  obj2.setContentSize = useCallback((arg0) => {
-    if (enableDynamicSizing) {
-      const result = animatedContentHeight.set(arg0);
-    }
-  }, items);
-  return obj2;
-};
+export default _modDef5445;

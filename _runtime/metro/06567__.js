@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 267,
+  height: 267,
   scales: [1],
-  hash: "16b0b46c160f5dbee25bcf55b1de2e19",
-  name: "img_account_sync_mastodon_white",
+  hash: "8004c631509b26672d76ec4ff50dd8cb",
+  name: "img_roblox_light",
   type: "svg",
 });

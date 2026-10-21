@@ -1,9 +1,7 @@
 // _runtime/metro/05260__.js
-import _mod5261 from "05261__.js";
+import _mod19 from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const context = _mod19.createContext(null);
 
-export const initialize = function initialize() {
-  _mod5261.startListening();
-};
+export const BottomSheetInternalContext = context;
+export const BottomSheetInternalProvider = context.Provider;

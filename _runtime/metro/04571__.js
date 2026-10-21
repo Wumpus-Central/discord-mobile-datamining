@@ -1,6 +1,9 @@
 // _runtime/metro/04571__.js
-import _mod4537 from "04537__.js";
+import _mod4558 from "04558__.js";
+import module_4572_mod from "04572__.js";
+import startOfUTCISOWeek_mod from "../04489_startOfUTCISOWeek.js";
 
+let _createSuperInternal = require;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -26,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneParser, Parser) {
+function _setPrototypeOf(ISOWeekParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneParser, Parser) {
-      ISOTimezoneParser.__proto__ = Parser;
-      return ISOTimezoneParser;
+    _setPrototypeOf = function _setPrototypeOf(ISOWeekParser, Parser) {
+      ISOWeekParser.__proto__ = Parser;
+      return ISOWeekParser;
     };
   }
-  return _setPrototypeOf(ISOTimezoneParser, Parser);
+  return _setPrototypeOf(ISOWeekParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -52,9 +55,25 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4537.Parser;
-let _createSuperInternal;
-class ISOTimezoneParser {
+let module_4572 = module_4572_mod;
+if (!module_4572) {
+  let obj = { default: module_4572 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4572;
+}
+module_4572 = tmp3;
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
+if (!startOfUTCISOWeek) {
+  const obj2 = { default: startOfUTCISOWeek };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfUTCISOWeek;
+}
+startOfUTCISOWeek = tmp5;
+const Parser = _mod4558.Parser;
+_createSuperInternal = undefined;
+class ISOWeekParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -91,14 +110,14 @@ class ISOTimezoneParser {
         if ("priority" in applyResult) {
           _Object = Object;
           definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 10,
+            value: 100,
             enumerable: true,
             configurable: true,
             writable: true,
           });
         } else {
-          num3 = 10;
-          applyResult.priority = 10;
+          num3 = 100;
+          applyResult.priority = 100;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -109,7 +128,7 @@ class ISOTimezoneParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T", "X"];
+          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -133,7 +152,7 @@ class ISOTimezoneParser {
     }
   }
 }
-let dependencyMap = ISOTimezoneParser;
+let dependencyMap = ISOWeekParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,11 +164,11 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-ISOTimezoneParser.prototype = Object.create(prototype, {
-  constructor: { value: ISOTimezoneParser, writable: true, configurable: true },
+ISOWeekParser.prototype = Object.create(prototype, {
+  constructor: { value: ISOWeekParser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(ISOTimezoneParser, Parser);
+  _setPrototypeOf(ISOWeekParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -186,10 +205,10 @@ dependencyMap = (function _isNativeReflectConstruct() {
 })();
 _createSuperInternal = function _createSuperInternal() {
   const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
+  const obj = metroRequire(_createSuperInternal);
   if (closure_1) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, metroRequire(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
@@ -210,62 +229,51 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("x" === arg1) {
-      return _createSuperInternal(4539).parseTimezonePattern(
-        _createSuperInternal(4540).timezonePatterns.basicOptionalMinutes,
-        arg0,
-      );
-    } else if ("xx" === arg1) {
-      return _createSuperInternal(4539).parseTimezonePattern(_createSuperInternal(4540).timezonePatterns.basic, arg0);
-    } else if ("xxxx" === arg1) {
-      return _createSuperInternal(4539).parseTimezonePattern(
-        _createSuperInternal(4540).timezonePatterns.basicOptionalSeconds,
-        arg0,
-      );
-    } else if ("xxxxx" === arg1) {
-      return _createSuperInternal(4539).parseTimezonePattern(
-        _createSuperInternal(4540).timezonePatterns.extendedOptionalSeconds,
-        arg0,
-      );
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("I" === arg1) {
+      return _createSuperInternal(4560).parseNumericPattern(_createSuperInternal(4561).numericPatterns.week, arg0);
+    } else if ("Io" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "week" });
     } else {
-      return _createSuperInternal(4539).parseTimezonePattern(
-        _createSuperInternal(4540).timezonePatterns.extended,
-        arg0,
-      );
+      return _createSuperInternal(4560).parseNDigits(arg1.length, arg0);
     }
   },
 };
 let items = [
   entry,
   {
-    key: "set",
-    value: function set(getTime, timestampIsSet, arg2) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 53;
       }
-      return date;
+      return tmp;
+    },
+  },
+  {
+    key: "set",
+    value: function set(arg0, arg1, arg2) {
+      return startOfUTCISOWeek.default(module_4572.default(arg0, arg2));
     },
   },
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
+    let tmp9 = items[num];
+    let flag = tmp9.enumerable;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp9.enumerable = flag;
+    tmp9.configurable = true;
+    if ("value" in tmp9) {
+      tmp9.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp8, tmp9.key, tmp9);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { ISOTimezoneParser };
+export { ISOWeekParser };

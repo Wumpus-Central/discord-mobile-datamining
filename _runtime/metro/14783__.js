@@ -1,10 +1,13 @@
 // _runtime/metro/14783__.js
-import _mod14797 from "14797__.js";
-import assign from "14784__.js";
-import Deflate from "../14785_Deflate.js";
-import Inflate from "../14793_Inflate.js";
+import registerAsset from "01134__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14797);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "25b28a12657775964c80c08fa4bc3ce7",
+  name: "ic_gift",
+  type: "png",
+});

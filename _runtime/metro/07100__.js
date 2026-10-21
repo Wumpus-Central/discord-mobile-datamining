@@ -1,13 +1,17 @@
 // _runtime/metro/07100__.js
-import registerAsset from "01134__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 160,
-  height: 160,
-  scales: [2, 3],
-  hash: "b7eca7761481c5ff3cc170b16fbdff57",
-  name: "img_no_results",
-  type: "png",
-});
+const constants = _mod17.Platform.constants;
+if (constants != null) {
+  const reactNativeVersion = constants.reactNativeVersion;
+}
+try {
+  let major;
+  if (reactNativeVersion != null) {
+    major = reactNativeVersion.major;
+  }
+  if (0 !== major) {
+    const InteractionManager = _mod17.InteractionManager;
+  }
+  exports.InteractionManager = InteractionManager;
+} catch (err) {}

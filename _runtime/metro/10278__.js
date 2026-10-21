@@ -1,12 +1,13 @@
 // _runtime/metro/10278__.js
-import _mod10275 from "10275__.js";
+import AbstractParserWithWordBoundaryChecking from "../10180_AbstractParserWithWordBoundaryChecking.js";
+import _mod10267 from "10267__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeUnitAgoFormatParser = require;
+const NLTimeUnitLaterFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,33 +26,35 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUTimeUnitAgoFormatParser {
-  constructor() {
+const regExp = new RegExp(
+  "(" + _mod10267.TIME_UNITS_PATTERN + ")(later|na|vanaf nu|voortaan|vooruit|uit)(?=(?:\\W|$))",
+  "i",
+);
+const regExp1 = new RegExp("(" + _mod10267.TIME_UNITS_PATTERN + ")(later|vanaf nu)(?=(?:\\W|$))", "i");
+class NLTimeUnitLaterFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, RUTimeUnitAgoFormatParser);
+    tmp = c2(this, NLTimeUnitLaterFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitAgoFormatParser);
+    obj = closure_4(NLTimeUnitLaterFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(RUTimeUnitAgoFormatParser, _mod10275.AbstractParserWithLeftBoundaryChecking);
+_inherits(NLTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(" + RUTimeUnitAgoFormatParser(10273).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))"
-    );
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.strictMode ? regExp1 : regExp;
   },
 };
 const items = [
@@ -59,14 +62,13 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = RUTimeUnitAgoFormatParser(10273).parseDuration(arg1[1]);
-      const ParsingComponents = RUTimeUnitAgoFormatParser(10147).ParsingComponents;
+      const ParsingComponents = NLTimeUnitLaterFormatParser(10176).ParsingComponents;
       return ParsingComponents.createRelativeFromReference(
         reference.reference,
-        RUTimeUnitAgoFormatParser(10146).reverseDuration(RUTimeUnitAgoFormatParser(10273).parseDuration(arg1[1])),
+        NLTimeUnitLaterFormatParser(10267).parseDuration(arg1[1]),
       );
     },
   },
 ];
 
-export default _createClass(RUTimeUnitAgoFormatParser, items);
+export default _createClass(NLTimeUnitLaterFormatParser, items);

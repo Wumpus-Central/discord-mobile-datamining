@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3lvdXR1YmVfM3Bw",
+  httpServerLocation: "/assets/modules/premium/logitech_3pp",
   scales: [1],
-  hash: "9d9787efe664eaa8f15204bced0ac103",
-  name: "fi.messages.9d9787efe664eaa8f15204bced0ac103.compiled.messages",
+  hash: "74d114c91c81530f2c73cdb12ed764ee",
+  name: "Logitech3PP.compiled.messages",
   type: "jsona",
 });

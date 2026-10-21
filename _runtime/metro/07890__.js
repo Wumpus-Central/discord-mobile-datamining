@@ -1,13 +1,9 @@
 // _runtime/metro/07890__.js
-import registerAsset from "01134__.js";
+import _modDef7891 from "07891__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b04e363869889767a126da0fcdcaf9c8",
-  name: "AppleNeutralIcon",
-  type: "png",
-});
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export default function getWebViewProxy(iframeId) {
+  return new _modDef7891(iframeId);
+}

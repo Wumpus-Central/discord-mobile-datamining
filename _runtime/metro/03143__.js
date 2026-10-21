@@ -3,9 +3,9 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/tiny_bronco",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "85ba830fae837ab85e6c8206c1f0235a",
-  name: "TinyBronco.compiled.messages",
+  hash: "b1e487ab629580e9c260cebe0adcd600",
+  name: "pt-BR.messages.b1e487ab629580e9c260cebe0adcd600.compiled.messages",
   type: "jsona",
 });
