@@ -1,14 +1,14 @@
 // === Module 7970: ? ===
 
 // Module 7970
-import _modDef7949 from "module_7949" /* 7949 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeImage = arg1;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +28,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeImage {
+const jsx = fn(21).jsx;
+class Defs {
   constructor() {
     self = this;
-    tmp = c2(this, FeImage);
+    tmp = c2(this, Defs);
     tmp2 = closure_4;
-    obj = closure_4(FeImage);
+    obj = closure_4(Defs);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +49,15 @@ class FeImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeImage, _modDef7949);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeImage(7926).warnUnimplementedFilter();
-    return null;
+    return jsx(Defs(7971), { children: this.props.children });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

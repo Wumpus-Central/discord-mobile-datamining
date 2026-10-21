@@ -1,27 +1,7 @@
 // === Module 15329: ? ===
 
 // Module 15329
-import e from "e" /* 1174 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-e.__extends(function MissingLocaleDataError() {
-  const self = this;
-  let tmp2 = null !== Error;
-  if (!tmp2) {
-    if (!tmp2) {
-      tmp2 = self;
-    }
-    tmp2.type = "MISSING_LOCALE_DATA";
-    return tmp2;
-  } else {
-    const apply = Error.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-  }
-}, Error);
 
-export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
-  return "MISSING_LOCALE_DATA" === type.type;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/intl/messages", scales: [1], hash: "99914b932bd37a50b983c5e7c90ae93b", name: "llm-pilot.compiled.messages", type: "jsona" });

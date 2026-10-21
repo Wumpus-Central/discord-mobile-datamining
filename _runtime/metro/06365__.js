@@ -1,30 +1,15 @@
 // === Module 6365: ? ===
 
 // Module 6365
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1341 */;
-import _mod1466 from "module_1466" /* 1466 */;
+import requirePromise from "requirePromise" /* 6364 */;
+import _mod6366 from "module_6366" /* 6366 */;
 
-let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
-let closure_1 = callBoundIntrinsic("Object.prototype.toString");
-let closure_2 = _mod1466();
 
-export default function isDateObject(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
-  }
-  if (!tmp) {
-    return tmp;
-  } else if (closure_2) {
-    let tmp4 = (function tryDateGetDayCall(arg0) {
-      try {
-        closure_1_0(arg0);
-        return true;
-      } catch (err) {
-        return false;
-      }
-    })(obj);
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
   } else {
-    tmp4 = "[object Date]" === closure_1(obj);
+    allSettled = _mod6366;
   }
+  return allSettled;
 };

@@ -1,74 +1,61 @@
 // === Module 5387: ? ===
 
 // Module 5387
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+const require = arg1;
+const dependencyMap = arg6;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
+export const useComposedGesture = function useComposedGesture(type) {
+  const substr = [...arguments].slice();
+  const flatMapResult = substr.flatMap((handlerTags) => {
+    if (obj.isComposedGesture(handlerTags)) {
+      handlerTags = handlerTags.handlerTags;
     } else {
-      callResult = call(constructResult);
+      handlerTags = [];
+      handlerTags[0] = handlerTags.handlerTag;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
+    return handlerTags;
+  });
+  if (obj.containsDuplicates(flatMapResult)) {
+    const _Error2 = Error;
+    const error = new Error(tmp2(5284).tagMessage("Each gesture can be used only once in the gesture composition."));
+    throw error;
+  } else {
+    const obj2 = { shouldUseReanimatedDetector: substr.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: substr.some((config) => config.config.dispatchesAnimatedEvents) };
+    if (obj2.shouldUseReanimatedDetector) {
+      if (obj2.dispatchesAnimatedEvents) {
+        const _Error = Error;
+        const error1 = new Error(tmp2(5284).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
+        throw error1;
+      }
+    }
+    const Reanimated = tmp2(5322).Reanimated;
+    let composedEventHandler;
+    if (Reanimated != null) {
+      composedEventHandler = Reanimated.useComposedEventHandler(substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
+    }
+    const found = substr.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
+    let animatedEventHandler;
+    if (found.length > 0) {
+      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
+    }
+    const obj3 = { handlerTags: flatMapResult, type, config: obj2, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
+    const obj4 = {
+      jsEventHandler(arg0) {
+          for (const item10007 of substr) {
+            if (item10007.detectorCallbacks.jsEventHandler) {
+              let detectorCallbacks = tmp.detectorCallbacks;
+              let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
+            }
+            continue;
+          }
+        },
+      reanimatedEventHandler: composedEventHandler,
+      animatedEventHandler
     };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+    obj3.detectorCallbacks = obj4;
+    obj3.externalSimultaneousHandlers = [];
+    obj3.gestures = substr;
+    return obj3;
   }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(arg0, arg1) {
-  return arg0;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 12945462865583;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}" };
-class ManualGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, ManualGesture);
-    tmp2 = c2;
-    obj = c2(ManualGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "ManualGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = ManualGesture;
-_inherits(ManualGesture, fn(5279).ContinousBaseGesture);
-const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    const items = [arg0];
-    return fn(items);
-  }
+  obj = substr(5347);
 };
-let items = [entry];
-
-export const ManualGesture = _createClass(ManualGesture, items);

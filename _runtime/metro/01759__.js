@@ -199,13 +199,13 @@ if (module_1661.shouldBeUseWeb()) {
 }
 
 export default fn;
-export const updatePropsJestWrapper = (D, keys, current, c4) => {
-  closure_0 = keys;
+export const updatePropsJestWrapper = (arg0, current, current, c4) => {
+  closure_0 = current;
   const item = updatePropsOnReactJS.forEach((fn) => {
     fn(closure_0);
   });
   const merged = Object.assign(current.current.value);
-  const merged1 = Object.assign(keys);
+  const merged1 = Object.assign(current);
   current.current.value = {};
-  fn(D, keys);
+  fn(arg0, current);
 };

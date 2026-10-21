@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "e0c33c2cafef5b70f6c02f92e9c696e1", name: "img_premium_error_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/chat_sidebar", width: 24, height: 24, scales: [2, 3], hash: "f15a8eea867ca31909b0a1cf49c6c7d8", name: "ic_notif", type: "png" });

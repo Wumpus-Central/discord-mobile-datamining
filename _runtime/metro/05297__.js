@@ -1,15 +1,13 @@
 // === Module 5297: ? ===
 
 // Module 5297
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef5298 from "module_5298" /* 5298 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let PlatformConstants;
-if (NativeModules != null) {
-  PlatformConstants = NativeModules.PlatformConstants;
-}
-if (PlatformConstants == null) {
-  PlatformConstants = get_ActivityIndicator.Platform.constants;
-}
+const use = _mod19.use;
+const Platform = _mod17.Platform;
 
-export default PlatformConstants;
+export const useEnsureGestureHandlerRootView = function useEnsureGestureHandlerRootView() {
+  use(_modDef5298);
+};

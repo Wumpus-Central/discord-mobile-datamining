@@ -1,40 +1,21 @@
 // === Module 8195: ? ===
 
 // Module 8195
-import _modDef8196 from "module_8196" /* 8196 */;
-
-importDefault = arg2;
-const dependencyMap = arg6;
+let c0 = 18761;
+let c1 = 19789;
 
 export default {
-  decode(arg0, buffer) {
-    value = _modDef8196.get();
-    if (undefined !== value) {
-      if (undefined !== arg0) {
-        try {
-          const decoder = new value(arg0);
-          const _DataView = DataView;
-          if (buffer instanceof DataView) {
-            buffer = buffer.buffer;
-          } else {
-            const _Uint8Array = Uint8Array;
-            buffer = Uint8Array.from(buffer);
-          }
-          decoder.decode(buffer);
-        } catch (err) {
-        }
-      }
+  BIG_ENDIAN: 19789,
+  LITTLE_ENDIAN: 18761,
+  getByteOrder(getUint16, c5) {
+    if (getUint16.getUint16(c5) === c0) {
+      return c0;
+    } else if (getUint16.getUint16(c5) === c1) {
+      return c1;
+    } else {
+      const _Error = Error;
+      const error = new Error("Illegal byte order value. Faulty image.");
+      throw error;
     }
-    const mapped = buffer.map((item) => String.fromCharCode(item));
-    return (function decodeAsciiValue(arg0) {
-      try {
-        const _decodeURIComponent = decodeURIComponent;
-        const _escape = escape;
-        return decodeURIComponent(escape(arg0));
-      } catch (err) {
-        return tmp;
-      }
-    })(mapped.join(""));
-  },
-  TAG_HEADER_SIZE: 5
+  }
 };

@@ -4,22 +4,30 @@
 import _mod6369 from "module_6369" /* 6369 */;
 
 
-export default function getPolyfill() {
-  if (String.prototype.trim) {
-    const trim = "\u200B".trim;
-    if ("\u200B" === "\u200B".trim()) {
-      const trim2 = "\u180E".trim;
-      if ("\u180E" === "\u180E".trim()) {
-        const trim3 = "_\u180E".trim;
-        if ("_\u180E" === "_\u180E".trim()) {
-          const trim4 = "\u180E_".trim;
-          if ("\u180E_" === "\u180E_".trim()) {
-            const _String = String;
+export default function Type(num) {
+  let str = "Null";
+  if (null !== num) {
+    let str2 = "Undefined";
+    if (undefined !== num) {
+      let str3 = "Object";
+      if (!_mod6369(num)) {
+        let str4 = "Number";
+        if (typeof num !== "number") {
+          let str5 = "Boolean";
+          if (typeof num !== "boolean") {
+            let str6;
+            if (typeof num === "string") {
+              str6 = "String";
+            }
+            str5 = str6;
           }
-          return trim5;
+          str4 = str5;
         }
+        str3 = str4;
       }
+      str2 = str3;
     }
+    str = str2;
   }
-  trim5 = _mod6369;
+  return str;
 };

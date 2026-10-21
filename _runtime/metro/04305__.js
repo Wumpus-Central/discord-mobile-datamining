@@ -1,63 +1,44 @@
 // === Module 4305: ? ===
 
 // Module 4305
-import module_2077 from "module_2077" /* 2077 */;
+const obj = { lessThanXSeconds: { one: { standalone: "manje od 1 sekunde", withPrepositionAgo: "manje od 1 sekunde", withPrepositionIn: "manje od 1 sekundu" }, dual: "manje od {{count}} sekunde", other: "manje od {{count}} sekundi" }, xSeconds: { one: { standalone: "1 sekunda", withPrepositionAgo: "1 sekunde", withPrepositionIn: "1 sekundu" }, dual: "{{count}} sekunde", other: "{{count}} sekundi" }, halfAMinute: "pola minute", lessThanXMinutes: { one: { standalone: "manje od 1 minute", withPrepositionAgo: "manje od 1 minute", withPrepositionIn: "manje od 1 minutu" }, dual: "manje od {{count}} minute", other: "manje od {{count}} minuta" }, xMinutes: { one: { standalone: "1 minuta", withPrepositionAgo: "1 minute", withPrepositionIn: "1 minutu" }, dual: "{{count}} minute", other: "{{count}} minuta" }, aboutXHours: { one: { standalone: "oko 1 sat", withPrepositionAgo: "oko 1 sat", withPrepositionIn: "oko 1 sat" }, dual: "oko {{count}} sata", other: "oko {{count}} sati" }, xHours: { one: { standalone: "1 sat", withPrepositionAgo: "1 sat", withPrepositionIn: "1 sat" }, dual: "{{count}} sata", other: "{{count}} sati" }, xDays: { one: { standalone: "1 dan", withPrepositionAgo: "1 dan", withPrepositionIn: "1 dan" }, dual: "{{count}} dana", other: "{{count}} dana" }, aboutXWeeks: { one: { standalone: "oko 1 tjedan", withPrepositionAgo: "oko 1 tjedan", withPrepositionIn: "oko 1 tjedan" }, dual: "oko {{count}} tjedna", other: "oko {{count}} tjedana" }, xWeeks: { one: { standalone: "1 tjedan", withPrepositionAgo: "1 tjedan", withPrepositionIn: "1 tjedan" }, dual: "{{count}} tjedna", other: "{{count}} tjedana" }, aboutXMonths: { one: { standalone: "oko 1 mjesec", withPrepositionAgo: "oko 1 mjesec", withPrepositionIn: "oko 1 mjesec" }, dual: "oko {{count}} mjeseca", other: "oko {{count}} mjeseci" }, xMonths: { one: { standalone: "1 mjesec", withPrepositionAgo: "1 mjesec", withPrepositionIn: "1 mjesec" }, dual: "{{count}} mjeseca", other: "{{count}} mjeseci" }, aboutXYears: { one: { standalone: "oko 1 godinu", withPrepositionAgo: "oko 1 godinu", withPrepositionIn: "oko 1 godinu" }, dual: "oko {{count}} godine", other: "oko {{count}} godina" }, xYears: { one: { standalone: "1 godina", withPrepositionAgo: "1 godine", withPrepositionIn: "1 godinu" }, dual: "{{count}} godine", other: "{{count}} godina" }, overXYears: { one: { standalone: "preko 1 godinu", withPrepositionAgo: "preko 1 godinu", withPrepositionIn: "preko 1 godinu" }, dual: "preko {{count}} godine", other: "preko {{count}} godina" }, almostXYears: { one: { standalone: "gotovo 1 godinu", withPrepositionAgo: "gotovo 1 godinu", withPrepositionIn: "gotovo 1 godinu" }, dual: "gotovo {{count}} godine", other: "gotovo {{count}} godina" } };
 
-if (!module_2077) {
-  const obj2 = { default: module_2077 };
-  let obj = obj2;
-} else {
-  obj = module_2077;
-}
-const date = {
-  ordinalNumber(arg0, unit) {
-    const NumberResult = Number(arg0);
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  one = obj[arg0];
+  if (typeof one === "string") {
+    let tmp7 = one;
+    if (null != addSuffix) {
+      tmp7 = one;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `prije ${one}`;
+        }
+        text = `za ${one}`;
+      }
     }
-    const StringResult = String(unit);
-    if ("year" === StringResult) {
-      const concat9 = "".concat;
-      return "".concat(NumberResult, "\u5E74");
-    } else if ("quarter" === StringResult) {
-      const concat8 = "\u7B2C".concat;
-      return "\u7B2C".concat(NumberResult, "\u56DB\u534A\u671F");
-    } else if ("month" === StringResult) {
-      const concat7 = "".concat;
-      return "".concat(NumberResult, "\u6708");
-    } else if ("week" === StringResult) {
-      const concat6 = "\u7B2C".concat;
-      return "\u7B2C".concat(NumberResult, "\u9031");
-    } else if ("date" === StringResult) {
-      const concat5 = "".concat;
-      return "".concat(NumberResult, "\u65E5");
-    } else if ("hour" === StringResult) {
-      const concat4 = "".concat;
-      return "".concat(NumberResult, "\u6642");
-    } else if ("minute" === StringResult) {
-      const concat3 = "".concat;
-      return "".concat(NumberResult, "\u5206");
-    } else if ("second" === StringResult) {
-      const concat2 = "".concat;
-      return "".concat(NumberResult, "\u79D2");
-    } else {
-      const concat = "".concat;
-      return "".concat(NumberResult);
+    return tmp7;
+  } else {
+    if (1 !== arg1) {
+      if (1 < arg1 % 10) {
+        if (arg1 % 10 < 5) {
+          const _String = String;
+          if ("1" !== str.substr(-2, 1)) {
+            const _String3 = String;
+            let replaced = one.dual.replace("{{count}}", String(arg1));
+          }
+          str = String(arg1);
+        }
+      }
+      const _String2 = String;
+      replaced = one.other.replace("{{count}}", String(arg1));
     }
-  },
-  era: obj.default({ values: { narrow: ["BC", "AC"], abbreviated: ["\u7D00\u5143\u524D", "\u897F\u66A6"], wide: ["\u7D00\u5143\u524D", "\u897F\u66A6"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["\u7B2C1\u56DB\u534A\u671F", "\u7B2C2\u56DB\u534A\u671F", "\u7B2C3\u56DB\u534A\u671F", "\u7B2C4\u56DB\u534A\u671F"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return Number(arg0) - 1;
+    if (null == addSuffix) {
+      const standalone = one.one.standalone;
     }
-  }),
-  month: obj.default({ values: { narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], abbreviated: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], wide: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], short: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], abbreviated: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], wide: ["\u65E5\u66DC\u65E5", "\u6708\u66DC\u65E5", "\u706B\u66DC\u65E5", "\u6C34\u66DC\u65E5", "\u6728\u66DC\u65E5", "\u91D1\u66DC\u65E5", "\u571F\u66DC\u65E5"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, abbreviated: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, wide: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, abbreviated: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, wide: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" } }, defaultFormattingWidth: "wide" })
+    if (!addSuffix.comparison) {
+      const withPrepositionAgo = one.one.withPrepositionAgo;
+    }
+    ({ one, withPrepositionIn } = one);
+  }
 };
-
-export default date;
 export default exports.default;

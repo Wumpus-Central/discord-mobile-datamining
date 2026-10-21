@@ -1,69 +1,27 @@
 // === Module 15449: ? ===
 
 // Module 15449
+import module_15450_mod from "module_15450" /* 15450 */;
 
-export default {
-  isASCIIDigit(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    return tmp;
-  },
-  isASCIIAlpha(input) {
-    let tmp = input >= 65;
-    if (tmp) {
-      tmp = input <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = input >= 97;
-      if (tmp2) {
-        tmp2 = input <= 122;
+const call = prototype.call;
+let module_15450 = module_15450_mod;
+if (module_15450) {
+  const bind = prototype.bind;
+  module_15450 = bind.bind(call, call);
+}
+if (!module_15450) {
+  module_15450 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
       }
-      tmp = tmp2;
-    }
-    return tmp;
-  },
-  isASCIIAlphanumeric(arg0) {
-    let tmp = arg0 >= 65;
-    if (tmp) {
-      tmp = arg0 <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 97;
-      if (tmp2) {
-        tmp2 = arg0 <= 122;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = arg0 >= 48;
-      if (tmp3) {
-        tmp3 = arg0 <= 57;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  },
-  isASCIIHex(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    if (!tmp) {
-      let tmp2 = decodeResult >= 65;
-      if (tmp2) {
-        tmp2 = decodeResult <= 70;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = decodeResult >= 97;
-      if (tmp3) {
-        tmp3 = decodeResult <= 102;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  }
-};
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_15450;

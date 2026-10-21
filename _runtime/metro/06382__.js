@@ -1,7 +1,15 @@
 // === Module 6382: ? ===
 
 // Module 6382
-import _mod1475 from "module_1475" /* 1475 */;
 
-
-export default _mod1475;
+export default function isPrimitive(fn) {
+  let tmp = null === fn;
+  if (!tmp) {
+    let tmp2 = typeof fn !== "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn !== "object";
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+};

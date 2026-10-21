@@ -1,18 +1,7 @@
 // === Module 15508: ? ===
 
 // Module 15508
+import _mod15442 from "module_15442" /* 15442 */;
 
-export const getHostFromUrl = function getHostFromUrl(scriptURL) {
-  const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
-  let tmp2;
-  if (match != null) {
-    tmp2 = match[1];
-  }
-  if (typeof tmp2 !== "string") {
-    const _Error = Error;
-    const error = new Error("Invalid URL - host not found");
-    throw error;
-  } else {
-    return tmp2;
-  }
-};
+
+export default _mod15442;

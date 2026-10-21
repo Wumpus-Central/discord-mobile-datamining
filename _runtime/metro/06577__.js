@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 128, height: 128, scales: [1], hash: "43cb25124fca194b4a6cf3676f39faf2", name: "img_meta_quest_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "8d6755adef39a79b94cc758161d8de0c", name: "img_account_sync_ebay_white", type: "svg" });

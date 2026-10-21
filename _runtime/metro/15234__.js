@@ -1,7 +1,10 @@
 // === Module 15234: ? ===
 
 // Module 15234
-import registerAsset from "module_1134" /* 1134 */;
+import _mod15233 from "module_15233" /* 15233 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 8, height: 12, scales: [2, 3], hash: "62f99171df821200253910f3b9f2a1f7", name: "StatusMobileOnline", type: "png" });
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod15233(arg0, arg1, closure_0));
+};

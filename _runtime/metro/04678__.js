@@ -1,26 +1,111 @@
 // === Module 4678: ? ===
 
 // Module 4678
-let closure_0 = { lessThanXSeconds: { one: "d\u01B0\u1EDBi 1 gi\u00E2y", other: "d\u01B0\u1EDBi {{count}} gi\u00E2y" }, xSeconds: { one: "1 gi\u00E2y", other: "{{count}} gi\u00E2y" }, halfAMinute: "n\u1EEDa ph\u00FAt", lessThanXMinutes: { one: "d\u01B0\u1EDBi 1 ph\u00FAt", other: "d\u01B0\u1EDBi {{count}} ph\u00FAt" }, xMinutes: { one: "1 ph\u00FAt", other: "{{count}} ph\u00FAt" }, aboutXHours: { one: "kho\u1EA3ng 1 gi\u1EDD", other: "kho\u1EA3ng {{count}} gi\u1EDD" }, xHours: { one: "1 gi\u1EDD", other: "{{count}} gi\u1EDD" }, xDays: { one: "1 ng\u00E0y", other: "{{count}} ng\u00E0y" }, aboutXWeeks: { one: "kho\u1EA3ng 1 tu\u1EA7n", other: "kho\u1EA3ng {{count}} tu\u1EA7n" }, xWeeks: { one: "1 tu\u1EA7n", other: "{{count}} tu\u1EA7n" }, aboutXMonths: { one: "kho\u1EA3ng 1 th\u00E1ng", other: "kho\u1EA3ng {{count}} th\u00E1ng" }, xMonths: { one: "1 th\u00E1ng", other: "{{count}} th\u00E1ng" }, aboutXYears: { one: "kho\u1EA3ng 1 n\u0103m", other: "kho\u1EA3ng {{count}} n\u0103m" }, xYears: { one: "1 n\u0103m", other: "{{count}} n\u0103m" }, overXYears: { one: "h\u01A1n 1 n\u0103m", other: "h\u01A1n {{count}} n\u0103m" }, almostXYears: { one: "g\u1EA7n 1 n\u0103m", other: "g\u1EA7n {{count}} n\u0103m" } };
+import _mod4257 from "module_4257" /* 4257 */;
+import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 4414 */;
+import startOfWeekYear_mod from "startOfWeekYear" /* 4534 */;
+import _typeof_mod from "module_4252" /* 4252 */;
+import module_4256_mod from "module_4256" /* 4256 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} trước`;
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  const obj = { default: differenceInCalendarDays };
+  let tmp3 = obj;
+} else {
+  tmp3 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp3;
+let startOfWeekYear = startOfWeekYear_mod;
+if (!startOfWeekYear) {
+  const obj2 = { default: startOfWeekYear };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfWeekYear;
+}
+startOfWeekYear = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
+} else {
+  tmp7 = _typeof;
+}
+_typeof = tmp7;
+let module_4256 = module_4256_mod;
+if (!module_4256) {
+  const obj4 = { default: module_4256 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_4256;
+}
+module_4256 = tmp9;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj5 = { default: requiredArgs };
+  let tmp11 = obj5;
+} else {
+  tmp11 = requiredArgs;
+}
+requiredArgs = tmp11;
+
+export default function setWeekYear(arg0, arg1, firstWeekContainsDate) {
+  requiredArgs.default(2, arguments);
+  const defaultOptions = _mod4257.getDefaultOptions();
+  let prop;
+  if (null != firstWeekContainsDate) {
+    prop = firstWeekContainsDate.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    let prop1;
+    if (null != firstWeekContainsDate) {
+      locale = firstWeekContainsDate.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              prop1 = options.firstWeekContainsDate;
+            }
+          }
         }
-        text = `${tmp} nữa`;
       }
     }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
+    prop = prop1;
   }
+  if (null === prop) {
+    prop = defaultOptions.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    const locale2 = defaultOptions.locale;
+    let prop2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            prop2 = options2.firstWeekContainsDate;
+          }
+        }
+      }
+    }
+    prop = prop2;
+  }
+  let num = 1;
+  if (null !== prop) {
+    num = 1;
+    if (undefined !== prop) {
+      num = prop;
+    }
+  }
+  const defaultResult2 = _typeof.default(arg0);
+  const defaultResult1 = module_4256.default(num);
+  const defaultResult3 = module_4256.default(arg1);
+  const date = new Date(0);
+  date.setFullYear(defaultResult3, 0, defaultResult1);
+  date.setHours(0, 0, 0, 0);
+  const defaultResult5 = startOfWeekYear.default(date, firstWeekContainsDate);
+  defaultResult5.setDate(defaultResult5.getDate() + differenceInCalendarDays.default(defaultResult2, startOfWeekYear.default(defaultResult2, firstWeekContainsDate)));
+  return defaultResult5;
 };
 export default exports.default;

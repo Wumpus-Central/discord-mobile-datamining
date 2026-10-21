@@ -1,110 +1,207 @@
 // === Module 12503: ? ===
 
 // Module 12503
-import extractRequestData from "extractRequestData" /* 12504 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import setupIntegration from "module_12479" /* 12479 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-let closure_4 = ["ip", "user"];
-let obj = { include: { cookies: true, data: true, headers: true, ip: false, query_string: true, url: true, user: { id: true, username: true, email: true } }, transactionNamingScheme: "methodPath" };
-
-export const requestDataIntegration = setupIntegration.defineIntegration(() => {
-  obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let obj2 = {};
-  const merged = Object.assign(obj);
-  const merged1 = Object.assign(obj);
-  let obj3 = {};
-  const merged2 = Object.assign(obj.include);
-  const merged3 = Object.assign(obj.include);
-  if (obj.include) {
-    if (typeof obj.include.user === "boolean") {
-      let user = obj.include.user;
+const SyncPromise = require;
+const obj = { PENDING: 0 };
+obj[0] = "PENDING";
+obj.RESOLVED = 1;
+obj[1] = "RESOLVED";
+obj.REJECTED = 2;
+obj[2] = "REJECTED";
+class SyncPromise {
+  constructor(arg0) {
+    self = this;
+    tmp = SyncPromise;
+    tmp2 = closure_3(this, SyncPromise);
+    __init = SyncPromise.prototype.__init;
+    call = __init.call;
+    if (typeof call === "unknown") {
+      __initResult = __init();
+    } else {
+      callResult = call(self);
     }
-    obj3.user = user;
-    obj2.include = obj3;
-    const obj4 = {
-      name: "RequestData",
-      processEvent(sdkProcessingMetadata) {
-          let prop = sdkProcessingMetadata.sdkProcessingMetadata;
-          if (undefined === prop) {
-            prop = {};
-          }
-          ({ request, normalizedRequest } = prop);
-          const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
-            include = include.include;
-            const user = include.user;
-            const items = ["method"];
-            const entries = Object.entries(closure_1_3(include, closure_1_4));
-            while (tmp2 !== undefined) {
-              let tmp5 = closure_1_2(tmp3, 2);
-              let first = tmp5[0];
-              if (tmp5[1]) {
-                let arr = items.push(first);
-              }
-              continue;
+    __init2 = tmp.prototype.__init2;
+    call2 = __init2.call;
+    if (typeof call2 === "unknown") {
+      __init2Result = __init2();
+    } else {
+      call2Result = call2(self);
+    }
+    __init3 = tmp.prototype.__init3;
+    call3 = __init3.call;
+    if (typeof call3 === "unknown") {
+      __init3Result = __init3();
+    } else {
+      call3Result = call3(self);
+    }
+    __init4 = tmp.prototype.__init4;
+    call4 = __init4.call;
+    if (typeof call4 === "unknown") {
+      __init4 = __init4();
+    } else {
+      call4Result = call4(self);
+    }
+    self._state = c2.PENDING;
+    self._handlers = [];
+    return;
+  }
+}
+const entry = {
+  key: "then",
+  value: function then(arg0, arg1) {
+    const self = this;
+    closure_1 = arg0;
+    closure_0 = arg1;
+    SyncPromise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const _handlers = self._handlers;
+      const items = [
+        false,
+        (arg0) => {
+          if (closure_1) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
             }
-            let flag = true;
-            if (undefined !== user) {
-              flag = user;
-              if (typeof user !== "boolean") {
-                const items1 = [];
-                const _Object = Object;
-                const entries1 = Object.entries(user);
-                flag = items1;
-                for (const item10032 of entries1) {
-                  let tmp11 = closure_1_2(item10032, 2);
-                  let first1 = tmp11[0];
-                  if (tmp11[1]) {
-                    let arr2 = items1.push(first1);
-                  }
-                  continue;
-                }
-              }
-            }
-            const include2 = { ip: include.ip, user: flag, request: null, transaction: null };
-            let tmp15;
-            if (0 !== items.length) {
-              tmp15 = items;
-            }
-            include2.request = tmp15;
-            include2.transaction = include.transactionNamingScheme;
-            return { include: include2 };
-          })(obj2);
-          if (normalizedRequest) {
-            let tmp5;
-            if (request) {
-              let ip = request.ip;
-              if (!ip) {
-                ip = request.socket && request.socket.remoteAddress;
-                const tmp6 = request.socket && request.socket.remoteAddress;
-              }
-              tmp5 = ip;
-            }
-            let user;
-            if (request) {
-              user = request.user;
-            }
-            const obj3 = extractRequestData;
-            obj = { ipAddress: tmp5, user };
-            const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
-            return sdkProcessingMetadata;
           } else {
-            let result1 = sdkProcessingMetadata;
-            if (request) {
-              obj2 = extractRequestData;
-              result1 = obj2.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
+            closure_0(arg0);
+          }
+        },
+        (arg0) => {
+          if (closure_0) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
             }
-            return result1;
+          } else {
+            closure_1(arg0);
           }
         }
-    };
-    return obj4;
+      ];
+      _handlers.push(items);
+      self._executeHandlers();
+    });
+    return Object.create(SyncPromise.prototype);
   }
-  user = {};
-  const merged4 = Object.assign(obj.include.user);
-  const merged5 = Object.assign(obj.include || {}.user);
-});
+};
+let items = [
+  entry,
+  {
+    key: "catch",
+    value: function _catch(arg0) {
+      return this.then((result) => result, arg0);
+    }
+  },
+  {
+    key: "finally",
+    value: function _finally(arg0) {
+      const self = this;
+      closure_0 = arg0;
+      SyncPromise((arg0, arg1) => {
+        closure_0 = arg0;
+        _self = arg1;
+        return _self.then((result) => {
+          c3 = false;
+          closure_2 = result;
+          if (closure_0) {
+            tmp();
+          }
+        }, (arg0) => {
+          c3 = true;
+          closure_2 = arg0;
+          if (closure_0) {
+            tmp();
+          }
+        }).then(() => {
+          if (c3) {
+            closure_1(closure_2);
+          } else {
+            closure_0(closure_2);
+          }
+        });
+      });
+      return Object.create(SyncPromise.prototype);
+    }
+  },
+  {
+    key: "__init",
+    value: function __init() {
+      const self = this;
+      this._resolve = (arg0) => {
+        self._setResult(obj.RESOLVED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init2",
+    value: function __init2() {
+      const self = this;
+      this._reject = (arg0) => {
+        self._setResult(obj.REJECTED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init3",
+    value: function __init3() {
+      const self = this;
+      this._setResult = (_state, _value) => {
+        if (self._state === self.PENDING) {
+          if (obj2.isThenable(_value)) {
+            _value.then(self._resolve, self._reject);
+          } else {
+            self._state = _state;
+            self._value = _value;
+            self._executeHandlers();
+          }
+          obj2 = SyncPromise(12486);
+        }
+      };
+    }
+  },
+  {
+    key: "__init4",
+    value: function __init4() {
+      const self = this;
+      this._executeHandlers = () => {
+        if (self._state !== obj.PENDING) {
+          const _handlers = self._handlers;
+          const substr = _handlers.slice();
+          self._handlers = [];
+          const item = substr.forEach((item) => {
+            if (!item[0]) {
+              if (_state._state === constants.RESOLVED) {
+                item[1](_state._value);
+              }
+              if (_state._state === constants.REJECTED) {
+                item[2](_state._value);
+              }
+              item[0] = true;
+            }
+          });
+        }
+      };
+    }
+  }
+];
+const _moduleResult = _createClass(SyncPromise, items);
+
+export const SyncPromise = _moduleResult;
+export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
+  closure_0 = arg0;
+  return new _moduleResult((arg0, fn) => {
+    fn(closure_0);
+  });
+};
+export const resolvedSyncPromise = function resolvedSyncPromise(item) {
+  closure_0 = item;
+  return new _moduleResult((fn) => {
+    fn(closure_0);
+  });
+};

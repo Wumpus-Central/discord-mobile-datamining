@@ -1,8 +1,21 @@
 // === Module 5465: ? ===
 
 // Module 5465
+import _mod19 from "module_19" /* 19 */;
+import _mod5256 from "module_5256" /* 5256 */;
 
-export default function _nonIterableRest() {
-  const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-  throw typeError;
+_mod19.useCallback;
+
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod5256.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
+    }
+  }, items);
+  return obj2;
 };

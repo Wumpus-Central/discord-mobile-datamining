@@ -1,7 +1,7 @@
 // === Module 4564: ? ===
 
 // Module 4564
-import _mod4537 from "module_4537" /* 4537 */;
+import _mod4558 from "module_4558" /* 4558 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour0to23Parser, Parser) {
+function _setPrototypeOf(ExtendedYearParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour0to23Parser, Parser) {
-      Hour0to23Parser.__proto__ = Parser;
-      return Hour0to23Parser;
+    _setPrototypeOf = function _setPrototypeOf(ExtendedYearParser, Parser) {
+      ExtendedYearParser.__proto__ = Parser;
+      return ExtendedYearParser;
     };
   }
-  return _setPrototypeOf(Hour0to23Parser, Parser);
+  return _setPrototypeOf(ExtendedYearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,9 +54,9 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4537.Parser;
+const Parser = _mod4558.Parser;
 let _createSuperInternal;
-class Hour0to23Parser {
+class ExtendedYearParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -92,10 +92,10 @@ class Hour0to23Parser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 70;
-          applyResult.priority = 70;
+          num3 = 130;
+          applyResult.priority = 130;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +106,7 @@ class Hour0to23Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["a", "b", "h", "K", "k", "t", "T"];
+          items1 = ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +130,7 @@ class Hour0to23Parser {
     }
   }
 }
-let dependencyMap = Hour0to23Parser;
+let dependencyMap = ExtendedYearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,9 +142,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-Hour0to23Parser.prototype = Object.create(prototype, { constructor: { value: Hour0to23Parser, writable: true, configurable: true } });
+ExtendedYearParser.prototype = Object.create(prototype, { constructor: { value: ExtendedYearParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(Hour0to23Parser, Parser);
+  _setPrototypeOf(ExtendedYearParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -205,33 +205,23 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("H" === arg1) {
-      return _createSuperInternal(4539).parseNumericPattern(_createSuperInternal(4540).numericPatterns.hour23h, arg0);
-    } else if ("Ho" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
+  value: function parse(arg0, arg1) {
+    if ("u" === arg1) {
+      let parseNDigitsSignedResult = _createSuperInternal(4560).parseNDigitsSigned(4, arg0);
     } else {
-      return _createSuperInternal(4539).parseNDigits(arg1.length, arg0);
+      parseNDigitsSignedResult = _createSuperInternal(4560).parseNDigitsSigned(arg1.length, arg0);
     }
+    return parseNDigitsSignedResult;
   }
 };
 let items = [
   entry,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 23;
-      }
-      return tmp;
-    }
-  },
-  {
     key: "set",
-    value: function set(setUTCHours, arg1, arg2) {
-      setUTCHours.setUTCHours(arg2, 0, 0, 0);
-      return setUTCHours;
+    value: function set(setUTCFullYear, arg1, arg2) {
+      setUTCFullYear.setUTCFullYear(arg2, 0, 1);
+      setUTCFullYear.setUTCHours(0, 0, 0, 0);
+      return setUTCFullYear;
     }
   }
 ];
@@ -253,4 +243,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour0to23Parser };
+export { ExtendedYearParser };

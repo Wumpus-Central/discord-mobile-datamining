@@ -1,7 +1,0 @@
-// === Module 16221: ? ===
-
-// Module 16221
-import registerAsset from "module_1134" /* 1134 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native/images", width: 345, height: 82, scales: [1, 2, 3], hash: "91248bc802fa2159ae23ab96ddaf91db", name: "clouds_light_background", type: "png" });

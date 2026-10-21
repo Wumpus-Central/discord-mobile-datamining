@@ -1,10 +1,5 @@
 // === Module 15435: ? ===
 
 // Module 15435
-import _mod15413 from "module_15413" /* 15413 */;
-import _mod15414 from "module_15414" /* 15414 */;
 
-
-export default Object.keys || (function keys(arg0) {
-  return _mod15414(arg0, _mod15413);
-});
+export const units = ["degree", "acre", "hectare", "percent", "bit", "byte", "gigabit", "gigabyte", "kilobit", "kilobyte", "megabit", "megabyte", "petabyte", "terabit", "terabyte", "day", "hour", "millisecond", "minute", "month", "second", "week", "year", "centimeter", "foot", "inch", "kilometer", "meter", "mile-scandinavian", "mile", "millimeter", "yard", "gram", "kilogram", "ounce", "pound", "stone", "celsius", "fahrenheit", "fluid-ounce", "gallon", "liter", "milliliter"];

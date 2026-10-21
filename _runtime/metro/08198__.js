@@ -1,24 +1,29 @@
 // === Module 8198: ? ===
 
 // Module 8198
+import findOffsets from "findOffsets" /* 8199 */;
+
+require = arg1;
+const dependencyMap = arg6;
 
 export default {
-  get(arg0) {
-    if (arg0) {
-      return arg0;
-    } else {
-      if (typeof globalThis.DOMParser !== "undefined") {
-        const dOMParser = new globalThis.DOMParser();
-        return dOMParser;
-      } else {
-        try {
-          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
-          const obj = { onError: result.onErrorStopParsing };
-          const dOMParser1 = new result.DOMParser(obj);
-          return dOMParser1;
-        } catch (err) {
+  isHeicFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
+          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
         }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
       }
+    } else {
+      return false;
     }
+  },
+  findHeicOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
   }
 };

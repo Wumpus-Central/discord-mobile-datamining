@@ -1,17 +1,18 @@
 // === Module 4580: ? ===
 
 // Module 4580
-import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4392 */;
-import requiredArgs_mod from "requiredArgs" /* 4232 */;
+import _typeof_mod from "module_4252" /* 4252 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
+import module_4256_mod from "module_4256" /* 4256 */;
 
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj = { default: startOfISOWeekYear };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = _typeof;
 }
-startOfISOWeekYear = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -20,11 +21,30 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let module_4256 = module_4256_mod;
+if (!module_4256) {
+  const obj3 = { default: module_4256 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4256;
+}
+module_4256 = tmp7;
 
-export default function isSameISOWeekYear(arg0, arg1) {
+export default function setUTCISODay(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfISOWeekYear.default(arg1).getTime();
+  const defaultResult1 = module_4256.default(arg1);
+  let diff = defaultResult1;
+  if (defaultResult1 % 7 === 0) {
+    diff = defaultResult1 - 7;
+  }
+  const defaultResult2 = _typeof.default(arg0);
+  let num = 0;
+  const uTCDay = defaultResult2.getUTCDay();
+  if ((diff % 7 + 7) % 7 < 1) {
+    num = 7;
+  }
+  const diff1 = num + diff - uTCDay;
+  defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff1);
+  return defaultResult2;
 };
 export default exports.default;

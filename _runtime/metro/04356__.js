@@ -1,38 +1,30 @@
 // === Module 4356: ? ===
 
 // Module 4356
-let closure_0 = { lessThanXSeconds: { one: "mindre \u00E4n en sekund", other: "mindre \u00E4n {{count}} sekunder" }, xSeconds: { one: "en sekund", other: "{{count}} sekunder" }, halfAMinute: "en halv minut", lessThanXMinutes: { one: "mindre \u00E4n en minut", other: "mindre \u00E4n {{count}} minuter" }, xMinutes: { one: "en minut", other: "{{count}} minuter" }, aboutXHours: { one: "ungef\u00E4r en timme", other: "ungef\u00E4r {{count}} timmar" }, xHours: { one: "en timme", other: "{{count}} timmar" }, xDays: { one: "en dag", other: "{{count}} dagar" }, aboutXWeeks: { one: "ungef\u00E4r en vecka", other: "ungef\u00E4r {{count}} vecka" }, xWeeks: { one: "en vecka", other: "{{count}} vecka" }, aboutXMonths: { one: "ungef\u00E4r en m\u00E5nad", other: "ungef\u00E4r {{count}} m\u00E5nader" }, xMonths: { one: "en m\u00E5nad", other: "{{count}} m\u00E5nader" }, aboutXYears: { one: "ungef\u00E4r ett \u00E5r", other: "ungef\u00E4r {{count}} \u00E5r" }, xYears: { one: "ett \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "\u00F6ver ett \u00E5r", other: "\u00F6ver {{count}} \u00E5r" }, almostXYears: { one: "n\u00E4stan ett \u00E5r", other: "n\u00E4stan {{count}} \u00E5r" } };
-let closure_1 = ["noll", "en", "tv\u00E5", "tre", "fyra", "fem", "sex", "sju", "\u00E5tta", "nio", "tio", "elva", "tolv"];
+import module_2076 from "module_2076" /* 2076 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp8 = tmp;
-    if (null != addSuffix) {
-      tmp8 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} sedan`;
-        }
-        text = `om ${tmp}`;
-      }
+if (!module_2076) {
+  const obj2 = { default: module_2076 };
+  let obj = obj2;
+} else {
+  obj = module_2076;
+}
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return String(arg0);
+  },
+  era: obj.default({ values: { narrow: ["p.n.e.", "n.e."], abbreviated: ["p.n.e.", "n.e."], wide: ["przed nasz\u0105 er\u0105", "naszej ery"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["I kw.", "II kw.", "III kw.", "IV kw."], wide: ["I kwarta\u0142", "II kwarta\u0142", "III kwarta\u0142", "IV kwarta\u0142"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    return tmp8;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    if (addSuffix) {
-      if (addSuffix.onlyNumeric) {
-        const _String2 = String;
-        one = tmp.other.replace("{{count}}", String(arg1));
-      }
-    }
-    if (arg1 < 13) {
-      let StringResult = closure_1[arg1];
-    } else {
-      const _String = String;
-      StringResult = String(arg1);
-    }
-    one = tmp.other.replace("{{count}}", StringResult);
-  }
+  }),
+  month: obj.default({ values: { narrow: ["S", "L", "M", "K", "M", "C", "L", "S", "W", "P", "L", "G"], abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"], wide: ["stycze\u0144", "luty", "marzec", "kwiecie\u0144", "maj", "czerwiec", "lipiec", "sierpie\u0144", "wrzesie\u0144", "pa\u017Adziernik", "listopad", "grudzie\u0144"] }, defaultWidth: "wide", formattingValues: { narrow: ["s", "l", "m", "k", "m", "c", "l", "s", "w", "p", "l", "g"], abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"], wide: ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "wrze\u015Bnia", "pa\u017Adziernika", "listopada", "grudnia"] }, defaultFormattingWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["N", "P", "W", "\u015A", "C", "P", "S"], short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"], abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."], wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"] }, defaultWidth: "wide", formattingValues: { narrow: ["n", "p", "w", "\u015B", "c", "p", "s"], short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"], abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."], wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"] }, defaultFormattingWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "p\u00F3\u0142n.", noon: "po\u0142", morning: "rano", afternoon: "popo\u0142.", evening: "wiecz.", night: "noc" }, abbreviated: { am: "AM", pm: "PM", midnight: "p\u00F3\u0142noc", noon: "po\u0142udnie", morning: "rano", afternoon: "popo\u0142udnie", evening: "wiecz\u00F3r", night: "noc" }, wide: { am: "AM", pm: "PM", midnight: "p\u00F3\u0142noc", noon: "po\u0142udnie", morning: "rano", afternoon: "popo\u0142udnie", evening: "wiecz\u00F3r", night: "noc" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "o p\u00F3\u0142n.", noon: "w po\u0142.", morning: "rano", afternoon: "po po\u0142.", evening: "wiecz.", night: "w nocy" }, abbreviated: { am: "AM", pm: "PM", midnight: "o p\u00F3\u0142nocy", noon: "w po\u0142udnie", morning: "rano", afternoon: "po po\u0142udniu", evening: "wieczorem", night: "w nocy" }, wide: { am: "AM", pm: "PM", midnight: "o p\u00F3\u0142nocy", noon: "w po\u0142udnie", morning: "rano", afternoon: "po po\u0142udniu", evening: "wieczorem", night: "w nocy" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

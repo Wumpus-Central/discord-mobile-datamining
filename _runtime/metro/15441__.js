@@ -1,34 +1,80 @@
 // === Module 15441: ? ===
 
 // Module 15441
-import _mod17 from "module_17" /* 17 */;
-import replaceByteInByteSequence from "replaceByteInByteSequence" /* 15442 */;
+import _mod15442 from "module_15442" /* 15442 */;
+import _mod15443 from "module_15443" /* 15443 */;
+import _mod15444 from "module_15444" /* 15444 */;
+import _mod15481 from "module_15481" /* 15481 */;
+import _mod15482 from "module_15482" /* 15482 */;
+import _mod15498 from "module_15498" /* 15498 */;
+import _mod15499 from "module_15499" /* 15499 */;
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
-  }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
+
+export default (dontCallGetSet, obj) => {
+  ({ target, global: _global, stat } = dontCallGetSet);
+  const tmp3 = _mod15442;
+  if (_global) {
+    let prototype = tmp3;
   } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+    let tmp4 = tmp3[target];
+    if (stat) {
+      if (!tmp4) {
+        tmp4 = _mod15443(target, {});
+      }
+      prototype = tmp4;
+    } else {
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = _mod15442[target].prototype;
+      }
+    }
+  }
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      if (arg0.dontCallGetSet) {
+        obj = _mod15444;
+        let iter = obj.f(prototype, key10024);
+        value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
+      } else {
+        tmp7 = prototype[key10024];
+      }
+      let sum = key10024;
+      let tmp12 = _mod15481;
+      if (!_global) {
+        let str4 = "#";
+        if (stat) {
+          str4 = ".";
+        }
+        sum = target + str4 + key10024;
+      }
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
+            continue;
+          } else {
+            let tmp22 = _mod15482(tmp21, tmp7);
+          }
+        }
+        continue;
+      }
+      let sham = arg0.sham;
+      if (!sham) {
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
+        sham = sham2;
+      }
+      if (sham) {
+        let tmp14 = _mod15498(tmp21, "sham", true);
+      }
+      let tmp19 = _mod15499(prototype, key10024, tmp21, arg0);
+      continue;
+    }
   }
 };
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {
-
-};
-
-export const URL = replaceByteInByteSequence.URL;

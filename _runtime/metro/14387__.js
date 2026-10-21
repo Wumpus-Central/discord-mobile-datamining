@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_channel/native/images", width: 284, height: 189, scales: [2, 3], hash: "8c2bdea51e6ab077ef729f3b6fe02c7a", name: "asset_blurred_media_post_preview", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/collectibles/native/images", width: 20.5, height: 20, scales: [2, 3], hash: "1852cc5a5de0318feebc04948ebfbffa", name: "img_collectibles_shop", type: "png" });

@@ -1,44 +1,49 @@
 // === Module 15409: ? ===
 
 // Module 15409
-import _mod15374 from "module_15374" /* 15374 */;
-import _mod15396 from "module_15396" /* 15396 */;
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 15410 */;
+import compareKV from "compareKV" /* 15411 */;
+import likelySubtags from "likelySubtags" /* 15414 */;
+import _mod15415 from "module_15415" /* 15415 */;
+import e_mod from "e" /* 1174 */;
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod15396(arg1)) {
-          tmp11Result = _mod15374;
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
-      }
-    }
-    return tmp7;
+const require = globalThis.__r;
+
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod15415, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export const getCanonicalLocales = function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
   } else {
-    throw new TypeError("Trying to call a non-function");
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
+    }
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_15413").parseUnicodeLocaleId(arr3[num3])));
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
   }
-}
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
+  return items;
 };
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
-
-export default isForced;
+export const isStructurallyValidLanguageTag = require("module_15413").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("module_15413").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("module_15413").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("module_15413").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("module_15413").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("module_15413").parseUnicodeLocaleId;

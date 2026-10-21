@@ -1,40 +1,28 @@
 // === Module 4504: ? ===
 
 // Module 4504
-import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4392 */;
-import module_4399_mod from "module_4399" /* 4399 */;
-import requiredArgs_mod from "requiredArgs" /* 4232 */;
+import module_4500_mod from "module_4500" /* 4500 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
 
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj = { default: startOfISOWeekYear };
+let module_4500 = module_4500_mod;
+if (!module_4500) {
+  const obj = { default: module_4500 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = module_4500;
 }
-startOfISOWeekYear = tmp3;
-let module_4399 = module_4399_mod;
-if (!module_4399) {
-  const obj2 = { default: module_4399 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4399;
-}
-module_4399 = tmp5;
+module_4500 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
-let c3 = 604800000;
+requiredArgs = tmp5;
 
-export default function getISOWeeksInYear(arg0) {
+export default function formatDistanceToNow(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
-  const defaultResult2 = startOfISOWeekYear.default(module_4399.default(defaultResult1, 60));
-  return Math.round((startOfISOWeekYear.default(module_4399.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
+  return module_4500.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

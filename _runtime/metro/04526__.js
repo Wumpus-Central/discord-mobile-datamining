@@ -1,8 +1,8 @@
 // === Module 4526: ? ===
 
 // Module 4526
-import _typeof_mod from "module_4231" /* 4231 */;
-import requiredArgs_mod from "requiredArgs" /* 4232 */;
+import _typeof_mod from "module_4252" /* 4252 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,10 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isBefore(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time < _typeof.default(arg1).getTime();
+export default function getMilliseconds(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getMilliseconds();
 };
 export default exports.default;

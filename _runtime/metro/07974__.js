@@ -1,13 +1,16 @@
 // === Module 7974: ? ===
 
 // Module 7974
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7975 from "module_7975" /* 7975 */;
+import _modDef7977 from "module_7977" /* 7977 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeSpotLight = fn;
+const FeBlend = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeSpotLight {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeBlend {
   constructor() {
     self = this;
-    tmp = c2(this, FeSpotLight);
-    tmp2 = closure_4;
-    obj = closure_4(FeSpotLight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeBlend);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeBlend);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,17 +52,32 @@ class FeSpotLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeSpotLight, fn(19).Component);
+_inherits(FeBlend, _modDef7977);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeSpotLight(7926).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeBlend(7976).extractFilter(this.props));
+    const obj2 = FeBlend(7976);
+    const merged1 = Object.assign(FeBlend(7976).extractIn(this.props));
+    const obj3 = FeBlend(7976);
+    const merged2 = Object.assign(FeBlend(7976).extractFeBlend(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeSpotLight, items);
-importDefaultResultResult.displayName = "FeSpotLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.mode = "normal";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

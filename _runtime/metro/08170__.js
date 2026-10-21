@@ -1,29 +1,69 @@
 // === Module 8170: ? ===
 
 // Module 8170
-import findOffsets from "findOffsets" /* 8171 */;
+import _mod8162 from "module_8162" /* 8162 */;
+import _mod8163 from "module_8163" /* 8163 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export default {
-  isHeicFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
-          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
-    } else {
-      return false;
+export const isAVI = function isAVI(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avi");
+};
+export const isFLV = function isFLV(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flv") && _mod8162.isFlvStringIncluded(fileChunk);
+};
+export const isM4V = function isM4V(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod8162.isftypStringIncluded(fileChunk);
+};
+export const isMKV = function isMKV(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod8162.findMatroskaDocTypeElements(fileChunk);
+};
+export const isMOV = function isMOV(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mov");
+};
+export const isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
+  if (!checkByFileTypeResult) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
     }
-  },
-  findHeicOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
+    let tmp8 = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod8162.getFileChunk(fileChunk);
+      const FileTypes2 = _mod8163.FileTypes;
+      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod8162.isftypStringIncluded(fileChunk1);
+      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod8162.isftypStringIncluded(fileChunk1);
+    }
+    checkByFileTypeResult = tmp8;
   }
+  return checkByFileTypeResult;
+};
+export const isOGG = function isOGG(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ogg");
+};
+export const isSWF = function isSWF(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "swf");
+};
+export const isWEBM = function isWEBM(fileChunk) {
+  fileChunk = _mod8162.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod8163.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod8162.findMatroskaDocTypeElements(fileChunk);
 };

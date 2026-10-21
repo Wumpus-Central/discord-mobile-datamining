@@ -1,77 +1,148 @@
 // === Module 12502: ? ===
 
 // Module 12502
-import _mod12424 from "module_12424" /* 12424 */;
+import _mod12485 from "module_12485" /* 12485 */;
+import _mod12490 from "module_12490" /* 12490 */;
+import _mod12493 from "module_12493" /* 12493 */;
+import _mod12503 from "module_12503" /* 12503 */;
+import __SENTRY_DEBUG__ from "module_12478" /* 12478 */;
+import consoleSandbox from "module_12479" /* 12479 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod12424.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod12424.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp16 = _mod12424.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        if (!set.has(item10026)) {
-          let addResult = set.add(item10026);
-          let obj2 = arg0(item10026);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
-            }
-            continue;
-          }
-        }
-        continue;
-      }
+function updateSession(ipAddress) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (obj.user) {
+    ipAddress = ipAddress.ipAddress;
+    let ip_address = !ipAddress;
+    if (!ipAddress) {
+      ip_address = obj.user.ip_address;
     }
-  })(fn);
-  return map.get(arg1);
+    if (ip_address) {
+      ipAddress.ipAddress = obj.user.ip_address;
+    }
+    if (!tmp) {
+      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
+    }
+    tmp = ipAddress.did || obj.did;
+  }
+  let timestamp = obj.timestamp;
+  if (!timestamp) {
+    timestamp = _mod12493.timestampInSeconds();
+  }
+  ipAddress.timestamp = timestamp;
+  if (obj.abnormal_mechanism) {
+    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
+  }
+  if (obj.ignoreDuration) {
+    ipAddress.ignoreDuration = obj.ignoreDuration;
+  }
+  if (!obj.sid) {
+    if (undefined !== obj.init) {
+      ipAddress.init = obj.init;
+    }
+    const did = ipAddress.did;
+    let did2 = !did;
+    if (!did) {
+      did2 = obj.did;
+    }
+    if (did2) {
+      const _HermesInternal = HermesInternal;
+      ipAddress.did = "" + obj.did;
+    }
+    if (typeof obj.started === "number") {
+      ipAddress.started = obj.started;
+    }
+    if (ipAddress.ignoreDuration) {
+      ipAddress.duration = undefined;
+    } else if (typeof obj.duration === "number") {
+      ipAddress.duration = obj.duration;
+    } else {
+      const diff = ipAddress.timestamp - ipAddress.started;
+      let num2 = 0;
+      if (diff >= 0) {
+        num2 = diff;
+      }
+      ipAddress.duration = num2;
+    }
+    if (obj.release) {
+      ipAddress.release = obj.release;
+    }
+    if (obj.environment) {
+      ipAddress.environment = obj.environment;
+    }
+    const ipAddress2 = ipAddress.ipAddress;
+    let ipAddress3 = !ipAddress2;
+    if (!ipAddress2) {
+      ipAddress3 = obj.ipAddress;
+    }
+    if (ipAddress3) {
+      ipAddress.ipAddress = obj.ipAddress;
+    }
+    const userAgent = ipAddress.userAgent;
+    let userAgent2 = !userAgent;
+    if (!userAgent) {
+      userAgent2 = obj.userAgent;
+    }
+    if (userAgent2) {
+      ipAddress.userAgent = obj.userAgent;
+    }
+    if (typeof obj.errors === "number") {
+      ipAddress.errors = obj.errors;
+    }
+    if (obj.status) {
+      ipAddress.status = obj.status;
+    }
+  } else {
+    if (32 === obj.sid.length) {
+      let sid = obj.sid;
+    } else {
+      sid = _mod12490.uuid4();
+    }
+    ipAddress.sid = sid;
+  }
 }
-const map = new Map();
-const set = new Set();
+_mod12503;
 
-export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          if (item10010.filename) {
-            if (!item10010.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
-              if (tmp9) {
-                item10010.module_metadata = tmp10;
-              }
-            }
-          }
-          continue;
-        }
-      }
-    });
-  } catch (err) {
+export const closeSession = function closeSession(status, status2) {
+  if (status2) {
+    const obj2 = { status: status2 };
+    let obj = obj2;
+  } else {
+    obj = {};
+    if ("ok" === status.status) {
+      obj = { status: "exited" };
+    }
   }
+  updateSession(status, obj);
 };
-export { getMetadataForUrl };
-export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
-        }
-      }
-    });
-  } catch (err) {
+export const makeSession = function makeSession(arg0) {
+  const timestampInSecondsResult = obj2(12493).timestampInSeconds();
+  obj2 = { sid: null, init: true, timestamp: null, started: null, duration: 0, status: "ok", errors: 0, ignoreDuration: false, toJSON: null };
+  let obj = obj2(12493);
+  obj2.sid = obj2(12490).uuid4();
+  obj2.timestamp = timestampInSecondsResult;
+  obj2.started = timestampInSecondsResult;
+  obj2.toJSON = function toJSON() {
+    const obj3 = { sid: "" + obj2.sid, init: obj2.init, started: null, timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
+    const obj = _mod12485;
+    obj3.started = new Date(1000 * obj2.started).toISOString();
+    const date = new Date(1000 * obj2.started);
+    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
+    ({ status: obj2.status, errors: obj2.errors } = obj2);
+    if (typeof obj2.did === "number") {
+      const _HermesInternal = HermesInternal;
+      const combined = "" + obj2.did;
+    }
+    obj3.did = combined;
+    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
+    obj3.attrs = { release: obj2.release, environment: obj2.environment, ip_address: obj2.ipAddress, user_agent: obj2.userAgent };
+    return obj.dropUndefinedKeys(obj3);
+  };
+  if (arg0) {
+    updateSession(obj2, arg0);
   }
+  return obj2;
 };
+export { updateSession };

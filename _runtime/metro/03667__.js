@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "e35baf894b11d05139756061b29ea4ad", name: "fi.messages.e35baf894b11d05139756061b29ea4ad.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/partner_perks/xbox/game_pass_perks", scales: [1], hash: "0ed18d802f39ad8ae58ce024ccbaa690", name: "XboxGamePassPerks.compiled.messages", type: "jsona" });

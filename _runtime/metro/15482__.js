@@ -1,34 +1,24 @@
 // === Module 15482: ? ===
 
 // Module 15482
+import _mod15465 from "module_15465" /* 15465 */;
+import _mod15483 from "module_15483" /* 15483 */;
 
-export const getReactNativeDimensionsWithDimensions = function getReactNativeDimensionsWithDimensions(width, value) {
-  try {
-    let obj = {};
-    let obj2 = {};
-    if (width) {
-      const obj5 = { screenWidth: null, screenHeight: null, screenScale: null, screenFontScale: null };
-      const _Math = Math;
-      obj5.screenWidth = Math.ceil(width.width);
-      const _Math2 = Math;
-      obj5.screenHeight = Math.ceil(width.height);
-      ({ scale: obj3.screenScale, fontScale: obj3.screenFontScale } = width);
-      obj = obj5;
+
+export default (arg0, arg1, arg2) => {
+  const arr = _mod15483(arg1);
+  for (let num = 0; num < arr.length; num = num + 1) {
+    let tmp3 = arr[num];
+    let tmp6 = _mod15465(arg0, tmp3);
+    if (!tmp6) {
+      let tmp8 = arg2;
+      if (arg2) {
+        tmp8 = _mod15465(arg2, tmp3);
+      }
+      tmp6 = tmp8;
     }
-    if (value) {
-      const obj9 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
-      const _Math3 = Math;
-      obj9.windowWidth = Math.ceil(value.width);
-      const _Math4 = Math;
-      obj9.windowHeight = Math.ceil(value.height);
-      ({ scale: obj4.windowScale, fontScale: obj4.windowFontScale } = value);
-      obj2 = obj9;
+    if (!tmp6) {
+      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
     }
-    const obj10 = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(obj2);
-    return obj10;
-  } catch (err) {
-    return null;
   }
 };

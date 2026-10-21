@@ -1,26 +1,26 @@
 // === Module 4400: ? ===
 
 // Module 4400
-import module_4235_mod from "module_4235" /* 4235 */;
-import module_4380_mod from "module_4380" /* 4380 */;
-import requiredArgs_mod from "requiredArgs" /* 4232 */;
+import module_4256_mod from "module_4256" /* 4256 */;
+import _typeof_mod from "module_4252" /* 4252 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
 
-let module_4235 = module_4235_mod;
-if (!module_4235) {
-  const obj = { default: module_4235 };
+let module_4256 = module_4256_mod;
+if (!module_4256) {
+  const obj = { default: module_4256 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4235;
+  tmp3 = module_4256;
 }
-module_4235 = tmp3;
-let module_4380 = module_4380_mod;
-if (!module_4380) {
-  const obj2 = { default: module_4380 };
+module_4256 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4380;
+  tmp5 = _typeof;
 }
-module_4380 = tmp5;
+_typeof = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -30,8 +30,19 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addYears(interval, arg1) {
+export default function addDays(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4380.default(interval, 12 * module_4235.default(arg1));
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = module_4256.default(arg1);
+  if (isNaN(defaultResult2)) {
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else if (defaultResult2) {
+    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
+    return defaultResult1;
+  } else {
+    return defaultResult1;
+  }
 };
 export default exports.default;

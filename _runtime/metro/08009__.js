@@ -2,10 +2,7 @@
 
 // Module 8009
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 7918 */;
-import extractPropsDefault from "extractProps" /* 7925 */;
-import extractFontDefault from "extractFont" /* 7932 */;
-import _modDef7934 from "module_7934" /* 7934 */;
+import _modDef7962 from "module_7962" /* 7962 */;
 import _modDef8010 from "module_8010" /* 8010 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -13,7 +10,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TSpan = fn;
+const SvgImage = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,69 +31,76 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturnDefault;
+const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-class TSpan {
+const re9 = /\s+/;
+class SvgImage {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, TSpan);
-    items1 = [...items];
+    tmp = closure_3(this, SvgImage);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(TSpan);
+    obj = hasOwnProperty(SvgImage);
     tmp3 = closure_4;
-    if (closure_7()) {
-      tmp5 = globalThis;
+    if (closure_8()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = TSpan(7925).propsAndStyles(matrix);
-      const obj = TSpan(7925);
-      const merged = Object.assign(propsAndStylesResult, TSpan(7926).pickNotNil(extractFontDefault(propsAndStylesResult, false)));
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = TSpan(7926);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(TSpan, _modDef7934);
+_inherits(SvgImage, _modDef7962);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = TSpan(7925).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = TSpan(7925);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef8010, {});
+    const self = this;
+    const props = this.props;
+    ({ preserveAspectRatio, href } = props);
+    ({ x, y, width, height } = props);
+    if (undefined === href) {
+      href = props.xlinkHref;
+    }
+    if (preserveAspectRatio) {
+      let parts = preserveAspectRatio.trim().split(re9);
+      const str = preserveAspectRatio.trim();
+    } else {
+      parts = [];
+    }
+    const size = { x, y, width, height, onLoad: props.onLoad, meetOrSlice: SvgImage(7951).meetOrSliceTypes[tmp3] || 0, align: null, src: null };
+    [tmp2, tmp3] = parts;
+    const tmp6 = SvgImage(7951).meetOrSliceTypes[tmp3] || 0;
+    size.align = SvgImage(7951).alignEnum[tmp2] || "xMidYMid";
+    let assetSource = null;
+    if (href) {
+      let tmp10 = href;
+      if (typeof href === "string") {
+        const obj = { uri: href };
+        tmp10 = obj;
+      }
+      assetSource = Image.resolveAssetSource(tmp10);
+    }
+    size.src = assetSource;
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp7 = SvgImage(7951).alignEnum[tmp2] || "xMidYMid";
+    const merged = Object.assign(SvgImage(7953).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return <tmp11 ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(TSpan, items);
-importDefaultResultResult.displayName = "TSpan";
-const extractFont = fn(7932);
-extractFont.setTSpan(importDefaultResultResult);
+const items = [entry];
+const importDefaultResultResult = _createClass(SvgImage, items);
+importDefaultResultResult.displayName = "Image";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
 
 export default importDefaultResultResult;

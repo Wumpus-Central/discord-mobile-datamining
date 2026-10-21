@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 18, height: 18, scales: [1, 2, 3], hash: "62d7aa01daae8d1f045686e6148f0a24", name: "ic_add_18px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 177, height: 112, scales: [2, 3], hash: "ca47b5bc4b94bd1dd969b5ea6e31ef36", name: "guild_subscription_no_guilds_darker", type: "png" });

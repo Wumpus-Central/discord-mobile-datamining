@@ -1,14 +1,25 @@
 // === Module 15432: ? ===
 
 // Module 15432
-import _mod15370 from "module_15370" /* 15370 */;
-import all from "module_15396" /* 15396 */;
+const require = globalThis.__r;
 
-let _moduleResult = all(_mod15370.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod15370.WeakMap));
-  const obj = /native code/;
-}
+const require = arg1;
+const dependencyMap = arg6;
 
-export default _moduleResult;
+export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
+  _require = locale;
+  const timezones = require("module_15433").timezones;
+  return timezones.filter((item) => (function isSupported(timeZone, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const obj = { timeZone };
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+      return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
+};

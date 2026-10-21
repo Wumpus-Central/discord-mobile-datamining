@@ -1,326 +1,882 @@
 // === Module 12534: ? ===
 
 // Module 12534
-import _mod12421 from "module_12421" /* 12421 */;
-import _mod12424 from "module_12424" /* 12424 */;
-import _mod12429 from "module_12429" /* 12429 */;
-import _mod12437 from "module_12437" /* 12437 */;
-import supportsFetch from "supportsFetch" /* 12535 */;
 import _slicedToArray from "module_32" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-const require = globalThis.__r;
-
-let closure_4 = async function _resolveResponse(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+const BaseClient = require;
+function isErrorEvent(type) {
+  return undefined === type.type;
+}
+function isTransactionEvent(type) {
+  return "transaction" === type.type;
+}
+let c4 = "Not capturing exception because it's already been captured.";
+class BaseClient {
+  constructor(arg0) {
+    self = this;
+    closure_0 = global;
+    tmp = closure_3(this, BaseClient);
+    this._options = global;
+    this._integrations = {};
+    this._numProcessing = 0;
+    this._outcomes = {};
+    this._hooks = {};
+    this._eventProcessors = [];
+    tmp2 = closure_0;
+    tmp3 = closure_1;
+    if (global.dsn) {
+      tmp2Result = tmp2(tmp3[3]);
+      self._dsn = tmp2Result.makeDsn(global.dsn);
+      tmp4 = tmp3;
+      tmp5 = tmp2;
     } else {
-      return { value: "IconComponent", done: null };
+      tmp4 = tmp3;
+      tmp5 = tmp2;
+      if (tmp2(tmp3[4]).DEBUG_BUILD) {
+        logger = tmp2(tmp3[5]).logger;
+        str = "No DSN provided, client will not send events.";
+        warnResult = logger.warn("No DSN provided, client will not send events.");
+        tmp4 = tmp3;
+        tmp5 = tmp2;
+      }
     }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+    if (self._dsn) {
+      tmp5Result = tmp5(tmp4[6]);
+      sdk = undefined;
+      if (global._metadata) {
+        sdk = global._metadata.sdk;
+      }
+      obj1 = { tunnel: null, recordDroppedEvent: null };
+      obj1.tunnel = self._options.tunnel;
+      recordDroppedEvent = self.recordDroppedEvent;
+      envelopeEndpointWithUrlEncodedAuth = tmp5Result.getEnvelopeEndpointWithUrlEncodedAuth(self._dsn, global.tunnel, sdk);
+      obj1.recordDroppedEvent = recordDroppedEvent.bind(self);
+      tmp9 = obj1;
+      merged = Object.assign(global.transportOptions);
+      obj1.url = envelopeEndpointWithUrlEncodedAuth;
+      self._transport = global.transport(obj1);
+    }
+    items = ["enableTracing", "tracesSampleRate", "tracesSampler"];
+    found = items.find((item) => {
+      let tmp = item in dependencyMap;
+      if (tmp) {
+        tmp = null == dependencyMap[item];
+      }
+      return tmp;
+    });
+    closure_1 = found;
+    if (found) {
+      tmp5Result1 = tmp5(tmp4[5]);
+      consoleSandboxResult = tmp5Result1.consoleSandbox(() => {
+        console.warn("[Sentry] Deprecation warning: `" + found + "` is set to undefined, which leads to tracing being enabled. In v9, a value of `undefined` will result in tracing being disabled.");
+      });
+    }
+    return;
+  }
+}
+const entry = {
+  key: "captureException",
+  value: function captureException(arg0, arg1, arg2) {
+    const self = this;
+    closure_1 = arg2;
+    const uuid4Result = BaseClient(12490).uuid4();
+    const obj = BaseClient(12490);
+    if (obj2.checkOrSetAlreadyCaught(arg0)) {
+      if (BaseClient(12507).DEBUG_BUILD) {
+        const logger = BaseClient(12479).logger;
+        logger.log(c4);
+      }
+      return uuid4Result;
+    } else {
+      const obj3 = { event_id: uuid4Result };
+      const merged = Object.assign(arg1);
+      self._process(self.eventFromException(arg0, obj3).then((result) => self._captureEvent(result, obj3, closure_1)));
+      return obj3.event_id;
+    }
+    obj2 = BaseClient(12490);
+  }
+};
+let items = [
+  entry,
+  {
+    key: "captureMessage",
+    value: function captureMessage(arg0, arg1, arg2, arg3) {
+      const self = this;
+      closure_1 = arg3;
+      const obj = { event_id: BaseClient(12490).uuid4() };
+      const merged = Object.assign(arg2);
+      const obj2 = BaseClient(12490);
+      let StringResult = arg0;
+      if (!obj3.isParameterizedString(arg0)) {
+        const _String = String;
+        StringResult = String(arg0);
+      }
+      obj3 = BaseClient(12486);
+      if (tmpResult.isPrimitive(arg0)) {
+        let eventFromMessageResult = self.eventFromMessage(StringResult, arg1, obj);
+      } else {
+        eventFromMessageResult = self.eventFromException(arg0, obj);
+      }
+      self._process(eventFromMessageResult.then((result) => self._captureEvent(result, obj, closure_1)));
+      return obj.event_id;
+    }
+  },
+  {
+    key: "captureEvent",
+    value: function captureEvent(sdkProcessingMetadata, originalException, arg2) {
+      const uuid4Result = BaseClient(12490).uuid4();
+      if (originalException) {
+        if (originalException.originalException) {
+          if (tmpResult.checkOrSetAlreadyCaught(originalException.originalException)) {
+            if (BaseClient(12507).DEBUG_BUILD) {
+              const logger = BaseClient(12479).logger;
+              logger.log(c4);
+            }
+            return uuid4Result;
+          }
+          tmpResult = BaseClient(12490);
+        }
+      }
+      const obj2 = { event_id: uuid4Result };
+      const merged = Object.assign(originalException);
+      const self = this;
+      let capturedSpanScope = sdkProcessingMetadata.sdkProcessingMetadata || {}.capturedSpanScope;
+      ({ _process, _captureEvent } = this);
+      if (!capturedSpanScope) {
+        capturedSpanScope = arg2;
+      }
+      _process(_captureEvent(sdkProcessingMetadata, obj2, capturedSpanScope));
+      return obj2.event_id;
+    }
+  },
+  {
+    key: "captureSession",
+    value: function captureSession(release) {
+      if (typeof release.release !== "string") {
+        if (BaseClient(12507).DEBUG_BUILD) {
+          const logger = BaseClient(12479).logger;
+          logger.warn("Discarded session because of missing or non-string release");
+        }
+      } else {
+        const self = this;
+        this.sendSession(release);
+        BaseClient(12502).updateSession(release, { init: false });
+        const obj = BaseClient(12502);
+      }
+    }
+  },
+  {
+    key: "getDsn",
+    value: function getDsn() {
+      return this._dsn;
+    }
+  },
+  {
+    key: "getOptions",
+    value: function getOptions() {
+      return this._options;
+    }
+  },
+  {
+    key: "getSdkMetadata",
+    value: function getSdkMetadata() {
+      return this._options._metadata;
+    }
+  },
+  {
+    key: "getTransport",
+    value: function getTransport() {
+      return this._transport;
+    }
+  },
+  {
+    key: "flush",
+    value: function flush(arg0) {
+      const self = this;
+      closure_0 = arg0;
+      const _transport = this._transport;
+      if (_transport) {
+        self.emit("flush");
+        const result = self._isClientDoneProcessing(arg0);
+        let nextPromise = result.then((result) => {
+          closure_0 = result;
+          return _transport.flush(closure_0).then((result) => {
+            let tmp = closure_0;
+            if (closure_0) {
+              tmp = result;
+            }
+            return tmp;
+          });
+        });
+      } else {
+        nextPromise = BaseClient(12503).resolvedSyncPromise(true);
+        const obj = BaseClient(12503);
+      }
+      return nextPromise;
+    }
+  },
+  {
+    key: "close",
+    value: function close(arg0) {
+      const self = this;
+      return this.flush(arg0).then((result) => {
+        self.getOptions().enabled = false;
+        self.emit("close");
+        return result;
+      });
+    }
+  },
+  {
+    key: "getEventProcessors",
+    value: function getEventProcessors() {
+      return this._eventProcessors;
+    }
+  },
+  {
+    key: "addEventProcessor",
+    value: function addEventProcessor(arg0) {
+      const _eventProcessors = this._eventProcessors;
+      _eventProcessors.push(arg0);
+    }
+  },
+  {
+    key: "init",
+    value: function init() {
+      const self = this;
+      let _isEnabledResult = this._isEnabled();
+      if (!_isEnabledResult) {
+        const integrations = self._options.integrations;
+        _isEnabledResult = integrations.some((name) => {
+          name = name.name;
+          return name.startsWith("Spotlight");
+        });
+      }
+      if (_isEnabledResult) {
+        self._setupIntegrations();
+      }
+    }
+  },
+  {
+    key: "getIntegrationByName",
+    value: function getIntegrationByName(arg0) {
+      return this._integrations[arg0];
+    }
+  },
+  {
+    key: "addIntegration",
+    value: function addIntegration(arg0) {
+      BaseClient(12535).setupIntegration(this, arg0, this._integrations);
+      if (!this._integrations[arg0.name]) {
+        const items = [arg0];
+        const result = BaseClient(12535).afterSetupIntegrations(this, items);
+        const tmpResult = BaseClient(12535);
+      }
+      const obj = BaseClient(12535);
+    }
+  },
+  {
+    key: "sendEvent",
+    value: function sendEvent(arg0) {
+      const self = this;
+      closure_0 = arg0;
+      let obj = arg1;
+      if (arg1 === undefined) {
+        obj = {};
+      }
+      self.emit("beforeSendEvent", arg0, obj);
+      let eventEnvelope = BaseClient(12522).createEventEnvelope(arg0, self._dsn, self._options._metadata, self._options.tunnel);
+      for (const item10025 of tmp3) {
+        let obj3 = BaseClient(12523);
+        let obj4 = BaseClient(12523);
+        eventEnvelope = obj3.addItemToEnvelope(eventEnvelope, obj4.createAttachmentEnvelopeItem(item10025));
+        continue;
+      }
+      const sendEnvelopeResult = self.sendEnvelope(eventEnvelope);
+      if (sendEnvelopeResult) {
+        sendEnvelopeResult.then((result) => self.emit("afterSendEvent", closure_0, result), null);
+      }
+      const obj2 = BaseClient(12522);
+      const tmp3 = obj.attachments || [];
+    }
+  },
+  {
+    key: "sendSession",
+    value: function sendSession(arg0) {
+      this.sendEnvelope(BaseClient(12522).createSessionEnvelope(arg0, this._dsn, this._options._metadata, this._options.tunnel));
+    }
+  },
+  {
+    key: "recordDroppedEvent",
+    value: function recordDroppedEvent(arg0, arg1, num) {
+      const self = this;
+      if (this._options.sendClientReports) {
+        let num2 = 1;
+        if (typeof 1 === "number") {
+          num2 = num;
+        }
+        const _HermesInternal = HermesInternal;
+        const combined = "" + arg0 + ":" + arg1;
+        if (BaseClient(12507).DEBUG_BUILD) {
+          const logger = BaseClient(12479).logger;
+          let str3 = "";
+          if (num2 > 1) {
+            const _HermesInternal2 = HermesInternal;
+            str3 = " (" + num2 + " times)";
+          }
+          const _HermesInternal3 = HermesInternal;
+          logger.log("Recording outcome: \"" + combined + "\"" + str3);
+        }
+        let num3 = self._outcomes[combined];
+        if (!num3) {
+          num3 = 0;
+        }
+        self._outcomes[combined] = num3 + num2;
+      }
+    }
+  },
+  {
+    key: "on",
+    value: function on(arg0, arg1) {
+      closure_0 = arg1;
+      let items = this._hooks[arg0];
+      if (!items) {
+        items = [];
+      }
+      this._hooks[arg0] = items;
+      items.push(arg1);
+      return () => {
+        const index = items.indexOf(closure_0);
+        if (index > -1) {
+          items.splice(index, 1);
+        }
+      };
+    }
+  },
+  {
+    key: "emit",
+    value: function emit(arg0) {
+      const args = [...arguments].slice();
+      if (this._hooks[arg0]) {
+        const item = arr.forEach((fn) => fn(...closure_0));
+      }
+    }
+  },
+  {
+    key: "sendEnvelope",
+    value: function sendEnvelope(arg0) {
+      const self = this;
+      this.emit("beforeEnvelope", arg0);
+      if (this._isEnabled()) {
+        if (self._transport) {
+          const _transport = self._transport;
+          let nextPromise = _transport.send(arg0).then(null, (arg0) => {
+            if (BaseClient(dependencyMap[4]).DEBUG_BUILD) {
+              const logger = BaseClient(dependencyMap[5]).logger;
+              logger.error("Error while sending envelope:", arg0);
+            }
+            return arg0;
+          });
+          const sendResult = _transport.send(arg0);
+        }
+        return nextPromise;
+      }
+      if (BaseClient(12507).DEBUG_BUILD) {
+        let logger = BaseClient(12479).logger;
+        logger.error("Transport disabled");
+      }
+      nextPromise = BaseClient(12503).resolvedSyncPromise({});
+      const tmp2Result = BaseClient(12503);
+    }
+  },
+  {
+    key: "_setupIntegrations",
+    value: function _setupIntegrations() {
+      const integrations = this._options.integrations;
+      this._integrations = BaseClient(12535).setupIntegrations(this, integrations);
+      const obj = BaseClient(12535);
+      const result = BaseClient(12535).afterSetupIntegrations(this, integrations);
+    }
+  },
+  {
+    key: "_updateSessionFromEvent",
+    value: function _updateSessionFromEvent(status, level) {
+      let flag = "fatal" === level.level;
+      let flag2 = false;
+      if (level.exception && level.exception.values) {
+        const iter = tmp[Symbol.iterator]();
+        flag2 = true;
+        while (iter !== undefined) {
+          let mechanism = iter.next().mechanism;
+          if (mechanism) {
+            if (false === tmp5.handled) {
+              flag = true;
+              iter.return();
+              flag2 = true;
+              break;
+            }
+            break;
+          }
+          continue;
+        }
+      }
+      let tmp8 = "ok" === status.status;
+      let tmp9 = tmp8;
+      if (tmp8) {
+        tmp9 = 0 === status.errors;
+      }
+      if (!tmp9) {
+        if (tmp8) {
+          tmp8 = flag;
+        }
+        tmp9 = tmp8;
+      }
+      if (tmp9) {
+        let obj2 = flag;
+        if (flag) {
+          obj2 = { status: "crashed" };
+        }
+        const obj3 = {};
+        const merged = Object.assign(obj2);
+        let errors = status.errors;
+        if (!errors) {
+          if (!flag2) {
+            flag2 = flag;
+          }
+          errors = Number(flag2);
+        }
+        const self = this;
+        obj3.errors = errors;
+        BaseClient(12502).updateSession(status, obj3);
+        this.captureSession(status);
+        const obj = BaseClient(12502);
+      }
+    }
+  },
+  {
+    key: "_isClientDoneProcessing",
+    value: function _isClientDoneProcessing(arg0) {
+      const self = this;
+      closure_0 = arg0;
+      return new BaseClient(12503).SyncPromise((arg0) => {
+        closure_0 = arg0;
+        c1 = 0;
+        const interval = setInterval(() => {
+          if (0 == self._numProcessing) {
+            const _clearInterval2 = clearInterval;
+            clearInterval(closure_2);
+            closure_0(true);
+          } else {
+            const sum = c1 + 1;
+            c1 = sum;
+            let tmp3 = closure_0;
+            if (closure_0) {
+              tmp3 = sum >= closure_0;
+            }
+            if (tmp3) {
+              const _clearInterval = clearInterval;
+              clearInterval(closure_2);
+              closure_0(false);
+            }
+          }
+        }, 1);
+      });
+    }
+  },
+  {
+    key: "_isEnabled",
+    value: function _isEnabled() {
+      let tmp = false !== this.getOptions().enabled;
+      if (tmp) {
+        tmp = undefined !== this._transport;
+      }
+      return tmp;
+    }
+  },
+  {
+    key: "_prepareEvent",
+    value: function _prepareEvent(type, integrations) {
+      const self = this;
+      let currentScope = arg2;
+      if (arg2 === undefined) {
+        currentScope = currentScope(self[14]).getCurrentScope();
+        let obj = currentScope(self[14]);
+      }
+      let isolationScope = arg3;
+      if (arg3 === undefined) {
+        isolationScope = currentScope(self[14]).getIsolationScope();
+        const obj3 = currentScope(self[14]);
+      }
+      const options = self.getOptions();
+      const keys = Object.keys(self._integrations);
+      integrations = integrations.integrations;
+      let tmp7 = !integrations;
+      if (!integrations) {
+        tmp7 = keys.length > 0;
+      }
+      if (tmp7) {
+        integrations.integrations = keys;
+      }
+      self.emit("preprocessEvent", type, integrations);
+      if (!type.type) {
+        let event_id = type.event_id;
+        if (!event_id) {
+          event_id = integrations.event_id;
+        }
+        isolationScope.setLastEventId(event_id);
+      }
+      let obj4 = currentScope(self[15]);
+      return currentScope(self[15]).prepareEvent(options, type, integrations, currentScope, self, isolationScope).then((contexts) => {
+        if (null === contexts) {
+          return contexts;
         } else {
-          closure_2 = tmp7;
-          closure_130_0 = closure_1;
-          closure_130_1 = undefined;
-          let reader;
-          let timeout;
-          closure_130_4 = undefined;
-          let timeout2;
-          let done;
-          if (_require) {
-            if (_require.body) {
-              const body = _require.body;
-              closure_130_1 = body;
-              reader = body.getReader();
-              const _setTimeout = setTimeout;
-              timeout = setTimeout(() => {
-                closure_1_1.cancel().then(null, () => {
-
-                });
-              }, 90000);
-              closure_130_4 = true;
-              if (closure_130_4) {
-                timeout2 = undefined;
-                c5 = 2;
-                const _setTimeout2 = setTimeout;
-                timeout2 = setTimeout(() => {
-                  closure_1_1.cancel().then(null, () => {
-
-                  });
-                }, 5000);
-                c3 = 3;
-                c6 = 1;
-                const obj4 = { value: reader.read(), done: false };
-                return obj4;
-              } else {
-                const _clearTimeout5 = clearTimeout;
-                clearTimeout(timeout);
-                reader.releaseLock();
-                closure_130_1.cancel().then(null, () => {
-
-                });
-                const cancelResult = closure_130_1.cancel();
+          const obj = { trace: BaseClient(12506).getTraceContextFromScope(currentScope) };
+          const merged = Object.assign(contexts.contexts);
+          contexts.contexts = obj;
+          const obj2 = BaseClient(12506);
+          const obj4 = { dynamicSamplingContext: BaseClient(12515).getDynamicSamplingContextFromScope(self, currentScope) };
+          const merged1 = Object.assign(contexts.sdkProcessingMetadata);
+          contexts.sdkProcessingMetadata = obj4;
+          return contexts;
+        }
+      });
+    }
+  },
+  {
+    key: "_captureEvent",
+    value: function _captureEvent(arg0) {
+      let obj = arg1;
+      if (arg1 === undefined) {
+        obj = {};
+      }
+      return this._processEvent(arg0, obj, arg2).then((event_id) => event_id.event_id, (logLevel) => {
+        if (BaseClient(dependencyMap[4]).DEBUG_BUILD) {
+          if (logLevel instanceof BaseClient(dependencyMap[17]).SentryError) {
+            if ("log" === logLevel.logLevel) {
+              const logger2 = BaseClient(dependencyMap[5]).logger;
+              logger2.log(logLevel.message);
+            }
+          }
+          const logger = BaseClient(dependencyMap[5]).logger;
+          logger.warn(logLevel);
+        }
+      });
+    }
+  },
+  {
+    key: "_processEvent",
+    value: function _processEvent(type, arg1, arg2) {
+      const self = this;
+      dependencyMap = type;
+      const data = arg1;
+      let session = arg2;
+      const options = this.getOptions();
+      const sampleRate = options.sampleRate;
+      closure_5 = "transaction" === type.type;
+      ({ type: type2, type } = type);
+      if (!type2) {
+        type2 = "error";
+      }
+      closure_6 = "before send for type `" + type2 + "`";
+      if (undefined !== sampleRate) {
+        const parseSampleRateResult = str(12519).parseSampleRate(sampleRate);
+        let obj = str(12519);
+      }
+      if (undefined === type) {
+        if (typeof parseSampleRateResult === "number") {
+          const _Math = Math;
+          if (Math.random() > parseSampleRateResult) {
+            self.recordDroppedEvent("sample_rate", "error", type);
+            let _HermesInternal = HermesInternal;
+            let sentryError = new str(12536).SentryError("Discarding event because it's not included in the random sample (sampling rate = " + sampleRate + ")", "log");
+            return str(12503).rejectedSyncPromise(sentryError);
+          }
+        }
+      }
+      str = "replay";
+      if ("replay_event" !== type2) {
+        str = type2;
+      }
+      const _prepareEventResult = self._prepareEvent(type, arg1, arg2, type.sdkProcessingMetadata || {}.capturedSpanIsolationScope);
+      const tmp5 = type.sdkProcessingMetadata || {};
+      let nextPromise = self._prepareEvent(type, arg1, arg2, type.sdkProcessingMetadata || {}.capturedSpanIsolationScope).then((result) => {
+        if (null === result) {
+          self.recordDroppedEvent("event_processor", str, dependencyMap);
+          let sentryError = new BaseClient(12536).SentryError("An event processor returned `null`, will not send event.", "log");
+          throw sentryError;
+        } else {
+          if (data.data) {
+            if (true === data.data.__sentry__) {
+              return result;
+            }
+          }
+          const promise = (function processBeforeSend(self, options, spans, data) {
+            ({ beforeSend, beforeSendTransaction, beforeSendSpan } = options);
+            if (closure_1_5(spans)) {
+              if (beforeSend) {
+                return beforeSend(spans, data);
+              }
+            }
+            if (closure_1_6(spans)) {
+              if (spans.spans) {
+                if (beforeSendSpan) {
+                  const items = [];
+                  spans = spans.spans;
+                  const iter = spans[Symbol.iterator]();
+                  while (iter !== undefined) {
+                    let beforeSendSpanResult = beforeSendSpan(iter.next());
+                    if (beforeSendSpanResult) {
+                      let arr = items.push(tmp5);
+                    } else {
+                      let obj = closure_0(combined[20]);
+                      let showSpanDropWarningResult = obj.showSpanDropWarning();
+                      let recordDroppedEventResult = self.recordDroppedEvent("before_send", "span");
+                    }
+                    continue;
+                  }
+                  spans.spans = items;
+                }
+              }
+              if (beforeSendTransaction) {
+                if (spans.spans) {
+                  const obj2 = {};
+                  const merged = Object.assign(spans.sdkProcessingMetadata);
+                  obj2.spanCountBeforeProcessing = spans.spans.length;
+                  spans.sdkProcessingMetadata = obj2;
+                }
+                return beforeSendTransaction(spans, data);
+              }
+            }
+            return spans;
+          })(self, options, result, data);
+          closure_0 = closure_6;
+          const _HermesInternal = HermesInternal;
+          const combined = "" + closure_6 + " must return `null` or a valid event.";
+          if (obj.isThenable(promise)) {
+            let nextPromise = promise.then((result) => {
+              if (!obj.isPlainObject(result)) {
+                if (null !== result) {
+                  const sentryError = new str(12536).SentryError(combined);
+                  throw sentryError;
+                }
+              }
+              return result;
+            }, (arg0) => {
+              const sentryError = new str(12536).SentryError("" + closure_0 + " rejected with " + arg0);
+              throw sentryError;
+            });
+          } else {
+            nextPromise = promise;
+            if (!obj2.isPlainObject(promise)) {
+              nextPromise = promise;
+              if (null !== promise) {
+                const sentryError1 = new BaseClient(12536).SentryError(combined);
+                throw sentryError1;
+              }
+            }
+            obj2 = BaseClient(12486);
+          }
+          return nextPromise;
+        }
+      });
+      return self._prepareEvent(type, arg1, arg2, type.sdkProcessingMetadata || {}.capturedSpanIsolationScope).then((result) => {
+        if (null === result) {
+          self.recordDroppedEvent("event_processor", str, dependencyMap);
+          let sentryError = new BaseClient(12536).SentryError("An event processor returned `null`, will not send event.", "log");
+          throw sentryError;
+        } else {
+          if (data.data) {
+            if (true === data.data.__sentry__) {
+              return result;
+            }
+          }
+          const promise = (function processBeforeSend(self, options, spans, data) {
+            ({ beforeSend, beforeSendTransaction, beforeSendSpan } = options);
+            if (closure_1_5(spans)) {
+              if (beforeSend) {
+                return beforeSend(spans, data);
+              }
+            }
+            if (closure_1_6(spans)) {
+              if (spans.spans) {
+                if (beforeSendSpan) {
+                  const items = [];
+                  spans = spans.spans;
+                  const iter = spans[Symbol.iterator]();
+                  while (iter !== undefined) {
+                    let beforeSendSpanResult = beforeSendSpan(iter.next());
+                    if (beforeSendSpanResult) {
+                      let arr = items.push(tmp5);
+                    } else {
+                      let obj = closure_0(combined[20]);
+                      let showSpanDropWarningResult = obj.showSpanDropWarning();
+                      let recordDroppedEventResult = self.recordDroppedEvent("before_send", "span");
+                    }
+                    continue;
+                  }
+                  spans.spans = items;
+                }
+              }
+              if (beforeSendTransaction) {
+                if (spans.spans) {
+                  const obj2 = {};
+                  const merged = Object.assign(spans.sdkProcessingMetadata);
+                  obj2.spanCountBeforeProcessing = spans.spans.length;
+                  spans.sdkProcessingMetadata = obj2;
+                }
+                return beforeSendTransaction(spans, data);
+              }
+            }
+            return spans;
+          })(self, options, result, data);
+          closure_0 = closure_6;
+          const _HermesInternal = HermesInternal;
+          const combined = "" + closure_6 + " must return `null` or a valid event.";
+          if (obj.isThenable(promise)) {
+            let nextPromise = promise.then((result) => {
+              if (!obj.isPlainObject(result)) {
+                if (null !== result) {
+                  const sentryError = new str(12536).SentryError(combined);
+                  throw sentryError;
+                }
+              }
+              return result;
+            }, (arg0) => {
+              const sentryError = new str(12536).SentryError("" + closure_0 + " rejected with " + arg0);
+              throw sentryError;
+            });
+          } else {
+            nextPromise = promise;
+            if (!obj2.isPlainObject(promise)) {
+              nextPromise = promise;
+              if (null !== promise) {
+                const sentryError1 = new BaseClient(12536).SentryError(combined);
+                throw sentryError1;
+              }
+            }
+            obj2 = BaseClient(12486);
+          }
+          return nextPromise;
+        }
+      }).then((sdkProcessingMetadata) => {
+        if (null === sdkProcessingMetadata) {
+          self.recordDroppedEvent("before_send", str, type);
+          if (closure_5) {
+            self.recordDroppedEvent("before_send", "span", 1 + type.spans || [].length);
+            const arr = type.spans || [];
+          }
+          const _HermesInternal = HermesInternal;
+          const sentryError = new BaseClient(12536).SentryError("" + closure_6 + " returned `null`, will not send event.", "log");
+          throw sentryError;
+        } else {
+          if (session) {
+            session = session.getSession();
+          }
+          let tmp3 = !closure_5;
+          if (!closure_5) {
+            tmp3 = session;
+          }
+          if (tmp3) {
+            const result = self._updateSessionFromEvent(session, sdkProcessingMetadata);
+          }
+          if (closure_5) {
+            let num2 = 0;
+            if (sdkProcessingMetadata.spans) {
+              num2 = sdkProcessingMetadata.spans.length;
+            }
+            const diff = (sdkProcessingMetadata.sdkProcessingMetadata && sdkProcessingMetadata.sdkProcessingMetadata.spanCountBeforeProcessing || 0) - num2;
+            if (diff > 0) {
+              self.recordDroppedEvent("before_send", "span", diff);
+            }
+            const tmp6 = sdkProcessingMetadata.sdkProcessingMetadata && sdkProcessingMetadata.sdkProcessingMetadata.spanCountBeforeProcessing || 0;
+          }
+          const transaction_info = sdkProcessingMetadata.transaction_info;
+          if (closure_5) {
+            if (transaction_info) {
+              if (sdkProcessingMetadata.transaction !== type.transaction) {
+                const obj = {};
+                const merged = Object.assign(transaction_info);
+                obj.source = "custom";
+                sdkProcessingMetadata.transaction_info = obj;
               }
             }
           }
-          c6 = 3;
-          return { value: "IconComponent", done: null };
+          self.sendEvent(sdkProcessingMetadata, closure_2);
+          return sdkProcessingMetadata;
         }
-      } else if (1 !== tmp7) {
-        if (2 === tmp7) {
-          c5 = 1;
-          closure_130_4 = false;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          const _clearTimeout2 = clearTimeout;
-          clearTimeout(timeout2);
-          c6 = 3;
-          const obj = { value, done: true };
-          return obj;
+      }).then(null, (originalException) => {
+        if (originalException instanceof BaseClient(12536).SentryError) {
+          throw originalException;
         } else {
-          done = value.done;
-          const _clearTimeout = clearTimeout;
-          clearTimeout(timeout2);
-          if (done) {
-            closure_130_0();
-            closure_130_4 = false;
-          }
-          c5 = 1;
+          const obj = { data: { __sentry__: true }, originalException };
+          self.captureException(originalException, obj);
+          const _HermesInternal = HermesInternal;
+          const sentryError = new BaseClient(12536).SentryError("Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.\nReason: " + originalException);
+          throw sentryError;
         }
-        c5 = 0;
-        const _clearTimeout3 = clearTimeout;
-        clearTimeout(timeout2);
-      }
-      c5 = 0;
-      const _clearTimeout4 = clearTimeout;
-      clearTimeout(timeout2);
-      throw closure_4;
-    } catch (tmp40) {
-      closure_4 = tmp40;
-      if (tmp4 === c5) {
-        c6 = tmp3;
-        throw tmp40;
-      } else if (tmp2 === tmp42) {
-        c3 = tmp2;
-      } else {
-        c3 = tmp;
-      }
+      });
     }
-  }
-};
-function streamHandler(clone) {
-  const response = clone;
-  try {
-    !(function resolveResponse(clone, arg1) {
+  },
+  {
+    key: "_process",
+    value: function _process(promise) {
       const self = this;
-      const apply = closure_1_4.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
+      this._numProcessing = this._numProcessing + 1;
+      promise.then((result) => {
+        self._numProcessing = self._numProcessing - 1;
+        return result;
+      }, (arg0) => {
+        self._numProcessing = self._numProcessing - 1;
+        return arg0;
+      });
+    }
+  },
+  {
+    key: "_clearOutcomes",
+    value: function _clearOutcomes() {
+      this._outcomes = {};
+      const entries = Object.entries(this._outcomes);
+      return entries.map((item) => {
+        [str, tmp] = item;
+        const tmp2 = _slicedToArray(str.split(":"), 2);
+        return { reason: tmp2[0], category: tmp2[1], quantity: tmp };
+      });
+    }
+  },
+  {
+    key: "_flushOutcomes",
+    value: function _flushOutcomes() {
+      if (BaseClient(12507).DEBUG_BUILD) {
+        const logger = BaseClient(12479).logger;
+        logger.log("Flushing outcomes...");
       }
-      return applyArgumentsResult;
-    })(clone.clone(), () => {
-      const obj2 = { endTimestamp: null, response: null };
-      const obj = _mod12421;
-      obj2.endTimestamp = 1000 * _mod12437.timestampInSeconds();
-      obj2.response = response;
-      obj.triggerHandlers("fetch-body-resolved", obj2);
-    });
-  } catch (err) {
-    return tmp;
-  }
-}
-function parseFetchArgs(arg0) {
-  if (0 === arg0.length) {
-    return { method: "GET", url: "" };
-  } else if (2 === arg0.length) {
-    [str4, tmp8] = arg0;
-    let tmp9 = str4;
-    if (typeof str4 !== "string") {
-      let str5 = "";
-      if (!str4) {
-        tmp9 = str5;
-      } else {
-        if (tmp10) {
-          str5 = str4.url;
-        } else if (str4.toString) {
-          str5 = str4.toString();
+      const self = this;
+      const _clearOutcomesResult = this._clearOutcomes();
+      if (0 !== _clearOutcomesResult.length) {
+        const DEBUG_BUILD = BaseClient(12507).DEBUG_BUILD;
+        if (self._dsn) {
+          if (DEBUG_BUILD) {
+            const logger4 = BaseClient(12479).logger;
+            logger4.log("Sending outcomes:", _clearOutcomesResult);
+          }
+          let tunnel = self._options.tunnel;
+          if (tunnel) {
+            tunnel = BaseClient(12526).dsnToString(self._dsn);
+            const tmpResult2 = BaseClient(12526);
+          }
+          self.sendEnvelope(BaseClient(12537).createClientReportEnvelope(_clearOutcomesResult, tunnel));
+          const tmpResult = BaseClient(12537);
+        } else if (DEBUG_BUILD) {
+          const logger3 = BaseClient(12479).logger;
+          logger3.log("No dsn provided, will not send outcomes");
         }
-        tmp10 = str4 && typeof str4 === "object" && str4.url;
+      } else if (BaseClient(12507).DEBUG_BUILD) {
+        const logger2 = BaseClient(12479).logger;
+        logger2.log("No outcomes to send");
       }
     }
-    const request = { url: tmp9, method: null };
-    let str6 = "GET";
-    if (tmp12) {
-      const _String2 = String;
-      str6 = String(tmp8.method).toUpperCase();
-      const str7 = String(tmp8.method);
-    }
-    request.method = str6;
-    return request;
-  } else {
-    let tmp3 = str8;
-    if (typeof arg0[0] !== "string") {
-      let str = "";
-      if (!str8) {
-        tmp3 = str;
-      } else {
-        if (tmp) {
-          str = str8.url;
-        } else if (str8.toString) {
-          str = str8.toString();
-        }
-        tmp = str8 && typeof str8 === "object" && str8.url;
-      }
-    }
-    const request1 = { url: tmp3, method: null };
-    let str2 = "GET";
-    if (tmp4) {
-      const _String = String;
-      str2 = String(str8.method).toUpperCase();
-      const str3 = String(str8.method);
-    }
-    request1.method = str2;
-    return request1;
   }
-}
+];
 
-export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(errorCallback) {
-  _mod12421.addHandler("fetch-body-resolved", errorCallback);
-  _mod12421.maybeInstrument("fetch-body-resolved", () => {
-    closure_0 = closure_5;
-    {
-      closure_0(12429).fill(closure_0(12424).GLOBAL_OBJ, "fetch", (arg0) => {
-        closure_0 = arg0;
-        return () => {
-          const items = [...arguments];
-          const error = new Error();
-          let stack = error;
-          const request = parseFetchArgs(items);
-          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
-          if (!closure_2_0) {
-            let obj3 = {};
-            let merged = Object.assign(obj);
-            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
-            const tmp2Result = tmp2(dependencyMap[2]);
-          }
-          let obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (response) => {
-            c1 = 0;
-            return (/* F161001 */ function*() { ... })();
-          });
-          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          }, (error) => {
-            obj = closure_3_0(12421);
-            const obj2 = {};
-            const merged = Object.assign(obj);
-            obj2.endTimestamp = 1000 * closure_3_0(12437).timestampInSeconds();
-            obj2.error = error;
-            obj.triggerHandlers("fetch", obj2);
-            const obj3 = closure_3_0(12437);
-            const obj4 = closure_3_0(12430);
-            if (tmp5) {
-              error.stack = stack.stack;
-              const result = closure_3_0(12429).addNonEnumerableProperty(error, "framesToPop", 1);
-              const tmpResult = closure_3_0(12429);
-            }
-            throw error;
-          });
-        };
-      });
-      const obj = closure_0(12429);
-    }
-  });
-};
-export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(errorCallback, arg1) {
-  _require = arg1;
-  require("module_12421").addHandler("fetch", errorCallback);
-  let obj = require("module_12421");
-  require("module_12421").maybeInstrument("fetch", () => {
-    let flag = closure_0;
-    if (closure_0 === undefined) {
-      flag = false;
-    }
-    if (flag) {
-      flag = !supportsFetch.supportsNativeFetch();
-    }
-    if (!flag) {
-      _mod12429.fill(_mod12424.GLOBAL_OBJ, "fetch", (arg0) => {
-        closure_0 = arg0;
-        return () => {
-          const items = [...arguments];
-          const error = new Error();
-          let stack = error;
-          const request = parseFetchArgs(items);
-          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
-          if (!closure_2_0) {
-            let obj3 = {};
-            let merged = Object.assign(obj);
-            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
-            const tmp2Result = tmp2(dependencyMap[2]);
-          }
-          let obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (response) => {
-            c1 = 0;
-            return (/* F161001 */ function*() { ... })();
-          });
-          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          }, (error) => {
-            obj = closure_3_0(12421);
-            const obj2 = {};
-            const merged = Object.assign(obj);
-            obj2.endTimestamp = 1000 * closure_3_0(12437).timestampInSeconds();
-            obj2.error = error;
-            obj.triggerHandlers("fetch", obj2);
-            const obj3 = closure_3_0(12437);
-            const obj4 = closure_3_0(12430);
-            if (tmp5) {
-              error.stack = stack.stack;
-              const result = closure_3_0(12429).addNonEnumerableProperty(error, "framesToPop", 1);
-              const tmpResult = closure_3_0(12429);
-            }
-            throw error;
-          });
-        };
-      });
-    }
-  });
-};
-export { parseFetchArgs };
+export const BaseClient = _createClass(BaseClient, items);

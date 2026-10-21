@@ -1,7 +1,12 @@
 // === Module 5293: ? ===
 
 // Module 5293
-import _mod17 from "module_17" /* 17 */;
+import animatedComponentDefault from "animatedComponent" /* 5294 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
+({ Animated, StyleSheet } = get_ActivityIndicator);
+const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
 
-export default _mod17.findNodeHandle;
+export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
+export const AnimatedNativeDetector = animatedComponent;
+export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

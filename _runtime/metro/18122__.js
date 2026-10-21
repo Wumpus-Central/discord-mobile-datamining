@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 60, height: 60, scales: [2, 3], hash: "ed431a42081d7323282ce4207b41689a", name: "icon-afk", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c8f47b968e51eb4d5f2964cb9e696a2a", name: "ChannelsFollowedIcon", type: "png" });

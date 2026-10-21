@@ -1,19 +1,7 @@
 // === Module 18127: ? ===
 
 // Module 18127
-import baseFlatten from "baseFlatten" /* 5756 */;
-import baseRest from "baseRest" /* 8805 */;
-import _mod18128 from "module_18128" /* 18128 */;
-import baseDifference from "baseDifference" /* 18129 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default baseRest((arg0, arg1) => {
-  if (_mod18128(arg0)) {
-    const tmpResult = baseDifference;
-    let tmpResultResult = tmpResult(arg0, baseFlatten(arg1, 1, _mod18128, true));
-    const tmpResult2 = baseFlatten;
-  } else {
-    tmpResultResult = [];
-  }
-  return tmpResultResult;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b83c9486cfaf14d2dd0ad9edbe75c34d", name: "WebhookPlusIcon", type: "png" });

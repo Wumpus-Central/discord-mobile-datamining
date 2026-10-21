@@ -1,33 +1,30 @@
 // === Module 12497: ? ===
 
 // Module 12497
-import setupIntegration from "module_12479" /* 12479 */;
+import _mod12480 from "module_12480" /* 12480 */;
+import _mod12481 from "module_12481" /* 12481 */;
 
-const weakMap = new WeakMap();
+require = arg1;
+const dependencyMap = arg6;
 
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function() {
-        const items = [...arguments];
-        const originalFunction = closure_1_0(12429).getOriginalFunction(this);
-        const obj = closure_1_0(12429);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {
-    }
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
+export const getMainCarrier = function getMainCarrier() {
+  const GLOBAL_OBJ = _mod12480.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || _mod12481.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod12481.SDK_VERSION;
+  tmp3[_mod12481.SDK_VERSION] = tmp3[_mod12481.SDK_VERSION] || {};
+  return _mod12480.GLOBAL_OBJ;
+};
+export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = _mod12481.SDK_VERSION;
   }
-}));
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[_mod12481.SDK_VERSION] || {};
+  tmp[_mod12481.SDK_VERSION] = tmp4;
+  return tmp4;
+};

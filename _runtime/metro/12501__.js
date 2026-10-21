@@ -1,34 +1,19 @@
 // === Module 12501: ? ===
 
 // Module 12501
-import _mod12502 from "module_12502" /* 12502 */;
-import setupIntegration from "module_12479" /* 12479 */;
+import _mod12485 from "module_12485" /* 12485 */;
 
+require = arg1;
+const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
 
-export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
-  name: "ModuleMetadata",
-  setup(on) {
-    const options = on;
-    on.on("beforeEnvelope", (arg0) => {
-      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        if ("event" === arg1) {
-          const _Array = Array;
-          let tmp3;
-          if (Array.isArray(arg0)) {
-            tmp3 = arg0[1];
-          }
-          if (tmp3) {
-            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-            arg0[1] = tmp3;
-            const obj = options(dependencyMap[2]);
-          }
-        }
-      });
-    });
-    on.on("applyFrameMetadata", (type) => {
-      if (!type.type) {
-        const result = _mod12502.addMetadataToStackFrames(options.getOptions().stackParser, type);
-      }
-    });
+export const _getSpanForScope = function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
+};
+export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod12485.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+  } else {
+    delete tmp2[tmp];
   }
-}));
+};

@@ -1,42 +1,13 @@
 // === Module 8737: ? ===
 
 // Module 8737
-import _mod8738 from "module_8738" /* 8738 */;
-import _mod8746 from "module_8746" /* 8746 */;
-import flattenStyle from "module_8739" /* 8739 */;
-import "module_4979";
-import emptyFunction_mod from "module_4979" /* 4979 */;
+import _mod17 from "module_17" /* 17 */;
 
-const obj = {};
-const module_8738 = Object.assign(_mod8738);
-obj.style = flattenStyle(_mod8746);
-let emptyFunction = emptyFunction_mod;
-const obj2 = { uri: emptyFunction.string, headers: null };
-let emptyFunction = emptyFunction_mod;
-obj2.headers = emptyFunction.objectOf(emptyFunction.string);
-const items = [emptyFunction.shape(obj2), emptyFunction.number, ];
-let emptyFunction = emptyFunction_mod;
-const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
-let emptyFunction = emptyFunction_mod;
-size.headers = emptyFunction.objectOf(emptyFunction.string);
-items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
-obj.source = emptyFunction.oneOfType(items);
-obj.blurRadius = emptyFunction.number;
-obj.defaultSource = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
-obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
-obj.progressiveRenderingEnabled = emptyFunction.bool;
-obj.fadeDuration = emptyFunction.number;
-obj.internal_analyticTag = emptyFunction.string;
-obj.onLoadStart = emptyFunction.func;
-obj.onError = emptyFunction.func;
-obj.onLoad = emptyFunction.func;
-obj.onLoadEnd = emptyFunction.func;
-obj.testID = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
-let emptyFunction = emptyFunction_mod;
-obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
+const obj = { SLIDER_DEFAULT_INITIAL_VALUE: 0, MARGIN_HORIZONTAL_PADDING: 0.05, THUMB_SIZE: 20, STEP_NUMBER_TEXT_FONT_SMALL: 8, STEP_NUMBER_TEXT_FONT_BIG: 12, LIMIT_MIN_VALUE: Number.MIN_SAFE_INTEGER, LIMIT_MAX_VALUE: Number.MAX_SAFE_INTEGER, DEFAULT_STEP_RESOLUTION: null };
+let num = 1000;
+if ("android" === _mod17.Platform.OS) {
+  num = 128;
+}
+obj.DEFAULT_STEP_RESOLUTION = num;
 
-export default obj;
+export const constants = obj;

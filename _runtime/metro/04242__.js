@@ -1,23 +1,7 @@
 // === Module 4242: ? ===
 
 // Module 4242
-let closure_0 = ["ned\u011Bli", "pond\u011Bl\u00ED", "\u00FAter\u00FD", "st\u0159edu", "\u010Dtvrtek", "p\u00E1tek", "sobotu"];
-let closure_1 = {
-  lastWeek: "'posledn\u00ED' eeee 've' p",
-  yesterday: "'v\u010Dera v' p",
-  today: "'dnes v' p",
-  tomorrow: "'z\u00EDtra v' p",
-  nextWeek(arg0) {
-    return "'v " + closure_0[arg0.getUTCDay(arg0)] + " o' p";
-  },
-  other: "P"
-};
+import registerAsset from "module_1134" /* 1134 */;
 
-export default function formatRelative(arg0, arg1) {
-  let tmpResult = tmp;
-  if (typeof closure_1[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==", scales: [1], hash: "7ad64672f5669cb12b479d3a2b798318", name: "uk.messages.7ad64672f5669cb12b479d3a2b798318.compiled.messages", type: "jsona" });

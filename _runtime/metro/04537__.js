@@ -1,62 +1,46 @@
 // === Module 4537: ? ===
 
 // Module 4537
-const Parser = arg1;
-const dependencyMap = arg6;
-class Parser {
-  constructor() {
-    if (this instanceof Parser) {
-      return;
-    } else {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-const entry = {
-  key: "run",
-  value: function run(arg0, arg1, arg2, arg3) {
-    const self = this;
-    const iter = this.parse(arg0, arg1, arg2, arg3);
-    let tmp = null;
-    if (iter) {
-      const obj = { setter: null, rest: null };
-      const valueSetter = new Parser(4534).ValueSetter(iter.value, self.validate, self.set, self.priority, self.subPriority);
-      obj.setter = valueSetter;
-      obj.rest = iter.rest;
-      tmp = obj;
-    }
-    return tmp;
-  }
-};
-const items = [
-  entry,
-  {
-    key: "validate",
-    value: function validate(arg0, arg1, arg2) {
-      return true;
-    }
-  }
-];
-for (let num = 0; num < items.length; num = num + 1) {
-  let tmp3 = items[num];
-  let flag = tmp3.enumerable;
-  if (!flag) {
-    flag = false;
-  }
-  tmp3.enumerable = flag;
-  tmp3.configurable = true;
-  if ("value" in tmp3) {
-    tmp3.writable = true;
-  }
-  let _Object = Object;
-  let definePropertyResult1 = Object.defineProperty(tmp2, tmp3.key, tmp3);
-}
+import differenceInCalendarWeeks_mod from "differenceInCalendarWeeks" /* 4441 */;
+import lastDayOfMonth_mod from "lastDayOfMonth" /* 4538 */;
+import startOfMonth_mod from "startOfMonth" /* 4468 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
 
-export { Parser };
+let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
+if (!differenceInCalendarWeeks) {
+  const obj = { default: differenceInCalendarWeeks };
+  let tmp3 = obj;
+} else {
+  tmp3 = differenceInCalendarWeeks;
+}
+differenceInCalendarWeeks = tmp3;
+let lastDayOfMonth = lastDayOfMonth_mod;
+if (!lastDayOfMonth) {
+  const obj2 = { default: lastDayOfMonth };
+  let tmp5 = obj2;
+} else {
+  tmp5 = lastDayOfMonth;
+}
+lastDayOfMonth = tmp5;
+let startOfMonth = startOfMonth_mod;
+if (!startOfMonth) {
+  const obj3 = { default: startOfMonth };
+  let tmp7 = obj3;
+} else {
+  tmp7 = startOfMonth;
+}
+startOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function getWeeksInMonth(arg0, arg1) {
+  requiredArgs.default(1, arguments);
+  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+};
+export default exports.default;

@@ -1,84 +1,43 @@
 // === Module 15178: ? ===
 
 // Module 15178
-import _mod15143 from "module_15143" /* 15143 */;
-import _mod15163 from "module_15163" /* 15163 */;
+import _mod518 from "module_518" /* 518 */;
+import baseKeys from "baseKeys" /* 544 */;
+import _mod545 from "module_545" /* 545 */;
+import _mod645 from "module_645" /* 645 */;
 
 
-export default (arg0, arg1) => {
-  obj = new obj(15172)(arg0, arg1);
-  const tmp3 = new obj(15143)("0.0.0");
-  if (obj.test(tmp3)) {
-    return tmp3;
+export default function isEmpty(size) {
+  if (null == size) {
+    return true;
   } else {
-    const tmp6 = new tmp(15143)("0.0.0-0");
-    if (obj.test(tmp6)) {
-      return tmp6;
-    } else {
-      let num = 0;
-      let num3 = 0;
-      let tmp9 = null;
-      let tmp10 = null;
-      if (0 < obj.set.length) {
-        do {
-          let arr = obj.set[num3];
-          obj = null;
-          let item = arr.forEach((semver) => {
-            obj = new _mod15143(semver.semver.version);
-            const operator = semver.operator;
-            if (">" === operator) {
-              if (0 === obj.prerelease.length) {
-                obj.patch = obj.patch + 1;
-              } else {
-                const prerelease = obj.prerelease;
-                prerelease.push(0);
-              }
-              obj.raw = obj.format();
+    if (_mod518(size)) {
+      return !size.length;
+    }
+    const tmp = _mod645(size);
+    if ("[object Map]" != tmp) {
+      if ("[object Set]" != tmp) {
+        if (_mod545(size)) {
+          return !baseKeys(size).length;
+        } else {
+          for (const key10021 in arg0) {
+            let call = hasOwnProperty.call;
+            if (typeof call === "unknown") {
+              let callResult = hasOwnProperty(key10021);
             } else {
-              if ("" !== operator) {
-                if (">=" !== operator) {
-                  if ("<" !== operator) {
-                    if ("<=" !== operator) {
-                      const _Error = Error;
-                      const _HermesInternal = HermesInternal;
-                      const error = new Error("Unexpected operation: " + semver.operator);
-                      throw error;
-                    }
-                  }
-                }
-              }
-              if (obj) {
-                !_mod15163(obj, obj);
-              }
+              callResult = call(arg0, key10021);
             }
-          });
-          let tmp13 = !obj;
-          let tmp14 = tmp9;
-          if (obj) {
-            let tmp16 = tmp14;
-            if (tmp14) {
-              tmp16 = !obj(15163)(tmp14, obj);
+            if (!callResult) {
+              continue;
+            } else {
+              let flag = false;
+              return false;
             }
-            tmp13 = tmp16;
           }
-          if (!tmp13) {
-            tmp14 = obj;
-          }
-          num3 = num + 1;
-          tmp9 = tmp14;
-          tmp10 = tmp14;
-          num = num3;
-        } while (num3 < obj.set.length);
-      }
-      let tmp20 = null;
-      if (tmp10) {
-        tmp20 = null;
-        if (obj.test(tmp10)) {
-          tmp20 = tmp10;
+          return true;
         }
       }
-      return tmp20;
     }
+    return !size.size;
   }
-  tmp = obj;
 };

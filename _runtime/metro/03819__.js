@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/private_channels/clean_up_inactive_gdms", scales: [1], hash: "130e925e8a424a9b43d870d884dca58e", name: "CleanUpInactiveGDMs.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcml2YXRlX2NoYW5uZWxzL2NsZWFuX3VwX2luYWN0aXZlX2dkbXM=", scales: [1], hash: "35f05901f8f96b49200db2e8cc36c4d2", name: "pt-BR.messages.35f05901f8f96b49200db2e8cc36c4d2.compiled.messages", type: "jsona" });

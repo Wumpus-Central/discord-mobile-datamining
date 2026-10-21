@@ -1,112 +1,56 @@
 // === Module 15428: ? ===
 
 // Module 15428
-import _mod15373 from "module_15373" /* 15373 */;
-import _mod15374 from "module_15374" /* 15374 */;
-import _mod15377 from "module_15377" /* 15377 */;
-import _mod15393 from "module_15393" /* 15393 */;
-import _mod15396 from "module_15396" /* 15396 */;
-import _mod15430 from "module_15430" /* 15430 */;
-import state from "state" /* 15431 */;
-import prop from "module_15429" /* 15429 */;
+import _mod15345 from "module_15345" /* 15345 */;
+import currencies2 from "currencies" /* 15429 */;
 
-let closure_5 = _mod15377("".slice);
-let closure_6 = _mod15377("".replace);
-let closure_7 = _mod15377([].join);
-let closure_8 = _mod15373 && !_mod15374(() => 8 !== defineProperty(() => {
-
-}, "length", { value: 8 }).length);
-const tmp = _mod15373 && !_mod15374(() => 8 !== defineProperty(() => {
-
-}, "length", { value: 8 }).length);
-let closure_9 = String(String).split("String");
-const fn = (toString, toString2, arg2) => {
-  let text = toString2;
-  if ("Symbol(" === closure_5(String(toString2), 0, 7)) {
-    text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
-  }
-  let getter = arg2;
-  if (arg2) {
-    getter = arg2.getter;
-  }
-  let text1 = text;
-  if (getter) {
-    text1 = `get ${tmp2}`;
-  }
-  let setter = arg2;
-  if (arg2) {
-    setter = arg2.setter;
-  }
-  let text2 = text1;
-  if (setter) {
-    text2 = `set ${tmp4}`;
-  }
-  const tmp8 = _mod15393(toString, "name");
-  let tmp9 = !tmp8;
-  if (tmp8) {
-    tmp9 = _mod15430.CONFIGURABLE && toString.name !== text2;
-    const tmp10 = _mod15430.CONFIGURABLE && toString.name !== text2;
-  }
-  if (tmp9) {
-    if (_mod15373) {
-      const obj = { value: text2, configurable: true };
-      defineProperty(toString, "name", obj);
-    } else {
-      toString.name = text2;
-    }
-  }
-  let tmp13 = closure_8;
-  if (closure_8) {
-    tmp13 = arg2;
-  }
-  if (tmp13) {
-    tmp13 = _mod15393(arg2, "arity");
-  }
-  if (tmp13) {
-    tmp13 = toString.length !== arg2.arity;
-  }
-  if (tmp13) {
-    const obj2 = { value: arg2.arity };
-    defineProperty(toString, "length", obj2);
+require = arg1;
+const dependencyMap = arg6;
+function isSupportedCurrency(arr3, locale) {
+  let str = locale;
+  if (undefined === locale) {
+    str = "en";
   }
   try {
-    if (arg2) {
-      if (_mod15393(arg2, "constructor")) {
-        if (arg2.constructor) {
-          if (_mod15373) {
-            defineProperty(toString, "prototype", { writable: false });
-          }
-        }
-        const enforceResult = state.enforce(toString);
-        if (!_mod15393(enforceResult, "source")) {
-          let str11 = "";
-          if (typeof text2 === "string") {
-            str11 = text2;
-          }
-          enforceResult.source = closure_7(closure_9, str11);
-        }
-        return toString;
+    const obj = { style: "currency", currencyDisplay: "name", currency: arr3 };
+    const memoizedNumberFormat = _mod15345.createMemoizedNumberFormat(str, obj);
+    const str2 = memoizedNumberFormat.format(123);
+    if (str2.substring(0, 3) !== arr3) {
+      if (str3.substring(str3.length - 3) !== arr3) {
+        return true;
       }
     }
-    if (toString.prototype) {
-      toString.prototype = undefined;
-    }
+    return false;
   } catch (err) {
   }
-};
-function toString() {
-  const self = this;
-  let source = _mod15396(this);
-  if (source) {
-    source = state.get(self).source;
-    const tmpResult = state;
-  }
-  if (!source) {
-    source = prop(self);
-  }
-  return source;
 }
-fn(toString, "toString");
-Function.prototype.toString = toString;
 
-export default fn;
+export const getSupportedCurrencies = function getSupportedCurrencies(locale) {
+  const items = [];
+  const currencies = currencies2.currencies;
+  for (let num = 0; num < currencies.length; num = num + 1) {
+    let arr3 = currencies[num];
+    if (3 === arr3.length) {
+      if (isSupportedCurrency(arr3, locale)) {
+        let arr = items.push(arr3);
+      }
+    } else if (5 === arr3.length) {
+      if ("~" === arr3[3]) {
+        let indexOf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[2]);
+        let indexOf2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[4]);
+        if (index <= index1) {
+          do {
+            let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
+            if (isSupportedCurrency(sum, locale)) {
+              let arr2 = items.push(sum);
+            }
+            index = index + 1;
+          } while (index <= index1);
+        }
+      }
+    }
+  }
+  return items;
+};

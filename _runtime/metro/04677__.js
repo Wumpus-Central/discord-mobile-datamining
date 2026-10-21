@@ -1,44 +1,49 @@
 // === Module 4677: ? ===
 
 // Module 4677
-import module_4678 from "module_4678" /* 4678 */;
-import module_4679 from "module_4679" /* 4679 */;
-import module_4680 from "module_4680" /* 4680 */;
-import date_mod from "module_4681" /* 4681 */;
-import date_mod from "module_4682" /* 4682 */;
+import module_4533_mod from "module_4533" /* 4533 */;
+import _typeof_mod from "module_4252" /* 4252 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
+import module_4256_mod from "module_4256" /* 4256 */;
 
-if (!module_4678) {
-  const obj = { default: module_4678 };
+let module_4533 = module_4533_mod;
+if (!module_4533) {
+  const obj = { default: module_4533 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4678;
+  tmp3 = module_4533;
 }
-if (!module_4679) {
-  const obj2 = { default: module_4679 };
+module_4533 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4679;
+  tmp5 = _typeof;
 }
-if (!module_4680) {
-  const obj3 = { default: module_4680 };
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4680;
+  tmp7 = requiredArgs;
 }
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
+requiredArgs = tmp7;
+let module_4256 = module_4256_mod;
+if (!module_4256) {
+  const obj4 = { default: module_4256 };
   let tmp9 = obj4;
 } else {
-  tmp9 = date;
+  tmp9 = module_4256;
 }
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+module_4256 = tmp9;
 
-export default { code: "vi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function setWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4533.default(defaultResult1, arg2) - module_4256.default(arg1);
+  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
+  return defaultResult1;
+};
 export default exports.default;

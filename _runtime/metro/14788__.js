@@ -1,5 +1,7 @@
 // === Module 14788: ? ===
 
 // Module 14788
+import registerAsset from "module_1134" /* 1134 */;
 
-export default { 2: "need dictionary", 1: "stream end", 0: "", "-1": "file error", "-2": "stream error", "-3": "data error", "-4": "insufficient memory", "-5": "buffer error", "-6": "incompatible version" };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple", width: 32, height: 32, scales: [2, 3], hash: "1b3ea47fa559c5b08fa13d985346d3b8", name: "tier_3_32px", type: "png" });

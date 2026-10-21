@@ -1,10 +1,8 @@
 // === Module 4557: ? ===
 
 // Module 4557
-import _mod4537 from "module_4537" /* 4537 */;
-import module_4555_mod from "module_4555" /* 4555 */;
+import _mod4558 from "module_4558" /* 4558 */;
 
-let _createSuperInternal = require;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -30,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
+function _setPrototypeOf(EraParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
-      StandAloneLocalDayParser.__proto__ = Parser;
-      return StandAloneLocalDayParser;
+    _setPrototypeOf = function _setPrototypeOf(EraParser, Parser) {
+      EraParser.__proto__ = Parser;
+      return EraParser;
     };
   }
-  return _setPrototypeOf(StandAloneLocalDayParser, Parser);
+  return _setPrototypeOf(EraParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,19 +54,11 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-let module_4555 = module_4555_mod;
-if (!module_4555) {
-  let obj = { default: module_4555 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4555;
-}
-module_4555 = tmp3;
-const Parser = _mod4537.Parser;
-_createSuperInternal = undefined;
-class StandAloneLocalDayParser {
+const Parser = _mod4558.Parser;
+let closure_129_0;
+class EraParser {
   constructor() {
-    if (this instanceof closure_1) {
+    if (this instanceof _setPrototypeOf) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -84,11 +74,11 @@ class StandAloneLocalDayParser {
           num = num + 1;
         } while (num < length);
       }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
+      tmp11 = _typeof;
+      call = _typeof.call;
       items = [];
       items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
+      applyResult = call.apply(_typeof, items.concat(array));
       tmp13 = undefined === applyResult;
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
@@ -102,10 +92,10 @@ class StandAloneLocalDayParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 140, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 90;
-          applyResult.priority = 90;
+          num3 = 140;
+          applyResult.priority = 140;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -116,7 +106,7 @@ class StandAloneLocalDayParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "e", "t", "T"];
+          items1 = ["R", "u", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -140,7 +130,7 @@ class StandAloneLocalDayParser {
     }
   }
 }
-let dependencyMap = StandAloneLocalDayParser;
+let closure_129_1 = EraParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -152,12 +142,13 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-StandAloneLocalDayParser.prototype = Object.create(prototype, { constructor: { value: StandAloneLocalDayParser, writable: true, configurable: true } });
+EraParser.prototype = Object.create(prototype, { constructor: { value: EraParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(StandAloneLocalDayParser, Parser);
+  _setPrototypeOf(EraParser, Parser);
 }
+_typeof = EraParser;
 let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
+_setPrototypeOf = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -189,12 +180,12 @@ dependencyMap = (function _isNativeReflectConstruct() {
   }
   return false;
 })();
-_createSuperInternal = function _createSuperInternal() {
+closure_129_0 = function _createSuperInternal() {
   const self = this;
-  const obj = hasOwnProperty(_createSuperInternal);
-  if (closure_1) {
+  const obj = _getPrototypeOf(_typeof);
+  if (_setPrototypeOf) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
@@ -215,66 +206,49 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber, arg3) {
-    const weekStartsOn = arg3;
-    function valueCallback(arg0) {
-      return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
-    }
-    if ("c" !== arg1) {
-      if ("cc" !== arg1) {
-        if ("co" === arg1) {
-          return _createSuperInternal(4539).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
-        } else if ("ccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else if ("ccccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else if ("cccccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else {
-          return ordinalNumber.day(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+  value: function parse(arg0, arg1, era) {
+    if ("G" !== arg1) {
+      if ("GG" !== arg1) {
+        if ("GGG" !== arg1) {
+          if ("GGGGG" === arg1) {
+            return era.era(arg0, { width: "narrow" });
+          } else {
+            return era.era(arg0, { width: "wide" }) || era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
+          }
         }
       }
     }
-    return _createSuperInternal(4539).mapValue(_createSuperInternal(4539).parseNDigits(arg1.length, arg0), valueCallback);
+    return era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
   }
 };
 let items = [
   entry,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 6;
-      }
-      return tmp;
-    }
-  },
-  {
     key: "set",
-    value: function set(arg0, arg1, arg2, arg3) {
-      const defaultResult = module_4555.default(arg0, arg2, arg3);
-      defaultResult.setUTCHours(0, 0, 0, 0);
-      return defaultResult;
+    value: function set(setUTCFullYear, arg1, era) {
+      arg1.era = era;
+      setUTCFullYear.setUTCFullYear(era, 0, 1);
+      setUTCFullYear.setUTCHours(0, 0, 0, 0);
+      return setUTCFullYear;
     }
   }
 ];
 if (0 < items.length) {
   do {
-    let tmp7 = items[num];
-    let flag = tmp7.enumerable;
+    let tmp5 = items[num];
+    let flag = tmp5.enumerable;
     if (!flag) {
       flag = false;
     }
-    tmp7.enumerable = flag;
-    tmp7.configurable = true;
-    if ("value" in tmp7) {
-      tmp7.writable = true;
+    tmp5.enumerable = flag;
+    tmp5.configurable = true;
+    if ("value" in tmp5) {
+      tmp5.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
+    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { StandAloneLocalDayParser };
+export { EraParser };

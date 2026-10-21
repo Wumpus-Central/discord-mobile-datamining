@@ -1036,8 +1036,8 @@ function accumulateDirectDispatchesSingle(dispatchConfig) {
     }
   }
 }
-function batchedUpdatesImpl(fn, value) {
-  return fn(value);
+function batchedUpdatesImpl(fn, arg1) {
+  return fn(arg1);
 }
 function executeDispatchesAndReleaseTopLevel(isPropagationStopped) {
   if (isPropagationStopped) {
@@ -5903,7 +5903,7 @@ function updateSuspenseListComponent(child, pendingProps, current) {
           if ("together" === revealOrder) {
             memoizedState = pendingProps.memoizedState;
             if (null === memoizedState) {
-              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "duration", treeForkCount: false };
+              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "enabled", treeForkCount: false };
             } else {
               memoizedState.isBackwards = false;
               memoizedState.rendering = null;
@@ -16541,10 +16541,10 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      { status: "pending", value: "Array", then: false }.then = function then(arg0) {
+      { status: "pending", value: "Array", then: "\u{1F3C2}\u{1F3FC}" }.then = function then(arg0) {
         items.push(arg0);
       };
-      obj2 = { status: "pending", value: "Array", then: false };
+      obj2 = { status: "pending", value: "Array", then: "\u{1F3C2}\u{1F3FC}" };
     }
     closure_123 = closure_123 + 1;
     obj.then(pingEngtangledActionScope, pingEngtangledActionScope);
@@ -16785,16 +16785,16 @@ let closure_210 = {
     mountWorkInProgressHook().memoizedState = items;
     return tmp5;
   },
-  useReducer(lastRenderedReducer, value, fn) {
+  useReducer(lastRenderedReducer, arg1, fn) {
     const tmp3 = mountWorkInProgressHook();
-    let tmp4 = value;
+    let tmp4 = arg1;
     if (undefined !== fn) {
-      const tmp5 = fn(value);
+      const tmp5 = fn(arg1);
       tmp4 = tmp5;
       if (c170) {
         setIsStrictModeForDevtools(true);
         try {
-          fn(value);
+          fn(arg1);
           setIsStrictModeForDevtools(false);
           tmp4 = tmp5;
         } catch (tmp12) {
@@ -17714,7 +17714,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
   let _Error2 = Error;
   throw Error("Expected ReactFiberErrorDialog.showErrorDialog to be a function.");
 } else {
-  batchedUpdatesImpl = function batchedUpdatesImpl(fn, value) {
+  batchedUpdatesImpl = function batchedUpdatesImpl(fn, arg1) {
     closure_277 = closure_277 | 1;
     try {
       closure_277 = tmp2;
@@ -17722,7 +17722,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
         closure_297 = peek.unstable_now() + 500;
         flushSyncWorkAcrossRoots_impl(0, true);
       }
-      return fn(value);
+      return fn(arg1);
     } catch (tmp10) {
       closure_277 = tmp;
       if (0 === tmp) {

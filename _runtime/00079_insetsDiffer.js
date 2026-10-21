@@ -1,7 +1,7 @@
 // === Module 79: insetsDiffer ===
 
 // Module 79 (insetsDiffer)
-let closure_0 = { top: "toCharArray$esjava$1", left: "Symbol", right: "unicodeVersion", bottom: "ty" };
+let closure_0 = { top: "end", left: "Date", right: "toCharArray$esjava$1", bottom: "toCharArray$esjava$1" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

@@ -1,28 +1,7 @@
 // === Module 9046: ? ===
 
 // Module 9046
-function emptyFunction() {
+import registerAsset from "module_1134" /* 1134 */;
 
-}
-function emptyFunctionWithReset() {
 
-}
-emptyFunctionWithReset.resetWarningCache = emptyFunction;
-
-export default () => {
-  function shim(arg0, arg1, arg2, arg3, arg4, arg5) {
-    if (arg5 !== shim(dependencyMap[0])) {
-      const _Error = Error;
-      const error = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-      error.name = "Invariant Violation";
-      throw error;
-    }
-  }
-  function getShim() {
-    return shim;
-  }
-  shim.isRequired = shim;
-  const obj = { array: shim, bigint: shim, bool: shim, func: shim, number: shim, object: shim, string: shim, symbol: shim, any: shim, arrayOf: getShim, element: shim, elementType: shim, instanceOf: getShim, node: shim, objectOf: getShim, oneOf: getShim, oneOfType: getShim, shape: getShim, exact: getShim, checkPropTypes: emptyFunctionWithReset, resetWarningCache: emptyFunction };
-  obj.PropTypes = obj;
-  return obj;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 251, height: 147, scales: [2, 3], hash: "7e87039ca280115f9b6a52cb6bc7dc5e", name: "img_app_crash_dark", type: "png" });

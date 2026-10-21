@@ -1,17 +1,41 @@
 // === Module 6386: ? ===
 
 // Module 6386
-import _mod1307 from "module_1307" /* 1307 */;
+import _Symbol from "_Symbol" /* 1311 */;
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1341 */;
+import regexTester from "regexTester" /* 1468 */;
 
-const tmp = _mod1307("%Array%");
-const isArray = tmp.isArray;
-let tmp2 = !isArray;
-if (!isArray) {
-  tmp2 = callBoundIntrinsic("Object.prototype.toString");
+let closure_0 = callBoundIntrinsic("Object.prototype.toString");
+if (_Symbol()) {
+  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
+  let closure_2 = regexTester(/^Symbol\(.*\)$/);
+  module.exports = function isSymbol(obj) {
+    if (typeof obj === "symbol") {
+      return true;
+    } else {
+      if (obj) {
+        if (typeof obj === "object") {
+          if ("[object Symbol]" === closure_0(obj)) {
+            try {
+              return (function isRealSymbolObject(arg0) {
+                const valueOfResult = arg0.valueOf();
+                let tmp2 = typeof valueOfResult === "symbol";
+                if (typeof valueOfResult === "symbol") {
+                  tmp2 = closure_1_2(closure_1_1(arg0));
+                }
+                return tmp2;
+              })(obj);
+            } catch (err) {
+              return false;
+            }
+          }
+        }
+      }
+      return false;
+    }
+  };
+} else {
+  module.exports = function isSymbol(arg0) {
+    return false;
+  };
 }
-let closure_0 = tmp2;
-
-export default tmp.isArray || (function IsArray(arg0) {
-  return "[object Array]" === closure_0(arg0);
-});

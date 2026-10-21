@@ -1,17 +1,17 @@
 // === Module 4596: ? ===
 
 // Module 4596
-import module_4412_mod from "module_4412" /* 4412 */;
-import requiredArgs_mod from "requiredArgs" /* 4232 */;
+import _typeof_mod from "module_4252" /* 4252 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
 
-let module_4412 = module_4412_mod;
-if (!module_4412) {
-  const obj = { default: module_4412 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4412;
+  tmp3 = _typeof;
 }
-module_4412 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,9 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isToday(arg0) {
+export default function isPast(date) {
   requiredArgs.default(1, arguments);
-  return module_4412.default(arg0, Date.now());
+  const time = _typeof.default(date).getTime();
+  return time < Date.now();
 };
 export default exports.default;

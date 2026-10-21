@@ -1,44 +1,86 @@
 // === Module 4353: ? ===
 
 // Module 4353
-import module_2077 from "module_2077" /* 2077 */;
+const obj = { lessThanXSeconds: { one: { regular: "mniej ni\u017C sekunda", past: "mniej ni\u017C sekund\u0119", future: "mniej ni\u017C sekund\u0119" }, twoFour: "mniej ni\u017C {{count}} sekundy", other: "mniej ni\u017C {{count}} sekund" }, xSeconds: { one: { regular: "sekunda", past: "sekund\u0119", future: "sekund\u0119" }, twoFour: "{{count}} sekundy", other: "{{count}} sekund" }, halfAMinute: { one: "p\u00F3\u0142 minuty", twoFour: "p\u00F3\u0142 minuty", other: "p\u00F3\u0142 minuty" }, lessThanXMinutes: { one: { regular: "mniej ni\u017C minuta", past: "mniej ni\u017C minut\u0119", future: "mniej ni\u017C minut\u0119" }, twoFour: "mniej ni\u017C {{count}} minuty", other: "mniej ni\u017C {{count}} minut" }, xMinutes: { one: { regular: "minuta", past: "minut\u0119", future: "minut\u0119" }, twoFour: "{{count}} minuty", other: "{{count}} minut" }, aboutXHours: { one: { regular: "oko\u0142o godziny", past: "oko\u0142o godziny", future: "oko\u0142o godzin\u0119" }, twoFour: "oko\u0142o {{count}} godziny", other: "oko\u0142o {{count}} godzin" }, xHours: { one: { regular: "godzina", past: "godzin\u0119", future: "godzin\u0119" }, twoFour: "{{count}} godziny", other: "{{count}} godzin" }, xDays: { one: { regular: "dzie\u0144", past: "dzie\u0144", future: "1 dzie\u0144" }, twoFour: "{{count}} dni", other: "{{count}} dni" }, aboutXWeeks: { one: "oko\u0142o tygodnia", twoFour: "oko\u0142o {{count}} tygodni", other: "oko\u0142o {{count}} tygodni" }, xWeeks: { one: "tydzie\u0144", twoFour: "{{count}} tygodnie", other: "{{count}} tygodni" }, aboutXMonths: { one: "oko\u0142o miesi\u0105c", twoFour: "oko\u0142o {{count}} miesi\u0105ce", other: "oko\u0142o {{count}} miesi\u0119cy" }, xMonths: { one: "miesi\u0105c", twoFour: "{{count}} miesi\u0105ce", other: "{{count}} miesi\u0119cy" }, aboutXYears: { one: "oko\u0142o rok", twoFour: "oko\u0142o {{count}} lata", other: "oko\u0142o {{count}} lat" }, xYears: { one: "rok", twoFour: "{{count}} lata", other: "{{count}} lat" }, overXYears: { one: "ponad rok", twoFour: "ponad {{count}} lata", other: "ponad {{count}} lat" }, almostXYears: { one: "prawie rok", twoFour: "prawie {{count}} lata", other: "prawie {{count}} lat" } };
 
-if (!module_2077) {
-  const obj2 = { default: module_2077 };
-  let obj = obj2;
-} else {
-  obj = module_2077;
-}
-const date = {
-  ordinalNumber(arg0, unit) {
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
-    }
-    let str = "-\u0435";
-    if ("date" !== unit) {
-      if ("week" !== unit) {
-        if ("minute" !== unit) {
-          let str4 = "-\u0439";
+export default function formatDistance(arg0, arg1, addSuffix) {
+  let replaced = arg1;
+  let replace = obj[arg0];
+  if (null != addSuffix) {
+    if (addSuffix.addSuffix) {
+      if (!addSuffix.comparison) {
+        if (1 === replaced) {
+          let other2 = replace.one;
+        } else {
+          const result = replaced % 100;
+          if (result <= 20) {
+            if (10 < result) {
+              other2 = replace.other;
+            }
+          }
+          const result1 = result % 10;
+          if (2 <= result1) {
+            if (result1 <= 4) {
+              other2 = replace.twoFour;
+            }
+          }
+          other2 = replace.other;
         }
-        str = str4;
+        let past = other2;
+        if (typeof other2 !== "string") {
+          past = other2.past;
+        }
+        const _String = String;
+        let text = `${tmp6("{{count}}", String(tmp))} temu`;
       }
-      str4 = "-\u044F";
+      if (1 === replaced) {
+        let other3 = replace.one;
+      } else {
+        const result2 = replaced % 100;
+        if (result2 <= 20) {
+          if (10 < result2) {
+            other3 = replace.other;
+          }
+        }
+        const result3 = result2 % 10;
+        if (2 <= result3) {
+          if (result3 <= 4) {
+            other3 = replace.twoFour;
+          }
+        }
+        other3 = replace.other;
+      }
+      let str4 = other3;
+      if (typeof other3 !== "string") {
+        str4 = other3.future;
+      }
+      replace = str4.replace;
+      const _String2 = String;
+      replaced = replace("{{count}}", String(replaced));
+      text = `za ${tmp}`;
     }
-    return Number(arg0) + str;
-  },
-  era: obj.default({ values: { narrow: ["\u0434\u043E \u043D.\u044D.", "\u043D.\u044D."], abbreviated: ["\u0434\u043E \u043D. \u044D.", "\u043D. \u044D."], wide: ["\u0434\u043E \u043D\u0430\u0448\u0435\u0439 \u044D\u0440\u044B", "\u043D\u0430\u0448\u0435\u0439 \u044D\u0440\u044B"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1-\u0439 \u043A\u0432.", "2-\u0439 \u043A\u0432.", "3-\u0439 \u043A\u0432.", "4-\u0439 \u043A\u0432."], wide: ["1-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "2-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "3-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B", "4-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+  }
+  if (1 === replaced) {
+    let other = replace.one;
+  } else {
+    const result4 = replaced % 100;
+    if (result4 <= 20) {
+      if (10 < result4) {
+        other = replace.other;
+      }
     }
-  }),
-  month: obj.default({ values: { narrow: ["\u042F", "\u0424", "\u041C", "\u0410", "\u041C", "\u0418", "\u0418", "\u0410", "\u0421", "\u041E", "\u041D", "\u0414"], abbreviated: ["\u044F\u043D\u0432.", "\u0444\u0435\u0432.", "\u043C\u0430\u0440\u0442", "\u0430\u043F\u0440.", "\u043C\u0430\u0439", "\u0438\u044E\u043D\u044C", "\u0438\u044E\u043B\u044C", "\u0430\u0432\u0433.", "\u0441\u0435\u043D\u0442.", "\u043E\u043A\u0442.", "\u043D\u043E\u044F\u0431.", "\u0434\u0435\u043A."], wide: ["\u044F\u043D\u0432\u0430\u0440\u044C", "\u0444\u0435\u0432\u0440\u0430\u043B\u044C", "\u043C\u0430\u0440\u0442", "\u0430\u043F\u0440\u0435\u043B\u044C", "\u043C\u0430\u0439", "\u0438\u044E\u043D\u044C", "\u0438\u044E\u043B\u044C", "\u0430\u0432\u0433\u0443\u0441\u0442", "\u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044C", "\u043E\u043A\u0442\u044F\u0431\u0440\u044C", "\u043D\u043E\u044F\u0431\u0440\u044C", "\u0434\u0435\u043A\u0430\u0431\u0440\u044C"] }, defaultWidth: "wide", formattingValues: { narrow: ["\u042F", "\u0424", "\u041C", "\u0410", "\u041C", "\u0418", "\u0418", "\u0410", "\u0421", "\u041E", "\u041D", "\u0414"], abbreviated: ["\u044F\u043D\u0432.", "\u0444\u0435\u0432.", "\u043C\u0430\u0440.", "\u0430\u043F\u0440.", "\u043C\u0430\u044F", "\u0438\u044E\u043D.", "\u0438\u044E\u043B.", "\u0430\u0432\u0433.", "\u0441\u0435\u043D\u0442.", "\u043E\u043A\u0442.", "\u043D\u043E\u044F\u0431.", "\u0434\u0435\u043A."], wide: ["\u044F\u043D\u0432\u0430\u0440\u044F", "\u0444\u0435\u0432\u0440\u0430\u043B\u044F", "\u043C\u0430\u0440\u0442\u0430", "\u0430\u043F\u0440\u0435\u043B\u044F", "\u043C\u0430\u044F", "\u0438\u044E\u043D\u044F", "\u0438\u044E\u043B\u044F", "\u0430\u0432\u0433\u0443\u0441\u0442\u0430", "\u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F", "\u043E\u043A\u0442\u044F\u0431\u0440\u044F", "\u043D\u043E\u044F\u0431\u0440\u044F", "\u0434\u0435\u043A\u0430\u0431\u0440\u044F"] }, defaultFormattingWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["\u0412", "\u041F", "\u0412", "\u0421", "\u0427", "\u041F", "\u0421"], short: ["\u0432\u0441", "\u043F\u043D", "\u0432\u0442", "\u0441\u0440", "\u0447\u0442", "\u043F\u0442", "\u0441\u0431"], abbreviated: ["\u0432\u0441\u043A", "\u043F\u043D\u0434", "\u0432\u0442\u0440", "\u0441\u0440\u0434", "\u0447\u0442\u0432", "\u043F\u0442\u043D", "\u0441\u0443\u0431"], wide: ["\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u0435\u0434\u0430", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043F\u044F\u0442\u043D\u0438\u0446\u0430", "\u0441\u0443\u0431\u0431\u043E\u0442\u0430"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D.", noon: "\u043F\u043E\u043B\u0434.", morning: "\u0443\u0442\u0440\u043E", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u044C" }, abbreviated: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D.", noon: "\u043F\u043E\u043B\u0434.", morning: "\u0443\u0442\u0440\u043E", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u044C" }, wide: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D\u043E\u0447\u044C", noon: "\u043F\u043E\u043B\u0434\u0435\u043D\u044C", morning: "\u0443\u0442\u0440\u043E", afternoon: "\u0434\u0435\u043D\u044C", evening: "\u0432\u0435\u0447\u0435\u0440", night: "\u043D\u043E\u0447\u044C" } }, defaultWidth: "any", formattingValues: { narrow: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D.", noon: "\u043F\u043E\u043B\u0434.", morning: "\u0443\u0442\u0440\u0430", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u0438" }, abbreviated: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D.", noon: "\u043F\u043E\u043B\u0434.", morning: "\u0443\u0442\u0440\u0430", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447.", night: "\u043D\u043E\u0447\u0438" }, wide: { am: "\u0414\u041F", pm: "\u041F\u041F", midnight: "\u043F\u043E\u043B\u043D\u043E\u0447\u044C", noon: "\u043F\u043E\u043B\u0434\u0435\u043D\u044C", morning: "\u0443\u0442\u0440\u0430", afternoon: "\u0434\u043D\u044F", evening: "\u0432\u0435\u0447\u0435\u0440\u0430", night: "\u043D\u043E\u0447\u0438" } }, defaultFormattingWidth: "wide" })
+    const result5 = result4 % 10;
+    if (2 <= result5) {
+      if (result5 <= 4) {
+        other = replace.twoFour;
+      }
+    }
+    other = replace.other;
+  }
+  let str = other;
+  if (typeof other !== "string") {
+    str = other.regular;
+  }
+  return str.replace("{{count}}", String(replaced));
 };
-
-export default date;
 export default exports.default;

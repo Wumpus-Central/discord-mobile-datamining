@@ -1,7 +1,8 @@
 // === Module 10782: ? ===
 
 // Module 10782
-import registerAsset from "module_1134" /* 1134 */;
+import baseRest from "baseRest" /* 8832 */;
+import baseDelay from "baseDelay" /* 10783 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "88df5c832b935fed96e52c66883efce1", name: "CircleXIcon", type: "png" });
+export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));

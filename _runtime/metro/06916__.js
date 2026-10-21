@@ -1,27 +1,7 @@
 // === Module 6916: ? ===
 
 // Module 6916
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-const UIManager = fn(17).UIManager;
-const jsx = fn(21).jsx;
-try {
-  let closure_0 = fn(6917).default;
-  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
-  exports.MaskedView = function MaskedView(children) {
-    children = children.children;
-    const merged = Object.assign(children, Object.assign({ children: 0 }));
-    let tmp2 = children;
-    if (closure_2) {
-      tmp2 = children;
-      if (closure_0) {
-        const obj = {};
-        const merged1 = Object.assign(merged);
-        obj.children = children;
-        tmp2 = <tmp3 />;
-      }
-    }
-    return tmp2;
-  };
-} catch (err) {
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_2hzotq2fhhtzqjz6caubttu6v4/node_modules/@react-navigation/elements/lib/module/assets", width: 96, height: 96, scales: [1, 1, 2, 3, 4], hash: "3162e8a244d8f6fbd259e79043e23ce4", name: "close-icon", type: "png" });

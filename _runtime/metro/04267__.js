@@ -1,14 +1,26 @@
 // === Module 4267: ? ===
 
 // Module 4267
-import module_2074 from "module_2074" /* 2074 */;
+let closure_0 = { lessThanXSeconds: { one: "mindre end \u00E9t sekund", other: "mindre end {{count}} sekunder" }, xSeconds: { one: "1 sekund", other: "{{count}} sekunder" }, halfAMinute: "\u00E9t halvt minut", lessThanXMinutes: { one: "mindre end \u00E9t minut", other: "mindre end {{count}} minutter" }, xMinutes: { one: "1 minut", other: "{{count}} minutter" }, aboutXHours: { one: "cirka 1 time", other: "cirka {{count}} timer" }, xHours: { one: "1 time", other: "{{count}} timer" }, xDays: { one: "1 dag", other: "{{count}} dage" }, aboutXWeeks: { one: "cirka 1 uge", other: "cirka {{count}} uger" }, xWeeks: { one: "1 uge", other: "{{count}} uger" }, aboutXMonths: { one: "cirka 1 m\u00E5ned", other: "cirka {{count}} m\u00E5neder" }, xMonths: { one: "1 m\u00E5ned", other: "{{count}} m\u00E5neder" }, aboutXYears: { one: "cirka 1 \u00E5r", other: "cirka {{count}} \u00E5r" }, xYears: { one: "1 \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "over 1 \u00E5r", other: "over {{count}} \u00E5r" }, almostXYears: { one: "n\u00E6sten 1 \u00E5r", other: "n\u00E6sten {{count}} \u00E5r" } };
 
-if (!module_2074) {
-  const obj2 = { default: module_2074 };
-  let obj = obj2;
-} else {
-  obj = module_2074;
-}
-
-export default { date: obj.default({ formats: { full: "EEEE, d 'de' MMMM 'de' y", long: "d 'de' MMMM 'de' y", medium: "d MMM y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'a las' {{time}}", long: "{{date}} 'a las' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} siden`;
+        }
+        text = `om ${tmp}`;
+      }
+    }
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
+  }
+};
 export default exports.default;

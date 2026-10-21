@@ -1,127 +1,14 @@
 // === Module 4378: ? ===
 
 // Module 4378
-import module_4379_mod from "module_4379" /* 4379 */;
-import module_4380_mod from "module_4380" /* 4380 */;
-import _typeof_mod from "module_4231" /* 4231 */;
-import requiredArgs_mod from "requiredArgs" /* 4232 */;
-import module_4235_mod from "module_4235" /* 4235 */;
+import module_2073 from "module_2073" /* 2073 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let module_4379 = module_4379_mod;
-if (!module_4379) {
-  const obj = { default: module_4379 };
-  let tmp3 = obj;
+if (!module_2073) {
+  const obj2 = { default: module_2073 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4379;
+  obj = module_2073;
 }
-module_4379 = tmp3;
-let module_4380 = module_4380_mod;
-if (!module_4380) {
-  const obj2 = { default: module_4380 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4380;
-}
-module_4380 = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
-} else {
-  tmp7 = _typeof;
-}
-_typeof = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-let module_4235 = module_4235_mod;
-if (!module_4235) {
-  const obj5 = { default: module_4235 };
-  let tmp11 = obj5;
-} else {
-  tmp11 = module_4235;
-}
-module_4235 = tmp11;
 
-export default function add(arg0, years) {
-  requiredArgs.default(2, arguments);
-  if (years) {
-    if ("object" === _typeof(years)) {
-      let num = 0;
-      if (years.years) {
-        num = module_4235.default(years.years);
-      }
-      let num2 = 0;
-      if (years.months) {
-        num2 = module_4235.default(years.months);
-      }
-      let num3 = 0;
-      if (years.weeks) {
-        num3 = module_4235.default(years.weeks);
-      }
-      let num4 = 0;
-      if (years.days) {
-        num4 = module_4235.default(years.days);
-      }
-      let num5 = 0;
-      if (years.hours) {
-        num5 = module_4235.default(years.hours);
-      }
-      let num6 = 0;
-      if (years.minutes) {
-        num6 = module_4235.default(years.minutes);
-      }
-      let num7 = 0;
-      if (years.seconds) {
-        num7 = module_4235.default(years.seconds);
-      }
-      const defaultResult1 = _typeof.default(arg0);
-      if (num2) {
-        let defaultResult2 = module_4380.default(defaultResult1, num2 + 12 * num);
-      } else {
-        defaultResult2 = defaultResult1;
-      }
-      if (num4) {
-        let defaultResult3 = module_4379.default(defaultResult2, num4 + 7 * num3);
-      } else {
-        defaultResult3 = defaultResult2;
-      }
-      const _Date = Date;
-      const sum = num7 + 60 * (num6 + 60 * num5);
-      const date = new Date(defaultResult3.getTime() + 1000 * sum);
-      return date;
-    }
-  }
-  return new Date(NaN);
-};
+export default { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "y-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "'kl'. HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'kl.' {{time}}", long: "{{date}} 'kl.' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

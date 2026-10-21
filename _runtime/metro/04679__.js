@@ -1,14 +1,46 @@
 // === Module 4679: ? ===
 
 // Module 4679
-import module_2074 from "module_2074" /* 2074 */;
+import module_4256_mod from "module_4256" /* 4256 */;
+import _typeof_mod from "module_4252" /* 4252 */;
+import requiredArgs_mod from "requiredArgs" /* 4253 */;
 
-if (!module_2074) {
-  const obj2 = { default: module_2074 };
-  let obj = obj2;
+let module_4256 = module_4256_mod;
+if (!module_4256) {
+  const obj = { default: module_4256 };
+  let tmp3 = obj;
 } else {
-  obj = module_2074;
+  tmp3 = module_4256;
 }
+module_4256 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default { date: obj.default({ formats: { full: "EEEE, 'ng\u00E0y' d MMMM 'n\u0103m' y", long: "'ng\u00E0y' d MMMM 'n\u0103m' y", medium: "d MMM 'n\u0103m' y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function setYear(date, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(date);
+  if (isNaN(defaultResult1.getTime())) {
+    const _Date = Date;
+    date = new Date(NaN);
+    return date;
+  } else {
+    defaultResult1.setFullYear(defaultResult2);
+    return defaultResult1;
+  }
+  defaultResult2 = module_4256.default(arg1);
+};
 export default exports.default;

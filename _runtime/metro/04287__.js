@@ -1,30 +1,25 @@
 // === Module 4287: ? ===
 
 // Module 4287
-import module_2077 from "module_2077" /* 2077 */;
+let closure_0 = { lessThanXSeconds: { one: "menos de un segundo", other: "menos de {{count}} segundos" }, xSeconds: { one: "1 segundo", other: "{{count}} segundos" }, halfAMinute: "medio minuto", lessThanXMinutes: { one: "menos de un minuto", other: "menos de {{count}} minutos" }, xMinutes: { one: "1 minuto", other: "{{count}} minutos" }, aboutXHours: { one: "alrededor de 1 hora", other: "alrededor de {{count}} horas" }, xHours: { one: "1 hora", other: "{{count}} horas" }, xDays: { one: "1 d\u00EDa", other: "{{count}} d\u00EDas" }, aboutXWeeks: { one: "alrededor de 1 semana", other: "alrededor de {{count}} semanas" }, xWeeks: { one: "1 semana", other: "{{count}} semanas" }, aboutXMonths: { one: "alrededor de 1 mes", other: "alrededor de {{count}} meses" }, xMonths: { one: "1 mes", other: "{{count}} meses" }, aboutXYears: { one: "alrededor de 1 a\u00F1o", other: "alrededor de {{count}} a\u00F1os" }, xYears: { one: "1 a\u00F1o", other: "{{count}} a\u00F1os" }, overXYears: { one: "m\u00E1s de 1 a\u00F1o", other: "m\u00E1s de {{count}} a\u00F1os" }, almostXYears: { one: "casi 1 a\u00F1o", other: "casi {{count}} a\u00F1os" } };
 
-if (!module_2077) {
-  const obj2 = { default: module_2077 };
-  let obj = obj2;
-} else {
-  obj = module_2077;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
-  },
-  era: obj.default({ values: { narrow: ["pr.n.e.", "AD"], abbreviated: ["pr. Kr.", "po. Kr."], wide: ["Prije Krista", "Poslije Krista"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1.", "2.", "3.", "4."], abbreviated: ["1. kv.", "2. kv.", "3. kv.", "4. kv."], wide: ["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `hace ${tmp}`;
+        }
+        text = `en ${tmp}`;
+      }
     }
-  }),
-  month: obj.default({ values: { narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], wide: ["sije\u010Danj", "velja\u010Da", "o\u017Eujak", "travanj", "svibanj", "lipanj", "srpanj", "kolovoz", "rujan", "listopad", "studeni", "prosinac"] }, defaultWidth: "wide", formattingValues: { narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], wide: ["sije\u010Dnja", "velja\u010De", "o\u017Eujka", "travnja", "svibnja", "lipnja", "srpnja", "kolovoza", "rujna", "listopada", "studenog", "prosinca"] }, defaultFormattingWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["N", "P", "U", "S", "\u010C", "P", "S"], short: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"], abbreviated: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"], wide: ["nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010Detvrtak", "petak", "subota"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, abbreviated: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, wide: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "poslije podne", evening: "nave\u010Der", night: "no\u0107u" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, abbreviated: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, wide: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "poslije podne", evening: "nave\u010Der", night: "no\u0107u" } }, defaultFormattingWidth: "wide" })
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    one = tmp.other.replace("{{count}}", arg1.toString());
+  }
 };
-
-export default date;
 export default exports.default;

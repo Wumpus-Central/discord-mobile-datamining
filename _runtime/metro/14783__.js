@@ -1,12 +1,7 @@
 // === Module 14783: ? ===
 
 // Module 14783
-import _mod14797 from "module_14797" /* 14797 */;
-import assign from "module_14784" /* 14784 */;
-import Deflate from "Deflate" /* 14785 */;
-import Inflate from "Inflate" /* 14793 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14797);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "25b28a12657775964c80c08fa4bc3ce7", name: "ic_gift", type: "png" });

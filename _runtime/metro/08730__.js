@@ -1,24 +1,7 @@
 // === Module 8730: ? ===
 
 // Module 8730
+import registerAsset from "module_1134" /* 1134 */;
 
-export default (obj) => {
-  if (obj instanceof Object) {
-    const _Array = Array;
-    if (!Array.isArray(obj)) {
-      obj = {};
-      for (const key10010 in arg0) {
-        if (!arg0.hasOwnProperty(key10010)) {
-          continue;
-        } else {
-          obj[key10010] = key10010;
-          continue;
-        }
-        continue;
-      }
-      return obj;
-    }
-  }
-  const error = new Error("keyMirror(...): Argument must be an object.");
-  throw error;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1a98a09be102b24c083fe11e00ab3c2d", name: "PlayIcon", type: "png" });

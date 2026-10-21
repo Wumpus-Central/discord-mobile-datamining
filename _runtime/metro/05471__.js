@@ -1,14 +1,11 @@
 // === Module 5471: ? ===
 
 // Module 5471
-import _mod5472 from "module_5472" /* 5472 */;
+import cancelAnimation from "cancelAnimation" /* 1658 */;
 
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
+const module_5464 = fn(5464);
+const memoResult = fn(19).memo(module_5464.createBottomSheetScrollableComponent(fn(5252).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent));
+memoResult.displayName = "BottomSheetSectionList";
 
-export default function toPropertyKey(arg0) {
-  const tmp = _mod5472(arg0, "string");
-  let text = tmp;
-  if ("symbol" != obj.default(tmp)) {
-    text = `${tmp}`;
-  }
-  return text;
-};
+export default memoResult;

@@ -1,7 +1,11 @@
 // === Module 7890: ? ===
 
 // Module 7890
-import registerAsset from "module_1134" /* 1134 */;
+import _modDef7891 from "module_7891" /* 7891 */;
 
+importDefault = arg2;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b04e363869889767a126da0fcdcaf9c8", name: "AppleNeutralIcon", type: "png" });
+export default function getWebViewProxy(iframeId) {
+  return new _modDef7891(iframeId);
+};

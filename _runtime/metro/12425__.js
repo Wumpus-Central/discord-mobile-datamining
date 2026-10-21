@@ -1,5 +1,7 @@
 // === Module 12425: ? ===
 
 // Module 12425
+import registerAsset from "module_1134" /* 1134 */;
 
-export const SDK_VERSION = "8.55.0";
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7036049d54a4b04a2af6c92d50fc7e6d", name: "ImagesIcon", type: "png" });
