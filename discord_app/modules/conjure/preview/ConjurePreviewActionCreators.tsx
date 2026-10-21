@@ -1,13 +1,27 @@
 // discord_app/modules/conjure/preview/ConjurePreviewActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import leaveFrame from "../../frames/leaveFrame.tsx";
 import conjurePausedPreviewViews from "conjurePausedPreviewViews.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import ConjurePreviewPauseStore from "ConjurePreviewPauseStore.tsx";
 
 require = fn;
+let closure_8 = async function _loadConjurePreviewDm() {
+  closure_2 = tmp2;
+  closure_1 = tmp5;
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.post({ url: Endpoints.CONJURE_PROJECT_PREVIEW_DM(closure_0), rejectWithError: true });
+  const body = value.body;
+  closure_129_1 = closure_130_4(body);
+  closure_130_1(closure_130_2[7]).dispatch({ type: "CHANNEL_CREATE", channel: closure_129_1 });
+  return closure_129_1.id;
+};
+let closure_4 = fn(4825).createChannelRecordFromServer;
+const Endpoints = fn(1087).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");
 
@@ -57,4 +71,14 @@ export const wakeConjurePreview = function wakeConjurePreview(projectId) {
     }
   }
   obj = conjurePausedPreviewViews;
+};
+export const loadConjurePreviewDm = function loadConjurePreviewDm() {
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

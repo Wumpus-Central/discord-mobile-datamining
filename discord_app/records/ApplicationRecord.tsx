@@ -117,19 +117,13 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
 };
 Object.defineProperty(prototype, "connectionEntrypointUrl", {
   get: function connectionEntrypointUrl() {
-    const obj = require("UserApplicationIdentityConstants")
+    const tmp = require("UserApplicationIdentityConstants")
       .APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
     let prop;
-    if (obj != null) {
-      prop = obj.connectionEntrypointUrlOverride;
+    if (tmp != null) {
+      prop = tmp.connectionEntrypointUrlOverride;
     }
-    if (null != prop) {
-      if (obj.getMigrationExperimentEnabled("ApplicationRecord")) {
-        let _connectionEntrypointUrl = obj.connectionEntrypointUrlOverride;
-      }
-      return _connectionEntrypointUrl;
-    }
-    _connectionEntrypointUrl = this._connectionEntrypointUrl;
+    return null != prop ? tmp.connectionEntrypointUrlOverride : this._connectionEntrypointUrl;
   },
   set: undefined,
 });

@@ -1,7 +1,7 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import c from "../../../../_runtime/00576_c.js";
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05219_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05240_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -18,11 +18,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8677)();
+  const tmp5 = first(8704)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8678).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8705).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(587).unsafe_rawColors.PRIMARY_800);
@@ -55,13 +55,13 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = result[0];
             closure_1_3(obj);
-            first(8678).cachedDominantColors[closure_1_0] = obj;
+            first(8705).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = _slicedToArray(result[0], 3);
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(8678).cachedDominantColors[tmp4]);
+        closure_3(getDominantColorsLocalAsset(8705).cachedDominantColors[tmp4]);
       }
     }
   }, items);
@@ -73,7 +73,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_12 = createStyles.createStyles({
   videoBackground: { alignItems: "center" },
   videoDetailsSpacer: { paddingTop: 12 },
@@ -222,7 +222,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                   }
                                 }
-                                tmp23 = tmp23(5219);
+                                tmp23 = tmp23(5240);
                                 const obj2 = { colors: tmp24, start: tmp46, end: items, style: tmp31, children: null };
                                 items = [tmp35, tmp26];
                                 obj2.children = items;

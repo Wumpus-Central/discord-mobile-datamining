@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
-import _modDef2396 from "../../../../../../game_organization_invites/GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2406 from "../../../../../../game_organization_invites/GameOrganizationInvitesUntranslated.messages.js";
 import ColorUtils from "../../../../../../../utils/ColorUtils.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
@@ -9,9 +9,9 @@ import getGameOrganizationDisplayNounDefault from "../../../../../../game_organi
 import GameOrganizationInviteStore from "../../../../../../game_organization_invites/GameOrganizationInviteStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(9932).CodedLinkExtendedType;
-const constants = fn(10833).GameOrganizationInviteStates;
-const InviteTypes = fn(7756).InviteTypes;
+const CodedLinkExtendedType = fn(9962).CodedLinkExtendedType;
+const constants = fn(10977).GameOrganizationInviteStates;
+const InviteTypes = fn(7784).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",
@@ -42,38 +42,39 @@ export const createGameOrganizationInviteEmbed = function createGameOrganization
       const obj4 = {};
       const merged2 = Object.assign(obj2);
       const intl3 = util.intl;
-      obj4.headerText = intl3.string(_modDef2396.GLe98U);
+      obj4.headerText = intl3.string(_modDef2406.GLe98U);
       const intl4 = util.intl;
-      obj4.titleText = intl4.string(_modDef2396["2/aTr2"]);
+      obj4.titleText = intl4.string(_modDef2406["2/aTr2"]);
       obj4.titleColor = RowGeneratorStyleSheet.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
       obj4.embedCanBeTapped = false;
       obj4.canBeAccepted = false;
       return obj4;
     } else {
       ({ organization, application, displayNoun } = invite);
-      const tmp20 = getGameOrganizationDisplayNounDefault(displayNoun);
+      const obj5 = { displayNoun };
+      const tmp20 = getGameOrganizationDisplayNounDefault(obj5);
       ({ memberCount, maxMembers } = organization);
-      const obj5 = {};
+      const obj9 = {};
       const merged3 = Object.assign(obj2);
       const intl6 = util.intl;
-      const obj10 = { noun: tmp20 };
-      obj5.headerText = intl6.formatToPlainString(_modDef2396["jKi+kc"], obj10);
-      ({ name: obj9.titleText, iconUrl } = organization);
-      obj5.thumbnailUrl = iconUrl;
-      obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-      ({ name: obj9.gameName, iconUrl: iconUrl2 } = application);
-      obj5.gameIconUrl = iconUrl2;
+      const obj11 = { noun: tmp20 };
+      obj9.headerText = intl6.formatToPlainString(_modDef2406["jKi+kc"], obj11);
+      ({ name: obj10.titleText, iconUrl } = organization);
+      obj9.thumbnailUrl = iconUrl;
+      obj9.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
+      ({ name: obj10.gameName, iconUrl: iconUrl2 } = application);
+      obj9.gameIconUrl = iconUrl2;
       let formatToPlainStringResult;
       if (null != memberCount) {
         if (null != maxMembers) {
           const intl = util.intl;
           const obj = { count: memberCount, max: maxMembers };
-          formatToPlainStringResult = intl.formatToPlainString(_modDef2396.VuENGl, obj);
+          formatToPlainStringResult = intl.formatToPlainString(_modDef2406.VuENGl, obj);
         }
       }
-      obj5.memberCountText = formatToPlainStringResult;
+      obj9.memberCountText = formatToPlainStringResult;
       const description = organization.description;
-      obj5.bodyText = description;
+      obj9.bodyText = description;
       const internal = nativeDefault.internal;
       const items = [
         ColorUtils.hexToRgba(
@@ -85,13 +86,13 @@ export const createGameOrganizationInviteEmbed = function createGameOrganization
       items[1] = ColorUtils.hexToRgba(
         internal2.resolveSemanticColor(theme, nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END),
       );
-      obj5.gradientColors = items;
+      obj9.gradientColors = items;
       const intl2 = util.intl;
-      const obj16 = { noun: tmp20 };
-      obj5.acceptLabelText = intl2.formatToPlainString(_modDef2396["Cz/ZUM"], obj16);
-      obj5.canBeAccepted = true;
-      obj5.embedCanBeTapped = true;
-      return obj5;
+      const obj18 = { noun: tmp20 };
+      obj9.acceptLabelText = intl2.formatToPlainString(_modDef2406["Cz/ZUM"], obj18);
+      obj9.canBeAccepted = true;
+      obj9.embedCanBeTapped = true;
+      return obj9;
     }
   }
   const tmp3 = getEmbedThemeColorsDefault(theme);

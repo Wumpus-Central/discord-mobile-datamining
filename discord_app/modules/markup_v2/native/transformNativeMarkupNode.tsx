@@ -58,7 +58,7 @@ function transformNode(type, channelId) {
       const replaced = type.value.content.replace(/^\n+|\n+$/g, "");
       let replaced1 = replaced;
       if ("ansi" === str3.toLowerCase()) {
-        replaced1 = replaced.replaceAll(require("HighlightJsAnsiLanguage").ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
+        replaced1 = replaced.replaceAll(require("MarkupRulesUtils").ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
       }
       if (true === channelId.formatInline) {
         const obj13 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: replaced1 };
@@ -101,7 +101,7 @@ function transformNode(type, channelId) {
         obj18.inQuote = true;
         let arr2 = transformNativeBlocks(type.value, obj18, "quote");
         if (arr2.length <= 0) {
-          const obj19 = { type: tmp52(5938).AST_KEY.TEXT, content: " " };
+          const obj19 = { type: tmp52(5960).AST_KEY.TEXT, content: " " };
           const items1 = [obj19];
           arr2 = items1;
         }

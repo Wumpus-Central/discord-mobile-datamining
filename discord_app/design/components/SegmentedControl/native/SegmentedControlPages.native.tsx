@@ -407,7 +407,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
         A.__closure = obj6;
         A.__workletHash = 6740536171688;
         A.__initData = __initData17;
-        const animatedStyle = tmp(5014).useAnimatedStyle(A);
+        const animatedStyle = tmp(5035).useAnimatedStyle(A);
         if (cResult[15] === tmp4) {
           class H {
             constructor() {
@@ -452,7 +452,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[16] = tmp12;
         cResult[17] = tmp6;
         cResult[18] = N;
-        const tmpResult4 = tmp(5014);
+        const tmpResult4 = tmp(5035);
       }
       class C {
         constructor() {

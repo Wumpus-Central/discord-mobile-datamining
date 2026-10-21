@@ -180,7 +180,7 @@ let closure_21 = async function _getApplication(arg0) {
           closure_131_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -362,7 +362,7 @@ let closure_23 = async function _getSimilarApplications(arg0) {
           closure_131_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -514,7 +514,7 @@ let closure_24 = async function _search(arg0) {
           closure_131_18 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -726,7 +726,7 @@ let closure_25 = async function _fetchCollections() {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -941,11 +941,11 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
     }
   }
 };
-fn(6761).FetchState;
-fn(11924).FetchState;
-fn(11919).FetchState;
-fn(11925).FetchState;
-const FetchState = fn(11926).FetchState;
+fn(6789).FetchState;
+fn(11972).FetchState;
+fn(11967).FetchState;
+fn(11973).FetchState;
+const FetchState = fn(11974).FetchState;
 const Endpoints = fn(1087).Endpoints;
 let c18 = 600000;
 const map = new Map();

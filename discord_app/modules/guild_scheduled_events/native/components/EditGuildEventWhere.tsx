@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx
 import util from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
-import _modDef2050 from "../../../../../_runtime/metro/02050__.js";
+import _modDef2049 from "../../../../../_runtime/metro/02049__.js";
 import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
 import EntityUtils from "../../utils/EntityUtils.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
@@ -40,15 +40,15 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(6735).isGuildScheduledEventActive;
-const GuildScheduledEventsConstants = fn(4806);
+let closure_8 = fn(6763).isGuildScheduledEventActive;
+const GuildScheduledEventsConstants = fn(4827);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
 const Constants = fn(1087);
 ({ Permissions: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_16 = createStyles.createStyles({
   channelSelection: { marginTop: 16 },
   error: { paddingVertical: 8 },
@@ -236,11 +236,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         function handleChangeEventEntityType(entityType) {
           _slicedToArray(null);
-          const obj = { entityType, scheduledEndTime: "r" };
+          const obj = { entityType, scheduledEndTime: "Array" };
           if (entityType === constants.EXTERNAL) {
-            let obj2 = _modDef2050(guildEvent.scheduledStartTime);
+            let obj2 = _modDef2049(guildEvent.scheduledStartTime);
             if (obj2 == null) {
-              obj2 = _modDef2050();
+              obj2 = _modDef2049();
             }
             obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
             const addResult = obj2.add(1, "hour");
@@ -383,11 +383,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           entityType: guildEvent.entityType,
           onChange: function handleChangeEventEntityType(entityType) {
             _undefined(null);
-            const obj = { entityType, scheduledEndTime: "r" };
+            const obj = { entityType, scheduledEndTime: "Array" };
             if (entityType === constants.EXTERNAL) {
-              let obj2 = _modDef2050(guildEvent.scheduledStartTime);
+              let obj2 = _modDef2049(guildEvent.scheduledStartTime);
               if (obj2 == null) {
-                obj2 = _modDef2050();
+                obj2 = _modDef2049();
               }
               obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
               const addResult = obj2.add(1, "hour");
@@ -404,11 +404,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         entityType: guildEvent.entityType,
         onChange: function handleChangeEventEntityType(entityType) {
           _undefined(null);
-          const obj = { entityType, scheduledEndTime: "r" };
+          const obj = { entityType, scheduledEndTime: "Array" };
           if (entityType === constants.EXTERNAL) {
-            let obj2 = _modDef2050(guildEvent.scheduledStartTime);
+            let obj2 = _modDef2049(guildEvent.scheduledStartTime);
             if (obj2 == null) {
-              obj2 = _modDef2050();
+              obj2 = _modDef2049();
             }
             obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
             const addResult = obj2.add(1, "hour");

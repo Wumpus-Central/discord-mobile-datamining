@@ -60,15 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] !== (undefined !== includeHidden && includeHidden)) {
         const fn = function c(profile) {
-          let someResult = closure_3.some((applicationId) => {
-            let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
-            if (migrationExperimentEnabled) {
-              migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled(
-                "useConnectionFilteredAppIdentities",
-              );
-            }
-            return migrationExperimentEnabled;
-          });
+          let someResult = closure_3.some((applicationId) => applicationId.applicationId === profile.application_id);
           if (someResult) {
             someResult = null != profile.profile;
           }
@@ -113,15 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           items = [];
         }
         return items.filter((profile) => {
-          let someResult = closure_2_3.some((applicationId) => {
-            let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
-            if (migrationExperimentEnabled) {
-              migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled(
-                "useConnectionFilteredAppIdentities",
-              );
-            }
-            return migrationExperimentEnabled;
-          });
+          let someResult = closure_2_3.some((applicationId) => applicationId.applicationId === profile.application_id);
           if (someResult) {
             someResult = null != profile.profile;
           }

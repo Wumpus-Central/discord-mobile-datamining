@@ -114,7 +114,7 @@ function getScreens(initiallyVerified) {
   obj2[VerificationModalScenes.CHANGE_EMAIL_COMPLETE] = obj25;
   return obj2;
 }
-const resetChangeEmailStore = fn(6874).resetChangeEmailStore;
+const resetChangeEmailStore = fn(6902).resetChangeEmailStore;
 const VerificationModalScenes = fn(1087).VerificationModalScenes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

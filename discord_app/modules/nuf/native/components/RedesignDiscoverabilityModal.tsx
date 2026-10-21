@@ -10,9 +10,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(13399).useContactSyncModalStore;
+const useContactSyncModalStore = fn(13466).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   header: {
     borderBottomWidth: 0,
@@ -31,7 +31,7 @@ obj2.container = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
   paddingBottom: 44,
-  paddingTop: fn(5229).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5250).NAV_BAR_HEIGHT + 32,
 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -220,7 +220,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = tmp18;
         }
         const obj3 = { onNext: tmp9, loading: false, initialName: name };
-        const tmp14 = jsx(allowPhone(13420), { onNext: tmp9, loading: false, initialName: name });
+        const tmp14 = jsx(allowPhone(13487), { onNext: tmp9, loading: false, initialName: name });
         cResult[6] = tmp9;
         cResult[7] = name;
         cResult[8] = tmp14;
@@ -263,7 +263,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         name = "";
       }
       obj2.initialName = name;
-      obj.children = jsx(allowPhone(13420), { onNext: callback, loading: false, initialName: null });
+      obj.children = jsx(allowPhone(13487), { onNext: callback, loading: false, initialName: null });
       return <View style={tmp.container}>{null}</View>;
     };
 ReactCompilerGating = fn(558);
@@ -432,7 +432,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const intl = onComplete(1128).intl;
       obj.headerBackTitle = intl.string(onComplete(1128).t["13/7kX"]);
-      return jsx(onComplete(7046).Navigator, {
+      return jsx(onComplete(7074).Navigator, {
         headerStyle: closure_8().header,
         screens: null,
         initialRouteName: onComplete(1107).DiscoverabilityScenes.LANDING,

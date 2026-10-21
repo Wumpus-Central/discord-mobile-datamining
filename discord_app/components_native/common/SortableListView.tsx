@@ -1,7 +1,7 @@
 // discord_app/components_native/common/SortableListView.tsx
 import c from "../../../_runtime/00576_c.js";
 import DeprecatedLayoutAnimation from "../../modules/animations/native/DeprecatedLayoutAnimation.tsx";
-import _mod7171 from "../../../discord_common/js/packages/flash-list/index.js";
+import _mod7199 from "../../../discord_common/js/packages/flash-list/index.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -665,7 +665,7 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [timestampProducer(_mod7171.FlashList, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod7199.FlashList, obj3), self.renderActive()];
   obj.children = items1;
   return React5(React3, obj);
 };

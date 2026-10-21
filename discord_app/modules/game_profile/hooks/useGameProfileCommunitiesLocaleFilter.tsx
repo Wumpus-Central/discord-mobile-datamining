@@ -5,7 +5,7 @@ import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(9440).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9469).useGameProfileCommunitiesLocaleFilterExclusions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleFilter.tsx");

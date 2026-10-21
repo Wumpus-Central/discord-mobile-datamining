@@ -236,7 +236,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 return closure_1_9.getCurrentUser();
               }
             }
-            obj3.type = tmp45(6446).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
+            obj3.type = tmp45(6468).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
             ({ id: obj6.id, name: obj6.name } = guild);
             obj3.stickers = [];
             tmp35(obj3);
@@ -843,15 +843,15 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = current(noop.useState(true), 2);
       [tmp12, asyncGeneratorStep] = current(noop.useState(false), 2);
       if (cResult[3] !== id) {
-        let isGuildStickerResult = tmp(6445).isGuildSticker(id);
+        let isGuildStickerResult = tmp(6467).isGuildSticker(id);
         if (!isGuildStickerResult) {
-          isGuildStickerResult = tmp(6445).isStandardSticker(id);
-          const tmpResult4 = tmp(6445);
+          isGuildStickerResult = tmp(6467).isStandardSticker(id);
+          const tmpResult4 = tmp(6467);
         }
         cResult[3] = id;
         cResult[4] = isGuildStickerResult;
         let tmp13 = isGuildStickerResult;
-        const tmpResult3 = tmp(6445);
+        const tmpResult3 = tmp(6467);
       } else {
         tmp13 = cResult[4];
       }
@@ -1400,8 +1400,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = obj4(noop.useState(false), 2);
       let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
       if (!isGuildStickerResult) {
-        isGuildStickerResult = tmp(6445).isStandardSticker(renderableSticker);
-        const tmpResult = tmp(6445);
+        isGuildStickerResult = tmp(6467).isStandardSticker(renderableSticker);
+        const tmpResult = tmp(6467);
       }
       obj4 = {
         hasFetched: tmp6,
@@ -1559,7 +1559,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         const tmpResult = collapsedStickersCategories(num[16]);
         let canCreateExpressions = null != guild;
         const findIndexResult = visibleRowIndex.findIndex(
-          (type) => type.type === category(6446).StickerCategoryTypes.FAVORITE,
+          (type) => type.type === category(6468).StickerCategoryTypes.FAVORITE,
         );
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
@@ -1647,7 +1647,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         }
         gridSectionIndex = gridSectionIndex + 1;
         findIndexResult1 = visibleRowIndex.findIndex(
-          (type) => type.type === category(6446).StickerCategoryTypes.RECENT,
+          (type) => type.type === category(6468).StickerCategoryTypes.RECENT,
         );
       }
       if (null == items) {

@@ -1,13 +1,13 @@
 // discord_app/modules/conjure/model_settings/ConjureEffortTiers.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
 import ConjureModelLabels from "ConjureModelLabels.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 require = fn;
 let closure_2 = ["thinking"];
 let closure_3 = ["fast"];
-let obj = { simple: _modDef3820.Mqb8mc, balanced: _modDef3820.zCZfA6, complex: _modDef3820["8l2atm"] };
+let obj = { simple: _modDef3830.Mqb8mc, balanced: _modDef3830.zCZfA6, complex: _modDef3830["8l2atm"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 

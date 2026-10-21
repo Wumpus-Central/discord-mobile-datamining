@@ -273,7 +273,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined,
   });
-  const favoritesCategories = favoriteChannels(10650).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10793).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -625,12 +625,12 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
   };
 }
-const ChannelRecord = fn(4804);
+const ChannelRecord = fn(4825);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: c10 } = ChannelRecord);
-let closure_19 = fn(4879).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(4813);
+let closure_19 = fn(4900).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(4834);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(7592).ChannelListChannelNoticeRow;
+const constants = fn(7620).ChannelListChannelNoticeRow;
 const Permissions = fn(1098).Permissions;
 let items = [
   EmbeddedActivitiesStore,
@@ -843,7 +843,7 @@ export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerE
           }
         }
         let flag2 = false;
-        if (tmp20 <= tmp(7586).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+        if (tmp20 <= tmp(7614).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
           class I {
             constructor() {
               if (closure_2) {

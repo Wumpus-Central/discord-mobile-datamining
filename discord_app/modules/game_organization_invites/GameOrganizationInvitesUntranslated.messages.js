@@ -1,13 +1,13 @@
 // discord_app/modules/game_organization_invites/GameOrganizationInvitesUntranslated.messages.js
 import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
-import _mod2397 from "../../../_runtime/metro/02397__.js";
+import _mod2407 from "../../../_runtime/metro/02407__.js";
 import module_1167_mod from "../../../_runtime/metro/01167__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let module_1167 = module_1167_mod;
 const loader = module_1167.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2397);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2407);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

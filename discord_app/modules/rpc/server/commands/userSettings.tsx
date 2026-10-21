@@ -3,11 +3,11 @@ import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 
 const RPCCommands = fn(1087).RPCCommands;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15549);
+const CONTEXT_MENU_ICON_NAMES = fn(15621);
 obj[RPCCommands.USER_SETTINGS_GET_LOCALE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.USER_SETTINGS_GET_LOCALE,
   {
-    scope: fn(8759).OAuth2Scopes.IDENTIFY,
+    scope: fn(8786).OAuth2Scopes.IDENTIFY,
     handler() {
       return { locale: LocaleStore.locale };
     },

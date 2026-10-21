@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import _mod4863 from "../../../../_runtime/metro/04863__.js";
+import _mod4884 from "../../../../_runtime/metro/04884__.js";
 import useQuestHomeHeaderDefault from "useQuestHomeHeader.tsx";
 import QuestHomeDefault from "QuestHome.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -10,10 +10,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 
 require = fn;
-const QuestConstants = fn(6661);
+const QuestConstants = fn(6689);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_1_1(found);
               }
             },
-            { equalityFn: _mod4863.shallow, fireImmediately: true },
+            { equalityFn: _mod4884.shallow, fireImmediately: true },
           ),
         [],
       );

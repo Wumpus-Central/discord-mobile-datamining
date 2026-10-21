@@ -165,7 +165,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(5586).DevShelfFetchState;
+const DevShelfFetchState = fn(5607).DevShelfFetchState;
 const AbortCodes = fn(1087).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = {

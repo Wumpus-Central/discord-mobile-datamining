@@ -382,8 +382,8 @@ let closure_26 = async function _openImagePicker(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -391,8 +391,8 @@ let closure_26 = async function _openImagePicker(arg0) {
           c4 = 1;
           c5 = 2;
           c6 = 1;
-          const obj4 = { value: openImagePickerUnhandled(closure_0), done: false };
-          return obj4;
+          const obj6 = { value: openImagePickerUnhandled(closure_0), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c4 = 0;
@@ -402,13 +402,13 @@ let closure_26 = async function _openImagePicker(arg0) {
             if (closure_129_1.message === closure_130_23) {
               const obj7 = { errorStr: closure_130_23 };
             } else if ("E_CROPPER_IMAGE_NOT_FOUND" === closure_129_1.code) {
-              const intl2 = closure_130_0(closure_130_2[15]).intl;
-              closure_130_0(closure_130_2[14]).presentFailedToast(intl2.string(closure_130_0(closure_130_2[15]).t.TTzyzW));
-              const obj6 = closure_130_0(closure_130_2[14]);
+              const intl = closure_130_0(closure_130_2[15]).intl;
+              closure_130_0(closure_130_2[14]).presentFailedToast(intl.string(closure_130_0(closure_130_2[15]).t.TTzyzW));
+              const obj4 = closure_130_0(closure_130_2[14]);
             } else {
               closure_130_0(closure_130_2[14]).presentFailedToast(closure_129_1.message);
               { errorStr: null }[0] = closure_129_1.message;
-              const obj5 = closure_130_0(closure_130_2[14]);
+              const obj3 = closure_130_0(closure_130_2[14]);
             }
           }
           c6 = 3;
@@ -425,21 +425,21 @@ let closure_26 = async function _openImagePicker(arg0) {
       } else {
         closure_129_0 = value;
         if (null != closure_129_0.errorStr) {
-          const intl = closure_130_0(closure_130_2[15]).intl;
-          const obj11 = { reason: closure_129_0.errorStr };
-          closure_130_0(closure_130_2[14]).presentFailedToast(intl.formatToPlainString(closure_130_0(closure_130_2[15]).t.Ex162J, obj11));
-          const obj = closure_130_0(closure_130_2[14]);
+          const intl2 = closure_130_0(closure_130_2[15]).intl;
+          const obj12 = { reason: closure_129_0.errorStr };
+          closure_130_0(closure_130_2[14]).presentFailedToast(intl2.formatToPlainString(closure_130_0(closure_130_2[15]).t.Ex162J, obj12));
+          const obj11 = closure_130_0(closure_130_2[14]);
         }
         c4 = 0;
         c6 = 3;
-        const obj12 = { value: closure_129_0, done: true };
-        return obj12;
+        const obj = { value: closure_129_0, done: true };
+        return obj;
       }
-    } catch (tmp46) {
-      closure_3 = tmp46;
+    } catch (tmp36) {
+      closure_3 = tmp36;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp46;
+        throw tmp36;
       } else {
         c5 = tmp;
       }
@@ -493,7 +493,7 @@ let closure_28 = async function _mediaManager(arg0) {
             closure_130_1 = closure_1;
             c6 = 1;
             c7 = 1;
-            return { value: "test", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1267,7 +1267,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "r" };
+                      obj8 = { uri, overrideType: "Array" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1286,7 +1286,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "r" };
+                  const obj9 = { uri, overrideType: "Array" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }
@@ -1450,7 +1450,7 @@ let closure_37 = async function _processVideoUpload(arg0) {
           let encodingConfig;
           c3 = 1;
           c4 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -1600,7 +1600,7 @@ let closure_38 = async function _processImageOrFileUpload(arg0) {
           closure_131_26 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -1846,7 +1846,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
             closure_130_19 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "test", done: true };
+            return { value: "Reflect", done: true };
           }
         break;
         case 1:
@@ -1945,7 +1945,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(8111);
+                      tmpResult = closure_1_0(8139);
                     }
                     const obj = closure_1_0(1384);
                   })(closure_130_0, closure_130_1)) {
@@ -2594,7 +2594,7 @@ let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1087);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(7816).NativePermissionTypes;
+const NativePermissionTypes = fn(7844).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2663,8 +2663,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(8111).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(8111).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(8139).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(8139).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

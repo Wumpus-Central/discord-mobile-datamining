@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -39,7 +39,7 @@ export default noop.memo(
         if (str == null) {
           str = "";
         }
-        const ViewImageDescriptions = PressableOpacity(4776).ViewImageDescriptions;
+        const ViewImageDescriptions = PressableOpacity(4797).ViewImageDescriptions;
         let tmp3 = null;
         if (ViewImageDescriptions.useSetting()) {
           tmp3 = null;
@@ -70,7 +70,7 @@ export default noop.memo(
               const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
               const intl = PressableOpacity(1128).intl;
               obj2.children = intl.string(PressableOpacity(1128).t.Q5VqrN);
-              const tmp9 = jsx(PressableOpacity(5195).Text, {
+              const tmp9 = jsx(PressableOpacity(5216).Text, {
                 variant: "text-xs/semibold",
                 color: "text-overlay-light",
                 children: null,
@@ -82,7 +82,7 @@ export default noop.memo(
             }
             if (cResult[4] === container.container) {
             }
-            PressableOpacity = PressableOpacity(6859).PressableOpacity;
+            PressableOpacity = PressableOpacity(6887).PressableOpacity;
             const obj3 = { style: container.container, onPress: tmp4, hitSlop: tmp6, children: tmp7 };
             tmp = (
               <PressableOpacity style={container.container} onPress={tmp4} hitSlop={tmp6}>
@@ -102,7 +102,7 @@ export default noop.memo(
         if (str == null) {
           str = "";
         }
-        const ViewImageDescriptions = str(4776).ViewImageDescriptions;
+        const ViewImageDescriptions = str(4797).ViewImageDescriptions;
         let tmp4 = null;
         if (ViewImageDescriptions.useSetting()) {
           tmp4 = null;
@@ -121,12 +121,12 @@ export default noop.memo(
             const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
             const intl = tmp3(1128).intl;
             obj2.children = intl.string(tmp3(1128).t.Q5VqrN);
-            obj.children = jsx(tmp3(5195).Text, {
+            obj.children = jsx(tmp3(5216).Text, {
               variant: "text-xs/semibold",
               color: "text-overlay-light",
               children: null,
             });
-            tmp4 = jsx(tmp3(6859).PressableOpacity, {
+            tmp4 = jsx(tmp3(6887).PressableOpacity, {
               style: tmp2.container,
               onPress() {
                 if (str == null) {

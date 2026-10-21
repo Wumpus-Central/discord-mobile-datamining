@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3144 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3154 from "../../age_assurance/ManualReview.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
@@ -40,7 +40,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-      const tmp19 = closure_13(tmp10(10757).ShieldIcon, obj2);
+      const tmp19 = closure_13(tmp10(10901).ShieldIcon, obj2);
       cResult[2] = tmp19;
       let tmp16 = tmp19;
     } else {
@@ -67,7 +67,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     }
     if (cResult[7] !== tmp24) {
       const obj5 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: tmp24 };
-      const tmp28 = closure_13(tmp10(5195).Text, obj5);
+      const tmp28 = closure_13(tmp10(5216).Text, obj5);
       cResult[7] = tmp24;
       cResult[8] = tmp28;
       let tmp26 = tmp28;
@@ -118,14 +118,14 @@ function ClassificationPolicyCard(policyExplainerLink) {
     };
     const obj11 = { style: tmp2.classificationPolicyCardIcon, children: null };
     const obj12 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-    obj11.children = closure_13(policyExplainerLink(10757).ShieldIcon, obj12);
+    obj11.children = closure_13(policyExplainerLink(10901).ShieldIcon, obj12);
     const items = [closure_13(closure_4, obj11)];
     const obj13 = { style: tmp2.classificationPolicyCardContent, children: null };
     const obj14 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = policyExplainerLink(1128).intl;
     const obj15 = { classificationDescription: policyExplainerLink.classificationTypeText };
     obj14.children = intl.format(policyExplainerLink(1128).t.zxUdpj, obj15);
-    obj13.children = closure_13(policyExplainerLink(5195).Text, obj14);
+    obj13.children = closure_13(policyExplainerLink(5216).Text, obj14);
     items[1] = closure_13(closure_4, obj13);
     obj10.children = items;
     obj.children = closure_14(TouchableHitBoxDefault, obj10);
@@ -134,7 +134,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7846);
+const SafetyHubConstants = fn(7874);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
   SafetyHubAnalyticsActions: c10,
@@ -143,7 +143,7 @@ const SafetyHubConstants = fn(7846);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   container: null,
@@ -396,7 +396,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           return intl.format(util.t["39jfOz"], obj2);
         }
       }, items);
-      obj.children = closure_13(classificationTypeText(5195).Text, {
+      obj.children = closure_13(classificationTypeText(5216).Text, {
         variant: "text-lg/normal",
         style: tmp.headerText,
         color: "mobile-text-heading-primary",
@@ -747,7 +747,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { large: true, children: null };
         const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef3144.rn3Gto);
+        obj3.children = intl2.string(_modDef3154.rn3Gto);
         const tmp13 = map1(closure_19, obj3);
         cResult[1] = tmp13;
         let tmp9 = tmp13;
@@ -788,7 +788,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.actionsTaken, children: null };
       const obj4 = { large: true, children: null };
       const intl2 = util.intl;
-      obj4.children = intl2.string(_modDef3144.rn3Gto);
+      obj4.children = intl2.string(_modDef3154.rn3Gto);
       obj3.children = map1(closure_19, obj4);
       items[1] = map1(React4, obj3);
       obj.children = items;
@@ -856,7 +856,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { large: true, children: null };
         const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef3144["yV/t/V"]);
+        obj3.children = intl2.string(_modDef3154["yV/t/V"]);
         const tmp13 = map1(closure_19, obj3);
         cResult[1] = tmp13;
         let tmp9 = tmp13;
@@ -897,7 +897,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.actionsTaken, children: null };
       const obj4 = { large: true, children: null };
       const intl2 = util.intl;
-      obj4.children = intl2.string(_modDef3144["yV/t/V"]);
+      obj4.children = intl2.string(_modDef3154["yV/t/V"]);
       obj3.children = map1(closure_19, obj4);
       items[1] = map1(React4, obj3);
       obj.children = items;
@@ -1036,7 +1036,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4) {
         const obj3 = { variant: "text-sm/normal", color: "text-muted", children: tmp4 };
-        const tmp8 = closure_13(tmp(5195).Text, obj3);
+        const tmp8 = closure_13(tmp(5216).Text, obj3);
         cResult[2] = tmp4;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -1330,7 +1330,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp6;
       }
       const intl = util.intl;
-      const formatResult = intl.format(_modDef3144.vPOpia, { tosLink, communityGuidelinesLink });
+      const formatResult = intl.format(_modDef3154.vPOpia, { tosLink, communityGuidelinesLink });
       cResult[0] = communityGuidelinesLink;
       cResult[1] = tosLink;
       cResult[2] = formatResult;
@@ -1340,7 +1340,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       ({ tosLink, communityGuidelinesLink } = arg0);
       const obj = { variant: "text-sm/normal", color: "text-muted", children: null };
       const intl = util.intl;
-      obj.children = intl.format(_modDef3144.vPOpia, { tosLink, communityGuidelinesLink });
+      obj.children = intl.format(_modDef3154.vPOpia, { tosLink, communityGuidelinesLink });
       return map1(Text_Text.Text, obj);
     };
 ReactCompilerGating = fn(558);

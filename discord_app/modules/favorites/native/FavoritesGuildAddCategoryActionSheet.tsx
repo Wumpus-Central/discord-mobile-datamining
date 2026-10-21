@@ -8,11 +8,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
-const maxLength = fn(4813).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+const maxLength = fn(4834).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.body = { gap: nativeDefault.space.PX_16 };
@@ -25,11 +25,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = _slicedToArray(noop.useState(""), 2);
       value = tmp5[0];
       if (cResult[0] !== value) {
-        const result = tmp(4825).isFavoritesGuildCategoryNameValid(value);
+        const result = tmp(4846).isFavoritesGuildCategoryNameValid(value);
         cResult[0] = value;
         cResult[1] = result;
         let tmp7 = result;
-        const tmpResult = tmp(4825);
+        const tmpResult = tmp(4846);
       } else {
         tmp7 = cResult[1];
       }
@@ -44,7 +44,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { title: null };
           const intl = tmp(1128).intl;
           obj2.title = intl.string(tmp(1128).t["ISN+NM"]);
-          const tmp13 = closure_6(tmp(7197).BottomSheetTitleHeader, obj2);
+          const tmp13 = closure_6(tmp(7225).BottomSheetTitleHeader, obj2);
           cResult[5] = tmp13;
           let tmp11 = tmp13;
         } else {
@@ -100,7 +100,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const items = [tmp18, tmp25];
             obj3.children = items;
-            const tmp30 = closure_7(tmp(5226).BottomSheet, obj3);
+            const tmp30 = closure_7(tmp(5247).BottomSheet, obj3);
             cResult[15] = tmp4.body;
             cResult[16] = tmp4.content;
             cResult[17] = tmp25;
@@ -109,7 +109,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             tmp28 = tmp30;
           }
           const obj4 = { text: tmp22, onPress: tmp9, disabled: !tmp7 };
-          const tmp27 = closure_6(tmp(5205).Button, obj4);
+          const tmp27 = closure_6(tmp(5226).Button, obj4);
           cResult[12] = tmp9;
           cResult[13] = !tmp7;
           cResult[14] = tmp27;
@@ -126,7 +126,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           returnKeyType: "done",
           onSubmitEditing: tmp9,
         };
-        const tmp21 = closure_6(tmp(6959).TextInput, obj5);
+        const tmp21 = closure_6(tmp(6987).TextInput, obj5);
         cResult[8] = tmp9;
         cResult[9] = value;
         cResult[10] = tmp21;
@@ -147,7 +147,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   : function FavoritesGuildAddCategoryActionSheet() {
       const tmp = closure_9();
       [value, obj4.onChange] = noop.useState("");
-      const result = value(4825).isFavoritesGuildCategoryNameValid(value);
+      const result = value(4846).isFavoritesGuildCategoryNameValid(value);
       importDefault = result;
       const items = [result, value];
       const callback = noop.useCallback(() => {
@@ -166,7 +166,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { title: null };
       const intl = value(1128).intl;
       obj3.title = intl.string(value(1128).t["ISN+NM"]);
-      obj2.header = closure_6(value(7197).BottomSheetTitleHeader, obj3);
+      obj2.header = closure_6(value(7225).BottomSheetTitleHeader, obj3);
       const obj4 = {
         label: null,
         placeholder: null,
@@ -185,15 +185,15 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.value = value;
       obj4.maxLength = maxLength;
       obj4.onSubmitEditing = callback;
-      const items1 = [closure_6(value(6959).TextInput, obj4)];
+      const items1 = [closure_6(value(6987).TextInput, obj4)];
       const obj5 = { text: null, onPress: null, disabled: null };
       const intl4 = value(1128).intl;
       obj5.text = intl4.string(value(1128).t.CumH4u);
       obj5.onPress = callback;
       obj5.disabled = !result;
-      items1[1] = closure_6(value(5205).Button, obj5);
+      items1[1] = closure_6(value(5226).Button, obj5);
       obj2.children = items1;
-      return closure_7(value(5226).BottomSheet, obj2);
+      return closure_7(value(5247).BottomSheet, obj2);
     };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");

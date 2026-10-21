@@ -73,9 +73,9 @@ let closure_10 = async function _handleLanguageChange(arg0) {
   }
 };
 const ScrollView = fn(17).ScrollView;
-const setAppLocale = fn(2070).setAppLocale;
+const setAppLocale = fn(2069).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

@@ -15,10 +15,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(4804).createChannelRecordFromInvite;
+let closure_5 = fn(4825).createChannelRecordFromInvite;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { flex: { flex: 1 }, channel: { flex: 0 }, time: { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -237,13 +237,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => closure_5(invite.channel), items);
       const obj2 = { children: null };
       const items1 = [
-        closure_8(invite(5195).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
+        closure_8(invite(5216).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
       ];
       const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
       const tmp = closure_10();
       items1[1] = closure_8(closure_11, { channel: memo, expiresAt: invite.getExpiresAt() });
       obj2.children = items1;
-      obj.children = closure_9(invite(5935).Stack, obj2);
+      obj.children = closure_9(invite(5957).Stack, obj2);
       return closure_8(View, obj);
     };
 export const InstantInviteDetails = tmp3;

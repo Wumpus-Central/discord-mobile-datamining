@@ -1,8 +1,14 @@
 // discord_app/modules/checkpoint/native/components/screens/stats/CheckpointFriendsStatsScreen.tsx
+import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3046 from "../../../../Checkpoint.messages.js";
+import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
+import useWindowDimensionsDefault from "../../../../../screen/useWindowDimensions.native.tsx";
+import _modDef3056 from "../../../../Checkpoint.messages.js";
+import _modDef3088 from "../../../../Checkpoint2026.messages.js";
+import UserUtils from "../../../../../../utils/UserUtils.tsx";
+import CheckpointFriendsRive from "../../../../../../../discord_common/js/packages/design/components/Rive/native/generated/CheckpointFriendsRive.tsx";
 import FriendsIcon from "../../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import CheckpointNavigation from "../../../../CheckpointNavigation.tsx";
 import AnalyticsLocationDefault from "../../../../../app_analytics/AnalyticsLocation.tsx";
@@ -10,13 +16,18 @@ import ChatIcon from "../../../../../../design/components/Icon/native/redesign/g
 import utils_openGiftModal from "../../../../../premium/native/utils/openGiftModal.tsx";
 import MicrophoneIcon from "../../../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
+import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointStatNumberDefault from "../../CheckpointStatNumber.tsx";
+import useFriendsAnimationState from "../../../../hooks/useFriendsAnimationState.tsx";
+import useSidekickLeave from "../../../../hooks/useSidekickLeave.tsx";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 function SidekickMessageInput(user) {
@@ -54,7 +65,7 @@ function SidekickMessageInput(user) {
             c3 = 2;
             c1 = 3;
             c4 = 1;
-            const obj6 = { value: tmp4(tmp40[31]).sendSidekickMessage(importDefault, id.id), done: false };
+            const obj6 = { value: tmp4(tmp40[33]).sendSidekickMessage(importDefault, id.id), done: false };
             return obj6;
           } else {
             c4 = 3;
@@ -62,9 +73,9 @@ function SidekickMessageInput(user) {
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c3 = 1;
-            const intl = tmp4(tmp40[19]).intl;
-            tmp4(tmp40[32]).presentError(intl.string(tmp4(tmp40[19]).t.fEptJP));
-            obj2 = tmp4(tmp40[32]);
+            const intl = tmp4(tmp40[21]).intl;
+            tmp4(tmp40[34]).presentError(intl.string(tmp4(tmp40[21]).t.fEptJP));
+            obj2 = tmp4(tmp40[34]);
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -97,7 +108,7 @@ function SidekickMessageInput(user) {
       }
     }
   };
-  const tmp = closure_18();
+  const tmp = closure_17();
   [value] = noop.useState(undefined);
   dependencyMap = tmp3;
   [tmp5, c3] = noop.useState(false);
@@ -152,7 +163,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1128).intl;
     obj5.accessibilityLabel = intl2.string(user(1128).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(12710).GiftIcon, obj6);
+    obj5.children = closure_13(user(12774).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5), ];
     const obj7 = {
       onPress: function handleSend() {
@@ -182,7 +193,7 @@ function SidekickMessageInput(user) {
     const obj8 = { disabled: !tmp10 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj7.children = closure_13(user(5642).SendMessageIcon, obj9);
+    obj7.children = closure_13(user(5662).SendMessageIcon, obj9);
     items1[1] = closure_13(closure_6, obj7);
     obj4.children = items1;
     items[1] = closure_14(closure_7, obj4);
@@ -193,13 +204,12 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointConstants = fn(5973);
+const CheckpointConstants = fn(5995);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const constants = { START: 0, [0]: "START", INTRO: 1, [1]: "INTRO", TRANSITION: 2, [2]: "TRANSITION", BEST: 3, [3]: "BEST", LEAVE: 4, [4]: "LEAVE", END: 5, [5]: "END" };
-let closure_16 = { "Avatar01/Stroke": "#000000", "Avatar01/Fill": CHECKPOINT_PRIMARY, "Avatar02/Stroke": "#000000", "Avatar02/Fill": CHECKPOINT_PRIMARY, "Avatar03/Stroke": "#000000", "Avatar03/Fill": CHECKPOINT_PRIMARY, "Avatar04/Stroke": "#000000", "Avatar04/Fill": CHECKPOINT_PRIMARY, "Avatar05/Stroke": "#000000", "Avatar05/Fill": CHECKPOINT_PRIMARY, ConnectorColor: CHECKPOINT_PRIMARY };
+let closure_15 = { "Avatar01/Stroke": "#000000", "Avatar01/Fill": CHECKPOINT_PRIMARY, "Avatar02/Stroke": "#000000", "Avatar02/Fill": CHECKPOINT_PRIMARY, "Avatar03/Stroke": "#000000", "Avatar03/Fill": CHECKPOINT_PRIMARY, "Avatar04/Stroke": "#000000", "Avatar04/Fill": CHECKPOINT_PRIMARY, "Avatar05/Stroke": "#000000", "Avatar05/Fill": CHECKPOINT_PRIMARY, ConnectorColor: CHECKPOINT_PRIMARY };
 const PlatformUtils = fn(1385);
 let tmp5;
 if (PlatformUtils.isIOS()) {
@@ -209,7 +219,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj2;
 }
 obj2 = tmp5;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj5 = { container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 }, animation: null, transition: null, header: null, heading: null, title: null, titleText: null, sidekick: null, sidekickDetails: null, stats: null, stat: null, messageInputContainer: null, messageInput: null, messageInputActions: null, disabled: null };
 const rect = { position: "absolute", left: -nativeDefault.space.PX_24, right: -nativeDefault.space.PX_24 };
 obj5.animation = rect;
@@ -235,120 +245,14 @@ obj5.messageInput = { flexGrow: 1, alignSelf: "stretch", maxHeight: 200, padding
 let obj14 = { minHeight: 96, padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, borderWidth: 2, borderColor: CHECKPOINT_PRIMARY, backgroundColor: nativeDefault.colors.BLACK };
 obj5.messageInputActions = { flexDirection: "row", justifyContent: "flex-end", gap: nativeDefault.space.PX_12 };
 obj5.disabled = { opacity: 0.5 };
-let closure_18 = createStyles.createStyles(obj5);
-let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendsAnimationState(route, arg1) {
-  const cResult = c.c(6);
-  const tmp4 = route === CheckpointNavigation.CheckpointRoute.SQUAD;
-  if (cResult[0] === route) {
-    if (cResult[1] === tmp4) {
-      let tmp5 = cResult[2];
-    }
-    [first] = noop.useState(tmp5);
-    closure_1 = tmp10;
-    if (first.route !== route) {
-      obj2 = { route, hasShownSquad: first.hasShownSquad || route === CheckpointNavigation.CheckpointRoute.SQUAD, isTransitioning: null };
-      let tmp12 = !arg1;
-      if (!arg1) {
-        tmp12 = first.route === CheckpointNavigation.CheckpointRoute.SQUAD;
-      }
-      if (tmp12) {
-        tmp12 = route === CheckpointNavigation.CheckpointRoute.SIDEKICK;
-      }
-      obj2.isTransitioning = tmp12;
-      tmp10(obj2);
-      const tmp11 = first.hasShownSquad || route === CheckpointNavigation.CheckpointRoute.SQUAD;
-    }
-    if (cResult[3] !== first.isTransitioning) {
-      const fn = function h() {
-        if (isTransitioning.isTransitioning) {
-          const _setTimeout = setTimeout;
-          isTransitioning = setTimeout(() => closure_1_1((arg0) => {
-            const obj = {};
-            const merged = Object.assign(arg0);
-            obj.isTransitioning = false;
-            return obj;
-          }), 1500);
-          return () => clearTimeout(closure_0);
-        }
-      };
-      const items = [first.isTransitioning];
-      cResult[3] = first.isTransitioning;
-      cResult[4] = fn;
-      cResult[5] = items;
-      let tmp15 = items;
-      let tmp14 = fn;
-    } else {
-      tmp14 = cResult[4];
-      tmp15 = cResult[5];
-    }
-    const effect = noop.useEffect(tmp14, tmp15);
-    if (CheckpointNavigation.CheckpointRoute.SQUAD_TRANSITION === route) {
-      return first.hasShownSquad ? constants.END : constants.START;
-    } else if (CheckpointNavigation.CheckpointRoute.SQUAD === route) {
-      return constants.INTRO;
-    } else if (CheckpointNavigation.CheckpointRoute.SIDEKICK === route) {
-      return first.isTransitioning ? constants.TRANSITION : constants.BEST;
-    } else if (CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE === route) {
-      return arg1 ? constants.BEST : constants.LEAVE;
-    } else {
-      return constants.START;
-    }
-  }
-  const obj4 = { route, hasShownSquad: tmp4, isTransitioning: false };
-  cResult[0] = route;
-  cResult[1] = tmp4;
-  cResult[2] = obj4;
-  tmp5 = obj4;
-}) : (function useFriendsAnimationState(route, arg1) {
-  [first] = noop.useState({ route, hasShownSquad: route === CheckpointNavigation.CheckpointRoute.SQUAD, isTransitioning: false });
-  closure_1 = tmp5;
-  if (first.route !== route) {
-    const obj3 = { route, hasShownSquad: first.hasShownSquad || route === CheckpointNavigation.CheckpointRoute.SQUAD, isTransitioning: null };
-    let tmp7 = !arg1;
-    if (!arg1) {
-      tmp7 = first.route === CheckpointNavigation.CheckpointRoute.SQUAD;
-    }
-    if (tmp7) {
-      tmp7 = route === CheckpointNavigation.CheckpointRoute.SIDEKICK;
-    }
-    obj3.isTransitioning = tmp7;
-    tmp5(obj3);
-    const tmp6 = first.hasShownSquad || route === CheckpointNavigation.CheckpointRoute.SQUAD;
-  }
-  const items = [first.isTransitioning];
-  const effect = noop.useEffect(() => {
-    if (isTransitioning.isTransitioning) {
-      const _setTimeout = setTimeout;
-      isTransitioning = setTimeout(() => closure_1_1((arg0) => {
-        const obj = {};
-        const merged = Object.assign(arg0);
-        obj.isTransitioning = false;
-        return obj;
-      }), 1500);
-      return () => clearTimeout(closure_0);
-    }
-  }, items);
-  if (CheckpointNavigation.CheckpointRoute.SQUAD_TRANSITION === route) {
-    return first.hasShownSquad ? constants.END : constants.START;
-  } else if (CheckpointNavigation.CheckpointRoute.SQUAD === route) {
-    return constants.INTRO;
-  } else if (CheckpointNavigation.CheckpointRoute.SIDEKICK === route) {
-    return first.isTransitioning ? constants.TRANSITION : constants.BEST;
-  } else if (CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE === route) {
-    return arg1 ? constants.BEST : constants.LEAVE;
-  } else {
-    return constants.START;
-  }
-  obj2 = { route, hasShownSquad: route === CheckpointNavigation.CheckpointRoute.SQUAD, isTransitioning: false };
-});
+let closure_17 = createStyles.createStyles(obj5);
 fn(558);
-let obj15 = { flexDirection: "row", justifyContent: "flex-end", gap: nativeDefault.space.PX_12 };
-ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsHeader(arg0) {
+const obj15 = { flexDirection: "row", justifyContent: "flex-end", gap: nativeDefault.space.PX_12 };
+let ReactCompilerGating = fn(558);
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function FriendsHeader(arg0) {
   const cResult = c.c(21);
   ({ title, description } = arg0);
-  const tmp4 = closure_18();
+  const tmp4 = closure_17();
   ({ header, heading, title: title2 } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     obj2 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
@@ -360,10 +264,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const toLocaleUpperCaseResult = intl.string(_modDef3046.ZQakPR).toLocaleUpperCase();
+    const toLocaleUpperCaseResult = intl.string(_modDef3056.ZQakPR).toLocaleUpperCase();
     cResult[1] = toLocaleUpperCaseResult;
     let tmp9 = toLocaleUpperCaseResult;
-    const stringResult = intl.string(_modDef3046.ZQakPR);
+    const stringResult = intl.string(_modDef3056.ZQakPR);
   } else {
     tmp9 = cResult[1];
   }
@@ -450,7 +354,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   tmp16 = tmp17;
 }) : (function FriendsHeader(children) {
   const title = children.title;
-  const tmp = closure_18();
+  const tmp = closure_17();
   const obj = { style: tmp.header, children: null };
   obj2 = { style: tmp.heading, children: null };
   const obj3 = { style: tmp.title, children: null };
@@ -459,12 +363,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   const intl = util.intl;
   const obj4 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp2 = CheckpointTextDefault;
-  obj5.children = intl.string(_modDef3046.ZQakPR).toLocaleUpperCase();
+  obj5.children = intl.string(_modDef3056.ZQakPR).toLocaleUpperCase();
   items[1] = map1(tmp2, obj5);
   obj3.children = items;
   const items1 = [closure_1_14(React5, obj3), ];
   const obj6 = { variant: "display-lg", children: null };
-  const stringResult = intl.string(_modDef3046.ZQakPR);
+  const stringResult = intl.string(_modDef3056.ZQakPR);
   obj6.children = title.toLocaleUpperCase();
   items1[1] = map1(CheckpointTextDefault, obj6);
   obj2.children = items1;
@@ -473,10 +377,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   return closure_1_14(React5, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function SidekickStats(sidekick) {
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function SidekickStats(sidekick) {
   const cResult = c.c(35);
   stats = sidekick.sidekick;
-  const tmp4 = closure_18();
+  const tmp4 = closure_17();
   if (cResult[0] !== stats.numMessagesSent) {
     const _Math = Math;
     const rounded = Math.round(stats.numMessagesSent);
@@ -559,7 +463,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sideki
   const rounded1 = Math.round(stats.numVoiceMinutes);
   const intl = util.intl;
   const intl2 = util.intl;
-  const stringResult = intl.string(_modDef3046.wWKySP);
+  const stringResult = intl.string(_modDef3056.wWKySP);
   const stats2 = tmp4.stats;
   const combined1 = "" + tmp5 + " " + stringResult.toLocaleLowerCase();
   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
@@ -608,21 +512,21 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sideki
   cResult[19] = tmp22;
   cResult[20] = tmp26;
   tmp25 = tmp26;
-  formatToPlainStringResult = intl2.formatToPlainString(_modDef3046.UZbUtl, { numMinutes: rounded1 });
+  formatToPlainStringResult = intl2.formatToPlainString(_modDef3056.UZbUtl, { numMinutes: rounded1 });
 }) : (function SidekickStats(sidekick) {
   sidekick = sidekick.sidekick;
-  const tmp = closure_18();
+  const tmp = closure_17();
   const rounded = Math.round(sidekick.numMessagesSent);
   const rounded1 = Math.round(sidekick.numVoiceMinutes);
   const intl = util.intl;
   const intl2 = util.intl;
-  const stringResult = intl.string(_modDef3046.wWKySP);
+  const stringResult = intl.string(_modDef3056.wWKySP);
   const obj = { style: tmp.stats, children: null };
   obj2 = { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult.toLocaleLowerCase(), style: tmp.stat, children: null };
   const items = [map1(ChatIcon.ChatIcon, { size: "md", color: CHECKPOINT_PRIMARY }), map1(CheckpointStatNumberDefault, { value: rounded })];
   obj2.children = items;
   const items1 = [closure_1_14(React5, obj2), ];
-  const obj4 = { accessible: true, accessibilityLabel: "" + rounded1 + " " + intl2.formatToPlainString(_modDef3046.UZbUtl, { numMinutes: rounded1 }).toLocaleLowerCase(), style: tmp.stat, children: null };
+  const obj4 = { accessible: true, accessibilityLabel: "" + rounded1 + " " + intl2.formatToPlainString(_modDef3056.UZbUtl, { numMinutes: rounded1 }).toLocaleLowerCase(), style: tmp.stat, children: null };
   const items2 = [map1(MicrophoneIcon.MicrophoneIcon, { size: "md", color: CHECKPOINT_PRIMARY }), map1(CheckpointStatNumberDefault, { value: rounded1 })];
   obj4.children = items2;
   items1[1] = closure_1_14(React5, obj4);
@@ -632,13 +536,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sideki
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/CheckpointFriendsStatsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointFriendsStatsScreen(route) {
-  const cResult = route(onPreviousStep[13]).c(76);
-  route = route.route;
-  const onNextStep = route.onNextStep;
-  onPreviousStep = route.onPreviousStep;
-  const tmp4 = closure_18();
-  obj2 = route(onPreviousStep[16]);
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointFriendsStatsScreen(arg0) {
+  const cResult = c.c(70);
+  ({ route, onNextStep, onPreviousStep } = arg0);
+  const tmp4 = closure_17();
+  obj2 = initialize;
   const items = [CheckpointStore];
   let stateFromStores = obj2.useStateFromStores(items, () => {
     const stats = CheckpointStore.stats;
@@ -653,7 +555,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [CheckpointStore];
-    const fn = function l() {
+    const fn = function o() {
       const stats = CheckpointStore.stats;
       let sidekick;
       if (stats != null) {
@@ -668,142 +570,139 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const obj = route(onPreviousStep[13]);
-  const stateFromStores1 = route(onPreviousStep[16]).useStateFromStores(tmp6, tmp7);
+  const stateFromStores1 = initialize.useStateFromStores(tmp6, tmp7);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [UserStore];
-    class N {
+    class R {
       constructor() {
         return closure_1_9.getCurrentUser();
       }
     }
     cResult[2] = items2;
-    cResult[3] = N;
-    let tmp10 = N;
+    cResult[3] = R;
+    let tmp10 = R;
     let tmp9 = items2;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const tmpResult = route(onPreviousStep[16]);
-  const stateFromStores2 = route(onPreviousStep[16]).useStateFromStores(tmp9, tmp10);
+  const tmpResult = initialize;
+  const stateFromStores2 = initialize.useStateFromStores(tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items3 = [AccessibilityStore];
-    class P {
+    class M {
       constructor() {
         return closure_1_8.useReducedMotion;
       }
     }
     cResult[4] = items3;
-    cResult[5] = P;
-    let tmp14 = P;
+    cResult[5] = M;
+    let tmp14 = M;
     let tmp13 = items3;
   } else {
     tmp13 = cResult[4];
     tmp14 = cResult[5];
   }
-  const tmpResult7 = route(onPreviousStep[16]);
-  const stateFromStores3 = route(onPreviousStep[16]).useStateFromStores(tmp13, tmp14);
-  const tmpResult8 = route(onPreviousStep[16]);
-  const tmp17 = closure_19(route, stateFromStores3);
+  const tmpResult9 = initialize;
+  const stateFromStores3 = initialize.useStateFromStores(tmp13, tmp14);
+  const tmpResult10 = initialize;
+  const friendsAnimationState = useFriendsAnimationState.useFriendsAnimationState(route, stateFromStores3);
+  const tmpResult11 = useFriendsAnimationState;
+  const sidekickLeave = useSidekickLeave.useSidekickLeave(route, stateFromStores3, onNextStep, onPreviousStep);
+  const tmpResult12 = useSidekickLeave;
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     cResult[6] = { ignoreKeyboard: true };
-    class P {
+    class M {
       constructor() {
         return closure_1_8.useReducedMotion;
       }
     }
     const obj3 = { ignoreKeyboard: true };
   } else {
-    const tmp19 = cResult[6];
+    const tmp20 = cResult[6];
   }
-  const size = onNextStep(tmp2[17])(tmp19);
+  const size = useWindowDimensionsDefault(tmp20);
   const height = size.height;
   let num8 = 0;
   const result = -height / 2;
-  if (tmp18) {
-    num8 = tmp20(tmp2[11]).space.PX_48;
+  if (tmp19) {
+    num8 = nativeDefault.space.PX_48;
   }
   const diff = result - num8;
   const sum = size.width + height;
   if (cResult[7] === diff) {
     if (cResult[8] === sum) {
-      let tmp24 = cResult[9];
+      let tmp25 = cResult[9];
     }
-    class P {
+    class M {
       constructor() {
         return closure_1_8.useReducedMotion;
       }
     }
-    [tmp27, tmp28, tmp29] = tmp26;
-    let str = tmp(tmp2[18]).useName(tmp27);
+    [tmp28, tmp29, tmp30] = tmp27;
+    let str = UserUtils.useName(tmp28);
     if (str == null) {
       str = "";
     }
     if (cResult[10] !== str) {
       const toLocaleUpperCaseResult = str.toLocaleUpperCase();
       cResult[10] = str;
-      class P {
+      class M {
         constructor() {
           return closure_1_8.useReducedMotion;
         }
       }
       cResult[11] = toLocaleUpperCaseResult;
-      let tmp30 = toLocaleUpperCaseResult;
+      let tmp31 = toLocaleUpperCaseResult;
     } else {
-      tmp30 = cResult[11];
+      tmp31 = cResult[11];
     }
-    const tmpResult9 = tmp(tmp2[18]);
-    let str2 = tmp(tmp2[18]).useName(tmp28);
+    const tmpResult13 = UserUtils;
+    let str2 = UserUtils.useName(tmp29);
     if (str2 == null) {
       str2 = "";
     }
     if (cResult[12] !== str2) {
       const toLocaleUpperCaseResult1 = str2.toLocaleUpperCase();
       cResult[12] = str2;
-      class P {
+      class M {
         constructor() {
           return closure_1_8.useReducedMotion;
         }
       }
       cResult[13] = toLocaleUpperCaseResult1;
-      let tmp32 = toLocaleUpperCaseResult1;
+      let tmp33 = toLocaleUpperCaseResult1;
     } else {
-      tmp32 = cResult[13];
+      tmp33 = cResult[13];
     }
-    const tmpResult10 = tmp(tmp2[18]);
-    let str3 = tmp(tmp2[18]).useName(tmp29);
+    const tmpResult14 = UserUtils;
+    let str3 = UserUtils.useName(tmp30);
     if (str3 == null) {
       str3 = "";
     }
     if (cResult[14] !== str3) {
       const toLocaleUpperCaseResult2 = str3.toLocaleUpperCase();
       cResult[14] = str3;
-      class P {
+      class M {
         constructor() {
           return closure_1_8.useReducedMotion;
         }
       }
       cResult[15] = toLocaleUpperCaseResult2;
-      let tmp34 = toLocaleUpperCaseResult2;
+      let tmp35 = toLocaleUpperCaseResult2;
     } else {
-      tmp34 = cResult[15];
+      tmp35 = cResult[15];
     }
-    const tmpResult11 = tmp(tmp2[18]);
+    const tmpResult15 = UserUtils;
     let user;
     if (stateFromStores1 != null) {
       user = stateFromStores1.user;
     }
-    let str4 = tmp(tmp2[18]).useName(user);
+    let str4 = UserUtils.useName(user);
     if (str4 == null) {
       str4 = "";
     }
-    const tmp38 = route === tmp(tmp2[14]).CheckpointRoute.SIDEKICK || route === tmp(tmp2[14]).CheckpointRoute.SIDEKICK_LEAVE;
-    if (tmp38) {
-      let tmp39 = null == stateFromStores1;
-    } else {
-      tmp39 = 0 === stateFromStores.length;
-    }
+    const tmp39 = route === CheckpointNavigation.CheckpointRoute.SIDEKICK || route === CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE;
     if (stateFromStores.length < 3) {
       let str6 = "twoFriends";
       if (stateFromStores3) {
@@ -816,321 +715,315 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         str5 = "threeFriends-reducedMotion";
       }
     }
-    if (cResult[16] === onNextStep) {
-      if (cResult[17] === onPreviousStep) {
-        if (cResult[18] === stateFromStores3) {
-          if (cResult[19] === route) {
-            let tmp40 = cResult[20];
-            let tmp41 = cResult[21];
+    if (tmp39) {
+      let tmp40 = null == stateFromStores1;
+    } else {
+      tmp40 = 0 === stateFromStores.length;
+    }
+    if (tmp40) {
+      if (cResult[16] !== tmp39) {
+        const string = util.intl.string;
+        _modDef3056;
+        class M {
+          constructor() {
+            return closure_1_8.useReducedMotion;
           }
-          const effect = noop.useEffect(tmp40, tmp41);
-          if (tmp39) {
-            if (cResult[22] !== tmp38) {
-              const string = tmp(tmp2[19]).intl.string;
-              tmp20(tmp2[20]);
-              class P {
-                constructor() {
-                  return closure_1_8.useReducedMotion;
-                }
-              }
-              cResult[22] = tmp38;
-              cResult[23] = tmp100;
-            } else {
-              if (cResult[24] !== cResult[23]) {
-                { name: null }.name = tmp98;
-                class P {
-                  constructor() {
-                    return closure_1_8.useReducedMotion;
-                  }
-                }
-                cResult[24] = tmp98;
-                cResult[25] = tmp104;
-                let tmp102 = tmp104;
-                const obj4 = { name: null };
-              } else {
-                tmp102 = cResult[25];
-              }
-              return tmp102;
+        }
+        cResult[16] = tmp39;
+        cResult[17] = tmp98;
+      } else {
+        if (cResult[18] !== cResult[17]) {
+          { name: null }.name = tmp96;
+          class M {
+            constructor() {
+              return closure_1_8.useReducedMotion;
             }
-          } else {
-            if (cResult[26] === tmp24) {
-              if (cResult[27] === tmp4.animation) {
-                let tmp44 = cResult[28];
+          }
+          cResult[18] = tmp96;
+          cResult[19] = tmp102;
+          let tmp100 = tmp102;
+          const obj4 = { name: null };
+        } else {
+          tmp100 = cResult[19];
+        }
+        return tmp100;
+      }
+    } else {
+      if (cResult[20] === tmp25) {
+        if (cResult[21] === tmp4.animation) {
+          let tmp42 = cResult[22];
+        }
+        if (cResult[23] !== tmp28) {
+          let userAvatarURL;
+          if (null != tmp28) {
+            const tmp21Result6 = AvatarUtilsDefault;
+            class M {
+              constructor() {
+                return closure_1_8.useReducedMotion;
               }
-              if (cResult[29] !== tmp27) {
-                let userAvatarURL;
-                if (null != tmp27) {
-                  const tmp20Result6 = tmp20(tmp2[15]);
-                  class P {
-                    constructor() {
-                      return closure_1_8.useReducedMotion;
-                    }
-                  }
-                  userAvatarURL = tmp20Result6.getUserAvatarURL(tmp27, false, 64, "png");
-                }
-                class P {
-                  constructor() {
-                    return closure_1_8.useReducedMotion;
-                  }
-                }
-                cResult[30] = userAvatarURL;
-                let tmp45 = userAvatarURL;
-              } else {
-                tmp45 = cResult[30];
+            }
+            userAvatarURL = tmp21Result6.getUserAvatarURL(tmp28, false, 64, "png");
+          }
+          class M {
+            constructor() {
+              return closure_1_8.useReducedMotion;
+            }
+          }
+          cResult[24] = userAvatarURL;
+          let tmp43 = userAvatarURL;
+        } else {
+          tmp43 = cResult[24];
+        }
+        if (cResult[25] !== tmp30) {
+          let userAvatarURL1;
+          if (null != tmp30) {
+            const tmp21Result7 = AvatarUtilsDefault;
+            class M {
+              constructor() {
+                return closure_1_8.useReducedMotion;
               }
-              if (cResult[31] !== tmp29) {
-                let userAvatarURL1;
-                if (null != tmp29) {
-                  const tmp20Result7 = tmp20(tmp2[15]);
-                  class P {
-                    constructor() {
-                      return closure_1_8.useReducedMotion;
-                    }
-                  }
-                  userAvatarURL1 = tmp20Result7.getUserAvatarURL(tmp29, false, 64, "png");
-                }
-                class P {
-                  constructor() {
-                    return closure_1_8.useReducedMotion;
-                  }
-                }
-                cResult[32] = userAvatarURL1;
-                let tmp49 = userAvatarURL1;
-              } else {
-                tmp49 = cResult[32];
+            }
+            userAvatarURL1 = tmp21Result7.getUserAvatarURL(tmp30, false, 64, "png");
+          }
+          class M {
+            constructor() {
+              return closure_1_8.useReducedMotion;
+            }
+          }
+          cResult[26] = userAvatarURL1;
+          let tmp47 = userAvatarURL1;
+        } else {
+          tmp47 = cResult[26];
+        }
+        class M {
+          constructor() {
+            return closure_1_8.useReducedMotion;
+          }
+        }
+        let user1;
+        if (stateFromStores1 != null) {
+          user1 = stateFromStores1.user;
+        }
+        if (cResult[29] !== user1) {
+          let userAvatarURL2;
+          if (null != user1) {
+            const tmp21Result8 = AvatarUtilsDefault;
+            class M {
+              constructor() {
+                return closure_1_8.useReducedMotion;
               }
-              class P {
-                constructor() {
-                  return closure_1_8.useReducedMotion;
-                }
+            }
+            userAvatarURL2 = tmp21Result8.getUserAvatarURL(user1, false, 64, "png");
+          }
+          class M {
+            constructor() {
+              return closure_1_8.useReducedMotion;
+            }
+          }
+          cResult[30] = userAvatarURL2;
+          let tmp53 = userAvatarURL2;
+        } else {
+          tmp53 = cResult[30];
+        }
+        if (cResult[31] !== stateFromStores2) {
+          let userAvatarURL3;
+          if (null != stateFromStores2) {
+            const tmp21Result9 = AvatarUtilsDefault;
+            class M {
+              constructor() {
+                return closure_1_8.useReducedMotion;
               }
-              let user1;
-              if (stateFromStores1 != null) {
-                user1 = stateFromStores1.user;
-              }
-              if (cResult[35] !== user1) {
-                let userAvatarURL2;
-                if (null != user1) {
-                  const tmp20Result8 = tmp20(tmp2[15]);
-                  class P {
-                    constructor() {
-                      return closure_1_8.useReducedMotion;
-                    }
-                  }
-                  userAvatarURL2 = tmp20Result8.getUserAvatarURL(user1, false, 64, "png");
-                }
-                class P {
-                  constructor() {
-                    return closure_1_8.useReducedMotion;
-                  }
-                }
-                cResult[36] = userAvatarURL2;
-                let tmp55 = userAvatarURL2;
-              } else {
-                tmp55 = cResult[36];
-              }
-              if (cResult[37] !== stateFromStores2) {
-                let userAvatarURL3;
-                if (null != stateFromStores2) {
-                  const tmp20Result9 = tmp20(tmp2[15]);
-                  class P {
-                    constructor() {
-                      return closure_1_8.useReducedMotion;
-                    }
-                  }
-                  userAvatarURL3 = tmp20Result9.getUserAvatarURL(stateFromStores2, false, 64, "png");
-                }
-                class P {
-                  constructor() {
-                    return closure_1_8.useReducedMotion;
-                  }
-                }
-                cResult[38] = userAvatarURL3;
-                let tmp59 = userAvatarURL3;
-              } else {
-                tmp59 = cResult[38];
-              }
-              if (cResult[39] !== str4) {
-                const toLocaleUpperCaseResult3 = str4.toLocaleUpperCase();
-                cResult[39] = str4;
-                class P {
-                  constructor() {
-                    return closure_1_8.useReducedMotion;
-                  }
-                }
-                cResult[40] = toLocaleUpperCaseResult3;
-                let tmp63 = toLocaleUpperCaseResult3;
-              } else {
-                tmp63 = cResult[40];
-              }
-              if (cResult[41] === tmp17) {
-                if (cResult[42] === tmp30) {
-                  if (cResult[43] === tmp32) {
-                    if (cResult[44] === tmp45) {
-                      if (cResult[45] === tmp49) {
-                        if (cResult[46] === tmp53) {
-                          if (cResult[47] === tmp55) {
-                            if (cResult[48] === tmp59) {
-                              if (cResult[49] === tmp63) {
-                                if (cResult[50] === tmp34) {
-                                  if (cResult[51] === tmp37) {
-                                    let tmp65 = cResult[52];
+            }
+            userAvatarURL3 = tmp21Result9.getUserAvatarURL(stateFromStores2, false, 64, "png");
+          }
+          class M {
+            constructor() {
+              return closure_1_8.useReducedMotion;
+            }
+          }
+          cResult[32] = userAvatarURL3;
+          let tmp57 = userAvatarURL3;
+        } else {
+          tmp57 = cResult[32];
+        }
+        if (cResult[33] !== str4) {
+          const toLocaleUpperCaseResult3 = str4.toLocaleUpperCase();
+          cResult[33] = str4;
+          class M {
+            constructor() {
+              return closure_1_8.useReducedMotion;
+            }
+          }
+          cResult[34] = toLocaleUpperCaseResult3;
+          let tmp61 = toLocaleUpperCaseResult3;
+        } else {
+          tmp61 = cResult[34];
+        }
+        if (cResult[35] === friendsAnimationState) {
+          if (cResult[36] === tmp31) {
+            if (cResult[37] === tmp33) {
+              if (cResult[38] === tmp43) {
+                if (cResult[39] === tmp47) {
+                  if (cResult[40] === tmp51) {
+                    if (cResult[41] === tmp53) {
+                      if (cResult[42] === tmp57) {
+                        if (cResult[43] === tmp61) {
+                          if (cResult[44] === tmp35) {
+                            if (cResult[45] === tmp38) {
+                              let tmp63 = cResult[46];
+                            }
+                            if (cResult[47] === str5) {
+                              if (cResult[48] === tmp63) {
+                                let tmp67 = cResult[49];
+                              }
+                              if (cResult[50] === tmp42) {
+                                if (cResult[51] === tmp67) {
+                                  let tmp72 = cResult[52];
+                                }
+                                if (cResult[53] === route) {
+                                  if (cResult[54] === tmp4.transition) {
+                                    let tmp75 = cResult[55];
                                   }
-                                  if (cResult[53] === str5) {
-                                    if (cResult[54] === tmp65) {
-                                      let tmp69 = cResult[55];
-                                    }
-                                    if (cResult[56] === tmp44) {
-                                      if (cResult[57] === tmp69) {
-                                        let tmp74 = cResult[58];
-                                      }
-                                      if (cResult[59] === route) {
-                                        if (cResult[60] === tmp4.transition) {
-                                          let tmp77 = cResult[61];
-                                        }
-                                        if (cResult[62] !== route) {
-                                          let tmp80 = route === tmp(tmp2[14]).CheckpointRoute.SQUAD;
-                                          if (tmp80) {
-                                            const obj5 = { title: null, description: null };
-                                            class P {
-                                              constructor() {
-                                                return closure_1_8.useReducedMotion;
-                                              }
-                                            }
-                                            obj5.title = obj20.string(tmp20(tmp2[20]).OzY5Ns);
-                                            const intl = tmp(tmp2[19]).intl;
-                                            obj5.description = intl.string(tmp20(tmp2[24]).EqdLDd);
-                                            tmp80 = closure_13(closure_20, obj5);
-                                          }
-                                          class P {
-                                            constructor() {
-                                              return closure_1_8.useReducedMotion;
-                                            }
-                                          }
-                                          cResult[63] = tmp80;
-                                          let tmp79 = tmp80;
-                                        } else {
-                                          tmp79 = cResult[63];
-                                        }
-                                        if (cResult[64] === tmp38) {
-                                          if (cResult[65] === stateFromStores1) {
-                                            if (cResult[66] === str4) {
-                                              if (cResult[67] === tmp4.sidekick) {
-                                                if (cResult[68] === tmp4.sidekickDetails) {
-                                                  let tmp83 = cResult[69];
-                                                }
-                                                if (cResult[70] === tmp4.container) {
-                                                  if (cResult[71] === tmp74) {
-                                                    if (cResult[72] === tmp77) {
-                                                      if (cResult[73] === tmp79) {
-                                                        if (cResult[74] === tmp83) {
-                                                          let tmp91 = cResult[75];
-                                                        }
-                                                        return tmp91;
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                                class P {
-                                                  constructor() {
-                                                    return closure_1_8.useReducedMotion;
-                                                  }
-                                                }
-                                                const obj7 = { style: tmp43, children: null };
-                                                const items4 = [tmp74, tmp77, tmp79, tmp83];
-                                                obj7.children = items4;
-                                                tmp94[0] = closure_14(closure_7, obj7);
-                                                const tmp97 = closure_13(tmp20(tmp2[25]), tmp94);
-                                                cResult[70] = tmp4.container;
-                                                cResult[71] = tmp74;
-                                                cResult[72] = tmp77;
-                                                cResult[73] = tmp79;
-                                                cResult[74] = tmp83;
-                                                cResult[75] = tmp97;
-                                                tmp91 = tmp97;
-                                                const tmp20Result10 = tmp20(tmp2[25]);
-                                              }
-                                            }
-                                          }
-                                        }
-                                        class P {
-                                          constructor() {
-                                            return closure_1_8.useReducedMotion;
-                                          }
-                                        }
-                                        if (tmp38) {
-                                          let tmp84 = null != stateFromStores1;
-                                        }
-                                        if (tmp84) {
-                                          const obj8 = { style: null, children: null };
-                                          class P {
-                                            constructor() {
-                                              return closure_1_8.useReducedMotion;
-                                            }
-                                          }
-                                          const obj9 = { style: tmp4.sidekickDetails, children: null };
-                                          const obj10 = { title: null, description: null };
-                                          const intl2 = tmp(tmp2[19]).intl;
-                                          obj10.title = intl2.string(tmp20(tmp2[20])["+uwOHt"]);
-                                          const intl3 = tmp(tmp2[19]).intl;
-                                          obj10.description = intl3.string(tmp20(tmp2[24])["/ctmGw"]);
-                                          const items5 = [closure_13(closure_20, obj10), ];
-                                          const obj11 = { sidekick: stateFromStores1 };
-                                          items5[1] = closure_13(closure_21, obj11);
-                                          obj9.children = items5;
-                                          const items6 = [closure_14(closure_7, obj9), ];
-                                          const obj12 = { user: stateFromStores1.user, username: str4 };
-                                          items6[1] = closure_13(SidekickMessageInput, obj12);
-                                          obj8.children = items6;
-                                          tmp84 = closure_14(closure_7, obj8);
-                                        }
-                                        cResult[64] = tmp38;
-                                        cResult[65] = stateFromStores1;
-                                        cResult[66] = str4;
-                                        cResult[67] = tmp4.sidekick;
-                                        cResult[68] = tmp4.sidekickDetails;
-                                        cResult[69] = tmp84;
-                                        tmp83 = tmp84;
-                                      }
-                                      const tmp78 = route === tmp(tmp2[14]).CheckpointRoute.SQUAD_TRANSITION;
-                                      class P {
+                                  if (cResult[56] !== route) {
+                                    let tmp78 = route === CheckpointNavigation.CheckpointRoute.SQUAD;
+                                    if (tmp78) {
+                                      const obj5 = { title: null, description: null };
+                                      class M {
                                         constructor() {
                                           return closure_1_8.useReducedMotion;
                                         }
                                       }
-                                      cResult[59] = route;
-                                      cResult[60] = tmp4.transition;
-                                      cResult[61] = tmp78;
-                                      tmp77 = tmp78;
+                                      obj5.title = obj21.string(_modDef3056.OzY5Ns);
+                                      const intl = util.intl;
+                                      obj5.description = intl.string(_modDef3088.EqdLDd);
+                                      tmp78 = map1(closure_18, obj5);
                                     }
-                                    class P {
+                                    class M {
                                       constructor() {
                                         return closure_1_8.useReducedMotion;
                                       }
                                     }
-                                    const obj13 = { style: tmp44, pointerEvents: "none", children: tmp69 };
-                                    const tmp76 = closure_13(closure_7, obj13);
-                                    cResult[56] = tmp44;
-                                    cResult[57] = tmp69;
-                                    cResult[58] = tmp76;
-                                    tmp74 = tmp76;
+                                    cResult[57] = tmp78;
+                                    let tmp77 = tmp78;
+                                  } else {
+                                    tmp77 = cResult[57];
                                   }
-                                  class P {
+                                  if (cResult[58] === tmp39) {
+                                    if (cResult[59] === stateFromStores1) {
+                                      if (cResult[60] === str4) {
+                                        if (cResult[61] === tmp4.sidekick) {
+                                          if (cResult[62] === tmp4.sidekickDetails) {
+                                            let tmp81 = cResult[63];
+                                          }
+                                          if (cResult[64] === tmp4.container) {
+                                            if (cResult[65] === tmp72) {
+                                              if (cResult[66] === tmp75) {
+                                                if (cResult[67] === tmp77) {
+                                                  if (cResult[68] === tmp81) {
+                                                    let tmp89 = cResult[69];
+                                                  }
+                                                  return tmp89;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          class M {
+                                            constructor() {
+                                              return closure_1_8.useReducedMotion;
+                                            }
+                                          }
+                                          const obj6 = { style: tmp41, children: null };
+                                          const items4 = [tmp72, tmp75, tmp77, tmp81];
+                                          obj6.children = items4;
+                                          tmp92[0] = closure_1_14(React5, obj6);
+                                          const tmp95 = map1(CheckpointScreenDefault, tmp92);
+                                          cResult[64] = tmp4.container;
+                                          cResult[65] = tmp72;
+                                          cResult[66] = tmp75;
+                                          cResult[67] = tmp77;
+                                          cResult[68] = tmp81;
+                                          cResult[69] = tmp95;
+                                          tmp89 = tmp95;
+                                          const tmp21Result10 = CheckpointScreenDefault;
+                                        }
+                                      }
+                                    }
+                                  }
+                                  class M {
                                     constructor() {
                                       return closure_1_8.useReducedMotion;
                                     }
                                   }
-                                  tmp71[0] = obj2;
-                                  tmp71[1] = str5;
-                                  tmp71[2] = tmp65;
-                                  const tmp73 = closure_13(tmp(tmp2[22]).CheckpointFriendsRive, tmp71);
-                                  cResult[53] = str5;
-                                  cResult[54] = tmp65;
-                                  cResult[55] = tmp73;
-                                  tmp69 = tmp73;
+                                  if (tmp39) {
+                                    let tmp82 = null != stateFromStores1;
+                                  }
+                                  if (tmp82) {
+                                    const obj7 = { style: null, children: null };
+                                    class M {
+                                      constructor() {
+                                        return closure_1_8.useReducedMotion;
+                                      }
+                                    }
+                                    const obj8 = { style: tmp4.sidekickDetails, children: null };
+                                    const obj9 = { title: null, description: null };
+                                    const intl2 = util.intl;
+                                    obj9.title = intl2.string(_modDef3056["+uwOHt"]);
+                                    const intl3 = util.intl;
+                                    obj9.description = intl3.string(_modDef3088["/ctmGw"]);
+                                    const items5 = [map1(closure_18, obj9), ];
+                                    const obj10 = { sidekick: stateFromStores1 };
+                                    items5[1] = map1(closure_19, obj10);
+                                    obj8.children = items5;
+                                    const items6 = [closure_1_14(React5, obj8), ];
+                                    const obj11 = { user: stateFromStores1.user, username: str4 };
+                                    items6[1] = map1(SidekickMessageInput, obj11);
+                                    obj7.children = items6;
+                                    tmp82 = closure_1_14(React5, obj7);
+                                  }
+                                  cResult[58] = tmp39;
+                                  cResult[59] = stateFromStores1;
+                                  cResult[60] = str4;
+                                  cResult[61] = tmp4.sidekick;
+                                  cResult[62] = tmp4.sidekickDetails;
+                                  cResult[63] = tmp82;
+                                  tmp81 = tmp82;
+                                }
+                                const tmp76 = route === CheckpointNavigation.CheckpointRoute.SQUAD_TRANSITION;
+                                class M {
+                                  constructor() {
+                                    return closure_1_8.useReducedMotion;
+                                  }
+                                }
+                                cResult[53] = route;
+                                cResult[54] = tmp4.transition;
+                                cResult[55] = tmp76;
+                                tmp75 = tmp76;
+                              }
+                              class M {
+                                constructor() {
+                                  return closure_1_8.useReducedMotion;
                                 }
                               }
+                              const obj12 = { style: tmp42, pointerEvents: "none", children: tmp67 };
+                              const tmp74 = map1(React5, obj12);
+                              cResult[50] = tmp42;
+                              cResult[51] = tmp67;
+                              cResult[52] = tmp74;
+                              tmp72 = tmp74;
                             }
+                            class M {
+                              constructor() {
+                                return closure_1_8.useReducedMotion;
+                              }
+                            }
+                            tmp69[0] = obj2;
+                            tmp69[1] = str5;
+                            tmp69[2] = tmp63;
+                            const tmp71 = map1(CheckpointFriendsRive.CheckpointFriendsRive, tmp69);
+                            cResult[47] = str5;
+                            cResult[48] = tmp63;
+                            cResult[49] = tmp71;
+                            tmp67 = tmp71;
                           }
                         }
                       }
@@ -1138,92 +1031,63 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                   }
                 }
               }
-              const obj14 = {};
-              const merged = Object.assign(closure_16);
-              obj14.AnimationState = tmp17;
-              obj14["Avatar01/img"] = tmp45;
-              obj14["Avatar02/img"] = tmp49;
-              obj14["Avatar03/img"] = tmp53;
-              obj14["Avatar04/img"] = tmp55;
-              obj14["Avatar05/img"] = tmp59;
-              obj14["Avatar01/Username"] = tmp30;
-              obj14["Avatar02/Username"] = tmp34;
-              obj14["Avatar03/Username"] = tmp32;
-              obj14["Avatar04/Username"] = tmp63;
-              obj14.twoFriends = tmp37;
-              cResult[41] = tmp17;
-              cResult[42] = tmp30;
-              cResult[43] = tmp32;
-              cResult[44] = tmp45;
-              cResult[45] = tmp49;
-              cResult[46] = tmp53;
-              cResult[47] = tmp55;
-              cResult[48] = tmp59;
-              cResult[49] = tmp63;
-              cResult[50] = tmp34;
-              cResult[51] = tmp37;
-              cResult[52] = obj14;
-              tmp65 = obj14;
             }
-            const items7 = [tmp4.animation, ];
-            class P {
-              constructor() {
-                return closure_1_8.useReducedMotion;
-              }
-            }
-            cResult[26] = tmp24;
-            cResult[27] = tmp4.animation;
-            cResult[28] = items7;
-            tmp44 = items7;
           }
         }
+        const obj13 = {};
+        const merged = Object.assign(closure_15);
+        obj13.AnimationState = friendsAnimationState;
+        obj13["Avatar01/img"] = tmp43;
+        obj13["Avatar02/img"] = tmp47;
+        obj13["Avatar03/img"] = tmp51;
+        obj13["Avatar04/img"] = tmp53;
+        obj13["Avatar05/img"] = tmp57;
+        obj13["Avatar01/Username"] = tmp31;
+        obj13["Avatar02/Username"] = tmp35;
+        obj13["Avatar03/Username"] = tmp33;
+        obj13["Avatar04/Username"] = tmp61;
+        obj13.twoFriends = tmp38;
+        cResult[35] = friendsAnimationState;
+        cResult[36] = tmp31;
+        cResult[37] = tmp33;
+        cResult[38] = tmp43;
+        cResult[39] = tmp47;
+        cResult[40] = tmp51;
+        cResult[41] = tmp53;
+        cResult[42] = tmp57;
+        cResult[43] = tmp61;
+        cResult[44] = tmp35;
+        cResult[45] = tmp38;
+        cResult[46] = obj13;
+        tmp63 = obj13;
       }
-    }
-    function oe() {
-      if (route === CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE) {
-        if (ref.current) {
-          onPreviousStep();
-        } else if (stateFromStores3) {
-          onNextStep();
-        } else {
-          const _setTimeout = setTimeout;
-          const timeout = setTimeout(onNextStep, 1000);
-          return () => clearTimeout(closure_0);
+      const items7 = [tmp4.animation, ];
+      class M {
+        constructor() {
+          return closure_1_8.useReducedMotion;
         }
-      } else {
-        ref.current = false;
       }
+      cResult[20] = tmp25;
+      cResult[21] = tmp4.animation;
+      cResult[22] = items7;
+      tmp42 = items7;
     }
-    const items8 = [onNextStep, onPreviousStep, stateFromStores3, route];
-    cResult[16] = onNextStep;
-    cResult[17] = onPreviousStep;
-    cResult[18] = stateFromStores3;
-    cResult[19] = route;
-    cResult[20] = oe;
-    cResult[21] = items8;
-    tmp41 = items8;
-    tmp40 = oe;
-    const tmpResult12 = tmp(tmp2[18]);
+    const tmpResult16 = UserUtils;
   }
-  const obj15 = { top: diff, height: sum };
+  const obj14 = { top: diff, height: sum };
   cResult[7] = diff;
   cResult[8] = sum;
-  cResult[9] = obj15;
-  tmp24 = obj15;
-  const ref = noop.useRef(true);
-  tmp18 = tmp17 === constants.BEST || tmp17 === constants.LEAVE;
-}) : (function CheckpointFriendsStatsScreen(route) {
-  route = route.route;
-  const onNextStep = route.onNextStep;
-  const onPreviousStep = route.onPreviousStep;
-  let stateFromStores3;
-  _slicedToArray = undefined;
-  noop = undefined;
+  cResult[9] = obj14;
+  tmp25 = obj14;
+  tmp19 = friendsAnimationState === useFriendsAnimationState.FriendsAnimationState.BEST || friendsAnimationState === useFriendsAnimationState.FriendsAnimationState.LEAVE;
+}) : (function CheckpointFriendsStatsScreen(arg0) {
+  ({ route, onNextStep, onPreviousStep } = arg0);
+  _require = undefined;
   let width;
   let height;
-  const tmp = closure_18();
+  const tmp = closure_17();
   const items = [CheckpointStore];
-  let stateFromStores = route(onPreviousStep[16]).useStateFromStores(items, () => {
+  let stateFromStores = require("initialize").useStateFromStores(items, () => {
     const stats = CheckpointStore.stats;
     let users;
     if (stats != null) {
@@ -1234,9 +1098,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (stateFromStores == null) {
     stateFromStores = [];
   }
-  const obj = route(onPreviousStep[16]);
+  const obj = require("initialize");
   const items1 = [CheckpointStore];
-  const stateFromStores1 = route(onPreviousStep[16]).useStateFromStores(items1, () => {
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     const stats = CheckpointStore.stats;
     let sidekick;
     if (stats != null) {
@@ -1244,62 +1108,60 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     }
     return sidekick;
   });
-  const tmp2Result = route(onPreviousStep[16]);
+  const tmp2Result = require("initialize");
   const items2 = [UserStore];
-  const stateFromStores2 = route(onPreviousStep[16]).useStateFromStores(items2, () => currentUser.getCurrentUser());
-  const tmp2Result7 = route(onPreviousStep[16]);
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => currentUser.getCurrentUser());
+  const tmp2Result9 = require("initialize");
   const items3 = [AccessibilityStore];
-  stateFromStores3 = route(onPreviousStep[16]).useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
-  _slicedToArray = noop.useRef(true);
-  const tmp8 = closure_19(route, stateFromStores3);
-  noop = tmp9;
-  const size = onNextStep(tmp3[17])({ ignoreKeyboard: true });
+  const stateFromStores3 = require("initialize").useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
+  const tmp2Result10 = require("initialize");
+  const friendsAnimationState = require("useFriendsAnimationState").useFriendsAnimationState(route, stateFromStores3);
+  const tmp2Result11 = require("useFriendsAnimationState");
+  const sidekickLeave = require("useSidekickLeave").useSidekickLeave(route, stateFromStores3, onNextStep, onPreviousStep);
+  const tmp10 = friendsAnimationState === require("useFriendsAnimationState").FriendsAnimationState.BEST || friendsAnimationState === require("useFriendsAnimationState").FriendsAnimationState.LEAVE;
+  _require = tmp10;
+  const size = width(tmp3[18])({ ignoreKeyboard: true });
   width = size.width;
   height = size.height;
-  const items4 = [tmp8 === constants.BEST || tmp8 === constants.LEAVE, height, width];
-  const memo = obj5.useMemo(() => {
+  const items4 = [tmp10, height, width];
+  const memo = noop.useMemo(() => {
     let num = 0;
     const result = -height / 2;
-    if (closure_5) {
+    if (closure_0) {
       num = nativeDefault.space.PX_48;
     }
     return { top: result - num, height: width + height };
   }, items4);
-  const tmp2Result8 = route(onPreviousStep[16]);
-  [tmp13, tmp14, tmp15] = stateFromStores;
-  const tmp12 = _slicedToArray(stateFromStores, 3);
-  let str = route(onPreviousStep[18]).useName(tmp13);
+  const tmp2Result12 = require("useSidekickLeave");
+  [tmp14, tmp15, tmp16] = stateFromStores;
+  const tmp13 = _slicedToArray(stateFromStores, 3);
+  let str = require("UserUtils").useName(tmp14);
   if (str == null) {
     str = "";
   }
-  const tmp2Result9 = route(onPreviousStep[18]);
+  const tmp2Result13 = require("UserUtils");
   const toLocaleUpperCaseResult = str.toLocaleUpperCase();
-  let str2 = route(onPreviousStep[18]).useName(tmp14);
+  let str2 = require("UserUtils").useName(tmp15);
   if (str2 == null) {
     str2 = "";
   }
-  const tmp2Result10 = route(onPreviousStep[18]);
+  const tmp2Result14 = require("UserUtils");
   const toLocaleUpperCaseResult1 = str2.toLocaleUpperCase();
-  let str3 = route(onPreviousStep[18]).useName(tmp15);
+  let str3 = require("UserUtils").useName(tmp16);
   if (str3 == null) {
     str3 = "";
   }
-  const tmp2Result11 = route(onPreviousStep[18]);
+  const tmp2Result15 = require("UserUtils");
   const toLocaleUpperCaseResult2 = str3.toLocaleUpperCase();
   let user;
   if (stateFromStores1 != null) {
     user = stateFromStores1.user;
   }
-  let str4 = route(onPreviousStep[18]).useName(user);
+  let str4 = require("UserUtils").useName(user);
   if (str4 == null) {
     str4 = "";
   }
-  const tmp21 = route === route(onPreviousStep[14]).CheckpointRoute.SIDEKICK || route === route(onPreviousStep[14]).CheckpointRoute.SIDEKICK_LEAVE;
-  if (tmp21) {
-    let tmp22 = null == stateFromStores1;
-  } else {
-    tmp22 = 0 === stateFromStores.length;
-  }
+  const tmp22 = route === require("CheckpointNavigation").CheckpointRoute.SIDEKICK || route === require("CheckpointNavigation").CheckpointRoute.SIDEKICK_LEAVE;
   if (stateFromStores.length < 3) {
     let str6 = "twoFriends";
     if (stateFromStores3) {
@@ -1312,129 +1174,118 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       str5 = "threeFriends-reducedMotion";
     }
   }
-  const items5 = [onNextStep, onPreviousStep, stateFromStores3, route];
-  const effect = obj5.useEffect(() => {
-    if (route === CheckpointNavigation.CheckpointRoute.SIDEKICK_LEAVE) {
-      if (ref.current) {
-        onPreviousStep();
-      } else if (stateFromStores3) {
-        onNextStep();
-      } else {
-        const _setTimeout = setTimeout;
-        const timeout = setTimeout(onNextStep, 1000);
-        return () => clearTimeout(closure_0);
-      }
-    } else {
-      ref.current = false;
-    }
-  }, items5);
   if (tmp22) {
-    const intl6 = tmp2(tmp3[19]).intl;
-    tmp10(tmp3[20]);
-    const tmp10Result9 = { name: null };
-    tmp10Result9.name = intl6.string(tmp21 ? tmp10Result9["+uwOHt"] : tmp10Result9.OzY5Ns);
-    closure_13(tmp10(tmp3[21]), tmp10Result9);
-    const tmp10Result = tmp10(tmp3[21]);
-    const tmp57 = tmp21 ? tmp10Result9["+uwOHt"] : tmp10Result9.OzY5Ns;
+    let tmp23 = null == stateFromStores1;
+  } else {
+    tmp23 = 0 === stateFromStores.length;
+  }
+  if (tmp23) {
+    const intl6 = tmp2(tmp3[21]).intl;
+    tmp11(tmp3[22]);
+    const tmp11Result9 = { name: null };
+    tmp11Result9.name = intl6.string(tmp22 ? tmp11Result9["+uwOHt"] : tmp11Result9.OzY5Ns);
+    closure_13(tmp11(tmp3[23]), tmp11Result9);
+    const tmp11Result = tmp11(tmp3[23]);
+    const tmp57 = tmp22 ? tmp11Result9["+uwOHt"] : tmp11Result9.OzY5Ns;
   } else {
     obj2 = { style: tmp.container, children: null };
     const obj3 = { style: null, pointerEvents: "none", children: null };
-    const items6 = [tmp.animation, memo];
-    obj3.style = items6;
+    const items5 = [tmp.animation, memo];
+    obj3.style = items5;
     const obj4 = { referencedAssets: obj2, defaultViewModelInstance: str5, dataBinding: null };
-    const obj6 = {};
-    const merged = Object.assign(closure_16);
-    obj6.AnimationState = tmp8;
+    const obj5 = {};
+    const merged = Object.assign(closure_15);
+    obj5.AnimationState = friendsAnimationState;
     let userAvatarURL;
-    if (null != tmp13) {
-      const tmp10Result11 = tmp10(tmp3[15]);
-      userAvatarURL = tmp10Result11.getUserAvatarURL(tmp13, false, 64, "png");
-    }
-    obj6["Avatar01/img"] = userAvatarURL;
-    let userAvatarURL1;
-    if (null != tmp15) {
-      const tmp10Result12 = tmp10(tmp3[15]);
-      userAvatarURL1 = tmp10Result12.getUserAvatarURL(tmp15, false, 64, "png");
-    }
-    obj6["Avatar02/img"] = userAvatarURL1;
-    let userAvatarURL2;
     if (null != tmp14) {
-      const tmp10Result13 = tmp10(tmp3[15]);
-      userAvatarURL2 = tmp10Result13.getUserAvatarURL(tmp14, false, 64, "png");
+      const tmp11Result11 = tmp11(tmp3[12]);
+      userAvatarURL = tmp11Result11.getUserAvatarURL(tmp14, false, 64, "png");
     }
-    obj6["Avatar03/img"] = userAvatarURL2;
+    obj5["Avatar01/img"] = userAvatarURL;
+    let userAvatarURL1;
+    if (null != tmp16) {
+      const tmp11Result12 = tmp11(tmp3[12]);
+      userAvatarURL1 = tmp11Result12.getUserAvatarURL(tmp16, false, 64, "png");
+    }
+    obj5["Avatar02/img"] = userAvatarURL1;
+    let userAvatarURL2;
+    if (null != tmp15) {
+      const tmp11Result13 = tmp11(tmp3[12]);
+      userAvatarURL2 = tmp11Result13.getUserAvatarURL(tmp15, false, 64, "png");
+    }
+    obj5["Avatar03/img"] = userAvatarURL2;
     let user1;
     if (stateFromStores1 != null) {
       user1 = stateFromStores1.user;
     }
     let userAvatarURL3;
     if (null != user1) {
-      const tmp10Result14 = tmp10(tmp3[15]);
-      userAvatarURL3 = tmp10Result14.getUserAvatarURL(user1, false, 64, "png");
+      const tmp11Result14 = tmp11(tmp3[12]);
+      userAvatarURL3 = tmp11Result14.getUserAvatarURL(user1, false, 64, "png");
     }
-    obj6["Avatar04/img"] = userAvatarURL3;
+    obj5["Avatar04/img"] = userAvatarURL3;
     let userAvatarURL4;
     if (null != stateFromStores2) {
-      const tmp10Result15 = tmp10(tmp3[15]);
-      userAvatarURL4 = tmp10Result15.getUserAvatarURL(stateFromStores2, false, 64, "png");
+      const tmp11Result15 = tmp11(tmp3[12]);
+      userAvatarURL4 = tmp11Result15.getUserAvatarURL(stateFromStores2, false, 64, "png");
     }
-    obj6["Avatar05/img"] = userAvatarURL4;
-    obj6["Avatar01/Username"] = toLocaleUpperCaseResult;
-    obj6["Avatar02/Username"] = toLocaleUpperCaseResult2;
-    obj6["Avatar03/Username"] = toLocaleUpperCaseResult1;
-    obj6["Avatar04/Username"] = str4.toLocaleUpperCase();
-    obj6.twoFriends = tmp20;
-    obj4.dataBinding = obj6;
-    obj3.children = closure_13(tmp2(tmp3[22]).CheckpointFriendsRive, obj4);
-    const items7 = [closure_13(height, obj3), , , ];
-    let tmp24Result3 = route === tmp2(tmp3[14]).CheckpointRoute.SQUAD_TRANSITION;
+    obj5["Avatar05/img"] = userAvatarURL4;
+    obj5["Avatar01/Username"] = toLocaleUpperCaseResult;
+    obj5["Avatar02/Username"] = toLocaleUpperCaseResult2;
+    obj5["Avatar03/Username"] = toLocaleUpperCaseResult1;
+    obj5["Avatar04/Username"] = str4.toLocaleUpperCase();
+    obj5.twoFriends = tmp21;
+    obj4.dataBinding = obj5;
+    obj3.children = closure_13(tmp2(tmp3[24]).CheckpointFriendsRive, obj4);
+    const items6 = [closure_13(closure_7, obj3), , , ];
+    let tmp24Result3 = route === tmp2(tmp3[20]).CheckpointRoute.SQUAD_TRANSITION;
     if (tmp24Result3) {
-      const obj7 = { style: tmp.transition, children: null };
-      const obj8 = { variant: "heading-lg/medium", children: null };
-      const intl = tmp2(tmp3[19]).intl;
-      obj8.children = intl.string(tmp10(tmp3[24])["6RSp5q"]);
-      obj7.children = closure_13(tmp10(tmp3[23]), obj8);
-      tmp24Result3 = closure_13(tmp27, obj7);
-      const tmp10Result16 = tmp10(tmp3[23]);
+      const obj6 = { style: tmp.transition, children: null };
+      const obj7 = { variant: "heading-lg/medium", children: null };
+      const intl = tmp2(tmp3[21]).intl;
+      obj7.children = intl.string(tmp11(tmp3[26])["6RSp5q"]);
+      obj6.children = closure_13(tmp11(tmp3[25]), obj7);
+      tmp24Result3 = closure_13(closure_7, obj6);
+      const tmp11Result16 = tmp11(tmp3[25]);
     }
-    items7[1] = tmp24Result3;
-    let tmp24Result4 = route === tmp2(tmp3[14]).CheckpointRoute.SQUAD;
+    items6[1] = tmp24Result3;
+    let tmp24Result4 = route === tmp2(tmp3[20]).CheckpointRoute.SQUAD;
     if (tmp24Result4) {
-      const obj9 = { title: null, description: null };
-      const intl2 = tmp2(tmp3[19]).intl;
-      obj9.title = intl2.string(tmp10(tmp3[20]).OzY5Ns);
-      const intl3 = tmp2(tmp3[19]).intl;
-      obj9.description = intl3.string(tmp10(tmp3[24]).EqdLDd);
-      tmp24Result4 = closure_13(closure_20, obj9);
+      const obj8 = { title: null, description: null };
+      const intl2 = tmp2(tmp3[21]).intl;
+      obj8.title = intl2.string(tmp11(tmp3[22]).OzY5Ns);
+      const intl3 = tmp2(tmp3[21]).intl;
+      obj8.description = intl3.string(tmp11(tmp3[26]).EqdLDd);
+      tmp24Result4 = closure_13(closure_18, obj8);
     }
-    items7[2] = tmp24Result4;
-    let tmp26Result = tmp21;
-    if (tmp21) {
+    items6[2] = tmp24Result4;
+    let tmp26Result = tmp22;
+    if (tmp22) {
       tmp26Result = null != stateFromStores1;
     }
     if (tmp26Result) {
-      const obj10 = { style: tmp.sidekick, children: null };
-      const obj11 = { style: tmp.sidekickDetails, children: null };
-      const obj12 = { title: null, description: null };
-      const intl4 = tmp2(tmp3[19]).intl;
-      obj12.title = intl4.string(tmp10(tmp3[20])["+uwOHt"]);
-      const intl5 = tmp2(tmp3[19]).intl;
-      obj12.description = intl5.string(tmp10(tmp3[24])["/ctmGw"]);
-      const items8 = [closure_13(closure_20, obj12), ];
-      const obj13 = { sidekick: stateFromStores1 };
-      items8[1] = closure_13(closure_21, obj13);
-      obj11.children = items8;
-      const items9 = [closure_14(tmp27, obj11), ];
-      const obj14 = { user: stateFromStores1.user, username: str4 };
-      items9[1] = closure_13(SidekickMessageInput, obj14);
-      obj10.children = items9;
-      tmp26Result = closure_14(tmp27, obj10);
+      const obj9 = { style: tmp.sidekick, children: null };
+      const obj10 = { style: tmp.sidekickDetails, children: null };
+      const obj11 = { title: null, description: null };
+      const intl4 = tmp2(tmp3[21]).intl;
+      obj11.title = intl4.string(tmp11(tmp3[22])["+uwOHt"]);
+      const intl5 = tmp2(tmp3[21]).intl;
+      obj11.description = intl5.string(tmp11(tmp3[26])["/ctmGw"]);
+      const items7 = [closure_13(closure_18, obj11), ];
+      const obj12 = { sidekick: stateFromStores1 };
+      items7[1] = closure_13(closure_19, obj12);
+      obj10.children = items7;
+      const items8 = [closure_14(closure_7, obj10), ];
+      const obj13 = { user: stateFromStores1.user, username: str4 };
+      items8[1] = closure_13(SidekickMessageInput, obj13);
+      obj9.children = items8;
+      tmp26Result = closure_14(closure_7, obj9);
     }
-    const obj15 = { children: null };
-    items7[3] = tmp26Result;
-    obj2.children = items7;
-    obj15.children = closure_14(height, obj2);
-    return closure_13(tmp10(tmp3[25]), obj15);
+    const obj14 = { children: null };
+    items6[3] = tmp26Result;
+    obj2.children = items6;
+    obj14.children = closure_14(closure_7, obj2);
+    return closure_13(tmp11(tmp3[27]), obj14);
   }
-  const tmp2Result12 = route(onPreviousStep[18]);
+  const tmp2Result16 = require("UserUtils");
 });

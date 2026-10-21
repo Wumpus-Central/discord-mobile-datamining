@@ -1,6 +1,6 @@
 // discord_app/utils/SubscriptionUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import _modDef2050 from "../../_runtime/metro/02050__.js";
+import _modDef2049 from "../../_runtime/metro/02049__.js";
 import PremiumUtils from "PremiumUtils.tsx";
 import SubscriptionPlanActionCreators from "../actions/SubscriptionPlanActionCreators.tsx";
 import CheckoutError from "../modules/checkout/CheckoutError.tsx";
@@ -230,9 +230,9 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
     const obj3 = { durations: found, currentDaysPaused: 0 };
     return obj3;
   } else if (null != status.pauseEndsAt) {
-    const tmp6 = _modDef2050(status.currentPeriodStart);
+    const tmp6 = _modDef2049(status.currentPeriodStart);
     const _Math = Math;
-    const rounded = Math.round(_modDef2050(status.pauseEndsAt).diff(tmp6, "days", true));
+    const rounded = Math.round(_modDef2049(status.pauseEndsAt).diff(tmp6, "days", true));
     const items = [];
     for (const item10042 of found) {
       if (PauseDuration.PauseDuration[item10042] > rounded) {
@@ -250,10 +250,10 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
 export const didBeginPurchaseFlowOnFractionalPremium = function didBeginPurchaseFlowOnFractionalPremium(isSameOrAfter) {
   let isMomentResult = null != isSameOrAfter;
   if (isMomentResult) {
-    isMomentResult = _modDef2050.isMoment(isSameOrAfter);
+    isMomentResult = _modDef2049.isMoment(isSameOrAfter);
   }
   if (isMomentResult) {
-    isMomentResult = isSameOrAfter.isSameOrAfter(_modDef2050());
+    isMomentResult = isSameOrAfter.isSameOrAfter(_modDef2049());
   }
   return isMomentResult;
 };

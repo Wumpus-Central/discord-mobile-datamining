@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/templates/ConjureTemplateWizard.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 require = fn;
 function conjureTemplateStartMessage(templateName) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3820["/qSx7+"], { templateName, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef3830["/qSx7+"], { templateName, locale: util.intl.currentLocale });
 }
 let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
   closure_0 = arg0;
@@ -76,7 +76,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
     }
   })();
 };
-const ConjureConnectionStore = fn(11001);
+const ConjureConnectionStore = fn(10656);
 ({ prepareTemplate: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");
@@ -200,9 +200,9 @@ export const conjureWizardServerCopy = function conjureWizardServerCopy(stateFro
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3820.vcxYIA);
+    obj.title = intl.string(_modDef3830.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef3820.auUHPZ);
+    obj.hint = intl2.string(_modDef3830.auUHPZ);
     server = obj;
   }
   return server;

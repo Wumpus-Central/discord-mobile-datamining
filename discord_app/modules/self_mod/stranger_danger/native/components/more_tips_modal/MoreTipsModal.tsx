@@ -7,7 +7,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import MonitoringAgentDefault from "../../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef8062 from "../../../../../../../_runtime/metro/08062__.js";
+import _modDef8090 from "../../../../../../../_runtime/metro/08090__.js";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
 import SafetyTipsSectionDefault from "../../../../shared/native/SafetyTipsSection.tsx";
 import WasThisHelpfulSectionDefault from "WasThisHelpfulSection.tsx";
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: null,
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return warningId(senderId[14]).popWithKey(channelId);
                 },
-                source: _modDef8062,
+                source: _modDef8090,
                 iconSize: native.IconSizes.MEDIUM,
                 accessibilityLabel: null,
               };

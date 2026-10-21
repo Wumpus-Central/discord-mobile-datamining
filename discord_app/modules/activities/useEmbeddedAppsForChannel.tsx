@@ -9,7 +9,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const NO_ACTIVITIES = fn(4799).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(4820).NO_ACTIVITIES;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

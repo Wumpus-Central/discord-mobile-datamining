@@ -2,6 +2,8 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjurePublishActionCreators from "ConjurePublishActionCreators.tsx";
+import conjureDevicePermissions from "../device_permissions/conjureDevicePermissions.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 
 require = fn;
@@ -16,9 +18,21 @@ function rejectPendingPatchNotesDraft(projectId, arg1) {
     value.reject(error);
   }
 }
+function rejectPendingPublishOptions(arg0, arg1) {
+  value = map2.get(arg0);
+  if (null != value) {
+    map2.delete(arg0);
+    const _clearTimeout = clearTimeout;
+    clearTimeout(value.timeout);
+    const _Error = Error;
+    const error = new Error(arg1);
+    value.reject(error);
+  }
+}
 const map = new Map();
 const map1 = new Map();
-const set = new Set(["activity", "automod", "widget", "bot"]);
+let set = new Set(["activity", "automod", "widget", "bot"]);
+const map2 = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishConnection.tsx");
 
@@ -35,6 +49,128 @@ export const publishFrameHandlers = {
   },
 };
 export const publishStepHandlers = {
+  publish_options(nonce, projectId) {
+    projectId = projectId.projectId;
+    let options;
+    value = map2.get(projectId);
+    if (null != value) {
+      if (value.nonce === nonce.nonce) {
+        map2.delete(projectId);
+        const _clearTimeout = clearTimeout;
+        clearTimeout(value.timeout);
+        options = nonce.options;
+        if (true === nonce.ok) {
+          if (null != options) {
+            const _Array = Array;
+            if (Array.isArray(options.destinations)) {
+              if (0 !== options.destinations.length) {
+                if (options.destinations.length <= 7) {
+                  const destinations2 = options.destinations;
+                  if (
+                    !destinations2.some((id) => {
+                      id = undefined;
+                      if (id != null) {
+                        id = id.id;
+                      }
+                      let tmp2 = typeof id !== "string";
+                      if (typeof id === "string") {
+                        tmp2 = 0 === id.id.length;
+                      }
+                      if (!tmp2) {
+                        tmp2 = id.id.length > 100;
+                      }
+                      if (!tmp2) {
+                        tmp2 = typeof id.label !== "string";
+                      }
+                      if (!tmp2) {
+                        tmp2 = 0 === id.label.length;
+                      }
+                      if (!tmp2) {
+                        tmp2 = id.label.length > 100;
+                      }
+                      return tmp2;
+                    })
+                  ) {
+                    const _Set = Set;
+                    const destinations1 = options.destinations;
+                    set = new Set(destinations1.map((id) => id.id));
+                    if (set.size === options.destinations.length) {
+                      const destinations = options.destinations;
+                      if (destinations.some((id) => id.id === options.selected_destination_id)) {
+                        value.resolve(options);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        let str = nonce.error;
+        if (str == null) {
+          str = "Could not load publish destinations. Try again.";
+        }
+        const error = new Error(str);
+        value.reject(error);
+      }
+    }
+  },
+  publish_approval_required(arg0, projectId) {
+    closure_0 = arg0;
+    projectId = projectId.projectId;
+    return (async () => {
+      if (c2 === 2) {
+        c2 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c2 = 2;
+          if (0 === v1) {
+            if (arg0 === 1) {
+              c2 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c2 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
+                const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
+                v1(tmp19[2]).dispatch(obj5);
+                v1 = 1;
+                c2 = 1;
+                const obj6 = { value: tmp2(tmp19[5])(tmp19[4], tmp19.paths), done: false };
+                return obj6;
+              } else {
+                c2 = 3;
+              }
+              obj7 = tmp2(c2[3]);
+            }
+          } else if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            const result = value.promptPublishApproval(closure_128_0.approval_url);
+          }
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } catch (tmp13) {
+          c2 = tmp;
+          throw tmp13;
+        }
+      }
+    })();
+  },
   publish_cta(publish_cta, arg1) {
     if (null != publish_cta.publish_cta) {
       const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: tmp, turnId: publish_cta.turn_id, patch: null };
@@ -66,6 +202,7 @@ export const publishStepHandlers = {
       hasUnpublishedChanges: true === published.has_unpublished_changes,
       surface: null,
       previewAppChannels: null,
+      previewDevicePermissions: null,
       publishedRevision: null,
       publishedAt: null,
       publishing: null,
@@ -73,14 +210,14 @@ export const publishStepHandlers = {
       newUiUnpublished: null,
     };
     const surface = published.surface;
-    let tmp = null;
+    let tmp2 = null;
     if (null != surface) {
-      tmp = null;
+      tmp2 = null;
       if (set.has(surface)) {
-        tmp = surface;
+        tmp2 = surface;
       }
     }
-    obj2.surface = tmp;
+    obj2.surface = tmp2;
     if (Array.isArray(published.preview_app_channels)) {
       const preview_app_channels = published.preview_app_channels;
       let found = preview_app_channels.filter((item) => typeof item === "string");
@@ -88,6 +225,13 @@ export const publishStepHandlers = {
       found = [];
     }
     obj2.previewAppChannels = found;
+    if (Array.isArray(published.preview_device_permissions)) {
+      const prop = published.preview_device_permissions;
+      let found1 = prop.filter(conjureDevicePermissions.isConjureDevicePermissionName);
+    } else {
+      found1 = [];
+    }
+    obj2.previewDevicePermissions = found1;
     let published_revision = null;
     if (typeof published.published_revision === "number") {
       published_revision = published.published_revision;
@@ -132,6 +276,7 @@ export const publishStepHandlers = {
   },
   publish_result(ok, projectId) {
     projectId = projectId.projectId;
+    DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
     value = map.get(projectId);
     map.delete(projectId);
     if (null != value) {
@@ -148,23 +293,26 @@ export const publishStepHandlers = {
     } else {
       const publishStatus = ConjurePublishStatusStore.getPublishStatus(projectId);
       if (null != publishStatus) {
-        const obj = {
+        const obj2 = {
           type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
           projectId,
           published: true,
           hasUnpublishedChanges: false,
           surface: null,
           previewAppChannels: null,
+          previewDevicePermissions: null,
           publishedRevision: null,
           publishedAt: null,
         };
         ({
-          surface: obj4.surface,
-          previewAppChannels: obj4.previewAppChannels,
-          publishedRevision: obj4.publishedRevision,
-          publishedAt: obj4.publishedAt,
+          surface: obj5.surface,
+          previewAppChannels: obj5.previewAppChannels,
+          previewDevicePermissions: obj5.previewDevicePermissions,
+          publishedRevision: obj5.publishedRevision,
+          publishedAt: obj5.publishedAt,
         } = publishStatus);
-        DispatcherDefault.dispatch(obj);
+        DispatcherDefault.dispatch(obj2);
+        const tmpResult = DispatcherDefault;
       }
     }
   },
@@ -186,14 +334,14 @@ export const preparePublish = function preparePublish(projectId) {
     conjureSocket.sendPreparePublish();
   }
 };
-export const publishProject = function publishProject(id) {
-  const projectId = id;
-  c1 = false;
+export const publishProject = function publishProject(projectId, arg1) {
+  closure_1 = arg1;
+  c2 = false;
   const promise = new Promise((resolve, reject) => {
     const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
     if (null != conjureSocket) {
       if (map.has(projectId)) {
-        const _Error2 = Error;
+        let _Error2 = Error;
         let error = new Error("Publish already in flight");
         reject(error);
       } else {
@@ -202,23 +350,39 @@ export const publishProject = function publishProject(id) {
           resolve,
           reject,
           timeout: setTimeout(() => {
-            value = map.get(projectId);
+            closure_1(dependencyMap[2]).dispatch({
+              type: "CONJURE_PROJECT_PUBLISH_APPROVAL",
+              projectId,
+              approvalUrl: null,
+            });
+            value = map2.get(projectId);
             if (null != value) {
-              map.delete(projectId);
+              map2.delete(projectId);
               const _clearTimeout = clearTimeout;
               clearTimeout(value.timeout);
               const _Error = Error;
               const error = new Error("Publish timed out");
               value.reject(error);
             }
+            value2 = map.get(projectId);
+            if (null != value2) {
+              map.delete(projectId);
+              const _clearTimeout2 = clearTimeout;
+              clearTimeout(value2.timeout);
+              const _Error2 = Error;
+              const error1 = new Error("Publish timed out");
+              value2.reject(error1);
+            }
+            const obj = closure_1(dependencyMap[2]);
+            const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
           }, 900000),
         };
         const result = map.set(projectId, obj4);
-        c1 = true;
+        c2 = true;
         const obj6 = { type: "CONJURE_PROJECT_PUBLISH_START", projectId };
         DispatcherDefault.dispatch(obj6);
         try {
-          conjureSocket.sendPublish();
+          conjureSocket.sendPublish(closure_1);
         } catch (error1) {
           obj2.delete(tmp4);
           obj.clearTimeout(tmp3);
@@ -238,7 +402,7 @@ export const publishProject = function publishProject(id) {
     const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
     if (null != conjureSocket) {
       if (map.has(projectId)) {
-        const _Error2 = Error;
+        let _Error2 = Error;
         let error = new Error("Publish already in flight");
         reject(error);
       } else {
@@ -247,23 +411,39 @@ export const publishProject = function publishProject(id) {
           resolve,
           reject,
           timeout: setTimeout(() => {
-            value = map.get(projectId);
+            closure_1(dependencyMap[2]).dispatch({
+              type: "CONJURE_PROJECT_PUBLISH_APPROVAL",
+              projectId,
+              approvalUrl: null,
+            });
+            value = map2.get(projectId);
             if (null != value) {
-              map.delete(projectId);
+              map2.delete(projectId);
               const _clearTimeout = clearTimeout;
               clearTimeout(value.timeout);
               const _Error = Error;
               const error = new Error("Publish timed out");
               value.reject(error);
             }
+            value2 = map.get(projectId);
+            if (null != value2) {
+              map.delete(projectId);
+              const _clearTimeout2 = clearTimeout;
+              clearTimeout(value2.timeout);
+              const _Error2 = Error;
+              const error1 = new Error("Publish timed out");
+              value2.reject(error1);
+            }
+            const obj = closure_1(dependencyMap[2]);
+            const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
           }, 900000),
         };
         const result = map.set(projectId, obj4);
-        c1 = true;
+        c2 = true;
         const obj6 = { type: "CONJURE_PROJECT_PUBLISH_START", projectId };
         DispatcherDefault.dispatch(obj6);
         try {
-          conjureSocket.sendPublish();
+          conjureSocket.sendPublish(closure_1);
         } catch (error1) {
           obj2.delete(tmp4);
           obj.clearTimeout(tmp3);
@@ -288,7 +468,7 @@ export const publishProject = function publishProject(id) {
       throw error;
     })
     .finally(() => {
-      if (c1) {
+      if (c2) {
         const obj2 = { type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId };
         DispatcherDefault.dispatch(obj2);
       }
@@ -358,14 +538,73 @@ export const recordPatchNotesSent = function recordPatchNotesSent(projectId, sen
   const obj2 = { type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId, sent };
 };
 export const rejectPendingPublish = function rejectPendingPublish(projectId, arg1) {
-  value = map.get(projectId);
+  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null });
+  value = map2.get(projectId);
   if (null != value) {
-    map.delete(projectId);
+    map2.delete(projectId);
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timeout);
     const _Error = Error;
     const error = new Error(arg1);
     value.reject(error);
   }
+  value2 = map.get(projectId);
+  if (null != value2) {
+    map.delete(projectId);
+    const _clearTimeout2 = clearTimeout;
+    clearTimeout(value2.timeout);
+    const _Error2 = Error;
+    const error1 = new Error(arg1);
+    value2.reject(error1);
+  }
+  const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
 };
 export { rejectPendingPatchNotesDraft };
+export const requestPublishOptions = function requestPublishOptions(id) {
+  closure_0 = id;
+  return new Promise((resolve, reject) => {
+    const conjureSocket = conjureProjectSockets.getConjureSocket(closure_0);
+    if (null == conjureSocket) {
+      let _Error = Error;
+      let error = new Error("Not connected");
+      return reject(error);
+    } else if (conjureSocket.supportsPublishOptions) {
+      rejectPendingPublishOptions(closure_0, "Superseded by a newer publish request");
+      const _Date = Date;
+      const _Math = Math;
+      const timestamp = Date.now();
+      const str2 = Math.random();
+      const _HermesInternal = HermesInternal;
+      const combined = "" + timestamp + "-" + Math.random().toString(36).slice(2);
+      const _setTimeout = setTimeout;
+      const obj2 = {
+        resolve,
+        reject,
+        timeout: setTimeout(() => {
+          value = map2.get(id);
+          if (null != value) {
+            map2.delete(id);
+            const _clearTimeout = clearTimeout;
+            clearTimeout(value.timeout);
+            const _Error = Error;
+            const error = new Error("Could not load publish destinations. Try again.");
+            value.reject(error);
+          }
+        }, 15000),
+        nonce: combined,
+      };
+      const result = map2.set(closure_0, obj2);
+      try {
+        conjureSocket.sendPublishOptions(combined);
+      } catch (err) {
+        tmp2(tmp3, "Could not load publish destinations. Try again.");
+      }
+      const str1 = Math.random().toString(36);
+    } else {
+      const obj3 = { destinations: null, selected_destination_id: "conjuring" };
+      const items = [{ id: "conjuring", label: "Conjuring" }];
+      obj3.destinations = items;
+      resolve(obj3);
+    }
+  });
+};

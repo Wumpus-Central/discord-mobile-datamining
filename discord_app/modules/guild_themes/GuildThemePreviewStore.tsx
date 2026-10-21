@@ -30,9 +30,9 @@ function handleEnd() {
   }
   return flag;
 }
-const GuildThemePreviewConstants = fn(5140);
+const GuildThemePreviewConstants = fn(5161);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
-const timeout = new fn(4795).Timeout();
+const timeout = new fn(4816).Timeout();
 let closure_5 = {
   guildId: null,
   draft: null,
@@ -160,7 +160,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: tmp, customUserThemeSettings: "r" };
+      const obj2 = { presetId: tmp, customUserThemeSettings: "Array" };
       const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {

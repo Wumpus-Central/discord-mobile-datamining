@@ -2,12 +2,12 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import _modDef8706 from "../../../../../_runtime/metro/08706__.js";
+import _modDef8733 from "../../../../../_runtime/metro/08733__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 const PlatformUtils = fn(1384);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
@@ -78,7 +78,7 @@ export default noop.memo(
             onValueChange,
             onResponderGrant: tmp10,
           };
-          const tmp15 = jsx(_modDef8706, {
+          const tmp15 = jsx(_modDef8733, {
             style: tmp7,
             disabled,
             value: current,

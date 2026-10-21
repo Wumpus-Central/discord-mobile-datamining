@@ -68,7 +68,7 @@ let closure_11 = async function _joinFrameActivity(arg0) {
           };
           c7 = 1;
           c8 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp10) {

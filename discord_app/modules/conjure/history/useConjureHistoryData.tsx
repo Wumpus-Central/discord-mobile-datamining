@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 let ReactCompilerGating = fn(558);
-let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHistoryLoad(arg0) {
       closure_0 = arg0;
       const cResult = c.c(12);
@@ -150,6 +150,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       }
     };
+let closure_4 = tmp2;
 let closure_5 = [];
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -323,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[22] = mapped;
                 }
               }
-              const fn5 = function j(environment) {
+              const fn5 = function _(environment) {
                 const obj = { environment, backups: null };
                 if ("preview" === environment) {
                   closure_0 = state;
@@ -535,3 +536,4 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }, items6),
       };
     };
+export const useHistoryLoad = tmp2;

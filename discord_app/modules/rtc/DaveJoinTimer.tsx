@@ -63,7 +63,7 @@ prototype["joinSucceeded"] = function joinSucceeded(joinTransitionId, joinIsGrou
     }
   }
 };
-prototype["executed"] = function executed(transition_id, flag) {
+prototype["executed"] = function executed(_secureFramesLastExecutedTransitionId, flag) {
   const self = this;
   if (!tmp) {
     timestampProducer = self.timestampProducer;

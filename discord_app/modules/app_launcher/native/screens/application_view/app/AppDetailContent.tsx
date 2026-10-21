@@ -20,18 +20,18 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9577);
+const ApplicationCommandIndexStore = fn(9607);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1504);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_12 = fn(5941).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(5963).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
-  headerSpacer: { height: fn(11995).EXPANDED_HEADER_HEIGHT - fn(11995).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(12043).EXPANDED_HEADER_HEIGHT - fn(12043).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -49,7 +49,7 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(11995).EXPANDED_HEADER_HEIGHT - fn(11995).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(12043).EXPANDED_HEADER_HEIGHT - fn(12043).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {
@@ -634,7 +634,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj2 = require("CommandRowButton");
-      return closure_13(tmp(6854).TableRow, {
+      return closure_13(tmp(6882).TableRow, {
         start: isFirstRow,
         end: isLastRow,
         label: command.displayName,

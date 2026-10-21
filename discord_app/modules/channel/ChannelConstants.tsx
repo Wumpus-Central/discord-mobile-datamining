@@ -47,6 +47,7 @@ const frozen = Object.freeze({
   IS_SPOILER_CHANNEL: 2097152,
   IS_GAME_INVITES_CHANNEL: 4194304,
   HAS_ONLY_SYSTEM_MESSAGES: 8388608,
+  UNLISTED: 67108864,
 });
 const result = size.fileFinishedImporting("modules/channel/ChannelConstants.tsx");
 

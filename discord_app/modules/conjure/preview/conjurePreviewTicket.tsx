@@ -6,7 +6,7 @@ import ConjureLastIntegrationStatusStore from "../projects/ConjureLastIntegratio
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const isLaunched = fn(6727).isLaunched;
+const isLaunched = fn(6755).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTicket.tsx");
 

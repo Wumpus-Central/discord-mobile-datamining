@@ -1,6 +1,7 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/billing_settings_nitro_gift_banner.tsx
 import _mod1212 from "../../../../../../../_runtime/metro/01212__.js";
 import localized_string from "../../common/v1/localized_string.tsx";
+import help_article from "help_article.tsx";
 import gradient from "gradient.tsx";
 import theme_aware_asset from "theme_aware_asset.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -9,7 +10,7 @@ require = fn;
 const MessageType = fn(1212).MessageType;
 class BillingSettingsNitroGiftBanner$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , ,];
+    items = [, , , , , , , , , , , ,];
     items[0] = { no: 1, name: "asset_url", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "header", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "body", kind: "scalar", T: 9 };
@@ -48,20 +49,28 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
         return require("localized_string").LocalizedString;
       },
     };
-    obj = { no: 11, name: "body_localized", kind: "message", T: null };
+    items[10] = {
+      no: 11,
+      name: "body_localized",
+      kind: "message",
+      T() {
+        return require("localized_string").LocalizedString;
+      },
+    };
+    obj = { no: 12, name: "additional_terms_localized", kind: "message", T: null };
     class T {
       constructor() {
         return closure_1_0(closure_1_1[4]).LocalizedString;
       }
     }
     obj.T = T;
-    items[10] = obj;
-    items[11] = {
-      no: 12,
-      name: "additional_terms_localized",
+    items[11] = obj;
+    items[12] = {
+      no: 13,
+      name: "help_article",
       kind: "message",
       T() {
-        return require("localized_string").LocalizedString;
+        return require("help_article").HelpArticle;
       },
     };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", items, T);
@@ -200,6 +209,20 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
       writeUnknownFields,
     );
   }
+  if (assetUrl.helpArticle) {
+    const HelpArticle = help_article.HelpArticle;
+    const tagResult12 = tag.tag(13, _mod1212.WireType.LengthDelimited);
+    const joined6 = HelpArticle.internalBinaryWrite(
+      assetUrl.helpArticle,
+      tag.tag(13, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult6 = HelpArticle.internalBinaryWrite(
+      assetUrl.helpArticle,
+      tag.tag(13, _mod1212.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -249,22 +272,30 @@ let items = [
       return require("localized_string").LocalizedString;
     },
   },
+  {
+    no: 11,
+    name: "body_localized",
+    kind: "message",
+    T() {
+      return require("localized_string").LocalizedString;
+    },
+  },
   ,
 ];
-let obj = { no: 11, name: "body_localized", kind: "message", T: null };
+let obj = { no: 12, name: "additional_terms_localized", kind: "message", T: null };
 class T {
   constructor() {
     return closure_1_0(closure_1_1[4]).LocalizedString;
   }
 }
 obj.T = T;
-items[10] = obj;
-items[11] = {
-  no: 12,
-  name: "additional_terms_localized",
+items[11] = obj;
+items[12] = {
+  no: 13,
+  name: "help_article",
   kind: "message",
   T() {
-    return require("localized_string").LocalizedString;
+    return require("help_article").HelpArticle;
   },
 };
 const prototype1 = new prototype(

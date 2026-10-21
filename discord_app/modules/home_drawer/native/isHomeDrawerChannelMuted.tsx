@@ -5,7 +5,7 @@ import JoinedThreadsStore from "../../threads/JoinedThreadsStore.tsx";
 import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const isThread = fn(4804).isThread;
+const isThread = fn(4825).isThread;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");

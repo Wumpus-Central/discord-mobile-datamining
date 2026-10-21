@@ -51,30 +51,30 @@ function answerFor(cmd) {
   } else if (null == obj[cmd.cmd]) {
     return null;
   } else {
-    ({ options, subject } = tmp10(cmd));
+    ({ options, subject } = tmp9(cmd));
     if (found.recorded.length >= 20) {
-      obj = { result: tmp12 };
-      return obj;
+      const obj2 = { result: tmp11 };
+      return obj2;
     } else {
-      let obj2 = { command: cmd.cmd, answered: tmp13 };
+      let obj3 = { command: cmd.cmd, answered: tmp12 };
       if (null != options) {
         if (options.length > 0) {
-          const obj3 = { options };
-          let obj6 = obj3;
+          const obj4 = { options };
+          obj = obj4;
         }
-        const merged = Object.assign(obj6);
+        const merged = Object.assign(obj);
         if (null != subject) {
-          const obj4 = { subject };
-          let obj5 = obj4;
+          const obj5 = { subject };
+          let obj6 = obj5;
         } else {
-          obj5 = {};
+          obj6 = {};
         }
-        const merged1 = Object.assign(obj5);
-        obj2 = tmp2(obj2);
+        const merged1 = Object.assign(obj6);
+        obj3 = tmp13(obj3);
       }
-      obj6 = {};
+      obj = {};
     }
-    const tmp10Result = tmp10(cmd);
+    const tmp9Result = tmp9(cmd);
   }
 }
 const RPCCommands = Constants.RPCCommands;
@@ -150,6 +150,20 @@ let obj = {
     obj.subject = tmp;
     return obj;
   },
+  [RPCCommands.REQUEST_DEVICE_PERMISSIONS]: (args) => {
+    if (Array.isArray(args.args.permissions)) {
+      const permissions = args.args.permissions;
+      let found = permissions.filter((item) => typeof item === "string");
+    } else {
+      found = [];
+    }
+    obj = {
+      result: { permissions: found.map((permission) => ({ permission, state: "denied" })) },
+      answered: "denied; an agent may not grant device access",
+      options: found,
+    };
+    return obj;
+  },
   [RPCCommands.OPEN_USER_PROFILE]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.OPEN_USER_POPOUT]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.OPEN_GAME_PROFILE]: () => ({ result: { opened: true }, answered: "opened" }),
@@ -157,8 +171,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "unicodeVersion", answered: "applicationId" }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "unicodeVersion", answered: "applicationId" }),
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "unicodeVersion", answered: 31058513 }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "unicodeVersion", answered: 31058513 }),
 };
 let closure_5 = {
   drain() {
@@ -189,8 +203,8 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
       closure_6.unshift(obj2);
     }
     if (1 === arr.length) {
-      let result = obj2(9202).setRpcCommandInterceptor(answerFor);
-      obj = obj2(9202);
+      let result = obj2(9229).setRpcCommandInterceptor(answerFor);
+      obj = obj2(9229);
     }
     const obj3 = {
       iframeId,

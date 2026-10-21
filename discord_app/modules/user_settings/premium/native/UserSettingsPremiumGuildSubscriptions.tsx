@@ -30,11 +30,11 @@ const Constants = fn(1087);
 const FractionalPremiumStates = fn(1394).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(6658).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(6686).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -152,9 +152,9 @@ prototype["render"] = function render() {
   obj3.children = items;
   return value2(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(4999).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(5020).ThemeContext;
 const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, backgroundColor: fn(6658).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
+let obj3 = { flex: 1, backgroundColor: fn(6686).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -339,12 +339,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = true;
       }
       let obj = require("useSubscriptionPlansLoaded");
-      ({ fractionalState: c2, endsAt } = flag(7454)({ forceFetch: true }));
-      const tmp3 = flag(7454)({ forceFetch: true });
+      ({ fractionalState: c2, endsAt } = flag(7482)({ forceFetch: true }));
+      const tmp3 = flag(7482)({ forceFetch: true });
       isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
       const tmpResult = require("ReverseTrialUtils");
-      fpDurationText = flag(14589)(endsAt, tmp(14589).CountDownMessageTypes.LONG_TIME_LEFT);
-      const tmp4 = flag(14589);
+      fpDurationText = flag(14663)(endsAt, tmp(14663).CountDownMessageTypes.LONG_TIME_LEFT);
+      const tmp4 = flag(14663);
       const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
         const obj = {

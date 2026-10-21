@@ -103,6 +103,9 @@ prototype["initialize"] = function initialize() {
 prototype["requestMember"] = function requestMember(arg0, arg1) {
   navigation.request(arg0, arg1);
 };
+prototype["isMemberRequestSettled"] = function isMemberRequestSettled(arg0, arg1) {
+  return navigation.isSettled(arg0, arg1);
+};
 prototype["getDebugState"] = function getDebugState(arg0) {
   return navigation.getDebugState(arg0);
 };
@@ -115,22 +118,25 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
     return false;
   },
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch(arg0) {
+    closure_0 = false;
     function _loop(iter) {
       const members = iter.members;
       const item = members.forEach((user) => {
-        navigation.acknowledge(iter.guildId, user.user.id);
+        iter = closure_6.acknowledge(iter.guildId, user.user.id) || iter;
       });
       if (null != iter.notFound) {
         const notFound = iter.notFound;
-        const item1 = notFound.forEach((item) => navigation.acknowledge(iter.guildId, item));
+        const item1 = notFound.forEach((item) => {
+          iter = closure_6.acknowledge(iter.guildId, item) || iter;
+        });
       }
     }
-    const iter = arg0.chunks[Symbol.iterator]();
+    let iter = arg0.chunks[Symbol.iterator]();
     while (iter !== undefined) {
       let _loopResult = _loop(iter.next());
       continue;
     }
-    return false;
+    return closure_0;
   },
   SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
   SMART_SEARCH_FETCH_SUCCESS: function handleSmartSearchFetchSuccess(messages) {

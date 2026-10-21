@@ -1,19 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4863 from "../../../../../_runtime/metro/04863__.js";
+import _mod4884 from "../../../../../_runtime/metro/04884__.js";
 import identity from "../../../../../_runtime/metro/01269__.js";
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_2 = Object.freeze({
-  name: "",
-  emojiId: "constructor",
-  emojiName: "count",
-  description: "toCharArray$esjava$1",
-  refId: "getGuild",
-});
+let closure_2 = Object.freeze({ name: "", emojiId: "code", emojiName: "name", description: "message", refId: "mn" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
@@ -56,14 +50,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4863.shallow);
+      return closure_3(first, _mod4884.shallow);
     }
   : function useDescriptionState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ description: arr[0], setDescription: arr[1] } = arg0);
         return items;
-      }, _mod4863.shallow);
+      }, _mod4884.shallow);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -80,14 +74,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4863.shallow);
+      return closure_3(first, _mod4884.shallow);
     }
   : function useEmojiIdState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
         return items;
-      }, _mod4863.shallow);
+      }, _mod4884.shallow);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -104,14 +98,14 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4863.shallow);
+      return closure_3(first, _mod4884.shallow);
     }
   : function useEmojiNameState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
         return items;
-      }, _mod4863.shallow);
+      }, _mod4884.shallow);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -128,14 +122,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4863.shallow);
+      return closure_3(first, _mod4884.shallow);
     }
   : function useNameState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ name: arr[0], setName: arr[1] } = arg0);
         return items;
-      }, _mod4863.shallow);
+      }, _mod4884.shallow);
     };
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx",
@@ -177,12 +171,12 @@ export const useRefIdState = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4863.shallow);
+      return closure_3(first, _mod4884.shallow);
     }
   : function useRefIdState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ refId: arr[0], setRefId: arr[1] } = arg0);
         return items;
-      }, _mod4863.shallow);
+      }, _mod4884.shallow);
     };

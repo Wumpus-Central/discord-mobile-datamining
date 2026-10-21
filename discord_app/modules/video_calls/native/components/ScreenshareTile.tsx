@@ -4,10 +4,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05258_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05279_LegacyBaseButton.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef11304 from "../../../../../_runtime/metro/11304__.js";
+import _modDef11348 from "../../../../../_runtime/metro/11348__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[5];
         }
         if (cResult[6] !== tmp4.image) {
-          const obj3 = { source: _modDef11304, style: tmp4.image, resizeMode: "contain" };
+          const obj3 = { source: _modDef11348, style: tmp4.image, resizeMode: "contain" };
           const tmp19 = hasOwnProperty(FastImageDefault, obj3);
           cResult[6] = tmp4.image;
           cResult[7] = tmp19;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj4 = { source: null, style: null, resizeMode: "contain" };
       const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-      obj4.source = _modDef11304;
+      obj4.source = _modDef11348;
       obj4.style = tmp.image;
       items[1] = hasOwnProperty(FastImageDefault, obj4);
       const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };

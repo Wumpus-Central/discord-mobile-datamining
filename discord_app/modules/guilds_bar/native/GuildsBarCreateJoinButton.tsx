@@ -114,7 +114,7 @@ const Constants = fn(1087);
 } = Constants);
 const PremiumUpsellTypes = fn(1394).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -126,7 +126,7 @@ export default noop.memo(
         const cResult = enabled(576).c(17);
         const tmp4 = closure_13();
         let obj = enabled(576);
-        const guildsBarAnimatedWrapperStyles = enabled(17489).useGuildsBarAnimatedWrapperStyles();
+        const guildsBarAnimatedWrapperStyles = enabled(17570).useGuildsBarAnimatedWrapperStyles();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { location: "GuildsBarCreateJoinButton" };
           cResult[0] = obj3;
@@ -134,7 +134,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const GameCommunityAddServerEntryExperiment = tmp(14845).GameCommunityAddServerEntryExperiment;
+        const GameCommunityAddServerEntryExperiment = tmp(14919).GameCommunityAddServerEntryExperiment;
         enabled = GameCommunityAddServerEntryExperiment.useConfig(first).enabled;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [SelectedGuildStore];
@@ -149,7 +149,7 @@ export default noop.memo(
           tmp7 = cResult[1];
           tmp8 = cResult[2];
         }
-        const obj2 = enabled(17489);
+        const obj2 = enabled(17570);
         let stateFromStores = enabled;
         if (enabled) {
           stateFromStores = tmpResult.useStateFromStores(tmp7, tmp8);
@@ -175,7 +175,7 @@ export default noop.memo(
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1128).intl;
           const stringResult = intl.string(tmp(1128).t.l5WIbf);
-          const tmp16 = jsx(tmp(17544).HomeDrawerAddServerRowExpandedChildren, {});
+          const tmp16 = jsx(tmp(17625).HomeDrawerAddServerRowExpandedChildren, {});
           cResult[5] = stringResult;
           cResult[6] = tmp16;
           let tmp13 = tmp16;
@@ -194,7 +194,7 @@ export default noop.memo(
         }
         if (cResult[7] !== MOBILE_GUILDBAR_ICON_DEFAULT) {
           const obj5 = { size: "md", color: MOBILE_GUILDBAR_ICON_DEFAULT };
-          const tmp21 = jsx(tmp(10959).CirclePlusIcon, { size: "md", color: MOBILE_GUILDBAR_ICON_DEFAULT });
+          const tmp21 = jsx(tmp(11103).CirclePlusIcon, { size: "md", color: MOBILE_GUILDBAR_ICON_DEFAULT });
           cResult[7] = MOBILE_GUILDBAR_ICON_DEFAULT;
           cResult[8] = tmp21;
           let tmp19 = tmp21;
@@ -233,7 +233,7 @@ export default noop.memo(
           expandedChildren: tmp13,
           children: tmp19,
         };
-        const tmp23 = jsx(tmp18(17489), {
+        const tmp23 = jsx(tmp18(17570), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -254,10 +254,10 @@ export default noop.memo(
       }
     : function GuildsBarCreateJoinButton() {
         const tmp = closure_13();
-        let obj = enabled(17489);
-        const GameCommunityAddServerEntryExperiment = enabled(14845).GameCommunityAddServerEntryExperiment;
+        let obj = enabled(17570);
+        const GameCommunityAddServerEntryExperiment = enabled(14919).GameCommunityAddServerEntryExperiment;
         enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-        const guildsBarAnimatedWrapperStyles = enabled(17489).useGuildsBarAnimatedWrapperStyles();
+        const guildsBarAnimatedWrapperStyles = enabled(17570).useGuildsBarAnimatedWrapperStyles();
         const items = [SelectedGuildStore];
         let stateFromStores = enabled;
         if (enabled) {
@@ -287,15 +287,15 @@ export default noop.memo(
           overState: "y",
           config: memo,
           label: null,
-          expandedChildren: "\u{1F961}",
-          children: 10,
+          expandedChildren: "text-status-idle",
+          children: null,
         };
         obj2 = enabled(504);
         const intl = tmp2(1128).intl;
         obj4.label = intl.string(enabled(1128).t.l5WIbf);
-        obj4.expandedChildren = jsx(enabled(17544).HomeDrawerAddServerRowExpandedChildren, {});
+        obj4.expandedChildren = jsx(enabled(17625).HomeDrawerAddServerRowExpandedChildren, {});
         const colors = nativeDefault.colors;
-        obj4.children = jsx(enabled(10959).CirclePlusIcon, {
+        obj4.children = jsx(enabled(11103).CirclePlusIcon, {
           size: "md",
           color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
         });
@@ -307,8 +307,8 @@ export default noop.memo(
           overState: "y",
           config: memo,
           label: null,
-          expandedChildren: "\u{1F961}",
-          children: 10,
+          expandedChildren: "text-status-idle",
+          children: null,
         });
         return <View style={tmp.stretch}>{null}</View>;
       },

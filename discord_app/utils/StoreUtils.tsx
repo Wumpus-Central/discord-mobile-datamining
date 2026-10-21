@@ -2,106 +2,109 @@
 import util from "../intl/index.native.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
 import ImageLoaderUtils from "../modules/image_upload/ImageLoaderUtils.tsx";
+import actions_BillingActionCreators from "../modules/billing/actions/BillingActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import BillingInfoStore from "../stores/billing/BillingInfoStore.tsx";
 import PaymentSourceStore from "../stores/billing/PaymentSourceStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
-import allSettled_mod from "../../_runtime/06341_allSettled.js";
+import allSettled_mod from "../../_runtime/06363_allSettled.js";
 
 require = fn;
+let closure_10 = async function _waitForSubscriptionsToBeFetched() {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c2 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c0 = 0;
+          if (!SubscriptionStore.hasFetchedSubscriptions()) {
+            if (BillingInfoStore.isSubscriptionFetching) {
+              if (BillingInfoStore.isSubscriptionFetching) {
+                c1 = 2;
+                c2 = 1;
+                const obj6 = { value: closure_128_0(closure_128_1[11]).sleep(50), done: false };
+                return obj6;
+              }
+            } else {
+              c1 = 1;
+              c2 = 1;
+              const obj7 = { value: actions_BillingActionCreators.fetchSubscriptions(), done: false };
+              return obj7;
+            }
+          }
+        }
+      } else {
+        if (1 === tmp4) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        }
+        c2 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+      c2 = 3;
+    } catch (tmp14) {
+      c2 = tmp;
+      throw tmp14;
+    }
+  }
+};
 function fetchCountryCodeQueryDependencies() {
   const items = [];
   if (!PaymentSourceStore.hasFetchedPaymentSources) {
     let paymentSourcesFetchRequest = BillingInfoStore.paymentSourcesFetchRequest;
     if (paymentSourcesFetchRequest == null) {
-      paymentSourcesFetchRequest = require("actions/BillingActionCreators").fetchPaymentSources();
-      let obj = require("actions/BillingActionCreators");
+      paymentSourcesFetchRequest = actions_BillingActionCreators.fetchPaymentSources();
     }
     items.push(paymentSourcesFetchRequest);
   }
   if (!BillingInfoStore.ipCountryCodeLoaded) {
-    items.push(require("actions/BillingActionCreators").fetchIpCountryCode());
-    const obj2 = require("actions/BillingActionCreators");
+    items.push(actions_BillingActionCreators.fetchIpCountryCode());
   }
-  _require = asyncGeneratorStep(async (arg0) => {
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            c1 = 0;
-            closure_129_0 = closure_0;
-            if (SubscriptionStore.hasFetchedSubscriptions()) {
-              closure_0();
-            } else if (BillingInfoStore.isSubscriptionFetching) {
-              function wait() {
-                if (closure_2_4.isSubscriptionFetching) {
-                  const _setTimeout = setTimeout;
-                  const timerId = setTimeout(closure_1_1, 50);
-                } else {
-                  closure_1_0();
-                }
-              }
-              closure_129_1 = wait;
-              wait();
-            } else {
-              c2 = 1;
-              c3 = 1;
-              const obj5 = { value: closure_0(c1[10]).fetchSubscriptions(), done: false };
-              return obj5;
-            }
-            c3 = 3;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_129_0();
-        }
-        c3 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } catch (tmp13) {
-        c3 = tmp;
-        throw tmp13;
-      }
-    }
-  });
   items.push(
-    new Promise(function () {
+    (function waitForSubscriptionsToBeFetched() {
       const self = this;
-      const apply = closure_0.apply;
+      const apply = closure_1_10.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }),
+    })(),
   );
   return Promise.allSettled(items);
 }
-let closure_11 = async function _httpGetWithCountryCodeQuery(arg0) {
+let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -141,7 +144,7 @@ let closure_11 = async function _httpGetWithCountryCodeQuery(arg0) {
           closure_132_5 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -158,7 +161,7 @@ let closure_11 = async function _httpGetWithCountryCodeQuery(arg0) {
               isAuthenticatedResult = closure_133_3.isAuthenticated();
             }
             if (isAuthenticatedResult) {
-              const items = [closure_133_10()];
+              const items = [closure_133_11()];
               const promise = new Promise((arg0) => setTimeout(arg0, 10000));
               items[1] = promise;
               c6 = 2;
@@ -225,7 +228,7 @@ let closure_11 = async function _httpGetWithCountryCodeQuery(arg0) {
             closure_132_0.query = obj7;
           }
         }
-        const HTTP = closure_133_0(closure_133_1[11]).HTTP;
+        const HTTP = closure_133_0(closure_133_1[12]).HTTP;
         c7 = 3;
         const obj8 = { value: HTTP.get(closure_132_0), done: true };
         return obj8;
@@ -240,14 +243,14 @@ const Constants = fn(1087);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(5860).isMobile;
+const isMobile = fn(5882).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(5860).isTablet;
+  tmp4 = !fn(5882).isTablet;
 }
 if (tmp4) {
-  tmp4 = -1 !== fn(5781).getChromeVersion();
-  let obj2 = fn(5781);
+  tmp4 = -1 !== fn(5801).getChromeVersion();
+  let obj2 = fn(5801);
 }
 let closure_9 = tmp4;
 const size = fn(2);
@@ -293,7 +296,7 @@ export const getAssetURL = function getAssetURL(application_id, mimeType, size, 
 export { fetchCountryCodeQueryDependencies };
 export const httpGetWithCountryCodeQuery = function httpGetWithCountryCodeQuery() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

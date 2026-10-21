@@ -23,17 +23,17 @@ import useAppChannelClosedDefault from "../useAppChannelClosed.tsx";
 import useChannelAppFrameTeardownDefault from "../../frames/useChannelAppFrameTeardown.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const useChannelContentGate = obj(10696);
+const useChannelContentGate = obj(10840);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4945);
+let createStyles = fn(4966);
 let obj2 = { icon: null };
 let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg };
 obj2.icon = size;
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4945);
+createStyles = fn(4966);
 let closure_8 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;
@@ -59,15 +59,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 ({ frame, state } = useFrameLifecycleDefault(tmp9));
                 conjureBackgroundFramesDefault(applicationId, surface);
                 const tmp10 = useFrameLifecycleDefault(tmp9);
-                useEdgeOnlySwipeExitDefault(state === tmp(17790).FrameLifecycleState.Launched);
+                useEdgeOnlySwipeExitDefault(state === tmp(17871).FrameLifecycleState.Launched);
                 const tmp5Result = useEdgeOnlySwipeExitDefault;
                 let tmp15 = null;
-                if (state === tmp(17790).FrameLifecycleState.Launched) {
+                if (state === tmp(17871).FrameLifecycleState.Launched) {
                   tmp15 = applicationId;
                 }
                 useInlineFrameOAuthNavigationDefault(tmp15);
                 const tmp5Result3 = useInlineFrameOAuthNavigationDefault;
-                const isConjureChannelCandidate = tmp(7294).useIsConjureChannelCandidate(channel, "AppChannel");
+                const isConjureChannelCandidate = tmp(7322).useIsConjureChannelCandidate(channel, "AppChannel");
                 id = channel.id;
                 if (cResult[9] !== id) {
                   class M {
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                if (tmp(17790).FrameLifecycleState.Launched === state) {
+                if (tmp(17871).FrameLifecycleState.Launched === state) {
                   class M {
                     constructor(arg0) {
                       obj = closure_0(closure_2[15]);
@@ -98,7 +98,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const obj2 = {
                     frameId: frame.id,
-                    level: tmp(11758).FrameStackLevel.WithinAppContent,
+                    level: tmp(11806).FrameStackLevel.WithinAppContent,
                     presentation: tmp7,
                   };
                   const tmp22 = closure_5(FrameRenderTargetDefault, obj2);
@@ -115,7 +115,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const tmpResult = tmp(7294);
+                const tmpResult = tmp(7322);
               }
               const obj3 = { applicationId, surface };
               cResult[6] = applicationId;
@@ -374,7 +374,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = obj4;
       }
       const obj5 = {
-        type: channel(5587).EmbeddedSurfaceType.APP_CHANNEL,
+        type: channel(5608).EmbeddedSurfaceType.APP_CHANNEL,
         channelId: channel.id,
         guildId: channel.guild_id,
       };

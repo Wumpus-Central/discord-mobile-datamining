@@ -92,14 +92,14 @@ export const getFrameLaunchChannelId = function getFrameLaunchChannelId(surface)
   }
   return channelId;
 };
-export const asLaunched = function asLaunched(mainFrame) {
+export const asLaunched = function asLaunched(frame) {
   let state;
-  if (mainFrame != null) {
-    state = mainFrame.state;
+  if (frame != null) {
+    state = frame.state;
   }
   let tmp2 = null;
   if ("launched" === state) {
-    tmp2 = mainFrame;
+    tmp2 = frame;
   }
   return tmp2;
 };

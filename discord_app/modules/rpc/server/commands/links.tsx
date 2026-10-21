@@ -18,8 +18,29 @@ import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 require = fn;
-let closure_11 = async function _openExternalLink(arg0) {
+function trackExternalLink(application, arg1, arg2) {
+  const str = new URL(arg1);
+  let tmp = "client.vibeyard.tools" === str.hostname;
+  if (tmp) {
+    tmp = "/link" === str.pathname;
+  }
+  if (tmp) {
+    str.search = "";
+    str.hash = "";
+    str.username = "";
+    str.password = "";
+  }
+  application = application.application;
+  let id;
+  if (application != null) {
+    id = application.id;
+  }
+  const obj = AnalyticsUtilsDefault;
+  obj.track(constants3.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: str.toString(), opened: true });
+}
+let closure_12 = async function _openExternalLink(arg0, arg1) {
   let application = arg0;
+  closure_1 = arg1;
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -27,7 +48,7 @@ let closure_11 = async function _openExternalLink(arg0) {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -45,20 +66,20 @@ let closure_11 = async function _openExternalLink(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             const channelId = tmp3;
-            application = tmp5;
+            application = tmp7;
             closure_130_0 = application;
-            closure_130_1 = url;
+            closure_130_1 = closure_1;
             closure_130_2 = undefined;
             closure_130_3 = undefined;
             closure_130_4 = undefined;
-            const application3 = application.application;
+            application = application.application;
             let id;
-            if (application3 != null) {
-              id = application3.id;
+            if (application != null) {
+              id = application.id;
             }
             const application1 = application.getApplication(id);
             closure_130_2 = application1;
@@ -70,115 +91,127 @@ let closure_11 = async function _openExternalLink(arg0) {
             const embeddedActivityLocationChannelId =
               embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location);
             closure_130_3 = embeddedActivityLocationChannelId;
-            let tmp48;
+            let tmp43;
             if (PlatformUtils.isPlatformEmbedded) {
-              const obj4 = { application: application1, channelId: embeddedActivityLocationChannelId };
-              tmp48 = getEmbeddedActivityPopoutWindowKeyDefault(obj4);
+              const obj5 = { application: application1, channelId: embeddedActivityLocationChannelId };
+              tmp43 = getEmbeddedActivityPopoutWindowKeyDefault(obj5);
             }
             let internalDeepLink = null;
-            if (null != tmp41Result.tryValidateEmbeddedAppFrame(application)) {
-              internalDeepLink = internalDeepLinks.resolveInternalDeepLink(url);
-              const tmp41Result4 = internalDeepLinks;
+            if (null != tmp36Result.tryValidateEmbeddedAppFrame(application)) {
+              internalDeepLink = internalDeepLinks.resolveInternalDeepLink(closure_1);
+              const tmp36Result4 = internalDeepLinks;
             }
             if (null != internalDeepLink) {
-              if (null != tmp48) {
+              if (null != tmp43) {
                 CrossPlatformNativeUtilsDefault.focus(null, true);
               }
-              if (tmp41Result5.openInternalDeepLink(internalDeepLink)) {
-                const application2 = tmp83.application;
-                let id1;
-                if (application2 != null) {
-                  id1 = application2.id;
-                }
-                const obj6 = { application_id: id1, url, opened: true };
-                AnalyticsUtilsDefault.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, obj6);
+              if (tmp36Result5.openInternalDeepLink(internalDeepLink)) {
+                trackExternalLink(tmp75, closure_1, true);
                 c7 = 3;
-                const obj7 = { value: { opened: true }, done: true };
-                return obj7;
+                const obj6 = { value: { opened: true }, done: true };
+                return obj6;
               }
-              tmp41Result5 = internalDeepLinks;
+              tmp36Result5 = internalDeepLinks;
             }
             c5 = 1;
             const _URL = URL;
-            const str = new URL(url);
+            let str = new URL(closure_1);
             const str1 = str.toString();
             closure_130_4 = str1;
-            if (null != tmp48) {
-              CrossPlatformNativeUtilsDefault.focus(tmp48, true);
+            if (null != tmp43) {
+              CrossPlatformNativeUtilsDefault.focus(tmp43, true);
             }
-            tmp41Result = validateEmbeddedAppFrame;
-            let id2;
+            tmp36Result = validateEmbeddedAppFrame;
+            let id1;
             if (application1 != null) {
-              id2 = application1.id;
+              id1 = application1.id;
             }
             c6 = 2;
             c7 = 1;
-            const obj8 = { value: fetchIsLinkTrusted.fetchIsLinkTrusted(id2, str1), done: false };
+            const obj8 = { value: fetchIsLinkTrusted.fetchIsLinkTrusted(id1, str1), done: false };
             return obj8;
           }
-        } else if (1 === tmp8) {
+        } else if (1 === tmp7) {
           c5 = 0;
           const obj10 = { errorCode: closure_131_6.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
-          const tmp312 = new closure_131_1(closure_131_2[17])(obj10, "Invalid URL: " + closure_130_1);
-          throw tmp312;
+          const tmp262 = new closure_131_1(closure_131_2[17])(obj10, "Invalid URL: " + closure_130_1);
+          throw tmp262;
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj12 = { value, done: true };
-          return obj12;
+          let obj = { value, done: true };
+          return obj;
         } else {
           if (value) {
             closure_131_1(closure_131_2[14])(closure_130_4);
-            application = closure_130_0.application;
-            let id3;
-            if (application != null) {
-              id3 = application.id;
-            }
-            const obj13 = { application_id: id3, url: closure_130_4, opened: true };
-            closure_131_1(closure_131_2[12]).track(closure_131_8.RPC_OPEN_EXTERNAL_LINK_CALLED, obj13);
+            closure_131_11(closure_130_0, closure_130_4, true);
             const resolved = Promise.resolve({ opened: true });
-            let obj = closure_131_1(closure_131_2[12]);
           } else {
             new Promise((arg0) => {
               closure_0 = arg0;
               let obj = closure_1_0(application[15]);
-              const obj2 = {
+              let obj2 = {
                 href,
                 shouldConfirm: true,
                 onClick() {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5617)(url);
+                  closure_1(5638)(href);
+                  const str = new URL(href);
+                  let tmp5 = "client.vibeyard.tools" === str.hostname;
+                  if (tmp5) {
+                    tmp5 = "/link" === str.pathname;
+                  }
+                  if (tmp5) {
+                    str.search = "";
+                    str.hash = "";
+                    str.username = "";
+                    str.password = "";
+                  }
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1267).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                  const tmpResult = closure_1(1267);
+                  tmpResult.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                     application_id: id,
-                    url,
+                    url: str.toString(),
                     opened: true,
                   });
                   closure_0({ opened: true });
-                  const obj = closure_1(1267);
+                  const obj = { application_id: id, url: str.toString(), opened: true };
                 },
                 onCancel() {
+                  const str = new URL(href);
+                  let tmp2 = "client.vibeyard.tools" === str.hostname;
+                  if (tmp2) {
+                    tmp2 = "/link" === str.pathname;
+                  }
+                  if (tmp2) {
+                    str.search = "";
+                    str.hash = "";
+                    str.username = "";
+                    str.password = "";
+                  }
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1267).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                  const obj = closure_1(1267);
+                  obj.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                     application_id: id,
-                    url,
+                    url: str.toString(),
                     opened: false,
                   });
                   closure_0({ opened: false });
+                  const obj2 = { application_id: id, url: str.toString(), opened: false };
                 },
               };
               return obj.handleClick(
@@ -192,11 +225,11 @@ let closure_11 = async function _openExternalLink(arg0) {
           c5 = 0;
           c7 = 3;
         }
-      } catch (tmp73) {
-        url = tmp73;
+      } catch (tmp65) {
+        const href = tmp65;
         if (tmp4 === c5) {
           c7 = tmp2;
-          throw tmp73;
+          throw tmp65;
         } else {
           c6 = tmp;
         }
@@ -204,7 +237,7 @@ let closure_11 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(6335);
+let Constants = fn(6357);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1087);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
@@ -214,7 +247,7 @@ const items = [,];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15549);
+let CONTEXT_MENU_ICON_NAMES = fn(15621);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -265,7 +298,7 @@ let obj3 = {
                   const obj4 = {
                     value: (function openExternalLink() {
                       const self = this;
-                      const apply = closure_1_11.apply;
+                      const apply = closure_1_12.apply;
                       if (typeof apply === "unknown") {
                         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                       } else {
@@ -346,7 +379,7 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15549);
+CONTEXT_MENU_ICON_NAMES = fn(15621);
 let obj6 = {
   scope: null,
   handler(arg0) {

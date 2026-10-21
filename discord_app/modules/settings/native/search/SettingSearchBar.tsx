@@ -10,7 +10,7 @@ import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStor
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { marginTop: nativeDefault.modules.mobile.SETTINGS_PADDING_TOP } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function f() {
+        const fn2 = function h() {
           const result = settings_tracking_Tracking.trackSettingSearchInputFocused();
           UserSettingSearchStore.setState({ isActive: true, isFocused: true });
         };
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function b() {
+        const fn3 = function y() {
           UserSettingSearchStore.setState({ isFocused: false });
         };
         cResult[2] = fn3;
@@ -79,6 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj2 = {
           ref,
+          testID: "user_settings_search_input",
           size: "md",
           onFocus: tmp7,
           onBlur: tmp8,
@@ -88,6 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp12 = jsx(SearchField.SearchField, {
           ref,
+          testID: "user_settings_search_input",
           size: "md",
           onFocus: tmp7,
           onBlur: tmp8,
@@ -150,6 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ref = noop.useRef(null);
       obj.children = jsx(SearchField.SearchField, {
         ref: noop.useRef(null),
+        testID: "user_settings_search_input",
         size: "md",
         onFocus: callback1,
         onBlur: callback2,

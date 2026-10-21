@@ -36,8 +36,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           hexToRgbResult = closure_6.get(arg0);
         }
         if (hexToRgbResult == null) {
-          hexToRgbResult = tmp(4942).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
-          const tmpResult = tmp(4942);
+          hexToRgbResult = tmp(4963).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+          const tmpResult = tmp(4963);
         }
         cResult[2] = arg0;
         cResult[3] = hexToRgbResult;

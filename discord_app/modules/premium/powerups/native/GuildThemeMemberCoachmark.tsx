@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildThemeMemberCoachmark.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2558 from "../GuildPowerups.messages.js";
+import _modDef2568 from "../GuildPowerups.messages.js";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import BoostingActionCreators from "../../../../actions/native/BoostingActionCreators.tsx";
 import GuildPowerupsImageDefault from "GuildPowerupsImage.tsx";
@@ -10,10 +10,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
 require = fn;
-let closure_6 = fn(5143).GUILD_THEME_POWERUP_BOOST_PRICE;
-const ContentDismissActionType = fn(4797).ContentDismissActionType;
+let closure_6 = fn(5164).GUILD_THEME_POWERUP_BOOST_PRICE;
+const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { coachmarkImage: null };
 let size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
 obj2.coachmarkImage = size;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         AccessibilityStore = tmp13;
-        const diff = closure_6 - markAsDismissed(8319)(guildId).available;
+        const diff = closure_6 - markAsDismissed(8347)(guildId).available;
         GuildPowerupsStore = diff;
         if (cResult[9] !== markAsDismissed) {
           class D {
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = U;
       }
       const tmpResult3 = guildId(504);
-      let guildPowerupBannerImage = guildId(13259).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+      let guildPowerupBannerImage = guildId(13327).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
       if (guildPowerupBannerImage == null) {
         class D {
           constructor() {
@@ -177,13 +177,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        guildPowerupBannerImage = markAsDismissed(17345);
+        guildPowerupBannerImage = markAsDismissed(17425);
       }
       cResult[6] = stateFromStores;
       cResult[7] = stateFromStores1;
       cResult[8] = guildPowerupBannerImage;
       tmp13 = guildPowerupBannerImage;
-      const tmpResult4 = guildId(13259);
+      const tmpResult4 = guildId(13327);
     }
   : function GuildThemeMemberCoachmark(guildId) {
       guildId = guildId.guildId;
@@ -213,11 +213,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [guildPowerupBannerImage];
       const stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
       const obj2 = guildId(504);
-      guildPowerupBannerImage = guildId(13259).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+      guildPowerupBannerImage = guildId(13327).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
       if (guildPowerupBannerImage == null) {
-        guildPowerupBannerImage = markAsDismissed(17345);
+        guildPowerupBannerImage = markAsDismissed(17425);
       }
-      const diff = onDismiss - markAsDismissed(8319)(guildId).available;
+      const diff = onDismiss - markAsDismissed(8347)(guildId).available;
       c5 = diff;
       const items3 = [markAsDismissed];
       onDismiss = stateFromStores1.useCallback(() => {
@@ -245,9 +245,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onButtonPress: null,
         };
         const intl = util.intl;
-        obj.title = intl.string(_modDef2558.RK6NbY);
+        obj.title = intl.string(_modDef2568.RK6NbY);
         const intl2 = util.intl;
-        obj.description = intl2.string(_modDef2558.xlAqGk);
+        obj.description = intl2.string(_modDef2568.xlAqGk);
         obj.onDismiss = onDismiss;
         obj.renderImgComponent = function renderImgComponent() {
           return jsx(markAsDismissed(coachmarkImage[18]), {
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.onButtonPress = callback1;
         return obj;
       }, items5);
-      const obj3 = guildId(13259);
-      const coachmark = tmp2(9768).useCoachmark(guildId.targetRef, memo);
+      const obj3 = guildId(13327);
+      const coachmark = tmp2(9798).useCoachmark(guildId.targetRef, memo);
       return null;
     };

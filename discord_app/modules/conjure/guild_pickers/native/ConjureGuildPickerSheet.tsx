@@ -12,9 +12,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {
-  channel: fn(5980).SelectOptionType.CHANNEL,
-  role: fn(5980).SelectOptionType.ROLE,
-  user: fn(5980).SelectOptionType.USER,
+  channel: fn(6002).SelectOptionType.CHANNEL,
+  role: fn(6002).SelectOptionType.ROLE,
+  user: fn(6002).SelectOptionType.USER,
 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

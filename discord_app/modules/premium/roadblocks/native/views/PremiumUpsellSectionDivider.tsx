@@ -1,19 +1,19 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05219_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05240_LinearGradient.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const ConstantsIOS = LockIcon(1107);
-const LockIcon2 = LockIcon(8515);
-const PremiumUpsellGradientBackground = LockIcon(9836);
+const LockIcon2 = LockIcon(8542);
+const PremiumUpsellGradientBackground = LockIcon(9866);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7493).Gradients;
+const Gradients = fn(7521).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_8 = createStyles.createStyles((arg0) => {
   let num;
   if (arg0 === obj2.START) {

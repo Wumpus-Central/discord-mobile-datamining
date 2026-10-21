@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef2050 from "../../../_runtime/metro/02050__.js";
+import _modDef2049 from "../../../_runtime/metro/02049__.js";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import FrecencyDefault from "../../lib/Frecency.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
@@ -72,7 +72,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(5966);
+const SoundboardConstants = fn(5988);
 ({ DEFAULT_SOUND_GUILD_ID: closure_8, EMPTY_SOUND_ID_LIST: closure_9 } = SoundboardConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const UserSettingsTypes = fn(1097).UserSettingsTypes;
@@ -114,7 +114,7 @@ let closure_23 = new FrecencyDefault({
       }
       return num2;
     }
-    obj = _modDef2050();
+    obj = _modDef2049();
   },
   lookupKey(arg0) {
     return arg0;
@@ -481,8 +481,8 @@ const soundboardStore = new SoundboardStore(DispatcherDefault, {
   TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS: function handleTopSoundboardSoundsLoaded(topSoundsMetadata) {
     topSoundsMetadata = topSoundsMetadata.topSoundsMetadata;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: null };
-    const obj2 = _modDef2050();
-    obj.topSoundsTTL = _modDef2050().add(1, "days").valueOf();
+    const obj2 = _modDef2049();
+    obj.topSoundsTTL = _modDef2049().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
   },
 });

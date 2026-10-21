@@ -15,6 +15,8 @@ prototype.Reasons = {
   [1]: "LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED",
   INVALID_CHANNEL: 2,
   [2]: "INVALID_CHANNEL",
+  CSP_UNAVAILABLE: 3,
+  [3]: "CSP_UNAVAILABLE",
 };
 
 export default prototype;

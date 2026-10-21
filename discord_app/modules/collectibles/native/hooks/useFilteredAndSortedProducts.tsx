@@ -114,8 +114,8 @@ export const useFilteredAndSortedProducts = ReactCompilerGating.isReactCompilerE
         const items = [tmp7, badBundleFilter, tmp6];
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function h(value, fn) {
-            return fn(value);
+          const fn2 = function h(arg0, fn) {
+            return fn(arg0);
           };
           cResult[8] = fn2;
           let tmp9 = fn2;

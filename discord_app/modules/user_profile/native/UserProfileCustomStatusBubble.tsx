@@ -9,7 +9,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import inlineStyles from "../../../../_runtime/07910_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07938_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -31,7 +31,7 @@ let str = "";
 if (PlatformUtils.isAndroid()) {
   str = "\u00A0";
 }
-let createStyles = fn(4945);
+let createStyles = fn(4966);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { position: "relative" },
@@ -137,7 +137,7 @@ let closure_17 = {
   statusBubblePaddingVertical: 7,
 };
 const dependencyMap = {
-  [fn(7253).UserProfileThemeTypes.PREVIEW]: {
+  [fn(7281).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "text-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,
@@ -299,7 +299,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           };
           let items = [tmp13, text, tmp15];
           obj4.children = items;
-          const tmp18 = closure_12(emoji(5195).Text, obj4);
+          const tmp18 = closure_12(emoji(5216).Text, obj4);
           cResult[10] = lineClamp;
           cResult[11] = onTextLayout;
           cResult[12] = tmp13;
@@ -430,7 +430,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         obj2 = PlatformUtils2;
       }
     };
-createStyles = fn(4945);
+createStyles = fn(4966);
 let closure_21 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()

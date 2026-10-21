@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef12268 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-1x.png.js";
-import _modDef12269 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js";
-import _modDef12270 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-3x.png.js";
+import _modDef12323 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-1x.png.js";
+import _modDef12324 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js";
+import _modDef12325 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12268 }, 3: null };
-const obj2 = { uri: _modDef12268 };
-obj[2] = { uri: _modDef12269 };
-const obj3 = { uri: _modDef12269 };
-obj[3] = { uri: _modDef12270 };
+let obj = { 1: null, 2: { uri: _modDef12323 }, 3: null };
+const obj2 = { uri: _modDef12323 };
+obj[2] = { uri: _modDef12324 };
+const obj3 = { uri: _modDef12324 };
+obj[3] = { uri: _modDef12325 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12270 };
+const obj4 = { uri: _modDef12325 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CatIllocon.native.tsx");
 
@@ -90,7 +90,7 @@ export const CatIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      obj.source = num(6946).getAssetSource(obj);
+      obj.source = num(6974).getAssetSource(obj);
       obj.style = memo;
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;

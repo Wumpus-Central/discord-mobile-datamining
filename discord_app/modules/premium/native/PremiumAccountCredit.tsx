@@ -4,7 +4,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import _modDef3240 from "../premium_group/PremiumGroup.messages.js";
+import _modDef3250 from "../premium_group/PremiumGroup.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GameIcon from "../../game_detection/native/GameIcon.tsx";
 import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
@@ -19,7 +19,7 @@ let View = fn(17).View;
 const SubscriptionStatusTypes = fn(1087).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   title: { marginBottom: 12 },
   creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -33,8 +33,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(7210).GameIconImageSize[fn(undefined, 7210).GameIconSizes.SMALL],
-  height: fn(7210).GameIconImageSize[fn(undefined, 7210).GameIconSizes.SMALL],
+  width: fn(7238).GameIconImageSize[fn(undefined, 7238).GameIconSizes.SMALL],
+  height: fn(7238).GameIconImageSize[fn(undefined, 7238).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };
@@ -223,7 +223,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = util.intl;
-          const stringResult = intl4.string(intl(3240)["5asczk"]);
+          const stringResult = intl4.string(intl(3250)["5asczk"]);
           cResult[28] = stringResult;
         }
       } else {
@@ -319,8 +319,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp46Result = timestampProducer(View, obj12);
             } else {
               const obj14 = { size: GameIcon.GameIconSizes.SMALL, skuId: str };
-              tmp46Result = timestampProducer(intl(7210), obj14);
-              const intlResult = intl(7210);
+              tmp46Result = timestampProducer(intl(7238), obj14);
+              const intlResult = intl(7238);
             }
             cResult[37] = tmp7;
             cResult[38] = str;
@@ -353,7 +353,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (hasPremiumGroup) {
         const intl3 = util.intl;
-        let stringResult = intl3.string(_modDef3240["5asczk"]);
+        let stringResult = intl3.string(_modDef3250["5asczk"]);
       } else {
         if (null != currentSubscription) {
           if (currentSubscription.planId === planId) {
@@ -655,7 +655,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = tmp2(1128).intl;
           obj3.children = intl.string(tmp2(1128).t.YugZY0);
-          const items1 = [closure_6(tmp2(5195).Text, obj3), , ,];
+          const items1 = [closure_6(tmp2(5216).Text, obj3), , ,];
           const obj4 = { style: null, children: null };
           const items2 = [tmp.creditList, creditListContainerStyle];
           obj4.style = items2;
@@ -680,7 +680,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl2 = tmp2(1128).intl;
           obj5.children = intl2.string(tmp2(1128).t.Z5b2Gf);
-          items1[2] = closure_6(tmp2(5195).Text, obj5);
+          items1[2] = closure_6(tmp2(5216).Text, obj5);
           let tmp9Result = null;
           if (null != currentSubscription) {
             tmp9Result = null;
@@ -688,7 +688,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
               const intl3 = tmp2(1128).intl;
               obj6.children = intl3.string(tmp2(1128).t.azRP0E);
-              tmp9Result = closure_6(tmp2(5195).Text, obj6);
+              tmp9Result = closure_6(tmp2(5216).Text, obj6);
             }
           }
           items1[3] = tmp9Result;

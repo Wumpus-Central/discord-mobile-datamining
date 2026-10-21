@@ -284,19 +284,19 @@ export const canPublishProject = function canPublishProject(project) {
   }
   return tmp3;
 };
-export const canRemixProject = function canRemixProject(owner_user_id) {
+export const canRemixProject = function canRemixProject(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let isProjectPublicResult = owner_user_id.owner_user_id === id;
+  let isProjectPublicResult = project.owner_user_id === id;
   if (!isProjectPublicResult) {
-    isProjectPublicResult = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
-    const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
+    isProjectPublicResult = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
+    const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
   }
   if (!isProjectPublicResult) {
-    isProjectPublicResult = ConjureProjectTypes.isProjectPublic(owner_user_id);
+    isProjectPublicResult = ConjureProjectTypes.isProjectPublic(project);
   }
   return isProjectPublicResult;
 };

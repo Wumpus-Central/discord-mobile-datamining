@@ -80,7 +80,7 @@ function getScreens() {
 let closure_3 = ["categories"];
 let closure_4 = ["categories"];
 const View = fn(17).View;
-const isGuildReadableType = fn(4804).isGuildReadableType;
+const isGuildReadableType = fn(4825).isGuildReadableType;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_17,
@@ -96,7 +96,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28, Fragment: closure_29 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   highlightsLearnMore: { fontSize: 12, color: nativeDefault.unsafe_rawColors.BLUE_345, marginTop: 4 },
   separator: null,
@@ -127,8 +127,8 @@ class NotificationSettings extends PureComponent {
         const _HermesInternal = HermesInternal;
         const tmpResult2 = ActionSheetActionCreatorsDefault;
         const obj2 = { guildId };
-        tmpResult2.openLazy(asyncRequireImpl(10811, dependencyMap.paths), "muteSettings" + guildId, obj2);
-        const tmp7 = asyncRequireImpl(10811, dependencyMap.paths);
+        tmpResult2.openLazy(asyncRequireImpl(10955, dependencyMap.paths), "muteSettings" + guildId, obj2);
+        const tmp7 = asyncRequireImpl(10955, dependencyMap.paths);
       }
     };
     applyArgumentsResult.handleToggleChange = function handleToggleChange(mobile_push, arg1, NotificationLabel) {
@@ -281,8 +281,8 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     style: closure_30(this.context).highlightsLearnMore,
     accessibilityRole: "link",
     onPress() {
-      const obj = self(5622);
-      return obj.openURL(self(2068).getArticleURL(constants.HIGHLIGHTS));
+      const obj = self(5642);
+      return obj.openURL(self(2067).getArticleURL(constants.HIGHLIGHTS));
     },
     children: null,
   };
@@ -367,11 +367,11 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const intl2 = tmp7(1128).intl;
     obj4.helperText = intl2.string(tmp7(1128).t["8wbTQ6"]);
     const obj5 = { label: formatResult, onPress: self.handleMutePress, arrow: !muted };
-    obj4.children = closure_1_27(tmp7(6854).TableRow, obj5);
-    const items = [closure_1_27(tmp7(6938).TableRowGroup, obj4, "mute")];
+    obj4.children = closure_1_27(tmp7(6882).TableRow, obj5);
+    const items = [closure_1_27(tmp7(6966).TableRowGroup, obj4, "mute")];
     let tmp10Result = null;
     if (muted) {
-      const obj6 = { muteConfig, type: tmp7(10813).MuteSettingType.SERVER };
+      const obj6 = { muteConfig, type: tmp7(10957).MuteSettingType.SERVER };
       tmp10Result = closure_1_27(MutedUntilTextDefault, obj6, "muted-until");
     }
     items[1] = tmp10Result;
@@ -507,7 +507,7 @@ prototype["getOverriddenChannels"] = function getOverriddenChannels() {
   });
   return mapped.filter((item) => null != item);
 };
-NotificationSettings.contextType = fn(4999).ThemeContext;
+NotificationSettings.contextType = fn(5020).ThemeContext;
 let ReactCompilerGating = fn(558);
 let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ConnectedNotificationSettings(guildId) {
@@ -614,7 +614,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = guildId(504);
-      const shouldUseNewNotificationSystem = guildId(10793).useShouldUseNewNotificationSystem(
+      const shouldUseNewNotificationSystem = guildId(10937).useShouldUseNewNotificationSystem(
         "NotificationSettingsModalNative",
       );
       if (cResult[9] === tmp18) {
@@ -632,7 +632,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const merged = Object.assign(tmp13);
       const obj3 = { guildId, channels: tmp18, navigation, shouldUseNewNotificationSystem };
-      const tmpResult2 = guildId(10793);
+      const tmpResult2 = guildId(10937);
       cResult[9] = tmp18;
       cResult[10] = guildId;
       cResult[11] = navigation;
@@ -687,18 +687,18 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const tmp3 = _objectWithoutProperties(stateFromStoresObject, closure_4);
       const obj4 = { children: null };
-      const obj3 = guildId(10793);
+      const obj3 = guildId(10937);
       const merged = Object.assign(tmp3);
       const items2 = [
         closure_27(NotificationSettings, {
           guildId,
           channels: memo,
           navigation,
-          shouldUseNewNotificationSystem: guildId(10793).useShouldUseNewNotificationSystem(
+          shouldUseNewNotificationSystem: guildId(10937).useShouldUseNewNotificationSystem(
             "NotificationSettingsModalNative",
           ),
         }),
-        closure_27(guildId(5553).NavScrim, {}),
+        closure_27(guildId(5574).NavScrim, {}),
       ];
       obj4.children = items2;
       return closure_28(closure_29, obj4);

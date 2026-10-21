@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/quests/native/openQuestAccess
 
 export default function openQuestAccessSuspendedBottomSheet() {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(16210, dependencyMap.paths),
+    asyncRequireImpl(16286, dependencyMap.paths),
     QuestAccessSuspendedBottomSheet,
     {},
   );

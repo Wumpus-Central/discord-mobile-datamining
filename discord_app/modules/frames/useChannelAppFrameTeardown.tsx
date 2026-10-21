@@ -8,7 +8,7 @@ import FramesStore from "FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const getFrameSurfaceForChannel = fn(6727).getFrameSurfaceForChannel;
+const getFrameSurfaceForChannel = fn(6755).getFrameSurfaceForChannel;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

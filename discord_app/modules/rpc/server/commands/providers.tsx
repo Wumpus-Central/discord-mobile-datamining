@@ -1,17 +1,34 @@
 // discord_app/modules/rpc/server/commands/providers.tsx
+import DispatcherDefault from "../../../../Dispatcher.tsx";
+import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
+import ConnectedAccountsActionCreatorsDefault from "../../../../actions/ConnectedAccountsActionCreators.tsx";
+import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
 
-const require = fn;
-let Constants = fn(6335);
+require = fn;
+let closure_10 = async function _refreshProviderAccessToken() {
+  closure_3 = tmp5;
+  closure_2 = tmp2;
+  await ConnectedAccountsActionCreatorsDefault.refreshAccessToken(closure_0, closure_1);
+  closure_130_0 = value;
+  if (null == closure_130_0) {
+    throw new closure_131_1(closure_131_2[7])(
+      { errorCode: closure_131_8.OAUTH2_ERROR },
+      "Refreshing access token did not return a new access token",
+    );
+  }
+  return { access_token: closure_130_0 };
+};
+let Constants = fn(6357);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1087);
-({ AnalyticsLocations: metroRequire, ComponentActions: closure_7, PlatformTypes: closure_8 } = Constants);
+({ AnalyticsLocations: hasOwnProperty, ComponentActions: metroRequire, PlatformTypes: closure_7 } = Constants);
 Constants = fn(2026);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
 Constants = fn(1098);
-({ RPCCommands, RPCErrors: closure_9 } = Constants);
+({ RPCCommands, RPCErrors: closure_8 } = Constants);
 const items = [AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID];
 const set = new Set(items);
 let obj = { [RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: obj2 };
@@ -26,199 +43,123 @@ obj2 = {
     return requiredResult.keys(obj2);
   },
   handler(arg0) {
-    ({ signal: closure_0, socket, args } = arg0);
+    ({ signal: require, socket, args } = arg0);
     const provider = args.provider;
     const connection_redirect = args.connection_redirect;
     let result = require("RPCHelpers").validatePostMessageTransport(socket.transport);
     let obj = require("RPCHelpers");
     let obj2 = require("RPCHelpers");
     const validateApplicationResult = require("RPCHelpers").validateApplication(socket.application);
-    value = provider(connection_redirect[8]).get(provider);
+    value = provider(connection_redirect[10]).get(provider);
     c3 = value;
     if (null == value) {
-      const obj4 = { errorCode: constants2.INVALID_PROVIDER };
+      const obj4 = { errorCode: closure_8.INVALID_PROVIDER };
       const _HermesInternal = HermesInternal;
-      const tmp4Result1 = new tmp4(tmp[9])(obj4, 'Platform not found for provider "' + provider + '"');
+      const tmp4Result1 = new tmp4(tmp[7])(obj4, 'Platform not found for provider "' + provider + '"');
       throw tmp4Result1;
-    } else if (provider !== constants.AMAZON_MUSIC) {
-      let obj5 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      let tmp22 = new tmp4(tmp[9])(obj5, "Command not available for this application");
+    } else if (provider !== constants2.AMAZON_MUSIC) {
+      const obj5 = { errorCode: closure_8.UNAUTHORIZED_FOR_APPLICATION };
+      const tmp22 = new tmp4(tmp[7])(obj5, "Command not available for this application");
       throw tmp22;
     } else if (set.has(validateApplicationResult)) {
-      _require = asyncGeneratorStep(async (arg0, arg1) => {
-        if (c7 === 2) {
-          c7 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp7 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            let obj2 = { value, done: true };
-            return obj2;
+      const account = ConnectedAccountsStore.getAccount(null, provider);
+      if (null != account) {
+        let promise = (function refreshProviderAccessToken() {
+          const self = this;
+          const apply = closure_1_10.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
-            return { value: "IconComponent", done: null };
+            applyArgumentsResult = apply(self, arguments);
           }
-        } else {
-          try {
-            c7 = 2;
-            if (0 === c6) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                const successRedirect = tmp5;
-                closure_130_0 = closure_0;
-                closure_130_1 = closure_1;
-                closure_130_2 = undefined;
-                account = account.getAccount(null, closure_1);
-                if (null == account) {
-                  function handleConnectionsUpdate(accounts) {
-                    if (null != type) {
-                      accounts = accounts.accounts;
-                      if (accounts == null) {
-                        accounts = [];
-                      }
-                      const found = accounts.find((type) => type.type === type.type);
-                      if (null != found) {
-                        const obj = { access_token: found.access_token };
-                        closure_1_0(obj);
-                        const removed = closure_0.removeEventListener("abort", closure_1_5);
-                        provider(connection_redirect[10]).unsubscribe("USER_CONNECTIONS_UPDATE", closure_1_3);
-                        const ComponentDispatch = closure_0(connection_redirect[11]).ComponentDispatch;
-                        ComponentDispatch.unsubscribe(constants2.CONNECTIONS_CALLBACK_ERROR, closure_1_4);
-                        const obj2 = provider(connection_redirect[10]);
-                      }
-                    }
-                  }
-                  closure_130_3 = handleConnectionsUpdate;
-                  function handleConnectionsCallbackError() {
-                    const obj = { errorCode: OAUTH2_ERROR.OAUTH2_ERROR };
-                    const tmp = provider(connection_redirect[9]);
-                    closure_1_1(
-                      new provider(connection_redirect[9])(
-                        { errorCode: OAUTH2_ERROR.OAUTH2_ERROR },
-                        'OAuth2 setup for "' + closure_1 + '" failed',
-                      ),
-                    );
-                    const removed = closure_0.removeEventListener("abort", closure_1_5);
-                    const tmp2 = new provider(connection_redirect[9])(
-                      { errorCode: OAUTH2_ERROR.OAUTH2_ERROR },
-                      'OAuth2 setup for "' + closure_1 + '" failed',
-                    );
-                    provider(connection_redirect[10]).unsubscribe("USER_CONNECTIONS_UPDATE", closure_1_3);
-                    const ComponentDispatch = closure_0(connection_redirect[11]).ComponentDispatch;
-                    ComponentDispatch.unsubscribe(constants2.CONNECTIONS_CALLBACK_ERROR, closure_1_4);
-                  }
-                  closure_130_4 = handleConnectionsCallbackError;
-                  function handleSocketDisconnected() {
-                    const obj = { errorCode: OAUTH2_ERROR.OAUTH2_ERROR };
-                    const tmp = provider(connection_redirect[9]);
-                    closure_1_1(
-                      new provider(connection_redirect[9])(
-                        { errorCode: OAUTH2_ERROR.OAUTH2_ERROR },
-                        'OAuth2 setup for "' + closure_1 + '" was abandoned',
-                      ),
-                    );
-                    const removed = closure_0.removeEventListener("abort", closure_1_5);
-                    const tmp2 = new provider(connection_redirect[9])(
-                      { errorCode: OAUTH2_ERROR.OAUTH2_ERROR },
-                      'OAuth2 setup for "' + closure_1 + '" was abandoned',
-                    );
-                    provider(connection_redirect[10]).unsubscribe("USER_CONNECTIONS_UPDATE", closure_1_3);
-                    const ComponentDispatch = closure_0(connection_redirect[11]).ComponentDispatch;
-                    ComponentDispatch.unsubscribe(constants2.CONNECTIONS_CALLBACK_ERROR, closure_1_4);
-                  }
-                  closure_130_5 = handleSocketDisconnected;
-                  if (closure_0.aborted) {
-                    const result = handleSocketDisconnected();
-                    c7 = 3;
-                    return { value: "IconComponent", done: null };
-                  } else {
-                    const subscription = provider(connection_redirect[10]).subscribe(
-                      "USER_CONNECTIONS_UPDATE",
-                      handleConnectionsUpdate,
-                    );
-                    let ComponentDispatch = closure_0(connection_redirect[11]).ComponentDispatch;
-                    const subscription1 = ComponentDispatch.subscribe(
-                      constants2.CONNECTIONS_CALLBACK_ERROR,
-                      handleConnectionsCallbackError,
-                    );
-                    const listener = closure_0.addEventListener("abort", handleSocketDisconnected, { once: true });
-                    const obj5 = { platformType: tmp3.type, location: constants.ACTIVITY_RPC, successRedirect };
-                    provider(connection_redirect[12])(obj5);
-                    const obj7 = provider(connection_redirect[10]);
-                  }
-                } else {
-                  c5 = 1;
-                  c6 = 2;
-                  c7 = 1;
-                  const obj8 = {
-                    value: provider(connection_redirect[13]).refreshAccessToken(tmp3.type, account.id),
-                    done: false,
-                  };
-                  return obj8;
-                }
+          return applyArgumentsResult;
+        })(value.type, account.id);
+      } else {
+        promise = new Promise((arg0, arg1) => {
+          closure_0 = arg0;
+          closure_1 = arg1;
+          function handleConnectionsUpdate(accounts) {
+            if (null != c3) {
+              accounts = accounts.accounts;
+              if (accounts == null) {
+                accounts = [];
               }
-            } else {
-              if (1 === tmp8) {
-                c5 = 0;
-                closure_130_1(closure_4);
-              } else if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c5 = 0;
-                c7 = 3;
-                const obj9 = { value, done: true };
-                return obj9;
-              } else {
-                closure_130_2 = value;
-                if (null != closure_130_2) {
-                  let obj = { access_token: closure_130_2 };
-                  closure_130_0(obj);
-                  c5 = 0;
-                }
+              const found = accounts.find((type) => type.type === type.type);
+              if (null != found) {
+                const obj = { access_token: found.access_token };
+                closure_0(obj);
+                const removed = _require.removeEventListener("abort", handleSocketDisconnected);
+                DispatcherDefault.unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
+                const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+                ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
               }
-              const obj10 = { errorCode: OAUTH2_ERROR.OAUTH2_ERROR };
-              const tmp22 = new provider(connection_redirect[9])(
-                obj10,
-                "Refreshing access token did not return a new access token",
-              );
-              throw tmp22;
-            }
-            c7 = 3;
-          } catch (tmp47) {
-            closure_4 = tmp47;
-            if (tmp4 === c5) {
-              c7 = tmp2;
-              throw tmp47;
-            } else {
-              c6 = tmp;
             }
           }
-        }
-      });
-      const promise = new Promise(function () {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      });
+          function handleConnectionsCallbackError() {
+            const obj = { errorCode: closure_3_8.OAUTH2_ERROR };
+            closure_1(
+              new RPCErrorDefault(
+                { errorCode: closure_3_8.OAUTH2_ERROR },
+                'OAuth2 setup for "' + provider + '" failed',
+              ),
+            );
+            const removed = _require.removeEventListener("abort", handleSocketDisconnected);
+            const tmp2 = new RPCErrorDefault(
+              { errorCode: closure_3_8.OAUTH2_ERROR },
+              'OAuth2 setup for "' + provider + '" failed',
+            );
+            DispatcherDefault.unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
+            const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+            ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
+          }
+          function handleSocketDisconnected() {
+            const obj = { errorCode: closure_3_8.OAUTH2_ERROR };
+            closure_1(
+              new RPCErrorDefault(
+                { errorCode: closure_3_8.OAUTH2_ERROR },
+                'OAuth2 setup for "' + provider + '" was abandoned',
+              ),
+            );
+            const removed = _require.removeEventListener("abort", handleSocketDisconnected);
+            const tmp2 = new RPCErrorDefault(
+              { errorCode: closure_3_8.OAUTH2_ERROR },
+              'OAuth2 setup for "' + provider + '" was abandoned',
+            );
+            DispatcherDefault.unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
+            const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+            ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
+          }
+          if (closure_0.aborted) {
+            const result = handleSocketDisconnected();
+          } else {
+            const subscription = provider(connection_redirect[11]).subscribe(
+              "USER_CONNECTIONS_UPDATE",
+              handleConnectionsUpdate,
+            );
+            let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
+            const subscription1 = ComponentDispatch.subscribe(
+              constants2.CONNECTIONS_CALLBACK_ERROR,
+              handleConnectionsCallbackError,
+            );
+            const listener = obj.addEventListener("abort", handleSocketDisconnected, { once: true });
+            const obj3 = {
+              platformType: handleConnectionsCallbackError.type,
+              location: constants.ACTIVITY_RPC,
+              successRedirect: handleConnectionsUpdate,
+            };
+            provider(connection_redirect[13])(obj3);
+            let obj2 = provider(connection_redirect[11]);
+          }
+          obj = closure_0;
+        });
+      }
       return promise;
     } else {
-      const obj6 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp10 = new tmp4(tmp[9])(obj6, "Command not available for this application");
+      const obj6 = { errorCode: closure_8.UNAUTHORIZED_FOR_APPLICATION };
+      const tmp10 = new tmp4(tmp[7])(obj6, "Command not available for this application");
       throw tmp10;
     }
-    let obj3 = provider(connection_redirect[8]);
+    let obj3 = provider(connection_redirect[10]);
   },
 };
 const items1 = [RPC_AUTHENTICATED_SCOPE];
@@ -236,7 +177,7 @@ let obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-let closure_3 = asyncGeneratorStep(async (arg0) => {
+let closure_11 = asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -273,7 +214,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           closure_129_5 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -284,44 +225,44 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          const result = closure_130_0(closure_130_2[7]).validatePostMessageTransport(socket.transport);
-          const obj14 = closure_130_0(closure_130_2[7]);
-          closure_129_2 = closure_130_0(closure_130_2[7]).validateApplication(socket.application);
-          const obj15 = closure_130_0(closure_130_2[7]);
-          closure_129_3 = closure_130_1(closure_130_2[8]).get(provider);
+          const result = closure_130_0(closure_130_2[9]).validatePostMessageTransport(socket.transport);
+          const obj14 = closure_130_0(closure_130_2[9]);
+          closure_129_2 = closure_130_0(closure_130_2[9]).validateApplication(socket.application);
+          const obj15 = closure_130_0(closure_130_2[9]);
+          closure_129_3 = closure_130_1(closure_130_2[10]).get(provider);
           if (null == closure_129_3) {
-            const obj5 = { errorCode: closure_130_9.INVALID_PROVIDER };
+            const obj5 = { errorCode: closure_130_8.INVALID_PROVIDER };
             const _HermesInternal = HermesInternal;
-            const tmp592 = new closure_130_1(closure_130_2[9])(
+            const tmp592 = new closure_130_1(closure_130_2[7])(
               obj5,
               'Platform not found for provider "' + provider + '"',
             );
             throw tmp592;
-          } else if (provider !== closure_130_8.AMAZON_MUSIC) {
-            const obj7 = { errorCode: closure_130_9.UNAUTHORIZED_FOR_APPLICATION };
-            const tmp53 = new closure_130_1(closure_130_2[9])(obj7, "Command not available for this application");
+          } else if (provider !== closure_130_7.AMAZON_MUSIC) {
+            const obj7 = { errorCode: closure_130_8.UNAUTHORIZED_FOR_APPLICATION };
+            const tmp53 = new closure_130_1(closure_130_2[7])(obj7, "Command not available for this application");
             throw tmp53;
-          } else if (closure_130_10.has(closure_129_2)) {
-            account = closure_130_5.getAccount(null, provider);
+          } else if (closure_130_9.has(closure_129_2)) {
+            account = closure_130_4.getAccount(null, provider);
             if (null == account) {
-              const obj8 = { errorCode: closure_130_9.NO_CONNECTION_FOUND };
-              const tmp44 = new closure_130_1(closure_130_2[9])(obj8, "No connection found");
+              const obj8 = { errorCode: closure_130_8.NO_CONNECTION_FOUND };
+              const tmp44 = new closure_130_1(closure_130_2[7])(obj8, "No connection found");
               throw tmp44;
             } else {
               c3 = 2;
               c4 = 1;
               const obj9 = {
-                value: closure_130_1(closure_130_2[13]).refreshAccessToken(closure_129_3.type, account.id),
+                value: closure_130_1(closure_130_2[6]).refreshAccessToken(closure_129_3.type, account.id),
                 done: false,
               };
               return obj9;
             }
           } else {
-            const obj10 = { errorCode: closure_130_9.UNAUTHORIZED_FOR_APPLICATION };
-            const tmp24 = new closure_130_1(closure_130_2[9])(obj10, "Command not available for this application");
+            const obj10 = { errorCode: closure_130_8.UNAUTHORIZED_FOR_APPLICATION };
+            const tmp24 = new closure_130_1(closure_130_2[7])(obj10, "Command not available for this application");
             throw tmp24;
           }
-          const obj16 = closure_130_1(closure_130_2[8]);
+          const obj16 = closure_130_1(closure_130_2[10]);
         }
       } else if (arg0 === 1) {
         c4 = 3;
@@ -333,8 +274,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       } else {
         closure_129_5 = value;
         if (null == closure_129_5) {
-          const obj12 = { errorCode: closure_130_9.OAUTH2_ERROR };
-          const tmp15 = new closure_130_1(closure_130_2[9])(
+          const obj12 = { errorCode: closure_130_8.OAUTH2_ERROR };
+          const tmp15 = new closure_130_1(closure_130_2[7])(
             obj12,
             "Refreshing access token did not return a new access token",
           );
@@ -354,7 +295,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
 });
 obj3.handler = function handler() {
   const self = this;
-  const apply = closure_3.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

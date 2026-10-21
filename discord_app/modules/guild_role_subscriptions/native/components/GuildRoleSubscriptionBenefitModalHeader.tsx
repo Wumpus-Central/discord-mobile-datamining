@@ -16,7 +16,7 @@ const View = fn(17).View;
 const Fonts = fn(1087).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   headerContainer: {
     alignItems: "center",

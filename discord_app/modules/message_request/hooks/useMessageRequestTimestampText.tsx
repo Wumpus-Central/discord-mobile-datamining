@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useMessageRequestTimestampText.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import _modDef2050 from "../../../../_runtime/metro/02050__.js";
+import _modDef2049 from "../../../../_runtime/metro/02049__.js";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
 const require = globalThis.__r;
@@ -56,9 +56,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let str = "";
         let calendarResult;
         if (null != extractTimestampResult) {
-          calendarResult = _modDef2050(extractTimestampResult).calendar();
+          calendarResult = _modDef2049(extractTimestampResult).calendar();
           str = forResult;
-          const obj7 = _modDef2050(extractTimestampResult);
+          const obj7 = _modDef2049(extractTimestampResult);
         }
         cResult[3] = stateFromStores;
         cResult[4] = messageRequestPreview;
@@ -88,8 +88,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let str = "";
         if (null != extractTimestampResult) {
-          str = _modDef2050(extractTimestampResult).calendar();
-          const obj6 = _modDef2050(extractTimestampResult);
+          str = _modDef2049(extractTimestampResult).calendar();
+          const obj6 = _modDef2049(extractTimestampResult);
         }
         return str;
       }
@@ -150,9 +150,9 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
         let str = "";
         let timestampString;
         if (null != extractTimestampResult) {
-          timestampString = tmp(8256).getTimestampString(extractTimestampResult);
+          timestampString = tmp(8284).getTimestampString(extractTimestampResult);
           str = forResult;
-          const tmpResult2 = tmp(8256);
+          const tmpResult2 = tmp(8284);
         }
         cResult[3] = stateFromStores;
         cResult[4] = messageRequestPreview;
@@ -183,8 +183,8 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
         }
         let str = "";
         if (null != extractTimestampResult) {
-          str = tmp(8256).getTimestampString(extractTimestampResult);
-          const tmpResult = tmp(8256);
+          str = tmp(8284).getTimestampString(extractTimestampResult);
+          const tmpResult = tmp(8284);
         }
         return str;
       }

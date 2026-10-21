@@ -8,7 +8,7 @@ import InviteButtonDefault from "../../instant_invite/native/components/InviteBu
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const InviteSendStates = fn(7756).InviteSendStates;
+const InviteSendStates = fn(7784).InviteSendStates;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -88,7 +88,7 @@ function handleUserSettingsProtoStoreUpdate() {
     _undefined = undefined;
   }
 }
-const isGuildTextChannelType = fn(4804).isGuildTextChannelType;
+const isGuildTextChannelType = fn(4825).isGuildTextChannelType;
 const dependencyMap = fn(1255).BACKGROUND_GRADIENT_PRESETS_MAP;
 const SystemThemeState = fn(1210).SystemThemeState;
 let closure_14 = true;

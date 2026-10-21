@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef2050 from "../../../../_runtime/metro/02050__.js";
+import _modDef2049 from "../../../../_runtime/metro/02049__.js";
 import UserOfferStore from "../../../stores/billing/UserOfferStore.tsx";
 
 require = fn;
@@ -19,10 +19,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = _modDef2050(value);
+        tmp4 = _modDef2049(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(_modDef2050());
+        return tmp4.isAfter(_modDef2049());
       }
     }
     let tmp6 = null != tmp11;

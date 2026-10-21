@@ -1,14 +1,10 @@
 // discord_app/modules/conjure/publish/useConjurePublishAction.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import util from "../../../intl/index.native.tsx";
-import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import conjureAppInServer from "../projects/conjureAppInServer.tsx";
-import conjurePublishFailureMessage from "conjurePublishFailureMessage.tsx";
 import conjurePublishAction2 from "conjurePublishAction.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -22,7 +18,6 @@ import ConjureProjectStore_mod from "../projects/ConjureProjectStore.tsx";
 import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 
 const require = globalThis.__r;
-const conjurePublishFailureMessageDefault = conjurePublishFailureMessage;
 
 require = fn;
 function readPublishSubject(projectId, guildId) {
@@ -291,7 +286,7 @@ let closure_20 = async function _saveConjureFirstPublishDetails(arg0) {
           closure_131_5 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -397,172 +392,323 @@ let closure_22 = async function _firstPublishDescription(arg0) {
     return str2;
   })();
 };
-function startPublish(project, isUpdate, arg2) {
-  _require = project;
-  project = project.project;
-  ({ platform: dependencyMap, guildId: asyncGeneratorStep } = arg2);
-  const id = project.id;
-  let tmp = null != project.guildId;
-  if (tmp) {
-    const status = project.input.status;
-    let surface;
-    if (status != null) {
-      surface = status.surface;
-    }
-    tmp = "activity" === surface;
+function startPublish() {
+  const self = this;
+  const apply = closure_24.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
   }
-  if (tmp) {
-    tmp = null == project.appChannelId;
-  }
-  if (tmp) {
-    tmp = !isUpdate.isUpdate;
-  }
-  closure_5 = tmp;
-  if (tmp) {
-    let obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: true };
-    project(584).dispatch(obj2);
-    let obj = project(584);
-  }
-  const obj3 = require("conjurePublishConnection");
-  const publishProjectResult = require("conjurePublishConnection").publishProject(id);
-  require("conjurePublishConnection")
-    .publishProject(id)
-    .then((ok) => {
-      if (true === ok.ok) {
-        return ok;
-      } else {
-        if (ok.code === conjurePublishFailureMessage.PREVIEW_BOT_NOT_INSTALLED_CODE) {
-          project = ConjureActionCreators.getProject(id);
-          project.catch(() => {});
-          const tmp9Result = ConjureActionCreators;
-        }
-        const _Error = Error;
-        const error = new Error(conjurePublishFailureMessageDefault(ok));
-        throw error;
-      }
-    })
-    .then(
-      (result) => {
-        project = result;
-        const intl = project(dependencyMap[20]).intl;
-        closure_2.showConfirmation(intl.string(project(dependencyMap[21]).S6Px3n));
-        if (null != project.guildId) {
-          const tmpResult = tmp(dependencyMap[24]);
-          const profile = tmpResult.fetchProfile(tmp(dependencyMap[13]).conjureProductionBotUserId(project), {
-            withMutualGuilds: true,
-          });
-          profile.catch(() => {});
-          const tmpResult3 = tmp(dependencyMap[13]);
-        }
-        result = project(dependencyMap[22]).refreshPublishedProject(id, { isPreview: false });
-        const tmpResult4 = project(dependencyMap[22]);
-        const catchPromise1 = result.catch(() => {});
-        const nextPromise = result
-          .catch(() => {})
-          .then(() => {
-            let tmp;
-            if (closure_5) {
-              if (true !== channel_skipped.channel_skipped) {
-                tmp = (function waitForAppChannel() {
-                  const self = this;
-                  const apply = closure_1_24.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(id, asyncGeneratorStep);
-              }
-            }
-            return tmp;
-          });
-        result
-          .catch(() => {})
-          .then(() => {
-            let tmp;
-            if (closure_5) {
-              if (true !== channel_skipped.channel_skipped) {
-                tmp = (function waitForAppChannel() {
-                  const self = this;
-                  const apply = closure_1_24.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(id, asyncGeneratorStep);
-              }
-            }
-            return tmp;
-          })
-          .finally(() => {
-            project(dependencyMap[23]).dispatch({
-              type: "CONJURE_PROJECT_APP_CHANNEL_PENDING",
-              projectId,
-              pending: false,
-            });
-          })
-          .catch(() => {});
-        const cleanupPromise = result
-          .catch(() => {})
-          .then(() => {
-            let tmp;
-            if (closure_5) {
-              if (true !== channel_skipped.channel_skipped) {
-                tmp = (function waitForAppChannel() {
-                  const self = this;
-                  const apply = closure_1_24.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(id, asyncGeneratorStep);
-              }
-            }
-            return tmp;
-          })
-          .finally(() => {
-            project(dependencyMap[23]).dispatch({
-              type: "CONJURE_PROJECT_APP_CHANNEL_PENDING",
-              projectId,
-              pending: false,
-            });
-          });
-      },
-      (message) => {
-        DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: false });
-        if (message instanceof Error) {
-          message = message.message;
-        } else {
-          const intl = util.intl;
-          message = intl.string(_modDef3820.gMWZeG);
-        }
-        dependencyMap.showError(message);
-        const obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: false };
-      },
-    );
-  let nextPromise = require("conjurePublishConnection")
-    .publishProject(id)
-    .then((ok) => {
-      if (true === ok.ok) {
-        return ok;
-      } else {
-        if (ok.code === conjurePublishFailureMessage.PREVIEW_BOT_NOT_INSTALLED_CODE) {
-          project = ConjureActionCreators.getProject(id);
-          project.catch(() => {});
-          const tmp9Result = ConjureActionCreators;
-        }
-        const _Error = Error;
-        const error = new Error(conjurePublishFailureMessageDefault(ok));
-        throw error;
-      }
-    });
+  return applyArgumentsResult;
 }
-let closure_24 = async function _waitForAppChannel(arg0) {
+let closure_24 = async function _startPublish(arg0, arg1, arg2) {
+  let project = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_4 = tmp4;
+            closure_3 = tmp8;
+            closure_131_0 = project;
+            closure_131_1 = closure_1;
+            closure_131_2 = undefined;
+            closure_131_3 = undefined;
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            closure_131_6 = undefined;
+            closure_131_7 = undefined;
+            closure_131_8 = undefined;
+            project = project.project;
+            closure_131_3 = project;
+            ({ platform: closure_131_4, guildId: closure_131_5 } = dependencyMap);
+            const id = project.id;
+            closure_131_6 = id;
+            set.add(id);
+            c6 = 2;
+            c7 = 3;
+            c8 = 1;
+            const obj5 = { value: require("conjurePublishConnection").requestPublishOptions(id), done: false };
+            return obj5;
+          }
+        } else if (1 === tmp8) {
+          c6 = 0;
+          closure_132_27.delete(closure_131_6);
+          throw closure_5;
+        } else if (2 === tmp8) {
+          c6 = 1;
+          closure_131_9 = closure_5;
+          let _delete = closure_131_4;
+          let showError = closure_131_4.showError;
+          let _Error = Error;
+          if (closure_131_9 instanceof Error) {
+            let message = closure_131_9.message;
+          } else {
+            const intl2 = closure_132_0(closure_132_2[19]).intl;
+            message = intl2.string(closure_132_1(closure_132_2[20]).gMWZeG);
+          }
+          showError(message);
+          c6 = 0;
+          _delete = closure_132_27.delete;
+          showError = _delete(closure_131_6);
+          c8 = 3;
+        } else {
+          if (3 === tmp8) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 0;
+              closure_132_27.delete(closure_131_6);
+              c8 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              closure_131_7 = value;
+              if (1 === closure_131_7.destinations.length) {
+                let selected_destination_id = closure_131_7.selected_destination_id;
+              } else {
+                c7 = 4;
+                c8 = 1;
+                const obj7 = { value: closure_131_4.promptPublishDestination(closure_131_7), done: false };
+                return obj7;
+              }
+            }
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else {
+            selected_destination_id = value;
+            if (arg0 === 2) {
+              c6 = 0;
+              closure_132_27.delete(closure_131_6);
+              c8 = 3;
+              let obj = { value, done: true };
+              return obj;
+            }
+          }
+          closure_131_2 = selected_destination_id;
+          c6 = 0;
+          closure_132_27.delete(closure_131_6);
+          if (null == closure_131_2) {
+            c8 = 3;
+          } else if (!closure_132_14.isProjectPublishing(closure_131_6)) {
+            const publishStatus = closure_132_14.getPublishStatus(closure_131_6);
+            let publishing;
+            if (publishStatus != null) {
+              publishing = publishStatus.publishing;
+            }
+            if (true !== publishing) {
+              let tmp30 = null != closure_131_0.guildId;
+              if (tmp30) {
+                const status = closure_131_0.input.status;
+                let surface;
+                if (status != null) {
+                  surface = status.surface;
+                }
+                tmp30 = "activity" === surface;
+              }
+              if (tmp30) {
+                tmp30 = null == closure_131_0.appChannelId;
+              }
+              if (tmp30) {
+                tmp30 = !closure_131_1.isUpdate;
+              }
+              closure_131_8 = tmp30;
+              if (closure_131_8) {
+                closure_132_25(closure_131_6, true);
+              }
+              const obj3 = closure_132_0(closure_132_2[18]);
+              const publishProjectResult = closure_132_0(closure_132_2[18]).publishProject(
+                closure_131_6,
+                closure_131_2,
+              );
+              closure_132_0(closure_132_2[18])
+                .publishProject(closure_131_6, closure_131_2)
+                .then((ok) => {
+                  if (true === ok.ok) {
+                    return ok;
+                  } else {
+                    if (ok.code === closure_0(11774).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                      project = closure_0(10678).getProject(projectId);
+                      project.catch(() => {});
+                      const tmp9Result = closure_0(10678);
+                    }
+                    const _Error = Error;
+                    const error = new Error(closure_1(11774)(ok));
+                    throw error;
+                  }
+                })
+                .then(
+                  (result) => {
+                    const channel_skipped = result;
+                    const intl = project(1128).intl;
+                    closure_4.showConfirmation(intl.string(closure_1_1(3830).S6Px3n));
+                    if (null != channel_skipped.guildId) {
+                      const tmpResult = project(8634);
+                      const profile = tmpResult.fetchProfile(project(10689).conjureProductionBotUserId(closure_3), {
+                        withMutualGuilds: true,
+                      });
+                      profile.catch(() => {});
+                      const tmpResult3 = project(10689);
+                    }
+                    result = project(10743).refreshPublishedProject(projectId, { isPreview: false });
+                    const tmpResult4 = project(10743);
+                    const catchPromise1 = result.catch(() => {});
+                    const nextPromise = result
+                      .catch(() => {})
+                      .then(() => {
+                        let tmp;
+                        if (closure_2_8) {
+                          if (true !== channel_skipped.channel_skipped) {
+                            tmp = (function waitForAppChannel() {
+                              const self = this;
+                              const apply = closure_1_26.apply;
+                              if (typeof apply === "unknown") {
+                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                              } else {
+                                applyArgumentsResult = apply(self, arguments);
+                              }
+                              return applyArgumentsResult;
+                            })(projectId, closure_2_5);
+                          }
+                        }
+                        return tmp;
+                      });
+                    result
+                      .catch(() => {})
+                      .then(() => {
+                        let tmp;
+                        if (closure_2_8) {
+                          if (true !== channel_skipped.channel_skipped) {
+                            tmp = (function waitForAppChannel() {
+                              const self = this;
+                              const apply = closure_1_26.apply;
+                              if (typeof apply === "unknown") {
+                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                              } else {
+                                applyArgumentsResult = apply(self, arguments);
+                              }
+                              return applyArgumentsResult;
+                            })(projectId, closure_2_5);
+                          }
+                        }
+                        return tmp;
+                      })
+                      .finally(() => {
+                        closure_2_1(584).dispatch({
+                          type: "CONJURE_PROJECT_APP_CHANNEL_PENDING",
+                          projectId,
+                          pending: false,
+                        });
+                      })
+                      .catch(() => {});
+                    const cleanupPromise = result
+                      .catch(() => {})
+                      .then(() => {
+                        let tmp;
+                        if (closure_2_8) {
+                          if (true !== channel_skipped.channel_skipped) {
+                            tmp = (function waitForAppChannel() {
+                              const self = this;
+                              const apply = closure_1_26.apply;
+                              if (typeof apply === "unknown") {
+                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                              } else {
+                                applyArgumentsResult = apply(self, arguments);
+                              }
+                              return applyArgumentsResult;
+                            })(projectId, closure_2_5);
+                          }
+                        }
+                        return tmp;
+                      })
+                      .finally(() => {
+                        closure_2_1(584).dispatch({
+                          type: "CONJURE_PROJECT_APP_CHANNEL_PENDING",
+                          projectId,
+                          pending: false,
+                        });
+                      });
+                  },
+                  (message) => {
+                    closure_1(584).dispatch({ type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId, pending: false });
+                    if (message instanceof Error) {
+                      message = message.message;
+                    } else {
+                      const intl = closure_0(1128).intl;
+                      message = intl.string(closure_1(3830).gMWZeG);
+                    }
+                    closure_1_4.showError(message);
+                    const obj = closure_1(584);
+                    const obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId, pending: false };
+                  },
+                );
+              let nextPromise = closure_132_0(closure_132_2[18])
+                .publishProject(closure_131_6, closure_131_2)
+                .then((ok) => {
+                  if (true === ok.ok) {
+                    return ok;
+                  } else {
+                    if (ok.code === closure_0(11774).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                      project = closure_0(10678).getProject(projectId);
+                      project.catch(() => {});
+                      const tmp9Result = closure_0(10678);
+                    }
+                    const _Error = Error;
+                    const error = new Error(closure_1(11774)(ok));
+                    throw error;
+                  }
+                });
+            }
+          }
+          let intl = closure_132_0(closure_132_2[19]).intl;
+          closure_131_4.showError(intl.string(closure_132_1(closure_132_2[20])["TD/ze/"]));
+        }
+      } catch (tmp84) {
+        closure_5 = tmp84;
+        if (tmp5 === c6) {
+          c8 = tmp3;
+          throw tmp84;
+        } else if (tmp2 === tmp86) {
+          c7 = tmp2;
+        } else {
+          c7 = tmp;
+        }
+      }
+    }
+  })();
+};
+function setAppChannelPending(projectId, arg1) {
+  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId, pending: true });
+}
+let closure_26 = async function _waitForAppChannel(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -636,7 +782,7 @@ let closure_24 = async function _waitForAppChannel(arg0) {
 };
 function runConjurePublishAction() {
   const self = this;
-  const apply = closure_27.apply;
+  const apply = closure_29.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -644,11 +790,11 @@ function runConjurePublishAction() {
   }
   return applyArgumentsResult;
 }
-let closure_27 = async function _runConjurePublishAction(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
+let closure_29 = async function _runConjurePublishAction(arg0) {
+  if (c7 === 2) {
+    c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -659,117 +805,136 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
     }
   } else {
     try {
-      c5 = 2;
-      let num2 = 0;
-      if (0 === num3) {
-        num3 = 1;
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          c5 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
+          c7 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_1 = closure_2;
-          ({ guildId, platform, busy } = closure_2);
-          let flag = true;
-          if (true !== busy) {
-            busy = set.has(closure_0);
-            if (!busy) {
-              busy = readPublishSubject;
-              const tmp5 = readPublishSubject(closure_0, guildId);
-              if (null != tmp5) {
-                guildId = projectPublishing;
-                busy = projectPublishing.isProjectPublishing(closure_0);
-                if (!busy) {
-                  num2 = tmp5.input.status;
-                  guildId = undefined;
-                  busy = undefined;
-                  if (num2 != null) {
-                    busy = num2.publishing;
+          closure_5 = tmp2;
+          closure_133_0 = closure_0;
+          closure_133_1 = dependencyMap;
+          closure_133_2 = undefined;
+          closure_133_3 = undefined;
+          const platform = dependencyMap.platform;
+          if (true !== dependencyMap.busy) {
+            if (!set.has(closure_0)) {
+              const tmp10 = readPublishSubject(closure_0, tmp33);
+              if (null != tmp10) {
+                publishApprovalUrl = publishApprovalUrl.getPublishApprovalUrl(closure_0);
+                closure_133_2 = publishApprovalUrl;
+                if (null != publishApprovalUrl) {
+                  if (__initData(tmp10.project)) {
+                    c6 = 1;
+                    c7 = 1;
+                    const obj4 = { value: require("asyncRequireImpl")(paths[25], paths.paths), done: false };
+                    return obj4;
                   }
-                  if (flag !== busy) {
-                    num2 = _require;
-                    flag = dependencyMap;
-                    busy = require("conjurePublishAction").resolveConjurePublishAction(tmp5.input);
-                    const obj6 = require("conjurePublishAction");
-                    const obj4 = {
-                      entryPoint: tmp23,
+                }
+                if (!obj8.isProjectPublishing(closure_0)) {
+                  const status = tmp10.input.status;
+                  let publishing;
+                  if (status != null) {
+                    publishing = status.publishing;
+                  }
+                  if (true !== publishing) {
+                    const conjurePublishAction = require("conjurePublishAction").resolveConjurePublishAction(
+                      tmp10.input,
+                    );
+                    closure_133_3 = conjurePublishAction;
+                    const obj9 = require("conjurePublishAction");
+                    const obj5 = {
+                      entryPoint: tmp31,
                       publishState: null,
                       surface: null,
                       installScope: null,
                       action: null,
                     };
-                    const status2 = tmp5.input.status;
+                    const status3 = tmp10.input.status;
                     let state;
-                    if (status2 != null) {
-                      state = status2.state;
+                    if (status3 != null) {
+                      state = status3.state;
                     }
                     let publishState = state;
                     if (state == null) {
                       publishState = null;
                     }
-                    obj4.publishState = publishState;
-                    const status = tmp5.input.status;
+                    obj5.publishState = publishState;
+                    const status2 = tmp10.input.status;
                     let surface;
-                    if (status != null) {
-                      surface = status.surface;
+                    if (status2 != null) {
+                      surface = status2.surface;
                     }
                     if (surface == null) {
                       surface = null;
                     }
-                    obj4.surface = surface;
-                    obj4.installScope = tmp5.project.install_scope;
-                    obj4.action = busy.action;
-                    const result = require("ConjureAnalytics").trackConjurePublishActionClicked(closure_0, obj4);
-                    if (null != busy.disabledReason) {
+                    obj5.surface = surface;
+                    obj5.installScope = tmp10.project.install_scope;
+                    obj5.action = conjurePublishAction.action;
+                    const result = require("ConjureAnalytics").trackConjurePublishActionClicked(closure_0, obj5);
+                    if (null == conjurePublishAction.disabledReason) {
+                      require("conjurePublishConnection").preparePublish(closure_0);
+                      if (null == conjurePublishAction.confirmReason) {
+                        c6 = 2;
+                        c7 = 1;
+                        const obj6 = { value: continuePublish(closure_0, conjurePublishAction, tmp32), done: false };
+                        return obj6;
+                      } else {
+                        platform.showPublishBlocked(
+                          require("conjurePublishBlockedReason").ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS,
+                          conjurePublishAction.confirmReason,
+                          () => {
+                            closure_2_30(closure_1_0, publishState, closure_1_1).catch(() => {});
+                          },
+                        );
+                      }
+                      const tmp36Result = require("conjurePublishConnection");
+                    } else {
                       platform.showPublishBlocked(
-                        num2(11725).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER,
-                        busy.disabledReason,
+                        require("conjurePublishBlockedReason").ConjurePublishBlockedReason.MISSING_MANAGE_SERVER,
+                        conjurePublishAction.disabledReason,
                       );
                     }
-                    const obj7 = require("ConjureAnalytics");
+                    const obj10 = require("ConjureAnalytics");
                   }
-                  num2(11091).preparePublish(closure_0);
-                  if (null == busy.confirmReason) {
-                    c5 = num3;
-                    const obj5 = { value: continuePublish(closure_0, busy, tmp24), done: false };
-                    return obj5;
-                  } else {
-                    num2 = num2(11725).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
-                    flag = busy.confirmReason;
-                    platform.showPublishBlocked(num2, flag, () => {
-                      closure_2_28(closure_0, busy, closure_1).catch(() => {});
-                    });
-                  }
-                  const num2Result = num2(11091);
                 }
+                obj8 = publishApprovalUrl;
               }
             }
           }
+          c7 = 3;
         }
-      } else {
-        num3 = 1;
+      } else if (1 === tmp5) {
         if (arg0 === 1) {
-          c5 = 3;
+          c7 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj = { value, done: true };
-          return obj;
+        } else if (arg0 !== 2) {
+          const result1 = value.promptPublishApproval(closure_133_2);
         }
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c7 = 3;
+        const obj = { value, done: true };
+        return obj;
       }
-      c5 = 3;
-    } catch (tmp17) {
-      c5 = tmp;
-      throw tmp17;
+      c7 = 3;
+      const obj7 = { value, done: true };
+      return obj7;
+    } catch (tmp25) {
+      c7 = tmp;
+      throw tmp25;
     }
   }
 };
 function continuePublish() {
   const self = this;
-  const apply = closure_29.apply;
+  const apply = closure_31.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -777,7 +942,7 @@ function continuePublish() {
   }
   return applyArgumentsResult;
 }
-let closure_29 = async function _continuePublish() {
+let closure_31 = async function _continuePublish() {
   closure_1 = arg1;
   closure_2 = arg2;
   c14 = 0;
@@ -845,15 +1010,30 @@ let closure_29 = async function _continuePublish() {
                     }
                   }
                 }
+                if ("consent_then_publish" !== closure_138_1.intent) {
+                  c14 = 4;
+                  c15 = 1;
+                  const obj6 = { value: closure_139_23(closure_138_5, closure_138_1, closure_138_2), done: false };
+                  return obj6;
+                } else {
+                  closure_139_27.add(closure_138_0);
+                  c12 = 2;
+                  const requestConsent = closure_138_4.requestConsent;
+                  f158370 = requestConsent;
+                  if (requestConsent == null) {
+                    f158370 = (arg0) => closure_2_18(arg0, closure_1_3);
+                  }
+                  c14 = 6;
+                  c15 = 1;
+                  const obj7 = { value: f158370(closure_138_0), done: false };
+                  return obj7;
+                }
               }
             }
-            c15 = 3;
-            c15 = 3;
-            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp8) {
           c12 = 0;
-          closure_139_25.delete(closure_138_0);
+          closure_139_27.delete(closure_138_0);
           throw closure_13;
         } else if (2 === tmp8) {
           if (arg0 === 1) {
@@ -861,16 +1041,16 @@ let closure_29 = async function _continuePublish() {
             throw value;
           } else if (arg0 === 2) {
             c12 = 0;
-            closure_139_25.delete(closure_138_0);
+            closure_139_27.delete(closure_138_0);
             c15 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             obj4.description = value;
             c14 = 3;
             c15 = 1;
-            const obj7 = { value: promptFirstPublish(obj4), done: false };
-            return obj7;
+            const obj9 = { value: promptFirstPublish(obj4), done: false };
+            return obj9;
           }
         } else if (3 === tmp8) {
           if (arg0 === 1) {
@@ -878,19 +1058,19 @@ let closure_29 = async function _continuePublish() {
             throw value;
           } else if (arg0 === 2) {
             c12 = 0;
-            closure_139_25.delete(closure_138_0);
+            closure_139_27.delete(closure_138_0);
             c15 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             closure_138_6 = value;
             c12 = 0;
-            closure_139_25.delete(closure_138_0);
+            closure_139_27.delete(closure_138_0);
             if (closure_138_6) {
               if (!closure_139_14.isProjectPublishing(closure_138_0)) {
-                const tmp51 = closure_139_17(closure_138_0, closure_138_3);
-                closure_3 = tmp51;
-                if (tmp51 == null) {
+                const tmp50 = closure_139_17(closure_138_0, closure_138_3);
+                closure_3 = tmp50;
+                if (tmp50 == null) {
                   closure_3 = closure_138_5;
                 }
                 closure_138_5 = closure_3;
@@ -900,89 +1080,99 @@ let closure_29 = async function _continuePublish() {
             return { value: "IconComponent", done: null };
           }
         } else if (4 === tmp8) {
+          if (arg0 === 1) {
+            c15 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c15 = 3;
+            const obj11 = { value, done: true };
+            return obj11;
+          }
+        } else if (5 === tmp8) {
           c12 = 0;
-          closure_139_25.delete(closure_138_0);
+          closure_139_27.delete(closure_138_0);
           throw closure_13;
+        } else if (6 === tmp8) {
+          if (arg0 === 1) {
+            c15 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c12 = 0;
+            closure_139_27.delete(closure_138_0);
+            c15 = 3;
+            const obj12 = { value, done: true };
+            return obj12;
+          } else {
+            c12 = 0;
+            closure_139_27.delete(closure_138_0);
+            if (closure_139_14.isProjectPublishing(closure_138_0)) {
+              c15 = 3;
+              return { value: "IconComponent", done: null };
+            } else {
+              closure_138_7 = closure_139_17(closure_138_0, closure_138_3);
+              let integrationStatus;
+              if (closure_138_7 != null) {
+                integrationStatus = closure_138_7.input.integrationStatus;
+              }
+              c5 = integrationStatus;
+              if (integrationStatus == null) {
+                c5 = null;
+              }
+              closure_138_8 = c5;
+              if (null != closure_138_7) {
+                const obj13 = {
+                  installScope: closure_138_7.project.install_scope,
+                  previewReady: null,
+                  integrationInstalled: null,
+                  botPermissionsChanged: null,
+                };
+                let preview_ready;
+                if (closure_138_8 != null) {
+                  preview_ready = closure_138_8.preview_ready;
+                }
+                obj13.previewReady = true === preview_ready;
+                let prop;
+                if (closure_138_8 != null) {
+                  prop = closure_138_8.integration_installed;
+                }
+                integrationInstalled = prop;
+                if (prop == null) {
+                  integrationInstalled = null;
+                }
+                obj13.integrationInstalled = integrationInstalled;
+                let prop1;
+                if (closure_138_8 != null) {
+                  prop1 = closure_138_8.bot_permissions_changed;
+                }
+                obj13.botPermissionsChanged = true === prop1;
+                if (!obj14.requiresPermissionReview(obj13)) {
+                  c14 = 7;
+                  c15 = 1;
+                  const obj15 = { value: closure_139_23(closure_138_7, closure_138_1, closure_138_2), done: false };
+                  return obj15;
+                }
+                obj14 = closure_139_0(closure_139_2[30]);
+              }
+              c15 = 3;
+              return { value: "IconComponent", done: null };
+            }
+          }
         } else if (arg0 === 1) {
           c15 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c12 = 0;
-          closure_139_25.delete(closure_138_0);
           c15 = 3;
           const obj = { value, done: true };
           return obj;
-        } else {
-          c12 = 0;
-          closure_139_25.delete(closure_138_0);
-          if (closure_139_14.isProjectPublishing(closure_138_0)) {
-            c15 = 3;
-            return { value: "IconComponent", done: null };
-          } else {
-            closure_138_7 = closure_139_17(closure_138_0, closure_138_3);
-            let integrationStatus;
-            if (closure_138_7 != null) {
-              integrationStatus = closure_138_7.input.integrationStatus;
-            }
-            c5 = integrationStatus;
-            if (integrationStatus == null) {
-              c5 = null;
-            }
-            closure_138_8 = c5;
-            if (null != closure_138_7) {
-              const obj9 = {
-                installScope: closure_138_7.project.install_scope,
-                previewReady: null,
-                integrationInstalled: null,
-                botPermissionsChanged: null,
-              };
-              let preview_ready;
-              if (closure_138_8 != null) {
-                preview_ready = closure_138_8.preview_ready;
-              }
-              obj9.previewReady = true === preview_ready;
-              let prop;
-              if (closure_138_8 != null) {
-                prop = closure_138_8.integration_installed;
-              }
-              integrationInstalled = prop;
-              if (prop == null) {
-                integrationInstalled = null;
-              }
-              obj9.integrationInstalled = integrationInstalled;
-              let prop1;
-              if (closure_138_8 != null) {
-                prop1 = closure_138_8.bot_permissions_changed;
-              }
-              obj9.botPermissionsChanged = true === prop1;
-              if (!obj10.requiresPermissionReview(obj9)) {
-                closure_139_23(closure_138_7, closure_138_1, closure_138_2);
-              }
-              obj10 = closure_139_0(closure_139_2[28]);
-            }
-          }
         }
-        if ("consent_then_publish" !== closure_138_1.intent) {
-          closure_139_23(closure_138_5, closure_138_1, closure_138_2);
-        } else {
-          closure_139_25.add(closure_138_0);
-          c12 = 2;
-          const requestConsent = closure_138_4.requestConsent;
-          f157857 = requestConsent;
-          if (requestConsent == null) {
-            f157857 = (arg0) => closure_2_18(arg0, closure_1_3);
-          }
-          c14 = 5;
-          c15 = 1;
-          const obj11 = { value: f157857(closure_138_0), done: false };
-          return obj11;
-        }
-      } catch (tmp105) {
-        closure_13 = tmp105;
+        c15 = 3;
+        return { value: "IconComponent", done: null };
+      } catch (tmp103) {
+        closure_13 = tmp103;
         if (tmp4 === c12) {
           c15 = tmp2;
-          throw tmp105;
-        } else if (tmp === tmp107) {
+          throw tmp103;
+        } else if (tmp === tmp105) {
           c14 = tmp;
         } else {
           c14 = tmp5;
@@ -991,7 +1181,7 @@ let closure_29 = async function _continuePublish() {
     }
   })();
 };
-let ConjureProjectStore = fn(6724);
+let ConjureProjectStore = fn(6752);
 ({ canPublishProject: closure_11, isProjectOwner: closure_12 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const Permissions = fn(1087).Permissions;
@@ -1044,6 +1234,7 @@ export default function useConjurePublishAction(arg0, arg1) {
         guildId: null,
         appChannelId: null,
         publishing: null,
+        approvalUrl: null,
         installScope: null,
         status: null,
         integrationStatus: null,
@@ -1082,6 +1273,9 @@ export default function useConjurePublishAction(arg0, arg1) {
       obj.appChannelId = appChannelId;
       let tmp10 = null != closure_0;
       if (tmp10) {
+        tmp10 = null == ConjurePublishStatusStore.getPublishApprovalUrl(closure_0);
+      }
+      if (tmp10) {
         let isProjectPublishingResult = ConjurePublishStatusStore.isProjectPublishing(closure_0);
         if (!isProjectPublishingResult) {
           const publishStatus = ConjurePublishStatusStore.getPublishStatus(closure_0);
@@ -1094,6 +1288,11 @@ export default function useConjurePublishAction(arg0, arg1) {
         tmp10 = isProjectPublishingResult;
       }
       obj.publishing = tmp10;
+      let publishApprovalUrl = null;
+      if (null != closure_0) {
+        publishApprovalUrl = ConjurePublishStatusStore.getPublishApprovalUrl(closure_0);
+      }
+      obj.approvalUrl = publishApprovalUrl;
       installScope = undefined;
       if (tmp2 != null) {
         installScope = tmp2.input.installScope;
@@ -1213,7 +1412,7 @@ export default function useConjurePublishAction(arg0, arg1) {
     botInGuild,
     liveNameOutdated,
   ];
-  ({ canPublish, appChannelId } = stateFromStoresObject);
+  ({ canPublish, approvalUrl, appChannelId } = stateFromStoresObject);
   memo = obj.useMemo(() => {
     let tmp = null;
     if (null != project) {
@@ -1320,12 +1519,15 @@ export default function useConjurePublishAction(arg0, arg1) {
     return conjurePublishAction;
   }, items5);
   const items6 = [arg0, context];
-  let tmp18 = null;
   if (null != context) {
-    tmp18 = null;
     if (canPublish) {
-      tmp18 = null;
       if (null != memo1) {
+        if (null == approvalUrl) {
+          let label = memo1.label;
+        } else {
+          const intl = tmp3(tmp4[19]).intl;
+          label = intl.string(context(tmp4[20]).qru9M5);
+        }
         const obj3 = {};
         const merged = Object.assign(memo1);
         let status1;
@@ -1340,10 +1542,8 @@ export default function useConjurePublishAction(arg0, arg1) {
         obj3.appChannelId = appChannelId;
         obj3.publishing = publishing;
         if (publishing) {
-          const intl = require("util").intl;
-          let label = intl.string(context(tmp4[21]).Rhx0rn);
-        } else {
-          label = memo1.label;
+          const intl2 = tmp3(tmp4[19]).intl;
+          label = intl2.string(context(tmp4[20]).Rhx0rn);
         }
         obj3.label = label;
         if (!publishing) {
@@ -1351,11 +1551,11 @@ export default function useConjurePublishAction(arg0, arg1) {
         }
         obj3.disabled = publishing;
         obj3.run = tmp17;
-        tmp18 = obj3;
+        return obj3;
       }
     }
   }
-  return tmp18;
+  return null;
 }
 export const ConjurePublishActionContext = context;
 export const publishGuildId = function publishGuildId(project, fallbackGuildId) {

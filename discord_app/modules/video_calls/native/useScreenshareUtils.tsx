@@ -47,8 +47,8 @@ function startStream() {
   obj = inject;
 }
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
-const Features = fn(5680).Features;
-const DeviceUtils = fn(4902);
+const Features = fn(5700).Features;
+const DeviceUtils = fn(4923);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 const BroadcastUploadManager = fn(17).NativeModules.BroadcastUploadManager;
 const ReactCompilerGating = fn(558);
@@ -124,7 +124,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/useScreensha
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useScreenshareUtils(arg0) {
       const cResult = require("c").c(24);
-      const tmp5 = analyticsLocations(11467)(arg0);
+      const tmp5 = analyticsLocations(11517)(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         cResult[0] = closure_8 >= 12;
         let first = tmp8;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[3];
       }
       const tmpResult = require("initialize");
-      const showMobileGoLiveUpsell = analyticsLocations(11478).useConfig(tmp13).showMobileGoLiveUpsell;
+      const showMobileGoLiveUpsell = analyticsLocations(11528).useConfig(tmp13).showMobileGoLiveUpsell;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ApplicationStreamingStore];
         class E {
@@ -170,9 +170,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = cResult[4];
         tmp15 = cResult[5];
       }
-      const tmp4Result = analyticsLocations(11478);
+      const tmp4Result = analyticsLocations(11528);
       const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
-      analyticsLocations = tmp4(7202)().analyticsLocations;
+      analyticsLocations = tmp4(7230)().analyticsLocations;
       let tmp18 = null != stateFromStores1;
       if (tmp18) {
         tmp18 = stateFromStores1.state === ApplicationStreamStates.ACTIVE;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return closure_1_4.getCurrentUserActiveStream();
                       }
                     }
-                    tmp4(tmp18 ? 11483 : 11484);
+                    tmp4(tmp18 ? 11533 : 11534);
                   }
                 }
               }

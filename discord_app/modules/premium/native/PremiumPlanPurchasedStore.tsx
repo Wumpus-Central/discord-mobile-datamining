@@ -97,7 +97,7 @@ export const reset = function reset() {
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
       onPaymentSuccess: "applicationId",
-      onPaymentDismiss: "children",
+      onPaymentDismiss: "__workletHash",
     });
   });
 };

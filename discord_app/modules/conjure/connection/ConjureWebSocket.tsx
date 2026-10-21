@@ -4,7 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/conjure/connection/ConjureWebSocket.tsx");
 class ConjureWebSocket {
   constructor() {
-    return Object.assign({ socket: null });
+    return Object.assign({ socket: null, supportsPublishOptions: false });
   }
 }
 const prototype = ConjureWebSocket.prototype;
@@ -28,7 +28,11 @@ prototype["open"] = function open(ticket) {
     if (self.socket === webSocket) {
       try {
         const _JSON = JSON;
-        closure_1_1(JSON.parse(event.data));
+        const parsed = JSON.parse(event.data);
+        if ("hello" === parsed.type) {
+          tmp2.supportsPublishOptions = true === parsed.publish_options;
+        }
+        closure_1_1(parsed);
       } catch (err) {
         return tmp;
       }
@@ -141,14 +145,29 @@ prototype["sendQueuedMessageAction"] = function sendQueuedMessageAction(arg0, id
   const error = new Error("WebSocket not open");
   throw error;
 };
-prototype["sendPublish"] = function sendPublish() {
+prototype["sendPublishOptions"] = function sendPublishOptions(combined) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
       const _JSON = JSON;
-      socket.send(JSON.stringify({ type: "publish" }));
+      const obj = { type: "publish_options", nonce: combined };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("Not connected");
+  throw error;
+};
+prototype["sendPublish"] = function sendPublish(destination_id) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "publish", destination_id };
+      socket.send(JSON.stringify(obj));
     }
   }
   const error = new Error("WebSocket not open");
@@ -456,6 +475,7 @@ prototype["sendControlAck"] = function sendControlAck(id, failed, response, mess
   }
 };
 prototype["close"] = function close() {
+  this.supportsPublishOptions = false;
   const socket = this.socket;
   if (socket != null) {
     socket.close();

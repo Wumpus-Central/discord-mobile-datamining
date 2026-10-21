@@ -1,18 +1,18 @@
 // discord_app/modules/conjure/plan/conjurePlanExperienceSections.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3820 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
 import conjurePlanFormat from "conjurePlanFormat.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanExperienceSections.tsx");
 
 export const CONJURE_PLAN_EXPERIENCE_KIND_LABELS = {
-  frame: _modDef3820.Z2bt4u,
-  overlay_widget: _modDef3820["0mGHfU"],
-  user_widget: _modDef3820.Jipr29,
-  bot: _modDef3820.EbvC13,
-  commands: _modDef3820.EbvC13,
-  automod: _modDef3820.tiMvei,
+  frame: _modDef3830.Z2bt4u,
+  overlay_widget: _modDef3830["0mGHfU"],
+  user_widget: _modDef3830.Jipr29,
+  bot: _modDef3830.EbvC13,
+  commands: _modDef3830.EbvC13,
+  automod: _modDef3830.tiMvei,
 };
 export const conjurePlanExperienceIsApp = function conjurePlanExperienceIsApp(experience) {
   let tmp = "frame" === experience.kind;
@@ -56,7 +56,7 @@ export const conjurePlanDisplayedSections = function conjurePlanDisplayedSection
 export const conjurePlanFrameFeatures = function conjurePlanFrameFeatures(usableInVoice) {
   if (usableInVoice.usableInVoice) {
     const intl = util.intl;
-    const items = [intl.string(_modDef3820["4oGg2h"])];
+    const items = [intl.string(_modDef3830["4oGg2h"])];
     let items1 = items;
   } else {
     items1 = [];
@@ -64,7 +64,7 @@ export const conjurePlanFrameFeatures = function conjurePlanFrameFeatures(usable
   const items2 = [...items1];
   if (usableInVoice.launchableAnywhere) {
     const intl2 = util.intl;
-    const items3 = [intl2.string(_modDef3820.BTGCfR)];
+    const items3 = [intl2.string(_modDef3830.BTGCfR)];
     let items4 = items3;
   } else {
     items4 = [];
@@ -73,9 +73,9 @@ export const conjurePlanFrameFeatures = function conjurePlanFrameFeatures(usable
   return items2;
 };
 export const conjurePlanRequirementGroups = function conjurePlanRequirementGroups(proposal) {
-  let items = [{ key: "permissions", caption: _modDef3820["2UbW6r"], names: proposal.bot_permissions }];
-  let obj = { key: "permissions", caption: _modDef3820["2UbW6r"], names: proposal.bot_permissions };
-  items[1] = { key: "intents", caption: _modDef3820["7TKfpj"], names: proposal.privileged_intents };
+  let items = [{ key: "permissions", caption: _modDef3830["2UbW6r"], names: proposal.bot_permissions }];
+  let obj = { key: "permissions", caption: _modDef3830["2UbW6r"], names: proposal.bot_permissions };
+  items[1] = { key: "intents", caption: _modDef3830["7TKfpj"], names: proposal.privileged_intents };
   return items.flatMap((names) => {
     names = names.names;
     if (null != names) {

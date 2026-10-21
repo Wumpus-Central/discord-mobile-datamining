@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHECKPOINT_NAV_HEIGHT = fn(5973).CHECKPOINT_NAV_HEIGHT;
+const CHECKPOINT_NAV_HEIGHT = fn(5995).CHECKPOINT_NAV_HEIGHT;
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_10 = createStyles.createStyles({
   container: { height: "100%", width: "100%" },
   scroll: { width: "100%" },

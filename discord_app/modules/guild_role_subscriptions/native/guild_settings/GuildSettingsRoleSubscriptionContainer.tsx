@@ -6,15 +6,15 @@ import RoleSubscriptionSettingsDisabledContext from "../../RoleSubscriptionSetti
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const ErrorBlockDefault = tmp13(12116);
-const WarningNoticeDefault = tmp13(18965);
+const ErrorBlockDefault = tmp13(12164);
+const WarningNoticeDefault = tmp13(19042);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_9 = createStyles.createStyles({
   container: { flex: 1 },
   warningBlockContainer: { marginHorizontal: 16, marginTop: 16 },

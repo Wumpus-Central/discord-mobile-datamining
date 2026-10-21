@@ -46,7 +46,7 @@ let closure_4 = async function _handleFrameLaunchStart(arg0) {
           ({ applicationId: closure_129_0, frameId: closure_129_1, surface: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {

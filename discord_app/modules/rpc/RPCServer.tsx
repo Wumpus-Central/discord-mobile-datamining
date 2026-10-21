@@ -8,7 +8,7 @@ import RpcCommandInterception from "RpcCommandInterception.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(6335).TransportTypes;
+const TransportTypes = fn(6357).TransportTypes;
 const Constants = fn(1087);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -95,7 +95,95 @@ prototype["handleDisconnect"] = function handleDisconnect(abortController, arg1)
 prototype["handleRequest"] = function handleRequest(socket, arg1) {
   let self = this;
   closure_2 = arg1;
-  const promise = new Promise((fn) => {
+  self((arg0) => {
+    const joi = arg0;
+    c3 = 0;
+    c4 = 0;
+    return (function* (arg0) {
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c2 = 0;
+              closure_129_0 = joi;
+              closure_129_1 = undefined;
+              closure_129_2 = undefined;
+              if (null != joi.validation) {
+                c3 = 1;
+                c4 = 1;
+                const obj4 = { value: joi.getJoi(), done: false };
+                return obj4;
+              }
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
+              closure_129_1 = value;
+              tmp2(args[8])(null != closure_129_0.validation, "command.validation must not be null");
+              closure_129_2 = closure_129_0.validation(closure_129_1);
+              const promise = new Promise((arg0, arg1) => {
+                closure_0 = arg0;
+                closure_1 = arg1;
+                closure_1_1.validate(args.args, closure_1_2, { convert: false }, (message) => {
+                  if (null == message) {
+                    closure_0();
+                  } else {
+                    const obj = { errorCode: constants.INVALID_PAYLOAD };
+                    const tmp8 = new closure_2_1(args[5])(obj, message.message);
+                    closure_1(tmp8);
+                  }
+                });
+              });
+              c3 = 2;
+              c4 = 1;
+              const obj6 = { value: promise, done: false };
+              return obj6;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            let obj = { value, done: true };
+            return obj;
+          }
+          c4 = 3;
+          const obj7 = { value: closure_129_0, done: true };
+          return obj7;
+        } catch (tmp9) {
+          c4 = tmp;
+          throw tmp9;
+        }
+      }
+    })();
+  });
+  let promise = new Promise((fn) => {
     if (null != closure_2.nonce) {
       if ("" !== closure_2.nonce) {
         const cmd = closure_2.cmd;
@@ -180,82 +268,15 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
       }
     }
     throw new RPCErrorDefault({ errorCode: constants4.INVALID_PAYLOAD }, "Payload requires a nonce");
-  }).then((result) => {
-    closure_0 = self(function* (arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_3 = tmp5;
-              closure_130_0 = closure_0;
-              closure_130_1 = closure_1;
-              closure_130_2 = undefined;
-              if (null != closure_0.validation) {
-                c4 = 1;
-                c5 = 1;
-                const obj4 = { value: closure_0.getJoi(), done: false };
-                return obj4;
-              } else {
-                tmp28(closure_0);
-                c5 = 3;
-              }
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_130_2 = value;
-            closure_1(tmp2[8])(null != closure_0.validation, "command.validation must not be null");
-            args = args.args;
-            closure_130_2.validate(args, closure_0.validation(closure_130_2), { convert: false }, (message) => {
-              if (null == message) {
-                closure_1_0(closure_0);
-              } else {
-                const obj = { errorCode: constants.INVALID_PAYLOAD };
-                const tmp8 = new closure_1(closure_2[5])(obj, message.message);
-                closure_1_1(tmp8);
-              }
-            });
-          }
-          c5 = 3;
-          let obj = { value, done: true };
-          return obj;
-        } catch (tmp9) {
-          c5 = tmp;
-          throw tmp9;
-        }
-      }
-    });
-    return new Promise(function () {
-      self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    });
+  }).then(function () {
+    self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   });
   const nextPromise1 = new Promise((fn) => {
     if (null != closure_2.nonce) {
@@ -291,82 +312,15 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
     }
     throw new RPCErrorDefault({ errorCode: constants4.INVALID_PAYLOAD }, "Payload requires a nonce");
   })
-    .then((result) => {
-      closure_0 = self(function* (arg0, arg1) {
-        if (c5 === 2) {
-          c5 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_3 = tmp5;
-                closure_130_0 = closure_0;
-                closure_130_1 = closure_1;
-                closure_130_2 = undefined;
-                if (null != closure_0.validation) {
-                  c4 = 1;
-                  c5 = 1;
-                  const obj4 = { value: closure_0.getJoi(), done: false };
-                  return obj4;
-                } else {
-                  tmp28(closure_0);
-                  c5 = 3;
-                }
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              closure_130_2 = value;
-              closure_1(tmp2[8])(null != closure_0.validation, "command.validation must not be null");
-              args = args.args;
-              closure_130_2.validate(args, closure_0.validation(closure_130_2), { convert: false }, (message) => {
-                if (null == message) {
-                  closure_1_0(closure_0);
-                } else {
-                  const obj = { errorCode: constants.INVALID_PAYLOAD };
-                  const tmp8 = new closure_1(closure_2[5])(obj, message.message);
-                  closure_1_1(tmp8);
-                }
-              });
-            }
-            c5 = 3;
-            let obj = { value, done: true };
-            return obj;
-          } catch (tmp9) {
-            c5 = tmp;
-            throw tmp9;
-          }
-        }
-      });
-      return new Promise(function () {
-        self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      });
+    .then(function () {
+      self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     })
     .then(function () {
       self = this;
@@ -412,82 +366,15 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
     }
     throw new RPCErrorDefault({ errorCode: constants4.INVALID_PAYLOAD }, "Payload requires a nonce");
   })
-    .then((result) => {
-      closure_0 = self(function* (arg0, arg1) {
-        if (c5 === 2) {
-          c5 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_3 = tmp5;
-                closure_130_0 = closure_0;
-                closure_130_1 = closure_1;
-                closure_130_2 = undefined;
-                if (null != closure_0.validation) {
-                  c4 = 1;
-                  c5 = 1;
-                  const obj4 = { value: closure_0.getJoi(), done: false };
-                  return obj4;
-                } else {
-                  tmp28(closure_0);
-                  c5 = 3;
-                }
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              closure_130_2 = value;
-              closure_1(tmp2[8])(null != closure_0.validation, "command.validation must not be null");
-              args = args.args;
-              closure_130_2.validate(args, closure_0.validation(closure_130_2), { convert: false }, (message) => {
-                if (null == message) {
-                  closure_1_0(closure_0);
-                } else {
-                  const obj = { errorCode: constants.INVALID_PAYLOAD };
-                  const tmp8 = new closure_1(closure_2[5])(obj, message.message);
-                  closure_1_1(tmp8);
-                }
-              });
-            }
-            c5 = 3;
-            let obj = { value, done: true };
-            return obj;
-          } catch (tmp9) {
-            c5 = tmp;
-            throw tmp9;
-          }
-        }
-      });
-      return new Promise(function () {
-        self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      });
+    .then(function () {
+      self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     })
     .then(function () {
       self = this;
@@ -571,82 +458,15 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
     }
     throw new RPCErrorDefault({ errorCode: constants4.INVALID_PAYLOAD }, "Payload requires a nonce");
   })
-    .then((result) => {
-      closure_0 = self(function* (arg0, arg1) {
-        if (c5 === 2) {
-          c5 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_3 = tmp5;
-                closure_130_0 = closure_0;
-                closure_130_1 = closure_1;
-                closure_130_2 = undefined;
-                if (null != closure_0.validation) {
-                  c4 = 1;
-                  c5 = 1;
-                  const obj4 = { value: closure_0.getJoi(), done: false };
-                  return obj4;
-                } else {
-                  tmp28(closure_0);
-                  c5 = 3;
-                }
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              closure_130_2 = value;
-              closure_1(tmp2[8])(null != closure_0.validation, "command.validation must not be null");
-              args = args.args;
-              closure_130_2.validate(args, closure_0.validation(closure_130_2), { convert: false }, (message) => {
-                if (null == message) {
-                  closure_1_0(closure_0);
-                } else {
-                  const obj = { errorCode: constants.INVALID_PAYLOAD };
-                  const tmp8 = new closure_1(closure_2[5])(obj, message.message);
-                  closure_1_1(tmp8);
-                }
-              });
-            }
-            c5 = 3;
-            let obj = { value, done: true };
-            return obj;
-          } catch (tmp9) {
-            c5 = tmp;
-            throw tmp9;
-          }
-        }
-      });
-      return new Promise(function () {
-        self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      });
+    .then(function () {
+      self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     })
     .then(function () {
       self = this;

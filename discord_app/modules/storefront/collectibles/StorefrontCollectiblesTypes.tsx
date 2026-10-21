@@ -9,5 +9,5 @@ export const StorefrontPromotionCollectiblesType = {
   TARGETED_OFFER: "TARGETED_OFFER",
   COLLECT_AND_CLAIM: "COLLECT_AND_CLAIM",
 };
-export const StorefrontPromotionCollectAndClaimSubtype = { TAKEOVER: "TAKEOVER" };
+export const StorefrontPromotionCollectAndClaimSubtype = { TAKEOVER: "TAKEOVER", BASIC: "BASIC" };
 export const StorefrontPromotionCollectiblesContentTheme = { LIGHT: "light", DARK: "dark" };

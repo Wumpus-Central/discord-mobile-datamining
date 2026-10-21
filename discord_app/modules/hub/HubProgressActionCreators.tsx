@@ -5,7 +5,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(8996).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9023).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1087).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
@@ -20,7 +20,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
     }
     if (hasItem) {
       const items = [INVITE_USER];
-      const result = items(4781).updateUserGuildSettings(
+      const result = items(4802).updateUserGuildSettings(
         guildId,
         (hubProgress) => {
           let flag = false;
@@ -35,9 +35,9 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
           }
           return flag;
         },
-        items(4781).UserSettingsDelay.INFREQUENT_USER_ACTION,
+        items(4802).UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
-      const obj = items(4781);
+      const obj = items(4802);
     }
   }
 };

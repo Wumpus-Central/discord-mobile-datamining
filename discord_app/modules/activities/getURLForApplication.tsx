@@ -1,4 +1,6 @@
 // discord_app/modules/activities/getURLForApplication.tsx
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import TestModeStore from "../../stores/game_store/TestModeStore.tsx";
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
@@ -39,7 +41,7 @@ export default function getURLForApplication(arg0) {
   }
   return activityUrlOverride;
 }
-export const getNonTestModeUrlForApplication = function getNonTestModeUrlForApplication(applicationId) {
+export const getNonTestModeUrlForApplication = function getNonTestModeUrlForApplication(arg0) {
   if (null == ACTIVITY_APPLICATION_HOST) {
     return null;
   } else if (ACTIVITY_APPLICATION_HOST.startsWith("//")) {
@@ -49,11 +51,50 @@ export const getNonTestModeUrlForApplication = function getNonTestModeUrlForAppl
     const _HermesInternal2 = HermesInternal;
     const uRL = new URL(ACTIVITY_APPLICATION_HOST, "" + window.location.protocol + "//" + window.location.host);
     const _HermesInternal3 = HermesInternal;
-    uRL.hostname = "" + applicationId + "." + uRL.hostname;
+    uRL.hostname = "" + arg0 + "." + uRL.hostname;
     return uRL.origin;
   } else {
     const _HermesInternal = HermesInternal;
-    return "https://" + applicationId + "." + ACTIVITY_APPLICATION_HOST;
+    return "https://" + arg0 + "." + ACTIVITY_APPLICATION_HOST;
+  }
+};
+export const getApplicationRouterOrigin = function getApplicationRouterOrigin(url) {
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
+  if (null == toURLSafeResult) {
+    return null;
+  } else {
+    const first = _slicedToArray(_slicedToArray(toURLSafeResult.hostname.split(".", 1), 1)[0].split("--", 1), 1)[0];
+    const _window3 = window;
+    let origin = null;
+    if (null != ACTIVITY_APPLICATION_HOST) {
+      if (ACTIVITY_APPLICATION_HOST.startsWith("//")) {
+        const _URL = URL;
+        const _window = window;
+        const _window2 = window;
+        const _HermesInternal2 = HermesInternal;
+        const uRL = new URL(ACTIVITY_APPLICATION_HOST, "" + window.location.protocol + "//" + window.location.host);
+        const _HermesInternal3 = HermesInternal;
+        uRL.hostname = "" + first + "." + uRL.hostname;
+        origin = uRL.origin;
+      } else {
+        const _HermesInternal = HermesInternal;
+        origin = "https://" + first + "." + ACTIVITY_APPLICATION_HOST;
+      }
+    }
+    let origin2 = null;
+    if (null != origin) {
+      const toURLSafeResult1 = URLUtilsDefault.toURLSafe(origin);
+      let origin1;
+      if (toURLSafeResult1 != null) {
+        origin1 = toURLSafeResult1.origin;
+      }
+      origin2 = null;
+      if (origin1 === toURLSafeResult.origin) {
+        origin2 = toURLSafeResult.origin;
+      }
+      const tmpResult = URLUtilsDefault;
+    }
+    return origin2;
   }
 };
 export const isUsingDevShelfActivityUrlOverride = function isUsingDevShelfActivityUrlOverride() {

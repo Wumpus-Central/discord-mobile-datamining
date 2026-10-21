@@ -46,7 +46,7 @@ let closure_3 = async function _fetchProjectMcpConnection(arg0) {
           closure_130_4 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -199,13 +199,13 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
             c6 = 0;
             { type: "error", error: null }.error = closure_133_0(closure_133_1[2]).externalAuthErrorFor(closure_132_0.status, closure_132_2);
             c8 = 3;
-            const obj13 = { type: "error", error: null };
+            const obj12 = { type: "error", error: null };
             const obj7 = closure_133_0(closure_133_1[2]);
           } else if (4 === tmp9) {
             c6 = 0;
             c8 = 3;
-            const obj14 = { value: { type: "error", error: "unavailable" }, done: true };
-            return obj14;
+            const obj13 = { value: { type: "error", error: "unavailable" }, done: true };
+            return obj13;
           } else if (5 === tmp9) {
             if (arg0 === 1) {
               c8 = 3;
@@ -224,8 +224,8 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            const obj15 = { value, done: true };
-            return obj15;
+            const obj14 = { value, done: true };
+            return obj14;
           } else {
             let url;
             if (value != null) {
@@ -243,13 +243,13 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
           const obj17 = { value, done: true };
           return obj17;
         }
-      } catch (tmp36) {
+      } catch (tmp32) {
         if (tmp5 === c6) {
           c8 = tmp3;
-          throw tmp36;
-        } else if (tmp2 === tmp37) {
+          throw tmp32;
+        } else if (tmp2 === tmp33) {
           c7 = tmp2;
-        } else if (tmp === tmp37) {
+        } else if (tmp === tmp33) {
           c7 = tmp3;
         } else {
           c7 = tmp6;

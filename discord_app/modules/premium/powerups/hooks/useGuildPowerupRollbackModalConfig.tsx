@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2558 from "../GuildPowerups.messages.js";
+import _modDef2568 from "../GuildPowerups.messages.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission.tsx";
@@ -27,11 +27,11 @@ function getGuildThemeRollbackModalConfig(storeRemovalDate) {
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
       const _HermesInternal = HermesInternal;
-      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2558["6e2ry1"], obj2);
+      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2568["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      const items = [intl2.formatToPlainString(_modDef2558.jd8fki, obj5)];
+      const items = [intl2.formatToPlainString(_modDef2568.jd8fki, obj5)];
       obj.bodies = items;
       return obj;
     }

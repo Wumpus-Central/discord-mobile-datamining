@@ -29,9 +29,9 @@ let closure_13 = async function _navigateToGuild() {
     analyticsLocation: closure_129_4,
     options: closure_129_5,
   } = closure_0);
-  return "test";
+  return "Reflect";
 };
-const GlobalDiscoveryServersConstants = fn(8940);
+const GlobalDiscoveryServersConstants = fn(8967);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,
@@ -217,14 +217,15 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "toCharArray$esjava$1",
-    discoverySplash: null,
-    emojis: [],
+    discoverySplash: 1392509300,
+    emojis: false,
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
+  obj.emojis = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {

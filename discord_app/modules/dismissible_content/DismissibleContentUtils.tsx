@@ -497,15 +497,15 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4786).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4792);
+const DCFEventTypes = fn(4807).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4813);
 ({
   addCandidateContent: closure_8,
   removeCandidateContent: closure_9,
   isContentShown: c10,
   getCurrentlyShownCounts: closure_11,
 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4797).ContentDismissActionType;
+const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 let c14 = 2592000000;
 const ReactCompilerGating = fn(558);
@@ -556,8 +556,8 @@ function getGuildNextNumTimesDismissed(arg0, stateFromStores) {
   return num + 1;
 }
 let items = [
-  fn(4784).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
-  fn(4784).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
+  fn(4805).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
+  fn(4805).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
 ];
 const set = new Set(items);
 const size = fn(2);

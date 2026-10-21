@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_8 = createStyles.createStyles({
   productDetailsContainer: { width: "100%", marginVertical: 12, alignItems: "center", gap: 2 },
 });

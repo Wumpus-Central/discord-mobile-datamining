@@ -34,11 +34,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (prop == null) {
             prop = null;
           }
-          const items1 = [prop, tmp(4867).isMemberCommunicationDisabled(stateFromStores)];
+          const items1 = [prop, tmp(4888).isMemberCommunicationDisabled(stateFromStores)];
           cResult[5] = stateFromStores;
           cResult[6] = items1;
           let tmp9 = items1;
-          const tmpResult2 = tmp(4867);
+          const tmpResult2 = tmp(4888);
         } else {
           tmp9 = cResult[6];
         }

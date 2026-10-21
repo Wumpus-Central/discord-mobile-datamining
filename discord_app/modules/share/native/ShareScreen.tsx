@@ -25,15 +25,15 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(4804);
+const ChannelRecord = fn(4825);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(12729).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10545).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12793).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10574).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -233,7 +233,7 @@ export default function ShareScreen(appEntryKey) {
                                   let channel2;
                                   c5 = 1;
                                   c6 = 1;
-                                  return { value: "test", done: true };
+                                  return { value: "Reflect", done: true };
                                 }
                               } else if (1 === tmp7) {
                                 if (arg0 === 1) {

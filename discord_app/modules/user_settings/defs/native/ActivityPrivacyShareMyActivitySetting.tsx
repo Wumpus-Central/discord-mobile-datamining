@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2694 from "../../../activity_privacy/ActivityPrivacy.messages.js";
+import _modDef2704 from "../../../activity_privacy/ActivityPrivacy.messages.js";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -9,11 +9,11 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2694.WhdCGP);
+    return intl.string(_modDef2704.WhdCGP);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2694.UQ9RHJ);
+    return intl.string(_modDef2704.UQ9RHJ);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.ShowCurrentGame.useSetting,

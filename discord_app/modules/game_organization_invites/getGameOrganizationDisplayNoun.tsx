@@ -1,19 +1,24 @@
 // discord_app/modules/game_organization_invites/getGameOrganizationDisplayNoun.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2396 from "GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2406 from "GameOrganizationInvitesUntranslated.messages.js";
 import GameOrganizationInviteConstants from "GameOrganizationInviteConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const constants = GameOrganizationInviteConstants.GameOrganizationDisplayNouns;
 const result = size.fileFinishedImporting("modules/game_organization_invites/getGameOrganizationDisplayNoun.tsx");
 
-export default function getGameOrganizationDisplayNoun(arg0) {
-  if (arg0 === constants.GUILD) {
+export default function getGameOrganizationDisplayNoun(lowercase) {
+  let flag = lowercase.lowercase;
+  if (flag === undefined) {
+    flag = false;
+  }
+  if (lowercase.displayNoun === constants.GUILD) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef2396.sm5cz5);
+    const tmp8 = _modDef2406;
+    intl2.string(flag ? tmp8.aikK3o : tmp8.sm5cz5);
   } else {
     const intl = util.intl;
-    stringResult = intl.string(_modDef2396.nVMqjA);
+    const tmp4 = _modDef2406;
+    return intl.string(flag ? tmp4.xXXGsq : tmp4.nVMqjA);
   }
-  return stringResult;
 }

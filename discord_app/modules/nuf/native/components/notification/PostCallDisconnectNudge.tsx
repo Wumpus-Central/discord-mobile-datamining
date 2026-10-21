@@ -11,8 +11,8 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const PermissionPromptType = fn(13125).PermissionPromptType;
-const NotificationPermissionConstants = fn(13126);
+const PermissionPromptType = fn(13193).PermissionPromptType;
+const NotificationPermissionConstants = fn(13194);
 ({ EventActionLocation: closure_8, NotificationNudgeSurface: closure_9 } = NotificationPermissionConstants);
 const jsx = fn(21).jsx;
 let c11 = "post-call-disconnect-nudge-key";
@@ -86,10 +86,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     };
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(16592);
+  let obj = stateFromStores1(16668);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(13127).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(13127);
+  const canSeePushNotificationNudge = stateFromStores(13195).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(13195);
   const items = [VoiceStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
     currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null),
@@ -122,11 +122,11 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
     if (!obj.useConfig({ location: "usePostCallDisconnectNudge" }).inHoldout) {
       prop = null;
       if (canSeePushNotificationNudge) {
-        prop = tmp2(4784).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
+        prop = tmp2(4805).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
       }
     }
   }
-  const tmp6Result = tmp6(stateFromStores(7445).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
+  const tmp6Result = tmp6(stateFromStores(7473).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
   first = tmp6Result[0];
   markAsDismissed = tmp12;
   const items3 = [first, tmp6Result[1]];
@@ -136,7 +136,7 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
         PermissionPromptType.CALL_DISCONNECT_BOTTOM_SHEET,
       );
       const obj3 = { markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17718, dependencyMap.paths), c11, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17799, dependencyMap.paths), c11, obj3);
     }
   }, items3);
 };

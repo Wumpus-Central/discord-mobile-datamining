@@ -11,13 +11,13 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(9952);
+const ChannelDetailsConstants = fn(9982);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PlatformUtils = fn(1384);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_15 = createStyles.createStyles({
   hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 },
   topic: { overflow: "hidden" },
@@ -48,17 +48,19 @@ const __initData6 = {
 let ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildChannelDetailsTopic(arg0) {
-      const cResult = require("c").c(72);
+      const cResult = require("c").c(85);
       ({ channel, textAlign, initialExpanded } = arg0);
       _require = tmp4;
       closure_15();
       let obj = require("c");
       const channelTopicGradientBackground = require("ChannelDetailsTopicGradient").useChannelTopicGradientBackground();
       const tmpResult = require("ChannelDetailsTopicGradient");
-      [tmp8, importDefault] = sharedValue.useState(true);
-      [expanded, _slicedToArray] = sharedValue.useState(undefined !== initialExpanded && initialExpanded);
-      const tmp7 = _slicedToArray(sharedValue.useState(true), 2);
-      sharedValue = require("ReanimatedRexport").useSharedValue(undefined);
+      [tmp8, importDefault] = noop.useState(true);
+      [expanded, _slicedToArray] = noop.useState(undefined !== initialExpanded && initialExpanded);
+      const tmp7 = _slicedToArray(noop.useState(true), 2);
+      [r10036, noop] = noop.useState();
+      const tmp11 = _slicedToArray(noop.useState(), 2);
+      const sharedValue = require("ReanimatedRexport").useSharedValue(undefined);
       const tmpResult7 = require("ReanimatedRexport");
       const sharedValue1 = require("ReanimatedRexport").useSharedValue(undefined);
       const tmpResult8 = require("ReanimatedRexport");
@@ -121,88 +123,136 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       fn3.__initData = __initData3;
       const animatedStyle2 = tmpResult12.useAnimatedStyle(fn3);
       if (cResult[0] === expanded) {
-        if (cResult[3] !== sharedValue1) {
-          class K {
+        const _Symbol = Symbol;
+        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          class Z {
             constructor(arg0) {
-              return closure_5.set(arg0.nativeEvent.layout.height);
+              lines = arg0.nativeEvent.lines;
+              substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+              mapped = substr.map((text) => text.text);
+              tmp = closure_4(mapped.join(""));
+              return;
             }
           }
-          cResult[3] = sharedValue1;
-          cResult[4] = K;
+          cResult[3] = Z;
         } else {
-          class K {
+          class Z {
             constructor(arg0) {
-              return closure_5.set(arg0.nativeEvent.layout.height);
+              lines = arg0.nativeEvent.lines;
+              substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+              mapped = substr.map((text) => text.text);
+              tmp = closure_4(mapped.join(""));
+              return;
+            }
+          }
+        }
+        if (cResult[4] !== sharedValue1) {
+          class Z {
+            constructor(arg0) {
+              lines = arg0.nativeEvent.lines;
+              substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+              mapped = substr.map((text) => text.text);
+              tmp = closure_4(mapped.join(""));
+              return;
+            }
+          }
+          cResult[4] = sharedValue1;
+          cResult[5] = tmp22;
+        } else {
+          class Z {
+            constructor(arg0) {
+              lines = arg0.nativeEvent.lines;
+              substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+              mapped = substr.map((text) => text.text);
+              tmp = closure_4(mapped.join(""));
+              return;
             }
           }
         }
         if (!tmp8) {
-          class K {
+          class Z {
             constructor(arg0) {
-              return closure_5.set(arg0.nativeEvent.layout.height);
+              lines = arg0.nativeEvent.lines;
+              substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+              mapped = substr.map((text) => text.text);
+              tmp = closure_4(mapped.join(""));
+              return;
             }
           }
-          if (cResult[10] === channel.id) {
-            class K {
+          if (cResult[11] === channel.id) {
+            class Z {
               constructor(arg0) {
-                return closure_5.set(arg0.nativeEvent.layout.height);
+                lines = arg0.nativeEvent.lines;
+                substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+                mapped = substr.map((text) => text.text);
+                tmp = closure_4(mapped.join(""));
+                return;
               }
             }
-            if (cResult[13] === channel.id) {
-              class K {
+            if (cResult[14] === channel.id) {
+              class Z {
                 constructor(arg0) {
-                  return closure_5.set(arg0.nativeEvent.layout.height);
+                  lines = arg0.nativeEvent.lines;
+                  substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+                  mapped = substr.map((text) => text.text);
+                  tmp = closure_4(mapped.join(""));
+                  return;
                 }
               }
-              if (cResult[16] === sharedValue1) {
-                class K {
+              if (cResult[17] === sharedValue1) {
+                class Z {
                   constructor(arg0) {
-                    return closure_5.set(arg0.nativeEvent.layout.height);
+                    lines = arg0.nativeEvent.lines;
+                    substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+                    mapped = substr.map((text) => text.text);
+                    tmp = closure_4(mapped.join(""));
+                    return;
                   }
                 }
               }
-              function re() {
+              function ue() {
                 const result = sharedValue.set(undefined);
                 const result1 = sharedValue1.set(undefined);
                 closure_3(closure_0);
+                noop("");
               }
-              cResult[16] = sharedValue1;
-              cResult[17] = tmp4;
-              cResult[18] = sharedValue;
-              cResult[19] = re;
+              cResult[17] = sharedValue1;
+              cResult[18] = tmp4;
+              cResult[19] = sharedValue;
+              cResult[20] = ue;
             }
             const obj4 = { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: num };
             const parseTopicResult = require("MarkupUtils").parseTopic(channel.topic, true, obj4);
-            cResult[13] = channel.id;
-            cResult[14] = channel.topic;
-            cResult[15] = parseTopicResult;
+            cResult[14] = channel.id;
+            cResult[15] = channel.topic;
+            cResult[16] = parseTopicResult;
             const obj13 = require("MarkupUtils");
           }
           const _HermesInternal = HermesInternal;
           const obj11 = require("MarkupUtils");
           const obj5 = { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: num };
           const parseTopicResult1 = obj11.parseTopic("" + channel.topic.replace(/(\r\n|\n|\r)/gm, " "), true, obj5);
-          cResult[10] = channel.id;
-          cResult[11] = channel.topic;
-          cResult[12] = parseTopicResult1;
-          const str2 = "" + channel.topic;
+          cResult[11] = channel.id;
+          cResult[12] = channel.topic;
+          cResult[13] = parseTopicResult1;
+          const str3 = "" + channel.topic;
         } else {
-          class K {
+          class Z {
             constructor(arg0) {
-              return closure_5.set(arg0.nativeEvent.layout.height);
-            }
-          }
-          class X {
-            constructor() {
-              tmp = closure_3(!closure_2);
-              tmp2 = closure_17;
-              result = closure_6.set(closure_2 ? tmp2.VISIBLE : tmp2.HIDDEN);
+              lines = arg0.nativeEvent.lines;
+              substr = lines.slice(0, CHANNEL_TOPIC_LINE_CLAMP);
+              mapped = substr.map((text) => text.text);
+              tmp = closure_4(mapped.join(""));
               return;
             }
           }
-          cResult[5] = expanded;
-          cResult[6] = sharedValue2;
-          cResult[7] = X;
+          function ae() {
+            closure_3(!first);
+            const result = sharedValue2.set(first ? constants.VISIBLE : constants.HIDDEN);
+          }
+          cResult[6] = expanded;
+          cResult[7] = sharedValue2;
+          cResult[8] = ae;
         }
       }
       const fn4 = function f(nativeEvent) {
@@ -230,11 +280,14 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       _slicedToArray = undefined;
       first1 = undefined;
       closure_5 = undefined;
+      absoluteFill = undefined;
       const tmp = closure_15();
       const channelTopicGradientBackground = channel(first[11]).useChannelTopicGradientBackground();
       [first, _slicedToArray] = first1.useState(true);
       [first1, closure_5] = first1.useState(flag);
       let obj = channel(first[11]);
+      [tmp10, c6] = first1.useState();
+      const tmp9 = _slicedToArray(first1.useState(), 2);
       const sharedValue = channel(first[12]).useSharedValue(undefined);
       let obj2 = channel(first[12]);
       const sharedValue1 = channel(first[12]).useSharedValue(undefined);
@@ -263,7 +316,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         EMPTY_STYLE,
         withSpring: channel(first[13]).withSpring,
         expanded: first1,
-        SPRING_CHANNEL_DETAILS,
+        SPRING_CHANNEL_DETAILS: sharedValue2,
       };
       fn.__workletHash = 518436856881;
       fn.__initData = __initData4;
@@ -274,12 +327,12 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         EMPTY_STYLE,
         withSpring: channel(first[13]).withSpring,
         expanded: first1,
-        SPRING_CHANNEL_DETAILS,
+        SPRING_CHANNEL_DETAILS: sharedValue2,
       };
-      class D {
+      class A {
         constructor() {
-          obj = closure_7;
-          if (null == closure_7.get()) {
+          obj = closure_8;
+          if (null == closure_8.get()) {
             obj1 = closure_16;
           } else {
             obj1 = { height: null };
@@ -288,22 +341,29 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           return obj1;
         }
       }
-      D.__closure = { expandedHeight: sharedValue1, EMPTY_STYLE };
-      D.__workletHash = 16721769117590;
-      D.__initData = __initData5;
-      const animatedStyle1 = channel(first[12]).useAnimatedStyle(D);
+      A.__closure = { expandedHeight: sharedValue1, EMPTY_STYLE };
+      A.__workletHash = 16721769117590;
+      A.__initData = __initData5;
+      const animatedStyle1 = channel(first[12]).useAnimatedStyle(A);
       const obj7 = channel(first[12]);
-      const fn2 = function y() {
-        const obj = { opacity: spring.withSpring(sharedValue2.get(), SPRING_CHANNEL_DETAILS) };
-        return obj;
-      };
+      class D {
+        constructor() {
+          obj = { opacity: null };
+          obj2 = closure_0(closure_2[13]);
+          obj.opacity = obj2.withSpring(closure_9.get(), SPRING_CHANNEL_DETAILS);
+          return obj;
+        }
+      }
       const obj8 = channel(first[12]);
-      fn2.__closure = { withSpring: channel(first[13]).withSpring, gradient: sharedValue2, SPRING_CHANNEL_DETAILS };
-      fn2.__workletHash = 16158058985911;
-      fn2.__initData = __initData6;
+      D.__closure = {
+        withSpring: channel(first[13]).withSpring,
+        gradient: sharedValue2,
+        SPRING_CHANNEL_DETAILS: sharedValue2,
+      };
+      D.__workletHash = 16158058985911;
+      D.__initData = __initData6;
       const items = [sharedValue2, first1];
-      const animatedStyle2 = obj8.useAnimatedStyle(fn2);
-      const items1 = [sharedValue1];
+      const animatedStyle2 = obj8.useAnimatedStyle(D);
       const callback = first1.useCallback((nativeEvent) => {
         closure_3(nativeEvent.nativeEvent.lines.length > closure_2_8);
         if (nativeEvent.nativeEvent.lines.length > closure_2_8) {
@@ -314,8 +374,15 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         }
         HIDDEN = constants.HIDDEN;
       }, items);
+      const items1 = [sharedValue1];
+      const callback1 = first1.useCallback((nativeEvent) => {
+        const lines = nativeEvent.nativeEvent.lines;
+        const substr = lines.slice(0, closure_2_8);
+        const mapped = substr.map((text) => text.text);
+        _undefined(mapped.join(""));
+      }, []);
       const items2 = [first, first1, sharedValue2];
-      const callback1 = first1.useCallback(
+      const callback2 = first1.useCallback(
         (nativeEvent) => sharedValue1.set(nativeEvent.nativeEvent.layout.height),
         items1,
       );
@@ -332,7 +399,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [sharedValue];
       const items4 = [,];
       ({ id: arr5[0], topic: arr5[1] } = channel);
-      const callback2 = first1.useCallback((nativeEvent) => {
+      const callback3 = first1.useCallback((nativeEvent) => {
         const result = sharedValue.set(nativeEvent.nativeEvent.layout.height);
       }, items3);
       let memo1 = first1.useMemo(() => {
@@ -359,6 +426,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         const result = sharedValue.set(undefined);
         const result1 = sharedValue1.set(undefined);
         closure_5(flag);
+        _undefined("");
       }, items6);
       if (null == memo) {
         let PressableOpacity = closure_5;
@@ -374,63 +442,105 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           variant: "heading-sm/normal",
           style: tmp.topicText,
           onTextLayout: callback,
-          onLayout: callback1,
+          onLayout: callback2,
           children: memo2,
         }),
       };
-      const items7 = [closure_11(closure_5, obj10)];
-      const obj12 = { style: null, children: null };
-      const items8 = [tmp.topic, animatedStyle];
-      obj12.style = items8;
-      const obj13 = { style: animatedStyle1, children: null };
-      const obj14 = { onPress: memo, activeOpacity: 0.7, children: null };
-      const obj15 = { pointerEvents: str, children: null };
-      const obj16 = {
-        color: "interactive-text-default",
-        variant: "heading-sm/normal",
-        onLayout: callback2,
-        lineClamp: null,
-        style: null,
-        children: null,
-      };
-      let tmp27;
-      if (!first1) {
-        tmp27 = sharedValue2;
-      }
-      obj16.lineClamp = tmp27;
-      const items9 = [tmp.topicText, ,];
-      if (first1) {
-        expanded = tmp.expanded;
-      }
-      items9[1] = expanded;
-      items9[2] = { textAlign: channel.textAlign };
-      obj16.style = items9;
-      if (first1) {
-        memo1 = memo2;
-      }
-      const obj17 = { children: null };
-      obj16.children = memo1;
-      obj15.children = closure_11(channel(first[16]).Text, obj16);
-      obj14.children = closure_11(closure_5, obj15);
-      obj13.children = closure_11(PressableOpacity, obj14);
-      const items10 = [closure_11(flag(first[12]).View, obj13)];
-      const obj18 = {
-        style: null,
+      const items7 = [closure_11(closure_5, obj10), ,];
+      const obj12 = {
+        style: tmp.hidden,
         pointerEvents: "none",
-        children: closure_11(flag(first[17]), {
-          style: tmp.gradient,
-          start: VerticalGradient.START,
-          end: VerticalGradient.END,
-          colors: channelTopicGradientBackground,
+        importantForAccessibility: "no-hide-descendants",
+        accessibilityElementsHidden: true,
+        children: closure_11(channel(first[16]).Text, {
+          variant: "heading-sm/normal",
+          style: tmp.topicText,
+          onTextLayout: callback1,
+          children: memo1,
         }),
       };
-      const items11 = [sharedValue.absoluteFill, animatedStyle2];
-      obj18.style = items11;
-      items10[1] = closure_11(flag(first[12]).View, obj18);
-      obj12.children = items10;
-      items7[1] = closure_12(flag(first[12]).View, obj12);
-      obj17.children = items7;
-      return closure_12(closure_13, obj17);
+      items7[1] = closure_11(closure_5, obj12);
+      const obj14 = { style: null, children: null };
+      const items8 = [tmp.topic, animatedStyle];
+      obj14.style = items8;
+      const obj15 = { style: animatedStyle1, children: null };
+      const obj16 = { onPress: memo, activeOpacity: 0.7 };
+      if (null == memo) {
+        const merged = Object.assign(tmp31);
+        const obj17 = { pointerEvents: str2, children: null };
+        const obj18 = {
+          color: "interactive-text-default",
+          variant: "heading-sm/normal",
+          onLayout: callback3,
+          lineClamp: null,
+          style: null,
+          children: null,
+        };
+        let tmp36;
+        if (!first1) {
+          tmp36 = sharedValue1;
+        }
+        obj18.lineClamp = tmp36;
+        const items9 = [tmp.topicText, ,];
+        if (first1) {
+          expanded = tmp.expanded;
+        }
+        items9[1] = expanded;
+        const obj19 = { textAlign: channel.textAlign };
+        items9[2] = obj19;
+        obj18.style = items9;
+        if (first1) {
+          memo1 = memo2;
+        }
+        const obj20 = { children: null };
+        obj18.children = memo1;
+        obj17.children = closure_11(tmp2(tmp3[16]).Text, obj18);
+        obj16.children = closure_11(tmp28, obj17);
+        obj15.children = closure_11(PressableOpacity, obj16);
+        const items10 = [closure_11(tmp30, obj15)];
+        const obj21 = { style: null, pointerEvents: "none", children: null };
+        const items11 = [absoluteFill.absoluteFill, animatedStyle2];
+        obj21.style = items11;
+        const obj22 = { style: tmp.gradient, start: null, end: null, colors: null };
+        ({ START: obj24.start, END: obj24.end } = VerticalGradient);
+        obj22.colors = channelTopicGradientBackground;
+        obj21.children = closure_11(tmp29(tmp3[18]), obj22);
+        items10[1] = closure_11(tmp29(tmp3[12]).View, obj21);
+        obj14.children = items10;
+        items7[2] = closure_12(flag(tmp3[12]).View, obj14);
+        obj20.children = items7;
+        return closure_12(closure_13, obj20);
+      } else {
+        let str = "";
+        if (!first1) {
+          str = tmp10;
+        }
+        const obj23 = {
+          accessibilityRole: "button",
+          accessibilityLabel: str,
+          accessibilityHint: null,
+          accessibilityState: null,
+        };
+        const intl = tmp2(tmp3[17]).intl;
+        const t = tmp2(tmp3[17]).t;
+        obj23.accessibilityHint = intl.string(first1 ? t["6MwJo/"] : t.lBeKY2);
+        const obj41 = { expanded: first1 };
+        obj23.accessibilityState = obj41;
+      }
+      const obj11 = {
+        variant: "heading-sm/normal",
+        style: tmp.topicText,
+        onTextLayout: callback,
+        onLayout: callback2,
+        children: memo2,
+      };
+      const obj13 = { variant: "heading-sm/normal", style: tmp.topicText, onTextLayout: callback1, children: memo1 };
+      const obj9 = {
+        withSpring: channel(first[13]).withSpring,
+        gradient: sharedValue2,
+        SPRING_CHANNEL_DETAILS: sharedValue2,
+      };
+      tmp28 = closure_5;
     };
 ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
@@ -481,7 +591,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] === tmp7) {
         }
-        Text = Text(5195).Text;
+        Text = Text(5216).Text;
         const obj3 = {
           variant: "heading-sm/normal",
           color: "interactive-text-default",
@@ -516,7 +626,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { textAlign: channel.textAlign };
         obj2.style = obj3;
         obj2.children = stateFromStores;
-        tmp4 = closure_11(channel(5195).Text, obj2);
+        tmp4 = closure_11(channel(5216).Text, obj2);
       }
       return tmp4;
     };
@@ -560,7 +670,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] === tmp7) {
         }
-        Text = Text(5195).Text;
+        Text = Text(5216).Text;
         const obj3 = {
           variant: "heading-sm/normal",
           color: "interactive-text-default",
@@ -586,7 +696,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { textAlign: channel.textAlign };
         obj2.style = obj3;
         obj2.children = stateFromStores;
-        tmp4 = closure_11(channel(5195).Text, obj2);
+        tmp4 = closure_11(channel(5216).Text, obj2);
       }
       return tmp4;
     };

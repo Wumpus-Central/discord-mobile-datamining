@@ -1,7 +1,7 @@
 // discord_app/modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx
-import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
 import Constants from "../../../../../Constants.tsx";
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
+import SentryUtilsDefault from "../../../../../utils/SentryUtils.native.tsx";
 import SoundboardTypes from "../../../../soundboard/SoundboardTypes.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
@@ -11,6 +11,7 @@ const items = [
   EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE,
   EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS,
 ];
+const set = new Set();
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
@@ -42,9 +43,19 @@ export const getAnalyticsPage = function getAnalyticsPage(featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_SCHEDULED_MESSAGES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
     return AnalyticsPages.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SHOP_MEMBER_PRICING === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_SHOP_MEMBER_PRICING;
   } else {
     const _HermesInternal = HermesInternal;
-    _modDef38(false, "Missing featureName: " + featureName);
+    const combined = "" + "getAnalyticsPage" + ":" + featureName;
+    if (!set.has(combined)) {
+      set.add(combined);
+      const obj2 = { tags: null };
+      const obj3 = { helper: "getAnalyticsPage", feature_name: featureName };
+      obj2.tags = obj3;
+      SentryUtilsDefault.captureMessage("PremiumFeatureUpsellUtils: missing featureName mapping", obj2, "error");
+    }
+    return null;
   }
 };
 export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
@@ -70,6 +81,14 @@ export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.SHOP_MEMBER_PRICING;
   } else {
     const _HermesInternal = HermesInternal;
-    _modDef38(false, "Missing featureName: " + EMOJIS_EVERYWHERE);
+    const combined = "" + "getUpsellType" + ":" + EMOJIS_EVERYWHERE;
+    if (!set.has(combined)) {
+      set.add(combined);
+      const obj2 = { tags: null };
+      const obj3 = { helper: "getUpsellType", feature_name: EMOJIS_EVERYWHERE };
+      obj2.tags = obj3;
+      SentryUtilsDefault.captureMessage("PremiumFeatureUpsellUtils: missing featureName mapping", obj2, "error");
+    }
+    return null;
   }
 };

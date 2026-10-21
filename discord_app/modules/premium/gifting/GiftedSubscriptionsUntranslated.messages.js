@@ -1,13 +1,13 @@
 // discord_app/modules/premium/gifting/GiftedSubscriptionsUntranslated.messages.js
 import AssetJsonUtils from "../../asset_json/native/AssetJsonUtils.tsx";
-import _mod2627 from "../../../../_runtime/metro/02627__.js";
+import _mod2637 from "../../../../_runtime/metro/02637__.js";
 import module_1167_mod from "../../../../_runtime/metro/01167__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let module_1167 = module_1167_mod;
 const loader = module_1167.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2627);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2637);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

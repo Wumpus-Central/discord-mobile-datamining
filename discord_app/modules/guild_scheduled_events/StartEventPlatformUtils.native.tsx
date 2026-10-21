@@ -121,7 +121,7 @@ let closure_10 = async function _navigateToEvent(arg0) {
     }
   }
 };
-let closure_8 = fn(4806).GuildScheduledEventEntityTypes;
+let closure_8 = fn(4827).GuildScheduledEventEntityTypes;
 const Routes = fn(1087).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");

@@ -19,30 +19,30 @@ let c7 = 28;
 let c8 = 0.4;
 let c9 = 1.14;
 let items = [
-  fn(16471).EmojiAngryFaceWithHornsIcon,
-  fn(16473).EmojiColdFaceIcon,
-  fn(16475).EmojiCowboyHatFaceIcon,
-  fn(16477).EmojiCryingFaceIcon,
-  fn(16479).EmojiDisguisedFaceIcon,
-  fn(16481).EmojiFaceVomitingIcon,
-  fn(16483).EmojiFaceWithMonocleIcon,
-  fn(16485).EmojiFaceWithSpiralEyesIcon,
-  fn(16487).EmojiMeltingFaceIcon,
-  fn(16489).EmojiMoneyMouthFaceIcon,
-  fn(16491).EmojiNerdFaceIcon,
-  fn(16493).EmojiPartyingFaceIcon,
-  fn(16495).EmojiSalutingFaceIcon,
-  fn(16497).EmojiSkullIcon,
-  fn(16499).EmojiSmilingFaceWithHornsIcon,
-  fn(16501).EmojiSmilingFaceWithSunglassesIcon,
-  fn(16503).EmojiSquintingFaceWithTongueIcon,
-  fn(16505).EmojiUpsideDownFaceIcon,
-  fn(16507).EmojiWoozyFaceIcon,
-  fn(16509).EmojiZanyFaceIcon,
-  fn(16511).EmojiRollingOnTheFloorLaughingIcon,
-  fn(16513).EmojiSmilingFaceWithHeartsIcon,
+  fn(16547).EmojiAngryFaceWithHornsIcon,
+  fn(16549).EmojiColdFaceIcon,
+  fn(16551).EmojiCowboyHatFaceIcon,
+  fn(16553).EmojiCryingFaceIcon,
+  fn(16555).EmojiDisguisedFaceIcon,
+  fn(16557).EmojiFaceVomitingIcon,
+  fn(16559).EmojiFaceWithMonocleIcon,
+  fn(16561).EmojiFaceWithSpiralEyesIcon,
+  fn(16563).EmojiMeltingFaceIcon,
+  fn(16565).EmojiMoneyMouthFaceIcon,
+  fn(16567).EmojiNerdFaceIcon,
+  fn(16569).EmojiPartyingFaceIcon,
+  fn(16571).EmojiSalutingFaceIcon,
+  fn(16573).EmojiSkullIcon,
+  fn(16575).EmojiSmilingFaceWithHornsIcon,
+  fn(16577).EmojiSmilingFaceWithSunglassesIcon,
+  fn(16579).EmojiSquintingFaceWithTongueIcon,
+  fn(16581).EmojiUpsideDownFaceIcon,
+  fn(16583).EmojiWoozyFaceIcon,
+  fn(16585).EmojiZanyFaceIcon,
+  fn(16587).EmojiRollingOnTheFloorLaughingIcon,
+  fn(16589).EmojiSmilingFaceWithHeartsIcon,
 ];
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_11 = createStyles.createStyles({
   slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
 });
@@ -162,13 +162,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         return obj;
       };
-      let obj2 = pressed(5014);
+      let obj2 = pressed(5035);
       fn.__closure = {
         pressed,
-        withSpring: pressed(5208).withSpring,
-        interpolate: pressed(5014).interpolate,
+        withSpring: pressed(5229).withSpring,
+        interpolate: pressed(5035).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5209).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5230).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
       fn.__workletHash = 16574219123934;
@@ -203,10 +203,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       let obj3 = {
         pressed,
-        withSpring: pressed(5208).withSpring,
-        interpolate: pressed(5014).interpolate,
+        withSpring: pressed(5229).withSpring,
+        interpolate: pressed(5035).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5209).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5230).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
     }
@@ -233,13 +233,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         return obj;
       };
-      let obj = pressed(5014);
+      let obj = pressed(5035);
       fn.__closure = {
         pressed,
-        withSpring: pressed(5208).withSpring,
-        interpolate: pressed(5014).interpolate,
+        withSpring: pressed(5229).withSpring,
+        interpolate: pressed(5035).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5209).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5230).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
       fn.__workletHash = 4597331743997;
@@ -517,5 +517,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           <closure_16 key={index} index={index} emoji={null} emojisKey={null} placeholderIcon={null} onChange={null} />
         );
       });
-      return jsx(emojis(5935).Stack, { direction: "horizontal", spacing: 8, children: null });
+      return jsx(emojis(5957).Stack, { direction: "horizontal", spacing: 8, children: null });
     };

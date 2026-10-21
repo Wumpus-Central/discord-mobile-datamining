@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_9 = createStyles.createStyles({ title: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
@@ -398,13 +398,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp37 = tmp3;
                 let deleteProject = dependencyMap;
                 if (_slicedToArray) {
-                  tmp37 = tmp37(11023);
+                  tmp37 = tmp37(10678);
                   deleteProject = tmp37.deleteProject;
                   let deleteProjectResult = deleteProject(user.id);
                 } else {
                   const obj5 = { alsoRemovePreviewBot };
-                  deleteProjectResult = tmp37(11083).unpublishProject(user.id, obj5);
-                  const tmp37Result = tmp37(11083);
+                  deleteProjectResult = tmp37(10743).unpublishProject(user.id, obj5);
+                  const tmp37Result = tmp37(10743);
                 }
                 deleteProjectResult.catch(() => null);
                 dependencyMap = 1;
@@ -425,7 +425,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (true !== ok) {
                 const intl = tmp3(1128).intl;
-                const tmp23 = tmp2(3820);
+                const tmp23 = tmp2(3830);
                 if (closure_129_4) {
                   let PJ2Fkn = tmp23["0XDHob"];
                 } else {
@@ -439,10 +439,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 if (!closure_129_4) {
                   const obj7 = { text: null, variant: "success" };
-                  const obj = tmp2(5625);
-                  obj7.text = tmp3(11675).conjureRemoveAppSuccess(closure_129_1);
+                  const obj = tmp2(5645);
+                  obj7.text = tmp3(11721).conjureRemoveAppSuccess(closure_129_1);
                   obj.open("CONJURE_APP_REMOVED", obj7);
-                  const obj3 = tmp3(11675);
+                  const obj3 = tmp3(11721);
                 }
                 c3 = 3;
                 return { value: "IconComponent", done: null };

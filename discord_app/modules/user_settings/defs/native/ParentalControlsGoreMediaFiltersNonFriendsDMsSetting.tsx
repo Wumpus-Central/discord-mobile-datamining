@@ -5,7 +5,7 @@ import useParentalControlSettings from "../../../parent_tools/hooks/useParentalC
 import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCenterControlledSettingsUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
-const ExplicitMediaRedactionUtils = obj(8535);
+const ExplicitMediaRedactionUtils = obj(8562);
 require = fn;
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 function onGoreContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const obj = selectedTeenId(15915);
+    const obj = selectedTeenId(15991);
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1128).intl;
     obj3.title = intl.string(selectedTeenId(1128).t["16/3Bi"]);
@@ -57,18 +57,18 @@ function onGoreContentNonFriendsDmOnPress() {
     obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     const items = [selectedTeenId(1211).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
-    const result = selectedTeenId(15920).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(15920);
+    const result = selectedTeenId(15996).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(15996);
   }
 }
 function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["Yh+HX1"]);
 }
-const SettingBuilders = fn(11111);
+const SettingBuilders = fn(11155);
 const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
-  parent: fn(8280).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8308).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: tmp2,
   onPress: onGoreContentNonFriendsDmOnPress,
   unsearchable: true,

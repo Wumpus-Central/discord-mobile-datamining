@@ -3,12 +3,12 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import conjureChatTurns from "../conjureChatTurns.tsx";
 import ConjureDesignFeedback from "../../design_feedback/ConjureDesignFeedback.tsx";
 import ConjureVersionRestoreConfirm from "../../history/native/ConjureVersionRestoreConfirm.tsx";
+import ConjureNativeMarkdown from "ConjureNativeMarkdown.tsx";
 import ConjureTimelineTree from "../../agent_activity/ConjureTimelineTree.tsx";
 import ConjureTodoAgents from "../../agent_activity/ConjureTodoAgents.tsx";
 import ConjureMessageActionSheet from "ConjureMessageActionSheet.tsx";
 import ConjureChatRestore from "../../history/ConjureChatRestore.tsx";
 import conjureQueuedMessage from "../conjureQueuedMessage.tsx";
-import ConjureNativeMarkdown from "ConjureNativeMarkdown.tsx";
 import ConjureActivityBox from "../../agent_activity/native/ConjureActivityBox.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -20,27 +20,27 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4945);
-let obj = { row: { position: "relative", paddingLeft: fn(12197).MESSAGE_CONTENT_INSET, paddingRight: fn(12197).MESSAGE_EDGE_INSET, paddingVertical: fn(12206).ROW_PAD, gap: fn(12206).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
-let obj3 = { position: "relative", paddingLeft: fn(12197).MESSAGE_CONTENT_INSET, paddingRight: fn(12197).MESSAGE_EDGE_INSET, paddingVertical: fn(12206).ROW_PAD, gap: fn(12206).BLOCK_GAP };
-obj.rowGroupStart = { marginTop: fn(12206).GROUP_GAP };
-let obj4 = { marginTop: fn(12206).GROUP_GAP };
-obj.boundaryRow = { paddingHorizontal: fn(12197).MESSAGE_EDGE_INSET, paddingVertical: fn(12206).ROW_PAD };
-const rect = { position: "absolute", left: fn(12197).MESSAGE_EDGE_INSET, top: fn(12206).ROW_PAD };
+const createStyles = fn(4966);
+let obj = { row: { position: "relative", paddingLeft: fn(12263).MESSAGE_CONTENT_INSET, paddingRight: fn(12263).MESSAGE_EDGE_INSET, paddingVertical: fn(12272).ROW_PAD, gap: fn(12272).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
+let obj3 = { position: "relative", paddingLeft: fn(12263).MESSAGE_CONTENT_INSET, paddingRight: fn(12263).MESSAGE_EDGE_INSET, paddingVertical: fn(12272).ROW_PAD, gap: fn(12272).BLOCK_GAP };
+obj.rowGroupStart = { marginTop: fn(12272).GROUP_GAP };
+let obj4 = { marginTop: fn(12272).GROUP_GAP };
+obj.boundaryRow = { paddingHorizontal: fn(12263).MESSAGE_EDGE_INSET, paddingVertical: fn(12272).ROW_PAD };
+const rect = { position: "absolute", left: fn(12263).MESSAGE_EDGE_INSET, top: fn(12272).ROW_PAD };
 obj.avatar = rect;
-let obj5 = { paddingHorizontal: fn(12197).MESSAGE_EDGE_INSET, paddingVertical: fn(12206).ROW_PAD };
-obj.spoken = { position: "relative", gap: fn(12206).BLOCK_GAP };
-const rect1 = { left: fn(12197).MESSAGE_EDGE_INSET - fn(12197).MESSAGE_CONTENT_INSET, top: 0 };
+let obj5 = { paddingHorizontal: fn(12263).MESSAGE_EDGE_INSET, paddingVertical: fn(12272).ROW_PAD };
+obj.spoken = { position: "relative", gap: fn(12272).BLOCK_GAP };
+const rect1 = { left: fn(12263).MESSAGE_EDGE_INSET - fn(12263).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj6 = { position: "relative", gap: fn(12206).BLOCK_GAP };
-obj.avatarSpokenReplying = { top: fn(12207).REPLY_PREVIEW_HEIGHT + fn(12206).BLOCK_GAP };
-let obj7 = { top: fn(12207).REPLY_PREVIEW_HEIGHT + fn(12206).BLOCK_GAP };
+let obj6 = { position: "relative", gap: fn(12272).BLOCK_GAP };
+obj.avatarSpokenReplying = { top: fn(12273).REPLY_PREVIEW_HEIGHT + fn(12272).BLOCK_GAP };
+let obj7 = { top: fn(12273).REPLY_PREVIEW_HEIGHT + fn(12272).BLOCK_GAP };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj8 = { marginBottom: -nativeDefault.space.PX_4 };
-obj.activityBox = { marginLeft: -fn(12206).RAIL_INDENT };
+obj.activityBox = { marginLeft: -fn(12272).RAIL_INDENT };
 let closure_10 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj9 = { marginLeft: -fn(12206).RAIL_INDENT };
+let obj9 = { marginLeft: -fn(12272).RAIL_INDENT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageRow.tsx");
 
@@ -56,7 +56,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const replied = projectId.replied;
   const onJumpToReplied = projectId.onJumpToReplied;
   ({ onApprovePlan, onPickIdea, onAnswerClarification, onDismissClarification } = projectId);
-  ({ onClarificationInputFocusChange, canSend, onDismissAppBuildRequest } = projectId);
+  ({ onCardInputFocusChange, canSend, onDismissAppBuildRequest } = projectId);
   const onRestoreVersion = projectId.onRestoreVersion;
   ({ first, clarificationDismissed, appBuildRequestDismissed } = projectId);
   const tmp4 = onDismissAppBuildRequest();
@@ -162,7 +162,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         const _Symbol = Symbol;
                         if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
                           const items = [onTogglePlan];
-                          function fe() {
+                          function xe() {
                             const currentUser = onTogglePlan.getCurrentUser();
                             let id;
                             if (currentUser != null) {
@@ -171,8 +171,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             return id;
                           }
                           cResult[36] = items;
-                          cResult[37] = fe;
-                          let tmp35 = fe;
+                          cResult[37] = xe;
+                          let tmp35 = xe;
                           let tmp34 = items;
                         } else {
                           tmp34 = cResult[36];
@@ -1290,7 +1290,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const onTogglePlan = projectId.onTogglePlan;
   const replied = projectId.replied;
   const onJumpToReplied = projectId.onJumpToReplied;
-  ({ onDismissClarification: closure_9, onDismissAppBuildRequest: closure_10, onRestoreVersion } = projectId);
+  ({ onDismissClarification: closure_9, onCardInputFocusChange, onDismissAppBuildRequest: closure_10, onRestoreVersion } = projectId);
   let trimmed;
   let user_id;
   let stateFromStores;
@@ -1304,7 +1304,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let index;
   closure_26 = undefined;
   let open;
-  ({ first, checklistExpanded, planVersion, planExpanded, onApprovePlan, onPickIdea, onAnswerClarification, clarificationDismissed, onClarificationInputFocusChange, canSend, appBuildRequestDismissed } = projectId);
+  ({ first, checklistExpanded, planVersion, planExpanded, onApprovePlan, onPickIdea, onAnswerClarification, clarificationDismissed, canSend, appBuildRequestDismissed } = projectId);
   const tmp = closure_10();
   const spoken = tmp;
   const items = [message];
@@ -1871,7 +1871,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               onDismiss() {
                           return closure_1_9(clarification.id);
                         },
-              onInputFocusChange: onClarificationInputFocusChange
+              onInputFocusChange: onCardInputFocusChange
             };
             tmp52Result21 = tmp52(tmp18(tmp12[45]), obj41);
           }
@@ -1884,7 +1884,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               canSend,
               onDismiss() {
                           return closure_1_10(appBuildRequest.id);
-                        }
+                        },
+              onInputFocusChange: onCardInputFocusChange
             };
             tmp52Result22 = tmp52(tmp18(tmp12[46]), obj42);
           }

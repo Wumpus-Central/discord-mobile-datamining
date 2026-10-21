@@ -95,10 +95,10 @@ const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
 let closure_20 = {
-  friends: "toCharArray$esjava$1",
-  blocked: "Symbol",
-  ignored: "unicodeVersion",
-  blockedOrIgnored: "ty",
+  friends: "end",
+  blocked: "Date",
+  ignored: "toCharArray$esjava$1",
+  blockedOrIgnored: "toCharArray$esjava$1",
 };
 const set3 = new Set();
 const map1 = new Map();

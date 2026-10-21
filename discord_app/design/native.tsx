@@ -120,6 +120,8 @@ import TagGroup from "components/TagGroup/native/TagGroup.native.tsx";
 import ToggleIconButton from "components/Button/native/ToggleIconButton.native.tsx";
 import useToggleButtonProps from "components/Button/native/useToggleButtonProps.native.tsx";
 import AIShimmer from "visual-identities/ai/AIShimmer/AIShimmer.native.tsx";
+import StepModal from "components/Modal/native/StepModal.native.tsx";
+import ModalStepIndicator from "components/Modal/native/ModalStepIndicator.native.tsx";
 import ModalFooter from "components/Modal/native/ModalFooter.native.tsx";
 import ModalFloatingAction from "components/Modal/native/ModalFloatingAction.native.tsx";
 import ModalActionButton from "components/Modal/native/ModalActionButton.native.tsx";
@@ -163,8 +165,6 @@ import CoachmarkConstants from "components/Coachmark/native/CoachmarkConstants.n
 import useAccessibilityNativeStackFocusTracking from "components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx";
 import createAccessibleNativeStackNavigator from "components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx";
 import useFocusRefOnNavigationDefault from "components/Navigator/native/useFocusRefOnNavigation.tsx";
-import StepModal from "components/Modal/native/StepModal.native.tsx";
-import ModalStepIndicator from "components/Modal/native/ModalStepIndicator.native.tsx";
 import ModalDisclaimer from "components/Modal/native/ModalDisclaimer.native.tsx";
 import AvatarDuoPile from "components/Pile/native/AvatarDuoPile.native.tsx";
 import Slider from "components/Slider/native/Slider.native.tsx";

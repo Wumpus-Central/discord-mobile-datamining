@@ -112,7 +112,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1087).PlatformTypes;
-const Constants = fn(7225);
+const Constants = fn(7253);
 ({
   MetadataFields: closure_7,
   OperatorTypes: closure_8,
@@ -122,7 +122,7 @@ const Constants = fn(7225);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   numericalInputContainerIOSInline: { marginTop: -2 },
   numericalInputContainerAndroidInline: null,
@@ -547,7 +547,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }
         _slicedToArray(tmp, num);
       };
-      return onChangeText(metadataField(7244).TableSwitchRow, obj, metadataField);
+      return onChangeText(metadataField(7272).TableSwitchRow, obj, metadataField);
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1497,7 +1497,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       if (num == null) {
         num = -1;
       }
-      const realizedOperatorForResult = metadataField(18893).realizedOperatorFor(existingPendingConfiguration.operator);
+      const realizedOperatorForResult = metadataField(18970).realizedOperatorFor(existingPendingConfiguration.operator);
       c7 = realizedOperatorForResult;
       value = undefined;
       if (existingPendingConfiguration != null) {
@@ -1505,9 +1505,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           value = iter.value;
         }
       }
-      let obj = metadataField(18893);
-      const tmpResult = metadataField(18893);
-      str1 = metadataField(18893).displayedValueFor(value, realizedOperatorForResult).toString();
+      let obj = metadataField(18970);
+      const tmpResult = metadataField(18970);
+      str1 = metadataField(18970).displayedValueFor(value, realizedOperatorForResult).toString();
       let mapped = noop;
       [value] = noop.useState(str1);
       closure_10 = tmp9;
@@ -1596,7 +1596,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.children = onInputValueChange(metadataField(1202).TextInput, obj6, metadataField);
           let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer")];
           const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-          items1[1] = onInputValueChange(metadataField(5195).Text, obj7);
+          items1[1] = onInputValueChange(metadataField(5216).Text, obj7);
           obj4.children = items1;
           tmp21Result = closure_13(tmp22, obj4);
         }
@@ -1638,9 +1638,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             _slicedToArray(tmp3, num);
           },
         };
-        return onInputValueChange(metadataField(7244).TableSwitchRow, obj8, metadataField);
+        return onInputValueChange(metadataField(7272).TableSwitchRow, obj8, metadataField);
       }
-      const str = metadataField(18893).displayedValueFor(value, realizedOperatorForResult);
+      const str = metadataField(18970).displayedValueFor(value, realizedOperatorForResult);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()

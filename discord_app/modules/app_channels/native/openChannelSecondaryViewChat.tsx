@@ -72,11 +72,11 @@ export const useDismissChannelSecondaryViewChatOnFrameDeepLink = ReactCompilerGa
           if (null != handleFrameDeepLinkQueued) {
             handleFrameDeepLinkQueued = function handleFrameDeepLinkQueued(channelId) {
               if (channelId.channelId === handleFrameDeepLinkQueued) {
-                const rootNavigationRef = handleFrameDeepLinkQueued(5112).getRootNavigationRef();
+                const rootNavigationRef = handleFrameDeepLinkQueued(5133).getRootNavigationRef();
                 handleFrameDeepLinkQueued = tmp;
-                const obj2 = handleFrameDeepLinkQueued(5112);
+                const obj2 = handleFrameDeepLinkQueued(5133);
                 const tmp6 = handleFrameDeepLinkQueued;
-                const rootNavigationRef1 = handleFrameDeepLinkQueued(5112).getRootNavigationRef();
+                const rootNavigationRef1 = handleFrameDeepLinkQueued(5133).getRootNavigationRef();
                 let num = -1;
                 if (null != rootNavigationRef1) {
                   num = -1;
@@ -104,7 +104,7 @@ export const useDismissChannelSecondaryViewChatOnFrameDeepLink = ReactCompilerGa
                     rootNavigationRef.dispatch(obj);
                   }
                 }
-                const obj4 = handleFrameDeepLinkQueued(5112);
+                const obj4 = handleFrameDeepLinkQueued(5133);
               }
             };
             const subscription = DispatcherDefault.subscribe("FRAME_DEEP_LINK_QUEUED", handleFrameDeepLinkQueued);
@@ -131,11 +131,11 @@ export const useDismissChannelSecondaryViewChatOnFrameDeepLink = ReactCompilerGa
       const effect = noop.useEffect(() => {
         function handleFrameDeepLinkQueued(channelId) {
           if (channelId.channelId === handleFrameDeepLinkQueued) {
-            const rootNavigationRef = handleFrameDeepLinkQueued(5112).getRootNavigationRef();
+            const rootNavigationRef = handleFrameDeepLinkQueued(5133).getRootNavigationRef();
             handleFrameDeepLinkQueued = tmp;
-            const obj2 = handleFrameDeepLinkQueued(5112);
+            const obj2 = handleFrameDeepLinkQueued(5133);
             const tmp6 = handleFrameDeepLinkQueued;
-            const rootNavigationRef1 = handleFrameDeepLinkQueued(5112).getRootNavigationRef();
+            const rootNavigationRef1 = handleFrameDeepLinkQueued(5133).getRootNavigationRef();
             let num = -1;
             if (null != rootNavigationRef1) {
               num = -1;
@@ -161,7 +161,7 @@ export const useDismissChannelSecondaryViewChatOnFrameDeepLink = ReactCompilerGa
                 rootNavigationRef.dispatch(obj);
               }
             }
-            const obj4 = handleFrameDeepLinkQueued(5112);
+            const obj4 = handleFrameDeepLinkQueued(5133);
           }
         }
         if (null != handleFrameDeepLinkQueued) {

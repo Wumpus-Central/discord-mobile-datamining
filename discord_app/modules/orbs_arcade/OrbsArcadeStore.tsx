@@ -10,6 +10,7 @@ let fetchedAt = null;
 let c4 = false;
 let orbsArcadeGames = [];
 let map = new Map();
+new Set();
 let set = new Set();
 const Store = initializeDefault.Store;
 class OrbsArcadeStore extends Store {}
@@ -50,6 +51,9 @@ prototype["getGameStateForGame"] = function getGameStateForGame(id) {
 };
 prototype["isClaimingRewards"] = function isClaimingRewards(gameId) {
   return set.has(gameId);
+};
+prototype["isLaunchingGame"] = function isLaunchingGame(arg0) {
+  return set.has(arg0);
 };
 OrbsArcadeStore.displayName = "OrbsArcadeStore";
 const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
@@ -112,12 +116,21 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
       set.delete(gameId);
     }
   },
+  ORBS_ARCADE_LAUNCH_GAME_BEGIN: function handleLaunchGameBegin(gameId) {
+    set = new Set(set);
+    set = set.add(gameId.gameId);
+  },
+  ORBS_ARCADE_LAUNCH_GAME_END: function handleLaunchGameEnd(gameId) {
+    set = new Set(set);
+    set.delete(gameId.gameId);
+  },
   LOGOUT: function initializeState() {
     c2 = false;
     fetchedAt = null;
     c4 = false;
     orbsArcadeGames = [];
     map = new Map();
+    new Set();
     set = new Set();
   },
 });

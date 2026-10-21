@@ -29,8 +29,8 @@ function hasBasicChannelChanged(basicChannel, nextResult) {
   }
   return tmp;
 }
-let closure_7 = fn(4804).createChannelRecordFromServer;
-const ChannelLoader = fn(4800).ChannelLoader;
+let closure_7 = fn(4825).createChannelRecordFromServer;
+const ChannelLoader = fn(4821).ChannelLoader;
 let closure_15 = new LoggerDefault("GuildBasicChannels");
 class GuildBasicChannels {
   constructor() {
@@ -86,9 +86,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    let items = [tmp3(4826).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(4826).basicChannels(closure_0);
-    items[1] = tmp3(4826).syncedBasicChannels(closure_0).getKvEntries();
+    let items = [tmp3(4847).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4847).basicChannels(closure_0);
+    items[1] = tmp3(4847).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);

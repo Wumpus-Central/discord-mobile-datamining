@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const context = noop.createContext(0);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_8 = createStyles.createStyles({
   placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 },
 });
@@ -26,9 +26,9 @@ export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled
       const tmp2 = closure_8();
       [tmp4, require] = noop.useState(0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function u(_nativeTag) {
-          if (_nativeTag) {
-            require(_nativeTag._nativeTag);
+        const fn = function u(__nativeTag) {
+          if (__nativeTag) {
+            require(__nativeTag.__nativeTag);
           }
         };
         cResult[0] = fn;
@@ -73,9 +73,9 @@ export const WebViewContextProvider = ReactCompilerGating.isReactCompilerEnabled
       const items1 = [
         hasOwnProperty(View, {
           style: closure_8().placeholderWebView,
-          ref: noop.useCallback((_nativeTag) => {
-            if (_nativeTag) {
-              closure_0(_nativeTag._nativeTag);
+          ref: noop.useCallback((__nativeTag) => {
+            if (__nativeTag) {
+              closure_0(__nativeTag.__nativeTag);
             }
           }, items),
           pointerEvents: "none",

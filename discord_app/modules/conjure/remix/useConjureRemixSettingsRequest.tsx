@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (null != settings_keys) {
             let obj2 = { keys: settings_keys, note: null };
             const intl = tmp(1128).intl;
-            obj2.note = intl.string(settings_keys(3820).F2yVHg);
+            obj2.note = intl.string(settings_keys(3830).F2yVHg);
             tmp12 = obj2;
           }
         }
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != settings_keys) {
           let obj2 = { keys: settings_keys, note: null };
           const intl = require("util").intl;
-          obj2.note = intl.string(settings_keys(3820).F2yVHg);
+          obj2.note = intl.string(settings_keys(3830).F2yVHg);
           tmp4 = obj2;
         }
       }

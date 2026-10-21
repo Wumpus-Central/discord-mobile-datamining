@@ -16,34 +16,34 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "default",
+    borderTopLeftRadius: "op",
     borderTopRightRadius: "unicodeVersion",
-    borderBottomLeftRadius: "default",
-    borderBottomRightRadius: "accessible",
-    divider: "applicationId",
-    dividerColor: "add",
-    dividerPaddingLeft: "__esModule",
-    dividerPaddingRight: "Array",
-    placeholderShape: "toCharArray$esjava$1",
-    placeholderShapeColor: "unicodeVersion",
-    placeholderShapeCount: "concat",
-    placeholderShapeGap: "intl",
-    placeholderShapePaddingHorizontal: "apply",
-    placeholderShapePaddingVertical: "toString",
-    placeholderFeedBackgroundColor: "data",
-    placeholderFeedColor: "r",
-    placeholderFeedLabelPadding: "toCharArray$esjava$1",
-    placeholderFeedLabelPaddingInnerRatio: "top",
-    placeholderFeedLabelSize: "data",
-    placeholderFeedLabelSecondarySize: "r",
-    placeholderFeedPadding: "toCharArray$esjava$1",
-    placeholderFeedShape: "unicodeVersion",
-    placeholderFeedShapeSize: "__workletHash",
+    borderBottomLeftRadius: "ti",
+    borderBottomRightRadius: "guild_id",
+    divider: "unicodeVersion",
+    dividerColor: "nativeEvent",
+    dividerPaddingLeft: "lineClamp",
+    dividerPaddingRight: "unicodeVersion",
+    placeholderShape: "shapes",
+    placeholderShapeColor: "ref",
+    placeholderShapeCount: "unicodeVersion",
+    placeholderShapeGap: "accessibilityLabel",
+    placeholderShapePaddingHorizontal: "guild_id",
+    placeholderShapePaddingVertical: "unicodeVersion",
+    placeholderFeedBackgroundColor: "backgroundColor",
+    placeholderFeedColor: "guild_id",
+    placeholderFeedLabelPadding: "disabled",
+    placeholderFeedLabelPaddingInnerRatio: "y",
+    placeholderFeedLabelSize: "toCharArray$esjava$1",
+    placeholderFeedLabelSecondarySize: "length",
+    placeholderFeedPadding: "to",
+    placeholderFeedShape: "Boolean",
+    placeholderFeedShapeSize: "toCharArray$esjava$1",
     placeholderType: NONE,
-    width: "onSelectionChangeShouldSetResponderCapture",
-    height: "dier",
-    verticalAlignment: "gorilla",
-    horizontalAlignment: 132778825978495060000000000000000000000000000000000000000000000000000000000,
+    width: false,
+    height: false,
+    verticalAlignment: false,
+    horizontalAlignment: false,
   };
   if (null == listFooter) {
     return size;
@@ -162,9 +162,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(7108).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(7136).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(7108).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(7136).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

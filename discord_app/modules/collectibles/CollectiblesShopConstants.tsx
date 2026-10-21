@@ -17,7 +17,6 @@ const CollectibleShopTab = {
   COLLABS: "collabs",
   OFFER_ELIGIBLE: "offer-eligible",
   PROMOTION: "promotion",
-  LAYOUT: "layout",
   COLLECTION_INDEX: "collection-index",
   GAME_SHOPS: "game-shops",
   GAME_SERVERS: "game-servers",

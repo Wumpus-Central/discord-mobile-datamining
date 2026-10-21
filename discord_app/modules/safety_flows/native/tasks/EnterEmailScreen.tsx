@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/native/tasks/EnterEmailScreen.tsx
-import _modDef2822 from "../../SafetyFlows.messages.js";
+import _modDef2832 from "../../SafetyFlows.messages.js";
 import types from "../../types.tsx";
 import SafetyFlowTaskScreenDefault from "../SafetyFlowTaskScreen.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -22,9 +22,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first = tmp5[0];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1128).intl;
-        const stringResult = intl.string(_modDef2822.bFbsV6);
+        const stringResult = intl.string(_modDef2832.bFbsV6);
         const intl2 = tmp(1128).intl;
-        const stringResult1 = intl2.string(_modDef2822.RRBNpv);
+        const stringResult1 = intl2.string(_modDef2832.RRBNpv);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp7 = stringResult;
@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== first) {
         const obj3 = { children: null };
         const obj4 = { label: "Email", value: first, onChange: tmp5[1] };
-        obj3.children = jsx(tmp(6959).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
-        const tmp15 = jsx(tmp(5935).Stack, { children: null });
+        obj3.children = jsx(tmp(6987).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
+        const tmp15 = jsx(tmp(5957).Stack, { children: null });
         cResult[4] = first;
         cResult[5] = tmp15;
         let tmp13 = tmp15;
@@ -73,9 +73,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { title: null, action: null, onAction: null, children: null };
       const tmp = _slicedToArray(noop.useState(""), 2);
       const intl = require("util").intl;
-      obj2.title = intl.string(_modDef2822.bFbsV6);
+      obj2.title = intl.string(_modDef2832.bFbsV6);
       const intl2 = require("util").intl;
-      obj2.action = intl2.string(_modDef2822.RRBNpv);
+      obj2.action = intl2.string(_modDef2832.RRBNpv);
       obj2.onAction = function onAction() {
         closure_0.push(types.SafetyFlowScreens.VERIFY_EMAIL);
       };

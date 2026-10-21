@@ -13,14 +13,18 @@ const obj = {
   Event: null,
   NavigateEvent: null,
   NavigationDestination: null,
+  URL: null,
   EventTarget: null,
   MessageEvent: null,
   PageTransitionEvent: null,
   MessageChannel: null,
   MessagePort: null,
   Document: null,
+  DocumentFragment: null,
+  HTMLTemplateElement: null,
   DOMParser: null,
   Node: null,
+  HTMLElement: null,
   Element: null,
   Attr: null,
   NodeList: null,
@@ -63,6 +67,8 @@ obj.NavigateEvent = passThrough.protectPrototype("NavigateEvent", ["destination"
 let passThrough = passThrough_mod;
 obj.NavigationDestination = passThrough.protectPrototype("NavigationDestination", ["url"]);
 let passThrough = passThrough_mod;
+obj.URL = passThrough.protectPrototype("URL", ["href", "origin", "pathname", "search"]);
+let passThrough = passThrough_mod;
 obj.EventTarget = passThrough.protectPrototype("EventTarget", ["addEventListener"]);
 let passThrough = passThrough_mod;
 obj.MessageEvent = passThrough.protectPrototype("MessageEvent", ["data", "origin", "ports", "source"]);
@@ -75,18 +81,34 @@ obj.MessagePort = passThrough.protectPrototype("MessagePort", ["close", "onmessa
 let passThrough = passThrough_mod;
 obj.Document = passThrough.protectPrototype("Document", ["defaultView", "documentElement", "querySelectorAll"]);
 let passThrough = passThrough_mod;
+obj.DocumentFragment = passThrough.protectPrototype("DocumentFragment", ["querySelectorAll"]);
+let passThrough = passThrough_mod;
+obj.HTMLTemplateElement = passThrough.protectPrototype("HTMLTemplateElement", ["content"]);
+let passThrough = passThrough_mod;
 obj.DOMParser = passThrough.protectPrototype("DOMParser", ["parseFromString"]);
 let passThrough = passThrough_mod;
-obj.Node = passThrough.protectPrototype("Node", ["childNodes", "nodeType", "parentNode", "textContent"]);
+obj.Node = passThrough.protectPrototype("Node", [
+  "baseURI",
+  "childNodes",
+  "nodeType",
+  "ownerDocument",
+  "parentNode",
+  "textContent",
+]);
+let passThrough = passThrough_mod;
+obj.HTMLElement = passThrough.protectPrototype("HTMLElement", ["nonce"]);
 let passThrough = passThrough_mod;
 obj.Element = passThrough.protectPrototype("Element", [
   "getAttribute",
+  "getAttributeNS",
   "hasAttribute",
   "localName",
   "outerHTML",
   "querySelectorAll",
   "remove",
   "setAttribute",
+  "setAttributeNS",
+  "shadowRoot",
 ]);
 let passThrough = passThrough_mod;
 obj.Attr = passThrough.protectPrototype("Attr", ["localName", "ownerElement", "value"]);
@@ -166,6 +188,7 @@ obj.Constructor = passThrough.protectConstructors([
   "MessageChannel",
   "Set",
   "Uint32Array",
+  "URL",
   "WeakMap",
   "WeakSet",
 ]);

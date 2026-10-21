@@ -37,8 +37,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6810).addPostConnectionCallback;
-let closure_10 = fn(7482).handleMobileWebCheckoutStatus;
+fn(6838).addPostConnectionCallback;
+let closure_10 = fn(7510).handleMobileWebCheckoutStatus;
 const Constants = fn(1087);
 ({
   AnalyticEvents: map1,
@@ -48,20 +48,27 @@ const Constants = fn(1087);
   PlatformTypes: closure_17,
   ME: closure_18,
 } = Constants);
-const StaticChannelRoute = fn(4807).StaticChannelRoute;
-const StreamTypes = fn(6594).StreamTypes;
-const NativePermissionTypes = fn(7816).NativePermissionTypes;
-let closure_22 = fn(11048).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_23 = fn(7595).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_24 = fn(5660).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(14910).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8280).MobileUserSettings;
+const StaticChannelRoute = fn(4828).StaticChannelRoute;
+const StreamTypes = fn(6622).StreamTypes;
+const NativePermissionTypes = fn(7844).NativePermissionTypes;
+let closure_22 = fn(10703).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_23 = fn(7623).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_24 = fn(5680).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(14984).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8308).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
 export default function handleSupportedURL(payload) {
   payload = payload.payload;
-  ({ safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation } = payload);
+  ({
+    safe,
+    navigationReplace,
+    waitForConnection,
+    skipMessageFetch,
+    isAppStartupNavigation,
+    userProfileNavigationReplace,
+  } = payload);
   let rootNavigationRef1;
   let rootNavigationRef2;
   let inviteCode;
@@ -129,7 +136,7 @@ export default function handleSupportedURL(payload) {
     }
     flag = true;
     if (null != payload.userId) {
-      const obj15 = { userId: payload.userId };
+      const obj15 = { userId: payload.userId, navigationReplace: userProfileNavigationReplace };
       const result2 = tmp157(tmp155[21]).showUserProfileActionSheetPostConnection(obj15);
       flag = true;
       const tmp157Result = tmp157(tmp155[21]);
@@ -302,7 +309,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(14922, dependencyMap.paths),
+                    asyncRequireImpl(14996, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -346,7 +353,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.USER_PROFILE === type) {
           flag = true;
           if (null != payload.userId) {
-            const obj28 = { userId: payload.userId };
+            const obj28 = { userId: payload.userId, navigationReplace: userProfileNavigationReplace };
             const result3 = payload(inviteCode[21]).showUserProfileActionSheetPostConnection(obj28);
             flag = true;
             const obj19 = payload(inviteCode[21]);
@@ -673,15 +680,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(6623).popAll();
-                        const obj5 = closure_1(6623);
+                        closure_1(6651).popAll();
+                        const obj5 = closure_1(6651);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7439).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7439);
+                        dependencyMap(7467).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7467);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(7223).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(7251).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -699,8 +706,8 @@ export default function handleSupportedURL(payload) {
                     }
                     closure_133_1 = closure_1(1386).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(5622).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(5622);
+                      closure_1(5642).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(5642);
                     }
                     const obj12 = closure_1(1386);
                   }
@@ -893,8 +900,8 @@ export default function handleSupportedURL(payload) {
                       sourceQuestContent: QuestContent.QuestContent.QUEST_EMBED_MOBILE,
                       properties: null,
                     };
-                    const obj3 = { referrer_id: payload.referrerId };
-                    obj2.properties = obj3;
+                    const obj4 = { referrer_id: payload.referrerId };
+                    obj2.properties = obj4;
                     AnalyticsActions.trackQuestEvent(obj2);
                   }
                   let sort;
@@ -906,22 +913,22 @@ export default function handleSupportedURL(payload) {
                     filter = payload.filter;
                   }
                   const obj5 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
-                  let tmp9 = null;
+                  let tmp3 = null;
                   if (null != sort) {
-                    tmp9 = null;
+                    tmp3 = null;
                     if ("" !== sort) {
-                      tmp9 = sort;
+                      tmp3 = sort;
                     }
                   }
-                  obj5.sort = tmp9;
-                  let tmp10 = null;
+                  obj5.sort = tmp3;
+                  let tmp4 = null;
                   if (null != filter) {
-                    tmp10 = null;
+                    tmp4 = null;
                     if ("" !== filter) {
-                      tmp10 = filter;
+                      tmp4 = filter;
                     }
                   }
-                  obj5.filter = tmp10;
+                  obj5.filter = tmp4;
                   obj5.fromContent = QuestContent.QuestContent.QUEST_SHARE_LINK;
                   QuestUtils.openQuestHome(obj5);
                 });

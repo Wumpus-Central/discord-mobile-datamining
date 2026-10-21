@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult3 = useStateFromStores;
     }
   : function useColorThemeBackground() {
-      const tmp = stateFromStores(5110)();
+      const tmp = stateFromStores(5131)();
       _require = tmp;
       const items = [ThemeStore];
       stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);

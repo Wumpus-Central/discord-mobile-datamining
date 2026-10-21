@@ -8,9 +8,9 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(9642);
+const SearchConstants = fn(9672);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-const constants2 = fn(9641).SearchResultContentEntityTypes;
+const constants2 = fn(9671).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

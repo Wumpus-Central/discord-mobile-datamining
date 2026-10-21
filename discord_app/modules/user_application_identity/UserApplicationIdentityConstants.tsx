@@ -1,5 +1,4 @@
 // discord_app/modules/user_application_identity/UserApplicationIdentityConstants.tsx
-import socialSDKMigration from "../application_account_linking/experiments/socialSDKMigration.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
@@ -30,10 +29,6 @@ export const APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS = {
   [obj.VALORANT]: obj2[obj.VALORANT],
 };
 export const getMigratedApplicationIdentityConnectionsScreenApplications =
-  function getMigratedApplicationIdentityConnectionsScreenApplications(arg0) {
-    closure_0 = arg0;
-    const found = items.filter((getMigrationExperimentEnabled) =>
-      getMigrationExperimentEnabled.getMigrationExperimentEnabled(closure_0),
-    );
-    return found.map((applicationId) => applicationId.applicationId);
+  function getMigratedApplicationIdentityConnectionsScreenApplications() {
+    return items.map((applicationId) => applicationId.applicationId);
   };

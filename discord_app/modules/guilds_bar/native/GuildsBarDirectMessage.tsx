@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const ChannelTypes = fn(1087).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { dm: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -422,7 +422,7 @@ export default noop.memo(
           cutouts,
           externalChildren: badge,
           expandedChildren: true,
-          children: null,
+          children: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Rldl90b29scw==",
         };
         let tmp11Result = null;
         if (null != channel) {
@@ -467,7 +467,7 @@ export default noop.memo(
           cutouts,
           externalChildren: badge,
           expandedChildren: true,
-          children: null,
+          children: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Rldl90b29scw==",
         });
       },
 );

@@ -5,12 +5,12 @@ import embeddedActivityLocationUtils from "../../../activities/utils/embeddedAct
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05258_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05279_LegacyBaseButton.js";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
+import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import VoicePanelPIPHandoff from "VoicePanelPIPHandoff.tsx";
-import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
 import VoicePanelPIPUtils from "VoicePanelPIPUtils.tsx";
 import utils_triggerIOSHapticDefault from "../utils/triggerIOSHaptic.tsx";
@@ -27,15 +27,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10704);
+const VoicePanelConstants = fn(10848);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10702).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18193).VoicePanelPIPModes;
-const ActivityPanelModes = fn(5570).ActivityPanelModes;
-const isLaunched = fn(6727).isLaunched;
+const VoicePanelControlsModes = fn(10846).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18276).VoicePanelPIPModes;
+const ActivityPanelModes = fn(5591).ActivityPanelModes;
+const isLaunched = fn(6755).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef9370 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroCoinSpotIllustration-1x.png.js";
-import _modDef9371 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroCoinSpotIllustration-2x.png.js";
-import _modDef9372 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroCoinSpotIllustration-3x.png.js";
+import _modDef9398 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroCoinSpotIllustration-1x.png.js";
+import _modDef9399 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroCoinSpotIllustration-2x.png.js";
+import _modDef9400 from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroCoinSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9370 }, 3: null };
-let obj2 = { uri: _modDef9370 };
-obj[2] = { uri: _modDef9371 };
-const obj3 = { uri: _modDef9371 };
-obj[3] = { uri: _modDef9372 };
+let obj = { 1: null, 2: { uri: _modDef9398 }, 3: null };
+let obj2 = { uri: _modDef9398 };
+obj[2] = { uri: _modDef9399 };
+const obj3 = { uri: _modDef9399 };
+obj[3] = { uri: _modDef9400 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef9372 };
+const obj4 = { uri: _modDef9400 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx",

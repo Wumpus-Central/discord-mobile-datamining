@@ -7,7 +7,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import EmojiStore from "../EmojiStore.tsx";
 
 require = fn;
-const ExpressionSourceRecord = fn(6835);
+const ExpressionSourceRecord = fn(6863);
 ({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
 const GuildFeatures = fn(1087).GuildFeatures;
 const ReactCompilerGating = fn(558);
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
 
 export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiAndSource(emojiId) {
-  const cResult = emojiId(refreshPositionKey[9]).c(21);
+  const cResult = emojiId(refreshPositionKey[9]).c(22);
   emojiId = emojiId.emojiId;
   refreshPositionKey = emojiId.refreshPositionKey;
   const skipKnownGuildEmojiFetch = emojiId.skipKnownGuildEmojiFetch;
@@ -329,7 +329,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
           return obj5;
         }
       }
-      const fromGuildRecord = ref.createFromGuildRecord(joinedEmojiSourceGuildRecord);
+      const fromGuildRecord = closure_7.createFromGuildRecord(joinedEmojiSourceGuildRecord);
     }
     cResult[5] = joinedEmojiSourceGuildRecord;
     cResult[6] = fromGuildRecord;
@@ -367,59 +367,146 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
   [tmp24, GuildStore] = noop.useState(tmp21);
   const tmp16Result = _slicedToArray(noop.useState(tmp21), 2);
   [tmp26, EmojiStore] = noop.useState(null);
-  const tmp16Result2 = _slicedToArray(noop.useState(null), 2);
+  const tmp16Result3 = _slicedToArray(noop.useState(null), 2);
+  [tmp28, closure_7] = noop.useState(null);
+  noop.useRef(refreshPositionKey);
   if (cResult[7] !== refreshPositionKey) {
-    class K {
+    class E {
       constructor() {
-        closure_7.current = refreshPositionKey;
-        return;
+        obj = closure_6;
+        obj2 = closure_5;
+        customEmojiById = null;
+        if (null != emojiId) {
+          customEmojiById = obj.getCustomEmojiById(tmp);
+        }
+        type = undefined;
+        if (customEmojiById != null) {
+          type = customEmojiById.type;
+        }
+        if (type === closure_0(closure_1[7]).EmojiTypes.GUILD) {
+          obj1 = { emoji: null, joinedEmojiSourceGuildRecord: null };
+          obj1.emoji = customEmojiById;
+          guildId = undefined;
+          if (customEmojiById != null) {
+            guildId = customEmojiById.guildId;
+          }
+          obj1.joinedEmojiSourceGuildRecord = obj2.getGuild(guildId);
+          obj5 = obj1;
+        } else {
+          obj5 = { emoji: null, joinedEmojiSourceGuildRecord: null };
+        }
+        return obj5;
       }
     }
     cResult[7] = refreshPositionKey;
-    cResult[8] = K;
+    cResult[8] = tmp30;
   } else {
-    class K {
+    class E {
       constructor() {
-        closure_7.current = refreshPositionKey;
-        return;
+        obj = closure_6;
+        obj2 = closure_5;
+        customEmojiById = null;
+        if (null != emojiId) {
+          customEmojiById = obj.getCustomEmojiById(tmp);
+        }
+        type = undefined;
+        if (customEmojiById != null) {
+          type = customEmojiById.type;
+        }
+        if (type === closure_0(closure_1[7]).EmojiTypes.GUILD) {
+          obj1 = { emoji: null, joinedEmojiSourceGuildRecord: null };
+          obj1.emoji = customEmojiById;
+          guildId = undefined;
+          if (customEmojiById != null) {
+            guildId = customEmojiById.guildId;
+          }
+          obj1.joinedEmojiSourceGuildRecord = obj2.getGuild(guildId);
+          obj5 = obj1;
+        } else {
+          obj5 = { emoji: null, joinedEmojiSourceGuildRecord: null };
+        }
+        return obj5;
       }
     }
   }
-  const effect = noop.useEffect(K);
+  const effect = noop.useEffect(tmp30);
   if (cResult[9] === emojiId) {
-    class K {
+    class E {
       constructor() {
-        closure_7.current = refreshPositionKey;
-        return;
+        obj = closure_6;
+        obj2 = closure_5;
+        customEmojiById = null;
+        if (null != emojiId) {
+          customEmojiById = obj.getCustomEmojiById(tmp);
+        }
+        type = undefined;
+        if (customEmojiById != null) {
+          type = customEmojiById.type;
+        }
+        if (type === closure_0(closure_1[7]).EmojiTypes.GUILD) {
+          obj1 = { emoji: null, joinedEmojiSourceGuildRecord: null };
+          obj1.emoji = customEmojiById;
+          guildId = undefined;
+          if (customEmojiById != null) {
+            guildId = customEmojiById.guildId;
+          }
+          obj1.joinedEmojiSourceGuildRecord = obj2.getGuild(guildId);
+          obj5 = obj1;
+        } else {
+          obj5 = { emoji: null, joinedEmojiSourceGuildRecord: null };
+        }
+        return obj5;
       }
     }
     const effect1 = noop.useEffect(B, items1);
     if (cResult[13] === emoji) {
-      class K {
+      class E {
         constructor() {
-          closure_7.current = refreshPositionKey;
-          return;
+          obj = closure_6;
+          obj2 = closure_5;
+          customEmojiById = null;
+          if (null != emojiId) {
+            customEmojiById = obj.getCustomEmojiById(tmp);
+          }
+          type = undefined;
+          if (customEmojiById != null) {
+            type = customEmojiById.type;
+          }
+          if (type === closure_0(closure_1[7]).EmojiTypes.GUILD) {
+            obj1 = { emoji: null, joinedEmojiSourceGuildRecord: null };
+            obj1.emoji = customEmojiById;
+            guildId = undefined;
+            if (customEmojiById != null) {
+              guildId = customEmojiById.guildId;
+            }
+            obj1.joinedEmojiSourceGuildRecord = obj2.getGuild(guildId);
+            obj5 = obj1;
+          } else {
+            obj5 = { emoji: null, joinedEmojiSourceGuildRecord: null };
+          }
+          return obj5;
         }
       }
     }
-    let obj2 = { expressionSourceGuild: tmp24, expressionSourceApplication: tmp26, sourceType: tmp20, joinedEmojiSourceGuildRecord, hasJoinedEmojiSourceGuild: tmp10, emoji, isFetching: tmp18 };
+    let obj2 = { expressionSourceGuild: tmp24, expressionSourceApplication: tmp26, expressionSourcePack: tmp28, sourceType: tmp20, joinedEmojiSourceGuildRecord, hasJoinedEmojiSourceGuild: tmp10, emoji, isFetching: tmp18 };
     cResult[13] = emoji;
     cResult[14] = tmp26;
     cResult[15] = tmp24;
-    cResult[16] = tmp10;
-    cResult[17] = tmp18;
-    cResult[18] = joinedEmojiSourceGuildRecord;
-    cResult[19] = tmp20;
-    cResult[20] = obj2;
+    cResult[16] = tmp28;
+    cResult[17] = tmp10;
+    cResult[18] = tmp18;
+    cResult[19] = joinedEmojiSourceGuildRecord;
+    cResult[20] = tmp20;
+    cResult[21] = obj2;
   }
   class B {
     constructor() {
-      tmp = closure_7;
-      current = closure_7.current;
+      tmp = closure_8;
+      current = closure_8.current;
       if (current != null) {
         currentResult = current();
       }
-      closure_0 = closure_2(/* F157453 */ function() { ... });
+      closure_0 = closure_2(/* F157962 */ function() { ... });
       if (closure_2) {
         tmp4 = (function fetch() { ... })();
       } else {
@@ -436,7 +523,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[10] = tmp14;
   cResult[11] = B;
   cResult[12] = items1;
-  ref = noop.useRef(refreshPositionKey);
+  const tmp16Result4 = _slicedToArray(noop.useState(null), 2);
 }) : (function useEmojiAndSource(emojiId) {
   emojiId = emojiId.emojiId;
   const refreshPositionKey = emojiId.refreshPositionKey;
@@ -448,7 +535,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
   noop = undefined;
   c5 = undefined;
   c6 = undefined;
-  ref = undefined;
+  c7 = undefined;
   const items = [c6, c5];
   const stateFromStoresObject = emojiId(refreshPositionKey[10]).useStateFromStoresObject(items, () => {
     let customEmojiById = null;
@@ -500,15 +587,17 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
   noop = sourceType[1];
   let fromGuildRecord = null;
   if (null != joinedEmojiSourceGuildRecord) {
-    fromGuildRecord = ref.createFromGuildRecord(joinedEmojiSourceGuildRecord);
+    fromGuildRecord = c7.createFromGuildRecord(joinedEmojiSourceGuildRecord);
   }
   const tmp8 = _slicedToArray(noop.useState(tmp5), 2);
   [tmp14, c5] = noop.useState(fromGuildRecord);
   const tmp7Result = _slicedToArray(noop.useState(fromGuildRecord), 2);
   [tmp16, c6] = noop.useState(null);
-  ref = obj2.useRef(refreshPositionKey);
+  const tmp7Result3 = _slicedToArray(noop.useState(null), 2);
+  [tmp18, c7] = noop.useState(null);
+  noop.useRef(refreshPositionKey);
   const effect = obj2.useEffect(() => {
-    closure_7.current = refreshPositionKey;
+    closure_8.current = refreshPositionKey;
   });
   const items1 = [emojiId, tmp5];
   const effect1 = obj2.useEffect(() => {
@@ -544,7 +633,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
               if (null != closure_0) {
                 c2 = 1;
                 v3 = 1;
-                const obj4 = { value: closure_2_9(tmp32), done: false };
+                const obj4 = { value: closure_2_9(tmp39), done: false };
                 return obj4;
               }
             }
@@ -567,6 +656,8 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
               closure_1_6(closure_128_0.application);
             } else if (constants.GUILD === type) {
               closure_1_5(closure_128_0.guild);
+            } else if (constants.PACK === type) {
+              closure_1_7(closure_128_0.pack);
             }
           }
           v3(false);
@@ -576,9 +667,9 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
           }
           v3 = 3;
           return { value: "IconComponent", done: null };
-        } catch (tmp27) {
+        } catch (tmp34) {
           v3 = tmp;
-          throw tmp27;
+          throw tmp34;
         }
       }
     };
@@ -605,5 +696,5 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
     }
     return tmp4;
   }, items1);
-  return { expressionSourceGuild, expressionSourceApplication, sourceType: sourceType[0], joinedEmojiSourceGuildRecord, hasJoinedEmojiSourceGuild, emoji, isFetching };
+  return { expressionSourceGuild, expressionSourceApplication, expressionSourcePack, sourceType: sourceType[0], joinedEmojiSourceGuildRecord, hasJoinedEmojiSourceGuild, emoji, isFetching };
 });

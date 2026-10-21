@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, justifyContent: "center" },
   scrollViewContentContainer: { flexGrow: 2 },

@@ -495,9 +495,6 @@ const frozen2 = Object.freeze({
   COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH: "/users/@me/valid-collectibles-gift-recipients-batch",
   COLLECTIBLES_MARKETING: "/users/@me/collectibles-marketing",
   COLLECTIBLES_SHOP: "/collectibles-shop",
-  COLLECTIBLES_SHOP_TAB_LAYOUT(arg0) {
-    return "/collectibles-shop-tab-layouts/" + arg0;
-  },
   GUILD_MEMBER_BANNER(guildId, id, banner) {
     let str = webp;
     if (webp === undefined) {
@@ -2111,6 +2108,9 @@ const frozen2 = Object.freeze({
   },
   CONJURE_PROJECT_PUBLISH_PREVIEW(arg0) {
     return "/conjure/projects/" + arg0 + "/publish-preview";
+  },
+  CONJURE_PROJECT_PREVIEW_DM(arg0) {
+    return "/conjure/projects/" + arg0 + "/preview-dm";
   },
   CONJURE_APPLICATION_CHANNELS(arg0) {
     return "/conjure/applications/" + arg0 + "/channels";
@@ -2567,9 +2567,6 @@ const obj2 = {
   COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH: "/users/@me/valid-collectibles-gift-recipients-batch",
   COLLECTIBLES_MARKETING: "/users/@me/collectibles-marketing",
   COLLECTIBLES_SHOP: "/collectibles-shop",
-  COLLECTIBLES_SHOP_TAB_LAYOUT(arg0) {
-    return "/collectibles-shop-tab-layouts/" + arg0;
-  },
   GUILD_MEMBER_BANNER(guildId, id, banner) {
     let str = webp;
     if (webp === undefined) {
@@ -4183,6 +4180,9 @@ const obj2 = {
   },
   CONJURE_PROJECT_PUBLISH_PREVIEW(arg0) {
     return "/conjure/projects/" + arg0 + "/publish-preview";
+  },
+  CONJURE_PROJECT_PREVIEW_DM(arg0) {
+    return "/conjure/projects/" + arg0 + "/preview-dm";
   },
   CONJURE_APPLICATION_CHANNELS(arg0) {
     return "/conjure/applications/" + arg0 + "/channels";
@@ -5015,6 +5015,7 @@ const obj11 = {
   SAMSUNG: "samsung",
   CONTACTS: "contacts",
   INSTAGRAM: "instagram",
+  LETTERBOXD: "letterboxd",
   MASTODON: "mastodon",
   SOUNDCLOUD: "soundcloud",
   GITHUB: "github",
@@ -7536,6 +7537,7 @@ export const AnalyticEvents = {
   ANDROID_JANK_SESSION: "android_jank_session",
   ANDROID_JANK_SCREEN: "android_jank_screen",
   IOS_JANK_SESSION: "ios_jank_session",
+  IOS_JANK_SCREEN: "ios_jank_screen",
   APP_JS_STALLED: "app_js_stalled",
   LIBDISCORE_LOADED: "libdiscore_loaded",
   LIBDISCORE_KV_DUAL_READ_ERROR: "libdiscore_kv_dual_read_error",
@@ -7728,6 +7730,9 @@ export const AnalyticEvents = {
   SERVER_HUB_TOGGLE_SETTING: "server_hub_toggle_setting",
   SERVER_HUB_VISIT: "server_hub_visit",
   SERVER_HUB_WIDGET_EDIT_CLICKED: "server_hub_widget_edit_clicked",
+  POPULAR_MUSIC_CLICK: "popular_music_click",
+  POPULAR_MUSIC_END_IMPRESSION: "popular_music_end_impression",
+  POPULAR_MUSIC_HOVER: "popular_music_hover",
   SWP_NOTICE_VIEWED: "swp_notice_viewed",
   SWP_NOTICE_ACTION: "swp_notice_action",
   SWP_SETTINGS_VIEWED: "swp_settings_viewed",

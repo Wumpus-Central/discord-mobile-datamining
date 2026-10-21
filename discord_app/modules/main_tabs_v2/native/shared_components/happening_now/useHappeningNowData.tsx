@@ -28,12 +28,12 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let GuildScheduledEventStore = fn(6735);
+let GuildScheduledEventStore = fn(6763);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const MemberListRowTypes = fn(7321).MemberListRowTypes;
-let closure_20 = fn(4878).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(16402).HappeningNowItem;
+const MemberListRowTypes = fn(7349).MemberListRowTypes;
+let closure_20 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
+const HappeningNowItem = fn(16478).HappeningNowItem;
 const Constants = fn(1087);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
 items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];

@@ -28,3 +28,4 @@ export function isStaticRouteIconType(channelId) {
   }
   return tmp;
 }
+export const ANSI_CONTROL_SEQUENCE_RE_GLOBAL = /\x1B\[(\d+(?:[:;]\d+)*)m/g;

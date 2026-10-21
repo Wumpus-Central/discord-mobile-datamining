@@ -15,7 +15,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_10 = createStyles.createStyles({
   container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" },
   header: { textAlign: "center", marginBottom: 8 },
@@ -212,14 +212,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = onConfirm(1128).intl;
       obj3.children = intl.format(onConfirm(1128).t.wumolR, { age: age.age });
-      const items = [closure_8(onConfirm(5195).Heading, obj3), ,];
+      const items = [closure_8(onConfirm(5216).Heading, obj3), ,];
       const obj4 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
       const intl2 = onConfirm(1128).intl;
       const obj5 = { helpURL: null };
       const tmp2 = _slicedToArray(noop.useState(false), 2);
       obj5.helpURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
       obj4.children = intl2.format(onConfirm(1128).t.n3QjDE, obj5);
-      items[1] = closure_8(onConfirm(5195).Text, obj4);
+      items[1] = closure_8(onConfirm(5216).Text, obj4);
       const obj7 = { style: tmp.buttonWrapper, children: null };
       const obj8 = { loading: tmp3, disabled: tmp3, text: null, onPress: null, grow: true };
       const intl3 = onConfirm(1128).intl;
@@ -234,8 +234,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return applyArgumentsResult;
       };
-      obj7.children = closure_8(onConfirm(5205).Button, obj8);
+      obj7.children = closure_8(onConfirm(5226).Button, obj8);
       items[2] = closure_8(View, obj7);
       obj2.children = items;
-      return closure_9(onConfirm(7172).SafeAreaPaddingView, obj2);
+      return closure_9(onConfirm(7200).SafeAreaPaddingView, obj2);
     };

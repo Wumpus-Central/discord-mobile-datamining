@@ -13,13 +13,13 @@ const prototype = function ForumChannelSeenManager(channelId) {
   obj.id = concat(FORUM_CHANNEL, "_", channelId);
   const tmp4 = new tmp(obj, tmp3, tmp2, FORUM_CHANNEL, concat, "_", new.target);
   _require = tmp4;
-  tmp4.createFlushSeenItemsFunction = function createFlushSeenItemsFunction(IMMEDIATE) {
+  tmp4.createFlushSeenItemsFunction = function createFlushSeenItemsFunction(arg0) {
     let obj = {
       guildId: closure_0.guildId,
       channelId: closure_0.channelId,
       sessionId: closure_0.sessionId,
       trackedFeedItems: closure_0.trackedFeedItems,
-      isForcedFlush: null != IMMEDIATE,
+      isForcedFlush: null != arg0,
     };
     return () => {
       (function flushSeenItems(trackedFeedItems) {

@@ -1,11 +1,9 @@
 // discord_app/modules/frames/useFrameLifecycle.tsx
-import FramesActionCreatorsDefault from "FramesActionCreators.native.tsx";
-import preloadChannelAppFrame from "preloadChannelAppFrame.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
-require = fn;
+const require = fn;
 function useFrameLifecycleState(applicationId) {
   applicationId = applicationId.applicationId;
   const surface = applicationId.surface;
@@ -14,23 +12,18 @@ function useFrameLifecycleState(applicationId) {
   const memo = noop.useMemo(() => React5(applicationId, surface), items);
   const items1 = [memo];
   const memo1 = noop.useMemo(() => surface, items1);
-  const tmp3 = surface(memo[8])(memo);
-  const obj = applicationId(memo[10]);
+  const tmp3 = surface(memo[7])(memo);
+  const obj = applicationId(memo[9]);
   const application = obj.useApplication(applicationId);
   ({ data, isLoading } = application);
-  const tmp4 = surface(memo[9])(memo);
-  const result = applicationId(memo[11]).isEmbeddedApplication(data);
-  const obj2 = applicationId(memo[11]);
+  const tmp4 = surface(memo[8])(memo);
+  const result = applicationId(memo[10]).isEmbeddedApplication(data);
+  const obj2 = applicationId(memo[10]);
   const tmp8 = _slicedToArray(noop.useState(null), 2);
   _slicedToArray = tmp8[1];
+  const obj3 = { surface: memo1, setFailed: null, lifecycle: null };
   const items2 = [memo];
-  const obj3 = {
-    frameId: memo,
-    hasFrame: null != tmp3,
-    surface: memo1,
-    setFailed: noop.useCallback(() => closure_3(memo), items2),
-    lifecycle: null,
-  };
+  obj3.setFailed = noop.useCallback(() => closure_3(memo), items2);
   if (closure_6(tmp3)) {
     if (tmp4) {
       const obj4 = { state: obj.RenderingElsewhere };
@@ -50,7 +43,7 @@ function useFrameLifecycleState(applicationId) {
         const obj7 = { state: obj.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: obj.Loading, frame: "r" };
+        const obj8 = { state: obj.Loading, frame: "Array" };
         obj10 = obj8;
       } else {
         if (null != data) {
@@ -72,7 +65,7 @@ function useFrameLifecycleState(applicationId) {
     return obj3;
   }
 }
-const FramesConstants = fn(6727);
+const FramesConstants = fn(6755);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = {
   Loading: "loading",
@@ -89,148 +82,102 @@ let result = size.fileFinishedImporting("modules/frames/useFrameLifecycle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useFrameLifecycle(applicationId) {
-      const cResult = applicationId(hasFrame[5]).c(15);
+      const cResult = applicationId(setFailed[5]).c(9);
       applicationId = applicationId.applicationId;
-      let surface = applicationId.surface;
+      const surface = applicationId.surface;
       if (cResult[0] === surface) {
         if (cResult[1] === applicationId) {
           let tmp2 = cResult[2];
         }
         const tmp4 = useFrameLifecycleState(tmp2);
-        const frameId = tmp4.frameId;
-        hasFrame = tmp4.hasFrame;
         const surface2 = tmp4.surface;
-        const setFailed = tmp4.setFailed;
+        setFailed = tmp4.setFailed;
         const lifecycle = tmp4.lifecycle;
         const state = lifecycle.state;
         if (cResult[3] === applicationId) {
-          if (cResult[4] === frameId) {
-            if (cResult[5] === hasFrame) {
+          if (cResult[4] === setFailed) {
+            if (cResult[5] === state) {
               if (cResult[6] === surface2) {
                 let tmp5 = cResult[7];
                 let tmp6 = cResult[8];
               }
-              const effect = state.useEffect(tmp5, tmp6);
-              if (cResult[9] === applicationId) {
-                if (cResult[10] === setFailed) {
-                  if (cResult[11] === state) {
-                    if (cResult[12] === surface2) {
-                      let tmp8 = cResult[13];
-                      let tmp9 = cResult[14];
-                    }
-                    const effect1 = obj3.useEffect(tmp8, tmp9);
-                    return lifecycle;
-                  }
-                }
-              }
-              class F {
-                constructor() {
-                  if (state === closure_1_8.AwaitingLaunch) {
-                    tmp = setFailed;
-                    closure_0 = setFailed(function* () {
-                      applicationId = tmp3;
-                      yield frameId(hasFrame[7]).launchFrame({ applicationId, surface });
-                      if (1 === tmp7) {
-                        c2 = 0;
-                        setFailed();
-                        surface = 3;
-                      } else if (arg0 === 1) {
-                        surface = 3;
-                        throw value;
-                      } else if (arg0 !== 2) {
-                        c2 = 0;
-                      }
-                      return value;
-                    });
-                    tmp2 = (function launch() {
-                      const self = this;
-                      const apply = closure_0.apply;
-                      if (typeof apply === "unknown") {
-                        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                      } else {
-                        applyArgumentsResult = apply(self, arguments);
-                      }
-                      return applyArgumentsResult;
-                    })();
-                  }
-                  return;
-                }
-              }
-              const items = [state, applicationId, surface2, setFailed];
-              cResult[9] = applicationId;
-              cResult[10] = setFailed;
-              cResult[11] = state;
-              cResult[12] = surface2;
-              cResult[13] = F;
-              cResult[14] = items;
-              tmp9 = items;
-              tmp8 = F;
-              obj3 = state;
+              const effect = noop.useEffect(tmp5, tmp6);
+              return lifecycle;
             }
           }
         }
         const fn = function p() {
-          let claimPreloadedFrameResult = hasFrame;
-          if (hasFrame) {
-            claimPreloadedFrameResult = preloadChannelAppFrame.claimPreloadedFrame(frameId);
-          }
-          if (claimPreloadedFrameResult) {
-            const obj3 = { applicationId, surface: surface2 };
-            FramesActionCreatorsDefault.launchFrame(obj3);
+          if (state === AwaitingLaunch.AwaitingLaunch) {
+            closure_0 = asyncGeneratorStep(async () => {
+              applicationId = tmp3;
+              let v0 = 1;
+              await surface2(setFailed[6]).launchFrame({ applicationId, surface });
+              if (1 === tmp7) {
+                v0 = 0;
+                v0();
+                c3 = 3;
+              } else if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 !== 2) {
+                v0 = 0;
+              }
+              v0 = 0;
+              return value;
+            });
+            (function launch() {
+              const self = this;
+              const apply = closure_0.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            })();
           }
         };
-        const items1 = [frameId, hasFrame, applicationId, surface2];
+        const items = [state, applicationId, surface2, setFailed];
         cResult[3] = applicationId;
-        cResult[4] = frameId;
-        cResult[5] = hasFrame;
+        cResult[4] = setFailed;
+        cResult[5] = state;
         cResult[6] = surface2;
         cResult[7] = fn;
-        cResult[8] = items1;
-        tmp6 = items1;
+        cResult[8] = items;
+        tmp6 = items;
         tmp5 = fn;
       }
-      let obj2 = { applicationId, surface };
+      const obj2 = { applicationId, surface };
       cResult[0] = surface;
       cResult[1] = applicationId;
       cResult[2] = obj2;
       tmp2 = obj2;
-      let obj = applicationId(hasFrame[5]);
+      const obj = applicationId(setFailed[5]);
     }
   : function useFrameLifecycle(applicationId) {
       applicationId = applicationId.applicationId;
       const tmp = useFrameLifecycleState({ applicationId, surface: applicationId.surface });
-      const frameId = tmp.frameId;
-      const hasFrame = tmp.hasFrame;
-      let surface = tmp.surface;
+      const surface = tmp.surface;
       const setFailed = tmp.setFailed;
       const lifecycle = tmp.lifecycle;
       const state = lifecycle.state;
-      const items = [frameId, hasFrame, applicationId, surface];
-      const effect = state.useEffect(() => {
-        let claimPreloadedFrameResult = hasFrame;
-        if (hasFrame) {
-          claimPreloadedFrameResult = preloadChannelAppFrame.claimPreloadedFrame(frameId);
-        }
-        if (claimPreloadedFrameResult) {
-          const obj3 = { applicationId, surface };
-          FramesActionCreatorsDefault.launchFrame(obj3);
-        }
-      }, items);
-      const items1 = [state, applicationId, surface, setFailed];
-      const effect1 = state.useEffect(() => {
+      const items = [state, applicationId, surface, setFailed];
+      const effect = noop.useEffect(() => {
         closure_0 = async function _launch2() {
           applicationId = tmp3;
-          await closure_2_1(closure_2_2[7]).launchFrame({ applicationId, surface });
+          let v0 = 1;
+          await closure_2_1(closure_2_2[6]).launchFrame({ applicationId, surface });
           if (1 === tmp7) {
-            c2 = 0;
-            setFailed();
-            surface = 3;
+            v0 = 0;
+            v0();
+            c3 = 3;
           } else if (arg0 === 1) {
-            surface = 3;
+            c3 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            c2 = 0;
+            v0 = 0;
           }
+          v0 = 0;
           return value;
         };
         if (state === AwaitingLaunch.AwaitingLaunch) {
@@ -245,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return applyArgumentsResult;
           })();
         }
-      }, items1);
+      }, items);
       return lifecycle;
     };
 export { FrameLifecycleState };

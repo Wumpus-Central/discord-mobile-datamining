@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05219_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05240_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import useShopProductItems from "../../collectibles/hooks/useShopProductItems.tsx";
@@ -19,11 +19,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileFrameRecord = fn(7606).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7634).isProfileFrameRecord;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   container: { flex: 1 },
   previewContainer: { overflow: "hidden", height: 300, alignItems: "center" },
@@ -379,7 +379,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       let purchase;
       ({ previewSkuId, user, guildId } = arg0);
       const tmp = closure_12();
-      const tmp2 = purchase(8599)(previewSkuId);
+      const tmp2 = purchase(8626)(previewSkuId);
       const product = tmp2.product;
       c0 = product;
       purchase = tmp2.purchase;
@@ -403,11 +403,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp3;
       }, items);
-      const items1 = [closure_9(purchase(10976), { user, guildId, profileFrame: memo, maxWidth: 280 })];
+      const items1 = [closure_9(purchase(11120), { user, guildId, profileFrame: memo, maxWidth: 280 })];
       const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
       const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
       obj2.colors = items2;
-      items1[1] = closure_9(purchase(5219), obj2);
+      items1[1] = closure_9(purchase(5240), obj2);
       obj.children = items1;
       return closure_10(closure_5, obj);
     };
@@ -424,13 +424,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      const tmp6Result = selectedProfileFrame(8612)(str);
+      const tmp6Result = selectedProfileFrame(8639)(str);
       const tmp7 = _slicedToArray(noop.useState(currentProfileFrame), 2);
       selectedProfileFrame = tmp7[0];
-      const tmp6 = selectedProfileFrame(8612);
-      const bottomSheetRef = guildId(8596).useBottomSheetRef().bottomSheetRef;
-      const tmpResult = guildId(8596);
-      const analyticsLocations = selectedProfileFrame(7202)(tmp5(7227).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
+      const tmp6 = selectedProfileFrame(8639);
+      const bottomSheetRef = guildId(8623).useBottomSheetRef().bottomSheetRef;
+      const tmpResult = guildId(8623);
+      const analyticsLocations = selectedProfileFrame(7230)(tmp5(7255).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
       if (cResult[0] !== tmp6Result) {
         let tmp11 = null != tmp6Result;
         if (tmp11) {
@@ -551,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             obj2.title = tmp19(guildId(1128).t["oTSa/q"]);
-            const tmp20 = closure_9(guildId(7197).BottomSheetTitleHeader, obj2);
+            const tmp20 = closure_9(guildId(7225).BottomSheetTitleHeader, obj2);
             cResult[10] = tmp20;
           } else {
             class A {
@@ -606,7 +606,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = O;
       }
       const obj4 = {
-        type: selectedProfileFrame(7227).EDIT_PROFILE_FRAME_SHEET,
+        type: selectedProfileFrame(7255).EDIT_PROFILE_FRAME_SHEET,
         guild_id: guildId,
         profile_has_nitro_customization: tmp10,
       };
@@ -614,7 +614,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp10;
       cResult[4] = obj4;
       tmp13 = obj4;
-      const tmp5Result = selectedProfileFrame(7202);
+      const tmp5Result = selectedProfileFrame(7230);
     }
   : function EditProfileFrameActionSheet(arg0) {
       ({ user, currentProfileFrame, guildId } = arg0);

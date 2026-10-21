@@ -26,10 +26,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AddApplicationIdentityTableRow(arg0) {
       const cResult = startAuthorization(576).c(17);
       ({ application, start, end } = arg0);
-      const tmp4 = analyticsLocations(7203)(application);
+      const tmp4 = analyticsLocations(7231)(application);
       startAuthorization = tmp4.startAuthorization;
       const obj = startAuthorization(576);
-      analyticsLocations = analyticsLocations(7202)(analyticsLocations(7227).ACTION_SHEET).analyticsLocations;
+      analyticsLocations = analyticsLocations(7230)(analyticsLocations(7255).ACTION_SHEET).analyticsLocations;
       const tmp6 = closure_7();
       if (cResult[0] !== application) {
         const iconSource = application.getIconSource(tmp(1202).getIconSize(tmp(1202).IconSizes.LARGE));
@@ -50,7 +50,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp16 = closure_5(tmp(6854).TableRow.Arrow, {});
+            const tmp16 = closure_5(tmp(6882).TableRow.Arrow, {});
             cResult[8] = tmp16;
             let tmp14 = tmp16;
           } else {
@@ -81,7 +81,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             trailing: tmp14,
             disabled: !tmp4.canStartAuthorization,
           };
-          const tmp20 = closure_5(tmp(6854).TableRow, obj2, application.id);
+          const tmp20 = closure_5(tmp(6882).TableRow, obj2, application.id);
           cResult[9] = application.id;
           cResult[10] = application.name;
           cResult[11] = end;
@@ -110,17 +110,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = startAuthorization;
       cResult[4] = fn;
       tmp9 = fn;
-      const tmp5 = analyticsLocations(7202);
+      const tmp5 = analyticsLocations(7230);
     }
   : function AddApplicationIdentityTableRow(application) {
       application = application.application;
       _require = undefined;
       let analyticsLocations;
       ({ start, end } = application);
-      ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7203)(application));
-      const tmp2 = analyticsLocations(7203)(application);
-      analyticsLocations = analyticsLocations(7202)(analyticsLocations(7227).ACTION_SHEET).analyticsLocations;
-      const tmp3 = analyticsLocations(7202);
+      ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7231)(application));
+      const tmp2 = analyticsLocations(7231)(application);
+      analyticsLocations = analyticsLocations(7230)(analyticsLocations(7255).ACTION_SHEET).analyticsLocations;
+      const tmp3 = analyticsLocations(7230);
       const tmp4 = closure_7();
       const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
       const obj2 = {
@@ -155,12 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const bottom = found(found1[8])().bottom;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o(migrationData) {
-          let tmp = null == migrationData.migrationData;
-          if (!tmp) {
-            migrationData = migrationData.migrationData;
-            tmp = !migrationData.getMigrationExperimentEnabled("AddConnectionActionSheet");
-          }
-          return tmp;
+          return null == migrationData.migrationData;
         };
         cResult[0] = fn;
         let first = fn;
@@ -172,42 +167,63 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const platforms = require("ConnectionsHooks").usePlatforms();
       found = platforms.filter(first);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp9 = closure_4("AddConnectionActionSheet");
+        const tmp9 = closure_4();
         cResult[1] = tmp9;
         let tmp7 = tmp9;
       } else {
         tmp7 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function b(arg0) {
-          return null != arg0;
-        };
-        cResult[2] = fn2;
-        let tmp10 = fn2;
+        class A {
+          constructor(arg0) {
+            return null != arg0;
+          }
+        }
+        cResult[2] = A;
       } else {
-        tmp10 = cResult[2];
+        class A {
+          constructor(arg0) {
+            return null != arg0;
+          }
+        }
       }
       const tmpResult = require("ConnectionsHooks");
-      found1 = tmp5(found1[10])(tmp7).filter(tmp10);
+      found1 = tmp5(found1[10])(tmp7).filter(A);
       BottomSheet = tmp(tmp2[11]).BottomSheet;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        class A {
+          constructor(arg0) {
+            return null != arg0;
+          }
+        }
         const obj2 = { title: null };
         const intl = tmp(tmp2[13]).intl;
         obj2.title = intl.string(tmp(tmp2[13]).t.Zhcj9X);
-        const tmp13 = closure_5(tmp(tmp2[12]).BottomSheetTitleHeader, obj2);
-        cResult[3] = tmp13;
-        let tmp11 = tmp13;
+        const tmp12 = closure_5(tmp(tmp2[12]).BottomSheetTitleHeader, obj2);
+        cResult[3] = tmp12;
       } else {
-        tmp11 = cResult[3];
+        class A {
+          constructor(arg0) {
+            return null != arg0;
+          }
+        }
       }
       const BottomSheetScrollView = tmp(tmp2[14]).BottomSheetScrollView;
       if (cResult[4] !== bottom) {
-        const obj3 = { paddingBottom: bottom };
+        class A {
+          constructor(arg0) {
+            return null != arg0;
+          }
+        }
+        tmp14[0] = bottom;
         cResult[4] = bottom;
-        cResult[5] = obj3;
-        let tmp14 = obj3;
+        cResult[5] = tmp14;
       } else {
-        tmp14 = cResult[5];
+        class A {
+          constructor(arg0) {
+            return null != arg0;
+          }
+        }
       }
       const mapped = found1.map((application, index) => {
         const obj = { application, start: 0 === index, end: null };
@@ -246,59 +262,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return hasOwnProperty(TableRow.TableRow, obj, type);
       });
       if (cResult[6] === BottomSheetScrollView) {
-        if (cResult[7] === tmp4.list) {
-          if (cResult[8] === mapped1) {
-            if (cResult[9] === tmp14) {
-              if (cResult[10] === mapped) {
-                let tmp17 = cResult[11];
-              }
-              if (cResult[12] === BottomSheet) {
-                if (cResult[13] === tmp17) {
-                  if (cResult[14] === tmp11) {
-                    let tmp19 = cResult[15];
-                  }
-                  return tmp19;
-                }
-              }
-              const obj4 = { scrollable: true, startExpanded: true, header: tmp11, children: tmp17 };
-              const tmp21 = closure_5(BottomSheet, obj4);
-              cResult[12] = BottomSheet;
-              cResult[13] = tmp17;
-              cResult[14] = tmp11;
-              cResult[15] = tmp21;
-              tmp19 = tmp21;
-            }
+        class A {
+          constructor(arg0) {
+            return null != arg0;
           }
         }
       }
-      const obj5 = { style: tmp4.list, contentContainerStyle: tmp14, children: null };
+      const obj3 = { style: tmp4.list, contentContainerStyle: tmp14, children: null };
       const items = [mapped, mapped1];
-      obj5.children = items;
-      const tmp18 = closure_6(BottomSheetScrollView, obj5);
+      obj3.children = items;
+      const arr3 = tmp5(found1[10])(tmp7);
       cResult[6] = BottomSheetScrollView;
       cResult[7] = tmp4.list;
       cResult[8] = mapped1;
       cResult[9] = tmp14;
       cResult[10] = mapped;
-      cResult[11] = tmp18;
-      tmp17 = tmp18;
-      const arr3 = tmp5(found1[10])(tmp7);
+      cResult[11] = closure_6(BottomSheetScrollView, obj3);
+      const tmp17 = closure_6(BottomSheetScrollView, obj3);
     }
   : function AddConnectionActionSheet() {
       _require = found(found1[7])();
-      let tmp = closure_7();
+      const tmp = closure_7();
       const platforms = require("ConnectionsHooks").usePlatforms();
-      found = platforms.filter((migrationData) => {
-        let tmp = null == migrationData.migrationData;
-        if (!tmp) {
-          migrationData = migrationData.migrationData;
-          tmp = !migrationData.getMigrationExperimentEnabled("AddConnectionActionSheet");
-        }
-        return tmp;
-      });
+      found = platforms.filter((migrationData) => null == migrationData.migrationData);
       let obj = require("ConnectionsHooks");
       const tmp2 = found(found1[10]);
-      found1 = found(found1[10])(closure_4("AddConnectionActionSheet")).filter((item) => null != item);
+      found1 = found(found1[10])(closure_4()).filter((item) => null != item);
       const obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
       const obj3 = { title: null };
       const intl = require("util").intl;

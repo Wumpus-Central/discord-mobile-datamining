@@ -85,7 +85,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               closure_130_11 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "test", done: true };
+              return { value: "Reflect", done: true };
             }
           break;
           case 1:
@@ -419,7 +419,7 @@ let closure_37 = async function _handleDowngradeCommand(arg0) {
     }
     await "IconComponent";
     downgradeCommand2 = downgradeCommand.downgradeCommand;
-    return "test";
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -676,7 +676,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
             state2 = state.state;
             c5 = 1;
             c6 = 1;
-            return { value: "test", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp8) {
@@ -733,14 +733,14 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
 let closure_3 = ["succeededOnlyFields"];
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const PremiumPlanPurchasedStore = fn(7482);
+const PremiumPlanPurchasedStore = fn(7510);
 ({ setPaymentSuccess: closure_7, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
-const useGPlayAnalyticsStore = fn(9727).useGPlayAnalyticsStore;
-let Constants = fn(7474);
+const useGPlayAnalyticsStore = fn(9757).useGPlayAnalyticsStore;
+let Constants = fn(7502);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
-const OrderStatus = fn(5660).OrderStatus;
+const OrderStatus = fn(5680).OrderStatus;
 const SubscriptionPlanInfo = fn(1394).SubscriptionPlanInfo;
 const jsx = fn(21).jsx;
 let closure_22 = new LoggerDefault("GPlayManager.android");
@@ -751,7 +751,7 @@ let closure_26 = null;
 let closure_27 = null;
 let closure_28 = null;
 let closure_29 = null;
-const items = [fn(7468).ProductIds.PREMIUM_TIER_2_MONTHLY];
+const items = [fn(7496).ProductIds.PREMIUM_TIER_2_MONTHLY];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gplay/native/GPlayManager.android.tsx");
 

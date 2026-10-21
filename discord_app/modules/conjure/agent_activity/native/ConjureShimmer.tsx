@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_13 = createStyles.createStyles({
   root: { position: "relative" },
   band: { position: "absolute", top: 0, bottom: 0 },
@@ -258,9 +258,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj10 = { style: tmp4.fill, start, end, colors: tmp22, locations };
                     obj8.children = closure_8(require("LinearGradient"), obj10);
                     obj6.children = closure_8(require("ReanimatedRexport").View, obj8);
-                    obj4.children = closure_8(require("../../../../../_runtime/metro/06917__.js"), obj6);
+                    obj4.children = closure_8(require("../../../../../_runtime/metro/06945__.js"), obj6);
                     tmp29 = closure_8(closure_6, obj4);
-                    const tmp32 = require("../../../../../_runtime/metro/06917__.js");
+                    const tmp32 = require("../../../../../_runtime/metro/06945__.js");
                   }
                   cResult[22] = live;
                   cResult[23] = tmp22;
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const width = tmp5[0];
       dependencyMap = tmp5[1];
       let obj = tint(504);
-      sharedValue = tint(5014).useSharedValue(0);
+      sharedValue = tint(5035).useSharedValue(0);
       if (live) {
         live = !stateFromStores;
       }
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items[4] = cssResult;
         return items;
       }, items2);
-      let obj3 = tint(5014);
+      let obj3 = tint(5035);
       class R {
         constructor() {
           obj = { transform: null };
@@ -425,7 +425,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       R.__closure = { bandWidth: result, progress: sharedValue, width };
       R.__workletHash = 8820828976937;
       R.__initData = __initData2;
-      const animatedStyle = tint(5014).useAnimatedStyle(R);
+      const animatedStyle = tint(5035).useAnimatedStyle(R);
       let obj4 = {
         style: tmp.root,
         onLayout: live.useCallback((nativeEvent) => {
@@ -460,11 +460,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items4[2] = animatedStyle;
         obj8.style = items4;
         const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
-        obj8.children = closure_8(width(5219), obj10);
-        obj6.children = closure_8(width(5014).View, obj8);
-        obj5.children = closure_8(width(6917), obj6);
+        obj8.children = closure_8(width(5240), obj10);
+        obj6.children = closure_8(width(5035).View, obj8);
+        obj5.children = closure_8(width(6945), obj6);
         tmp14 = closure_8(closure_6, obj5);
-        const tmp18 = width(6917);
+        const tmp18 = width(6945);
       }
       items3[1] = tmp14;
       obj4.children = items3;

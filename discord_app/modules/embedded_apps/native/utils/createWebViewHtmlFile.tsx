@@ -2,7 +2,7 @@
 import NativeFileModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import bridgeProtocol from "../../../../../discord_common/js/packages/embedded-app-shims/src/native-shell/bridgeProtocol.tsx";
-import _modDef11371 from "../../../../../_runtime/metro/11371__.js";
+import _modDef11415 from "../../../../../_runtime/metro/11415__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -10,17 +10,22 @@ function webViewShellFileName(arg0) {
   return "iframe--" + arg0 + ".html";
 }
 function generateWebViewHtml(arg0) {
-  ({ iframeUri, iframeSandboxAttributes, referrerPolicy, shimBridgeSecret } = arg0);
+  ({ iframeUri, iframeSandboxAttributes, referrerPolicy, shimBridgeSecret, iframeCsp } = arg0);
   let str = "";
+  let str2 = "";
+  if (null != iframeCsp) {
+    const _HermesInternal = HermesInternal;
+    str2 = ' csp="' + iframeCsp + '"';
+  }
   if (null != shimBridgeSecret) {
-    const tmp3 = _modDef11371;
+    const tmp4 = _modDef11415;
     const _JSON = JSON;
     const _JSON2 = JSON;
     const json = JSON.stringify(shimBridgeSecret);
-    const _HermesInternal = HermesInternal;
+    const _HermesInternal2 = HermesInternal;
     str =
       '<script type="text/javascript">' +
-      tmp3 +
+      tmp4 +
       '</script>\n      <script type="text/javascript">' +
       bridgeProtocol.SHELL_BRIDGE_GLOBAL +
       ".start(" +
@@ -40,7 +45,9 @@ function generateWebViewHtml(arg0) {
     iframeSandboxAttributes +
     '" referrerPolicy="' +
     referrerPolicy +
-    '">\n      </iframe>\n  </body>\n  </html>\n'
+    '"' +
+    str2 +
+    ">\n      </iframe>\n  </body>\n  </html>\n"
   );
 }
 let closure_9 = async function _createWebViewHtmlFile(arg0) {
@@ -76,6 +83,7 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
           closure_129_3 = undefined;
           closure_129_4 = undefined;
           closure_129_5 = undefined;
+          closure_129_6 = undefined;
           ({
             iframeId: closure_129_0,
             iframeUri: closure_129_1,
@@ -83,12 +91,13 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
             referrerPolicy: closure_129_3,
             shimVersion: closure_129_4,
             shellBridgeSecret: closure_129_5,
+            iframeCsp: closure_129_6,
           } = closure_0);
-          closure_129_6 = undefined;
           closure_129_7 = undefined;
+          closure_129_8 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "test", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -100,19 +109,21 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
           return obj6;
         } else {
           const _HermesInternal = HermesInternal;
-          closure_129_6 = "" + closure_130_5 + "/" + closure_130_6(closure_129_0);
+          closure_129_7 = "" + closure_130_5 + "/" + closure_130_6(closure_129_0);
           const obj7 = {
             iframeUri: closure_129_1,
             iframeSandboxAttributes: closure_129_2,
             referrerPolicy: closure_129_3,
             shimBridgeSecret: null,
+            iframeCsp: null,
           };
           let tmp23 = null;
           if (2 === closure_129_4) {
             tmp23 = closure_129_5;
           }
           obj7.shimBridgeSecret = tmp23;
-          closure_129_7 = closure_130_8(obj7);
+          obj7.iframeCsp = closure_129_6;
+          closure_129_8 = closure_130_8(obj7);
           c5 = 2;
           c6 = 1;
           const obj8 = {
@@ -154,13 +165,13 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
           const obj4 = closure_130_1(closure_130_2[2]);
           c5 = 4;
           c6 = 1;
-          const obj10 = { value: obj4.writeFile("cache", closure_129_6, closure_129_7, "utf8"), done: false };
+          const obj10 = { value: obj4.writeFile("cache", closure_129_7, closure_129_8, "utf8"), done: false };
           return obj10;
         }
       } else if (3 === tmp6) {
         c4 = 0;
-        closure_129_8 = closure_3;
-        closure_130_1(closure_130_2[3]).captureException(closure_129_8);
+        closure_129_9 = closure_3;
+        closure_130_1(closure_130_2[3]).captureException(closure_129_9);
         c6 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -177,18 +188,18 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp25) {
-      closure_3 = tmp25;
+    } catch (tmp26) {
+      closure_3 = tmp26;
       if (tmp3 === c4) {
         c6 = tmp;
-        throw tmp25;
+        throw tmp26;
       } else {
         c5 = tmp;
       }
     }
   }
 };
-let closure_4 = fn(11062).EMBEDDED_APP_FRAME_ELEMENT_ID;
+let closure_4 = fn(10717).EMBEDDED_APP_FRAME_ELEMENT_ID;
 const discord_activity_data = "discord_activity_data";
 let c7 = null;
 const size = fn(2);

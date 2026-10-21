@@ -15,8 +15,8 @@ function reset() {
   c16 = false;
   c17 = null;
 }
-const isNoneSubscription = fn(2052).isNoneSubscription;
-const SubscriptionRecord = fn(2060).SubscriptionRecord;
+const isNoneSubscription = fn(2051).isNoneSubscription;
+const SubscriptionRecord = fn(2059).SubscriptionRecord;
 const Constants = fn(1087);
 ({ SubscriptionStatusTypes: closure_4, SubscriptionTypes: hasOwnProperty } = Constants);
 let obj = null;

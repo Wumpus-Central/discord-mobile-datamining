@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import _mod4863 from "../../../_runtime/metro/04863__.js";
+import _mod4884 from "../../../_runtime/metro/04884__.js";
 import SystemRulesUtils from "SystemRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(12635).AutomodTriggerType;
+const AutomodTriggerType = fn(12699).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1269);
@@ -230,7 +230,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [,];
           ({ syncRules: arr[0], fetching: arr[1] } = arg0);
           return items;
-        }, require("../../../_runtime/metro/04863__.js").shallow),
+        }, require("../../../_runtime/metro/04884__.js").shallow),
         2,
       );
       first = tmp3[0];
@@ -397,7 +397,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [,];
           ({ syncRules: arr[0], fetching: arr[1] } = arg0);
           return items;
-        }, require("../../../_runtime/metro/04863__.js").shallow),
+        }, require("../../../_runtime/metro/04884__.js").shallow),
         2,
       );
       first = tmp2[0];
@@ -536,7 +536,7 @@ function useSyncAutomodRules(arg0) {
       const items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, _mod4863.shallow),
+    }, _mod4884.shallow),
     2,
   );
   const first = tmp2[0];
@@ -652,7 +652,7 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      return withEqualityFn(tmp4, require("../../../_runtime/metro/04863__.js").shallow);
+      return withEqualityFn(tmp4, require("../../../_runtime/metro/04884__.js").shallow);
     }
   : function useAutomodRulesList(arg0) {
       _require = arg0;
@@ -666,5 +666,5 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled()
           obj = {};
         }
         return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-      }, require("../../../_runtime/metro/04863__.js").shallow);
+      }, require("../../../_runtime/metro/04884__.js").shallow);
     };

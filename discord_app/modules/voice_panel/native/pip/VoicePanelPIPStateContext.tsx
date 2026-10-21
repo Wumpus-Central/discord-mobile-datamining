@@ -2,15 +2,15 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 let size = {
-  id: "enabled",
+  id: "enumerable",
   mode: "toCharArray$esjava$1",
   width: false,
   height: null,
-  containerHeight: 0,
-  showSecondaryPIP: false,
+  containerHeight: "box-none",
+  showSecondaryPIP: null,
   scale: null,
 };
-const ReanimatedHelperTypes = fn(7120);
+const ReanimatedHelperTypes = fn(7148);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 let ReactCompilerGating = fn(558);

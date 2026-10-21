@@ -11,9 +11,9 @@ import MarkupTextRuleDefault from "MarkupTextRule.tsx";
 import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule.tsx";
 import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule.tsx";
 import getSoundmojiASTFromString from "../premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx";
+import MarkupRulesUtils from "MarkupRulesUtils.tsx";
 import MarkupListRuleDefault from "MarkupListRule.tsx";
 import MarkupSubtextRuleDefault from "MarkupSubtextRule.tsx";
-import HighlightJsAnsiLanguage from "../../utils/HighlightJsAnsiLanguage.tsx";
 import TimestampUtils from "TimestampUtils.tsx";
 import PlatformMarkupRulesDefault from "PlatformMarkupRules.native.tsx";
 import MarkupHeadingRuleDefault from "MarkupHeadingRule.tsx";
@@ -245,8 +245,8 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
 }
 const Constants = fn(1087);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5941).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5942).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5963).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5964).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;
@@ -986,7 +986,7 @@ let items1 = [
             formatted = str3.toLowerCase();
           }
           if ("ansi" === formatted) {
-            match[2] = match[2].replaceAll(HighlightJsAnsiLanguage.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
+            match[2] = match[2].replaceAll(MarkupRulesUtils.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
           }
           return match;
         } else {
@@ -1011,7 +1011,7 @@ const obj24 = {
           formatted = str3.toLowerCase();
         }
         if ("ansi" === formatted) {
-          match[2] = match[2].replaceAll(HighlightJsAnsiLanguage.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
+          match[2] = match[2].replaceAll(MarkupRulesUtils.ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
         }
         return match;
       } else {

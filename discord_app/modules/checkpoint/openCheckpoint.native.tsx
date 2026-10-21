@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/checkpoint/openCheckpoint.native.tsx");
 
-export const openCheckpoint = function openCheckpoint(devtools) {
+export const openCheckpoint = function openCheckpoint(devtools, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -16,7 +16,7 @@ export const openCheckpoint = function openCheckpoint(devtools) {
   AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_STARTED, { source: devtools });
   const obj2 = { source: devtools };
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(12778, dependencyMap.paths),
+    asyncRequireImpl(12842, dependencyMap.paths),
     { didPlayerShareDataWithDiscord: flag },
     "CHECKPOINT_MODAL",
   );

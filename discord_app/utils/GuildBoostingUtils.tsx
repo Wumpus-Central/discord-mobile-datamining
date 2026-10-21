@@ -2,10 +2,10 @@
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
-import _modDef2050 from "../../_runtime/metro/02050__.js";
+import _modDef2049 from "../../_runtime/metro/02049__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
-import _modDef3240 from "../modules/premium/premium_group/PremiumGroup.messages.js";
+import _modDef3250 from "../modules/premium/premium_group/PremiumGroup.messages.js";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import actions_BoostingActionCreators from "../actions/BoostingActionCreators.tsx";
@@ -52,7 +52,7 @@ const PremiumConstants = fn(1394);
   TotalStickerCountsByTier: closure_25,
   PerkIcons: closure_26,
 } = PremiumConstants);
-let closure_27 = fn(2067).getPremiumGroupProductName;
+let closure_27 = fn(2066).getPremiumGroupProductName;
 let obj = {
   LEVEL_1: 1,
   [1]: "LEVEL_1",
@@ -546,7 +546,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = _modDef2050().diff(_modDef2050(arg0), "months");
+  let num = _modDef2049().diff(_modDef2049(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -554,9 +554,9 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef2050();
+  const obj = _modDef2049();
   const entries = Object.entries(closure_28);
-  const diffResult = _modDef2050().diff(arg0, "months");
+  const diffResult = _modDef2049().diff(arg0, "months");
   while (tmp3 !== undefined) {
     let tmp6 = _slicedToArray(tmp4, 2);
     let first = tmp6[0];
@@ -617,7 +617,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
     const obj = { premiumGroupProductName: closure_27() };
-    return intl7.formatToPlainString(_modDef3240["5xN/C1"], obj);
+    return intl7.formatToPlainString(_modDef3250["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(GuildBoostSlotStore.boostSlots);
@@ -911,7 +911,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8323).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8351).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

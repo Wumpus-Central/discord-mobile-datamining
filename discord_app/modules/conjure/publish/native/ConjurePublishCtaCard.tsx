@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishCtaCard.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3820 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import useConjurePublishActionDefault from "../useConjurePublishAction.tsx";
@@ -64,17 +64,17 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { direction: "horizontal", spacing: 4, align: "center", children: null };
                 const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
                 const intl = tmp(1128).intl;
-                obj3.children = intl.string(guildId(3820)["+HGTlC"]);
-                const items1 = [closure_4(tmp(5195).Text, obj3), ,];
-                const obj4 = { guild: stateFromStores, size: tmp(6834).GuildIconSizes.XXSMALL };
-                items1[1] = closure_4(guildId(6834), obj4);
+                obj3.children = intl.string(guildId(3830)["+HGTlC"]);
+                const items1 = [closure_4(tmp(5216).Text, obj3), ,];
+                const obj4 = { guild: stateFromStores, size: tmp(6862).GuildIconSizes.XXSMALL };
+                items1[1] = closure_4(guildId(6862), obj4);
                 const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
-                const tmp16 = guildId(6834);
-                obj5.children = tmp(12163).publishCardServerName(stateFromStores.name);
-                items1[2] = closure_4(tmp(5195).Text, obj5);
+                const tmp16 = guildId(6862);
+                obj5.children = tmp(12225).publishCardServerName(stateFromStores.name);
+                items1[2] = closure_4(tmp(5216).Text, obj5);
                 obj2.children = items1;
-                tmp12 = closure_5(tmp(5935).Stack, obj2);
-                const tmpResult2 = tmp(12163);
+                tmp12 = closure_5(tmp(5957).Stack, obj2);
+                const tmpResult2 = tmp(12225);
               }
               cResult[10] = stateFromStores;
               cResult[11] = tmp12;
@@ -91,7 +91,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { direction: "horizontal", spacing: 8, align: "center", children: null };
             const items2 = [tmp9, tmp11];
             obj6.children = items2;
-            const tmp19 = closure_5(tmp(5935).Stack, obj6);
+            const tmp19 = closure_5(tmp(5957).Stack, obj6);
             cResult[12] = tmp9;
             cResult[13] = tmp11;
             cResult[14] = tmp19;
@@ -99,7 +99,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp10 = closure_4(publish(5205).Button, {
+      const tmp10 = closure_4(publish(5226).Button, {
         text: publish.label,
         variant: "primary",
         size: "sm",
@@ -135,7 +135,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         return guild;
       });
       const children = [
-        closure_4(publish(5205).Button, {
+        closure_4(publish(5226).Button, {
           text: publish.label,
           variant: "primary",
           size: "sm",
@@ -151,20 +151,20 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { direction: "horizontal", spacing: 4, align: "center", children: null };
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp(1128).intl;
-        obj4.children = intl.string(guildId(3820)["+HGTlC"]);
-        const items2 = [closure_4(tmp(5195).Text, obj4), ,];
-        const obj5 = { guild: stateFromStores, size: tmp(6834).GuildIconSizes.XXSMALL };
-        items2[1] = closure_4(guildId(6834), obj5);
+        obj4.children = intl.string(guildId(3830)["+HGTlC"]);
+        const items2 = [closure_4(tmp(5216).Text, obj4), ,];
+        const obj5 = { guild: stateFromStores, size: tmp(6862).GuildIconSizes.XXSMALL };
+        items2[1] = closure_4(guildId(6862), obj5);
         const obj6 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
-        const tmp8 = guildId(6834);
-        obj6.children = tmp(12163).publishCardServerName(stateFromStores.name);
-        items2[2] = closure_4(tmp(5195).Text, obj6);
+        const tmp8 = guildId(6862);
+        obj6.children = tmp(12225).publishCardServerName(stateFromStores.name);
+        items2[2] = closure_4(tmp(5216).Text, obj6);
         obj3.children = items2;
-        tmp4Result = closure_5(tmp(5935).Stack, obj3);
-        const tmpResult = tmp(12163);
+        tmp4Result = closure_5(tmp(5957).Stack, obj3);
+        const tmpResult = tmp(12225);
       }
       children[1] = tmp4Result;
-      return closure_5(publish(5935).Stack, { direction: "horizontal", spacing: 8, align: "center", children });
+      return closure_5(publish(5957).Stack, { direction: "horizontal", spacing: 8, align: "center", children });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if ("new_ui" === cta.reason) {
             const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
             const intl = util.intl;
-            obj2.children = intl.string(_modDef3820["9ZqzLo"]);
+            obj2.children = intl.string(_modDef3830["9ZqzLo"]);
             tmp8Result = React4(Text_Text.Text, obj2);
           }
           const items = [tmp8Result, ,];
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if ("new_ui" !== cta.reason) {
             const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
             const intl2 = util.intl;
-            obj4.children = intl2.string(_modDef3820.SifbJM);
+            obj4.children = intl2.string(_modDef3830.SifbJM);
             tmp8Result3 = React4(Text_Text.Text, obj4);
           }
           const obj5 = { children: null };
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if ("new_ui" === cta.reason) {
             const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
             const intl = util.intl;
-            obj2.children = intl.string(_modDef3820["9ZqzLo"]);
+            obj2.children = intl.string(_modDef3830["9ZqzLo"]);
             tmp6Result = React4(Text_Text.Text, obj2);
           }
           const items = [tmp6Result, ,];
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if ("new_ui" !== cta.reason) {
             const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
             const intl2 = util.intl;
-            obj4.children = intl2.string(_modDef3820.SifbJM);
+            obj4.children = intl2.string(_modDef3830.SifbJM);
             tmp6Result3 = React4(Text_Text.Text, obj4);
           }
           const obj5 = { children: null };

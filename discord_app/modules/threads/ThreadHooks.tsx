@@ -57,7 +57,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(4804).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(4825).THREADED_CHANNEL_TYPES;
 const Constants = fn(1087);
 ({ Permissions: closure_12, MessageFlags: map1, ChannelTypes: closure_14 } = Constants);
 let obj = {

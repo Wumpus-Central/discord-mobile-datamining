@@ -2,8 +2,8 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef3046 from "Checkpoint.messages.js";
-import _modDef3078 from "Checkpoint2026.messages.js";
+import _modDef3056 from "Checkpoint.messages.js";
+import _modDef3088 from "Checkpoint2026.messages.js";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import CheckpointUtils from "2025/CheckpointUtils.tsx";
 import CheckpointTrait from "../../../discord_common/js/shared/shared-constants/CheckpointTrait.tsx";
@@ -47,7 +47,7 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
   const obj3 = { text: voiceDurationString, accessibilityLabel: null };
   const intl2 = util.intl;
   const obj4 = { duration: CheckpointUtils.getAccessibleVoiceDurationString(rounded) };
-  obj3.accessibilityLabel = intl2.formatToPlainString(_modDef3078.lw35aH, obj4);
+  obj3.accessibilityLabel = intl2.formatToPlainString(_modDef3088.lw35aH, obj4);
   obj.voice = obj3;
   if (stats.numMessagesSent > 0) {
     const numMessagesSent = stats.numMessagesSent;
@@ -55,15 +55,15 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
   } else {
     const intl3 = util.intl;
     const obj5 = { count: stats.numMessagesSent };
-    toLocaleStringResult = intl3.formatToPlainString(_modDef3078.foKBCN, obj5);
+    toLocaleStringResult = intl3.formatToPlainString(_modDef3088.foKBCN, obj5);
   }
   const obj6 = { text: toLocaleStringResult, accessibilityLabel: null };
   const intl4 = util.intl;
-  obj6.accessibilityLabel = intl4.formatToPlainString(_modDef3078.IdRUAC, { count: stats.numMessagesSent });
+  obj6.accessibilityLabel = intl4.formatToPlainString(_modDef3088.IdRUAC, { count: stats.numMessagesSent });
   obj.messages = obj6;
   if (null == stats.topGuild) {
     const intl5 = util.intl;
-    const stringResult = intl5.string(_modDef3078.GultYJ);
+    const stringResult = intl5.string(_modDef3088.GultYJ);
     const obj8 = { text: stringResult, accessibilityLabel: stringResult };
     let obj9 = obj8;
   } else {
@@ -73,7 +73,7 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
     obj9.text = intl17.formatToPlainString(util.t.GBLpQ8, obj10);
     const intl18 = util.intl;
     const obj11 = { days: stats.topGuildNumDaysInteracted };
-    obj9.accessibilityLabel = intl18.formatToPlainString(_modDef3078.MpSH8v, obj11);
+    obj9.accessibilityLabel = intl18.formatToPlainString(_modDef3088.MpSH8v, obj11);
   }
   obj.topGuildDaysInteracted = obj9;
   if (null == stats.topGuild) {
@@ -85,7 +85,7 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
     obj13 = { text: stats.topGuild.guildName, accessibilityLabel: null };
     const intl6 = util.intl;
     const obj14 = { guildName: stats.topGuild.guildName };
-    obj13.accessibilityLabel = intl6.formatToPlainString(_modDef3078["9UTJ+t"], obj14);
+    obj13.accessibilityLabel = intl6.formatToPlainString(_modDef3088["9UTJ+t"], obj14);
   }
   obj.topGuildName = obj13;
   if (stats.numEmojisSent > 0) {
@@ -94,11 +94,11 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
   } else {
     const intl8 = util.intl;
     const obj15 = { count: stats.numEmojisSent };
-    toLocaleStringResult1 = intl8.formatToPlainString(_modDef3078.RHYx1k, obj15);
+    toLocaleStringResult1 = intl8.formatToPlainString(_modDef3088.RHYx1k, obj15);
   }
   const obj16 = { text: toLocaleStringResult1, accessibilityLabel: null };
   const intl9 = util.intl;
-  obj16.accessibilityLabel = intl9.formatToPlainString(_modDef3078["36qpUG"], { count: stats.numEmojisSent });
+  obj16.accessibilityLabel = intl9.formatToPlainString(_modDef3088["36qpUG"], { count: stats.numEmojisSent });
   obj.reactions = obj16;
   if (null == stats.topEmoji) {
     const intl11 = util.intl;
@@ -116,7 +116,7 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
     obj19 = { text: result, accessibilityLabel: null };
     const intl10 = util.intl;
     const obj20 = { emojiName: stats.topEmoji.emojiName };
-    obj19.accessibilityLabel = intl10.formatToPlainString(_modDef3078.CcBo8C, obj20);
+    obj19.accessibilityLabel = intl10.formatToPlainString(_modDef3088.CcBo8C, obj20);
   }
   obj.topEmojiName = obj19;
   if (stats.totalDaysPlayed > 0) {
@@ -125,11 +125,11 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
     let formatToPlainStringResult = intl13.formatToPlainString(util.t.GBLpQ8, obj21);
   } else {
     const intl12 = util.intl;
-    formatToPlainStringResult = intl12.string(_modDef3078.mg1NPe);
+    formatToPlainStringResult = intl12.string(_modDef3088.mg1NPe);
   }
   const obj22 = { text: formatToPlainStringResult, accessibilityLabel: null };
   const intl14 = util.intl;
-  obj22.accessibilityLabel = intl14.formatToPlainString(_modDef3078.LYcKX7, { days: stats.totalDaysPlayed });
+  obj22.accessibilityLabel = intl14.formatToPlainString(_modDef3088.LYcKX7, { days: stats.totalDaysPlayed });
   obj.daysPlayed = obj22;
   if (null == stats.topGame) {
     const intl16 = util.intl;
@@ -140,7 +140,7 @@ function transformCheckpoint2026StatsToRowGeneratedComponent(stats) {
     obj25 = { text: stats.topGame.applicationName, accessibilityLabel: null };
     const intl15 = util.intl;
     const obj26 = { gameName: stats.topGame.applicationName };
-    obj25.accessibilityLabel = intl15.formatToPlainString(_modDef3078.kLqpNC, obj26);
+    obj25.accessibilityLabel = intl15.formatToPlainString(_modDef3088.kLqpNC, obj26);
   }
   obj.topGameName = obj25;
   ({ topEmoji: obj.topEmoji, topGuild: obj.topGuild, topGame: obj.topGame } = stats);
@@ -350,7 +350,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (V2025.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3046.goiR2u);
+    return intl.string(_modDef3056.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

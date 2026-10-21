@@ -9,6 +9,7 @@ const items = [
   CheckpointNavigation.CheckpointRoute.VOICE_FACE,
   CheckpointNavigation.CheckpointRoute.MESSAGES_GENERAL,
   CheckpointNavigation.CheckpointRoute.MESSAGES_OUTFIT,
+  CheckpointNavigation.CheckpointRoute.SERVERS_GENERAL,
   CheckpointNavigation.CheckpointRoute.SERVERS_HEADWEAR,
   CheckpointNavigation.CheckpointRoute.EMOJI_GENERAL,
   CheckpointNavigation.CheckpointRoute.EMOJI_SHOES,

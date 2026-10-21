@@ -64,15 +64,15 @@ class OrbsArcadeFetchManager extends tmp2 {
         }
         let result = !tmp4;
         if (!tmp4) {
-          const obj = applyArgumentsResult(19096);
+          const obj = applyArgumentsResult(19171);
           result = obj.isOrbsArcadeEnrollmentOver(
-            applyArgumentsResult(19094).orbsArcadeGameStateFromServer(game_state),
+            applyArgumentsResult(18196).orbsArcadeGameStateFromServer(game_state),
           );
-          const obj2 = applyArgumentsResult(19094);
+          const obj2 = applyArgumentsResult(18196);
         }
         if (tmp8) {
-          const orbsArcadeGames1 = applyArgumentsResult(19095).fetchOrbsArcadeGames();
-          const obj3 = applyArgumentsResult(19095);
+          const orbsArcadeGames1 = applyArgumentsResult(19170).fetchOrbsArcadeGames();
+          const obj3 = applyArgumentsResult(19170);
         }
         tmp8 = found.versionId !== game_state.game_version_id || result;
       }
@@ -131,7 +131,7 @@ class OrbsArcadeFetchManager extends tmp2 {
             () => {
               closure_0.boundaryRefetchTimerId = null;
               closure_0.scheduledBoundaryAt = null;
-              orbsArcadeGames = applyArgumentsResult(19095).fetchOrbsArcadeGames();
+              orbsArcadeGames = applyArgumentsResult(19170).fetchOrbsArcadeGames();
             },
             Math.min(diff + Math.floor(Math.random() * closure_5), DAY),
           );

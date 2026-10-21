@@ -6,7 +6,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(5143).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5164).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (null != found1) {
                 if (null != allPowerups[found1]) {
                   const intl = closure_0(1128).intl;
-                  const tmp11 = skuId(2558);
+                  const tmp11 = skuId(2568);
                   let title;
                   if (allPowerups[found1] != null) {
                     title = tmp13.title;

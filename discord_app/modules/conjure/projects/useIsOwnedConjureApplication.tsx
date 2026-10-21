@@ -9,7 +9,7 @@ import ConjureProjectStore from "ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6724).isProjectOwner;
+const isProjectOwner = fn(6752).isProjectOwner;
 const useIsOwnedConjureApplication = "useIsOwnedConjureApplication";
 let closure_7 = new BackoffDefault(30000, 300000);
 const ReactCompilerGating = fn(558);
@@ -166,15 +166,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult3 = tmp(504);
       }
       const fn = function f() {
-        let tmp = closure_1;
+        let result = closure_1;
         if (closure_1) {
-          tmp = null != closure_0;
+          result = null != closure_0;
         }
-        if (tmp) {
-          tmp =
-            ConjureUtils.eligibleConjureGuilds(GuildStore.getGuildsArray(), useIsOwnedConjureApplication).length > 0;
+        if (result) {
+          result = ConjureUtils.hasEligibleConjureGuild(GuildStore.getGuildsArray(), useIsOwnedConjureApplication);
         }
-        return tmp;
+        return result;
       };
       const items5 = [arg1, arg0];
       cResult[1] = arg0;
@@ -193,15 +192,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(
         items,
         () => {
-          let tmp = closure_1;
+          let result = closure_1;
           if (closure_1) {
-            tmp = null != closure_0;
+            result = null != closure_0;
           }
-          if (tmp) {
-            tmp =
-              ConjureUtils.eligibleConjureGuilds(GuildStore.getGuildsArray(), useIsOwnedConjureApplication).length > 0;
+          if (result) {
+            result = ConjureUtils.hasEligibleConjureGuild(GuildStore.getGuildsArray(), useIsOwnedConjureApplication);
           }
-          return tmp;
+          return result;
         },
         items1,
       );

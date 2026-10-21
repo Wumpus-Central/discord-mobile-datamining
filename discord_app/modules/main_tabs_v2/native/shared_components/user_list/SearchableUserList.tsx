@@ -10,17 +10,17 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10545).UserRowModes;
+const UserRowModes = fn(10574).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
     paddingBottom: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
   },
-  searchBar: { height: "duration", minHeight: false },
+  searchBar: { height: "enabled", minHeight: false },
   searchBarRowContainer: null,
   noResults: null,
 };

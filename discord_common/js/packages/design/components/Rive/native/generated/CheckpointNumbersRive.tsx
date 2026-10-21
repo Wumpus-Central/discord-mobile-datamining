@@ -25,13 +25,44 @@ let closure_4 = [
   "onDataBindingChange",
 ];
 const jsx = fn(21).jsx;
-const artboardProperties = { Artboard: { TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" } };
-const artboardViewModelInstances = { Artboard: ["Instance"] };
+const artboardProperties = {
+  Artboard: {
+    DisplayValueString: "string",
+    reducedMotion: "boolean",
+    TextColor: "color",
+    "Fire CountUp": "trigger",
+    DisplayValue: "number",
+  },
+};
+const artboardViewModelInstances = { Artboard: ["default", "reducedMotion"] };
 let ReactCompilerGating = fn(558);
 let obj2 = {
   Artboard: ReactCompilerGating.isReactCompilerEnabled()
     ? function ArtboardBindings(arg0) {
-        ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = arg0);
+        ({ instance, reducedMotionEnabled, dataBinding, onDataBindingChange, playIfNeeded } = arg0);
+        let DisplayValueString;
+        if (dataBinding != null) {
+          DisplayValueString = dataBinding.DisplayValueString;
+        }
+        let DisplayValueString1;
+        if (onDataBindingChange != null) {
+          DisplayValueString1 = onDataBindingChange.DisplayValueString;
+        }
+        const stringBinding = BaseRive.useStringBinding(
+          "DisplayValueString",
+          instance,
+          DisplayValueString,
+          DisplayValueString1,
+          playIfNeeded,
+        );
+        const booleanBinding = BaseRive.useBooleanBinding(
+          "reducedMotion",
+          instance,
+          reducedMotionEnabled,
+          undefined,
+          playIfNeeded,
+        );
+        const tmpResult = BaseRive;
         let TextColor;
         if (dataBinding != null) {
           TextColor = dataBinding.TextColor;
@@ -41,6 +72,7 @@ let obj2 = {
           TextColor1 = onDataBindingChange.TextColor;
         }
         const colorBinding = BaseRive.useColorBinding("TextColor", instance, TextColor, TextColor1, playIfNeeded);
+        const tmpResult4 = BaseRive;
         let prop;
         if (dataBinding != null) {
           prop = dataBinding["Fire CountUp"];
@@ -50,7 +82,7 @@ let obj2 = {
           prop1 = onDataBindingChange["Fire CountUp"];
         }
         const triggerBinding = BaseRive.useTriggerBinding("Fire CountUp", instance, prop, prop1, playIfNeeded);
-        const tmpResult = BaseRive;
+        const tmpResult5 = BaseRive;
         let DisplayValue;
         if (dataBinding != null) {
           DisplayValue = dataBinding.DisplayValue;
@@ -69,7 +101,30 @@ let obj2 = {
         return null;
       }
     : function ArtboardBindings(arg0) {
-        ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = arg0);
+        ({ instance, reducedMotionEnabled, dataBinding, onDataBindingChange, playIfNeeded } = arg0);
+        let DisplayValueString;
+        if (dataBinding != null) {
+          DisplayValueString = dataBinding.DisplayValueString;
+        }
+        let DisplayValueString1;
+        if (onDataBindingChange != null) {
+          DisplayValueString1 = onDataBindingChange.DisplayValueString;
+        }
+        const stringBinding = BaseRive.useStringBinding(
+          "DisplayValueString",
+          instance,
+          DisplayValueString,
+          DisplayValueString1,
+          playIfNeeded,
+        );
+        const booleanBinding = BaseRive.useBooleanBinding(
+          "reducedMotion",
+          instance,
+          reducedMotionEnabled,
+          undefined,
+          playIfNeeded,
+        );
+        const tmpResult = BaseRive;
         let TextColor;
         if (dataBinding != null) {
           TextColor = dataBinding.TextColor;
@@ -79,6 +134,7 @@ let obj2 = {
           TextColor1 = onDataBindingChange.TextColor;
         }
         const colorBinding = BaseRive.useColorBinding("TextColor", instance, TextColor, TextColor1, playIfNeeded);
+        const tmpResult4 = BaseRive;
         let prop;
         if (dataBinding != null) {
           prop = dataBinding["Fire CountUp"];
@@ -88,7 +144,7 @@ let obj2 = {
           prop1 = onDataBindingChange["Fire CountUp"];
         }
         const triggerBinding = BaseRive.useTriggerBinding("Fire CountUp", instance, prop, prop1, playIfNeeded);
-        const tmpResult = BaseRive;
+        const tmpResult5 = BaseRive;
         let DisplayValue;
         if (dataBinding != null) {
           DisplayValue = dataBinding.DisplayValue;
@@ -142,7 +198,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (undefined !== tmp9) {
         str = tmp9;
       }
-      let str2 = "Instance";
+      let str2 = "default";
       if (undefined !== tmp10) {
         str2 = tmp10;
       }
@@ -222,7 +278,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         str = artboard;
       }
       defaultViewModelInstance = defaultViewModelInstance.defaultViewModelInstance;
-      let str2 = "Instance";
+      let str2 = "default";
       if (undefined !== defaultViewModelInstance) {
         str2 = defaultViewModelInstance;
       }

@@ -16,6 +16,7 @@ export const ServerHubVisitSource = {
   WINNER_BADGE: "winner_badge",
   LEADER_BADGE: "leader_badge",
   LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",
+  MUSIC_SYSTEM_MESSAGE: "music_system_message",
 };
 export const trackServerHubToggleSetting = function trackServerHubToggleSetting(id, settingType, value) {
   AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_TOGGLE_SETTING, { guild_id: id, type: settingType, value });

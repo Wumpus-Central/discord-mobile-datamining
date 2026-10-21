@@ -8,10 +8,10 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchMediaTypes = fn(9642).SearchMediaTypes;
+const SearchMediaTypes = fn(9672).SearchMediaTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj = {
   container: {
     borderRadius: nativeDefault.radii.xs,

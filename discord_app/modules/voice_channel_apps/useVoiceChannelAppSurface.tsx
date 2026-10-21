@@ -1,7 +1,7 @@
 // discord_app/modules/voice_channel_apps/useVoiceChannelAppSurface.tsx
+import voiceChannelAppSession from "voiceChannelAppSession.tsx";
 import useChannelAppFrameTeardownDefault from "../frames/useChannelAppFrameTeardown.tsx";
 import useVoiceChannelApp from "useVoiceChannelApp.tsx";
-import voiceChannelAppSession from "voiceChannelAppSession.tsx";
 import FramesStore from "../frames/FramesStore.tsx";
 import VoiceChannelAppStore from "VoiceChannelAppStore.tsx";
 

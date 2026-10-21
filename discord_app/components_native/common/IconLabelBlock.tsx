@@ -13,7 +13,7 @@ let closure_3 = ["error"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = {
   wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 },
   error: {
@@ -114,7 +114,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return React5(View, obj);
 };
-IconLabelBlock.contextType = fn(4999).ThemeContext;
+IconLabelBlock.contextType = fn(5020).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

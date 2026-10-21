@@ -146,7 +146,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               closure_145_14 = undefined;
               c20 = 1;
               c21 = 1;
-              return { value: "test", done: true };
+              return { value: "Reflect", done: true };
             }
             break;
           case 1:

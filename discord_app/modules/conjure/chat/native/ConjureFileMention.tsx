@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3820 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import conjureFileMentions from "../conjureFileMentions.tsx";
 import conjureStoredAttachments from "../conjureStoredAttachments.tsx";
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let obj2 = { chip: null, thumbnail: null, name: null };
 let obj3 = {
   flexDirection: "row",
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (name1 == null) {
               const intl = util.intl;
-              name1 = intl.string(_modDef3820.ff9Q4C);
+              name1 = intl.string(_modDef3830.ff9Q4C);
             }
             let name2;
             if (conjureStoredAttachment != null) {
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (name == null) {
         const intl = util.intl;
-        name = intl.string(_modDef3820.ff9Q4C);
+        name = intl.string(_modDef3830.ff9Q4C);
       }
       obj4.children = name;
       items[1] = hasOwnProperty(Text_Text.Text, obj4);

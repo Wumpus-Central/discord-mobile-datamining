@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2726 from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
+import _modDef2736 from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import NotifyFriendsOnProfileUpdateUtils from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdateUtils.tsx";
@@ -10,11 +10,11 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2726.F3llsQ);
+    return intl.string(_modDef2736.F3llsQ);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2726["6goWcz"]);
+    return intl.string(_modDef2736["6goWcz"]);
   },
   parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   useValue: UserSettings.NotifyFriendsOnProfileUpdate.useSetting,

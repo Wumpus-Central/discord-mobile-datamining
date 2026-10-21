@@ -90,9 +90,9 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
     return {
       colorString: null,
       colorStrings: null,
-      colorRoleId: "applicationId",
-      hoistRoleId: "default",
-      iconRoleId: "max",
+      colorRoleId: "unicodeVersion",
+      hoistRoleId: "t",
+      iconRoleId: "left",
       highestRoleId: "r",
     };
   } else {

@@ -8,11 +8,11 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
 const ActivityLayoutMode = fn(2026).ActivityLayoutMode;
-const ActivityPanelModes = fn(5570).ActivityPanelModes;
-const FramesConstants = fn(6727);
+const ActivityPanelModes = fn(5591).ActivityPanelModes;
+const FramesConstants = fn(6755);
 ({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_13 = createStyles.createStyles({
   activityContainer: { flex: 1 },
   wrapper: { position: "absolute", left: "50%", top: "50%" },

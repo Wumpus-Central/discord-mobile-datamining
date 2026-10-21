@@ -19,7 +19,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4804).createChannelRecordFromServer;
+let closure_6 = fn(4825).createChannelRecordFromServer;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_9,
@@ -44,6 +44,10 @@ export default {
     ({ location: _slicedToArray, onBeforeTransition: asyncGeneratorStep, navigateToChannel } = joinCallVideo);
     if (navigateToChannel === undefined) {
       navigateToChannel = true;
+    }
+    let flag2 = joinCallVideo.navigationReplace;
+    if (flag2 === undefined) {
+      flag2 = true;
     }
     const self = this;
     return (async () => {
@@ -96,6 +100,7 @@ export default {
                   v0(_getRecipientsResult, 1)[0],
                   asyncGeneratorStep,
                   navigateToChannel,
+                  flag2,
                 );
                 if (null != _openCachedDMChannelResult) {
                   joinCallIfRequested(_openCachedDMChannelResult);
@@ -152,7 +157,7 @@ export default {
               if (closure_129_4 != null) {
                 closure_129_4();
               }
-              closure_128_0(closure_129_6._openPrivateChannel(closure_128_1.body));
+              closure_128_0(closure_129_7._openPrivateChannel(closure_128_1.body, closure_129_6));
             }
             v0 = 0;
             c5 = 3;
@@ -274,6 +279,9 @@ export default {
     if (navigateToChannel === undefined) {
       flag = true;
     }
+    if (flag2 === undefined) {
+      flag2 = true;
+    }
     const dMFromUserId = ChannelStore.getDMFromUserId(id);
     let channel = null;
     if (null != dMFromUserId) {
@@ -287,7 +295,8 @@ export default {
           fn();
         }
         if (null != obj2.getRootNavigationRef()) {
-          transitionToChannel.transitionToChannel(channel.id, { navigationReplace: true });
+          const obj4 = { navigationReplace: flag2 };
+          transitionToChannel.transitionToChannel(channel.id, obj4);
           tmp3 = channel;
           const tmp6Result = transitionToChannel;
         } else {
@@ -401,11 +410,16 @@ export default {
     }
     return items1;
   },
-  _openPrivateChannel(body) {
+  _openPrivateChannel(body, arg1) {
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = true;
+    }
     const tmp = closure_6(body);
     DispatcherDefault.dispatch({ type: "CHANNEL_CREATE", channel: tmp });
     if (null != obj2.getRootNavigationRef()) {
-      transitionToChannel.transitionToChannel(tmp.id, { navigationReplace: true });
+      const obj3 = { navigationReplace: flag };
+      transitionToChannel.transitionToChannel(tmp.id, obj3);
       const tmp5Result = transitionToChannel;
     } else {
       const privateChannel = SelectedChannelActionCreatorsDefault.selectPrivateChannel(tmp.id);
@@ -432,7 +446,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
+      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     });
     if (flag) {
@@ -447,7 +461,7 @@ export default {
     };
     const obj2 = {
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
+      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     };
     const tmpResult2 = DispatcherDefault;
@@ -593,8 +607,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7373).checkGuildTemplateDirty(closure_128_2);
-        name(7373);
+        const result = name(7401).checkGuildTemplateDirty(closure_128_2);
+        name(7401);
       }
       return closure_128_1;
     })();

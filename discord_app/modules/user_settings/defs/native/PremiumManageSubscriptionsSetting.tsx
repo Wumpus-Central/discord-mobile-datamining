@@ -40,7 +40,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       }, []);
     };
-const SettingBuilders = fn(11111);
+const SettingBuilders = fn(11155);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShowManageSubscriptionsSetting() {
       const cResult = c.c(1);
@@ -72,7 +72,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(16085).SubscriptionIcon,
+  IconComponent: fn(16161).SubscriptionIcon,
   usePreNavigationAction: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
     ? function useShowManageSubscriptionsSetting() {

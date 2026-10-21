@@ -116,8 +116,8 @@ export default {
                       const join_url = body.body.join_url;
                       const secret = body.body.secret;
                       if (null != join_url) {
-                        activityChannelId(5622).openURL(join_url, constants2.SAFARI);
-                        const obj3 = activityChannelId(5622);
+                        activityChannelId(5642).openURL(join_url, constants2.SAFARI);
+                        const obj3 = activityChannelId(5642);
                         const obj2 = {
                           type: "ACTIVITY_JOIN",
                           applicationId: null,
@@ -146,8 +146,8 @@ export default {
                         const _HermesInternal = HermesInternal;
                         const combined =
                           "" + deeplink_uri.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-                        activityChannelId(5622).openURL(combined, constants2.SAFARI);
-                        const obj6 = activityChannelId(5622);
+                        activityChannelId(5642).openURL(combined, constants2.SAFARI);
+                        const obj6 = activityChannelId(5642);
                         const obj12 = {
                           type: "ACTIVITY_JOIN",
                           applicationId: null,

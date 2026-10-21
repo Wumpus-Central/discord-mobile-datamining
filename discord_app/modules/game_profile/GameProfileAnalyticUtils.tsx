@@ -6,7 +6,7 @@ import ContentInventoryStore from "../content_inventory/ContentInventoryStore.ts
 require = fn;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(8771).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8798).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -102,6 +102,10 @@ export const GameProfileTrackActionActions = {
   [43]: "AppStoreReviews",
   GooglePlayReviews: 44,
   [44]: "GooglePlayReviews",
+  AppStoreLink: 45,
+  [45]: "AppStoreLink",
+  GooglePlayStoreLink: 46,
+  [46]: "GooglePlayStoreLink",
 };
 export const GameProfileSources = {
   ActivityCard: "activity_card",

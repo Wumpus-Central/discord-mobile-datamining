@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx
-import _modDef9549 from "../../../../../../../discord_assets/assets/connections/xbox_discord_link.png.js";
+import _modDef9579 from "../../../../../../../discord_assets/assets/connections/xbox_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const XboxLinkModalScenes = fn(9539).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9569).XboxLinkModalScenes;
 const PlatformTypes = fn(1087).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_7 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { uri: _modDef9549 };
+        const obj3 = { uri: _modDef9579 };
         cResult[4] = obj3;
         let tmp8 = obj3;
       } else {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp14;
         }
       }
-      const tmp15 = jsx(navigation(9550).TwoWayLinkPreConnect, {
+      const tmp15 = jsx(navigation(9580).TwoWayLinkPreConnect, {
         platformType: PlatformTypes.XBOX,
         onError: tmp7,
         onNext: tmp6,
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = noop.useCallback(() => {
         navigation.push(XboxLinkModalScenes.ERROR);
       }, items1);
-      const memo = noop.useMemo(() => ({ uri: _modDef9549 }), []);
+      const memo = noop.useMemo(() => ({ uri: _modDef9579 }), []);
       const obj2 = {
         platformType: PlatformTypes.XBOX,
         onError: callback1,
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.title = intl.string(navigation(1128).t["e/z3na"]);
       const intl2 = navigation(1128).intl;
       obj2.body = intl2.string(navigation(1128).t["7tXu0i"]);
-      return jsx(navigation(9550).TwoWayLinkPreConnect, {
+      return jsx(navigation(9580).TwoWayLinkPreConnect, {
         platformType: PlatformTypes.XBOX,
         onError: callback1,
         onNext: callback,

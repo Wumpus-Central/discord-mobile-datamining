@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import isChangelogUserDefault from "../../changelog/utils/isChangelogUser.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../../_runtime/05230_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05251_BottomSheetModal.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
@@ -22,13 +22,13 @@ import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7253).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7281).UserProfileThemeTypes;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5227).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5248).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4945);
+const createStyles = fn(4966);
 let closure_18 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },
@@ -179,7 +179,7 @@ let closure_27 = {
 const __initData7 = {
   code: "function UserProfileActionSheetTsx8(){const{scrollPosition}=this.__closure;const transform=scrollPosition.get()<=0?[{translateY:scrollPosition.get()}]:[];return{transform:transform};}",
 };
-const __initData8 = {
+let closure_29 = {
   code: "function UserProfileActionSheetTsx9(){const{scrollPosition}=this.__closure;const transform=scrollPosition.get()<=0?[{translateY:scrollPosition.get()}]:[];return{transform:transform};}",
 };
 ReactCompilerGating = fn(558);
@@ -189,11 +189,12 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function UserProfileActionSheet(userId) {
-        const cResult = userId(localUser[15]).c(191);
+        const cResult = userId(localUser[15]).c(192);
         userId = userId.userId;
         const channelId = userId.channelId;
         ({ messageId, localUser } = userId);
-        ({ roleId, sessionId, onClose } = userId);
+        ({ roleId, sessionId, navigationReplace } = userId);
+        const onClose = userId.onClose;
         ({ openedAt, isPreviewingChanges, collectibleProfileOverrides, showGuildProfile, sourceAnalyticsLocations } =
           userId);
         let tmp4 = undefined !== isPreviewingChanges;
@@ -212,53 +213,53 @@ export default noop.memo(
         } else {
           tmp6 = cResult[1];
         }
-        noop = tmp6;
-        closure_18();
+        const location_stack = tmp6;
+        c18();
         let obj = userId(localUser[15]);
         const sharedValue = userId(localUser[14]).useSharedValue(0);
         const tmpResult = userId(localUser[14]);
         const sharedValue1 = userId(localUser[14]).useSharedValue(-1);
         const top = channelId(localUser[16])().top;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const items1 = [UserStore];
+          const items1 = [stateFromStores2];
           cResult[2] = items1;
           let tmp11 = items1;
         } else {
           tmp11 = cResult[2];
         }
         if (cResult[3] !== userId) {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
           }
           cResult[3] = userId;
-          cResult[4] = X;
+          cResult[4] = Z;
         } else {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
           }
         }
         const tmpResult9 = userId(localUser[14]);
-        const stateFromStores = userId(localUser[17]).useStateFromStores(tmp11, X);
+        const stateFromStores = userId(localUser[17]).useStateFromStores(tmp11, Z);
         let tmp15 = stateFromStores;
         if (stateFromStores == null) {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
           }
           if (localUser != null) {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
             }
           }
           if (tmp16 === userId) {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
@@ -266,9 +267,9 @@ export default noop.memo(
           }
           tmp15 = tmp17;
         }
-        c6 = tmp15;
+        c7 = tmp15;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
@@ -277,14 +278,14 @@ export default noop.memo(
           cResult[5] = items2;
           const tmp18 = items2;
         } else {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
           }
         }
         if (cResult[6] !== channelId) {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
@@ -295,7 +296,7 @@ export default noop.memo(
           cResult[8] = items3;
           let tmp20 = items3;
         } else {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
@@ -305,62 +306,62 @@ export default noop.memo(
         const tmpResult10 = userId(localUser[17]);
         const stateFromStores1 = userId(localUser[17]).useStateFromStores(tmp18, tmp21, tmp20);
         if (stateFromStores1 != null) {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
           }
         }
-        c7 = tmp23;
+        c8 = tmp23;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
           }
-          const items4 = [stateFromStores2];
+          const items4 = [c8];
           cResult[9] = items4;
           const tmp24 = items4;
         } else {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
           }
         }
         if (cResult[10] === undefined) {
-          class X {
+          class Z {
             constructor() {
               return closure_9.getUser(userId);
             }
           }
-          stateFromStores2 = tmp(localUser[17]).useStateFromStores(tmp24, re);
+          stateFromStores2 = tmp(localUser[17]).useStateFromStores(tmp24, le);
           const tmpResult12 = tmp(localUser[17]);
           if (tmp15 != null) {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
             }
           }
           if (undefined == null) {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
             }
           }
           if (tmp5) {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
             }
           }
           const tmp10Result = tmp10(localUser[18]);
-          UserStore = tmp10(localUser[18])(undefined, undefined);
+          UserProfileSettingsStore = tmp10(localUser[18])(undefined, undefined);
           if (cResult[13] !== tmp6) {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
@@ -370,7 +371,7 @@ export default noop.memo(
             cResult[14] = tmp31;
             const arraySpreadResult = HermesBuiltin.arraySpread(tmp6, 0);
           } else {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
@@ -380,25 +381,25 @@ export default noop.memo(
           const tmp10ResultResult = tmp10(localUser[18])(undefined, undefined);
           const bottomSheetRef1 = tmp(localUser[21]).useBottomSheetRef();
           ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
-          noop.useRef(null);
+          onClose.useRef(null);
           const tmpResult13 = tmp(localUser[21]);
           const sharedValue2 = tmp(localUser[14]).useSharedValue(0);
           if (cResult[15] !== sharedValue2) {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
             }
             const fn = (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-              const scrollEventsHandlersDefault = animatedScrollableState(5230).useScrollEventsHandlersDefault(
+              const scrollEventsHandlersDefault = animatedScrollableState(5251).useScrollEventsHandlersDefault(
                 animatedRef,
                 sharedValue,
                 lockableScrollableContentOffsetY,
               );
-              const obj = animatedScrollableState(5230);
-              animatedScrollableState = animatedScrollableState(5230).useBottomSheetInternal().animatedScrollableState;
+              const obj = animatedScrollableState(5251);
+              animatedScrollableState = animatedScrollableState(5251).useBottomSheetInternal().animatedScrollableState;
               const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-              const obj2 = animatedScrollableState(5230);
+              const obj2 = animatedScrollableState(5251);
               const fn = function s(contentOffset, arg1) {
                 if (handleOnScroll != null) {
                   tmp(contentOffset, arg1);
@@ -410,12 +411,12 @@ export default noop.memo(
                 }
                 const result = animatedScrollableState.set(num);
               };
-              const obj3 = animatedScrollableState(5014);
+              const obj3 = animatedScrollableState(5035);
               fn.__closure = {
                 defaultHandleOnScroll: handleOnScroll,
                 scrollPosition: animatedScrollableState,
                 animatedScrollableState,
-                SCROLLABLE_STATE: animatedScrollableState(5230).SCROLLABLE_STATE,
+                SCROLLABLE_STATE: animatedScrollableState(5251).SCROLLABLE_STATE,
               };
               fn.__workletHash = 1075381102662;
               fn.__initData = __initData;
@@ -425,7 +426,7 @@ export default noop.memo(
                 defaultHandleOnScroll: handleOnScroll,
                 scrollPosition: animatedScrollableState,
                 animatedScrollableState,
-                SCROLLABLE_STATE: animatedScrollableState(5230).SCROLLABLE_STATE,
+                SCROLLABLE_STATE: animatedScrollableState(5251).SCROLLABLE_STATE,
               };
               const merged = Object.assign(scrollEventsHandlersDefault);
               obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);
@@ -434,7 +435,7 @@ export default noop.memo(
             cResult[15] = sharedValue2;
             cResult[16] = fn;
           } else {
-            class X {
+            class Z {
               constructor() {
                 return closure_9.getUser(userId);
               }
@@ -456,23 +457,25 @@ export default noop.memo(
           _e.__workletHash = 15687962271123;
           _e.__initData = __initData7;
           const animatedStyle = tmp(localUser[14]).useAnimatedStyle(_e);
-          const tmp42 = onClose(noop.useState(false), 2);
-          closure_12 = tmp42[0];
-          closure_13 = tmp42[1];
+          const tmp42 = navigationReplace(onClose.useState(false), 2);
+          closure_13 = tmp42[0];
+          closure_14 = tmp42[1];
           const tmpResult15 = tmp(localUser[14]);
-          [r10174, closure_14] = onClose(noop.useState(0), 2);
+          [r10175, ACTION_SHEET_MAX_WIDTH] = navigationReplace(onClose.useState(0), 2);
           const _Symbol = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
-            cResult[17] = tmp45;
+            cResult[17] = Ee;
           } else {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
           }
@@ -480,82 +483,91 @@ export default noop.memo(
           const setting = ProfileVisibility.useSetting();
           const _Symbol2 = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
-            const items5 = [analyticsLocations];
-            class Ue {
+            const items5 = [UserProfileSettingsStore];
+            class Re {
               constructor() {
-                return analyticsLocations.getPendingChanges();
+                return closure_10.getPendingChanges();
               }
             }
             cResult[18] = items5;
-            cResult[19] = Ue;
-            let tmp48 = Ue;
-            const tmp47 = items5;
+            cResult[19] = Re;
+            let tmp47 = Re;
+            const tmp46 = items5;
           } else {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
-            tmp48 = cResult[19];
+            tmp47 = cResult[19];
           }
-          const tmp43 = onClose(noop.useState(0), 2);
-          const stateFromStoresObject = tmp(localUser[17]).useStateFromStoresObject(tmp47, tmp48);
+          const tmp43 = navigationReplace(onClose.useState(0), 2);
+          const stateFromStoresObject = tmp(localUser[17]).useStateFromStoresObject(tmp46, tmp47);
           ({ pendingThemeColors, pendingAvatarDecoration, pendingProfileEffect, pendingProfileFrame } =
             stateFromStoresObject);
           if (collectibleProfileOverrides != null) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
           }
           if (undefined == null) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
           }
-          c15 = tmp50;
+          c16 = tmp49;
           if (collectibleProfileOverrides != null) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
           }
           if (undefined == null) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
           }
-          c16 = tmp51;
+          c17 = tmp50;
           if (collectibleProfileOverrides != null) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
           }
           if (undefined == null) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
           }
-          c17 = tmp52;
+          c18 = tmp51;
           if (cResult[20] === channelId) {
-            class X {
-              constructor() {
-                return closure_9.getUser(userId);
+            class Ee {
+              constructor(arg0) {
+                tmp = closure_15(Math.floor(userId.nativeEvent.layout.width));
+                return;
               }
             }
           }
@@ -579,22 +591,23 @@ export default noop.memo(
           cResult[27] = obj3;
           const tmpResult16 = tmp(localUser[17]);
         }
-        re = function re() {
+        le = function le() {
           let member = null;
-          if (null != c7) {
+          if (null != c8) {
             member = GuildMemberStore.getMember(tmp, userId);
           }
           return member;
         };
         cResult[10] = undefined;
         cResult[11] = userId;
-        cResult[12] = re;
+        cResult[12] = le;
         const tmpResult11 = userId(localUser[17]);
       }
     : function UserProfileActionSheet(userId) {
         userId = userId.userId;
         const channelId = userId.channelId;
         const localUser = userId.localUser;
+        const navigationReplace = userId.navigationReplace;
         const onClose = userId.onClose;
         ({ openedAt, isPreviewingChanges } = userId);
         ({ messageId, roleId, sessionId, disableCalls, disableMessage, isVoiceContext, location: _location } = userId);
@@ -609,38 +622,41 @@ export default noop.memo(
         if (prop === undefined) {
           prop = [];
         }
-        let stateFromStores;
         let guild_id;
         let stateFromStores2;
-        closure_13 = undefined;
+        closure_14 = undefined;
         let analyticsLocations;
         let sharedValue2;
         let first;
-        closure_17 = undefined;
+        closure_18 = undefined;
         let first1;
-        closure_19 = undefined;
+        closure_20 = undefined;
         let avatarDecoration;
         let profileEffect1;
         let profileFrame1;
         let createUserProfileAnalyticsContext;
-        closure_24 = undefined;
+        closure_25 = undefined;
         let width;
-        closure_26 = undefined;
+        closure_27 = undefined;
         let navigation;
         function handleUserSettingsClose() {
           navigation.goBack();
           const merged = Object.assign(createUserProfileAnalyticsContext);
-          showUserProfileActionSheetDefault({ sourceAnalyticsLocations: analyticsLocations, localUser });
+          showUserProfileActionSheetDefault({
+            navigationReplace,
+            sourceAnalyticsLocations: analyticsLocations,
+            localUser,
+          });
         }
-        let tmp = first1();
+        let tmp = closure_18();
         const tmp3 = localUser;
         const sharedValue = userId(localUser[14]).useSharedValue(0);
         let obj = userId(localUser[14]);
         const sharedValue1 = userId(localUser[14]).useSharedValue(-1);
         const top = channelId(localUser[16])().top;
         let obj2 = userId(localUser[14]);
-        let items = [stateFromStores];
-        stateFromStores = userId(localUser[17]).useStateFromStores(items, () => UserStore.getUser(userId));
+        let items = [top];
+        const stateFromStores = userId(localUser[17]).useStateFromStores(items, () => UserStore.getUser(userId));
         let obj4 = stateFromStores;
         if (stateFromStores == null) {
           let id;
@@ -654,7 +670,7 @@ export default noop.memo(
           obj4 = tmp9;
         }
         let obj3 = userId(localUser[17]);
-        const items1 = [sharedValue1];
+        const items1 = [sharedValue];
         const items2 = [channelId];
         const stateFromStores1 = userId(tmp3[17]).useStateFromStores(
           items1,
@@ -666,7 +682,7 @@ export default noop.memo(
           guild_id = stateFromStores1.guild_id;
         }
         const tmp2Result = userId(tmp3[17]);
-        const items3 = [top];
+        const items3 = [sharedValue1];
         stateFromStores2 = userId(tmp3[17]).useStateFromStores(items3, () => {
           let member = null;
           if (null != guild_id) {
@@ -680,14 +696,14 @@ export default noop.memo(
           id1 = obj4.id;
         }
         if (id1 == null) {
-          id1 = closure_13;
+          id1 = stateFromStores2;
         }
         let tmp15;
         if (showGuildProfile) {
           tmp15 = guild_id;
         }
         const tmp6ResultResult = channelId(tmp3[18])(id1, tmp15);
-        closure_13 = tmp6ResultResult;
+        closure_14 = tmp6ResultResult;
         const items4 = [];
         const tmp6Result = channelId(tmp3[18]);
         const tmp6Result10 = channelId(tmp3[20]);
@@ -696,22 +712,22 @@ export default noop.memo(
         const arraySpreadResult = HermesBuiltin.arraySpread(prop, 0);
         const bottomSheetRef = userId(tmp3[21]).useBottomSheetRef();
         const bottomSheetClose = bottomSheetRef.bottomSheetClose;
-        const ref = isPreviewingChanges.useRef(null);
+        const ref = onClose.useRef(null);
         const tmp2Result14 = userId(tmp3[21]);
         sharedValue2 = userId(tmp3[14]).useSharedValue(0);
         const items5 = [sharedValue2];
-        const memo = isPreviewingChanges.useMemo(() => {
+        const memo = onClose.useMemo(() => {
           closure_0 = sharedValue2;
           return (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-            const scrollEventsHandlersDefault = animatedScrollableState(5230).useScrollEventsHandlersDefault(
+            const scrollEventsHandlersDefault = animatedScrollableState(5251).useScrollEventsHandlersDefault(
               animatedRef,
               sharedValue,
               lockableScrollableContentOffsetY,
             );
-            const obj = animatedScrollableState(5230);
-            animatedScrollableState = animatedScrollableState(5230).useBottomSheetInternal().animatedScrollableState;
+            const obj = animatedScrollableState(5251);
+            animatedScrollableState = animatedScrollableState(5251).useBottomSheetInternal().animatedScrollableState;
             const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-            const obj2 = animatedScrollableState(5230);
+            const obj2 = animatedScrollableState(5251);
             const fn = function s(contentOffset, arg1) {
               if (handleOnScroll != null) {
                 tmp(contentOffset, arg1);
@@ -723,12 +739,12 @@ export default noop.memo(
               }
               const result = animatedScrollableState.set(num);
             };
-            const obj3 = animatedScrollableState(5014);
+            const obj3 = animatedScrollableState(5035);
             fn.__closure = {
               defaultHandleOnScroll: handleOnScroll,
               scrollPosition: animatedScrollableState,
               animatedScrollableState,
-              SCROLLABLE_STATE: animatedScrollableState(5230).SCROLLABLE_STATE,
+              SCROLLABLE_STATE: animatedScrollableState(5251).SCROLLABLE_STATE,
             };
             fn.__workletHash = 1075381102662;
             fn.__initData = __initData;
@@ -738,7 +754,7 @@ export default noop.memo(
               defaultHandleOnScroll: handleOnScroll,
               scrollPosition: animatedScrollableState,
               animatedScrollableState,
-              SCROLLABLE_STATE: animatedScrollableState(5230).SCROLLABLE_STATE,
+              SCROLLABLE_STATE: animatedScrollableState(5251).SCROLLABLE_STATE,
             };
             const merged = Object.assign(scrollEventsHandlersDefault);
             obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);
@@ -746,10 +762,10 @@ export default noop.memo(
           };
         }, items5);
         const tmp2Result15 = userId(tmp3[14]);
-        class W {
+        class Y {
           constructor() {
-            obj = closure_15;
-            if (closure_15.get() <= 0) {
+            obj = closure_16;
+            if (closure_16.get() <= 0) {
               obj1 = { translateY: null };
               obj1.translateY = obj.get();
               items = [];
@@ -761,24 +777,26 @@ export default noop.memo(
             return { transform: items1 };
           }
         }
-        W.__closure = { scrollPosition: sharedValue2 };
-        W.__workletHash = 4091977514258;
-        W.__initData = __initData8;
-        const animatedStyle = userId(tmp3[14]).useAnimatedStyle(W);
-        const tmp24 = onClose(isPreviewingChanges.useState(false), 2);
+        Y.__closure = { scrollPosition: sharedValue2 };
+        Y.__workletHash = 4091977514258;
+        Y.__initData = handleUserSettingsClose;
+        const animatedStyle = userId(tmp3[14]).useAnimatedStyle(Y);
+        const tmp24 = navigationReplace(onClose.useState(false), 2);
         first = tmp24[0];
-        closure_17 = tmp24[1];
-        const tmp26 = onClose(isPreviewingChanges.useState(0), 2);
+        closure_18 = tmp24[1];
+        const tmp26 = navigationReplace(onClose.useState(0), 2);
         first1 = tmp26[0];
-        closure_19 = tmp26[1];
-        const callback = isPreviewingChanges.useCallback((nativeEvent) => {
-          closure_19(Math.floor(nativeEvent.nativeEvent.layout.width));
+        closure_20 = tmp26[1];
+        const callback = onClose.useCallback((nativeEvent) => {
+          closure_20(Math.floor(nativeEvent.nativeEvent.layout.width));
         }, []);
         const ProfileVisibility = tmp2(tmp3[22]).ProfileVisibility;
         const setting = ProfileVisibility.useSetting();
         const tmp2Result16 = userId(tmp3[14]);
-        const items6 = [obj4];
-        const stateFromStoresObject = userId(tmp3[17]).useStateFromStoresObject(items6, () => obj4.getPendingChanges());
+        const items6 = [stateFromStores];
+        const stateFromStoresObject = userId(tmp3[17]).useStateFromStoresObject(items6, () =>
+          stateFromStores.getPendingChanges(),
+        );
         avatarDecoration = undefined;
         ({ pendingThemeColors, pendingAvatarDecoration, pendingProfileEffect, pendingProfileFrame } =
           stateFromStoresObject);
@@ -828,7 +846,7 @@ export default noop.memo(
             tmp38 = skuId;
           }
           const tmp6Result2Result = tmp6(tmp3[25])(tmp38);
-          closure_24 = tmp6Result2Result;
+          closure_25 = tmp6Result2Result;
           let tmp41;
           const tmp6Result11 = tmp6(tmp3[25]);
           if (!isScreenLandscape) {
@@ -847,7 +865,7 @@ export default noop.memo(
           const items7 = [tmp6Result2Result, sharedValue, top, sharedValue1, first1];
           const memo1 = obj8.useMemo(() => {
             let tmp2 = null;
-            if (null != closure_24) {
+            if (null != closure_25) {
               const obj = {
                 animatedPosition: sharedValue,
                 safeAreaTop: top,
@@ -890,7 +908,7 @@ export default noop.memo(
             let tmp110Result = null != tmp6Result2Result;
             const memo2 = obj8.useMemo(() => {
               if (isPreviewingChanges) {
-                if (null != closure_24) {
+                if (null != closure_25) {
                   const _Math = Math;
                   const bound = Math.min(width, ACTION_SHEET_MAX_WIDTH);
                   return scaleProfileFrameDefault(tmp, bound).overflowTop;
@@ -901,7 +919,7 @@ export default noop.memo(
             if (!tmp110Result) {
               tmp110Result = isPreviewingChanges;
             }
-            const tmp56 = tmp6(tmp3[33])(sharedValue2);
+            const tmp56 = tmp6(tmp3[33])(analyticsLocations);
             const tmp60 = tmp6(tmp3[37])();
             const token = tmp2(tmp3[38]).useToken(tmp6(tmp3[39]).colors.INTERACTIVE_TEXT_HOVER, theme);
             const obj7 = {
@@ -913,7 +931,7 @@ export default noop.memo(
               guildMember: stateFromStores2,
             };
             const tmp62 = tmp6(tmp3[40])(obj7);
-            closure_26 = tmp62;
+            closure_27 = tmp62;
             const items9 = [obj4, channelId];
             const items10 = [stateFromStores, userId];
             const memo3 = obj8.useMemo(() => {
@@ -955,7 +973,7 @@ export default noop.memo(
             const effect2 = obj8.useEffect(() => {
               let tmp = first;
               if (!first) {
-                tmp = null == closure_13;
+                tmp = null == closure_14;
               }
               if (!tmp) {
                 let tmp6 = null == guild_id;
@@ -967,8 +985,8 @@ export default noop.memo(
                   tmp6 = null != prop;
                 }
                 if (tmp6) {
-                  AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, closure_26);
-                  closure_17(true);
+                  AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, closure_27);
+                  closure_18(true);
                 }
               }
             }, items12);
@@ -1084,9 +1102,9 @@ export default noop.memo(
               const obj12 = { style: { marginTop: 42 }, Illustration: tmp2(tmp3[52]).NoResults, body: null };
               const intl2 = tmp2(tmp3[53]).intl;
               obj12.body = intl2.string(tmp2(tmp3[53]).t.eAn6z2);
-              obj11.children = first(tmp2(tmp3[51]).EmptyState, obj12);
-              obj10.children = first(tmp2(tmp3[50]).BottomSheet, obj11);
-              obj9.children = first(tmp2(tmp3[23]).UserProfileAnalyticsProvider, obj10);
+              obj11.children = sharedValue2(tmp2(tmp3[51]).EmptyState, obj12);
+              obj10.children = sharedValue2(tmp2(tmp3[50]).BottomSheet, obj11);
+              obj9.children = sharedValue2(tmp2(tmp3[23]).UserProfileAnalyticsProvider, obj10);
               let tmp109Result10 = tmp105(tmp2(tmp3[20]).AnalyticsLocationProvider, obj9);
             } else {
               const obj13 = { theme, primaryColor, secondaryColor, children: null };
@@ -1128,11 +1146,11 @@ export default noop.memo(
               let tmp109Result = tmp110Result;
               if (tmp110Result) {
                 const obj17 = { animatedPosition: sharedValue };
-                tmp109Result = tmp109(createUserProfileAnalyticsContext, obj17);
+                tmp109Result = tmp109(profileFrame1, obj17);
               }
               const items15 = [tmp109Result, , ,];
               const obj18 = { gradientHeight: diff, bannerHeight: tmp56 };
-              items15[1] = first(tmp6(tmp3[55]), obj18);
+              items15[1] = sharedValue2(tmp6(tmp3[55]), obj18);
               const obj19 = {
                 scrollsToTop: false,
                 style: tmp.container,
@@ -1161,6 +1179,7 @@ export default noop.memo(
                 displayProfile: null,
                 disableCalls: null,
                 disableMessage: null,
+                navigationReplace: null,
                 isVoiceContext: null,
                 location: null,
                 disableStatus: null,
@@ -1181,6 +1200,7 @@ export default noop.memo(
               obj22.displayProfile = tmp6ResultResult;
               obj22.disableCalls = disableCalls;
               obj22.disableMessage = disableMessage;
+              obj22.navigationReplace = navigationReplace;
               obj22.isVoiceContext = isVoiceContext;
               obj22.location = _location;
               obj22.disableStatus = memo3;
@@ -1205,7 +1225,11 @@ export default noop.memo(
               };
               obj22.showUserProfileActionSheet = function showUserProfileActionSheetWithParams() {
                 const merged = Object.assign(createUserProfileAnalyticsContext);
-                showUserProfileActionSheetDefault({ sourceAnalyticsLocations: analyticsLocations, localUser });
+                showUserProfileActionSheetDefault({
+                  navigationReplace,
+                  sourceAnalyticsLocations: analyticsLocations,
+                  localUser,
+                });
               };
               obj22.initialSection = userId.initialSection;
               tmp2Result23 = tmp2(tmp3[56]);
@@ -1246,9 +1270,9 @@ export default noop.memo(
               const obj29 = { children: null };
               items16[1] = tmp109Result7;
               obj21.children = items16;
-              obj29.children = closure_17(sharedValue, obj21);
-              obj19.children = first(sharedValue, obj29);
-              items15[2] = first(tmp2(tmp3[13]).BottomSheetScrollView, obj19);
+              obj29.children = first(prop, obj21);
+              obj19.children = sharedValue2(prop, obj29);
+              items15[2] = sharedValue2(tmp2(tmp3[13]).BottomSheetScrollView, obj19);
               let tmp109Result8 = !tmp110Result;
               if (!tmp110Result) {
                 const obj30 = { variant: "floating", tabStyle: null, onPress: null };
@@ -1259,7 +1283,7 @@ export default noop.memo(
               }
               items15[3] = tmp109Result8;
               obj16.children = items15;
-              const items18 = [closure_17(tmp2(tmp3[50]).BottomSheet, obj16), ,];
+              const items18 = [first(tmp2(tmp3[50]).BottomSheet, obj16), ,];
               if (tmp110Result) {
                 const obj32 = {
                   animatedPosition: sharedValue,
@@ -1271,7 +1295,7 @@ export default noop.memo(
                 if (tmp109Result9) {
                   const obj33 = {
                     frame: tmp6Result2Result,
-                    profileThemeType: guild_id.ACTION_SHEET,
+                    profileThemeType: obj4.ACTION_SHEET,
                     frameOrder: tmp2(tmp3[30]).ProfileFrameLayerOrder.FRONT,
                     containerWidth: first1,
                   };
@@ -1285,7 +1309,7 @@ export default noop.memo(
                 obj34.onPress = bottomSheetClose;
                 items19[1] = tmp109(tmp2(tmp3[62]).ActionSheetHeaderBar, obj34);
                 obj32.children = items19;
-                tmp110Result = tmp110(closure_26, obj32);
+                tmp110Result = tmp110(width, obj32);
               }
               items18[1] = tmp110Result;
               if (!isPreviewingChanges) {

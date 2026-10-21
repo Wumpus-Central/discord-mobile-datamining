@@ -32,7 +32,17 @@ export default function DirectVideo(streamId, onContainerResized) {
   const items = [flag2];
   const layoutEffect = onResize.useLayoutEffect(() => {
     let current = ref.current;
-    const resizeObserver = new globalThis.ResizeObserver((arg0) => {
+    let defaultView;
+    if (current != null) {
+      const ownerDocument = current.ownerDocument;
+      if (ownerDocument != null) {
+        defaultView = ownerDocument.defaultView;
+      }
+    }
+    if (defaultView == null) {
+      defaultView = window;
+    }
+    const resizeObserver = new defaultView.ResizeObserver((arg0) => {
       if (flag2) {
         const iter = arg0[Symbol.iterator]();
         const nextResult = iter.next();
