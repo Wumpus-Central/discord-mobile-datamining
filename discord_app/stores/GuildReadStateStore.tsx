@@ -94,7 +94,7 @@ function isCountableChannel(channel) {
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
-            let result2 = collapsed(channel.type);
+            let result2 = v65535(channel.type);
             if (!result2) {
               result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(channel);
             }
@@ -535,7 +535,7 @@ function recountGuild(guildId, hasItem) {
                 if (tmp45) {
                   let tmp46 = result;
                   if (result) {
-                    let result2 = collapsed(obj14.type);
+                    let result2 = v65535(obj14.type);
                     if (!result2) {
                       result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj14);
                     }
@@ -1068,7 +1068,7 @@ const ChannelRecord = fn(4825);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: c10 } = ChannelRecord);
 const isGuildNSFW = fn(4839).isGuildNSFW;
 const ChannelFlags = fn(4828).ChannelFlags;
-const ReadStateConstants = fn(6684);
+const ReadStateConstants = fn(6691);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1087).NULL_STRING_GUILD_ID;
 let guilds = {};

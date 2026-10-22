@@ -31,17 +31,6 @@ export const isConjurePublishCtaVisible = function isConjurePublishCtaVisible(pu
   }
   return tmp;
 };
-export const publishCardServerName = function publishCardServerName(name) {
-  let combined = name;
-  const arr = Array.from(name);
-  if (arr.length > 24) {
-    const substr = arr.slice(0, 23);
-    const joined = substr.join("");
-    const _HermesInternal = HermesInternal;
-    combined = "" + joined.trimEnd() + "\u2026";
-  }
-  return combined;
-};
 export const livePublishCardMessageId = function livePublishCardMessageId(arg0, arg1) {
   let diff = arg0.length - 1;
   if (0 <= diff) {
@@ -66,16 +55,18 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
   return null;
 };
 export const publishNoticeMessage = function publishNoticeMessage(notice, arg1) {
-  if (true === notice.channel_skipped) {
-    let ev23Cw = _modDef3830.ev23Cw;
+  if (true === notice.commands_failed) {
+    let prop = _modDef3830["PrQg+B"];
+  } else if (true === notice.channel_skipped) {
+    prop = _modDef3830.ev23Cw;
   } else if (notice.update) {
-    ev23Cw = _modDef3830.gQzuLC;
+    prop = _modDef3830.gQzuLC;
   } else if (null == arg1) {
-    ev23Cw = _modDef3830.MOrR29;
+    prop = _modDef3830.MOrR29;
   } else {
-    ev23Cw = _modDef3830["/npn7F"];
+    prop = _modDef3830["/npn7F"];
   }
-  return ev23Cw;
+  return prop;
 };
 export const withLivePublishCard = function withLivePublishCard(stateFromStores1, stateFromStores2) {
   let diff = stateFromStores1.length - 1;

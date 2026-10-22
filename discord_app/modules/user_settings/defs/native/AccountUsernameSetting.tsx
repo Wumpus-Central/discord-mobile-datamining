@@ -7,7 +7,7 @@ import AutomodQuarantineUtils from "../../../guild_automod/AutomodQuarantineUtil
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
-const Text_Text = Text(5216);
+const Text_Text = Text(5220);
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
@@ -35,7 +35,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }),
       );
     };
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountUsernameSettingDescription() {
       let Text = require;
@@ -84,7 +84,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8308).MobileUserSettings.ACCOUNT,
+  parent: fn(8317).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountUsernameSettingDescription() {

@@ -31,7 +31,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1375).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   tag: {
     paddingLeft: 4,
@@ -278,7 +278,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if ("sm" === size) {
         str3 = "text-xxs/semibold";
       }
-      items1[1] = hasOwnProperty(tmp17(5216).Text, {
+      items1[1] = hasOwnProperty(tmp17(5220).Text, {
         variant: str3,
         lineClamp: 1,
         maxFontSizeMultiplier: 2,

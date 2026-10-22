@@ -112,7 +112,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
       );
     };
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function InstallNativeUpdateIcon() {
       let tmp8Result = dependencyMap;

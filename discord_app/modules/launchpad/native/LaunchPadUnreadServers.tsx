@@ -12,14 +12,14 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 function renderHistorySection() {
-  return collapsed(closure_15, {});
+  return v65535(closure_15, {});
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const ChannelTypes = fn(1087).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   listWrapper: { marginTop: 8 },
   list: { marginBottom: 4, flexShrink: 0 },
@@ -93,7 +93,7 @@ let closure_13 = noop.memo(
             onLongPress: tmp5,
             backgroundColor: tmp3.maskStrokeStyle.backgroundColor,
           };
-          const tmp9 = closure_10(onGuildSelect(18510), obj3);
+          const tmp9 = closure_10(onGuildSelect(18578), obj3);
           cResult[5] = guildId;
           cResult[6] = tmp5;
           cResult[7] = tmp4;
@@ -124,7 +124,7 @@ let closure_13 = noop.memo(
         const callback1 = noop.useCallback(() => {
           transitionToGuild.transitionToGuild(guildId);
         }, items1);
-        obj.children = closure_10(onGuildSelect(18510), {
+        obj.children = closure_10(onGuildSelect(18578), {
           size: 48,
           borderRadius: 16,
           guildId,
@@ -449,7 +449,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_12();
       if (cResult[0] !== tmp2.guildHistorySeparator) {
         const obj2 = { style: tmp2.guildHistorySeparator };
-        const tmp6 = collapsed(hasOwnProperty, obj2);
+        const tmp6 = v65535(hasOwnProperty, obj2);
         cResult[0] = tmp2.guildHistorySeparator;
         cResult[1] = tmp6;
         let tmp3 = tmp6;
@@ -462,7 +462,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp7;
       }
-      const tmp8 = collapsed(hasOwnProperty, { style: tmp2.guildHistorySeparatorWrapper, children: tmp3 });
+      const tmp8 = v65535(hasOwnProperty, { style: tmp2.guildHistorySeparatorWrapper, children: tmp3 });
       cResult[2] = tmp2.guildHistorySeparatorWrapper;
       cResult[3] = tmp3;
       cResult[4] = tmp8;
@@ -473,9 +473,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_12();
       const obj = {
         style: tmp.guildHistorySeparatorWrapper,
-        children: collapsed(hasOwnProperty, { style: tmp.guildHistorySeparator }),
+        children: v65535(hasOwnProperty, { style: tmp.guildHistorySeparator }),
       };
-      return collapsed(hasOwnProperty, obj);
+      return v65535(hasOwnProperty, obj);
     };
 ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -705,7 +705,7 @@ export default noop.memo(
             let tmp14 = null != tmp12;
             if (tmp14) {
               const obj2 = { channelId: tmp12 };
-              tmp14 = collapsed(closure_14, obj2);
+              tmp14 = v65535(closure_14, obj2);
             }
             return tmp14;
           } else if (arg0 >= 1) {
@@ -717,7 +717,7 @@ export default noop.memo(
             let tmp6 = null != tmp3;
             if (tmp6) {
               const obj = { guildId: tmp3, selected: selectedGuildId === tmp3, onGuildSelect };
-              tmp6 = collapsed(closure_13, obj);
+              tmp6 = v65535(closure_13, obj);
             }
             return tmp6;
           } else {

@@ -13,7 +13,7 @@ let closure_3 = ["channelId", "analyticsLocation"];
 let closure_4 = ["channelId", "analyticsLocation"];
 const Constants = fn(1087);
 ({ AbortCodes: closure_9, Endpoints: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(4971).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
+let closure_12 = fn(4974).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
 const MessageDataType = {
   SEND: 0,
   [0]: "SEND",
@@ -207,8 +207,8 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const signalStrength = handleCommand1(7546).getSignalStrength();
-  const obj2 = handleCommand1(7546);
+  const signalStrength = handleCommand1(7553).getSignalStrength();
+  const obj2 = handleCommand1(7553);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -231,7 +231,7 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     }
     const result1 = self.startQueueMetricTimers(nonce.nonce);
     const HTTP = handleCommand1(1297).HTTP;
-    const request = { url: collapsed.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
+    const request = { url: v65535.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
@@ -251,8 +251,8 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const signalStrength = handleCommand1(7546).getSignalStrength();
-  const obj2 = handleCommand1(7546);
+  const signalStrength = handleCommand1(7553).getSignalStrength();
+  const obj2 = handleCommand1(7553);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -275,7 +275,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     }
     const result1 = self.startQueueMetricTimers(message.nonce);
     const HTTP = handleCommand1(1297).HTTP;
-    const request = { url: collapsed.MESSAGES_ANNOUNCEMENT(channelId), body: obj3, context: tmp4, oldFormErrors: true };
+    const request = { url: v65535.MESSAGES_ANNOUNCEMENT(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;

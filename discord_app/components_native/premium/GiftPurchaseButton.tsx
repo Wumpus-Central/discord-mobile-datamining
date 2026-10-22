@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const obj = require("c");
       const buttonTextColorStyles = require("ButtonHooks").useButtonTextColorStyles(str);
-      const merged = Object.assign(tmp(5216).TextStyleSheet["text-sm/semibold"]);
+      const merged = Object.assign(tmp(5220).TextStyleSheet["text-sm/semibold"]);
       const merged1 = Object.assign(buttonTextColorStyles);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionStore];
@@ -56,11 +56,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("ButtonHooks");
       const stateFromStores = require("initialize").useStateFromStores(tmp8, tmp9);
       if (cResult[4] !== planId) {
-        const productIdForGift = tmp(7496).getProductIdForGift(planId);
+        const productIdForGift = tmp(7503).getProductIdForGift(planId);
         cResult[4] = planId;
         cResult[5] = productIdForGift;
         let tmp12 = productIdForGift;
-        const tmpResult8 = tmp(7496);
+        const tmpResult8 = tmp(7503);
       } else {
         tmp12 = cResult[5];
       }
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp23) {
         tmp23 = stateFromStores.planId === planId;
       }
-      const analyticsLocations = recipientUserId(7230)().analyticsLocations;
+      const analyticsLocations = recipientUserId(7237)().analyticsLocations;
       const tmpResult11 = require("initialize");
       const createOrReuseGiftOrder = require("createOrReuseGiftOrder").useCreateOrReuseGiftOrder("GiftPurchaseButton");
       if (cResult[12] === tmp4) {
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[17] === recipientUserId) {
                   let tmp26 = cResult[18];
                 }
-                const BaseTextButton = tmp(5227).BaseTextButton;
+                const BaseTextButton = tmp(5231).BaseTextButton;
                 const obj4 = {
                   style: obj3,
                   basePlanId: planId,
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   isGift: true,
                   product: stateFromStores2,
                 };
-                const tmp28 = recipientUserId(14772)(obj4);
+                const tmp28 = recipientUserId(14816)(obj4);
                 if (cResult[19] === BaseTextButton) {
                   if (cResult[20] === tmp26) {
                     if (cResult[21] === stateFromStores1) {
@@ -295,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const premiumTypeFromPlanId = planId(2053).getPremiumTypeFromPlanId(closure_129_0);
           const premiumType = premiumTypeFromPlanId.premiumType;
           const planInterval = premiumTypeFromPlanId.planInterval;
-          planId(10404).openGiftModal({
+          planId(10416).openGiftModal({
             recipientUserId: closure_129_2,
             premiumType,
             planInterval,
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj7.title = intl.string(planId(1128).t.R0RpRX);
           const intl2 = planId(1128).intl;
           obj7.body = intl2.string(planId(1128).t.CKsXk3);
-          tmp3(5889).show(obj7);
+          tmp3(5896).show(obj7);
         }),
         items3,
       );

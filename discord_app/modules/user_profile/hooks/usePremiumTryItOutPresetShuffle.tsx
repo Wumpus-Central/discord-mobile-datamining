@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "get",
+              originalAsset: "gap",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "get",
+              originalAsset: "gap",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "get",
+              originalAsset: "gap",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               imageUri: tryItOutPresetConfig.getBannerSrc(false),
               staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
               description: tryItOutPresetConfig.getBannerAltText(),
-              originalAsset: "get",
+              originalAsset: "gap",
             };
             obj1.banner = obj5.createPendingImage(obj7);
             themeColors = tryItOutPresetConfig.themeColors;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return I;
     }
   : function usePremiumTryItOutPresetShuffle() {
-      const tmp = callback(5187)();
+      const tmp = callback(5191)();
       const isThemeLightResult = shared.isThemeLight(tmp);
       const require = isThemeLightResult;
       const items = [isThemeLightResult];
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           imageUri: tryItOutPresetConfig.getBannerSrc(false),
           staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
           description: tryItOutPresetConfig.getBannerAltText(),
-          originalAsset: "get",
+          originalAsset: "gap",
         });
         const themeColors = tryItOutPresetConfig.themeColors;
         obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;

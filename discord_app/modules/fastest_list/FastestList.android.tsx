@@ -10,9 +10,9 @@ let ReanimatedRexport = ReanimatedRexport_mod;
 ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const FastestListNativeComponent = ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-const BottomSheetModal = fn(5251);
+const BottomSheetModal = fn(5255);
 let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(
-  fn(5251).SCROLLABLE_TYPE.SCROLLVIEW,
+  fn(5255).SCROLLABLE_TYPE.SCROLLVIEW,
   FastestListNativeComponent,
 );
 let closure_9 = 0;

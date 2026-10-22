@@ -15,7 +15,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1087).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1202).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         RelationshipTypes.FRIEND,
       );
       const effect = stateFromStoresArray1.useEffect(() => {
-        const userAffinitiesV2 = closure_0(9043).fetchUserAffinitiesV2();
+        const userAffinitiesV2 = closure_0(9052).fetchUserAffinitiesV2();
       }, []);
       const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
       const effect1 = stateFromStoresArray1.useEffect(() => {

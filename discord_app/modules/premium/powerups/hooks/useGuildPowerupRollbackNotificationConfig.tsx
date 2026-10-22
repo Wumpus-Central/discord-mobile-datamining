@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       let tmp8;
       if (stateFromStores != null) {
-        tmp8 = stateFromStores.allPowerups[tmp(undefined, 5167).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+        tmp8 = stateFromStores.allPowerups[tmp(undefined, 5171).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
       const tmpResult = require("initialize");
       const shouldShowGuildThemeRollback = require("guildTheme").useShouldShowGuildThemeRollback(arg0, arg1);
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         GuildPowerupsStore.getStateForGuild(closure_0),
       );
       if (stateFromStores != null) {
-        const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5167).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+        const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5171).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
       const obj = require("initialize");
       let tmp5 = null;

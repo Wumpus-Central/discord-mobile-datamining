@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxs = fn(21).jsxs;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   commandClickable: {
     color: nativeDefault.colors.MENTION_FOREGROUND,

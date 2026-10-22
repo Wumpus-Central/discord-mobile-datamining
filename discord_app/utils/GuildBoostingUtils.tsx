@@ -826,7 +826,7 @@ export const getAvailableSoundboardSoundCount = function getAvailableSoundboardS
   if (-1 === items.indexOf(arg2)) {
     return 0;
   } else {
-    let tmp4 = constants2;
+    let tmp4 = closure_1_20;
     premiumFeatures = premiumFeatures.premiumFeatures;
     let num;
     if (premiumFeatures != null) {
@@ -845,7 +845,7 @@ export const getAvailableSoundboardSoundCount = function getAvailableSoundboardS
   }
 };
 export const getMaxSoundboardSlots = function getMaxSoundboardSlots(premiumFeatures) {
-  let tmp = constants2;
+  let tmp = closure_1_20;
   premiumFeatures = premiumFeatures.premiumFeatures;
   let num;
   if (premiumFeatures != null) {
@@ -911,7 +911,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8351).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8360).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

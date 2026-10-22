@@ -43,11 +43,11 @@ export const SubmittingOverlay = ReactCompilerGating.isReactCompilerEnabled()
           return obj1;
         }
       }
-      const obj2 = submitting(5035);
+      const obj2 = submitting(5038);
       S.__closure = {
-        withSpring: submitting(5229).withSpring,
+        withSpring: submitting(5233).withSpring,
         submitting,
-        SUBTLE_SPRING: submitting(5230).SUBTLE_SPRING,
+        SUBTLE_SPRING: submitting(5234).SUBTLE_SPRING,
       };
       S.__workletHash = 17050905766844;
       S.__initData = __initData;
@@ -60,7 +60,7 @@ export const SubmittingOverlay = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] !== submitting) {
             let tmp8 = submitting;
             if (submitting) {
-              tmp8 = jsx(tmp(5244).Ellipsis, { variant: "active", size: "md" });
+              tmp8 = jsx(tmp(5248).Ellipsis, { variant: "active", size: "md" });
             }
             cResult[4] = submitting;
             cResult[5] = tmp8;
@@ -102,9 +102,9 @@ export const SubmittingOverlay = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp6 = items;
       const obj3 = {
-        withSpring: submitting(5229).withSpring,
+        withSpring: submitting(5233).withSpring,
         submitting,
-        SUBTLE_SPRING: submitting(5230).SUBTLE_SPRING,
+        SUBTLE_SPRING: submitting(5234).SUBTLE_SPRING,
       };
     }
   : function SubmittingOverlay(submitting) {
@@ -118,11 +118,11 @@ export const SubmittingOverlay = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
       };
-      let obj = submitting(5035);
+      let obj = submitting(5038);
       fn.__closure = {
-        withSpring: submitting(5229).withSpring,
+        withSpring: submitting(5233).withSpring,
         submitting,
-        SUBTLE_SPRING: submitting(5230).SUBTLE_SPRING,
+        SUBTLE_SPRING: submitting(5234).SUBTLE_SPRING,
       };
       fn.__workletHash = 15672049349439;
       fn.__initData = __initData2;
@@ -131,7 +131,7 @@ export const SubmittingOverlay = ReactCompilerGating.isReactCompilerEnabled()
       const items = [submitting.style, tmp.ellipsis, animatedStyle];
       obj3.style = items;
       if (submitting) {
-        submitting = jsx(tmp2(5244).Ellipsis, { variant: "active", size: "md" });
+        submitting = jsx(tmp2(5248).Ellipsis, { variant: "active", size: "md" });
       }
       obj3.children = submitting;
       return jsx(ReanimatedRexportDefault.View, { style: null, children: null });

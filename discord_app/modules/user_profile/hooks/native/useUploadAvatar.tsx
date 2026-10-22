@@ -110,12 +110,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let originalMd5;
                 closure_128_3 = undefined;
                 closure_128_4 = undefined;
-                analyticsLocations(5192).hideActionSheet();
-                const obj13 = analyticsLocations(5192);
+                analyticsLocations(5196).hideActionSheet();
+                const obj13 = analyticsLocations(5196);
                 const obj6 = { size };
                 c2 = 1;
                 c3 = 1;
-                const obj8 = { value: analyticsLocations(8130).openImagePicker(obj6), done: false };
+                const obj8 = { value: analyticsLocations(8139).openImagePicker(obj6), done: false };
                 return obj8;
               }
             } else if (arg0 === 1) {
@@ -145,21 +145,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj10 = { imageUri: base64, description: null, originalMd5: null };
-              const obj2 = guildId(15735);
-              obj10.description = guildId(8622).generateAvatarDescription();
+              const obj2 = guildId(15777);
+              obj10.description = guildId(8631).generateAvatarDescription();
               obj10.originalMd5 = originalMd5;
               closure_128_4 = obj2.createPendingImage(obj10);
               if (c2) {
-                tmp30(8620).setTryItOutAvatar(closure_128_4);
-                const tmp30Result = tmp30(8620);
+                tmp30(8629).setTryItOutAvatar(closure_128_4);
+                const tmp30Result = tmp30(8629);
               } else {
                 const obj11 = { guildId, avatar: closure_128_4 };
-                tmp30(8617).setPendingChanges(obj11);
-                const tmp30Result2 = tmp30(8617);
-                const result = guildId(8619).announcePendingAvatarChange("set");
-                const obj7 = guildId(8619);
+                tmp30(8626).setPendingChanges(obj11);
+                const tmp30Result2 = tmp30(8626);
+                const result = guildId(8628).announcePendingAvatarChange("set");
+                const obj7 = guildId(8628);
               }
-              const obj4 = guildId(8622);
+              const obj4 = guildId(8631);
             }
           } catch (tmp40) {
             c3 = tmp;
@@ -241,12 +241,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let originalMd5;
                   closure_128_3 = undefined;
                   closure_128_4 = undefined;
-                  tmp2(5192).hideActionSheet();
-                  const obj13 = tmp2(5192);
+                  tmp2(5196).hideActionSheet();
+                  const obj13 = tmp2(5196);
                   const obj6 = { size };
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj8 = { value: tmp2(8130).openImagePicker(obj6), done: false };
+                  const obj8 = { value: tmp2(8139).openImagePicker(obj6), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -276,21 +276,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj10 = { imageUri: base64, description: null, originalMd5: null };
-                const obj2 = v0(15735);
-                obj10.description = v0(8622).generateAvatarDescription();
+                const obj2 = v0(15777);
+                obj10.description = v0(8631).generateAvatarDescription();
                 obj10.originalMd5 = originalMd5;
                 closure_128_4 = obj2.createPendingImage(obj10);
                 if (closure_129_1) {
-                  tmp30(8620).setTryItOutAvatar(closure_128_4);
-                  const tmp30Result = tmp30(8620);
+                  tmp30(8629).setTryItOutAvatar(closure_128_4);
+                  const tmp30Result = tmp30(8629);
                 } else {
                   const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-                  tmp30(8617).setPendingChanges(obj11);
-                  const tmp30Result2 = tmp30(8617);
-                  const result = v0(8619).announcePendingAvatarChange("set");
-                  const obj7 = v0(8619);
+                  tmp30(8626).setPendingChanges(obj11);
+                  const tmp30Result2 = tmp30(8626);
+                  const result = v0(8628).announcePendingAvatarChange("set");
+                  const obj7 = v0(8628);
                 }
-                const obj4 = v0(8622);
+                const obj4 = v0(8631);
               }
             } catch (tmp40) {
               c3 = tmp;

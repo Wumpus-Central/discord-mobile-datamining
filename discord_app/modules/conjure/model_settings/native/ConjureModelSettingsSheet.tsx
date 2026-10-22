@@ -146,7 +146,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 if (cResult[14] !== cResult[13]) {
                   const obj2 = { variant: "text-xs/normal", color: "text-muted", children: tmp17 };
-                  const tmp22 = closure_8(tmp(5216).Text, obj2);
+                  const tmp22 = closure_8(tmp(5220).Text, obj2);
                   cResult[14] = tmp17;
                   cResult[15] = tmp22;
                   let tmp20 = tmp22;
@@ -162,7 +162,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
                 const items2 = [tmp15, tmp20];
                 obj3.children = items2;
-                const tmp25 = closure_9(tmp(5957).Stack, obj3);
+                const tmp25 = closure_9(tmp(5964).Stack, obj3);
                 cResult[16] = tmp15;
                 cResult[17] = tmp20;
                 cResult[18] = tmp25;
@@ -228,13 +228,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         stringResult = string(tmp8["/rJzr6"]);
       }
-      items3[1] = closure_8(projectId(5216).Text, {
+      items3[1] = closure_8(projectId(5220).Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: stringResult,
       });
       obj2.children = items3;
-      return closure_9(projectId(5957).Stack, obj2);
+      return closure_9(projectId(5964).Stack, obj2);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);

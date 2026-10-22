@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp6 = turn_id;
           }
-          tmpResult2 = tmp(10658);
+          tmpResult2 = tmp(10670);
         }
       }
       cResult[0] = role;

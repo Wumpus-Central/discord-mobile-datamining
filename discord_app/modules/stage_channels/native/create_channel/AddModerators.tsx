@@ -11,10 +11,10 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["guildId", "onChannelCreated"];
 const View = fn(17).View;
-const RowType = fn(7851).RowType;
+const RowType = fn(7859).RowType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   moderatorDescriptionContainer: { margin: 16 },
@@ -184,12 +184,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               navigation.setOptions({
                 headerRight: first
                   ? () => closure_1_10(stringResult(navigation[17]).HeaderSubmittingIndicator, {})
-                  : () => collapsed(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
+                  : () => v65535(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
               });
               const obj = {
                 headerRight: first
                   ? () => closure_1_10(stringResult(navigation[17]).HeaderSubmittingIndicator, {})
-                  : () => collapsed(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
+                  : () => v65535(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
               };
             };
             const items1 = [tmp26, navigation, first1, first];
@@ -211,17 +211,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           mapped = found.map((row) => {
             row = row.row;
             if (row.rowType === constants.ROLE) {
-              let moderatorOverwrite = guildId(6617).createModeratorOverwrite(
+              let moderatorOverwrite = guildId(6624).createModeratorOverwrite(
                 row.id,
                 guildId(2000).PermissionOverwriteType.ROLE,
               );
-              const obj2 = guildId(6617);
+              const obj2 = guildId(6624);
             } else {
-              moderatorOverwrite = guildId(6617).createModeratorOverwrite(
+              moderatorOverwrite = guildId(6624).createModeratorOverwrite(
                 row.id,
                 guildId(2000).PermissionOverwriteType.MEMBER,
               );
-              const obj = guildId(6617);
+              const obj = guildId(6624);
             }
             return moderatorOverwrite;
           });
@@ -269,17 +269,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const mapped = found.map((row) => {
           row = row.row;
           if (row.rowType === constants.ROLE) {
-            let moderatorOverwrite = guildId(6617).createModeratorOverwrite(
+            let moderatorOverwrite = guildId(6624).createModeratorOverwrite(
               row.id,
               guildId(2000).PermissionOverwriteType.ROLE,
             );
-            const obj2 = guildId(6617);
+            const obj2 = guildId(6624);
           } else {
-            moderatorOverwrite = guildId(6617).createModeratorOverwrite(
+            moderatorOverwrite = guildId(6624).createModeratorOverwrite(
               row.id,
               guildId(2000).PermissionOverwriteType.MEMBER,
             );
-            const obj = guildId(6617);
+            const obj = guildId(6624);
           }
           return moderatorOverwrite;
         });
@@ -308,12 +308,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         navigation.setOptions({
           headerRight: first
             ? () => closure_1_10(stringResult(navigation[17]).HeaderSubmittingIndicator, {})
-            : () => collapsed(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
+            : () => v65535(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
         });
         const obj = {
           headerRight: first
             ? () => closure_1_10(stringResult(navigation[17]).HeaderSubmittingIndicator, {})
-            : () => collapsed(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
+            : () => v65535(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
         };
       }, items1);
       let obj2 = { style: tmp3.addMembersContainer, children: null };

@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       const tmp = closure_5();
-      closure_3 = bounty(9563).useGetQuestImpressionId();
-      let obj = bounty(9563);
+      closure_3 = bounty(9574).useGetQuestImpressionId();
+      let obj = bounty(9574);
       const fn = function y() {
         let num = 0;
         if (visible) {
@@ -161,12 +161,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
       };
-      let obj2 = bounty(5035);
-      fn.__closure = { withTiming: bounty(5188).withTiming, visible, timingStandard: bounty(5191).timingStandard };
+      let obj2 = bounty(5038);
+      fn.__closure = { withTiming: bounty(5192).withTiming, visible, timingStandard: bounty(5195).timingStandard };
       fn.__workletHash = 5587342121093;
       fn.__initData = __initData2;
       const animatedStyle = obj2.useAnimatedStyle(fn);
-      bounty(16198);
+      bounty(16240);
       if (visible) {
         const obj4 = { style: null, children: null };
         const items = [tmp.container, animatedStyle];
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        const items1 = [closure_3(tmp2(5226).Button, obj5)];
+        const items1 = [closure_3(tmp2(5230).Button, obj5)];
         let tmp9Result = null;
         if (showCloseButton) {
           const obj6 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -199,11 +199,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj6.text = intl.string(tmp2(1128).t.cpT0Cq);
           obj6.disabled = flag;
           obj6.onPress = bounty.onClose;
-          tmp9Result = tmp9(tmp2(5226).Button, obj6);
+          tmp9Result = tmp9(tmp2(5230).Button, obj6);
         }
         items1[1] = tmp9Result;
         obj4.children = items1;
-        visible = closure_4(visible(5035).View, obj4);
+        visible = closure_4(visible(5038).View, obj4);
         tmp9 = closure_3;
       }
       return visible;

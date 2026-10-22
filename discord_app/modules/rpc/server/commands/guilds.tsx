@@ -4,13 +4,15 @@ import Constants2 from "../../Constants.tsx";
 import OAuth2Scopes from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import botScopedAccess from "../../helpers/botScopedAccess.tsx";
+import RPCHelpers from "../../RPCHelpers.tsx";
+import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import Constants from "../../../../Constants.tsx";
 import CONTEXT_MENU_ICON_NAMES_mod from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;
-({ RPCCommands, RPCErrors: hasOwnProperty } = Constants);
+({ RPCCommands, RPCErrors: metroRequire } = Constants);
 let obj = {};
 let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
 let obj2 = { scope: null, validateAccess: null, handler: null };
@@ -72,6 +74,44 @@ obj[RPCCommands.GET_GUILDS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCComman
       return obj;
     });
     return obj;
+  },
+});
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+const obj4 = {
+  scope: OAuth2Scopes.OAuth2Scopes.RPC,
+  handler() {
+    let obj = { guilds: null };
+    const guildsArray = GuildStore.getGuildsArray();
+    obj.guilds = guildsArray.map((id) => {
+      const obj = { id: id.id, name: id.name, icon_url: null };
+      let tmp = getGuildIconURL(id, 128);
+      if (tmp == null) {
+        tmp = null;
+      }
+      obj.icon_url = tmp;
+      return obj;
+    });
+    return obj;
+  },
+};
+obj[RPCCommands.GET_ROLES] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ROLES, {
+  scope: OAuth2Scopes.OAuth2Scopes.BOT,
+  validateAccess(socket) {
+    return botScopedAccess.validateBotScopeHasGuildAccess(socket.socket, socket.args.guild_id);
+  },
+  handler(args) {
+    const guild_id = args.args.guild_id;
+    if (null == GuildStore.getGuild(guild_id)) {
+      const obj2 = { errorCode: constants.INVALID_GUILD };
+      const _HermesInternal = HermesInternal;
+      const tmp62 = new RPCErrorDefault(obj2, "Invalid guild id: " + guild_id);
+      throw tmp62;
+    } else {
+      const obj = { roles: null };
+      const sortedRoles = GuildRoleStore.getSortedRoles(guild_id);
+      obj.roles = sortedRoles.map(RPCHelpers.transformRole);
+      return obj;
+    }
   },
 });
 const result = size.fileFinishedImporting("modules/rpc/server/commands/guilds.tsx");

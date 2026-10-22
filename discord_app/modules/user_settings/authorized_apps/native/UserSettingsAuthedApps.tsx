@@ -12,19 +12,19 @@ import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 
 const require = globalThis.__r;
 
-const CircleInformationIcon = GlobeEarthIcon(5668);
-const GlobeEarthIcon2 = GlobeEarthIcon(9450);
-const EmbedIcon = GlobeEarthIcon(13968);
+const CircleInformationIcon = GlobeEarthIcon(5672);
+const GlobeEarthIcon2 = GlobeEarthIcon(9461);
+const EmbedIcon = GlobeEarthIcon(14004);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7182).FetchState;
+const FetchState = fn(7189).FetchState;
 const Constants = fn(1087);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   spinner: { padding: 16 },
   emptyText: { marginTop: 24 },
@@ -47,7 +47,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] !== style) {
           GlobeEarthIcon = GlobeEarthIcon2.GlobeEarthIcon;
           const obj2 = { style, size: "xs" };
-          tmp = collapsed(GlobeEarthIcon, obj2);
+          tmp = v65535(GlobeEarthIcon, obj2);
           cResult[0] = style;
           cResult[1] = tmp;
         }
@@ -55,7 +55,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
           if (cResult[2] !== style) {
             const obj3 = { style, size: "xs" };
-            const tmp8 = collapsed(EmbedIcon.EmbedIcon, obj3);
+            const tmp8 = v65535(EmbedIcon.EmbedIcon, obj3);
             cResult[2] = style;
             cResult[3] = tmp8;
             let tmp6 = tmp8;
@@ -65,7 +65,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp3 = tmp6;
         } else if (cResult[4] !== style) {
           const obj4 = { style, size: "xs" };
-          const tmp5 = collapsed(CircleInformationIcon.CircleInformationIcon, obj4);
+          const tmp5 = v65535(CircleInformationIcon.CircleInformationIcon, obj4);
           cResult[4] = style;
           cResult[5] = tmp5;
           tmp3 = tmp5;
@@ -82,13 +82,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       return noop.useMemo(() => {
         if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
           const obj2 = { style, size: "xs" };
-          return collapsed(GlobeEarthIcon2.GlobeEarthIcon, obj2);
+          return v65535(GlobeEarthIcon2.GlobeEarthIcon, obj2);
         } else if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
           const obj3 = { style, size: "xs" };
-          return collapsed(EmbedIcon.EmbedIcon, obj3);
+          return v65535(EmbedIcon.EmbedIcon, obj3);
         } else {
           const obj = { style, size: "xs" };
-          return collapsed(CircleInformationIcon.CircleInformationIcon, obj);
+          return v65535(CircleInformationIcon.CircleInformationIcon, obj);
         }
       }, items);
     };
@@ -838,19 +838,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
         const intl = util.intl;
         obj3.children = intl.string(util.t.HU3RFw);
-        const items = [collapsed(Text_Text.Text, obj3)];
+        const items = [v65535(Text_Text.Text, obj3)];
         const obj4 = { style: closure_0.headerDescription, variant: "heading-sm/medium", children: null };
         const intl2 = util.intl;
         obj4.children = intl2.string(util.t.Nu5Yi0);
-        items[1] = collapsed(Text_Text.Text, obj4);
+        items[1] = v65535(Text_Text.Text, obj4);
         obj2.children = items;
         const items1 = [closure_2_11(React4, obj2)];
         const obj5 = { style: closure_0.appListHeader, children: null };
         const obj6 = { title: null };
         const intl3 = util.intl;
         obj6.title = intl3.string(util.t.PHjkRE);
-        obj5.children = collapsed(TableRowGroup.TableRowGroupTitle, obj6);
-        items1[1] = collapsed(React4, obj5);
+        obj5.children = v65535(TableRowGroup.TableRowGroupTitle, obj6);
+        items1[1] = v65535(React4, obj5);
         obj.children = items1;
         return closure_2_11(__initData, obj);
       }
@@ -906,19 +906,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
             const intl = util.intl;
             obj3.children = intl.string(util.t.HU3RFw);
-            const items = [collapsed(Text_Text.Text, obj3)];
+            const items = [v65535(Text_Text.Text, obj3)];
             const obj4 = { style: closure_0.headerDescription, variant: "heading-sm/medium", children: null };
             const intl2 = util.intl;
             obj4.children = intl2.string(util.t.Nu5Yi0);
-            items[1] = collapsed(Text_Text.Text, obj4);
+            items[1] = v65535(Text_Text.Text, obj4);
             obj2.children = items;
             const items1 = [closure_2_11(React4, obj2)];
             const obj5 = { style: closure_0.appListHeader, children: null };
             const obj6 = { title: null };
             const intl3 = util.intl;
             obj6.title = intl3.string(util.t.PHjkRE);
-            obj5.children = collapsed(TableRowGroup.TableRowGroupTitle, obj6);
-            items1[1] = collapsed(React4, obj5);
+            obj5.children = v65535(TableRowGroup.TableRowGroupTitle, obj6);
+            items1[1] = v65535(React4, obj5);
             obj.children = items1;
             return closure_2_11(__initData, obj);
           }

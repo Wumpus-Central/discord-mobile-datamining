@@ -6,18 +6,18 @@ const require = globalThis.__r;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
-function getApplicationIdsForGame(gameId) {
+function getApplicationIdsForGame(arg0) {
   const set = new Set();
-  if (null != gameId) {
-    set.add(gameId);
-    const game = GameStore.getGame(gameId);
+  if (null != arg0) {
+    set.add(arg0);
+    const game = GameStore.getGame(arg0);
     if (game != null) {
       const linkedApplications = game.linkedApplications;
       if (linkedApplications != null) {
         const item = linkedApplications.forEach((id) => set.add(id.id));
       }
     }
-    const application = ApplicationStore.getApplication(gameId);
+    const application = ApplicationStore.getApplication(arg0);
     if (application != null) {
       const linkedGames = application.linkedGames;
       if (linkedGames != null) {

@@ -59,12 +59,12 @@ let closure_6 = async function _sendShareMessage(arg0) {
               originalUri: uri.uri,
               mimeType: uri.mimeType,
               filename: uri.name,
-              platform: closure_0(8120).UploadPlatform.REACT_NATIVE,
+              platform: closure_0(8129).UploadPlatform.REACT_NATIVE,
               width: uri.width,
               height: uri.height,
               preTranscodeSourceSize: uri.originalSize,
             };
-            const cloudUpload = new closure_0(8118).CloudUpload(size, guildId.id);
+            const cloudUpload = new closure_0(8127).CloudUpload(size, guildId.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -87,10 +87,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
               const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
               closure_1_6.reject(obj);
               const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
-              guildId(9622).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-              const obj3 = guildId(9622);
+              guildId(9634).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+              const obj3 = guildId(9634);
               const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-              guildId(8280).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+              guildId(8289).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
             },
           };
           c4 = 2;
@@ -117,8 +117,8 @@ let closure_6 = async function _sendShareMessage(arg0) {
     }
   }
 };
-const DraftType = fn(7608).DraftType;
-const MessageSendLocation = fn(4971).MessageSendLocation;
+const DraftType = fn(7615).DraftType;
+const MessageSendLocation = fn(4974).MessageSendLocation;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 

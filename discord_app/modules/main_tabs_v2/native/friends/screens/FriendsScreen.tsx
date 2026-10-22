@@ -8,7 +8,7 @@ import TableRow from "../../../../../design/components/TableRow/native/TableRow.
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import WumpusCouchSpotIllustration from "../../../../../design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx";
-import _modDef17715 from "../../../../../../_runtime/metro/17715__.js";
+import _modDef17785 from "../../../../../../_runtime/metro/17785__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, flex: 1 },
   requestsButtonContainer: null,
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [];
         if (tmp2) {
           const obj = {
-            icon: _modDef17715,
+            icon: _modDef17785,
             IconComponent: SendMessageIcon.SendMessageIcon,
             iconVariant: "default",
             label: null,
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let v1IEawz = require;
           let obj9 = dependencyMap;
           let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-          const obj8 = { source: _modDef17715 };
+          const obj8 = { source: _modDef17785 };
           obj7.icon = React5(TableRow.TableRow.Icon, obj8);
           obj7.trailing = React5(TableRow.TableRow.Arrow, {});
           const intl5 = util.intl;

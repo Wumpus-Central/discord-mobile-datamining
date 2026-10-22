@@ -28,15 +28,15 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let GuildScheduledEventStore = fn(6763);
+let GuildScheduledEventStore = fn(6770);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const MemberListRowTypes = fn(7349).MemberListRowTypes;
+const MemberListRowTypes = fn(7356).MemberListRowTypes;
 let closure_20 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(16478).HappeningNowItem;
+const HappeningNowItem = fn(16547).HappeningNowItem;
 const Constants = fn(1087);
-({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
-items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
+({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: closure_31, StatusTypes: closure_32 } = Constants);
+let items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
 const ReactCompilerGating = fn(558);
 let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSpammyStoresVersion(arg0, arg1, arg2, arg3) {
   _require = arg0;

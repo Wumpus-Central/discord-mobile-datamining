@@ -1,27 +1,26 @@
 // discord_app/modules/games/getGameMediaRefURL.tsx
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
+import StringUtils from "../../utils/StringUtils.tsx";
 import ImageProxyUtils from "../image_proxy/ImageProxyUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
-export default function getGameMediaRefURL(id, type, size) {
-  if (null == type) {
-    return null;
-  } else {
-    type = type.type;
+export default function getGameMediaRefURL(id, value, size) {
+  let tmp = null != value;
+  if (tmp) {
+    tmp = !StringUtils.isNullOrEmpty(value.value);
+  }
+  if (tmp) {
+    const type = value.type;
     if ("hash" === type) {
-      let tmp8 = null;
-      if (!obj3.isNullOrEmpty(type.value)) {
-        const obj2 = { id, hash: type.value };
-        const merged = Object.assign(size);
-        let gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj2);
-        if (gameAssetURL == null) {
-          gameAssetURL = null;
-        }
-        tmp8 = gameAssetURL;
+      const obj3 = { id, hash: value.value };
+      const merged = Object.assign(size);
+      let gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj3);
+      if (gameAssetURL == null) {
+        gameAssetURL = null;
       }
-      return tmp8;
+      return gameAssetURL;
     } else if ("url" === type) {
       size = undefined;
       if (size != null) {
@@ -38,9 +37,18 @@ export default function getGameMediaRefURL(id, type, size) {
         format = size.format;
       }
       obj5.format = format;
-      return ImageProxyUtils.getSizedImageAssetURL(type.value, obj5);
+      return ImageProxyUtils.getSizedImageAssetURL(value.value, obj5);
     } else {
       return null;
     }
+  } else {
+    return null;
   }
 }
+export const hasGameMediaRef = function hasGameMediaRef(cover) {
+  let tmp = null != cover;
+  if (tmp) {
+    tmp = !StringUtils.isNullOrEmpty(cover.value);
+  }
+  return tmp;
+};

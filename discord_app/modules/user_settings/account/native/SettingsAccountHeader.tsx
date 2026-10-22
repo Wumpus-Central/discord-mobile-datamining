@@ -16,10 +16,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1087).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7393).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7400).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -224,8 +224,8 @@ export default noop.memo(
         cResult[11] = header;
         cResult[12] = tmp15;
         cResult[13] = tmp18;
-        cResult[14] = collapsed(View, obj4);
-        const tmp20 = collapsed(View, obj4);
+        cResult[14] = v65535(View, obj4);
+        const tmp20 = v65535(View, obj4);
       }
     : function SettingsAccountHeader() {
         const tmp = closure_11();
@@ -267,7 +267,7 @@ export default noop.memo(
           }
           items2[1] = tmp14;
           obj4.children = items2;
-          let tmp9Result = collapsed(View, obj4);
+          let tmp9Result = v65535(View, obj4);
         } else {
           tmp9Result = null;
         }

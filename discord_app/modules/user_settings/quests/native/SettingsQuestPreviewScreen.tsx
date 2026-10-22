@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   controlBarContainer: { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 },
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp2 = null;
         if (null != stateFromStores) {
           const obj = { quest: tmp };
-          tmp2 = collapsed(QuestCardPreview.QuestCardPreview, obj);
+          tmp2 = v65535(QuestCardPreview.QuestCardPreview, obj);
         }
         return tmp2;
       }, items3);
@@ -361,7 +361,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _HermesInternal = HermesInternal;
           const combined = "" + first + "-" + stateFromStores1 + "-" + completedAt + "-" + progress;
           const obj = { questId: first };
-          return collapsed(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
+          return v65535(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
         }
       }, items4);
       callback2 = obj2.useCallback(() => null, []);

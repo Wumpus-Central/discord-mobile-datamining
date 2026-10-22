@@ -9,15 +9,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(8658).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8676);
+let closure_5 = fn(8667).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8685);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } =
   ProfileFrameConstants);
 let jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
-const Easing = fn(5035).Easing;
-source.easing = Easing.in(fn(5035).Easing.ease);
-const createStyles = fn(4966);
+const Easing = fn(5038).Easing;
+source.easing = Easing.in(fn(5038).Easing.ease);
+const createStyles = fn(4969);
 let obj3 = { container: null, layer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -849,7 +849,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       c9 = undefined;
       c10 = undefined;
       const tmp = c10();
-      const settled = frame(8677).usePreloadLayerImages({
+      const settled = frame(8686).usePreloadLayerImages({
         frame,
         containerWidth,
         profileThemeType,
@@ -867,12 +867,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           return result;
         });
       }, items);
-      let obj = frame(8677);
+      let obj = frame(8686);
       let num = 0;
       if (settled) {
         num = 1;
       }
-      sharedValue = frame(5035).useSharedValue(num);
+      sharedValue = frame(5038).useSharedValue(num);
       const items1 = [settled, sharedValue];
       const effect = profileThemeType.useEffect(() => {
         let num = 0;
@@ -889,7 +889,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               overflowTop: c8,
               overflowBottom: c9,
               overflowHorizontal: c10,
-            } = containerWidth(8679)(frame, containerWidth));
+            } = containerWidth(8688)(frame, containerWidth));
             const obj4 = { style: null, children: null };
             const items2 = [tmp.container];
             const obj5 = { opacity: sharedValue };
@@ -907,7 +907,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 containerHeight={containerHeight}
               />
             ));
-            return jsx(containerWidth(5035).View, { style: null, children: null });
+            return jsx(containerWidth(5038).View, { style: null, children: null });
           }
         }
       }

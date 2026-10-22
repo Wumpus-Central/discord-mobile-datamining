@@ -17,11 +17,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6644).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(7393);
+let closure_6 = fn(6651).TINY_BRONCO_SETTINGS_LOCATION;
+const Constants = fn(7400);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -180,7 +180,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           tmp21 = tmp24;
         }
         const obj4 = { type: "info", message: tmp11, role: "status", action: tmp17 };
-        const tmp20 = jsx(noticeType(7929).InlineNotice, {
+        const tmp20 = jsx(noticeType(7937).InlineNotice, {
           type: "info",
           message: tmp11,
           role: "status",
@@ -228,7 +228,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.text = intl2.string(noticeType(1128).t.hvVgAZ);
       obj3.onPress = callback;
       obj2.action = obj3;
-      obj.children = jsx(noticeType(7929).InlineNotice, { type: "info", message: null, role: "status", action: null });
+      obj.children = jsx(noticeType(7937).InlineNotice, { type: "info", message: null, role: "status", action: null });
       return <View style={closure_10().container}>{null}</View>;
     };
 fn(558);
@@ -386,7 +386,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { type: "info", message: tmp10, role: "status", action: tmp13 };
-        const tmp15 = jsx(tmp(7929).InlineNotice, { type: "info", message: tmp10, role: "status", action: tmp13 });
+        const tmp15 = jsx(tmp(7937).InlineNotice, { type: "info", message: tmp10, role: "status", action: tmp13 });
         cResult[7] = tmp10;
         cResult[8] = tmp15;
       } else {
@@ -460,7 +460,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1128).t.FDSSia);
       obj3.onPress = callback1;
       obj2.action = obj3;
-      obj.children = jsx(AGE_CONFIRMATION_NOTICE(7929).InlineNotice, {
+      obj.children = jsx(AGE_CONFIRMATION_NOTICE(7937).InlineNotice, {
         type: "info",
         message: null,
         role: "status",

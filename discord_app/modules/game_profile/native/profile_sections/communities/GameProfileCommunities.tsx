@@ -23,12 +23,12 @@ const JoinGuildSources = fn(1087).JoinGuildSources;
 const isStaticChannelRoute = fn(4828).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(9260).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(9269).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -40,7 +40,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(9260).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9269).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -718,19 +718,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = game(1128).intl;
       obj3.children = intl.string(game(1128).t.r6bvTh);
-      const items1 = [closure_11(game(5216).Heading, obj3)];
+      const items1 = [closure_11(game(5220).Heading, obj3)];
       if (showLocaleFilter) {
         const obj4 = {
           size: "sm",
           variant: "secondary",
-          icon: closure_11(tmp12(9472).LanguageIcon, { size: "sm" }),
+          icon: closure_11(tmp12(9483).LanguageIcon, { size: "sm" }),
           accessibilityLabel: null,
           onPress: null,
         };
         const intl2 = tmp12(1128).intl;
         obj4.accessibilityLabel = intl2.string(tmp12(1128).t.OlOHDH);
         obj4.onPress = callback;
-        showLocaleFilter = closure_11(tmp12(7935).IconButton, obj4);
+        showLocaleFilter = closure_11(tmp12(7943).IconButton, obj4);
       }
       items1[1] = showLocaleFilter;
       obj2.children = items1;

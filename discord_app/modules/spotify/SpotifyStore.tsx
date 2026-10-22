@@ -529,7 +529,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8787);
+const SpotifyConstants = fn(8796);
 ({
   getSpotifyResourceType: map1,
   isSpotifyParty: closure_14,
@@ -649,7 +649,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11274).SpotifyAPI;
+    const SpotifyAPI = self(11291).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1328,7 +1328,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       const id1 = AuthenticationStore.getId();
       if (id1 === AuthenticationStore.getId()) {
         const result = VoiceStateStore.isCurrentClientInVoiceChannel();
-        const obj5 = { userId: id1, checkSoundSharing: true, checkSoundboardSounds: false };
+        const obj5 = { userId: id1, checkSoundSharing: true };
         if (result) {
           if (obj9.getIsSpeaking(obj5)) {
             if (null != closure_3) {
@@ -1338,7 +1338,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6760);
+        obj9 = device(6767);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1504,7 +1504,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
     userId = userId.userId;
     if (userId === AuthenticationStore.getId()) {
       const result = VoiceStateStore.isCurrentClientInVoiceChannel();
-      const obj2 = { userId, checkSoundSharing: true, checkSoundboardSounds: false };
+      const obj2 = { userId, checkSoundSharing: true };
       if (result) {
         if (obj.getIsSpeaking(obj2)) {
           if (null != c3) {
@@ -1524,7 +1524,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       userId = userId.userId;
       if (userId === id.getId()) {
         const result = currentClientInVoiceChannel.isCurrentClientInVoiceChannel();
-        const obj2 = { userId, checkSoundSharing: true, checkSoundboardSounds: false };
+        const obj2 = { userId, checkSoundSharing: true };
         if (result) {
           if (obj.getIsSpeaking(obj2)) {
             if (null != _null) {

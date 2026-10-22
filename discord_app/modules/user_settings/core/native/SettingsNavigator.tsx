@@ -25,7 +25,7 @@ function LeftAlignedHeaderTitle(children) {
   if (usePersistentBadge != null) {
     persistentBadge = usePersistentBadge();
   }
-  const tmp5 = collapsed(Text_Text.Heading, {
+  const tmp5 = v65535(Text_Text.Heading, {
     lineClamp: 1,
     variant: "redesign/heading-18/bold",
     color: "mobile-text-heading-primary",
@@ -38,7 +38,7 @@ function LeftAlignedHeaderTitle(children) {
     const obj = { style: tmp.headerContainerRow, children: null };
     const items = [tmp5];
     const obj2 = { badge: persistentBadge };
-    items[1] = collapsed(closure_14, obj2);
+    items[1] = v65535(closure_14, obj2);
     obj.children = items;
     tmp6 = closure_1_11(View, obj);
   }
@@ -49,9 +49,9 @@ const Constants = fn(1087);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9701);
+const NativeStackNavigator = fn(9713);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   headerContainer: null,
@@ -91,7 +91,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { size: native.BetaSizes.SMALL };
-          const tmp7 = collapsed(native.BetaTag, obj2);
+          const tmp7 = v65535(native.BetaTag, obj2);
           cResult[0] = tmp7;
           let first = tmp7;
         } else {
@@ -103,7 +103,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   : function SettingHeaderBadge(badge) {
       if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
         const obj = { size: native.BetaSizes.SMALL };
-        return collapsed(native.BetaTag, obj);
+        return v65535(native.BetaTag, obj);
       }
     };
 ReactCompilerGating = fn(558);
@@ -343,11 +343,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -381,11 +381,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -418,11 +418,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -456,11 +456,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -489,11 +489,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -538,11 +538,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -571,11 +571,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -616,11 +616,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -651,11 +651,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -688,11 +688,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -722,11 +722,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -759,11 +759,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -792,11 +792,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -829,11 +829,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -861,11 +861,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -902,11 +902,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -934,11 +934,11 @@ export default noop.memo(
                     style: navigation.backIcon,
                     importantForAccessibility: "no-hide-descendants",
                     accessibilityElementsHidden: true,
-                    children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                    children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                   };
-                  obj2.children = collapsed(View, obj3);
-                  obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                  return collapsed(View, obj);
+                  obj2.children = v65535(View, obj3);
+                  obj.children = v65535(Pressables.PressableOpacity, obj2);
+                  return v65535(View, obj);
                 };
               }
             }
@@ -965,11 +965,11 @@ export default noop.memo(
                       style: navigation.backIcon,
                       importantForAccessibility: "no-hide-descendants",
                       accessibilityElementsHidden: true,
-                      children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                      children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                     };
-                    obj2.children = collapsed(View, obj3);
-                    obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                    return collapsed(View, obj);
+                    obj2.children = v65535(View, obj3);
+                    obj.children = v65535(Pressables.PressableOpacity, obj2);
+                    return v65535(View, obj);
                   };
                 }
               }
@@ -1002,11 +1002,11 @@ export default noop.memo(
                         style: navigation.backIcon,
                         importantForAccessibility: "no-hide-descendants",
                         accessibilityElementsHidden: true,
-                        children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                        children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                       };
-                      obj2.children = collapsed(View, obj3);
-                      obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                      return collapsed(View, obj);
+                      obj2.children = v65535(View, obj3);
+                      obj.children = v65535(Pressables.PressableOpacity, obj2);
+                      return v65535(View, obj);
                     };
                   }
                 }
@@ -1046,11 +1046,11 @@ export default noop.memo(
                         style: navigation.backIcon,
                         importantForAccessibility: "no-hide-descendants",
                         accessibilityElementsHidden: true,
-                        children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                        children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                       };
-                      obj2.children = collapsed(View, obj3);
-                      obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                      return collapsed(View, obj);
+                      obj2.children = v65535(View, obj3);
+                      obj.children = v65535(Pressables.PressableOpacity, obj2);
+                      return v65535(View, obj);
                     };
                   }
                 }
@@ -1078,11 +1078,11 @@ export default noop.memo(
                         style: navigation.backIcon,
                         importantForAccessibility: "no-hide-descendants",
                         accessibilityElementsHidden: true,
-                        children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+                        children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
                       };
-                      obj2.children = collapsed(View, obj3);
-                      obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                      return collapsed(View, obj);
+                      obj2.children = v65535(View, obj3);
+                      obj.children = v65535(Pressables.PressableOpacity, obj2);
+                      return v65535(View, obj);
                     };
                   }
                 }
@@ -1264,11 +1264,11 @@ export default noop.memo(
               style: navigation.backIcon,
               importantForAccessibility: "no-hide-descendants",
               accessibilityElementsHidden: true,
-              children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
+              children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }),
             };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           },
           items3,
         );

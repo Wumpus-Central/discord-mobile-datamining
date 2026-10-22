@@ -12,10 +12,10 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(5248).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(5252).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" },
   tagListIconWrapper: null,
@@ -308,10 +308,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl3 = tmp6(1128).intl;
         obj3.text = intl3.string(tmp6(1128).t.XqMe3N);
-        tmp5Result = closure_8(tmp6(5226).Button, obj3);
+        tmp5Result = closure_8(tmp6(5230).Button, obj3);
       }
       obj.trailing = tmp5Result;
-      const children = [closure_8(renderIcon(7225).BottomSheetTitleHeader, obj)];
+      const children = [closure_8(renderIcon(7232).BottomSheetTitleHeader, obj)];
       let tmp5Result4 = null;
       if (null != onQueryChange) {
         tmp5Result4 = null;
@@ -352,8 +352,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             }
             onQueryChange(ref);
           };
-          tmp5Result4 = closure_8(selectedOptions(8953), obj4);
-          const tmp13 = selectedOptions(8953);
+          tmp5Result4 = closure_8(selectedOptions(8962), obj4);
+          const tmp13 = selectedOptions(8962);
         }
       }
       children[1] = tmp5Result4;
@@ -511,7 +511,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                 const obj4 = { style: tmp20, children: null };
                                 const items = [tmp21, cResult[28]];
                                 obj4.children = items;
-                                const tmp28 = collapsed(View, obj4);
+                                const tmp28 = v65535(View, obj4);
                                 cResult[29] = tmp21;
                                 cResult[30] = cResult[28];
                                 cResult[31] = tmp28;
@@ -689,7 +689,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[1] = tmp6Result2;
       obj4.children = items1;
-      obj2.trailing = collapsed(View, obj4);
+      obj2.trailing = v65535(View, obj4);
       return closure_1_8(TableRow.TableRow, obj2);
     };
 ReactCompilerGating = fn(558);

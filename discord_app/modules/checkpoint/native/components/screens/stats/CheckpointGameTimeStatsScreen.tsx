@@ -11,9 +11,9 @@ import CheckpointStatsUtils from "../../../../CheckpointStatsUtils.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
-import NumberAnimationDefault from "../../NumberAnimation.tsx";
+import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
-import _modDef12897 from "../../../../../../../discord_assets/assets/checkpoint/game-time.png.js";
+import _modDef12931 from "../../../../../../../discord_assets/assets/checkpoint/2026/gaming_loop.png.js";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -36,7 +36,7 @@ let obj2 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, padding
 obj.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj.titleText = { flexShrink: 1 };
 obj.imageContainer = { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" };
-obj.image = { height: "100%", aspectRatio: 0.6493506493506493 };
+obj.image = { height: "100%", aspectRatio: 0.6498194945848376 };
 obj.copy = { flexShrink: 1 };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj.number = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp25Result = CheckpointScreenDefault;
       const container = tmp4.container;
       if (cResult[23] !== tmp4.image) {
-        const obj7 = { uri: _modDef12897, style: tmp4.image };
+        const obj7 = { uri: _modDef12931, style: tmp4.image };
         const tmp32 = timestampProducer(CheckpointApngPlayerDefault, obj7);
         cResult[23] = tmp4.image;
         cResult[24] = tmp32;
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj10.accessibilityLabel = "" + rounded + " " + stringResult;
           obj10.style = tmp4.number;
           const obj11 = { end: rounded };
-          obj10.children = timestampProducer(NumberAnimationDefault, obj11);
+          obj10.children = timestampProducer(CheckpointCountUpStatNumberDefault, obj11);
           const tmp47 = timestampProducer(View, obj10);
           const tmp25Result6 = CheckpointTextDefault;
           if (null != checkpointTopPercent) {
@@ -372,7 +372,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp2Result = CheckpointStatsUtils;
       const obj5 = { uri: null, style: null };
       const tmp8Result = CheckpointScreenDefault;
-      obj5.uri = _modDef12897;
+      obj5.uri = _modDef12931;
       obj5.style = tmp.image;
       obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
       const items1 = [timestampProducer(View, obj4)];
@@ -391,14 +391,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityLabel: "" + rounded + " " + stringResult,
         style: tmp.number,
-        children: timestampProducer(NumberAnimationDefault, { end: rounded }),
+        children: timestampProducer(CheckpointCountUpStatNumberDefault, { end: rounded }),
       });
       const obj11 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
       const obj10 = {
         accessible: true,
         accessibilityLabel: "" + rounded + " " + stringResult,
         style: tmp.number,
-        children: timestampProducer(NumberAnimationDefault, { end: rounded }),
+        children: timestampProducer(CheckpointCountUpStatNumberDefault, { end: rounded }),
       };
       if (null != checkpointTopPercent) {
         const intl4 = util.intl;

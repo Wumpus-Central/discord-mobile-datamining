@@ -26,7 +26,7 @@ import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14040, dependencyMap.paths), timestampProducer, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14075, dependencyMap.paths), timestampProducer, {
     questId,
     questContent,
     questContentPosition,
@@ -38,7 +38,7 @@ function viewReward(quest) {
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14040, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14075, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
@@ -271,7 +271,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
     }
   }
 };
-const QuestConstants = fn(6689);
+const QuestConstants = fn(6696);
 ({
   QuestsExperimentLocations: hasOwnProperty,
   QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: metroRequire,
@@ -285,7 +285,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9527, dependencyMap.paths), React5, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9538, dependencyMap.paths), React5, {
     questId: questId.questId,
   });
 };
@@ -380,10 +380,10 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
       const features2 = quest.config.features;
       if (features2.includes(constants.CLOUD_GAMING_ACTIVITY)) {
         const obj3 = { size: "sm", style: obj2, color: nativeDefault.colors.WHITE };
-        let tmp5Result = collapsed(CloudIcon.CloudIcon, obj3);
+        let tmp5Result = v65535(CloudIcon.CloudIcon, obj3);
       } else {
         const obj4 = { size: "sm", style: obj2, color: nativeDefault.colors.WHITE };
-        tmp5Result = collapsed(GameControllerIcon.GameControllerIcon, obj4);
+        tmp5Result = v65535(GameControllerIcon.GameControllerIcon, obj4);
       }
       return tmp5Result;
     }
@@ -401,14 +401,14 @@ export const showQuestUnavailableAlert = function showQuestUnavailableAlert() {
   const intl3 = util.intl;
   obj4.text = intl3.string(util.t.H0vjGc);
   obj4.onPress = QuestActionCreators.fetchCurrentQuests;
-  const items = [collapsed(AlertModal.AlertActionButton, obj4)];
+  const items = [v65535(AlertModal.AlertActionButton, obj4)];
   const obj5 = { text: null, variant: "secondary" };
   const intl4 = util.intl;
   obj5.text = intl4.string(util.t["6XS10x"]);
-  items[1] = collapsed(AlertModal.AlertActionButton, obj5);
+  items[1] = v65535(AlertModal.AlertActionButton, obj5);
   obj3.children = items;
   obj2.actions = __initData(closure_1_11, obj3);
-  useAlertStore.openAlert("quest-unavailable", collapsed(AlertModal.AlertModal, obj2));
+  useAlertStore.openAlert("quest-unavailable", v65535(AlertModal.AlertModal, obj2));
 };
 export const dismissOverlayScreens = function dismissOverlayScreens() {
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();

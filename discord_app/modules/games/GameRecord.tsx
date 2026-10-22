@@ -202,7 +202,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   }
   return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
 };
-prototype["getCoverURL"] = function getCoverURL(c8) {
+prototype["getCoverURL"] = function getCoverURL(coverImageSize) {
   const media = this.media;
   let cover;
   if (media != null) {
@@ -212,7 +212,7 @@ prototype["getCoverURL"] = function getCoverURL(c8) {
   if (AvatarUtils.SUPPORTS_WEBP) {
     str = "webp";
   }
-  return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size });
+  return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size: coverImageSize });
 };
 prototype["getArtworkURLs"] = function getArtworkURLs(size) {
   const self = this;

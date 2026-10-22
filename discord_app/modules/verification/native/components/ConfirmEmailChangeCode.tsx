@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const setEmailToken = fn(6902).setEmailToken;
+const setEmailToken = fn(6909).setEmailToken;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             headerText: tmp10,
             confirmButtonText: tmp11,
           };
-          const tmp18 = jsx(navigation(6985), {
+          const tmp18 = jsx(navigation(6992), {
             onFormSubmit: tmp7,
             onSuccess: tmp5,
             onResend: tmp9,
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.headerText = intl.string(isChangeEmail(1128).t["2x/2Uo"]);
       const intl2 = isChangeEmail(1128).intl;
       obj2.confirmButtonText = intl2.string(isChangeEmail(1128).t.PDTjLN);
-      return jsx(navigation(6985), {
+      return jsx(navigation(6992), {
         onFormSubmit: null,
         onSuccess: null,
         onResend: null,

@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_6 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardActionButtons.tsx");
@@ -20,18 +20,18 @@ export default function ForLaterCardActionButtons(savedMessage) {
   const callback = noop.useCallback(
     () =>
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13721, dependencyMap.paths),
+        asyncRequireImpl(13757, dependencyMap.paths),
         "MessageReminderDurationActionSheet",
         {
           createReminder(dueAt) {
             const obj2 = {};
             const merged = Object.assign(closure_1_0.saveData);
             obj2.dueAt = dueAt;
-            obj2.source = savedMessage(13724).SavedMessageSources.FOR_LATER_LIST;
-            return savedMessage(13714).addOrUpdateSavedMessage(obj2);
+            obj2.source = savedMessage(13760).SavedMessageSources.FOR_LATER_LIST;
+            return savedMessage(13750).addOrUpdateSavedMessage(obj2);
           },
           removeReminder() {
-            return savedMessage(13714).removeSavedMessage({
+            return savedMessage(13750).removeSavedMessage({
               channelId: closure_1_0.saveData.channelId,
               messageId: closure_1_0.saveData.messageId,
               displayToast: true,
@@ -46,7 +46,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   );
   let intl = savedMessage(1128).intl;
   obj.label = intl.string(savedMessage(1128).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(12426).ChatArrowRightIcon;
+  obj.IconComponent = savedMessage(12456).ChatArrowRightIcon;
   obj.action = function action() {
     return jumpToMessage();
   };
@@ -60,7 +60,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   const tmp = closure_6();
   items1[1] = {
     label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6910).XSmallIcon,
+    IconComponent: savedMessage(6917).XSmallIcon,
     action() {
       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
     },
@@ -80,11 +80,11 @@ export default function ForLaterCardActionButtons(savedMessage) {
         const intl = savedMessage(1128).intl;
         obj.accessibilityLabel = intl.string(savedMessage(1128).t.e1heBD);
         obj.size = "sm";
-        obj.icon = jumpToMessage(9099);
-        return jsx(savedMessage(7935).IconButton, { ref: ref.ref });
+        obj.icon = jumpToMessage(9108);
+        return jsx(savedMessage(7943).IconButton, { ref: ref.ref });
       },
     };
-    obj3.children = jsx(tmp3(9719).ContextMenu, {
+    obj3.children = jsx(tmp3(9731).ContextMenu, {
       items: items1,
       keyboardShouldPersistTaps: "handled",
       triggerOnTap: true,
@@ -96,8 +96,8 @@ export default function ForLaterCardActionButtons(savedMessage) {
         const intl = savedMessage(1128).intl;
         obj.accessibilityLabel = intl.string(savedMessage(1128).t.e1heBD);
         obj.size = "sm";
-        obj.icon = jumpToMessage(9099);
-        return jsx(savedMessage(7935).IconButton, { ref: ref.ref });
+        obj.icon = jumpToMessage(9108);
+        return jsx(savedMessage(7943).IconButton, { ref: ref.ref });
       },
     });
     return <View style={tmp.actionGroup}>{null}</View>;
@@ -110,9 +110,9 @@ export default function ForLaterCardActionButtons(savedMessage) {
       action: null,
     };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(13725).BellZIcon;
+      let PencilIcon = tmp3(13761).BellZIcon;
     } else {
-      PencilIcon = tmp3(10078).PencilIcon;
+      PencilIcon = tmp3(10090).PencilIcon;
     }
     obj5.IconComponent = PencilIcon;
     obj5.action = callback;
@@ -120,7 +120,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }
   let obj2 = {
     label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6910).XSmallIcon,
+    IconComponent: savedMessage(6917).XSmallIcon,
     action() {
       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
     },

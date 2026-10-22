@@ -12,7 +12,7 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg };
 obj2.icon = size;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (arg1) {
         tmp5 = guild_id;
       }
-      const appChannelApplication = guild_id(7323).useAppChannelApplication(tmp5);
+      const appChannelApplication = guild_id(7330).useAppChannelApplication(tmp5);
       let tmp7 = null;
       if (arg1) {
         let conjureProjectId;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[2];
         tmp12 = cResult[3];
       }
-      const tmpResult = guild_id(7323);
+      const tmpResult = guild_id(7330);
       const stateFromStores = guild_id(504).useStateFromStores(first, tmp11, tmp12);
       let tmp16 = null != tmp7;
       const tmpResult3 = guild_id(504);
@@ -157,9 +157,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let formatToPlainStringResult;
         if (null != creator) {
           const intl = tmp(1128).intl;
-          const obj5 = { name: tmp(5015).getName(creator) };
+          const obj5 = { name: tmp(5018).getName(creator) };
           formatToPlainStringResult = intl.formatToPlainString(_modDef3830["6/x9LD"], obj5);
-          const tmpResult4 = tmp(5015);
+          const tmpResult4 = tmp(5018);
         }
         obj3.subtitle = formatToPlainStringResult;
         tmp20 = obj3;

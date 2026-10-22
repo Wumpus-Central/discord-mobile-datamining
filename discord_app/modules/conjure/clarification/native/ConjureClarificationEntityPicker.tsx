@@ -314,7 +314,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                 items = obj.clarificationEntities(
                                   input,
                                   items1,
-                                  () => question(5586).computeChannelName(closure_0, closure_2_6, stateFromStores),
+                                  () => question(5590).computeChannelName(closure_0, closure_2_6, stateFromStores),
                                   closure_1_1,
                                 );
                               }
@@ -508,7 +508,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                 items = obj.clarificationEntities(
                                   input,
                                   items1,
-                                  () => question(5586).computeChannelName(closure_0, closure_2_6, stateFromStores),
+                                  () => question(5590).computeChannelName(closure_0, closure_2_6, stateFromStores),
                                   closure_1_1,
                                 );
                               }
@@ -631,7 +631,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                 items = obj.clarificationEntities(
                                   input,
                                   items1,
-                                  () => question(5586).computeChannelName(closure_0, closure_2_6, stateFromStores),
+                                  () => question(5590).computeChannelName(closure_0, closure_2_6, stateFromStores),
                                   closure_1_1,
                                 );
                               }

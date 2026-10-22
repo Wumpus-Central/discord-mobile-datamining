@@ -7,7 +7,7 @@ import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../_runtime/05240_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05244_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
@@ -48,20 +48,20 @@ let closure_24 = async function _getBackgroundGradientColor() {
 };
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const OnboardingPromptType = fn(7175).OnboardingPromptType;
-let closure_15 = fn(7171).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(7182).OnboardingPromptType;
+let closure_15 = fn(7178).GuildOnboardingModalStates;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5250).NAV_BAR_HEIGHT,
+    marginTop: fn(5254).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -80,7 +80,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5250).NAV_BAR_HEIGHT,
+  marginTop: fn(5254).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -168,7 +168,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { children: null };
             const items = [tmp6, tmp11];
             obj3.children = items;
-            const tmp19 = guild(constants2, obj3);
+            const tmp19 = guild(closure_1_20, obj3);
             cResult[13] = tmp6;
             cResult[14] = tmp11;
             cResult[15] = tmp19;
@@ -222,7 +222,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.colors = items1;
       items[1] = closure_1_19(tmp2, obj3);
       obj.children = items;
-      return guild(constants2, obj);
+      return guild(closure_1_20, obj);
     };
 let closure_26 = {
   code: "function GuildOnboardingPromptsTsx1(){const{showPrompts,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)});const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)});return{opacity:opacity,transform:[{translateY:translateY}]};}",

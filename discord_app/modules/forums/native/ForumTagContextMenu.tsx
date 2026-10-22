@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== tagId) {
         const obj2 = {
           label: first,
-          IconComponent: tmp(10370).IdIcon,
+          IconComponent: tmp(10382).IdIcon,
           action() {
             ClipboardUtils.copy(tagId);
             ToastUtils.presentIdCopied();
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp8;
         }
       }
-      const tmp9 = jsx(tagId(9719).ContextMenu, { triggerOnLongPress: true, items: tmp7, enabled: setting, children });
+      const tmp9 = jsx(tagId(9731).ContextMenu, { triggerOnLongPress: true, items: tmp7, enabled: setting, children });
       cResult[3] = children;
       cResult[4] = tmp7;
       cResult[5] = setting;
@@ -62,11 +62,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const enabled = DeveloperMode.useSetting();
       const intl = tagId(1128).intl;
       obj.label = intl.string(tagId(1128).t["8VG6IY"]);
-      obj.IconComponent = tagId(10370).IdIcon;
+      obj.IconComponent = tagId(10382).IdIcon;
       obj.action = function action() {
         ClipboardUtils.copy(tagId);
         ToastUtils.presentIdCopied();
       };
       const items = [obj];
-      return jsx(tagId(9719).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
+      return jsx(tagId(9731).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
     };

@@ -28,8 +28,8 @@ export const isConjureDevicePermissionName = function isConjureDevicePermissionN
 export const isConjureDevicePermissionSupported = function isConjureDevicePermissionSupported(permission) {
   return obj[permission].isSupported();
 };
-export const getConjureDevicePermissionLabel = function getConjureDevicePermissionLabel(item) {
-  return obj[item].getLabel();
+export const getConjureDevicePermissionLabel = function getConjureDevicePermissionLabel(arg0) {
+  return obj[arg0].getLabel();
 };
 export const getConjureDevicePermissionPromptTitle = function getConjureDevicePermissionPromptTitle(app) {
   const intl = util.intl;

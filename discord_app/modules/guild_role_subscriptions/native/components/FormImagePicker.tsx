@@ -194,7 +194,7 @@ let closure_3 = ["description", "imageUploadSize", "image", "setImage", "disable
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 },
   buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 },
@@ -225,7 +225,7 @@ let size = {
 obj2.editImageIcon = size;
 obj2.standaloneIcon = { top: -4, right: -4 };
 obj2.disabled = { opacity: 0.3 };
-const collapsed = createStyles.createStyles(obj2);
+const v65535 = createStyles.createStyles(obj2);
 let obj5 = { CIRCLE: 0, [0]: "CIRCLE", SQUIRCLE: 1, [1]: "SQUIRCLE" };
 const ReactCompilerGating = fn(558);
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             obj5 = { text: tmp15, variant: "secondary", onPress: tmp14, size: "md", disabled: tmp5 };
-            const tmp24 = closure_8(tmp(5226).Button, obj5);
+            const tmp24 = closure_8(tmp(5230).Button, obj5);
             cResult[15] = tmp15;
             cResult[16] = tmp5;
             cResult[17] = tmp14;
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: tmp4,
           };
-          const tmp21 = closure_8(tmp(5216).Text, obj6);
+          const tmp21 = closure_8(tmp(5220).Text, obj6);
           cResult[12] = tmp4;
           cResult[13] = tmp13.imageDescription;
           cResult[14] = tmp21;
@@ -397,13 +397,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: tmp2.imageSelectionRow, children: null };
       const obj2 = { style: tmp2.buttonColumn, children: null };
       const items = [
-        closure_8(tmp6(5216).Text, {
+        closure_8(tmp6(5220).Text, {
           style: tmp2.imageDescription,
           variant: "text-sm/medium",
           color: "text-default",
           children: children.description,
         }),
-        closure_8(tmp6(5226).Button, {
+        closure_8(tmp6(5230).Button, {
           text: stringResult,
           variant: "secondary",
           onPress: function handleSelectImage() {

@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef13733 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-1x.png.js";
-import _modDef13734 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-2x.png.js";
-import _modDef13735 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-3x.png.js";
+import _modDef13769 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-1x.png.js";
+import _modDef13770 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-2x.png.js";
+import _modDef13771 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13733 }, 3: null };
-let obj2 = { uri: _modDef13733 };
-obj[2] = { uri: _modDef13734 };
-const obj3 = { uri: _modDef13734 };
-obj[3] = { uri: _modDef13735 };
+let obj = { 1: null, 2: { uri: _modDef13769 }, 3: null };
+let obj2 = { uri: _modDef13769 };
+obj[2] = { uri: _modDef13770 };
+const obj3 = { uri: _modDef13770 };
+obj[3] = { uri: _modDef13771 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13735 };
+const obj4 = { uri: _modDef13771 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx",

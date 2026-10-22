@@ -585,7 +585,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp8 = cResult[3];
         }
-        const tmp9 = tmp4(5581)(tmp8);
+        const tmp9 = tmp4(5585)(tmp8);
         _require = tmp9;
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj2.initialRouteState = undefined;
               obj2.screens = tmp14;
               obj2.viewStyle = tmp6;
-              tmp27Result = tmp27(tmp(7074).Navigator, obj2);
+              tmp27Result = tmp27(tmp(7081).Navigator, obj2);
             }
             cResult[16] = first;
             cResult[17] = tmp6;

@@ -9,11 +9,11 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandConstants = fn(5963);
+const ApplicationCommandConstants = fn(5970);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionHeader = {
@@ -695,7 +695,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let stringResult = intl2.string(util.t.V0w2ap);
                 }
                 const obj = { variant, color: "text-default", style: closure_18.sectionHeader, children: stringResult };
-                return collapsed(Text_Text.Text, obj);
+                return v65535(Text_Text.Text, obj);
               }
               const intl = util.intl;
               stringResult = intl.string(util.t.PHjkRE);

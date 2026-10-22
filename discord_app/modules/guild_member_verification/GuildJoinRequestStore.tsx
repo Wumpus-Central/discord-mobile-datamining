@@ -80,7 +80,7 @@ function handleGuildJoinRequestCreateOrUpdate(request) {
   }
   return false;
 }
-const joinRequestFromServer = fn(4993).joinRequestFromServer;
+const joinRequestFromServer = fn(4996).joinRequestFromServer;
 const map = new Map();
 const dependencyMap = {};
 let closure_8 = {};

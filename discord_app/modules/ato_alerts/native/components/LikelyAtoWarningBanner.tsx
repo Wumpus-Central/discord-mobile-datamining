@@ -117,17 +117,17 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(10894, dependencyMap.paths);
+      const tmp = asyncRequireImpl(10911, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         const items = [
           closure_1_10(
-            channelId(5216).Text,
+            channelId(5220).Text,
             { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title },
             index,
           ),
           closure_1_10(
-            channelId(5216).Text,
+            channelId(5220).Text,
             { variant: "text-xs/medium", color: "text-subtle", children: children.description },
             index,
           ),
@@ -135,7 +135,7 @@ class LikelyAtoWarningBanner {
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });
-      obj2.actionItems = collapsed(LikelyAtoMoreTipsModalActionItemsDefault, {
+      obj2.actionItems = v65535(LikelyAtoMoreTipsModalActionItemsDefault, {
         senderId,
         handleMutePressed() {
           return closure_1_5(channelId(senderId[8]).CtaEventTypes.USER_MODAL_MUTE);
@@ -144,7 +144,7 @@ class LikelyAtoWarningBanner {
       const obj4 = { variant: "text-sm/normal", color: "text-link", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.format(util.t.UkH122, { learnMoreLink: handleLearnMore });
-      obj2.learnMore = collapsed(Text_Text.Text, obj4);
+      obj2.learnMore = v65535(Text_Text.Text, obj4);
       obj.pushLazy(tmp, obj2, modalKey);
       const arr = hasOwnProperty();
       const obj3 = {
@@ -176,8 +176,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10651).SafetyWarningTypes;
-const Constants = fn(10886);
+const SafetyWarningTypes = fn(10663).SafetyWarningTypes;
+const Constants = fn(10903);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,
@@ -187,7 +187,7 @@ const AnalyticEvents = fn(1087).AnalyticEvents;
 const MuteUntilSeconds = fn(1097).MuteUntilSeconds;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
 };

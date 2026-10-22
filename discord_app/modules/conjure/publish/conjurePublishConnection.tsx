@@ -2,8 +2,11 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjurePublishActionCreators from "ConjurePublishActionCreators.tsx";
+import promptConjureDevicePermissionsOnInstallDefault from "../device_permissions/promptConjureDevicePermissionsOnInstall.tsx";
 import conjureDevicePermissions from "../device_permissions/conjureDevicePermissions.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ApplicationStore from "../../applications/ApplicationStore.tsx";
+import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 
 require = fn;
@@ -145,15 +148,15 @@ export const publishStepHandlers = {
             } else {
               if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
                 const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
-                v1(tmp19[2]).dispatch(obj5);
+                v1(tmp19[4]).dispatch(obj5);
                 v1 = 1;
                 c2 = 1;
-                const obj6 = { value: tmp2(tmp19[5])(tmp19[4], tmp19.paths), done: false };
+                const obj6 = { value: tmp2(tmp19[8])(tmp19[7], tmp19.paths), done: false };
                 return obj6;
               } else {
                 c2 = 3;
               }
-              obj7 = tmp2(c2[3]);
+              obj7 = tmp2(c2[6]);
             }
           } else if (arg0 === 1) {
             c2 = 3;
@@ -285,11 +288,11 @@ export const publishStepHandlers = {
       value.resolve(ok);
     }
     if (true !== ok.ok) {
-      let str = ok.error;
-      if (str == null) {
-        str = "publish_result not ok";
+      let str2 = ok.error;
+      if (str2 == null) {
+        str2 = "publish_result not ok";
       }
-      ConjurePublishActionCreators.trackPublishFailed(projectId, str, false);
+      ConjurePublishActionCreators.trackPublishFailed(projectId, str2, false);
     } else {
       const publishStatus = ConjurePublishStatusStore.getPublishStatus(projectId);
       if (null != publishStatus) {
@@ -305,14 +308,43 @@ export const publishStepHandlers = {
           publishedAt: null,
         };
         ({
-          surface: obj5.surface,
-          previewAppChannels: obj5.previewAppChannels,
-          previewDevicePermissions: obj5.previewDevicePermissions,
-          publishedRevision: obj5.publishedRevision,
-          publishedAt: obj5.publishedAt,
+          surface: obj4.surface,
+          previewAppChannels: obj4.previewAppChannels,
+          previewDevicePermissions: obj4.previewDevicePermissions,
+          publishedRevision: obj4.publishedRevision,
+          publishedAt: obj4.publishedAt,
         } = publishStatus);
         DispatcherDefault.dispatch(obj2);
         const tmpResult = DispatcherDefault;
+      }
+      const project = ConjureProjectStore.getProject(projectId);
+      const publishStatus1 = ConjurePublishStatusStore.getPublishStatus(projectId);
+      if (publishStatus1 != null) {
+        const previewDevicePermissions = publishStatus1.previewDevicePermissions;
+      }
+      let install_scope;
+      if (project != null) {
+        install_scope = project.install_scope;
+      }
+      if ("user" === install_scope) {
+        if ("" !== project.application_id) {
+          if (null != previewDevicePermissions) {
+            const application_id = project.application_id;
+            const obj3 = { applicationId: application_id, appName: null, permissions: null };
+            const application = ApplicationStore.getApplication(application_id);
+            let name;
+            if (application != null) {
+              name = application.name;
+            }
+            if (name == null) {
+              name = project.name;
+            }
+            obj3.appName = name;
+            obj3.permissions = previewDevicePermissions;
+            promptConjureDevicePermissionsOnInstallDefault(obj3);
+            const tmpResult2 = promptConjureDevicePermissionsOnInstallDefault;
+          }
+        }
       }
     }
   },
@@ -350,7 +382,7 @@ export const publishProject = function publishProject(projectId, arg1) {
           resolve,
           reject,
           timeout: setTimeout(() => {
-            closure_1(dependencyMap[2]).dispatch({
+            closure_1(dependencyMap[4]).dispatch({
               type: "CONJURE_PROJECT_PUBLISH_APPROVAL",
               projectId,
               approvalUrl: null,
@@ -373,7 +405,7 @@ export const publishProject = function publishProject(projectId, arg1) {
               const error1 = new Error("Publish timed out");
               value2.reject(error1);
             }
-            const obj = closure_1(dependencyMap[2]);
+            const obj = closure_1(dependencyMap[4]);
             const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
           }, 900000),
         };
@@ -411,7 +443,7 @@ export const publishProject = function publishProject(projectId, arg1) {
           resolve,
           reject,
           timeout: setTimeout(() => {
-            closure_1(dependencyMap[2]).dispatch({
+            closure_1(dependencyMap[4]).dispatch({
               type: "CONJURE_PROJECT_PUBLISH_APPROVAL",
               projectId,
               approvalUrl: null,
@@ -434,7 +466,7 @@ export const publishProject = function publishProject(projectId, arg1) {
               const error1 = new Error("Publish timed out");
               value2.reject(error1);
             }
-            const obj = closure_1(dependencyMap[2]);
+            const obj = closure_1(dependencyMap[4]);
             const obj2 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: null };
           }, 900000),
         };

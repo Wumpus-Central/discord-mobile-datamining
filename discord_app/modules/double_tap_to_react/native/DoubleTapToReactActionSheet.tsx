@@ -55,7 +55,7 @@ const AnalyticEvents = fn(1087).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -254,15 +254,15 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const top = children.top;
       ({ bottom, left } = children);
       ({ right, leading: dependencyMap } = children);
-      const sharedValue = top(5035).useSharedValue(0);
-      let obj = top(5035);
-      const sharedValue1 = top(5035).useSharedValue(0);
-      const obj2 = top(5035);
-      const sharedValue2 = top(5035).useSharedValue(0.2);
-      const obj3 = top(5035);
-      const sharedValue3 = top(5035).useSharedValue(0);
-      let obj4 = top(5035);
-      const mountLayoutEffect = top(5245).useMountLayoutEffect(() => {
+      const sharedValue = top(5038).useSharedValue(0);
+      let obj = top(5038);
+      const sharedValue1 = top(5038).useSharedValue(0);
+      const obj2 = top(5038);
+      const sharedValue2 = top(5038).useSharedValue(0.2);
+      const obj3 = top(5038);
+      const sharedValue3 = top(5038).useSharedValue(0);
+      let obj4 = top(5038);
+      const mountLayoutEffect = top(5249).useMountLayoutEffect(() => {
         randomizeAnimationValues({
           positionValue: sharedValue,
           rotationValue: sharedValue1,
@@ -271,7 +271,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           leading,
         });
       });
-      const obj5 = top(5245);
+      const obj5 = top(5249);
       class S {
         constructor() {
           obj = { scale: closure_5.get() };
@@ -316,8 +316,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       S.__workletHash = 17194622427708;
       S.__initData = __initData2;
-      const style = top(5035).useAnimatedStyle(S);
-      return closure_11(left(5035).View, { style, children: children.emojiComponent });
+      const style = top(5038).useAnimatedStyle(S);
+      return closure_11(left(5038).View, { style, children: children.emojiComponent });
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1254,7 +1254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 emoji_name: closure_129_2.name,
                 emoji_animated: closure_129_2.animated,
                 recommended: closure_129_4.current,
-                location: tmp22(7255).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+                location: tmp22(7262).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
               };
               tmp22(1267).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
               const _setTimeout = setTimeout;

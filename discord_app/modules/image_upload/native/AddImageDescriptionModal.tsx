@@ -9,10 +9,10 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7608).DraftType;
+const DraftType = fn(7615).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   imageContainer: null,
@@ -141,9 +141,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = {};
                   const merged = Object.assign(dependencyMap);
                   obj2.description = ref.current;
-                  id(9622).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                  const obj = id(9622);
-                  id(13873).close();
+                  id(9634).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                  const obj = id(9634);
+                  id(13909).close();
                 },
               );
               let merged = Object.assign(arg0);
@@ -232,9 +232,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = {};
                 const merged = Object.assign(dependencyMap);
                 obj2.description = ref.current;
-                id(9622).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                const obj = id(9622);
-                id(13873).close();
+                id(9634).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                const obj = id(9634);
+                id(13909).close();
               },
             );
             let merged = Object.assign(arg0);
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         screenKey: "addImageDescriptionModal",
         title: first,
         render() {
-          return collapsed(closure_13, { source, channelId, id });
+          return v65535(closure_13, { source, channelId, id });
         },
       });
       cResult[1] = channelId;
@@ -327,7 +327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.title = intl.string(util.t["5S2AK+"]);
       obj.render = function render() {
-        return collapsed(closure_13, { source, channelId, id });
+        return v65535(closure_13, { source, channelId, id });
       };
       return closure_10(ModalStackNavigatorDefault, obj);
     };

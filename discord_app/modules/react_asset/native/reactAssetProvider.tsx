@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/react_asset/native/reactAsset
 export default function reactAssetProvider() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1(19270).keysRequest((arr) => {
+    closure_1(19335).keysRequest((arr) => {
       const NATIVE_REQUIRED_ASSETS = native_required_assets.NATIVE_REQUIRED_ASSETS;
       const mapped = arr.map((item) => {
         let str = "";

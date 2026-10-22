@@ -18,7 +18,7 @@ const PremiumConstants = fn(1394);
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function PricingSubheadingCopy() {
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
   const obj4 = { style: pricingSection, children: null };
   const items = [tmp8, tmp11];
   obj4.children = items;
-  const tmp16 = constants2(View, obj4);
+  const tmp16 = closure_1_20(View, obj4);
   cResult[5] = tmp4.pricingSection;
   cResult[6] = tmp8;
   cResult[7] = tmp11;
@@ -539,5 +539,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
   }
   items[1] = tmp5Result;
   obj2.children = items;
-  return constants2(View, obj2);
+  return closure_1_20(View, obj2);
 });

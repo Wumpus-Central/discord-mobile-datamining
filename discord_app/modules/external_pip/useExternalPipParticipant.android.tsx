@@ -56,8 +56,8 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
     obj = closure_10;
   }
 }
-const ParticipantTypes = fn(5614).ParticipantTypes;
-const VoicePanelModes = fn(10848).VoicePanelModes;
+const ParticipantTypes = fn(5618).ParticipantTypes;
+const VoicePanelModes = fn(10865).VoicePanelModes;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
@@ -117,7 +117,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let closure_10 = {
   participantType: "Reflect",
-  selectedParticipantId: "default",
+  selectedParticipantId: "ddd",
   selectedParticipantSpeaking: null,
   selectedParticipantStreamId: null,
   selectedParticipantUserId: null,

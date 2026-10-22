@@ -12,7 +12,7 @@ const Constants = fn(1087);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, MAX_VISUAL_ROLE_LENGTH: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs },
   pill: null,
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === verifiedContainer.id) {
           let tmp5 = cResult[2];
         }
-        const roleIconProps = tmp(7259).useRoleIconProps(tmp5);
+        const roleIconProps = tmp(7266).useRoleIconProps(tmp5);
         if (cResult[3] !== verifiedContainer.name) {
           let name = verifiedContainer.name;
           importDefault = name;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             color: "interactive-text-active",
                             children: tmp7,
                           };
-                          const tmp37 = closure_6(tmp(5216).Text, obj2);
+                          const tmp37 = closure_6(tmp(5220).Text, obj2);
                           cResult[18] = tmp7;
                           cResult[19] = tmp37;
                           let tmp35 = tmp37;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 accessible: false,
                                 children: tmp38,
                               };
-                              const tmp44 = closure_6(tmp(6887).PressableHighlight, obj3);
+                              const tmp44 = closure_6(tmp(6894).PressableHighlight, obj3);
                               cResult[25] = tmp12;
                               cResult[26] = tmp14.container;
                               cResult[27] = tmp15;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = verifiedContainer.id;
         cResult[7] = handlePress;
         tmp12 = handlePress;
-        const tmpResult = tmp(7259);
+        const tmpResult = tmp(7266);
       }
       const obj11 = { guildId, roleId: verifiedContainer.id, size: 12 };
       cResult[0] = guildId;
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId, color } = role);
       const DeveloperMode = role(4797).DeveloperMode;
       const setting = DeveloperMode.useSetting();
-      const roleIconProps = role(7259).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
+      const roleIconProps = role(7266).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
       let name = role.name;
       let combined = name;
       if (role.name.length > closure_5) {
@@ -287,8 +287,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj5.guildId = guildId;
         obj5.roleColor = color;
-        let tmp10Result = closure_6(combined(7276), obj5);
-        const tmp15 = combined(7276);
+        let tmp10Result = closure_6(combined(7283), obj5);
+        const tmp15 = combined(7283);
       } else {
         const items = [tmp9.bubble];
         if (null != color) {
@@ -308,17 +308,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { style: tmp9.roleIcon, children: null };
         const obj10 = {};
         const merged = Object.assign(roleIconProps);
-        obj9.children = closure_6(combined(7278), obj10);
+        obj9.children = closure_6(combined(7285), obj10);
         tmp10Result2 = closure_6(View, obj9);
-        const tmp18 = combined(7278);
+        const tmp18 = combined(7285);
       }
       items1[1] = tmp10Result2;
-      items1[2] = closure_6(role(5216).Text, {
+      items1[2] = closure_6(role(5220).Text, {
         variant: "text-xs/semibold",
         color: "interactive-text-active",
         children: name,
       });
       obj4.children = items1;
       obj3.children = closure_7(View, obj4);
-      return closure_6(role(6887).PressableHighlight, obj3);
+      return closure_6(role(6894).PressableHighlight, obj3);
     };

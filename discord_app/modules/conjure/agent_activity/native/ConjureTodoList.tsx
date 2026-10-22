@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { list: { gap: nativeDefault.space.PX_8 }, row: null, marker: null, markerUnfinished: null, markerInProgress: null, markerSpinner: null, text: null, agents: null, agentMark: null, agentMarkTint0: null, agentMarkTint1: null, agentMarkTint2: null, agentMarkTint3: null, textCompleted: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -75,7 +75,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAge
                     obj2.accessibilityLabel = intl.formatToPlainString(items1(3830).SPGdDc, obj3);
                     const _HermesInternal = HermesInternal;
                     obj2.children = "+" + tmp6;
-                    tmp18 = closure_6(tmp(5216).Text, obj2);
+                    tmp18 = closure_6(tmp(5220).Text, obj2);
                   }
                   cResult[12] = tmp6;
                   cResult[13] = tmp18;
@@ -177,7 +177,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAge
       obj3.accessibilityLabel = intl.formatToPlainString(items(3830).SPGdDc, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(5216).Text, obj3);
+      tmp9 = closure_6(tmp2(5220).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -354,7 +354,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoMa
     stringResult1 = intl6.string(_modDef3830.lRpwhD);
     tmp21 = require;
   }
-  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6880).FormCheckbox, { checked: "completed" === status }) };
+  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6887).FormCheckbox, { checked: "completed" === status }) };
 });
 ReactCompilerGating = fn(558);
 const obj10 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_INFO };
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                                 obj2.showLabel = tmp32;
                                 obj2.hideLabel = tmp33;
                                 obj2.children = tmp50;
-                                const tmp57 = closure_6(textCompleted(12356), obj2);
+                                const tmp57 = closure_6(textCompleted(12382), obj2);
                                 cResult[40] = tmp6;
                                 cResult[41] = onToggleExpanded;
                                 cResult[42] = tmp5;
@@ -655,7 +655,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                             }
                             tmp49[2] = tmp7.text;
                             tmp49[3] = provisional;
-                            items1[1] = closure_6(tmp(5216).Text, tmp49);
+                            items1[1] = closure_6(tmp(5220).Text, tmp49);
                             obj4.children = items1;
                             tmp44 = closure_7(closure_5, obj4);
                           }
@@ -831,7 +831,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
           }
         }
         const obj5 = { accessibilityLiveRegion: str4, accessibilityLabel: tmp10, children: tmp9 };
-        const tmp30 = closure_6(tmp(12356).ConjureNativeCollapsibleMeta, obj5);
+        const tmp30 = closure_6(tmp(12382).ConjureNativeCollapsibleMeta, obj5);
         cResult[13] = tmp9;
         cResult[14] = tmp10;
         cResult[15] = str4;
@@ -857,11 +857,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp15 = cResult[9];
   }
   if (cResult[10] !== tmp15) {
-    const groupAgentsByTodoResult = tmp(12242).groupAgentsByTodo(tmp15);
+    const groupAgentsByTodoResult = tmp(12265).groupAgentsByTodo(tmp15);
     cResult[10] = tmp15;
     cResult[11] = groupAgentsByTodoResult;
     let tmp17 = groupAgentsByTodoResult;
-    const tmpResult2 = tmp(12242);
+    const tmpResult2 = tmp(12265);
   } else {
     tmp17 = cResult[11];
   }
@@ -956,8 +956,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12227);
-  ({ completed, total } = agents(12227).todoProgress(todos));
+  let obj = agents(12250);
+  ({ completed, total } = agents(12250).todoProgress(todos));
   let items = [agents];
   noop = noop.useMemo(() => {
     let items = agents;
@@ -970,7 +970,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     return null;
   }
   const intl = agents(1128).intl;
-  const todoProgressResult = agents(12227).todoProgress(todos);
+  const todoProgressResult = agents(12250).todoProgress(todos);
   const intl2 = agents(1128).intl;
   const formatToPlainStringResult = intl.formatToPlainString(flag2(3830)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
@@ -984,7 +984,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       str = "polite";
     }
   }
-  obj2.meta = closure_6(agents(12356).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj2.meta = closure_6(agents(12382).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj2.showHeader = total > 0;
   obj2.superseded = flag3;
   obj2.expanded = flag4;
@@ -1031,7 +1031,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       let obj4 = { style: tmp.row, children: null };
       let items2 = [closure_6(closure_10, { status: "pending" }), ];
       const obj5 = { variant: "text-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-      items2[1] = closure_6(agents(5216).Text, obj5);
+      items2[1] = closure_6(agents(5220).Text, obj5);
       obj4.children = items2;
       tmp11Result = closure_7(closure_5, obj4);
     }
@@ -1039,5 +1039,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   items1[1] = tmp11Result;
   obj3.children = items1;
   obj2.children = closure_7(closure_5, obj3);
-  return closure_6(flag2(12356), obj2);
+  return closure_6(flag2(12382), obj2);
 });

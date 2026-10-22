@@ -44,6 +44,7 @@ function retryFailedUsers() {
             voiceState: tmp23,
             voicePlatform: null,
             speaking: false,
+            playingSoundboard: false,
             lastSpoke: 0,
             soundsharing: false,
             ringing: false,
@@ -62,10 +63,10 @@ function retryFailedUsers() {
     return c2;
   }
 }
-const makeSortedVoiceState = fn(5699).makeSortedVoiceState;
+const makeSortedVoiceState = fn(5703).makeSortedVoiceState;
 const Constants = fn(1087);
 ({ ME: closure_9, RTCConnectionStates: c10 } = Constants);
-const ParticipantTypes = fn(5614).ParticipantTypes;
+const ParticipantTypes = fn(5618).ParticipantTypes;
 new CachedEntriesMapDefault();
 const tmp3 = new CachedEntriesMapDefault();
 const set = new Set();
@@ -173,6 +174,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault,
               voiceState: tmp21,
               voicePlatform: null,
               speaking: false,
+              playingSoundboard: false,
               lastSpoke: 0,
               soundsharing: false,
               ringing: false,

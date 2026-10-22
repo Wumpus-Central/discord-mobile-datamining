@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef17721 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-1x.png.js";
-import _modDef17722 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-2x.png.js";
-import _modDef17723 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-3x.png.js";
+import _modDef17791 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-1x.png.js";
+import _modDef17792 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-2x.png.js";
+import _modDef17793 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17721 }, 3: null };
-let obj2 = { uri: _modDef17721 };
-obj[2] = { uri: _modDef17722 };
-const obj3 = { uri: _modDef17722 };
-obj[3] = { uri: _modDef17723 };
+let obj = { 1: null, 2: { uri: _modDef17791 }, 3: null };
+let obj2 = { uri: _modDef17791 };
+obj[2] = { uri: _modDef17792 };
+const obj3 = { uri: _modDef17792 };
+obj[3] = { uri: _modDef17793 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17723 };
+const obj4 = { uri: _modDef17793 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx",

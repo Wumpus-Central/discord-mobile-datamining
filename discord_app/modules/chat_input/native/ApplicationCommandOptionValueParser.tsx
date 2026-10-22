@@ -41,7 +41,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(5586).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(5590).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -78,7 +78,7 @@ function getChannels(getGuildId, arr) {
   }
 }
 let closure_6 = fn(4825).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5964);
+const ChannelAutocompleteConstants = fn(5971);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {}
 class ApplicationCommandOptionValueParser {

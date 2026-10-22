@@ -4,37 +4,33 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import ConjureMessageTime from "../ConjureMessageTime.tsx";
 import ConjureMessageActionSheet from "ConjureMessageActionSheet.tsx";
+import _modDef12304 from "../../../../../_runtime/metro/12304__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 },
   name: { flexShrink: 1 },
   time: { flexShrink: 0 },
-  conjureTile: null,
+  agentAvatar: null,
 };
 let size = {
-  width: fn(12263).MESSAGE_AVATAR_SIZE,
-  height: fn(12263).MESSAGE_AVATAR_SIZE,
-  borderRadius: nativeDefault.radii.sm,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_MUTED,
-  backgroundColor: nativeDefault.colors.BACKGROUND_CODE,
-  alignItems: "center",
-  justifyContent: "center",
+  width: fn(12286).MESSAGE_AVATAR_SIZE,
+  height: fn(12286).MESSAGE_AVATAR_SIZE,
+  borderRadius: fn(12286).MESSAGE_AVATAR_SIZE / 2,
 };
-obj2.conjureTile = size;
+obj2.agentAvatar = size;
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureMessageHeader(arg0) {
       const cResult = c.c(18);
       ({ name, color, at, onPressName } = arg0);
@@ -184,9 +180,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = messageAuthorUser(576).c(6);
       ({ at, userId } = arg0);
       let obj = messageAuthorUser(576);
-      messageAuthorUser = messageAuthorUser(12274).useMessageAuthorUser(userId);
-      const obj2 = messageAuthorUser(12274);
-      const name = messageAuthorUser(5015).useName(messageAuthorUser);
+      messageAuthorUser = messageAuthorUser(12297).useMessageAuthorUser(userId);
+      const obj2 = messageAuthorUser(12297);
+      const name = messageAuthorUser(5018).useName(messageAuthorUser);
       if (cResult[0] !== messageAuthorUser) {
         const fn = function t() {
           if (null != messageAuthorUser) {
@@ -220,9 +216,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   : function ConjureUserHeader(arg0) {
       let messageAuthorUser;
       ({ userId, at } = arg0);
-      messageAuthorUser = messageAuthorUser(12274).useMessageAuthorUser(userId);
-      let obj = messageAuthorUser(12274);
-      const name = messageAuthorUser(5015).useName(messageAuthorUser);
+      messageAuthorUser = messageAuthorUser(12297).useMessageAuthorUser(userId);
+      let obj = messageAuthorUser(12297);
+      const name = messageAuthorUser(5018).useName(messageAuthorUser);
       [][0] = messageAuthorUser;
       let tmp4 = null;
       if (null != messageAuthorUser) {
@@ -276,7 +272,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         size = PressableOpacity(1202).AvatarSizes.NORMAL;
       }
       let obj = messageAuthorUser(576);
-      messageAuthorUser = PressableOpacity(12274).useMessageAuthorUser(userId);
+      messageAuthorUser = PressableOpacity(12297).useMessageAuthorUser(userId);
       if (cResult[0] !== messageAuthorUser) {
         const fn = function t() {
           if (null != messageAuthorUser) {
@@ -307,7 +303,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[6] === tmp4) {
           }
-          PressableOpacity = PressableOpacity(6887).PressableOpacity;
+          PressableOpacity = PressableOpacity(6894).PressableOpacity;
           const obj2 = {
             onPress: tmp4,
             onLongPress: tmp4,
@@ -327,7 +323,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp10;
         tmp8 = tmp10;
       }
-      const PressableOpacityResult = PressableOpacity(12274);
+      const PressableOpacityResult = PressableOpacity(12297);
     }
   : function ConjureUserAvatar(size) {
       let NORMAL = size.size;
@@ -335,7 +331,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         NORMAL = messageAuthorUser(1202).AvatarSizes.NORMAL;
       }
       messageAuthorUser = undefined;
-      messageAuthorUser = messageAuthorUser(12274).useMessageAuthorUser(size.userId);
+      messageAuthorUser = messageAuthorUser(12297).useMessageAuthorUser(size.userId);
       const items = [messageAuthorUser];
       const callback = noop.useCallback(() => {
         if (null != messageAuthorUser) {
@@ -355,7 +351,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.accessibilityLabel = intl.string(tmp3(1128).t.iXAna6);
         const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "r" };
         obj2.children = closure_5(tmp3(1202).Avatar, obj3);
-        tmp7 = closure_5(tmp3(6887).PressableOpacity, obj2);
+        tmp7 = closure_5(tmp3(6894).PressableOpacity, obj2);
       }
       return tmp7;
     };
@@ -368,31 +364,23 @@ export const ConjureHeader = tmp5;
 export const ConjureUserAvatar = tmp6;
 export const ConjureAvatar = ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureAvatar() {
-      const cResult = c.c(3);
-      const tmp4 = closure_7();
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_BRAND };
-        const tmp8 = hasOwnProperty(AppsIcon.AppsIcon, obj2);
-        cResult[0] = tmp8;
-        let first = tmp8;
+      const cResult = c.c(2);
+      const tmp3 = closure_7();
+      if (cResult[0] !== tmp3.agentAvatar) {
+        const obj2 = { source: _modDef12304, style: tmp3.agentAvatar };
+        const tmp8 = hasOwnProperty(FastImageDefault, obj2);
+        cResult[0] = tmp3.agentAvatar;
+        cResult[1] = tmp8;
+        let tmp4 = tmp8;
       } else {
-        first = cResult[0];
+        tmp4 = cResult[1];
       }
-      if (cResult[1] !== tmp4.conjureTile) {
-        const obj3 = { style: tmp4.conjureTile, children: first };
-        const tmp12 = hasOwnProperty(View, obj3);
-        cResult[1] = tmp4.conjureTile;
-        cResult[2] = tmp12;
-        let tmp9 = tmp12;
-      } else {
-        tmp9 = cResult[2];
-      }
-      return tmp9;
+      return tmp4;
     }
   : function ConjureAvatar() {
-      const obj = {
-        style: closure_7().conjureTile,
-        children: hasOwnProperty(AppsIcon.AppsIcon, { size: "sm", color: nativeDefault.colors.TEXT_BRAND }),
-      };
-      return hasOwnProperty(View, obj);
+      const obj = { source: null, style: null };
+      const tmp = closure_7();
+      obj.source = _modDef12304;
+      obj.style = tmp.agentAvatar;
+      return hasOwnProperty(FastImageDefault, obj);
     };

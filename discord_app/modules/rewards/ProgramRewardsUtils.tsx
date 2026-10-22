@@ -15,8 +15,8 @@ function canFetchXboxProgramReward() {
 }
 const PremiumTypes = fn(1394).PremiumTypes;
 const dependencyMap = {
-  [fn(14932).RewardProgram.NITRO]: canFetchNitroProgramReward,
-  [fn(14932).RewardProgram.XBOX]: canFetchXboxProgramReward,
+  [fn(14976).RewardProgram.NITRO]: canFetchNitroProgramReward,
+  [fn(14976).RewardProgram.XBOX]: canFetchXboxProgramReward,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
@@ -54,9 +54,8 @@ export const canFetchAnyProgramReward = function canFetchAnyProgramReward() {
   }
   return false;
 };
-export const hasNecessaryPremiumSubscriptionStatus = function hasNecessaryPremiumSubscriptionStatus(stateFromStores) {
-  let currentUser = stateFromStores;
-  if (stateFromStores == null) {
+export const hasNecessaryPremiumSubscriptionStatus = function hasNecessaryPremiumSubscriptionStatus(currentUser) {
+  if (currentUser == null) {
     currentUser = UserStore.getCurrentUser();
   }
   return PremiumUtils.isPremiumExactly(currentUser, PremiumTypes.TIER_2);

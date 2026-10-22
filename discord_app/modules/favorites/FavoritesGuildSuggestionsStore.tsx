@@ -89,7 +89,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = tmp5;
         cResult[2] = items1;
       } else {
-        const tmp8 = _slicedToArray(tmp(7473).useSelectedDismissibleContent(cResult[2]), 2);
+        const tmp8 = _slicedToArray(tmp(7480).useSelectedDismissibleContent(cResult[2]), 2);
         _require = tmp9;
         if (cResult[3] !== tmp8[1]) {
           const fn2 = function _() {
@@ -138,7 +138,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp15;
         cResult[10] = obj2;
         tmp17 = obj2;
-        const tmpResult = tmp(7473);
+        const tmpResult = tmp(7480);
       }
       const obj = require("c");
     }

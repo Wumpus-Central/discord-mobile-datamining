@@ -7,7 +7,7 @@ import NotificationSettingsStore from "../../../../stores/NotificationSettingsSt
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePredicate() {
       let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
@@ -32,7 +32,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(8308).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8317).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);

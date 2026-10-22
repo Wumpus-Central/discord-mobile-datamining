@@ -86,7 +86,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             const mountLayoutEffect = useMountEffect.useMountLayoutEffect(tmp8);
             const _Symbol = Symbol;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj2 = { value: "toCharArray$esjava$1", defaultValue: "Symbol" };
+              const obj2 = { value: "r", defaultValue: "emoji" };
               cResult[8] = obj2;
               let tmp11 = obj2;
             } else {
@@ -150,7 +150,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           current.setNativeProps(obj);
         }
       });
-      return { value: "toCharArray$esjava$1", defaultValue: "Symbol" };
+      return { value: "r", defaultValue: "emoji" };
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
@@ -211,7 +211,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (isFocusedResult) {
             str = "none";
           }
-          items[1] = collapsed(React4, { pointerEvents: str, onPress, style });
+          items[1] = v65535(React4, { pointerEvents: str, onPress, style });
           obj.children = items;
           return closure_2_11(React5, obj);
         },
@@ -259,7 +259,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (isFocusedResult) {
             str = "none";
           }
-          items[1] = collapsed(React4, { pointerEvents: str, onPress, style });
+          items[1] = v65535(React4, { pointerEvents: str, onPress, style });
           obj.children = items;
           return closure_2_11(React5, obj);
         },
@@ -280,7 +280,7 @@ export const NativeTextInput = function TextInput(ref) {
     const merged1 = Object.assign(native2.mergeProps(merged, tmp5, tmp6));
     const tmp7Result = native2;
     obj.ref = native2.mergeRefs(ref, ref.ref);
-    const tmp15 = collapsed(hasOwnProperty, obj);
+    const tmp15 = v65535(hasOwnProperty, obj);
     let panGestureWrapperResult = tmp15;
     if (!merged.multiline) {
       panGestureWrapperResult = closure_14(ref).panGestureWrapper(tmp15);

@@ -21,7 +21,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let closure_12 = Math.min(PixelRatio.get(), 4);
 let closure_13 = Math.min(PixelRatio.get(), 4);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   mediaContainer: { position: "relative", overflow: "hidden" },
   thumbnailBorder: { borderRadius: nativeDefault.radii.sm },
@@ -79,7 +79,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { style: androidStyle, children: null };
               const items = [tmp7, tmp11];
               obj2.children = items;
-              const tmp18 = collapsed(hasOwnProperty, obj2);
+              const tmp18 = v65535(hasOwnProperty, obj2);
               cResult[12] = androidStyle;
               cResult[13] = tmp7;
               cResult[14] = tmp11;
@@ -126,7 +126,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items;
       const items1 = [React6(FastImageDefault, obj2), React6(closure_17, { shouldSpoiler, blurTheme })];
       obj.children = items1;
-      return collapsed(hasOwnProperty, obj);
+      return v65535(hasOwnProperty, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -150,7 +150,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { children: null };
           const items = [tmp3, tmp5];
           obj2.children = items;
-          const tmp12 = collapsed(closure_1_11, obj2);
+          const tmp12 = v65535(closure_1_11, obj2);
           cResult[6] = tmp3;
           cResult[7] = tmp5;
           cResult[8] = tmp12;
@@ -177,7 +177,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         React6(closure_17, { shouldSpoiler, blurTheme }),
       ];
       obj.children = items;
-      return collapsed(closure_1_11, obj);
+      return v65535(closure_1_11, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -215,7 +215,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { children: null };
           const items = [tmp4, tmp13];
           obj3.children = items;
-          const tmp20 = collapsed(closure_1_11, obj3);
+          const tmp20 = v65535(closure_1_11, obj3);
           cResult[7] = tmp4;
           cResult[8] = tmp13;
           cResult[9] = tmp20;
@@ -241,7 +241,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = React6(SpoilerIconDefault, size);
         items[1] = React6(hasOwnProperty, obj3);
         obj.children = items;
-        tmp2 = collapsed(closure_1_11, obj);
+        tmp2 = v65535(closure_1_11, obj);
       }
       return tmp2;
     };
@@ -258,10 +258,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] !== isMediaPost) {
           const obj2 = {};
           const merged = Object.assign(isMediaPost);
-          const tmp29 = closure_9(ref(12992), obj2);
+          const tmp29 = closure_9(ref(13028), obj2);
           cResult[0] = isMediaPost;
           cResult[1] = tmp29;
-          const tmp25 = ref(12992);
+          const tmp25 = ref(13028);
         }
       } else {
         if (tmpResult.isAndroid()) {
@@ -287,7 +287,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = cResult[5];
         }
         if (null != isMediaPost.obscureReason) {
-          const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7371).AGE_VERIFICATION_OBSCURABLE_REASONS;
+          const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7378).AGE_VERIFICATION_OBSCURABLE_REASONS;
           if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(isMediaPost.obscureReason)) {
             if (tmp7) {
               if (cResult[6] === isMediaPost.containerStyle) {
@@ -336,7 +336,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                     onPress: M,
                     children: tmp8,
                   };
-                  const tmp38 = closure_9(tmp(6887).PressableOpacity, obj5);
+                  const tmp38 = closure_9(tmp(6894).PressableOpacity, obj5);
                   cResult[10] = tmp8;
                   cResult[11] = tmp38;
                 } else {
@@ -418,9 +418,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       if (obscureReason.isMediaPost) {
         const obj2 = {};
         const merged = Object.assign(obscureReason);
-        let tmp6Result = closure_9(ref(12992), obj2);
+        let tmp6Result = closure_9(ref(13028), obj2);
         let tmp12 = closure_9;
-        const tmp19 = ref(12992);
+        const tmp19 = ref(13028);
       } else {
         if (tmp3Result.isAndroid()) {
           const obj3 = {};
@@ -436,7 +436,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp3Result = tmp3(1384);
       }
       if (null != obscureReason.obscureReason) {
-        const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7371).AGE_VERIFICATION_OBSCURABLE_REASONS;
+        const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7378).AGE_VERIFICATION_OBSCURABLE_REASONS;
         if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
           if (shouldAgeVerifyForReason) {
             const obj5 = { style: null, ref: null, children: null };
@@ -447,14 +447,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
               activeOpacity: 0,
               onPress() {
-                const obj = ref(7859);
+                const obj = ref(7867);
                 const result = obj.showAgeVerificationGetStartedModal({
-                  entryPoint: obscureReason(6636).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW,
+                  entryPoint: obscureReason(6643).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW,
                 });
               },
               children: tmp6Result,
             };
-            obj5.children = tmp12(tmp3(6887).PressableOpacity, obj6);
+            obj5.children = tmp12(tmp3(6894).PressableOpacity, obj6);
             let tmp12Result = tmp12(closure_5, obj5);
           }
           return tmp12Result;
@@ -478,7 +478,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           },
           children: tmp6Result,
         };
-        obj7.children = tmp12(tmp3(6887).PressableOpacity, obj8);
+        obj7.children = tmp12(tmp3(6894).PressableOpacity, obj8);
         tmp12Result = tmp12(closure_5, obj7);
       } else {
         const obj9 = { style: null, ref: null, children: null };

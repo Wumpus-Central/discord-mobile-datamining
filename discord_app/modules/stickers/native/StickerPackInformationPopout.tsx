@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   informationContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { variant: "text-md/bold", color: "text-brand", children: null };
                 const intl4 = tmp(1128).intl;
                 obj4.children = intl4.string(tmp(1128).t.cpT0Cq);
-                const tmp16 = closure_3(tmp(5216).Text, obj4);
+                const tmp16 = closure_3(tmp(5220).Text, obj4);
                 cResult[23] = tmp16;
                 let tmp14 = tmp16;
               } else {
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   accessibilityLabel: tmp12,
                   children: tmp14,
                 };
-                const tmp19 = closure_3(tmp(6887).PressableOpacity, obj5);
+                const tmp19 = closure_3(tmp(6894).PressableOpacity, obj5);
                 cResult[24] = onClose;
                 cResult[25] = tmp19;
                 let tmp17 = tmp19;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: tmp6,
             };
-            const tmp10 = closure_3(tmp(5216).Text, obj8);
+            const tmp10 = closure_3(tmp(5220).Text, obj8);
             cResult[19] = informationHeader.informationHeader;
             cResult[20] = tmp6;
             cResult[21] = tmp10;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = informationHeader.informationContentDescription;
       cResult[13] = renderItem;
       tmp5 = renderItem;
-      tmpResult = informationHeader(6467);
+      tmpResult = informationHeader(6474);
     }
   : function StickerPackInformationPopout(stickerPack) {
       stickerPack = stickerPack.stickerPack;

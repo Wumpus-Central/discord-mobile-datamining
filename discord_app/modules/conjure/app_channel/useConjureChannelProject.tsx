@@ -7,7 +7,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const isProjectOwner = fn(6752).isProjectOwner;
+const isProjectOwner = fn(6759).isProjectOwner;
 const Permissions = fn(1087).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

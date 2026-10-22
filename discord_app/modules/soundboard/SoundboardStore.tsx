@@ -72,7 +72,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(5988);
+const SoundboardConstants = fn(5995);
 ({ DEFAULT_SOUND_GUILD_ID: closure_8, EMPTY_SOUND_ID_LIST: closure_9 } = SoundboardConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const UserSettingsTypes = fn(1097).UserSettingsTypes;
@@ -201,8 +201,8 @@ prototype["shouldFetchDefaultSounds"] = function shouldFetchDefaultSounds() {
 prototype["hasFetchedDefaultSounds"] = function hasFetchedDefaultSounds() {
   return FETCHED === obj.FETCHED;
 };
-prototype["isUserPlayingSounds"] = function isUserPlayingSounds(userId) {
-  value = map3.get(userId);
+prototype["isUserPlayingSounds"] = function isUserPlayingSounds(id) {
+  value = map3.get(id);
   let tmp2 = null != value;
   if (tmp2) {
     tmp2 = value > 0;

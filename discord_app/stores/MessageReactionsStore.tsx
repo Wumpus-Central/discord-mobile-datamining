@@ -85,6 +85,9 @@ const messageReactionsStore = new MessageReactionsStore(DispatcherDefault, {
       return users.set(id.id, new UserRecord(id));
     });
   },
+  MESSAGE_REACTION_SET_FETCHED: function handleSetFetched(messageId) {
+    prototype.ensure(messageId.messageId, messageId.emoji, messageId.reactionType).fetched = true;
+  },
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/MessageReactionsStore.tsx");

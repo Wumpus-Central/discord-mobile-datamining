@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "Reflect";
 };
-const GlobalDiscoveryServersConstants = fn(8967);
+const GlobalDiscoveryServersConstants = fn(8976);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,
@@ -217,8 +217,8 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "toCharArray$esjava$1",
-    discoverySplash: 1392509300,
-    emojis: false,
+    discoverySplash: 291996680679354600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    emojis: 4274012591955026000000000000000000000000000000000000000000000000000000000000000000000000000000000,
   };
   ({
     approximate_presence_count: obj.presenceCount,
@@ -235,7 +235,7 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
     tmp = items;
   }
   [tmp3] = tmp;
-  const arr2 = collapsed();
+  const arr2 = v65535();
   locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {

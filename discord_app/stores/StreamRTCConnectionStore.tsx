@@ -20,7 +20,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1087);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6622).StreamTypes;
+const StreamTypes = fn(6629).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};
@@ -314,7 +314,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
       appContext = appContext.appContext;
       const streamKey = appContext.streamKey;
-      closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
+      closure_11[streamKey] = { appContext, analyticsLocations: "r" };
       const item = _modDef12.forEach(closure_18, (analyticsContext) => {
         analyticsContext = analyticsContext.analyticsContext;
         analyticsContext.setActionContext(appContext);
@@ -392,9 +392,12 @@ if (MediaEngineStore.isSupported()) {
           if (!obj5.startsWith("web-contents-media-stream:")) {
             str2 = "window";
             if (!obj5.startsWith("window:")) {
-              str2 = "unknown";
-              if (obj5.startsWith("screen:")) {
-                str2 = "screen";
+              str2 = "screen";
+              if (!obj5.startsWith("screen:")) {
+                str2 = "unknown";
+                if (obj5.startsWith("activity:")) {
+                  str2 = "activity";
+                }
               }
             }
           }

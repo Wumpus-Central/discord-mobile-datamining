@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -391,10 +391,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj4.children = intl2.string(util.t.J0XdJ4);
               items1[1] = React6(Text_Text.Text, obj4);
               obj2.children = items1;
-              tmpResult = closure_3_11(collapsed, obj2);
+              tmpResult = closure_3_11(v65535, obj2);
             }
             children[1] = tmpResult;
-            return closure_3_11(collapsed, { children });
+            return closure_3_11(v65535, { children });
           };
           obj.onPress = function onPress() {
             const id = item.id;

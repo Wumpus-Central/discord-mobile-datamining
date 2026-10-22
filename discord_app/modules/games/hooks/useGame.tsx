@@ -12,13 +12,13 @@ const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1087).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
-  get(gameId) {
-    if (null == gameId) {
+  get(item) {
+    if (null == item) {
       return null;
-    } else if (GameStore.hasNoData(gameId)) {
+    } else if (GameStore.hasNoData(item)) {
       let NO_DATA = require("initialize").NO_DATA;
     } else {
-      NO_DATA = GameStore.getGame(gameId);
+      NO_DATA = GameStore.getGame(item);
       if (NO_DATA == null) {
         NO_DATA = null;
       }

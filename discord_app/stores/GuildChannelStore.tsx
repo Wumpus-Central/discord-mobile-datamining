@@ -187,7 +187,7 @@ function handleGuildRoleUpdate(guildId) {
 }
 function hasElevatedPermissions(user, context) {
   obj = BigFlagUtilsAll;
-  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), constants2);
+  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), closure_1_20);
 }
 function handleFavoritesUpdate() {
   rebuildGuildChannels(constants);

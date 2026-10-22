@@ -21,12 +21,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = analyticsLocations(576).c(14);
       let FREE_FAVORITE_LIMIT = limit.limit;
       if (undefined === FREE_FAVORITE_LIMIT) {
-        FREE_FAVORITE_LIMIT = tmp(10794).FREE_FAVORITE_LIMIT;
+        FREE_FAVORITE_LIMIT = tmp(10811).FREE_FAVORITE_LIMIT;
       }
-      analyticsLocations = first(10797)().analyticsLocations;
+      analyticsLocations = first(10814)().analyticsLocations;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          first(5192).hideActionSheet(analyticsLocations(10795).FAVORITES_UPSELL_SHEET_KEY);
+          first(5196).hideActionSheet(analyticsLocations(10812).FAVORITES_UPSELL_SHEET_KEY);
         };
         cResult[0] = fn;
         first = fn;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = closure_6(tmp(10798).FavoritesSpotIllustration, {});
+        const tmp13 = closure_6(tmp(10815).FavoritesSpotIllustration, {});
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             openPremiumModalDefault(obj);
           },
         };
-        const tmp18 = closure_6(tmp(5226).Button, obj3);
+        const tmp18 = closure_6(tmp(5230).Button, obj3);
         cResult[6] = analyticsLocations;
         cResult[7] = tmp18;
         let tmp16 = tmp18;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result = FavoritesGuildAnalytics.setNextFavoritesGuildViewSource("upsell_modal");
           router_utils.transitionToGuild(FAVORITES);
         };
-        const tmp21 = closure_6(tmp(5226).Button, obj4);
+        const tmp21 = closure_6(tmp(5230).Button, obj4);
         cResult[8] = tmp21;
         let tmp19 = tmp21;
       } else {
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { children: null };
         const items = [tmp16, tmp19];
         obj5.children = items;
-        const tmp24 = closure_7(tmp(6675).ButtonGroup, obj5);
+        const tmp24 = closure_7(tmp(6682).ButtonGroup, obj5);
         cResult[9] = tmp16;
         cResult[10] = tmp24;
         let tmp22 = tmp24;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp25;
       }
-      const tmp26 = closure_6(analyticsLocations(10803).PromoSheet, {
+      const tmp26 = closure_6(analyticsLocations(10820).PromoSheet, {
         title: tmp6,
         description: tmp8,
         illustration: tmp11,
@@ -134,11 +134,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function FavoritesGuildUpsellSheet(limit) {
       let FREE_FAVORITE_LIMIT = limit.limit;
       if (FREE_FAVORITE_LIMIT === undefined) {
-        FREE_FAVORITE_LIMIT = analyticsLocations(10794).FREE_FAVORITE_LIMIT;
+        FREE_FAVORITE_LIMIT = analyticsLocations(10811).FREE_FAVORITE_LIMIT;
       }
       analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault().analyticsLocations;
       importDefault = noop.useCallback(() => {
-        closure_1(5192).hideActionSheet(analyticsLocations(10795).FAVORITES_UPSELL_SHEET_KEY);
+        closure_1(5196).hideActionSheet(analyticsLocations(10812).FAVORITES_UPSELL_SHEET_KEY);
       }, []);
       let obj = { title: null, description: null, illustration: null, actions: null };
       const intl = analyticsLocations(1128).intl;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         count: FREE_FAVORITE_LIMIT,
         maxCount: MAX_FAVORITE_CHANNELS,
       });
-      obj.illustration = closure_6(analyticsLocations(10798).FavoritesSpotIllustration, {});
+      obj.illustration = closure_6(analyticsLocations(10815).FavoritesSpotIllustration, {});
       const obj3 = { children: null };
       const obj4 = { size: "lg", variant: "primary", text: null, onPress: null };
       const intl3 = analyticsLocations(1128).intl;
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         openPremiumModalDefault(obj);
       };
-      const items = [closure_6(analyticsLocations(5226).Button, obj4)];
+      const items = [closure_6(analyticsLocations(5230).Button, obj4)];
       const obj5 = { size: "lg", variant: "secondary", text: null, onPress: null };
       const intl4 = analyticsLocations(1128).intl;
       obj5.text = intl4.string(_modDef3412.PprSsy);
@@ -170,8 +170,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const result = FavoritesGuildAnalytics.setNextFavoritesGuildViewSource("upsell_modal");
         router_utils.transitionToGuild(FAVORITES);
       };
-      items[1] = closure_6(analyticsLocations(5226).Button, obj5);
+      items[1] = closure_6(analyticsLocations(5230).Button, obj5);
       obj3.children = items;
-      obj.actions = closure_7(analyticsLocations(6675).ButtonGroup, obj3);
-      return closure_6(analyticsLocations(10803).PromoSheet, obj);
+      obj.actions = closure_7(analyticsLocations(6682).ButtonGroup, obj3);
+      return closure_6(analyticsLocations(10820).PromoSheet, obj);
     };

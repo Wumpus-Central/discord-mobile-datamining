@@ -125,7 +125,7 @@ function dismissBadgeDirectoryBadgeIndicator(badgeId) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/useBadgeDirectoryBadgeIndicators.tsx");
 
-export const NEW_INDICATOR_BADGE_IDS = fn(11072).BETA_BADGE_IDS;
+export const NEW_INDICATOR_BADGE_IDS = fn(11089).BETA_BADGE_IDS;
 export { isNewIndicatorBadgeId };
 export { dismissBadgeDirectoryBadgeIndicator };
 export const useBadgeDirectoryBadgeIndicators = tmp2;

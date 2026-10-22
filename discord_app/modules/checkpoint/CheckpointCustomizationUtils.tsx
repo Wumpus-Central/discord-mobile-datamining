@@ -50,7 +50,12 @@ function getAssetDescription(asset) {
     return stringResult1;
   }
 }
-({ CHECKPOINT_RARITY_LABEL_MESSAGES: c3, TRAIT_OPTION_HEIGHT, TRAIT_OPTION_WIDTH } = CheckpointConstants);
+({
+  CHECKPOINT_RARITY_LABEL_MESSAGES: c3,
+  CHECKPOINT_RARITY_ORDER: closure_4,
+  TRAIT_OPTION_HEIGHT,
+  TRAIT_OPTION_WIDTH,
+} = CheckpointConstants);
 const CheckpointCustomizationOption = {
   FACE: "face",
   OUTFIT: "outfit",
@@ -164,7 +169,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
     tmp5 = _require;
     CHECKPOINT_OUTFIT_COLOR_OPTION_NAMES = require("CheckpointTraitOptionNames").CHECKPOINT_TRAIT_OPTION_NAMES[tmp4];
   }
-  dependencyMap = tmp5(6343).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
+  dependencyMap = tmp5(6350).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
   return arr.map((optionId) => {
     trait = optionId;
     const obj = {
@@ -178,7 +183,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
         }
         return str;
       },
-      rarity: trait(6343).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
+      rarity: trait(6350).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
       asset: null,
     };
     let thumbnail;
@@ -188,6 +193,72 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
     obj.asset = thumbnail;
     return obj;
   });
+};
+export const getTraitPickerOptions = function getTraitPickerOptions(
+  customizationOption,
+  options,
+  stateFromStores,
+  stateFromStores1,
+  savedOptionId,
+) {
+  const visibleTraitRarities = CheckpointCharacterTraits.getVisibleTraitRarities(
+    obj3[customizationOption],
+    stateFromStores,
+  );
+  const visibleTraitOptions = [];
+  let totalCount = 0;
+  let earnedCount = 0;
+  const iter = options[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let hasItem = null == nextResult.rarity;
+    if (!hasItem) {
+      hasItem = visibleTraitRarities.has(tmp2.rarity);
+    }
+    let tmp9 = tmp2.rarity === CheckpointTraitRarity.CheckpointTraitRarity.NITRO && !stateFromStores1;
+    let tmp10 = tmp9;
+    if (null != tmp2.rarity) {
+      totalCount = totalCount + 1;
+    }
+    let tmp13 = hasItem;
+    if (!hasItem) {
+      tmp13 = savedOptionId === tmp2.optionId;
+    }
+    if (tmp13) {
+      obj2 = {};
+      let merged = Object.assign(nextResult);
+      obj2.locked = tmp10;
+      let arr = visibleTraitOptions.push(obj2);
+      let tmp21 = null == tmp2.rarity || tmp9;
+      if (!tmp21) {
+        earnedCount = earnedCount + 1;
+      }
+    }
+    continue;
+  }
+  const sorted = visibleTraitOptions.sort((rarity, rarity2) => {
+    if (null == rarity.rarity) {
+      let length = closure_1_4.length;
+      let arr = closure_1_4;
+    } else {
+      arr = closure_1_4;
+      length = closure_1_4.indexOf(rarity.rarity);
+      if (-1 === length) {
+        length = arr.length;
+      }
+    }
+    if (null == rarity2.rarity) {
+      let length2 = arr.length;
+    } else {
+      length2 = arr.indexOf(rarity2.rarity);
+      if (-1 === length2) {
+        length2 = arr.length;
+      }
+    }
+    return length - length2;
+  });
+  return { visibleTraitOptions, totalCount, earnedCount };
 };
 export const isTraitNoneOptionId = function isTraitNoneOptionId(arg0, arg1) {
   return CheckpointCharacterTraits.NONE_OPTION_IDS[arg0] === arg1;

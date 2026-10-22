@@ -15,7 +15,7 @@ import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import BotTagDefault from "../../../../applications/native/BotTag.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef13925 from "../../../../../../_runtime/metro/13925__.js";
+import _modDef13961 from "../../../../../../_runtime/metro/13961__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -27,7 +27,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let c11 = 16;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles(() => {
   const obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },
@@ -276,7 +276,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp13 = !tmp4;
                   if (!tmp4) {
                     const obj6 = {
-                      source: _modDef13925,
+                      source: _modDef13961,
                       size: native.Icon.Sizes.REFRESH_SMALL_16,
                       style: tmp5.arrowIcon,
                     };
@@ -379,7 +379,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = tmp8;
       let tmp5Result = !disableArrow;
       if (!disableArrow) {
-        const obj6 = { source: _modDef13925, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+        const obj6 = { source: _modDef13961, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
         tmp5Result = tmp5(native.Icon, obj6);
       }
       items[2] = tmp5Result;
@@ -445,7 +445,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         style: tmp4.channelIcon,
-        autoStatusCutout: null,
+        autoStatusCutout: "jsona",
       };
       const tmp7 = closure_1_8(native.Avatar, obj2);
       cResult[0] = isMobileOnline;
@@ -464,11 +464,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         avatarDecoration: user.avatarDecoration,
         guildId: "Boolean",
         size: native.AvatarSizes.REFRESH_MEDIUM_32,
-        status: false,
+        status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
         isMobileOnline: null,
-        isVROnline: true,
-        style: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Rldl90b29scw==",
-        autoStatusCutout: null,
+        isVROnline: "9353860856bfc05333c0c56840083d00",
+        style: "uk.messages.9353860856bfc05333c0c56840083d00.compiled.messages",
+        autoStatusCutout: "jsona",
       };
       let tmp3 = null;
       if (!user.isSystemUser()) {
@@ -563,7 +563,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { children: null };
               const items = [tmp5, tmp7];
               obj2.children = items;
-              const tmp13 = React6(collapsed, obj2);
+              const tmp13 = React6(v65535, obj2);
               cResult[8] = tmp5;
               cResult[9] = tmp7;
               cResult[10] = tmp13;
@@ -625,7 +625,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6Result = closure_1_8(Text_Text.Text, obj3);
       }
       children[1] = tmp6Result;
-      return React6(collapsed, { children });
+      return React6(v65535, { children });
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()

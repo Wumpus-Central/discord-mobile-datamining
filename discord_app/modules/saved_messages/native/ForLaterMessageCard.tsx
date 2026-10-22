@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef5672 from "../../../../_runtime/metro/05672__.js";
+import _modDef5676 from "../../../../_runtime/metro/05676__.js";
 import SavedMessageHelpers from "../SavedMessageHelpers.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   card: { gap: 16, marginBottom: 16 },
   cardDivider: {
@@ -41,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-          const tmp10 = closure_10(tmp(6991).CircleErrorIcon, obj2);
+          const tmp10 = closure_10(tmp(6998).CircleErrorIcon, obj2);
           cResult[3] = tmp10;
           let tmp7 = tmp10;
         } else {
@@ -76,12 +76,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 variant: "secondary",
                 accessibilityLabel: tmp18,
                 size: "sm",
-                icon: _modDef5672,
+                icon: _modDef5676,
                 onPress() {
                   return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
                 },
               };
-              const tmp23 = closure_10(tmp(7935).IconButton, obj3);
+              const tmp23 = closure_10(tmp(7943).IconButton, obj3);
               cResult[10] = savedMessage.saveData;
               cResult[11] = tmp23;
               let tmp20 = tmp23;
@@ -103,7 +103,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { variant: "primary", border: "subtle", shadow: "none", style: tmp5, children: null };
               const items = [tmp7, tmp15, tmp24];
               obj4.children = items;
-              const tmp30 = closure_11(tmp(6884).Card, obj4);
+              const tmp30 = closure_11(tmp(6891).Card, obj4);
               cResult[15] = tmp5;
               cResult[16] = tmp15;
               cResult[17] = tmp24;
@@ -123,7 +123,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.deletedText,
             children: cResult[5],
           };
-          const tmp17 = closure_10(tmp(5216).Text, obj6);
+          const tmp17 = closure_10(tmp(5220).Text, obj6);
           cResult[6] = tmp4.deletedText;
           cResult[7] = cResult[5];
           cResult[8] = tmp17;
@@ -146,7 +146,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ card: arr[0], deletedCard: arr[1] } = tmp);
       obj.style = items;
       const items1 = [
-        closure_10(savedMessage(6991).CircleErrorIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED }),
+        closure_10(savedMessage(6998).CircleErrorIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED }),
         ,
       ];
       const obj3 = {
@@ -163,19 +163,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl.string(tmp3(1128).t.o572Fe);
       }
       obj3.children = stringResult;
-      items1[1] = closure_10(savedMessage(5216).Text, obj3);
+      items1[1] = closure_10(savedMessage(5220).Text, obj3);
       const obj4 = { style: tmp.deletedActionButton, children: null };
       const obj5 = { variant: "secondary", accessibilityLabel: null, size: "sm", icon: null, onPress: null };
       const intl3 = tmp3(1128).intl;
       obj5.accessibilityLabel = intl3.string(savedMessage(1128).t.SvXS1Z);
-      obj5.icon = _modDef5672;
+      obj5.icon = _modDef5676;
       obj5.onPress = function onPress() {
         return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
       };
-      obj4.children = closure_10(savedMessage(7935).IconButton, obj5);
+      obj4.children = closure_10(savedMessage(7943).IconButton, obj5);
       items1[2] = closure_10(View, obj4);
       obj.children = items1;
-      return closure_11(savedMessage(6884).Card, obj);
+      return closure_11(savedMessage(6891).Card, obj);
     };
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
@@ -395,7 +395,7 @@ export default noop.memo(
                             } else {
                               c1 = 1;
                               c2 = 1;
-                              const obj5 = { value: tmp4(13718).savedMessageJumpToMessage(tmp4, c1), done: false };
+                              const obj5 = { value: tmp4(13754).savedMessageJumpToMessage(tmp4, c1), done: false };
                               return obj5;
                             }
                           } else if (arg0 === 1) {
@@ -406,8 +406,8 @@ export default noop.memo(
                             const obj6 = { value, done: true };
                             return obj6;
                           } else {
-                            closure_2_1(6651).pop();
-                            const arr = closure_2_1(6651);
+                            closure_2_1(6658).pop();
+                            const arr = closure_2_1(6658);
                             const obj8 = {
                               channel_id: tmp4.saveData.channelId,
                               message_id: tmp4.saveData.messageId,
@@ -422,9 +422,9 @@ export default noop.memo(
                             }
                             obj8.message_author_id = id;
                             if (null != tmp4.saveData.dueAt) {
-                              let BOOKMARK = tmp4(10036).SavedMessageSortTypes.REMINDER;
+                              let BOOKMARK = tmp4(10048).SavedMessageSortTypes.REMINDER;
                             } else {
-                              BOOKMARK = tmp4(10036).SavedMessageSortTypes.BOOKMARK;
+                              BOOKMARK = tmp4(10048).SavedMessageSortTypes.BOOKMARK;
                             }
                             obj8.type = BOOKMARK;
                             let diffResult;
@@ -496,7 +496,7 @@ export default noop.memo(
         savedMessage = savedMessage.savedMessage;
         const throttledNow = savedMessage.throttledNow;
         const tmp = closure_12();
-        const savedMessageChannel = savedMessage(13718).useSavedMessageChannel(savedMessage);
+        const savedMessageChannel = savedMessage(13754).useSavedMessageChannel(savedMessage);
         const items = [savedMessage, savedMessageChannel];
         const callback = noop.useCallback(
           asyncGeneratorStep(async () => {
@@ -561,7 +561,7 @@ export default noop.memo(
                             } else {
                               c1 = 1;
                               c2 = 1;
-                              const obj5 = { value: v3(13718).savedMessageJumpToMessage(tmp4, c1), done: false };
+                              const obj5 = { value: v3(13754).savedMessageJumpToMessage(tmp4, c1), done: false };
                               return obj5;
                             }
                           } else if (arg0 === 1) {
@@ -572,8 +572,8 @@ export default noop.memo(
                             const obj6 = { value, done: true };
                             return obj6;
                           } else {
-                            v1(6651).pop();
-                            const arr = v1(6651);
+                            v1(6658).pop();
+                            const arr = v1(6658);
                             const obj8 = {
                               channel_id: tmp4.saveData.channelId,
                               message_id: tmp4.saveData.messageId,
@@ -588,9 +588,9 @@ export default noop.memo(
                             }
                             obj8.message_author_id = id;
                             if (null != tmp4.saveData.dueAt) {
-                              let BOOKMARK = v3(10036).SavedMessageSortTypes.REMINDER;
+                              let BOOKMARK = v3(10048).SavedMessageSortTypes.REMINDER;
                             } else {
-                              BOOKMARK = v3(10036).SavedMessageSortTypes.BOOKMARK;
+                              BOOKMARK = v3(10048).SavedMessageSortTypes.BOOKMARK;
                             }
                             obj8.type = BOOKMARK;
                             let diffResult;
@@ -634,7 +634,7 @@ export default noop.memo(
           }),
           items,
         );
-        let obj = savedMessage(13718);
+        let obj = savedMessage(13754);
         const items1 = [PermissionStore];
         if (null != savedMessage.message) {
           if (null != savedMessageChannel) {
@@ -660,7 +660,7 @@ export default noop.memo(
               })
             ) {
               let obj3 = { savedMessage, jumpToMessage: callback, throttledNow };
-              const tmp8 = closure_10(savedMessageChannel(13720), obj3);
+              const tmp8 = closure_10(savedMessageChannel(13756), obj3);
               let obj4 = {
                 variant: "primary",
                 border: "subtle",
@@ -672,7 +672,7 @@ export default noop.memo(
               let tmp6Result = null;
               if (null != savedMessage.saveData.dueAt) {
                 let obj5 = { savedMessage, throttledNow, actions: tmp8 };
-                tmp6Result = closure_10(tmp2(13727).ForLaterCardReminderHeader, obj5);
+                tmp6Result = closure_10(tmp2(13763).ForLaterCardReminderHeader, obj5);
               }
               const items2 = [tmp6Result, , ,];
               let obj6 = { channel: savedMessageChannel, actions: null };
@@ -681,13 +681,13 @@ export default noop.memo(
                 tmp12 = tmp8;
               }
               obj6.actions = tmp12;
-              items2[1] = closure_10(tmp2(13729).ForLaterCardHeader, obj6);
+              items2[1] = closure_10(tmp2(13765).ForLaterCardHeader, obj6);
               const obj7 = { style: tmp.cardDivider };
               items2[2] = closure_10(View, obj7);
               let obj8 = { message: savedMessage.message, lineClamp: 2, maxHeight: 250 };
-              items2[3] = closure_10(tmp2(13730).ForLaterMessageRow, obj8);
+              items2[3] = closure_10(tmp2(13766).ForLaterMessageRow, obj8);
               obj4.children = items2;
-              return closure_11(tmp2(6884).Card, obj4);
+              return closure_11(tmp2(6891).Card, obj4);
             }
           }
         }

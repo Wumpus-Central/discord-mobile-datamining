@@ -5,7 +5,7 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import ReferencedMessageStore from "../../../../replies/ReferencedMessageStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7673).ReferencedMessageState;
+const ReferencedMessageState = fn(7680).ReferencedMessageState;
 const MessageTypes = fn(1087).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(

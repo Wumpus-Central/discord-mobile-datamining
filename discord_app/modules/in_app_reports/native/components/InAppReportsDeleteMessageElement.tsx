@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const tmp22 = jsx(tmp(5671).TrashIcon, { color: "text-feedback-critical" });
+          const tmp22 = jsx(tmp(5675).TrashIcon, { color: "text-feedback-critical" });
           cResult[13] = tmp22;
           const tmp21 = tmp22;
         } else {
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onPress: C,
           icon: tmp21,
         };
-        const tmp26 = jsx(reportId(14476), {
+        const tmp26 = jsx(reportId(14520), {
           title: tmp15,
           disabledTitle: tmp16,
           description: tmp17,
@@ -213,8 +213,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.description = intl3.string(message(1128).t.dK8S0w);
       obj2.disabled = tmp[0];
       obj2.onPress = callback;
-      obj2.icon = jsx(message(5671).TrashIcon, { color: "text-feedback-critical" });
-      return jsx(reportId(14476), {
+      obj2.icon = jsx(message(5675).TrashIcon, { color: "text-feedback-critical" });
+      return jsx(reportId(14520), {
         title: null,
         disabledTitle: null,
         description: null,

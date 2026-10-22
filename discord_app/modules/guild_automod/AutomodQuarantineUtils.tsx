@@ -86,7 +86,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (closure_0 == null) {
             guildId = SelectedGuildStore.getGuildId();
           }
-          const obj = { nick: "toCharArray$esjava$1", bio: "Symbol" };
+          const obj = { nick: "r", bio: "emoji" };
           guild = GuildStore.getGuild(guildId);
           if (null != guild) {
             if (null != guildId) {
@@ -151,7 +151,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (closure_0 == null) {
             guildId = SelectedGuildStore.getGuildId();
           }
-          const obj = { nick: "toCharArray$esjava$1", bio: "Symbol" };
+          const obj = { nick: "r", bio: "emoji" };
           guild = GuildStore.getGuild(guildId);
           if (null != guild) {
             if (null != guildId) {

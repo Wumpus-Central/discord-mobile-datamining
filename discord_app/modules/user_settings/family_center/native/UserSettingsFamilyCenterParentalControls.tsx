@@ -12,10 +12,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1087).UserSettingsSections;
-const FamilyCenterSubPages = fn(7623).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7630).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "toCharArray$esjava$1", headerRight: "Symbol" });
+                setOptionsResult1 = closure_0.setOptions({ title: "r", headerRight: "emoji" });
                 return;
               }
             }
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "toCharArray$esjava$1", headerRight: "Symbol" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "r", headerRight: "emoji" });
                   return;
                 }
               }
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "toCharArray$esjava$1", headerRight: "Symbol" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "r", headerRight: "emoji" });
                   return;
                 }
               }
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "toCharArray$esjava$1", headerRight: "Symbol" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "r", headerRight: "emoji" });
                   return;
                 }
               }
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "toCharArray$esjava$1", headerRight: "Symbol" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "r", headerRight: "emoji" });
                   return;
                 }
               }
@@ -346,7 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "toCharArray$esjava$1", headerRight: "Symbol" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "r", headerRight: "emoji" });
                   return;
                 }
               }
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "toCharArray$esjava$1", headerRight: "Symbol" });
+          setOptionsResult1 = closure_0.setOptions({ title: "r", headerRight: "emoji" });
           return;
         }
       }
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "toCharArray$esjava$1", headerRight: "Symbol" });
+    stackNavigation.setOptions({ title: "r", headerRight: "emoji" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

@@ -13,7 +13,7 @@ require = fn;
 let c7 = 300000;
 let c8 = null;
 let closure_9 = [];
-const collapsed = 0;
+const v65535 = 0;
 let map = new Map();
 class ICYMISession {
   constructor() {

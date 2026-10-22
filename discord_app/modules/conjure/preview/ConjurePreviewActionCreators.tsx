@@ -28,8 +28,8 @@ const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePrevie
 export const reloadConjureAppFrames = function reloadConjureAppFrames(application_id) {
   ConjurePlatformUtilsDefault.reloadAppFrames(application_id);
 };
-export const reloadConjureProjectFrames = function reloadConjureProjectFrames(arg0) {
-  const project = ConjureProjectStore.getProject(arg0);
+export const reloadConjureProjectFrames = function reloadConjureProjectFrames(projectId) {
+  const project = ConjureProjectStore.getProject(projectId);
   if (null != project) {
     ConjurePlatformUtilsDefault.reloadAppFrames(project.application_id);
     if (!obj2.isPreviewlessProject(project)) {

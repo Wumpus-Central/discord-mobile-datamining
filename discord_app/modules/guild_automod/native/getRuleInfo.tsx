@@ -5,7 +5,7 @@ import RobotIcon from "../../../design/components/Icon/native/redesign/generated
 import Constants from "../Constants.tsx";
 import MenuIcon from "../../../design/components/Icon/native/redesign/generated/MenuIcon.tsx";
 import ChannelListPlusIcon from "../../../design/components/Icon/native/redesign/generated/ChannelListPlusIcon.tsx";
-import _modDef18850 from "../../../../_runtime/metro/18850__.js";
+import _modDef18917 from "../../../../_runtime/metro/18917__.js";
 import BaseRuleInfo from "../BaseRuleInfo.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -38,7 +38,7 @@ export const getRuleInfo = function getRuleInfo(triggerType, rule) {
             }
           }
         }
-        const obj7 = { source: _modDef18850 };
+        const obj7 = { source: _modDef18917 };
         tmp9 = obj7;
       }
       if (tmp9 == null) {

@@ -199,13 +199,13 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
             c6 = 0;
             { type: "error", error: null }.error = closure_133_0(closure_133_1[2]).externalAuthErrorFor(closure_132_0.status, closure_132_2);
             c8 = 3;
-            const obj12 = { type: "error", error: null };
+            const obj13 = { type: "error", error: null };
             const obj7 = closure_133_0(closure_133_1[2]);
           } else if (4 === tmp9) {
             c6 = 0;
             c8 = 3;
-            const obj13 = { value: { type: "error", error: "unavailable" }, done: true };
-            return obj13;
+            const obj14 = { value: { type: "error", error: "unavailable" }, done: true };
+            return obj14;
           } else if (5 === tmp9) {
             if (arg0 === 1) {
               c8 = 3;
@@ -224,8 +224,8 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            const obj14 = { value, done: true };
-            return obj14;
+            const obj15 = { value, done: true };
+            return obj15;
           } else {
             let url;
             if (value != null) {
@@ -243,13 +243,13 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
           const obj17 = { value, done: true };
           return obj17;
         }
-      } catch (tmp32) {
+      } catch (tmp36) {
         if (tmp5 === c6) {
           c8 = tmp3;
-          throw tmp32;
-        } else if (tmp2 === tmp33) {
+          throw tmp36;
+        } else if (tmp2 === tmp37) {
           c7 = tmp2;
-        } else if (tmp === tmp33) {
+        } else if (tmp === tmp37) {
           c7 = tmp3;
         } else {
           c7 = tmp6;

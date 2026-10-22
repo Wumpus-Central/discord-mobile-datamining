@@ -297,7 +297,7 @@ export const useMaybeFetchCollectiblesShopHome = ReactCompilerGating.isReactComp
                   );
                 }
               }
-              tmp8 = null != closure_9 && Date.now() - closure_7 < collapsed;
+              tmp8 = null != closure_9 && Date.now() - closure_7 < v65535;
             }
           }
         }

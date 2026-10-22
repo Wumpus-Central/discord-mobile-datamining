@@ -8,7 +8,7 @@ import NavigatorConstants from "NavigatorConstants.native.tsx";
 import HeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
-import _mod6912 from "../../../../../_runtime/metro/06912__.js";
+import _mod6919 from "../../../../../_runtime/metro/06919__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" },
   headerTitle: null,
@@ -33,7 +33,7 @@ let obj2 = {
   submittingIndicator: null,
 };
 let obj4 = {};
-let merged = Object.assign(fn(5216).TextStyleSheet["redesign/heading-18/bold"]);
+let merged = Object.assign(fn(5220).TextStyleSheet["redesign/heading-18/bold"]);
 obj4.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
@@ -67,7 +67,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = styles();
       if (cResult[0] !== tmp4.headerButtonIcon) {
         const obj2 = { size: "md", style: tmp4.headerButtonIcon };
-        const tmp7 = collapsed(ArrowLargeLeftIcon.ArrowLargeLeftIcon, obj2);
+        const tmp7 = v65535(ArrowLargeLeftIcon.ArrowLargeLeftIcon, obj2);
         cResult[0] = tmp4.headerButtonIcon;
         cResult[1] = tmp7;
         let tmp5 = tmp7;
@@ -78,7 +78,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function HeaderBackImage() {
       const tmp = styles();
-      return collapsed(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md", style: styles().headerButtonIcon });
+      return v65535(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md", style: styles().headerButtonIcon });
     };
 let closure_13 = tmp8;
 ReactCompilerGating = fn(558);
@@ -123,7 +123,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        tmp(6909).useNavigatorBackPressHandler(B);
+        tmp(6916).useNavigatorBackPressHandler(B);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class B {
@@ -174,12 +174,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.displayMode = "minimal";
         obj2.backImage = tmp19;
         obj2.accessibilityLabel = tmp16;
-        const tmp25 = closure_10(tmp(6912).HeaderBackButton, obj2);
+        const tmp25 = closure_10(tmp(6919).HeaderBackButton, obj2);
         cResult[11] = tmp11;
         cResult[12] = tmp5;
         cResult[13] = tmp19;
         cResult[14] = tmp25;
-        const tmpResult2 = tmp(6909);
+        const tmpResult2 = tmp(6916);
       }
       if (tmp4 == null) {
         class B {
@@ -222,10 +222,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { size: "md", style: null };
         const items = [headerButtonIcon.headerButtonIcon, { tintColor: tintColor.tintColor }];
         obj.style = items;
-        return collapsed(XSmallIcon.XSmallIcon, obj);
+        return v65535(XSmallIcon.XSmallIcon, obj);
       };
       obj2.accessibilityLabel = stringResult;
-      return closure_10(require("../../../../../_runtime/metro/06912__.js").HeaderBackButton, obj2);
+      return closure_10(require("../../../../../_runtime/metro/06919__.js").HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
@@ -278,7 +278,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = tmp4;
       obj2.displayMode = "minimal";
       obj2.backImage = tmp11;
-      const tmp14 = closure_10(require("../../../../../_runtime/metro/06912__.js").HeaderBackButton, obj2);
+      const tmp14 = closure_10(require("../../../../../_runtime/metro/06919__.js").HeaderBackButton, obj2);
       cResult[6] = tmp4;
       cResult[7] = tmp5;
       cResult[8] = tmp14;
@@ -288,7 +288,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   : function CustomHeaderBackButton(onPress) {
       onPress = onPress.onPress;
       const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-      onPress(6909).useNavigatorBackPressHandler(() => {
+      onPress(6916).useNavigatorBackPressHandler(() => {
         if (null != onPress) {
           tmp();
         }
@@ -301,7 +301,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.backImage = function backImage() {
         return closure_1_10(closure_1_13, {});
       };
-      return closure_10(onPress(6912).HeaderBackButton, obj2);
+      return closure_10(onPress(6919).HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -368,7 +368,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.labelStyle = tmp14;
         obj3.backImage = tmp16;
         obj3.accessibilityLabel = tmp17;
-        const tmp23 = collapsed(_mod6912.HeaderBackButton, obj3);
+        const tmp23 = v65535(_mod6919.HeaderBackButton, obj3);
         cResult[10] = tmp14;
         cResult[11] = tmp4;
         cResult[12] = tmp17;
@@ -403,7 +403,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = text;
       }
       obj2.accessibilityLabel = tmp5;
-      return collapsed(_mod6912.HeaderBackButton, obj2);
+      return v65535(_mod6919.HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -421,7 +421,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: title,
         };
-        const tmp8 = collapsed(Text_Text.Text, obj2);
+        const tmp8 = v65535(Text_Text.Text, obj2);
         cResult[0] = title;
         cResult[1] = tmp8;
         let tmp6 = tmp8;
@@ -470,7 +470,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-muted",
               children: subtitle,
             };
-            tmp13 = collapsed(Text_Text.Text, obj4);
+            tmp13 = v65535(Text_Text.Text, obj4);
           }
           cResult[6] = tmp4.navigatorHeaderSubtitle;
           cResult[7] = subtitle;
@@ -496,7 +496,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.navigatorHeaderTitleContainer, children: null };
       const items = [
         icon,
-        collapsed(Text_Text.Text, {
+        v65535(Text_Text.Text, {
           accessibilityRole: "header",
           "aria-level": "1",
           lineClamp: 1,
@@ -519,7 +519,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: subtitle,
         };
-        tmp6Result = collapsed(Text_Text.Text, obj3);
+        tmp6Result = v65535(Text_Text.Text, obj3);
       }
       items1[1] = tmp6Result;
       items1[2] = HeaderDebugOverlayDefault("js-stack");
@@ -550,7 +550,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp6;
             }
             const obj2 = { style: tmp5, children };
-            const tmp9 = collapsed(closure_1_8, obj2);
+            const tmp9 = v65535(closure_1_8, obj2);
             cResult[7] = children;
             cResult[8] = tmp5;
             cResult[9] = tmp9;
@@ -580,7 +580,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       items[2] = style;
       obj.style = items;
       obj.children = children;
-      return collapsed(closure_1_8, obj);
+      return v65535(closure_1_8, obj);
     };
 size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/NavigatorHeader.native.tsx");
@@ -589,7 +589,7 @@ export const useStyles = styles;
 export const NavigatorHeader = tmp7;
 export const HeaderBackImage = tmp8;
 export const renderBackImage = function renderBackImage() {
-  return collapsed(closure_13, {});
+  return v65535(closure_13, {});
 };
 export function getHeaderCloseButton(pop) {
   const onPress = pop;
@@ -597,7 +597,7 @@ export function getHeaderCloseButton(pop) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.onPress = onPress;
-    return collapsed(closure_14, obj);
+    return v65535(closure_14, obj);
   };
 }
 export function getHeaderConditionalBackButton(callback1) {
@@ -702,7 +702,7 @@ export function getHeaderTextButton(intl, callback) {
     const merged = Object.assign(arg0);
     obj.text = text;
     obj.onPress = onPress;
-    return collapsed(closure_16, obj);
+    return v65535(closure_16, obj);
   };
 }
 export function getHeaderNoTitle() {
@@ -715,7 +715,7 @@ export const HeaderSubmittingIndicator = ReactCompilerGating.isReactCompilerEnab
       const tmp2 = styles();
       if (cResult[0] !== tmp2.submittingIndicator) {
         const obj2 = { animating: true, style: tmp2.submittingIndicator, color: tmp2.submittingIndicator.color };
-        const tmp6 = collapsed(React6, obj2);
+        const tmp6 = v65535(React6, obj2);
         cResult[0] = tmp2.submittingIndicator;
         cResult[1] = tmp6;
         let tmp3 = tmp6;
@@ -726,9 +726,5 @@ export const HeaderSubmittingIndicator = ReactCompilerGating.isReactCompilerEnab
     }
   : function HeaderSubmittingIndicator() {
       const tmp = styles();
-      return collapsed(React6, {
-        animating: true,
-        style: tmp.submittingIndicator,
-        color: tmp.submittingIndicator.color,
-      });
+      return v65535(React6, { animating: true, style: tmp.submittingIndicator, color: tmp.submittingIndicator.color });
     };

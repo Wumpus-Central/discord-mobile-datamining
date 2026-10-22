@@ -78,6 +78,12 @@ prototype["getAudioLayer"] = function getAudioLayer() {
 };
 prototype["setGoLiveSource"] = function setGoLiveSource() {};
 prototype["setClipsSource"] = function setClipsSource() {};
+prototype["startSnapshotCapture"] = function startSnapshotCapture() {};
+prototype["stopSnapshotCapture"] = function stopSnapshotCapture() {};
+prototype["setSnapshotSource"] = function setSnapshotSource() {};
+prototype["getSnapshotStats"] = function getSnapshotStats() {
+  return Promise.resolve(null);
+};
 prototype["setClipsQualitySettings"] = function setClipsQualitySettings() {
   return false;
 };

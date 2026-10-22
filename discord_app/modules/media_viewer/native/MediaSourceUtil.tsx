@@ -237,34 +237,35 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
   }
   if (null != thumbnail) {
     if (null == image.video) {
+      let str7 = image.type;
       ({ proxyURL: proxyURL2, url: url2 } = thumbnail);
       let str1 = url2;
       if (null != proxyURL2) {
         str1 = url2;
         if ("" !== proxyURL2) {
           const _URL2 = URL;
-          const str44 = new URL(proxyURL2);
-          const formatted = str44.pathname.toLowerCase();
+          const str42 = new URL(proxyURL2);
+          const formatted = str42.pathname.toLowerCase();
           const endsWithResult = formatted.endsWith(".avif");
-          const formatted1 = str44.pathname.toLowerCase();
+          const formatted1 = str42.pathname.toLowerCase();
           if (tmp6) {
             if (formatted1.endsWith(".webp")) {
-              const searchParams5 = str44.searchParams;
+              const searchParams5 = str42.searchParams;
               searchParams5.append("animated", "true");
               if (endsWithResult) {
-                const searchParams6 = str44.searchParams;
+                const searchParams6 = str42.searchParams;
                 searchParams6.append("format", "webp");
               }
-              str1 = str44.toString();
+              str1 = str42.toString();
             } else {
               str1 = proxyURL2;
             }
           } else {
             str1 = proxyURL2;
             if (endsWithResult) {
-              const searchParams4 = str44.searchParams;
+              const searchParams4 = str42.searchParams;
               searchParams4.append("format", "webp");
-              str1 = str44.toString();
+              str1 = str42.toString();
             }
           }
         }
@@ -333,7 +334,7 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
             shareURI: null,
           };
           ({ width: obj10.width, height: obj10.height } = thumbnail);
-          size.isGIFV = "gifv" === image.type;
+          size.isGIFV = "gifv" === str7;
           size.sourceURI = thumbnail.url;
           const provider2 = image.provider;
           let name1;
@@ -364,66 +365,36 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
         }
       }
       if ("video" !== image.type) {
-        const size2 = {
-          uri: mobileOptimizedSrc,
-          messageId: id.id,
+        const obj7 = {
+          embed: image,
+          media: thumbnail,
+          message: id,
+          embedIndex: mediaIndex,
           guildId: guildIdFromSearchContext,
-          channelId: id.channel_id,
-          mediaIndex,
-          width: null,
-          height: null,
-          sourceURI: null,
-          accessoryType: "embed",
-          noCarousel: null,
-          spoiler: null,
-          flags: null,
-          obscure: null,
-          contentScanVersion: null,
-          contentType: null,
-          shareURI: null,
+          spoiler: hasSpoilerEmbeds,
+          obscure: result,
+          noCarousel: !isEmbedInlineResult,
         };
-        ({ width: obj15.width, height: obj15.height, url: obj15.sourceURI } = thumbnail);
-        size2.noCarousel = !isEmbedInlineResult;
-        size2.spoiler = hasSpoilerEmbeds;
-        size2.flags = image.flags;
-        size2.obscure = result;
-        size2.contentScanVersion = content_scan_version;
-        if ("contentType" in thumbnail) {
-          let contentType4 = thumbnail.contentType;
-        } else if ("content_type" in thumbnail) {
-          const content_type4 = thumbnail.content_type;
-          contentType4 = content_type4;
-        }
-        size2.contentType = contentType4;
-        size2.shareURI = thumbnail.url;
-        const obj7 = {};
-        const merged1 = Object.assign(size2);
-        obj7.uri = str1;
-        let tmp43 = obj7;
-        if (str1 !== mobileOptimizedSrc) {
-          const items = [size2, obj7];
-          tmp43 = items;
-        }
-        return tmp43;
+        return getEmbedImageMediaSources(obj7);
       }
-      const items1 = [];
+      const items = [];
       if (null == image.thumbnail) {
         if (tmp26) {
           tmp26 = null != image.video;
         }
         if (!tmp26) {
-          if (0 !== items1.length) {
-            if (1 === items1.length) {
-              let first = items1[0];
-            } else if (2 === items1.length) {
-              const items2 = [,];
-              [arr2[0], arr2[1]] = items1;
-              first = items2;
+          if (0 !== items.length) {
+            if (1 === items.length) {
+              let first = items[0];
+            } else if (2 === items.length) {
+              const items1 = [,];
+              [arr2[0], arr2[1]] = items;
+              first = items1;
             }
             return first;
           }
         } else {
-          let size3 = {
+          let size2 = {
             uri: mobileOptimizedSrc,
             guildId: guildIdFromSearchContext,
             spoiler: hasSpoilerEmbeds,
@@ -444,99 +415,99 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
             disableDownload: true,
             shareURI: null,
           };
-          let str29 = image.video;
-          if ("contentType" in str29) {
-            let contentType3 = str29.contentType;
-          } else if ("content_type" in str29) {
-            const content_type3 = str29.content_type;
+          let str30 = image.video;
+          if ("contentType" in str30) {
+            let contentType3 = str30.contentType;
+          } else if ("content_type" in str30) {
+            const content_type3 = str30.content_type;
             contentType3 = content_type3;
           }
-          size3.contentType = contentType3;
-          size3.sourceURI = image.url;
-          size3.messageId = id.id;
-          size3.noCarousel = !isEmbedInlineResult;
-          size3.mediaIndex = mediaIndex;
-          size3.width = image.video.width;
-          size3.height = image.video.height;
-          size3.channelId = id.channel_id;
+          size2.contentType = contentType3;
+          size2.sourceURI = image.url;
+          size2.messageId = id.id;
+          size2.noCarousel = !isEmbedInlineResult;
+          size2.mediaIndex = mediaIndex;
+          size2.width = image.video.width;
+          size2.height = image.video.height;
+          size2.channelId = id.channel_id;
           ({ proxyURL: proxyURL3, url: url4 } = image.video);
-          let str59 = url4;
+          let str57 = url4;
           if (null != proxyURL3) {
-            str29 = "";
-            str59 = url4;
+            str30 = "";
+            str57 = url4;
             if ("" !== proxyURL3) {
               const _URL4 = URL;
               const uRL = new URL(proxyURL3);
               url4 = uRL;
               const formatted2 = uRL.pathname.toLowerCase();
-              str29 = formatted2.endsWith(".avif");
+              str30 = formatted2.endsWith(".avif");
               const formatted3 = uRL.pathname.toLowerCase();
-              let str34 = formatted3.endsWith(".webp");
+              str7 = formatted3.endsWith(".webp");
               if (!tmp35) {
-                str59 = proxyURL3;
-                if (str29) {
+                str57 = proxyURL3;
+                if (str30) {
                   const searchParams10 = url4.searchParams;
                   searchParams10.append("format", "webp");
-                  str59 = url4.toString();
+                  str57 = url4.toString();
                 }
               }
             }
-            if (str34) {
+            if (str7) {
               const searchParams11 = url4.searchParams;
-              str34 = "true";
+              str7 = "true";
               proxyURL3 = searchParams11.append("animated", "true");
-              if (str29) {
+              if (str30) {
                 const searchParams12 = url4.searchParams;
                 proxyURL3 = "webp";
                 searchParams12.append("format", "webp");
               }
-              str29 = url4.toString;
-              str59 = str29();
+              str30 = url4.toString;
+              str57 = str30();
             } else {
-              str59 = proxyURL3;
+              str57 = proxyURL3;
             }
           }
-          size3.embedURI = str59;
-          size3.embedProviderName = url3;
+          size2.embedURI = str57;
+          size2.embedProviderName = url3;
           url3 = image.url;
-          size3.shareURI = url3;
-          size3 = items1.push(size3);
+          size2.shareURI = url3;
+          size2 = items.push(size2);
         }
       } else {
         ({ proxyURL: proxyURL4, url: url5 } = image.thumbnail);
-        let str60 = url5;
+        let str58 = url5;
         if (null != proxyURL4) {
-          str60 = url5;
+          str58 = url5;
           if ("" !== proxyURL4) {
             const _URL3 = URL;
-            const str50 = new URL(proxyURL4);
-            const formatted4 = str50.pathname.toLowerCase();
+            const str48 = new URL(proxyURL4);
+            const formatted4 = str48.pathname.toLowerCase();
             const endsWithResult1 = formatted4.endsWith(".avif");
-            const formatted5 = str50.pathname.toLowerCase();
-            if (tmp55) {
+            const formatted5 = str48.pathname.toLowerCase();
+            if (tmp52) {
               if (formatted5.endsWith(".webp")) {
-                const searchParams8 = str50.searchParams;
+                const searchParams8 = str48.searchParams;
                 searchParams8.append("animated", "true");
                 if (endsWithResult1) {
-                  const searchParams9 = str50.searchParams;
+                  const searchParams9 = str48.searchParams;
                   searchParams9.append("format", "webp");
                 }
-                str60 = str50.toString();
+                str58 = str48.toString();
               } else {
-                str60 = proxyURL4;
+                str58 = proxyURL4;
               }
             } else {
-              str60 = proxyURL4;
+              str58 = proxyURL4;
               if (endsWithResult1) {
-                const searchParams7 = str50.searchParams;
+                const searchParams7 = str48.searchParams;
                 searchParams7.append("format", "webp");
-                str60 = str50.toString();
+                str58 = str48.toString();
               }
             }
           }
         }
-        let size4 = {
-          uri: utils_ImageUtilsDefault.getMobileOptimizedSrc(str60, image.thumbnail.width, image.thumbnail.height),
+        let size3 = {
+          uri: utils_ImageUtilsDefault.getMobileOptimizedSrc(str58, image.thumbnail.width, image.thumbnail.height),
           guildId: guildIdFromSearchContext,
           spoiler: hasSpoilerEmbeds,
           flags: image.flags,
@@ -560,16 +531,16 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
           const content_type2 = thumbnail2.content_type;
           contentType2 = content_type2;
         }
-        size4.contentType = contentType2;
-        size4.messageId = id.id;
-        size4.noCarousel = !isEmbedInlineResult;
-        size4.mediaIndex = mediaIndex;
-        size4.channelId = id.channel_id;
-        size4.sourceURI = image.thumbnail.url;
-        size4.width = image.thumbnail.width;
-        size4.height = image.thumbnail.height;
-        size4.shareURI = image.thumbnail.url;
-        size4 = items1.push(size4);
+        size3.contentType = contentType2;
+        size3.messageId = id.id;
+        size3.noCarousel = !isEmbedInlineResult;
+        size3.mediaIndex = mediaIndex;
+        size3.channelId = id.channel_id;
+        size3.sourceURI = image.thumbnail.url;
+        size3.width = image.thumbnail.width;
+        size3.height = image.thumbnail.height;
+        size3.shareURI = image.thumbnail.url;
+        size3 = items.push(size3);
         const tmp13Result = utils_ImageUtilsDefault;
       }
       const tmp16Result4 = renderer_EmbedUtils;
@@ -589,7 +560,7 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
             if (str6) {
               const searchParams = url.searchParams;
               searchParams.append("format", "webp");
-              let str61 = url.toString();
+              let str59 = url.toString();
             }
           }
         }
@@ -603,11 +574,89 @@ function extractMediaFromEmbed(image, id, contentMessage, mediaIndex, guildIdFro
             searchParams3.append("format", "webp");
           }
           str6 = url.toString;
-          str61 = str6();
+          str59 = str6();
         }
       }
     }
   }
+}
+function getEmbedImageMediaSources(arg0) {
+  ({ embed, media, message } = arg0);
+  ({ proxyURL, url } = media);
+  let str1 = url;
+  ({ embedIndex, guildId, spoiler, obscure, noCarousel } = arg0);
+  if (null != proxyURL) {
+    str1 = url;
+    if ("" !== proxyURL) {
+      const _URL = URL;
+      const str9 = new URL(proxyURL);
+      const formatted = str9.pathname.toLowerCase();
+      const endsWithResult = formatted.endsWith(".avif");
+      const formatted1 = str9.pathname.toLowerCase();
+      if (tmp) {
+        if (formatted1.endsWith(".webp")) {
+          const searchParams2 = str9.searchParams;
+          searchParams2.append("animated", "true");
+          if (endsWithResult) {
+            const searchParams3 = str9.searchParams;
+            searchParams3.append("format", "webp");
+          }
+          str1 = str9.toString();
+        } else {
+          str1 = proxyURL;
+        }
+      } else {
+        str1 = proxyURL;
+        if (endsWithResult) {
+          const searchParams = str9.searchParams;
+          searchParams.append("format", "webp");
+          str1 = str9.toString();
+        }
+      }
+    }
+  }
+  const mobileOptimizedSrc = utils_ImageUtilsDefault.getMobileOptimizedSrc(str1, media.width, media.height);
+  const size = {
+    uri: mobileOptimizedSrc,
+    messageId: message.id,
+    guildId,
+    channelId: message.channel_id,
+    mediaIndex: embedIndex,
+    width: media.width,
+    height: media.height,
+    sourceURI: media.url,
+    accessoryType: "embed",
+    noCarousel,
+    spoiler,
+    flags: embed.flags,
+    obscure,
+    contentScanVersion: null,
+    contentType: null,
+    shareURI: null,
+  };
+  if (null != embed.contentScanVersion) {
+    let content_scan_version = embed.contentScanVersion;
+  } else if (null != embed.content_scan_version) {
+    content_scan_version = embed.content_scan_version;
+  }
+  size.contentScanVersion = content_scan_version;
+  if ("contentType" in media) {
+    let contentType = media.contentType;
+  } else if ("content_type" in media) {
+    const content_type = media.content_type;
+    contentType = content_type;
+  }
+  size.contentType = contentType;
+  size.shareURI = media.url;
+  obj2 = {};
+  const merged = Object.assign(size);
+  obj2.uri = str1;
+  let tmp8 = obj2;
+  if (str1 !== mobileOptimizedSrc) {
+    const items = [size, obj2];
+    tmp8 = items;
+  }
+  return tmp8;
 }
 function toMediaSourceFromUnfurledMedia(id, guildId, media, description, spoiler) {
   const unfurledMediaItemType = transformMessageComponents.getUnfurledMediaItemType(media);
@@ -713,13 +762,13 @@ let obj2 = {
   DEFAULT: 3,
   [3]: "DEFAULT",
 };
-function flattenSource(cResult, arg1) {
-  if (!Array.isArray(cResult)) {
-    return cResult;
+function flattenSource(sources, arg1) {
+  if (!Array.isArray(sources)) {
+    return sources;
   } else if (arg1) {
-    let first = cResult[cResult.length - 1];
+    let first = sources[sources.length - 1];
   } else {
-    first = cResult[0];
+    first = sources[0];
   }
 }
 function isValidVideoAttachment(filename) {
@@ -864,6 +913,33 @@ export { extractMediaFromAttachment };
 export { getEmbedUrl };
 export { getEmbedMedia };
 export { extractMediaFromEmbed };
+export const extractThumbnailMediaFromEmbed = function extractThumbnailMediaFromEmbed(
+  thumbnail,
+  message2,
+  message1,
+  embedIndex,
+  guild_id,
+) {
+  thumbnail = thumbnail.thumbnail;
+  if (null != thumbnail) {
+    const obj = {
+      embed: thumbnail,
+      media: thumbnail,
+      message: message2,
+      embedIndex,
+      guildId: guild_id,
+      spoiler: null,
+      obscure: null,
+      noCarousel: true,
+    };
+    obj2 = { contentMessage: message1 };
+    obj.spoiler = renderMessageMarkupDefault(message2, obj2).hasSpoilerEmbeds;
+    const obj4 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: thumbnail };
+    const obj3 = ObscuredMediaUtils;
+    obj.obscure = obj3.isMediaObscuredForHarmTypes(obj4, ObscuredMediaUtils.getEnabledHarmTypesForMessage(message2));
+    return getEmbedImageMediaSources(obj);
+  }
+};
 export const extractMediaFromMessageComponents = function extractMediaFromMessageComponents(
   getContentMessage,
   contentMessage,
@@ -1026,13 +1102,13 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
   message2,
   components,
   guild_id,
-  tmp10Result10,
+  tmp10Result14,
   componentMediaIndex,
 ) {
   _require = message2;
   closure_1 = guild_id;
   const obj = require("InteractionComponentUtils");
-  value = require("InteractionComponentUtils").flattenComponents(components).get(tmp10Result10);
+  value = require("InteractionComponentUtils").flattenComponents(components).get(tmp10Result14);
   if (null == value) {
     return null;
   } else {
@@ -1138,17 +1214,17 @@ export const extractMediaSourcesFromMessage = function extractMediaSourcesFromMe
   }
   return items;
 };
-export const setMediaSourcePortal = function setMediaSourcePortal(items, portal) {
-  let first = items;
-  if (Array.isArray(items)) {
-    first = items[0];
+export const setMediaSourcePortal = function setMediaSourcePortal(items1, portal) {
+  let first = items1;
+  if (Array.isArray(items1)) {
+    first = items1[0];
   }
   if (!tmp2) {
     const _Array = Array;
-    if (Array.isArray(items)) {
-      items[0].portal = portal;
+    if (Array.isArray(items1)) {
+      items1[0].portal = portal;
     } else {
-      items.portal = portal;
+      items1.portal = portal;
     }
   }
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05240_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05244_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStore.tsx";
@@ -13,7 +13,7 @@ const StaticChannelRoute = fn(4828).StaticChannelRoute;
 const GuildMemberFlags = fn(4887).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", alignItems: "center" },
@@ -65,7 +65,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== tmp6) {
           const obj3 = { style: tmp6, colors: tmp7, useAngle: true, angle: -90 };
-          const tmp11 = collapsed(LinearGradientDefault, obj3);
+          const tmp11 = v65535(LinearGradientDefault, obj3);
           cResult[6] = tmp6;
           cResult[7] = tmp11;
           let tmp8 = tmp11;
@@ -79,7 +79,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp12;
         }
         const obj4 = { style: tmp3.progressBackground, children: tmp8 };
-        const tmp15 = collapsed(View, obj4);
+        const tmp15 = v65535(View, obj4);
         cResult[8] = tmp3.progressBackground;
         cResult[9] = tmp8;
         cResult[10] = tmp15;
@@ -100,8 +100,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = obj3;
       obj2.style = items;
       obj2.colors = ["rgba(103, 203, 134, 1)", "rgba(59, 165, 92, 1)"];
-      obj.children = collapsed(LinearGradientDefault, obj2);
-      return collapsed(View, obj);
+      obj.children = v65535(LinearGradientDefault, obj2);
+      return v65535(View, obj);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx");

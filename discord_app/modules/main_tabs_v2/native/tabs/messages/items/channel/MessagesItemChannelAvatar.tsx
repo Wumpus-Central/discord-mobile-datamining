@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11982).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(12003).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -417,7 +417,7 @@ export default noop.memo(
                 style: false,
                 size: true,
                 animate: true,
-                typing: "enabled",
+                typing: false,
                 autoStatusCutout: false,
               };
               if (!stateFromStores2.isSystemUser()) {
@@ -583,7 +583,7 @@ export default noop.memo(
               style: false,
               size: true,
               animate: true,
-              typing: "enabled",
+              typing: false,
               autoStatusCutout: false,
             };
             let tmp12 = null;
@@ -607,7 +607,7 @@ export default noop.memo(
               style: false,
               size: true,
               animate: true,
-              typing: "enabled",
+              typing: false,
               autoStatusCutout: false,
             });
           }

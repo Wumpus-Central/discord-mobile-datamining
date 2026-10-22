@@ -19,17 +19,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "enabled",
+    overSpecs: "emoji",
     dropSpecs: "toCharArray$esjava$1",
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "'",
-    scrollPosition: "characters",
-    windowSize: false,
-    setStateShallow: "%",
-    dropStart: "/",
-    dropComplete: "?",
+    listInsets: 12,
+    scrollPosition: 12,
+    windowSize: null,
+    setStateShallow: null,
+    dropStart: 0,
+    dropComplete: "No Output Devices",
   };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
@@ -71,9 +71,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1274).batchUpdates(() =>
-        dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" }),
-      );
+      dropSpecs(1274).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "r", overSpecs: "toCharArray$esjava$1" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -98,7 +96,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -133,7 +131,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == dropSpecs) {
             const obj2 = {
               isDragTarget: false,
-              dragState: "enabled",
+              dragState: "emoji",
               overState: "toCharArray$esjava$1",
               itemSize: null,
               dragDropInProgress,
@@ -241,7 +239,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == dropSpecs) {
             const obj2 = {
               isDragTarget: false,
-              dragState: "enabled",
+              dragState: "emoji",
               overState: "toCharArray$esjava$1",
               itemSize: null,
               dragDropInProgress,

@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = 30;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_13 = createStyles.createStyles((height, height2) => {
   const obj = {
     container: { alignSelf: "flex-start", height },
@@ -574,7 +574,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                 };
                                                                                 const items = [tmp28, tmp32, tmp56];
                                                                                 obj6.children = items;
-                                                                                const tmp63 = collapsed(
+                                                                                const tmp63 = v65535(
                                                                                   ReanimatedRexportDefault.View,
                                                                                   obj6,
                                                                                 );
@@ -973,7 +973,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                             const obj7 = { children: null };
                                             const items = [tmp15, tmp36];
                                             obj7.children = items;
-                                            const tmp43 = collapsed(closure_1_11, obj7);
+                                            const tmp43 = v65535(closure_1_11, obj7);
                                             cResult[53] = tmp36;
                                             cResult[54] = tmp15;
                                             cResult[55] = tmp43;
@@ -1115,7 +1115,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = React6(ReanimatedRexportDefault.View, obj5);
       items2[1] = React6(ReanimatedRexportDefault.View, obj4);
       obj.children = items2;
-      return collapsed(closure_1_11, obj);
+      return v65535(closure_1_11, obj);
     };
 const __initData = {
   code: "function AIShimmerNativeTsx1(){const{animationProgress,BAND_UPDATES_PER_PASS,bandGlyphsAt,slotCount,glyphChoices,overshootInSlots}=this.__closure;const totalProgress=animationProgress.get();const passProgress=totalProgress-Math.floor(totalProgress);const updateStep=Math.floor(passProgress*BAND_UPDATES_PER_PASS)/BAND_UPDATES_PER_PASS;return bandGlyphsAt(updateStep,slotCount,glyphChoices,overshootInSlots);}",

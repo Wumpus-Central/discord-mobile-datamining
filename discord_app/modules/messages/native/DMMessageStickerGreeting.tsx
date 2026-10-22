@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -52,7 +52,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
 let c14 = "847199849233514549";
 let c15 = "749054660769218631";
 let c16 = 180;
-const END = fn(5126).GradientPercentage.END;
+const END = fn(5130).GradientPercentage.END;
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsRendered() {
@@ -195,8 +195,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                     if (closure_1_1 !== text) {
                       dependencyMap(text);
                     }
-                    closure_1(5645).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
-                    const obj = closure_1(5645);
+                    closure_1(5649).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
+                    const obj = closure_1(5649);
                     const obj2 = { text, variant: "critical" };
                   }
                   closure_128_0 = showErrorToast;
@@ -310,8 +310,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                     if (closure_1_1 !== text) {
                       dependencyMap(text);
                     }
-                    closure_1(5645).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
-                    const obj = closure_1(5645);
+                    closure_1(5649).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
+                    const obj = closure_1(5649);
                     const obj2 = { text, variant: "critical" };
                   }
                   closure_128_0 = showErrorToast;
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const hasInputText = channel.hasInputText;
       let obj = channel(576);
-      const tmp4 = closure_13(channel(5126).useGradientValue(END));
+      const tmp4 = closure_13(channel(5130).useGradientValue(END));
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageStore];
@@ -413,7 +413,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp7 = cResult[2];
       }
-      let obj2 = channel(5126);
+      let obj2 = channel(5130);
       const stateFromStores = channel(504).useStateFromStores(first, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
@@ -436,15 +436,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = channel(504).useStateFromStores(tmp9, tmp11);
       const tmp13 = hasInputText;
       const tmpResult6 = channel(504);
-      let name = hasInputText(5015).useName(stateFromStores1);
+      let name = hasInputText(5018).useName(stateFromStores1);
       if (name == null) {
         const intl = tmp(1128).intl;
         name = intl.string(tmp(1128).t.y1Wu2f);
       }
       const intl2 = tmp(1128).intl;
       intl2.formatToPlainString(channel(1128).t.m0zYbV, { username: name });
-      let obj5 = hasInputText(5015);
-      const showConvoStarterInDM = channel(13042).useShowConvoStarterInDM(channel);
+      let obj5 = hasInputText(5018);
+      const showConvoStarterInDM = channel(13078).useShowConvoStarterInDM(channel);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [StickersStore];
         cResult[6] = items2;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp20 = cResult[9];
       }
-      const tmpResult7 = channel(13042);
+      const tmpResult7 = channel(13078);
       const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
       if (cResult[10] !== showConvoStarterInDM) {
         class U {
@@ -553,7 +553,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.height = obj5.withDelay(300, obj6.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 }));
         return obj;
       };
-      const tmpResult9 = channel(5035);
+      const tmpResult9 = channel(5038);
       fn3.__closure = {
         styles: tmp4,
         isRendered,
@@ -561,8 +561,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasMessages: stateFromStores,
         HEIGHT_COMPACT: 72,
         HEIGHT_FULL,
-        withDelay: channel(5035).withDelay,
-        withTiming: channel(5188).withTiming,
+        withDelay: channel(5038).withDelay,
+        withTiming: channel(5192).withTiming,
         STANDARD_EASING: channel(1202).STANDARD_EASING,
       };
       fn3.__workletHash = 16992012801942;
@@ -576,11 +576,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasMessages: stateFromStores,
         HEIGHT_COMPACT: 72,
         HEIGHT_FULL,
-        withDelay: channel(5035).withDelay,
-        withTiming: channel(5188).withTiming,
+        withDelay: channel(5038).withDelay,
+        withTiming: channel(5192).withTiming,
         STANDARD_EASING: channel(1202).STANDARD_EASING,
       };
-      const shouldAnimateSticker = channel(10112).useShouldAnimateSticker(false);
+      const shouldAnimateSticker = channel(10124).useShouldAnimateSticker(false);
       if (!showConvoStarterInDM) {
         class U {
           constructor() {
@@ -610,12 +610,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj4 = { style: tmp4.gradient, colors: tmp28 };
-        const tmp32 = closure_10(tmp13(5240), obj4);
+        const tmp32 = closure_10(tmp13(5244), obj4);
         cResult[13] = tmp28;
         cResult[14] = tmp4.gradient;
         cResult[15] = tmp32;
       }
-      const tmpResult10 = channel(10112);
+      const tmpResult10 = channel(10124);
     }
   : function DMMessageStickerGreeting(channel) {
       channel = channel.channel;

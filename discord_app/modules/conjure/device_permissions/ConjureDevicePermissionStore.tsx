@@ -3,6 +3,7 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
+let obj = { users: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ConjureDevicePermissionStore extends DeviceSettingsStore {}
 const prototype = ConjureDevicePermissionStore.prototype;
@@ -21,7 +22,7 @@ prototype["getDecision"] = function getDecision(applicationId, permission) {
   let tmp2 = null;
   if (null != id) {
     let tmp5;
-    if (obj3.users[id] != null) {
+    if (obj.users[id] != null) {
       if (tmp4[applicationId] != null) {
         tmp5 = tmp7[permission];
       }
@@ -34,21 +35,21 @@ prototype["getDecision"] = function getDecision(applicationId, permission) {
   return tmp2;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return obj3;
+  return obj;
 };
 ConjureDevicePermissionStore.displayName = "ConjureDevicePermissionStore";
 ConjureDevicePermissionStore.persistKey = "ConjureDevicePermissionStore";
-const conjureDevicePermissionStore = new ConjureDevicePermissionStore(DispatcherDefault, {
+obj = {
   CONJURE_DEVICE_PERMISSIONS_DECIDE: function handleDecide(arg0) {
     ({ applicationId, permissions } = arg0);
     const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
     } else {
-      const users = obj3.users;
+      const users = obj.users;
       let tmp4 = users[id];
       if (tmp4 == null) {
-        const obj = {};
+        obj = {};
         users[id] = obj;
         tmp4 = obj;
       }
@@ -67,11 +68,38 @@ const conjureDevicePermissionStore = new ConjureDevicePermissionStore(Dispatcher
         tmp5[tmp9] = str3;
         continue;
       }
-      obj3 = {};
-      const merged = Object.assign(obj3);
+      const obj3 = {};
+      const merged = Object.assign(obj);
+      obj = obj3;
     }
   },
-});
+  CONJURE_DEVICE_PERMISSIONS_RESET: function handleReset(permissions) {
+    permissions = permissions.permissions;
+    closure_0 = undefined;
+    const id = AuthenticationStore.getId();
+    let tmp4 = null;
+    if (null != id) {
+      let tmp7;
+      if (obj.users[id] != null) {
+        tmp7 = tmp6[permissions.applicationId];
+      }
+      tmp4 = tmp7;
+    }
+    closure_0 = tmp4;
+    if (null != tmp4) {
+      if (permissions.some((item) => null != closure_0[item])) {
+        for (const item10021 of permissions) {
+          delete tmp[tmp2];
+          continue;
+        }
+        obj = {};
+        const merged = Object.assign(obj);
+      }
+    }
+    return false;
+  },
+};
+const conjureDevicePermissionStore = new ConjureDevicePermissionStore(DispatcherDefault, obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/device_permissions/ConjureDevicePermissionStore.tsx");
 

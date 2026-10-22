@@ -237,7 +237,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8124);
+const ClipsConstants = fn(8133);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
   ClipSaveTypes: closure_7,
@@ -251,7 +251,7 @@ const ClipsConstants = fn(8124);
 } = ClipsConstants);
 const Constants = fn(1087);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(5795);
+const StreamSettingsConstants = fn(5800);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -371,7 +371,7 @@ prototype["getHardwareClassificationVersion"] = function getHardwareClassificati
   return obj.hardwareClassificationVersion;
 };
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
-  return closure_21 >= collapsed;
+  return closure_21 >= v65535;
 };
 prototype["getLastClipsError"] = function getLastClipsError() {
   return c26;

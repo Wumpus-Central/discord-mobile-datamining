@@ -3,7 +3,7 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../modules/reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../_runtime/05251_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/05255_BottomSheetModal.js";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -1406,7 +1406,7 @@ let closure_22 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   fastListInstance = children(section, fastListInstance);
   section = [fastListInstance, false];
   obj4.children = section;
-  collapsed(NativeViewDefault, obj4);
+  v65535(NativeViewDefault, obj4);
 });
 let closure_23 = noop.memo(function _FastListSectionFooterRenderer(disableWrapper) {
   ({ layoutSize, fastListInstance, children, section, recyclerKey, horizontal } = disableWrapper);
@@ -1426,7 +1426,7 @@ let closure_23 = noop.memo(function _FastListSectionFooterRenderer(disableWrappe
   children = children(section, fastListInstance);
   section = [children, false];
   obj4.children = section;
-  collapsed(NativeViewDefault, obj4);
+  v65535(NativeViewDefault, obj4);
 });
 let closure_24 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   ({ layoutSize, children, section, fastListInstance, item, recyclerKey, horizontal } = disableWrapper);
@@ -1451,7 +1451,7 @@ let closure_24 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   }
   const items = [childrenResult1, false];
   obj3.children = items;
-  childrenResult = collapsed(NativeViewDefault, obj3);
+  childrenResult = v65535(NativeViewDefault, obj3);
 });
 let closure_25 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, recyclerKey, horizontal } = disableWrapper);
@@ -1471,7 +1471,7 @@ let closure_25 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper
   children = children(fastListInstance);
   fastListInstance = [children, false];
   obj4.children = fastListInstance;
-  collapsed(NativeViewDefault, obj4);
+  v65535(NativeViewDefault, obj4);
 });
 let closure_26 = noop.memo(function _FastListSpacer(layoutSize) {
   layoutSize = layoutSize.layoutSize;
@@ -2722,7 +2722,7 @@ prototype4["render"] = function render() {
     renderAccessoryResult = renderAccessory(self);
   }
   children[2] = renderAccessoryResult;
-  return collapsed(__initData, { children });
+  return v65535(__initData, { children });
 };
 FastList.defaultProps = {
   batchesToRender: 12,

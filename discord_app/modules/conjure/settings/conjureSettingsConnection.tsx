@@ -1,5 +1,6 @@
 // discord_app/modules/conjure/settings/conjureSettingsConnection.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import ConjurePreviewActionCreators from "../preview/ConjurePreviewActionCreators.tsx";
 import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -28,13 +29,14 @@ let closure_4 = async function _submitProjectSettings(arg0) {
   })();
 };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsConnection.tsx");
+let result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsConnection.tsx");
 
 export const settingsFrameHandlers = {
   settings(schema, projectId) {
+    projectId = projectId.projectId;
     DispatcherDefault.dispatch({
       type: "CONJURE_SETTINGS_SET",
-      projectId: projectId.projectId,
+      projectId,
       settings: {
         schema: schema.schema,
         values: schema.values,
@@ -42,6 +44,19 @@ export const settingsFrameHandlers = {
         connections: schema.connections,
       },
     });
+    if (true === schema.values_changed) {
+      const result = ConjurePreviewActionCreators.reloadConjureProjectFrames(projectId);
+    }
+    const obj2 = {
+      type: "CONJURE_SETTINGS_SET",
+      projectId,
+      settings: {
+        schema: schema.schema,
+        values: schema.values,
+        secrets: schema.secrets,
+        connections: schema.connections,
+      },
+    };
   },
 };
 export const submitProjectSettings = function submitProjectSettings() {
@@ -84,7 +99,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
             c1 = 1;
             v3 = 1;
             const obj5 = {
-              value: v3(dependencyMap[2]).fetchConjureWorker(require, "/agent/rebuild", { method: "POST" }),
+              value: v3(dependencyMap[3]).fetchConjureWorker(require, "/agent/rebuild", { method: "POST" }),
               done: false,
             };
             return obj5;

@@ -6,8 +6,8 @@ import GameStore from "../../games/GameStore.tsx";
 import DiscoverableGuildsStore from "../../guild/DiscoverableGuildsStore.tsx";
 
 require = fn;
-function getCommunityGuildIds(gameId) {
-  const game = GameStore.getGame(gameId);
+function getCommunityGuildIds(arg0) {
+  const game = GameStore.getGame(arg0);
   let communityGuildIds;
   if (game != null) {
     communityGuildIds = game.communityGuildIds;
@@ -20,8 +20,8 @@ function getCommunityGuildIds(gameId) {
 let closure_4 = [];
 const initialize = fn(504);
 const obj2 = {
-  getQueryId(gameId) {
-    const game = GameStore.getGame(gameId);
+  getQueryId(arg0) {
+    const game = GameStore.getGame(arg0);
     let communityGuildIds;
     if (game != null) {
       communityGuildIds = game.communityGuildIds;
@@ -32,12 +32,12 @@ const obj2 = {
     let combined = null;
     if (communityGuildIds.length > 0) {
       const _HermesInternal = HermesInternal;
-      combined = "game-community-guilds/" + gameId;
+      combined = "game-community-guilds/" + arg0;
     }
     return combined;
   },
-  get(gameId) {
-    const game = GameStore.getGame(gameId);
+  get(arg0) {
+    const game = GameStore.getGame(arg0);
     let communityGuildIds;
     if (game != null) {
       communityGuildIds = game.communityGuildIds;

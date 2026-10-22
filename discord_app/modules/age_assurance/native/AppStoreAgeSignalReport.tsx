@@ -216,7 +216,7 @@ let closure_18 = async function _settleAppStoreAgeSignalReport() {
           c0 = 3;
           const obj4 = { value, done: true };
           return obj4;
-        } else if (null != collapsed) {
+        } else if (null != v65535) {
           const items = [tmp13, require("TimeUtils").sleep(15000)];
           c1 = 1;
           c0 = 1;
@@ -249,6 +249,140 @@ let c13 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalReport.tsx");
 
+export const queueAppStoreAgeSignalSubmit = function queueAppStoreAgeSignalSubmit(arg0) {
+  closure_0 = arg0;
+  closure_3 = async function _settle() {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_0 = tmp4;
+            const items = [dependencyMap];
+            c1 = 1;
+            c2 = 1;
+            const obj4 = { value: Promise.allSettled(items), done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          if (c12 === closure_128_4) {
+            c12 = null;
+          }
+          c2 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp11) {
+        c2 = tmp;
+        throw tmp11;
+      }
+    }
+  };
+  closure_1 = closure_12;
+  const tmp = (async () => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_0 = tmp4;
+            if (null != closure_1) {
+              c1 = 1;
+              c2 = 1;
+              const obj4 = { value: tmp5, done: false };
+              return obj4;
+            }
+          }
+        } else if (1 === tmp4) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c1 = 2;
+        c2 = 1;
+        const obj7 = { value: closure_128_0(), done: false };
+        return obj7;
+      } catch (tmp9) {
+        c2 = tmp;
+        throw tmp9;
+      }
+    }
+  })();
+  closure_2 = tmp;
+  const tmp2 = (function settle() {
+    const self = this;
+    const apply = closure_3.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })();
+  asyncGeneratorStep = tmp2;
+  closure_12 = tmp2;
+  return tmp;
+};
 export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalReport() {
   c9 = true;
   const sum = c13 + 1;
@@ -258,8 +392,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
   if (tmp3) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp4(5626).shouldCollectAppStoreSignal();
-      const tmp4Result = tmp4(5626);
+      result = tmp4(5630).shouldCollectAppStoreSignal();
+      const tmp4Result = tmp4(5630);
     }
     tmp3 = result;
     const obj = require("AppStoreAgeSignalSupport");

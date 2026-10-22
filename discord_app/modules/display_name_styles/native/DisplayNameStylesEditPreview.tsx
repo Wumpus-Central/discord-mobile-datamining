@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   previewSection: {
     marginBottom: nativeDefault.space.PX_24,
@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const tmp5 = closure_9();
       const obj = user(576);
-      const guildMemberAndUserPendingNameplate = user(8619).useGuildMemberAndUserPendingNameplate(user, guildId);
+      const guildMemberAndUserPendingNameplate = user(8628).useGuildMemberAndUserPendingNameplate(user, guildId);
       ({ guildNameplate, pendingNameplate, userNameplate } = guildMemberAndUserPendingNameplate);
       if (cResult[0] !== guildNameplate) {
         const nameplateData = tmp(1992).getNameplateData(guildNameplate);
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     pendingDisplayNameStyles: tmp13,
                                     pendingGlobalName: displayName,
                                   };
-                                  const tmp33 = closure_7(tmp(11121).NameplatePreview, obj4);
+                                  const tmp33 = closure_7(tmp(11138).NameplatePreview, obj4);
                                   cResult[28] = stateFromStores;
                                   cResult[29] = displayName;
                                   cResult[30] = tmp13;
@@ -572,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 maxWidth: 320,
                 accessibilityLabel: tmp14,
               };
-              const tmp20 = closure_7(guildId(11003), obj7);
+              const tmp20 = closure_7(guildId(11020), obj7);
               cResult[12] = displayName;
               cResult[13] = tmp13;
               cResult[14] = guildId;
@@ -604,7 +604,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = user.id;
       cResult[6] = fn;
       tmp11 = fn;
-      const tmpResult = user(8619);
+      const tmpResult = user(8628);
     }
   : function DisplayNameStylesEditPreview(user) {
       user = user.user;

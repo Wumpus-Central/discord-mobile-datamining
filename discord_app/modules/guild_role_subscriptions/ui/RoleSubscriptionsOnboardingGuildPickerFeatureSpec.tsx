@@ -34,10 +34,10 @@ export default {
             isUserInCreatorMonetizationEligibleCountry: null,
             shouldRestrictUpdatingRoleSubscriptionSettings: null,
           };
-          const obj = closure_1_0(7337);
+          const obj = closure_1_0(7344);
           obj2.isUserInCreatorMonetizationEligibleCountry =
-            closure_1_0(7338).isUserInCreatorMonetizationEligibleCountry();
-          const obj3 = closure_1_0(7338);
+            closure_1_0(7345).isUserInCreatorMonetizationEligibleCountry();
+          const obj3 = closure_1_0(7345);
           obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(
             4893,
           ).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);

@@ -42,6 +42,14 @@ Object.defineProperty(prototype, "orbsArcadeGames", {
   },
   set: undefined,
 });
+prototype["getGame"] = function getGame(arg0) {
+  closure_0 = arg0;
+  let found = orbsArcadeGames.find((id) => id.id === closure_0);
+  if (found == null) {
+    found = null;
+  }
+  return found;
+};
 prototype["getGameStateForGame"] = function getGameStateForGame(id) {
   value = map.get(id);
   if (value == null) {
@@ -52,8 +60,8 @@ prototype["getGameStateForGame"] = function getGameStateForGame(id) {
 prototype["isClaimingRewards"] = function isClaimingRewards(gameId) {
   return set.has(gameId);
 };
-prototype["isLaunchingGame"] = function isLaunchingGame(arg0) {
-  return set.has(arg0);
+prototype["isLaunchingGame"] = function isLaunchingGame(id) {
+  return set.has(id);
 };
 OrbsArcadeStore.displayName = "OrbsArcadeStore";
 const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {

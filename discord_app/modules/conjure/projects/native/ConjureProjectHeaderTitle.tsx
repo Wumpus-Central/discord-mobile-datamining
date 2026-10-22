@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", flexShrink: 1, gap: nativeDefault.space.PX_8 },
   title: { flexShrink: 1 },

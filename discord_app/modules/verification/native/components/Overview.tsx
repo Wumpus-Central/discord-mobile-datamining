@@ -18,7 +18,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   containerInner: { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" },
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn2 = function b() {
-        return collapsed(closure_2_11, {
+        return v65535(closure_2_11, {
           children: stateFromStores.map((item) => {
             if (item === constants.CAPTCHA) {
               let obj = { text: null, onPress: null, grow: true };
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj4 = { style: tmp.containerInner, children: null };
       const callback = noop.useCallback(
         () =>
-          collapsed(closure_2_11, {
+          v65535(closure_2_11, {
             children: stateFromStores.map((item) => {
               if (item === constants.CAPTCHA) {
                 let obj = { text: null, onPress: null, grow: true };

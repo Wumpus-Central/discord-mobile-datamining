@@ -12,7 +12,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 let closure_8 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(8382).CREATE_NEW_CHANNEL_VALUE;
+const CREATE_NEW_CHANNEL_VALUE = fn(8391).CREATE_NEW_CHANNEL_VALUE;
 const ChannelTypes = fn(1087).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -97,10 +97,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.Yr6nGx);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-      rulesChannel(8965).updateGuild({ rulesChannelId });
-      const obj = rulesChannel(8965);
+      rulesChannel(8974).updateGuild({ rulesChannelId });
+      const obj = rulesChannel(8974);
       const obj2 = { rulesChannelId };
-      rulesChannel(5192).hideActionSheet();
+      rulesChannel(5196).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -110,7 +110,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8884, dependencyMap.paths), "SelectRulesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8893, dependencyMap.paths), "SelectRulesChannel", obj2);
   }, items3);
   const callback2 = obj.useCallback(() => {
     let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -119,10 +119,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.VqhxxN);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-      rulesChannel(8965).updateGuild({ publicUpdatesChannelId });
-      const obj = rulesChannel(8965);
+      rulesChannel(8974).updateGuild({ publicUpdatesChannelId });
+      const obj = rulesChannel(8974);
       const obj2 = { publicUpdatesChannelId };
-      rulesChannel(5192).hideActionSheet();
+      rulesChannel(5196).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
@@ -132,7 +132,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8884, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8893, dependencyMap.paths), "SelectUpdatesChannel", obj2);
   }, items4);
   const obj6 = {
     headerRef: ref,

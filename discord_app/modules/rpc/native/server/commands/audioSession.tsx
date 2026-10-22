@@ -2,12 +2,12 @@
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let Constants = fn(6357);
+let Constants = fn(6364);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1087);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15621);
+const CONTEXT_MENU_ICON_NAMES = fn(15665);
 let obj3 = {
   scope: null,
   handler(socket) {

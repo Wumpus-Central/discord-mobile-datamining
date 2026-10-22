@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import AccessibilityPreferencesContext from "../../AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import DataBindByName from "../../../../../../../_runtime/05030_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/05033_DataBindByName.js";
 import ManaContext from "../../ManaContext/ManaContext.native.tsx";
 import useRivePlayback from "useRivePlayback.tsx";
 import RiveTypes from "RiveTypes.tsx";
@@ -260,6 +260,7 @@ ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useColorBinding(arg0, arg1, arg2, current, arg4) {
       closure_0 = arg2;
+      dependencyMap = current;
       closure_2 = arg4;
       const cResult = c.c(11);
       const iter = DataBindByName.useRiveColor(arg0, arg1);
@@ -274,40 +275,49 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           const effect = noop.useEffect(tmp2, tmp3);
           noop.useRef(current);
           if (cResult[5] !== current) {
-            const fn2 = function p() {
-              closure_5.current = current;
-            };
+            class E {
+              constructor() {
+                closure_5.current = closure_1;
+                return;
+              }
+            }
             const items = [current];
             cResult[5] = current;
-            cResult[6] = fn2;
+            cResult[6] = E;
             cResult[7] = items;
             let tmp6 = items;
-            let tmp5 = fn2;
           } else {
-            tmp5 = cResult[6];
+            class E {
+              constructor() {
+                closure_5.current = closure_1;
+                return;
+              }
+            }
             tmp6 = cResult[7];
           }
-          const effect1 = noop.useEffect(tmp5, tmp6);
+          const effect1 = noop.useEffect(E, tmp6);
           if (cResult[8] !== value) {
-            const fn3 = function y() {
-              if (null != value) {
-                current = ref.current;
-                if (current != null) {
-                  current(value.toInt());
-                }
+            class E {
+              constructor() {
+                closure_5.current = closure_1;
+                return;
               }
-            };
+            }
             const items1 = [value];
             cResult[8] = value;
-            cResult[9] = fn3;
+            cResult[9] = tmp10;
             cResult[10] = items1;
             let tmp9 = items1;
-            let tmp8 = fn3;
           } else {
-            tmp8 = cResult[9];
+            class E {
+              constructor() {
+                closure_5.current = closure_1;
+                return;
+              }
+            }
             tmp9 = cResult[10];
           }
-          const effect2 = noop.useEffect(tmp8, tmp9);
+          const effect2 = noop.useEffect(tmp10, tmp9);
         }
       }
       const fn = function c() {
@@ -409,6 +419,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       closure_9(iter.value, arg3);
     };
 ReactCompilerGating = fn(558);
+let c10 = 1000;
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useTriggerBinding(arg0, arg1, arg2, onTrigger, arg4) {
       closure_0 = arg2;
@@ -683,89 +694,94 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = arg1;
       noop = arg2;
       closure_4 = arg4;
-      const cResult = require("c").c(13);
-      if (cResult[0] === arg1) {
-        if (cResult[1] === arg0) {
-          if (cResult[2] === arg4) {
-            if (cResult[3] === arg2) {
-              let tmp2 = cResult[4];
-              let tmp3 = cResult[5];
+      const cResult = require("c").c(15);
+      closure_5 = noop.useRef(null);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function c() {
+          return () => {
+            if (null != ref.current) {
+              current = ref.current;
+              const _setTimeout = setTimeout;
+              const timerId = setTimeout(() => current.dispose(), closure_2_10);
             }
-            const effect = noop.useEffect(tmp2, tmp3);
-            closure_5 = noop.useRef(current);
-            if (cResult[6] !== current) {
-              const fn2 = function b() {
-                closure_5.current = current;
-              };
-              const items = [current];
-              cResult[6] = current;
-              cResult[7] = fn2;
+            ref.current = null;
+          };
+        };
+        const items = [];
+        cResult[0] = fn;
+        cResult[1] = items;
+        tmp2 = fn;
+        tmp3 = items;
+      } else {
+        [tmp2, tmp3] = cResult;
+      }
+      const effect = obj2.useEffect(tmp2, tmp3);
+      if (cResult[2] === arg1) {
+        if (cResult[3] === arg0) {
+          if (cResult[4] === arg4) {
+            if (cResult[5] === arg2) {
+              let tmp5 = cResult[6];
+              let tmp6 = cResult[7];
+            }
+            const effect1 = obj2.useEffect(tmp5, tmp6);
+            closure_6 = obj2.useRef(current);
+            if (cResult[8] !== current) {
               class E {
                 constructor() {
-                  obj = closure_1;
-                  if (null != closure_1) {
-                    tmp = closure_0;
-                    imagePropertyResult = obj.imageProperty(closure_0);
-                    if (null != imagePropertyResult) {
-                      return imagePropertyResult.addListener(() => {
-                        current = ref.current;
-                        let currentResult;
-                        if (current != null) {
-                          currentResult = current();
-                        }
-                        return currentResult;
-                      });
-                    }
-                  }
+                  closure_6.current = closure_3;
                   return;
                 }
               }
-              cResult[8] = items;
-              let tmp6 = items;
-              let tmp5 = fn2;
+              const items1 = [current];
+              cResult[8] = current;
+              cResult[9] = E;
+              cResult[10] = items1;
+              let tmp9 = items1;
             } else {
-              tmp5 = cResult[7];
-              tmp6 = cResult[8];
-            }
-            const effect1 = obj2.useEffect(tmp5, tmp6);
-            if (cResult[9] === arg1) {
-              if (cResult[10] === arg0) {
-                let tmp8 = cResult[11];
-                let tmp9 = cResult[12];
-              }
-              const effect2 = obj2.useEffect(tmp8, tmp9);
-            }
-            class E {
-              constructor() {
-                obj = closure_1;
-                if (null != closure_1) {
-                  tmp = closure_0;
-                  imagePropertyResult = obj.imageProperty(closure_0);
-                  if (null != imagePropertyResult) {
-                    return imagePropertyResult.addListener(() => {
-                      current = ref.current;
-                      let currentResult;
-                      if (current != null) {
-                        currentResult = current();
-                      }
-                      return currentResult;
-                    });
-                  }
+              class E {
+                constructor() {
+                  closure_6.current = closure_3;
+                  return;
                 }
-                return;
               }
+              tmp9 = cResult[10];
             }
-            const items1 = [arg0, arg1];
-            cResult[9] = arg1;
-            cResult[10] = arg0;
-            cResult[11] = E;
-            cResult[12] = items1;
-            tmp9 = items1;
-            tmp8 = E;
+            const effect2 = obj2.useEffect(E, tmp9);
+            if (cResult[11] === arg1) {
+              class E {
+                constructor() {
+                  closure_6.current = closure_3;
+                  return;
+                }
+              }
+              const effect3 = obj2.useEffect(tmp11, tmp12);
+            }
+            const fn3 = function y() {
+              if (null != closure_1) {
+                const imagePropertyResult = closure_1.imageProperty(closure_0);
+                if (null != imagePropertyResult) {
+                  return imagePropertyResult.addListener(() => {
+                    current = ref.current;
+                    let currentResult;
+                    if (current != null) {
+                      currentResult = current();
+                    }
+                    return currentResult;
+                  });
+                }
+              }
+            };
+            const items2 = [arg0, arg1];
+            cResult[11] = arg1;
+            cResult[12] = arg0;
+            cResult[13] = fn3;
+            cResult[14] = items2;
+            tmp11 = fn3;
+            tmp12 = items2;
           }
         }
       }
-      const fn = function c() {
+      const fn2 = function v() {
         if (null != closure_1) {
           if (null != closure_2) {
             c0 = false;
@@ -776,14 +792,22 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
             }
             const fromURLAsync = RiveImages.loadFromURLAsync(uri);
             fromURLAsync
-              .then((result) => {
-                if (!c0) {
+              .then((dispose) => {
+                if (c0) {
+                  dispose.dispose();
+                } else {
                   const imagePropertyResult = closure_1.imageProperty(closure_0);
                   if (imagePropertyResult != null) {
-                    result = imagePropertyResult.set(result);
+                    const result = imagePropertyResult.set(dispose);
                   }
+                  if (null != ref.current) {
+                    current = ref.current;
+                    const _setTimeout = setTimeout;
+                    const timerId = setTimeout(() => current.dispose(), c10);
+                  }
+                  ref.current = dispose;
                   if (closure_4 != null) {
-                    tmp6();
+                    tmp9();
                   }
                 }
               })
@@ -794,23 +818,36 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       };
-      const items2 = [arg0, arg1, arg2, arg4];
-      cResult[0] = arg1;
-      cResult[1] = arg0;
-      cResult[2] = arg4;
-      cResult[3] = arg2;
-      cResult[4] = fn;
-      cResult[5] = items2;
-      tmp3 = items2;
-      tmp2 = fn;
+      const items3 = [arg0, arg1, arg2, arg4];
+      cResult[2] = arg1;
+      cResult[3] = arg0;
+      cResult[4] = arg4;
+      cResult[5] = arg2;
+      cResult[6] = fn2;
+      cResult[7] = items3;
+      tmp6 = items3;
+      tmp5 = fn2;
+      const obj = require("c");
     }
   : function useImageBinding(arg0, arg1, arg2, current, arg4) {
       closure_0 = arg0;
       closure_1 = arg1;
       noop = arg2;
       closure_4 = arg4;
+      closure_5 = noop.useRef(null);
+      const effect = noop.useEffect(
+        () => () => {
+          if (null != ref.current) {
+            current = ref.current;
+            const _setTimeout = setTimeout;
+            const timerId = setTimeout(() => current.dispose(), closure_2_10);
+          }
+          ref.current = null;
+        },
+        [],
+      );
       const items = [arg0, arg1, arg2, arg4];
-      const effect = noop.useEffect(() => {
+      const effect1 = noop.useEffect(() => {
         if (null != closure_1) {
           if (null != closure_2) {
             c0 = false;
@@ -821,14 +858,22 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
             }
             const fromURLAsync = RiveImages.loadFromURLAsync(uri);
             fromURLAsync
-              .then((result) => {
-                if (!c0) {
+              .then((dispose) => {
+                if (c0) {
+                  dispose.dispose();
+                } else {
                   const imagePropertyResult = closure_1.imageProperty(closure_0);
                   if (imagePropertyResult != null) {
-                    result = imagePropertyResult.set(result);
+                    const result = imagePropertyResult.set(dispose);
                   }
+                  if (null != ref.current) {
+                    current = ref.current;
+                    const _setTimeout = setTimeout;
+                    const timerId = setTimeout(() => current.dispose(), c10);
+                  }
+                  ref.current = dispose;
                   if (closure_4 != null) {
-                    tmp6();
+                    tmp9();
                   }
                 }
               })
@@ -839,13 +884,13 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      closure_5 = noop.useRef(current);
+      closure_6 = noop.useRef(current);
       const items1 = [current];
-      const effect1 = noop.useEffect(() => {
-        closure_5.current = current;
+      const effect2 = noop.useEffect(() => {
+        closure_6.current = current;
       }, items1);
       const items2 = [arg0, arg1];
-      const effect2 = noop.useEffect(() => {
+      const effect3 = noop.useEffect(() => {
         if (null != closure_1) {
           const imagePropertyResult = closure_1.imageProperty(closure_0);
           if (null != imagePropertyResult) {

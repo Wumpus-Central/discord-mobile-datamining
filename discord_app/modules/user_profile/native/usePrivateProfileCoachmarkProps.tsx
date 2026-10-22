@@ -11,7 +11,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
@@ -56,7 +56,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
       const cResult = markAsDismissed(576).c(15);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const obj = markAsDismissed(576);
-      let userIsTeen = markAsDismissed(8099).useUserIsTeen();
+      let userIsTeen = markAsDismissed(8108).useUserIsTeen();
       const ProfileVisibility = markAsDismissed(4797).ProfileVisibility;
       const setting = ProfileVisibility.useSetting();
       if (userIsTeen) {
@@ -175,7 +175,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
         }
         obj4.string(tmp(1128).t["6hEfm1"]);
       }
-      const obj2 = markAsDismissed(8099);
+      const obj2 = markAsDismissed(8108);
     }
   : function usePrivateProfileCoachmarkProps(visibleContent) {
       visibleContent = visibleContent.visibleContent;

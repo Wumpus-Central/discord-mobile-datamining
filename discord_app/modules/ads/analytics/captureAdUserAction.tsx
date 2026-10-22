@@ -510,9 +510,9 @@ const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
 
-export const captureAdUserAction = function captureAdUserAction(captureAdUserActionResult1) {
+export const captureAdUserAction = function captureAdUserAction(type) {
   try {
-    const type = captureAdUserActionResult1.type;
+    type = type.type;
     if (captureAdUserActionTypes.AdUserActionType.END_CONTENT_LOAD === type) {
       (function handleEndContentLoadAction(adCreativeType) {
         if (adCreativeType.adCreativeType === AdCreativeType.AdCreativeType.QUEST) {
@@ -602,7 +602,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           tmp2Result9.trackAdContentEvent(obj5);
           const tmp2Result10 = AnalyticsTypes;
         }
-      })(captureAdUserActionResult1);
+      })(type);
     } else if (captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL === type) {
       (function handleClickInternalAction() {
         const self = this;
@@ -613,7 +613,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      })(type).catch(reportCaptureAdUserActionError);
       const promise3 = (function handleClickInternalAction() {
         const self = this;
         const apply = closure_1_8.apply;
@@ -623,7 +623,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1);
+      })(type);
     } else if (captureAdUserActionTypes.AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
       (function handleClickExternalAdvertiserCtaAction() {
         const self = this;
@@ -634,7 +634,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      })(type).catch(reportCaptureAdUserActionError);
       const promise2 = (function handleClickExternalAdvertiserCtaAction() {
         const self = this;
         const apply = closure_1_9.apply;
@@ -644,7 +644,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1);
+      })(type);
     } else if (captureAdUserActionTypes.AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
       (function handleViewInternalSurfaceImpressionAction() {
         const self = this;
@@ -655,7 +655,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      })(type).catch(reportCaptureAdUserActionError);
       const promise = (function handleViewInternalSurfaceImpressionAction() {
         const self = this;
         const apply = closure_1_11.apply;
@@ -665,9 +665,9 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1);
+      })(type);
     } else if (captureAdUserActionTypes.AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
-      handleViewImpression(captureAdUserActionResult1);
+      handleViewImpression(type);
     }
   } catch (tmp13) {
     reportCaptureAdUserActionError(tmp13);

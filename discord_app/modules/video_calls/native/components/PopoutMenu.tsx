@@ -5,8 +5,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import Patterns from "../../../../../_runtime/05196_Patterns.js";
-import LegacyBaseButton from "../../../../../_runtime/05279_LegacyBaseButton.js";
+import Patterns from "../../../../../_runtime/05200_Patterns.js";
+import LegacyBaseButton from "../../../../../_runtime/05283_LegacyBaseButton.js";
 import FormRowDefault from "../../../../design/void/Form/native/FormRow.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = 250;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: {
     position: "absolute",
@@ -366,18 +366,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj3 = {
-            withTiming: onOpen(5188).withTiming,
+            withTiming: onOpen(5192).withTiming,
             animateIn: tmp7[0] > 0 && !first,
             STANDARD_EASING: onOpen(1202).STANDARD_EASING,
             ANIMATION_DURATION: v250,
-            runOnJS: onOpen(5035).runOnJS,
+            runOnJS: onOpen(5038).runOnJS,
             handleClose,
             EXTRA_PADDING: 8,
           };
           De.__closure = obj3;
           De.__workletHash = 4709130936628;
           De.__initData = debounceResult;
-          const animatedStyle = onOpen(5035).useAnimatedStyle(De);
+          const animatedStyle = onOpen(5038).useAnimatedStyle(De);
           const _Symbol3 = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
             class Ie {
@@ -440,7 +440,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              let obj4 = { runOnJS: onOpen(5035).runOnJS, _setClose: tmp10 };
+              let obj4 = { runOnJS: onOpen(5038).runOnJS, _setClose: tmp10 };
               PopoutMenuTsx4.__closure = obj4;
               PopoutMenuTsx4.__workletHash = 15929711498886;
               PopoutMenuTsx4.__initData = Ie;
@@ -454,12 +454,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const Gesture = onOpen(5279).Gesture;
+            const Gesture = onOpen(5283).Gesture;
             const LongPressResult = Gesture.LongPress();
             function be() {
               ReanimatedRexport.runOnJS(Oe)();
             }
-            let obj5 = { runOnJS: onOpen(5035).runOnJS, handleLongPress: tmp36 };
+            let obj5 = { runOnJS: onOpen(5038).runOnJS, handleLongPress: tmp36 };
             be.__closure = obj5;
             be.__workletHash = 1649917173815;
             class De {
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { gesture: tmp37, children: null };
               const obj8 = { ref, children: trigger };
               obj6.children = closure_6(first1, obj8);
-              const items2 = [closure_6(onOpen(5279).GestureDetector, obj6)];
+              const items2 = [closure_6(onOpen(5283).GestureDetector, obj6)];
               class De {
                 constructor() {
                   tmp = closure_0;
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[30] = trigger;
             cResult[31] = tmp44Result;
           }
-          let tmpResult = onOpen(5035);
+          let tmpResult = onOpen(5038);
         }
         const rect = { left, top };
         cResult[9] = left;

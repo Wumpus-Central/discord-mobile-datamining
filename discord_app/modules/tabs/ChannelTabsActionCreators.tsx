@@ -187,10 +187,7 @@ export const openDuplicateTab = function openDuplicateTab() {
   }
 };
 export const navigateToRoute = function navigateToRoute(routePath, routeLabel) {
-  if (0 !== ChannelTabsStore.getTabs().length) {
-    const obj2 = { type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel };
-    DispatcherDefault.dispatch(obj2);
-  }
+  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel });
 };
 export { TabHistoryNavResult };
 export const goBackInActiveTab = function goBackInActiveTab() {

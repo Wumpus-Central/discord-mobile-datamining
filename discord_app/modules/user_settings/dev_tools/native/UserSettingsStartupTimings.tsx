@@ -20,7 +20,7 @@ require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, code: { fontFamily: fn(1087).Fonts.CODE_BOLD }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.border = { height: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -95,14 +95,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       closure_10 = Math.ceil(tmp5(9).renderLatestMessages.importTime);
       const _Symbol2 = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const lastTrackedAppUiViewed2Properties = tmp(7561).getLastTrackedAppUiViewed2Properties();
+        const lastTrackedAppUiViewed2Properties = tmp(7568).getLastTrackedAppUiViewed2Properties();
         class G {
           constructor() {
             return closure_7.alertStartupMetrics;
           }
         }
         let tmp20 = lastTrackedAppUiViewed2Properties;
-        const tmpResult2 = tmp(7561);
+        const tmpResult2 = tmp(7568);
       } else {
         tmp20 = cResult[6];
       }
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_1 = undefined;
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp5(5139).getAppFirstVisibleTimestamp(), done: false };
+                  const obj5 = { value: tmp5(5143).getAppFirstVisibleTimestamp(), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -157,9 +157,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 return obj6;
               } else {
                 closure_128_0 = value;
-                closure_128_1 = tmp5(13695)(closure_128_0);
+                closure_128_1 = tmp5(13731)(closure_128_0);
                 const obj7 = { message: closure_128_1 };
-                tmp2(8810).showShareActionSheet(obj7, "Startup Timing");
+                tmp2(8819).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 }
               }
               let obj4 = { contentContainerStyle: tmp28, ListHeaderComponent: tmp29, data: tmp11, renderItem: tmp31 };
-              const tmp34 = closure_8(tmp(7199).FlashList, obj4);
+              const tmp34 = closure_8(tmp(7206).FlashList, obj4);
               cResult[19] = tmp11;
               cResult[20] = tmp28;
               cResult[21] = tmp29;
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
   }
   let obj = require("c");
-  const parts = checked(13695)(useResult, !checked, first1).split("\n");
+  const parts = checked(13731)(useResult, !checked, first1).split("\n");
   cResult[0] = useResult;
   cResult[1] = checked;
   cResult[2] = first1;
@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(5139).getAppFirstVisibleTimestamp(), done: false };
+            const obj5 = { value: tmp5(5143).getAppFirstVisibleTimestamp(), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -504,9 +504,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(13695)(closure_128_0);
+          closure_128_1 = tmp5(13731)(closure_128_0);
           const obj7 = { message: closure_128_1 };
-          tmp2(8810).showShareActionSheet(obj7, "Startup Timing");
+          tmp2(8819).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
@@ -615,7 +615,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj20.children = items9;
     items2[7] = React6(closure_12, obj20);
     obj19.children = items2;
-    obj18.label = React6(collapsed, obj19);
+    obj18.label = React6(v65535, obj19);
     obj17.children = closure_2_8(TableRow.TableRow, obj18);
     items[1] = closure_2_8(TableRowGroup.TableRowGroup, obj17);
     const obj21 = { title: "Legend", hasIcons: false, children: null };
@@ -623,7 +623,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj23 = { children: null };
     const items10 = [closure_2_8(closure_12, { children: "\u2615 - Java / Kotlin" }), closure_2_8(closure_12, { children: "\u{1F3A8} - React render" }), closure_2_8(closure_12, { children: "\u{1F4BE} - CacheStore" }), closure_2_8(closure_12, { children: "\u{1F9A5} - Slow Store Update / Handler" }), closure_2_8(closure_12, { children: "\u{1F3C3} - Startup Event" }), closure_2_8(closure_12, { children: "\u{1F310} - Socket Event" })];
     obj23.children = items10;
-    obj22.label = React6(collapsed, obj23);
+    obj22.label = React6(v65535, obj23);
     obj21.children = closure_2_8(TableRow.TableRow, obj22);
     items[2] = closure_2_8(TableRowGroup.TableRowGroup, obj21);
     const obj24 = { title: "Detailed Times", hasIcons: false, children: null };
@@ -650,12 +650,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj.children = items;
     const items12 = [React6(Stack_Stack.Stack, obj), closure_2_8(View, { style: border.border })];
     obj16.children = items12;
-    return React6(collapsed, obj16);
+    return React6(v65535, obj16);
   };
   obj5.data = memo;
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(7199).FlashList, obj5);
+  obj4.children = closure_8(tmp10(7206).FlashList, obj5);
   return closure_8(checked, obj4);
 });

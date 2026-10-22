@@ -463,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.render = function render() {
         const obj = { children: null };
         const obj2 = { projectId: stateFromStores, sceneProjectId: "Array", openedProjectIdRef };
-        const items = [collapsed(closure_13, obj2), collapsed(ConjureProjectListDefault, { guildId })];
+        const items = [v65535(closure_13, obj2), v65535(ConjureProjectListDefault, { guildId })];
         obj.children = items;
         return __initData(closure_2_11, obj);
       };
@@ -474,8 +474,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           projectId = projectId.projectId;
           const obj = { children: null };
           const items = [
-            collapsed(closure_13, { projectId: stateFromStores, sceneProjectId: projectId, openedProjectIdRef }),
-            collapsed(ConjureChatSceneDefault, { guildId, projectId }),
+            v65535(closure_13, { projectId: stateFromStores, sceneProjectId: projectId, openedProjectIdRef }),
+            v65535(ConjureChatSceneDefault, { guildId, projectId }),
           ];
           obj.children = items;
           return __initData(closure_2_11, obj);
@@ -492,8 +492,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           projectId = projectId.projectId;
           const obj = { children: null };
           const items = [
-            collapsed(closure_13, { projectId: stateFromStores, sceneProjectId: projectId, openedProjectIdRef }),
-            collapsed(ConjureDebugSceneDefault, { projectId }),
+            v65535(closure_13, { projectId: stateFromStores, sceneProjectId: projectId, openedProjectIdRef }),
+            v65535(ConjureDebugSceneDefault, { projectId }),
           ];
           obj.children = items;
           return __initData(closure_2_11, obj);

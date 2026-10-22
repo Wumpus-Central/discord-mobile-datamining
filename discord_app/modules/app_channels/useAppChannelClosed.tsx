@@ -5,7 +5,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FramesConstants = fn(6755);
+const FramesConstants = fn(6762);
 ({ isLaunched: hasOwnProperty, makeFrameId: metroRequire } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

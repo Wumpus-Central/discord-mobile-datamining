@@ -23,8 +23,8 @@ prototype["getPublishStatus"] = function getPublishStatus(projectId) {
   }
   return value;
 };
-prototype["isProjectPublishing"] = function isProjectPublishing(projectId) {
-  return set.has(projectId);
+prototype["isProjectPublishing"] = function isProjectPublishing(arg0) {
+  return set.has(arg0);
 };
 prototype["getPublishApprovalUrl"] = function getPublishApprovalUrl(arg0) {
   value = map1.get(arg0);

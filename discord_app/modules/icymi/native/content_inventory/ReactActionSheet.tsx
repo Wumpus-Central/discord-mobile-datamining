@@ -6,18 +6,18 @@ import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
 import openEmojiPickerActionSheet from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import ICYMIContext from "../ICYMIContext.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/13019__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/13055__objectDestructuringEmpty.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5248).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   header: { width: "100%", display: "flex", alignItems: "center", padding: 8 },
   container: { gap: 12 },
@@ -911,8 +911,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                     return obj3;
                   } else {
                     closure_5(true);
-                    v1(8800).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-                    const obj5 = v1(8800);
+                    v1(8809).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+                    const obj5 = v1(8809);
                     const obj4 = {
                       itemId: tmp4.id,
                       itemType: hotwheels_gaming_activity,
@@ -923,7 +923,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                         actionDestinationType: null,
                       },
                     };
-                    v1(8800).feedItemActioned(obj4);
+                    v1(8809).feedItemActioned(obj4);
                     v1 = 1;
                     dependencyMap = 1;
                     const obj7 = { value: sendMessage(first1), done: false };
@@ -1221,8 +1221,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { children: null };
         const obj3 = {};
         const merged1 = Object.assign(tmp4);
-        obj2.children = collapsed(closure_14, obj3);
-        const tmp15 = collapsed(ICYMIContext.ICYMIContextProvider, obj2);
+        obj2.children = v65535(closure_14, obj3);
+        const tmp15 = v65535(ICYMIContext.ICYMIContextProvider, obj2);
         cResult[2] = tmp4;
         cResult[3] = tmp15;
         let tmp9 = tmp15;
@@ -1239,8 +1239,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = { children: null };
         const obj2 = {};
         const merged1 = Object.assign(merged);
-        obj.children = collapsed(closure_14, obj2);
-        return collapsed(ICYMIContext.ICYMIContextProvider, obj);
+        obj.children = v65535(closure_14, obj2);
+        return v65535(ICYMIContext.ICYMIContextProvider, obj);
       }
     };
 export const getStatusReplyContent = function getStatusReplyContent(reply) {

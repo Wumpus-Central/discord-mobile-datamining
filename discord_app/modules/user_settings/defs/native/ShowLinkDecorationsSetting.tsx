@@ -31,13 +31,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OLZFB8);
   },
-  parent: fn(8308).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8317).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onShowLinkDecorationsValueChange,
 });

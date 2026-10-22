@@ -342,10 +342,10 @@ function scheduleEditIfNeeded(timeout) {
     timeout.timeout = setTimeout(persistPendingEdit, num);
   }
 }
-function updateNotifSettingValue(GAMING_DEFAULT, arg1) {
+function updateNotifSettingValue(CALLS, arg1) {
   ({ createNew, update } = arg1);
   const orCreatePendingEdit = NotifSettingsProtoStore.getOrCreatePendingEdit();
-  const setting = NotifSettingsProtoStore.getSetting(GAMING_DEFAULT);
+  const setting = NotifSettingsProtoStore.getSetting(CALLS);
   if (null != setting) {
     const DeclarativeNotifSetting2 = notification_settings.DeclarativeNotifSetting;
     let cloneResult = DeclarativeNotifSetting2.clone(setting);
@@ -360,7 +360,7 @@ function updateNotifSettingValue(GAMING_DEFAULT, arg1) {
     }
   }
   if (update(cloneResult)) {
-    orCreatePendingEdit.partialSettings.values[GAMING_DEFAULT] = cloneResult;
+    orCreatePendingEdit.partialSettings.values[CALLS] = cloneResult;
     if (!tmp9) {
       let num = {}.minRescheduleDelayMillis;
       if (num == null) {
@@ -392,8 +392,8 @@ export const schedulePersistPendingEditsIfNeeded = function schedulePersistPendi
     tmp2 = null != pendingEdit.timeout || tmp.isApplyingEdit;
   }
 };
-export const updateNotifSettingToggleValue = function updateNotifSettingToggleValue(GAMING_DEFAULT, toggle) {
-  updateNotifSettingValue(GAMING_DEFAULT, {
+export const updateNotifSettingToggleValue = function updateNotifSettingToggleValue(CALLS, toggle) {
+  updateNotifSettingValue(CALLS, {
     createNew() {
       const DeclarativeNotifSetting = toggle(dependencyMap[6]).DeclarativeNotifSetting;
       const obj = DeclarativeNotifSetting.create();
@@ -406,8 +406,8 @@ export const updateNotifSettingToggleValue = function updateNotifSettingToggleVa
     },
   });
 };
-export const updateNotifSettingRadioValue = function updateNotifSettingRadioValue(GAMING_DEFAULT, radio) {
-  updateNotifSettingValue(GAMING_DEFAULT, {
+export const updateNotifSettingRadioValue = function updateNotifSettingRadioValue(CALLS, radio) {
+  updateNotifSettingValue(CALLS, {
     update(radio) {
       radio.radio = radio;
       return radio.radio !== radio;

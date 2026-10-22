@@ -4,7 +4,7 @@ import showUserProfileActionSheetDefault from "../../../user_profile/native/show
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ChannelCallStore = fn(10830);
+const ChannelCallStore = fn(10847);
 ({ resetFocus: closure_4, toggleFocus: hasOwnProperty } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(576);
       const tmp4 = analyticsLocations;
       ({ bottom, right } = analyticsLocations(1633)());
-      analyticsLocations = analyticsLocations(7230)().analyticsLocations;
+      analyticsLocations = analyticsLocations(7237)().analyticsLocations;
       if (cResult[0] !== channel.id) {
         function handleDoubleTap() {
           React4();
@@ -52,17 +52,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             gestureEnabled: true,
             participant,
             avatarSize: channel(1202).AvatarSizes.PROFILE,
-            resizeMode: channel(11359).ResizeMode.AUTO,
+            resizeMode: channel(11376).ResizeMode.AUTO,
             statusStyle: tmp8,
             onSingleTap,
             onDoubleTap: tmp6,
             onLongPress: tmp7,
           };
-          const tmp13 = jsx(tmp4(11369), {
+          const tmp13 = jsx(tmp4(11386), {
             gestureEnabled: true,
             participant,
             avatarSize: channel(1202).AvatarSizes.PROFILE,
-            resizeMode: channel(11359).ResizeMode.AUTO,
+            resizeMode: channel(11376).ResizeMode.AUTO,
             statusStyle: tmp8,
             onSingleTap,
             onDoubleTap: tmp6,
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = tmp8;
           cResult[12] = tmp13;
           tmp9 = tmp13;
-          const tmp4Result = tmp4(11369);
+          const tmp4Result = tmp4(11386);
         }
         const obj3 = { marginRight: right, marginBottom: bottom };
         cResult[5] = bottom;

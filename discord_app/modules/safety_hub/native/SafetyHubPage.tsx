@@ -21,7 +21,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(15911);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(15953);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -34,7 +34,7 @@ function handleManualReviewClick() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(7874).AgeCheckStatus;
+const AgeCheckStatus = fn(7882).AgeCheckStatus;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -169,7 +169,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp5) {
         const obj4 = { type: "critical", message: tmp5, role: "alert", action: tmp8 };
-        const tmp12 = closure_12(tmp(7929).InlineNotice, obj4);
+        const tmp12 = closure_12(tmp(7937).InlineNotice, obj4);
         cResult[3] = tmp5;
         cResult[4] = tmp12;
         let tmp10 = tmp12;
@@ -478,7 +478,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj7 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -519,7 +519,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15913, dependencyMap.paths),
+          asyncRequireImpl(15955, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

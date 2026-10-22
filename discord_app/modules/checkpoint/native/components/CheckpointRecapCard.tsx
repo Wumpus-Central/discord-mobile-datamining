@@ -20,9 +20,9 @@ let c14 = "M0 40H30L40 30V0H10L0 10V40Z";
 let c15 = 240;
 let c16 = 150;
 let c17 = 2026;
-const CheckpointStatNumber = fn(12868);
+const CheckpointStatNumber = fn(12902);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj3 = {
   card: { width: 200, height: 268, overflow: "hidden", transformOrigin: "top left" },
   container: { position: "absolute", top: 0, left: 0 },
@@ -84,16 +84,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp11 = cResult[4];
         }
-        const cardColors = recapCardBackgroundImage(8600).getCardColors(character);
+        const cardColors = recapCardBackgroundImage(8609).getCardColors(character);
         ({ primaryBackgroundColor, secondaryBackgroundColor, recapCardBackgroundImage } = cardColors);
         if (cResult[5] !== character) {
           if (null != character) {
             const _Math3 = Math;
-            let characterLayerUrls = recapCardBackgroundImage(6016).getCharacterLayerUrls(
+            let characterLayerUrls = recapCardBackgroundImage(6023).getCharacterLayerUrls(
               character,
               Math.round(c15 * first(1900)()),
             );
-            const tmpResult3 = recapCardBackgroundImage(6016);
+            const tmpResult3 = recapCardBackgroundImage(6023);
           } else {
             characterLayerUrls = [];
           }
@@ -148,13 +148,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const obj4 = {
             isCardArtLoaded: hasItem,
-            withTiming: recapCardBackgroundImage(5188).withTiming,
+            withTiming: recapCardBackgroundImage(5192).withTiming,
             CARD_ART_FADE_IN_DURATION_MS: v150,
           };
           fn.__closure = obj4;
           fn.__workletHash = 7330466380212;
           fn.__initData = __initData;
-          const animatedStyle = recapCardBackgroundImage(5035).useAnimatedStyle(fn);
+          const animatedStyle = recapCardBackgroundImage(5038).useAnimatedStyle(fn);
           if (cResult[8] !== tmp21[1]) {
             class U {
               constructor() {
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj5 = { d, fill: secondaryBackgroundColor };
-              const tmp32 = closure_7(recapCardBackgroundImage(7938).Path, obj5);
+              const tmp32 = closure_7(recapCardBackgroundImage(7946).Path, obj5);
               cResult[13] = secondaryBackgroundColor;
               cResult[14] = tmp32;
             } else {
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const obj6 = { value, color: primaryBackgroundColor, size: 64 };
-                      const tmp54 = closure_7(first(12868), obj6);
+                      const tmp54 = closure_7(first(12902), obj6);
                       cResult[31] = primaryBackgroundColor;
                       cResult[32] = tmp54;
                     } else {
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                         const obj7 = { d: d2, fill: primaryBackgroundColor };
-                        const tmp61 = closure_7(recapCardBackgroundImage(7938).Path, obj7);
+                        const tmp61 = closure_7(recapCardBackgroundImage(7946).Path, obj7);
                         cResult[36] = primaryBackgroundColor;
                         cResult[37] = tmp61;
                       } else {
@@ -323,7 +323,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           const obj8 = { size: "custom", color: first(587).colors.BLACK, style: tmp4.clyde };
-                          const tmp69 = closure_7(recapCardBackgroundImage(10529).ClydeIcon, obj8);
+                          const tmp69 = closure_7(recapCardBackgroundImage(10541).ClydeIcon, obj8);
                           cResult[41] = tmp4.clyde;
                           cResult[42] = tmp69;
                         } else {
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         viewBox: "0 0 40 40",
                         children: tmp59,
                       };
-                      const tmp66 = closure_7(first(7938), size);
+                      const tmp66 = closure_7(first(7946), size);
                       cResult[38] = tmp4.container;
                       cResult[39] = tmp59;
                       cResult[40] = tmp66;
@@ -370,13 +370,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     cResult[35] = tmp58;
                   }
                   const obj11 = { style: tmp38, children: tmp42 };
-                  const tmp50 = closure_7(first(5035).View, obj11);
+                  const tmp50 = closure_7(first(5038).View, obj11);
                   cResult[28] = tmp38;
                   cResult[29] = tmp42;
                   cResult[30] = tmp50;
                 }
                 const obj12 = { source: tmp40, style: absoluteFill.absoluteFill, onLoad: tmp41 };
-                const tmp46 = closure_7(first(5651), obj12);
+                const tmp46 = closure_7(first(5655), obj12);
                 cResult[25] = tmp40;
                 cResult[26] = tmp41;
                 cResult[27] = tmp46;
@@ -389,7 +389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[24] = ie;
             }
             const size1 = { style: tmp4.container, width: tmp7, height, viewBox: "0 0 200 284", children: tmp30 };
-            const tmp37 = closure_7(first(7938), size1);
+            const tmp37 = closure_7(first(7946), size1);
             cResult[15] = tmp4.container;
             cResult[16] = tmp30;
             cResult[17] = tmp37;
@@ -398,9 +398,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[10] = tmp11;
           cResult[11] = tmp4.card;
           cResult[12] = items3;
-          const tmpResult4 = recapCardBackgroundImage(5035);
+          const tmpResult4 = recapCardBackgroundImage(5038);
         }
-        const tmpResult = recapCardBackgroundImage(8600);
+        const tmpResult = recapCardBackgroundImage(8609);
       }
       const size2 = { width: result, height: result1 };
       cResult[0] = result;

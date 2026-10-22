@@ -10,10 +10,10 @@ require = fn;
 let closure_2 = ["isActivityFocused"];
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, StyleSheet: closure_7, View: closure_8 } = get_ActivityIndicator);
-const IS_IOS = fn(10848).IS_IOS;
+const IS_IOS = fn(10865).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({ fill: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[3] !== tmp5) {
               const obj2 = {};
               const merged = Object.assign(tmp5);
-              const tmp15 = collapsed(closure_13, obj2);
+              const tmp15 = v65535(closure_13, obj2);
               cResult[3] = tmp5;
               cResult[4] = tmp15;
             }
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (isActivityFocused.isActivityFocused) {
             const obj2 = {};
             const merged1 = Object.assign(merged);
-            let children = collapsed(closure_13, obj2);
+            let children = v65535(closure_13, obj2);
           }
           return children;
         }

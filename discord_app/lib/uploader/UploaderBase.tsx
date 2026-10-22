@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
 const AbortCodes = fn(1087).AbortCodes;
-const FileUploadErrorTypes = fn(4971).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4974).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(580).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -89,7 +89,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "unicodeVersion",
+      items: "ix",
     };
     return tmp3;
   }

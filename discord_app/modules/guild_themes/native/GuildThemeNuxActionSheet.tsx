@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const GuildThemeNuxActionSheet = "GuildThemeNuxActionSheet";
 let closure_13 = new LoggerDefault("GuildThemeNuxActionSheet");
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: null, title: null, description: null, options: null, warning: null, footer: null };
 const tmp3 = new LoggerDefault("GuildThemeNuxActionSheet");
 obj2.container = { padding: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: 0 };
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj5 = {
-                      value: closure_0(17417).saveGuildThemeNuxPreference(tmp48, closure_1_6),
+                      value: closure_0(17487).saveGuildThemeNuxPreference(tmp48, closure_1_6),
                       done: false,
                     };
                     return obj5;
@@ -241,8 +241,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 v0 = 0;
                 c5.current = true;
                 tmp3(constants.TAKE_ACTION);
-                markAsDismissed(5192).hideActionSheet(GuildThemeNuxActionSheet);
-                const obj = markAsDismissed(5192);
+                markAsDismissed(5196).hideActionSheet(GuildThemeNuxActionSheet);
+                const obj = markAsDismissed(5196);
               }
               v0 = 0;
               c5 = 3;
@@ -306,13 +306,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores;
       let callback1;
       const tmp = closure_14();
-      [tmp5, c2] = noop.useState(guildId(17417).getInitialGuildThemeNuxSelection);
-      const tmp4 = _slicedToArray(noop.useState(guildId(17417).getInitialGuildThemeNuxSelection), 2);
+      [tmp5, c2] = noop.useState(guildId(17487).getInitialGuildThemeNuxSelection);
+      const tmp4 = _slicedToArray(noop.useState(guildId(17487).getInitialGuildThemeNuxSelection), 2);
       [tmp7, c3] = noop.useState(null);
       const tmp6 = _slicedToArray(noop.useState(null), 2);
       [tmp9, c4] = noop.useState(false);
       noop = noop.useRef(false);
-      const tmp10 = tmp5 === guildId(5183).GuildThemeSourcePreference.PERSONAL;
+      const tmp10 = tmp5 === guildId(5187).GuildThemeSourcePreference.PERSONAL;
       closure_6 = tmp10;
       const tmp8 = _slicedToArray(noop.useState(false), 2);
       const items = [stateFromStores];
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.onDismiss = callback3;
       obj3.contentStyles = tmp.container;
       const items7 = [
-        closure_10(markAsDismissed(17418), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
+        closure_10(markAsDismissed(17488), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
         ,
         ,
         ,
@@ -475,25 +475,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl3 = tmp2(1128).intl;
       obj4.children = intl3.string(guildId(1128).t.Q9zFy9);
-      items7[1] = closure_10(guildId(5216).Text, obj4);
+      items7[1] = closure_10(guildId(5220).Text, obj4);
       let obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
       const intl4 = tmp2(1128).intl;
       obj5.children = intl4.string(guildId(1128).t.XLpBLj);
-      items7[2] = closure_10(guildId(5216).Text, obj5);
+      items7[2] = closure_10(guildId(5220).Text, obj5);
       let obj6 = { style: tmp.options, children: null };
       let obj7 = { hasIcons: false, value: tmp5, onChange: callback, children: null };
       const obj8 = { label: null, value: null };
       const intl5 = tmp2(1128).intl;
       obj8.label = intl5.string(guildId(1128).t.aN3RNQ);
-      obj8.value = guildId(5183).GuildThemeSourcePreference.GUILD;
-      const items8 = [closure_10(guildId(6963).TableRadioRow, obj8)];
+      obj8.value = guildId(5187).GuildThemeSourcePreference.GUILD;
+      const items8 = [closure_10(guildId(6970).TableRadioRow, obj8)];
       const obj9 = { label: null, value: null };
       const intl6 = tmp2(1128).intl;
       obj9.label = intl6.string(guildId(1128).t.js8y7t);
-      obj9.value = guildId(5183).GuildThemeSourcePreference.PERSONAL;
-      items8[1] = closure_10(guildId(6963).TableRadioRow, obj9);
+      obj9.value = guildId(5187).GuildThemeSourcePreference.PERSONAL;
+      items8[1] = closure_10(guildId(6970).TableRadioRow, obj9);
       obj7.children = items8;
-      obj6.children = closure_11(guildId(6964).TableRadioGroup, obj7);
+      obj6.children = closure_11(guildId(6971).TableRadioGroup, obj7);
       items7[3] = closure_10(closure_6, obj6);
       let tmp20Result = null;
       if (tmp10) {
@@ -501,7 +501,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { type: "warning", message: null, role: "status" };
         const intl7 = tmp2(1128).intl;
         obj11.message = intl7.string(tmp2(1128).t.tTHQAy);
-        obj10.children = closure_10(tmp2(7929).InlineNotice, obj11);
+        obj10.children = closure_10(tmp2(7937).InlineNotice, obj11);
         tmp20Result = closure_10(tmp21, obj10);
       }
       items7[4] = tmp20Result;
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp7) {
         const obj12 = { style: tmp.warning, children: null };
         const obj13 = { type: "critical", message: tmp7, role: "alert" };
-        obj12.children = closure_10(tmp2(7929).InlineNotice, obj13);
+        obj12.children = closure_10(tmp2(7937).InlineNotice, obj13);
         tmp20Result2 = closure_10(tmp21, obj12);
       }
       items7[5] = tmp20Result2;
@@ -523,9 +523,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj15.loading = tmp9;
       obj15.disabled = tmp9;
       obj15.onPress = callback2;
-      obj14.children = closure_10(guildId(5226).Button, obj15);
+      obj14.children = closure_10(guildId(5230).Button, obj15);
       items7[6] = closure_10(closure_6, obj14);
       obj3.children = items7;
-      return closure_11(guildId(5247).BottomSheet, obj3);
+      return closure_11(guildId(5251).BottomSheet, obj3);
     };
 export const GUILD_THEME_NUX_ACTION_SHEET_KEY = "GuildThemeNuxActionSheet";

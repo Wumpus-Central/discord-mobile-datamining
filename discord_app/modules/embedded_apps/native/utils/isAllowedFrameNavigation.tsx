@@ -90,8 +90,8 @@ export const isAllowedFrameNavigation = function isAllowedFrameNavigation(url, r
         url = uRL;
         const _HermesInternal = HermesInternal;
         if ("" + url.protocol + "//" + url.host === routerOrigin) {
-          let someResult = !uRL(11427).isTooLongForCloudflare(tmp8.href, routerOrigin);
-          const tmpResult = uRL(11427);
+          let someResult = !uRL(11444).isTooLongForCloudflare(tmp8.href, routerOrigin);
+          const tmpResult = uRL(11444);
         } else {
           someResult = (function getFrameSources(directives) {
             directives = directives.directives;

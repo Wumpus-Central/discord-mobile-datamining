@@ -5,10 +5,10 @@ import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05240_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import NavigatorConstants from "../../Navigator/native/NavigatorConstants.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05251_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05255_BottomSheetModal.js";
 import ActionSheetContextDefault from "../../../../modules/action_sheet/native/ActionSheetContext.tsx";
 import ActionSheetHeaderBar from "ActionSheetHeaderBar.native.tsx";
 import Sheet_BottomSheetBackdrop from "BottomSheetBackdrop.native.tsx";
@@ -77,7 +77,7 @@ let closure_5 = [
 ];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_9, View: c10, Platform } = get_ActivityIndicator);
-const ActionSheetConstants = fn(5248);
+const ActionSheetConstants = fn(5252);
 ({
   ACTION_SHEET_START_HEIGHT_RATIO: closure_11,
   ACTION_SHEET_MAX_WIDTH: closure_12,
@@ -91,7 +91,7 @@ const ActionSheetConstants = fn(5248);
 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_22 = createStyles.createStyles((arg0) => {
   let num = arg1;
   if (arg1 === undefined) {
@@ -313,7 +313,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = { onLayout: Y, style: tmp15, children: tmp5 };
-              const tmp32 = constants2(collapsed, obj2);
+              const tmp32 = closure_1_20(v65535, obj2);
               cResult[25] = tmp5;
               cResult[26] = Y;
               cResult[27] = tmp15;
@@ -423,9 +423,9 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.onChange = callback1;
         const obj4 = { bounces: false, keyboardShouldPersistTaps, style: scrollViewStyle, children: null };
         const obj5 = { onLayout: callback, style: wrapperStyle, children };
-        obj4.children = constants2(collapsed, obj5);
-        obj3.children = constants2(BottomSheetModal.BottomSheetScrollView, obj4);
-        return constants2(BottomSheetModalDefault, obj3);
+        obj4.children = closure_1_20(v65535, obj5);
+        obj3.children = closure_1_20(BottomSheetModal.BottomSheetScrollView, obj4);
+        return closure_1_20(BottomSheetModalDefault, obj3);
       }
       items = [];
     };
@@ -619,7 +619,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       obj4.colors = tmp5;
                       obj4.children = tmp31;
-                      tmp36 = constants2(LinearGradientDefault, obj4);
+                      tmp36 = closure_1_20(LinearGradientDefault, obj4);
                       const tmp21Result2 = LinearGradientDefault;
                     }
                     class L {
@@ -659,7 +659,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   obj5.children = tmp6;
-                  const tmp34 = constants2(collapsed, obj5);
+                  const tmp34 = closure_1_20(v65535, obj5);
                   cResult[28] = tmp6;
                   cResult[29] = tmp30;
                   cResult[30] = tmp34;
@@ -800,7 +800,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items1);
-      const tmp11 = constants2(collapsed, obj2);
+      const tmp11 = closure_1_20(v65535, obj2);
       const obj3 = {};
       const merged1 = Object.assign(merged);
       obj3.ref = ref;
@@ -817,7 +817,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           colors: borderGradient,
           children: tmp11,
         };
-        tmp10Result = constants2(LinearGradientDefault, obj4);
+        tmp10Result = closure_1_20(LinearGradientDefault, obj4);
         const tmp3Result2 = LinearGradientDefault;
       }
       const items3 = [tmp10Result, extraContent];
@@ -831,7 +831,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== arg0) {
         const obj2 = {};
         const merged = Object.assign(arg0);
-        const tmp8 = constants2(collapsed, obj2);
+        const tmp8 = closure_1_20(v65535, obj2);
         cResult[0] = arg0;
         cResult[1] = tmp8;
         let tmp2 = tmp8;
@@ -842,7 +842,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function Background(arg0) {
       const merged = Object.assign(arg0);
-      return constants2(collapsed, {});
+      return closure_1_20(v65535, {});
     };
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
@@ -851,7 +851,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_22(false);
       if (cResult[0] !== tmp2.backgroundOverlay) {
         const obj2 = { style: tmp2.backgroundOverlay };
-        const tmp6 = constants2(collapsed, obj2);
+        const tmp6 = closure_1_20(v65535, obj2);
         cResult[0] = tmp2.backgroundOverlay;
         cResult[1] = tmp6;
         let tmp3 = tmp6;
@@ -867,7 +867,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {};
       const merged = Object.assign(arg0);
       obj3.children = tmp3;
-      const tmp9 = constants2(collapsed, obj3);
+      const tmp9 = closure_1_20(v65535, obj3);
       cResult[2] = arg0;
       cResult[3] = tmp3;
       cResult[4] = tmp9;
@@ -877,8 +877,8 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = {};
       const merged = Object.assign(arg0);
       const tmp = closure_22(false);
-      obj.children = constants2(collapsed, { style: closure_22(false).backgroundOverlay });
-      return constants2(collapsed, obj);
+      obj.children = closure_1_20(v65535, { style: closure_22(false).backgroundOverlay });
+      return closure_1_20(v65535, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1047,7 +1047,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
           let tmp43 = cResult[29];
         }
         const layoutEffect = obj2.useLayoutEffect(tmp42, tmp43);
-        const bottomSheetImperativeHandle = tmp(5563).useBottomSheetImperativeHandle(tmp12, ref1);
+        const bottomSheetImperativeHandle = tmp(5567).useBottomSheetImperativeHandle(tmp12, ref1);
         if (cResult[30] === close) {
           if (cResult[31] === transitionState) {
             let tmp46 = cResult[32];
@@ -1058,7 +1058,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[35] === onLeave) {
               let tmp49 = cResult[36];
             }
-            const unmountEffect = tmp(5245).useUnmountEffect(tmp49);
+            const unmountEffect = tmp(5249).useUnmountEffect(tmp49);
             if (cResult[37] !== close) {
               function ie(arg0, arg1, arg2, arg3, arg4) {
                 if (arg4 !== BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
@@ -1108,7 +1108,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
             }
             const tmp54 = closure_28(tmp13.animatedIndex);
             closure_14 = tmp54;
-            const tmpResult4 = tmp(5245);
+            const tmpResult4 = tmp(5249);
             function ke() {
               return closure_14.get() <= -1;
             }
@@ -1116,8 +1116,8 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
             ke.__closure = obj3;
             ke.__workletHash = 4341912681188;
             ke.__initData = __initData;
-            const derivedValue = tmp(5035).useDerivedValue(ke);
-            const tmpResult5 = tmp(5035);
+            const derivedValue = tmp(5038).useDerivedValue(ke);
+            const tmpResult5 = tmp(5038);
             class Be {
               constructor() {
                 return closure_15.get();
@@ -1145,11 +1145,11 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            const obj5 = { transitionState, runOnJS: tmp(5035).runOnJS, onLeave };
+            const obj5 = { transitionState, runOnJS: tmp(5038).runOnJS, onLeave };
             De.__closure = obj5;
             De.__workletHash = 1921852093213;
             De.__initData = __initData3;
-            const animatedReaction = tmp(5035).useAnimatedReaction(Be, De);
+            const animatedReaction = tmp(5038).useAnimatedReaction(Be, De);
             if (cResult[41] !== dismissAccessibilityLabel) {
               class Oe {
                 constructor() {
@@ -1269,7 +1269,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               closure_27(tmp35(1499)(tmp64));
-              tmp35(5128)();
+              tmp35(5132)();
               if (tmp13.backgroundComponent != null) {
                 class Me {
                   constructor(arg0) {
@@ -1438,7 +1438,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
                             let items = [tmp75, tmp79];
                             obj7.children = items;
                             obj6.children = closure_21(ref1, obj7);
-                            const tmp87 = closure_20(tmp(5579).LayerScope, obj6);
+                            const tmp87 = closure_20(tmp(5583).LayerScope, obj6);
                             cResult[67] = tmp74;
                             cResult[68] = tmp75;
                             class Be {
@@ -1535,7 +1535,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
             cResult[43] = tmp31;
             cResult[44] = backdropOpacity;
             cResult[45] = Le;
-            const tmpResult6 = tmp(5035);
+            const tmpResult6 = tmp(5038);
           }
           function oe() {
             if (ref.current) {
@@ -1577,7 +1577,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
         cResult[33] = items5;
         tmp47 = items5;
         tmp46 = re;
-        let tmpResult = tmp(5563);
+        let tmpResult = tmp(5567);
       }
       function te() {
         registerDismissHandler(closure_4);
@@ -1778,7 +1778,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
       const items5 = [backdropOpacity, backdropChildren];
       const callback2 = obj.useCallback(
         () =>
-          constants2(ActionSheetHeaderBar.ActionSheetHeaderBar, {
+          closure_2_20(ActionSheetHeaderBar.ActionSheetHeaderBar, {
             accessibilityLabel: dismissAccessibilityLabel,
             onPress() {
               const current = ref.current;
@@ -1795,24 +1795,24 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
         const items = [React6.absoluteFill, animatedIndex.style];
         obj.style = items;
         const items1 = [
-          constants2(Sheet_BottomSheetBackdrop.BottomSheetBackdrop, {
+          closure_2_20(Sheet_BottomSheetBackdrop.BottomSheetBackdrop, {
             animatedIndex: animatedIndex.animatedIndex,
             opacity: backdropOpacity,
           }),
           backdropChildren,
         ];
         obj.children = items1;
-        return guild(collapsed, obj);
+        return guild(v65535, obj);
       }, items5);
       const callback4 = obj.useCallback((arg0) => {
         const obj = {};
         const merged = Object.assign(arg0);
         let tmpResult = footer;
         if (footer == null) {
-          tmpResult = constants2(NavScrim.NavScrim, {});
+          tmpResult = closure_2_20(NavScrim.NavScrim, {});
         }
         obj.children = tmpResult;
-        return constants2(BottomSheetModal.BottomSheetFooter, obj);
+        return closure_2_20(BottomSheetModal.BottomSheetFooter, obj);
       }, items6);
       const tmp22 = backdropChildren(dismissAccessibilityLabel[25])({ ignoreKeyboard: true });
       const obj2 = { transitionState, runOnJS: backdropOpacity(dismissAccessibilityLabel[17]).runOnJS, onLeave };

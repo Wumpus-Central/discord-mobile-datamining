@@ -1166,7 +1166,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
   AUTO_UPDATER_QUIT_AND_INSTALL: function handleAutoUpdaterQuitAndInstall() {
     let tmp = null == selectedVoiceChannelId;
     if (!tmp) {
-      tmp = null == collapsed;
+      tmp = null == v65535;
     }
     if (!tmp) {
       const _Date = Date;

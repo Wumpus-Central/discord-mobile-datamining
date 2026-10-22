@@ -47,34 +47,33 @@ class OrbsArcadeFetchManager extends tmp2 {
       if (!wasSaved) {
         const _Date2 = Date;
         applyArgumentsResult.lastLocaleRefetchAt = Date.now();
-        orbsArcadeGames = OrbsArcadeActionCreators.fetchOrbsArcadeGames();
+        const orbsArcadeGames = OrbsArcadeActionCreators.fetchOrbsArcadeGames();
       }
     };
-    applyArgumentsResult.handleGameStateUpdate = function handleGameStateUpdate(arg0) {
-      ({ game_id: closure_0, game_state } = arg0);
-      orbsArcadeGames = orbsArcadeGames.orbsArcadeGames;
-      const found = orbsArcadeGames.find((id) => id.id === closure_1_0);
-      if (null != found) {
-        let tmp4 = null != found.endsAt;
+    applyArgumentsResult.handleGameStateUpdate = function handleGameStateUpdate(game_state) {
+      game_state = game_state.game_state;
+      game = game.getGame(game_state.game_id);
+      if (null != game) {
+        let tmp4 = null != game.endsAt;
         if (tmp4) {
           const _Date = Date;
           const _Date2 = Date;
-          const parsed = Date.parse(found.endsAt);
+          const parsed = Date.parse(game.endsAt);
           tmp4 = parsed <= Date.now();
         }
         let result = !tmp4;
         if (!tmp4) {
-          const obj = applyArgumentsResult(19171);
+          const obj = applyArgumentsResult(16304);
           result = obj.isOrbsArcadeEnrollmentOver(
-            applyArgumentsResult(18196).orbsArcadeGameStateFromServer(game_state),
+            applyArgumentsResult(16299).orbsArcadeGameStateFromServer(game_state),
           );
-          const obj2 = applyArgumentsResult(18196);
+          const obj2 = applyArgumentsResult(16299);
         }
         if (tmp8) {
-          const orbsArcadeGames1 = applyArgumentsResult(19170).fetchOrbsArcadeGames();
-          const obj3 = applyArgumentsResult(19170);
+          const orbsArcadeGames = applyArgumentsResult(16303).fetchOrbsArcadeGames();
+          const obj3 = applyArgumentsResult(16303);
         }
-        tmp8 = found.versionId !== game_state.game_version_id || result;
+        tmp8 = game.versionId !== game_state.game_version_id || result;
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
@@ -86,7 +85,7 @@ class OrbsArcadeFetchManager extends tmp2 {
       if (applyArgumentsResult.hasFetched()) {
         const _Date = Date;
         closure_0 = Date.now();
-        orbsArcadeGames = OrbsArcadeStore.orbsArcadeGames;
+        let orbsArcadeGames = OrbsArcadeStore.orbsArcadeGames;
         let items = [];
         HermesBuiltin.arraySpread(
           orbsArcadeGames.flatMap((id) => {
@@ -131,7 +130,7 @@ class OrbsArcadeFetchManager extends tmp2 {
             () => {
               closure_0.boundaryRefetchTimerId = null;
               closure_0.scheduledBoundaryAt = null;
-              orbsArcadeGames = applyArgumentsResult(19170).fetchOrbsArcadeGames();
+              const orbsArcadeGames = applyArgumentsResult(16303).fetchOrbsArcadeGames();
             },
             Math.min(diff + Math.floor(Math.random() * closure_5), DAY),
           );

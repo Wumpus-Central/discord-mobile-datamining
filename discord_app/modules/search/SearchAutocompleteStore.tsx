@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
-import _modDef5785 from "../../../_runtime/metro/05785__.js";
+import _modDef5790 from "../../../_runtime/metro/05790__.js";
 import AutocompleteUtils from "../../utils/AutocompleteUtils.tsx";
 import GuildUtilsDefault from "../../utils/GuildUtils.tsx";
 import UserSearchManagerDefault from "../autocompleter/UserSearchManager.tsx";
@@ -230,7 +230,7 @@ function rebuildAutocompleteResults(c14) {
 const Constants = fn(1087);
 ({ SearchPopoutModes: c10, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(6804).AutocompleterResultTypes;
+fn(6811).AutocompleterResultTypes;
 let c14 = null;
 let closure_15 = [];
 const map = new Map();
@@ -269,7 +269,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef5785(c14, searchContext)) {
+    if (!_modDef5790(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -277,7 +277,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef5785(c14, searchContext)) {
+    if (!_modDef5790(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }

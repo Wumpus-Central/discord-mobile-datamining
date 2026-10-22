@@ -9,8 +9,8 @@ import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes.tsx";
 import GameWidgetLimits from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import UserProfilePersonalWidget from "UserProfilePersonalWidget.tsx";
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes.tsx";
-import WidgetActionCreatorsDefault from "WidgetActionCreators.tsx";
 import WidgetGameTag from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
+import WidgetActionCreatorsDefault from "WidgetActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import UserProfileStore from "UserProfileStore.tsx";
@@ -83,9 +83,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7683).WIDGET_TITLES_BY_TYPE;
+const WIDGET_TITLES_BY_TYPE = fn(7690).WIDGET_TITLES_BY_TYPE;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
-let closure_9 = fn(11925).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_9 = fn(14323).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -167,18 +167,18 @@ export const addWidgetToPending = function addWidgetToPending(type) {
     })
   ) {
     if (type.type === WidgetType.WidgetType.PERSONAL) {
-      const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
       const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
         dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK,
-        obj3,
+        obj2,
       );
-      const tmp13Result = DismissibleContentUnsafeUtils;
-      const obj4 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const tmp16Result = DismissibleContentUnsafeUtils;
+      const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
       const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
         dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE,
-        obj4,
+        obj3,
       );
-      const tmp13Result2 = DismissibleContentUnsafeUtils;
+      const tmp16Result2 = DismissibleContentUnsafeUtils;
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);

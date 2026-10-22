@@ -62,6 +62,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
   RESUME_CAMERA_VIEW,
   SET_CAMERA_VIEW_FIT,
   STOP_CAMERA_VIEW,
+  CAPTURE_SCREEN,
 } = Constants.RPCCommands);
 const result = size.fileFinishedImporting("modules/rpc/native/server/commands/unsupported.tsx");
 
@@ -124,4 +125,5 @@ export default {
   [RESUME_CAMERA_VIEW]: unavailableCommand.unsupportedCommand,
   [SET_CAMERA_VIEW_FIT]: unavailableCommand.unsupportedCommand,
   [STOP_CAMERA_VIEW]: unavailableCommand.unsupportedCommand,
+  [CAPTURE_SCREEN]: unavailableCommand.unsupportedCommand,
 };

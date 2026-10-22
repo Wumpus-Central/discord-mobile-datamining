@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { padding: nativeDefault.space.PX_8, alignItems: "center" },
@@ -153,14 +153,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_5 = undefined;
       const tmp = closure_10();
       importDefault = tmp;
-      let obj = onSelectFont(8623);
-      const visibleFontOrder = onSelectFont(16521).useVisibleFontOrder();
-      let obj2 = onSelectFont(16521);
-      const displayNameStylesNewFonts = onSelectFont(16523).useDisplayNameStylesNewFonts(visibleFontOrder);
+      let obj = onSelectFont(8632);
+      const visibleFontOrder = onSelectFont(16590).useVisibleFontOrder();
+      let obj2 = onSelectFont(16590);
+      const displayNameStylesNewFonts = onSelectFont(16592).useDisplayNameStylesNewFonts(visibleFontOrder);
       ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
       [first, closure_5] = first.useState(selectedFontId);
       let tmp15Result = first !== onSelectFont(1412).DisplayNameFont.DEFAULT;
-      let obj3 = onSelectFont(16523);
+      let obj3 = onSelectFont(16592);
       closure_6 = tmp9;
       let obj4 = onSelectFont(1409);
       constants = first.useCallback((arg0) => {
@@ -183,12 +183,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = onSelectFont(1128).intl;
       obj7.text = intl2.string(onSelectFont(1128).t.XqMe3N);
       obj7.onPress = callback;
-      obj6.trailing = closure_8(onSelectFont(5226).Button, obj7);
+      obj6.trailing = closure_8(onSelectFont(5230).Button, obj7);
       obj5.header = closure_8(DisplayNameStylesSheetHeaderDefault, obj6);
       const obj8 = { style: tmp.container, children: null };
       const obj9 = { style: tmp.contentContainer, children: null };
       let items1 = [
-        closure_8(onSelectFont(5957).Stack, {
+        closure_8(onSelectFont(5964).Stack, {
           direction: "horizontal",
           align: "center",
           justify: "center",
@@ -249,11 +249,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (tmp15Result) {
         const obj11 = { style: tmp.nonLatinDisclaimer, children: null };
-        let items2 = [closure_8(onSelectFont(5668).CircleInformationIcon, { size: "sm" })];
+        let items2 = [closure_8(onSelectFont(5672).CircleInformationIcon, { size: "sm" })];
         const obj12 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: null };
         const intl3 = onSelectFont(1128).intl;
         obj12.children = intl3.string(_modDef2928["+O1xL2"]);
-        items2[1] = closure_8(onSelectFont(5216).Text, obj12);
+        items2[1] = closure_8(onSelectFont(5220).Text, obj12);
         obj11.children = items2;
         tmp15Result = closure_9(tmp14, obj11);
       }
@@ -261,5 +261,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj9.children = items1;
       obj8.children = closure_9(closure_5, obj9);
       obj5.children = closure_8(closure_5, obj8);
-      return closure_8(onSelectFont(5247).BottomSheet, obj5);
+      return closure_8(onSelectFont(5251).BottomSheet, obj5);
     };

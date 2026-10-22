@@ -32,7 +32,7 @@ const DismissibleContentConstants = fn(4818);
 ({ ContentDismissActionType: closure_14, DismissibleContentGroupName: closure_15 } = DismissibleContentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   navbarTitleContainer: { height: "100%", flex: 1, flexDirection: "row", alignItems: "center" },
   navbarTitlePrimaryText: null,
@@ -122,8 +122,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] !== stateFromStores) {
           let channelIcon = null;
           if (null != stateFromStores) {
-            channelIcon = channelId(8478).getChannelIcon(stateFromStores);
-            const tmpResult5 = channelId(8478);
+            channelIcon = channelId(8487).getChannelIcon(stateFromStores);
+            const tmpResult5 = channelId(8487);
           }
           class C {
             constructor() {
@@ -137,7 +137,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[9] !== stateFromStores) {
           if (null != stateFromStores) {
-            channelId(5586);
+            channelId(5590);
             class C {
               constructor() {
                 return closure_1_5.isConnected();
@@ -1491,7 +1491,7 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled()
             obj.disabled = disabled;
             obj.style = style;
             obj.children = children;
-            const children1 = [closure_16(closure_1(9001), obj)];
+            const children1 = [closure_16(closure_1(9010), obj)];
             let tmp3Result = null;
             if (hasActivitiesPrivateChannelTooltip) {
               const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -1514,8 +1514,8 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 return tmp2;
               };
-              tmp3Result = closure_16(closure_1(10366), obj2);
-              const tmp4Result = closure_1(10366);
+              tmp3Result = closure_16(closure_1(10378), obj2);
+              const tmp4Result = closure_1(10378);
             }
             children1[1] = tmp3Result;
             return closure_17(closure_4, { children: children1 }, index);
@@ -1575,7 +1575,7 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled()
           obj.disabled = disabled;
           obj.style = style;
           obj.children = children;
-          const children1 = [closure_16(closure_1(9001), obj)];
+          const children1 = [closure_16(closure_1(9010), obj)];
           let tmp3Result = null;
           if (hasActivitiesPrivateChannelTooltip) {
             const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -1598,8 +1598,8 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled()
               }
               return tmp2;
             };
-            tmp3Result = closure_16(closure_1(10366), obj2);
-            const tmp4Result = closure_1(10366);
+            tmp3Result = closure_16(closure_1(10378), obj2);
+            const tmp4Result = closure_1(10378);
           }
           children1[1] = tmp3Result;
           return closure_17(closure_4, { children: children1 }, index);

@@ -10,7 +10,7 @@ import FastImageDefault from "../../../../../../components_native/common/FastIma
 import GameControllerIcon from "../../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
-import NumberAnimationDefault from "../../NumberAnimation.tsx";
+import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
 import GameStore from "../../../../../games/GameStore.tsx";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
@@ -206,7 +206,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                               lineClamp: 2,
                               children: name,
                             };
-                            const tmp38 = closure_7(tmp(5216).Text, obj6);
+                            const tmp38 = closure_7(tmp(5220).Text, obj6);
                             cResult[26] = name;
                             cResult[27] = tmp4.gameName;
                             cResult[28] = tmp38;
@@ -243,7 +243,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   const items4 = [,];
                   ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp4);
                   obj11.style = items4;
-                  obj11.children = closure_7(tmp(8050).UnknownGameIcon, { size: "lg" });
+                  obj11.children = closure_7(tmp(8058).UnknownGameIcon, { size: "lg" });
                   tmp23 = closure_7(View, obj11);
                 }
                 cResult[15] = unknownCover;
@@ -329,7 +329,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [,];
         ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp);
         obj7.style = items1;
-        obj7.children = closure_7(tmp2(8050).UnknownGameIcon, { size: "lg" });
+        obj7.children = closure_7(tmp2(8058).UnknownGameIcon, { size: "lg" });
         tmp11 = closure_7(View, obj7);
       }
       const items2 = [tmp11, tmp10(CheckpointRankTagDefault, { rank, style: tmp.rank })];
@@ -337,7 +337,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [closure_8(View, obj5)];
       const obj9 = { style: tmp.gameText, children: null };
       const items4 = [
-        tmp10(id(5216).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }),
+        tmp10(id(5220).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }),
         tmp10(CheckpointTextDefault, {
           variant: "experimental/mono-md/bold",
           style: tmp.gameSessions,
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const combined = "" + cResult[14] + " " + cResult[15];
               if (cResult[20] !== tmp10) {
                 const obj2 = { end: tmp10 };
-                const tmp34 = React5(NumberAnimationDefault, obj2);
+                const tmp34 = React5(CheckpointCountUpStatNumberDefault, obj2);
                 cResult[20] = tmp10;
                 cResult[21] = tmp34;
                 let tmp31 = tmp34;
@@ -662,14 +662,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityLabel: "" + rounded + " " + stringResult.toLocaleLowerCase(),
         style: tmp.number,
-        children: React5(NumberAnimationDefault, { end: rounded }),
+        children: React5(CheckpointCountUpStatNumberDefault, { end: rounded }),
       });
       const obj9 = { variant: "heading-lg/medium", children: null };
       const obj8 = {
         accessible: true,
         accessibilityLabel: "" + rounded + " " + stringResult.toLocaleLowerCase(),
         style: tmp.number,
-        children: React5(NumberAnimationDefault, { end: rounded }),
+        children: React5(CheckpointCountUpStatNumberDefault, { end: rounded }),
       };
       const intl2 = util.intl;
       obj9.children = intl2.format(_modDef3088.aJMJ6b, { numGames: rounded });

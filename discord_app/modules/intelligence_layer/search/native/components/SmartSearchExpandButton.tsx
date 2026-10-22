@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" },
@@ -45,11 +45,11 @@ export default noop.memo(
         const cResult = onPress(576).c(17);
         ({ isCollapsed, onPress } = arg0);
         const obj = onPress(576);
-        const tmp4 = closure_10(onPress(17969).useSearchHostSurfaceColor());
+        const tmp4 = closure_10(onPress(18039).useSearchHostSurfaceColor());
         if (isCollapsed) {
-          let ChevronSmallUpIcon = onPress(11026).ChevronSmallDownIcon;
+          let ChevronSmallUpIcon = onPress(11043).ChevronSmallDownIcon;
         } else {
-          ChevronSmallUpIcon = onPress(14775).ChevronSmallUpIcon;
+          ChevronSmallUpIcon = onPress(14819).ChevronSmallUpIcon;
         }
         if (cResult[0] !== onPress) {
           const fn = function l() {
@@ -129,15 +129,15 @@ export default noop.memo(
           cResult[13] = tmp25;
           tmp21 = tmp25;
         }
-        const obj2 = onPress(17969);
+        const obj2 = onPress(18039);
       }
     : function SmartSearchExpandButton(arg0) {
         ({ isCollapsed, onPress } = arg0);
-        const tmp3 = closure_10(onPress(17969).useSearchHostSurfaceColor());
+        const tmp3 = closure_10(onPress(18039).useSearchHostSurfaceColor());
         if (isCollapsed) {
-          let ChevronSmallUpIcon = onPress(11026).ChevronSmallDownIcon;
+          let ChevronSmallUpIcon = onPress(11043).ChevronSmallDownIcon;
         } else {
-          ChevronSmallUpIcon = onPress(14775).ChevronSmallUpIcon;
+          ChevronSmallUpIcon = onPress(14819).ChevronSmallUpIcon;
         }
         const items = [onPress];
         const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
@@ -165,7 +165,7 @@ export default noop.memo(
         obj3.accessibilityLabel = intl.string(FKLBbW);
         obj3.onPress = callback;
         const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" })];
-        const obj = onPress(17969);
+        const obj = onPress(18039);
         const obj4 = { style: tmp3.surface, pointerEvents: "none" };
         items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(587).colors.INTERACTIVE_ICON_DEFAULT });
         obj3.children = items1;

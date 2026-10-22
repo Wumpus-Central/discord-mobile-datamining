@@ -11,7 +11,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16264);
+const YouBarConstants = fn(16334);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
@@ -24,7 +24,7 @@ const YouBarConstants = fn(16264);
 const StatusTypes = fn(1087).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   placeholderAvatar: {
     borderRadius: nativeDefault.radii.round,
@@ -246,7 +246,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const result1 = size / 4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const diff1 = diff - result1 * 2;
-        const point = { shape: ClipView.CutoutShape.Circle, x: diff1 + collapsed, y: diff1 + collapsed, size: 2 * sum };
+        const point = { shape: ClipView.CutoutShape.Circle, x: diff1 + v65535, y: diff1 + v65535, size: 2 * sum };
         cResult[0] = point;
         let first = point;
       } else {
@@ -343,8 +343,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const rect = {
               position: "absolute",
-              right: timestampProducer - collapsed,
-              bottom: timestampProducer - collapsed,
+              right: timestampProducer - v65535,
+              bottom: timestampProducer - v65535,
             };
             obj5.style = rect;
             const tmp46 = __initData(native.Status, obj5);
@@ -395,7 +395,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const result = size / 2;
       const sum = result + native.STATUS_PADDING;
       const diff = tmp3 - sum - (size / 4) * 2;
-      const point = { shape: ClipView.CutoutShape.Circle, x: diff + collapsed, y: diff + collapsed, size: 2 * sum };
+      const point = { shape: ClipView.CutoutShape.Circle, x: diff + v65535, y: diff + v65535, size: 2 * sum };
       const obj2 = { style: null, children: null };
       size = {
         height: native.AVATAR_SIZE_MAP[hasOwnProperty],
@@ -438,11 +438,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         streaming: false,
         style: null,
       };
-      const rect = {
-        position: "absolute",
-        right: timestampProducer - collapsed,
-        bottom: timestampProducer - collapsed,
-      };
+      const rect = { position: "absolute", right: timestampProducer - v65535, bottom: timestampProducer - v65535 };
       obj8.style = rect;
       items4[1] = __initData(native.Status, obj8);
       obj3.children = items4;

@@ -5,14 +5,14 @@ import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import ConjureDevicePermissionStore from "../../../conjure/device_permissions/ConjureDevicePermissionStore.tsx";
 
 const require = fn;
-const Constants = fn(6357);
+const Constants = fn(6364);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1087).RPCCommands;
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
 const set = new Set();
 let obj2 = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15621);
+let CONTEXT_MENU_ICON_NAMES = fn(15665);
 obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.GET_DEVICE_PERMISSIONS,
   {
@@ -20,7 +20,7 @@ obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCComm
     handler(socket) {
       const frame = validateConjureAppFrameDefault(socket.socket).frame;
       const obj = { permissions: null };
-      const prop = frame(10756).CONJURE_DEVICE_PERMISSION_NAMES;
+      const prop = frame(10768).CONJURE_DEVICE_PERMISSION_NAMES;
       obj.permissions = prop.map((permission) => {
         if (obj.isConjureDevicePermissionSupported(permission)) {
           const obj2 = { permission, state: null };
@@ -39,7 +39,7 @@ obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCComm
     },
   },
 );
-CONTEXT_MENU_ICON_NAMES = fn(15621);
+CONTEXT_MENU_ICON_NAMES = fn(15665);
 obj2[RPCCommands.REQUEST_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.REQUEST_DEVICE_PERMISSIONS,
   {

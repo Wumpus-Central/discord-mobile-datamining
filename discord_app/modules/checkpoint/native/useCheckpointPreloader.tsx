@@ -1,22 +1,22 @@
 // discord_app/modules/checkpoint/native/useCheckpointPreloader.tsx
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef5094 from "../../../../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js";
-import _modDef5098 from "../../../../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js";
-import _modDef5100 from "../../../../discord_assets/assets/mana/rive/native/CheckpointNumbers.riv.js";
-import _modDef8601 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-purple.png.js";
-import _modDef8602 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-cyan.png.js";
-import _modDef8603 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-pink.png.js";
-import _modDef8604 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
-import _modDef8605 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
-import _modDef8606 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
-import _modDef12851 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
-import _modDef12853 from "../../../../discord_assets/assets/checkpoint/checkpoint-bgm.mp3.js";
-import _modDef12857 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
-import _modDef12867 from "../../../../discord_assets/assets/checkpoint/voice-soundwave.png.js";
-import _modDef12869 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef12873 from "../../../../discord_assets/assets/checkpoint/messages.png.js";
-import _modDef12897 from "../../../../discord_assets/assets/checkpoint/game-time.png.js";
-import _modDef12904 from "../../../../discord_assets/assets/checkpoint/checkpoint-clyde.png.js";
+import _modDef5098 from "../../../../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js";
+import _modDef5102 from "../../../../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js";
+import _modDef5104 from "../../../../discord_assets/assets/mana/rive/native/CheckpointNumbers.riv.js";
+import _modDef8610 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-purple.png.js";
+import _modDef8611 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-cyan.png.js";
+import _modDef8612 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-pink.png.js";
+import _modDef8613 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
+import _modDef8614 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
+import _modDef8615 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
+import _modDef12883 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
+import _modDef12885 from "../../../../discord_assets/assets/checkpoint/checkpoint-bgm.mp3.js";
+import _modDef12889 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef12899 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres.png.js";
+import _modDef12903 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12906 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop.png.js";
+import _modDef12931 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop.png.js";
+import _modDef12938 from "../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -24,25 +24,25 @@ const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-const CheckpointFetchStates = fn(12843).CheckpointFetchStates;
+const CheckpointFetchStates = fn(12875).CheckpointFetchStates;
 let items = [
-  _modDef5094,
   _modDef5098,
-  _modDef5100,
-  _modDef12857,
-  _modDef12904,
-  _modDef12873,
-  _modDef12867,
-  _modDef12869,
-  _modDef12897,
-  _modDef8601,
-  _modDef8602,
-  _modDef8603,
-  _modDef8604,
-  _modDef8605,
-  _modDef8606,
-  _modDef12853,
-  _modDef12851,
+  _modDef5102,
+  _modDef5104,
+  _modDef12889,
+  _modDef12938,
+  _modDef12906,
+  _modDef12899,
+  _modDef12903,
+  _modDef12931,
+  _modDef8610,
+  _modDef8611,
+  _modDef8612,
+  _modDef8613,
+  _modDef8614,
+  _modDef8615,
+  _modDef12885,
+  _modDef12883,
 ];
 const ReactCompilerGating = fn(558);
 const size = fn(2);

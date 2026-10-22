@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16 },
   section: null,
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = connection(576).c(24);
       const tmp4 = closure_7();
       let obj = connection(576);
-      const mcpConnectionPanel = connection(12178).useMcpConnectionPanel(projectId.projectId);
+      const mcpConnectionPanel = connection(12199).useMcpConnectionPanel(projectId.projectId);
       connection = mcpConnectionPanel.connection;
       ({ loading, failed, mint } = mcpConnectionPanel);
       if (cResult[0] !== connection) {
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { title: null };
         let intl = tmp(1128).intl;
         obj3.title = intl.string(mint(3830)["7937yd"]);
-        const tmp10 = closure_5(tmp(7225).BottomSheetTitleHeader, obj3);
+        const tmp10 = closure_5(tmp(7232).BottomSheetTitleHeader, obj3);
         cResult[4] = tmp10;
         let tmp7 = tmp10;
       } else {
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
         let intl2 = tmp(1128).intl;
         obj4.children = intl2.string(mint(3830).WltAg2);
-        const tmp14 = closure_5(tmp(5216).Text, obj4);
+        const tmp14 = closure_5(tmp(5220).Text, obj4);
         cResult[5] = tmp14;
         let tmp11 = tmp14;
       } else {
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const items = [tmp11, tmp15, tmp23];
                             obj6.children = items;
                             obj5.children = closure_6(View, obj6);
-                            const tmp33 = closure_5(tmp(7275).ActionSheet, obj5);
+                            const tmp33 = closure_5(tmp(7282).ActionSheet, obj5);
                             cResult[20] = tmp4.content;
                             cResult[21] = tmp15;
                             cResult[22] = tmp23;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj9 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
                       const intl8 = tmp(1128).intl;
                       obj9.children = intl8.string(mint(3830).IAF2eN);
-                      obj8.children = closure_5(tmp(5216).Text, obj9);
+                      obj8.children = closure_5(tmp(5220).Text, obj9);
                       const items1 = [closure_5(View, obj8)];
                       const obj10 = { variant: "secondary", size: "sm", text: null, loading: null, onPress: null };
                       const intl9 = tmp(1128).intl;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       obj10.onPress = function onPress() {
                         mint(false);
                       };
-                      items1[1] = closure_5(tmp(5226).Button, obj10);
+                      items1[1] = closure_5(tmp(5230).Button, obj10);
                       obj7.children = items1;
                       tmp24 = closure_6(View, obj7);
                     }
@@ -187,18 +187,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj12 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl4 = tmp(1128).intl;
         obj12.children = intl4.string(mint(3830).UCwV3L);
-        const items2 = [closure_5(tmp(5216).Text, obj12), , ,];
+        const items2 = [closure_5(tmp(5220).Text, obj12), , ,];
         const obj13 = { variant: "primary", children: null };
         const obj14 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: connection.url };
-        obj13.children = closure_5(tmp(5216).Text, obj14);
-        items2[1] = closure_5(tmp(6884).Card, obj13);
+        obj13.children = closure_5(tmp(5220).Text, obj14);
+        items2[1] = closure_5(tmp(6891).Card, obj13);
         const obj15 = { style: tmp4.actions, children: null };
         const obj16 = { style: tmp4.action, children: null };
         const obj17 = { variant: "primary", size: "md", text: null, onPress: null };
         const intl5 = tmp(1128).intl;
         obj17.text = intl5.string(tmp(1128).t.OpuAlK);
         obj17.onPress = tmp6;
-        obj16.children = closure_5(tmp(5226).Button, obj17);
+        obj16.children = closure_5(tmp(5230).Button, obj17);
         const items3 = [closure_5(View, obj16)];
         const obj18 = { style: tmp4.action, children: null };
         const obj19 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
@@ -206,25 +206,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj19.text = intl6.string(mint(3830).FBKOBq);
         obj19.loading = loading;
         obj19.onPress = section;
-        obj18.children = closure_5(tmp(5226).Button, obj19);
+        obj18.children = closure_5(tmp(5230).Button, obj19);
         items3[1] = closure_5(View, obj18);
         obj15.children = items3;
         items2[2] = closure_6(View, obj15);
         const obj20 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl7 = tmp(1128).intl;
-        const obj21 = { time: tmp(12179).formatMcpConnectionExpiry(connection) };
+        const obj21 = { time: tmp(12200).formatMcpConnectionExpiry(connection) };
         obj20.children = intl7.format(mint(3830).EQ8k1i, obj21);
-        items2[3] = closure_5(tmp(5216).Text, obj20);
+        items2[3] = closure_5(tmp(5220).Text, obj20);
         obj11.children = items2;
         let tmp16 = closure_6(View, obj11);
-        const tmpResult = tmp(12179);
+        const tmpResult = tmp(12200);
       } else {
         tmp16 = null;
         if (loading) {
           const obj22 = { variant: "text-sm/normal", color: "text-muted", children: null };
           let intl3 = tmp(1128).intl;
           obj22.children = intl3.string(mint(3830).Q6xQTM);
-          tmp16 = closure_5(tmp(5216).Text, obj22);
+          tmp16 = closure_5(tmp(5220).Text, obj22);
         }
       }
       cResult[6] = connection;
@@ -235,13 +235,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ actions: tmp3[11], section } = tmp4);
       cResult[12] = section;
       cResult[13] = tmp16;
-      let obj2 = connection(12178);
+      let obj2 = connection(12199);
     }
   : function ConjureConnectToolSheet(projectId) {
       let connection;
       mint = undefined;
       const tmp = closure_7();
-      const mcpConnectionPanel = connection(12178).useMcpConnectionPanel(projectId.projectId);
+      const mcpConnectionPanel = connection(12199).useMcpConnectionPanel(projectId.projectId);
       connection = mcpConnectionPanel.connection;
       ({ loading, mint } = mcpConnectionPanel);
       const items = [connection];
@@ -275,29 +275,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { title: null };
       let intl = connection(1128).intl;
       obj3.title = intl.string(mint(3830)["7937yd"]);
-      obj2.header = closure_5(connection(7225).BottomSheetTitleHeader, obj3);
+      obj2.header = closure_5(connection(7232).BottomSheetTitleHeader, obj3);
       const obj4 = { style: tmp.content, children: null };
       const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
       let intl2 = connection(1128).intl;
       obj5.children = intl2.string(mint(3830).WltAg2);
-      const items2 = [closure_5(connection(5216).Text, obj5), ,];
+      const items2 = [closure_5(connection(5220).Text, obj5), ,];
       if (null != connection) {
         const obj6 = { style: tmp.section, children: null };
         const obj7 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl4 = tmp2(1128).intl;
         obj7.children = intl4.string(tmp8(3830).UCwV3L);
-        const items3 = [closure_5(tmp2(5216).Text, obj7), , ,];
+        const items3 = [closure_5(tmp2(5220).Text, obj7), , ,];
         const obj8 = { variant: "primary", children: null };
         const obj9 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: connection.url };
-        obj8.children = closure_5(tmp2(5216).Text, obj9);
-        items3[1] = closure_5(tmp2(6884).Card, obj8);
+        obj8.children = closure_5(tmp2(5220).Text, obj9);
+        items3[1] = closure_5(tmp2(6891).Card, obj8);
         const obj10 = { style: tmp.actions, children: null };
         const obj11 = { style: tmp.action, children: null };
         const obj12 = { variant: "primary", size: "md", text: null, onPress: null };
         const intl5 = tmp2(1128).intl;
         obj12.text = intl5.string(tmp2(1128).t.OpuAlK);
         obj12.onPress = callback;
-        obj11.children = closure_5(tmp2(5226).Button, obj12);
+        obj11.children = closure_5(tmp2(5230).Button, obj12);
         const items4 = [closure_5(View, obj11)];
         const obj13 = { style: tmp.action, children: null };
         const obj14 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
@@ -305,25 +305,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj14.text = intl6.string(tmp8(3830).FBKOBq);
         obj14.loading = loading;
         obj14.onPress = callback1;
-        obj13.children = closure_5(tmp2(5226).Button, obj14);
+        obj13.children = closure_5(tmp2(5230).Button, obj14);
         items4[1] = closure_5(View, obj13);
         obj10.children = items4;
         items3[2] = closure_6(View, obj10);
         const obj15 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl7 = tmp2(1128).intl;
-        const obj16 = { time: tmp2(12179).formatMcpConnectionExpiry(connection) };
+        const obj16 = { time: tmp2(12200).formatMcpConnectionExpiry(connection) };
         obj15.children = intl7.format(tmp8(3830).EQ8k1i, obj16);
-        items3[3] = closure_5(tmp2(5216).Text, obj15);
+        items3[3] = closure_5(tmp2(5220).Text, obj15);
         obj6.children = items3;
         let tmp7Result = closure_6(View, obj6);
-        const tmp2Result = tmp2(12179);
+        const tmp2Result = tmp2(12200);
       } else {
         tmp7Result = null;
         if (loading) {
           const obj17 = { variant: "text-sm/normal", color: "text-muted", children: null };
           let intl3 = tmp2(1128).intl;
           obj17.children = intl3.string(tmp8(3830).Q6xQTM);
-          tmp7Result = closure_5(tmp2(5216).Text, obj17);
+          tmp7Result = closure_5(tmp2(5220).Text, obj17);
         }
       }
       items2[1] = tmp7Result;
@@ -334,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj20 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
         const intl8 = tmp2(1128).intl;
         obj20.children = intl8.string(tmp8(3830).IAF2eN);
-        obj19.children = closure_5(tmp2(5216).Text, obj20);
+        obj19.children = closure_5(tmp2(5220).Text, obj20);
         const items5 = [closure_5(View, obj19)];
         const obj21 = { variant: "secondary", size: "sm", text: null, loading: null, onPress: null };
         const intl9 = tmp2(1128).intl;
@@ -343,13 +343,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj21.onPress = function onPress() {
           mint(false);
         };
-        items5[1] = closure_5(tmp2(5226).Button, obj21);
+        items5[1] = closure_5(tmp2(5230).Button, obj21);
         obj18.children = items5;
         tmp9Result2 = closure_6(View, obj18);
       }
       items2[2] = tmp9Result2;
       obj4.children = items2;
       obj2.children = closure_6(View, obj4);
-      return closure_5(connection(7275).ActionSheet, obj2);
+      return closure_5(connection(7282).ActionSheet, obj2);
     };
 export const CONJURE_CONNECT_TOOL_SHEET_KEY = "ConjureConnectToolSheet";

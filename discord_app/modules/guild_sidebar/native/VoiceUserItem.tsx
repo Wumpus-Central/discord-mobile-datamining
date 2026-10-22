@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef8483 from "../../../../_runtime/metro/08483__.js";
+import _modDef8492 from "../../../../_runtime/metro/08492__.js";
 import HeadphonesDenyIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
@@ -26,7 +26,7 @@ const jsxProd = fn(21);
 let c8 = "text-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
 const XSMALL_20 = fn(1202).AvatarSizes.XSMALL_20;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
   disabled: { opacity: 0.5 },
@@ -47,7 +47,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11983);
+const ChannelListLayout = fn(12004);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
@@ -343,7 +343,7 @@ export default noop.memo(
                                             let tmp = null;
                                             if (isInEmbeddedActivity) {
                                               const obj = {
-                                                source: _modDef8483,
+                                                source: _modDef8492,
                                                 size: native.Icon.Sizes.REFRESH_SMALL_16,
                                                 style: closure_16.legacyVoiceStateIcon,
                                               };

@@ -37,8 +37,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const GuildPowerupsBoostGemDefault = tmp5(13328);
-const GuildPowerupsImageDefault = tmp5(13330);
+const GuildPowerupsBoostGemDefault = tmp5(13364);
+const GuildPowerupsImageDefault = tmp5(13366);
 const View = _mod17.View;
 ({ GuildPowerupType: hasOwnProperty, GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP: metroRequire } = GuildPowerupsConstants);
 let closure_7 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;
@@ -379,7 +379,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { children: null };
             const items = [tmp10, tmp13];
             obj2.children = items;
-            const tmp23 = React6(collapsed, obj2);
+            const tmp23 = React6(v65535, obj2);
             cResult[6] = tmp10;
             cResult[7] = tmp13;
             cResult[8] = tmp23;
@@ -451,7 +451,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { children: null };
         items[1] = tmp5Result;
         obj7.children = items;
-        return React6(collapsed, obj7);
+        return React6(v65535, obj7);
       } else if (tmp2.LEVEL === type) {
         const obj = { powerup };
         return closure_1_8(closure_13, obj);

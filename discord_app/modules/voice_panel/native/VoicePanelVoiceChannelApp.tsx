@@ -11,9 +11,9 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import VoicePanelStore from "../VoicePanelStore.tsx";
 
 require = fn;
-const VoicePanelControlsModes = fn(10846).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { layer: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

@@ -27,41 +27,41 @@ import GuildDiscoveryCategoryStore from "../../../global_discovery_servers/Guild
 require = fn;
 function primaryCategoryToEmojiIcon(categoryid) {
   if (GuildPrimaryCategory.GAMING === categoryid) {
-    return collapsed(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.ENTERTAINMENT === categoryid) {
-    return collapsed(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.GENERAL_CHATTING === categoryid) {
-    return collapsed(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SCIENCE_AND_TECH === categoryid) {
-    return collapsed(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.MUSIC === categoryid) {
-    return collapsed(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.EDUCATION === categoryid) {
-    return collapsed(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.CREATIVE_ARTS === categoryid) {
-    return collapsed(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FINANCE === categoryid) {
-    return collapsed(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.BOTS === categoryid) {
-    return collapsed(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SPORTS === categoryid) {
-    return collapsed(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.TRAVEL_AND_FOOD === categoryid) {
-    return collapsed(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FASHION_AND_BEAUTY === categoryid) {
-    return collapsed(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FITNESS_AND_HEALTH === categoryid) {
-    return collapsed(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
-    return collapsed(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(17754).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(17824).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   footer: null,
@@ -160,7 +160,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { accessibilityRole, accessibilityState, variant: str, text: topic, onPress: tmp9, icon: tmp4 };
-          const tmp12 = collapsed(components_Button_Button.Button, obj3);
+          const tmp12 = v65535(components_Button_Button.Button, obj3);
           cResult[7] = accessibilityRole;
           cResult[8] = accessibilityState;
           cResult[9] = tmp4;
@@ -205,7 +205,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           return importDefault(categoryid);
         };
         obj2.icon = tmp;
-        tmp8Result = collapsed(components_Button_Button.Button, obj2);
+        tmp8Result = v65535(components_Button_Button.Button, obj2);
       }
       return tmp8Result;
     };
@@ -326,11 +326,11 @@ export default function ICYMITopicsScreen() {
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1128).intl;
   obj3.children = intl.string(first(1128).t.Y5d99L);
-  const children = [closure_10(first(5216).Text, obj3), , , ,];
+  const children = [closure_10(first(5220).Text, obj3), , , ,];
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1128).intl;
   obj4.children = intl2.string(first(1128).t.MGZsfv);
-  children[1] = closure_10(first(5216).Text, obj4);
+  children[1] = closure_10(first(5220).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = {
     showsVerticalScrollIndicator: false,
@@ -345,7 +345,7 @@ export default function ICYMITopicsScreen() {
   obj6.children = closure_10(closure_6, {
     style: tmp.topicsContainer,
     children: stateFromStoresArray.map((categoryId) =>
-      collapsed(
+      v65535(
         closure_15,
         {
           selected: first.has(categoryId.categoryId),
@@ -368,7 +368,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1128).intl;
     obj11.text = intl3.string(tmp7(1128).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5226).Button, obj11);
+    obj9.children = closure_10(tmp7(5230).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

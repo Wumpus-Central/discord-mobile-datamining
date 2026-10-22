@@ -819,18 +819,18 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6763).isEventUpcoming;
+const isEventUpcoming = fn(6770).isEventUpcoming;
 const ChannelRecord = fn(4825);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5591);
+const ActivityPanelConstants = fn(5595);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
 const ChannelConstants = fn(4828);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
 const GuildScheduledEventStatus = fn(4827).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6684).ReadStateTypes;
+const ReadStateTypes = fn(6691).ReadStateTypes;
 const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -897,8 +897,8 @@ prototype["getAllChannelIdsForWindowId"] = function getAllChannelIdsForWindowId(
   }
   return Array.from(set);
 };
-prototype["isAnyWindowFocused"] = function isAnyWindowFocused(arg0) {
-  if (null == this.channelWindowIds[arg0]) {
+prototype["isAnyWindowFocused"] = function isAnyWindowFocused(channelId) {
+  if (null == this.channelWindowIds[channelId]) {
     return false;
   } else {
     for (const item10009 of tmp) {
@@ -946,7 +946,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -1007,7 +1007,7 @@ ReadState["get"] = function get(channelId) {
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -1924,14 +1924,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6797, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6804, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6797, dependencyMap.paths);
+          const promise = asyncRequireImpl(6804, dependencyMap.paths);
         }
       }
     });
@@ -2113,7 +2113,7 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(arg0) {
         const tmp6 = collapsedCategories(basicChannel.type);
         let tmp7 = !tmp6;
         if (tmp6) {
-          const tmp9 = constants2(basicChannel.type);
+          const tmp9 = closure_1_20(basicChannel.type);
           let tmp10 = !tmp9;
           if (!tmp9) {
             const hasItem = set2.has(basicChannel.type);
@@ -3079,13 +3079,16 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       result = visibleInlineChannels.isChannelVisibleInline(channelId, (arg0) => focused.isFocused(arg0));
       const tmp13Result = visibleInlineChannels;
     }
+    if (!result) {
+      result = merged.isAnyWindowFocused(channelId);
+    }
     if (result) {
       if (shouldAutomaticallyAck(value)) {
         if (!isPushNotification.isPushNotification) {
           const channelId4 = value.channelId;
-          const tmp27 = null == channelId4 || !OverlaySupported.OVERLAY_SUPPORTED;
-          let result1 = !tmp27;
-          if (!tmp27) {
+          const tmp28 = null == channelId4 || !OverlaySupported.OVERLAY_SUPPORTED;
+          let result1 = !tmp28;
+          if (!tmp28) {
             result1 = OverlayVisibility.isOverlayChannelVisible(channelId4);
           }
           const obj5 = { messageId: message.id, trackAnalytics: true, location: null };
@@ -3095,9 +3098,9 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
         }
       }
     }
-    const tmp32 = null == channelId || !OverlaySupported.OVERLAY_SUPPORTED;
-    let result2 = !tmp32;
-    if (!tmp32) {
+    const tmp33 = null == channelId || !OverlaySupported.OVERLAY_SUPPORTED;
+    let result2 = !tmp33;
+    if (!tmp33) {
       result2 = OverlayVisibility.isOverlayChannelVisible(channelId);
     }
     if (result2) {
@@ -3130,11 +3133,11 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
                 }
                 tmp13Result7 = isMessageMentioned;
               }
-              let tmp39 = null != channel && channel.isPrivate();
-              if (tmp39) {
-                tmp39 = !UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
+              let tmp40 = null != channel && channel.isPrivate();
+              if (tmp40) {
+                tmp40 = !UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
               }
-              if (tmp39) {
+              if (tmp40) {
                 obj11 = { shouldMention: true, isMentionLowImportance: false };
               } else {
                 if (UserGuildSettingsStore.mentionOnAllMessages) {
@@ -3165,12 +3168,12 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
                 ReadState.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER).lastMessageId = message.id;
                 if (NotificationCenterItemsStore.tabFocused) {
                   value4 = ReadState.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
-                  if (tmp43) {
-                    let tmp44 = null != value4.lastMessageId;
-                    if (!tmp44) {
-                      tmp44 = 0 !== value4.mentionCount;
+                  if (tmp44) {
+                    let tmp45 = null != value4.lastMessageId;
+                    if (!tmp45) {
+                      tmp45 = 0 !== value4.mentionCount;
                     }
-                    if (tmp44) {
+                    if (tmp45) {
                       let lastMessageId = value4.lastMessageId;
                       if (lastMessageId == null) {
                         lastMessageId = require("SnowflakeUtils").fromTimestamp(value4.getAckTimestamp());
@@ -3180,7 +3183,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
                       value4.ack(obj12);
                     }
                   }
-                  tmp43 = undefined !== value4.ackMessageId && value4.lastMessageId !== value4.ackMessageId;
+                  tmp44 = undefined !== value4.ackMessageId && value4.lastMessageId !== value4.ackMessageId;
                 }
               }
             }
@@ -3243,7 +3246,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "krisp", isExplicitUserAction: "DRAFT_SAVE", trackAnalytics: null });
+    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "krisp", isExplicitUserAction: "STREAM_START", trackAnalytics: null });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3630,7 +3633,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "Reflect", isExplicitUserAction: "CONJURE_REMIX_STATE_SET", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "Reflect", isExplicitUserAction: "text", trackAnalytics: "\n" });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

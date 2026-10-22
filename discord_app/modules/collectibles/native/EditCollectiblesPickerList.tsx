@@ -7,29 +7,26 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4969);
 let obj = {
   list: { flex: 1 },
   listContent: { paddingBottom: 88 },
   loadingContainer: { paddingVertical: 80, alignItems: "center" },
-  header: { paddingHorizontal: fn(14384).GUTTER_SIZE, paddingBottom: 5 },
+  header: { paddingHorizontal: fn(14428).GUTTER_SIZE, paddingBottom: 5 },
 };
-let closure_7 = createStyles.createStyles(obj);
+let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_8 = noop.memo(
+let closure_10 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function DefaultHeader(header) {
         const cResult = c.c(5);
         header = header.header;
-        const tmp4 = closure_7();
+        const tmp4 = closure_9();
         if (cResult[0] !== header) {
           const obj2 = { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: header };
-          const tmp7 = jsx(Text_Text.Heading, {
-            variant: "heading-sm/medium",
-            color: "mobile-text-heading-primary",
-            children: header,
-          });
+          const tmp7 = timestampProducer(Text_Text.Heading, obj2);
           cResult[0] = header;
           cResult[1] = tmp7;
           let tmp5 = tmp7;
@@ -42,7 +39,7 @@ let closure_8 = noop.memo(
           }
           return tmp8;
         }
-        const tmp9 = <hasOwnProperty style={tmp4.header}>{tmp5}</hasOwnProperty>;
+        const tmp9 = timestampProducer(hasOwnProperty, { style: tmp4.header, children: tmp5 });
         cResult[2] = tmp4.header;
         cResult[3] = tmp5;
         cResult[4] = tmp9;
@@ -50,33 +47,32 @@ let closure_8 = noop.memo(
         const obj3 = { style: tmp4.header, children: tmp5 };
       }
     : function DefaultHeader(children) {
-        return (
-          <hasOwnProperty style={closure_7().header}>
-            {jsx(Text_Text.Heading, {
-              variant: "heading-sm/medium",
-              color: "mobile-text-heading-primary",
-              children: children.header,
-            })}
-          </hasOwnProperty>
-        );
+        return timestampProducer(hasOwnProperty, {
+          style: closure_9().header,
+          children: timestampProducer(Text_Text.Heading, {
+            variant: "heading-sm/medium",
+            color: "mobile-text-heading-primary",
+            children: children.header,
+          }),
+        });
       },
 );
 ReactCompilerGating = fn(558);
-let obj3 = { paddingHorizontal: fn(14384).GUTTER_SIZE, paddingBottom: 5 };
+let obj3 = { paddingHorizontal: fn(14428).GUTTER_SIZE, paddingBottom: 5 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
 export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEnabled()
   ? function EditCollectiblesPickerList(renderRow) {
-      const cResult = selectedSkuId(renderRow[7]).c(21);
+      const cResult = selectedSkuId(renderRow[7]).c(25);
       ({ sections, selectedSkuId } = renderRow);
       renderRow = renderRow.renderRow;
-      const isFetching = renderRow.isFetching;
-      let loadingContainer = closure_7();
+      ({ isFetching, ListHeaderComponent } = renderRow);
+      const tmp5 = closure_9();
       let obj = selectedSkuId(renderRow[7]);
-      [tmp6, _slicedToArray] = noop.useState(0);
+      [tmp7, _slicedToArray] = noop.useState(0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function u(nativeEvent) {
+        const fn = function c(nativeEvent) {
           _slicedToArray(nativeEvent.nativeEvent.layout.width);
         };
         cResult[0] = fn;
@@ -85,8 +81,8 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         first = cResult[0];
       }
       let num = 0;
-      if (tmp6 > 0) {
-        const diff = tmp6 - 4 * selectedSkuId(tmp2[5]).GUTTER_SIZE;
+      if (tmp7 > 0) {
+        const diff = tmp7 - 4 * selectedSkuId(tmp2[5]).GUTTER_SIZE;
         num = diff / selectedSkuId(tmp2[5]).ROW_SIZE;
       }
       if (undefined !== isFetching && isFetching) {
@@ -99,28 +95,16 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         if (cResult[2] !== sections) {
           const items1 = [];
           noop = items1;
-          class Z {
-            constructor(arg0) {
-              item = renderRow.item;
-              if ("header" === item.type) {
-                tmp5 = jsx;
-                tmp6 = closure_8;
-                obj1 = { header: null };
-                obj1.header = item.header;
-                tmp4 = jsx(closure_8, obj1);
-              } else {
-                tmp = renderRow;
-                obj = { items: null, size: null, selectedSkuId: null };
-                obj.items = item.items;
-                tmp2 = closure_4;
-                obj.size = closure_4;
-                tmp3 = selectedSkuId;
-                obj.selectedSkuId = selectedSkuId;
-                tmp4 = renderRow(obj);
-              }
-              return tmp4;
-            }
-          }
+          let item = sections.forEach((header) => {
+            closure_3.push({ type: "header", key: "header-" + header.section, header: header.header });
+            const obj = { type: "header", key: "header-" + header.section, header: header.header };
+            const obj2 = selectedSkuId(renderRow[9]);
+            const item = selectedSkuId(renderRow[9])
+              .chunk(header.items, selectedSkuId(renderRow[5]).ROW_SIZE)
+              .forEach((items, index) => {
+                closure_3.push({ type: "row", key: "row-" + header.section + "-" + index, items });
+              });
+          });
           cResult[2] = sections;
           cResult[3] = items1;
         } else {
@@ -129,239 +113,136 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         if (cResult[4] === num) {
           if (cResult[5] === renderRow) {
             if (cResult[6] === selectedSkuId) {
-              let tmp12 = cResult[7];
+              let tmp14 = cResult[7];
             }
             const _Symbol2 = Symbol;
-            class Z {
-              constructor(arg0) {
-                item = renderRow.item;
-                if ("header" === item.type) {
-                  tmp5 = jsx;
-                  tmp6 = closure_8;
-                  obj1 = { header: null };
-                  obj1.header = item.header;
-                  tmp4 = jsx(closure_8, obj1);
-                } else {
-                  tmp = renderRow;
-                  obj = { items: null, size: null, selectedSkuId: null };
-                  obj.items = item.items;
-                  tmp2 = closure_4;
-                  obj.size = closure_4;
-                  tmp3 = selectedSkuId;
-                  obj.selectedSkuId = selectedSkuId;
-                  tmp4 = renderRow(obj);
-                }
-                return tmp4;
-              }
-            }
-            if (tmp13 === Symbol.for("react.memo_cache_sentinel")) {
-              const fn2 = function z(type) {
-                return type.type;
-              };
-              class Z {
+            if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+              class O {
                 constructor(arg0) {
-                  item = renderRow.item;
-                  if ("header" === item.type) {
-                    tmp5 = jsx;
-                    tmp6 = closure_8;
-                    obj1 = { header: null };
-                    obj1.header = item.header;
-                    tmp4 = jsx(closure_8, obj1);
-                  } else {
-                    tmp = renderRow;
-                    obj = { items: null, size: null, selectedSkuId: null };
-                    obj.items = item.items;
-                    tmp2 = closure_4;
-                    obj.size = closure_4;
-                    tmp3 = selectedSkuId;
-                    obj.selectedSkuId = selectedSkuId;
-                    tmp4 = renderRow(obj);
-                  }
-                  return tmp4;
+                  return renderRow.type;
                 }
               }
-              let tmp14 = fn2;
+              cResult[8] = O;
             } else {
-              tmp14 = cResult[8];
+              class O {
+                constructor(arg0) {
+                  return renderRow.type;
+                }
+              }
             }
             const _Symbol3 = Symbol;
             if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-              class H {
+              class D {
                 constructor(arg0) {
                   return renderRow.key;
                 }
               }
-              class Z {
-                constructor(arg0) {
-                  item = renderRow.item;
-                  if ("header" === item.type) {
-                    tmp5 = jsx;
-                    tmp6 = closure_8;
-                    obj1 = { header: null };
-                    obj1.header = item.header;
-                    tmp4 = jsx(closure_8, obj1);
-                  } else {
-                    tmp = renderRow;
-                    obj = { items: null, size: null, selectedSkuId: null };
-                    obj.items = item.items;
-                    tmp2 = closure_4;
-                    obj.size = closure_4;
-                    tmp3 = selectedSkuId;
-                    obj.selectedSkuId = selectedSkuId;
-                    tmp4 = renderRow(obj);
-                  }
-                  return tmp4;
-                }
-              }
+              cResult[9] = D;
             } else {
-              class H {
+              class D {
                 constructor(arg0) {
                   return renderRow.key;
                 }
               }
             }
             if (tmp4) {
-              class H {
+              class D {
                 constructor(arg0) {
                   return renderRow.key;
                 }
               }
-              class Z {
-                constructor(arg0) {
-                  item = renderRow.item;
-                  if ("header" === item.type) {
-                    tmp5 = jsx;
-                    tmp6 = closure_8;
-                    obj1 = { header: null };
-                    obj1.header = item.header;
-                    tmp4 = jsx(closure_8, obj1);
-                  } else {
-                    tmp = renderRow;
-                    obj = { items: null, size: null, selectedSkuId: null };
-                    obj.items = item.items;
-                    tmp2 = closure_4;
-                    obj.size = closure_4;
-                    tmp3 = selectedSkuId;
-                    obj.selectedSkuId = selectedSkuId;
-                    tmp4 = renderRow(obj);
-                  }
-                  return tmp4;
-                }
-              }
-              if (cResult[11] !== loadingContainer.loadingContainer) {
-                class H {
+              if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+                class D {
                   constructor(arg0) {
                     return renderRow.key;
                   }
                 }
-                class Z {
+                const tmp22 = closure_6(num, { animating: true, size: "large" });
+                cResult[10] = tmp22;
+                const tmp20 = tmp22;
+              } else {
+                class D {
                   constructor(arg0) {
-                    item = renderRow.item;
-                    if ("header" === item.type) {
-                      tmp5 = jsx;
-                      tmp6 = closure_8;
-                      obj1 = { header: null };
-                      obj1.header = item.header;
-                      tmp4 = jsx(closure_8, obj1);
-                    } else {
-                      tmp = renderRow;
-                      obj = { items: null, size: null, selectedSkuId: null };
-                      obj.items = item.items;
-                      tmp2 = closure_4;
-                      obj.size = closure_4;
-                      tmp3 = selectedSkuId;
-                      obj.selectedSkuId = selectedSkuId;
-                      tmp4 = renderRow(obj);
-                    }
-                    return tmp4;
+                    return renderRow.key;
                   }
                 }
-                tmp24[0] = loadingContainer.loadingContainer;
-                tmp24[1] = tmp21;
-                const tmp25 = <closure_5 {...tmp24} />;
-                loadingContainer = loadingContainer.loadingContainer;
-                cResult[11] = loadingContainer;
+              }
+              if (cResult[11] !== tmp5.loadingContainer) {
+                class D {
+                  constructor(arg0) {
+                    return renderRow.key;
+                  }
+                }
+                let obj2 = { style: tmp5.loadingContainer, children: tmp20 };
+                const tmp25 = closure_6(closure_5, obj2);
+                cResult[11] = tmp5.loadingContainer;
                 cResult[12] = tmp25;
               } else {
-                class H {
+                class D {
                   constructor(arg0) {
                     return renderRow.key;
                   }
                 }
               }
+              if (cResult[13] === ListHeaderComponent) {
+                class D {
+                  constructor(arg0) {
+                    return renderRow.key;
+                  }
+                }
+              }
+              const obj3 = { children: null };
+              const items2 = [ListHeaderComponent, tmp23];
+              obj3.children = items2;
+              const tmp29 = closure_8(closure_7, obj3);
+              cResult[13] = ListHeaderComponent;
+              cResult[14] = tmp23;
+              cResult[15] = tmp29;
             } else {
-              class H {
+              class D {
                 constructor(arg0) {
                   return renderRow.key;
                 }
               }
-              class Z {
-                constructor(arg0) {
-                  item = renderRow.item;
-                  if ("header" === item.type) {
-                    tmp5 = jsx;
-                    tmp6 = closure_8;
-                    obj1 = { header: null };
-                    obj1.header = item.header;
-                    tmp4 = jsx(closure_8, obj1);
-                  } else {
-                    tmp = renderRow;
-                    obj = { items: null, size: null, selectedSkuId: null };
-                    obj.items = item.items;
-                    tmp2 = closure_4;
-                    obj.size = closure_4;
-                    tmp3 = selectedSkuId;
-                    obj.selectedSkuId = selectedSkuId;
-                    tmp4 = renderRow(obj);
-                  }
-                  return tmp4;
-                }
-              }
-              tmp18[0] = tmp9;
-              tmp18[1] = tmp12;
-              tmp18[2] = tmp14;
-              tmp18[3] = H;
-              tmp18[4] = selectedSkuId;
-              tmp18[5] = loadingContainer.listContent;
-              tmp18[6] = first;
-              const tmp19 = jsx(selectedSkuId(tmp2[10]).BottomSheetFlashList, tmp18);
-              cResult[13] = tmp9;
-              cResult[14] = tmp12;
-              cResult[15] = selectedSkuId;
-              cResult[16] = loadingContainer.listContent;
-              cResult[17] = tmp19;
+              const obj4 = {
+                data: tmp10,
+                renderItem: tmp14,
+                ListHeaderComponent,
+                getItemType: O,
+                keyExtractor: D,
+                extraData: selectedSkuId,
+                contentContainerStyle: tmp5.listContent,
+                onLayout: first,
+                keyboardShouldPersistTaps: "always",
+              };
+              const tmp19 = closure_6(selectedSkuId(tmp2[10]).BottomSheetFlashList, obj4);
+              cResult[16] = ListHeaderComponent;
+              cResult[17] = tmp10;
+              cResult[18] = tmp14;
+              cResult[19] = selectedSkuId;
+              cResult[20] = tmp5.listContent;
+              cResult[21] = tmp19;
             }
           }
         }
-        class Z {
-          constructor(arg0) {
-            item = renderRow.item;
-            if ("header" === item.type) {
-              tmp5 = jsx;
-              tmp6 = closure_8;
-              obj1 = { header: null };
-              obj1.header = item.header;
-              tmp4 = jsx(closure_8, obj1);
-            } else {
-              tmp = renderRow;
-              obj = { items: null, size: null, selectedSkuId: null };
-              obj.items = item.items;
-              tmp2 = closure_4;
-              obj.size = closure_4;
-              tmp3 = selectedSkuId;
-              obj.selectedSkuId = selectedSkuId;
-              tmp4 = renderRow(obj);
-            }
-            return tmp4;
+        const fn2 = function $(item) {
+          item = item.item;
+          if ("header" === item.type) {
+            const obj2 = { header: item.header };
+            let tmp4 = timestampProducer(closure_10, obj2);
+          } else {
+            const obj = { items: item.items, size: num, selectedSkuId };
+            tmp4 = renderRow(obj);
           }
-        }
+          return tmp4;
+        };
         cResult[4] = num;
         cResult[5] = renderRow;
         cResult[6] = selectedSkuId;
-        cResult[7] = Z;
-        tmp12 = Z;
+        cResult[7] = fn2;
+        tmp14 = fn2;
       }
-      const tmp5 = _slicedToArray(noop.useState(0), 2);
+      const tmp6 = _slicedToArray(noop.useState(0), 2);
     }
   : function EditCollectiblesPickerList(sections) {
       sections = sections.sections;
@@ -371,8 +252,9 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
       if (flag === undefined) {
         flag = false;
       }
+      const ListHeaderComponent = sections.ListHeaderComponent;
       c4 = undefined;
-      const tmp = closure_7();
+      const tmp = closure_9();
       let num = 0;
       [tmp3, c4] = renderRow(flag.useState(0), 2);
       const callback = flag.useCallback((nativeEvent) => {
@@ -395,7 +277,7 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
             const obj = { type: "header", key: "header-" + header.section, header: header.header };
             const obj2 = items(12);
             const item = items(12)
-              .chunk(header.items, items(14384).ROW_SIZE)
+              .chunk(header.items, items(14428).ROW_SIZE)
               .forEach((items, index) => {
                 items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
               });
@@ -407,7 +289,7 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         item = item.item;
         if ("header" === item.type) {
           const obj2 = { header: item.header };
-          let tmp4 = <closure_8 header={item.header} />;
+          let tmp4 = timestampProducer(closure_10, obj2);
         } else {
           const obj = { items: item.items, size: num, selectedSkuId };
           tmp4 = renderRow(obj);
@@ -415,16 +297,19 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
         return tmp4;
       }, items1);
       const callback2 = obj.useCallback((type) => type.type, []);
-      let obj2 = { style: null, children: null };
       if (flag) {
-        obj2.style = tmp.loadingContainer;
-        obj2.children = <c4 animating size="large" />;
-        let tmp16 = obj2;
+        let obj2 = { children: null };
+        const items2 = [ListHeaderComponent];
+        const obj3 = { style: tmp.loadingContainer, children: closure_6(c4, { animating: true, size: "large" }) };
+        items2[1] = closure_6(num, obj3);
+        obj2.children = items2;
+        let tmp16 = closure_8(closure_7, obj2);
       } else {
-        obj2.style = tmp.list;
-        const obj3 = {
+        const obj4 = { style: tmp.list, children: null };
+        const obj5 = {
           data: memo,
           renderItem: callback1,
+          ListHeaderComponent,
           getItemType: callback2,
           keyExtractor: tmp11,
           extraData: selectedSkuId,
@@ -432,17 +317,8 @@ export const EditCollectiblesPickerList = ReactCompilerGating.isReactCompilerEna
           onLayout: callback,
           keyboardShouldPersistTaps: "always",
         };
-        obj2.children = jsx(sections(selectedSkuId[10]).BottomSheetFlashList, {
-          data: memo,
-          renderItem: callback1,
-          getItemType: callback2,
-          keyExtractor: tmp11,
-          extraData: selectedSkuId,
-          contentContainerStyle: tmp.listContent,
-          onLayout: callback,
-          keyboardShouldPersistTaps: "always",
-        });
-        tmp16 = obj2;
+        obj4.children = closure_6(sections(selectedSkuId[10]).BottomSheetFlashList, obj5);
+        tmp16 = closure_6(num, obj4);
       }
-      return <num {...tmp16} />;
+      return tmp16;
     };

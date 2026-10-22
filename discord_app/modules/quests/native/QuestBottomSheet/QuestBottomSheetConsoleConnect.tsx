@@ -12,7 +12,6 @@ import openUserSettings from "../../../user_settings/core/native/openUserSetting
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import XboxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
 import PlaystationNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
-import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
 import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
@@ -29,7 +28,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -51,7 +50,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === onConsoleSelect) {
           if (cResult[5] !== cResult[2]) {
             const obj2 = { hasIcons: true, children: tmp4 };
-            const tmp9 = closure_8(onConsoleSelect(6966).TableRowGroup, obj2);
+            const tmp9 = closure_8(onConsoleSelect(6973).TableRowGroup, obj2);
             cResult[5] = tmp4;
             cResult[6] = tmp9;
             let tmp7 = tmp9;
@@ -116,6 +115,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const intl3 = util.intl;
           const stringResult = intl3.string(util.t.JafL6p);
           cResult[3] = tmp28;
+          class T {
+            constructor() {
+              return closure_1(closure_0);
+            }
+          }
           cResult[4] = stringResult;
           let tmp26 = stringResult;
           let tmp25 = tmp28;
@@ -131,9 +135,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[5] = tmp4.account;
           cResult[6] = stringResult1;
-          let tmp30 = stringResult1;
-        } else {
-          tmp30 = cResult[6];
+          class T {
+            constructor() {
+              return closure_1(closure_0);
+            }
+          }
         }
         if (cResult[7] === tmp4) {
           if (cResult[8] === tmp5) {
@@ -145,20 +151,27 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp34;
           }
-          const obj2 = { arrow: true, icon: tmp25, label: tmp26, subLabel: tmp30, onPress: tmp33 };
+          const obj2 = { arrow: true, icon: tmp25, label: tmp26, subLabel: tmp30, onPress: null };
+          class T {
+            constructor() {
+              return closure_1(closure_0);
+            }
+          }
           const tmp36 = closure_1_8(TableRow.TableRow, obj2);
           cResult[10] = tmp30;
           cResult[11] = tmp33;
           cResult[12] = tmp36;
           tmp34 = tmp36;
         }
-        const fn = function f() {
-          return closure_1(closure_0);
-        };
+        class T {
+          constructor() {
+            return closure_1(closure_0);
+          }
+        }
         cResult[7] = tmp4;
         cResult[8] = tmp5;
-        cResult[9] = fn;
-        tmp33 = fn;
+        cResult[9] = T;
+        tmp33 = T;
       } else if (tmp9.XBOX === type) {
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
@@ -166,7 +179,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const intl = util.intl;
           const stringResult2 = intl.string(util.t.Nfvo72);
           cResult[13] = tmp15;
-          class E {
+          class T {
             constructor() {
               return closure_1(closure_0);
             }
@@ -186,7 +199,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[15] = tmp4.account;
           cResult[16] = stringResult3;
-          class E {
+          class T {
             constructor() {
               return closure_1(closure_0);
             }
@@ -203,7 +216,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp21;
           }
           const obj3 = { arrow: true, icon: tmp12, label: tmp13, subLabel: tmp17, onPress: null };
-          class E {
+          class T {
             constructor() {
               return closure_1(closure_0);
             }
@@ -214,15 +227,15 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[22] = tmp23;
           tmp21 = tmp23;
         }
-        class E {
+        class T {
           constructor() {
             return closure_1(closure_0);
           }
         }
         cResult[17] = tmp4;
         cResult[18] = tmp5;
-        cResult[19] = E;
-        tmp20 = E;
+        cResult[19] = A;
+        tmp20 = A;
       } else {
         return null;
       }
@@ -284,21 +297,19 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16287, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16357, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(9528).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(9528);
-  closure_4 = quest(14042).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(14042);
-  noop = quest(9563).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(9539).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(9539);
+  closure_4 = quest(9574).useGetQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj3 = quest(9563);
+  let obj2 = quest(9574);
   return closure_8(closure_9, {
-    consoles: noop.useMemo(
+    consoles: openQuestBottomSheet.useMemo(
       () =>
         QuestPlatformUtils.supportedConsoles(quest).map((type) => {
           closure_0 = type;
@@ -308,64 +319,32 @@ export default function QuestBottomSheetConsoleConnect(quest) {
     ),
     onConsoleSelect: function handleConsoleSelect(account) {
       if (null != account.account) {
-        if (
-          obj5.shouldMigrateToAdAnalyticsInterface(
-            AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
-            "quest_bottom_sheet_console_connect",
-          )
-        ) {
-          const obj3 = {
-            type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
-            adCreativeType: AdCreativeType.AdCreativeType.QUEST,
-            adCreativeId: quest.id,
-            questContentCTA: AnalyticsTypes.QuestContentCTA.VIEW_CONSOLE_CONNECTIONS,
-            surfaceId: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
-            sourceQuestContent,
-            impressionId: closure_5(),
-          };
-          captureAdUserAction.captureAdUserAction(obj3);
-        } else {
-          const obj4 = {
-            questId: quest.id,
-            questContent: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
-            questContentCTA: AnalyticsTypes.QuestContentCTA.VIEW_CONSOLE_CONNECTIONS,
-            sourceQuestContent,
-          };
-          closure_4(obj4);
-        }
-        obj5 = AdAnalyticsInterfaceExperiment;
+        const obj2 = {
+          type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+          adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+          adCreativeId: quest.id,
+          questContentCTA: AnalyticsTypes.QuestContentCTA.VIEW_CONSOLE_CONNECTIONS,
+          surfaceId: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
+          sourceQuestContent,
+          impressionId: closure_4(),
+        };
+        captureAdUserAction.captureAdUserAction(obj2);
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        const obj6 = { screen: constants2.CONNECTIONS };
-        openUserSettings.openUserSettings(obj6);
+        const obj5 = { screen: constants2.CONNECTIONS };
+        openUserSettings.openUserSettings(obj5);
       } else {
-        if (
-          obj12.shouldMigrateToAdAnalyticsInterface(
-            AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
-            "quest_bottom_sheet_console_connect",
-          )
-        ) {
-          const obj8 = {
-            type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
-            adCreativeType: AdCreativeType.AdCreativeType.QUEST,
-            adCreativeId: quest.id,
-            questContentCTA: AnalyticsTypes.QuestContentCTA.CONNECT_CONSOLE,
-            surfaceId: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
-            sourceQuestContent,
-            impressionId: closure_5(),
-          };
-          captureAdUserAction.captureAdUserAction(obj8);
-        } else {
-          const obj = {
-            questId: quest.id,
-            questContent: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
-            questContentCTA: AnalyticsTypes.QuestContentCTA.CONNECT_CONSOLE,
-            sourceQuestContent,
-          };
-          closure_4(obj);
-        }
-        const obj11 = { platformType: account.type, location: "quests", onClose: openQuestBottomSheet };
-        authorizeConnectionDefault(obj11);
-        obj12 = AdAnalyticsInterfaceExperiment;
+        const obj7 = {
+          type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+          adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+          adCreativeId: quest.id,
+          questContentCTA: AnalyticsTypes.QuestContentCTA.CONNECT_CONSOLE,
+          surfaceId: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
+          sourceQuestContent,
+          impressionId: closure_4(),
+        };
+        captureAdUserAction.captureAdUserAction(obj7);
+        const obj8 = { platformType: account.type, location: "quests", onClose: openQuestBottomSheet };
+        authorizeConnectionDefault(obj8);
       }
     },
   });

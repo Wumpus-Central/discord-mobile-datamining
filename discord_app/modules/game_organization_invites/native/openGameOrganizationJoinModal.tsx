@@ -6,5 +6,5 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/openGameOrganizationJoinModal.tsx");
 
 export default function openGameOrganizationJoinModal(code) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12617, dependencyMap.paths), { code });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12649, dependencyMap.paths), { code });
 }

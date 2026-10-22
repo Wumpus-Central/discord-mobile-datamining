@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1087).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 },
   gameIcon: null,
@@ -311,7 +311,7 @@ export default function UserProfileGameFriendActionSheet(user) {
     let tmp = null != application;
     if (tmp) {
       const obj = { application, userDisplayName, userId: user.id };
-      tmp = collapsed(closure_13, obj, application.id);
+      tmp = v65535(closure_13, obj, application.id);
     }
     return tmp;
   });

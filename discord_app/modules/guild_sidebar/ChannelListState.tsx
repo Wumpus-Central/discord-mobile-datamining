@@ -239,9 +239,9 @@ const ChannelRecord = fn(4825);
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7620).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7627).ChannelListGuildActionRow;
 const Constants = fn(1087);
-({ ChannelTypes: closure_30, GuildFeatures: items } = Constants);
+({ ChannelTypes: closure_30, GuildFeatures: closure_31 } = Constants);
 const ChannelFlags = fn(4828).ChannelFlags;
 const Permissions = fn(1098).Permissions;
 let c34 = "placeholder-channel-id";
@@ -275,7 +275,7 @@ const FAVORITES = obj.FAVORITES;
 const RECENTS = obj.RECENTS;
 const UNCATEGORIZED_CHANNELS = obj.UNCATEGORIZED_CHANNELS;
 const FIRST_NAMED_CATEGORY = obj.FIRST_NAMED_CATEGORY;
-items = [String(ChannelListGuildActionRow.GUILD_DIRECTORY)];
+let items = [String(ChannelListGuildActionRow.GUILD_DIRECTORY)];
 let set = new Set(items);
 class ChannelListImpl {
   constructor(arg0, arg1, arg2) {
@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "APP_STATE_UPDATE_WILL_BECOME_ACTIVE",
+      version: "user",
     });
     merged.id = global;
     obj = closure_25;

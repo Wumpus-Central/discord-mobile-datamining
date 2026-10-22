@@ -36,7 +36,7 @@ const View = fn(17).View;
 const AuthStates = fn(1087).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     password: { marginTop: 24 },
@@ -94,7 +94,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               onPress,
               children: tmp5,
             };
-            const tmp9 = collapsed(Pressables.PressableOpacity, obj2);
+            const tmp9 = v65535(Pressables.PressableOpacity, obj2);
             cResult[6] = containerStyle;
             cResult[7] = onPress;
             cResult[8] = tmp5;
@@ -103,7 +103,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp6 = collapsed(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text });
+      const tmp6 = v65535(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text });
       cResult[1] = text;
       cResult[2] = str2;
       cResult[3] = textStyle;
@@ -121,12 +121,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (str2 === undefined) {
         str2 = "text-link";
       }
-      return collapsed(Pressables.PressableOpacity, {
+      return v65535(Pressables.PressableOpacity, {
         style: containerStyle,
         hitSlop: { top: 8, right: 8, bottom: 8 },
         accessibilityRole: "button",
         onPress,
-        children: collapsed(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text }),
+        children: v65535(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text }),
       });
     };
 let closure_13 = tmp3;

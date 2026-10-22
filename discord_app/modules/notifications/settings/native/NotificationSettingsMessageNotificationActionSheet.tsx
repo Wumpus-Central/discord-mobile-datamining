@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserNotificationSettings = fn(1087).UserNotificationSettings;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   header: { padding: 24, paddingTop: 0 },

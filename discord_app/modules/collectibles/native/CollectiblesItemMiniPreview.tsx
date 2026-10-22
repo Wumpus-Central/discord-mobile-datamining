@@ -7,20 +7,20 @@ import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef9374 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef9385 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7632).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7639).isAvatarDecorationRecord;
 const isNameplateRecord = fn(1993).isNameplateRecord;
-const isProfileEffectRecord = fn(7633).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7634).isProfileFrameRecord;
-let closure_8 = fn(8676).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileEffectRecord = fn(7640).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7641).isProfileFrameRecord;
+let closure_8 = fn(8685).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" },
   framePreview: {
@@ -39,7 +39,7 @@ let obj = {
 };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(9349).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9360).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.nameplate = {
   overflow: "hidden",
   borderTopRightRadius: nativeDefault.radii.xs,
@@ -148,7 +148,7 @@ export default noop.memo(
           } else if (isProfileEffectRecord(item)) {
             const _Symbol = Symbol;
             if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj7 = { uri: _modDef9374 };
+              const obj7 = { uri: _modDef9385 };
               cResult[21] = obj7;
               let tmp28 = obj7;
             } else {
@@ -199,7 +199,7 @@ export default noop.memo(
             };
             const items = [tmp30, tmp34];
             obj11.children = items;
-            const tmp41 = collapsed(View, obj11);
+            const tmp41 = v65535(View, obj11);
             cResult[26] = tmp4.profileEffect;
             cResult[27] = tmp30;
             cResult[28] = tmp34;
@@ -294,14 +294,14 @@ export default noop.memo(
           const obj7 = { style: items, children: null };
           const obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
           const obj9 = { source: null, style: null, resizeMode: "cover" };
-          const obj10 = { uri: _modDef9374 };
+          const obj10 = { uri: _modDef9385 };
           obj9.source = obj10;
           obj9.style = tmp.sampleProfile;
           const items1 = [React6(FastImageDefault, obj9)];
           const obj11 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true };
           items1[1] = React6(ProfileEffectDefault, obj11);
           obj8.children = items1;
-          obj7.children = collapsed(View, obj8);
+          obj7.children = v65535(View, obj8);
           return React6(View, obj7);
         } else if (isNameplateRecord(item)) {
           const obj12 = { style: null, children: null };

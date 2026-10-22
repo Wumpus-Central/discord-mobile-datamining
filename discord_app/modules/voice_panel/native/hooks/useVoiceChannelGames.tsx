@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStoresArray = tmp2(504).useStateFromStoresArray(first, tmp10, tmp11);
         const tmp2Result = tmp2(504);
-        const getGamesForAppIds = tmp2(9184).useGetGamesForAppIds(stateFromStoresArray);
+        const getGamesForAppIds = tmp2(9193).useGetGamesForAppIds(stateFromStoresArray);
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [UserStore];
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = cResult[5];
           tmp17 = cResult[6];
         }
-        const tmp2Result3 = tmp2(9184);
+        const tmp2Result3 = tmp2(9193);
         const stateFromStores = tmp2(504).useStateFromStores(tmp16, tmp17);
         if (cResult[7] === getGamesForAppIds) {
           if (cResult[8] === stateFromStores) {

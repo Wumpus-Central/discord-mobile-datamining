@@ -35,7 +35,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items;
     }
   : function useGradientColors() {
-      token = token(5234).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+      token = token(5238).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       let items = [token];
       return noop.useMemo(() => {
         const items = [token, ColorUtils.hexWithOpacity(token, 0)];

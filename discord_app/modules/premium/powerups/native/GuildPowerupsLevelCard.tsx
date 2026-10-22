@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05240_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
@@ -15,14 +15,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildPowerupsConstants = fn(5164);
+const GuildPowerupsConstants = fn(5168);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1087);
 ({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(13374).TIER_CARDS;
+const TIER_CARDS = fn(13410).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   cardContainer: { flex: 1 },
   card: { padding: 0, overflow: "hidden", flex: 1 },
@@ -153,7 +153,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const tmp23 = active ? colors.WHITE : colors.TEXT_MUTED;
                   if (cResult[20] !== tmp23) {
                     const obj3 = { size: "xs", color: tmp23 };
-                    const tmp26 = collapsed(BoostGemIcon.BoostGemIcon, obj3);
+                    const tmp26 = v65535(BoostGemIcon.BoostGemIcon, obj3);
                     cResult[20] = tmp23;
                     cResult[21] = tmp26;
                     let tmp24 = tmp26;
@@ -186,7 +186,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     tmp31 = tmp34;
                   }
                   const obj5 = { style: tmp21, children: tmp24 };
-                  const tmp30 = collapsed(View, obj5);
+                  const tmp30 = v65535(View, obj5);
                   cResult[22] = tmp21;
                   cResult[23] = tmp24;
                   cResult[24] = tmp30;
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const items4 = [,];
               ({ boostContainer: arr5[0], boostContainerBackground: arr5[1] } = tmp4);
               obj6.style = items4;
-              const tmp20 = collapsed(View, obj6);
+              const tmp20 = v65535(View, obj6);
               cResult[14] = tmp4.boostContainer;
               cResult[15] = tmp4.boostContainerBackground;
               cResult[16] = tmp20;
@@ -212,7 +212,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             ({ START: obj2.start, END: obj2.end } = closure_1_8);
             obj11.colors = tmp5;
             obj11.style = tmp11;
-            const tmp16 = collapsed(LinearGradientDefault, obj11);
+            const tmp16 = v65535(LinearGradientDefault, obj11);
             cResult[11] = tmp5;
             cResult[12] = tmp11;
             cResult[13] = tmp16;
@@ -255,12 +255,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         items1[1] = progressStart;
         items1[2] = position === constants.END && tmp.progressEnd;
         obj3.style = items1;
-        const items2 = [collapsed(LinearGradientDefault, obj3), ,];
+        const items2 = [v65535(LinearGradientDefault, obj3), ,];
         const obj4 = { style: null };
         const items3 = [,];
         ({ boostContainer: arr6[0], boostContainerBackground: arr6[1] } = tmp);
         obj4.style = items3;
-        items2[1] = collapsed(View, obj4);
+        items2[1] = v65535(View, obj4);
         const items4 = [tmp.boostContainer];
         let boostContainerActive = active;
         if (active) {
@@ -271,8 +271,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.style = items4;
         const colors = nativeDefault.colors;
         const obj9 = { size: "xs", color: active ? colors.WHITE : colors.TEXT_MUTED };
-        obj5.children = collapsed(BoostGemIcon.BoostGemIcon, obj9);
-        items2[2] = collapsed(View, obj5);
+        obj5.children = v65535(BoostGemIcon.BoostGemIcon, obj9);
+        items2[2] = v65535(View, obj5);
         obj.children = items2;
         return closure_1_11(View, obj);
       }
@@ -327,10 +327,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           mapped = substr.map((perkIcon, index) => {
             const obj2 = { style: closure_1.perkRowStyle, children: null };
             const items = [
-              collapsed(GuildBoostingMarketingUtils.getIconForPerk(perkIcon.perkIcon), {
-                color: iconColor,
-                size: "sm",
-              }),
+              v65535(GuildBoostingMarketingUtils.getIconForPerk(perkIcon.perkIcon), { color: iconColor, size: "sm" }),
             ];
             const obj4 = { color: textColor, style: closure_1.perkText, variant: null, children: null };
             let str = "text-sm/medium";
@@ -339,7 +336,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             obj4.variant = str;
             obj4.children = perkIcon.getCopy();
-            items[1] = collapsed(Text_Text.Text, obj4);
+            items[1] = v65535(Text_Text.Text, obj4);
             obj2.children = items;
             return closure_2_11(View, obj2, "perk-" + perks + "-" + index);
           });
@@ -608,21 +605,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp37 = tmp40;
                     }
                     const obj6 = { style: tmp4.footerContainer, children: tmp30 };
-                    const tmp36 = collapsed(View, obj6);
+                    const tmp36 = v65535(View, obj6);
                     cResult[17] = tmp4.footerContainer;
                     cResult[18] = tmp30;
                     cResult[19] = tmp36;
                     tmp33 = tmp36;
                   }
                   const obj7 = { cost: powerup.cost, status: calculatePowerupCardStatus };
-                  const tmp32 = collapsed(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj7);
+                  const tmp32 = v65535(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj7);
                   cResult[14] = powerup.cost;
                   cResult[15] = calculatePowerupCardStatus;
                   cResult[16] = tmp32;
                   tmp30 = tmp32;
                 }
                 const obj8 = { isActive: tmp18, index };
-                const tmp29 = collapsed(closure_14, obj8);
+                const tmp29 = v65535(closure_14, obj8);
                 cResult[11] = index;
                 cResult[12] = tmp18;
                 cResult[13] = tmp29;
@@ -630,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj9 = { color: str, variant: str2, children: powerup.title };
-            const tmp25 = collapsed(Text_Text.Text, obj9);
+            const tmp25 = v65535(Text_Text.Text, obj9);
             cResult[7] = powerup.title;
             cResult[8] = str;
             cResult[9] = str2;
@@ -639,7 +636,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj17 = { position: MIDDLE, active: tmp7.type !== constants2.INACTIVE, nextActive: tmp17 };
-        const tmp22 = collapsed(closure_13, obj17);
+        const tmp22 = v65535(closure_13, obj17);
         cResult[3] = tmp7.type !== constants2.INACTIVE;
         cResult[4] = MIDDLE;
         cResult[5] = tmp17;
@@ -696,7 +693,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp20 = tmp7.type !== constants2.INACTIVE;
       }
       obj4.nextActive = tmp20;
-      const items1 = [collapsed(closure_13, obj4)];
+      const items1 = [v65535(closure_13, obj4)];
       const obj5 = { style: tmp.contentContainer, children: null };
       let str;
       if (manaTypeConsolidationExperiment) {
@@ -710,17 +707,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.variant = str2;
       obj6.children = powerup.title;
       const items2 = [
-        collapsed(Text_Text.Text, obj6),
-        collapsed(closure_14, { isActive: tmp6.type !== constants2.INACTIVE, index }),
+        v65535(Text_Text.Text, obj6),
+        v65535(closure_14, { isActive: tmp6.type !== constants2.INACTIVE, index }),
       ];
       const obj7 = {
         style: tmp.footerContainer,
-        children: collapsed(GuildPowerupsCardFooter.GuildPowerupsCardFooter, {
+        children: v65535(GuildPowerupsCardFooter.GuildPowerupsCardFooter, {
           cost: powerup.cost,
           status: calculatePowerupCardStatus,
         }),
       };
-      items2[2] = collapsed(View, obj7);
+      items2[2] = v65535(View, obj7);
       obj5.children = items2;
       items1[1] = closure_1_11(View, obj5);
       obj3.children = items1;

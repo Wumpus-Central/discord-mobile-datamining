@@ -255,7 +255,7 @@ function computePermissions(excludeGuildPermissions) {
         id2 = currentUser1.id;
       }
       if (id !== id2) {
-        if (collapsed(tmp4, id)) {
+        if (v65535(tmp4, id)) {
           let flag2 = checkElevated;
           if (checkElevated === undefined) {
             flag2 = true;
@@ -613,7 +613,7 @@ export const getGuildVisualOwnerId = function getGuildVisualOwnerId(guild) {
 export const isRoleHigher = function isRoleHigher(guild, id, guildId, id) {
   let tmp = null == id;
   if (!tmp) {
-    tmp = !collapsed(guild, id);
+    tmp = !v65535(guild, id);
   }
   let tmp4 = !tmp;
   if (tmp) {

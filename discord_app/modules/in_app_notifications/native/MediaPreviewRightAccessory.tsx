@@ -25,15 +25,15 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const ClipViewDefault = ClipView;
 
 const PlatformUtils = ImageWarningIcon(1384);
-const EyeIcon = ImageWarningIcon(7042);
-const ImageWarningIcon2 = ImageWarningIcon(8528);
+const EyeIcon = ImageWarningIcon(7049);
+const ImageWarningIcon2 = ImageWarningIcon(8537);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(4966);
+let createStyles = fn(4969);
 let obj2 = { badge: null, icon: null };
 let size = {
   alignItems: "center",
@@ -49,7 +49,7 @@ let size = {
 obj2.badge = size;
 obj2.icon = { width: 10, height: 10 };
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(4966);
+createStyles = fn(4969);
 let obj3 = { badge: null };
 let size1 = {
   width: 20,
@@ -64,7 +64,7 @@ let size1 = {
 };
 obj3.badge = size1;
 let closure_12 = createStyles.createStyles(obj3);
-createStyles = fn(4966);
+createStyles = fn(4969);
 let obj5 = {
   mediaThumbnailContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
   mediaThumbnail: { width: "100%", height: "100%" },
@@ -103,9 +103,9 @@ obj5.spoilerPill = {
   alignItems: "center",
 };
 let closure_13 = createStyles.createStyles(obj5);
-createStyles = fn(4966);
+createStyles = fn(4969);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
-createStyles = fn(4966);
+createStyles = fn(4969);
 let obj11 = {
   padding: nativeDefault.space.PX_4,
   borderRadius: nativeDefault.radii.xs,
@@ -114,7 +114,7 @@ let obj11 = {
   alignItems: "center",
 };
 let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(13643).RIGHT_ACCESSORY_LEFT_MARGIN },
+  rightAccessoryContainer: { marginLeft: fn(13679).RIGHT_ACCESSORY_LEFT_MARGIN },
 });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -234,7 +234,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { children: null };
                 const items = [children, tmp5, tmp9, tmp18];
                 obj4.children = items;
-                const tmp25 = collapsed(React6, obj4);
+                const tmp25 = v65535(React6, obj4);
                 cResult[12] = children;
                 cResult[13] = tmp5;
                 cResult[14] = tmp9;
@@ -324,7 +324,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = tmp14Result;
       items[3] = closure_1_8(View, obj4);
       obj6.children = items;
-      return collapsed(React6, obj6);
+      return v65535(React6, obj6);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
@@ -638,7 +638,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                                     ({ obscure: obj26.isObscured, isSpoiler: obj26.isSpoiler } = tmp48);
                                     const items3 = [tmp56, tmp60];
                                     obj13.children = items3;
-                                    const tmp67 = collapsed(closure_18, obj13);
+                                    const tmp67 = v65535(closure_18, obj13);
                                     cResult[37] = tmp48.isSpoiler;
                                     cResult[38] = tmp48.obscure;
                                     cResult[39] = tmp56;
@@ -885,7 +885,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     items4[1] = tmp24Result;
                     obj16.children = items4;
-                    obj15.children = collapsed(closure_18, obj16);
+                    obj15.children = v65535(closure_18, obj16);
                     return closure_1_8(View, obj15);
                   }
                 }
@@ -957,7 +957,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: tmp4.container, children: null };
         const items1 = [tmp10, tmp13];
         obj4.children = items1;
-        const tmp20 = collapsed(View, obj4);
+        const tmp20 = v65535(View, obj4);
         cResult[7] = tmp4.container;
         cResult[8] = tmp10;
         cResult[9] = tmp13;
@@ -996,7 +996,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = closure_1_8(closure_19, { previewableMedia, size: 56, message });
       const items1 = [closure_1_8(ClipViewDefault, obj2), closure_1_8(closure_17, { total: totalMediaCount })];
       obj.children = items1;
-      return collapsed(View, obj);
+      return v65535(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1045,7 +1045,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp4;
     };
 ReactCompilerGating = fn(558);
-let obj12 = { rightAccessoryContainer: { marginLeft: fn(13643).RIGHT_ACCESSORY_LEFT_MARGIN } };
+let obj12 = { rightAccessoryContainer: { marginLeft: fn(13679).RIGHT_ACCESSORY_LEFT_MARGIN } };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

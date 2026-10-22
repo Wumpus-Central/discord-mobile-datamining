@@ -27,7 +27,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11982);
+const RedesignChannelListConstants = fn(12003);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: c10,
@@ -67,12 +67,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       return isThemeDarkResult;
     };
 fn(558);
-let createStyles = fn(4966);
+let createStyles = fn(4969);
 let closure_17 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(4966);
+createStyles = fn(4969);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = {
-    bannerWrapper: { width: "100%", maxHeight: arg0 * collapsed, aspectRatio, overflow: "hidden" },
+    bannerWrapper: { width: "100%", maxHeight: arg0 * v65535, aspectRatio, overflow: "hidden" },
     guildBanner: { left: "50%", top: "50%" },
     bannerOverlay: null,
   };
@@ -82,7 +82,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(4966);
+createStyles = fn(4969);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -91,7 +91,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(4966);
+createStyles = fn(4969);
 let closure_19 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 ReactCompilerGating = fn(558);
 const __initData = {

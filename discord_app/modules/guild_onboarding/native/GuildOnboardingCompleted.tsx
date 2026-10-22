@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 400;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   screen: { flex: 1, position: "relative" },
   container: {
@@ -545,13 +545,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             substr.map((role) => {
               const obj = {
                 style: role.role,
-                children: collapsed(UserProfileRolesCard.RoleItem, {
+                children: v65535(UserProfileRolesCard.RoleItem, {
                   role,
                   guildId: stateFromStores1.id,
                   disableInteraction: true,
                 }),
               };
-              return collapsed(React4, obj, role.id);
+              return v65535(React4, obj, role.id);
             }),
           ];
           let tmp21Result3 = null;

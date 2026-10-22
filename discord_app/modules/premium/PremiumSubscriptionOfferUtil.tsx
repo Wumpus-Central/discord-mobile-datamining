@@ -15,12 +15,12 @@ import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
 
 require = fn;
 function getDiscountInfo(active_discount_id) {
-  if (collapsed !== active_discount_id) {
+  if (v65535 !== active_discount_id) {
     if (__initData !== active_discount_id) {
       if (closure_1_19 === active_discount_id) {
         const obj2 = { duration: 1, percentage: 10, discountId: active_discount_id };
         return obj2;
-      } else if (constants2 === active_discount_id) {
+      } else if (closure_1_20 === active_discount_id) {
         const obj3 = { duration: 1, percentage: 50, discountId: active_discount_id };
         return obj3;
       } else {
@@ -236,9 +236,9 @@ ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFetchChurnUserDiscountOffer(arg0) {
       const cResult = c.c(8);
-      let tmp4 = useDiscountOfferDefault(collapsed);
+      let tmp4 = useDiscountOfferDefault(v65535);
       const tmp5 = useDiscountOfferDefault(closure_1_19);
-      const tmp6 = useDiscountOfferDefault(constants2);
+      const tmp6 = useDiscountOfferDefault(closure_1_20);
       const tmp7 = useDiscountOfferDefault(closure_1_11);
       [tmp9, require] = noop.useState(false);
       const tmp8 = _slicedToArray(noop.useState(false), 2);
@@ -333,9 +333,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp13 = _slicedToArray(noop.useState(null), 2);
     }
   : function useFetchChurnUserDiscountOffer(arg0) {
-      let tmp2 = useDiscountOfferDefault(collapsed);
+      let tmp2 = useDiscountOfferDefault(v65535);
       const tmp3 = useDiscountOfferDefault(closure_1_19);
-      const tmp4 = useDiscountOfferDefault(constants2);
+      const tmp4 = useDiscountOfferDefault(closure_1_20);
       const tmp5 = useDiscountOfferDefault(closure_1_11);
       [tmp7, require] = noop.useState(false);
       const tmp6 = _slicedToArray(noop.useState(false), 2);

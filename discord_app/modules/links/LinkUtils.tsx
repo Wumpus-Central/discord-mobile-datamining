@@ -8,7 +8,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const Constants = fn(1087);
 const ME = Constants.ME;
 const Permissions = Constants.Permissions;
-const CONVERSATION_QUERY_PARAM = fn(5589).CONVERSATION_QUERY_PARAM;
+const CONVERSATION_QUERY_PARAM = fn(5593).CONVERSATION_QUERY_PARAM;
 const mapped = Array.from(fn(4828).StaticChannelRoutes).map((item) => RegexUtilsDefault.escape(item));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");

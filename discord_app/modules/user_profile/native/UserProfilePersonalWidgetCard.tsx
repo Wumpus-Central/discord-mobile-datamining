@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05240_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05244_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import GifTagDefault from "GifTag.tsx";
@@ -16,7 +16,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-const native = ThemeContextProvider(5020);
+const native = ThemeContextProvider(5023);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -26,7 +26,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
 const locations = [0, 0.4, 1];
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { coverContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" }, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" };
 obj2.coverContent = { gap: nativeDefault.space.PX_4 };
@@ -70,7 +70,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Person
         }
       }
       const obj3 = { variant, color, lineClamp, onTextLayout, children: tmp5 };
-      const tmp9 = collapsed(Text_Text.Text, obj3);
+      const tmp9 = v65535(Text_Text.Text, obj3);
       cResult[4] = color;
       cResult[5] = lineClamp;
       cResult[6] = onTextLayout;
@@ -134,7 +134,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Person
   } else {
     if (cResult[6] !== cResult[5]) {
       const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: tmp8 };
-      const tmp13 = collapsed(Text_Text.Text, obj4);
+      const tmp13 = v65535(Text_Text.Text, obj4);
       cResult[6] = tmp8;
       cResult[7] = tmp13;
       let tmp11 = tmp13;
@@ -146,7 +146,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Person
       }
     }
     const obj5 = { hitSlop, onPress: tmp6, accessibilityRole: "button", accessibilityState: tmp7, children: tmp11 };
-    const tmp18 = collapsed(hasOwnProperty, obj5);
+    const tmp18 = v65535(hasOwnProperty, obj5);
     cResult[8] = tmp6;
     cResult[9] = tmp7;
     cResult[10] = tmp11;
@@ -171,9 +171,9 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Person
   };
   const intl = util.intl;
   let t = util.t;
-  t = collapsed(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) });
+  t = v65535(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) });
   obj2.children = t;
-  collapsed(hasOwnProperty, obj2);
+  v65535(hasOwnProperty, obj2);
   const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) };
 });
 ReactCompilerGating = fn(558);
@@ -321,7 +321,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
       let tmp7 = null;
       if ("" !== section.title) {
         const obj2 = { variant: "heading-xl/semibold", color: "text-strong", maxLines: 2, children: section.title };
-        tmp7 = collapsed(closure_16, obj2);
+        tmp7 = v65535(closure_16, obj2);
       }
       cResult[3] = section.title;
       cResult[4] = tmp7;
@@ -333,7 +333,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
       let tmp11 = null;
       if ("" !== section.subtitle) {
         const obj3 = { variant: "text-sm/medium", color: "text-default", maxLines: 3, children: section.subtitle };
-        tmp11 = collapsed(closure_16, obj3);
+        tmp11 = v65535(closure_16, obj3);
       }
       cResult[5] = section.subtitle;
       cResult[6] = tmp11;
@@ -375,7 +375,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
                       const items = [tmp19, tmp28, tmp14, tmp35];
                       obj5.children = items;
                       obj4.children = closure_1_11(React5, obj5);
-                      tmp = collapsed(ThemeContextProvider, obj4);
+                      tmp = v65535(ThemeContextProvider, obj4);
                       cResult[22] = tmp14;
                       coverContainer = coverContainer.coverContainer;
                       cResult[23] = coverContainer;
@@ -387,7 +387,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
                     let tmp36 = null;
                     if (showGifTag) {
                       const obj6 = { style: coverContainer.gifTag };
-                      tmp36 = collapsed(GifTagDefault, obj6);
+                      tmp36 = v65535(GifTagDefault, obj6);
                     }
                     cResult[19] = showGifTag;
                     cResult[20] = coverContainer.gifTag;
@@ -399,7 +399,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
                 if (null != source) {
                   if ("" !== section.title) {
                     const obj7 = { colors, locations, style: timestampProducer.absoluteFill, pointerEvents: "none" };
-                    tmp29 = collapsed(LinearGradientDefault, obj7);
+                    tmp29 = v65535(LinearGradientDefault, obj7);
                   } else {
                     tmp29 = null;
                   }
@@ -417,11 +417,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
             const intl = util.intl;
             obj8.accessibilityLabel = intl.string(util.t.MxXgrL);
             const obj9 = { source, style: timestampProducer.absoluteFill, resizeMode: "cover" };
-            obj8.children = collapsed(FastImageDefault, obj9);
-            let tmp20Result = collapsed(hasOwnProperty, obj8);
+            obj8.children = v65535(FastImageDefault, obj9);
+            let tmp20Result = v65535(hasOwnProperty, obj8);
           } else {
             const obj10 = { source, style: timestampProducer.absoluteFill, resizeMode: "cover" };
-            tmp20Result = collapsed(FastImageDefault, obj10);
+            tmp20Result = v65535(FastImageDefault, obj10);
           }
           cResult[11] = canToggleAnimation;
           cResult[12] = source;
@@ -463,13 +463,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
   let tmp6 = null;
   if ("" !== section.title) {
     const obj2 = { variant: "heading-xl/semibold", color: "text-strong", maxLines: 2, children: section.title };
-    tmp6 = collapsed(closure_16, obj2);
+    tmp6 = v65535(closure_16, obj2);
   }
   const items1 = [tmp6, ];
   let tmp9 = null;
   if ("" !== section.subtitle) {
     const obj3 = { variant: "text-sm/medium", color: "text-default", maxLines: 3, children: section.subtitle };
-    tmp9 = collapsed(closure_16, obj3);
+    tmp9 = v65535(closure_16, obj3);
   }
   items1[1] = tmp9;
   obj.children = items1;
@@ -483,8 +483,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
       const intl = util.intl;
       obj6.accessibilityLabel = intl.string(util.t.MxXgrL);
       const obj7 = { source, style: timestampProducer.absoluteFill, resizeMode: "cover" };
-      obj6.children = collapsed(FastImageDefault, obj7);
-      let tmp24Result = collapsed(hasOwnProperty, obj6);
+      obj6.children = v65535(FastImageDefault, obj7);
+      let tmp24Result = v65535(hasOwnProperty, obj6);
       let tmp15 = timestampProducer;
       let tmp14 = importDefault;
     } else {
@@ -492,14 +492,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
       const obj8 = { source, style: null, resizeMode: "cover" };
       tmp15 = timestampProducer;
       obj8.style = timestampProducer.absoluteFill;
-      tmp24Result = collapsed(FastImageDefault, obj8);
+      tmp24Result = v65535(FastImageDefault, obj8);
     }
     const items2 = [tmp24Result, , , ];
     let tmp24Result4 = null;
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = collapsed(tmp14(5240), obj9);
+        tmp24Result4 = v65535(tmp14(5244), obj9);
       } else {
         tmp24Result4 = null;
       }
@@ -509,12 +509,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
     let tmp24Result5 = null;
     if (showGifTag) {
       const obj10 = { style: tmp.gifTag };
-      tmp24Result5 = collapsed(tmp14(8449), obj10);
+      tmp24Result5 = v65535(tmp14(8458), obj10);
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
     obj4.children = closure_1_11(React5, obj5);
-    tmp24Result6 = collapsed(native.ThemeContextProvider, obj4);
+    tmp24Result6 = v65535(native.ThemeContextProvider, obj4);
   }
   return tmp24Result6;
 });
@@ -540,7 +540,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function FieldR
               let tmp19 = null;
               if ("" !== field.title) {
                 const obj2 = { variant: "text-sm/medium", color: "text-default", maxLines: 2, children: field.title };
-                tmp19 = collapsed(closure_16, obj2);
+                tmp19 = v65535(closure_16, obj2);
               }
               cResult[9] = field.title;
               cResult[10] = tmp19;
@@ -552,7 +552,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function FieldR
               let tmp23 = null;
               if ("" !== field.description) {
                 const obj3 = { variant: "text-xs/medium", color: "text-subtle", maxLines: 4, children: field.description };
-                tmp23 = collapsed(closure_16, obj3);
+                tmp23 = v65535(closure_16, obj3);
               }
               cResult[11] = field.description;
               cResult[12] = tmp23;
@@ -608,7 +608,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function FieldR
         let tmp15 = null;
         if (showGifTag) {
           const obj7 = { style: tmp4.gifTagSmall };
-          tmp15 = collapsed(GifTagDefault, obj7);
+          tmp15 = v65535(GifTagDefault, obj7);
         }
         items2[1] = tmp15;
         obj6.children = items2;
@@ -626,7 +626,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function FieldR
   let tmp7 = null;
   if (null != source) {
     const obj8 = { source, style: tmp4.fieldImage, resizeMode: "cover" };
-    tmp7 = collapsed(FastImageDefault, obj8);
+    tmp7 = v65535(FastImageDefault, obj8);
   }
   cResult[0] = source;
   cResult[1] = tmp4.fieldImage;
@@ -643,7 +643,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function FieldR
   ({ showGifTag, canToggleAnimation, toggleAnimation } = tmp2);
   if (null != source) {
     const obj = { source, style: tmp.fieldImage, resizeMode: "cover" };
-    tmp3 = collapsed(FastImageDefault, obj);
+    tmp3 = v65535(FastImageDefault, obj);
   }
   const obj2 = { style: tmp.fieldRow, children: null };
   let tmp7Result = tmp3;
@@ -657,7 +657,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function FieldR
       let tmp13 = null;
       if (showGifTag) {
         const obj4 = { style: tmp.gifTagSmall };
-        tmp13 = collapsed(GifTagDefault, obj4);
+        tmp13 = v65535(GifTagDefault, obj4);
       }
       items[1] = tmp13;
       obj3.children = items;
@@ -669,13 +669,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function FieldR
   let tmp16 = null;
   if ("" !== field.title) {
     const obj6 = { variant: "text-sm/medium", color: "text-default", maxLines: 2, children: field.title };
-    tmp16 = collapsed(closure_16, obj6);
+    tmp16 = v65535(closure_16, obj6);
   }
   const items2 = [tmp16, ];
   let tmp19 = null;
   if ("" !== field.description) {
     const obj7 = { variant: "text-xs/medium", color: "text-subtle", maxLines: 4, children: field.description };
-    tmp19 = collapsed(closure_16, obj7);
+    tmp19 = v65535(closure_16, obj7);
   }
   items2[1] = tmp19;
   obj5.children = items2;
@@ -725,7 +725,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Fields
       cResult[3] = mapped;
     }
     const fn = function b(field) {
-      return collapsed(closure_20, { userId, field, disableInteraction }, field.key);
+      return v65535(closure_20, { userId, field, disableInteraction }, field.key);
     };
     cResult[4] = disableInteraction;
     cResult[5] = userId;
@@ -739,7 +739,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Fields
   if (0 !== section.fields.length) {
     const obj = { style: tmp.fieldsContainer, children: null };
     const fields = section.fields;
-    obj.children = fields.map((field) => collapsed(closure_20, { userId, field, disableInteraction }, field.key));
+    obj.children = fields.map((field) => v65535(closure_20, { userId, field, disableInteraction }, field.key));
     tmp2 = closure_10(closure_7, obj);
   }
   return tmp2;
@@ -776,7 +776,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
     }
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp13 = closure_10(tmp(9383).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+      const tmp13 = closure_10(tmp(9394).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
       cResult[6] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -866,10 +866,10 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
     type = type.type;
     if ("cover" === type) {
       const obj2 = { userId, section: type, disableInteraction };
-      return collapsed(closure_19, obj2, arg1);
+      return v65535(closure_19, obj2, arg1);
     } else if ("fields" === type) {
       const obj = { userId, section: type, disableInteraction };
-      return collapsed(closure_21, obj, arg1);
+      return v65535(closure_21, obj, arg1);
     } else {
       return null;
     }
@@ -891,7 +891,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
   let obj2 = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   let obj = userId(504);
   const tmp5 = disableInteraction;
-  obj2.titleLeadingIcon = closure_10(userId(9383).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj2.titleLeadingIcon = closure_10(userId(9394).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj2.title = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -899,7 +899,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
   }
   if (tmp4Result) {
     const obj3 = { userId, widget };
-    tmp4Result = closure_10(tmp5(14282), obj3);
+    tmp4Result = closure_10(tmp5(14325), obj3);
   }
   obj2.trailingAction = tmp4Result;
   const obj4 = { style: tmp.sectionsContainer, children: null };
@@ -909,10 +909,10 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
       type = type.type;
       if ("cover" === type) {
         const obj2 = { userId, section: type, disableInteraction };
-        return collapsed(closure_19, obj2, index);
+        return v65535(closure_19, obj2, index);
       } else if ("fields" === type) {
         const obj = { userId, section: type, disableInteraction };
-        return collapsed(closure_21, obj, index);
+        return v65535(closure_21, obj, index);
       } else {
         return null;
       }
@@ -926,7 +926,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
   items1[1] = tmp4Result2;
   obj4.children = items1;
   obj2.children = closure_11(closure_7, obj4);
-  return closure_10(disableInteraction(7280), obj2);
+  return closure_10(disableInteraction(7287), obj2);
 });
 ReactCompilerGating = fn(558);
 let obj8 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 };
@@ -939,8 +939,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     const obj2 = { children: null };
     const obj3 = {};
     const merged = Object.assign(arg0);
-    obj2.children = collapsed(closure_22, obj3);
-    const tmp10 = collapsed(PersonalWidgetExpandCollapseContext.PersonalWidgetExpandCollapseProvider, obj2);
+    obj2.children = v65535(closure_22, obj3);
+    const tmp10 = v65535(PersonalWidgetExpandCollapseContext.PersonalWidgetExpandCollapseProvider, obj2);
     cResult[0] = arg0;
     cResult[1] = tmp10;
     let tmp4 = tmp10;
@@ -951,6 +951,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
 }) : (function UserProfilePersonalWidgetCard(arg0) {
   const obj = { children: null };
   const merged = Object.assign(arg0);
-  obj.children = collapsed(closure_22, {});
-  return collapsed(PersonalWidgetExpandCollapseContext.PersonalWidgetExpandCollapseProvider, obj);
+  obj.children = v65535(closure_22, {});
+  return v65535(PersonalWidgetExpandCollapseContext.PersonalWidgetExpandCollapseProvider, obj);
 });

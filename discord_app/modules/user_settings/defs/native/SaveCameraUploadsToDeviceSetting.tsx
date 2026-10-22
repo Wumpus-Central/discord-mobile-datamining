@@ -7,7 +7,7 @@ import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSaveCameraUploadsToDeviceValue() {
       const cResult = c.c(2);
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["99tBAC"]);
   },
-  parent: fn(8308).MobileUserSettings.CHAT,
+  parent: fn(8317).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useSaveCameraUploadsToDeviceValue() {
         const cResult = c.c(2);

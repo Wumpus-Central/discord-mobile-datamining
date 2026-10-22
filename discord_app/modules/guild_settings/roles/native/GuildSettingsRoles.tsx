@@ -38,7 +38,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(4876).isEveryoneRole;
-let closure_15 = fn(18936).GuildSettingsRoleEditSections;
+let closure_15 = fn(19003).GuildSettingsRoleEditSections;
 const Constants = fn(1087);
 ({
   GuildSettingsSections: closure_16,
@@ -49,7 +49,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { flex: 1 },
   scrollContainer: { paddingHorizontal: 12 },
@@ -1376,7 +1376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { title: null };
         const intl = util.intl;
         obj2.title = intl.formatToPlainString(util.t["38N3Vz"], { numRoles: "" + roleData.length });
-        const items1 = [constants2(TableRowGroup.TableRowGroupTitle, obj2)];
+        const items1 = [closure_2_20(TableRowGroup.TableRowGroupTitle, obj2)];
         let tmpResult = null;
         if (!first) {
           tmpResult = null;
@@ -1393,7 +1393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj4.onPress = callback4;
             obj4.style = closure_1.reorderButton;
             const obj5 = { color: nativeDefault.colors.TEXT_LINK, size: "sm" };
-            const items2 = [constants2(ArrowsUpDownIcon.ArrowsUpDownIcon, obj5)];
+            const items2 = [closure_2_20(ArrowsUpDownIcon.ArrowsUpDownIcon, obj5)];
             const obj6 = {
               style: closure_1.reorderButtonText,
               variant: "text-sm/medium",
@@ -1402,7 +1402,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl3 = util.intl;
             obj6.children = intl3.string(util.t["0dOFq+"]);
-            items2[1] = constants2(Text_Text.Text, obj6);
+            items2[1] = closure_2_20(Text_Text.Text, obj6);
             obj4.children = items2;
             tmpResult = guild(Pressables.PressableOpacity, obj4);
           }
@@ -1420,7 +1420,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl4 = util.intl;
           obj7.children = intl4.string(util.t.nHcwVl);
-          tmp6Result = constants2(Text_Text.Text, obj7);
+          tmp6Result = closure_2_20(Text_Text.Text, obj7);
         }
         children[1] = tmp6Result;
         return guild(timestampProducer, { children });
@@ -1447,19 +1447,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl4 = util.intl;
           obj5.children = intl4.string(util.t["1ydhVp"]);
-          obj3.children = constants2(Text_Text.Text, obj5);
-          const items1 = [constants2(timestampProducer, obj3)];
+          obj3.children = closure_2_20(Text_Text.Text, obj5);
+          const items1 = [closure_2_20(timestampProducer, obj3)];
           const obj6 = { style: closure_1.divider };
-          items1[1] = constants2(timestampProducer, obj6);
+          items1[1] = closure_2_20(timestampProducer, obj6);
           obj2.children = items1;
           let tmpResult = guild(closure_2_22, obj2);
         } else {
           const obj = { style: closure_1.emptySubheaderContainer, children: null };
           const obj7 = {
             style: closure_1.emptyIlloContainer,
-            children: constants2(MemberRolesAbstractUI.MemberRolesAbstractUI, {}),
+            children: closure_2_20(MemberRolesAbstractUI.MemberRolesAbstractUI, {}),
           };
-          const items2 = [constants2(timestampProducer, obj7), ,];
+          const items2 = [closure_2_20(timestampProducer, obj7), ,];
           const obj8 = { style: closure_1.emptySubheaderBody, children: null };
           const obj9 = {
             style: closure_1.subheader,
@@ -1469,7 +1469,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = util.intl;
           obj9.children = intl.string(util.t.ALlnbi);
-          const items3 = [constants2(Text_Text.Heading, obj9), ,];
+          const items3 = [closure_2_20(Text_Text.Heading, obj9), ,];
           const obj10 = {
             style: closure_1.subheaderBody,
             variant: "text-sm/medium",
@@ -1478,18 +1478,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl2 = util.intl;
           obj10.children = intl2.string(util.t["1ydhVp"]);
-          items3[1] = constants2(Text_Text.Text, obj10);
+          items3[1] = closure_2_20(Text_Text.Text, obj10);
           const obj11 = { style: closure_1.subheaderButton, children: null };
           const obj12 = { text: null, onPress: null };
           const intl3 = util.intl;
           obj12.text = intl3.string(util.t.JZZjQK);
           obj12.onPress = callback1;
-          obj11.children = constants2(components_Button_Button.Button, obj12);
-          items3[2] = constants2(timestampProducer, obj11);
+          obj11.children = closure_2_20(components_Button_Button.Button, obj12);
+          items3[2] = closure_2_20(timestampProducer, obj11);
           obj8.children = items3;
           items2[1] = guild(timestampProducer, obj8);
           const obj13 = { style: closure_1.divider };
-          items2[2] = constants2(timestampProducer, obj13);
+          items2[2] = closure_2_20(timestampProducer, obj13);
           obj.children = items2;
           tmpResult = guild(timestampProducer, obj);
         }
@@ -1514,8 +1514,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               isLastRole: true,
               isFirstRole: true,
             };
-            obj2.children = constants2(GuildSettingsRoleItemDefault, obj3);
-            return constants2(timestampProducer, obj2);
+            obj2.children = closure_2_20(GuildSettingsRoleItemDefault, obj3);
+            return closure_2_20(timestampProducer, obj2);
           }
         }
         return null;
@@ -1660,7 +1660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj8 = {
             style: tmp.emptyRolesIcon,
             size: tmp3(tmp4[46]).Icon.Sizes.LARGE,
-            source: require("../../../../../_runtime/metro/08952__.js"),
+            source: require("../../../../../_runtime/metro/08961__.js"),
           };
           obj7.leading = tmp37(tmp3(tmp4[46]).Icon, obj8);
           let obj9 = { variant: "text-md/semibold", color: "interactive-text-default", children: null };

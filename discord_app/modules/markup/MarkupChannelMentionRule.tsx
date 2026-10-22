@@ -160,7 +160,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
           obj4.content = items3;
           let obj11 = obj4;
         } else if (null != url) {
-          const obj9 = { type: "link", content: null, target: null, title: "unicodeVersion" };
+          const obj9 = { type: "link", content: null, target: null, title: "ix" };
           const obj10 = { type: "text", content: url };
           const items4 = [obj10];
           obj9.content = items4;
@@ -398,7 +398,7 @@ obj.channelOrMessageUrl = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "unicodeVersion" };
+      const obj = { type: "link", content: null, target: null, title: "ix" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -458,7 +458,7 @@ let obj3 = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "unicodeVersion" };
+      const obj = { type: "link", content: null, target: null, title: "ix" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -532,7 +532,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "unicodeVersion" };
+    const obj = { type: "link", content: null, target: tmp, title: "ix" };
     const items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

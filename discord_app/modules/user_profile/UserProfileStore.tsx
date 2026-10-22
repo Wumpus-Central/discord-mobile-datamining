@@ -488,7 +488,7 @@ function handleProfileFetch(arg0) {
       termsOfServiceUrl: null,
       privacyPolicyUrl: null,
     };
-    let obj5 = {
+    let obj2 = {
       id: null,
       primarySkuId: null,
       customInstallUrl: null,
@@ -512,7 +512,9 @@ function handleProfileFetch(arg0) {
     found3 = mapped2.filter(set(tmp36[14]).isNotNullish);
   }
   obj.widgets = found3;
-  ({ wishlist_settings: obj2.wishlistSettings, private: obj2.private } = userProfile);
+  obj.wishlistSettings = userProfile.wishlist_settings;
+  obj.profileReadState = set(date1[22]).parseProfileReadState(userProfile.profile_read_state);
+  obj.private = userProfile.private;
   const result5 = map1.set(userProfile.user.id, obj);
   checkUserProfileCollectiblesExpiration(userProfile.user.id);
   if (null != userProfile.guild_member_profile) {
@@ -551,6 +553,7 @@ function handleProfileFetch(arg0) {
     userProfile = userProfile.guild_member_profile.guild_id;
     checkUserProfileCollectiblesExpiration(userProfile.user.id, userProfile);
   }
+  let obj4 = set(date1[22]);
   tmp35 = date;
 }
 function handleProfileFetchStart(withMutualFriends) {
@@ -599,7 +602,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "code",
+      fetchError: "unicodeVersion",
     };
     value4 = obj;
   }
@@ -957,6 +960,20 @@ prototype["getWishlistSettings"] = function getWishlistSettings(userId, wishlist
     const wishlistSettings = value.wishlistSettings;
     if (wishlistSettings != null) {
       tmp2 = wishlistSettings[wishlistId];
+    }
+  }
+  if (tmp2 == null) {
+    tmp2 = null;
+  }
+  return tmp2;
+};
+prototype["getProfileReadStateSectionAckedAt"] = function getProfileReadStateSectionAckedAt(arg0, arg1) {
+  value = map1.get(arg0);
+  let tmp2;
+  if (value != null) {
+    const profileReadState = value.profileReadState;
+    if (profileReadState != null) {
+      tmp2 = profileReadState[arg1];
     }
   }
   if (tmp2 == null) {

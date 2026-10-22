@@ -342,8 +342,8 @@ export { RejectionReason };
 export { trackEntryPoint };
 export { isGameDisabled };
 export { gameIsAcceptable };
-export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
-  const game = GameStore.getGame(gameId);
+export const gameIdIsAcceptable = function gameIdIsAcceptable(arg0) {
+  const game = GameStore.getGame(arg0);
   if (null == game) {
     const items = [obj.NoMatch];
     let arr = items;

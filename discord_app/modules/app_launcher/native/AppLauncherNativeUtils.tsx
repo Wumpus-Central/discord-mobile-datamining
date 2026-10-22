@@ -17,7 +17,7 @@ require = fn;
 const AppLauncherNativeConstants = fn(1504);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const BuiltInSectionId = fn(5963).BuiltInSectionId;
+const BuiltInSectionId = fn(5970).BuiltInSectionId;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()

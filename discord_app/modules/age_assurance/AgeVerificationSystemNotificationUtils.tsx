@@ -7,12 +7,7 @@ require = fn;
 const MessageEmbedTypes = fn(1087).MessageEmbedTypes;
 const obj = { CTAS: "ctas", CONTENT_TYPE: "content_type" };
 let obj2 = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen", REQUEST_MANUAL_REVIEW: "request_manual_review" };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationSystemNotificationUtils.tsx");
-
-export const AgeVerificationSystemNotificationEmbedKeys = obj;
-export const AgeVerificationSystemNotificationCtaTypes = obj2;
-export const AgeVerificationSystemNotificationContentType = {
+const obj3 = {
   VERIFIED_ADULT: "verified_adult",
   VERIFIED_TEEN: "verified_teen",
   ERROR: "error",
@@ -20,7 +15,14 @@ export const AgeVerificationSystemNotificationContentType = {
   ID_FAILED: "id_failed",
   UNDERAGE: "underage",
   MANUAL_REVIEW_SUBMITTED: "manual_review_submitted",
+  TNS_SET_UNCONFIRMED: "tns_set_unconfirmed",
 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationSystemNotificationUtils.tsx");
+
+export const AgeVerificationSystemNotificationEmbedKeys = obj;
+export const AgeVerificationSystemNotificationCtaTypes = obj2;
+export const AgeVerificationSystemNotificationContentType = obj3;
 export const isAgeVerificationMessageWithRetryCta = function isAgeVerificationMessageWithRetryCta(channel_id, id) {
   const message = MessageStore.getMessage(channel_id, id);
   if (null != message) {
@@ -66,6 +68,30 @@ export const isAgeVerificationMessageWithManualReviewCta = function isAgeVerific
               result = obj2.isManualAgeAssuranceFallbackEnabled("isAgeVerificationMessageWithManualReviewCta");
             }
             return result;
+          }
+        }
+      }
+    }
+  }
+  return false;
+};
+export const isAgeVerificationMessageWithConfirmAgeCta = function isAgeVerificationMessageWithConfirmAgeCta(
+  channel_id,
+  id,
+) {
+  const message = MessageStore.getMessage(channel_id, id);
+  if (null != message) {
+    if (null != message.embeds) {
+      if (0 !== message.embeds.length) {
+        if (null != message.embeds[0].fields) {
+          if (message.embeds[0].type === MessageEmbedTypes.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
+            const fields = message.embeds[0].fields;
+            const found = fields.find((rawName) => rawName.rawName === constants.CONTENT_TYPE);
+            let rawValue;
+            if (found != null) {
+              rawValue = found.rawValue;
+            }
+            return rawValue === obj3.TNS_SET_UNCONFIRMED;
           }
         }
       }

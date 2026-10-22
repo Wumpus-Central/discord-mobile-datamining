@@ -243,7 +243,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
   }
 };
 const GUILD_VOCAL_CHANNEL_TYPES = fn(4825).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6357);
+let Constants = fn(6364);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1087);
 ({
@@ -273,6 +273,13 @@ if (str2.includes(".")) {
   }
   tmp5 = str2;
   obj2 = /^\d+$/;
+}
+function transformBigFlag(permissions) {
+  let str = permissions;
+  if (typeof permissions !== "bigint") {
+    str = permissions.toString();
+  }
+  return str;
 }
 function transformVoiceState(arg0, id, userId) {
   userId = userId.userId;
@@ -315,6 +322,45 @@ export const containsSameValues = function containsSameValues(arg0, arg1) {
   return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
 };
 export { validateOrigin };
+export { transformBigFlag };
+export const transformRole = function transformRole(id) {
+  const obj = {
+    id: id.id,
+    name: id.name,
+    color: id.color,
+    colors: null,
+    hoist: null,
+    position: null,
+    permissions: null,
+    managed: null,
+    mentionable: null,
+    icon: null,
+    unicode_emoji: null,
+    tags: null,
+    flags: null,
+  };
+  let colors = id.colors;
+  if (colors == null) {
+    const obj2 = { primary_color: id.color, secondary_color: null, tertiary_color: null };
+    colors = obj2;
+  }
+  obj.colors = colors;
+  ({ hoist: obj.hoist, position: obj.position, permissions } = id);
+  let str = permissions;
+  if (typeof permissions !== "bigint") {
+    str = permissions.toString();
+  }
+  obj.permissions = str;
+  ({
+    managed: obj.managed,
+    mentionable: obj.mentionable,
+    icon: obj.icon,
+    unicodeEmoji: obj.unicode_emoji,
+    tags: obj.tags,
+    flags: obj.flags,
+  } = id);
+  return obj;
+};
 export const transformChannel = function transformChannel(channel, result) {
   let nSFW = channel;
   closure_1 = result;
@@ -372,7 +418,7 @@ export const transformChannel = function transformChannel(channel, result) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(5969).getName(dependencyMap, id.id, user),
+            nick: closure_1(5976).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -381,7 +427,7 @@ export const transformChannel = function transformChannel(channel, result) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9222)(user);
+          obj.user = closure_1(9231)(user);
           return obj;
         }
       });

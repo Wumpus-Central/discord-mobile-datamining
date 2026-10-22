@@ -61,7 +61,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             const obj2 = {
               titleText: str,
               titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(
-                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 7934 : 8486)),
+                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 7942 : 8495)),
               ),
               subtitleText: null,
               descriptionText: null,

@@ -57,9 +57,9 @@ export const canBotScopeReadMessages = function canBotScopeReadMessages(socket, 
     );
   }
 };
-export const validateBotScopeHasGuildAccess = function validateBotScopeHasGuildAccess(context, guild_id) {
-  if (isPostMessageSocketDefault(context)) {
-    if (guild_id !== getGuildIdForEmbeddedSurfaceDefault(context.context.surface)) {
+export const validateBotScopeHasGuildAccess = function validateBotScopeHasGuildAccess(socket, guild_id) {
+  if (isPostMessageSocketDefault(socket)) {
+    if (guild_id !== getGuildIdForEmbeddedSurfaceDefault(socket.context.surface)) {
       const obj2 = { errorCode: constants3.INVALID_PERMISSIONS };
       const tmp14 = new RPCErrorDefault(obj2, "Guild not in embedded context");
       throw tmp14;

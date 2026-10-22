@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1202).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1206).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   pressableOpacity: null,
   activityPreview: null,
@@ -560,7 +560,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   v1 = 1;
                   dependencyMap = 1;
-                  const obj5 = { value: v1(11293)(obj4), done: false };
+                  const obj5 = { value: v1(11310)(obj4), done: false };
                   return obj5;
                 } else {
                   dependencyMap = 3;
@@ -570,8 +570,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 3;
               throw value;
             } else if (arg0 !== 2) {
-              const result = tmp2(11386).setOrientationLockState(closure_128_3);
-              const obj = tmp2(11386);
+              const result = tmp2(11403).setOrientationLockState(closure_128_3);
+              const obj = tmp2(11403);
             }
             dependencyMap = 3;
             const obj6 = { value, done: true };
@@ -728,7 +728,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               tmp5 = obj2;
             }
             obj.cutout = tmp5;
-            return collapsed(native.CutoutableAvatarImage, obj);
+            return v65535(native.CutoutableAvatarImage, obj);
           },
         };
         const items4 = [closure_10(tmp10(tmp3[10]).SummarizedIconRow, obj14), , ,];
@@ -775,8 +775,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { theme: constants.DARK, children: null };
         const obj3 = {};
         const merged = Object.assign(arg0);
-        obj2.children = collapsed(closure_16, obj3);
-        const tmp11 = collapsed(native2.ThemeContextProvider, obj2);
+        obj2.children = v65535(closure_16, obj3);
+        const tmp11 = v65535(native2.ThemeContextProvider, obj2);
         cResult[0] = arg0;
         cResult[1] = tmp11;
         let tmp4 = tmp11;
@@ -788,6 +788,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function ActivityTile(arg0) {
       const obj = { theme: constants.DARK, children: null };
       const merged = Object.assign(arg0);
-      obj.children = collapsed(closure_16, {});
-      return collapsed(native2.ThemeContextProvider, obj);
+      obj.children = v65535(closure_16, {});
+      return v65535(native2.ThemeContextProvider, obj);
     };

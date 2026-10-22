@@ -18,7 +18,7 @@ const Constants = fn(1087);
 const PremiumConstants = fn(1394);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: c10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -93,18 +93,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = onPress(576).c(6);
       ({ analyticsLocations, useTier0UpsellContent } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const upsellType = onPress(9641).getUpsellType(onPress(9640).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
+        const upsellType = onPress(9653).getUpsellType(onPress(9652).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
         cResult[0] = upsellType;
         let first = upsellType;
-        const tmpResult = onPress(9641);
+        const tmpResult = onPress(9653);
       } else {
         first = cResult[0];
       }
       let obj = onPress(576);
-      const tmpResult2 = onPress(9629);
+      const tmpResult2 = onPress(9641);
       ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
         useTier0UpsellContent,
-        onPress(9629).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
+        onPress(9641).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
         constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
       ));
       if (cResult[1] !== onPress) {
@@ -137,18 +137,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = obj2;
       const tmp6 = usePremiumFeatureUpsellGetNitroDefault(
         useTier0UpsellContent,
-        onPress(9629).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
+        onPress(9641).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
         constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
       );
     }
   : function useEmojiPickerPremiumSearchUpsellClick(arg0) {
       let onPress;
       ({ analyticsLocations, useTier0UpsellContent } = arg0);
-      let obj = onPress(9629);
+      let obj = onPress(9641);
       const tmp = usePremiumFeatureUpsellGetNitroDefault(
         useTier0UpsellContent,
         obj.usePremiumUpsellConfig(
-          onPress(9641).getUpsellType(onPress(9640).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+          onPress(9653).getUpsellType(onPress(9652).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
           analyticsLocations,
         ).onViewAllPerks,
         constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
@@ -185,7 +185,7 @@ export const PremiumSearchUpsell = noop.memo(
         if (cResult[0] !== useTier0UpsellContent.useTier0UpsellContent) {
           const intl = util.intl;
           if (useTier0UpsellContent.useTier0UpsellContent) {
-            const obj2 = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
+            const obj2 = { planName: PremiumUtils.getTierDisplayNameByPlanId(v65535.PREMIUM_MONTH_TIER_0) };
             let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj2);
             const tmpResult = PremiumUtils;
           } else {
@@ -257,7 +257,7 @@ export const PremiumSearchUpsell = noop.memo(
         const tmp2 = closure_14(useTier0UpsellContent);
         const intl = util.intl;
         if (useTier0UpsellContent.useTier0UpsellContent) {
-          const obj = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
+          const obj = { planName: PremiumUtils.getTierDisplayNameByPlanId(v65535.PREMIUM_MONTH_TIER_0) };
           let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj);
           let tmp10 = require;
           const tmp8Result = PremiumUtils;
@@ -275,7 +275,7 @@ export const PremiumSearchUpsell = noop.memo(
           stringResult = string(t.pj0XBN);
         }
         obj2.ctaText = stringResult;
-        obj2.icon = jsx(tmp10(9383).NitroWheelIcon, {
+        obj2.icon = jsx(tmp10(9394).NitroWheelIcon, {
           size: "sm",
           color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
           style: tmp.nitroIcon,

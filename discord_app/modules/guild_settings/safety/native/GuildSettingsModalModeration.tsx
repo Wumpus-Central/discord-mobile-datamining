@@ -27,7 +27,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { stack: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_13 = createStyles.createLegacyClassComponentStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -102,7 +102,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp22;
           }
           const obj3 = { title: tmp10, hasIcons: false, description: tmp12, children: tmp19 };
-          const tmp24 = collapsed(TableRowGroup.TableRowGroup, obj3, "filter-section");
+          const tmp24 = v65535(TableRowGroup.TableRowGroup, obj3, "filter-section");
           cResult[7] = tmp12;
           cResult[8] = tmp19;
           cResult[9] = tmp24;
@@ -114,7 +114,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           onValueChange: first,
           disabled: tmp8,
         };
-        const tmp21 = collapsed(TableSwitchRow.TableSwitchRow, obj5);
+        const tmp21 = v65535(TableSwitchRow.TableSwitchRow, obj5);
         cResult[4] = tmp8;
         cResult[5] = DEFAULT2 === constants4.AGE_RESTRICTED;
         cResult[6] = tmp21;
@@ -151,8 +151,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.value = DEFAULT2 === constants4.AGE_RESTRICTED;
         obj5.onValueChange = tmp8;
         obj5.disabled = tmp7;
-        obj2.children = collapsed(TableSwitchRow.TableSwitchRow, obj5);
-        tmp9 = collapsed(TableRowGroup.TableRowGroup, obj2, "filter-section");
+        obj2.children = v65535(TableSwitchRow.TableSwitchRow, obj5);
+        tmp9 = v65535(TableRowGroup.TableRowGroup, obj2, "filter-section");
       }
       return tmp9;
     };
@@ -195,7 +195,7 @@ prototype["updateNavigation"] = function updateNavigation(submitting) {
         const obj = { onPress: self.handleSaveChanges, text: null };
         const intl = util.intl;
         obj.text = intl.string(util.t["R3BPH+"]);
-        return collapsed(HeaderActionButton.HeaderActionButton, obj);
+        return v65535(HeaderActionButton.HeaderActionButton, obj);
       };
     }
     setOptionsResult.headerRight = fn2;
@@ -215,7 +215,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(16007).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(16049).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -226,7 +226,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
       const obj3 = { color };
       obj2.style = obj3;
       obj2.children = name;
-      tmpResult = collapsed(Text_Text.Text, obj2);
+      tmpResult = v65535(Text_Text.Text, obj2);
     }
     obj.label = tmpResult;
     obj.subLabel = desc;
@@ -236,9 +236,9 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
       tmp5 = disabled;
     }
     obj.disabled = tmp5;
-    return collapsed(TableRadioRow.TableRadioRow, obj, "level-" + value);
+    return v65535(TableRadioRow.TableRadioRow, obj, "level-" + value);
   });
-  return closure_10(self(6964).TableRadioGroup, obj, "level-section");
+  return closure_10(self(6971).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -254,7 +254,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(16007).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(16049).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -265,9 +265,9 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
       tmp2 = disabled;
     }
     obj.disabled = tmp2;
-    return collapsed(TableRadioRow.TableRadioRow, obj, "filter-" + value);
+    return v65535(TableRadioRow.TableRadioRow, obj, "filter-" + value);
   });
-  return closure_10(self(6964).TableRadioGroup, obj, "filter-section");
+  return closure_10(self(6971).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;
@@ -280,13 +280,13 @@ prototype["render"] = function render() {
   const items1 = [this.renderVerificationLevelSection(), this.renderExplicitContentFilter()];
   if (canManageGuild) {
     const obj3 = { guild, hasChanges };
-    canManageGuild = collapsed(closure_14, obj3);
+    canManageGuild = v65535(closure_14, obj3);
   }
   const obj4 = { children: null };
   items1[2] = canManageGuild;
   obj2.children = items1;
   obj.children = closure_1_11(Stack_Stack.Stack, obj2);
-  const items2 = [collapsed(Form.Form, obj), collapsed(NavScrim.NavScrim, {})];
+  const items2 = [v65535(Form.Form, obj), v65535(NavScrim.NavScrim, {})];
   obj4.children = items2;
   return closure_1_11(__initData, obj4);
 };
@@ -301,7 +301,7 @@ prototype["handleVerificationLevelChange"] = function handleVerificationLevelCha
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
   GuildSettingsActionCreatorsDefault.updateGuild({ explicitContentFilter });
 };
-GuildSettingsModalModeration.contextType = fn(5020).ThemeContext;
+GuildSettingsModalModeration.contextType = fn(5023).ThemeContext;
 ReactCompilerGating = fn(558);
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);

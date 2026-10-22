@@ -6,7 +6,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsSingleThemePickerVisible() {
       const cResult = c.c(2);
@@ -33,7 +33,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.Ksh3ik);
   },
-  parent: fn(8308).MobileUserSettings.APPEARANCE,
+  parent: fn(8317).MobileUserSettings.APPEARANCE,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIsSingleThemePickerVisible() {
         const cResult = c.c(2);
@@ -55,7 +55,7 @@ const route = SettingBuilders.createRoute({
         const items = [ThemeStore];
         return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
       },
-  useTrailing: fn(16443).useAppearanceSettingTrailing,
+  useTrailing: fn(16512).useAppearanceSettingTrailing,
   screen: {
     route: fn(1087).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

@@ -18,11 +18,11 @@ import TextStyles_mod from "../../../../rebrand/native/TextStyles.tsx";
 require = fn;
 const View = fn(17).View;
 fn(4827).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
-let closure_11 = fn(8843).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
+let closure_11 = fn(8852).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
 const Fonts = fn(1098).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   eventContainer: { paddingHorizontal: nativeDefault.space.PX_16 },
   eventHeader: { paddingTop: 19 },
@@ -507,7 +507,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2,
       );
       let obj2 = guildEvent(504);
-      const result = guildEvent(8848).recurrenceRuleFromServer(guildEvent.recurrence_rule);
+      const result = guildEvent(8857).recurrenceRuleFromServer(guildEvent.recurrence_rule);
       const items3 = [,];
       ({ guild_id: arr4[0], id: arr4[1] } = guildEvent);
       const effect = noop.useEffect(() => {
@@ -520,7 +520,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           guildEvent.guild_id,
         );
       }, items3);
-      let obj3 = guildEvent(8848);
+      let obj3 = guildEvent(8857);
       const tmp8 = useGuildScheduledEventUserCountDefault(guildEvent.guild_id, guildEvent.id, recurrenceId);
       const items4 = [GuildStore];
       const stateFromStores1 = guildEvent(504).useStateFromStores(
@@ -552,7 +552,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items7 = [tmp.eventContainer, { paddingBottom: safeBottomPadding + 16 }];
       obj6.style = items7;
       const items8 = [
-        closure_12(guildEvent(8861).GuildEventCardHeader, {
+        closure_12(guildEvent(8870).GuildEventCardHeader, {
           event: guildEvent,
           style: tmp.eventHeader,
           showUserCount: false,
@@ -560,16 +560,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           showCreator: false,
           recurrenceId,
         }),
-        closure_12(guildEvent(8861).GuildEventCardTitle, {
+        closure_12(guildEvent(8870).GuildEventCardTitle, {
           event: guildEvent,
           textStyle: tmp.eventTitle,
           style: tmp.eventTitleContainer,
         }),
-        closure_12(guildEvent(8861).GuildEventCardSimpleGuildInfo, {
+        closure_12(guildEvent(8870).GuildEventCardSimpleGuildInfo, {
           event: guildEvent,
           textStyle: tmp.guildTextStyle,
         }),
-        closure_12(guildEvent(8861).GuildEventSimpleLocation, { event: guildEvent }),
+        closure_12(guildEvent(8870).GuildEventSimpleLocation, { event: guildEvent }),
         ,
         ,
         ,
@@ -577,11 +577,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ,
       ];
       const obj11 = { style: tmp.interestedContainer, children: null };
-      const items9 = [closure_12(guildEvent(9100).BellIcon, { size: "sm", style: tmp.interestedIcon })];
+      const items9 = [closure_12(guildEvent(9109).BellIcon, { size: "sm", style: tmp.interestedIcon })];
       const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
       const intl = guildEvent(1128).intl;
       obj13.children = intl.format(guildEvent(1128).t["+DLsD8"], { count: tmp8 });
-      items9[1] = closure_12(guildEvent(5216).Text, obj13);
+      items9[1] = closure_12(guildEvent(5220).Text, obj13);
       obj11.children = items9;
       items8[4] = closure_13(creator, obj11);
       let tmp11Result = null != creator && stateFromStores1;
@@ -637,19 +637,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj16.children = intl2.format(tmp2(1128).t["66DLFs"], obj17);
-        items10[1] = closure_12(tmp2(5216).Text, obj16);
+        items10[1] = closure_12(tmp2(5220).Text, obj16);
         obj14.children = items10;
         tmp11Result = closure_13(tmp12, obj14);
       }
       items8[5] = tmp11Result;
-      items8[6] = closure_12(guildEvent(8861).GuildEventCardDescription, {
+      items8[6] = closure_12(guildEvent(8870).GuildEventCardDescription, {
         event: guildEvent,
         style: tmp.eventDescriptionContainer,
       });
       let hasItem = set.has(guildEvent.entity_type);
       if (hasItem) {
         const obj19 = { noBackground: true, divider: null, onConfirmPress: null, channelId: null, style: null };
-        const items11 = [tmp2(7858).DividerPosition.TOP, tmp2(7858).DividerPosition.BOTTOM];
+        const items11 = [tmp2(7866).DividerPosition.TOP, tmp2(7866).DividerPosition.BOTTOM];
         obj19.divider = items11;
         obj19.onConfirmPress = function onConfirmPress() {
           return ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -662,7 +662,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items8[7] = hasItem;
       const obj20 = { direction: "horizontal", style: tmp.controlsContainer, children: null };
       const items12 = [
-        closure_12(guildEvent(8861).GuildEventCardPrimaryAction, {
+        closure_12(guildEvent(8870).GuildEventCardPrimaryAction, {
           event: guildEvent,
           onCloseAction: function handleCloseAction() {
             ActionSheetActionCreatorsDefault.hideActionSheet(closure_11);
@@ -678,12 +678,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp13Result = null;
       if (stateFromStores1) {
         const obj22 = { event: guildEvent };
-        tmp13Result = closure_12(tmp2(8861).GuildEventShareAction, obj22);
+        tmp13Result = closure_12(tmp2(8870).GuildEventShareAction, obj22);
       }
       items12[1] = tmp13Result;
-      items12[2] = closure_12(guildEvent(8861).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
+      items12[2] = closure_12(guildEvent(8870).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
       obj20.children = items12;
-      items8[8] = closure_13(guildEvent(6675).ButtonGroup, obj20);
+      items8[8] = closure_13(guildEvent(6682).ButtonGroup, obj20);
       let tmp13Result2 = null != result;
       if (tmp13Result2) {
         const obj23 = {

@@ -14,21 +14,21 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["username"];
 let closure_4 = ["username"];
-const RegistrationUIStore = fn(17189);
+const RegistrationUIStore = fn(17259);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_13 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
-const FadeIn = fn(5035).FadeIn;
+const FadeIn = fn(5038).FadeIn;
 obj2.entering = FadeIn.duration(300);
-const FadeOut = fn(5035).FadeOut;
+const FadeOut = fn(5038).FadeOut;
 obj2.exiting = FadeOut.duration(300);
 let obj3 = { layout: null };
-const LinearTransition = fn(5035).LinearTransition;
-const Easing = fn(5035).Easing;
-obj3.layout = LinearTransition.easing(Easing.inOut(fn(5035).Easing.quad)).duration(300);
+const LinearTransition = fn(5038).LinearTransition;
+const Easing = fn(5038).Easing;
+obj3.layout = LinearTransition.easing(Easing.inOut(fn(5038).Easing.quad)).duration(300);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? function UsernameStatusMessage(arg0) {
@@ -43,7 +43,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           obj2 = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-          const tmp35 = collapsed(CircleErrorIcon.CircleErrorIcon, obj2);
+          const tmp35 = v65535(CircleErrorIcon.CircleErrorIcon, obj2);
           cResult[0] = tmp35;
           let first = tmp35;
         } else {
@@ -62,7 +62,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const merged1 = Object.assign(obj3);
         obj4.animated = true;
         obj4.children = usernameStatus.message;
-        items[1] = collapsed(Text_Text.Text, obj4);
+        items[1] = v65535(Text_Text.Text, obj4);
         obj3.children = items;
         const tmp45 = closure_1_11(Stack_Stack.Stack, obj3);
         cResult[1] = tmp4.status;
@@ -82,7 +82,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 color: "text-feedback-positive",
                 children: usernameStatus.message,
               };
-              const tmp21 = collapsed(Text_Text.Text, obj5);
+              const tmp21 = v65535(Text_Text.Text, obj5);
               cResult[4] = usernameStatus.message;
               cResult[5] = tmp21;
               let tmp19 = tmp21;
@@ -102,7 +102,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             obj6.variant = "text-xs/medium";
             obj6.animated = true;
             obj6.children = tmp19;
-            const tmp30 = collapsed(Text_Text.Text, obj6);
+            const tmp30 = v65535(Text_Text.Text, obj6);
             cResult[6] = tmp4.status;
             cResult[7] = tmp19;
             cResult[8] = tmp30;
@@ -128,7 +128,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             obj7.color = "text-muted";
             obj7.animated = true;
             obj7.children = tmp8;
-            const tmp18 = collapsed(Text_Text.Text, obj7);
+            const tmp18 = v65535(Text_Text.Text, obj7);
             cResult[10] = tmp4.inputHint;
             cResult[11] = tmp18;
             let tmp10 = tmp18;
@@ -151,13 +151,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
         obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
         obj3 = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-        const items = [collapsed(CircleErrorIcon.CircleErrorIcon, obj3)];
+        const items = [v65535(CircleErrorIcon.CircleErrorIcon, obj3)];
         const obj4 = { variant: "text-xs/medium", color: "text-feedback-critical", style: tmp.status };
         const merged = Object.assign(obj2);
         const merged1 = Object.assign(obj3);
         obj4.animated = true;
         obj4.children = usernameStatus.message;
-        items[1] = collapsed(Text_Text.Text, obj4);
+        items[1] = v65535(Text_Text.Text, obj4);
         obj2.children = items;
         let tmp6 = closure_1_11(Stack_Stack.Stack, obj2);
       } else {
@@ -178,8 +178,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-feedback-positive",
               children: usernameStatus.message,
             };
-            obj5.children = collapsed(Text_Text.Text, obj6);
-            tmp6 = collapsed(Text_Text.Text, obj5);
+            obj5.children = v65535(Text_Text.Text, obj6);
+            tmp6 = v65535(Text_Text.Text, obj5);
           }
         }
         tmp6 = null;
@@ -193,13 +193,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           obj.animated = true;
           const intl = util.intl;
           obj.children = intl.string(util.t.y7LSyU);
-          tmp6 = collapsed(Text_Text.Text, obj);
+          tmp6 = v65535(Text_Text.Text, obj);
         }
       }
       return tmp6;
     };
 ReactCompilerGating = fn(558);
-const easingResult = LinearTransition.easing(Easing.inOut(fn(5035).Easing.quad));
+const easingResult = LinearTransition.easing(Easing.inOut(fn(5038).Easing.quad));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
@@ -330,7 +330,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
         }
-        if (undefined === setUsername(15874).NameValidationState.ERROR) {
+        if (undefined === setUsername(15916).NameValidationState.ERROR) {
           class H {
             constructor() {
               tmp = closure_1(true);
@@ -366,7 +366,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
           status: null,
           submitBehavior: null,
         };
-        const TextInput = setUsername(6987).TextInput;
+        const TextInput = setUsername(6994).TextInput;
         if (tmpResult.isAndroid()) {
           class H {
             constructor() {
@@ -498,14 +498,14 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
         type = usernameStatus.type;
       }
       let str2;
-      if (type === tmp14(15874).NameValidationState.ERROR) {
+      if (type === tmp14(15916).NameValidationState.ERROR) {
         str2 = "error";
       }
       const obj6 = { children: null };
       obj3.status = str2;
       obj3.submitBehavior = submitBehavior;
       const items3 = [
-        closure_10(setUsername(6987).TextInput, obj3),
+        closure_10(setUsername(6994).TextInput, obj3),
         closure_10(closure_16, { usernameStatus, isUsernameFocused: tmp5[0] }),
       ];
       obj6.children = items3;

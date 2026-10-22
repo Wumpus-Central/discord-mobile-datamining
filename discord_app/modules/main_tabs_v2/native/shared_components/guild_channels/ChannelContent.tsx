@@ -11,10 +11,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6684).UnreadSetting;
+const UnreadSetting = fn(6691).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let PlatformUtils = fn(1384);
 let num = -1;
 if (PlatformUtils.isIOS()) {
@@ -29,7 +29,7 @@ let obj3 = {
   channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
   channelTraitIcon: null,
 };
-let obj4 = { opacity: fn(11982).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(12003).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1384);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

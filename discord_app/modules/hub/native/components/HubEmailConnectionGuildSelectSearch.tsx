@@ -7,12 +7,12 @@ import useNavigation from "../../../../design/components/Navigator/native/useNav
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06806_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/06813_fuzzysearch.js";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod7199 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7206 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import SearchBarNavDefault from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import HubActionCreatorsDefault from "../../../../actions/HubActionCreators.tsx";
-import _modDef13575 from "../../../../../_runtime/metro/13575__.js";
+import _modDef13611 from "../../../../../_runtime/metro/13611__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,10 +21,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13547).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13583).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   fauxHeader: { paddingHorizontal: 0 },
@@ -42,7 +42,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(9);
       const tmp4 = closure_11();
       if (cResult[0] !== tmp4.emptyStateImage) {
-        const obj2 = { style: tmp4.emptyStateImage, source: _modDef13575 };
+        const obj2 = { style: tmp4.emptyStateImage, source: _modDef13611 };
         const tmp9 = closure_1_8(FastImageDefault, obj2);
         cResult[0] = tmp4.emptyStateImage;
         cResult[1] = tmp9;
@@ -93,7 +93,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   : function EmptyState() {
       const tmp = closure_11();
       const obj = { style: tmp.emptyWrapper, children: null };
-      const obj2 = { style: tmp.emptyStateImage, source: _modDef13575 };
+      const obj2 = { style: tmp.emptyStateImage, source: _modDef13611 };
       const items = [closure_1_8(FastImageDefault, obj2)];
       const obj3 = {
         style: tmp.emptyStateTitle,
@@ -203,7 +203,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(6353).APIError(closure_128_0);
+                  const aPIError = new id(6360).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);
@@ -253,7 +253,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   };
   const tmp8Result = SearchBarNavDefault;
   obj6.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingTop: 16 };
-  items[1] = anyErrorMessage(_mod7199.FlashList, obj6);
+  items[1] = anyErrorMessage(_mod7206.FlashList, obj6);
   obj3.children = items;
   return closure_9(closure_10, obj3);
 }

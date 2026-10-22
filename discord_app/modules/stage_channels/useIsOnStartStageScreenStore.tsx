@@ -122,7 +122,7 @@ export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCo
       );
       let tmp3 = stateFromStores1;
       if (stateFromStores1) {
-        tmp3 = !stateFromStores(7847)(id.id);
+        tmp3 = !stateFromStores(7855)(id.id);
       }
       dependencyMap = tmp3;
       const items3 = [stateFromStores, tmp3];

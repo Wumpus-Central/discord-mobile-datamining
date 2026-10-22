@@ -11,16 +11,16 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(17458);
+const FavoritesGuildSuggestionsStore = fn(17528);
 ({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } =
   FavoritesGuildSuggestionsStore);
 const NOOP = fn(1087).NOOP;
-let closure_8 = fn(11982).getScaledCategoryRowHeight;
+let closure_8 = fn(12003).getScaledCategoryRowHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_13 = createStyles.createStyles({
   container: { marginTop: PX_4 },
   rows: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: PX_8 },
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = arr(576).c(21);
       const tmp4 = closure_13();
       let obj = arr(576);
-      const categoryStyles = arr(17360).useCategoryStyles();
+      const categoryStyles = arr(17430).useCategoryStyles();
       arr = closure_5();
       const tmp6 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== tmp6) {
-        let obj3 = { label: first, perform: tmp6, Icon: tmp(6910).XSmallIcon };
+        let obj3 = { label: first, perform: tmp6, Icon: tmp(6917).XSmallIcon };
         cResult[1] = tmp6;
         cResult[2] = obj3;
         let tmp10 = obj3;
@@ -130,8 +130,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = util.intl;
             obj3.text = intl.string(util.t.OYkgVk);
             obj3.onPress = function onPress() {
-              const tmp = closure_1(17460);
-              return tmp(arr(12794).getDestinationIdFromResult(closure_0));
+              const tmp = closure_1(17530);
+              return tmp(arr(12826).getDestinationIdFromResult(closure_0));
             };
             obj2.trailing = React6(components_Button_Button.Button, obj3);
             obj.children = React6(SearchableDestinationListRowDefault, obj2);
@@ -147,18 +147,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj7.name = intl2.string(_modDef3412.oHWnLy);
         obj7.styles = categoryStyles;
         obj7.trailingAction = tmp10;
-        const renderCategoryItemResult = tmp(17360).renderCategoryItem(obj7);
+        const renderCategoryItemResult = tmp(17430).renderCategoryItem(obj7);
         cResult[5] = categoryStyles;
         cResult[6] = tmp10;
         cResult[7] = renderCategoryItemResult;
         tmp14 = renderCategoryItemResult;
-        const tmpResult = tmp(17360);
+        const tmpResult = tmp(17430);
       }
-      let obj2 = arr(17360);
+      let obj2 = arr(17430);
     }
   : function FavoritesGuildSuggestedChannels() {
       let tmp = closure_13();
-      const categoryStyles = arr(17360).useCategoryStyles();
+      const categoryStyles = arr(17430).useCategoryStyles();
       arr = closure_5();
       const tmp5 = closure_6();
       importDefault = tmp5;
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3.name = intl.string(_modDef3412.oHWnLy);
         obj3.styles = categoryStyles;
         obj3.trailingAction = memo;
-        const items2 = [tmp2(17360).renderCategoryItem(obj3)];
+        const items2 = [tmp2(17430).renderCategoryItem(obj3)];
         const obj4 = {
           style: tmp.rows,
           children: arr.map((item, index) => {
@@ -201,8 +201,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = util.intl;
             obj3.text = intl.string(util.t.OYkgVk);
             obj3.onPress = function onPress() {
-              const tmp = closure_1(17460);
-              return tmp(arr(12794).getDestinationIdFromResult(closure_0));
+              const tmp = closure_1(17530);
+              return tmp(arr(12826).getDestinationIdFromResult(closure_0));
             };
             obj2.trailing = React6(components_Button_Button.Button, obj3);
             obj.children = React6(SearchableDestinationListRowDefault, obj2);
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2[1] = closure_9(View, obj4);
         obj2.children = items2;
         tmp9 = closure_10(View, obj2);
-        const tmp2Result = tmp2(17360);
+        const tmp2Result = tmp2(17430);
       }
       return tmp9;
     };

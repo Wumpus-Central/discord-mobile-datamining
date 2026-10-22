@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 },
   namePill: null,
@@ -17,7 +17,7 @@ let obj2 = {
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 };
 obj2.namePill = {
   flexShrink: 1,
-  minHeight: fn(5232).SMALL_BUTTON_HEIGHT,
+  minHeight: fn(5236).SMALL_BUTTON_HEIGHT,
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_4,
@@ -26,7 +26,7 @@ obj2.namePill = {
 };
 let obj4 = {
   flexShrink: 1,
-  minHeight: fn(5232).SMALL_BUTTON_HEIGHT,
+  minHeight: fn(5236).SMALL_BUTTON_HEIGHT,
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_4,
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = applicationId(576);
       const stateFromStores = applicationId(504).useStateFromStores(first, tmp8, tmp9);
       const tmpResult = applicationId(504);
-      const balance = applicationId(9409).useFetchVirtualCurrencyBalance().balance;
+      const balance = applicationId(9420).useFetchVirtualCurrencyBalance().balance;
       if (cResult[4] === stateFromStores) {
         if (cResult[5] === tmp4.namePill) {
           if (cResult[6] === tmp4.nameText) {
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[8] !== balance) {
             const obj2 = { balance };
-            const tmp17 = closure_5(tmp(13852).BalanceWidgetPill, obj2);
+            const tmp17 = closure_5(tmp(13888).BalanceWidgetPill, obj2);
             cResult[8] = balance;
             cResult[9] = tmp17;
             let tmp15 = tmp17;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.nameText,
             children: stateFromStores,
           };
-          obj4.children = closure_5(tmp(5216).Text, obj5);
+          obj4.children = closure_5(tmp(5220).Text, obj5);
           tmp12 = closure_5(View, obj4);
         }
       }
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp4.nameText;
       cResult[7] = tmp12;
       tmp11 = tmp12;
-      const tmpResult2 = applicationId(9409);
+      const tmpResult2 = applicationId(9420);
     }
   : function OrbsArcadeFrameHeaderInfo(applicationId) {
       applicationId = applicationId.applicationId;
@@ -182,14 +182,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: tmp.nameText,
             children: stateFromStores,
           };
-          obj4.children = closure_5(tmp2(5216).Text, obj5);
+          obj4.children = closure_5(tmp2(5220).Text, obj5);
           tmp7 = closure_5(View, obj4);
         }
       }
       const items2 = [
         tmp7,
-        closure_5(applicationId(13852).BalanceWidgetPill, {
-          balance: applicationId(9409).useFetchVirtualCurrencyBalance().balance,
+        closure_5(applicationId(13888).BalanceWidgetPill, {
+          balance: applicationId(9420).useFetchVirtualCurrencyBalance().balance,
         }),
       ];
       obj3.children = items2;

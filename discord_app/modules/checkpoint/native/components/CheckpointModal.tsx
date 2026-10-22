@@ -286,7 +286,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   obj13.style = items6;
   const obj14 = { uri: null, style: null };
   const tmp7Result2 = _slicedToArray(noop.useState(false), 2);
-  obj14.uri = require("../../../../../discord_assets/assets/checkpoint/checkpoint-clyde.png.js");
+  obj14.uri = require("../../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js");
   obj14.style = tmp.logo;
   const items7 = [closure_15(require("CheckpointApngPlayer"), obj14)];
   const obj15 = { style: tmp.headerActions, children: null };
@@ -428,14 +428,14 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12843).CheckpointFetchStates;
-const CheckpointConstants = fn(5995);
+const CheckpointFetchStates = fn(12875).CheckpointFetchStates;
+const CheckpointConstants = fn(6002);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   loader: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BLACK },
   container: { height: "100%" },
@@ -457,7 +457,8 @@ let rect = {
   justifyContent: "space-between",
 };
 obj2.nav = rect;
-obj2.logo = { width: CHECKPOINT_LOGO_SIZE, height: CHECKPOINT_LOGO_SIZE };
+let size = { width: CHECKPOINT_LOGO_SIZE + 6, height: CHECKPOINT_LOGO_SIZE + 6, margin: -3 };
+obj2.logo = size;
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BLACK };
 obj2.headerActions = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: null, gap: null };
@@ -468,7 +469,7 @@ obj2.customizationSection = rect1;
 let closure_18 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
-const size = fn(2);
+size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()

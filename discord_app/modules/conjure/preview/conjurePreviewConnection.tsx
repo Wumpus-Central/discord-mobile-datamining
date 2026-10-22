@@ -9,14 +9,82 @@ import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.t
 import conjurePreviewControlLease from "conjurePreviewControlLease.tsx";
 import conjurePreviewClaims from "conjurePreviewClaims.tsx";
 import ConjurePublishActionCreators from "../publish/ConjurePublishActionCreators.tsx";
+import UserApplicationIdentityActionCreatorsDefault from "../../user_application_identity/UserApplicationIdentityActionCreators.tsx";
 import conjureMediaTickets from "../connection/conjureMediaTickets.tsx";
 import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import conjurePreviewModeRequests from "conjurePreviewModeRequests.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import UserStore from "../../../stores/UserStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-let closure_5 = async function _getPreviewScreenshotUrl() {
+let closure_6 = async function _refetchWidgetData() {
+  if (c0 === 2) {
+    c0 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c0 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
+          c0 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c0 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          currentUser = currentUser.getCurrentUser();
+          let id;
+          if (currentUser != null) {
+            id = currentUser.id;
+          }
+          if (null != id) {
+            c2 = 1;
+            c1 = 2;
+            c0 = 1;
+            const obj5 = {
+              value: UserApplicationIdentityActionCreatorsDefault.fetchUserApplicationIdentitiesWithProfiles(id),
+              done: false,
+            };
+            return obj5;
+          }
+        }
+      } else {
+        if (1 === tmp6) {
+          c2 = 0;
+        } else if (arg0 === 1) {
+          c0 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          c2 = 0;
+        }
+        c2 = 0;
+        c0 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+      c0 = 3;
+    } catch (tmp12) {
+      if (tmp3 === c2) {
+        c0 = tmp2;
+        throw tmp12;
+      } else {
+        c1 = tmp;
+      }
+    }
+  }
+};
+let closure_7 = async function _getPreviewScreenshotUrl() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await conjureMediaTickets.getMediaTicket(closure_0);
@@ -30,7 +98,7 @@ let closure_5 = async function _getPreviewScreenshotUrl() {
   const _HermesInternal = HermesInternal;
   return "" + baseUrl + "/agent/screenshots/" + encodeURIComponent(closure_130_0) + "?" + closure_130_4;
 };
-let closure_6 = async function _uploadOverlayBackground(arg0) {
+let closure_8 = async function _uploadOverlayBackground(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -96,7 +164,7 @@ let closure_6 = async function _uploadOverlayBackground(arg0) {
     }
   })();
 };
-let closure_7 = async function _resetOverlayBackground(arg0) {
+let closure_9 = async function _resetOverlayBackground(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -156,7 +224,7 @@ let closure_7 = async function _resetOverlayBackground(arg0) {
     }
   }
 };
-let closure_8 = async function _getOverlayBackgroundUrl() {
+let closure_10 = async function _getOverlayBackgroundUrl() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await conjureMediaTickets.getMediaTicket(closure_0);
@@ -167,7 +235,7 @@ let closure_8 = async function _getOverlayBackgroundUrl() {
   const _HermesInternal = HermesInternal;
   return "" + closure_130_1.baseUrl + "/agent/overlay-background?" + uRLSearchParams;
 };
-let closure_9 = async function _relayCaptureRequest(arg0, arg1, arg2) {
+let closure_11 = async function _relayCaptureRequest(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   let probe = arg2;
@@ -198,7 +266,7 @@ let closure_9 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     ({ probe: obj4.probe, spec: obj4.spec, build: obj4.build } = probe);
     closure_131_4 = asyncGeneratorStep(async () => {
       closure_2_1.sendCaptureAck(user.id, "accepted");
-      await v3(closure_1_2[4]).awaitConjurePreviewClaim(closure_2_0, user.id);
+      await v3(closure_1_2[5]).awaitConjurePreviewClaim(closure_2_0, user.id);
       return value;
     });
     obj7.onAccepted = function onAccepted() {
@@ -214,7 +282,7 @@ let closure_9 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     obj7.resolveUploadUrl = function resolveUploadUrl() {
       return (function getClientCaptureUploadUrl() {
         const self = this;
-        const apply = closure_1_11.apply;
+        const apply = closure_1_13.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -239,7 +307,7 @@ let closure_9 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     return value;
   })();
 };
-let closure_10 = async function _relayControlRequest(arg0) {
+let closure_12 = async function _relayControlRequest(arg0) {
   closure_131_0 = closure_0;
   closure_131_1 = closure_1;
   closure_131_2 = user;
@@ -252,7 +320,7 @@ let closure_10 = async function _relayControlRequest(arg0) {
     request,
     asyncGeneratorStep(async () => {
       closure_2_1.sendControlAck(user.id, "accepted");
-      await v3(closure_1_2[4]).awaitConjurePreviewClaim(closure_2_0, user.id);
+      await v3(closure_1_2[5]).awaitConjurePreviewClaim(closure_2_0, user.id);
       return null != value;
     }),
   );
@@ -276,7 +344,7 @@ let closure_10 = async function _relayControlRequest(arg0) {
   }
   return value;
 };
-let closure_11 = async function _getClientCaptureUploadUrl() {
+let closure_13 = async function _getClientCaptureUploadUrl() {
   closure_1 = tmp2;
   await conjureMediaTickets.getMediaTicket(closure_0);
   closure_129_0 = value;
@@ -306,7 +374,7 @@ export const previewFrameHandlers = {
     }
     (function relayCaptureRequest() {
       const self = this;
-      const apply = closure_1_9.apply;
+      const apply = closure_1_11.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -316,7 +384,7 @@ export const previewFrameHandlers = {
     })(projectId, projectId.ws, probe).catch(() => {});
     const promise = (function relayCaptureRequest() {
       const self = this;
-      const apply = closure_1_9.apply;
+      const apply = closure_1_11.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -330,7 +398,7 @@ export const previewFrameHandlers = {
     ConjurePreviewActionCreators.wakeConjurePreview(projectId);
     (function relayControlRequest() {
       const self = this;
-      const apply = closure_1_10.apply;
+      const apply = closure_1_12.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -362,6 +430,18 @@ export const previewFrameHandlers = {
       const result2 = conjurePreviewControlLease.setConjureControlTuning(projectId, false);
       ConjurePlatformUtilsDefault.endPreviewOperation(projectId);
     }
+  },
+  widget_refreshed() {
+    !(function refetchWidgetData() {
+      const self = this;
+      const apply = closure_1_6.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
   },
   overlay_background(blur, projectId) {
     DispatcherDefault.dispatch({
@@ -429,7 +509,7 @@ export const sendOverlayBackgroundBlur = function sendOverlayBackgroundBlur(proj
 };
 export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -439,7 +519,7 @@ export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl() {
 };
 export const uploadOverlayBackground = function uploadOverlayBackground() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -449,7 +529,7 @@ export const uploadOverlayBackground = function uploadOverlayBackground() {
 };
 export const resetOverlayBackground = function resetOverlayBackground() {
   const self = this;
-  const apply = closure_7.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -459,7 +539,7 @@ export const resetOverlayBackground = function resetOverlayBackground() {
 };
 export const getOverlayBackgroundUrl = function getOverlayBackgroundUrl() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,13 +1,13 @@
 // discord_app/intl/messages/untranslated.messages.js
 import AssetJsonUtils from "../../modules/asset_json/native/AssetJsonUtils.tsx";
-import _mod15331 from "../../../_runtime/metro/15331__.js";
+import _mod15375 from "../../../_runtime/metro/15375__.js";
 import module_1167_mod from "../../../_runtime/metro/01167__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let module_1167 = module_1167_mod;
 const loader = module_1167.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod15331);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod15375);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

@@ -17,7 +17,7 @@ const useMemo = fn(19).useMemo;
 const Constants = fn(1087);
 ({ ActivityFlags: closure_8, ActivityTypes: closure_9, MAX_CHANNEL_NAME_LENGTH: c10 } = Constants);
 const ChannelFlags = fn(4828).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(7357).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7364).MAX_FORUM_POST_TAGS;
 let c13 = "No Mic";
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -189,7 +189,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         gameId = stateFromStores.gameId;
       }
-      const data = tmp(7383).useGame(gameId).data;
+      const data = tmp(7390).useGame(gameId).data;
       let officialApplicationId;
       if (data != null) {
         officialApplicationId = data.getOfficialApplicationId();
@@ -246,7 +246,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useGameInvitesChannelOfficialApplication(arg0) {
       const tmp = closure_15(arg0);
-      application = application(6788).useApplication(tmp);
+      application = application(6795).useApplication(tmp);
       const items = [application];
       return useMemo(() => {
         const merged = Object.assign(_objectWithoutProperties(application, closure_4));
@@ -299,8 +299,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp11 = cResult[7];
           }
-          const subscribeGuildMembers = tmp(7385).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
-          const tmpResult2 = tmp(7385);
+          const subscribeGuildMembers = tmp(7392).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
+          const tmpResult2 = tmp(7392);
         }
         const tmpResult = tmp(504);
       }
@@ -483,7 +483,7 @@ export const deriveThreadName = function deriveThreadName(description) {
     str2 = "";
   }
   const str = description.trim();
-  return sanitizeThreadNameDefault(str2.slice(0, collapsed), true);
+  return sanitizeThreadNameDefault(str2.slice(0, v65535), true);
 };
 export const useIsGameInvitesPost = tmp3;
 export const useIsGameInvitePostVoiceEnabled = tmp4;

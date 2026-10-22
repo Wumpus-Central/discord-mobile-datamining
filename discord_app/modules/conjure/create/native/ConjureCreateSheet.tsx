@@ -15,12 +15,12 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10656);
+const ConjureConnectionStore = fn(10668);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8, stageModelSettings: closure_9 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -466,7 +466,7 @@ export default function ConjureCreateSheet(guildId) {
   const callback2 = obj.useCallback(() => {
     const obj2 = { key: ConjureEffortPicker.CONJURE_EFFORT_PICKER_SHEET_KEY, stackingBehavior: "stack", content: null };
     const obj = ActionSheetActionCreators;
-    obj2.content = collapsed(ConjureEffortPicker.ConjureEffortPickerSheet, {
+    obj2.content = v65535(ConjureEffortPicker.ConjureEffortPickerSheet, {
       initialSettings: CONJURE_DEFAULT_TIER_SETTINGS,
       tiers: ConjureLandingModelChoices.CONJURE_LANDING_TIER_SEATS,
       choices,
@@ -496,7 +496,7 @@ export default function ConjureCreateSheet(guildId) {
         content: null,
       };
       const obj3 = { template: wizard, guildId, modelSettings: CONJURE_DEFAULT_TIER_SETTINGS, onCreated: callback3 };
-      obj2.content = collapsed(ConjureTemplateWizardSheetDefault, obj3);
+      obj2.content = v65535(ConjureTemplateWizardSheetDefault, obj3);
       ActionSheetActionCreators.showActionSheet(obj2);
     }
   }, items6);

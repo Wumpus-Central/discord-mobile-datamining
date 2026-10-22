@@ -3335,10 +3335,10 @@ prototype["didFetchingFail"] = function didFetchingFail(item) {
   }
   return hasItem;
 };
-prototype["getGame"] = function getGame(gameId) {
+prototype["getGame"] = function getGame(arg0) {
   value = undefined;
-  if (null != gameId) {
-    value = map.get(gameId);
+  if (null != arg0) {
+    value = map.get(arg0);
   }
   return value;
 };

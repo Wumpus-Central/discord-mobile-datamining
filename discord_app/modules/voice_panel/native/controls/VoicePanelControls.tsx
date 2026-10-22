@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05279_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05283_LegacyBaseButton.js";
 import native2 from "../../../../design/components/experimental/native.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
@@ -286,17 +286,17 @@ function useControlsGesture(tab, sharedValue, sharedValue1, G) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(10848);
+const VoicePanelConstants = fn(10865);
 ({ UI_SHOW_HIDE_PHYSICS: closure_7, MODE_CHANGE_PHYSICS: closure_8, BORDER_RADIUS_PHYSICS: closure_9, PANEL_CONTROLS_HEIGHT_PHYSICS: c10, VoicePanelModes: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(10851);
+const VoicePanelCardConstants = fn(10868);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(10846);
+const VoicePanelControlsConstants = fn(10863);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } = VoicePanelControlsConstants);
 const Constants = fn(1087);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -374,9 +374,9 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
   } else {
     first = cResult[0];
   }
-  const tmp6 = isScreenReaderEnabled(12438)(first);
+  const tmp6 = isScreenReaderEnabled(12468)(first);
   dependencyMap = tmp6;
-  const context = windowDimensions.useContext(isScreenReaderEnabled(10847));
+  const context = windowDimensions.useContext(isScreenReaderEnabled(10864));
   const controlsSpecs = context.controlsSpecs;
   windowDimensions = context.windowDimensions;
   const mode = context.mode;
@@ -463,9 +463,9 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
 }) : (function useWrapperSpecs(wrapperSpecs) {
   _require = wrapperSpecs;
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
-  const tmp2 = isScreenReaderEnabled(12438)({ ignoreKeyboard: true });
+  const tmp2 = isScreenReaderEnabled(12468)({ ignoreKeyboard: true });
   dependencyMap = tmp2;
-  const context = windowDimensions.useContext(isScreenReaderEnabled(10847));
+  const context = windowDimensions.useContext(isScreenReaderEnabled(10864));
   const controlsSpecs = context.controlsSpecs;
   windowDimensions = context.windowDimensions;
   const mode = context.mode;
@@ -635,7 +635,7 @@ let closure_41 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           const obj5 = { children: null };
           const items = [tmp13, tmp17];
           obj5.children = items;
-          const tmp23 = constants2(closure_1_19, obj5);
+          const tmp23 = closure_1_20(closure_1_19, obj5);
           cResult[13] = tmp13;
           cResult[14] = tmp17;
           cResult[15] = tmp23;
@@ -701,7 +701,7 @@ let closure_41 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const obj2 = { item: tmp11, renderItem: VoicePanelFloatingCTAContainer.renderVoicePanelFloatingCTA };
   items2[1] = collapsedCategories(native.TransitionItem, { item: tmp12, renderItem: VoicePanelConsoleStatus.renderVoicePanelConsoleStatus });
   obj3.children = items2;
-  return constants2(closure_1_19, obj3);
+  return closure_1_20(closure_1_19, obj3);
 }));
 const __initData7 = { code: "function VoicePanelControlsTsx14(){const{controlsSpecs,connected,sharedTab,wrapperSpecs,TRANSITIONAL_HEIGHT,CONTROLS_DRAWER_HEADER_EXPANDED_SIZE,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const showPushToTalkText=controlsSpecs.get().pushToTalk&&connected.get();const height=sharedTab.get()===\"settings\"&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?CONTROLS_DRAWER_HEADER_EXPANDED_SIZE:controlsSpecs.get().height;const translateY=function(){return sharedTab.get()!==\"settings\"&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?-controlsSpecs.get().height:0;}();return{top:showPushToTalkText?-4:0,height:withSpring(height,MODE_CHANGE_PHYSICS),opacity:withSpring(sharedTab.get()!==\"settings\"&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?0:1,MODE_CHANGE_PHYSICS),transform:[{translateY:withSpring(translateY,MODE_CHANGE_PHYSICS)},{scale:withSpring(sharedTab.get()!==\"settings\"&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?0.95:1,MODE_CHANGE_PHYSICS)}]};}" };
 const __initData8 = { code: "function VoicePanelControlsTsx15(){const{controlsSpecs,connected,sharedTab,wrapperSpecs,TRANSITIONAL_HEIGHT,CONTROLS_DRAWER_HEADER_EXPANDED_SIZE,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const showPushToTalkText=controlsSpecs.get().pushToTalk&&connected.get();const height=sharedTab.get()==='settings'&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?CONTROLS_DRAWER_HEADER_EXPANDED_SIZE:controlsSpecs.get().height;const translateY=function(){return sharedTab.get()!=='settings'&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?-controlsSpecs.get().height:0;}();return{top:showPushToTalkText?-4:0,height:withSpring(height,MODE_CHANGE_PHYSICS),opacity:withSpring(sharedTab.get()!=='settings'&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?0:1,MODE_CHANGE_PHYSICS),transform:[{translateY:withSpring(translateY,MODE_CHANGE_PHYSICS)},{scale:withSpring(sharedTab.get()!=='settings'&&wrapperSpecs.get().height>=TRANSITIONAL_HEIGHT?0.95:1,MODE_CHANGE_PHYSICS)}]};}" };
@@ -1039,7 +1039,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         tab = false;
                         const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
                         const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-                        chatOpen(/* F159698 */ function() { ... });
+                        chatOpen(/* F160519 */ function() { ... });
                         if (!disableControlsUpdate) {
                           const obj3 = { mode: constants.DRAWER };
                           const merged = Object.assign(controlsProps);
@@ -1119,7 +1119,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       tab = false;
                       const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
                       const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-                      chatOpen(/* F159698 */ function() { ... });
+                      chatOpen(/* F160519 */ function() { ... });
                       if (!disableControlsUpdate) {
                         const obj3 = { mode: constants.DRAWER };
                         const merged = Object.assign(controlsProps);
@@ -1390,7 +1390,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         tab = false;
                         const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
                         const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-                        chatOpen(/* F159698 */ function() { ... });
+                        chatOpen(/* F160519 */ function() { ... });
                         if (!disableControlsUpdate) {
                           const obj3 = { mode: constants.DRAWER };
                           const merged = Object.assign(controlsProps);
@@ -1495,7 +1495,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 tab = false;
                 const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
                 const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-                chatOpen(/* F159698 */ function() { ... });
+                chatOpen(/* F160519 */ function() { ... });
                 if (!disableControlsUpdate) {
                   const obj3 = { mode: constants.DRAWER };
                   const merged = Object.assign(controlsProps);
@@ -1562,7 +1562,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               tab = false;
               const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
               const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-              chatOpen(/* F159698 */ function() { ... });
+              chatOpen(/* F160519 */ function() { ... });
               if (!disableControlsUpdate) {
                 const obj3 = { mode: constants.DRAWER };
                 const merged = Object.assign(controlsProps);
@@ -1596,7 +1596,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tab = false;
           const tmp2 = disableControlsUpdate.get().mode !== constants.DRAWER;
           const result = gestureState(channelId[41]).reportJankVoicePanelTabRequest(closure_1_2, { tab, disableControlsUpdate, controlsProps }, tmp2);
-          chatOpen(/* F159698 */ function() { ... });
+          chatOpen(/* F160519 */ function() { ... });
           if (!disableControlsUpdate) {
             const obj3 = { mode: constants.DRAWER };
             const merged = Object.assign(controlsProps);
@@ -1747,7 +1747,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     size.borderBottomLeftRadius = spring.withSpring(num2, BORDER_RADIUS_PHYSICS);
     const tmpResult = spring;
-    size.height = spring.withSpring(sharedValue1.get().height, collapsed);
+    size.height = spring.withSpring(sharedValue1.get().height, v65535);
     const tmpResult6 = spring;
     size.width = spring.withSpring(sharedValue1.get().width, MODE_CHANGE_PHYSICS);
     const tmpResult7 = spring;

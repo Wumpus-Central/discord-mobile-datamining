@@ -10,7 +10,7 @@ import GuildTagConstants from "../../../guild_tag/GuildTagConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
 import MessageCountUtils from "../../../threads/MessageCountUtils.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import _modDef8254 from "../../../../../_runtime/metro/08254__.js";
+import _modDef8263 from "../../../../../_runtime/metro/08263__.js";
 import transformMessageComponentsDefault from "transformMessageComponents.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -84,7 +84,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8254);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8263);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -1434,7 +1434,12 @@ const ReferencedMessageState = ReferencedMessageStore2.ReferencedMessageState;
   GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_26,
 } = MessageConstants);
 const ReferencedMessageRowState = RowGeneratorConstants.ReferencedMessageRowState;
-({ MessageTypes: closure_28, MessageStates: closure_29, MessageFlags: closure_30, ChannelTypes: items } = Constants);
+({
+  MessageTypes: closure_28,
+  MessageStates: closure_29,
+  MessageFlags: closure_30,
+  ChannelTypes: closure_31,
+} = Constants);
 const GuildTagBadgeSize = GuildTagConstants.GuildTagBadgeSize;
 let result = size.fileFinishedImporting("modules/messages/native/renderer/createMessageContent.tsx");
 

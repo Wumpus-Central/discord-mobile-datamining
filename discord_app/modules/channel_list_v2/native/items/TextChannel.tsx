@@ -16,11 +16,11 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11982);
+const RedesignChannelListConstants = fn(12003);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = {
     container: {

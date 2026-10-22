@@ -9,9 +9,9 @@ const require = fn;
 let closure_3 = ["children"];
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9701);
+const NativeStackNavigator = fn(9713);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj3 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_8 = createStyles.createStyles(obj3);
 const ReactCompilerGating = fn(558);
@@ -38,12 +38,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { title: null, headerLeft: null };
               const intl = closure_0(1128).intl;
               obj.title = intl.string(closure_0(1128).t.jVshKt);
-              obj.headerLeft = closure_0(9657).getRenderModalCloseImage(navigation.navigation);
-              const merged = Object.assign(accessibilityNativeStackOptions(9989)());
+              obj.headerLeft = closure_0(9669).getRenderModalCloseImage(navigation.navigation);
+              const merged = Object.assign(accessibilityNativeStackOptions(10001)());
               return obj;
             },
             getComponent() {
-              return closure_0(17733).default;
+              return closure_0(17803).default;
             },
           };
           const tmp9 = closure_5(closure_7.Screen, obj3);
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = {
             name: "guild",
             options(navigation) {
-              const obj = { headerLeft: closure_0(9657).getRenderModalBackImage(navigation.navigation) };
+              const obj = { headerLeft: closure_0(9669).getRenderModalBackImage(navigation.navigation) };
               return obj;
             },
             getComponent() {
-              return closure_0(17734).default;
+              return closure_0(17804).default;
             },
           };
           const tmp13 = closure_5(closure_7.Screen, obj4);
@@ -126,22 +126,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj = { title: null, headerLeft: null };
             const intl = closure_0(1128).intl;
             obj.title = intl.string(closure_0(1128).t.jVshKt);
-            obj.headerLeft = closure_0(9657).getRenderModalCloseImage(navigation.navigation);
-            const merged = Object.assign(closure_1(9989)());
+            obj.headerLeft = closure_0(9669).getRenderModalCloseImage(navigation.navigation);
+            const merged = Object.assign(closure_1(10001)());
             return obj;
           },
           getComponent() {
-            return closure_0(17733).default;
+            return closure_0(17803).default;
           },
         }),
         closure_5(closure_7.Screen, {
           name: "guild",
           options(navigation) {
-            const obj = { headerLeft: closure_0(9657).getRenderModalBackImage(navigation.navigation) };
+            const obj = { headerLeft: closure_0(9669).getRenderModalBackImage(navigation.navigation) };
             return obj;
           },
           getComponent() {
-            return closure_0(17734).default;
+            return closure_0(17804).default;
           },
         }),
       ];

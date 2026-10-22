@@ -1,8 +1,8 @@
 // discord_app/modules/application_widget/hooks/useUserApplicationWidgetData.tsx
 import UserProfileApplicationWidgetTypes from "../../user_profile/UserProfileApplicationWidgetTypes.tsx";
 import maybeFetchUserProfileDefault from "../../user_profile/maybeFetchUserProfile.tsx";
-import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs.tsx";
 import UserApplicationIdentityActionCreatorsDefault from "../../user_application_identity/UserApplicationIdentityActionCreators.tsx";
+import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
@@ -13,8 +13,8 @@ import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-fn(11788).FetchState;
-const FetchState = fn(10745).FetchState;
+fn(10761).FetchState;
+const FetchState = fn(10757).FetchState;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useApplicationWidgetConfig(arg0) {

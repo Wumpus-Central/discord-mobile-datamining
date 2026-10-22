@@ -5,7 +5,7 @@ import ChannelRTCStore from "../ChannelRTCStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ParticipantTypes = fn(5614).ParticipantTypes;
+const ParticipantTypes = fn(5618).ParticipantTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

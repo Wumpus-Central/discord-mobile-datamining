@@ -19,6 +19,7 @@ const obj = {
   DEPRECATED_SIZE_60: "DEPRECATED_SIZE_60",
   DEPRECATED_SIZE_100: "DEPRECATED_SIZE_100",
 };
+const obj2 = { SPEAKING: "speaking", PLAYING_SOUNDBOARD: "soundboard" };
 const frozen = Object.freeze({
   [obj.SIZE_16]: Object.freeze({ size: 16, status: 6, stroke: 2, offset: 0 }),
   [obj.SIZE_20]: Object.freeze({ size: 20, status: 6, stroke: 2, offset: 0 }),
@@ -48,6 +49,7 @@ export const VR_STATUS_WIDTH_RATIO = 1.5;
 export const VR_STATUS_SCALE = 1;
 export const VR_CUTOUT_BORDER_RADIUS = 0.5;
 export const AvatarSizes = obj;
+export const VoiceStatus = obj2;
 export const StatusBackdropColors = { BLACK: "black", WHITE: "white" };
 export const StatusBackdropOpacity = { HIGH: 0.7, [0.7]: "HIGH", LOW: 0.45, [0.45]: "LOW" };
 export const AvatarSizeSpecs = frozen;
@@ -63,4 +65,15 @@ export const getAvatarSize = function getAvatarSize(num) {
 };
 export const getStatusSize = function getStatusSize(arg0) {
   return frozen[arg0].status;
+};
+export const getVoiceStatus = function getVoiceStatus(arg0, arg1) {
+  if (arg1) {
+    let PLAYING_SOUNDBOARD = obj2.PLAYING_SOUNDBOARD;
+  } else {
+    PLAYING_SOUNDBOARD = null;
+    if (arg0) {
+      PLAYING_SOUNDBOARD = obj2.SPEAKING;
+    }
+  }
+  return PLAYING_SOUNDBOARD;
 };

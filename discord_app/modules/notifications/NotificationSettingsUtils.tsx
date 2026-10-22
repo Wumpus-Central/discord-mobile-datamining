@@ -45,7 +45,7 @@ function getExperimentAndConfigBySettingId(arg0) {
   }
   return {};
 }
-const NotificationSettingsConstants = fn(15590);
+const NotificationSettingsConstants = fn(15634);
 ({ NOTIF_SETTING_MAPPING: closure_4, NOTIF_SETTINGS: hasOwnProperty } = NotificationSettingsConstants);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
@@ -57,11 +57,11 @@ function useIsDeclarativeSettingsUIAvailable(AndroidMessageNotificationsSetting)
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
-function useNotifCategoryVisibility(CATEGORY_OTHER) {
+function useNotifCategoryVisibility(CATEGORY_CALLS_MESSAGES) {
   if (typeof useIsDeclarativeSettingsUIAvailable === "function") {
     const _HermesInternal = HermesInternal;
     return DeclarativeNotificationSettingsRedesignExperiment.useIsDeclarativeNotificationSettingsRedesignEnabled(
-      "useIsDeclarativeSettingsUIAvailable:" + CATEGORY_OTHER,
+      "useIsDeclarativeSettingsUIAvailable:" + CATEGORY_CALLS_MESSAGES,
     );
   } else {
     throw new TypeError("Trying to call a non-function");

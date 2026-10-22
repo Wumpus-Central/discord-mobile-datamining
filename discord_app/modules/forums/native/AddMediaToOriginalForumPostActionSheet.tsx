@@ -86,13 +86,13 @@ let closure_17 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(8126).maxFileSize(id.id);
-            const obj = closure_0(8126);
-            const effectiveUploadLimit = closure_0(8142).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(8135).maxFileSize(id.id);
+            const obj = closure_0(8135);
+            const effectiveUploadLimit = closure_0(8151).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(5192).hideActionSheet();
+              closure_1(5196).hideActionSheet();
               const obj4 = {
                 file: currentSize,
                 maxSize: effectiveUploadLimit,
@@ -100,20 +100,20 @@ let closure_17 = async function _upload2(arg0) {
                 guildId: id.id,
                 analyticsLocations,
               };
-              closure_1(9625)(obj4);
-              const obj3 = closure_1(5192);
+              closure_1(9637)(obj4);
+              const obj3 = closure_1(5196);
             }
-            const obj2 = closure_0(8142);
+            const obj2 = closure_0(8151);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(5192).hideActionSheet();
+            closure_1(5196).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9622).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9622);
-            closure_1(5192).hideActionSheet();
+            closure_1(9634).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9634);
+            closure_1(5196).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -167,7 +167,7 @@ let closure_17 = async function _upload2(arg0) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(8121).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(8130).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -268,12 +268,12 @@ let closure_17 = async function _upload2(arg0) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(7608).DraftType;
+const DraftType = fn(7615).DraftType;
 const Constants = fn(1087);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { paddingHorizontal: 16, paddingTop: 24 },
   post: {

@@ -11,7 +11,7 @@ import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import ImprovedMobileShopLoadingExperiment from "../experiments/ImprovedMobileShopLoadingExperiment.tsx";
 import CollectiblesShopManager2 from "../CollectiblesShopManager.tsx";
 import NativePaymentHooksDefault from "../../payments/native/hooks/NativePaymentHooks.android.tsx";
-import takeWhileDefault from "../../../../_runtime/17026_takeWhile.js";
+import takeWhileDefault from "../../../../_runtime/17095_takeWhile.js";
 import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment.tsx";
 import ShopCategory from "ShopCategory.tsx";
 import ShopNitroUpsellBanner from "ShopNitroUpsellBanner.tsx";
@@ -29,7 +29,7 @@ const MobileNitroUpsellInShopFeedExperimentDefault = MobileNitroUpsellInShopFeed
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FeedBlockRecord = fn(7659).FeedBlockRecord;
+const FeedBlockRecord = fn(7666).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1089);
 ({
   COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1,
@@ -42,7 +42,7 @@ const Constants = fn(1087);
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_22 = createStyles.createStyles({
   rootContainer: { height: "100%", width: "100%" },
   spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 },
@@ -746,7 +746,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = obj4.useCallback((item) => {
         item = item.item;
         if (item.kind === analyticsLocations.SKELETON) {
-          let tmp18Result = constants2(ShopCategory.ShopCategorySkeleton, {});
+          let tmp18Result = closure_2_20(ShopCategory.ShopCategorySkeleton, {});
         } else if (item.kind === tmp.NITRO_UPSELL) {
           const obj2 = { isDarkTheme: stateFromStores1, dismiss, buttonVariant: null };
           let GET_NITRO = closure_31;
@@ -754,7 +754,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             GET_NITRO = MobileNitroUpsellInShopFeedExperiment.NitroUpsellBannerButtonVariant.GET_NITRO;
           }
           obj2.buttonVariant = GET_NITRO;
-          tmp18Result = constants2(ShopNitroUpsellBanner.ShopNitroUpsellBanner, obj2);
+          tmp18Result = closure_2_20(ShopNitroUpsellBanner.ShopNitroUpsellBanner, obj2);
         } else {
           let tmp4 = 0 !== item.categoryIndex;
           if (!tmp4) {
@@ -772,7 +772,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             CollectiblesPerfLogging.trackShopPerf(obj3);
           }
           const obj4 = { category: item.category, isDarkTheme: stateFromStores1, index: item.categoryIndex };
-          tmp18Result = constants2(ShopCategory.ShopCategory, obj4);
+          tmp18Result = closure_2_20(ShopCategory.ShopCategory, obj4);
         }
         return tmp18Result;
       }, items20);
@@ -882,7 +882,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = null;
         }
         obj3.fetchShopHomeError = tmp16;
-        return constants2(CollectiblesShopFeaturedPageDefault, obj3);
+        return closure_2_20(CollectiblesShopFeaturedPageDefault, obj3);
       }, items24);
       const callback6 = obj4.useCallback(() => {
         if (!closure_34.current[constants.ORBS]) {
@@ -1008,7 +1008,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {};
       const merged = Object.assign(arg0);
       obj3.improvedLoading = isImprovedMobileShopLoadingEnabled;
-      const tmp5 = constants2(closure_27, obj3);
+      const tmp5 = closure_1_20(closure_27, obj3);
       cResult[0] = isImprovedMobileShopLoadingEnabled;
       cResult[1] = arg0;
       cResult[2] = tmp5;
@@ -1020,7 +1020,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
         ImprovedMobileShopLoadingExperiment.useIsImprovedMobileShopLoadingEnabled("collectibles_shop_v2");
       const merged = Object.assign(arg0);
       obj2.improvedLoading = isImprovedMobileShopLoadingEnabled;
-      return constants2(closure_27, obj2);
+      return closure_1_20(closure_27, obj2);
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1098,7 +1098,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(E, tmp14);
       const tmp11 = _slicedToArray(noop.useState(false), 2);
-      nativePaymentsConnected(1384).isIOS() && !nativePaymentsConnected(6448).isStable && isStaffResult;
+      nativePaymentsConnected(1384).isIOS() && !nativePaymentsConnected(6455).isStable && isStaffResult;
       if (!nativePaymentsConnected) {
         class E {
           constructor() {
@@ -1152,7 +1152,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp(1384);
         const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj8.isIOS()}`;
         obj7.captureMessage(
-          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj8.isIOS()}`} isStable: ${tmp(6448).isStable}`,
+          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj8.isIOS()}`} isStable: ${tmp(6455).isStable}`,
         );
       }
       if (screen.screen !== constants.ORBS) {
@@ -1271,7 +1271,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5(1384);
         const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;
         SentryUtilsDefault.captureMessage(
-          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(6448).isStable}`,
+          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(6455).isStable}`,
         );
         const tmpResult = SentryUtilsDefault;
       }
@@ -1292,7 +1292,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.screen = screen;
       obj5.improvedLoading = false;
       tmp21 = closure_20(closure_27, obj5);
-      tmp11 = nativePaymentsConnected(1384).isIOS() && !nativePaymentsConnected(6448).isStable && isStaffResult;
+      tmp11 = nativePaymentsConnected(1384).isIOS() && !nativePaymentsConnected(6455).isStable && isStaffResult;
     };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopV2.tsx");

@@ -17,13 +17,9 @@ export const initializeFastImageApngExperiment = function initializeFastImageApn
   if (obj.isAndroid()) {
     const initialized = initializeDefault.initialized;
     initialized.then(() => {
-      const obj = { location: "loaded" };
-      const enabled = config.getConfig(obj, { autoTrackExposure: false }).enabled;
-      const result = NativeImageManagerModuleDefault.setFastImageApngEnabled(enabled);
-      const obj2 = config;
-      if (obj4.isFastImageApngEnabled() === enabled) {
-        config = obj2.getConfig(obj);
-      }
+      const result = NativeImageManagerModuleDefault.setFastImageApngEnabled(
+        config.getConfig({ location: "loaded" }).enabled,
+      );
     });
   }
   obj = PlatformUtils;

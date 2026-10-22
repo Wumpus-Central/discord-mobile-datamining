@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_7 = ReanimatedRexport.createAnimatedComponent(View);
 const SPRING_CONFIG = { damping: 10, stiffness: 300, mass: 1 };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   button: null,
   buttonPressed: null,
@@ -33,7 +33,7 @@ let obj = {
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = {
   marginTop: 4,
-  height: fn(18343).SOUND_BUTTON_HEIGHT,
+  height: fn(18411).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -45,7 +45,7 @@ obj.button = {
 };
 let obj2 = {
   marginTop: 4,
-  height: fn(18343).SOUND_BUTTON_HEIGHT,
+  height: fn(18411).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -58,7 +58,11 @@ let obj2 = {
 obj.buttonPressed = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
 obj.buttonDisabled = { opacity: 0.5 };
 let obj4 = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
-obj.buttonPlaying = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.STATUS_SPEAKING };
+obj.buttonPlaying = {
+  borderStyle: "solid",
+  borderWidth: 2,
+  borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED,
+};
 const rect = {
   position: "absolute",
   top: 0,
@@ -100,7 +104,7 @@ const size1 = {
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(6887).PressableOpacity);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(6894).PressableOpacity);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAnimationSharedValuesAndHandlers(arg0) {
@@ -480,7 +484,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       return hasOwnProperty(closure_7, obj);
     };
 ReactCompilerGating = fn(558);
-let obj5 = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.STATUS_SPEAKING };
+let obj5 = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/SoundButton.tsx");
 

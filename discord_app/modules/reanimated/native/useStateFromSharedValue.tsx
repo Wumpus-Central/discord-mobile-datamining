@@ -64,12 +64,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             closure_0 = arg1;
             addListener.addListener(arg0, (arg0) => set(dependencyMap[5]).runOnJS(closure_0)(arg0));
           };
-          const obj4 = { runOnJS: closure_0(5035).runOnJS };
+          const obj4 = { runOnJS: closure_0(5038).runOnJS };
           fn.__closure = obj4;
           fn.__workletHash = 580393174787;
           fn.__initData = __initData;
-          closure_0(5035).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-          const obj3 = closure_0(5035);
+          closure_0(5038).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+          const obj3 = closure_0(5038);
         }
         return () => {
           const listeners = set.listeners;
@@ -129,14 +129,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const result = map.set(tmp, value);
           let fn = function n(arg0, arg1, addListener) {
             closure_0 = arg1;
-            addListener.addListener(arg0, (arg0) => set(5035).runOnJS(closure_0)(arg0));
+            addListener.addListener(arg0, (arg0) => set(5038).runOnJS(closure_0)(arg0));
           };
-          const obj4 = { runOnJS: closure_0(5035).runOnJS };
+          const obj4 = { runOnJS: closure_0(5038).runOnJS };
           fn.__closure = obj4;
           fn.__workletHash = 4734743082561;
           fn.__initData = __initData;
-          closure_0(5035).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-          const obj3 = closure_0(5035);
+          closure_0(5038).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+          const obj3 = closure_0(5038);
         }
         return () => {
           const listeners = set.listeners;

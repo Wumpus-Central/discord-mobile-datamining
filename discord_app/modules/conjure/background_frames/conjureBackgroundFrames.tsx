@@ -89,7 +89,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6755);
+const FramesConstants = fn(6762);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

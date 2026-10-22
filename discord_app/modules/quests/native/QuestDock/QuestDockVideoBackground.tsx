@@ -13,8 +13,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(6689).QuestDockMode;
-const QuestDockConstants = fn(16261);
+const QuestDockMode = fn(6696).QuestDockMode;
+const QuestDockConstants = fn(16331);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } =
   QuestDockConstants);
 const VerticalGradient = fn(1087).VerticalGradient;
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 let closure_14 = [0, 0.1, 0.8, 1];
 const locations = [0, 0.33, 0.76, 1];
 const QuestDockBackgroundCollapsedMediaMode = { PAUSED: "paused", HIDDEN: "hidden" };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   backgroundWrapper: null,
   backgroundImage: null,
@@ -66,7 +66,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = activeQuestDockMode(576).c(7);
       ({ children, style } = arg0);
       const tmp3 = closure_17();
-      activeQuestDockMode = noop.useContext(activeQuestDockMode(16262).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = noop.useContext(activeQuestDockMode(16332).QuestDockGestureContext).activeQuestDockMode;
       let obj = activeQuestDockMode(576);
       const fn = function n() {
         let num = 0;
@@ -75,9 +75,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
       };
-      const obj2 = activeQuestDockMode(5035);
+      const obj2 = activeQuestDockMode(5038);
       fn.__closure = {
-        withSpring: activeQuestDockMode(5229).withSpring,
+        withSpring: activeQuestDockMode(5233).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -111,7 +111,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp5 = items;
       const obj3 = {
-        withSpring: activeQuestDockMode(5229).withSpring,
+        withSpring: activeQuestDockMode(5233).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -120,7 +120,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   : function QuestDockBackgroundMediaFade(arg0) {
       let activeQuestDockMode;
       ({ children, style } = arg0);
-      activeQuestDockMode = noop.useContext(activeQuestDockMode(16262).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = noop.useContext(activeQuestDockMode(16332).QuestDockGestureContext).activeQuestDockMode;
       const tmp = closure_17();
       const fn = function s() {
         let num = 0;
@@ -129,9 +129,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
       };
-      let obj = activeQuestDockMode(5035);
+      let obj = activeQuestDockMode(5038);
       fn.__closure = {
-        withSpring: activeQuestDockMode(5229).withSpring,
+        withSpring: activeQuestDockMode(5233).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -222,13 +222,13 @@ export default noop.memo(
             const fn2 = function $() {
               let num = 0;
               if (activeQuestDockMode.get() === QuestDockMode.COLLAPSED) {
-                num = -1 * collapsed;
+                num = -1 * v65535;
               }
               const items = [{ translateX: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) }];
               const obj3 = { translateX: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
               let num3 = 0;
               if (activeQuestDockMode.get() === QuestDockMode.COLLAPSED) {
-                num3 = -1 * collapsed;
+                num3 = -1 * v65535;
               }
               const obj4 = { transform: null, width: null };
               const tmpResult = spring;

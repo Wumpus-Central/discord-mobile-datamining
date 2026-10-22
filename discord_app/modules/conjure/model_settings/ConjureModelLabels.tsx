@@ -38,10 +38,3 @@ export const tierTooltip = function tierTooltip(title, arg1) {
   return obj;
 };
 export const THINKING_LABELS = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" };
-export const PROVIDER_LABELS = {
-  anthropic: "Anthropic",
-  openai: "OpenAI",
-  deepseek: "DeepSeek",
-  xai: "xAI",
-  moonshotai: "Moonshot AI",
-};

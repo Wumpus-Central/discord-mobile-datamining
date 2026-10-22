@@ -2,15 +2,13 @@
 import util from "../../../intl/index.native.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
-import AnalyticsActions from "../lib/analytics/AnalyticsActions.tsx";
-import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import QuestConstants from "../QuestConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ QuestHomeSortMethods: c2, RewardFilterTypes: c3, TaskFilterTypes: closure_4 } = QuestConstants);
-let result = size.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
+const result = size.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
 
 export const getContextualEntrypointHeading = function getContextualEntrypointHeading(taskDetails) {
   ({ quest, thirdPartyTaskDetails } = taskDetails);
@@ -154,51 +152,28 @@ export const getCtaLink = function getCtaLink(config) {
   return config.ctaConfig.link;
 };
 export const copyShareLink = function copyShareLink(id, ctaContent) {
-  ctaContent = ctaContent.ctaContent;
-  if (
-    obj.shouldMigrateToAdAnalyticsInterface(
-      AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
-      "copy_share_link",
-    )
-  ) {
-    const obj2 = {
-      type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
-      adCreativeType: AdCreativeType.AdCreativeType.QUEST,
-      adCreativeId: id,
-      questContentCTA: ctaContent,
-      surfaceId: null,
-      sourceQuestContent: null,
-      questContentPosition: null,
-      impressionId: null,
-    };
-    ({
-      content: obj5.surfaceId,
-      sourceQuestContent: obj5.sourceQuestContent,
-      position: obj5.questContentPosition,
-      impressionId: obj5.impressionId,
-    } = ctaContent);
-    captureAdUserAction.captureAdUserAction(obj2);
-    const tmpResult = captureAdUserAction;
-  } else {
-    const obj4 = {
-      questId: id,
-      questContent: ctaContent.content,
-      questContentCTA: ctaContent,
-      questContentPosition: null,
-      impressionId: null,
-      sourceQuestContent: null,
-    };
-    ({
-      position: obj3.questContentPosition,
-      impressionId: obj3.impressionId,
-      sourceQuestContent: obj3.sourceQuestContent,
-    } = ctaContent);
-    const result = AnalyticsActions.trackQuestContentClicked(obj4);
-    const tmpResult3 = AnalyticsActions;
-  }
-  obj = AdAnalyticsInterfaceExperiment;
+  const obj = captureAdUserAction;
+  obj.captureAdUserAction({
+    type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+    adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+    adCreativeId: id,
+    questContentCTA: ctaContent.ctaContent,
+    surfaceId: ctaContent.content,
+    sourceQuestContent: ctaContent.sourceQuestContent,
+    questContentPosition: ctaContent.position,
+    impressionId: ctaContent.impressionId,
+  });
+  const obj2 = {
+    type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+    adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+    adCreativeId: id,
+    questContentCTA: ctaContent.ctaContent,
+    surfaceId: ctaContent.content,
+    sourceQuestContent: ctaContent.sourceQuestContent,
+    questContentPosition: ctaContent.position,
+    impressionId: ctaContent.impressionId,
+  };
   ClipboardUtils.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
-  const tmpResult4 = ClipboardUtils;
 };
 export const getDefaultReward = function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {

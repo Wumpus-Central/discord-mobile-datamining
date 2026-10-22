@@ -26,7 +26,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const contentStyles = { marginBottom: 0 };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 },
   contentContainer: null,
@@ -420,7 +420,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                         const obj7 = { style: tmp10, children: tmp29 };
                         items[1] = closure_1_8(View, obj7);
                         obj6.children = items;
-                        const tmp38 = React6(collapsed, obj6);
+                        const tmp38 = React6(v65535, obj6);
                         cResult[27] = tmp29;
                         cResult[28] = tmp10;
                         cResult[29] = tmp38;
@@ -514,7 +514,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = React6(View, obj4);
       items[1] = closure_1_8(View, obj3);
       obj2.children = items;
-      return React6(collapsed, obj2);
+      return React6(v65535, obj2);
     };
 ReactCompilerGating = fn(558);
 let obj6 = { width: "100%", gap: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_16 };
@@ -625,9 +625,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
       multiplier = multiplier.multiplier;
       const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-      const result = multiplier(9550).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+      const result = multiplier(9561).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
       dependencyMap = result;
-      let obj = multiplier(9550);
+      let obj = multiplier(9561);
       const items = [orbMultiplierEligibility];
       const items1 = [result, orbMultiplierEligibility, multiplier];
       const memo = noop.useMemo(() => {
@@ -662,14 +662,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
       let obj3 = {
         visible:
-          orbMultiplierEligibility === multiplier(9550).QuestOrbMultiplierEligibilityType.NITRO ||
-          orbMultiplierEligibility === multiplier(9550).QuestOrbMultiplierEligibilityType.UPSELL,
+          orbMultiplierEligibility === multiplier(9561).QuestOrbMultiplierEligibilityType.NITRO ||
+          orbMultiplierEligibility === multiplier(9561).QuestOrbMultiplierEligibilityType.UPSELL,
         children: null,
       };
       const tmp4 =
-        orbMultiplierEligibility === multiplier(9550).QuestOrbMultiplierEligibilityType.NITRO ||
-        orbMultiplierEligibility === multiplier(9550).QuestOrbMultiplierEligibilityType.UPSELL;
+        orbMultiplierEligibility === multiplier(9561).QuestOrbMultiplierEligibilityType.NITRO ||
+        orbMultiplierEligibility === multiplier(9561).QuestOrbMultiplierEligibilityType.UPSELL;
       obj3.children = closure_8(closure_14, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-      obj2.children = closure_8(orbMultiplierEligibility(16330), obj3);
-      return closure_8(multiplier(5247).BottomSheet, obj2);
+      obj2.children = closure_8(orbMultiplierEligibility(16399), obj3);
+      return closure_8(multiplier(5251).BottomSheet, obj2);
     };

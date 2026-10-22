@@ -31,14 +31,14 @@ function restartFrame(item10016) {
     launch,
   });
 }
-const isLaunched = fn(6755).isLaunched;
+const isLaunched = fn(6762).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 
 export { restartFrame };
-export const restartAppFrames = function restartAppFrames(c0) {
-  closure_0 = c0;
-  if (null != c0) {
+export const restartAppFrames = function restartAppFrames(application_id) {
+  closure_0 = application_id;
+  if (null != application_id) {
     const items = [];
     HermesBuiltin.arraySpread(FramesStore.getAllFrames(), 0);
     const found = items.filter((applicationId) => applicationId.applicationId === closure_0);

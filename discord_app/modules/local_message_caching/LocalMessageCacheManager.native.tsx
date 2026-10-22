@@ -241,7 +241,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1087).MessageStates;
-const MutexUtils = fn(15713);
+const MutexUtils = fn(15755);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -962,7 +962,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6470);
+                let obj9 = values(6477);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

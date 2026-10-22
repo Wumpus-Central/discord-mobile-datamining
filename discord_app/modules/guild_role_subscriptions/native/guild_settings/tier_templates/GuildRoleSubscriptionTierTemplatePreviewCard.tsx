@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/Ac
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import useTypeConsolidationTextTransform from "../../../../design/useTypeConsolidationTextTransform.tsx";
-import _modDef7226 from "../../../../../../_runtime/metro/07226__.js";
+import _modDef7233 from "../../../../../../_runtime/metro/07233__.js";
 import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: {
     padding: 16,
@@ -129,7 +129,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const items = [tmp7, " ", title];
             obj3.children = items;
-            const tmp12 = collapsed(Text_Text.Text, obj3);
+            const tmp12 = v65535(Text_Text.Text, obj3);
             cResult[7] = typeConsolidationEyebrow.variant;
             cResult[8] = tmp6;
             cResult[9] = tmp7;
@@ -178,7 +178,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         title,
       ];
       obj2.children = items1;
-      return collapsed(Text_Text.Text, obj2);
+      return v65535(Text_Text.Text, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -241,7 +241,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { children: null };
       const items = [tmp4, tmp6, tmp9];
       obj4.children = items;
-      const tmp13 = collapsed(newPricesToPick, obj4);
+      const tmp13 = v65535(newPricesToPick, obj4);
       cResult[5] = tmp4;
       cResult[6] = tmp9;
       cResult[7] = tmp13;
@@ -265,7 +265,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj.children = items;
-      return collapsed(newPricesToPick, obj);
+      return v65535(newPricesToPick, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
@@ -332,7 +332,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp6, children: null };
       const items = [tmp7, tmp10, tmp13];
       obj5.children = items;
-      const tmp17 = collapsed(newPricesToPick, obj5);
+      const tmp17 = v65535(newPricesToPick, obj5);
       cResult[8] = tmp7;
       cResult[9] = tmp13;
       cResult[10] = tmp17;
@@ -347,7 +347,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         React6(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: name }),
       ];
       obj2.children = items;
-      return React6(closure_14, { title: collapsed(newPricesToPick, obj2), description });
+      return React6(closure_14, { title: v65535(newPricesToPick, obj2), description });
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -378,7 +378,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: tmp4.viewEntireTemplateFooterUnderline };
         items[2] = React6(newPricesToPick, obj4);
         obj3.children = items;
-        const tmp14 = collapsed(newPricesToPick, obj3);
+        const tmp14 = v65535(newPricesToPick, obj3);
         cResult[2] = tmp4.viewEntireTemplateFooterUnderline;
         cResult[3] = tmp14;
         let tmp10 = tmp14;
@@ -387,7 +387,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj5 = { children: null };
-        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7226, style: null };
+        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7233, style: null };
         const obj7 = { transform: null };
         const items1 = [{ rotate: "180deg" }];
         obj7.transform = items1;
@@ -408,7 +408,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: tmp4.viewEntireTemplateFooter, children: null };
       const items2 = [tmp10, tmp15];
       obj8.children = items2;
-      const tmp21 = collapsed(newPricesToPick, obj8);
+      const tmp21 = v65535(newPricesToPick, obj8);
       cResult[5] = tmp4.viewEntireTemplateFooter;
       cResult[6] = tmp10;
       cResult[7] = tmp21;
@@ -432,9 +432,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         React6(newPricesToPick, { style: tmp.viewEntireTemplateFooterUnderline }),
       ];
       obj2.children = items;
-      const items1 = [collapsed(newPricesToPick, obj2)];
+      const items1 = [v65535(newPricesToPick, obj2)];
       const obj5 = { children: null };
-      const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7226, style: null };
+      const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7233, style: null };
       const obj7 = { transform: null };
       const items2 = [{ rotate: "180deg" }];
       obj7.transform = items2;
@@ -442,7 +442,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.children = React6(native.Icon, obj6);
       items1[1] = React6(newPricesToPick, obj5);
       obj.children = items1;
-      return collapsed(newPricesToPick, obj);
+      return v65535(newPricesToPick, obj);
     };
 ReactCompilerGating = fn(558);
 let obj7 = {
@@ -623,7 +623,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                   function handleViewEntireTemplate() {
                                     ActionSheetActionCreatorsDefault.openLazy(
-                                      asyncRequireImpl(19141, dependencyMap.paths),
+                                      asyncRequireImpl(19208, dependencyMap.paths),
                                       "TierTemplateCard",
                                       { template, guildId, handleSelectTemplateInPreview },
                                     );
@@ -1106,7 +1106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (closure_7) {
           const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(19145, dependencyMap.paths),
+            asyncRequireImpl(19212, dependencyMap.paths),
             "TierTemplatePriceReselectionCard",
             obj2,
           );
@@ -1128,7 +1128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = {
         style: tmp.contentContainer,
         onPress: function handleViewEntireTemplate() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19141, dependencyMap.paths), "TierTemplateCard", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19208, dependencyMap.paths), "TierTemplateCard", {
             template,
             guildId,
             handleSelectTemplateInPreview: callback1,

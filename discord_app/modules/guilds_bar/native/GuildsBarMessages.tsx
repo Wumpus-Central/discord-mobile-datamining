@@ -151,10 +151,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "dm-expanded-children",
-          externalChildren: "guild-row",
-          expandedChildren: "rgba(0, 0, 0, 1)",
-          children: "rgba(0, 0, 0, 0)",
+          label: "guild-row",
+          externalChildren: "rgba(0, 0, 0, 1)",
+          expandedChildren: "rgba(0, 0, 0, 0)",
+          children: "rgba(255, 255, 255, 1)",
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
         const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -171,10 +171,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "dm-expanded-children",
-          externalChildren: "guild-row",
-          expandedChildren: "rgba(0, 0, 0, 1)",
-          children: "rgba(0, 0, 0, 0)",
+          label: "guild-row",
+          externalChildren: "rgba(0, 0, 0, 1)",
+          expandedChildren: "rgba(0, 0, 0, 0)",
+          children: "rgba(255, 255, 255, 1)",
         });
       },
 );

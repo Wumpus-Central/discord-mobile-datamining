@@ -53,7 +53,7 @@ function renderCategoryItem(muted) {
       style: styles.categoryText,
       children: name,
     };
-    tmp34Result = closure_12(trailingAction(5216).Text, obj2);
+    tmp34Result = closure_12(trailingAction(5220).Text, obj2);
   }
   let tmp3 = null;
   if (null != icon) {
@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(11098).PlusMediumIcon;
+    Icon = trailingAction(11115).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -121,7 +121,7 @@ function renderCategoryItem(muted) {
         obj7.onLongPress = onLongPress;
         obj7.style = items;
         obj7.children = tmp18Result;
-        let tmp28Result = closure_12(trailingAction(6887).PressableHighlight, obj7);
+        let tmp28Result = closure_12(trailingAction(6894).PressableHighlight, obj7);
       } else {
         const obj8 = { accessibilityRole: "header", style: items, children: tmp18Result };
         tmp28Result = closure_12(View, obj8);
@@ -157,14 +157,14 @@ function renderCategoryItem(muted) {
     const obj11 = { size: "xxs", color: flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE };
     colors = closure_12(Icon, obj11);
     obj10.children = colors;
-    obj10 = closure_12(trailingAction(6887).PressableOpacity, obj10);
+    obj10 = closure_12(trailingAction(6894).PressableOpacity, obj10);
     obj9.children = obj10;
     closure_12(View, obj9);
   }
   const obj = { paddingLeft: 16, marginTop: num, marginBottom };
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11982);
+const RedesignChannelListConstants = fn(12003);
 ({
   CATEGORY_MARGIN_BOTTOM: closure_8,
   CATEGORY_MARGIN_TOP: closure_9,
@@ -173,7 +173,7 @@ const RedesignChannelListConstants = fn(11982);
 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 const styles = createStyles.createStyles(() => {
   const obj = {
     categoryWrapper: { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical, paddingRight: 16 },
@@ -323,7 +323,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != tmp12) {
           obj3 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
           ({ tooltip: obj4.accessibilityLabel, label: obj4.children } = tmp12);
-          tmp16 = closure_12(ChevronSmallDownIcon(5216).Text, obj3);
+          tmp16 = closure_12(ChevronSmallDownIcon(5220).Text, obj3);
         }
         cResult[3] = tmp12;
         cResult[4] = tmp16;
@@ -369,7 +369,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const colors = nativeDefault.colors;
       const obj6 = {};
       merged = Object.assign(merged);
-      ChevronSmallDownIcon = ChevronSmallDownIcon(11026).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = ChevronSmallDownIcon(11043).ChevronSmallDownIcon;
       obj6.icon = closure_12(ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
@@ -401,7 +401,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         collapsed: CategoryCollapseStore.isCollapsed(channel.id),
         muted: UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id),
       }));
-      collapsed = stateFromStoresObject.collapsed;
+      const collapsed = stateFromStoresObject.collapsed;
       const obj = channel(504);
       ({ onPress, onLongPress } = closure_23(channel.id, collapsed));
       const tmp7 = useChannelNameDefault(channel);
@@ -434,7 +434,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp9) {
         obj4 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
         ({ tooltip: obj3.accessibilityLabel, label: obj3.children } = tmp9);
-        tmp12 = closure_12(tmp2(5216).Text, obj4);
+        tmp12 = closure_12(tmp2(5220).Text, obj4);
       }
       obj2.note = tmp12;
       obj2.trailingAction = useFavoritesGuildCategoryAddActionDefault(channel);
@@ -444,7 +444,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const colors = nativeDefault.colors;
       const obj7 = {};
       const merged1 = Object.assign(merged);
-      obj7.icon = closure_12(channel(11026).ChevronSmallDownIcon, {
+      obj7.icon = closure_12(channel(11043).ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
         style: collapsed2 ? obj3 : obj4,
@@ -500,12 +500,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.onPress = tmp7;
         obj3.withMarginTop = withMarginTop;
         obj3.styles = tmp2;
-        collapsed = obj3.collapsed;
+        const collapsed = obj3.collapsed;
         let merged = Object.assign(obj3, Object.assign({ collapsed: 0 }));
         const colors = stateFromStores(587).colors;
         const obj5 = {};
         merged = Object.assign(merged);
-        ChevronSmallDownIcon = ChevronSmallDownIcon(11026).ChevronSmallDownIcon;
+        ChevronSmallDownIcon = ChevronSmallDownIcon(11043).ChevronSmallDownIcon;
         const obj6 = {
           size: "xxs",
           color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
@@ -553,12 +553,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = callback;
       obj2.withMarginTop = guildId.withMarginTop;
       obj2.styles = tmp;
-      collapsed = obj2.collapsed;
+      const collapsed = obj2.collapsed;
       const merged = Object.assign(obj2, Object.assign({ collapsed: 0 }));
       const colors = stateFromStores(587).colors;
       obj3 = {};
       const merged1 = Object.assign(merged);
-      obj3.icon = closure_12(tmp2(11026).ChevronSmallDownIcon, {
+      obj3.icon = closure_12(tmp2(11043).ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
         style: collapsed ? obj3 : obj4,

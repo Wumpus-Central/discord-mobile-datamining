@@ -18,7 +18,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(16387);
+const GuildRoleSubscriptionsConstants = fn(16456);
 ({
   GuildRoleSubscriptionsTierScenes: hasOwnProperty,
   MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire,
@@ -232,7 +232,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const obj15 = { children: null };
       items[7] = React6(FormPriceTierDefault, obj14);
       obj15.children = items;
-      return closure_1_11(collapsed, obj15);
+      return closure_1_11(v65535, obj15);
     };
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(

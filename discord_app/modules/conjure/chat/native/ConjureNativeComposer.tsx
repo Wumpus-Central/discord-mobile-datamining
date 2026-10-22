@@ -12,8 +12,8 @@ import MusicIcon from "../../../../design/components/Icon/native/redesign/genera
 import PlusLargeIcon from "../../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import ConjureAttachmentTypes from "../ConjureAttachmentTypes.tsx";
 import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
-import ConjureModelSettingsSheet from "../../model_settings/native/ConjureModelSettingsSheet.tsx";
 import conjureStoredAttachments2 from "../conjureStoredAttachments.tsx";
+import ConjureModelSettingsSheet from "../../model_settings/native/ConjureModelSettingsSheet.tsx";
 import conjureAttachmentDrafts from "../conjureAttachmentDrafts.tsx";
 import conjureMentions from "../conjureMentions.tsx";
 import StopIcon from "../../../../design/components/Icon/native/redesign/generated/StopIcon.tsx";
@@ -63,7 +63,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-let createStyles = fn(4966);
+let createStyles = fn(4969);
 let obj2 = {
   pill: {
     backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
@@ -72,7 +72,7 @@ let obj2 = {
   },
 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4966);
+createStyles = fn(4969);
 let obj5 = {
   container: null,
   box: null,
@@ -595,7 +595,7 @@ export default function ConjureNativeComposer(projectId) {
         conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
       if (arr.length > diff) {
         const intl = obj2(1128).intl;
-        let obj = { count: obj2(11695).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+        let obj = { count: obj2(11712).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
         _undefined3(intl.formatToPlainString(_modDef3830.Q0aCVZ, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
@@ -627,7 +627,7 @@ export default function ConjureNativeComposer(projectId) {
         };
         obj3 = obj5;
       });
-      obj2 = obj2(12233);
+      obj2 = obj2(12256);
       result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
     }
   }, items12);
@@ -667,9 +667,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(12388).pickConjurePhotos(
+                value: projectId(12414).pickConjurePhotos(
                   "mixed",
-                  projectId(11695).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(11712).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };

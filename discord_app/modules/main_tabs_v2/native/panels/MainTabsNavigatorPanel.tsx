@@ -19,7 +19,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -58,11 +58,11 @@ export default noop.memo(
               let obj = require;
               let result = dependencyMap;
               if (isChatLockedOpen) {
-                obj = obj(17252);
+                obj = obj(17322);
                 result = obj.convertPortraitToLandscapeScreens();
               } else {
-                obj(5141).dismissKeyboard();
-                const objResult = obj(5141);
+                obj(5145).dismissKeyboard();
+                const objResult = obj(5145);
                 const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
               }
               closure_4.current = true;
@@ -522,11 +522,11 @@ export default noop.memo(
             let obj = require;
             let result = dependencyMap;
             if (isChatLockedOpen) {
-              obj = obj(17252);
+              obj = obj(17322);
               result = obj.convertPortraitToLandscapeScreens();
             } else {
-              obj(5141).dismissKeyboard();
-              const objResult = obj(5141);
+              obj(5145).dismissKeyboard();
+              const objResult = obj(5145);
               const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
             }
             closure_4.current = true;
@@ -780,7 +780,7 @@ export default noop.memo(
             let tmp = null;
             if (isChatBesideChannelList) {
               const obj = { translateX, maxWidth, isChatLockedOpen };
-              tmp = collapsed(ChannelScreenAnimatedFrameDefault, obj);
+              tmp = v65535(ChannelScreenAnimatedFrameDefault, obj);
             }
             return tmp;
           }, items11);

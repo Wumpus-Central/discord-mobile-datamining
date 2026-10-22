@@ -280,7 +280,7 @@ obj = {
       interactionId: applicationId.id,
       customId: applicationId.customId,
       channelId: applicationId.channelId,
-      modalKey: "get",
+      modalKey: "gap",
     };
     if (null != nonce) {
       if (null != dependencyMap[nonce]) {

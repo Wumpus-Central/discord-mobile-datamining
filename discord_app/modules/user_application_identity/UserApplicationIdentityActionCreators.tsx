@@ -6,8 +6,8 @@ const require = fn;
 const Constants = fn(1087);
 const Endpoints = Constants.Endpoints;
 let obj = {
-  fetchUserApplicationIdentitiesWithProfiles(arg0, arg1) {
-    closure_0 = arg0;
+  fetchUserApplicationIdentitiesWithProfiles(id, arg1) {
+    closure_0 = id;
     closure_1 = arg1;
     return (async () => {
       if (c5 === 2) {
@@ -154,8 +154,8 @@ const fetchStore = initialize.createFetchStore(UserApplicationIdentityStore, {
   get(arg0) {
     return UserApplicationIdentityStore.getUserIdentities(arg0);
   },
-  load(arg0) {
-    return obj.fetchUserApplicationIdentitiesWithProfiles(arg0);
+  load(id) {
+    return obj.fetchUserApplicationIdentitiesWithProfiles(id);
   },
 });
 const size = fn(2);

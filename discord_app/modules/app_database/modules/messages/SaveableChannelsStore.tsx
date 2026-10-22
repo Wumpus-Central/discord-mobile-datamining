@@ -83,9 +83,9 @@ function handleCacheLoadedLazyNoCache() {
 }
 let lastChannel = null;
 const bound = Math.max(25, 25, 1);
-let extendedMemoryLru = new fn(7566).ExtendedMemoryLru(750, 500);
+let extendedMemoryLru = new fn(7573).ExtendedMemoryLru(750, 500);
 let global = extendedMemoryLru;
-let lru = new fn(7567).Lru(15);
+let lru = new fn(7574).Lru(15);
 let c9 = false;
 let SaveableChannelsStore;
 class SaveableChannelsStore extends tmp3 {

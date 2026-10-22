@@ -6,7 +6,7 @@ import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../../_runtime/05251_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05255_BottomSheetModal.js";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
 import completeAppLauncherOnboardingDefault from "onboarding/utils/completeAppLauncherOnboarding.tsx";
@@ -17,10 +17,10 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(11933).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(11954).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm },
   onboardingHeader: null,
@@ -285,7 +285,7 @@ export default noop.memo(
               tmp4Result = PlatformUtils;
             }
             children[1] = tmp3Result;
-            return collapsed(React6, { children });
+            return v65535(React6, { children });
           };
           cResult[12] = visibleContent;
           cResult[13] = context;
@@ -410,7 +410,7 @@ export default noop.memo(
             tmp4Result = PlatformUtils;
           }
           children[1] = tmp3Result;
-          return collapsed(React6, { children });
+          return v65535(React6, { children });
         }, items3);
         const items5 = [chatInputRef, isScreenReaderEnabled, ref, onClose];
         const callback3 = transitionState.useCallback((arg0, arg1, arg2) => {
@@ -419,20 +419,20 @@ export default noop.memo(
               let trackWithMetadata = require;
               let APP_LAUNCHER_EXPANDED = dependencyMap;
               if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-                let current = trackWithMetadata(11115).AppLauncherBottomSheetExpandReason.KEYBOARD;
-              } else if (arg2 === trackWithMetadata(5251).ANIMATION_SOURCE.GESTURE) {
-                current = trackWithMetadata(11115).AppLauncherBottomSheetExpandReason.GESTURE;
-              } else if (arg2 !== trackWithMetadata(5251).ANIMATION_SOURCE.USER) {
-                current = trackWithMetadata(11115).AppLauncherBottomSheetExpandReason.OTHER;
+                let current = trackWithMetadata(11132).AppLauncherBottomSheetExpandReason.KEYBOARD;
+              } else if (arg2 === trackWithMetadata(5255).ANIMATION_SOURCE.GESTURE) {
+                current = trackWithMetadata(11132).AppLauncherBottomSheetExpandReason.GESTURE;
+              } else if (arg2 !== trackWithMetadata(5255).ANIMATION_SOURCE.USER) {
+                current = trackWithMetadata(11132).AppLauncherBottomSheetExpandReason.OTHER;
               } else {
                 current = ref1.current;
               }
-              trackWithMetadata = trackWithMetadata(5693).trackWithMetadata;
+              trackWithMetadata = trackWithMetadata(5697).trackWithMetadata;
               APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
               const obj = { reason: current };
               trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
               ref1.current = undefined;
-              const trackWithMetadataResult = trackWithMetadata(5693);
+              const trackWithMetadataResult = trackWithMetadata(5697);
             }
           }
         }, items4);

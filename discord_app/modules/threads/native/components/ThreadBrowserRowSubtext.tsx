@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let items = [,];
 ({ CHANNEL_NAME_CHANGE: arr[0], THREAD_STARTER_MESSAGE: arr[1] } = fn(1087).MessageTypes);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   row: { flexDirection: "row" },
   subtextContent: { lineHeight: 18, flexShrink: 1 },
@@ -559,11 +559,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let roleStyle;
       const tmp = closure_13();
       items = [message.author.id];
-      const subscribeGuildMembers = message(7385).useSubscribeGuildMembers(
+      const subscribeGuildMembers = message(7392).useSubscribeGuildMembers(
         { [thread.guild_id]: items },
         "ThreadBrowserRowSubtext",
       );
-      let obj = message(7385);
+      let obj = message(7392);
       const items1 = [UserStore];
       const stateFromStores = message(504).useStateFromStores(items1, () => {
         let author = UserStore.getUser(message.author.id);
@@ -579,9 +579,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       ({ nick: c2, colorString: c3, colorStrings: c4 } = useMessageAuthorDefault(message));
       let tmp4 = useMessageAuthorDefault(message);
       const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
-      const timestampString = message(8284).getTimestampString(extractTimestampResult);
-      const obj5 = message(8284);
-      const timestampAccessibilityLabel = message(8284).getTimestampAccessibilityLabel(extractTimestampResult);
+      const timestampString = message(8293).getTimestampString(extractTimestampResult);
+      const obj5 = message(8293);
+      const timestampAccessibilityLabel = message(8293).getTimestampAccessibilityLabel(extractTimestampResult);
       roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
       const obj7 = {
         user: stateFromStores,
@@ -634,7 +634,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       });
-      obj7.children = closure_9(message(5216).Text, obj8);
+      obj7.children = closure_9(message(5220).Text, obj8);
       return closure_9(closure_16, obj7);
     };
 ReactCompilerGating = fn(558);
@@ -707,7 +707,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { style: tmp4.row, children: null };
             items = [children, tmp5, tmp11];
             obj5.children = items;
-            const tmp17 = collapsed(View, obj5);
+            const tmp17 = v65535(View, obj5);
             cResult[13] = children;
             cResult[14] = tmp4.row;
             cResult[15] = tmp5;
@@ -762,7 +762,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.children = "" + timestamp;
         items[2] = React6(Text_Text.Text, obj5);
         obj3.children = items;
-        tmp6 = collapsed(View, obj3);
+        tmp6 = v65535(View, obj3);
       }
       return tmp6;
     };
@@ -819,7 +819,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { children: null };
                 const items1 = [tmp8, tmp12];
                 obj3.children = items1;
-                const tmp18 = collapsed(closure_1_11, obj3);
+                const tmp18 = v65535(closure_1_11, obj3);
                 cResult[13] = tmp8;
                 cResult[14] = tmp12;
                 cResult[15] = tmp18;
@@ -896,7 +896,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         children: nickname,
       });
       obj3.children = items1;
-      return collapsed(closure_1_11, obj3);
+      return v65535(closure_1_11, obj3);
     };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/ThreadBrowserRowSubtext.tsx");
@@ -930,7 +930,7 @@ export const ThreadSubtext = ReactCompilerGating.isReactCompilerEnabled()
       const obj = id(576);
       const stateFromStores = id(504).useStateFromStores(first, tmp6, tmp7);
       const tmpResult = id(504);
-      const lastMessageTimestamp = id(8284).useLastMessageTimestamp(thread);
+      const lastMessageTimestamp = id(8293).useLastMessageTimestamp(thread);
       if (null != stateFromStores) {
         if (!items.includes(stateFromStores.type)) {
           if (!thread.isArchivedThread()) {
@@ -950,20 +950,20 @@ export const ThreadSubtext = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[4] !== lastMessageTimestamp) {
-        const timestampString = tmp(8284).getTimestampString(lastMessageTimestamp);
+        const timestampString = tmp(8293).getTimestampString(lastMessageTimestamp);
         cResult[4] = lastMessageTimestamp;
         cResult[5] = timestampString;
         let tmp15 = timestampString;
-        const tmpResult5 = tmp(8284);
+        const tmpResult5 = tmp(8293);
       } else {
         tmp15 = cResult[5];
       }
       if (cResult[6] !== lastMessageTimestamp) {
-        const timestampAccessibilityLabel = tmp(8284).getTimestampAccessibilityLabel(lastMessageTimestamp);
+        const timestampAccessibilityLabel = tmp(8293).getTimestampAccessibilityLabel(lastMessageTimestamp);
         cResult[6] = lastMessageTimestamp;
         cResult[7] = timestampAccessibilityLabel;
         let tmp17 = timestampAccessibilityLabel;
-        const tmpResult6 = tmp(8284);
+        const tmpResult6 = tmp(8293);
       } else {
         tmp17 = cResult[7];
       }
@@ -981,7 +981,7 @@ export const ThreadSubtext = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp17;
       cResult[11] = tmp20;
       tmp19 = tmp20;
-      const tmpResult4 = id(8284);
+      const tmpResult4 = id(8293);
     }
   : function ThreadSubtext(thread) {
       thread = thread.thread;
@@ -994,7 +994,7 @@ export const ThreadSubtext = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = id(504);
-      const lastMessageTimestamp = id(8284).useLastMessageTimestamp(thread);
+      const lastMessageTimestamp = id(8293).useLastMessageTimestamp(thread);
       if (null != stateFromStores) {
         if (!items.includes(stateFromStores.type)) {
           if (!thread.isArchivedThread()) {
@@ -1003,13 +1003,13 @@ export const ThreadSubtext = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj2 = id(8284);
-      const timestampString = id(8284).getTimestampString(lastMessageTimestamp);
-      const tmpResult = id(8284);
-      const tmpResult2 = id(8284);
+      const obj2 = id(8293);
+      const timestampString = id(8293).getTimestampString(lastMessageTimestamp);
+      const tmpResult = id(8293);
+      const tmpResult2 = id(8293);
       return closure_9(closure_14, {
         thread,
         timestamp: timestampString,
-        accessibilityLabel: id(8284).getTimestampAccessibilityLabel(lastMessageTimestamp),
+        accessibilityLabel: id(8293).getTimestampAccessibilityLabel(lastMessageTimestamp),
       });
     };

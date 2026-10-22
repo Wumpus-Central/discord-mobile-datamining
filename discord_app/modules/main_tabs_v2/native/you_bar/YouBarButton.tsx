@@ -10,11 +10,11 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16264);
+const YouBarConstants = fn(16334);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = {
   buttonContainer: {
     position: "relative",
@@ -134,10 +134,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         position: "absolute",
         left: sum,
         top: sum1,
-        right: "unicodeVersion",
-        bottom: "t",
-        padding: "left",
-        minWidth: "r",
+        right: "ix",
+        bottom: "useEffect",
+        padding: "a",
+        minWidth: "application",
       };
       cResult[0] = sum;
       cResult[1] = sum1;
@@ -161,10 +161,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           position: "absolute",
           left: size - badgeSize + num,
           top: size - badgeSize + num2,
-          right: "unicodeVersion",
-          bottom: "t",
-          padding: "left",
-          minWidth: "r",
+          right: "ix",
+          bottom: "useEffect",
+          padding: "a",
+          minWidth: "application",
         };
         return rect;
       }, items);

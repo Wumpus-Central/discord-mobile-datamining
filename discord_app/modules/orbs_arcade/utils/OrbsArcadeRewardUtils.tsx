@@ -1,13 +1,14 @@
 // discord_app/modules/orbs_arcade/utils/OrbsArcadeRewardUtils.tsx
+import util from "../../../intl/index.native.tsx";
 import OrbsArcadeTypes from "../OrbsArcadeTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/orbs_arcade/utils/OrbsArcadeRewardUtils.tsx");
 
-export const getOrbsArcadeRewardStatus = function getOrbsArcadeRewardStatus(arg0, arg1) {
+export const getOrbsArcadeRewardStatus = function getOrbsArcadeRewardStatus(id, gameState) {
   let tmp;
-  if (arg1 != null) {
-    tmp = arg1.rewardGrants[arg0];
+  if (gameState != null) {
+    tmp = gameState.rewardGrants[id];
   }
   let claimedAt;
   if (tmp != null) {
@@ -28,9 +29,9 @@ export const getOrbsArcadeRewardStatus = function getOrbsArcadeRewardStatus(arg0
   }
   return LOCKED;
 };
-export const getOrbsArcadeFocusedReward = function getOrbsArcadeFocusedReward(arg0, arg1) {
-  closure_0 = arg1;
-  const items = [...arg0];
+export const getOrbsArcadeFocusedReward = function getOrbsArcadeFocusedReward(rewards, stateFromStores) {
+  closure_0 = stateFromStores;
+  const items = [...rewards];
   const sorted = items.sort((scoreTarget, scoreTarget2) => scoreTarget.scoreTarget - scoreTarget2.scoreTarget);
   return sorted.find((item) => {
     let claimedAt;
@@ -75,4 +76,13 @@ export const isOrbsArcadeEnrollmentOver = function isOrbsArcadeEnrollmentOver(ga
     tmp = !values.some((pendingAt) => null != pendingAt.pendingAt && null == pendingAt.claimedAt);
   }
   return tmp;
+};
+export const getOrbsArcadeRewardScoreLabel = function getOrbsArcadeRewardScoreLabel(reward, orbsArcadeRewardStatus) {
+  const intl = util.intl;
+  if (orbsArcadeRewardStatus === OrbsArcadeTypes.OrbsArcadeRewardStatus.LOCKED) {
+    let Q8Vv0m = util.t.XKyikw;
+  } else {
+    Q8Vv0m = util.t.Q8Vv0m;
+  }
+  return intl.formatToPlainString(Q8Vv0m, { score: reward.scoreTarget });
 };

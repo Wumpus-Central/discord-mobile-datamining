@@ -13,7 +13,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1394).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   badgeTextUppercase: { textTransform: "uppercase" },
   badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE },

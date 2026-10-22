@@ -122,12 +122,12 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
           closure_129_1 = undefined;
           closure_129_2 = undefined;
           let threads;
-          const nextBatch = collapsed.getNextBatch(closure_0, 10);
+          const nextBatch = v65535.getNextBatch(closure_0, 10);
           closure_129_1 = nextBatch;
           c4 = 2;
           if (0 === nextBatch.length) {
             c4 = 0;
-            collapsed.finishRequesting(closure_0, nextBatch);
+            v65535.finishRequesting(closure_0, nextBatch);
             c6 = 3;
             return { value: "IconComponent", done: null };
           } else {
@@ -139,7 +139,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
             closure_129_2 = guild_id;
             if (null == guild_id) {
               c4 = 0;
-              collapsed.finishRequesting(closure_0, nextBatch);
+              v65535.finishRequesting(closure_0, nextBatch);
               c6 = 3;
               return { value: "IconComponent", done: null };
             } else {
@@ -193,7 +193,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     }
   }
 };
-const computeThreadIdsSnapshot = fn(7379).computeThreadIdsSnapshot;
+const computeThreadIdsSnapshot = fn(7386).computeThreadIdsSnapshot;
 const Endpoints = fn(1087).Endpoints;
 class DefaultDict {
   constructor(arg0) {

@@ -72,8 +72,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               isCollapsedResult = null != id;
             }
             if (isCollapsedResult) {
-              guildId(11198).categoryExpand(id);
-              const obj = guildId(11198);
+              guildId(11215).categoryExpand(id);
+              const obj = guildId(11215);
             }
             if (obj2.hasNotSetUpChannelOptIn(guildId)) {
               if (channelId === id) {
@@ -82,19 +82,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [channelId];
                 const set = new Set(items);
                 obj3.include = set;
-                const result = guildId(11195).optIntoAllChannelsForExistingMember(guildId, obj3);
-                const tmp8Result = guildId(11195);
+                const result = guildId(11212).optIntoAllChannelsForExistingMember(guildId, obj3);
+                const tmp8Result = guildId(11212);
               } else {
                 const obj4 = { exclude: null };
                 const _Set = Set;
                 const items1 = [channelId];
                 const set1 = new Set(items1);
                 obj4.exclude = set1;
-                const result1 = guildId(11195).optIntoAllChannelsForExistingMember(guildId, obj4);
-                const tmp8Result3 = guildId(11195);
+                const result1 = guildId(11212).optIntoAllChannelsForExistingMember(guildId, obj4);
+                const tmp8Result3 = guildId(11212);
               }
             } else {
-              const tmp8Result4 = guildId(7188);
+              const tmp8Result4 = guildId(7195);
               const obj5 = { section: constants.CHANNEL_BROWSER };
               const result2 = tmp8Result4.updateOptInChannelsImmediate(
                 guildId,
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj5,
               );
             }
-            obj2 = guildId(11195);
+            obj2 = guildId(11212);
           };
           cResult[10] = fn3;
           let tmp14 = fn3;
@@ -172,8 +172,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             isCollapsedResult = null != id;
           }
           if (isCollapsedResult) {
-            guildId(11198).categoryExpand(id);
-            const obj = guildId(11198);
+            guildId(11215).categoryExpand(id);
+            const obj = guildId(11215);
           }
           if (obj2.hasNotSetUpChannelOptIn(guildId)) {
             if (channelId === id) {
@@ -182,23 +182,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const items = [channelId];
               const set = new Set(items);
               obj3.include = set;
-              const result = guildId(11195).optIntoAllChannelsForExistingMember(guildId, obj3);
-              const tmp8Result = guildId(11195);
+              const result = guildId(11212).optIntoAllChannelsForExistingMember(guildId, obj3);
+              const tmp8Result = guildId(11212);
             } else {
               const obj4 = { exclude: null };
               const _Set = Set;
               const items1 = [channelId];
               const set1 = new Set(items1);
               obj4.exclude = set1;
-              const result1 = guildId(11195).optIntoAllChannelsForExistingMember(guildId, obj4);
-              const tmp8Result3 = guildId(11195);
+              const result1 = guildId(11212).optIntoAllChannelsForExistingMember(guildId, obj4);
+              const tmp8Result3 = guildId(11212);
             }
           } else {
-            const tmp8Result4 = guildId(7188);
+            const tmp8Result4 = guildId(7195);
             const obj5 = { section: constants.CHANNEL_BROWSER };
             const result2 = tmp8Result4.updateOptInChannelsImmediate(guildId, channelId, !isChannelOptedInResult, obj5);
           }
-          obj2 = guildId(11195);
+          obj2 = guildId(11212);
         }, []),
       };
     };

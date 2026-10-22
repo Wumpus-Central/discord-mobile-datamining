@@ -661,5 +661,6 @@ export default {
   CUSTOM_TYPING_INDICATOR_ANNOUNCEMENT_SHEET: "custom typing indicator announcement sheet",
   CHAT_TYPING_INDICATOR: "chat typing indicator",
   BEST_BUY_PREMIUM_TAB_POPOVER: "best buy premium tab popover",
+  CODE_BLURPLE_PREMIUM_TAB_POPOVER: "call of duty blueprint premium tab popover",
   FRIENDS_SIDEBAR: "friends sidebar",
 };

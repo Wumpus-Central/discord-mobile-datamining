@@ -7,12 +7,12 @@ import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
 import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const LinearGradientDefault = tmp5(5240);
+const LinearGradientDefault = tmp5(5244);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   container: { flexShrink: 0 },
   background: { position: "relative" },

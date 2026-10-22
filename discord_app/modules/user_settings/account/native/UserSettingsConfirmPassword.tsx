@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },
@@ -299,7 +299,7 @@ export const UserSettingsConfirmPasswordWrapped = ReactCompilerGating.isReactCom
       if (cResult[0] !== settingNavigationRoute.params) {
         const obj3 = {};
         const merged = Object.assign(settingNavigationRoute.params);
-        const tmp8 = collapsed(UserSettingsConfirmPasswordInner, obj3);
+        const tmp8 = v65535(UserSettingsConfirmPasswordInner, obj3);
         cResult[0] = settingNavigationRoute.params;
         cResult[1] = tmp8;
         let tmp3 = tmp8;
@@ -310,5 +310,5 @@ export const UserSettingsConfirmPasswordWrapped = ReactCompilerGating.isReactCom
     }
   : function UserSettingsConfirmPasswordWrapped() {
       const merged = Object.assign(useSettingNavigationRoute.useSettingNavigationRoute().params);
-      return collapsed(UserSettingsConfirmPasswordInner, {});
+      return v65535(UserSettingsConfirmPasswordInner, {});
     };

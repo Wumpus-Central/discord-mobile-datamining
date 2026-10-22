@@ -127,8 +127,8 @@ const frozen2 = Object.freeze({
     }
     return "/users/" + arg0 + "/sessions/" + session_id + "/activities/" + num + "/metadata";
   },
-  USER_ACTIVITY_JOIN(userId, sessionId, id) {
-    return "/users/" + userId + "/sessions/" + sessionId + "/activities/" + id + "/" + obj.JOIN;
+  USER_ACTIVITY_JOIN(userId, sessionId, applicationId) {
+    return "/users/" + userId + "/sessions/" + sessionId + "/activities/" + applicationId + "/" + obj.JOIN;
   },
   USER_ACTIVITY_STATISTICS: "/users/@me/activities/statistics/applications",
   USER_ACTIVITY_SUBSCRIBE: "/users/@me/activities/subscribe",
@@ -1363,9 +1363,6 @@ const frozen2 = Object.freeze({
   },
   ACTIVITY_LEAVE(arg0, id, arg2) {
     return "/applications/" + arg0 + "/activities/" + id + "/instances/" + arg2 + "/leave";
-  },
-  ACTIVITIES_DISCORD_CONFIG(arg0) {
-    return "/activities/discord-config/" + arg0;
   },
   ACTIVITIES_TRUSTED_LINKS(arg0) {
     return "/applications/" + arg0 + "/trusted-links/check";
@@ -2199,8 +2196,8 @@ const obj2 = {
     }
     return "/users/" + arg0 + "/sessions/" + session_id + "/activities/" + num + "/metadata";
   },
-  USER_ACTIVITY_JOIN(userId, sessionId, id) {
-    return "/users/" + userId + "/sessions/" + sessionId + "/activities/" + id + "/" + obj.JOIN;
+  USER_ACTIVITY_JOIN(userId, sessionId, applicationId) {
+    return "/users/" + userId + "/sessions/" + sessionId + "/activities/" + applicationId + "/" + obj.JOIN;
   },
   USER_ACTIVITY_STATISTICS: "/users/@me/activities/statistics/applications",
   USER_ACTIVITY_SUBSCRIBE: "/users/@me/activities/subscribe",
@@ -3435,9 +3432,6 @@ const obj2 = {
   },
   ACTIVITY_LEAVE(arg0, id, arg2) {
     return "/applications/" + arg0 + "/activities/" + id + "/instances/" + arg2 + "/leave";
-  },
-  ACTIVITIES_DISCORD_CONFIG(arg0) {
-    return "/activities/discord-config/" + arg0;
   },
   ACTIVITIES_TRUSTED_LINKS(arg0) {
     return "/applications/" + arg0 + "/trusted-links/check";
@@ -5681,9 +5675,6 @@ const frozen16 = Object.freeze({
   USER_APPLICATION_IDENTITIES(arg0) {
     return "user-application-identities/" + arg0;
   },
-  ACTIVITIES_DISCORD_CONFIG(arg0) {
-    return "activities-discord-config/" + arg0;
-  },
   GAME(arg0) {
     let combined = null;
     if (null != arg0) {
@@ -7727,6 +7718,8 @@ export const AnalyticEvents = {
   LEADERBOARD_CLICK: "leaderboard_click",
   LEADERBOARD_END_IMPRESSION: "leaderboard_end_impression",
   LEADERBOARD_HOVER: "leaderboard_hover",
+  POPULAR_GAMES_CLICK: "popular_games_click",
+  POPULAR_GAMES_HOVER: "popular_games_hover",
   SERVER_HUB_TOGGLE_SETTING: "server_hub_toggle_setting",
   SERVER_HUB_VISIT: "server_hub_visit",
   SERVER_HUB_WIDGET_EDIT_CLICKED: "server_hub_widget_edit_clicked",
@@ -9279,6 +9272,8 @@ export const AnalyticEvents = {
   CONJURE_TURN_RESULTED: "conjure_turn_resulted",
   CONJURE_PUBLISH_ACTION_CLICKED: "conjure_publish_action_clicked",
   CONJURE_ERRORED: "conjure_errored",
+  CONJURE_RATING_SUBMITTED: "conjure_rating_submitted",
+  CONJURE_RATING_FEEDBACK_SUBMITTED: "conjure_rating_feedback_submitted",
   SMART_SEARCH_ANSWER_RETURNED: "smart_search_answer_returned",
   SMART_SEARCH_ANSWER_SHOWN: "smart_search_answer_shown",
   SMART_SEARCH_ANSWER_DWELLED: "smart_search_answer_dwelled",
@@ -9847,6 +9842,7 @@ export const HelpdeskArticles = {
   CUSTOM_TYPING_INDICATOR: "42962943077271",
   BUY_GIFT_CARDS: "41159846304279",
   BEST_BUY_PROMOTION: "39188406147479",
+  CODE_BLURPLE_PROMOTION: "39188406147479-Nitro-Rewards#h_01M4Y7XV7016H1S3QY1S2JA1NC",
 };
 export const HelpdeskArticlesInternalGUIDs = {
   INVALID_BILLING_ADDRESS: "#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618",

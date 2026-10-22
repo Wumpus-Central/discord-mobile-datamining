@@ -149,7 +149,7 @@ let body = {
     ({ guildId, level } = arg0);
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: collapsed.GUILD_MFA(guildId),
+      url: v65535.GUILD_MFA(guildId),
       body: { level },
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -278,7 +278,7 @@ let body = {
     obj(584).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(584);
-    const obj6 = obj(7058);
+    const obj6 = obj(7065);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -348,7 +348,7 @@ let body = {
       tmp2 = null;
     }
     const request = {
-      url: collapsed.GUILD(id),
+      url: v65535.GUILD(id),
       body: { owner_id: id2, code: tmp2 },
       oldFormErrors: true,
       trackedActionData: null,
@@ -371,12 +371,7 @@ let body = {
     if (arg1 === undefined) {
       flag = false;
     }
-    const obj2 = {
-      url: collapsed.GUILD_PINCODE(id),
-      oldFormErrors: true,
-      trackedActionData: null,
-      rejectWithError: null,
-    };
+    const obj2 = { url: v65535.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj = TrackedHTTPUtilsDefault;
     obj2.trackedActionData = {
       event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
@@ -392,7 +387,7 @@ let body = {
   deleteGuild(arg0) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: collapsed.GUILD_DELETE(arg0),
+      url: v65535.GUILD_DELETE(arg0),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -454,7 +449,7 @@ let body = {
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                  const AccessibilityAnnouncer = closure_1_0(4974).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = closure_1_0(4977).AccessibilityAnnouncer;
                   const intl = closure_1_0(1128).intl;
                   AccessibilityAnnouncer.announce(intl.string(closure_1_0(1128).t["7iPyVW"]));
                 }),
@@ -584,7 +579,7 @@ let body = {
   enableIntegration(id, type, id2) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: collapsed.GUILD_INTEGRATIONS(id),
+      url: v65535.GUILD_INTEGRATIONS(id),
       body: null,
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -596,7 +591,7 @@ let body = {
   disableIntegration(id, id2) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: collapsed.GUILD_INTEGRATION(id, id2),
+      url: v65535.GUILD_INTEGRATION(id, id2),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -605,7 +600,7 @@ let body = {
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: collapsed.GUILD_INTEGRATION(guildId, id),
+      url: v65535.GUILD_INTEGRATION(guildId, id),
       body: null,
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -617,7 +612,7 @@ let body = {
   syncIntegration(guildId, id) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: collapsed.GUILD_INTEGRATION_SYNC(guildId, id),
+      url: v65535.GUILD_INTEGRATION_SYNC(guildId, id),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };

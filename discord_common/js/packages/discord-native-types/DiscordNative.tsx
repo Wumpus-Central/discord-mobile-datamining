@@ -28,6 +28,8 @@ export const StoredCrashInformation = {
   [6]: "StreamMediaSessionId",
   IntentionalCrashReason: 7,
   [7]: "IntentionalCrashReason",
+  BuildNumber: 8,
+  [8]: "BuildNumber",
 };
 export const JSExceptionLocation = {
   RendererProcessDelayed: 0,

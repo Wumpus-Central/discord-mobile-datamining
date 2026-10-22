@@ -92,7 +92,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1087);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(4971);
+const MessageConstants = fn(4974);
 ({
   MESSAGE_GROUP_SPACING: closure_11,
   DEFAULT_COMPACT_SPACING: closure_12,

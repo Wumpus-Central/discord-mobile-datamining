@@ -12,9 +12,9 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
-  safeArea: { marginTop: fn(5250).NAV_BAR_HEIGHT, flex: 1 },
+  safeArea: { marginTop: fn(5254).NAV_BAR_HEIGHT, flex: 1 },
   container: { flex: 1 },
   title: { marginBottom: 8, textAlign: "center" },
   header: { alignItems: "center", justifyContent: "center", padding: 16 },
@@ -75,7 +75,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                     return tmp26;
                   }
                   let obj3 = { top: true, style: safeArea, children: tmp22 };
-                  const tmp28 = closure_7(tmp(7200).SafeAreaPaddingView, obj3);
+                  const tmp28 = closure_7(tmp(7207).SafeAreaPaddingView, obj3);
                   cResult[19] = tmp4.safeArea;
                   cResult[20] = tmp22;
                   cResult[21] = tmp28;
@@ -113,7 +113,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp6,
         };
-        const tmp10 = closure_7(tmp(5216).Text, obj7);
+        const tmp10 = closure_7(tmp(5220).Text, obj7);
         cResult[5] = tmp4.title;
         cResult[6] = tmp6;
         cResult[7] = tmp10;
@@ -215,7 +215,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                const obj3 = tmp4(13084);
+                const obj3 = tmp4(13120);
                 dependencyMap = 1;
                 c4 = 1;
                 const obj5 = {
@@ -232,7 +232,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { value, done: true };
               return obj6;
             } else {
-              closure_1(13082).close();
+              closure_1(13118).close();
               c4 = 3;
               return { value: "IconComponent", done: null };
             }
@@ -255,7 +255,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = entry(1128).intl;
       obj4.children = intl.format(entry(1128).t.w9tsNk, { guildName: entry.name });
-      obj3.children = closure_7(entry(5216).Text, obj4);
+      obj3.children = closure_7(entry(5220).Text, obj4);
       const items = [closure_7(closure_5, obj3)];
       let obj6 = {
         onSubmit(arg0, arg1) {
@@ -279,11 +279,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = closure_7(GuildDirectoryEditDescriptionTemplateDefault, obj6);
       obj2.children = items;
       obj.children = closure_8(closure_6, obj2);
-      return closure_7(entry(7200).SafeAreaPaddingView, obj);
+      return closure_7(entry(7207).SafeAreaPaddingView, obj);
     };
 const EDIT_DESCRIPTION = "EDIT_DESCRIPTION";
 ReactCompilerGating = fn(558);
-let obj3 = { marginTop: fn(5250).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(5254).NAV_BAR_HEIGHT, flex: 1 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx",
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {};
         const obj3 = {
           fullscreen: true,
-          headerLeft: tmp(6903).getHeaderCloseButton(GuildDirectoryEditDescriptionModalActionCreatorsDefault.close),
+          headerLeft: tmp(6910).getHeaderCloseButton(GuildDirectoryEditDescriptionModalActionCreatorsDefault.close),
           headerTitle() {
             return null;
           },
@@ -310,13 +310,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = arg0;
         cResult[1] = obj2;
         let tmp4 = obj2;
-        const tmpResult = tmp(6903);
+        const tmpResult = tmp(6910);
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] !== tmp4) {
         const obj4 = { screens: tmp4, initialRouteName: EDIT_DESCRIPTION };
-        const tmp10 = closure_7(tmp(7074).Navigator, obj4);
+        const tmp10 = closure_7(tmp(7081).Navigator, obj4);
         cResult[2] = tmp4;
         cResult[3] = tmp10;
         let tmp7 = tmp10;

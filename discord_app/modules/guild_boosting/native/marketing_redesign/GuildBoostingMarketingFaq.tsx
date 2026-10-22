@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef14809 from "../../../../../_runtime/metro/14809__.js";
+import _modDef14853 from "../../../../../_runtime/metro/14853__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,12 +13,12 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   wrapper: {
     alignSelf: "center",
     marginTop: 50,
-    marginBottom: fn(7486).VISIBILITY_OFFSET,
+    marginBottom: fn(7493).VISIBILITY_OFFSET,
     maxWidth: 800,
     paddingHorizontal: 16,
     width: "100%",
@@ -37,7 +37,7 @@ let obj2 = {
 let obj3 = {
   alignSelf: "center",
   marginTop: 50,
-  marginBottom: fn(7486).VISIBILITY_OFFSET,
+  marginBottom: fn(7493).VISIBILITY_OFFSET,
   maxWidth: 800,
   paddingHorizontal: 16,
   width: "100%",
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp4.heading) {
         let obj2 = { style: heading, variant: "heading-xxl/bold", children: first1 };
-        const tmp11 = closure_7(tmp(5216).Heading, obj2);
+        const tmp11 = closure_7(tmp(5220).Heading, obj2);
         cResult[1] = tmp4.heading;
         cResult[2] = tmp11;
         let tmp9 = tmp11;
@@ -375,14 +375,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             str = "interactive-text-active";
           }
           items1 = [
-            closure_1_7(closure_0(5216).Text, {
+            closure_1_7(closure_0(5220).Text, {
               color: str,
               style: closure_0.question,
               variant: "text-md/normal",
               children: getQuestion.getQuestion(),
             }),
           ];
-          const obj4 = { source: _modDef14809, style: null };
+          const obj4 = { source: _modDef14853, style: null };
           const items2 = [closure_0.questionIcon];
           let questionIconExpanded = tmp;
           if (tmp) {
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj4.style = items2;
           items1[1] = closure_1_7(closure_0(1202).Icon, obj4);
           obj2.children = items1;
-          const items3 = [closure_1_8(closure_0(6887).PressableOpacity, obj2)];
+          const items3 = [closure_1_8(closure_0(6894).PressableOpacity, obj2)];
           if (tmp) {
             const obj5 = {
               style: tmp4.answer,
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               variant: "text-sm/normal",
               children: getQuestion.getAnswer(),
             };
-            tmp = closure_1_7(tmp5(5216).Text, obj5);
+            tmp = closure_1_7(tmp5(5220).Text, obj5);
           }
           items3[1] = tmp;
           obj.children = items3;

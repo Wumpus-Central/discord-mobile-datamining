@@ -15,16 +15,16 @@ let closure_3 = ["isActive", "disableTint", "showBadge", "isSmallSize", "backgro
 let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
 const View = fn(17).View;
-const resetFocusTimer = fn(10830).resetFocusTimer;
+const resetFocusTimer = fn(10847).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const ColorUtils = fn(4963);
+const ColorUtils = fn(4966);
 let closure_12 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let c13 = 45;
 let closure_14 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_16 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj3 = {
   buttonContainer: { position: "absolute" },
   iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" },
@@ -183,7 +183,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                       style: tmp16,
                                                       children: tmp42,
                                                     };
-                                                    const tmp48 = closure_10(onPress(6887).PressableOpacity, obj3);
+                                                    const tmp48 = closure_10(onPress(6894).PressableOpacity, obj3);
                                                     cResult[46] = accessibilityLabel;
                                                     cResult[47] = accessibilityState;
                                                     cResult[48] = tmp42;
@@ -218,15 +218,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                         width: result1,
                                         height: result1,
                                         borderRadius: tmp11.badgeRadius,
-                                        top: onPress(11313).getBadgeTop(
+                                        top: onPress(11330).getBadgeTop(
                                           tmp11.badgeRadius,
                                           tmp11.buttonRadius,
                                           cutoutPositionInDegrees,
                                         ),
                                         left: null,
                                       };
-                                      const tmpResult = onPress(11313);
-                                      size1.left = onPress(11313).getBadgeLeft(
+                                      const tmpResult = onPress(11330);
+                                      size1.left = onPress(11330).getBadgeLeft(
                                         tmp11.badgeRadius,
                                         tmp11.buttonRadius,
                                         cutoutPositionInDegrees,
@@ -234,7 +234,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                       items1[1] = size1;
                                       obj5.style = items1;
                                       tmp38 = closure_10(View, obj5);
-                                      const tmpResult2 = onPress(11313);
+                                      const tmpResult2 = onPress(11330);
                                     }
                                     cResult[34] = tmp11.badgeRadius;
                                     cResult[35] = tmp11.buttonRadius;
@@ -517,7 +517,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(tmp5);
       obj4.showBadge = undefined !== tmp7 && tmp7;
       obj4.lottieComponentColor = tmp9;
-      const tmp24 = collapsed(closure_18, obj4);
+      const tmp24 = v65535(closure_18, obj4);
       cResult[12] = undefined !== tmp8 && tmp8;
       cResult[13] = tmp5;
       cResult[14] = undefined !== tmp7 && tmp7;
@@ -572,7 +572,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tintColor = tmp5;
       }
       obj.lottieComponentColor = tintColor;
-      return collapsed(closure_18, obj);
+      return v65535(closure_18, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -604,7 +604,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp10;
       }
       const merged = Object.assign(tmp3);
-      const tmp12 = collapsed(closure_18, {
+      const tmp12 = v65535(closure_18, {
         backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
         imageStyle: tmp9,
         isSmallSize: undefined !== tmp4 && tmp4,
@@ -631,7 +631,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         isSmallSize: flag,
       };
       const merged1 = Object.assign(merged);
-      return collapsed(closure_18, obj);
+      return v65535(closure_18, obj);
     };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/CallBarAction.tsx");
@@ -685,15 +685,15 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = {};
               const merged = Object.assign(tmp6);
               obj3.children = tmp15;
-              obj2.children = collapsed(closure_18, obj3);
-              const tmp26 = collapsed(View, obj2);
+              obj2.children = v65535(closure_18, obj3);
+              const tmp26 = v65535(View, obj2);
               cResult[13] = tmp6;
               cResult[14] = tmp15;
               cResult[15] = tmp26;
               tmp19 = tmp26;
             }
             const obj4 = { style: tmp11, children: tmp12 };
-            const tmp18 = collapsed(View, obj4);
+            const tmp18 = v65535(View, obj4);
             cResult[10] = tmp11;
             cResult[11] = tmp12;
             cResult[12] = tmp18;
@@ -705,7 +705,7 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-overlay-light",
             children: tmp5,
           };
-          const tmp14 = collapsed(Text_Text.Text, obj5);
+          const tmp14 = v65535(Text_Text.Text, obj5);
           cResult[7] = tmp5;
           cResult[8] = tmp10.notificationText;
           cResult[9] = tmp14;
@@ -740,10 +740,10 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-overlay-light",
           children: isMentioned.notifications,
         };
-        obj3.children = collapsed(Text_Text.Text, obj4);
-        obj.children = collapsed(View, obj3);
-        obj2.children = collapsed(closure_18, obj);
-        return collapsed(View, obj2);
+        obj3.children = v65535(Text_Text.Text, obj4);
+        obj.children = v65535(View, obj3);
+        obj2.children = v65535(closure_18, obj);
+        return v65535(View, obj2);
       }
       notificationAreaMentioned = tmp2.notificationAreaMentioned;
     };

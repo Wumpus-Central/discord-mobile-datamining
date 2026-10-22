@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_8 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
 });
@@ -205,6 +205,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2,
       );
       const obj2 = markAsDismissed(2053);
-      const coachmark = visible(9798).useCoachmark(visible.targetRef, memo);
+      const coachmark = visible(9810).useCoachmark(visible.targetRef, memo);
       return null;
     };

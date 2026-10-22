@@ -44,7 +44,7 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13597, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13633, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -60,12 +60,12 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_14(id(5226).Button, {
+  return closure_14(id(5230).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_14(id(12064).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_14(id(12085).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -75,13 +75,13 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1128).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13598, dependencyMap.paths),
+      asyncRequireImpl(13634, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_14(channel(9421).TagIcon, { size: "xxs" });
-  return closure_14(channel(5226).Button, obj);
+  obj.icon = closure_14(channel(9432).TagIcon, { size: "xxs" });
+  return closure_14(channel(5230).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -121,7 +121,7 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12981).useForumChannelStore;
+const useForumChannelStore = fn(13017).useForumChannelStore;
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 const Fonts = fn(1098).Fonts;
@@ -140,7 +140,7 @@ let items = [
   "loading_section",
 ];
 const set = new Set(items);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerRow: {
@@ -1905,7 +1905,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(tmp3[17]).intl;
       obj12.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-      obj12.icon = require("../../../../_runtime/metro/13607__.js");
+      obj12.icon = require("../../../../_runtime/metro/13643__.js");
       obj12.disabled = tmp15;
       obj12.positionBottom = insets.bottom + require("native").space.PX_16;
       obj12.onPress = callback1;

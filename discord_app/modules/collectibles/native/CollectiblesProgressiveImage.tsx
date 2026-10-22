@@ -44,8 +44,8 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
         tmp5 = cResult[2];
       }
       const obj = sharedValue(576);
-      sharedValue = sharedValue(5035).useSharedValue(0);
-      const tmpResult = sharedValue(5035);
+      sharedValue = sharedValue(5038).useSharedValue(0);
+      const tmpResult = sharedValue(5038);
       class I {
         constructor() {
           obj = { opacity: closure_0.get() };
@@ -55,7 +55,7 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
       I.__closure = { backgroundImageOpacity: sharedValue };
       I.__workletHash = 14095099553650;
       I.__initData = __initData;
-      const animatedStyle = sharedValue(5035).useAnimatedStyle(I);
+      const animatedStyle = sharedValue(5038).useAnimatedStyle(I);
       if (cResult[4] !== sharedValue) {
         function handleImageLoad() {
           const obj2 = { duration: 500, easing: null };
@@ -120,26 +120,26 @@ export const CollectiblesProgressiveImage = ReactCompilerGating.isReactCompilerE
       cResult[7] = tmp6;
       cResult[8] = items;
       tmp13 = items;
-      const tmpResult2 = sharedValue(5035);
+      const tmpResult2 = sharedValue(5038);
     }
   : function CollectiblesProgressiveImage(arg0) {
       ({ source, style } = arg0);
       let sharedValue;
       const merged = Object.assign(arg0, Object.assign({ source: 0, style: 0 }));
-      sharedValue = sharedValue(5035).useSharedValue(0);
-      const obj = sharedValue(5035);
+      sharedValue = sharedValue(5038).useSharedValue(0);
+      const obj = sharedValue(5038);
       const fn = function u() {
         return { opacity: sharedValue.get() };
       };
       fn.__closure = { backgroundImageOpacity: sharedValue };
       fn.__workletHash = 13501599736881;
       fn.__initData = __initData2;
-      const animatedStyle = sharedValue(5035).useAnimatedStyle(fn);
+      const animatedStyle = sharedValue(5038).useAnimatedStyle(fn);
       const obj3 = { style: null, children: null };
       const items = [style, animatedStyle];
       obj3.style = items;
       const obj4 = {};
-      let obj2 = sharedValue(5035);
+      let obj2 = sharedValue(5038);
       const merged1 = Object.assign(merged);
       obj4.source = source;
       obj4.style = StyleSheet.absoluteFill;

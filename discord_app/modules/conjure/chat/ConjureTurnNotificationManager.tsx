@@ -91,7 +91,7 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
       obj4.body = conjureMentions.withConjureMentionNames(body);
       let CHANNELResult = null;
       if (null != conjureWorkspaceGuildId) {
-        CHANNELResult = collapsed.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
+        CHANNELResult = v65535.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
       }
       obj4.route = CHANNELResult;
       let tmp26;
