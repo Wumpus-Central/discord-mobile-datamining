@@ -1,45 +1,19 @@
 // _runtime/metro/15527__.js
-import _typeof from "15528__.js";
+import _mod15493 from "15493__.js";
+import _mod15514 from "15514__.js";
+import f2 from "../15528_f.js";
+import _mod15538 from "15538__.js";
+import _mod15539 from "15539__.js";
 
-if (_typeof) {
-  if (typeof _typeof === "object") {
-    let _default = _typeof;
-  }
-  let obj = globalThis;
-  const _Intl = Intl;
-  if (typeof Intl === "undefined") {
-    if (undefined !== global) {
-      obj = { PluralRules: _default.default };
-      global.Intl = obj;
-      _default = _default.default;
-      _default.polyfill = true;
-    } else {
-      const _window = window;
-      if (typeof window === "undefined") {
-        const self = this;
-        const obj2 = { PluralRules: _default.default };
-        this.Intl = obj2;
-      }
+let closure_2 = _mod15493([].concat);
+
+export default _mod15514("Reflect", "ownKeys") ||
+  function ownKeys(arg0) {
+    const fResult = f2.f(_mod15538(arg0));
+    const f = _mod15539.f;
+    let tmp2 = fResult;
+    if (f) {
+      tmp2 = closure_2(fResult, f(arg0));
     }
-    obj = { PluralRules: _default.default };
-    obj.window.Intl = obj;
-  } else {
-    const _Intl5 = Intl;
-    if (Intl.PluralRules) {
-      const _Intl2 = Intl;
-      if (Intl.PluralRules.prototype.selectRange) {
-        const items = ["en", "es", "ru", "zh"];
-        const _Intl4 = Intl;
-        if (PluralRules.supportedLocalesOf(items).length < items.length) {
-          const _Intl6 = Intl;
-          Intl.PluralRules = _default.default;
-          _default.default.polyfill = true;
-        }
-      }
-    }
-    const _Intl3 = Intl;
-    Intl.PluralRules = _default.default;
-    _default.default.polyfill = true;
-  }
-}
-_default = { default: _typeof };
+    return tmp2;
+  };

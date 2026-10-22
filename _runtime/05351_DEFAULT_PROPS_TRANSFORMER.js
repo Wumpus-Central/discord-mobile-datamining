@@ -1,0 +1,34 @@
+// _runtime/05351_DEFAULT_PROPS_TRANSFORMER.js
+import hash from "05340_hash.js";
+import allowedNativeProps from "05341_allowedNativeProps.js";
+import _mod5350 from "metro/05350__.js";
+import _mod5352 from "metro/05352__.js";
+import _mod5353 from "metro/05353__.js";
+import _mod5354 from "metro/05354__.js";
+
+export const isGestureEnabled = _mod5352.isGestureEnabled;
+export const prepareConfigForNativeSide = _mod5352.prepareConfigForNativeSide;
+export const useClonedAndRemappedConfig = _mod5352.useClonedAndRemappedConfig;
+export const runCallback = _mod5354.runCallback;
+export const touchEventTypeToCallbackType = _mod5354.touchEventTypeToCallbackType;
+export const useMemoizedGestureCallbacks = _mod5354.useMemoizedGestureCallbacks;
+export const checkMappingForChangeProperties = _mod5353.checkMappingForChangeProperties;
+export const flattenAndFilterEvent = _mod5353.flattenAndFilterEvent;
+export const getChangeEventCalculator = _mod5353.getChangeEventCalculator;
+export const isEventForHandlerWithTag = _mod5353.isEventForHandlerWithTag;
+export const isNativeAnimatedEvent = _mod5353.isNativeAnimatedEvent;
+export const maybeExtractNativeEvent = _mod5353.maybeExtractNativeEvent;
+export const shouldHandleTouchEvents = _mod5353.shouldHandleTouchEvents;
+export const allowedNativeProps = allowedNativeProps.allowedNativeProps;
+export const EMPTY_WHITE_LIST = allowedNativeProps.EMPTY_WHITE_LIST;
+export const HandlerCallbacks = allowedNativeProps.HandlerCallbacks;
+export const NativeWrapperProps = allowedNativeProps.NativeWrapperProps;
+export const PropsToFilter = allowedNativeProps.PropsToFilter;
+export const PropsWhiteLists = allowedNativeProps.PropsWhiteLists;
+export const bindSharedValues = hash.bindSharedValues;
+export const hasWorkletEventHandlers = hash.hasWorkletEventHandlers;
+export const maybeUnpackValue = hash.maybeUnpackValue;
+export const unbindSharedValues = hash.unbindSharedValues;
+export const containsDuplicates = _mod5350.containsDuplicates;
+export const isComposedGesture = _mod5350.isComposedGesture;
+export const prepareRelations = _mod5350.prepareRelations;

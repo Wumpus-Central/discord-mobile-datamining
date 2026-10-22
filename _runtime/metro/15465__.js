@@ -1,10 +1,8 @@
 // _runtime/metro/15465__.js
-import _mod15449 from "15449__.js";
-import _mod15466 from "15466__.js";
+const require = globalThis.__r;
 
-let closure_2 = _mod15449({}.hasOwnProperty);
+const require = arg1;
+const dependencyMap = arg6;
 
-export default Object.hasOwn ||
-  function hasOwn(arg0, arg1) {
-    return closure_2(_mod15466(arg0), arg1);
-  };
+export const shouldPolyfill = require("15466__.js").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

@@ -1,21 +1,13 @@
 // _runtime/metro/12498__.js
-import _mod12497 from "12497__.js";
-import _mod12499 from "12499__.js";
+import registerAsset from "01134__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
-  const sentryCarrier = _mod12497.getSentryCarrier(mainCarrier);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod12499.getStackAsyncContextStrategy();
-    const tmpResult = _mod12499;
-  }
-  return acs;
-};
-export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod12497.getMainCarrier();
-  _mod12497.getSentryCarrier(mainCarrier).acs = acs;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "66946e5f24d9f7d485f69d93acc2bd06",
+  name: "CloudDownloadIcon",
+  type: "png",
+});

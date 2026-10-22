@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1c7fa64f17165fe6aaad3178602df81d",
-  name: "LinkIcon",
+  hash: "cc60adc9d34b42157ecab0277b6b238d",
+  name: "UserPlatformIcon",
   type: "png",
 });

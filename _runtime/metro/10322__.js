@@ -1,7 +1,7 @@
 // _runtime/metro/10322__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../10180_AbstractParserWithWordBoundaryChecking.js";
-import now from "../10197_now.js";
+import now from "../10209_now.js";
+import _mod10316 from "10316__.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -91,12 +91,12 @@ if (self2) {
     }
     const _Object3 = Object;
     let closure_7 = fn(now);
-    class ESCasualDateParser {
+    class RUCasualDateParser {
       constructor() {
         self = this;
-        tmp = closure_0(this, ESCasualDateParser);
+        tmp = closure_0(this, RUCasualDateParser);
         tmp2 = c2;
-        obj = c2(ESCasualDateParser);
+        obj = c2(RUCasualDateParser);
         tmp3 = closure_1;
         if (closure_3()) {
           tmp7 = globalThis;
@@ -111,34 +111,43 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _classCallCheck = ESCasualDateParser;
-    _inherits(ESCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    _classCallCheck = RUCasualDateParser;
+    _inherits(RUCasualDateParser, _mod10316.AbstractParserWithLeftRightBoundaryChecking);
     const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-        return /(ahora|hoy|mañana|ayer)(?=\W|$)/i;
+      key: "innerPatternString",
+      value: function innerPatternString(arg0) {
+        return "(?:\u0441|\u0441\u043E)?\\s*(\u0441\u0435\u0433\u043E\u0434\u043D\u044F|\u0432\u0447\u0435\u0440\u0430|\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430|\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430)";
       },
     };
     let items = [entry];
     const entry1 = {
       key: "innerExtract",
       value: function innerExtract(reference, arg1) {
-        const formatted = arg1[0].toLowerCase();
-        if ("ahora" === formatted) {
-          return closure_7.now(reference.reference);
-        } else if ("hoy" === formatted) {
+        const formatted = arg1[1].toLowerCase();
+        if ("\u0441\u0435\u0433\u043E\u0434\u043D\u044F" === formatted) {
           return closure_7.today(reference.reference);
-        } else if ("ma\u00F1ana" === formatted) {
-          return closure_7.tomorrow(reference.reference);
-        } else if ("ayer" === formatted) {
+        } else if ("\u0432\u0447\u0435\u0440\u0430" === formatted) {
           return closure_7.yesterday(reference.reference);
+        } else if ("\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+          return closure_7.tomorrow(reference.reference);
+        } else if ("\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+          return closure_7.theDayAfter(reference.reference, 2);
+        } else if (
+          "\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" ===
+          formatted
+        ) {
+          return closure_7.theDayAfter(reference.reference, 3);
+        } else if ("\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
+          return closure_7.theDayBefore(reference.reference, 2);
+        } else if ("\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
+          return closure_7.theDayBefore(reference.reference, 3);
         } else {
           return tmp2;
         }
       },
     };
     items[1] = entry1;
-    exports.default = _createClass(ESCasualDateParser, items);
+    exports.default = _createClass(RUCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

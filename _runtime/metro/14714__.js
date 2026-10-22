@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 134,
+  height: 56,
   scales: [2, 3],
-  hash: "81c4c8246b195a90d6f5bb90212bbc6a",
-  name: "tier_3_32px",
+  hash: "3d54a60f579be5dc72492b0eeac44a2b",
+  name: "img_discord_nitro_logo_centered_light",
   type: "png",
 });

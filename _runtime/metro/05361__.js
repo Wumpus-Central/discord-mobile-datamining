@@ -1,23 +1,18 @@
 // _runtime/metro/05361__.js
-import ComposedGestureName from "../05338_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../05347_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod5362 from "05362__.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const items = [
-  ["maxDistance", "maxDist"],
-  ["maxDuration", "maxDurationMs"],
-  ["maxDelay", "maxDelayMs"],
-];
-const map = new Map(items);
-let closure_3 = {};
+const use = noop.use;
+const context = noop.createContext(null);
 
-export const useTapGesture = function useTapGesture() {
-  let tmp = cResult;
-  if (cResult === undefined) {
-    tmp = closure_3;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
-  return _mod5362.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+export const InterceptingDetectorMode = {
+  DEFAULT: 0,
+  [0]: "DEFAULT",
+  ANIMATED: 1,
+  [1]: "ANIMATED",
+  REANIMATED: 2,
+  [2]: "REANIMATED",
+};
+export const InterceptingDetectorContext = context;
+export const useInterceptingDetectorContext = function useInterceptingDetectorContext() {
+  return use(context);
 };

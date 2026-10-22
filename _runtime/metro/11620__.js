@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 12,
+  height: 12,
   scales: [2, 3],
-  hash: "40d8dc40d3509844c13de0abfc4c355d",
-  name: "camera_swap",
+  hash: "b28329d7d2ebd0b330f6112973e5d746",
+  name: "ic_sparkle",
   type: "png",
 });

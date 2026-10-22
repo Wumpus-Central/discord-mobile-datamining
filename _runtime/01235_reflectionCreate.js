@@ -15,7 +15,7 @@ export const reflectionCreate = function reflectionCreate(value) {
     let localName = nextResult.localName;
     if (!nextResult.opt) {
       if (tmp3.oneof) {
-        obj[tmp3.oneof] = { oneofKind: "r" };
+        obj[tmp3.oneof] = { oneofKind: "Array" };
       } else if (tmp3.repeat) {
         obj[localName] = [];
       } else {

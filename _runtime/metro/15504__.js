@@ -1,12 +1,14 @@
 // _runtime/metro/15504__.js
-import _mod15442 from "15442__.js";
-import all from "15468__.js";
+import prop_mod from "15505__.js";
 
-let _moduleResult = all(_mod15442.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod15442.WeakMap));
-  const obj = /native code/;
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
 }
 
-export default _moduleResult;
+export default prop;

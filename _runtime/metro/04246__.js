@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/promotions/third_party/code_blurple/blueprint",
   scales: [1],
-  hash: "7967a6dda94f81fe190acc66c51e2b5e",
+  hash: "b30d263a10214586bf2e02e4f99fd007",
   name: "CodeBlurpleBlueprints.compiled.messages",
   type: "jsona",
 });

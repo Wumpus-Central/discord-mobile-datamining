@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/InRainbowsIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "2bb189919203a7299ceda12e2b9f8582",
-  name: "GalaxyIcon",
+  hash: "83afa6ade4bb460402841be8438f6e52",
+  name: "InRainbowsIcon",
   type: "png",
 });

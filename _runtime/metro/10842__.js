@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/age_gate/native/images",
-  width: 274.5,
-  height: 110,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "43e5ff0d9ea5f04fe209ebfd15e2d439",
-  name: "nsfw_gate_unavailable",
+  hash: "4a26dcaa59eb2e8051daf1439ff56b26",
+  name: "ChannelNotificationIcon",
   type: "png",
 });

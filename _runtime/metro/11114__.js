@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/badge",
+  width: 30,
+  height: 30,
   scales: [2, 3],
-  hash: "eac553938fe05ac1b820e85a05890a1f",
-  name: "SlashBoxIcon",
+  hash: "581374036ac67fb316291b50b3effd2f",
+  name: "ic_badge_nitro",
   type: "png",
 });

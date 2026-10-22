@@ -1,14 +1,13 @@
 // _runtime/metro/14865__.js
-let num = 0;
-let num2 = 0;
-let tmp2 = num;
-do {
-  do {
-    let tmp3 = tmp2 >>> 1;
-    let tmp5 = 1 & tmp2 ? 3988292384 ^ tmp3 : tmp3;
-    num2 = num2 + 1;
-    tmp2 = tmp5;
-  } while (num2 < 8);
-  tmp[num] = tmp5;
-  num = num + 1;
-} while (num < 256);
+import registerAsset from "01134__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
+  width: 24,
+  height: 23,
+  scales: [2, 3],
+  hash: "0e23713e9cb6c9f18c86b80cbd5851e5",
+  name: "tier_3_24px",
+  type: "png",
+});

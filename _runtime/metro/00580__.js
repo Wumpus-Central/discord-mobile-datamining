@@ -365,7 +365,13 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "manualRef", type: "onScroll", listener: "onScrollWorklet" };
+          obj = {
+            fired: false,
+            wrapFn: "a",
+            target: "<string:592510979>",
+            type: "<string:1851998464>",
+            listener: "<string:2538668033>",
+          };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -392,7 +398,13 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "manualRef", type: "onScroll", listener: "onScrollWorklet" };
+          obj = {
+            fired: false,
+            wrapFn: "a",
+            target: "<string:592510979>",
+            type: "<string:1851998464>",
+            listener: "<string:2538668033>",
+          };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

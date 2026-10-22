@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/referral_program/native/images",
-  width: 180,
-  height: 180,
-  scales: [1],
-  hash: "7d7d766e7ebb30cec66584e69b89634d",
-  name: "Glow",
+  httpServerLocation: "/assets/modules/premium/native/images/perks",
+  width: 300,
+  height: 175,
+  scales: [2, 3],
+  hash: "fac2e3b3b87c5c331642c571eab831c9",
+  name: "sticker",
   type: "png",
 });

@@ -1,7 +1,8 @@
 // _runtime/metro/15551__.js
-import _mod15552 from "15552__.js";
-import get_ActivityIndicator from "00017__.js";
+import _mod15529 from "15529__.js";
+import _mod15530 from "15530__.js";
 
-export default function getReactNativeVersion() {
-  return _mod15552.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
-}
+export default Object.keys ||
+  function keys(arg0) {
+    return _mod15530(arg0, _mod15529);
+  };

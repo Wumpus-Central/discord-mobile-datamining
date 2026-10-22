@@ -90,10 +90,10 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "end",
+      current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "horizontal",
-      reduceMotion: "space-between",
+      startTimestamp: "keyword",
+      reduceMotion: "to top left",
     };
     let num = obj.velocity;
     if (num == null) {

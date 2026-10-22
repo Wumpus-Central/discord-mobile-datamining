@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 155.5,
+  height: 16,
   scales: [2, 3],
-  hash: "cb2a2e3b1b856419d08252c8139a8321",
-  name: "entrace_sounds",
+  hash: "cda787d6a3bd0c9bbee693bc4f7f0975",
+  name: "img_logo_nitro_classic_horizontal",
   type: "png",
 });

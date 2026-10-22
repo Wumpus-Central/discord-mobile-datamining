@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d71daeef64b152476fb485143e6c3f6e",
-  name: "TextLockIcon",
+  hash: "9ca1aab40b1d1dec8d5caf0688317d98",
+  name: "TextSpoilerIcon",
   type: "png",
 });

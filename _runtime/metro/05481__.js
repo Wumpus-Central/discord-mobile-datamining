@@ -1,9 +1,31 @@
 // _runtime/metro/05481__.js
-import _mod5482 from "05482__.js";
-import _mod5483 from "05483__.js";
-import _mod5484 from "05484__.js";
-import _mod5486 from "05486__.js";
+import _mod17 from "00017__.js";
 
-export default function _slicedToArray(arg0, arg1) {
-  return _mod5482(arg0) || _mod5483(arg0, arg1) || _mod5484(arg0, arg1) || _mod5486();
-}
+const Platform = _mod17.Platform;
+
+export const isNewArch = function isNewArch() {
+  if (undefined !== c1) {
+    return c1;
+  } else {
+    try {
+      let prop;
+      if (global != null) {
+        prop = global.nativeFabricUIManager;
+      }
+      let flag = Boolean(prop);
+      if (global != null) {
+        const __turboModuleProxy = global.__turboModuleProxy;
+      }
+      if (!flag) {
+        flag = Boolean(__turboModuleProxy);
+      }
+      if (!flag) {
+        flag = false;
+      }
+      c1 = flag;
+      return c1;
+    } catch (err) {
+      c1 = true;
+    }
+  }
+};

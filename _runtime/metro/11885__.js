@@ -1,5 +1,5 @@
 // _runtime/metro/11885__.js
-import _mod11834 from "11834__.js";
+import _mod11860 from "11860__.js";
 
 const self = this;
 let self2 = this;
@@ -56,14 +56,14 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "belgi", verb: "bo\u2018lishi kerak" },
-          file: { unit: "bayt", verb: "bo\u2018lishi kerak" },
-          array: { unit: "element", verb: "bo\u2018lishi kerak" },
-          set: { unit: "element", verb: "bo\u2018lishi kerak" },
+          string: { unit: "karakter", verb: "memiliki" },
+          file: { unit: "byte", verb: "memiliki" },
+          array: { unit: "item", verb: "memiliki" },
+          set: { unit: "item", verb: "memiliki" },
         };
         closure_1 = {
-          regex: "kirish",
-          email: "elektron pochta manzili",
+          regex: "input",
+          email: "alamat email",
           url: "URL",
           emoji: "emoji",
           uuid: "UUID",
@@ -76,23 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "ISO sana va vaqti",
-          date: "ISO sana",
-          time: "ISO vaqt",
-          duration: "ISO davomiylik",
-          ipv4: "IPv4 manzil",
-          ipv6: "IPv6 manzil",
-          mac: "MAC manzil",
-          cidrv4: "IPv4 diapazon",
-          cidrv6: "IPv6 diapazon",
-          base64: "base64 kodlangan satr",
-          base64url: "base64url kodlangan satr",
-          json_string: "JSON satr",
-          e164: "E.164 raqam",
+          datetime: "tanggal dan waktu format ISO",
+          date: "tanggal format ISO",
+          time: "jam format ISO",
+          duration: "durasi format ISO",
+          ipv4: "alamat IPv4",
+          ipv6: "alamat IPv6",
+          cidrv4: "rentang alamat IPv4",
+          cidrv6: "rentang alamat IPv6",
+          base64: "string dengan enkode base64",
+          base64url: "string dengan enkode base64url",
+          json_string: "string JSON",
+          e164: "angka E.164",
           jwt: "JWT",
-          template_literal: "kirish",
+          template_literal: "input",
         };
-        closure_2 = { nan: "NaN", number: "raqam", array: "massiv" };
+        closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -101,125 +100,118 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp45 = closure_2[parsedTypeResult];
-              if (tmp45 == null) {
-                tmp45 = parsedTypeResult;
+              let tmp48 = closure_2[parsedTypeResult];
+              if (tmp48 == null) {
+                tmp48 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined =
-                  "Noto\u2018g\u2018ri kirish: kutilgan instanceof " + code.expected + ", qabul qilingan " + tmp45;
+                let combined = "Input tidak valid: diharapkan instanceof " + code.expected + ", diterima " + tmp48;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Noto\u2018g\u2018ri kirish: kutilgan " + expected + ", qabul qilingan " + tmp45;
+                combined = "Input tidak valid: diharapkan " + expected + ", diterima " + tmp48;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Noto\u2018g\u2018ri kirish: kutilgan " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Input tidak valid: diharapkan " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 =
-                  "Noto\u2018g\u2018ri variant: quyidagilardan biri kutilgan " + closure_2.joinValues(code.values, "|");
+                combined1 = "Pilihan tidak valid: diharapkan salah satu dari " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str30 = "<";
+              let str25 = "<";
               if (code.inclusive) {
-                str30 = "<=";
+                str25 = "<=";
               }
               let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
-              let str31 = code.origin;
+              let str26 = code.origin;
               if (tmp27) {
-                if (str31 == null) {
-                  str31 = "qiymat";
+                if (str26 == null) {
+                  str26 = "value";
+                }
+                const str1 = code.maximum.toString();
+                let str32 = tmp27.unit;
+                if (str32 == null) {
+                  str32 = "elemen";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 =
-                  "Juda katta: kutilgan " +
-                  str31 +
-                  " " +
-                  str30 +
-                  code.maximum.toString() +
-                  " " +
-                  tmp27.unit +
-                  " " +
-                  tmp27.verb;
+                let combined2 = "Terlalu besar: diharapkan " + str26 + " memiliki " + str25 + str1 + " " + str32;
               } else {
-                let str32 = str31;
-                if (str31 == null) {
-                  str32 = "qiymat";
+                let str27 = str26;
+                if (str26 == null) {
+                  str27 = "value";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Juda katta: kutilgan " + str32 + " " + str30 + code.maximum.toString();
+                combined2 = "Terlalu besar: diharapkan " + str27 + " menjadi " + str25 + code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str22 = ">";
+              let str19 = ">";
               if (code.inclusive) {
-                str22 = ">=";
+                str19 = ">=";
               }
               let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str46 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 =
-                  "Juda kichik: kutilgan " + origin + " " + str22 + str1 + " " + tmp15.unit + " " + tmp15.verb;
+                let combined3 = "Terlalu kecil: diharapkan " + origin + " memiliki " + str19 + str46 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str1;
+                combined3 = "Terlalu kecil: diharapkan " + origin + " menjadi " + str19 + str46;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = 'Noto\u2018g\u2018ri satr: "' + code.prefix + '" bilan boshlanishi kerak';
+                let combined4 = 'String tidak valid: harus dimulai dengan "' + code.prefix + '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = 'Noto\u2018g\u2018ri satr: "' + code.suffix + '" bilan tugashi kerak';
+                combined4 = 'String tidak valid: harus berakhir dengan "' + code.suffix + '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = 'Noto\u2018g\u2018ri satr: "' + code.includes + '" ni o\u2018z ichiga olishi kerak';
+                combined4 = 'String tidak valid: harus menyertakan "' + code.includes + '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Noto\u2018g\u2018ri satr: " + code.pattern + " shabloniga mos kelishi kerak";
+                combined4 = "String tidak valid: harus sesuai pola " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Noto\u2018g\u2018ri " + format;
+                combined4 = "" + format + " tidak valid";
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Noto\u2018g\u2018ri raqam: " + code.divisor + " ning karralisi bo\u2018lishi kerak";
+              return "Angka tidak valid: harus kelipatan dari " + code.divisor;
             case "unrecognized_keys":
-              let str5 = "";
+              let str3 = "";
               if (code.keys.length > 1) {
-                str5 = "lar";
+                str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Noma\u2019lum kalit" + str5 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Kunci tidak dikenali " + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "" + code.origin + " dagi kalit noto\u2018g\u2018ri";
+              return "Kunci tidak valid di " + code.origin;
             case "invalid_union":
-              return "Noto\u2018g\u2018ri kirish";
+              return "Input tidak valid";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "" + code.origin + " da noto\u2018g\u2018ri qiymat";
+              return "Nilai tidak valid di " + code.origin;
             default:
-              return "Noto\u2018g\u2018ri kirish";
+              return "Input tidak valid";
           }
         };
         return obj;
@@ -227,7 +219,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod11834);
+    let closure_2 = fn(_mod11860);
     function error() {}
     module.exports = exports.default;
   } else {

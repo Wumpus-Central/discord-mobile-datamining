@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
+  httpServerLocation: "/assets/modules/voice_panel/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2b649615a70a14244330a855517175bb",
-  name: "report",
+  hash: "e57414c7a7beaf43becfa6bd320e5461",
+  name: "vr",
   type: "png",
 });

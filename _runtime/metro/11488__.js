@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f9f36b748bcc7c6393cf056bc860ba1e",
-  name: "HandRequestSpeakIcon",
+  hash: "e535ea871b8155df08d1e92a6b532c6c",
+  name: "GroupArrowDownIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "4db0790f7a81e49025d7fbfb9aeb182c",
-  name: "zh-TW",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "2c9d6b044e5ee68661cb6d6e33d3d458",
+  name: "EmojiPartyingFaceIcon",
   type: "png",
 });

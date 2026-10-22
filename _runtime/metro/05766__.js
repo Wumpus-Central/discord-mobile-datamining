@@ -1,9 +1,20 @@
 // _runtime/metro/05766__.js
-import baseGetAllKeys from "../00668_baseGetAllKeys.js";
-import _mod5749 from "05749__.js";
-import keysIn from "../05751_keysIn.js";
+import _mod523 from "00523__.js";
 
-export default function getAllKeysIn(arg0) {
-  const tmp = baseGetAllKeys;
-  return tmp(arg0, keysIn, _mod5749);
+let prototype;
+if (_mod523) {
+  prototype = _mod523.prototype;
+}
+let valueOf;
+if (prototype) {
+  valueOf = prototype.valueOf;
+}
+
+export default function cloneSymbol(arg0) {
+  if (valueOf) {
+    const call = valueOf.call;
+    Object(typeof call === "unknown" ? valueOf() : call(arg0));
+  } else {
+    return {};
+  }
 }

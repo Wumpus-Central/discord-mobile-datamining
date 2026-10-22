@@ -1,99 +1,28 @@
 // _runtime/metro/15488__.js
-let c0 = false;
+import _mod15489 from "15489__.js";
+import _mod15491 from "15491__.js";
+import text from "../15498_text.js";
+import _mod15509 from "15509__.js";
+import _mod15519 from "15519__.js";
+import _mod15521 from "15521__.js";
+import _mod15523 from "15523__.js";
+import _mod15524 from "15524__.js";
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(15447)(arg0);
-    const tmp4 = closure_0(15489)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
+if (!_mod15489) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod15491(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod15521) {
+      if (_mod15509(tmp3, tmp4)) {
+        const tmpResult = _mod15523;
+        return tmpResult(!_mod15519(_mod15524.f, tmp3, tmp4), tmp3[tmp4]);
       }
-      return num3;
     } else {
-      let sum = closure_0(15493)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {}
     }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(15447)(arg0);
-    const tmp4 = closure_0(15489)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(15493)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-  },
-};
+  };
+}
+
+export const f = getOwnPropertyDescriptor;

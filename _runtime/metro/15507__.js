@@ -1,8 +1,11 @@
 // _runtime/metro/15507__.js
-import _mod15485 from "15485__.js";
 import _mod15486 from "15486__.js";
 
-export default Object.keys ||
-  function keys(arg0) {
-    return _mod15486(arg0, _mod15485);
-  };
+const tmp = _mod15486.navigator && _mod15486.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
+
+export default str;

@@ -1,13 +1,10 @@
 // _runtime/metro/11704__.js
-import registerAsset from "01134__.js";
+import _mod11703 from "11703__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "c633d33c98eaf36e731a0f2d3f8db716",
-  name: "ChatShieldIcon",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export const keepLocalCopy = function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod11703.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+};

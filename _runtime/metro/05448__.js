@@ -1,8 +1,4 @@
 // _runtime/metro/05448__.js
-import _mod17 from "00017__.js";
+import _modDef5449 from "05449__.js";
 
-const StyleSheet = _mod17.StyleSheet;
-
-export const styles = StyleSheet.create({
-  container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" },
-});
+export default _modDef5449;

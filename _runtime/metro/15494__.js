@@ -1,11 +1,12 @@
 // _runtime/metro/15494__.js
-import _mod15467 from "15467__.js";
+import _mod15490 from "15490__.js";
 
-export default (arg0) => {
-  if (_mod15467(arg0)) {
-    return arg0;
-  } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
+export default !_mod15490(() => {
+  const fn = () => {};
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
   }
-};
+  return hasOwnPropertyResult;
+});

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 80,
-  height: 80,
-  scales: [1],
-  hash: "e64e51684091ac2de27992b084fed7fd",
-  name: "img_wumpus_nitro_tier_0",
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 420,
+  height: 112,
+  scales: [2, 3],
+  hash: "e2e6d0edbd6c916cde4ea4f22a6f794c",
+  name: "subscription_placeholder_pattern_darker",
   type: "png",
 });

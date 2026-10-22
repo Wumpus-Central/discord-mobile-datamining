@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 605.5,
+  height: 244.5,
   scales: [2, 3],
-  hash: "69d07b73ba14be901804955fa84a0ead",
-  name: "grey_badge",
+  hash: "fdaf8ab7fb8f1ab3047aef93e706bcc1",
+  name: "img_discord_nitro_logo_left_light",
   type: "png",
 });

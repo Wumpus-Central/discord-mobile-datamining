@@ -1,14 +1,12 @@
 // _runtime/metro/10344__.js
-import repeatedTimeunitPattern from "../10173_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10180_AbstractParserWithWordBoundaryChecking.js";
-import _mod10342 from "10342__.js";
+import _mod10341 from "10341__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMonthNameMiddleEndianParser = require;
+const UKTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,24 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10342.MONTH_DICTIONARY) +
-    ")(?:-|/|\\s*,?\\s*)(" +
-    _mod10342.ORDINAL_NUMBER_PATTERN +
-    ")(?!\\s*(?:am|pm))\\s*(?:(?:al|\\-|\\alle|\\del|\\s)\\s*(" +
-    _mod10342.ORDINAL_NUMBER_PATTERN +
-    ")\\s*)?(?:(?:-|/|\\s*,?\\s*)(" +
-    _mod10342.YEAR_PATTERN +
-    "))?(?=\\W|$)(?!\\:\\d)",
-  "i",
-);
-class ENMonthNameMiddleEndianParser {
+class UKTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMonthNameMiddleEndianParser);
+    tmp = c2(this, UKTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMonthNameMiddleEndianParser);
+    obj = closure_4(UKTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -59,47 +45,26 @@ class ENMonthNameMiddleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(UKTimeUnitAgoFormatParser, _mod10341.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + UKTimeUnitAgoFormatParser(10339).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, index) {
-      const tmp3 = ENMonthNameMiddleEndianParser(10342).MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
-      const result = ENMonthNameMiddleEndianParser(10342).parseOrdinalNumberPattern(index[2]);
-      if (result > 31) {
-        return null;
-      } else {
-        const date = { day: result, month: tmp3 };
-        const parsingComponents = createParsingComponents.createParsingComponents(date);
-        if (index[4]) {
-          parsingComponents.assign("year", ENMonthNameMiddleEndianParser(10342).parseYear(index[4]));
-        } else {
-          parsingComponents.imply(
-            "year",
-            ENMonthNameMiddleEndianParser(10174).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
-          );
-        }
-        if (index[3]) {
-          const result1 = ENMonthNameMiddleEndianParser(10342).parseOrdinalNumberPattern(index[3]);
-          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
-          parsingResult.start = parsingComponents;
-          parsingResult.end = parsingComponents.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-          return parsingResult;
-        } else {
-          return parsingComponents;
-        }
-      }
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = UKTimeUnitAgoFormatParser(10339).parseDuration(arg1[1]);
+      const ParsingComponents = UKTimeUnitAgoFormatParser(10188).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        UKTimeUnitAgoFormatParser(10187).reverseDuration(UKTimeUnitAgoFormatParser(10339).parseDuration(arg1[1])),
+      );
     },
   },
 ];
 
-export default _createClass(ENMonthNameMiddleEndianParser, items);
+export default _createClass(UKTimeUnitAgoFormatParser, items);

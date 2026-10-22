@@ -1,17 +1,18 @@
 // _runtime/metro/05293__.js
-import animatedComponentDefault from "../05294_animatedComponent.js";
-import get_ActivityIndicator from "00017__.js";
+import _mod5294 from "05294__.js";
+import ScrollView from "../05382_ScrollView.js";
+import hitSlopDefault from "../05383_hitSlop.js";
+import Touchable from "../05394_Touchable.js";
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
-
-export const GestureDetectorType = {
-  Native: 0,
-  [0]: "Native",
-  Virtual: 1,
-  [1]: "Virtual",
-  Intercepting: 2,
-  [2]: "Intercepting",
-};
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });
+export const BaseButton = _mod5294.BaseButton;
+export const BorderlessButton = _mod5294.BorderlessButton;
+export const PureNativeButton = _mod5294.PureNativeButton;
+export const RawButton = _mod5294.RawButton;
+export const RectButton = _mod5294.RectButton;
+export const FlatList = ScrollView.FlatList;
+export const RefreshControl = ScrollView.RefreshControl;
+export const ScrollView = ScrollView.ScrollView;
+export const Switch = ScrollView.Switch;
+export const TextInput = ScrollView.TextInput;
+export const Pressable = hitSlopDefault;
+export const Touchable = Touchable.Touchable;

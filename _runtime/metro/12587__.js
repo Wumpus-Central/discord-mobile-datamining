@@ -1,71 +1,31 @@
 // _runtime/metro/12587__.js
-import _mod12506 from "12506__.js";
-import _flush from "../12527__flush.js";
-import _mod12552 from "12552__.js";
+import _mod12588 from "12588__.js";
+import setupIntegration from "12565__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod12506.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod12506.withScope,
-    getClient() {
-      return _mod12506.getClient();
-    },
-    getScope: _mod12506.getCurrentScope,
-    getIsolationScope: _mod12506.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod12506.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod12506.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod12552.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod12506.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod12506.getCurrentScope();
-        const tmpResult3 = _mod12506;
-        const client = _mod12506.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
+export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
+  name: "ModuleMetadata",
+  setup(on) {
+    const options = on;
+    on.on("beforeEnvelope", (arg0) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        if ("event" === arg1) {
+          const _Array = Array;
+          let tmp3;
+          if (Array.isArray(arg0)) {
+            tmp3 = arg0[1];
+          }
+          if (tmp3) {
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+            arg0[1] = tmp3;
+            const obj = options(dependencyMap[2]);
+          }
         }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod12506;
+      });
+    });
+    on.on("applyFrameMetadata", (type) => {
+      if (!type.type) {
+        const result = _mod12588.addMetadataToStackFrames(options.getOptions().stackParser, type);
       }
-    },
-  };
-}
-
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+    });
+  },
+}));

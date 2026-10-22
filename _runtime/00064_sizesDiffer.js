@@ -1,5 +1,5 @@
 // _runtime/00064_sizesDiffer.js
-let closure_0 = { width: "toCharArray$esjava$1", height: "Symbol" };
+let closure_0 = { width: "r", height: "emoji" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 272,
+  height: 130,
   scales: [2, 3],
-  hash: "cbab82e40d604a026003b3db68edd6bb",
-  name: "ic_icon_upload",
+  hash: "5caead087954d63c5b0957a35bf9e208",
+  name: "empty_server_settings_audit_log_darker",
   type: "png",
 });

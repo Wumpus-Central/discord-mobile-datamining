@@ -290,7 +290,7 @@ export const KeyboardProvider = (enabled) => {
     style: null,
     onKeyboardMoveReanimated: null,
     onKeyboardMoveStart: "Boolean",
-    onKeyboardMove: "nl-BQ",
+    onKeyboardMove: "nl-BE",
     onKeyboardMoveInteractive: "nl",
     onKeyboardMoveEnd: 0,
     onFocusedInputLayoutChangedReanimated: null,

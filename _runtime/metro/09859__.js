@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 80,
-  height: 80,
+  httpServerLocation: "/assets/images/native/custom_app_icons/MangaIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "d6c65250c1813722d34dd286c312a88f",
-  name: "img_nitro_classic_icon_white_80px",
+  hash: "c95dda79dd2256b3ff93ba5baa549fb1",
+  name: "MangaIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 161,
-  scales: [1],
-  hash: "1b6a1fd726ebdfc69d47b037085b4f19",
-  name: "graggle_2",
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 87,
+  height: 87,
+  scales: [2, 3],
+  hash: "d299e9311da17e9393089ebfa8d667b1",
+  name: "resubscribed_alert_header",
   type: "png",
 });
