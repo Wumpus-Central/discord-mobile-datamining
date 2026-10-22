@@ -1,6 +1,6 @@
-// === Module 7170: GuildOnboardingStore ===
+// === Module 7177: GuildOnboardingStore ===
 
-// Module 7170 (GuildOnboardingStore)
+// Module 7177 (GuildOnboardingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1087 */;

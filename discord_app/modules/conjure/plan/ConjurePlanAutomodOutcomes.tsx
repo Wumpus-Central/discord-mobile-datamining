@@ -1,10 +1,10 @@
-// === Module 12370: ConjurePlanAutomodOutcomes ===
+// === Module 12396: ConjurePlanAutomodOutcomes ===
 
-// Module 12370 (ConjurePlanAutomodOutcomes)
+// Module 12396 (ConjurePlanAutomodOutcomes)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 4883 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5687 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5691 */;
 import size from "module_2" /* 2 */;
 
 const getFriendlyDurationString = GuildDisableCommunicationConstants.getFriendlyDurationString;

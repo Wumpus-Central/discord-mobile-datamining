@@ -1,6 +1,6 @@
-// === Module 11180: useMessagePreviewHeight ===
+// === Module 11197: useMessagePreviewHeight ===
 
-// Module 11180 (useMessagePreviewHeight)
+// Module 11197 (useMessagePreviewHeight)
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

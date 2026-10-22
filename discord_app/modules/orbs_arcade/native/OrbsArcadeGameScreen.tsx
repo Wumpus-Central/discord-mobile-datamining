@@ -1,26 +1,26 @@
-// === Module 18192: OrbsArcadeGameScreen ===
+// === Module 18262: OrbsArcadeGameScreen ===
 
-// Module 18192 (OrbsArcadeGameScreen)
+// Module 18262 (OrbsArcadeGameScreen)
 import nativeDefault from "native" /* 587 */;
 import Link from "Link" /* 1506 */;
-import leaveFrame from "leaveFrame" /* 10723 */;
+import leaveFrame from "leaveFrame" /* 10735 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6754 */;
+import FramesStore from "FramesStore" /* 6761 */;
 
 require = fn;
 const View = fn(17).View;
 const ThemeTypes = fn(1087).ThemeTypes;
-const FramesConstants = fn(6755);
+const FramesConstants = fn(6762);
 ({ isLaunched: closure_7, FrameLayoutModes } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const OrbsArcadeGame = "OrbsArcadeGame";
-const presentation = { layoutMode: FrameLayoutModes.FOCUSED, portraitSafeAreasConfig: fn(18193).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG };
-const createStyles = fn(4966);
+const presentation = { layoutMode: FrameLayoutModes.FOCUSED, portraitSafeAreasConfig: fn(18263).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG };
+const createStyles = fn(4969);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, wrapper: null, header: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.wrapper = { flex: 1, overflow: "hidden", borderTopStartRadius: nativeDefault.radii.lg, borderTopEndRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let rect = { position: "absolute", top: 0, left: 0, right: 0, height: fn(5591).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK };
+let rect = { position: "absolute", top: 0, left: 0, right: 0, height: fn(5595).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK };
 obj2.header = rect;
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

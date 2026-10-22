@@ -1,6 +1,6 @@
-// === Module 7006: useKeyboardIsOpen ===
+// === Module 7013: useKeyboardIsOpen ===
 
-// Module 7006 (useKeyboardIsOpen)
+// Module 7013 (useKeyboardIsOpen)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1502 */;
 import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1503 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;

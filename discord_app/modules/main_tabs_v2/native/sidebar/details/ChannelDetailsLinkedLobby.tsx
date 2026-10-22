@@ -1,12 +1,12 @@
-// === Module 18017: ChannelDetailsLinkedLobby ===
+// === Module 18087: ChannelDetailsLinkedLobby ===
 
-// Module 18017 (ChannelDetailsLinkedLobby)
+// Module 18087 (ChannelDetailsLinkedLobby)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7234 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7241 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;

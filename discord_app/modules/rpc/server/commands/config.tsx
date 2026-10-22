@@ -1,11 +1,11 @@
-// === Module 15626: commands/config ===
+// === Module 15670: commands/config ===
 
-// Module 15626 (commands/config)
+// Module 15670 (commands/config)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import RPCErrorDefault from "RPCError" /* 9224 */;
-import Constants_mod from "Constants" /* 6357 */;
+import RPCErrorDefault from "RPCError" /* 9233 */;
+import Constants_mod from "Constants" /* 6364 */;
 import Constants_mod from "Constants" /* 1087 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15621 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15665 */;
 import size from "module_2" /* 2 */;
 
 let Constants = Constants_mod;

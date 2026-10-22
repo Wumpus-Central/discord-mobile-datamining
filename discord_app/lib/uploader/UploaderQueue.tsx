@@ -1,6 +1,6 @@
-// === Module 10062: UploaderQueue ===
+// === Module 10074: UploaderQueue ===
 
-// Module 10062 (UploaderQueue)
+// Module 10074 (UploaderQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

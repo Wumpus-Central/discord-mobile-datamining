@@ -573,11 +573,11 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   closure_0 = arg0;
-  return obj.updateAsync("guilds", async (arg0) => f92639(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f93076(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   closure_0 = id;
-  const f92628 = (arg0) => {
+  const f93065 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync("guilds", async (guilds) => obj2(1248).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -918,7 +918,7 @@ export { setGuildThemeSourcePreferenceOverride };
 export const clearGuildThemeSourcePreferenceOverride = function clearGuildThemeSourcePreferenceOverride(guildThemeSourcePreference) {
   obj2(1211).GuildThemeSourcePreference.UNSPECIFIED;
   obj2 = guildThemeSourcePreference;
-  const f92628 = (arg0) => {
+  const f93065 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync("guilds", async (guilds) => obj2(1248).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -986,7 +986,7 @@ export const removeDismissedRecurringContent = function removeDismissedRecurring
   return updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 };
 export const clearGuildDismissedContents = function clearGuildDismissedContents() {
-  const f92639 = (guilds) => {
+  const f93076 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -1003,7 +1003,7 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       }
     }
   };
-  return obj.updateAsync("guilds", async (arg0) => f92639(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f93076(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearDismissedContents = function clearDismissedContents() {
   return obj.updateAsync("userContent", async (arg0) => {

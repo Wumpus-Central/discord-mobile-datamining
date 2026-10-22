@@ -1,9 +1,9 @@
-// === Module 8939: useGuildEmbeddedApplications ===
+// === Module 8948: useGuildEmbeddedApplications ===
 
-// Module 8939 (useGuildEmbeddedApplications)
+// Module 8948 (useGuildEmbeddedApplications)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6788 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;

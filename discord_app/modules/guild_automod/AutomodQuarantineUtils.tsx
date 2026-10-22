@@ -1,17 +1,17 @@
-// === Module 12708: AutomodQuarantineUtils ===
+// === Module 12740: AutomodQuarantineUtils ===
 
-// Module 12708 (AutomodQuarantineUtils)
+// Module 12740 (AutomodQuarantineUtils)
 import util from "util" /* 1128 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4907 */;
-import openUserSettings2 from "openUserSettings" /* 7467 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11136 */;
+import openUserSettings2 from "openUserSettings" /* 7474 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11153 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11071 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11088 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
 const Constants = fn(1087);
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "toCharArray$esjava$1", bio: "Symbol" };
+      const obj = { nick: "r", bio: "emoji" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -141,7 +141,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "toCharArray$esjava$1", bio: "Symbol" };
+    const obj = { nick: "r", bio: "emoji" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

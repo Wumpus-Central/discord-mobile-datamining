@@ -1,6 +1,6 @@
-// === Module 11296: Constants ===
+// === Module 11313: Constants ===
 
-// Module 11296 (Constants)
+// Module 11313 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");

@@ -1,8 +1,8 @@
-// === Module 5035: ReanimatedRexport ===
+// === Module 5038: ReanimatedRexport ===
 
-// Module 5035 (ReanimatedRexport)
+// Module 5038 (ReanimatedRexport)
 import cancelAnimationDefault from "cancelAnimation" /* 1658 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5036 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5039 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import size from "module_2" /* 2 */;
 

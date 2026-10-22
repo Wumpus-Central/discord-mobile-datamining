@@ -1,24 +1,24 @@
-// === Module 12896: CheckpointGameTimeStatsScreen ===
+// === Module 12930: CheckpointGameTimeStatsScreen ===
 
-// Module 12896 (CheckpointGameTimeStatsScreen)
+// Module 12930 (CheckpointGameTimeStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import CheckpointConstants from "CheckpointConstants" /* 5995 */;
-import CalendarIcon from "CalendarIcon" /* 9007 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 12846 */;
-import CheckpointTextDefault from "CheckpointText" /* 12861 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12863 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12866 */;
-import NumberAnimationDefault from "NumberAnimation" /* 12870 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12871 */;
-import _modDef12897 from "module_12897" /* 12897 */;
-import CheckpointStore from "CheckpointStore" /* 12843 */;
+import CheckpointConstants from "CheckpointConstants" /* 6002 */;
+import CalendarIcon from "CalendarIcon" /* 9016 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 12878 */;
+import CheckpointTextDefault from "CheckpointText" /* 12893 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12895 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12898 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 12901 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12904 */;
+import _modDef12931 from "module_12931" /* 12931 */;
+import CheckpointStore from "CheckpointStore" /* 12875 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4966 */;
+import createStyles from "createStyles" /* 4969 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -30,7 +30,7 @@ let obj2 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, padding
 obj.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj.titleText = { flexShrink: 1 };
 obj.imageContainer = { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" };
-obj.image = { height: "100%", aspectRatio: 0.6493506493506493 };
+obj.image = { height: "100%", aspectRatio: 0.6498194945848376 };
 obj.copy = { flexShrink: 1 };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj.number = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const tmp25Result = CheckpointScreenDefault;
   const container = tmp4.container;
   if (cResult[23] !== tmp4.image) {
-    const obj7 = { uri: _modDef12897, style: tmp4.image };
+    const obj7 = { uri: _modDef12931, style: tmp4.image };
     const tmp32 = timestampProducer(CheckpointApngPlayerDefault, obj7);
     cResult[23] = tmp4.image;
     cResult[24] = tmp32;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       obj10.accessibilityLabel = "" + rounded + " " + stringResult;
       obj10.style = tmp4.number;
       const obj11 = { end: rounded };
-      obj10.children = timestampProducer(NumberAnimationDefault, obj11);
+      obj10.children = timestampProducer(CheckpointCountUpStatNumberDefault, obj11);
       const tmp47 = timestampProducer(View, obj10);
       const tmp25Result6 = CheckpointTextDefault;
       if (null != checkpointTopPercent) {
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const tmp2Result = CheckpointStatsUtils;
   const obj5 = { uri: null, style: null };
   const tmp8Result = CheckpointScreenDefault;
-  obj5.uri = _modDef12897;
+  obj5.uri = _modDef12931;
   obj5.style = tmp.image;
   obj4.children = timestampProducer(CheckpointApngPlayerDefault, obj5);
   const items1 = [timestampProducer(View, obj4), ];
@@ -373,9 +373,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   obj7.children = items2;
   const items3 = [React5(View, obj7), , ];
   const tmp8Result5 = CheckpointTextDefault;
-  items3[1] = timestampProducer(View, { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(NumberAnimationDefault, { end: rounded }) });
+  items3[1] = timestampProducer(View, { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(CheckpointCountUpStatNumberDefault, { end: rounded }) });
   const obj11 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const obj10 = { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(NumberAnimationDefault, { end: rounded }) };
+  const obj10 = { accessible: true, accessibilityLabel: "" + rounded + " " + stringResult, style: tmp.number, children: timestampProducer(CheckpointCountUpStatNumberDefault, { end: rounded }) };
   if (null != checkpointTopPercent) {
     const intl4 = util.intl;
     const obj12 = {

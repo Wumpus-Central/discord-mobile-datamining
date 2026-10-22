@@ -1,8 +1,8 @@
-// === Module 9441: useGameProfileLinks ===
+// === Module 9458: useGameProfileLinks ===
 
-// Module 9441 (useGameProfileLinks)
+// Module 9458 (useGameProfileLinks)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9280 */;
+import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9291 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -52,7 +52,7 @@ export const useGameProfileLinks = ReactCompilerGating.isReactCompilerEnabled() 
     websites = websites.websites;
     const found = websites.filter(I);
     const _Object = Object;
-    const values = Object.values(tmp(9280).MOBILE_STORES);
+    const values = Object.values(tmp(9291).MOBILE_STORES);
     const mapped = values.map((item) => GameProfileMobileStoreLinkUtils.getMobileStoreLink(closure_0, item));
     const _Symbol2 = Symbol;
     const found1 = mapped.filter(tmp(1388).isNotNullish);
@@ -116,10 +116,10 @@ export const useGameProfileLinks = ReactCompilerGating.isReactCompilerEnabled() 
     websites = websites.websites;
     const found = websites.filter((category) => {
       category = category.category;
-      const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = websites(9233).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = websites(9242).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       let hasItem = GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES.includes(category);
       if (hasItem) {
-        const MOBILE_STORE_WEBSITE_CATEGORIES = websites(9280).MOBILE_STORE_WEBSITE_CATEGORIES;
+        const MOBILE_STORE_WEBSITE_CATEGORIES = websites(9291).MOBILE_STORE_WEBSITE_CATEGORIES;
         hasItem = !MOBILE_STORE_WEBSITE_CATEGORIES.has(category);
       }
       return hasItem;
@@ -128,9 +128,9 @@ export const useGameProfileLinks = ReactCompilerGating.isReactCompilerEnabled() 
     const mapped = values.map((item) => closure_0(dependencyMap[4]).getMobileStoreLink(websites, item));
     const found1 = mapped.filter(GlobalUtils.isNotNullish);
     const sorted = found.sort((category, category2) => {
-      const prop = websites(9233).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const prop = websites(9242).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       const index = prop.indexOf(category.category);
-      const prop1 = websites(9233).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const prop1 = websites(9242).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       return index - prop1.indexOf(category2.category);
     });
     return sorted.concat(found1);

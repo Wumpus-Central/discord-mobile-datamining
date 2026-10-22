@@ -1,21 +1,21 @@
-// === Module 17901: SmartSearchEmptyScreen ===
+// === Module 17971: SmartSearchEmptyScreen ===
 
-// Module 17901 (SmartSearchEmptyScreen)
+// Module 17971 (SmartSearchEmptyScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef4085 from "module_4085" /* 4085 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4975 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5575 */;
-import SuggestedSearchListDefault from "SuggestedSearchList" /* 17902 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
+import SuggestedSearchListDefault from "SuggestedSearchList" /* 17972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { container: { flex: 1, gap: nativeDefault.space.PX_8 }, copy: null };
 let obj3 = { flex: 1, gap: nativeDefault.space.PX_8 };
 obj.copy = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };

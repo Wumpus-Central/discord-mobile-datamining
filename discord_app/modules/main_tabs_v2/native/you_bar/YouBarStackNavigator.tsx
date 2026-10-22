@@ -1,16 +1,16 @@
-// === Module 17266: YouBarStackNavigator ===
+// === Module 17336: YouBarStackNavigator ===
 
-// Module 17266 (YouBarStackNavigator)
+// Module 17336 (YouBarStackNavigator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import LayerScope from "LayerScope" /* 5579 */;
-import Navigator from "Navigator" /* 7074 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 8801 */;
-import notifications_Notifications from "notifications/Notifications" /* 17675 */;
-import useNotificationPermissionPromptDefault from "useNotificationPermissionPrompt" /* 17796 */;
+import LayerScope from "LayerScope" /* 5583 */;
+import Navigator from "Navigator" /* 7081 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 8810 */;
+import notifications_Notifications from "notifications/Notifications" /* 17745 */;
+import useNotificationPermissionPromptDefault from "useNotificationPermissionPrompt" /* 17866 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
 function getGuildsComponent() {
@@ -24,10 +24,10 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(11130).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11147).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9701);
+const NativeStackNavigator = fn(9713);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -123,7 +123,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj9 = { children: null };
       const items1 = [tmp17, tmp19, tmp25];
       obj9.children = items1;
-      const tmp34 = closure_1_11(collapsed, obj9);
+      const tmp34 = closure_1_11(v65535, obj9);
       cResult[12] = tmp17;
       cResult[13] = tmp19;
       cResult[14] = tmp25;
@@ -221,7 +221,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     });
     obj3.children = items;
-    return closure_2_11(collapsed, obj3);
+    return closure_2_11(v65535, obj3);
   }, items2);
   obj5.children = closure_9(Screen.Navigator, obj6);
   obj4.children = closure_9(current(accessibilityNativeStackOptions[16]).LayerScope, obj5);

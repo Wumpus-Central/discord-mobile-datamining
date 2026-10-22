@@ -1,6 +1,6 @@
-// === Module 12902: CheckpointSummaryStatsScreen ===
+// === Module 12936: CheckpointSummaryStatsScreen ===
 
-// Module 12902 (CheckpointSummaryStatsScreen)
+// Module 12936 (CheckpointSummaryStatsScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,19 +9,19 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import GuildIcon from "GuildIcon" /* 6862 */;
-import EmojiDefault from "Emoji" /* 7206 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8050 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 8600 */;
-import CheckpointTextDefault from "CheckpointText" /* 12861 */;
-import CheckpointScreen from "CheckpointScreen" /* 12863 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12868 */;
-import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 12903 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import GuildIcon from "GuildIcon" /* 6869 */;
+import EmojiDefault from "Emoji" /* 7213 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8058 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 8609 */;
+import CheckpointTextDefault from "CheckpointText" /* 12893 */;
+import CheckpointScreen from "CheckpointScreen" /* 12895 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12902 */;
+import CheckpointRecapCardDefault from "CheckpointRecapCard" /* 12937 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
-import CheckpointStore from "CheckpointStore" /* 12843 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import CheckpointStore from "CheckpointStore" /* 12875 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -32,8 +32,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(5995).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4966);
+const sum = fn(6002).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(4969);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, stats: { alignSelf: "stretch", gap: nativeDefault.space.PX_24 }, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_24 };
 obj2.row = { flexDirection: "row", columnGap: nativeDefault.space.PX_16 };

@@ -1,8 +1,8 @@
-// === Module 12716: useContentHarmTypes ===
+// === Module 12748: useContentHarmTypes ===
 
-// Module 12716 (useContentHarmTypes)
+// Module 12748 (useContentHarmTypes)
 import c from "c" /* 576 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7366 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7373 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -16,10 +16,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnabled
   dependencyMap = arg1;
   const cResult = require("c").c(18);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const eligibleHarmTypesConfigsForContext = tmp(7366).getEligibleHarmTypesConfigsForContext();
+    const eligibleHarmTypesConfigsForContext = tmp(7373).getEligibleHarmTypesConfigsForContext();
     cResult[0] = eligibleHarmTypesConfigsForContext;
     let first = eligibleHarmTypesConfigsForContext;
-    const tmpResult = tmp(7366);
+    const tmpResult = tmp(7373);
   } else {
     first = cResult[0];
   }
@@ -74,7 +74,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnabled
       tmp16 = cResult[9];
     }
     const tmpResult6 = tmp(504);
-    stateFromStores2 = tmpResult6.useStateFromStores(tmp14, tmp15, tmp16, tmp(7374).areSettingsEqual);
+    stateFromStores2 = tmpResult6.useStateFromStores(tmp14, tmp15, tmp16, tmp(7381).areSettingsEqual);
     if (null != stateFromStores1) {
       let id;
       if (stateFromStores != null) {
@@ -230,10 +230,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnabled
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(7370).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(7377).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(7366).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(7366);
+    NONE = tmp(7373).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(7373);
   }
   return NONE;
 });

@@ -1,11 +1,11 @@
-// === Module 5586: useChannelName ===
+// === Module 5590: useChannelName ===
 
-// Module 5586 (useChannelName)
+// Module 5590 (useChannelName)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import UserUtilsDefault from "UserUtils" /* 5015 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5172 */;
+import ExperimentStore from "ExperimentStore" /* 5176 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 

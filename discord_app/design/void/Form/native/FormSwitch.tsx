@@ -1,16 +1,16 @@
-// === Module 8919: Form/FormSwitch ===
+// === Module 8928: Form/FormSwitch ===
 
-// Module 8919 (Form/FormSwitch)
+// Module 8928 (Form/FormSwitch)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4973 */;
-import useThemeDefault from "useTheme" /* 5187 */;
+import shared from "shared" /* 4976 */;
+import useThemeDefault from "useTheme" /* 5191 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Switch = fn(17).Switch;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { switch: { marginVertical: -5 }, track: { color: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

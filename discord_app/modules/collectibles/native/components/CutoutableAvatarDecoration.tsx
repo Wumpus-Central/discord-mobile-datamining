@@ -1,15 +1,15 @@
-// === Module 9363: CutoutableAvatarDecoration ===
+// === Module 9374: CutoutableAvatarDecoration ===
 
-// Module 9363 (CutoutableAvatarDecoration)
+// Module 9374 (CutoutableAvatarDecoration)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9360 */;
-import ClipViewDefault from "ClipView" /* 9364 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9371 */;
+import ClipViewDefault from "ClipView" /* 9375 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 require = fn;
 const View = fn(17).View;

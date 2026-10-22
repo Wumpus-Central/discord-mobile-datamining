@@ -1,17 +1,17 @@
-// === Module 16230: QuestHomeEmptyState ===
+// === Module 16272: QuestHomeEmptyState ===
 
-// Module 16230 (QuestHomeEmptyState)
+// Module 16272 (QuestHomeEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import useChatLayoutDefault from "useChatLayout" /* 5135 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useToken from "useToken" /* 5234 */;
-import LinearGradientDefault from "LinearGradient" /* 5240 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7200 */;
-import _modDef16231 from "module_16231" /* 16231 */;
+import useChatLayoutDefault from "useChatLayout" /* 5139 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useToken from "useToken" /* 5238 */;
+import LinearGradientDefault from "LinearGradient" /* 5244 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7207 */;
+import _modDef16273 from "module_16273" /* 16273 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { flex: 1 }, emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 }, emptyStateContentContainer: { top: -55, paddingHorizontal: nativeDefault.space.PX_32 }, emptyStateContentTitle: { textAlign: "center" }, emptyStateContentDescription: { textAlign: "center", marginTop: 4 }, emptyImage: { flex: 1, width: "100%", aspectRatio: 1.6375545851528384, minWidth: "100%", position: "absolute", bottom: 0, zIndex: -1 }, backgroundImage: null, gradient: null, actionWrapper: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
               if (!isChatLockedOpen) {
                 const obj5 = { children: null };
                 const obj6 = { style: tmp8.emptyImage, children: null };
-                const obj7 = { style: tmp8.backgroundImage, source: _modDef16231, resizeMode: "cover" };
+                const obj7 = { style: tmp8.backgroundImage, source: _modDef16273, resizeMode: "cover" };
                 obj6.children = hasOwnProperty(FastImageDefault, obj7);
                 const items1 = [hasOwnProperty(React3, obj6), ];
                 const obj8 = { style: tmp8.gradient, end: null, start: null, colors: null };
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
     const obj11 = { style: tmp5.emptyImage, children: null };
-    const obj12 = { style: tmp5.backgroundImage, source: _modDef16231, resizeMode: "cover" };
+    const obj12 = { style: tmp5.backgroundImage, source: _modDef16273, resizeMode: "cover" };
     obj11.children = hasOwnProperty(FastImageDefault, obj12);
     const items2 = [hasOwnProperty(React3, obj11), ];
     const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

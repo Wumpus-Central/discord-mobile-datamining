@@ -1,6 +1,6 @@
-// === Module 13030: ChatInputCover ===
+// === Module 13066: ChatInputCover ===
 
-// Module 13030 (ChatInputCover)
+// Module 13066 (ChatInputCover)
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
 import noop from "module_19" /* 19 */;
 

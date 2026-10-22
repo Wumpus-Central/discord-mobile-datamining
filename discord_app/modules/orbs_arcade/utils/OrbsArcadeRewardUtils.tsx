@@ -1,15 +1,16 @@
-// === Module 19171: OrbsArcadeRewardUtils ===
+// === Module 16304: OrbsArcadeRewardUtils ===
 
-// Module 19171 (OrbsArcadeRewardUtils)
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 18196 */;
+// Module 16304 (OrbsArcadeRewardUtils)
+import util from "util" /* 1128 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16299 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/orbs_arcade/utils/OrbsArcadeRewardUtils.tsx");
 
-export const getOrbsArcadeRewardStatus = function getOrbsArcadeRewardStatus(arg0, arg1) {
+export const getOrbsArcadeRewardStatus = function getOrbsArcadeRewardStatus(id, gameState) {
   let tmp;
-  if (arg1 != null) {
-    tmp = arg1.rewardGrants[arg0];
+  if (gameState != null) {
+    tmp = gameState.rewardGrants[id];
   }
   let claimedAt;
   if (tmp != null) {
@@ -30,9 +31,9 @@ export const getOrbsArcadeRewardStatus = function getOrbsArcadeRewardStatus(arg0
   }
   return LOCKED;
 };
-export const getOrbsArcadeFocusedReward = function getOrbsArcadeFocusedReward(arg0, arg1) {
-  closure_0 = arg1;
-  const items = [...arg0];
+export const getOrbsArcadeFocusedReward = function getOrbsArcadeFocusedReward(rewards, stateFromStores) {
+  closure_0 = stateFromStores;
+  const items = [...rewards];
   const sorted = items.sort((scoreTarget, scoreTarget2) => scoreTarget.scoreTarget - scoreTarget2.scoreTarget);
   return sorted.find((item) => {
     let claimedAt;
@@ -77,4 +78,13 @@ export const isOrbsArcadeEnrollmentOver = function isOrbsArcadeEnrollmentOver(ga
     tmp = !values.some((pendingAt) => null != pendingAt.pendingAt && null == pendingAt.claimedAt);
   }
   return tmp;
+};
+export const getOrbsArcadeRewardScoreLabel = function getOrbsArcadeRewardScoreLabel(reward, orbsArcadeRewardStatus) {
+  const intl = util.intl;
+  if (orbsArcadeRewardStatus === OrbsArcadeTypes.OrbsArcadeRewardStatus.LOCKED) {
+    let Q8Vv0m = util.t.XKyikw;
+  } else {
+    Q8Vv0m = util.t.Q8Vv0m;
+  }
+  return intl.formatToPlainString(Q8Vv0m, { score: reward.scoreTarget });
 };

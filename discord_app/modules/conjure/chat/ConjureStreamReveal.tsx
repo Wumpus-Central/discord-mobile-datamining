@@ -1,6 +1,6 @@
-// === Module 12210: ConjureStreamReveal ===
+// === Module 12224: ConjureStreamReveal ===
 
-// Module 12210 (ConjureStreamReveal)
+// Module 12224 (ConjureStreamReveal)
 import size from "module_2" /* 2 */;
 
 function splitsCharacter(target, sum) {

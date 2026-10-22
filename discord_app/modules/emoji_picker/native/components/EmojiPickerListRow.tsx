@@ -1,19 +1,19 @@
-// === Module 9869: EmojiPickerListRow ===
+// === Module 9881: EmojiPickerListRow ===
 
-// Module 9869 (EmojiPickerListRow)
+// Module 9881 (EmojiPickerListRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import native from "native" /* 1202 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
-import shared from "shared" /* 4973 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import Pressables from "Pressables" /* 6887 */;
-import _modDef7207 from "module_7207" /* 7207 */;
-import _modDef7208 from "module_7208" /* 7208 */;
-import LockIcon from "LockIcon" /* 8542 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9870 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9871 */;
+import shared from "shared" /* 4976 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import Pressables from "Pressables" /* 6894 */;
+import _modDef7214 from "module_7214" /* 7214 */;
+import _modDef7215 from "module_7215" /* 7215 */;
+import LockIcon from "LockIcon" /* 8551 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9882 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9883 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -22,12 +22,12 @@ require = fn;
 let closure_3 = ["nativeRow"];
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9786);
+const EmojiPickerListConstants = fn(9798);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1243).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1384);
 let num = 28;
@@ -141,7 +141,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
                       const obj2 = { accessibilityRole: "button", accessibilityLabel: emoji.name, style: tmp5, onPress: tmp6, onLongPress: tmp7, children: null };
                       const items = [cResult[18], tmp19];
                       obj2.children = items;
-                      const tmp25 = collapsed(Pressables.PressableOpacity, obj2);
+                      const tmp25 = v65535(Pressables.PressableOpacity, obj2);
                       cResult[21] = emoji.name;
                       cResult[22] = tmp5;
                       cResult[23] = tmp6;
@@ -170,9 +170,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
             const obj4 = { resizeMode: "contain", style: surrogates.image, placeholder: null, source: null, usesSmallCache: true };
             const tmp14 = FastImageDefault;
             if (tmpResult.isThemeDark(ThemeStore.theme)) {
-              let tmp13Result = _modDef7207;
+              let tmp13Result = _modDef7214;
             } else {
-              tmp13Result = _modDef7208;
+              tmp13Result = _modDef7215;
             }
             obj4.placeholder = tmp13Result;
             const obj5 = { uri: image };
@@ -236,10 +236,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
     const obj2 = { resizeMode: "contain", style: tmp.image, placeholder: null, source: null, usesSmallCache: true };
     const tmp2Result = FastImageDefault;
     if (tmp6Result.isThemeDark(ThemeStore.theme)) {
-      tmp3 = 7207;
+      tmp3 = 7214;
       let tmp2Result2 = importDefault(tmp3);
     } else {
-      tmp2Result2 = _modDef7208;
+      tmp2Result2 = _modDef7215;
     }
     obj2.placeholder = tmp2Result2;
     const obj3 = { uri: tmp4 };
@@ -255,7 +255,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
     }
     items1[1] = disabled;
     obj.children = items1;
-    return collapsed(Pressables.PressableOpacity, obj);
+    return v65535(Pressables.PressableOpacity, obj);
   }
   tmp4 = getEmojiItemUrlDefault(emoji, animateEmoji, IMAGE_SIZE);
 });

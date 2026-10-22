@@ -1,17 +1,17 @@
-// === Module 12967: SlowModeIndicator ===
+// === Module 13003: SlowModeIndicator ===
 
-// Module 12967 (SlowModeIndicator)
+// Module 13003 (SlowModeIndicator)
 import nativeDefault from "native" /* 587 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7736 */;
-import TimerIcon from "TimerIcon" /* 11250 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7745 */;
+import TimerIcon from "TimerIcon" /* 11267 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 7735 */;
+import SlowmodeStore from "SlowmodeStore" /* 7744 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -37,7 +37,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const stateFromStores = tmp(504).useStateFromStores(first, tmp7);
     const tmpResult = tmp(504);
-    const canBypassSlowmode = tmp(7736).useCanBypassSlowmode(channel);
+    const canBypassSlowmode = tmp(7745).useCanBypassSlowmode(channel);
     if (channel.hasTypingText) {
       if (!canBypassSlowmode) {
         if (stateFromStores <= 0) {
@@ -57,7 +57,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           if (cResult[9] !== null) {
             let obj2 = { lineClamp: 1, allowFontScaling: false, variant: "text-xs/medium", color: "interactive-text-default", children: null };
-            const tmp17 = closure_5(tmp(5216).Text, obj2);
+            const tmp17 = closure_5(tmp(5220).Text, obj2);
             cResult[9] = null;
             cResult[10] = tmp17;
             let tmp15 = tmp17;
@@ -66,7 +66,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           if (cResult[11] !== tmp4.icon) {
             const obj3 = { style: tmp4.icon, size: "xxs" };
-            const tmp20 = closure_5(tmp(11250).TimerIcon, obj3);
+            const tmp20 = closure_5(tmp(11267).TimerIcon, obj3);
             cResult[11] = tmp4.icon;
             cResult[12] = tmp20;
             let tmp18 = tmp20;
@@ -86,7 +86,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj4 = { onPress: tmp14, style: tmp4.container, children: null };
           const items1 = [tmp15, tmp18];
           obj4.children = items1;
-          const tmp23 = closure_6(tmp(6887).PressableOpacity, obj4);
+          const tmp23 = closure_6(tmp(6894).PressableOpacity, obj4);
           cResult[13] = tmp14;
           cResult[14] = tmp4.container;
           cResult[15] = tmp15;
@@ -98,12 +98,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[4] === canBypassSlowmode) {
     }
-    const tmpResult3 = tmp(7736);
-    const slowmodeIndicatorText = tmp(7736).getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
+    const tmpResult3 = tmp(7745);
+    const slowmodeIndicatorText = tmp(7745).getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
     cResult[4] = canBypassSlowmode;
     cResult[5] = stateFromStores;
     cResult[6] = slowmodeIndicatorText;
-    const tmpResult4 = tmp(7736);
+    const tmpResult4 = tmp(7745);
   }
   const fn = function u() {
     return SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType);

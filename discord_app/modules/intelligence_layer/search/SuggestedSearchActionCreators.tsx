@@ -1,11 +1,11 @@
-// === Module 13147: SuggestedSearchActionCreators ===
+// === Module 13183: SuggestedSearchActionCreators ===
 
-// Module 13147 (SuggestedSearchActionCreators)
+// Module 13183 (SuggestedSearchActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SmartSearchExperiments from "SmartSearchExperiments" /* 13146 */;
+import SmartSearchExperiments from "SmartSearchExperiments" /* 13182 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13107 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 13143 */;
 
 require = fn;
 function canFetchSuggestedSearches(guildId) {
@@ -60,14 +60,14 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
           closure_132_2 = undefined;
           closure_132_0 = closure_0;
           closure_132_1 = closure_1;
-          let tmp32 = closure_2;
+          let tmp30 = closure_2;
           if (closure_2 === undefined) {
-            tmp32 = null;
+            tmp30 = null;
           }
-          closure_132_2 = tmp32;
+          closure_132_2 = tmp30;
           let guildId;
           let channelIds;
-          let parentSuggestedSearch;
+          let contextualProperties;
           closure_132_6 = undefined;
           closure_132_7 = undefined;
           closure_132_8 = undefined;
@@ -86,7 +86,7 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
         } else {
           guildId = closure_132_0.guildId;
           channelIds = closure_132_0.channelIds;
-          parentSuggestedSearch = closure_133_1(closure_133_2[6]).getParentSuggestedSearch(closure_132_0.queryText);
+          contextualProperties = closure_133_1(closure_133_2[6]).getContextualProperties(closure_132_0, closure_132_1);
           const obj14 = closure_133_1(closure_133_2[6]);
           const obj7 = { type: "SUGGESTED_SEARCHES_FETCH_START", scope: closure_132_0 };
           closure_133_1(closure_133_2[7]).dispatch(obj7);
@@ -110,7 +110,7 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
           const obj11 = { type: "SUGGESTED_SEARCHES_FETCH_FAILURE", scope: closure_132_0, windowSize: closure_132_2 };
           closure_133_1(closure_133_2[7]).dispatch(obj11);
           const obj2 = closure_133_1(closure_133_2[7]);
-          const obj13 = { smartSearchQuery: closure_132_0, requestId: null, durationMs: null, responseStatusCode: null, suggestedSearches: null, parentSuggestedSearch: null };
+          const obj13 = { requestId: null, durationMs: null, responseStatusCode: null, suggestedSearches: null, contextualProperties: null };
           const _performance = performance;
           obj13.durationMs = performance.now() - closure_132_6;
           let status;
@@ -123,8 +123,8 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
           }
           obj13.responseStatusCode = responseStatusCode;
           obj13.suggestedSearches = [];
-          obj13.parentSuggestedSearch = parentSuggestedSearch;
-          const result = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj13, closure_132_1);
+          obj13.contextualProperties = contextualProperties;
+          const result = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj13);
           c9 = 3;
           const obj4 = closure_133_1(closure_133_2[6]);
         } else if (arg0 === 1) {
@@ -138,13 +138,13 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
           const obj16 = { type: "SUGGESTED_SEARCHES_FETCH_SUCCESS", scope: closure_132_0, requestId: closure_132_7.body.request_id, suggestedSearches: closure_132_8, windowSize: closure_132_2 };
           closure_133_1(closure_133_2[7]).dispatch(obj16);
           const obj10 = closure_133_1(closure_133_2[7]);
-          const obj17 = { smartSearchQuery: closure_132_0, requestId: closure_132_7.body.request_id, durationMs: null, responseStatusCode: null, suggestedSearches: null, parentSuggestedSearch: null };
+          const obj17 = { requestId: closure_132_7.body.request_id, durationMs: null, responseStatusCode: null, suggestedSearches: null, contextualProperties: null };
           const _performance2 = performance;
           obj17.durationMs = performance.now() - closure_132_6;
           obj17.responseStatusCode = closure_132_7.status;
           obj17.suggestedSearches = closure_132_8;
-          obj17.parentSuggestedSearch = parentSuggestedSearch;
-          const result1 = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj17, closure_132_1);
+          obj17.contextualProperties = contextualProperties;
+          const result1 = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj17);
           c7 = 0;
           const obj12 = closure_133_1(closure_133_2[6]);
         }
@@ -153,11 +153,11 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp33) {
-      closure_6 = tmp33;
+    } catch (tmp31) {
+      closure_6 = tmp31;
       if (tmp4 === c7) {
         c9 = tmp2;
-        throw tmp33;
+        throw tmp31;
       } else {
         c8 = tmp;
       }
@@ -212,7 +212,7 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
     }
   }
 };
-const SmartSearchConstants = fn(13108);
+const SmartSearchConstants = fn(13144);
 ({ SUGGESTED_SEARCHES_REQUEST_LIMIT: hasOwnProperty, SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS } = SmartSearchConstants);
 const Constants = fn(1087);
 ({ Endpoints: metroRequire, NOOP: closure_7 } = Constants);

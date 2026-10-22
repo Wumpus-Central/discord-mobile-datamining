@@ -1,26 +1,27 @@
-// === Module 6759: ChannelRTCParticipants ===
+// === Module 6766: ChannelRTCParticipants ===
 
-// Module 6759 (ChannelRTCParticipants)
+// Module 6766 (ChannelRTCParticipants)
 import _mod12 from "module_12" /* 12 */;
-import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 5592 */;
-import ContentClassificationReference from "ContentClassificationReference" /* 5593 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5969 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6624 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 6670 */;
-import useIsSpeaking from "useIsSpeaking" /* 6760 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6761 */;
+import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 5596 */;
+import ContentClassificationReference from "ContentClassificationReference" /* 5597 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6631 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 6677 */;
+import useIsSpeaking from "useIsSpeaking" /* 6767 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6768 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import FramesStore from "FramesStore" /* 6754 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6665 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6621 */;
+import FramesStore from "FramesStore" /* 6761 */;
+import SoundboardStore from "SoundboardStore" /* 5993 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6672 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6476 */;
+import CallStore from "CallStore" /* 6483 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import SpeakingStore from "SpeakingStore" /* 6664 */;
+import SpeakingStore from "SpeakingStore" /* 6671 */;
 import UserStore from "UserStore" /* 1392 */;
-import VideoStreamStore from "VideoStreamStore" /* 6758 */;
-import VoiceStateStore from "VoiceStateStore" /* 5612 */;
+import VideoStreamStore from "VideoStreamStore" /* 6765 */;
+import VoiceStateStore from "VoiceStateStore" /* 5616 */;
 
 require = fn;
 function sortKey(type) {
@@ -62,14 +63,14 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5614);
-({ isStreamParticipant: closure_14, ParticipantTypes: closure_15 } = CallConstants);
+const CallConstants = fn(5618);
+({ isStreamParticipant: closure_15, ParticipantTypes: closure_16 } = CallConstants);
 let Constants = fn(1087);
-({ ActivityTypes: closure_16, ChannelTypes: closure_17 } = Constants);
-const FramesConstants = fn(6755);
+({ ActivityTypes: closure_17, ChannelTypes: closure_18 } = Constants);
+const FramesConstants = fn(6762);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-Constants = fn(5700);
-({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
+Constants = fn(5704);
+({ MediaEngineContextTypes: closure_19, Features: closure_20 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = { VIDEO: "VIDEO", STREAM: "STREAM", FILTERED: "FILTERED", SPEAKING: "SPEAKING", ACTIVITY: "ACTIVITY", NOT_POPPED_OUT: "NOT_POPPED_OUT", STAGE_SPEAKER: "STAGE_SPEAKER" };
 const size = fn(2);
@@ -84,7 +85,7 @@ class ChannelRTCParticipants {
     obj.poppedOutParticipants = set;
     set1 = new Set();
     obj.stageSpeakerIds = set1;
-    secondaryIndexMap = new closure_0(closure_2[17]).SecondaryIndexMap((type) => {
+    secondaryIndexMap = new closure_0(closure_2[18]).SecondaryIndexMap((type) => {
       const items = [];
       if (tmp2) {
         items.push(obj.SPEAKING);
@@ -121,7 +122,7 @@ class ChannelRTCParticipants {
         }
         return items;
       }
-      if (closure_2_14(type)) {
+      if (value2(type)) {
         items.push(obj.STREAM);
         let isPoppedOut = type.type === constants.HIDDEN_STREAM;
         if (!isPoppedOut) {
@@ -249,16 +250,17 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f95781) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f96230) {
   const self = this;
-  const userId = f95781;
+  const userId = f96230;
   let flag;
-  if (this.participants[f95781] != null) {
+  if (this.participants[f96230] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
         const obj2 = { userId, checkIsMuted: true };
         const isSpeaking = useIsSpeaking.getIsSpeaking(obj2);
+        const isSoundSharingResult = SpeakingStore.isSoundSharing(userId);
         const participantByIndex = self.participantByIndex;
         value = participantByIndex.get(type.id);
         type = undefined;
@@ -266,7 +268,9 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f957
           type = value.type;
         }
         if (type === tmp.USER) {
-          return flag;
+          if (value.speaking === isSpeaking) {
+            return flag;
+          }
         }
         if (isSpeaking) {
           const _Date = Date;
@@ -277,10 +281,11 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f957
         const merged = Object.assign(type);
         obj3.speaking = isSpeaking;
         obj3.lastSpoke = self.lastSpoke[userId];
-        obj3.soundsharing = SpeakingStore.isSoundSharing(userId);
+        obj3.playingSoundboard = SoundboardStore.isUserPlayingSounds(userId);
+        obj3.soundsharing = isSoundSharingResult;
         const result = participantByIndex2.set(type.id, obj3);
         flag = true;
-        const isSoundSharingResult = SpeakingStore.isSoundSharing(userId);
+        const isUserPlayingSoundsResult = SoundboardStore.isUserPlayingSounds(userId);
       } else {
         return flag;
       }
@@ -291,10 +296,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f957
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f95787, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f96236, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f95787] != null) {
+  if (this.participants[f96236] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {
@@ -420,6 +425,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
         num = 0;
       }
       obj.lastSpoke = num;
+      obj.playingSoundboard = SoundboardStore.isUserPlayingSounds(userId);
       obj.soundsharing = SpeakingStore.isSoundSharing(userId);
       obj.ringing = flag;
       obj.userNick = NicknameUtilsDefault.getName(guildId, self.channelId, user);
@@ -443,20 +449,20 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
           if (participant != null) {
             type = participant.type;
           }
-          let tmp20 = null;
+          let tmp21 = null;
           if (type === constants.STREAM) {
-            let tmp21;
+            let tmp22;
             if (null != participant.maxResolution) {
               const obj5 = {};
               const merged1 = Object.assign(participant.maxResolution);
-              tmp21 = obj5;
+              tmp22 = obj5;
             }
-            const obj7 = { maxResolution: tmp21, maxFrameRate: participant.maxFrameRate };
-            tmp20 = obj7;
+            const obj7 = { maxResolution: tmp22, maxFrameRate: participant.maxFrameRate };
+            tmp21 = obj7;
           }
           const obj8 = {};
           const merged2 = Object.assign(VideoStreamStore.getUserStreamData(userId, guildId, constants4.STREAM));
-          const merged3 = Object.assign(tmp20);
+          const merged3 = Object.assign(tmp21);
           obj8.type = streamForUser.ownerId === AuthenticationStore.getId() && ApplicationStreamingStore.isSelfStreamHidden(self.channelId) ? constants.HIDDEN_STREAM : constants.STREAM;
           obj8.id = encodeStreamKeyResult;
           let flag2;
@@ -468,7 +474,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
           }
           obj8.userVideo = flag2;
           obj8.user = user;
-          const tmp17 = streamForUser.ownerId === AuthenticationStore.getId() && ApplicationStreamingStore.isSelfStreamHidden(self.channelId);
+          const tmp18 = streamForUser.ownerId === AuthenticationStore.getId() && ApplicationStreamingStore.isSelfStreamHidden(self.channelId);
           obj8.userNick = NicknameUtilsDefault.getName(guildId, self.channelId, user);
           obj8.stream = streamForUser;
           const poppedOutParticipants2 = self.poppedOutParticipants;

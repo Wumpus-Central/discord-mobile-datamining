@@ -1,20 +1,20 @@
-// === Module 13543: components/JoinServer ===
+// === Module 13579: components/JoinServer ===
 
-// Module 13543 (components/JoinServer)
-import NavigatorHeader from "NavigatorHeader" /* 6903 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8825 */;
+// Module 13579 (components/JoinServer)
+import NavigatorHeader from "NavigatorHeader" /* 6910 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8834 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const CreateGuildConstants = fn(7052);
+const CreateGuildConstants = fn(7059);
 ({ CreateGuildModalStates: hasOwnProperty, NUXGuildTemplatesAnalytics: metroRequire } = CreateGuildConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5250).NAV_BAR_HEIGHT } };
+const createStyles = fn(4969);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5254).NAV_BAR_HEIGHT } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-const obj3 = { marginTop: fn(5250).NAV_BAR_HEIGHT };
+const obj3 = { marginTop: fn(5254).NAV_BAR_HEIGHT };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/JoinServer.tsx");
 

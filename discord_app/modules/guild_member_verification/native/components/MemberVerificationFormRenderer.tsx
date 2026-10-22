@@ -1,6 +1,6 @@
-// === Module 6874: MemberVerificationFormRenderer ===
+// === Module 6881: MemberVerificationFormRenderer ===
 
-// Module 6874 (MemberVerificationFormRenderer)
+// Module 6881 (MemberVerificationFormRenderer)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

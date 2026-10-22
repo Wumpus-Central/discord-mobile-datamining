@@ -1,21 +1,21 @@
-// === Module 13048: VoicePanelControlsDrawerTitle ===
+// === Module 13084: VoicePanelControlsDrawerTitle ===
 
-// Module 13048 (VoicePanelControlsDrawerTitle)
+// Module 13084 (VoicePanelControlsDrawerTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import NativeViewDefault from "NativeView" /* 6865 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7147 */;
-import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 13049 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import NativeViewDefault from "NativeView" /* 6872 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7154 */;
+import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 13085 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4966);
-let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(10846).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
+const createStyles = fn(4969);
+let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(10863).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
 obj.titlePillBG = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_6 = createStyles.createStyles(obj);

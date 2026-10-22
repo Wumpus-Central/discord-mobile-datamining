@@ -1,6 +1,6 @@
-// === Module 13388: GuildPowerupsRecentActivitySection ===
+// === Module 13424: GuildPowerupsRecentActivitySection ===
 
-// Module 13388 (GuildPowerupsRecentActivitySection)
+// Module 13424 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -8,17 +8,17 @@ import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import DateUtils from "DateUtils" /* 4794 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7054 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8295 */;
-import BoostGemIcon from "BoostGemIcon" /* 9766 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 13389 */;
-import BoostTier1Icon from "BoostTier1Icon" /* 13391 */;
-import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 13393 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 13395 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7061 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8304 */;
+import BoostGemIcon from "BoostGemIcon" /* 9778 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 13425 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 13427 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 13429 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 13431 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4966 */;
+import createStyles from "createStyles" /* 4969 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

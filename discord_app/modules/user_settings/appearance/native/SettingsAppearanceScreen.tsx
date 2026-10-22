@@ -1,18 +1,18 @@
-// === Module 16446: SettingsAppearanceScreen ===
+// === Module 16515: SettingsAppearanceScreen ===
 
-// Module 16446 (SettingsAppearanceScreen)
+// Module 16515 (SettingsAppearanceScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
 import _modDef3412 from "module_3412" /* 3412 */;
-import useMountEffectDefault from "useMountEffect" /* 5245 */;
-import HeaderShared from "HeaderShared" /* 9657 */;
-import SettingBuilders from "SettingBuilders" /* 11155 */;
-import SettingLayoutDefault from "SettingLayout" /* 15856 */;
+import useMountEffectDefault from "useMountEffect" /* 5249 */;
+import HeaderShared from "HeaderShared" /* 9669 */;
+import SettingBuilders from "SettingBuilders" /* 11172 */;
+import SettingLayoutDefault from "SettingLayout" /* 15898 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4990 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 
@@ -71,9 +71,9 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(16447);
+const FontScaleStore = fn(16516);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8308).MobileUserSettings;
+const MobileUserSettings = fn(8317).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -117,7 +117,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFon
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "r" });
+          nativeStackNavigation.setOptions({ headerRight: "Array" });
         }
       }
       const obj2 = { headerRight: null };
@@ -150,7 +150,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFon
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "r" });
+          nativeStackNavigation.setOptions({ headerRight: "Array" });
         }
       }
       const obj2 = { headerRight: null };

@@ -1,13 +1,13 @@
-// === Module 10850: VoicePanelCardLayoutManager ===
+// === Module 10867: VoicePanelCardLayoutManager ===
 
-// Module 10850 (VoicePanelCardLayoutManager)
+// Module 10867 (VoicePanelCardLayoutManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10852 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10869 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
 
 require = fn;
 function getTargetCardSize(windowWidth) {
@@ -20,12 +20,12 @@ function getTargetCardSize(windowWidth) {
   return Math.max(closure_1_8, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(10848);
+const VoicePanelConstants = fn(10865);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({ BASE_TARGET_CARD_SIZE: closure_8, VoicePanelCTACardDimensionKeys: closure_9, VoicePanelCTACardDimensions: c10, VOICE_PANEL_CHUNK_DIVISOR: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(10851);
+const VoicePanelCardConstants = fn(10868);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(5614).ParticipantTypes;
+const ParticipantTypes = fn(5618).ParticipantTypes;
 let closure_15 = { id: "invalid", type: VoicePanelCardItemType.PARTICIPANT, x: 0, y: 0, width: 0, height: 0, zIndex: 0 };
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -277,7 +277,7 @@ prototype["getTargetDimensions"] = function getTargetDimensions(id) {
   if (null == id) {
     let defaultTargetCoords = self.defaultTargetCoords;
   } else if (set.has(id)) {
-    defaultTargetCoords = collapsed[id];
+    defaultTargetCoords = v65535[id];
   } else {
     const targetDimensions = self.targetDimensions;
     defaultTargetCoords = targetDimensions.get(id);

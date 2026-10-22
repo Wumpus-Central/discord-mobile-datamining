@@ -1,19 +1,19 @@
-// === Module 15796: TryItOutPresets ===
+// === Module 15838: TryItOutPresets ===
 
-// Module 15796 (TryItOutPresets)
+// Module 15838 (TryItOutPresets)
 import util from "util" /* 1128 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1411 */;
 import DisplayNameFont from "DisplayNameFont" /* 1412 */;
-import _mod15799 from "module_15799" /* 15799 */;
-import _mod15800 from "module_15800" /* 15800 */;
-import _mod15803 from "module_15803" /* 15803 */;
-import _mod15804 from "module_15804" /* 15804 */;
-import _mod15807 from "module_15807" /* 15807 */;
-import _mod15808 from "module_15808" /* 15808 */;
-import _mod15811 from "module_15811" /* 15811 */;
-import _mod15812 from "module_15812" /* 15812 */;
-import _mod15815 from "module_15815" /* 15815 */;
-import _mod15816 from "module_15816" /* 15816 */;
+import _mod15841 from "module_15841" /* 15841 */;
+import _mod15842 from "module_15842" /* 15842 */;
+import _mod15845 from "module_15845" /* 15845 */;
+import _mod15846 from "module_15846" /* 15846 */;
+import _mod15849 from "module_15849" /* 15849 */;
+import _mod15850 from "module_15850" /* 15850 */;
+import _mod15853 from "module_15853" /* 15853 */;
+import _mod15854 from "module_15854" /* 15854 */;
+import _mod15857 from "module_15857" /* 15857 */;
+import _mod15858 from "module_15858" /* 15858 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -31,16 +31,16 @@ const obj3 = {
     return intl.string(util.t["TFc+iF"]);
   },
   getHeaderSrc() {
-    return require("module_15797").default;
+    return require("module_15839").default;
   },
   getPreviewThumbnailSrc() {
-    return require("module_15798").default;
+    return require("module_15840").default;
   },
   getBannerSrc(arg0) {
     if (arg0) {
-      let _default = _mod15799.default;
+      let _default = _mod15841.default;
     } else {
-      _default = _mod15800.default;
+      _default = _mod15842.default;
     }
     return _default;
   },
@@ -58,16 +58,16 @@ obj5.getName = function getName() {
   return intl.string(util.t["4g+5bq"]);
 };
 obj5.getHeaderSrc = function getHeaderSrc() {
-  return require("module_15801").default;
+  return require("module_15843").default;
 };
 obj5.getPreviewThumbnailSrc = function getPreviewThumbnailSrc() {
-  return require("module_15802").default;
+  return require("module_15844").default;
 };
 obj5.getBannerSrc = function getBannerSrc(arg0) {
   if (arg0) {
-    let _default = _mod15803.default;
+    let _default = _mod15845.default;
   } else {
-    _default = _mod15804.default;
+    _default = _mod15846.default;
   }
   return _default;
 };
@@ -84,16 +84,16 @@ obj7.getName = function getName() {
   return intl.string(util.t.ycg1xj);
 };
 obj7.getHeaderSrc = function getHeaderSrc() {
-  return require("module_15805").default;
+  return require("module_15847").default;
 };
 obj7.getPreviewThumbnailSrc = function getPreviewThumbnailSrc() {
-  return require("module_15806").default;
+  return require("module_15848").default;
 };
 obj7.getBannerSrc = function getBannerSrc(arg0) {
   if (arg0) {
-    let _default = _mod15807.default;
+    let _default = _mod15849.default;
   } else {
-    _default = _mod15808.default;
+    _default = _mod15850.default;
   }
   return _default;
 };
@@ -110,16 +110,16 @@ obj9.getName = function getName() {
   return intl.string(util.t["9WLHvr"]);
 };
 obj9.getHeaderSrc = function getHeaderSrc() {
-  return require("module_15809").default;
+  return require("module_15851").default;
 };
 obj9.getPreviewThumbnailSrc = function getPreviewThumbnailSrc() {
-  return require("module_15810").default;
+  return require("module_15852").default;
 };
 obj9.getBannerSrc = function getBannerSrc(arg0) {
   if (arg0) {
-    let _default = _mod15811.default;
+    let _default = _mod15853.default;
   } else {
-    _default = _mod15812.default;
+    _default = _mod15854.default;
   }
   return _default;
 };
@@ -136,16 +136,16 @@ obj11.getName = function getName() {
   return intl.string(util.t.UdNuqi);
 };
 obj11.getHeaderSrc = function getHeaderSrc() {
-  return require("module_15813").default;
+  return require("module_15855").default;
 };
 obj11.getPreviewThumbnailSrc = function getPreviewThumbnailSrc() {
-  return require("module_15814").default;
+  return require("module_15856").default;
 };
 obj11.getBannerSrc = function getBannerSrc(arg0) {
   if (arg0) {
-    let _default = _mod15815.default;
+    let _default = _mod15857.default;
   } else {
-    _default = _mod15816.default;
+    _default = _mod15858.default;
   }
   return _default;
 };

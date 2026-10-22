@@ -1,6 +1,6 @@
-// === Module 12924: joinOrStartActivityInChannel ===
+// === Module 12960: joinOrStartActivityInChannel ===
 
-// Module 12924 (joinOrStartActivityInChannel)
+// Module 12960 (joinOrStartActivityInChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 import ChannelStore from "ChannelStore" /* 4821 */;

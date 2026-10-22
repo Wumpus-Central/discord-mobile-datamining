@@ -1,7 +1,7 @@
-// === Module 12395: conjureSecretsRequests ===
+// === Module 12422: conjureSecretsRequests ===
 
-// Module 12395 (conjureSecretsRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10749 */;
+// Module 12422 (conjureSecretsRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10763 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

@@ -1,19 +1,19 @@
-// === Module 16429: SettingsVoiceScreen ===
+// === Module 16498: SettingsVoiceScreen ===
 
-// Module 16429 (SettingsVoiceScreen)
+// Module 16498 (SettingsVoiceScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import shared from "shared" /* 4973 */;
-import useThemeDefault from "useTheme" /* 5187 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5279 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import SettingBuilders from "SettingBuilders" /* 11155 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11559 */;
-import KrispLogo from "KrispLogo" /* 11562 */;
-import _modDef11563 from "module_11563" /* 11563 */;
-import _modDef11564 from "module_11564" /* 11564 */;
-import SettingLayoutDefault from "SettingLayout" /* 15856 */;
+import shared from "shared" /* 4976 */;
+import useThemeDefault from "useTheme" /* 5191 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import SettingBuilders from "SettingBuilders" /* 11172 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11576 */;
+import KrispLogo from "KrispLogo" /* 11579 */;
+import _modDef11580 from "module_11580" /* 11580 */;
+import _modDef11581 from "module_11581" /* 11581 */;
+import SettingLayoutDefault from "SettingLayout" /* 15898 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2067 */;
@@ -57,7 +57,7 @@ function getVoiceSettings() {
   const obj9 = { children: null };
   const items6 = [closure_1_8(closure_14, {}), closure_1_8(closure_13, {})];
   obj9.children = items6;
-  obj8.subLabel = React6(collapsed, obj9);
+  obj8.subLabel = React6(v65535, obj9);
   items1[4] = obj8;
   const obj10 = { label: null, settings: null };
   const intl7 = util.intl;
@@ -85,12 +85,12 @@ function getVoiceSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8308).MobileUserSettings;
+const MobileUserSettings = fn(8317).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const guideURL = "" + HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispLogo() {
@@ -98,9 +98,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispL
   const tmp4 = closure_12();
   const tmp6 = useThemeDefault();
   if (obj2.isThemeLight(tmp6)) {
-    let tmp5Result = _modDef11563;
+    let tmp5Result = _modDef11580;
   } else {
-    tmp5Result = _modDef11564;
+    tmp5Result = _modDef11581;
   }
   ({ krisp, logo } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -162,9 +162,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function KrispL
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef11563;
+    let tmp2Result = _modDef11580;
   } else {
-    tmp2Result = _modDef11564;
+    tmp2Result = _modDef11581;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

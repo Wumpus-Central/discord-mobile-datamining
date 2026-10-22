@@ -1,15 +1,15 @@
-// === Module 17136: ParentalControlsUseDataForQuestsSetting ===
+// === Module 17205: ParentalControlsUseDataForQuestsSetting ===
 
-// Module 17136 (ParentalControlsUseDataForQuestsSetting)
+// Module 17205 (ParentalControlsUseDataForQuestsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef2536 from "module_2536" /* 2536 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15988 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7622 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16030 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7629 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToSupportQuestsSettingValue() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -31,7 +31,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2536.ZhaNu8);
   },
-  parent: fn(8308).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8317).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToSupportQuestsSettingValue() {
     const cResult = c.c(1);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

@@ -1,7 +1,7 @@
-// === Module 7534: usePremiumTrialOffer ===
+// === Module 7541: usePremiumTrialOffer ===
 
-// Module 7534 (usePremiumTrialOffer)
-import useAndroidAndLegacyIOSPremiumTrialOfferCandidates from "useAndroidAndLegacyIOSPremiumTrialOfferCandidates" /* 7535 */;
+// Module 7541 (usePremiumTrialOffer)
+import useAndroidAndLegacyIOSPremiumTrialOfferCandidates from "useAndroidAndLegacyIOSPremiumTrialOfferCandidates" /* 7542 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

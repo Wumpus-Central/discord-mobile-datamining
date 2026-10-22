@@ -1,6 +1,6 @@
-// === Module 10627: getBotTagFromUser ===
+// === Module 10639: getBotTagFromUser ===
 
-// Module 10627 (getBotTagFromUser)
+// Module 10639 (getBotTagFromUser)
 import ApplicationConstants from "ApplicationConstants" /* 1375 */;
 import size from "module_2" /* 2 */;
 

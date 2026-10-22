@@ -1,24 +1,24 @@
-// === Module 17660: YouBarAvatarDefault ===
+// === Module 17730: YouBarAvatarDefault ===
 
-// Module 17660 (YouBarAvatarDefault)
+// Module 17730 (YouBarAvatarDefault)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import useToken from "useToken" /* 5234 */;
-import ReactionIcon from "ReactionIcon" /* 9308 */;
-import ClipView from "ClipView" /* 9364 */;
+import useToken from "useToken" /* 5238 */;
+import ReactionIcon from "ReactionIcon" /* 9319 */;
+import ClipView from "ClipView" /* 9375 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16264);
+const YouBarConstants = fn(16334);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_4, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty, YOU_BAR_STATUS_INSET: metroRequire, YOU_BAR_HEIGHT: closure_7, YOU_BAR_LARGE_STATUS_SIZE: closure_8, YOU_BAR_PADDING: closure_9, YOU_BAR_STATUS_OFFSET: c10 } = YouBarConstants);
 const StatusTypes = fn(1087).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { placeholderAvatar: { borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, justifyContent: "center", alignItems: "center" }, placeholderAvatarBackground: null, avatarShadow: null };
 let rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round };
 obj.placeholderAvatarBackground = rect;
@@ -190,7 +190,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
   const result1 = size / 4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const diff1 = diff - result1 * 2;
-    const point = { shape: ClipView.CutoutShape.Circle, x: diff1 + collapsed, y: diff1 + collapsed, size: 2 * sum };
+    const point = { shape: ClipView.CutoutShape.Circle, x: diff1 + v65535, y: diff1 + v65535, size: 2 * sum };
     cResult[0] = point;
     let first = point;
   } else {
@@ -265,7 +265,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
       const _Symbol2 = Symbol;
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
         const obj5 = { size, status: StatusTypes.OFFLINE, isMobileOnline: false, isVROnline: false, streaming: false, style: null };
-        const rect = { position: "absolute", right: timestampProducer - collapsed, bottom: timestampProducer - collapsed };
+        const rect = { position: "absolute", right: timestampProducer - v65535, bottom: timestampProducer - v65535 };
         obj5.style = rect;
         const tmp46 = __initData(native.Status, obj5);
         cResult[17] = tmp46;
@@ -314,7 +314,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
   const result = size / 2;
   const sum = result + native.STATUS_PADDING;
   const diff = tmp3 - sum - size / 4 * 2;
-  const point = { shape: ClipView.CutoutShape.Circle, x: diff + collapsed, y: diff + collapsed, size: 2 * sum };
+  const point = { shape: ClipView.CutoutShape.Circle, x: diff + v65535, y: diff + v65535, size: 2 * sum };
   const obj2 = { style: null, children: null };
   size = { height: native.AVATAR_SIZE_MAP[hasOwnProperty], width: native.AVATAR_SIZE_MAP[hasOwnProperty], position: "relative" };
   obj2.style = size;
@@ -340,7 +340,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
   obj4.children = map1(View, obj5);
   const items4 = [__initData(ClipViewDefault, obj4), ];
   const obj8 = { size, status: StatusTypes.OFFLINE, isMobileOnline: false, isVROnline: false, streaming: false, style: null };
-  const rect = { position: "absolute", right: timestampProducer - collapsed, bottom: timestampProducer - collapsed };
+  const rect = { position: "absolute", right: timestampProducer - v65535, bottom: timestampProducer - v65535 };
   obj8.style = rect;
   items4[1] = __initData(native.Status, obj8);
   obj3.children = items4;

@@ -1,6 +1,6 @@
-// === Module 5079: useRivePlayback ===
+// === Module 5083: useRivePlayback ===
 
-// Module 5079 (useRivePlayback)
+// Module 5083 (useRivePlayback)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

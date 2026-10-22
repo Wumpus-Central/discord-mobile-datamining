@@ -1,26 +1,26 @@
-// === Module 5858: StreamQualityUtils ===
+// === Module 5865: StreamQualityUtils ===
 
-// Module 5858 (StreamQualityUtils)
+// Module 5865 (StreamQualityUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5860 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5867 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5859 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5866 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5696 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const StreamSettingsConstants = fn(5795);
+const StreamSettingsConstants = fn(5800);
 ({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: closure_11, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = StreamSettingsConstants);
 let closure_15 = fn(1394).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5700).ResolutionTypes;
+const ResolutionTypes = fn(5704).ResolutionTypes;
 const ReactCompilerGating = fn(558);
 function isPremiumRequirement(quality) {
   return null != quality.quality || null != quality.guildPremiumTier;
@@ -71,7 +71,7 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
       tmp6 = null == closure_12.find((resolution) => {
         let tmp = resolution.resolution === closure_0;
         if (tmp) {
-          tmp = resolution.fps !== collapsed.FPS_5;
+          tmp = resolution.fps !== v65535.FPS_5;
         }
         if (tmp) {
           tmp = !(null != resolution.quality || null != resolution.guildPremiumTier);

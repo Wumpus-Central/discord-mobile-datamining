@@ -1,12 +1,12 @@
-// === Module 12110: AppLauncherSelectOptionFormRow ===
+// === Module 12129: AppLauncherSelectOptionFormRow ===
 
-// Module 12110 (AppLauncherSelectOptionFormRow)
+// Module 12129 (AppLauncherSelectOptionFormRow)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import _modDef7219 from "module_7219" /* 7219 */;
-import Form from "Form" /* 8910 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12082 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import _modDef7226 from "module_7226" /* 7226 */;
+import Form from "Form" /* 8919 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12103 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["style", "option", "selected", "selectedItemName", "unselectedSubLabel", "autoFocus"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { formRow: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", flex: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -79,8 +79,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
             if (cResult[17] === tmp10) {
               const _Symbol = Symbol;
               if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj2 = { source: _modDef7219, size: tmp(1202).IconSizes.SMALL_20 };
-                const tmp26 = jsx(tmp(1202).Icon, { source: _modDef7219, size: tmp(1202).IconSizes.SMALL_20 });
+                const obj2 = { source: _modDef7226, size: tmp(1202).IconSizes.SMALL_20 };
+                const tmp26 = jsx(tmp(1202).Icon, { source: _modDef7226, size: tmp(1202).IconSizes.SMALL_20 });
                 cResult[19] = tmp26;
                 let tmp23 = tmp26;
               } else {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
               }
               const obj3 = { start: true, end: true, style: tmp16, label: tmp17, subLabel: cResult[18], trailing: tmp23 };
               const merged = Object.assign(tmp6);
-              const tmp32 = jsx(tmp(8910).FormRow, { start: true, end: true, style: tmp16, label: tmp17, subLabel: cResult[18], trailing: tmp23 });
+              const tmp32 = jsx(tmp(8919).FormRow, { start: true, end: true, style: tmp16, label: tmp17, subLabel: cResult[18], trailing: tmp23 });
               cResult[20] = tmp6;
               cResult[21] = tmp16;
               cResult[22] = tmp17;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
       }
     }
     const obj4 = { variant: str, color: str2, lineClamp: 1, children: tmp5.displayName };
-    const tmp19 = jsx(tmp(5216).Text, { variant: str, color: str2, lineClamp: 1, children: tmp5.displayName });
+    const tmp19 = jsx(tmp(5220).Text, { variant: str, color: str2, lineClamp: 1, children: tmp5.displayName });
     cResult[11] = tmp5.displayName;
     cResult[12] = str;
     cResult[13] = str2;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
     }
   }
   obj2.subLabel = fn;
-  obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(7219), size: native.IconSizes.SMALL_20 });
+  obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(7226), size: native.IconSizes.SMALL_20 });
   const merged1 = Object.assign(merged);
   return jsx(Form.FormRow, { start: true, end: true, style: null, label: null, subLabel: null, trailing: null });
 });

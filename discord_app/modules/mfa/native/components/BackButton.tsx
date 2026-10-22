@@ -1,9 +1,9 @@
-// === Module 16867: BackButton ===
+// === Module 16936: BackButton ===
 
-// Module 16867 (BackButton)
+// Module 16936 (BackButton)
 import jsxProd from "jsxProd" /* 21 */;
-import MfaStepsTypes from "MfaStepsTypes" /* 16861 */;
-import buttonDefault from "button" /* 16864 */;
+import MfaStepsTypes from "MfaStepsTypes" /* 16930 */;
+import buttonDefault from "button" /* 16933 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BackButt
     }
     return tmp7;
   }
-  const tmp8 = jsx(navigation(16864), {
+  const tmp8 = jsx(navigation(16933), {
     variant: "secondary",
     text: first,
     onPress() {

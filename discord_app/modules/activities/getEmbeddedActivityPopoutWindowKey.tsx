@@ -1,13 +1,13 @@
-// === Module 15633: getEmbeddedActivityPopoutWindowKey ===
+// === Module 15677: getEmbeddedActivityPopoutWindowKey ===
 
-// Module 15633 (getEmbeddedActivityPopoutWindowKey)
+// Module 15677 (getEmbeddedActivityPopoutWindowKey)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4890 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 7806 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 7814 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 
 require = fn;
-const ActivityPanelModes = fn(5591).ActivityPanelModes;
+const ActivityPanelModes = fn(5595).ActivityPanelModes;
 const PopoutWindowKeys = fn(1087).PopoutWindowKeys;
 const ReactCompilerGating = fn(558);
 function getEmbeddedActivityPopoutWindowKey(arg0) {

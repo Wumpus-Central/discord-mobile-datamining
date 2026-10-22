@@ -1,6 +1,6 @@
-// === Module 11734: ConjureRoleIds ===
+// === Module 11751: ConjureRoleIds ===
 
-// Module 11734 (ConjureRoleIds)
+// Module 11751 (ConjureRoleIds)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/settings/ConjureRoleIds.tsx");

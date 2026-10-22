@@ -1,20 +1,20 @@
-// === Module 18602: ConjureTurnNotificationManager ===
+// === Module 18670: ConjureTurnNotificationManager ===
 
-// Module 18602 (ConjureTurnNotificationManager)
+// Module 18670 (ConjureTurnNotificationManager)
 import UserSettings from "UserSettings" /* 4797 */;
-import ConjureUtils from "ConjureUtils" /* 7322 */;
-import conjureProjectMute from "conjureProjectMute" /* 10681 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10700 */;
-import SoundUtils from "SoundUtils" /* 11454 */;
-import conjureMentions from "conjureMentions" /* 12275 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7622 */;
+import ConjureUtils from "ConjureUtils" /* 7329 */;
+import conjureProjectMute from "conjureProjectMute" /* 10693 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10712 */;
+import SoundUtils from "SoundUtils" /* 11471 */;
+import conjureMentions from "conjureMentions" /* 12298 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7629 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13631 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 13667 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6477 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6484 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
 
 require = fn;
 function handleConjureTurnSettled(projectId) {
@@ -85,7 +85,7 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
       obj4.body = conjureMentions.withConjureMentionNames(body);
       let CHANNELResult = null;
       if (null != conjureWorkspaceGuildId) {
-        CHANNELResult = collapsed.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
+        CHANNELResult = v65535.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
       }
       obj4.route = CHANNELResult;
       let tmp26;

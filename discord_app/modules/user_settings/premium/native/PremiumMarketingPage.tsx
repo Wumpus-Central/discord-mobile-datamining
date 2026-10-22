@@ -1,40 +1,40 @@
-// === Module 14666: PremiumMarketingPage ===
+// === Module 14710: PremiumMarketingPage ===
 
-// Module 14666 (PremiumMarketingPage)
+// Module 14710 (PremiumMarketingPage)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 4806 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4991 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
-let FractionalPremiumStates = fn(1394).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { display: "flex" }, scrollContainer: { flexDirection: "column", alignItems: "center", marginTop: 16 }, arrowIcon: { tintColor: nativeDefault.colors.TEXT_DEFAULT }, backButton: null, sectionWithTopMargin: { marginTop: 48 }, sectionWithPadding: { paddingHorizontal: 12 }, sectionWidth: { maxWidth: 464 }, accountCreditContainer: { width: "100%" }, accountCreditContainerWithSpacing: { marginTop: 24, marginBottom: 20 }, themedBackground: null, backButtonBackground: null };
 let obj4 = { transform: null, position: "absolute", left: 16 };
 let items = [{ scaleX: -1 }];
 obj4.transform = items;
 obj2.backButton = obj4;
 let obj3 = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
-obj2.themedBackground = { backgroundColor: fn(6686).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-let obj5 = { backgroundColor: fn(6686).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-obj2.backButtonBackground = { backgroundColor: fn(6686).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+obj2.themedBackground = { backgroundColor: fn(6693).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+let obj5 = { backgroundColor: fn(6693).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+obj2.backButtonBackground = { backgroundColor: fn(6693).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj6 = { backgroundColor: fn(6686).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+let obj6 = { backgroundColor: fn(6693).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingPage.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumMarketingPage(userHasSubscription) {
-  const cResult = userHasSubscription(analyticsLocations[11]).c(105);
+  const cResult = userHasSubscription(analyticsLocations[11]).c(108);
   userHasSubscription = userHasSubscription.userHasSubscription;
   ({ subscriptionDetails, billingInfo, accountCredit, applicationId, onClose, premiumFeatureCardOrder, entitlements, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation } = userHasSubscription);
   let obj = userHasSubscription(analyticsLocations[11]);
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   noop = undefined;
   c5 = undefined;
   enabled = undefined;
-  FractionalPremiumStates = undefined;
+  let ref;
   let sharedValue;
   let promotionMarketingComponent;
   onClose = undefined;
@@ -248,9 +248,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     tmp9 = enabled;
   }
   enabled = tmp9;
+  ref = obj3.useRef(0);
   noop.useRef(0);
   noop.useRef(0);
-  FractionalPremiumStates = obj3.useRef(0);
   const tmp6Result = navigation(analyticsLocations[18]);
   sharedValue = userHasSubscription(analyticsLocations[19]).useSharedValue(false);
   const callback = obj3.useCallback((nativeEvent) => {
@@ -306,18 +306,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     hasAccountCreditResult = tmp6(tmp2[29]).hasAccountCredit(entitlements);
     const tmp6Result4 = tmp6(tmp2[29]);
   }
-  const tmpResult3 = userHasSubscription(analyticsLocations[20]);
-  const tmp19 = navigation(analyticsLocations[30])({ forceFetch: true });
+  const tmpResult4 = userHasSubscription(analyticsLocations[20]);
+  const items3 = [ref];
+  const stateFromStores = userHasSubscription(analyticsLocations[30]).useStateFromStores(items3, () => ref.getCurrentUser());
+  let flag;
+  if (stateFromStores != null) {
+    flag = stateFromStores.isFractionalPremiumWithNoStandardSub();
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  const tmpResult5 = userHasSubscription(analyticsLocations[30]);
   const promotionMarketingComponent1 = userHasSubscription(analyticsLocations[20]).usePromotionMarketingComponent(tmp(tmp2[21]).MarketingComponentType.MARKETING_PAGE_BANNER);
-  const items3 = [, , ];
-  ({ container: arr4[0], themedBackground: arr4[1] } = tmp4);
+  const items4 = [, , ];
+  ({ container: arr5[0], themedBackground: arr5[1] } = tmp4);
   let num = 0;
   if (!userHasSubscription) {
     num = top;
   }
-  const obj6 = { style: items3, children: null };
-  items3[2] = { paddingTop: num };
-  const items4 = [sharedValue(navigation(analyticsLocations[31]), {}), , ];
+  const obj6 = { style: items4, children: null };
+  items4[2] = { paddingTop: num };
+  const items5 = [sharedValue(navigation(analyticsLocations[31]), {}), , ];
   const obj7 = {
     contentContainerStyle: tmp4.scrollContainer,
     onScroll: function handleScroll(nativeEvent) {
@@ -349,88 +358,88 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     showsVerticalScrollIndicator: false,
     children: null
   };
-  const items5 = [tmp16, subscriptionDetails, billingInfo, , , , , , , ];
+  const items6 = [tmp16, subscriptionDetails, billingInfo, , , , , , , ];
   if (!hasAccountCreditResult) {
-    items5[3] = null;
+    items6[3] = null;
     const obj8 = { style: null };
-    const items6 = [userHasSubscription ? tmp4.sectionWithTopMargin : {}, tmp4.sectionWidth];
-    obj8.style = items6;
-    items5[4] = tmp23(tmp6(tmp2[32]), obj8);
-    let tmp23Result = null != promotionMarketingComponent1;
-    if (tmp23Result) {
-      tmp23Result = "marketingPageBanner" === promotionMarketingComponent1.properties.properties.oneofKind;
+    const items7 = [userHasSubscription ? tmp4.sectionWithTopMargin : {}, tmp4.sectionWidth];
+    obj8.style = items7;
+    items6[4] = tmp22(tmp6(tmp2[32]), obj8);
+    let tmp22Result = null != promotionMarketingComponent1;
+    if (tmp22Result) {
+      tmp22Result = "marketingPageBanner" === promotionMarketingComponent1.properties.properties.oneofKind;
     }
-    if (tmp23Result) {
+    if (tmp22Result) {
       const obj9 = { style: null, bannerFields: null, analyticsPage: "Marketing Page Banner Tile", onPaymentSuccess: null, onPaymentDismiss: null, componentId: null, promotionId: null };
-      const items7 = [, , ];
-      ({ sectionWithPadding: arr9[0], sectionWidth: arr9[1] } = tmp4);
+      const items8 = [, , ];
+      ({ sectionWithPadding: arr10[0], sectionWidth: arr10[1] } = tmp4);
       const obj10 = { marginBottom: tmp6(tmp2[8]).space.PX_24 };
-      items7[2] = obj10;
-      obj9.style = items7;
+      items8[2] = obj10;
+      obj9.style = items8;
       obj9.bannerFields = promotionMarketingComponent1.properties.properties.marketingPageBanner;
       obj9.onPaymentSuccess = onPaymentSuccess;
       obj9.onPaymentDismiss = onPaymentDismiss;
-      ({ id: obj15.componentId, promotionId: obj15.promotionId } = promotionMarketingComponent1);
-      tmp23Result = tmp23(tmp6(tmp2[33]), obj9);
+      ({ id: obj17.componentId, promotionId: obj17.promotionId } = promotionMarketingComponent1);
+      tmp22Result = tmp22(tmp6(tmp2[33]), obj9);
       const tmp6Result5 = tmp6(tmp2[33]);
     }
-    items5[5] = tmp23Result;
+    items6[5] = tmp22Result;
     const obj11 = { style: null, order: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null, onLayout: null, onFirstCardLayout: null };
-    const items8 = [, ];
-    ({ sectionWithPadding: arr10[0], sectionWidth: arr10[1] } = tmp4);
-    obj11.style = items8;
+    const items9 = [, ];
+    ({ sectionWithPadding: arr11[0], sectionWidth: arr11[1] } = tmp4);
+    obj11.style = items9;
     obj11.order = premiumFeatureCardOrder;
     obj11.applicationId = applicationId;
     obj11.onPaymentSuccess = onPaymentSuccess;
     obj11.onPaymentDismiss = onPaymentDismiss;
     obj11.onLayout = callback;
     obj11.onFirstCardLayout = callback1;
-    items5[6] = tmp23(tmp6(tmp2[34]), obj11);
+    items6[6] = tmp22(tmp6(tmp2[34]), obj11);
     const obj12 = { style: null };
-    const items9 = [, ];
-    ({ sectionWithTopMargin: arr11[0], sectionWidth: arr11[1] } = tmp4);
-    obj12.style = items9;
-    items5[7] = tmp23(tmp6(tmp2[35]), obj12);
+    const items10 = [, ];
+    ({ sectionWithTopMargin: arr12[0], sectionWidth: arr12[1] } = tmp4);
+    obj12.style = items10;
+    items6[7] = tmp22(tmp6(tmp2[35]), obj12);
     const obj13 = { style: null, isFractionalOnly: null };
-    const items10 = [, , ];
-    ({ sectionWithTopMargin: arr12[0], sectionWithPadding: arr12[1], sectionWidth: arr12[2] } = tmp4);
-    obj13.style = items10;
-    obj13.isFractionalOnly = tmp19.fractionalState === FractionalPremiumStates.FP_ONLY;
-    items5[8] = tmp23(tmp6(tmp2[36]), obj13);
-    const items11 = [, , , ];
+    const items11 = [, , ];
     ({ sectionWithTopMargin: arr13[0], sectionWithPadding: arr13[1], sectionWidth: arr13[2] } = tmp4);
-    let tmp30 = null;
+    obj13.style = items11;
+    obj13.isFractionalOnly = flag;
+    items6[8] = tmp22(tmp6(tmp2[36]), obj13);
+    const items12 = [, , , ];
+    ({ sectionWithTopMargin: arr14[0], sectionWithPadding: arr14[1], sectionWidth: arr14[2] } = tmp4);
+    let tmp28 = null;
     if (tmp9) {
       const obj14 = { marginBottom: null };
       const _Math = Math;
       obj14.marginBottom = Math.max(rect.bottom, tmp6(tmp2[8]).space.PX_16) + 48;
-      tmp30 = obj14;
+      tmp28 = obj14;
     }
-    const obj16 = { style: null, showSubscribeButton: null };
-    items11[3] = tmp30;
-    obj16.style = items11;
-    let tmp32 = !userHasSubscription;
+    const obj15 = { style: null, showSubscribeButton: null };
+    items12[3] = tmp28;
+    obj15.style = items12;
+    let tmp30 = !userHasSubscription;
     if (!userHasSubscription) {
-      tmp32 = !enabled;
+      tmp30 = !enabled;
     }
-    obj16.showSubscribeButton = tmp32;
-    items5[9] = tmp23(tmp6(tmp2[37]), obj16);
-    obj7.children = items5;
-    items4[1] = tmp21(tmp24, obj7);
-    let tmp23Result3 = null;
+    obj15.showSubscribeButton = tmp30;
+    items6[9] = tmp22(tmp6(tmp2[37]), obj15);
+    obj7.children = items6;
+    items5[1] = tmp20(tmp23, obj7);
+    let tmp22Result3 = null;
     if (tmp9) {
-      const obj17 = { style: tmp4.sectionWidth, isVisible: sharedValue, backgroundColor: tmp4.themedBackground.backgroundColor };
-      tmp23Result3 = tmp23(tmp6(tmp2[38]), obj17);
+      const obj16 = { style: tmp4.sectionWidth, isVisible: sharedValue, backgroundColor: tmp4.themedBackground.backgroundColor };
+      tmp22Result3 = tmp22(tmp6(tmp2[38]), obj16);
     }
-    items4[2] = tmp23Result3;
-    obj6.children = items4;
-    return tmp21(tmp22, obj6);
+    items5[2] = tmp22Result3;
+    obj6.children = items5;
+    return tmp20(tmp21, obj6);
   } else {
-    const items12 = [tmp4.accountCreditContainer, ];
+    const items13 = [tmp4.accountCreditContainer, ];
     const obj18 = { style: null, children: null };
-    items12[1] = userHasSubscription ? {} : tmp4.accountCreditContainerWithSpacing;
-    obj18.style = items12;
+    items13[1] = userHasSubscription ? {} : tmp4.accountCreditContainerWithSpacing;
+    obj18.style = items13;
     obj18.children = accountCredit;
-    tmp23(tmp22, obj18);
+    tmp22(tmp21, obj18);
   }
 });

@@ -1,9 +1,9 @@
-// === Module 14243: UserProfileGameFriendActionSheet ===
+// === Module 14281: UserProfileGameFriendActionSheet ===
 
-// Module 14243 (UserProfileGameFriendActionSheet)
+// Module 14281 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13430 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13466 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1087).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 }, gameIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.gameIcon = size;
@@ -271,7 +271,7 @@ export default function UserProfileGameFriendActionSheet(user) {
     let tmp = null != application;
     if (tmp) {
       const obj = { application, userDisplayName, userId: user.id };
-      tmp = collapsed(closure_13, obj, application.id);
+      tmp = v65535(closure_13, obj, application.id);
     }
     return tmp;
   });

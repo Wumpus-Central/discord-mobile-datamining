@@ -1,9 +1,9 @@
-// === Module 9722: UID ===
+// === Module 9734: UID ===
 
-// Module 9722 (UID)
+// Module 9734 (UID)
 import c from "c" /* 576 */;
-import useInitialValueDefault from "useInitialValue" /* 5581 */;
-import uniqueIdDefault from "uniqueId" /* 6652 */;
+import useInitialValueDefault from "useInitialValue" /* 5585 */;
+import uniqueIdDefault from "uniqueId" /* 6659 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

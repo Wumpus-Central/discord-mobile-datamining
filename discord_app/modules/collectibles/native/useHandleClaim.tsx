@@ -1,6 +1,6 @@
-// === Module 14371: useHandleClaim ===
+// === Module 14414: useHandleClaim ===
 
-// Module 14371 (useHandleClaim)
+// Module 14414 (useHandleClaim)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,26 +30,26 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   _require = asyncGeneratorStep(async () => {
     const product = tmp3;
-    await product(7626).claimPremiumCollectiblesProduct(product.skuId);
+    await product(7633).claimPremiumCollectiblesProduct(product.skuId);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { text: null };
       const intl = product(1128).intl;
       obj7.text = intl.string(product(1128).t.CKsXk3);
-      stageCollectibleChangeForEditProfile(5645).open("collectible shop claim error", obj7);
+      stageCollectibleChangeForEditProfile(5649).open("collectible shop claim error", obj7);
       c4 = 3;
-      stageCollectibleChangeForEditProfile(5645);
+      stageCollectibleChangeForEditProfile(5649);
     } else if (arg0 === 1) {
       c4 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      stageCollectibleChangeForEditProfile(5192).hideAllActionSheets();
-      stageCollectibleChangeForEditProfile(5192);
-      stageCollectibleChangeForEditProfile(13846).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
-      stageCollectibleChangeForEditProfile(13846);
-      const collectiblesPurchases = product(7626).fetchCollectiblesPurchases();
+      stageCollectibleChangeForEditProfile(5196).hideAllActionSheets();
+      stageCollectibleChangeForEditProfile(5196);
+      stageCollectibleChangeForEditProfile(13882).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
+      stageCollectibleChangeForEditProfile(13882);
+      const collectiblesPurchases = product(7633).fetchCollectiblesPurchases();
       c3 = 0;
-      product(7626);
+      product(7633);
     }
     return value;
   });

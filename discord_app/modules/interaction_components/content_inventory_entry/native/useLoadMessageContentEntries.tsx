@@ -1,10 +1,10 @@
-// === Module 11173: useLoadMessageContentEntries ===
+// === Module 11190: useLoadMessageContentEntries ===
 
-// Module 11173 (useLoadMessageContentEntries)
+// Module 11190 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 2000 */;
-import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8588 */;
-import useAvatarColor from "useAvatarColor" /* 8590 */;
+import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8597 */;
+import useAvatarColor from "useAvatarColor" /* 8599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -698,9 +698,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(2026).ImageSizes;
-const promiseDeduper = new fn(10746).PromiseDeduper();
-const promiseDeduper3 = new fn(10746).PromiseDeduper();
-const promiseDeduper4 = new fn(10746).PromiseDeduper();
+const promiseDeduper = new fn(10758).PromiseDeduper();
+const promiseDeduper3 = new fn(10758).PromiseDeduper();
+const promiseDeduper4 = new fn(10758).PromiseDeduper();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");
@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
     tmp27 = cResult[4];
   }
   const tmp19Result = _slicedToArray(set2.useState(tmp21), 2);
-  const colorStore = tmp(8590).useColorStore(tmp27);
+  const colorStore = tmp(8599).useColorStore(tmp27);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     _require = asyncGeneratorStep(async (arg0, arg1) => {
       if (c7 === 2) {
@@ -1075,7 +1075,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
   cResult[12] = arr2;
   cResult[13] = arr;
   cResult[14] = set2;
-  const tmpResult = tmp(8590);
+  const tmpResult = tmp(8599);
 }) : (function useLoadMessageContentEntries(arg0) {
   closure_1 = first1.useRef(new Map());
   const map = new Map();

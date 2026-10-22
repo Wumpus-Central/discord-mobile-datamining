@@ -1,20 +1,15 @@
-// === Module 18827: editorUtils ===
+// === Module 18894: editorUtils ===
 
-// Module 18827 (editorUtils)
+// Module 18894 (editorUtils)
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6353 */;
-import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 18828 */;
-import GuildSpaceTypes from "GuildSpaceTypes" /* 18829 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6360 */;
+import guildSpaceWidgetLayout from "guildSpaceWidgetLayout" /* 18895 */;
+import GuildSpaceTypes from "GuildSpaceTypes" /* 18896 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let c3 = "draft:";
-let closure_4 = 0;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_space/editorUtils.tsx");
-
-export const createDraftWidget = function createDraftWidget(type, default_title, locked) {
-  const obj = { id: null, position: { column: guildSpaceWidgetLayout.LEFT_COLUMN, order: 0 }, requires_hydration: false, default_title, locked };
+function createDraftWidget(type, name, locked) {
+  const obj = { id: null, position: { column: guildSpaceWidgetLayout.LEFT_COLUMN, order: 0 }, requires_hydration: false, default_title: name, locked };
   closure_4 = tmp + 1;
   obj.id = "" + c3 + +closure_4;
   if (GuildSpaceTypes.GuildSpaceWidgetType.IMAGE_TEXT === type) {
@@ -33,6 +28,30 @@ export const createDraftWidget = function createDraftWidget(type, default_title,
     return obj5;
   }
   const obj2 = { column: guildSpaceWidgetLayout.LEFT_COLUMN, order: 0 };
+}
+let c3 = "draft:";
+let closure_4 = 0;
+let items = [fn(18896).GuildSpaceWidgetType.POPULAR_MUSIC, fn(18896).GuildSpaceWidgetType.LEADERBOARD];
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_space/editorUtils.tsx");
+
+export { createDraftWidget };
+export const createDefaultDraftWidgets = function createDefaultDraftWidgets(arg0) {
+  closure_0 = arg0;
+  return items.flatMap((item, order) => {
+    closure_0 = item;
+    const found = closure_0.find((type) => type.type === closure_0);
+    if (null == found) {
+      items = [];
+    } else {
+      const obj = {};
+      const merged = Object.assign(createDraftWidget(item, found.name, found.locked));
+      const obj2 = { column: guildSpaceWidgetLayout.LEFT_COLUMN, order };
+      obj.position = obj2;
+      items = [obj];
+    }
+    return items;
+  });
 };
 export const isDraftWidgetId = function isDraftWidgetId(widget_id) {
   return widget_id.startsWith(c3);

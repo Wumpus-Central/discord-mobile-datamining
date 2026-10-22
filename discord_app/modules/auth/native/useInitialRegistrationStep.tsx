@@ -1,16 +1,16 @@
-// === Module 17205: useInitialRegistrationStep ===
+// === Module 17275: useInitialRegistrationStep ===
 
-// Module 17205 (useInitialRegistrationStep)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6647 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17188 */;
+// Module 17275 (useInitialRegistrationStep)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6654 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17258 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConsentStore from "ConsentStore" /* 6649 */;
+import ConsentStore from "ConsentStore" /* 6656 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const resetRegistration = fn(17189).resetRegistration;
+const resetRegistration = fn(17259).resetRegistration;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");

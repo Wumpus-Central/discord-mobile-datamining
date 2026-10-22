@@ -1,10 +1,10 @@
-// === Module 8710: UserProfileAvatar ===
+// === Module 8719: UserProfileAvatar ===
 
-// Module 8710 (UserProfileAvatar)
+// Module 8719 (UserProfileAvatar)
 import c from "c" /* 576 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8696 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 8711 */;
-import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8714 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8705 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8720 */;
+import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8723 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ require = fn;
 let closure_3 = ["backgroundColor", "size", "ref"];
 let closure_4 = ["animate", "user", "guildId"];
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8636).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(7281).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8645).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(7288).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -85,7 +85,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
         }
         const obj4 = { ref: tmp5, style: tmp15, size: tmp6 };
         const merged = Object.assign(tmp4);
-        const tmp22 = collapsed(HeaderAvatarDefault, obj4);
+        const tmp22 = v65535(HeaderAvatarDefault, obj4);
         cResult[14] = tmp4;
         cResult[15] = tmp5;
         cResult[16] = tmp6;
@@ -107,7 +107,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp11);
   items2[2] = tmp12;
   obj5.style = items2;
-  const tmp14 = collapsed(View, obj5);
+  const tmp14 = v65535(View, obj5);
   cResult[7] = tmp11.avatarBackground;
   cResult[8] = tmp11.avatarPosition;
   cResult[9] = tmp12;
@@ -126,13 +126,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp2);
   items[2] = { backgroundColor: backgroundColor.backgroundColor };
   obj2.style = items;
-  const items1 = [collapsed(View, obj2), ];
+  const items1 = [v65535(View, obj2), ];
   const obj3 = { ref: backgroundColor.ref, style: null, size };
   const items2 = [, ];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   obj3.style = items2;
   const merged1 = Object.assign(merged);
-  items1[1] = collapsed(HeaderAvatarDefault, obj3);
+  items1[1] = v65535(HeaderAvatarDefault, obj3);
   obj.children = items1;
   return __initData(closure_1_11, obj);
 });

@@ -1,14 +1,14 @@
-// === Module 6754: FramesStore ===
+// === Module 6761: FramesStore ===
 
-// Module 6754 (FramesStore)
+// Module 6761 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1098 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5591 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5605 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6756 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6757 */;
-import FramesConstants from "FramesConstants" /* 6755 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5595 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5609 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6763 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6764 */;
+import FramesConstants from "FramesConstants" /* 6762 */;
 import size from "module_2" /* 2 */;
 
 function findFrameByIframeId(iframeId) {

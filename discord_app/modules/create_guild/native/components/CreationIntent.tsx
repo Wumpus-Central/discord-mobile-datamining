@@ -1,32 +1,32 @@
-// === Module 13529: CreationIntent ===
+// === Module 13565: CreationIntent ===
 
-// Module 13529 (CreationIntent)
+// Module 13565 (CreationIntent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import useNavigation from "useNavigation" /* 1505 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5249 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5951 */;
-import TableRowGroup from "TableRowGroup" /* 6966 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7200 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13472 */;
-import ChairIllocon from "ChairIllocon" /* 13530 */;
-import WorldIllocon from "WorldIllocon" /* 13534 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5253 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5958 */;
+import TableRowGroup from "TableRowGroup" /* 6973 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7207 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13508 */;
+import ChairIllocon from "ChairIllocon" /* 13566 */;
+import WorldIllocon from "WorldIllocon" /* 13570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7052);
+const CreateGuildConstants = fn(7059);
 ({ CreateGuildModalStates: metroRequire, GuildTemplateTriggers: closure_7, NUXGuildTemplatesAnalytics: closure_8 } = CreateGuildConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsLocations: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
-let obj2 = { contentContainer: { flex: 1, marginTop: fn(5250).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
-let obj3 = { flex: 1, marginTop: fn(5250).NAV_BAR_HEIGHT };
+const createStyles = fn(4969);
+let obj2 = { contentContainer: { flex: 1, marginTop: fn(5254).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
+let obj3 = { flex: 1, marginTop: fn(5254).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.headerContainer = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
 obj2.headerTitle = { textAlign: "center", marginBottom: 8 };
@@ -382,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Creation
   const items3 = [closure_12(ref, obj4), , ];
   let obj7 = { style: tmp.sections, children: null };
   const obj8 = { hasIcons: true, children: null };
-  const tmp13 = trigger(13100);
+  const tmp13 = trigger(13136);
   const obj9 = { Icon: null, message: null, onPress: null };
   if (closure_14) {
     obj9.Icon = ChairIllocon.ChairIllocon;
@@ -398,10 +398,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Creation
     obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = closure_11(trigger(13100), obj10);
+    items4[1] = closure_11(trigger(13136), obj10);
     obj8.children = items4;
     let tmp15 = obj8;
-    const tmp12Result = trigger(13100);
+    const tmp12Result = trigger(13136);
   } else {
     obj9.Icon = WorldIllocon.WorldIllocon;
     const intl3 = util.intl;
@@ -416,10 +416,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Creation
     obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = closure_11(trigger(13100), obj11);
+    items5[1] = closure_11(trigger(13136), obj11);
     obj8.children = items5;
     tmp15 = obj8;
-    const tmp12Result2 = trigger(13100);
+    const tmp12Result2 = trigger(13136);
   }
   obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp15);
   items3[1] = closure_11(ref, obj7);

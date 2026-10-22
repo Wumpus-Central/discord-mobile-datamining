@@ -1,21 +1,23 @@
-// === Module 17002: UserSettingsDesignSystemBadge ===
+// === Module 17071: UserSettingsDesignSystemBadge ===
 
-// Module 17002 (UserSettingsDesignSystemBadge)
+// Module 17071 (UserSettingsDesignSystemBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Stack_Stack from "Stack/Stack" /* 5957 */;
-import Card from "Card" /* 6884 */;
-import TableRadioGroup from "TableRadioGroup" /* 6964 */;
-import TextInput from "TextInput" /* 6987 */;
-import TableSwitchRow from "TableSwitchRow" /* 7272 */;
-import StarIcon3 from "StarIcon" /* 9907 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11082 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11084 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11086 */;
-import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 11088 */;
-import Badge_Badge from "Badge/Badge" /* 13216 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Stack_Stack from "Stack/Stack" /* 5964 */;
+import Card from "Card" /* 6891 */;
+import TableRadioGroup from "TableRadioGroup" /* 6971 */;
+import TextInput from "TextInput" /* 6994 */;
+import TableSwitchRow from "TableSwitchRow" /* 7279 */;
+import LockIcon from "LockIcon" /* 8551 */;
+import TagIcon from "TagIcon" /* 9432 */;
+import StarIcon3 from "StarIcon" /* 9919 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 11099 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 11101 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 11103 */;
+import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 11105 */;
+import Badge_Badge from "Badge/Badge" /* 13252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +26,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, preview: null, badgeRow: null, narrow: null, comparisonLabel: null, comparisonCell: null, layoutCase: null, inlineRow: null, trailingRow: null, inlineBadge: null, selfStart: null, selfStartParent: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.preview = { minHeight: nativeDefault.space.PX_32, alignItems: "center", justifyContent: "center" };
@@ -42,7 +44,7 @@ obj2.inlineBadge = { marginLeft: nativeDefault.space.PX_8 };
 obj2.selfStart = { alignSelf: "flex-start" };
 obj2.selfStartParent = { alignItems: "flex-start" };
 let closure_9 = createStyles.createStyles(obj2);
-let closure_10 = ["secondary", "primary", "expressive", "rarity-common", "rarity-rare", "rarity-epic", "rarity-mythic"];
+let closure_10 = ["secondary", "primary", "expressive", "premium", "inverted", "rarity-common", "rarity-rare", "rarity-epic", "rarity-mythic"];
 let items = [{ value: "new", label: "new" }, { value: "beta", label: "beta" }, { value: "early_access", label: "early_access" }, { value: "free_trial", label: "free_trial" }, { value: "custom", label: "Custom text" }];
 let c12 = "A very long custom badge label that truncates";
 let ReactCompilerGating = fn(558);
@@ -179,8 +181,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Playgr
       cResult[4] = first3;
       cResult[5] = first;
       cResult[6] = undefined;
+    } else if ("premium" === first) {
+      let ExperimentalMythicIcon = LockIcon.LockIcon;
+    } else if ("inverted" === first) {
+      ExperimentalMythicIcon = TagIcon.TagIcon;
     } else if ("rarity-common" === first) {
-      let ExperimentalMythicIcon = ExperimentalCommonIcon.ExperimentalCommonIcon;
+      ExperimentalMythicIcon = ExperimentalCommonIcon.ExperimentalCommonIcon;
     } else if ("rarity-rare" === first) {
       ExperimentalMythicIcon = ExperimentalRareIcon.ExperimentalRareIcon;
     } else {
@@ -245,8 +251,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Playgr
     items[5] = React5(TableSwitchRow.TableSwitchRow, obj8);
     obj.children = items;
     return closure_1_8(Stack_Stack.Stack, obj);
+  } else if ("premium" === first) {
+    let ExperimentalMythicIcon = LockIcon.LockIcon;
+  } else if ("inverted" === first) {
+    ExperimentalMythicIcon = TagIcon.TagIcon;
   } else if ("rarity-common" === first) {
-    let ExperimentalMythicIcon = ExperimentalCommonIcon.ExperimentalCommonIcon;
+    ExperimentalMythicIcon = ExperimentalCommonIcon.ExperimentalCommonIcon;
   } else if ("rarity-rare" === first) {
     ExperimentalMythicIcon = ExperimentalRareIcon.ExperimentalRareIcon;
   } else {
@@ -265,8 +275,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
   const tmp4 = closure_9();
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp8 = closure_7(tmp(5216).Heading, { variant: "text-lg/bold", children: "Variants" });
-    const tmp9 = closure_7(tmp(5216).Text, { variant: "text-sm/normal", color: "text-subtle", children: "Every variant with built-in types, custom text, and a leading icon. With no variant, a badge uses the grey default." });
+    const tmp8 = closure_7(tmp(5220).Heading, { variant: "text-lg/bold", children: "Variants" });
+    const tmp9 = closure_7(tmp(5220).Text, { variant: "text-sm/normal", color: "text-subtle", children: "Every variant with built-in types, custom text, and a leading icon. With no variant, a badge uses the grey default." });
     cResult[0] = tmp8;
     cResult[1] = tmp9;
     tmp5 = tmp8;
@@ -281,8 +291,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
       const obj3 = { style: badgeRow.badgeRow, children: null };
       const items1 = [React5(Badge_Badge.Badge, { type: "new", variant }), React5(Badge_Badge.Badge, { type: "beta", variant }), React5(Badge_Badge.Badge, { type: { text: "Custom" }, variant }), , ];
       const obj7 = { type: "new", variant, icon: null };
-      if ("rarity-common" === variant) {
-        let StarIcon = ExperimentalCommonIcon.ExperimentalCommonIcon;
+      if ("premium" === variant) {
+        let StarIcon = LockIcon.LockIcon;
+      } else if ("inverted" === variant) {
+        StarIcon = TagIcon.TagIcon;
+      } else if ("rarity-common" === variant) {
+        StarIcon = ExperimentalCommonIcon.ExperimentalCommonIcon;
       } else if ("rarity-rare" === variant) {
         StarIcon = ExperimentalRareIcon.ExperimentalRareIcon;
       } else if ("rarity-epic" === variant) {
@@ -295,8 +309,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
       obj7.icon = StarIcon;
       items1[3] = React5(Badge_Badge.Badge, obj7);
       const obj8 = { type: { text: "Custom" }, variant, icon: null };
-      if ("rarity-common" === variant) {
-        let StarIcon2 = ExperimentalCommonIcon.ExperimentalCommonIcon;
+      if ("premium" === variant) {
+        let StarIcon2 = LockIcon.LockIcon;
+      } else if ("inverted" === variant) {
+        StarIcon2 = TagIcon.TagIcon;
+      } else if ("rarity-common" === variant) {
+        StarIcon2 = ExperimentalCommonIcon.ExperimentalCommonIcon;
       } else if ("rarity-rare" === variant) {
         StarIcon2 = ExperimentalRareIcon.ExperimentalRareIcon;
       } else if ("rarity-epic" === variant) {
@@ -324,8 +342,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
     let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
     items = [tmp5, tmp6, tmp10];
     obj3.children = items;
-    obj2.children = closure_8(tmp(5957).Stack, obj3);
-    const tmp17 = closure_7(tmp(6884).Card, obj2);
+    obj2.children = closure_8(tmp(5964).Stack, obj3);
+    const tmp17 = closure_7(tmp(6891).Card, obj2);
     cResult[4] = tmp10;
     cResult[5] = tmp17;
     let tmp13 = tmp17;
@@ -346,8 +364,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
       const obj3 = { style: badgeRow.badgeRow, children: null };
       const items1 = [React5(Badge_Badge.Badge, { type: "new", variant }), React5(Badge_Badge.Badge, { type: "beta", variant }), React5(Badge_Badge.Badge, { type: { text: "Custom" }, variant }), , ];
       const obj7 = { type: "new", variant, icon: null };
-      if ("rarity-common" === variant) {
-        let StarIcon = ExperimentalCommonIcon.ExperimentalCommonIcon;
+      if ("premium" === variant) {
+        let StarIcon = LockIcon.LockIcon;
+      } else if ("inverted" === variant) {
+        StarIcon = TagIcon.TagIcon;
+      } else if ("rarity-common" === variant) {
+        StarIcon = ExperimentalCommonIcon.ExperimentalCommonIcon;
       } else if ("rarity-rare" === variant) {
         StarIcon = ExperimentalRareIcon.ExperimentalRareIcon;
       } else if ("rarity-epic" === variant) {
@@ -360,8 +382,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Varian
       obj7.icon = StarIcon;
       items1[3] = React5(Badge_Badge.Badge, obj7);
       const obj8 = { type: { text: "Custom" }, variant, icon: null };
-      if ("rarity-common" === variant) {
-        let StarIcon2 = ExperimentalCommonIcon.ExperimentalCommonIcon;
+      if ("premium" === variant) {
+        let StarIcon2 = LockIcon.LockIcon;
+      } else if ("inverted" === variant) {
+        StarIcon2 = TagIcon.TagIcon;
+      } else if ("rarity-common" === variant) {
+        StarIcon2 = ExperimentalCommonIcon.ExperimentalCommonIcon;
       } else if ("rarity-rare" === variant) {
         StarIcon2 = ExperimentalRareIcon.ExperimentalRareIcon;
       } else if ("rarity-epic" === variant) {

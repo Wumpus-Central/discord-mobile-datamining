@@ -1,11 +1,11 @@
-// === Module 8978: getChannelA11yLabel ===
+// === Module 8987: getChannelA11yLabel ===
 
-// Module 8978 (getChannelA11yLabel)
+// Module 8987 (getChannelA11yLabel)
 import util from "util" /* 1128 */;
-import UserUtils from "UserUtils" /* 5015 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7181 */;
-import utils from "utils" /* 8593 */;
+import UserUtils from "UserUtils" /* 5018 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7188 */;
+import utils from "utils" /* 8602 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -68,12 +68,12 @@ export default function getChannelA11yLabel(mentionCount) {
         const t7 = util.t;
         Lo0dCa = unread ? t7["fxxUo/"] : t7.lts3Ld;
       }
-      const intl10 = util.intl;
-      const obj2 = { channelName, mentionCount: num };
-      const items = [intl10.formatToPlainString(Lo0dCa, obj2), ];
       const intl11 = util.intl;
+      const obj2 = { channelName, mentionCount: num };
+      const items = [intl11.formatToPlainString(Lo0dCa, obj2), ];
+      const intl12 = util.intl;
       const obj3 = { members: channel.recipients.length + 1 };
-      items[1] = intl11.formatToPlainString(util.t.CxSA5N, obj3);
+      items[1] = intl12.formatToPlainString(util.t.CxSA5N, obj3);
       let joined = items.join(", ");
     } else if (constants.GUILD_STORE === type) {
       let g8ONM0 = util.t.Bo4msg;
@@ -151,21 +151,21 @@ export default function getChannelA11yLabel(mentionCount) {
         }
       }
       if (null != voiceChannelStartTime) {
-        const intl17 = util.intl;
+        const intl9 = util.intl;
         const obj8 = { duration: null };
         const obj9 = { start: voiceChannelStartTime };
         const _Date = Date;
         obj8.duration = utils.formatActiveA11yTimestamp(obj9, Date.now());
-        items1.push(intl17.formatToPlainString(util.t.JQtsGh, obj8));
+        items1.push(intl9.formatToPlainString(util.t.JQtsGh, obj8));
         const tmpResult = utils;
       }
-      if (tmp15) {
-        const intl9 = util.intl;
+      if (tmp17) {
+        const intl10 = util.intl;
         const obj10 = { activeActivities: activityNames.join(", ") };
-        items1.push(intl9.formatToPlainString(util.t.LmYuHT, obj10));
+        items1.push(intl10.formatToPlainString(util.t.LmYuHT, obj10));
       }
       joined = items1.join(", ");
-      tmp15 = null != activityNames && activityNames.length > 0;
+      tmp17 = null != activityNames && activityNames.length > 0;
     } else if (constants.GUILD_STAGE_VOICE === type) {
       g8ONM0 = util.t.TPPk2T;
     } else {
@@ -202,9 +202,9 @@ export default function getChannelA11yLabel(mentionCount) {
       const items2 = [joined];
       let items4 = items2;
     } else if (null != g8ONM0) {
-      const intl12 = util.intl;
+      const intl13 = util.intl;
       const obj11 = { channelName, mentionCount: num };
-      const items3 = [intl12.formatToPlainString(g8ONM0, obj11)];
+      const items3 = [intl13.formatToPlainString(g8ONM0, obj11)];
       items4 = items3;
     } else {
       items4 = [];
@@ -213,20 +213,28 @@ export default function getChannelA11yLabel(mentionCount) {
       items4.unshift(stringResult1);
     }
     if (isIncomingCall) {
-      const intl14 = util.intl;
-      items4.push(intl14.string(util.t["fk1/bX"]));
-    } else if (flag) {
-      const intl13 = util.intl;
-      items4.push(intl13.string(util.t["NGg/fm"]));
-    }
-    let tmp22 = null != embeddedActivitiesCount;
-    if (tmp22) {
-      tmp22 = embeddedActivitiesCount > 0;
-    }
-    if (tmp22) {
       const intl15 = util.intl;
+      items4.push(intl15.string(util.t["fk1/bX"]));
+    } else if (flag) {
+      const intl14 = util.intl;
+      items4.push(intl14.string(util.t["NGg/fm"]));
+    }
+    let tmp24 = null != embeddedActivitiesCount;
+    if (tmp24) {
+      tmp24 = embeddedActivitiesCount > 0;
+    }
+    if (tmp24) {
+      const intl16 = util.intl;
       const obj12 = { activitiesCount: embeddedActivitiesCount };
-      items4.push(intl15.formatToPlainString(util.t.O6PLYd, obj12));
+      items4.push(intl16.formatToPlainString(util.t.O6PLYd, obj12));
+    }
+    if (channel.isNSFW()) {
+      const intl17 = util.intl;
+      items4.push(intl17.string(util.t.jVv7YM));
+    }
+    if (channel.isSpoilerChannel()) {
+      const intl18 = util.intl;
+      items4.push(intl18.string(util.t["+Pu3G1"]));
     }
     if (!isSubscriptionGated) {
       if (null != undefined) {
@@ -237,8 +245,8 @@ export default function getChannelA11yLabel(mentionCount) {
       }
       return items4.join(", ");
     } else {
-      const intl16 = util.intl;
-      const string = intl16.string;
+      const intl19 = util.intl;
+      const string = intl19.string;
       let t1 = util.t;
       if (needSubscriptionToAccess) {
         t1 = t1["oj+HOs"];
@@ -249,14 +257,14 @@ export default function getChannelA11yLabel(mentionCount) {
     }
   }
 };
-export const getStatusLabel = function getStatusLabel(status) {
-  if (constants2.ONLINE === status) {
+export const getStatusLabel = function getStatusLabel(value) {
+  if (constants2.ONLINE === value) {
     return UserUtils.humanizeStatus(constants2.ONLINE);
-  } else if (constants2.IDLE === status) {
+  } else if (constants2.IDLE === value) {
     return UserUtils.humanizeStatus(constants2.IDLE);
-  } else if (constants2.DND === status) {
+  } else if (constants2.DND === value) {
     return UserUtils.humanizeStatus(constants2.DND);
-  } else if (constants2.INVISIBLE === status) {
+  } else if (constants2.INVISIBLE === value) {
     return UserUtils.humanizeStatus(constants2.INVISIBLE);
   } else {
     return "";

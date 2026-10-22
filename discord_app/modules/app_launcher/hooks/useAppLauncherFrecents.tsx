@@ -1,21 +1,21 @@
-// === Module 12031: useAppLauncherFrecents ===
+// === Module 12052: useAppLauncherFrecents ===
 
-// Module 12031 (useAppLauncherFrecents)
+// Module 12052 (useAppLauncherFrecents)
 import c from "c" /* 576 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7236 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9606 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10162 */;
-import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 10164 */;
-import getPrimaryAppCommand from "getPrimaryAppCommand" /* 11329 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7243 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9618 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10174 */;
+import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 10176 */;
+import getPrimaryAppCommand from "getPrimaryAppCommand" /* 11346 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7182 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7189 */;
 import UserStore from "UserStore" /* 1392 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12032 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12053 */;
 
 require = fn;
-const FetchState = fn(7182).FetchState;
+const FetchState = fn(7189).FetchState;
 const WATCH_YOUTUBE_PROD_APP_ID = fn(2026).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(5963);
+const ApplicationCommandConstants = fn(5970);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
 let items = [fn(2000).ApplicationCommandType.CHAT, fn(2000).ApplicationCommandType.PRIMARY_ENTRY_POINT];
@@ -204,7 +204,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
       }
       dependencyMap = tmp20;
-      const sortApplicationsViaFrecency = context(12033).useSortApplicationsViaFrecency(cResult[10], tmp16);
+      const sortApplicationsViaFrecency = context(12054).useSortApplicationsViaFrecency(cResult[10], tmp16);
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
@@ -232,7 +232,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
         tmp22 = cResult[15];
       }
-      const tmpResult5 = context(12033);
+      const tmpResult5 = context(12054);
       stateFromStores1 = context(504).useStateFromStores(tmp21, tmp22);
       if (cResult[16] !== stateFromStores1) {
         class T {

@@ -1,6 +1,6 @@
-// === Module 6678: PremiumGuildSubscribeConstants ===
+// === Module 6685: PremiumGuildSubscribeConstants ===
 
-// Module 6678 (PremiumGuildSubscribeConstants)
+// Module 6685 (PremiumGuildSubscribeConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx");

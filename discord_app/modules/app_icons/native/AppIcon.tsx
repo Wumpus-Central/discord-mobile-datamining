@@ -1,18 +1,18 @@
-// === Module 16712: AppIcon ===
+// === Module 16781: AppIcon ===
 
-// Module 16712 (AppIcon)
+// Module 16781 (AppIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4973 */;
-import useThemeDefault from "useTheme" /* 5187 */;
-import FastImageDefault from "FastImage" /* 5651 */;
+import shared from "shared" /* 4976 */;
+import useThemeDefault from "useTheme" /* 5191 */;
+import FastImageDefault from "FastImage" /* 5655 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const getIconById = fn(9823).getIconById;
+const getIconById = fn(9835).getIconById;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, image: { resizeMode: "contain", height: "100%", width: "100%" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

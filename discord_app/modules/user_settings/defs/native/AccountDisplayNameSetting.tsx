@@ -1,6 +1,6 @@
-// === Module 15880: AccountDisplayNameSetting ===
+// === Module 15922: AccountDisplayNameSetting ===
 
-// Module 15880 (AccountDisplayNameSetting)
+// Module 15922 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -8,7 +8,7 @@ import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountDisplayNameSettingTrailing() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -45,7 +45,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["9AjdkD"]);
   },
-  parent: fn(8308).MobileUserSettings.ACCOUNT,
+  parent: fn(8317).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountDisplayNameSettingTrailing() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

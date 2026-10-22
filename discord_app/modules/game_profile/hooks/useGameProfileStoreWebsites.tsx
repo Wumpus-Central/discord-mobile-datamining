@@ -1,15 +1,15 @@
-// === Module 9232: useGameProfileStoreWebsites ===
+// === Module 9241: useGameProfileStoreWebsites ===
 
-// Module 9232 (useGameProfileStoreWebsites)
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9233 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9235 */;
+// Module 9241 (useGameProfileStoreWebsites)
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9242 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 9244 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const set = new Set(["1402418703554842694", "356877880938070016"]);
-let items = [fn(9233).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES, fn(9233).ThirdPartyGameApplicationWebsiteCategory.STEAM, fn(9233).ThirdPartyGameApplicationWebsiteCategory.ROBLOX, fn(9233).ThirdPartyGameApplicationWebsiteCategory.BATTLENET, fn(9233).ThirdPartyGameApplicationWebsiteCategory.RIOT, fn(9233).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT];
+let items = [fn(9242).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES, fn(9242).ThirdPartyGameApplicationWebsiteCategory.STEAM, fn(9242).ThirdPartyGameApplicationWebsiteCategory.ROBLOX, fn(9242).ThirdPartyGameApplicationWebsiteCategory.BATTLENET, fn(9242).ThirdPartyGameApplicationWebsiteCategory.RIOT, fn(9242).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
@@ -21,8 +21,8 @@ export const useGameProfileStoreWebsites = ReactCompilerGating.isReactCompilerEn
   if (id != null) {
     id = id.id;
   }
-  const steamWebsiteUrl = id1(9234).useSteamWebsiteUrl(id);
-  let tmp6 = steamReleaseStatus(9236)(id);
+  const steamWebsiteUrl = id1(9243).useSteamWebsiteUrl(id);
+  let tmp6 = steamReleaseStatus(9245)(id);
   id1 = undefined;
   if (id != null) {
     id1 = id.id;
@@ -74,7 +74,7 @@ export const useGameProfileStoreWebsites = ReactCompilerGating.isReactCompilerEn
         found = [];
       }
       if (!tmp11) {
-        const obj3 = { category: tmp(9233).ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
+        const obj3 = { category: tmp(9242).ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
         found.push(obj3);
       }
       const _Symbol = Symbol;
@@ -142,7 +142,7 @@ export const useGameProfileStoreWebsites = ReactCompilerGating.isReactCompilerEn
       cResult[5] = tmp6;
       cResult[6] = sorted;
       tmp10 = sorted;
-      tmp11 = null == steamWebsiteUrl || steamReleaseStatus === tmp(9235).SteamReleaseStatus.RETIRED_ABANDONED || found.some((category) => category.category === id1(9233).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+      tmp11 = null == steamWebsiteUrl || steamReleaseStatus === tmp(9244).SteamReleaseStatus.RETIRED_ABANDONED || found.some((category) => category.category === id1(9242).ThirdPartyGameApplicationWebsiteCategory.STEAM);
     }
   } else {
     class S {
@@ -198,7 +198,7 @@ export const useGameProfileStoreWebsites = ReactCompilerGating.isReactCompilerEn
       }
     }
   }
-  const obj2 = id1(9234);
+  const obj2 = id1(9243);
 }) : (function useGameProfileStoreWebsites(id) {
   id = undefined;
   if (id != null) {
@@ -252,7 +252,7 @@ export const useGameProfileStoreWebsites = ReactCompilerGating.isReactCompilerEn
           someResult = steamReleaseStatus === SteamReleaseStatus.SteamReleaseStatus.RETIRED_ABANDONED;
         }
         if (!someResult) {
-          someResult = found.some((category) => category.category === steamWebsiteUrl(9233).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          someResult = found.some((category) => category.category === steamWebsiteUrl(9242).ThirdPartyGameApplicationWebsiteCategory.STEAM);
         }
         if (!someResult) {
           const obj = { category: ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
@@ -260,9 +260,9 @@ export const useGameProfileStoreWebsites = ReactCompilerGating.isReactCompilerEn
         }
         const sorted = found.sort((category, category2) => {
           let num = -1;
-          if (category.category !== steamWebsiteUrl(9233).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+          if (category.category !== steamWebsiteUrl(9242).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
             let num2 = 0;
-            if (category2.category === steamWebsiteUrl(9233).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+            if (category2.category === steamWebsiteUrl(9242).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
               num2 = 1;
             }
             num = num2;

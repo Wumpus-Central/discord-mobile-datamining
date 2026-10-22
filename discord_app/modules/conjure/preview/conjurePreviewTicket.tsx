@@ -1,14 +1,14 @@
-// === Module 10685: conjurePreviewTicket ===
+// === Module 10697: conjurePreviewTicket ===
 
-// Module 10685 (conjurePreviewTicket)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6757 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10686 */;
-import createProxyTicket from "createProxyTicket" /* 10688 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10679 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+// Module 10697 (conjurePreviewTicket)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6764 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10698 */;
+import createProxyTicket from "createProxyTicket" /* 10700 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10691 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
 
 require = fn;
-const isLaunched = fn(6755).isLaunched;
+const isLaunched = fn(6762).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTicket.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 16595: ShowLinkDecorationsSetting ===
+// === Module 16664: ShowLinkDecorationsSetting ===
 
-// Module 16595 (ShowLinkDecorationsSetting)
+// Module 16664 (ShowLinkDecorationsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15584 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -31,13 +31,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowLin
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OLZFB8);
   },
-  parent: fn(8308).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8317).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onShowLinkDecorationsValueChange
 });

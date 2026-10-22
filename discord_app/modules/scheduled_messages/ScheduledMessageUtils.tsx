@@ -1,6 +1,6 @@
-// === Module 9653: ScheduledMessageUtils ===
+// === Module 9665: ScheduledMessageUtils ===
 
-// Module 9653 (ScheduledMessageUtils)
+// Module 9665 (ScheduledMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -12,9 +12,9 @@ import GlobalUtils from "GlobalUtils" /* 1388 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5992 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7732 */;
-import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9654 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5999 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7741 */;
+import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9666 */;
 import _slicedToArray from "module_32" /* 32 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -26,7 +26,7 @@ require = fn;
 const Constants = fn(1087);
 ({ AnalyticEvents: metroRequire, MessageFlags: closure_7, Permissions: closure_8 } = Constants);
 const PremiumTypes = fn(1394).PremiumTypes;
-const ScheduledMessagesConstants = fn(9639);
+const ScheduledMessagesConstants = fn(9651);
 ({ MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: c10, MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_11, MAX_SCHEDULED_MESSAGES_PER_USER: closure_12, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: map1 } = ScheduledMessagesConstants);
 class ScheduledMessagesConfig {
   constructor(arg0, arg1) {
@@ -158,7 +158,7 @@ function getLatestScheduledTime(arg0) {
     const tmpResult = _modDef2049;
     const tmpResult3 = SnowflakeUtilsDefault;
     const tmpResultResult = tmpResult(SnowflakeUtilsDefault.extractTimestamp(arg0));
-    return _modDef2049.min(addResult, tmpResultResult.add(collapsed, "seconds"));
+    return _modDef2049.min(addResult, tmpResultResult.add(v65535, "seconds"));
   }
   const obj = _modDef2049();
 }
@@ -292,7 +292,7 @@ export const getScheduledTimeError = function getScheduledTimeError(isBefore, de
       const tmpResult = _modDef2049;
       const tmpResult3 = SnowflakeUtilsDefault;
       const tmpResultResult = tmpResult(SnowflakeUtilsDefault.extractTimestamp(dependencyMap));
-      minResult = _modDef2049.min(addResult, tmpResultResult.add(collapsed, "seconds"));
+      minResult = _modDef2049.min(addResult, tmpResultResult.add(v65535, "seconds"));
       const tmpResult4 = _modDef2049;
     }
     stringResult = null;

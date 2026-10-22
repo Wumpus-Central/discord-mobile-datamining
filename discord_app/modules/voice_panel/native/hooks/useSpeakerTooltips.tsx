@@ -1,21 +1,21 @@
-// === Module 18374: useSpeakerTooltips ===
+// === Module 18442: useSpeakerTooltips ===
 
-// Module 18374 (useSpeakerTooltips)
+// Module 18442 (useSpeakerTooltips)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import useCoachmark from "useCoachmark" /* 9798 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 18377 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import useCoachmark from "useCoachmark" /* 9810 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 18445 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(18372);
+const ConsoleVoiceUpsellStore = fn(18440);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
-let VoicePanelControlsModes = fn(10846).VoicePanelControlsModes;
+let VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let __initData = { code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}" };

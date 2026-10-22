@@ -1,16 +1,16 @@
-// === Module 18356: SoundboardSoundPreviewActionSheet ===
+// === Module 18424: SoundboardSoundPreviewActionSheet ===
 
-// Module 18356 (SoundboardSoundPreviewActionSheet)
+// Module 18424 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7421 */;
-import SoundboardUtils from "SoundboardUtils" /* 7429 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 18340 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7428 */;
+import SoundboardUtils from "SoundboardUtils" /* 7436 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 18408 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import UserStore from "UserStore" /* 1392 */;
-import SoundboardStore from "SoundboardStore" /* 5986 */;
+import SoundboardStore from "SoundboardStore" /* 5993 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { soundPresentation: { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 }, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
 let obj3 = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
 obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAKING };

@@ -1,20 +1,20 @@
-// === Module 12753: AppealIngestionRequestSent ===
+// === Module 12785: AppealIngestionRequestSent ===
 
-// Module 12753 (AppealIngestionRequestSent)
-import FastImageDefault from "FastImage" /* 5651 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12748 */;
-import _modDef12754 from "module_12754" /* 12754 */;
+// Module 12785 (AppealIngestionRequestSent)
+import FastImageDefault from "FastImage" /* 5655 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12780 */;
+import _modDef12786 from "module_12786" /* 12786 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7874);
+const SafetyHubConstants = fn(7882);
 ({ SafetyHubAnalyticsActions: closure_4, SafetyHubLinks: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, padding: 8 }, actionsHeader: { marginTop: 31, marginBottom: 16 }, checkboxPng: { width: 86, height: 78.33, marginLeft: -2, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionRequestSent() {
   const cResult = emitAppealIngestionEvent(576).c(20);
   const obj = emitAppealIngestionEvent(576);
-  emitAppealIngestionEvent = emitAppealIngestionEvent(12730).useEmitAppealIngestionEvent();
+  emitAppealIngestionEvent = emitAppealIngestionEvent(12762).useEmitAppealIngestionEvent();
   const tmp5 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
     tmp8 = cResult[1];
   }
   if (cResult[2] !== tmp5.checkboxPng) {
-    const obj3 = { source: _modDef12754, style: tmp5.checkboxPng };
+    const obj3 = { source: _modDef12786, style: tmp5.checkboxPng };
     const tmp14 = closure_6(FastImageDefault, obj3);
     cResult[2] = tmp5.checkboxPng;
     cResult[3] = tmp14;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { headerText: first, subHeaderText: tmp8 };
-    const tmp17 = closure_6(tmp(12728).AppealIngestionModalHeader, obj4);
+    const tmp17 = closure_6(tmp(12760).AppealIngestionModalHeader, obj4);
     cResult[4] = tmp17;
     let tmp15 = tmp17;
   } else {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (cResult[6] !== tmp5.actionsHeader) {
     const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp5.actionsHeader, children: tmp18 };
-    const tmp22 = closure_6(tmp(5216).Text, obj5);
+    const tmp22 = closure_6(tmp(5220).Text, obj5);
     cResult[6] = tmp5.actionsHeader;
     cResult[7] = tmp22;
     let tmp20 = tmp22;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   const items = [tmp10, tmp15, tmp20, tmp25, tmp32];
   obj9.children = items;
   obj8.children = closure_7(View, obj9);
-  const tmp38 = closure_6(emitAppealIngestionEvent(12728).AppealIngestionModalScreen, obj8);
+  const tmp38 = closure_6(emitAppealIngestionEvent(12760).AppealIngestionModalScreen, obj8);
   cResult[14] = tmp5.container;
   cResult[15] = tmp32;
   cResult[16] = tmp10;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   cResult[18] = tmp25;
   cResult[19] = tmp38;
   tmp37 = tmp38;
-  const obj2 = emitAppealIngestionEvent(12730);
+  const obj2 = emitAppealIngestionEvent(12762);
 }) : (function AppealIngestionRequestSent() {
   _require = require("useEmitAppealIngestionEvent").useEmitAppealIngestionEvent();
   const tmp = closure_8();
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  obj4.source = _modDef12754;
+  obj4.source = _modDef12786;
   obj4.style = tmp.checkboxPng;
   const items = [closure_6(FastImageDefault, obj4), closure_6(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };

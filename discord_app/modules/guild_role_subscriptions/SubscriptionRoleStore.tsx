@@ -1,6 +1,6 @@
-// === Module 4921: SubscriptionRoleStore ===
+// === Module 4924: SubscriptionRoleStore ===
 
-// Module 4921 (SubscriptionRoleStore)
+// Module 4924 (SubscriptionRoleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildRecord from "GuildRecord" /* 4839 */;

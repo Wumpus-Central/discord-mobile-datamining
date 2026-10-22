@@ -1,6 +1,6 @@
-// === Module 10692: ConjurePerfTraceLayout ===
+// === Module 10704: ConjurePerfTraceLayout ===
 
-// Module 10692 (ConjurePerfTraceLayout)
+// Module 10704 (ConjurePerfTraceLayout)
 import _slicedToArray from "module_32" /* 32 */;
 
 function walkNodes(findPerfTraceNodeResult, fn) {
@@ -320,7 +320,7 @@ export const perfTraceTree = function perfTraceTree(spans) {
   }
 };
 export const visiblePerfTraceRows = function visiblePerfTraceRows(cResult, arg1) {
-  collapsed = arg1;
+  let collapsed = arg1;
   let items = [];
   function walk(key) {
     collapsed = key;
@@ -386,7 +386,7 @@ export const visiblePerfTraceRows = function visiblePerfTraceRows(cResult, arg1)
 };
 export const overviewView = function overviewView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f106980 = (depth) => {
+  const f107443 = (depth) => {
     let tmp = depth.depth > 0;
     if (tmp) {
       const children = depth.children;
@@ -398,7 +398,7 @@ export const overviewView = function overviewView(children) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f106996(children);
+      tmp = f107459(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -427,7 +427,7 @@ export const extendView = function extendView(collapsed, memo, current) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f106996(children);
+      tmp = f107459(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -462,12 +462,12 @@ export const perfTraceKeys = function perfTraceKeys(cResult) {
 };
 export const expandedView = function expandedView(children) {
   const obj = { collapsed: new Set(), revealed: null };
-  const f106995 = () => true;
+  const f107458 = () => true;
   const set1 = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f106996(children);
+      tmp = f107459(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -483,12 +483,12 @@ export const expandedView = function expandedView(children) {
 };
 export const collapsedView = function collapsedView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f106996 = (depth) => depth.depth > 0;
+  const f107459 = (depth) => depth.depth > 0;
   const set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f106996(children);
+      tmp = f107459(children);
     }
     if (tmp) {
       set.add(children.key);

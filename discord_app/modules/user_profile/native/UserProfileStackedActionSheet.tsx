@@ -1,15 +1,15 @@
-// === Module 11023: UserProfileStackedActionSheet ===
+// === Module 11040: UserProfileStackedActionSheet ===
 
-// Module 11023 (UserProfileStackedActionSheet)
+// Module 11040 (UserProfileStackedActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5247 */;
-import Pressables from "Pressables" /* 6887 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6907 */;
-import Form from "Form" /* 8910 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
+import Pressables from "Pressables" /* 6894 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6914 */;
+import Form from "Form" /* 8919 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ let closure_5 = ["title", "children", "onBack"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { header: { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 }, headerSpacer: null, list: null, contentContainer: null, divider: null };
 let size = { width: nativeDefault.space.PX_24, height: nativeDefault.space.PX_24 };
 obj2.headerSpacer = size;
@@ -116,7 +116,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileS
         obj3.ItemSeparatorComponent = tmp12;
         obj3.contentContainerStyle = tmp15;
         obj3.renderItem = tmp16;
-        const tmp21 = closure_8(tmp(7199).BottomSheetFlashList, obj3);
+        const tmp21 = closure_8(tmp(7206).BottomSheetFlashList, obj3);
         cResult[16] = arr;
         cResult[17] = tmp5;
         cResult[18] = tmp10.list;
@@ -171,7 +171,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileS
     index = index.index;
     return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
   };
-  return closure_8(data(7199).BottomSheetFlashList, obj);
+  return closure_8(data(7206).BottomSheetFlashList, obj);
 });
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileStackedActionSheetSectionList(arg0) {
@@ -251,7 +251,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileS
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return closure_2_8(Form.FormDivider, { style: divider.divider });
   };
-  return closure_8(renderItem(5251).BottomSheetSectionList, obj);
+  return closure_8(renderItem(5255).BottomSheetSectionList, obj);
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");

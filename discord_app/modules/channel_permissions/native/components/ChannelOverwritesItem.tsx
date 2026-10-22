@@ -1,18 +1,18 @@
-// === Module 8949: ChannelOverwritesItem ===
+// === Module 8958: ChannelOverwritesItem ===
 
-// Module 8949 (ChannelOverwritesItem)
+// Module 8958 (ChannelOverwritesItem)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5022 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import AlertModal from "AlertModal" /* 5894 */;
-import FormCheckbox from "FormCheckbox" /* 6880 */;
-import TableRow from "TableRow" /* 6882 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8932 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8950 */;
-import _modDef8951 from "module_8951" /* 8951 */;
-import _modDef8952 from "module_8952" /* 8952 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import AlertModal from "AlertModal" /* 5901 */;
+import FormCheckbox from "FormCheckbox" /* 6887 */;
+import TableRow from "TableRow" /* 6889 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8941 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8959 */;
+import _modDef8960 from "module_8960" /* 8960 */;
+import _modDef8961 from "module_8961" /* 8961 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -21,10 +21,10 @@ require = fn;
 let closure_4 = ["item"];
 let closure_5 = ["checked"];
 const View = fn(17).View;
-const RowType = fn(7851).RowType;
+const RowType = fn(7859).RowType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function RemoveIcon(item) {
@@ -89,8 +89,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
               }
             }
           }
-          let tmp9 = closure_10(tmp(6997).CircleXIcon, obj2);
-          const tmp11 = closure_10(tmp(6997).CircleXIcon, obj2);
+          let tmp9 = closure_10(tmp(7004).CircleXIcon, obj2);
+          const tmp11 = closure_10(tmp(7004).CircleXIcon, obj2);
         } else {
           tmp9 = cResult[6];
         }
@@ -138,7 +138,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
         obj3.accessibilityLabel = first;
         obj3.onPress = tmp7;
         obj3.children = tmp9;
-        const tmp14 = closure_10(tmp(6887).PressableOpacity, obj3);
+        const tmp14 = closure_10(tmp(6894).PressableOpacity, obj3);
         cResult[7] = item.disabled;
         cResult[8] = tmp7;
         cResult[9] = tmp9;
@@ -224,8 +224,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_10(item(6997).CircleXIcon, obj2);
-    tmp3Result = closure_10(item(6887).PressableOpacity, obj);
+    obj.children = closure_10(item(7004).CircleXIcon, obj2);
+    tmp3Result = closure_10(item(6894).PressableOpacity, obj);
   }
   return tmp3Result;
 });
@@ -235,7 +235,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIt
   ({ disabled, item, subLabel, channelId, showType, showRemove, start, end, trailing, onPress, accessibilityRole, accessibilityState, accessible } = arg0);
   if (cResult[0] !== item.colorString) {
     const obj2 = { size: "lg", color: item.colorString };
-    const tmp6 = collapsed(ShieldUserIcon.ShieldUserIcon, obj2);
+    const tmp6 = v65535(ShieldUserIcon.ShieldUserIcon, obj2);
     cResult[0] = item.colorString;
     cResult[1] = tmp6;
     let tmp4 = tmp6;
@@ -278,7 +278,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIt
               }
             }
             const obj4 = { icon: tmp4, label: item.name, subLabel: tmp7, start, end, trailing: tmp10, onPress, disabled, accessibilityRole, accessibilityState, accessible };
-            const tmp16 = collapsed(TableRow.TableRow, obj4);
+            const tmp16 = v65535(TableRow.TableRow, obj4);
             cResult[11] = accessibilityRole;
             cResult[12] = accessibilityState;
             cResult[13] = accessible;
@@ -298,7 +298,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIt
       let tmp11 = trailing;
       if (showRemove) {
         const obj5 = { item, channelId };
-        tmp11 = collapsed(closure_13, obj5);
+        tmp11 = v65535(closure_13, obj5);
       }
       cResult[6] = channelId;
       cResult[7] = item;
@@ -320,7 +320,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIt
 }) : (function RoleItem(arg0) {
   ({ item, subLabel, trailing } = arg0);
   ({ disabled, channelId, showType, showRemove, start, end, onPress, accessibilityRole, accessibilityState, accessible } = arg0);
-  const obj = { icon: collapsed(ShieldUserIcon.ShieldUserIcon, { size: "lg", color: item.colorString }), label: item.name, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
+  const obj = { icon: v65535(ShieldUserIcon.ShieldUserIcon, { size: "lg", color: item.colorString }), label: item.name, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
   if (showType) {
     subLabel = ChannelPermissionsUtilsAll.getRowTypeLabel(item.rowType);
   }
@@ -329,7 +329,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIt
   obj.end = end;
   if (showRemove) {
     const obj4 = { item, channelId };
-    trailing = collapsed(closure_13, obj4);
+    trailing = v65535(closure_13, obj4);
   }
   obj.trailing = trailing;
   obj.onPress = onPress;
@@ -337,7 +337,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIt
   obj.accessibilityRole = accessibilityRole;
   obj.accessibilityState = accessibilityState;
   obj.accessible = accessible;
-  return collapsed(TableRow.TableRow, obj);
+  return v65535(TableRow.TableRow, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function MemberItem(arg0) {
@@ -367,7 +367,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
               }
               if (cResult[16] !== tmp18) {
                 const obj2 = { source: tmp18, size: native.AvatarSizes.SMALL };
-                const tmp24 = collapsed(native.Avatar, obj2);
+                const tmp24 = v65535(native.Avatar, obj2);
                 cResult[16] = tmp18;
                 cResult[17] = tmp24;
                 let tmp22 = tmp24;
@@ -406,7 +406,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
                         }
                       }
                       const obj3 = { icon: tmp22, label: tmp14, subLabel: item.username, start, end, trailing: tmp25, onPress, disabled, accessibilityRole, accessibilityState, accessible };
-                      const tmp31 = collapsed(TableRow.TableRow, obj3);
+                      const tmp31 = v65535(TableRow.TableRow, obj3);
                       cResult[24] = accessibilityRole;
                       cResult[25] = accessibilityState;
                       cResult[26] = accessible;
@@ -427,7 +427,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
               let tmp26 = trailing;
               if (showRemove) {
                 const obj4 = { item, channelId, onRemove };
-                tmp26 = collapsed(closure_13, obj4);
+                tmp26 = v65535(closure_13, obj4);
               }
               cResult[18] = channelId;
               cResult[19] = item;
@@ -460,8 +460,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
       }
       let tmp11 = null;
       if (item.rowType === RowType.OWNER) {
-        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8951, disableColor: true, style: tmp4.ownerIcon };
-        tmp11 = collapsed(native.Icon, obj6);
+        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8960, disableColor: true, style: tmp4.ownerIcon };
+        tmp11 = v65535(native.Icon, obj6);
       }
       cResult[6] = item.rowType;
       cResult[7] = tmp4.ownerIcon;
@@ -469,7 +469,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
       tmp9 = tmp11;
     }
     const obj7 = { style: tmp5, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
-    const tmp8 = collapsed(Text_Text.Text, obj7);
+    const tmp8 = v65535(Text_Text.Text, obj7);
     cResult[3] = item.name;
     cResult[4] = tmp5;
     cResult[5] = tmp8;
@@ -490,11 +490,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   const items = [, ];
   ({ name: arr[0], memberName: arr[1] } = tmp);
   obj2.style = items;
-  const items1 = [collapsed(Text_Text.Text, obj2), ];
+  const items1 = [v65535(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8951, disableColor: true, style: tmp.ownerIcon };
-    tmp4Result = collapsed(native.Icon, obj3);
+    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8960, disableColor: true, style: tmp.ownerIcon };
+    tmp4Result = v65535(native.Icon, obj3);
   }
   items1[1] = tmp4Result;
   obj.children = items1;
@@ -505,14 +505,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   }
   const obj4 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
   const tmp2Result = closure_1_11(View, obj);
-  obj4.icon = collapsed(native.Avatar, { source: avatarSource, size: native.AvatarSizes.SMALL });
+  obj4.icon = v65535(native.Avatar, { source: avatarSource, size: native.AvatarSizes.SMALL });
   obj4.label = tmp2Result;
   obj4.subLabel = item.username;
   obj4.start = start;
   obj4.end = end;
   if (showRemove) {
     const obj6 = { item, channelId, onRemove };
-    trailing = collapsed(closure_13, obj6);
+    trailing = v65535(closure_13, obj6);
   }
   obj4.trailing = trailing;
   obj4.onPress = onPress;
@@ -520,7 +520,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   obj4.accessibilityRole = accessibilityRole;
   obj4.accessibilityState = accessibilityState;
   obj4.accessible = accessible;
-  return collapsed(TableRow.TableRow, obj4);
+  return v65535(TableRow.TableRow, obj4);
 });
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyRoleItem(item) {
@@ -538,25 +538,25 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyR
       return tmp7;
     }
     const obj2 = { icon: tmp5, label: item.name };
-    const tmp9 = collapsed(TableRow.TableRow, obj2);
+    const tmp9 = v65535(TableRow.TableRow, obj2);
     cResult[3] = item.name;
     cResult[4] = tmp5;
     cResult[5] = tmp9;
     tmp7 = tmp9;
   }
-  const tmp6 = collapsed(native.Icon, { source: _modDef8952, color: item.colorString, size: native.IconSizes.MEDIUM, style: tmp4.roleIcon });
+  const tmp6 = v65535(native.Icon, { source: _modDef8961, color: item.colorString, size: native.IconSizes.MEDIUM, style: tmp4.roleIcon });
   cResult[0] = item.colorString;
   cResult[1] = tmp4.roleIcon;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-  const obj3 = { source: _modDef8952, color: item.colorString, size: native.IconSizes.MEDIUM, style: tmp4.roleIcon };
+  const obj3 = { source: _modDef8961, color: item.colorString, size: native.IconSizes.MEDIUM, style: tmp4.roleIcon };
 }) : (function EmptyRoleItem(item) {
   item = item.item;
   const obj = { icon: null, label: null };
   const tmp = closure_12();
-  obj.icon = collapsed(native.Icon, { source: _modDef8952, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_12().roleIcon });
+  obj.icon = v65535(native.Icon, { source: _modDef8961, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_12().roleIcon });
   obj.label = item.name;
-  return collapsed(TableRow.TableRow, obj);
+  return v65535(TableRow.TableRow, obj);
 });
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelOverwritesItem(item) {
@@ -588,7 +588,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelOverw
               }
               const obj2 = { item: tmp2 };
               const merged = Object.assign(tmp3);
-              const tmp15 = collapsed(closure_16, obj2);
+              const tmp15 = v65535(closure_16, obj2);
               cResult[9] = tmp2;
               cResult[10] = tmp3;
               cResult[11] = tmp15;
@@ -607,7 +607,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelOverw
       }
       const obj3 = { item: tmp2 };
       const merged1 = Object.assign(tmp3);
-      const tmp22 = collapsed(closure_15, obj3);
+      const tmp22 = v65535(closure_15, obj3);
       cResult[6] = tmp2;
       cResult[7] = tmp3;
       cResult[8] = tmp22;
@@ -621,7 +621,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelOverw
     return tmp23;
   }
   const merged2 = Object.assign(tmp3);
-  const tmp25 = collapsed(closure_14, { item: tmp2 });
+  const tmp25 = v65535(closure_14, { item: tmp2 });
   cResult[3] = tmp2;
   cResult[4] = tmp3;
   cResult[5] = tmp25;
@@ -639,7 +639,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelOverw
             if (RowType.EMPTY_STATE === rowType) {
               const obj = { item };
               const merged1 = Object.assign(merged);
-              return collapsed(closure_16, obj);
+              return v65535(closure_16, obj);
             } else {
               return null;
             }
@@ -648,11 +648,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelOverw
       }
       const obj2 = { item };
       const merged2 = Object.assign(merged);
-      return collapsed(closure_15, obj2);
+      return v65535(closure_15, obj2);
     }
   }
   const merged3 = Object.assign(merged);
-  return collapsed(closure_14, { item });
+  return v65535(closure_14, { item });
 });
 let closure_17 = tmp4;
 ReactCompilerGating = fn(558);
@@ -686,7 +686,7 @@ export const ChannelOverwritesCheckboxItem = ReactCompilerGating.isReactCompiler
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   if (cResult[5] !== tmp4) {
     const obj3 = { checked: tmp4 };
-    const tmp13 = collapsed(FormCheckbox.FormCheckbox, obj3);
+    const tmp13 = v65535(FormCheckbox.FormCheckbox, obj3);
     cResult[5] = tmp4;
     cResult[6] = tmp13;
     let tmp11 = tmp13;
@@ -709,7 +709,7 @@ export const ChannelOverwritesCheckboxItem = ReactCompilerGating.isReactCompiler
   obj4.accessibilityRole = accessibilityRole;
   obj4.accessibilityState = accessibilityState;
   obj4.trailing = tmp11;
-  const tmp16 = collapsed(closure_17, obj4);
+  const tmp16 = v65535(closure_17, obj4);
   cResult[7] = accessibilityRole;
   cResult[8] = accessibilityState;
   cResult[9] = tmp5;
@@ -727,6 +727,6 @@ export const ChannelOverwritesCheckboxItem = ReactCompilerGating.isReactCompiler
   obj2.accessible = true;
   obj2.accessibilityRole = accessibilityRole;
   obj2.accessibilityState = accessibilityState;
-  obj2.trailing = collapsed(FormCheckbox.FormCheckbox, { checked });
-  return collapsed(closure_17, obj2);
+  obj2.trailing = v65535(FormCheckbox.FormCheckbox, { checked });
+  return v65535(closure_17, obj2);
 });

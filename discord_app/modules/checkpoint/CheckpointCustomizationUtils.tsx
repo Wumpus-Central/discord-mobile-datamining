@@ -1,14 +1,14 @@
-// === Module 6341: CheckpointCustomizationUtils ===
+// === Module 6348: CheckpointCustomizationUtils ===
 
-// Module 6341 (CheckpointCustomizationUtils)
+// Module 6348 (CheckpointCustomizationUtils)
 import util from "util" /* 1128 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5996 */;
-import CheckpointTrait from "CheckpointTrait" /* 6018 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6339 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6342 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6343 */;
-import CheckpointConstants from "CheckpointConstants" /* 5995 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6003 */;
+import CheckpointTrait from "CheckpointTrait" /* 6025 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6346 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6349 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6350 */;
+import CheckpointConstants from "CheckpointConstants" /* 6002 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -52,7 +52,7 @@ function getAssetDescription(asset) {
     return stringResult1;
   }
 }
-({ CHECKPOINT_RARITY_LABEL_MESSAGES: c3, TRAIT_OPTION_HEIGHT, TRAIT_OPTION_WIDTH } = CheckpointConstants);
+({ CHECKPOINT_RARITY_LABEL_MESSAGES: c3, CHECKPOINT_RARITY_ORDER: closure_4, TRAIT_OPTION_HEIGHT, TRAIT_OPTION_WIDTH } = CheckpointConstants);
 const CheckpointCustomizationOption = { FACE: "face", OUTFIT: "outfit", OUTFIT_COLOR: "outfit_color", HAT: "hat", WEARABLE: "wearable", AURA: "aura", SHOES: "shoes", BASE: "base" };
 let obj2 = { [FACE]: _modDef3088.QQsnUi, [OUTFIT]: _modDef3088.R4kQz6, [OUTFIT_COLOR]: _modDef3088.Yzaoit, [HAT]: _modDef3088.ZUGgI7, [WEARABLE]: _modDef3088["KrhX/b"], [AURA]: _modDef3088["35nXwl"], [SHOES]: _modDef3088["Yt3O/L"], [BASE]: _modDef3088.bbQzr1 };
 ({ FACE, OUTFIT, OUTFIT_COLOR, HAT, WEARABLE, AURA, SHOES, BASE } = CheckpointCustomizationOption);
@@ -118,7 +118,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
     tmp5 = _require;
     CHECKPOINT_OUTFIT_COLOR_OPTION_NAMES = require("CheckpointTraitOptionNames").CHECKPOINT_TRAIT_OPTION_NAMES[tmp4];
   }
-  dependencyMap = tmp5(6343).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
+  dependencyMap = tmp5(6350).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
   return arr.map((optionId) => {
     trait = optionId;
     const obj = {
@@ -132,7 +132,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
         }
         return str;
       },
-      rarity: trait(6343).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
+      rarity: trait(6350).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
       asset: null
     };
     let thumbnail;
@@ -142,6 +142,63 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
     obj.asset = thumbnail;
     return obj;
   });
+};
+export const getTraitPickerOptions = function getTraitPickerOptions(customizationOption, options, stateFromStores, stateFromStores1, savedOptionId) {
+  const visibleTraitRarities = CheckpointCharacterTraits.getVisibleTraitRarities(obj3[customizationOption], stateFromStores);
+  const visibleTraitOptions = [];
+  let totalCount = 0;
+  let earnedCount = 0;
+  const iter = options[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let hasItem = null == nextResult.rarity;
+    if (!hasItem) {
+      hasItem = visibleTraitRarities.has(tmp2.rarity);
+    }
+    let tmp9 = tmp2.rarity === CheckpointTraitRarity.CheckpointTraitRarity.NITRO && !stateFromStores1;
+    let tmp10 = tmp9;
+    if (null != tmp2.rarity) {
+      totalCount = totalCount + 1;
+    }
+    let tmp13 = hasItem;
+    if (!hasItem) {
+      tmp13 = savedOptionId === tmp2.optionId;
+    }
+    if (tmp13) {
+      obj2 = {};
+      let merged = Object.assign(nextResult);
+      obj2.locked = tmp10;
+      let arr = visibleTraitOptions.push(obj2);
+      let tmp21 = null == tmp2.rarity || tmp9;
+      if (!tmp21) {
+        earnedCount = earnedCount + 1;
+      }
+    }
+    continue;
+  }
+  const sorted = visibleTraitOptions.sort((rarity, rarity2) => {
+    if (null == rarity.rarity) {
+      let length = closure_1_4.length;
+      let arr = closure_1_4;
+    } else {
+      arr = closure_1_4;
+      length = closure_1_4.indexOf(rarity.rarity);
+      if (-1 === length) {
+        length = arr.length;
+      }
+    }
+    if (null == rarity2.rarity) {
+      let length2 = arr.length;
+    } else {
+      length2 = arr.indexOf(rarity2.rarity);
+      if (-1 === length2) {
+        length2 = arr.length;
+      }
+    }
+    return length - length2;
+  });
+  return { visibleTraitOptions, totalCount, earnedCount };
 };
 export const isTraitNoneOptionId = function isTraitNoneOptionId(arg0, arg1) {
   return CheckpointCharacterTraits.NONE_OPTION_IDS[arg0] === arg1;

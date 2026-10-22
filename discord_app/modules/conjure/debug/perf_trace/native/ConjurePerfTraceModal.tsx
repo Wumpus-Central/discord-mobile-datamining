@@ -1,18 +1,18 @@
-// === Module 12442: ConjurePerfTraceModal ===
+// === Module 12472: ConjurePerfTraceModal ===
 
-// Module 12442 (ConjurePerfTraceModal)
+// Module 12472 (ConjurePerfTraceModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import NavigatorHeader from "NavigatorHeader" /* 6903 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7282 */;
-import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 12443 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12444 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12446 */;
-import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 12447 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import NavigatorHeader from "NavigatorHeader" /* 6910 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7289 */;
+import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 12473 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12474 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 12476 */;
+import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 12477 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10662 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10674 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const perf_trace = "perf_trace";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { content: { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12 }, section: null, toolbar: null, row: null, rowSelected: null, rowTop: null, chevron: null, operation: null, badge: null, swatch: null, track: null, bar: null, detail: null, detailLine: null, detailBlock: null, failed: null, running: null, smaller: null, smallerTrack: null };
 let obj3 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12 };
 obj2.section = { gap: nativeDefault.space.PX_4 };
@@ -466,11 +466,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
   const tmp = closure_11();
   const detail = tmp;
-  const perfCategoryColors = node(12443).usePerfCategoryColors();
+  const perfCategoryColors = node(12473).usePerfCategoryColors();
   if (collapsed) {
-    let ChevronSmallDownIcon = tmp2(7282).ChevronSmallRightIcon;
+    let ChevronSmallDownIcon = tmp2(7289).ChevronSmallRightIcon;
   } else {
-    ChevronSmallDownIcon = tmp2(11026).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp2(11043).ChevronSmallDownIcon;
   }
   if (node.failed) {
     let running = tmp.failed;
@@ -510,7 +510,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   obj2.accessibilityState = obj3;
   const obj4 = { style: null, children: null };
   const items1 = [tmp.rowTop, ];
-  let obj = node(12443);
+  let obj = node(12473);
   items1[1] = { paddingLeft: node.depth * selected(587).space.PX_12 };
   obj4.style = items1;
   if (node.children.length > 0) {
@@ -541,37 +541,37 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   let tmp13Result = null;
   if (node.descendants > 0) {
     const obj9 = { variant: "text-xs/normal", color: "text-muted", children: node.descendants };
-    tmp13Result = tmp13(tmp2(5216).Text, obj9);
+    tmp13Result = tmp13(tmp2(5220).Text, obj9);
   }
   items2[1] = tmp13Result;
   const obj10 = { style: null };
   const items3 = [tmp.swatch, perfCategoryColors[node.category]];
   obj10.style = items3;
   items2[2] = tmp13(closure_6, obj10);
-  items2[3] = tmp13(node(5216).Text, { variant: "text-xs/semibold", color: "text-strong", children: node.service });
-  items2[4] = tmp13(node(5216).Text, { variant: "text-xs/normal", color: "text-default", style: tmp.operation, lineClamp: 1, children: node.operation });
+  items2[3] = tmp13(node(5220).Text, { variant: "text-xs/semibold", color: "text-strong", children: node.service });
+  items2[4] = tmp13(node(5220).Text, { variant: "text-xs/normal", color: "text-default", style: tmp.operation, lineClamp: 1, children: node.operation });
   let tmp13Result4 = null;
   if (node.count > 1) {
     const obj13 = { style: tmp.badge, children: null };
     const obj14 = { variant: "text-xxs/semibold", color: "text-default", children: null };
     const _HermesInternal = HermesInternal;
     obj14.children = "\u00D7" + node.count;
-    obj13.children = tmp13(tmp2(5216).Text, obj14);
+    obj13.children = tmp13(tmp2(5220).Text, obj14);
     tmp13Result4 = tmp13(closure_6, obj13);
   }
   items2[5] = tmp13Result4;
   let tmp13Result5 = null;
   if (node.failed) {
     const obj15 = { size: "xs", color: selected(587).colors.STATUS_DANGER };
-    tmp13Result5 = tmp13(tmp2(7933).WarningIcon, obj15);
+    tmp13Result5 = tmp13(tmp2(7941).WarningIcon, obj15);
   }
   items2[6] = tmp13Result5;
   const obj16 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const obj11 = { variant: "text-xs/semibold", color: "text-strong", children: node.service };
   const obj12 = { variant: "text-xs/normal", color: "text-default", style: tmp.operation, lineClamp: 1, children: node.operation };
   const obj5 = { paddingLeft: node.depth * selected(587).space.PX_12 };
-  obj16.children = node(12444).perfNodeDuration(node);
-  items2[7] = tmp13(node(5216).Text, obj16);
+  obj16.children = node(12474).perfNodeDuration(node);
+  items2[7] = tmp13(node(5220).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), , ];
   const obj17 = { style: tmp.track, children: null };
@@ -587,8 +587,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
     const obj21 = { paddingLeft: node.depth * selected(587).space.PX_12 };
     items6[1] = obj21;
     obj20.style = items6;
-    const tmp2Result2 = tmp2(12444);
-    obj20.children = tmp2(12444).perfNodeSections(node).map((item) => {
+    const tmp2Result2 = tmp2(12474);
+    obj20.children = tmp2(12474).perfNodeSections(node).map((item) => {
       ({ title, rows } = item);
       let obj = { style: detail.detail, children: null };
       let tmp3 = null;
@@ -608,7 +608,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
             tmp4 = detail;
           }
           const obj = { style: detailLine, children: null };
-          const items = [closure_2_8(node(5216).Text, { variant: "text-xs/semibold", color: "text-muted", children: label }), closure_2_8(node(5216).Text, { variant: "text-xs/normal", color: "text-default", style: tmp4.operation, selectable: true, children: children.value })];
+          const items = [closure_2_8(node(5220).Text, { variant: "text-xs/semibold", color: "text-muted", children: label }), closure_2_8(node(5220).Text, { variant: "text-xs/normal", color: "text-default", style: tmp4.operation, selectable: true, children: children.value })];
           obj.children = items;
           return closure_2_9(closure_2_6, obj, label);
         })
@@ -620,7 +620,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       return React6(timestampProducer, obj, title);
     });
     tmp13Result6 = tmp13(closure_6, obj20);
-    const perfNodeSectionsResult = tmp2(12444).perfNodeSections(node);
+    const perfNodeSectionsResult = tmp2(12474).perfNodeSections(node);
   }
   items4[2] = tmp13Result6;
   obj2.children = items4;
@@ -899,13 +899,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   const cResult = toggle(576).c(64);
   trace = trace.trace;
   const tmp4 = closure_11();
-  toggle = selectedKey(12447)(trace);
+  toggle = selectedKey(12477)(trace);
   if (cResult[0] !== trace) {
-    const perfTraceExtentResult = tmp(10692).perfTraceExtent(trace);
+    const perfTraceExtentResult = tmp(10704).perfTraceExtent(trace);
     cResult[0] = trace;
     cResult[1] = perfTraceExtentResult;
     selectedKey = perfTraceExtentResult;
-    const tmpResult = tmp(10692);
+    const tmpResult = tmp(10704);
   } else {
     selectedKey = cResult[1];
   }
@@ -923,17 +923,17 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       let tmp9 = cResult[6];
     }
     if (cResult[7] !== trace) {
-      const perfTraceDurationResult = tmp(12444).perfTraceDuration(trace);
+      const perfTraceDurationResult = tmp(12474).perfTraceDuration(trace);
       cResult[7] = trace;
       cResult[8] = perfTraceDurationResult;
       let tmp10 = perfTraceDurationResult;
-      const tmpResult4 = tmp(12444);
+      const tmpResult4 = tmp(12474);
     } else {
       tmp10 = cResult[8];
     }
     if (cResult[9] !== tmp10) {
       let obj3 = { variant: "text-md/semibold", color: "text-strong", children: tmp10 };
-      const tmp14 = closure_8(tmp(5216).Text, obj3);
+      const tmp14 = closure_8(tmp(5220).Text, obj3);
       cResult[9] = tmp10;
       cResult[10] = tmp14;
       let tmp12 = tmp14;
@@ -941,17 +941,17 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       tmp12 = cResult[10];
     }
     if (cResult[11] !== trace) {
-      const perfTraceSummaryResult = tmp(12444).perfTraceSummary(trace);
+      const perfTraceSummaryResult = tmp(12474).perfTraceSummary(trace);
       cResult[11] = trace;
       cResult[12] = perfTraceSummaryResult;
       let tmp15 = perfTraceSummaryResult;
-      const tmpResult5 = tmp(12444);
+      const tmpResult5 = tmp(12474);
     } else {
       tmp15 = cResult[12];
     }
     if (cResult[13] !== tmp15) {
       const obj4 = { variant: "text-sm/normal", color: "text-muted", children: tmp15 };
-      const tmp19 = closure_8(tmp(5216).Text, obj4);
+      const tmp19 = closure_8(tmp(5220).Text, obj4);
       cResult[13] = tmp15;
       cResult[14] = tmp19;
       let tmp17 = tmp19;
@@ -964,7 +964,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
         const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const _HermesInternal = HermesInternal;
         obj5.children = "Started by " + trace.started_by.trace_name;
-        tmp21 = closure_8(tmp(5216).Text, obj5);
+        tmp21 = closure_8(tmp(5220).Text, obj5);
       }
       cResult[15] = trace.started_by;
       cResult[16] = tmp21;
@@ -977,9 +977,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       if (0 !== trace.dropped) {
         const obj6 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
         const _HermesInternal2 = HermesInternal;
-        obj6.children = "" + tmp(12444).formatSpanCount(trace.dropped) + " not recorded";
-        tmp25 = closure_8(tmp(5216).Text, obj6);
-        const tmpResult6 = tmp(12444);
+        obj6.children = "" + tmp(12474).formatSpanCount(trace.dropped) + " not recorded";
+        tmp25 = closure_8(tmp(5220).Text, obj6);
+        const tmpResult6 = tmp(12474);
       }
       cResult[17] = trace.dropped;
       cResult[18] = tmp25;
@@ -1005,7 +1005,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
             }
             if (cResult[27] !== toggle.reset) {
               const obj8 = { size: "sm", variant: "secondary", text: "Time sinks", onPress: toggle.reset };
-              const tmp38 = closure_8(tmp(5226).Button, obj8);
+              const tmp38 = closure_8(tmp(5230).Button, obj8);
               cResult[27] = toggle.reset;
               cResult[28] = tmp38;
               let tmp36 = tmp38;
@@ -1014,7 +1014,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
             }
             if (cResult[29] !== toggle.expandAll) {
               const obj9 = { size: "sm", variant: "secondary", text: "Expand all", onPress: toggle.expandAll };
-              const tmp41 = closure_8(tmp(5226).Button, obj9);
+              const tmp41 = closure_8(tmp(5230).Button, obj9);
               cResult[29] = toggle.expandAll;
               cResult[30] = tmp41;
               let tmp39 = tmp41;
@@ -1023,7 +1023,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
             }
             if (cResult[31] !== toggle.collapseAll) {
               const obj10 = { size: "sm", variant: "secondary", text: "Collapse all", onPress: toggle.collapseAll };
-              const tmp44 = closure_8(tmp(5226).Button, obj10);
+              const tmp44 = closure_8(tmp(5230).Button, obj10);
               cResult[31] = toggle.collapseAll;
               cResult[32] = tmp44;
               let tmp42 = tmp44;
@@ -1038,7 +1038,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
                   }
                   const _Symbol = Symbol;
                   if (cResult[38] === Symbol.for("react.memo_cache_sentinel")) {
-                    const tmp53 = closure_8(tmp(5216).Text, { variant: "text-xs/normal", color: "text-muted", children: "Long-press a span to expand everything under it." });
+                    const tmp53 = closure_8(tmp(5220).Text, { variant: "text-xs/normal", color: "text-muted", children: "Long-press a span to expand everything under it." });
                     cResult[38] = tmp53;
                     let tmp51 = tmp53;
                   } else {
@@ -1306,16 +1306,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
     const obj9 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
     obj9.children = "Started by " + trace.started_by.trace_name;
-    tmp8Result = closure_8(tmp4(5216).Text, obj9);
+    tmp8Result = closure_8(tmp4(5220).Text, obj9);
   }
   items1[2] = tmp8Result;
   let tmp8Result2 = null;
   if (0 !== trace.dropped) {
     const obj10 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.children = "" + tmp4(12444).formatSpanCount(trace.dropped) + " not recorded";
-    tmp8Result2 = closure_8(tmp4(5216).Text, obj10);
-    const tmp4Result = tmp4(12444);
+    obj10.children = "" + tmp4(12474).formatSpanCount(trace.dropped) + " not recorded";
+    tmp8Result2 = closure_8(tmp4(5220).Text, obj10);
+    const tmp4Result = tmp4(12474);
   }
   items1[3] = tmp8Result2;
   obj4.children = items1;
@@ -1330,7 +1330,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   obj15.children = rows.map((kind) => {
     if ("node" === kind.kind) {
       const obj3 = { node: kind.node, extent, collapsed: null, selected: null, onSelect: null, onToggle: null, onExpandSubtree: null };
-      collapsed = closure_0.collapsed;
+      const collapsed = closure_0.collapsed;
       obj3.collapsed = collapsed.has(kind.key);
       obj3.selected = kind.key === closure_0.selectedKey;
       ({ select: obj2.onSelect, toggle: obj2.onToggle, expandSubtree: obj2.onExpandSubtree } = closure_0);
@@ -1368,7 +1368,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
     if (null == stateFromStores) {
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        Text = Text(5216).Text;
+        Text = Text(5220).Text;
         tmp = closure_8(Text, { variant: "text-sm/normal", color: "text-muted", children: "This trace is no longer available." });
         cResult[5] = tmp;
       }
@@ -1404,7 +1404,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerfTr
   const items1 = [projectId, traceId];
   const stateFromStores = projectId(504).useStateFromStores(items, () => ConjureDebugStore.getTimingTrace(projectId, traceId), items1);
   if (null == stateFromStores) {
-    let tmp6 = closure_8(projectId(5216).Text, { variant: "text-sm/normal", color: "text-muted", children: "This trace is no longer available." });
+    let tmp6 = closure_8(projectId(5220).Text, { variant: "text-sm/normal", color: "text-muted", children: "This trace is no longer available." });
   } else {
     const obj2 = { trace: stateFromStores };
     tmp6 = closure_8(closure_15, obj2);
@@ -1435,10 +1435,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     const stateFromStores = tmp(504).useStateFromStores(first, tmp6, tmp7);
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const headerCloseButton = tmp(6903).getHeaderCloseButton(() => traceId(dependencyMap[21]).pop());
+      const headerCloseButton = tmp(6910).getHeaderCloseButton(() => traceId(dependencyMap[21]).pop());
       cResult[5] = headerCloseButton;
       let tmp9 = headerCloseButton;
-      const tmpResult2 = tmp(6903);
+      const tmpResult2 = tmp(6910);
     } else {
       tmp9 = cResult[5];
     }
@@ -1452,7 +1452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         }
         if (cResult[12] !== tmp12) {
           const obj2 = { initialRouteName: perf_trace, screens: tmp12 };
-          const tmp17 = closure_8(tmp(11096).Modal, obj2);
+          const tmp17 = closure_8(tmp(11113).Modal, obj2);
           cResult[12] = tmp12;
           cResult[13] = tmp17;
           let tmp14 = tmp17;

@@ -1,35 +1,33 @@
-// === Module 12874: CheckpointServersStatsScreen ===
+// === Module 12907: CheckpointServersStatsScreen ===
 
-// Module 12874 (CheckpointServersStatsScreen)
+// Module 12907 (CheckpointServersStatsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
 import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import GuildIcon from "GuildIcon" /* 6862 */;
-import ChatIcon from "ChatIcon" /* 8518 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11574 */;
-import CheckpointTextDefault from "CheckpointText" /* 12861 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 12863 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12866 */;
-import _modDef12869 from "module_12869" /* 12869 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 12875 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import GuildIcon from "GuildIcon" /* 6869 */;
+import CheckpointTextDefault from "CheckpointText" /* 12893 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 12895 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 12898 */;
+import _modDef12903 from "module_12903" /* 12903 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 12908 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 12909 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12843 */;
+import CheckpointStore from "CheckpointStore" /* 12875 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(5995);
+const CheckpointConstants = fn(6002);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
-let obj2 = { container: { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, globalContainer: null, header: null, heading: null, globalHeading: null, globe: null, title: null, titleText: null, guilds: null, globalGuilds: null, guildCard: null, guildContent: null, guildRankRow: null, guildDetails: null, guildName: null, guildStats: null, guildStat: null, guildStatText: null, topGuildIcon: null, guildIcon: null, globalGuildIcon: null };
+const createStyles = fn(4969);
+let obj2 = { container: { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, globalContainer: null, header: null, heading: null, globalHeading: null, globe: null, title: null, titleText: null, guilds: null, globalGuilds: null, guildCard: null, guildContent: null, guildRankRow: null, guildDetails: null, guildName: null, topGuildIcon: null, guildIcon: null, globalGuildIcon: null };
 let obj3 = { width: "100%", flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.globalContainer = { justifyContent: "flex-start", gap: nativeDefault.space.PX_24 };
 let obj4 = { justifyContent: "flex-start", gap: nativeDefault.space.PX_24 };
@@ -54,11 +52,6 @@ obj2.guildRankRow = { flexDirection: "row" };
 let obj12 = { flex: 1, alignSelf: "stretch", gap: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_12 };
 obj2.guildDetails = { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.guildName = { color: CHECKPOINT_WHITE };
-let obj13 = { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_12 };
-obj2.guildStats = { flexDirection: "row", flexWrap: "wrap", columnGap: nativeDefault.space.PX_16 };
-let obj14 = { flexDirection: "row", flexWrap: "wrap", columnGap: nativeDefault.space.PX_16 };
-obj2.guildStat = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj2.guildStatText = { fontSize: 16, lineHeight: 20 };
 let size = { width: 96, height: 96, borderRadius: nativeDefault.radii.none };
 obj2.topGuildIcon = size;
 const size1 = { width: 72, height: 72, borderRadius: nativeDefault.radii.none };
@@ -67,8 +60,8 @@ const size2 = { width: 64, height: 64, borderRadius: nativeDefault.radii.none };
 obj2.globalGuildIcon = size2;
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);
-let obj15 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-let ReactCompilerGating = fn(558);
+let obj13 = { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_12 };
+const ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildCard(arg0) {
   const cResult = c.c(23);
   ({ guild, rank, iconStyle, children } = arg0);
@@ -186,170 +179,6 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildCa
   obj.children = items2;
   return React5(View, obj);
 });
-ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildStats(arg0) {
-  const cResult = c.c(38);
-  ({ numVoiceMinutes: guildStats, numMessagesSent } = arg0);
-  const tmp4 = closure_8();
-  if (cResult[0] === numMessagesSent) {
-    if (cResult[1] === guildStats) {
-      if (cResult[2] === tmp4.guildStat) {
-        if (cResult[3] === tmp4.guildStatText) {
-          if (cResult[4] === tmp4.guildStats) {
-            const _HermesInternal = HermesInternal;
-            const combined = "" + cResult[8] + " " + cResult[9];
-            const _Symbol = Symbol;
-            if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj2 = { size: "xs", color: CHECKPOINT_PRIMARY };
-              const tmp39 = timestampProducer(ChatIcon.ChatIcon, obj2);
-              cResult[23] = tmp39;
-              let tmp36 = tmp39;
-            } else {
-              tmp36 = cResult[23];
-            }
-            if (cResult[24] === cResult[7]) {
-              if (cResult[25] === tmp4.guildStatText) {
-                let tmp40 = cResult[26];
-              }
-              if (cResult[27] === tmp5) {
-                if (cResult[28] === tmp4.guildStat) {
-                  if (cResult[29] === tmp8) {
-                    if (cResult[30] === combined) {
-                      if (cResult[31] === tmp40) {
-                        let tmp44 = cResult[32];
-                      }
-                      if (cResult[33] === tmp6) {
-                        if (cResult[34] === tmp9) {
-                          if (cResult[35] === tmp10) {
-                            if (cResult[36] === tmp44) {
-                              let tmp47 = cResult[37];
-                            }
-                            return tmp47;
-                          }
-                        }
-                      }
-                      const obj3 = { style: tmp9, children: null };
-                      const items = [tmp10, tmp44];
-                      obj3.children = items;
-                      const tmp49 = React5(tmp6, obj3);
-                      cResult[33] = tmp6;
-                      cResult[34] = tmp9;
-                      cResult[35] = tmp10;
-                      cResult[36] = tmp44;
-                      cResult[37] = tmp49;
-                      tmp47 = tmp49;
-                    }
-                  }
-                }
-              }
-              const obj4 = { accessible: tmp8, accessibilityLabel: combined, style: tmp4.guildStat, children: null };
-              const items1 = [tmp36, tmp40];
-              obj4.children = items1;
-              const tmp46 = React5(tmp5, obj4);
-              cResult[27] = tmp5;
-              cResult[28] = tmp4.guildStat;
-              cResult[29] = tmp8;
-              cResult[30] = combined;
-              cResult[31] = tmp40;
-              cResult[32] = tmp46;
-              tmp44 = tmp46;
-            }
-            const obj5 = { variant: "experimental/mono-md/bold", style: tmp4.guildStatText, children: cResult[7] };
-            const tmp43 = timestampProducer(CheckpointTextDefault, obj5);
-            cResult[24] = cResult[7];
-            cResult[25] = tmp4.guildStatText;
-            cResult[26] = tmp43;
-            tmp40 = tmp43;
-          }
-        }
-      }
-    }
-  }
-  const rounded = Math.round(guildStats);
-  if (cResult[13] !== numMessagesSent) {
-    const _Math = Math;
-    const rounded1 = Math.round(numMessagesSent);
-    cResult[13] = numMessagesSent;
-    cResult[14] = rounded1;
-    let tmp12 = rounded1;
-  } else {
-    tmp12 = cResult[14];
-  }
-  const intl = util.intl;
-  const intl2 = util.intl;
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef3056.UZbUtl, { numMinutes: rounded });
-  const guildStats2 = tmp4.guildStats;
-  const combined1 = "" + rounded + " " + formatToPlainStringResult.toLocaleLowerCase();
-  if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj6 = { size: "xs", color: CHECKPOINT_PRIMARY };
-    const tmp20 = timestampProducer(MicrophoneIcon.MicrophoneIcon, obj6);
-    cResult[15] = tmp20;
-    let tmp17 = tmp20;
-  } else {
-    tmp17 = cResult[15];
-  }
-  if (cResult[16] === tmp4.guildStatText) {
-    if (cResult[17] === rounded) {
-      let tmp21 = cResult[18];
-    }
-    if (cResult[19] === tmp4.guildStat) {
-      if (cResult[20] === combined1) {
-        if (cResult[21] === tmp21) {
-          let tmp23 = cResult[22];
-        }
-        const toLocaleLowerCaseResult = stringResult.toLocaleLowerCase();
-        cResult[0] = numMessagesSent;
-        cResult[1] = guildStats;
-        cResult[2] = tmp4.guildStat;
-        ({ guildStatText: tmp3[3], guildStats } = tmp4);
-        cResult[4] = guildStats;
-        cResult[5] = View;
-        cResult[6] = View;
-        cResult[7] = tmp12;
-        cResult[8] = tmp12;
-        cResult[9] = toLocaleLowerCaseResult;
-        cResult[10] = true;
-        cResult[11] = guildStats2;
-        cResult[12] = tmp23;
-      }
-    }
-    const obj7 = { accessible: true, accessibilityLabel: combined1, style: tmp4.guildStat, children: null };
-    const items2 = [tmp17, tmp21];
-    obj7.children = items2;
-    const tmp25 = React5(View, obj7);
-    cResult[19] = tmp4.guildStat;
-    cResult[20] = combined1;
-    cResult[21] = tmp21;
-    cResult[22] = tmp25;
-    tmp23 = tmp25;
-  }
-  const tmp22 = timestampProducer(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp4.guildStatText, children: rounded });
-  cResult[16] = tmp4.guildStatText;
-  cResult[17] = rounded;
-  cResult[18] = tmp22;
-  tmp21 = tmp22;
-  const obj8 = { variant: "experimental/mono-md/bold", style: tmp4.guildStatText, children: rounded };
-  stringResult = intl2.string(_modDef3056.wWKySP);
-}) : (function GuildStats(arg0) {
-  ({ numVoiceMinutes, numMessagesSent } = arg0);
-  const tmp = closure_8();
-  const rounded = Math.round(numVoiceMinutes);
-  const rounded1 = Math.round(numMessagesSent);
-  const intl = util.intl;
-  const intl2 = util.intl;
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef3056.UZbUtl, { numMinutes: rounded });
-  const obj = { style: tmp.guildStats, children: null };
-  const obj2 = { accessible: true, accessibilityLabel: "" + rounded + " " + formatToPlainStringResult.toLocaleLowerCase(), style: tmp.guildStat, children: null };
-  const items = [timestampProducer(MicrophoneIcon.MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), timestampProducer(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.guildStatText, children: rounded })];
-  obj2.children = items;
-  const items1 = [React5(View, obj2), ];
-  const obj5 = { accessible: true, accessibilityLabel: "" + rounded1 + " " + intl2.string(_modDef3056.wWKySP).toLocaleLowerCase(), style: tmp.guildStat, children: null };
-  const items2 = [timestampProducer(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), timestampProducer(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.guildStatText, children: rounded1 })];
-  obj5.children = items2;
-  items1[1] = React5(View, obj5);
-  obj.children = items1;
-  return React5(View, obj);
-});
 size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/CheckpointServersStatsScreen.tsx");
 
@@ -396,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       ({ container, header, heading, title } = tmp4);
       if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-        const tmp12 = closure_6(tmp(9603).ServerIcon, obj2);
+        const tmp12 = closure_6(tmp(9615).ServerIcon, obj2);
         cResult[26] = tmp12;
         let tmp9 = tmp12;
       } else {
@@ -468,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                             return tmp49;
                           }
                         }
-                        class K {
+                        class B {
                           constructor(arg0, arg1) {
                             ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
                             tmp = 0 === arg1;
@@ -478,8 +307,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                             obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
                             tmp3 = GuildCard;
                             if (tmp) {
-                              tmp6 = null;
-                              tmp5 = GuildStats;
+                              tmp5 = closure_1;
+                              tmp6 = closure_2;
+                              tmp8 = null;
+                              tmp7 = closure_1(closure_2[18]);
                               if (numMessagesSent == null) {
                                 numMessagesSent = 0;
                               }
@@ -489,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                                 numVoiceMinutes = 0;
                               }
                               obj1.numVoiceMinutes = numVoiceMinutes;
-                              tmp = tmp2(tmp5, obj1);
+                              tmp = tmp2(tmp7, obj1);
                             }
                             obj.children = tmp;
                             return tmp2(tmp3, obj, guild.id);
@@ -507,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                         cResult[56] = tmp54;
                         tmp49 = tmp54;
                       }
-                      class K {
+                      class B {
                         constructor(arg0, arg1) {
                           ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
                           tmp = 0 === arg1;
@@ -517,8 +348,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                           obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
                           tmp3 = GuildCard;
                           if (tmp) {
-                            tmp6 = null;
-                            tmp5 = GuildStats;
+                            tmp5 = closure_1;
+                            tmp6 = closure_2;
+                            tmp8 = null;
+                            tmp7 = closure_1(closure_2[18]);
                             if (numMessagesSent == null) {
                               numMessagesSent = 0;
                             }
@@ -528,7 +361,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                               numVoiceMinutes = 0;
                             }
                             obj1.numVoiceMinutes = numVoiceMinutes;
-                            tmp = tmp2(tmp5, obj1);
+                            tmp = tmp2(tmp7, obj1);
                           }
                           obj.children = tmp;
                           return tmp2(tmp3, obj, guild.id);
@@ -548,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                     let tmp43 = cResult[49];
                   }
                   const mapped = topGuildIcon.map(tmp43);
-                  class K {
+                  class B {
                     constructor(arg0, arg1) {
                       ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
                       tmp = 0 === arg1;
@@ -558,8 +391,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                       obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
                       tmp3 = GuildCard;
                       if (tmp) {
-                        tmp6 = null;
-                        tmp5 = GuildStats;
+                        tmp5 = closure_1;
+                        tmp6 = closure_2;
+                        tmp8 = null;
+                        tmp7 = closure_1(closure_2[18]);
                         if (numMessagesSent == null) {
                           numMessagesSent = 0;
                         }
@@ -569,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                           numVoiceMinutes = 0;
                         }
                         obj1.numVoiceMinutes = numVoiceMinutes;
-                        tmp = tmp2(tmp5, obj1);
+                        tmp = tmp2(tmp7, obj1);
                       }
                       obj.children = tmp;
                       return tmp2(tmp3, obj, guild.id);
@@ -579,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                   cResult[45] = topGuildIcon;
                   cResult[46] = mapped;
                 }
-                class K {
+                class B {
                   constructor(arg0, arg1) {
                     ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
                     tmp = 0 === arg1;
@@ -589,8 +424,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                     obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
                     tmp3 = GuildCard;
                     if (tmp) {
-                      tmp6 = null;
-                      tmp5 = GuildStats;
+                      tmp5 = closure_1;
+                      tmp6 = closure_2;
+                      tmp8 = null;
+                      tmp7 = closure_1(closure_2[18]);
                       if (numMessagesSent == null) {
                         numMessagesSent = 0;
                       }
@@ -600,7 +437,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                         numVoiceMinutes = 0;
                       }
                       obj1.numVoiceMinutes = numVoiceMinutes;
-                      tmp = tmp2(tmp5, obj1);
+                      tmp = tmp2(tmp7, obj1);
                     }
                     obj.children = tmp;
                     return tmp2(tmp3, obj, guild.id);
@@ -608,8 +445,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 }
                 cResult[47] = tmp4.guildIcon;
                 cResult[48] = tmp4.topGuildIcon;
-                cResult[49] = K;
-                tmp43 = K;
+                cResult[49] = B;
+                tmp43 = B;
               }
               const obj8 = { style: header, children: null };
               const items2 = [tmp28, tmp32];
@@ -654,7 +491,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     }
     if (cResult[5] !== tmp4.globe) {
       const obj12 = { uri: null, style: null };
-      class K {
+      class B {
         constructor(arg0, arg1) {
           ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
           tmp = 0 === arg1;
@@ -664,8 +501,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
           tmp3 = GuildCard;
           if (tmp) {
-            tmp6 = null;
-            tmp5 = GuildStats;
+            tmp5 = closure_1;
+            tmp6 = closure_2;
+            tmp8 = null;
+            tmp7 = closure_1(closure_2[18]);
             if (numMessagesSent == null) {
               numMessagesSent = 0;
             }
@@ -675,13 +514,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
               numVoiceMinutes = 0;
             }
             obj1.numVoiceMinutes = numVoiceMinutes;
-            tmp = tmp2(tmp5, obj1);
+            tmp = tmp2(tmp7, obj1);
           }
           obj.children = tmp;
           return tmp2(tmp3, obj, guild.id);
         }
       }
-      obj12.uri = _modDef12869;
+      obj12.uri = _modDef12903;
       obj12.style = tmp4.globe;
       const tmp60 = closure_6(tmp59, obj12);
       cResult[5] = tmp4.globe;
@@ -691,7 +530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       tmp56 = cResult[6];
     }
     const _Symbol4 = Symbol;
-    class K {
+    class B {
       constructor(arg0, arg1) {
         ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
         tmp = 0 === arg1;
@@ -701,8 +540,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
         tmp3 = GuildCard;
         if (tmp) {
-          tmp6 = null;
-          tmp5 = GuildStats;
+          tmp5 = closure_1;
+          tmp6 = closure_2;
+          tmp8 = null;
+          tmp7 = closure_1(closure_2[18]);
           if (numMessagesSent == null) {
             numMessagesSent = 0;
           }
@@ -712,7 +553,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
             numVoiceMinutes = 0;
           }
           obj1.numVoiceMinutes = numVoiceMinutes;
-          tmp = tmp2(tmp5, obj1);
+          tmp = tmp2(tmp7, obj1);
         }
         obj.children = tmp;
         return tmp2(tmp3, obj, guild.id);
@@ -720,7 +561,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     }
     if (tmp61 === Symbol.for("react.memo_cache_sentinel")) {
       const obj13 = { variant: "display-lg", children: null };
-      class K {
+      class B {
         constructor(arg0, arg1) {
           ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
           tmp = 0 === arg1;
@@ -730,8 +571,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
           tmp3 = GuildCard;
           if (tmp) {
-            tmp6 = null;
-            tmp5 = GuildStats;
+            tmp5 = closure_1;
+            tmp6 = closure_2;
+            tmp8 = null;
+            tmp7 = closure_1(closure_2[18]);
             if (numMessagesSent == null) {
               numMessagesSent = 0;
             }
@@ -741,7 +584,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
               numVoiceMinutes = 0;
             }
             obj1.numVoiceMinutes = numVoiceMinutes;
-            tmp = tmp2(tmp5, obj1);
+            tmp = tmp2(tmp7, obj1);
           }
           obj.children = tmp;
           return tmp2(tmp3, obj, guild.id);
@@ -762,7 +605,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           let tmp67 = cResult[11];
         }
         const _Symbol5 = Symbol;
-        class K {
+        class B {
           constructor(arg0, arg1) {
             ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
             tmp = 0 === arg1;
@@ -772,8 +615,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
             obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
             tmp3 = GuildCard;
             if (tmp) {
-              tmp6 = null;
-              tmp5 = GuildStats;
+              tmp5 = closure_1;
+              tmp6 = closure_2;
+              tmp8 = null;
+              tmp7 = closure_1(closure_2[18]);
               if (numMessagesSent == null) {
                 numMessagesSent = 0;
               }
@@ -783,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 numVoiceMinutes = 0;
               }
               obj1.numVoiceMinutes = numVoiceMinutes;
-              tmp = tmp2(tmp5, obj1);
+              tmp = tmp2(tmp7, obj1);
             }
             obj.children = tmp;
             return tmp2(tmp3, obj, guild.id);
@@ -809,7 +654,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                   return tmp82;
                 }
               }
-              class K {
+              class B {
                 constructor(arg0, arg1) {
                   ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
                   tmp = 0 === arg1;
@@ -819,8 +664,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                   obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
                   tmp3 = GuildCard;
                   if (tmp) {
-                    tmp6 = null;
-                    tmp5 = GuildStats;
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    tmp8 = null;
+                    tmp7 = closure_1(closure_2[18]);
                     if (numMessagesSent == null) {
                       numMessagesSent = 0;
                     }
@@ -830,7 +677,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                       numVoiceMinutes = 0;
                     }
                     obj1.numVoiceMinutes = numVoiceMinutes;
-                    tmp = tmp2(tmp5, obj1);
+                    tmp = tmp2(tmp7, obj1);
                   }
                   obj.children = tmp;
                   return tmp2(tmp3, obj, guild.id);
@@ -848,7 +695,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
               cResult[25] = tmp87;
               tmp82 = tmp87;
             }
-            class K {
+            class B {
               constructor(arg0, arg1) {
                 ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
                 tmp = 0 === arg1;
@@ -858,8 +705,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
                 tmp3 = GuildCard;
                 if (tmp) {
-                  tmp6 = null;
-                  tmp5 = GuildStats;
+                  tmp5 = closure_1;
+                  tmp6 = closure_2;
+                  tmp8 = null;
+                  tmp7 = closure_1(closure_2[18]);
                   if (numMessagesSent == null) {
                     numMessagesSent = 0;
                   }
@@ -869,7 +718,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                     numVoiceMinutes = 0;
                   }
                   obj1.numVoiceMinutes = numVoiceMinutes;
-                  tmp = tmp2(tmp5, obj1);
+                  tmp = tmp2(tmp7, obj1);
                 }
                 obj.children = tmp;
                 return tmp2(tmp3, obj, guild.id);
@@ -882,7 +731,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
             cResult[21] = tmp81;
             tmp79 = tmp81;
           }
-          class K {
+          class B {
             constructor(arg0, arg1) {
               ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
               tmp = 0 === arg1;
@@ -892,8 +741,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
               obj.iconStyle = tmp ? tmp4.topGuildIcon : tmp4.guildIcon;
               tmp3 = GuildCard;
               if (tmp) {
-                tmp6 = null;
-                tmp5 = GuildStats;
+                tmp5 = closure_1;
+                tmp6 = closure_2;
+                tmp8 = null;
+                tmp7 = closure_1(closure_2[18]);
                 if (numMessagesSent == null) {
                   numMessagesSent = 0;
                 }
@@ -903,7 +754,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                   numVoiceMinutes = 0;
                 }
                 obj1.numVoiceMinutes = numVoiceMinutes;
-                tmp = tmp2(tmp5, obj1);
+                tmp = tmp2(tmp7, obj1);
               }
               obj.children = tmp;
               return tmp2(tmp3, obj, guild.id);
@@ -975,7 +826,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       const obj5 = { style: tmp.heading, children: null };
       const obj6 = { style: tmp.title, children: null };
       const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const items1 = [closure_6(tmp2(9603).ServerIcon, obj7), ];
+      const items1 = [closure_6(tmp2(9615).ServerIcon, obj7), ];
       const obj8 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
       const tmp16 = CheckpointScreenDefault;
       const intl3 = tmp2(1128).intl;
@@ -1014,7 +865,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                   numVoiceMinutes = 0;
                 }
                 obj2.numVoiceMinutes = numVoiceMinutes;
-                tmp = timestampProducer(closure_10, obj2);
+                tmp = timestampProducer(CheckpointGuildStatsDefault, obj2);
               }
               obj.children = tmp;
               return timestampProducer(closure_9, obj, guild.id);
@@ -1036,7 +887,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   let obj = require("initialize");
   const obj15 = { uri: null, style: null };
   const tmp6 = CheckpointScreenDefault;
-  obj15.uri = _modDef12869;
+  obj15.uri = _modDef12903;
   obj15.style = tmp.globe;
   const items6 = [closure_6(CheckpointApngPlayerDefault, obj15), ];
   const obj16 = { variant: "display-lg", children: null };

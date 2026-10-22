@@ -1,11 +1,11 @@
-// === Module 10093: gif_picker/GIFPickerUtils ===
+// === Module 10105: gif_picker/GIFPickerUtils ===
 
-// Module 10093 (gif_picker/GIFPickerUtils)
+// Module 10105 (gif_picker/GIFPickerUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9676 */;
-import FavoriteGIFHooks from "FavoriteGIFHooks" /* 10094 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9688 */;
+import FavoriteGIFHooks from "FavoriteGIFHooks" /* 10106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -95,9 +95,9 @@ export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled(
   cResult[2] = tmp5;
   tmp4 = tmp5;
 }) : (function useFavoriteGIFsMobile() {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(10094).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  sortedFavoriteGIFs = sortedFavoriteGIFs(10106).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(10094);
+  let obj = sortedFavoriteGIFs(10106);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {

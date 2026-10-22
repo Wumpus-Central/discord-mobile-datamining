@@ -1,6 +1,6 @@
-// === Module 8966: GuildSettingsStore ===
+// === Module 8975: GuildSettingsStore ===
 
-// Module 8966 (GuildSettingsStore)
+// Module 8975 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -12,18 +12,18 @@ import ChannelRecord from "ChannelRecord" /* 4825 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
 import PlainRecord from "PlainRecord" /* 4836 */;
 import GuildRecord from "GuildRecord" /* 4839 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8967 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8968 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 8970 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8971 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8972 */;
-import GuildProfileStore from "GuildProfileStore" /* 8945 */;
-import InviteRecord from "InviteRecord" /* 8827 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8976 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8977 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 8979 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8980 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8981 */;
+import GuildProfileStore from "GuildProfileStore" /* 8954 */;
+import InviteRecord from "InviteRecord" /* 8836 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;
 import Constants from "Constants" /* 1087 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8382 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8391 */;
 import size from "module_2" /* 2 */;
 
 function handleFormInit(type) {

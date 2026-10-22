@@ -1,14 +1,14 @@
-// === Module 13771: useConjureAppProject ===
+// === Module 13807: useConjureAppProject ===
 
-// Module 13771 (useConjureAppProject)
-import ConjureActionCreators from "ConjureActionCreators" /* 10678 */;
+// Module 13807 (useConjureAppProject)
+import ConjureActionCreators from "ConjureActionCreators" /* 10690 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const canRemixProject = fn(6752).canRemixProject;
+const canRemixProject = fn(6759).canRemixProject;
 const ConjureAppHoverCard = "ConjureAppHoverCard";
 const ReactCompilerGating = fn(558);
 const size = fn(2);

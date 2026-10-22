@@ -1,9 +1,9 @@
-// === Module 9612: CommandPermissionContext ===
+// === Module 9624: CommandPermissionContext ===
 
-// Module 9612 (CommandPermissionContext)
+// Module 9624 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import Server from "Server" /* 2000 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7293 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7300 */;
 import noop from "module_19" /* 19 */;
 import ImpersonateStore from "ImpersonateStore" /* 4874 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

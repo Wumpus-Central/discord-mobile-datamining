@@ -1,16 +1,16 @@
-// === Module 17892: SearchFilterSuggestions ===
+// === Module 17962: SearchFilterSuggestions ===
 
-// Module 17892 (SearchFilterSuggestions)
+// Module 17962 (SearchFilterSuggestions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5020 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import spring from "spring" /* 5229 */;
-import springPresets from "springPresets" /* 5230 */;
-import TableRow from "TableRow" /* 6882 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13106 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 17893 */;
+import native from "native" /* 5023 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import spring from "spring" /* 5233 */;
+import springPresets from "springPresets" /* 5234 */;
+import TableRow from "TableRow" /* 6889 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13142 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 17963 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -22,9 +22,9 @@ function getSuggestionsKey(arr) {
 }
 let closure_3 = ["text", "searchTokenType", "onPress"];
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9671).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9683).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
@@ -509,12 +509,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(17887).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(17957).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(17887);
-  const validFilterTokens = searchContext(17896).useValidFilterTokens(searchContext);
+  let obj = searchContext(17957);
+  const validFilterTokens = searchContext(17966).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -552,7 +552,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(17896);
+  let obj2 = searchContext(17966);
   const fn = function _() {
     return dismissed.get();
   };
@@ -564,8 +564,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       ReanimatedRexport.runOnJS(closure_8)(closure_18);
     }
   };
-  const obj3 = searchContext(5035);
-  fn2.__closure = { runOnJS: searchContext(5035).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
+  const obj3 = searchContext(5038);
+  fn2.__closure = { runOnJS: searchContext(5038).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
   fn2.__workletHash = 4958389658939;
   fn2.__initData = __initData6;
   const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
@@ -603,5 +603,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return memo(closure_1_11, {}, text.text);
     })}</View></closure_17>;
   }, items4);
-  return memo(searchContext(5020).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
+  return memo(searchContext(5023).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
 }));

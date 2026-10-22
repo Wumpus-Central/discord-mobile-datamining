@@ -1,12 +1,12 @@
-// === Module 13145: SmartSearchActionCreators ===
+// === Module 13181: SmartSearchActionCreators ===
 
-// Module 13145 (SmartSearchActionCreators)
+// Module 13181 (SmartSearchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13110 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13130 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13146 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13166 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13107 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 13143 */;
 
 const require = fn;
 let closure_8 = async function _fetchAnswer(arg0) {
@@ -46,7 +46,7 @@ let closure_8 = async function _fetchAnswer(arg0) {
           let channelIds;
           let requestKey;
           closure_129_8 = undefined;
-          let parentSuggestedSearch;
+          let contextualProperties;
           closure_129_10 = undefined;
           closure_129_11 = undefined;
           closure_129_12 = undefined;
@@ -81,7 +81,7 @@ let closure_8 = async function _fetchAnswer(arg0) {
                   if (!closure_130_5.hasAnswer(guildId, requestKey)) {
                     const _performance2 = performance;
                     closure_129_8 = performance.now();
-                    parentSuggestedSearch = closure_130_1(closure_130_2[8]).getParentSuggestedSearch(queryText);
+                    contextualProperties = closure_130_1(closure_130_2[8]).getContextualProperties(smartSearchQuery, closure_129_2);
                     const obj7 = closure_130_1(closure_130_2[8]);
                     const obj10 = { type: "SMART_SEARCH_FETCH_START", smartSearchQuery };
                     closure_130_1(closure_130_2[9]).dispatch(obj10);
@@ -118,7 +118,7 @@ let closure_8 = async function _fetchAnswer(arg0) {
           const obj13 = { type: "SMART_SEARCH_FETCH_FAILURE", smartSearchQuery, status: closure_129_14 };
           closure_130_1(closure_130_2[9]).dispatch(obj13);
           const obj2 = closure_130_1(closure_130_2[9]);
-          const obj14 = { smartSearchQuery, requestId: null, durationMs: null, responseStatus: null, smartSearchStatus: null, answerText: "", citations: null, parentSuggestedSearch: null };
+          const obj14 = { smartSearchQuery, requestId: null, durationMs: null, responseStatus: null, smartSearchStatus: null, answerText: "", citations: null, contextualProperties: null };
           const _performance = performance;
           obj14.durationMs = performance.now() - closure_129_8;
           let str = "error";
@@ -128,8 +128,8 @@ let closure_8 = async function _fetchAnswer(arg0) {
           obj14.responseStatus = str;
           obj14.smartSearchStatus = closure_129_14;
           obj14.citations = [];
-          obj14.parentSuggestedSearch = parentSuggestedSearch;
-          const result = closure_130_1(closure_130_2[8]).trackSmartSearchAnswerReturned(obj14, closure_129_2);
+          obj14.contextualProperties = contextualProperties;
+          const result = closure_130_1(closure_130_2[8]).trackSmartSearchAnswerReturned(obj14);
           const obj4 = closure_130_1(closure_130_2[8]);
         } else if (arg0 === 1) {
           c6 = 3;
@@ -145,18 +145,18 @@ let closure_8 = async function _fetchAnswer(arg0) {
           })(closure_129_10.body.message_citations);
           closure_129_12 = (function resolveSearchStatus(search_status, length) {
             if ("not_qualified" === search_status) {
-              return closure_1_0(13111).SmartSearchStatus.NOT_QUALIFIED;
+              return closure_1_0(13147).SmartSearchStatus.NOT_QUALIFIED;
             } else if ("no_results" === search_status) {
-              return closure_1_0(13111).SmartSearchStatus.EMPTY;
+              return closure_1_0(13147).SmartSearchStatus.EMPTY;
             } else if ("success" === search_status) {
               if (length > 0) {
-                let EMPTY = closure_1_0(13111).SmartSearchStatus.LOADED;
+                let EMPTY = closure_1_0(13147).SmartSearchStatus.LOADED;
               } else {
-                EMPTY = closure_1_0(13111).SmartSearchStatus.EMPTY;
+                EMPTY = closure_1_0(13147).SmartSearchStatus.EMPTY;
               }
               return EMPTY;
             } else {
-              return closure_1_0(13111).SmartSearchStatus.ERROR;
+              return closure_1_0(13147).SmartSearchStatus.ERROR;
             }
           })(closure_129_10.body.search_status, closure_129_11.length);
           const obj15 = { type: "SMART_SEARCH_FETCH_SUCCESS", smartSearchQuery, smartSearchStatus: closure_129_12, answerText: closure_129_10.body.answer_text, citations: closure_129_11, messages: null };
@@ -164,15 +164,15 @@ let closure_8 = async function _fetchAnswer(arg0) {
           obj15.messages = message_citations.map((message) => message.message);
           closure_130_1(closure_130_2[9]).dispatch(obj15);
           const obj16 = closure_130_1(closure_130_2[9]);
-          const obj17 = { smartSearchQuery, requestId: closure_129_10.body.request_id, durationMs: null, responseStatus: null, smartSearchStatus: null, answerText: null, citations: null, parentSuggestedSearch: null };
+          const obj17 = { smartSearchQuery, requestId: closure_129_10.body.request_id, durationMs: null, responseStatus: null, smartSearchStatus: null, answerText: null, citations: null, contextualProperties: null };
           const _performance3 = performance;
           obj17.durationMs = performance.now() - closure_129_8;
           obj17.responseStatus = closure_129_10.body.search_status;
           obj17.smartSearchStatus = closure_129_12;
           obj17.answerText = closure_129_10.body.answer_text;
           obj17.citations = closure_129_11;
-          obj17.parentSuggestedSearch = parentSuggestedSearch;
-          const result1 = closure_130_1(closure_130_2[8]).trackSmartSearchAnswerReturned(obj17, closure_129_2);
+          obj17.contextualProperties = contextualProperties;
+          const result1 = closure_130_1(closure_130_2[8]).trackSmartSearchAnswerReturned(obj17);
           c4 = 0;
           const obj18 = closure_130_1(closure_130_2[8]);
         }

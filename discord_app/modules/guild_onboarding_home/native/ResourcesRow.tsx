@@ -1,19 +1,19 @@
-// === Module 17836: ResourcesRow ===
+// === Module 17906: ResourcesRow ===
 
-// Module 17836 (ResourcesRow)
+// Module 17906 (ResourcesRow)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13052 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 17838 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13088 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 17908 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(17837).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(17907).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 }, channelItem: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, marginLeft: 8, paddingVertical: 8, paddingHorizontal: 12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,9 +34,9 @@ export default function ResourcesRow(guildId) {
         onPress() {
           const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(guildId, channelId.channelId);
         },
-        children: closure_1_5(guildId(5216).Text, { variant: "text-md/medium", color: "text-default", children: children.title })
+        children: closure_1_5(guildId(5220).Text, { variant: "text-md/medium", color: "text-default", children: children.title })
       };
-      return closure_1_5(guildId(6887).PressableOpacity, obj, children.channelId);
+      return closure_1_5(guildId(6894).PressableOpacity, obj, children.channelId);
     }),
 
   ];
@@ -45,7 +45,7 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17839, dependencyMap.paths), closure_4, { guildId });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17909, dependencyMap.paths), closure_4, { guildId });
         },
       children: null
     };
@@ -53,8 +53,8 @@ export default function ResourcesRow(guildId) {
     const intl = guildId(1128).intl;
     const obj4 = { count: arr.length - 2 };
     obj3.children = intl.format(guildId(1128).t.F6iMs4, obj4);
-    obj2.children = closure_5(guildId(5216).Text, obj3);
-    tmp6 = closure_5(guildId(6887).PressableOpacity, obj2);
+    obj2.children = closure_5(guildId(5220).Text, obj3);
+    tmp6 = closure_5(guildId(6894).PressableOpacity, obj2);
   }
   items[1] = tmp6;
   obj.children = items;

@@ -1,28 +1,28 @@
-// === Module 16113: UserSettingsAuthedApp ===
+// === Module 16155: UserSettingsAuthedApp ===
 
-// Module 16113 (UserSettingsAuthedApp)
+// Module 16155 (UserSettingsAuthedApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import Link from "Link" /* 1506 */;
-import RootNavigationRef from "RootNavigationRef" /* 5133 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5668 */;
-import useAlertStore from "useAlertStore" /* 5890 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7066 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7070 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7189 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7194 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7236 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8819 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10728 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13408 */;
+import RootNavigationRef from "RootNavigationRef" /* 5137 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
+import useAlertStore from "useAlertStore" /* 5897 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7073 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7077 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7196 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7201 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7243 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8828 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10740 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13444 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7182 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7189 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6690 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 
 require = fn;
@@ -30,11 +30,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1087);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(9982).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(10907).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(9994).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10924).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: { marginTop: nativeDefault.space.PX_12, display: "flex", flexDirection: "row" }, warningIcon: null };
 let size = { width: 16, height: 16, marginRight: 8, color: nativeDefault.colors.TEXT_MUTED };
 obj2.warningIcon = size;

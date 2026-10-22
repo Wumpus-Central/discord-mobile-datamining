@@ -1,10 +1,10 @@
-// === Module 12229: ConjureSecretRequestState ===
+// === Module 12252: ConjureSecretRequestState ===
 
-// Module 12229 (ConjureSecretRequestState)
+// Module 12252 (ConjureSecretRequestState)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjureChatTurns from "conjureChatTurns" /* 10658 */;
+import conjureChatTurns from "conjureChatTurns" /* 10670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -54,11 +54,11 @@ export const unmarkMcpSecretRequestSaved = function unmarkMcpSecretRequestSaved(
     set.delete(request_id);
   }
 };
-export const secretRequestStatuses = function secretRequestStatuses(memo, stateFromStores11) {
+export const secretRequestStatuses = function secretRequestStatuses(memo, secrets) {
   let set1 = null;
-  if (null != stateFromStores11) {
+  if (null != secrets) {
     const _Set = Set;
-    const found = stateFromStores11.filter((set) => set.set);
+    const found = secrets.filter((set) => set.set);
     set1 = new Set(found.map((name) => name.name));
   }
   const map = new Map();

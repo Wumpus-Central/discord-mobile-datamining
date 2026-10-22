@@ -1,14 +1,14 @@
-// === Module 10160: PlaintextResolvers ===
+// === Module 10172: PlaintextResolvers ===
 
-// Module 10160 (PlaintextResolvers)
+// Module 10172 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4919 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import SlateUtils from "SlateUtils" /* 7734 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import SlateUtils from "SlateUtils" /* 7743 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6704 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6749 */;
+import EmojiStore from "EmojiStore" /* 6711 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6756 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;

@@ -1,14 +1,14 @@
-// === Module 15611: activityInstanceConnectedParticipants ===
+// === Module 15655: activityInstanceConnectedParticipants ===
 
-// Module 15611 (activityInstanceConnectedParticipants)
-import transformUserDefault from "transformUser" /* 9222 */;
+// Module 15655 (activityInstanceConnectedParticipants)
+import transformUserDefault from "transformUser" /* 9231 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(6357);
+const Constants = fn(6364);
 let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
 items = [Constants.RPC_AUTHENTICATED_SCOPE];
 const size = fn(2);

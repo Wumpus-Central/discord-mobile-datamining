@@ -1,6 +1,6 @@
-// === Module 6478: SpotifyStore ===
+// === Module 6485: SpotifyStore ===
 
-// Module 6478 (SpotifyStore)
+// Module 6485 (SpotifyStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -9,18 +9,18 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import Timers from "Timers" /* 4816 */;
-import useIsSpeaking from "useIsSpeaking" /* 6760 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8596 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11274 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 14837 */;
+import useIsSpeaking from "useIsSpeaking" /* 6767 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8605 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11291 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 14881 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6479 */;
-import IdleStore from "IdleStore" /* 6612 */;
-import PresenceStore from "PresenceStore" /* 5694 */;
-import SpeakingStore from "SpeakingStore" /* 6664 */;
-import VoiceStateStore from "VoiceStateStore" /* 5612 */;
-import Platforms from "Platforms" /* 6481 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6486 */;
+import IdleStore from "IdleStore" /* 6619 */;
+import PresenceStore from "PresenceStore" /* 5698 */;
+import SpeakingStore from "SpeakingStore" /* 6671 */;
+import VoiceStateStore from "VoiceStateStore" /* 5616 */;
+import Platforms from "Platforms" /* 6488 */;
 
 require = fn;
 function upsertAccount(accountId, accessToken) {
@@ -484,7 +484,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8787);
+const SpotifyConstants = fn(8796);
 ({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SpotifyConstants);
 const Constants = fn(1087);
 const PlatformTypes = Constants.PlatformTypes;
@@ -574,7 +574,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11274).SpotifyAPI;
+    const SpotifyAPI = self(11291).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1160,7 +1160,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       const id1 = AuthenticationStore.getId();
       if (id1 === AuthenticationStore.getId()) {
         const result = VoiceStateStore.isCurrentClientInVoiceChannel();
-        const obj5 = { userId: id1, checkSoundSharing: true, checkSoundboardSounds: false };
+        const obj5 = { userId: id1, checkSoundSharing: true };
         if (result) {
           if (obj9.getIsSpeaking(obj5)) {
             if (null != closure_3) {
@@ -1170,7 +1170,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6760);
+        obj9 = device(6767);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1307,7 +1307,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
     userId = userId.userId;
     if (userId === AuthenticationStore.getId()) {
       const result = VoiceStateStore.isCurrentClientInVoiceChannel();
-      const obj2 = { userId, checkSoundSharing: true, checkSoundboardSounds: false };
+      const obj2 = { userId, checkSoundSharing: true };
       if (result) {
         if (obj.getIsSpeaking(obj2)) {
           if (null != c3) {
@@ -1327,7 +1327,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       userId = userId.userId;
       if (userId === id.getId()) {
         const result = currentClientInVoiceChannel.isCurrentClientInVoiceChannel();
-        const obj2 = { userId, checkSoundSharing: true, checkSoundboardSounds: false };
+        const obj2 = { userId, checkSoundSharing: true };
         if (result) {
           if (obj.getIsSpeaking(obj2)) {
             if (null != _null) {

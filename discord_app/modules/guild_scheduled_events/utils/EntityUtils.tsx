@@ -1,6 +1,6 @@
-// === Module 8852: EntityUtils ===
+// === Module 8861: EntityUtils ===
 
-// Module 8852 (EntityUtils)
+// Module 8861 (EntityUtils)
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 const GuildScheduledEventsConstants = fn(4827);

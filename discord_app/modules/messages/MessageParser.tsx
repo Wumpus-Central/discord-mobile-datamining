@@ -1,21 +1,21 @@
-// === Module 7730: MessageParser ===
+// === Module 7739: MessageParser ===
 
-// Module 7730 (MessageParser)
+// Module 7739 (MessageParser)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4797 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4919 */;
-import UserUtilsDefault from "UserUtils" /* 5015 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import MarkupRulesDefault from "MarkupRules" /* 5962 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5969 */;
-import MarkupTextRule2 from "MarkupTextRule" /* 5971 */;
-import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 7731 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7732 */;
-import IsolateString from "IsolateString" /* 7733 */;
-import EmojiStore from "EmojiStore" /* 6704 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6749 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import MarkupRulesDefault from "MarkupRules" /* 5969 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
+import MarkupTextRule2 from "MarkupTextRule" /* 5978 */;
+import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 7740 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7741 */;
+import IsolateString from "IsolateString" /* 7742 */;
+import EmojiStore from "EmojiStore" /* 6711 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6756 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
@@ -23,7 +23,7 @@ import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
-import StreamerModeStore from "StreamerModeStore" /* 5016 */;
+import StreamerModeStore from "StreamerModeStore" /* 5019 */;
 import UserStore from "UserStore" /* 1392 */;
 import t_mod from "module_1951" /* 1951 */;
 
@@ -173,8 +173,8 @@ function createParserState(getGuildId, arr) {
   const mapped3 = _modDef12(GuildChannelStore.getTextChannelNameDisambiguations(guildId)).map((id) => ({ id: id.id, text: id.name }));
   if (null != guildId) {
     const tmp9Result3 = tmp9(12);
-    const found1 = tmp9(12)(guildId(6687).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((item) => item !== closure_1_7);
-    const tmp9Result1Result = tmp9(12)(guildId(6687).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const found1 = tmp9(12)(guildId(6694).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((item) => item !== closure_1_7);
+    const tmp9Result1Result = tmp9(12)(guildId(6694).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
     const flatMapResult = found1.flatMap((item) => GuildChannelStore.getChannels(guildId)[item].map((channel) => {
       channel = channel.channel;
       if (!channel.isCategory()) {
@@ -350,7 +350,7 @@ function unparseWithMeta(content1, id, isNotification) {
 let closure_7 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1087);
 ({ Permissions: closure_15, MARKDOWN_SPOILER_REGEXP, MARKDOWN_STATIC_ROUTE_NAME_REGEXP } = Constants);
-const GAME_MENTION_SENTINEL = fn(5964).GAME_MENTION_SENTINEL;
+const GAME_MENTION_SENTINEL = fn(5971).GAME_MENTION_SENTINEL;
 const EmojiIntention = fn(1395).EmojiIntention;
 let tmp3 = /^<@!?(\d+)>/;
 const tmp4 = /^<@&(\d+)>/;
@@ -961,7 +961,7 @@ obj12.parse = function parse(arg0, arg1, guild) {
 obj8.emoji = obj12;
 const obj13 = { match: null, parse: null };
 let t = t_mod;
-obj13.match = t.anyScopeRegex(fn(5985).soundmojiRawFormatRegex);
+obj13.match = t.anyScopeRegex(fn(5992).soundmojiRawFormatRegex);
 obj13.parse = function parse(arg0) {
   [, tmp, tmp2] = arg0;
   return { content: "<sound:" + tmp + ":" + tmp2 + ">" };

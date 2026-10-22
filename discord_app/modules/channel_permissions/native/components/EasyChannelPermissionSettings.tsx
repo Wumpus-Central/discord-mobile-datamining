@@ -1,17 +1,17 @@
-// === Module 18103: EasyChannelPermissionSettings ===
+// === Module 18173: EasyChannelPermissionSettings ===
 
-// Module 18103 (EasyChannelPermissionSettings)
+// Module 18173 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5693 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5888 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8932 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8933 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8949 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11253 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5895 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8941 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8942 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8958 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11270 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 18104 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 18174 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
@@ -29,13 +29,13 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(7851).SettingMode;
+const SettingMode = fn(7859).SettingMode;
 const Constants = fn(1087);
 ({ ChannelTypes: closure_18, Permissions: closure_19, AnalyticEvents: closure_20, ChannelSettingsSections: closure_21, SettingsPaneTypes: closure_22 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { marginTop: 16, flex: 1 }, adminWarning: null };
 let obj3 = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.adminWarning = { marginTop: nativeDefault.space.PX_12 };
@@ -83,7 +83,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (cResult[3] !== navigation) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
         return;
       }
     }
@@ -95,7 +95,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   } else {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
         return;
       }
     }
@@ -105,7 +105,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (null != guild) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
         return;
       }
     }
@@ -113,7 +113,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
         return;
       }
     }
@@ -121,7 +121,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   } else {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
         return;
       }
     }
@@ -129,7 +129,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (null != guild) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
         return;
       }
     }
@@ -179,13 +179,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             closure_1 = tmp5;
             closure_128_0 = undefined;
             accessPermissions = accessPermissions.accessPermissions;
-            const result = v2(8932).isPrivateGuildChannel(accessPermissions);
-            const obj9 = v2(8932);
+            const result = v2(8941).isPrivateGuildChannel(accessPermissions);
+            const obj9 = v2(8941);
             const tmp21 = v2;
-            closure_128_0 = v2(8932).flipEveryonePermission(accessPermissions, accessPermissions, result);
+            closure_128_0 = v2(8941).flipEveryonePermission(accessPermissions, accessPermissions, result);
             currentUser = currentUser.getCurrentUser();
             let tmp7 = ChannelSettingsPermissionsStore;
-            const obj10 = v2(8932);
+            const obj10 = v2(8941);
             if (!ChannelSettingsPermissionsStore) {
               tmp7 = null == currentUser;
             }
@@ -195,7 +195,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             if (!tmp7) {
               v2 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp21(8932).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
+              const obj4 = { value: tmp21(8941).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
               return obj4;
             }
             canResult = PermissionStore.can(constants.ADMINISTRATOR, guild);
@@ -223,7 +223,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         const items = [closure_128_0];
         v2 = 2;
         dependencyMap = 1;
-        const obj7 = { value: tmp2(8933).savePermissionUpdates(closure_129_0.id, items), done: false };
+        const obj7 = { value: tmp2(8942).savePermissionUpdates(closure_129_0.id, items), done: false };
         return obj7;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -263,7 +263,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               if (!privateToggleState) {
                 c2 = 1;
                 dependencyMap = 1;
-                const obj6 = { value: tmp5(8934).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
+                const obj6 = { value: tmp5(8943).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
                 return obj6;
               }
             }
@@ -288,7 +288,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           stringResult = string(t["47gQYL"]);
         }
         closure_128_0 = stringResult;
-        closure_128_1 = tmp5(5586).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+        closure_128_1 = tmp5(5590).computeChannelName(closure_129_0, UserStore, RelationshipStore);
         let intl2 = tmp5(1128).intl;
         let onCancel = intl2.format;
         let show = tmp5(1128).t;
@@ -301,8 +301,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         }
         closure_128_2 = onCancelResult;
         closure_129_2(!closure_129_1);
-        const obj4 = tmp5(5586);
-        show = tmp2(5888).show;
+        const obj4 = tmp5(5590);
+        show = tmp2(5895).show;
         const obj9 = { title: closure_128_0, body: closure_128_2, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null, isDismissable: false };
         const intl3 = tmp5(1128).intl;
         obj9.cancelText = intl3.string(tmp5(1128).t["ETE/oC"]);
@@ -316,7 +316,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         obj9.onCancel = onCancel;
         show(obj9);
         dependencyMap = 3;
-        const tmp42 = tmp2(5888);
+        const tmp42 = tmp2(5895);
       } catch (tmp54) {
         dependencyMap = tmp;
         throw tmp54;
@@ -343,7 +343,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   const items1 = [navigation];
   const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-    navigation.setOptions({ headerRight: "r" });
+    navigation.setOptions({ headerRight: "Array" });
   }, items1);
   const items2 = [guild, sortedGuildRoles, channel];
   const memo = togglePrivateChannel.useMemo(() => {

@@ -1,10 +1,10 @@
-// === Module 15661: openConjureDevicePermissionPrompt ===
+// === Module 10769: openConjureDevicePermissionPrompt ===
 
-// Module 15661 (openConjureDevicePermissionPrompt)
+// Module 10769 (openConjureDevicePermissionPrompt)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import AlertModal from "AlertModal" /* 5894 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 10756 */;
+import AlertModal from "AlertModal" /* 5901 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 10768 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/device_permissions/openConjureDevicePermissionPrompt.native.tsx");

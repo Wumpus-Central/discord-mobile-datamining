@@ -1,17 +1,17 @@
-// === Module 9324: WishlistItemCardBase ===
+// === Module 9335: WishlistItemCardBase ===
 
-// Module 9324 (WishlistItemCardBase)
+// Module 9335 (WishlistItemCardBase)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import native from "native" /* 5020 */;
-import useToken from "useToken" /* 5234 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
-import LockIcon from "LockIcon" /* 8542 */;
-import useUserProfileColors from "useUserProfileColors" /* 8693 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9176 */;
-import useWishlistHooks from "useWishlistHooks" /* 9327 */;
+import native from "native" /* 5023 */;
+import useToken from "useToken" /* 5238 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
+import LockIcon from "LockIcon" /* 8551 */;
+import useUserProfileColors from "useUserProfileColors" /* 8702 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9185 */;
+import useWishlistHooks from "useWishlistHooks" /* 9338 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { card: { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" }, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -65,7 +65,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SourceI
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-    const tmp9 = closure_5(tmp(9325).HeartIcon, obj2);
+    const tmp9 = closure_5(tmp(9336).HeartIcon, obj2);
     cResult[2] = tmp9;
     let tmp6 = tmp9;
   } else {
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SourceI
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9325).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(9336).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 });

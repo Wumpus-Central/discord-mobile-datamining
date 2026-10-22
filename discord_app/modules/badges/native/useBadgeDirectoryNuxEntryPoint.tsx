@@ -1,6 +1,6 @@
-// === Module 14248: useBadgeDirectoryNuxEntryPoint ===
+// === Module 14286: useBadgeDirectoryNuxEntryPoint ===
 
-// Module 14248 (useBadgeDirectoryNuxEntryPoint)
+// Module 14286 (useBadgeDirectoryNuxEntryPoint)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

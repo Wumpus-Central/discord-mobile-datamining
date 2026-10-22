@@ -1,15 +1,15 @@
-// === Module 7457: trackSoundPlayed ===
+// === Module 7464: trackSoundPlayed ===
 
-// Module 7457 (trackSoundPlayed)
+// Module 7464 (trackSoundPlayed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import SoundboardTypes from "SoundboardTypes" /* 7422 */;
+import SoundboardTypes from "SoundboardTypes" /* 7429 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5696 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5988).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5995).DEFAULT_SOUND_GUILD_ID;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const PremiumConstants = fn(1394);
 ({ AnalyticsPremiumFeatureNames: closure_9, AnalyticsPremiumFeatureTiers: c10 } = PremiumConstants);
@@ -44,7 +44,7 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId, so
   if (tmp6) {
     tmp6 = sound_type !== SoundboardTypes.AnalyticsSoundType.ECHO;
   }
-  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? collapsed.PREMIUM_STANDARD : collapsed.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
+  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? v65535.PREMIUM_STANDARD : v65535.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
   if (null != guildId.emojiId) {
     let num = 1;
   } else {

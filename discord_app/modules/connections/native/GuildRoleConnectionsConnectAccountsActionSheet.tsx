@@ -1,6 +1,6 @@
-// === Module 11202: GuildRoleConnectionsConnectAccountsActionSheet ===
+// === Module 11219: GuildRoleConnectionsConnectAccountsActionSheet ===
 
-// Module 11202 (GuildRoleConnectionsConnectAccountsActionSheet)
+// Module 11219 (GuildRoleConnectionsConnectAccountsActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
@@ -10,51 +10,51 @@ import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import shared from "shared" /* 4973 */;
-import useThemeDefault from "useTheme" /* 5187 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useMountEffectDefault from "useMountEffect" /* 5245 */;
-import useChannelNameDefault from "useChannelName" /* 5586 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5668 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5693 */;
-import PlatformsDefault from "Platforms" /* 6481 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6809 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7251 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 7252 */;
-import getConnectionsRolesDefault from "getConnectionsRoles" /* 7254 */;
-import openUserSettings from "openUserSettings" /* 7467 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8478 */;
-import BotTagDefault from "BotTag" /* 9094 */;
-import _modDef11204 from "module_11204" /* 11204 */;
-import _modDef11205 from "module_11205" /* 11205 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11206 */;
-import _modDef11209 from "module_11209" /* 11209 */;
-import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 11215 */;
+import shared from "shared" /* 4976 */;
+import useThemeDefault from "useTheme" /* 5191 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useMountEffectDefault from "useMountEffect" /* 5249 */;
+import useChannelNameDefault from "useChannelName" /* 5590 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
+import PlatformsDefault from "Platforms" /* 6488 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6816 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7258 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 7259 */;
+import getConnectionsRolesDefault from "getConnectionsRoles" /* 7261 */;
+import openUserSettings from "openUserSettings" /* 7474 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
+import BotTagDefault from "BotTag" /* 9103 */;
+import _modDef11221 from "module_11221" /* 11221 */;
+import _modDef11222 from "module_11222" /* 11222 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11223 */;
+import _modDef11226 from "module_11226" /* 11226 */;
+import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 11232 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7182 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7189 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6479 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6486 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
-let Constants = fn(7253);
+let Constants = fn(7260);
 ({ MetadataFields: closure_17, OperatorTypes: closure_18, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_19, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_20 } = Constants);
 Constants = fn(1087);
 ({ PlatformTypes: closure_21, UserSettingsSections: closure_22, AnalyticEvents: closure_23, MarketingURLs: closure_24, FRIEND_SYNC_PLATFORM_TYPES: closure_25, ACTIVITY_PLATFORM_TYPES: closure_26, Permissions: closure_27, EMPTY_STRING_SNOWFLAKE_ID: closure_28 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_29, jsxs: closure_30, Fragment: items } = jsxProd);
-const createStyles = fn(4966);
+({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
+const createStyles = fn(4969);
 let obj2 = { container: { padding: 12 }, connectionsChecksGroups: { marginTop: 16, flexDirection: "column" }, connectionsChecksGroup: { flexDirection: "row", borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: nativeDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" }, connectionsChecksGroupPassed: null, connectionsChecksGroupPlatformDisabled: null, connectionsChecksGroupRequirementsNotMet: null, connectionsChecksGroupTextContainer: null, connectionsChecksGroupTextNameContainer: null, connectionsChecksGroupTextNameInfoIcon: null, connectionsChecksGroupCheckmark: null, connectionsChecksGroupCaret: null, connectionsCheck: null, platformIcon: null, channelName: null, channelNameIcon: null, channelNameText: null, header: null, content: null, footerText: null, accountConnectedContainer: null, accountConnectedPreview: null, accountConnectedPreviewConnectedUserAccount: null, accountConnectedPrivacy: null, accountConnectedPrivacyOptionsContainer: null, roleGranted: null, roleGrantedName: null, verifiedIcon: null, channelsGranted: null, manageConnectionsButton: null, loading: null, appIcon: null, botTag: null };
 let obj3 = { flexDirection: "row", borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: nativeDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" };
 obj2.connectionsChecksGroupPassed = { borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -1259,7 +1259,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Identi
                                   }
                                   let tmp43 = null;
                                   if (null != obj3) {
-                                    const obj12 = { style: null, user: null, size: null, guildId: "Array" };
+                                    const obj12 = { style: null, user: null, size: null, guildId: "a" };
                                     class G {
                                       constructor() {
                                         if (!result) {
@@ -1745,7 +1745,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function Identi
     obj7.onPress = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[23]).AvatarSizes.XSMALL, guildId: "Array" };
+      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[23]).AvatarSizes.XSMALL, guildId: "a" };
       tmp15Result = tmp15(tmp2(tmp3[23]).Avatar, obj8);
     }
     const items3 = [tmp15Result, , ];
@@ -1973,7 +1973,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
     }
   }, items3);
   let tmp3 = _slicedToArray(noop.useState(0), 2);
-  roleColor = eligibilityStatesGroups(5234).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+  roleColor = eligibilityStatesGroups(5238).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
   let obj3 = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -2028,7 +2028,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
     if (null != bot) {
       tmp11 = new closure_11(application.bot);
     }
-    const officialApplicationIds = eligibilityStatesGroups(7252).officialApplicationIds;
+    const officialApplicationIds = eligibilityStatesGroups(7259).officialApplicationIds;
     let str;
     if (application != null) {
       str = application.id;
@@ -2052,24 +2052,24 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef11204, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef11221, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1202).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
       const obj4 = { variant: "text-sm/semibold", color: "text-brand", children: null };
       const intl2 = tmp15(1128).intl;
       obj4.children = intl2.string(tmp15(1128).t["5911Lb"]);
-      tmp22Result = closure_1_29(tmp15(5216).Text, obj4);
+      tmp22Result = closure_1_29(tmp15(5220).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef11205, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef11222, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1202).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
       const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
       const intl = tmp15(1128).intl;
       obj6.children = intl.string(tmp15(1128).t.cEts68);
-      tmp22Result = closure_1_29(tmp15(5216).Text, obj6);
+      tmp22Result = closure_1_29(tmp15(5220).Text, obj6);
       tmp24 = closure_1_29;
     }
     let type1;
@@ -2144,7 +2144,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
         const obj11 = { variant: "text-xs/normal", color: "text-overlay-light", children: null };
         const intl4 = tmp15(1128).intl;
         obj11.children = intl4.string(tmp15(1128).t.UB3hKo);
-        obj10.children = tmp24(tmp15(5216).Text, obj11);
+        obj10.children = tmp24(tmp15(5220).Text, obj11);
         tmp24Result5 = tmp24(c8, obj10);
       }
     }
@@ -2157,7 +2157,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
     items1[1] = tmp24Result6;
     let tmp24Result7 = null;
     if (null != tmp11) {
-      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1202).AvatarSizes.XSMALL, guildId: "Array" };
+      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1202).AvatarSizes.XSMALL, guildId: "a" };
       tmp24Result7 = tmp24(tmp15(1202).Avatar, obj13);
     }
     items1[2] = tmp24Result7;
@@ -2174,7 +2174,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       }
       name = name1;
     }
-    const items2 = [tmp24(eligibilityStatesGroups(5216).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name }), tmp24Result, ];
+    const items2 = [tmp24(eligibilityStatesGroups(5220).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name }), tmp24Result, ];
     let tmp24Result8 = null;
     if (null != tmp28) {
       const obj16 = {
@@ -2185,7 +2185,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
           },
         children: null
       };
-      const obj17 = { source: _modDef11209, size: tmp15(1202).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
+      const obj17 = { source: _modDef11226, size: tmp15(1202).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
       obj16.children = tmp24(tmp15(1202).Icon, obj17);
       tmp24Result8 = tmp24(c7, obj16);
     }
@@ -2502,7 +2502,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       _undefined(enabled);
       ConnectedAccountsActionCreatorsDefault.setFriendSync(account.type, account.id, enabled);
     };
-    tmp12 = closure_29(account(8910).FormSwitchRow, obj2);
+    tmp12 = closure_29(account(8919).FormSwitchRow, obj2);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -2515,7 +2515,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       closure_4(show_activity);
       ConnectedAccountsActionCreatorsDefault.setShowActivity(account.type, account.id, show_activity);
     };
-    tmp15 = closure_29(account(8910).FormSwitchRow, obj3);
+    tmp15 = closure_29(account(8919).FormSwitchRow, obj3);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -2534,7 +2534,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
       }
       const result = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility(type, id, num);
     };
-    tmp18 = closure_29(account(8910).FormSwitchRow, obj5);
+    tmp18 = closure_29(account(8919).FormSwitchRow, obj5);
   }
   const obj6 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj7 = { label: null, value: null, onValueChange: null };
@@ -2551,7 +2551,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function Connec
     }
     ConnectedAccountsActionCreatorsDefault.setVisibility(type, id, num);
   };
-  const items = [closure_29(account(8910).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
+  const items = [closure_29(account(8919).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
   obj6.children = items;
   return closure_30(closure_8, obj6);
 });
@@ -2877,11 +2877,11 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                   prop = closure_1.role_connections_verification_url;
                 }
                 const resolved = Promise.resolve({ default: closure_1_40 });
-                const obj = closure_1(5192);
+                const obj = closure_1(5196);
                 const obj2 = { default: closure_1_40 };
                 const obj4 = { role, guildId, initialAttemptedPlatformType: platformType, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
                 let tmp7 = null;
-                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(11210).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
+                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(11227).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
                 }
@@ -2889,7 +2889,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(11210);
+                const obj3 = platformType(11227);
               },
               overrideUrl: null
             };
@@ -2912,7 +2912,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 DispatcherDefault.unsubscribe("MODAL_POP", handleModalClose);
                 let tmp = null;
                 if (!wasAlreadyConnected) {
-                  tmp = constants2;
+                  tmp = closure_3_20;
                 }
                 const obj2 = { default: closure_1_40 };
                 const resolved = Promise.resolve(obj2);

@@ -1,14 +1,14 @@
-// === Module 12809: ChannelTabsActionCreators ===
+// === Module 12841: ChannelTabsActionCreators ===
 
-// Module 12809 (ChannelTabsActionCreators)
+// Module 12841 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
-import transitionToChannel from "transitionToChannel" /* 5689 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5692 */;
+import transitionToChannel from "transitionToChannel" /* 5693 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5696 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 12810 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 12842 */;
 
 require = fn;
 function navigateToTabLocation(found) {
@@ -183,10 +183,7 @@ export const openDuplicateTab = function openDuplicateTab() {
   }
 };
 export const navigateToRoute = function navigateToRoute(routePath, routeLabel) {
-  if (0 !== ChannelTabsStore.getTabs().length) {
-    const obj2 = { type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel };
-    DispatcherDefault.dispatch(obj2);
-  }
+  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel });
 };
 export { TabHistoryNavResult };
 export const goBackInActiveTab = function goBackInActiveTab() {

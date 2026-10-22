@@ -1,13 +1,13 @@
-// === Module 16152: PremiumSetting ===
+// === Module 16194: PremiumSetting ===
 
-// Module 16152 (PremiumSetting)
+// Module 16194 (PremiumSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PremiumUtils from "PremiumUtils" /* 2053 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7506 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10986 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 14598 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16153 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7513 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11003 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 14642 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16195 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavi
     return flag;
   }, []);
 });
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSettingTrailing() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -79,7 +79,7 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(9383).NitroWheelIcon,
+  IconComponent: fn(9394).NitroWheelIcon,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSettingTrailing() {
     const cResult = c.c(1);

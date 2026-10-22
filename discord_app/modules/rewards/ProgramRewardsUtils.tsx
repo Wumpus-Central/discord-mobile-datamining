@@ -1,10 +1,10 @@
-// === Module 14930: ProgramRewardsUtils ===
+// === Module 14974: ProgramRewardsUtils ===
 
-// Module 14930 (ProgramRewardsUtils)
+// Module 14974 (ProgramRewardsUtils)
 import PremiumUtils from "PremiumUtils" /* 2053 */;
 import _modDef4596 from "module_4596" /* 4596 */;
-import useHasXboxMonthlyOrbsPerk from "useHasXboxMonthlyOrbsPerk" /* 14931 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 14932 */;
+import useHasXboxMonthlyOrbsPerk from "useHasXboxMonthlyOrbsPerk" /* 14975 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 14976 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function canFetchXboxProgramReward() {
   return useHasXboxMonthlyOrbsPerk.hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
 }
 const PremiumTypes = fn(1394).PremiumTypes;
-const dependencyMap = { [fn(14932).RewardProgram.NITRO]: canFetchNitroProgramReward, [fn(14932).RewardProgram.XBOX]: canFetchXboxProgramReward };
+const dependencyMap = { [fn(14976).RewardProgram.NITRO]: canFetchNitroProgramReward, [fn(14976).RewardProgram.XBOX]: canFetchXboxProgramReward };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
@@ -53,9 +53,8 @@ export const canFetchAnyProgramReward = function canFetchAnyProgramReward() {
   }
   return false;
 };
-export const hasNecessaryPremiumSubscriptionStatus = function hasNecessaryPremiumSubscriptionStatus(stateFromStores) {
-  let currentUser = stateFromStores;
-  if (stateFromStores == null) {
+export const hasNecessaryPremiumSubscriptionStatus = function hasNecessaryPremiumSubscriptionStatus(currentUser) {
+  if (currentUser == null) {
     currentUser = UserStore.getCurrentUser();
   }
   return PremiumUtils.isPremiumExactly(currentUser, PremiumTypes.TIER_2);

@@ -1,19 +1,19 @@
-// === Module 11305: usePipVideoOrStream ===
+// === Module 11322: usePipVideoOrStream ===
 
-// Module 11305 (usePipVideoOrStream)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5132 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 11295 */;
+// Module 11322 (usePipVideoOrStream)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5136 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 11312 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
-import VideoSpeakerStore from "VideoSpeakerStore" /* 11306 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6621 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
+import VideoSpeakerStore from "VideoSpeakerStore" /* 11323 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5696 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5700 */;
 
 require = fn;
-const CallConstants = fn(5614);
+const CallConstants = fn(5618);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePipVideoOrStream(arg0) {

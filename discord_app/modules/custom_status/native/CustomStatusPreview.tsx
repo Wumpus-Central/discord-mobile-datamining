@@ -1,19 +1,19 @@
-// === Module 11020: CustomStatusPreview ===
+// === Module 11037: CustomStatusPreview ===
 
-// Module 11020 (CustomStatusPreview)
+// Module 11037 (CustomStatusPreview)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ChatInputUtils from "ChatInputUtils" /* 5141 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import ChatInputUtils from "ChatInputUtils" /* 5145 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7281);
+const Constants = fn(7288);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty, UserProfileThemeTypes: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { flex: 1, position: "relative", overflow: "hidden", width: 323, maxHeight: 301, borderWidth: 1, borderColor: null, borderRadius: null };
   const colors = nativeDefault.colors;
@@ -51,7 +51,7 @@ export default function CustomStatusPreview(user) {
   ({ gradientFallbackBackground, avatarBackground, containerBackground } = userProfileColors);
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11021, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11038, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
   }, items);
   const obj2 = { theme, primaryColor, secondaryColor, children: null };
   const obj3 = { style: tmp7.profileContainer, children: null };

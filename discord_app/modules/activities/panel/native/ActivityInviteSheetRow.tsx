@@ -1,6 +1,6 @@
-// === Module 18299: ActivityInviteSheetRow ===
+// === Module 18367: ActivityInviteSheetRow ===
 
-// Module 18299 (ActivityInviteSheetRow)
+// Module 18367 (ActivityInviteSheetRow)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -11,9 +11,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7784).InviteSendStates;
+const InviteSendStates = fn(7793).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { acronym: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
 obj.acronym = size;

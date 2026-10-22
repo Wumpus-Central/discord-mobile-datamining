@@ -1,8 +1,8 @@
-// === Module 18897: showEmojiOverflowActionSheet ===
+// === Module 18964: showEmojiOverflowActionSheet ===
 
-// Module 18897 (showEmojiOverflowActionSheet)
+// Module 18964 (showEmojiOverflowActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_settings/native/showEmojiOverflowActionSheet.tsx");
@@ -15,5 +15,5 @@ export default function showEmojiOverflowActionSheet(arg0) {
     }
   };
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(18898, dependencyMap.paths), "EmojiOverflowActionSheet", obj2);
+  obj.openLazy(asyncRequireImpl(18965, dependencyMap.paths), "EmojiOverflowActionSheet", obj2);
 };

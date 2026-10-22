@@ -1,18 +1,18 @@
-// === Module 18780: BlockedUserInGdmActionSheet ===
+// === Module 18847: BlockedUserInGdmActionSheet ===
 
-// Module 18780 (BlockedUserInGdmActionSheet)
+// Module 18847 (BlockedUserInGdmActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5668 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5969 */;
-import TableRow from "TableRow" /* 6882 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7244 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7388 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18781 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
+import TableRow from "TableRow" /* 6889 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7251 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7395 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18848 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -27,11 +27,11 @@ function getUserCalloutRowText(arg0) {
     const obj2 = {
       usernameHook1() {
           const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 19) };
-          return collapsed(Text_Text.Text, obj);
+          return v65535(Text_Text.Text, obj);
         },
       usernameHook2() {
           const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 17) };
-          return collapsed(Text_Text.Text, obj);
+          return v65535(Text_Text.Text, obj);
         },
       numberOfOtherUsers: totalUsers - calledOutUserIds.length
     };
@@ -41,11 +41,11 @@ function getUserCalloutRowText(arg0) {
     const obj3 = {
       usernameHook1() {
           const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 19) };
-          return collapsed(Text_Text.Text, obj);
+          return v65535(Text_Text.Text, obj);
         },
       usernameHook2() {
           const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 17) };
-          return collapsed(Text_Text.Text, obj);
+          return v65535(Text_Text.Text, obj);
         }
     };
     formatResult = intl3.format(util.t["67ZE+9"], obj3);
@@ -54,11 +54,11 @@ function getUserCalloutRowText(arg0) {
     const obj4 = {
       usernameHook1() {
           const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 19) };
-          return collapsed(Text_Text.Text, obj);
+          return v65535(Text_Text.Text, obj);
         },
       usernameHook2() {
           const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 17) };
-          return collapsed(Text_Text.Text, obj);
+          return v65535(Text_Text.Text, obj);
         }
     };
     formatResult = intl2.format(util.t.veV4IN, obj4);
@@ -67,7 +67,7 @@ function getUserCalloutRowText(arg0) {
     let obj = {
       usernameHook() {
           const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 19) };
-          return collapsed(Text_Text.Text, obj);
+          return v65535(Text_Text.Text, obj);
         }
     };
     formatResult = intl.format(util.t["4WHCtq"], obj);
@@ -77,11 +77,11 @@ function getUserCalloutRowText(arg0) {
 function getBlockedUserInGDMTableRows(arg0) {
   ({ channelId, blockedUserIds, ignoredUserIds } = arg0);
   const channel = ChannelStore.getChannel(channelId);
-  const obj = { icon: collapsed(CircleCheckIcon.CircleCheckIcon, {}), label: null };
+  const obj = { icon: v65535(CircleCheckIcon.CircleCheckIcon, {}), label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.RIMw54);
   const items = [obj, ];
-  const obj2 = { icon: collapsed(CircleInformationIcon.CircleInformationIcon, {}), label: null };
+  const obj2 = { icon: v65535(CircleInformationIcon.CircleInformationIcon, {}), label: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.bejNWN);
   items[1] = obj2;
@@ -97,7 +97,7 @@ function getBlockedUserInGDMTableRows(arg0) {
       }
       const obj4 = { icon: null, label: null };
       obj3.guildId = guild_id;
-      obj4.icon = collapsed(closure_15, obj3);
+      obj4.icon = v65535(closure_15, obj3);
       const obj5 = { calledOutUserIds: substr, totalUsers: items1.length, channelId, guildId: null };
       let guild_id1;
       if (channel != null) {
@@ -122,7 +122,7 @@ function getBlockedUserInGDMTableRows(arg0) {
   if (channel != null) {
     guild_id2 = channel.guild_id;
   }
-  const obj7 = { icon: collapsed(closure_15, obj6), label: null };
+  const obj7 = { icon: v65535(closure_15, obj6), label: null };
   obj6.guildId = guild_id2;
   const obj8 = { calledOutUserIds: substr1, totalUsers: blockedUserIds.length > 0 ? blockedUserIds.length : ignoredUserIds.length, channelId, guildId: null };
   let guild_id3;
@@ -136,12 +136,12 @@ function getBlockedUserInGDMTableRows(arg0) {
   tmp3 = ignoredUserIds.length > 0;
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(14939);
+const SharedSpaceWarningConstants = fn(14983);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center" }, description: { textAlign: "center", alignSelf: "center" }, tableGroup: null, buttons: null, icon: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
 obj2.tableGroup = { paddingVertical: nativeDefault.space.PX_24 };
@@ -207,7 +207,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
       obj2.size = REFRESH_MEDIUM_32;
       let tmp17 = closure_10(tmp(1202).Avatar, obj2);
     } else {
-      tmp17 = closure_10(tmp(11751).UserIcon, {});
+      tmp17 = closure_10(tmp(11780).UserIcon, {});
     }
     cResult[8] = guildId;
     cResult[9] = tmp12;
@@ -216,7 +216,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
   } else {
     if (cResult[12] !== tmp7) {
       const obj3 = { users: tmp7, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-      const tmp11 = closure_10(tmp(10646).FacepileGroupDMAvatar, obj3);
+      const tmp11 = closure_10(tmp(10658).FacepileGroupDMAvatar, obj3);
       cResult[12] = tmp7;
       cResult[13] = tmp11;
       let tmp9 = tmp11;
@@ -243,11 +243,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_10(tmp(1202).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(11751).UserIcon, {});
+      tmp6 = closure_10(tmp(11780).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10646).FacepileGroupDMAvatar, obj4);
+    return closure_10(tmp(10658).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 });
@@ -729,8 +729,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
     hasIcons: true,
     children: arr4.map((item, index) => {
       ({ icon, label } = item);
-      const obj = { icon: collapsed(View, { style: icon.icon, children: icon }), label };
-      return collapsed(TableRow.TableRow, obj, index);
+      const obj = { icon: v65535(View, { style: icon.icon, children: icon }), label };
+      return v65535(TableRow.TableRow, obj, index);
     })
   });
   items1[2] = closure_10(View, obj8);

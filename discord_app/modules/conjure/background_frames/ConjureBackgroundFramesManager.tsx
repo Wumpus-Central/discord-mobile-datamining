@@ -1,8 +1,8 @@
-// === Module 18601: ConjureBackgroundFramesManager ===
+// === Module 18669: ConjureBackgroundFramesManager ===
 
-// Module 18601 (ConjureBackgroundFramesManager)
+// Module 18669 (ConjureBackgroundFramesManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
 
 const require = fn;
 function handleFrameLaunchStart() {

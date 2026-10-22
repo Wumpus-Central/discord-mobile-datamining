@@ -1,27 +1,27 @@
-// === Module 10946: useNativeForumPostHandlers ===
+// === Module 10963: useNativeForumPostHandlers ===
 
-// Module 10946 (useNativeForumPostHandlers)
+// Module 10963 (useNativeForumPostHandlers)
 import _modDef38 from "module_38" /* 38 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import ChatInputUtils from "ChatInputUtils" /* 5141 */;
-import HapticUtils from "HapticUtils" /* 5194 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5195 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5207 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import transitionToChannel from "transitionToChannel" /* 5689 */;
-import Tracking from "Tracking" /* 8265 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8478 */;
-import openMediaModal from "openMediaModal" /* 8715 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9739 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9741 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10947 */;
+import ChatInputUtils from "ChatInputUtils" /* 5145 */;
+import HapticUtils from "HapticUtils" /* 5198 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5199 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5211 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import transitionToChannel from "transitionToChannel" /* 5693 */;
+import Tracking from "Tracking" /* 8274 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
+import openMediaModal from "openMediaModal" /* 8724 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9751 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9753 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10964 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5193 */;
+import ActionSheetStore from "ActionSheetStore" /* 5197 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7361 */;
-import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 7382 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7368 */;
+import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 7389 */;
 
 require = fn;
 const Constants = fn(1087);
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNativ
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (undefined === NORMAL) {
-    NORMAL = tmp(5207).ReactionTypes.NORMAL;
+    NORMAL = tmp(5211).ReactionTypes.NORMAL;
   }
   if (cResult[0] !== threadId) {
     const fn = function h(containerRef) {
@@ -64,16 +64,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNativ
             tmp = endsWithResult;
           }
           if (tmp) {
-            let isAttachmentPathUrlResult = src.type === threadId(8807).ForumPostMediaTypes.ATTACHMENT;
+            let isAttachmentPathUrlResult = src.type === threadId(8816).ForumPostMediaTypes.ATTACHMENT;
             if (isAttachmentPathUrlResult) {
-              isAttachmentPathUrlResult = closure_2(9676).isAttachmentPathUrl(str);
-              const obj5 = closure_2(9676);
+              isAttachmentPathUrlResult = closure_2(9688).isAttachmentPathUrl(str);
+              const obj5 = closure_2(9688);
             }
             if (!isAttachmentPathUrlResult) {
-              let result = src.type === threadId(8807).ForumPostMediaTypes.EMBED;
+              let result = src.type === threadId(8816).ForumPostMediaTypes.EMBED;
               if (result) {
-                result = closure_2(9676).isExternalProxiedAttachmentUrl(str);
-                const obj6 = closure_2(9676);
+                result = closure_2(9688).isExternalProxiedAttachmentUrl(str);
+                const obj6 = closure_2(9688);
               }
               isAttachmentPathUrlResult = result;
             }
@@ -481,7 +481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNativ
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(5207).ReactionTypes.NORMAL;
+    NORMAL = threadId(5211).ReactionTypes.NORMAL;
   }
   const items = [threadId];
   const items1 = [threadId];
@@ -509,16 +509,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNativ
           tmp = endsWithResult;
         }
         if (tmp) {
-          let isAttachmentPathUrlResult = src.type === threadId(8807).ForumPostMediaTypes.ATTACHMENT;
+          let isAttachmentPathUrlResult = src.type === threadId(8816).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentPathUrlResult) {
-            isAttachmentPathUrlResult = callback1(9676).isAttachmentPathUrl(str);
-            const obj5 = callback1(9676);
+            isAttachmentPathUrlResult = callback1(9688).isAttachmentPathUrl(str);
+            const obj5 = callback1(9688);
           }
           if (!isAttachmentPathUrlResult) {
-            let result = src.type === threadId(8807).ForumPostMediaTypes.EMBED;
+            let result = src.type === threadId(8816).ForumPostMediaTypes.EMBED;
             if (result) {
-              result = callback1(9676).isExternalProxiedAttachmentUrl(str);
-              const obj6 = callback1(9676);
+              result = callback1(9688).isExternalProxiedAttachmentUrl(str);
+              const obj6 = callback1(9688);
             }
             isAttachmentPathUrlResult = result;
           }

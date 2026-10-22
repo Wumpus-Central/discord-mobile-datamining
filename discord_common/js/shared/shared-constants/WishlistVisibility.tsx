@@ -1,6 +1,6 @@
-// === Module 14314: WishlistVisibility ===
+// === Module 14356: WishlistVisibility ===
 
-// Module 14314 (WishlistVisibility)
+// Module 14356 (WishlistVisibility)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/WishlistVisibility.tsx");

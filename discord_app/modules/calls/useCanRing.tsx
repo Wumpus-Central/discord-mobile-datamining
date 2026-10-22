@@ -1,8 +1,8 @@
-// === Module 7400: useCanRing ===
+// === Module 7407: useCanRing ===
 
-// Module 7400 (useCanRing)
+// Module 7407 (useCanRing)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6476 */;
+import CallStore from "CallStore" /* 6483 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 

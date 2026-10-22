@@ -1,12 +1,12 @@
-// === Module 13214: EmojiSuggestionChatButton ===
+// === Module 13250: EmojiSuggestionChatButton ===
 
-// Module 13214 (EmojiSuggestionChatButton)
+// Module 13250 (EmojiSuggestionChatButton)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import spring from "spring" /* 5229 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5279 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13210 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import spring from "spring" /* 5233 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13246 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
@@ -18,7 +18,7 @@ const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = { swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical }, wrapper: { height, width: height }, glyphOverlay: null, glyphButton: null, image: null, surrogates: null };
   const obj2 = {};

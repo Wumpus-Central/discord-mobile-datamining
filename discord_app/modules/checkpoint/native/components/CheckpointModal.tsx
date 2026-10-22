@@ -1,20 +1,20 @@
-// === Module 12842: CheckpointModal ===
+// === Module 12874: CheckpointModal ===
 
-// Module 12842 (CheckpointModal)
+// Module 12874 (CheckpointModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 2000 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6002 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6342 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12789 */;
-import CheckpointFlows from "CheckpointFlows" /* 12847 */;
-import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 12917 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6009 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6349 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12821 */;
+import CheckpointFlows from "CheckpointFlows" /* 12879 */;
+import useCheckpointPreloaderDefault from "useCheckpointPreloader" /* 12953 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 4912 */;
-import CheckpointStore from "CheckpointStore" /* 12843 */;
+import CheckpointStore from "CheckpointStore" /* 12875 */;
 
 require = fn;
 function CheckpointModal(didPlayerShareDataWithDiscord) {
@@ -276,7 +276,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   obj13.style = items6;
   const obj14 = { uri: null, style: null };
   const tmp7Result2 = _slicedToArray(noop.useState(false), 2);
-  obj14.uri = require("module_12904");
+  obj14.uri = require("module_12938");
   obj14.style = tmp.logo;
   const items7 = [closure_15(require("CheckpointApngPlayer"), obj14), ];
   const obj15 = { style: tmp.headerActions, children: null };
@@ -398,18 +398,19 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12843).CheckpointFetchStates;
-const CheckpointConstants = fn(5995);
+const CheckpointFetchStates = fn(12875).CheckpointFetchStates;
+const CheckpointConstants = fn(6002);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { loader: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BLACK }, container: { height: "100%" }, layer: { position: "absolute", width: "100%", height: "100%" }, coveredCharacterLayer: { opacity: 0 }, nav: null, logo: null, headerActions: null, customizationSection: null };
 let rect = { position: "absolute", top: 0, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, height: CHECKPOINT_NAV_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 obj2.nav = rect;
-obj2.logo = { width: CHECKPOINT_LOGO_SIZE, height: CHECKPOINT_LOGO_SIZE };
+let size = { width: CHECKPOINT_LOGO_SIZE + 6, height: CHECKPOINT_LOGO_SIZE + 6, margin: -3 };
+obj2.logo = size;
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BLACK };
 obj2.headerActions = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: null, gap: null };
@@ -420,7 +421,7 @@ obj2.customizationSection = rect1;
 let closure_18 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
-const size = fn(2);
+size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointLoaderWrapper(arg0) {

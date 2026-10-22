@@ -1,10 +1,10 @@
-// === Module 11778: ConjureHistoryFormat ===
+// === Module 11819: ConjureHistoryFormat ===
 
-// Module 11778 (ConjureHistoryFormat)
+// Module 11819 (ConjureHistoryFormat)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import DateUtils from "DateUtils" /* 4794 */;
-import getTimestampString from "getTimestampString" /* 6005 */;
+import getTimestampString from "getTimestampString" /* 6012 */;
 import size from "module_2" /* 2 */;
 
 function startOfDayMs(arg0) {

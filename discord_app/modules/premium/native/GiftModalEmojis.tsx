@@ -1,8 +1,8 @@
-// === Module 11127: GiftModalEmojis ===
+// === Module 11144: GiftModalEmojis ===
 
-// Module 11127 (GiftModalEmojis)
+// Module 11144 (GiftModalEmojis)
 import EmojiUtilsDefault from "EmojiUtils" /* 4919 */;
-import EmojiDefault from "Emoji" /* 7206 */;
+import EmojiDefault from "Emoji" /* 7213 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let items = [[100, 0, -40], [120, 40, -10], [100, 80, 10], [180, 20, 20], [140, 95, 15], [250, 0, 0], [250, 80, -20], [400, 90, 10], [400, 20, -20], [410, 0, 40]];
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_7 = createStyles.createStyles({ emojisContainer: { alignItems: "center", justifyContent: "center", height: 250, width: "100%", position: "absolute", zIndex: 1, paddingBottom: 210 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

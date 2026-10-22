@@ -1,6 +1,6 @@
-// === Module 7691: NUFStore ===
+// === Module 7700: NUFStore ===
 
-// Module 7691 (NUFStore)
+// Module 7700 (NUFStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildStore from "GuildStore" /* 4843 */;

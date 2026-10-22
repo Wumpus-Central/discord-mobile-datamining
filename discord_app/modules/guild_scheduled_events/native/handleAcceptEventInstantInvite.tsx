@@ -1,8 +1,8 @@
-// === Module 9972: handleAcceptEventInstantInvite ===
+// === Module 9984: handleAcceptEventInstantInvite ===
 
-// Module 9972 (handleAcceptEventInstantInvite)
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8825 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6763 */;
+// Module 9984 (handleAcceptEventInstantInvite)
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8834 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6770 */;
 
 const require = fn;
 const size = fn(2);
@@ -37,13 +37,13 @@ export default function handleAcceptEventInstantInvite(code) {
                       const result = code(dependencyMap[3]).transitionToEventDetailsFromInvite(guildScheduledEvent);
                     }
           };
-          guildScheduledEvent(8825).acceptInvite(obj3);
-          const obj4 = guildScheduledEvent(8825);
+          guildScheduledEvent(8834).acceptInvite(obj3);
+          const obj4 = guildScheduledEvent(8834);
         }
-        tmpResult = tmp(9973);
+        tmpResult = tmp(9985);
       }
     }
   }
-  obj = code(7783);
+  obj = code(7792);
   tmp = code;
 };

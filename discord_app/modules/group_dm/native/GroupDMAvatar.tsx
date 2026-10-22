@@ -1,10 +1,10 @@
-// === Module 10646: GroupDMAvatar ===
+// === Module 10658: GroupDMAvatar ===
 
-// Module 10646 (GroupDMAvatar)
+// Module 10658 (GroupDMAvatar)
 import c from "c" /* 576 */;
 import native from "native" /* 1202 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ClipView from "ClipView" /* 9364 */;
+import ClipView from "ClipView" /* 9375 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -21,7 +21,7 @@ obj[fn(1202).AvatarSizes.REFRESH_MEDIUM_32] = fn(1202).AvatarSizes.XSMALL_20;
 obj[fn(1202).AvatarSizes.XSMALL] = fn(1202).AvatarSizes.SIZE_16;
 obj[fn(1202).AvatarSizes.SIZE_16] = fn(1202).AvatarSizes.XXSMALL_10;
 obj[fn(1202).AvatarSizes.NORMAL] = fn(1202).AvatarSizes.XSMALL;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_8 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function FacepileGroupDMAvatar(arg0) {

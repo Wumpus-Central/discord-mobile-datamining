@@ -1,15 +1,15 @@
-// === Module 8993: StartEventModal ===
+// === Module 9002: StartEventModal ===
 
-// Module 8993 (StartEventModal)
+// Module 9002 (StartEventModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import Pressables from "Pressables" /* 6887 */;
-import _modDef7163 from "module_7163" /* 7163 */;
-import GuildEventCardDefault from "GuildEventCard" /* 8987 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import Pressables from "Pressables" /* 6894 */;
+import _modDef7170 from "module_7170" /* 7170 */;
+import GuildEventCardDefault from "GuildEventCard" /* 8996 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,10 +22,10 @@ require = fn;
 const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(4827);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(8843).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(8852).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { mainContainer: { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { flex: 1, flexDirection: "column", justifyContent: "space-between", alignContent: "center" }, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.headerContainer = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_24 };
@@ -62,7 +62,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
     tmp6 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef7163 };
+    const obj2 = { source: _modDef7170 };
     const tmp10 = __initData(native.Icon, obj2);
     cResult[3] = tmp10;
     let tmp7 = tmp10;
@@ -90,7 +90,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = __initData(native.Icon, { source: _modDef7163 });
+  obj2.children = __initData(native.Icon, { source: _modDef7170 });
   obj.children = __initData(Pressables.PressableOpacity, obj2);
   return __initData(View, obj);
 });

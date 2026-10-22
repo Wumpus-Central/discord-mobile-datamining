@@ -1,19 +1,19 @@
-// === Module 17128: ParentalControlsFriendRequestsMutualFriendsSetting ===
+// === Module 17197: ParentalControlsFriendRequestsMutualFriendsSetting ===
 
-// Module 17128 (ParentalControlsFriendRequestsMutualFriendsSetting)
+// Module 17197 (ParentalControlsFriendRequestsMutualFriendsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7070 */;
-import useSelectedTeen from "useSelectedTeen" /* 8102 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15988 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7077 */;
+import useSelectedTeen from "useSelectedTeen" /* 8111 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16030 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7622 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7629 */;
 
 require = fn;
 const FriendSourceFlags = fn(1087).FriendSourceFlags;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsMutualFriendsSettingValue() {
   const cResult = c.c(2);
   const selectedTeenId = useSelectedTeen.useSelectedTeenId();
@@ -30,8 +30,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendR
   }
   return tmp6.mutualFriends;
 }) : (function useFriendRequestsMutualFriendsSettingValue() {
-  const selectedTeenId = controlledSetting(8102).useSelectedTeenId();
-  const ParentalControlledFriendSourceFlags = controlledSetting(15988).ParentalControlledFriendSourceFlags;
+  const selectedTeenId = controlledSetting(8111).useSelectedTeenId();
+  const ParentalControlledFriendSourceFlags = controlledSetting(16030).ParentalControlledFriendSourceFlags;
   controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
   const items = [controlledSetting];
   return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualFriends;
@@ -41,7 +41,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
   },
-  parent: fn(8308).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8317).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsMutualFriendsSettingValue() {
     const cResult = c.c(2);
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
@@ -58,8 +58,8 @@ const toggle = SettingBuilders.createToggle({
     }
     return tmp6.mutualFriends;
   }) : (function useFriendRequestsMutualFriendsSettingValue() {
-    const selectedTeenId = controlledSetting(8102).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(15988).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8111).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(16030).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualFriends;

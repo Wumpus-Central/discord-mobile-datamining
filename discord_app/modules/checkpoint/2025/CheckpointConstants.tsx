@@ -1,6 +1,6 @@
-// === Module 12822: checkpoint/CheckpointConstants ===
+// === Module 12854: checkpoint/CheckpointConstants ===
 
-// Module 12822 (checkpoint/CheckpointConstants)
+// Module 12854 (checkpoint/CheckpointConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/checkpoint/2025/CheckpointConstants.tsx");

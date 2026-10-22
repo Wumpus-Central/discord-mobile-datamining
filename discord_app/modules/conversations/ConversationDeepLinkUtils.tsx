@@ -1,8 +1,8 @@
-// === Module 10030: ConversationDeepLinkUtils ===
+// === Module 10042: ConversationDeepLinkUtils ===
 
-// Module 10030 (ConversationDeepLinkUtils)
+// Module 10042 (ConversationDeepLinkUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7678 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7685 */;
 
 const require = fn;
 function resolveConversationFocusLink() {
@@ -99,8 +99,8 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
     }
   }
 };
-fn(6838).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5589).CONVERSATION_QUERY_PARAM;
+fn(6845).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5593).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
@@ -116,7 +116,7 @@ export const consumeConversationFocusParam = function consumeConversationFocusPa
     return null;
   } else {
     str.delete(CONVERSATION_QUERY_PARAM);
-    const tryParseChannelPathResult = channelId(5588).tryParseChannelPath(pathname);
+    const tryParseChannelPathResult = channelId(5592).tryParseChannelPath(pathname);
     channelId = undefined;
     if (tryParseChannelPathResult != null) {
       channelId = tryParseChannelPathResult.channelId;

@@ -1,8 +1,8 @@
-// === Module 8297: createDisplayNameStylesMobile ===
+// === Module 8306: createDisplayNameStylesMobile ===
 
-// Module 8297 (createDisplayNameStylesMobile)
+// Module 8306 (createDisplayNameStylesMobile)
 import DisplayNameFont from "DisplayNameFont" /* 1412 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import UserStore from "UserStore" /* 1392 */;
 

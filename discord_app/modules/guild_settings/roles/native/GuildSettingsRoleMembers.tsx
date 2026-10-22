@@ -1,16 +1,16 @@
-// === Module 18967: GuildSettingsRoleMembers ===
+// === Module 19034: GuildSettingsRoleMembers ===
 
-// Module 18967 (GuildSettingsRoleMembers)
+// Module 19034 (GuildSettingsRoleMembers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8965 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7204 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7211 */;
 
 require = fn;
 function onMembersLoadFail() {
@@ -23,7 +23,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, containerSearchBar: null, missingMembers: null, missingMembersText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj2.containerSearchBar = { paddingBottom: nativeDefault.space.PX_12 };
@@ -82,7 +82,7 @@ export default function GuildSettingsRoleMembers(guild) {
           const obj2 = { text: null, variant: "critical" };
           const intl = name(1128).intl;
           obj2.text = intl.string(name(1128).t.fEptJP);
-          found(5645).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
+          found(5649).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
         });
       };
       obj2.confirmColor = guild(locked[15]).ButtonColors.RED;
@@ -95,7 +95,7 @@ export default function GuildSettingsRoleMembers(guild) {
   const callback1 = found.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(18946, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
+    obj2.openLazy(asyncRequireImpl(19013, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;

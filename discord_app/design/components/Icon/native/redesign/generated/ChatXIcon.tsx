@@ -1,10 +1,10 @@
-// === Module 13271: ChatXIcon ===
+// === Module 13307: ChatXIcon ===
 
-// Module 13271 (ChatXIcon)
+// Module 13307 (ChatXIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5650 */;
-import _mod13272 from "module_13272" /* 13272 */;
+import BaseIconImage from "BaseIconImage" /* 5654 */;
+import _mod13308 from "module_13308" /* 13308 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChatXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13272;
+    const tmpResult = _mod13308;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChatXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13272, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13308, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

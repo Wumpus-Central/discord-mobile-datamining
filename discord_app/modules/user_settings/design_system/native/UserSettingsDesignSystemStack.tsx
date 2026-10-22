@@ -1,11 +1,11 @@
-// === Module 16992: UserSettingsDesignSystemStack ===
+// === Module 17061: UserSettingsDesignSystemStack ===
 
-// Module 16992 (UserSettingsDesignSystemStack)
+// Module 17061 (UserSettingsDesignSystemStack)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Stack_Stack from "Stack/Stack" /* 5957 */;
-import Card from "Card" /* 6884 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Stack_Stack from "Stack/Stack" /* 5964 */;
+import Card from "Card" /* 6891 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { padding: 16, flex: 1, alignItems: "center" }, block: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: 80, flex: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

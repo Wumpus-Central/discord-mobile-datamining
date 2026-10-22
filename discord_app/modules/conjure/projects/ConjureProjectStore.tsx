@@ -1,9 +1,9 @@
-// === Module 6752: ConjureProjectStore ===
+// === Module 6759: ConjureProjectStore ===
 
-// Module 6752 (ConjureProjectStore)
+// Module 6759 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6753 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
 

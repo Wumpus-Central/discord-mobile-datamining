@@ -1,6 +1,6 @@
-// === Module 9628: getUploaderFileSizeMetrics ===
+// === Module 9640: getUploaderFileSizeMetrics ===
 
-// Module 9628 (getUploaderFileSizeMetrics)
+// Module 9640 (getUploaderFileSizeMetrics)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");

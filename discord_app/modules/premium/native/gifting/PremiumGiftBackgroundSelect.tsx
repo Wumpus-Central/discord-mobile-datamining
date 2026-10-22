@@ -1,20 +1,20 @@
-// === Module 10543: PremiumGiftBackgroundSelect ===
+// === Module 10555: PremiumGiftBackgroundSelect ===
 
-// Module 10543 (PremiumGiftBackgroundSelect)
+// Module 10555 (PremiumGiftBackgroundSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import timing from "timing" /* 5188 */;
-import NativeGiftContext from "NativeGiftContext" /* 10408 */;
+import timing from "timing" /* 5192 */;
+import NativeGiftContext from "NativeGiftContext" /* 10420 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { scrollView: { flex: 1, marginTop: nativeDefault.space.PX_24 }, contentContainer: { justifyContent: "center" } };
 let closure_9 = createStyles.createStyles(obj);
 const __initData = { code: "function PremiumGiftBackgroundSelectTsx1(){const{STANDARD_EASING,withTiming,visibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};}" };

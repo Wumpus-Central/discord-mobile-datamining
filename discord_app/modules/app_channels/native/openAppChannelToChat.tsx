@@ -1,8 +1,8 @@
-// === Module 13748: openAppChannelToChat ===
+// === Module 13784: openAppChannelToChat ===
 
-// Module 13748 (openAppChannelToChat)
-import transitionToChannel from "transitionToChannel" /* 5689 */;
-import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 9674 */;
+// Module 13784 (openAppChannelToChat)
+import transitionToChannel from "transitionToChannel" /* 5693 */;
+import openChannelSecondaryViewChatDefault from "openChannelSecondaryViewChat" /* 9686 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_channels/native/openAppChannelToChat.tsx");

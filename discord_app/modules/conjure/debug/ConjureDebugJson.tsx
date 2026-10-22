@@ -1,6 +1,6 @@
-// === Module 12452: ConjureDebugJson ===
+// === Module 12482: ConjureDebugJson ===
 
-// Module 12452 (ConjureDebugJson)
+// Module 12482 (ConjureDebugJson)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugJson.tsx");

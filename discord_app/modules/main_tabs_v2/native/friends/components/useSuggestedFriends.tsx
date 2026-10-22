@@ -1,16 +1,16 @@
-// === Module 17299: useSuggestedFriends ===
+// === Module 17369: useSuggestedFriends ===
 
-// Module 17299 (useSuggestedFriends)
+// Module 17369 (useSuggestedFriends)
 import _modDef12 from "module_12" /* 12 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 5015 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7710 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7719 */;
 
 require = fn;
-const SuggestedFriendSource = fn(13489).SuggestedFriendSource;
+const SuggestedFriendSource = fn(13525).SuggestedFriendSource;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
@@ -198,9 +198,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSugge
         return obj;
       });
       return _modDef12.unionBy(found, mapped, (user) => user.user.id).sort((user, user2) => {
-        const name = added(5015).getName(user.user);
-        const obj = added(5015);
-        return name.localeCompare(added(5015).getName(user2.user));
+        const name = added(5018).getName(user.user);
+        const obj = added(5018);
+        return name.localeCompare(added(5018).getName(user2.user));
       });
     } else {
       return [];

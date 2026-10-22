@@ -1,18 +1,18 @@
-// === Module 9005: GuildStageChannelSelection ===
+// === Module 9014: GuildStageChannelSelection ===
 
-// Module 9005 (GuildStageChannelSelection)
+// Module 9014 (GuildStageChannelSelection)
 import util from "util" /* 1128 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_7 = createStyles.createStyles({ channelText: { marginTop: 8, flexDirection: "row" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/modals/GuildStageChannelSelection.tsx");
@@ -45,7 +45,7 @@ export default function GuildStageChannelSelection(channel) {
       id = channel.id;
     }
     obj3.selectedItem = id;
-    obj2.openLazy(asyncRequireImpl(8884, dependencyMap.paths), "SelectUpdatesChannel", obj3);
+    obj2.openLazy(asyncRequireImpl(8893, dependencyMap.paths), "SelectUpdatesChannel", obj3);
   }
   function renderChannelHook(children, id) {
     return jsx(channel(handleSelectChannel[12]).Text, { variant: "text-sm/bold", color: "mobile-text-heading-primary", children }, id);

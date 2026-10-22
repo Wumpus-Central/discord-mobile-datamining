@@ -1,12 +1,12 @@
-// === Module 11677: ConjureCreateSheet ===
+// === Module 11694: ConjureCreateSheet ===
 
-// Module 11677 (ConjureCreateSheet)
+// Module 11694 (ConjureCreateSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7268 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 11680 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 11697 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 11702 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7275 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 11697 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 11714 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 11719 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,12 +17,12 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10656);
+const ConjureConnectionStore = fn(10668);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8, stageModelSettings: closure_9 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -453,7 +453,7 @@ export default function ConjureCreateSheet(guildId) {
   const callback2 = obj.useCallback(() => {
     const obj2 = { key: ConjureEffortPicker.CONJURE_EFFORT_PICKER_SHEET_KEY, stackingBehavior: "stack", content: null };
     const obj = ActionSheetActionCreators;
-    obj2.content = collapsed(ConjureEffortPicker.ConjureEffortPickerSheet, { initialSettings: CONJURE_DEFAULT_TIER_SETTINGS, tiers: ConjureLandingModelChoices.CONJURE_LANDING_TIER_SEATS, choices, onChange });
+    obj2.content = v65535(ConjureEffortPicker.ConjureEffortPickerSheet, { initialSettings: CONJURE_DEFAULT_TIER_SETTINGS, tiers: ConjureLandingModelChoices.CONJURE_LANDING_TIER_SEATS, choices, onChange });
     obj.showActionSheet(obj2);
   }, items4);
   const tmp4Result = require("ConjureLandingModelChoices");
@@ -476,7 +476,7 @@ export default function ConjureCreateSheet(guildId) {
     } else {
       const obj2 = { key: ConjureTemplateWizardSheet.CONJURE_TEMPLATE_WIZARD_SHEET_KEY, stackingBehavior: "stack", content: null };
       const obj3 = { template: wizard, guildId, modelSettings: CONJURE_DEFAULT_TIER_SETTINGS, onCreated: callback3 };
-      obj2.content = collapsed(ConjureTemplateWizardSheetDefault, obj3);
+      obj2.content = v65535(ConjureTemplateWizardSheetDefault, obj3);
       ActionSheetActionCreators.showActionSheet(obj2);
     }
   }, items6);

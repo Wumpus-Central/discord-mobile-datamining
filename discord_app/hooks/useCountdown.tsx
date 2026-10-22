@@ -1,8 +1,8 @@
-// === Module 7531: useCountdown ===
+// === Module 7538: useCountdown ===
 
-// Module 7531 (useCountdown)
+// Module 7538 (useCountdown)
 import DateUtils from "DateUtils" /* 4794 */;
-import useIntervalDefault from "useInterval" /* 7532 */;
+import useIntervalDefault from "useInterval" /* 7539 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;

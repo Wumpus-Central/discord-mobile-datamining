@@ -1,19 +1,19 @@
-// === Module 11199: OptInChannelsUtils ===
+// === Module 11216: OptInChannelsUtils ===
 
-// Module 11199 (OptInChannelsUtils)
+// Module 11216 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6806 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7185 */;
-import ChannelListState from "ChannelListState" /* 7614 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11200 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6813 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7192 */;
+import ChannelListState from "ChannelListState" /* 7621 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11217 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7186 */;
-import ReadStateStore from "ReadStateStore" /* 6750 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7193 */;
+import ReadStateStore from "ReadStateStore" /* 6757 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -27,8 +27,8 @@ const Constants = fn(1087);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
 const ChannelConstants = fn(4828);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7620).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6684).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7627).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6691).ReadStateTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelBrowserSections(arg0, _categories, arg2, rowHeight) {

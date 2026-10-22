@@ -1,6 +1,6 @@
-// === Module 14528: ClipsExperiment ===
+// === Module 14572: ClipsExperiment ===
 
-// Module 14528 (ClipsExperiment)
+// Module 14572 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PlatformUtilsAll from "PlatformUtils" /* 1384 */;
@@ -10,7 +10,7 @@ import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const PremiumTypes = fn(1394).PremiumTypes;
-const Features = fn(5700).Features;
+const Features = fn(5704).Features;
 const ApexExperiment = fn(1455);
 let obj2 = { kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: null };
 let obj3 = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };

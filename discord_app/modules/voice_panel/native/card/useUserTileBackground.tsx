@@ -1,9 +1,9 @@
-// === Module 18272: useUserTileBackground ===
+// === Module 18340: useUserTileBackground ===
 
-// Module 18272 (useUserTileBackground)
+// Module 18340 (useUserTileBackground)
 import c from "c" /* 576 */;
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 8706 */;
-import DominantColorUtils from "DominantColorUtils" /* 9377 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8715 */;
+import DominantColorUtils from "DominantColorUtils" /* 9388 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

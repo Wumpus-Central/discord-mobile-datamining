@@ -1,44 +1,44 @@
-// === Module 11796: ConjureNativePreview ===
+// === Module 11822: ConjureNativePreview ===
 
-// Module 11796 (ConjureNativePreview)
+// Module 11822 (ConjureNativePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import Card from "Card" /* 6884 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7185 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7388 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10686 */;
-import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10700 */;
-import leaveFrame from "leaveFrame" /* 10723 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10724 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11797 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11800 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11818 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import Card from "Card" /* 6891 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7192 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7395 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 10698 */;
+import ConjurePlatformUtils from "ConjurePlatformUtils" /* 10712 */;
+import leaveFrame from "leaveFrame" /* 10735 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10736 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 11823 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11826 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6754 */;
+import FramesStore from "FramesStore" /* 6761 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import ReadStateStore from "ReadStateStore" /* 6750 */;
+import ReadStateStore from "ReadStateStore" /* 6757 */;
 import AppStateStore from "AppStateStore" /* 2001 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
 
 const initialize = intl(504);
 const util = intl(1128);
-const UserProfileApplicationWidgetTypes = intl(7685);
+const UserProfileApplicationWidgetTypes = intl(7692);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11768);
+const conjureDesignFeedbackStore = fn(11801);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);
-const isLaunched = fn(6755).isLaunched;
+const isLaunched = fn(6762).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, dm: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 };
 obj.cardBody = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -1026,7 +1026,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
     const intl3 = tmp7(1128).intl;
     obj4.text = intl3.string(tmp7(1128).t["5911Lb"]);
     obj4.onPress = callback;
-    obj3.children = closure_22(tmp7(5226).Button, obj4);
+    obj3.children = closure_22(tmp7(5230).Button, obj4);
     let tmp28Result = closure_22(closure_25, obj3);
   } else if (null == stateFromStores) {
     const obj5 = { style: tmp.centered, children: closure_22(closure_5, {}) };
@@ -1034,10 +1034,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: tmp19, screenIndex: "conjure-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(previewApplicationId(10839), obj7, stateFromStores.id), ];
+    const items8 = [closure_22(previewApplicationId(10856), obj7, stateFromStores.id), ];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(11930).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(11951).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;

@@ -1,19 +1,19 @@
-// === Module 14505: GuildEventVoiceBanner ===
+// === Module 14549: GuildEventVoiceBanner ===
 
-// Module 14505 (GuildEventVoiceBanner)
+// Module 14549 (GuildEventVoiceBanner)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8842 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8865 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8851 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8874 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6763).isGuildScheduledEventActive;
+let closure_6 = fn(6770).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { header: { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, descriptionContainerStyle: { paddingTop: 4 }, buttonContainer: { marginTop: 12 } };
 let closure_9 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

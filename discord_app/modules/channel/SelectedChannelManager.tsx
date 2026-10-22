@@ -1,14 +1,14 @@
-// === Module 18775: SelectedChannelManager ===
+// === Module 18842: SelectedChannelManager ===
 
-// Module 18775 (SelectedChannelManager)
+// Module 18842 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1114 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6613 */;
-import transitionToGuild from "transitionToGuild" /* 7426 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6620 */;
+import transitionToGuild from "transitionToGuild" /* 7433 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
 
 require = fn;
 const findFirstVoiceChannelId = fn(4872).findFirstVoiceChannelId;
@@ -44,7 +44,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
   if (channel.type === constants.GROUP_DM) {
     const originChannelId = channel.originChannelId;
-    const channelId = SelectedChannelStore.getChannelId(collapsed);
+    const channelId = SelectedChannelStore.getChannelId(v65535);
     if (tmp) {
       router_utils.transitionTo(closure_1_8.CHANNEL(React6, channel.id));
     }

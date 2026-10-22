@@ -1,20 +1,20 @@
-// === Module 8107: InAppReportsMessagePreview ===
+// === Module 8116: InAppReportsMessagePreview ===
 
-// Module 8107 (InAppReportsMessagePreview)
+// Module 8116 (InAppReportsMessagePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ColorUtils from "ColorUtils" /* 4963 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import RowGeneratorDefault from "RowGenerator" /* 8108 */;
-import ChatItemDefault from "ChatItem" /* 9730 */;
+import ColorUtils from "ColorUtils" /* 4966 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import RowGeneratorDefault from "RowGenerator" /* 8117 */;
+import ChatItemDefault from "ChatItem" /* 9742 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, chatItemContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.chatItemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };

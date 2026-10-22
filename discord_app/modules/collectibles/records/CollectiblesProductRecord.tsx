@@ -1,13 +1,13 @@
-// === Module 7629: CollectiblesProductRecord ===
+// === Module 7636: CollectiblesProductRecord ===
 
-// Module 7629 (CollectiblesProductRecord)
+// Module 7636 (CollectiblesProductRecord)
 import getPricesFromServerDefault from "getPricesFromServer" /* 2050 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7630 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7636 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7637 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7643 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7631);
+const CollectiblesItemRecord = fn(7638);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1089).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1087);
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 24, categoryWillUnpublishAt: 24, isCategoryReward: null, prices: "f2fc96c4a753dd0c5dd02646aa2a518c", previewAssets: "img_account_sync_battlenet_white", googleSkuIds: "svg", eligibleOffers: "embed", variants: false, bundledProducts: null, isFirstParty: null };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 256, categoryWillUnpublishAt: 256, isCategoryReward: null, prices: "a9a658fd475f7a20d9e2c83953494ec4", previewAssets: "img_bungie_dark", googleSkuIds: "svg", eligibleOffers: "embed", variants: false, bundledProducts: null, isFirstParty: null };
               let str;
               if (first != null) {
                 str = first.optionValue;

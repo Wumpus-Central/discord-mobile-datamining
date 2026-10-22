@@ -1,15 +1,15 @@
-// === Module 11727: useConjureProjectSettingsForm ===
+// === Module 11744: useConjureProjectSettingsForm ===
 
-// Module 11727 (useConjureProjectSettingsForm)
+// Module 11744 (useConjureProjectSettingsForm)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6753 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6760 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
 
 const require = globalThis.__r;
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -20,7 +20,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1087).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(4966);
+let createStyles = fn(4969);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -31,7 +31,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(4966);
+createStyles = fn(4969);
 let closure_14 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -44,7 +44,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleCo
   const tmp2 = closure_14(color.color);
   if (cResult[0] !== tmp2.circle) {
     const obj2 = { style: tmp2.circle };
-    const tmp6 = collapsed(View, obj2);
+    const tmp6 = v65535(View, obj2);
     cResult[0] = tmp2.circle;
     cResult[1] = tmp6;
     let tmp3 = tmp6;
@@ -53,7 +53,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleCo
   }
   return tmp3;
 }) : (function RoleColorCircle(color) {
-  return collapsed(View, { style: closure_14(color.color).circle });
+  return v65535(View, { style: closure_14(color.color).circle });
 });
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureCollaboratorRolesSheet(guildId) {
@@ -591,7 +591,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     if (null != closure_1) {
       const obj2 = { content: null, key: null, stackingBehavior: "stack" };
       const obj3 = { guildId: tmp, initialSelectedRoleIds: first1, onSave: callback1 };
-      obj2.content = collapsed(closure_16, obj3);
+      obj2.content = v65535(closure_16, obj3);
       obj2.key = ConjureCollaboratorRolesSheet;
       ActionSheetActionCreators.showActionSheet(obj2);
     }

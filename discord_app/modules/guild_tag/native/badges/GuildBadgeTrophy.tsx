@@ -1,9 +1,9 @@
-// === Module 15085: GuildBadgeTrophy ===
+// === Module 15129: GuildBadgeTrophy ===
 
-// Module 15085 (GuildBadgeTrophy)
+// Module 15129 (GuildBadgeTrophy)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7938 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15056 */;
+import inlineStyles from "inlineStyles" /* 7946 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15100 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

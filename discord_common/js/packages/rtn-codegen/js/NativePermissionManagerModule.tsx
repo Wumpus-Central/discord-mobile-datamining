@@ -1,6 +1,6 @@
-// === Module 7867: NativePermissionManagerModule ===
+// === Module 7875: NativePermissionManagerModule ===
 
-// Module 7867 (NativePermissionManagerModule)
+// Module 7875 (NativePermissionManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

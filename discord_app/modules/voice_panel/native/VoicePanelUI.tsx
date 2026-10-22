@@ -1,30 +1,30 @@
-// === Module 18318: VoicePanelUI ===
+// === Module 18386: VoicePanelUI ===
 
-// Module 18318 (VoicePanelUI)
+// Module 18386 (VoicePanelUI)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5035 */;
-import HapticUtils from "HapticUtils" /* 5194 */;
-import spring from "spring" /* 5229 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5279 */;
-import ExternalPipDefault from "ExternalPip" /* 5804 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7147 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7230 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9934 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10847 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10852 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10854 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11993 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18275 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18320 */;
-import PanelSizeUtils from "PanelSizeUtils" /* 18322 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5038 */;
+import HapticUtils from "HapticUtils" /* 5198 */;
+import spring from "spring" /* 5233 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5283 */;
+import ExternalPipDefault from "ExternalPip" /* 5810 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7154 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7237 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9946 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10864 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10869 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10871 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12014 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18343 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18388 */;
+import PanelSizeUtils from "PanelSizeUtils" /* 18390 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
-import AppFreezeStore from "AppFreezeStore" /* 8745 */;
-import VoicePanelStore from "VoicePanelStore" /* 6783 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
+import AppFreezeStore from "AppFreezeStore" /* 8754 */;
+import VoicePanelStore from "VoicePanelStore" /* 6790 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -41,7 +41,7 @@ function useWrapperStyles(wrapperOffset) {
   const height = require("useGlobalStatusIndicatorState").useGlobalStatusIndicatorState().height;
   let tmp3 = closure_34();
   dependencyMap = tmp3;
-  const context = connected.useContext(height(10847));
+  const context = connected.useContext(height(10864));
   const wrapperDimensions = context.wrapperDimensions;
   connected = context.connected;
   const controlsSpecs = context.controlsSpecs;
@@ -109,7 +109,7 @@ function useWrapperStyles(wrapperOffset) {
             tmp32(wrapperDimensions, obj7);
             tmp16 = importDefault;
           }
-          tmp16(10852)(closure_0, { gestureActive: false, x: 0, y: 0 });
+          tmp16(10869)(closure_0, { gestureActive: false, x: 0, y: 0 });
         }
       }
     }
@@ -117,11 +117,11 @@ function useWrapperStyles(wrapperOffset) {
     tmp3 = windowHeight;
   };
   let obj5 = require("ReanimatedRexport");
-  fn3.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10852), wrapperOffset, getMaxPanelWidth: require("PanelSizeUtils").getMaxPanelWidth, getPanelX: require("PanelSizeUtils").getPanelX, roundToNearestPixel: height(11993), windowDimensions };
+  fn3.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10869), wrapperOffset, getMaxPanelWidth: require("PanelSizeUtils").getMaxPanelWidth, getPanelX: require("PanelSizeUtils").getPanelX, roundToNearestPixel: height(12014), windowDimensions };
   fn3.__workletHash = 7580692586417;
   fn3.__initData = __initData32;
   const animatedReaction = obj5.useAnimatedReaction(fn2, fn3);
-  let obj6 = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10852), wrapperOffset, getMaxPanelWidth: require("PanelSizeUtils").getMaxPanelWidth, getPanelX: require("PanelSizeUtils").getPanelX, roundToNearestPixel: height(11993), windowDimensions };
+  let obj6 = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10869), wrapperOffset, getMaxPanelWidth: require("PanelSizeUtils").getMaxPanelWidth, getPanelX: require("PanelSizeUtils").getPanelX, roundToNearestPixel: height(12014), windowDimensions };
   class A {
     constructor() {
       value = useReducedMotion.get();
@@ -204,114 +204,116 @@ function useWrapperStyles(wrapperOffset) {
     }
   }
   let obj7 = require("ReanimatedRexport");
-  A.__closure = { useReducedMotion, wrapperDimensions, wrapperOffset, connected, mode, VoicePanelModes: animatedStyle1, runOnJS: require("ReanimatedRexport").runOnJS, updateSourceTrackingView: height(5804).updateSourceTrackingView, withSpring: require("spring").withSpring, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, DRAWER_SIZE_PHYSICS: obj4 };
+  A.__closure = { useReducedMotion, wrapperDimensions, wrapperOffset, connected, mode, VoicePanelModes: animatedStyle1, runOnJS: require("ReanimatedRexport").runOnJS, updateSourceTrackingView: height(5810).updateSourceTrackingView, withSpring: require("spring").withSpring, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, DRAWER_SIZE_PHYSICS: obj4 };
   A.__workletHash = 14488035665779;
   A.__initData = __initData33;
   const animatedStyle = obj7.useAnimatedStyle(A);
-  const obj8 = { useReducedMotion, wrapperDimensions, wrapperOffset, connected, mode, VoicePanelModes: animatedStyle1, runOnJS: require("ReanimatedRexport").runOnJS, updateSourceTrackingView: height(5804).updateSourceTrackingView, withSpring: require("spring").withSpring, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, DRAWER_SIZE_PHYSICS: obj4 };
+  const obj8 = { useReducedMotion, wrapperDimensions, wrapperOffset, connected, mode, VoicePanelModes: animatedStyle1, runOnJS: require("ReanimatedRexport").runOnJS, updateSourceTrackingView: height(5810).updateSourceTrackingView, withSpring: require("spring").withSpring, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, DRAWER_SIZE_PHYSICS: obj4 };
   class C {
     constructor() {
-      obj = mode;
-      obj2 = connected;
-      value = mode.get();
-      if (typeof computeBorderRadii === "function") {
-        tmp3 = VoicePanelModes;
-        if (value === VoicePanelModes.PIP) {
-          num = DEFAULT_BORDER_RADIUS_PIP;
-        } else {
-          num = 0;
-          if (!tmp2) {
-            num = DEFAULT_BORDER_RADIUS;
-          }
-        }
-        size = { width: null, height: null, borderRadius: null, pointerEvents: null, backgroundColor: null };
-        tmp4 = wrapperDimensions;
-        size.width = wrapperDimensions.get().drawerWidth;
-        size.height = wrapperDimensions.get().drawerHeight;
-        tmp5 = closure_0;
-        tmp6 = closure_2;
-        obj4 = closure_0(closure_2[12]);
-        tmp7 = BORDER_RADIUS_PHYSICS;
-        size.borderRadius = obj4.withSpring(num, BORDER_RADIUS_PHYSICS);
-        str = "none";
-        if (obj.get() === tmp3.PANEL) {
-          str = "auto";
-        }
-        size.pointerEvents = str;
-        str2 = "transparent";
-        if (!obj2.get()) {
-          tmp8 = closure_2;
-          str2 = closure_2.maskDefaultBackground.backgroundColor;
-        }
-        size.backgroundColor = str2;
-        return size;
-      } else {
-        str3 = "Trying to call a non-function";
-        throw new TypeError("Trying to call a non-function");
+      size = { width: wrapperDimensions.get().drawerWidth, height: wrapperDimensions.get().drawerHeight, pointerEvents: null };
+      str = "none";
+      if (mode.get() === VoicePanelModes.PANEL) {
+        str = "auto";
       }
+      size.pointerEvents = str;
+      return size;
     }
   }
-  const obj9 = require("ReanimatedRexport");
-  C.__closure = { computeBorderRadii, mode, connected, wrapperDimensions, withSpring: require("spring").withSpring, BORDER_RADIUS_PHYSICS: windowDimensions, VoicePanelModes: animatedStyle1, styles: tmp3 };
-  C.__workletHash = 8780113527375;
+  C.__closure = { wrapperDimensions, mode, VoicePanelModes: animatedStyle1 };
+  C.__workletHash = 14326371753273;
   C.__initData = __initData35;
-  animatedStyle1 = obj9.useAnimatedStyle(C);
+  animatedStyle1 = require("ReanimatedRexport").useAnimatedStyle(C);
+  const obj9 = require("ReanimatedRexport");
+  const fn4 = function k() {
+    value = mode.get();
+    if (typeof computeBorderRadii === "function") {
+      if (value === VoicePanelModes.PIP) {
+        let num = DEFAULT_BORDER_RADIUS_PIP;
+      } else {
+        num = 0;
+        if (!tmp2) {
+          num = DEFAULT_BORDER_RADIUS;
+        }
+      }
+      obj2 = { borderRadius: spring.withSpring(num, v65535), backgroundColor: null };
+      let str = "transparent";
+      if (!connected.get()) {
+        str = closure_2.maskDefaultBackground.backgroundColor;
+      }
+      obj2.backgroundColor = str;
+      return obj2;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  };
+  const obj10 = require("ReanimatedRexport");
+  fn4.__closure = { computeBorderRadii, mode, connected, withSpring: require("spring").withSpring, BORDER_RADIUS_PHYSICS: windowDimensions, styles: tmp3 };
+  fn4.__workletHash = 2700534077363;
+  fn4.__initData = __initData36;
+  const animatedStyle2 = obj10.useAnimatedStyle(fn4);
   if (!require("ReleaseChannelUtils").isStable) {
-    class H {
+    class Y {
       constructor() {
         return windowDimensions.get();
       }
     }
-    const obj11 = { windowDimensions };
-    H.__closure = obj11;
-    H.__workletHash = 5417428185301;
-    H.__initData = __initData36;
-    const fn4 = function y(arg0) {
-      const obj = wrapperOffset(closure_2[15]);
-      wrapperOffset(closure_2[15]).runOnJS(log)("Window dimensions changed:", JSON.stringify(arg0));
-    };
-    const obj12 = { runOnJS: tmp(5035).runOnJS, log };
-    fn4.__closure = obj12;
-    fn4.__workletHash = 2055218123366;
-    fn4.__initData = __initData37;
-    const animatedReaction1 = tmp(5035).useAnimatedReaction(H, fn4);
-    let tmpResult = tmp(5035);
-    class T {
-      constructor() {
-        return wrapperDimensions.get();
+    const obj12 = { windowDimensions };
+    Y.__closure = obj12;
+    Y.__workletHash = 4681690335158;
+    Y.__initData = __initData37;
+    class H {
+      constructor(arg0) {
+        obj = closure_0(closure_2[15]);
+        runOnJSResult = obj.runOnJS(closure_1_28);
+        tmpResult = runOnJSResult("Window dimensions changed:", JSON.stringify(wrapperOffset));
+        return;
       }
     }
-    const obj13 = { wrapperDimensions };
-    T.__closure = obj13;
-    T.__workletHash = 3714374990167;
-    T.__initData = __initData38;
-    const fn5 = function k(arg0) {
-      const obj = wrapperOffset(closure_2[15]);
-      wrapperOffset(closure_2[15]).runOnJS(log)("Wrapper dimensions changed:", JSON.stringify(arg0));
+    const obj13 = { runOnJS: tmp(5038).runOnJS, log };
+    H.__closure = obj13;
+    H.__workletHash = 4621373029831;
+    H.__initData = __initData38;
+    const animatedReaction1 = tmp(5038).useAnimatedReaction(Y, H);
+    let tmpResult = tmp(5038);
+    const fn5 = function y() {
+      return wrapperDimensions.get();
     };
-    const obj14 = { runOnJS: tmp(5035).runOnJS, log };
+    const obj14 = { wrapperDimensions };
     fn5.__closure = obj14;
-    fn5.__workletHash = 2552930207447;
+    fn5.__workletHash = 12523662185784;
     fn5.__initData = __initData39;
-    const animatedReaction2 = tmp(5035).useAnimatedReaction(T, fn5);
-    let tmpResult2 = tmp(5035);
+    class T {
+      constructor(arg0) {
+        obj = closure_0(closure_2[15]);
+        runOnJSResult = obj.runOnJS(closure_1_28);
+        tmpResult = runOnJSResult("Wrapper dimensions changed:", JSON.stringify(wrapperOffset));
+        return;
+      }
+    }
+    const obj15 = { runOnJS: tmp(5038).runOnJS, log };
+    T.__closure = obj15;
+    T.__workletHash = 17578961345398;
+    T.__initData = __initData40;
+    const animatedReaction2 = tmp(5038).useAnimatedReaction(fn5, T);
+    let tmpResult2 = tmp(5038);
   }
-  let items = [tmp3.wrapper, animatedStyle1, animatedStyle];
-  return obj2.useMemo(() => ({ wrapperRootStyles: closure_2.wrapper, wrapperTransformStyles: animatedStyle, wrapperSurfaceStyles: animatedStyle1 }), items);
+  let items = [tmp3.wrapper, animatedStyle1, animatedStyle2, animatedStyle];
+  return obj2.useMemo(() => ({ wrapperRootStyles: closure_2.wrapper, wrapperTransformStyles: animatedStyle, wrapperSurfaceStyles: animatedStyle1, wrapperSurfaceSkinStyles: animatedStyle2 }), items);
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ Pressable: metroRequire, ScrollView } = get_ActivityIndicator);
-const VoicePanelConstants = fn(10848);
+const VoicePanelConstants = fn(10865);
 ({ BORDER_RADIUS_PHYSICS: c10, DEFAULT_BORDER_RADIUS } = VoicePanelConstants);
 const DEFAULT_BORDER_RADIUS_PIP = VoicePanelConstants.DEFAULT_BORDER_RADIUS_PIP;
 ({ DRAWER_SPRING_PHYSICS, IS_IOS: map1, MODE_CHANGE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const LAYOUT_PHYSICS = VoicePanelConstants.LAYOUT_PHYSICS;
 const DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE = VoicePanelConstants.DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE;
-const VoicePanelControlsModes = fn(10846).VoicePanelControlsModes;
-const isActivityParticipant = fn(5614).isActivityParticipant;
-const POP_RESISTANCE = fn(10849).POP_RESISTANCE;
+const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
+const isActivityParticipant = fn(5618).isActivityParticipant;
+const POP_RESISTANCE = fn(10866).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let c24 = 10;
@@ -329,7 +331,7 @@ function layoutTransition(originX) {
   return obj;
 }
 let tmp5 = new LoggerDefault("VoicePanelUI");
-layoutTransition.__closure = { withSpring: fn(5229).withSpring, LAYOUT_PHYSICS };
+layoutTransition.__closure = { withSpring: fn(5233).withSpring, LAYOUT_PHYSICS };
 layoutTransition.__workletHash = 16293847539255;
 layoutTransition.__initData = { code: "function layoutTransition_VoicePanelUITsx1(values){const{withSpring,LAYOUT_PHYSICS}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}" };
 let obj2 = {};
@@ -345,8 +347,8 @@ function scrollViewLayoutTransition(originX) {
   obj.initialValues = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;
 }
-let obj = { withSpring: fn(5229).withSpring, LAYOUT_PHYSICS };
-scrollViewLayoutTransition.__closure = { withSpring: fn(5229).withSpring, LAYOUT_PHYSICS, EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS: obj2 };
+let obj = { withSpring: fn(5233).withSpring, LAYOUT_PHYSICS };
+scrollViewLayoutTransition.__closure = { withSpring: fn(5233).withSpring, LAYOUT_PHYSICS, EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS: obj2 };
 scrollViewLayoutTransition.__workletHash = 10653209622652;
 scrollViewLayoutTransition.__initData = { code: "function scrollViewLayoutTransition_VoicePanelUITsx2(values){const{withSpring,LAYOUT_PHYSICS,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,LAYOUT_PHYSICS,'respect-motion-settings'),originY:withSpring(values.targetOriginY,LAYOUT_PHYSICS,'respect-motion-settings'),width:withSpring(values.targetWidth,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings'),height:withSpring(values.targetHeight,EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS,'respect-motion-settings')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}" };
 let obj4 = {};
@@ -370,7 +372,7 @@ function computeViewableChunksFromScrollPosition(arg0, arg1, arg2) {
 computeViewableChunksFromScrollPosition.__closure = { VOICE_PANEL_CHUNK_DIVISOR };
 computeViewableChunksFromScrollPosition.__workletHash = 3008066799757;
 computeViewableChunksFromScrollPosition.__initData = { code: "function computeViewableChunksFromScrollPosition_VoicePanelUITsx3(scrollPosition,windowHeight,contentHeight,extraChunks=1){const{VOICE_PANEL_CHUNK_DIVISOR}=this.__closure;const chunkSize=Math.ceil(windowHeight/VOICE_PANEL_CHUNK_DIVISOR);let start=Math.max(Math.floor(scrollPosition/chunkSize)-extraChunks,0);const end=Math.min(start+VOICE_PANEL_CHUNK_DIVISOR+extraChunks*2,Math.ceil(contentHeight/chunkSize));start=Math.max(end-VOICE_PANEL_CHUNK_DIVISOR-extraChunks*2,0);return{start:start,end:end};}" };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj6 = { accessibilityView: null, wrapper: null, maskDefaultBackground: null, scrollView: null, scrollViewContent: null, shade: null, shadePressable: null };
 let obj8 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
@@ -381,7 +383,7 @@ const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj9.alignItems = "flex-start";
 obj9.zIndex = 1;
 obj6.wrapper = obj9;
-let obj3 = { withSpring: fn(5229).withSpring, LAYOUT_PHYSICS, EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS: obj2 };
+let obj3 = { withSpring: fn(5233).withSpring, LAYOUT_PHYSICS, EMBEDDED_ACTIVITY_ORIENTATION_UPDATE_SAFE_LAYOUT_PHYSICS: obj2 };
 obj6.maskDefaultBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj11 = {};
 const merged5 = Object.assign(StyleSheet.absoluteFillObject);
@@ -1632,73 +1634,97 @@ const __initData31 = { code: "function VoicePanelUITsx50(){const{mode,connected,
 const __initData32 = { code: "function VoicePanelUITsx51(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,wrapperDimensions,updateSharedValueIfChanged,wrapperOffset,getMaxPanelWidth,getPanelX,roundToNearestPixel,windowDimensions}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{modeToSet:modeToSet,connected:connected,windowWidth:windowWidth,windowHeight:windowHeight,safeArea:safeArea,pipState:pipState,controlsHeight:controlsHeight,preJoinContentSize:preJoinContentSize,globalStatusIndicatorHeight:globalStatusIndicatorHeight}=props;if(modeToSet===VoicePanelModes.PIP&&pipState.id==null){return;}const animated=previous!=null?windowHeight===previous.windowHeight&&windowWidth===previous.windowWidth&&safeArea.top===previous.safeArea.top&&safeArea.bottom===previous.safeArea.bottom&&safeArea.left===previous.safeArea.left&&safeArea.right===previous.safeArea.right:true;let{drawerX:drawerX,drawerY:drawerY}=wrapperDimensions.get();const availableHeight=windowHeight-globalStatusIndicatorHeight;if(modeToSet===VoicePanelModes.PANEL){if(connected){drawerX=0;drawerY=0;updateSharedValueIfChanged(wrapperDimensions,{drawerWidth:windowWidth,drawerHeight:availableHeight,drawerX:drawerX,drawerY:drawerY,animated:animated,mode:modeToSet});updateSharedValueIfChanged(wrapperOffset,{gestureActive:false});}else{const drawerWidth=getMaxPanelWidth({windowWidth:windowWidth,connected:connected,safeAreaLeft:safeArea.left,safeAreaRight:safeArea.right});drawerX=getPanelX(windowWidth,drawerWidth);drawerY=roundToNearestPixel(Math.max(availableHeight-preJoinContentSize-controlsHeight-safeArea.bottom,availableHeight-0.8*availableHeight));updateSharedValueIfChanged(wrapperDimensions,{drawerWidth:drawerWidth,drawerHeight:availableHeight,drawerX:drawerX,drawerY:drawerY,animated:animated,mode:modeToSet});}}else if(modeToSet===VoicePanelModes.DISMISSED){if(connected){updateSharedValueIfChanged(wrapperDimensions,{mode:modeToSet});}else{updateSharedValueIfChanged(wrapperDimensions,{drawerY:windowDimensions.get().height+60,mode:modeToSet});}updateSharedValueIfChanged(wrapperOffset,{gestureActive:false,x:0,y:0});}}" };
 const __initData33 = { code: "function VoicePanelUITsx52(){const{useReducedMotion,wrapperDimensions,wrapperOffset,connected,mode,VoicePanelModes,runOnJS,updateSourceTrackingView,withSpring,DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,DRAWER_SIZE_PHYSICS}=this.__closure;const animateXY=!useReducedMotion.get()&&wrapperDimensions.get().animated||wrapperOffset.get().gestureActive;const{gestureActive:gestureActive,y:offsetY,x:offsetX}=wrapperOffset.get();let{drawerY:y,drawerX:x}=wrapperDimensions.get();const applyGestureOffset=!connected.get()&&(gestureActive||offsetY!==0);if(applyGestureOffset){y+=Math.max(offsetY,0);x+=offsetX;}const updateSourceTrackingViewHelper=function(finished){if(finished&&mode.get()!==VoicePanelModes.DISMISSED){runOnJS(updateSourceTrackingView)();}};return{transform:[{translateX:withSpring(x,wrapperOffset.get().gestureActive?DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE:DRAWER_SIZE_PHYSICS,animateXY?'animate-always':'animate-never',updateSourceTrackingViewHelper)},{translateY:withSpring(y,wrapperOffset.get().gestureActive?DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE:DRAWER_SIZE_PHYSICS,animateXY?'animate-always':'animate-never',updateSourceTrackingViewHelper)}]};}" };
 const __initData34 = { code: "function VoicePanelUITsx53(finished){const{mode,VoicePanelModes,runOnJS,updateSourceTrackingView}=this.__closure;if(finished&&mode.get()!==VoicePanelModes.DISMISSED){runOnJS(updateSourceTrackingView)();}}" };
-const __initData35 = { code: "function VoicePanelUITsx54(){const{computeBorderRadii,mode,connected,wrapperDimensions,withSpring,BORDER_RADIUS_PHYSICS,VoicePanelModes,styles}=this.__closure;const borderRadius=computeBorderRadii({mode:mode.get(),connected:connected.get()});return{width:wrapperDimensions.get().drawerWidth,height:wrapperDimensions.get().drawerHeight,borderRadius:withSpring(borderRadius,BORDER_RADIUS_PHYSICS),pointerEvents:mode.get()===VoicePanelModes.PANEL?'auto':'none',backgroundColor:connected.get()?'transparent':styles.maskDefaultBackground.backgroundColor};}" };
-const __initData36 = { code: "function VoicePanelUITsx55(){const{windowDimensions}=this.__closure;return windowDimensions.get();}" };
-const __initData37 = { code: "function VoicePanelUITsx56(value){const{runOnJS,log}=this.__closure;runOnJS(log)('Window dimensions changed:',JSON.stringify(value));}" };
-const __initData38 = { code: "function VoicePanelUITsx57(){const{wrapperDimensions}=this.__closure;return wrapperDimensions.get();}" };
-const __initData39 = { code: "function VoicePanelUITsx58(value){const{runOnJS,log}=this.__closure;runOnJS(log)('Wrapper dimensions changed:',JSON.stringify(value));}" };
+const __initData35 = { code: "function VoicePanelUITsx54(){const{wrapperDimensions,mode,VoicePanelModes}=this.__closure;return{width:wrapperDimensions.get().drawerWidth,height:wrapperDimensions.get().drawerHeight,pointerEvents:mode.get()===VoicePanelModes.PANEL?'auto':'none'};}" };
+const __initData36 = { code: "function VoicePanelUITsx55(){const{computeBorderRadii,mode,connected,withSpring,BORDER_RADIUS_PHYSICS,styles}=this.__closure;const borderRadius=computeBorderRadii({mode:mode.get(),connected:connected.get()});return{borderRadius:withSpring(borderRadius,BORDER_RADIUS_PHYSICS),backgroundColor:connected.get()?'transparent':styles.maskDefaultBackground.backgroundColor};}" };
+const __initData37 = { code: "function VoicePanelUITsx56(){const{windowDimensions}=this.__closure;return windowDimensions.get();}" };
+const __initData38 = { code: "function VoicePanelUITsx57(value){const{runOnJS,log}=this.__closure;runOnJS(log)('Window dimensions changed:',JSON.stringify(value));}" };
+const __initData39 = { code: "function VoicePanelUITsx58(){const{wrapperDimensions}=this.__closure;return wrapperDimensions.get();}" };
+const __initData40 = { code: "function VoicePanelUITsx59(value){const{runOnJS,log}=this.__closure;runOnJS(log)('Wrapper dimensions changed:',JSON.stringify(value));}" };
 ReactCompilerGating = fn(558);
-let closure_94 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedWrapper(children) {
-  const cResult = c.c(9);
+let closure_95 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedWrapper(children) {
+  const cResult = c.c(12);
   children = children.children;
-  ({ wrapperRootStyles, wrapperTransformStyles, wrapperSurfaceStyles } = useWrapperStyles(children.wrapperOffset));
-  if (cResult[0] === children) {
-    if (cResult[1] === wrapperSurfaceStyles) {
-      let tmp4 = cResult[2];
-    }
-    if (cResult[3] === tmp4) {
-      if (cResult[4] === wrapperTransformStyles) {
-        let tmp6 = cResult[5];
-      }
-      if (cResult[6] === tmp6) {
-        if (cResult[7] === wrapperRootStyles) {
-          let tmp10 = cResult[8];
-        }
-        return tmp10;
-      }
-      obj2 = { style: wrapperRootStyles, pointerEvents: "box-none", children: tmp6 };
-      const tmp13 = guild(ReanimatedNativeViewDefault, obj2);
-      cResult[6] = tmp6;
-      cResult[7] = wrapperRootStyles;
-      cResult[8] = tmp13;
-      tmp10 = tmp13;
-    }
-    const obj3 = { style: wrapperTransformStyles, pointerEvents: "box-none", children: tmp4 };
-    const tmp9 = guild(ReanimatedNativeViewDefault, obj3);
-    cResult[3] = tmp4;
-    cResult[4] = wrapperTransformStyles;
-    cResult[5] = tmp9;
-    tmp6 = tmp9;
+  ({ wrapperRootStyles, wrapperTransformStyles, wrapperSurfaceStyles, wrapperSurfaceSkinStyles } = useWrapperStyles(children.wrapperOffset));
+  if (cResult[0] !== wrapperSurfaceSkinStyles) {
+    obj2 = { style: null, pointerEvents: "none" };
+    const items = [StyleSheet.absoluteFill, wrapperSurfaceSkinStyles];
+    obj2.style = items;
+    const tmp8 = guild(ReanimatedNativeViewDefault, obj2);
+    cResult[0] = wrapperSurfaceSkinStyles;
+    cResult[1] = tmp8;
+    let tmp4 = tmp8;
+  } else {
+    tmp4 = cResult[1];
   }
-  const tmp5 = guild(ReanimatedNativeViewDefault, { style: wrapperSurfaceStyles, layout: layoutTransition, children });
-  cResult[0] = children;
-  cResult[1] = wrapperSurfaceStyles;
-  cResult[2] = tmp5;
-  tmp4 = tmp5;
-  obj4 = { style: wrapperSurfaceStyles, layout: layoutTransition, children };
+  if (cResult[2] === children) {
+    if (cResult[3] === tmp4) {
+      if (cResult[4] === wrapperSurfaceStyles) {
+        let tmp9 = cResult[5];
+      }
+      if (cResult[6] === tmp9) {
+        if (cResult[7] === wrapperTransformStyles) {
+          let tmp11 = cResult[8];
+        }
+        if (cResult[9] === tmp11) {
+          if (cResult[10] === wrapperRootStyles) {
+            let tmp15 = cResult[11];
+          }
+          return tmp15;
+        }
+        const obj3 = { style: wrapperRootStyles, pointerEvents: "box-none", children: tmp11 };
+        const tmp18 = guild(ReanimatedNativeViewDefault, obj3);
+        cResult[9] = tmp11;
+        cResult[10] = wrapperRootStyles;
+        cResult[11] = tmp18;
+        tmp15 = tmp18;
+      }
+      obj4 = { style: wrapperTransformStyles, pointerEvents: "box-none", children: tmp9 };
+      const tmp14 = guild(ReanimatedNativeViewDefault, obj4);
+      cResult[6] = tmp9;
+      cResult[7] = wrapperTransformStyles;
+      cResult[8] = tmp14;
+      tmp11 = tmp14;
+    }
+  }
+  const obj5 = { style: wrapperSurfaceStyles, layout: layoutTransition, children: null };
+  const items1 = [tmp4, children];
+  obj5.children = items1;
+  const tmp10 = closure_1_22(ReanimatedNativeViewDefault, obj5);
+  cResult[2] = children;
+  cResult[3] = tmp4;
+  cResult[4] = wrapperSurfaceStyles;
+  cResult[5] = tmp10;
+  tmp9 = tmp10;
   const tmp3 = useWrapperStyles(children.wrapperOffset);
-}) : (function AnimatedWrapper(children) {
-  ({ wrapperRootStyles, wrapperTransformStyles, wrapperSurfaceStyles } = useWrapperStyles(children.wrapperOffset));
+}) : (function AnimatedWrapper(wrapperOffset) {
+  ({ wrapperRootStyles, wrapperTransformStyles, wrapperSurfaceStyles, wrapperSurfaceSkinStyles } = useWrapperStyles(wrapperOffset.wrapperOffset));
   const obj = { style: wrapperRootStyles, pointerEvents: "box-none", children: null };
-  const tmp = useWrapperStyles(children.wrapperOffset);
+  const tmp = useWrapperStyles(wrapperOffset.wrapperOffset);
   obj2 = { style: wrapperTransformStyles, pointerEvents: "box-none", children: null };
   const tmp2 = ReanimatedNativeViewDefault;
-  obj2.children = guild(ReanimatedNativeViewDefault, { style: wrapperSurfaceStyles, layout: layoutTransition, children: children.children });
-  obj.children = guild(ReanimatedNativeViewDefault, obj2);
+  const obj3 = { style: wrapperSurfaceStyles, layout: layoutTransition, children: null };
+  const tmp3 = ReanimatedNativeViewDefault;
+  obj4 = { style: null, pointerEvents: "none" };
+  const items = [StyleSheet.absoluteFill, wrapperSurfaceSkinStyles];
+  obj4.style = items;
+  const items1 = [guild(ReanimatedNativeViewDefault, obj4), wrapperOffset.children];
+  obj3.children = items1;
+  obj2.children = closure_1_22(ReanimatedNativeViewDefault, obj3);
+  obj.children = guild(tmp3, obj2);
   return guild(tmp2, obj);
 });
 const DrawerShadeOpacityPhysics = { mass: 0.6, damping: 30, stiffness: 400, overshootClamping: true };
-const __initData40 = { code: "function VoicePanelUITsx59(){const{withSpring,opacity,DrawerShadeOpacityPhysics}=this.__closure;return{opacity:withSpring(opacity.get(),DrawerShadeOpacityPhysics),pointerEvents:opacity.get()===0?\"none\":\"auto\"};}" };
-const __initData41 = { code: "function VoicePanelUITsx60(){const{withSpring,opacity,DrawerShadeOpacityPhysics}=this.__closure;return{opacity:withSpring(opacity.get(),DrawerShadeOpacityPhysics),pointerEvents:opacity.get()===0?'none':'auto'};}" };
+const __initData41 = { code: "function VoicePanelUITsx60(){const{withSpring,opacity,DrawerShadeOpacityPhysics}=this.__closure;return{opacity:withSpring(opacity.get(),DrawerShadeOpacityPhysics),pointerEvents:opacity.get()===0?\"none\":\"auto\"};}" };
+const __initData42 = { code: "function VoicePanelUITsx61(){const{withSpring,opacity,DrawerShadeOpacityPhysics}=this.__closure;return{opacity:withSpring(opacity.get(),DrawerShadeOpacityPhysics),pointerEvents:opacity.get()===0?'none':'auto'};}" };
 ReactCompilerGating = fn(558);
-let closure_98 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DrawerShade(opacity) {
+let closure_99 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DrawerShade(opacity) {
   const cResult = opacity(576).c(9);
   opacity = opacity.opacity;
   const onPress = opacity.onPress;
   const tmp3 = closure_34();
   let obj = opacity(576);
   const fn = function o() {
-    const obj = { opacity: spring.withSpring(opacity.get(), closure_95), pointerEvents: null };
+    const obj = { opacity: spring.withSpring(opacity.get(), closure_96), pointerEvents: null };
     let str = "auto";
     if (0 === opacity.get()) {
       str = "none";
@@ -1706,10 +1732,10 @@ let closure_98 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj.pointerEvents = str;
     return obj;
   };
-  obj2 = opacity(5035);
-  fn.__closure = { withSpring: opacity(5229).withSpring, opacity, DrawerShadeOpacityPhysics };
-  fn.__workletHash = 6949445761550;
-  fn.__initData = __initData40;
+  obj2 = opacity(5038);
+  fn.__closure = { withSpring: opacity(5233).withSpring, opacity, DrawerShadeOpacityPhysics };
+  fn.__workletHash = 12392707874724;
+  fn.__initData = __initData41;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   if (cResult[0] === animatedStyle) {
     if (cResult[1] === tmp3.shade) {
@@ -1744,12 +1770,12 @@ let closure_98 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[1] = tmp3.shade;
   cResult[2] = items;
   tmp5 = items;
-  const obj3 = { withSpring: opacity(5229).withSpring, opacity, DrawerShadeOpacityPhysics };
+  const obj3 = { withSpring: opacity(5233).withSpring, opacity, DrawerShadeOpacityPhysics };
 }) : (function DrawerShade(onPress) {
   const opacity = onPress.opacity;
   const tmp = closure_34();
   const fn = function n() {
-    const obj = { opacity: spring.withSpring(opacity.get(), closure_95), pointerEvents: null };
+    const obj = { opacity: spring.withSpring(opacity.get(), closure_96), pointerEvents: null };
     let str = "auto";
     if (0 === opacity.get()) {
       str = "none";
@@ -1757,10 +1783,10 @@ let closure_98 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj.pointerEvents = str;
     return obj;
   };
-  let obj = opacity(5035);
-  fn.__closure = { withSpring: opacity(5229).withSpring, opacity, DrawerShadeOpacityPhysics };
-  fn.__workletHash = 7070087280036;
-  fn.__initData = __initData41;
+  let obj = opacity(5038);
+  fn.__closure = { withSpring: opacity(5233).withSpring, opacity, DrawerShadeOpacityPhysics };
+  fn.__workletHash = 14106533035077;
+  fn.__initData = __initData42;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj3 = { style: null, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_21(closure_6, { style: tmp.shadePressable, onPress: onPress.onPress }) };
   const items = [StyleSheet.absoluteFill, tmp.shade, animatedStyle];
@@ -1966,46 +1992,46 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (tmp6[0]) {
     obj2 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
     const obj3 = { children: null };
-    const items3 = [closure_21(tmp2(18324), {}), , ];
+    const items3 = [closure_21(tmp2(18392), {}), , ];
     obj4 = { opacity, onPress: dismissPanel };
-    items3[1] = closure_21(closure_98, obj4);
+    items3[1] = closure_21(closure_99, obj4);
     const obj5 = { gesture: tmp11, children: null };
     const obj6 = { style: tmp.accessibilityView, nativeID: null, accessibilityViewIsModal: true, layout: null, onAccessibilityEscape: null, children: null };
     let _HermesInternal = HermesInternal;
     obj6.nativeID = "voice-panel-ui-" + channelId;
     obj6.layout = layoutTransition;
-    obj6.onAccessibilityEscape = tmp2(10725);
-    const items4 = [closure_21(tmp2(18326), {}), , , ];
+    obj6.onAccessibilityEscape = tmp2(10737);
+    const items4 = [closure_21(tmp2(18394), {}), , , ];
     const obj7 = { wrapperOffset, children: null };
     const obj8 = { zIndex: 2, children: null };
     const obj9 = { wrapperOffset, gestureState, layout: layoutTransition };
-    obj8.children = closure_21(tmp2(18328), obj9);
-    const items5 = [closure_21(channelId(5579).LayerScope, obj8), , ];
+    obj8.children = closure_21(tmp2(18396), obj9);
+    const items5 = [closure_21(channelId(5583).LayerScope, obj8), , ];
     const obj10 = { gesture, children: null };
     const obj11 = { style: StyleSheet.absoluteFill, layout: layoutTransition, collapsable: false, children: null };
-    const tmp2Result = tmp2(18325);
+    const tmp2Result = tmp2(18393);
     const obj12 = { gesture: scrollNativeGesture, children: null };
     const obj13 = { layout: scrollViewLayoutTransition, ref: scrollerRef, onScroll: handleScroll, onMomentumScrollEnd: NOOP, animatedProps: scrollViewProps, style: tmp.scrollView, onContentSizeChange, contentContainerStyle: tmp.scrollViewContent, scrollEventThrottle: 8.333333333333334, children: null };
     const obj14 = { viewableChunks };
-    const items6 = [closure_21(tmp2(18385), obj14), closure_21(tmp2(18416), {})];
+    const items6 = [closure_21(tmp2(18453), obj14), closure_21(tmp2(18484), {})];
     obj13.children = items6;
     obj12.children = closure_22(closure_35, obj13);
-    obj11.children = closure_21(channelId(5279).GestureDetector, obj12);
-    obj10.children = closure_21(tmp2(7147), obj11);
-    items5[1] = closure_21(channelId(5279).GestureDetector, obj10);
-    items5[2] = closure_21(tmp2(18420), {});
+    obj11.children = closure_21(channelId(5283).GestureDetector, obj12);
+    obj10.children = closure_21(tmp2(7154), obj11);
+    items5[1] = closure_21(channelId(5283).GestureDetector, obj10);
+    items5[2] = closure_21(tmp2(18488), {});
     obj7.children = items5;
-    items4[1] = closure_22(closure_94, obj7);
-    items4[2] = closure_21(tmp2(18423), {});
+    items4[1] = closure_22(closure_95, obj7);
+    items4[2] = closure_21(tmp2(18491), {});
     const obj15 = { gestureState };
-    items4[3] = closure_21(tmp2(18429), obj15);
+    items4[3] = closure_21(tmp2(18497), obj15);
     obj6.children = items4;
     obj5.children = closure_22(tmp2Result, obj6);
-    items3[2] = closure_21(channelId(5279).GestureDetector, obj5);
+    items3[2] = closure_21(channelId(5283).GestureDetector, obj5);
     obj3.children = items3;
-    obj2.children = closure_22(channelId(5579).LayerScope, obj3);
-    tmp13 = closure_21(channelId(7230).AnalyticsLocationProvider, obj2);
-    const tmp2Result2 = tmp2(7147);
+    obj2.children = closure_22(channelId(5583).LayerScope, obj3);
+    tmp13 = closure_21(channelId(7237).AnalyticsLocationProvider, obj2);
+    const tmp2Result2 = tmp2(7154);
   }
   return tmp13;
 }));

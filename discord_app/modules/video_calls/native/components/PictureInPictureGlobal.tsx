@@ -1,38 +1,38 @@
-// === Module 18199: PictureInPictureGlobal ===
+// === Module 18267: PictureInPictureGlobal ===
 
-// Module 18199 (PictureInPictureGlobal)
+// Module 18267 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1202 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import timing from "timing" /* 5188 */;
-import NavigatorConstants from "NavigatorConstants" /* 5250 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6759 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7843 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11294 */;
-import PictureInPictureDefault from "PictureInPicture" /* 11303 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11305 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18200 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import timing from "timing" /* 5192 */;
+import NavigatorConstants from "NavigatorConstants" /* 5254 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6766 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7851 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11311 */;
+import PictureInPictureDefault from "PictureInPicture" /* 11320 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11322 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18268 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(11307);
+const usePipDimensionsDefault = tmp5(11324);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9740).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9752).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1087).PictureInPicturePositions;
-const ParticipantTypes = fn(5614).ParticipantTypes;
+const ParticipantTypes = fn(5618).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
 const native = fn(1202);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1202).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
@@ -360,8 +360,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const tmpResult8 = tmp(504);
-    const shouldForcePipOrientation = tmp(11304).useShouldForcePipOrientation(tmp31);
-    tmp(8655);
+    const shouldForcePipOrientation = tmp(11321).useShouldForcePipOrientation(tmp31);
+    tmp(8664);
     if (cResult[20] === channel.id) {
       class M {
         constructor() {
@@ -409,7 +409,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[21] = shouldForcePipOrientation;
     cResult[22] = obj2;
     tmp35 = obj2;
-    const tmpResult9 = tmp(11304);
+    const tmpResult9 = tmp(11321);
   }
   let tmp19 = stateFromStores1;
   if (null != tmp6) {

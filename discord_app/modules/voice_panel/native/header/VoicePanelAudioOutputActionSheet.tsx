@@ -1,28 +1,28 @@
-// === Module 9122: VoicePanelAudioOutputActionSheet ===
+// === Module 9131: VoicePanelAudioOutputActionSheet ===
 
-// Module 9122 (VoicePanelAudioOutputActionSheet)
+// Module 9131 (VoicePanelAudioOutputActionSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import util from "util" /* 1128 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4991 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5247 */;
-import NativeViewDefault from "NativeView" /* 6865 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7225 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 14085 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
+import NativeViewDefault from "NativeView" /* 6872 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7232 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 14119 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5697 */;
-import AudioManagerStore from "AudioManagerStore" /* 9114 */;
+import GameConsoleStore from "GameConsoleStore" /* 5701 */;
+import AudioManagerStore from "AudioManagerStore" /* 9123 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import SessionsStore from "SessionsStore" /* 5698 */;
+import SessionsStore from "SessionsStore" /* 5702 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(9121).VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
+let closure_9 = fn(9130).VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
 const PlatformTypes = fn(1087).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_13 = createStyles.createStyles({ sectionContainer: { marginTop: 0, marginBottom: 24 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelAudioPhoneOutputSection() {
@@ -45,9 +45,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
   ({ activeDevice, availableDevices } = stateFromStoresObject);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function s(arg0) {
-      availableDevices(9123).setAudioOutputDevice(arg0);
-      const obj = availableDevices(9123);
-      closure_1(5192).hideActionSheet(closure_1_9);
+      availableDevices(9132).setAudioOutputDevice(arg0);
+      const obj = availableDevices(9132);
+      closure_1(5196).hideActionSheet(closure_1_9);
     };
     cResult[2] = fn2;
     let tmp9 = fn2;
@@ -79,9 +79,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
         },
       hasIcons: true,
       children: availableDevices.map((deviceId) => {
-          const obj = { value: deviceId.deviceId, icon: closure_1_11(availableDevices(6890).TableRowIcon, { source: availableDevices(9113).audioDeviceToIconMap[deviceId.simpleDeviceType] }), label: null, subLabel: null };
-          const obj2 = { source: availableDevices(9113).audioDeviceToIconMap[deviceId.simpleDeviceType] };
-          obj.label = availableDevices(9113).getAudioDeviceToDisplayText(deviceId);
+          const obj = { value: deviceId.deviceId, icon: closure_1_11(availableDevices(6897).TableRowIcon, { source: availableDevices(9122).audioDeviceToIconMap[deviceId.simpleDeviceType] }), label: null, subLabel: null };
+          const obj2 = { source: availableDevices(9122).audioDeviceToIconMap[deviceId.simpleDeviceType] };
+          obj.label = availableDevices(9122).getAudioDeviceToDisplayText(deviceId);
           const deviceName = deviceId.deviceName;
           let length;
           if (deviceName != null) {
@@ -92,11 +92,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
             deviceName1 = deviceId.deviceName;
           }
           obj.subLabel = deviceName1;
-          return closure_1_11(availableDevices(6963).TableRadioRow, obj, deviceId.deviceId);
+          return closure_1_11(availableDevices(6970).TableRadioRow, obj, deviceId.deviceId);
         })
     };
-    obj2.children = closure_11(availableDevices(6964).TableRadioGroup, obj3);
-    tmp11 = closure_11(availableDevices(9124).VoicePanelFormSection, obj2);
+    obj2.children = closure_11(availableDevices(6971).TableRadioGroup, obj3);
+    tmp11 = closure_11(availableDevices(9133).VoicePanelFormSection, obj2);
   }
   cResult[3] = activeDevice;
   cResult[4] = availableDevices;
@@ -110,9 +110,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
   const stateFromStoresObject = availableDevices(573).useStateFromStoresObject(items, () => ({ activeDevice: AudioManagerStore.getActiveAudioDevice(), availableDevices: AudioManagerStore.getAudioDevices() }));
   availableDevices = stateFromStoresObject.availableDevices;
   closure_1 = noop.useCallback((arg0) => {
-    availableDevices(9123).setAudioOutputDevice(arg0);
-    const obj = availableDevices(9123);
-    closure_1(5192).hideActionSheet(closure_1_9);
+    availableDevices(9132).setAudioOutputDevice(arg0);
+    const obj = availableDevices(9132);
+    closure_1(5196).hideActionSheet(closure_1_9);
   }, []);
   let tmp5 = null;
   if (availableDevices.length > 0) {
@@ -130,9 +130,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
         },
       hasIcons: true,
       children: availableDevices.map((deviceId) => {
-          const obj = { value: deviceId.deviceId, icon: closure_1_11(availableDevices(6890).TableRowIcon, { source: availableDevices(9113).audioDeviceToIconMap[deviceId.simpleDeviceType] }), label: null, subLabel: null };
-          const obj2 = { source: availableDevices(9113).audioDeviceToIconMap[deviceId.simpleDeviceType] };
-          obj.label = availableDevices(9113).getAudioDeviceToDisplayText(deviceId);
+          const obj = { value: deviceId.deviceId, icon: closure_1_11(availableDevices(6897).TableRowIcon, { source: availableDevices(9122).audioDeviceToIconMap[deviceId.simpleDeviceType] }), label: null, subLabel: null };
+          const obj2 = { source: availableDevices(9122).audioDeviceToIconMap[deviceId.simpleDeviceType] };
+          obj.label = availableDevices(9122).getAudioDeviceToDisplayText(deviceId);
           const deviceName = deviceId.deviceName;
           let length;
           if (deviceName != null) {
@@ -143,11 +143,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
             deviceName1 = deviceId.deviceName;
           }
           obj.subLabel = deviceName1;
-          return closure_1_11(availableDevices(6963).TableRadioRow, obj, deviceId.deviceId);
+          return closure_1_11(availableDevices(6970).TableRadioRow, obj, deviceId.deviceId);
         })
     };
-    obj2.children = closure_11(tmp2(6964).TableRadioGroup, obj3);
-    tmp5 = closure_11(tmp2(9124).VoicePanelFormSection, obj2);
+    obj2.children = closure_11(tmp2(6971).TableRadioGroup, obj3);
+    tmp5 = closure_11(tmp2(9133).VoicePanelFormSection, obj2);
   }
   return tmp5;
 });
@@ -156,8 +156,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
   const cResult = channel(576).c(19);
   channel = channel.channel;
   const tmp4 = closure_13();
-  arr = arr(11578)();
-  let tmp5 = arr(11499)();
+  arr = arr(11595)();
+  let tmp5 = arr(11516)();
   dependencyMap = tmp5;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GameConsoleStore];
@@ -252,7 +252,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
     if (cResult[6] === arr) {
       let tmp16 = cResult[7];
     }
-    tmp(4991);
+    tmp(4994);
     class A {
       constructor() {
         str = undefined;
@@ -341,7 +341,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
             return tmp5;
           });
           obj3.children = mapped.filter((item) => Boolean(item));
-          obj2.children = closure_11(tmp(6964).TableRadioGroup, obj3);
+          obj2.children = closure_11(tmp(6971).TableRadioGroup, obj3);
           tmp25 = closure_11(tmp27, obj2);
         }
         cResult[14] = arr;
@@ -417,8 +417,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
   channel = channel.channel;
   let arr;
   let awaitingRemoteSessionInfo;
-  arr = arr(11578)();
-  dependencyMap = arr(11499)();
+  arr = arr(11595)();
+  dependencyMap = arr(11516)();
   let tmp = closure_13();
   const items = [awaitingRemoteSessionInfo];
   const stateFromStores = channel(573).useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
@@ -467,7 +467,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
     }
   }, items3);
   let obj2 = channel(573);
-  const tmp8 = !channel(4991).useIsDismissibleContentDismissed_UNSAFE(channel(4805).DismissibleContent.DONUT_MOBILE_NUX);
+  const tmp8 = !channel(4994).useIsDismissibleContentDismissed_UNSAFE(channel(4805).DismissibleContent.DONUT_MOBILE_NUX);
   awaitingRemoteSessionInfo = tmp8;
   const items4 = [arr, tmp8];
   const effect = stateFromStores.useEffect(() => {
@@ -514,8 +514,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceP
       return tmp5;
     });
     obj5.children = mapped.filter((item) => Boolean(item));
-    obj4.children = closure_11(tmp3(6964).TableRadioGroup, obj5);
-    tmp10 = closure_11(tmp3(9124).VoicePanelFormSection, obj4);
+    obj4.children = closure_11(tmp3(6971).TableRadioGroup, obj5);
+    tmp10 = closure_11(tmp3(9133).VoicePanelFormSection, obj4);
   }
   return tmp10;
 });
@@ -556,7 +556,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj2 = { title: null };
       const intl = BottomSheet(1128).intl;
       obj2.title = intl.string(BottomSheet(1128).t.iwxPM3);
-      const tmp8 = closure_11(BottomSheet(7225).BottomSheetTitleHeader, obj2);
+      const tmp8 = closure_11(BottomSheet(7232).BottomSheetTitleHeader, obj2);
       cResult[3] = tmp8;
       let tmp6 = tmp8;
     } else {
@@ -588,7 +588,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[8] === tmp9) {
     }
-    BottomSheet = BottomSheet(5247).BottomSheet;
+    BottomSheet = BottomSheet(5251).BottomSheet;
     const obj4 = { header: tmp6, children: null };
     const obj5 = { children: null };
     const obj6 = { children: null };

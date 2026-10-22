@@ -1,24 +1,24 @@
-// === Module 6793: GuildReadStateStore ===
+// === Module 6800: GuildReadStateStore ===
 
-// Module 6793 (GuildReadStateStore)
+// Module 6800 (GuildReadStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import FavoritesUtils from "FavoritesUtils" /* 4846 */;
 import ThreadActionUtils from "ThreadActionUtils" /* 4909 */;
-import NSFWContentGate from "NSFWContentGate" /* 6660 */;
-import isOptInEnabled from "isOptInEnabled" /* 6792 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6794 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6766 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6749 */;
+import NSFWContentGate from "NSFWContentGate" /* 6667 */;
+import isOptInEnabled from "isOptInEnabled" /* 6799 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6801 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6773 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6756 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1086 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import ReadStateStore from "ReadStateStore" /* 6750 */;
+import ReadStateStore from "ReadStateStore" /* 6757 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6690 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
@@ -87,7 +87,7 @@ function isCountableChannel(channel) {
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
-            let result2 = collapsed(channel.type);
+            let result2 = v65535(channel.type);
             if (!result2) {
               result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(channel);
             }
@@ -470,7 +470,7 @@ function recountGuild(guildId, hasItem) {
                 if (tmp45) {
                   let tmp46 = result;
                   if (result) {
-                    let result2 = collapsed(obj14.type);
+                    let result2 = v65535(obj14.type);
                     if (!result2) {
                       result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj14);
                     }
@@ -963,7 +963,7 @@ const ChannelRecord = fn(4825);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: c10 } = ChannelRecord);
 const isGuildNSFW = fn(4839).isGuildNSFW;
 const ChannelFlags = fn(4828).ChannelFlags;
-const ReadStateConstants = fn(6684);
+const ReadStateConstants = fn(6691);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1087).NULL_STRING_GUILD_ID;
 let guilds = {};

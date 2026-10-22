@@ -1,7 +1,7 @@
-// === Module 12979: UploaderError ===
+// === Module 13015: UploaderError ===
 
-// Module 12979 (UploaderError)
-import APIError from "APIError" /* 6354 */;
+// Module 13015 (UploaderError)
+import APIError from "APIError" /* 6361 */;
 
 const prototype = function UploaderError(body, arg1) {
   const tmp2 = new tmp(body, arg1, new.target, tmp, new.target);

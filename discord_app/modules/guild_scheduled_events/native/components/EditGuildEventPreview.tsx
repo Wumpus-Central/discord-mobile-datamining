@@ -1,13 +1,13 @@
-// === Module 8975: EditGuildEventPreview ===
+// === Module 8984: EditGuildEventPreview ===
 
-// Module 8975 (EditGuildEventPreview)
+// Module 8984 (EditGuildEventPreview)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5889 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8848 */;
-import ScheduleUtils from "ScheduleUtils" /* 8849 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 8977 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5896 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8857 */;
+import ScheduleUtils from "ScheduleUtils" /* 8858 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 8986 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" }, centered: { flexDirection: "column", alignItems: "center", justifyContent: "center" }, centerContainer: { flexGrow: 0, width: "100%" }, flex: { flex: 1, overflow: "visible" }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };
 let obj3 = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };
 obj2.eventContainer = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };
@@ -64,7 +64,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
   }
   let obj2 = str2(576);
   const stateFromStores = f55NX0(504).useStateFromStores(first, tmp4, tmp5);
-  const tmp8 = channel_id(5586)(stateFromStores);
+  const tmp8 = channel_id(5590)(stateFromStores);
   dependencyMap = tmp8;
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === tmp8) {
@@ -127,7 +127,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
   }
   const f55NX0Result = f55NX0(504);
   const tmp7 = channel_id;
-  let locationFromEvent = f55NX0(8852).getLocationFromEvent(str);
+  let locationFromEvent = f55NX0(8861).getLocationFromEvent(str);
   let tmp19 = tmp8;
   if (tmp8 == null) {
     tmp19 = locationFromEvent;
@@ -150,14 +150,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
     }
     if (cResult[25] !== str2.headerTitle) {
       const obj5 = { style: str2.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: tmp23 };
-      const tmp27 = closure_6(f55NX0(5216).Text, obj5);
+      const tmp27 = closure_6(f55NX0(5220).Text, obj5);
       cResult[25] = str2.headerTitle;
       cResult[26] = tmp27;
       let tmp25 = tmp27;
     } else {
       tmp25 = cResult[26];
     }
-    const Text = f55NX0(5216).Text;
+    const Text = f55NX0(5220).Text;
     const headerSubtitle = str2.headerSubtitle;
     if (cResult[27] !== stateFromStores) {
       let formatToPlainStringResult;
@@ -165,7 +165,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
         const intl2 = f55NX0(1128).intl;
         const obj6 = { channelName: null };
         const obj7 = { channel: stateFromStores };
-        obj6.channelName = tmp7(8978)(obj7);
+        obj6.channelName = tmp7(8987)(obj7);
         formatToPlainStringResult = intl2.formatToPlainString(f55NX0(1128).t.sxcQPE, obj6);
       }
       cResult[27] = stateFromStores;
@@ -232,13 +232,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
     cResult[19] = formatResult;
     cResult[20] = header;
   }
-  const f55NX0Result1 = f55NX0(8852);
-  const eventLocationIconSource = f55NX0(8976).getEventLocationIconSource(str, stateFromStores, true);
+  const f55NX0Result1 = f55NX0(8861);
+  const eventLocationIconSource = f55NX0(8985).getEventLocationIconSource(str, stateFromStores, true);
   cResult[21] = stateFromStores;
   cResult[22] = str;
   cResult[23] = eventLocationIconSource;
   tmp20 = eventLocationIconSource;
-  const f55NX0Result2 = f55NX0(8976);
+  const f55NX0Result2 = f55NX0(8985);
 }) : (function PreviewBody(event) {
   event = event.event;
   let eventLocationIconSource;
@@ -248,7 +248,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(5586)(stateFromStores);
+  const tmp6 = channel_id(5590)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -271,7 +271,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Preview
     const intl2 = tmp2(1128).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(8978)(obj7);
+    obj6.channelName = tmp5(8987)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1128).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;

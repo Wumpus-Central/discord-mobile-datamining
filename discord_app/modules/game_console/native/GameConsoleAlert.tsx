@@ -1,14 +1,14 @@
-// === Module 11587: GameConsoleAlert ===
+// === Module 11604: GameConsoleAlert ===
 
-// Module 11587 (GameConsoleAlert)
+// Module 11604 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5697 */;
+import GameConsoleStore from "GameConsoleStore" /* 5701 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_7 = createStyles.createStyles({ errorCodeText: { marginTop: 16 }, alertBody: { marginTop: 0 }, container: { flex: 1 }, body: { marginTop: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

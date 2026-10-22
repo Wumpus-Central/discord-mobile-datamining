@@ -1,17 +1,17 @@
-// === Module 7256: GuildOnboardingCompleted ===
+// === Module 7263: GuildOnboardingCompleted ===
 
-// Module 7256 (GuildOnboardingCompleted)
+// Module 7263 (GuildOnboardingCompleted)
 import nativeDefault from "native" /* 587 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import timing from "timing" /* 5188 */;
-import UserProfileRolesCard from "UserProfileRolesCard" /* 7258 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import timing from "timing" /* 5192 */;
+import UserProfileRolesCard from "UserProfileRolesCard" /* 7265 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7174 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7181 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 400;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { screen: { flex: 1, position: "relative" }, container: { backgroundColor: "rgba(0, 0, 0, 0.5)", paddingHorizontal: 24, display: "flex", justifyContent: "center", flexGrow: 1 }, containerWithoutSplash: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, backgroundImage: { position: "absolute", width: "100%", height: "100%" }, title: {}, subtitle: { marginTop: 16 }, card: null, username: null, rolesHeader: null, roles: null, role: null, roleOverflow: null, animation: null, wave: null, animationText: null, getStartedButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.card = { marginTop: 24, padding: 16, paddingBottom: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -431,8 +431,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildOnb
       const substr = stateFromStoresArray.slice(0, 3);
       const items14 = [
         substr.map((role) => {
-              const obj = { style: role.role, children: collapsed(UserProfileRolesCard.RoleItem, { role, guildId: stateFromStores1.id, disableInteraction: true }) };
-              return collapsed(React4, obj, role.id);
+              const obj = { style: role.role, children: v65535(UserProfileRolesCard.RoleItem, { role, guildId: stateFromStores1.id, disableInteraction: true }) };
+              return v65535(React4, obj, role.id);
             }),
 
       ];

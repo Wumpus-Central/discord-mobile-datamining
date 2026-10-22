@@ -1,12 +1,12 @@
-// === Module 12407: AIShimmer ===
+// === Module 12437: AIShimmer ===
 
-// Module 12407 (AIShimmer)
+// Module 12437 (AIShimmer)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import AIShimmerTypes from "AIShimmerTypes" /* 12408 */;
-import waveTransition2 from "waveTransition" /* 12409 */;
-import createWaveTransition from "createWaveTransition" /* 12410 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import AIShimmerTypes from "AIShimmerTypes" /* 12438 */;
+import waveTransition2 from "waveTransition" /* 12439 */;
+import createWaveTransition from "createWaveTransition" /* 12440 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = 30;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_13 = createStyles.createStyles((height, height2) => {
   const obj = { container: { alignSelf: "flex-start", height }, sizer: { opacity: 0 }, layer: { position: "absolute", top: 0, left: 0, height }, glyphLayer: null, window: { position: "absolute", top: 0, left: 0, height, overflow: "hidden" } };
   const rect = { position: "absolute", top: (height - height2) / 2, left: 0, height: height2 };
@@ -503,7 +503,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                                                                             const obj6 = { style: tmp27, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
                                                                             const items = [tmp28, tmp32, tmp56];
                                                                             obj6.children = items;
-                                                                            const tmp63 = collapsed(ReanimatedRexportDefault.View, obj6);
+                                                                            const tmp63 = v65535(ReanimatedRexportDefault.View, obj6);
                                                                             cResult[77] = tmp32;
                                                                             cResult[78] = tmp56;
                                                                             cResult[79] = tmp27;
@@ -796,7 +796,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                                         const obj7 = { children: null };
                                         const items = [tmp15, tmp36];
                                         obj7.children = items;
-                                        const tmp43 = collapsed(closure_1_11, obj7);
+                                        const tmp43 = v65535(closure_1_11, obj7);
                                         cResult[53] = tmp36;
                                         cResult[54] = tmp15;
                                         cResult[55] = tmp43;
@@ -919,7 +919,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
   obj4.children = React6(ReanimatedRexportDefault.View, obj5);
   items2[1] = React6(ReanimatedRexportDefault.View, obj4);
   obj.children = items2;
-  return collapsed(closure_1_11, obj);
+  return v65535(closure_1_11, obj);
 });
 const __initData = { code: "function AIShimmerNativeTsx1(){const{animationProgress,BAND_UPDATES_PER_PASS,bandGlyphsAt,slotCount,glyphChoices,overshootInSlots}=this.__closure;const totalProgress=animationProgress.get();const passProgress=totalProgress-Math.floor(totalProgress);const updateStep=Math.floor(passProgress*BAND_UPDATES_PER_PASS)/BAND_UPDATES_PER_PASS;return bandGlyphsAt(updateStep,slotCount,glyphChoices,overshootInSlots);}" };
 const __initData2 = { code: "function AIShimmerNativeTsx2(next,previous){const{runOnJS,setGlyphs}=this.__closure;if(next===previous){return;}runOnJS(setGlyphs)(next);}" };

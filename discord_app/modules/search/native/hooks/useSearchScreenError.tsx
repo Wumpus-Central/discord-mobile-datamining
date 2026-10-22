@@ -1,15 +1,15 @@
-// === Module 17974: useSearchScreenError ===
+// === Module 18044: useSearchScreenError ===
 
-// Module 17974 (useSearchScreenError)
+// Module 18044 (useSearchScreenError)
 import util from "util" /* 1128 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
-import SearchUtils from "SearchUtils" /* 13113 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
+import SearchUtils from "SearchUtils" /* 13149 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6771 */;
-import SearchQueryStore from "SearchQueryStore" /* 13120 */;
+import SearchMessageStore from "SearchMessageStore" /* 6778 */;
+import SearchQueryStore from "SearchQueryStore" /* 13156 */;
 
 require = fn;
-let closure_6 = fn(9672).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_6 = fn(9684).SEARCH_MESSAGE_TAB_SENTINEL;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageSearchErrorScreen(searchContext) {

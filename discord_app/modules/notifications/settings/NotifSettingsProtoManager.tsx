@@ -1,8 +1,8 @@
-// === Module 18746: NotifSettingsProtoManager ===
+// === Module 18814: NotifSettingsProtoManager ===
 
-// Module 18746 (NotifSettingsProtoManager)
-import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17162 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
+// Module 18814 (NotifSettingsProtoManager)
+import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17232 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
 
 require = fn;
 function handleConnectionRestored() {

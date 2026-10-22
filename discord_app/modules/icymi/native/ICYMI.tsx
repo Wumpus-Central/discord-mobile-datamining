@@ -1,6 +1,6 @@
-// === Module 17725: ICYMI ===
+// === Module 17795: ICYMI ===
 
-// Module 17725 (ICYMI)
+// Module 17795 (ICYMI)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,45 +8,45 @@ import ChannelTypes from "ChannelTypes" /* 1108 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import native from "native" /* 5020 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5126 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5668 */;
-import Pressables from "Pressables" /* 6887 */;
-import XSmallIcon from "XSmallIcon" /* 6910 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7017 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7200 */;
-import IconButton from "IconButton" /* 7935 */;
-import ICYMITypes from "ICYMITypes" /* 8795 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8800 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10583 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 12429 */;
-import notifications_Notifications from "notifications/Notifications" /* 17675 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 17677 */;
-import ICYMIContext from "ICYMIContext" /* 17728 */;
-import ICYMIStoreUtils from "ICYMIStoreUtils" /* 17730 */;
-import NativeICYMIUtils from "NativeICYMIUtils" /* 17742 */;
-import AnnouncementMessageRowDefault from "AnnouncementMessageRow" /* 17764 */;
-import ICYMIMessageRowDefault from "ICYMIMessageRow" /* 17768 */;
-import ContentInventoryEntryRowDefault from "ContentInventoryEntryRow" /* 17775 */;
-import ICYMILoading from "ICYMILoading" /* 17786 */;
-import ICYMIBottomLoading from "ICYMIBottomLoading" /* 17787 */;
-import CaughtUpRowDefault from "CaughtUpRow" /* 17788 */;
-import ICYMIGuildEventRowDefault from "ICYMIGuildEventRow" /* 17789 */;
-import ICYMIServerRecommendationRow from "ICYMIServerRecommendationRow" /* 17790 */;
-import ICYMIHeaderDefault from "ICYMIHeader" /* 17791 */;
-import ICYMIForumThreadRow from "ICYMIForumThreadRow" /* 17792 */;
-import CardHeightMeasurer from "CardHeightMeasurer" /* 17793 */;
-import AppFreezerDefault from "AppFreezer" /* 17795 */;
+import native from "native" /* 5023 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5130 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5132 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
+import Pressables from "Pressables" /* 6894 */;
+import XSmallIcon from "XSmallIcon" /* 6917 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7024 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7207 */;
+import IconButton from "IconButton" /* 7943 */;
+import ICYMITypes from "ICYMITypes" /* 8804 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8809 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10595 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 12459 */;
+import notifications_Notifications from "notifications/Notifications" /* 17745 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 17747 */;
+import ICYMIContext from "ICYMIContext" /* 17798 */;
+import ICYMIStoreUtils from "ICYMIStoreUtils" /* 17800 */;
+import NativeICYMIUtils from "NativeICYMIUtils" /* 17812 */;
+import AnnouncementMessageRowDefault from "AnnouncementMessageRow" /* 17834 */;
+import ICYMIMessageRowDefault from "ICYMIMessageRow" /* 17838 */;
+import ContentInventoryEntryRowDefault from "ContentInventoryEntryRow" /* 17845 */;
+import ICYMILoading from "ICYMILoading" /* 17856 */;
+import ICYMIBottomLoading from "ICYMIBottomLoading" /* 17857 */;
+import CaughtUpRowDefault from "CaughtUpRow" /* 17858 */;
+import ICYMIGuildEventRowDefault from "ICYMIGuildEventRow" /* 17859 */;
+import ICYMIServerRecommendationRow from "ICYMIServerRecommendationRow" /* 17860 */;
+import ICYMIHeaderDefault from "ICYMIHeader" /* 17861 */;
+import ICYMIForumThreadRow from "ICYMIForumThreadRow" /* 17862 */;
+import CardHeightMeasurer from "CardHeightMeasurer" /* 17863 */;
+import AppFreezerDefault from "AppFreezer" /* 17865 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8794 */;
-import ICYMIStore from "ICYMIStore" /* 8782 */;
+import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8803 */;
+import ICYMIStore from "ICYMIStore" /* 8791 */;
 
 const require = globalThis.__r;
 
@@ -126,7 +126,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17752, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17822, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -170,7 +170,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-            isFocused(13705).showForLaterModal(isFocused(10036).SavedMessageSortTypes.BOOKMARK);
+            isFocused(13741).showForLaterModal(isFocused(10048).SavedMessageSortTypes.BOOKMARK);
           }
       };
       ref1.current = obj;
@@ -301,16 +301,16 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: metroRequire } = get_ActivityIndicator);
-let closure_12 = fn(17726).NUM_GUILDS_EXTENDED_ONBOARDING;
+let closure_12 = fn(17796).NUM_GUILDS_EXTENDED_ONBOARDING;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_17 = createStyles.createStyles((paddingTop) => {
   const obj = { containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, overflow: "hidden", flex: 1, paddingTop } };
   return obj;
 });
-const createICYMIStyles = fn(17727);
+const createICYMIStyles = fn(17797);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, flexShrink: 1, flexGrow: 1 }, containerInPanels: { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, containerBackground: null, flashListWrapper: null, refreshing: null, header: null, headerLeft: null, headerClose: null, headerTitle: null, headerText: null, headerActions: null, notificationBadge: null, loading: null, headerBorder: null };
   const obj2 = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };

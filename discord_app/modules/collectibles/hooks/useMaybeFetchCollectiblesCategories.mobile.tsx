@@ -1,10 +1,10 @@
-// === Module 10450: ? ===
+// === Module 10462: ? ===
 
-// Module 10450
+// Module 10462
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10451 */;
-import DevSettingsStore from "DevSettingsStore" /* 5219 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10463 */;
+import DevSettingsStore from "DevSettingsStore" /* 5223 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

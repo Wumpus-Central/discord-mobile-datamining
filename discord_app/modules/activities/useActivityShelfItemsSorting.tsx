@@ -1,6 +1,6 @@
-// === Module 11938: useActivityShelfItemsSorting ===
+// === Module 11959: useActivityShelfItemsSorting ===
 
-// Module 11938 (useActivityShelfItemsSorting)
+// Module 11959 (useActivityShelfItemsSorting)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -53,11 +53,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
       let label_type;
       if (embeddedActivityConfig != null) {
         const obj = items(1384);
-        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(5615)(undefined, obj.getOS(obj))];
+        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(5619)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = closure_1(5615);
+        const tmp5 = closure_1(5619);
       }
       let tmp8 = null != label_type;
       if (tmp8) {
@@ -133,11 +133,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
       let label_type;
       if (embeddedActivityConfig != null) {
         const obj = items(1384);
-        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(5615)(undefined, obj.getOS(obj))];
+        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(5619)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = closure_1(5615);
+        const tmp5 = closure_1(5619);
       }
       let tmp8 = null != label_type;
       if (tmp8) {

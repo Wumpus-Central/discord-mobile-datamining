@@ -1,9 +1,9 @@
-// === Module 10689: conjureAppInServer ===
+// === Module 10701: conjureAppInServer ===
 
-// Module 10689 (conjureAppInServer)
-import ConjureUtils from "ConjureUtils" /* 7322 */;
+// Module 10701 (conjureAppInServer)
+import ConjureUtils from "ConjureUtils" /* 7329 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import UserProfileStore from "UserProfileStore" /* 7680 */;
+import UserProfileStore from "UserProfileStore" /* 7687 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
@@ -135,7 +135,7 @@ export const readConjureAppServerPresence = function readConjureAppServerPresenc
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(6753);
+              obj2 = application_id(6760);
             }
             str2 = tmp7;
           }

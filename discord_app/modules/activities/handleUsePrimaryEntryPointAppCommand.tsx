@@ -1,7 +1,7 @@
-// === Module 11958: handleUsePrimaryEntryPointAppCommand ===
+// === Module 11979: handleUsePrimaryEntryPointAppCommand ===
 
-// Module 11958 (handleUsePrimaryEntryPointAppCommand)
-import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 11333 */;
+// Module 11979 (handleUsePrimaryEntryPointAppCommand)
+import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 11350 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import UserStore from "UserStore" /* 1392 */;

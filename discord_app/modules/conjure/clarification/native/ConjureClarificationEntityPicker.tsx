@@ -1,18 +1,18 @@
-// === Module 12389: ConjureClarificationEntityPicker ===
+// === Module 12415: ConjureClarificationEntityPicker ===
 
-// Module 12389 (ConjureClarificationEntityPicker)
+// Module 12415 (ConjureClarificationEntityPicker)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
-import TableRow from "TableRow" /* 6882 */;
-import TableRowGroup from "TableRowGroup" /* 6966 */;
-import ConjureUtils from "ConjureUtils" /* 7322 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11747 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11749 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12238 */;
-import ConjureClarification from "ConjureClarification" /* 12383 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12390 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
+import TableRow from "TableRow" /* 6889 */;
+import TableRowGroup from "TableRowGroup" /* 6973 */;
+import ConjureUtils from "ConjureUtils" /* 7329 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11776 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11778 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12261 */;
+import ConjureClarification from "ConjureClarification" /* 12409 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12416 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -289,7 +289,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                           } else {
                             const obj = question(onChange[11]);
                             const items1 = [id.id];
-                            items = obj.clarificationEntities(input, items1, () => question(5586).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
+                            items = obj.clarificationEntities(input, items1, () => question(5590).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
                           }
                           return dependencyMap(items, conjureSettingsGuildId);
                         };
@@ -435,7 +435,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                                 } else {
                                   const obj = question(onChange[11]);
                                   const items1 = [id.id];
-                                  items = obj.clarificationEntities(input, items1, () => question(5586).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
+                                  items = obj.clarificationEntities(input, items1, () => question(5590).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
                                 }
                                 return dependencyMap(items, conjureSettingsGuildId);
                               };
@@ -515,7 +515,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                                 } else {
                                   const obj = question(onChange[11]);
                                   const items1 = [id.id];
-                                  items = obj.clarificationEntities(input, items1, () => question(5586).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
+                                  items = obj.clarificationEntities(input, items1, () => question(5590).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
                                 }
                                 return dependencyMap(items, conjureSettingsGuildId);
                               };

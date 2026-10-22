@@ -1,14 +1,14 @@
-// === Module 17168: VEVOOPropTintColor ===
+// === Module 17238: VEVOOPropTintColor ===
 
-// Module 17168 (VEVOOPropTintColor)
+// Module 17238 (VEVOOPropTintColor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import ColorUtils from "ColorUtils" /* 4963 */;
-import FormSwitch from "FormSwitch" /* 7273 */;
-import Form from "Form" /* 8910 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15737 */;
-import VEVOO from "VEVOO" /* 17165 */;
+import ColorUtils from "ColorUtils" /* 4966 */;
+import FormSwitch from "FormSwitch" /* 7280 */;
+import Form from "Form" /* 8919 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 15779 */;
+import VEVOO from "VEVOO" /* 17235 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,11 +16,11 @@ const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-const VEVOOStore = fn(5569);
+const VEVOOStore = fn(5573);
 ({ getVisualEffectViewOverrides: metroRequire, setVisualEffectViewOverides: closure_7 } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { tintColor: null };
 let size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, borderRadius: nativeDefault.radii.sm };
 obj.tintColor = size;
@@ -656,7 +656,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             cResult[28] = tmp45;
           }
           const obj5 = { disabled: !tmp8, initialValue: ref, onValueChange: Y };
-          const tmp42 = closure_8(first1(17167), obj5);
+          const tmp42 = closure_8(first1(17237), obj5);
           cResult[21] = !tmp8;
           cResult[22] = Y;
           cResult[23] = tmp42;
@@ -792,7 +792,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(17167), {
+  obj7.subLabel = closure_8(backgroundColor(17237), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

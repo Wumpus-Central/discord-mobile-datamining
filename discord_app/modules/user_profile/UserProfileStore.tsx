@@ -1,25 +1,25 @@
-// === Module 7680: UserProfileStore ===
+// === Module 7687: UserProfileStore ===
 
-// Module 7680 (UserProfileStore)
+// Module 7687 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import Timers from "Timers" /* 4816 */;
-import WidgetType from "WidgetType" /* 7681 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7682 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7685 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7686 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7688 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7689 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7690 */;
+import WidgetType from "WidgetType" /* 7688 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7689 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7692 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7693 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7695 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7696 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7697 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1086 */;
-import PresenceStore from "PresenceStore" /* 5694 */;
-import SortedGuildStore from "SortedGuildStore" /* 6680 */;
+import PresenceStore from "PresenceStore" /* 5698 */;
+import SortedGuildStore from "SortedGuildStore" /* 6687 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -440,7 +440,7 @@ function handleProfileFetch(arg0) {
   if (null != application) {
     ({ id: obj3.id, primary_sku_id: obj3.primarySkuId, custom_install_url: obj3.customInstallUrl, install_params: obj3.installParams, integration_types_config: obj3.integrationTypesConfig, flags: obj3.flags, embedded_surfaces: obj3.embeddedSurfaces, popular_application_command_ids: obj3.popularApplicationCommandIds, storefront_available: obj3.storefront_available, name: obj3.name, terms_of_service_url: obj3.termsOfServiceUrl, privacy_policy_url: obj3.privacyPolicyUrl } = application);
     tmp42 = { id: null, primarySkuId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, flags: null, embeddedSurfaces: null, popularApplicationCommandIds: null, storefront_available: null, name: null, termsOfServiceUrl: null, privacyPolicyUrl: null };
-    let obj5 = { id: null, primarySkuId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, flags: null, embeddedSurfaces: null, popularApplicationCommandIds: null, storefront_available: null, name: null, termsOfServiceUrl: null, privacyPolicyUrl: null };
+    let obj2 = { id: null, primarySkuId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, flags: null, embeddedSurfaces: null, popularApplicationCommandIds: null, storefront_available: null, name: null, termsOfServiceUrl: null, privacyPolicyUrl: null };
   }
   obj.application = tmp42;
   obj.badges = mapped1;
@@ -451,7 +451,9 @@ function handleProfileFetch(arg0) {
     found3 = mapped2.filter(set(tmp36[14]).isNotNullish);
   }
   obj.widgets = found3;
-  ({ wishlist_settings: obj2.wishlistSettings, private: obj2.private } = userProfile);
+  obj.wishlistSettings = userProfile.wishlist_settings;
+  obj.profileReadState = set(date1[22]).parseProfileReadState(userProfile.profile_read_state);
+  obj.private = userProfile.private;
   const result5 = map1.set(userProfile.user.id, obj);
   checkUserProfileCollectiblesExpiration(userProfile.user.id);
   if (null != userProfile.guild_member_profile) {
@@ -490,6 +492,7 @@ function handleProfileFetch(arg0) {
     userProfile = userProfile.guild_member_profile.guild_id;
     checkUserProfileCollectiblesExpiration(userProfile.user.id, userProfile);
   }
+  let obj4 = set(date1[22]);
   tmp35 = date;
 }
 function handleProfileFetchStart(withMutualFriends) {
@@ -523,7 +526,7 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   value4 = map1.get(userId);
   if (value4 == null) {
-    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "code" };
+    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "unicodeVersion" };
     value4 = obj;
   }
   const timestamp = Date.now();
@@ -872,6 +875,20 @@ prototype["getWishlistSettings"] = function getWishlistSettings(userId, wishlist
     const wishlistSettings = value.wishlistSettings;
     if (wishlistSettings != null) {
       tmp2 = wishlistSettings[wishlistId];
+    }
+  }
+  if (tmp2 == null) {
+    tmp2 = null;
+  }
+  return tmp2;
+};
+prototype["getProfileReadStateSectionAckedAt"] = function getProfileReadStateSectionAckedAt(arg0, arg1) {
+  value = map1.get(arg0);
+  let tmp2;
+  if (value != null) {
+    const profileReadState = value.profileReadState;
+    if (profileReadState != null) {
+      tmp2 = profileReadState[arg1];
     }
   }
   if (tmp2 == null) {

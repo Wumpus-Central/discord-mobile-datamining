@@ -1,24 +1,24 @@
-// === Module 10583: ThemedGradient ===
+// === Module 10595: ThemedGradient ===
 
-// Module 10583 (ThemedGradient)
+// Module 10595 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import ColorUtils from "ColorUtils" /* 4963 */;
-import utils_ColorDefault from "utils/Color" /* 4964 */;
-import shared from "shared" /* 4973 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5126 */;
-import GuildThemePresets from "GuildThemePresets" /* 5129 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5131 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5186 */;
-import useThemeDefault from "useTheme" /* 5187 */;
-import LinearGradientDefault from "LinearGradient" /* 5240 */;
+import ColorUtils from "ColorUtils" /* 4966 */;
+import utils_ColorDefault from "utils/Color" /* 4967 */;
+import shared from "shared" /* 4976 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5130 */;
+import GuildThemePresets from "GuildThemePresets" /* 5133 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5135 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5190 */;
+import useThemeDefault from "useTheme" /* 5191 */;
+import LinearGradientDefault from "LinearGradient" /* 5244 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4990 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
@@ -92,7 +92,7 @@ let closure_5 = ["overlayOpacity", "gradientOverride"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({ softenGradient: { flex: 1 }, linearGradient: { flex: 1 }, absolute: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 } });
 let angleCenter = { x: 0.5, y: 0.5 };
 let c14 = 0.7;
@@ -137,7 +137,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Gradie
                 }
               }
               const obj2 = { colors, locations, angle, angleCenter, useAngle: true, style: tmp10 };
-              const tmp13 = collapsed(LinearGradientDefault, obj2);
+              const tmp13 = v65535(LinearGradientDefault, obj2);
               cResult[12] = angle;
               cResult[13] = angleCenter;
               cResult[14] = colors;
@@ -206,7 +206,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Gradie
   items[3] = absolute;
   items[4] = angleCenter.componentStyles;
   obj.style = items;
-  return collapsed(LinearGradientDefault, obj);
+  return v65535(LinearGradientDefault, obj);
 });
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function Gradient(gradient) {
@@ -380,7 +380,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     tmp4 = cResult[1];
   }
   dependencyMap = tmp4;
-  const tmp5 = mixColorOverride(5187)();
+  const tmp5 = mixColorOverride(5191)();
   theme = tmp5;
   if (cResult[2] === mix) {
     if (cResult[3] === tmp4) {
@@ -445,7 +445,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     }
   }
   let obj = mix(576);
-  const guildThemePresetAppearance = mix(5129).getGuildThemePresetAppearance(preset, tmp5);
+  const guildThemePresetAppearance = mix(5133).getGuildThemePresetAppearance(preset, tmp5);
   if (cResult[11] === mix) {
     if (cResult[12] === tmp4) {
       if (cResult[13] === mixColorOverride) {
@@ -524,7 +524,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
   cResult[14] = tmp5;
   cResult[15] = A;
   tmp10 = A;
-  const tmpResult = mix(5129);
+  const tmpResult = mix(5133);
 }) : (function GuildThemePresetGradient(mixColorOverride) {
   ({ angleOverride, mix: require, mixAmount } = mixColorOverride);
   ({ preset, absolute, wide, tall, componentStyles } = mixColorOverride);
@@ -941,8 +941,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_10(reduced(5240), obj);
-    const tmp2Result = reduced(5240);
+    tmp10Result = closure_10(reduced(5244), obj);
+    const tmp2Result = reduced(5244);
   }
   return tmp10Result;
 });
@@ -1033,7 +1033,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Active
       obj2.gradientAngle = num13;
       obj2.baseMix = GUILD_THEME_DEFAULT_BASE_MIX;
       obj2.theme = tmp6;
-      const tmp30 = collapsed(closure_21, obj2);
+      const tmp30 = v65535(closure_21, obj2);
       cResult[8] = tmp5;
       cResult[9] = tmp18;
       cResult[10] = num13;
@@ -1059,7 +1059,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Active
     const obj3 = {};
     const merged1 = Object.assign(tmp5);
     obj3.preset = tmp4.preset;
-    const tmp16 = collapsed(closure_19, obj3);
+    const tmp16 = v65535(closure_19, obj3);
     cResult[14] = tmp4.preset;
     cResult[15] = tmp5;
     cResult[16] = tmp16;
@@ -1087,12 +1087,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Active
     }
     obj2.baseMix = GUILD_THEME_DEFAULT_BASE_MIX;
     obj2.theme = theme;
-    return collapsed(closure_21, obj2);
+    return v65535(closure_21, obj2);
   } else {
     const obj = {};
     const merged2 = Object.assign(merged);
     obj.preset = activeGuildTheme.preset;
-    return collapsed(closure_19, obj);
+    return v65535(closure_19, obj);
   }
 });
 ReactCompilerGating = fn(558);
@@ -1143,7 +1143,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomThemed
         const obj4 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp6) };
         items1[1] = obj4;
         obj3.style = items1;
-        items[1] = collapsed(View, obj3);
+        items[1] = v65535(View, obj3);
         obj2.children = items;
         tmp16 = closure_1_11(View, obj2);
         const tmpResult = ColorUtils;
@@ -1161,7 +1161,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomThemed
   const merged = Object.assign(tmp5);
   const merged1 = Object.assign(tmp4.customThemeSettings);
   obj5.theme = tmp4.theme;
-  const tmp14 = collapsed(closure_21, obj5);
+  const tmp14 = v65535(closure_21, obj5);
   cResult[4] = tmp4.customThemeSettings;
   cResult[5] = tmp4.theme;
   cResult[6] = tmp5;
@@ -1181,7 +1181,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomThemed
   const merged1 = Object.assign(merged);
   const merged2 = Object.assign(customTheme.customThemeSettings);
   obj.theme = customTheme.theme;
-  const tmp6 = collapsed(closure_21, obj);
+  const tmp6 = v65535(closure_21, obj);
   let tmp7 = tmp6;
   if (merged.withOverlay) {
     const obj2 = { style: styles.absolute, children: null };
@@ -1191,7 +1191,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomThemed
     const obj4 = { backgroundColor: ColorUtils.hexWithOpacity(tmp2.overlayColor, num) };
     items1[1] = obj4;
     obj3.style = items1;
-    items[1] = collapsed(View, obj3);
+    items[1] = v65535(View, obj3);
     obj2.children = items;
     tmp7 = closure_1_11(View, obj2);
   }
@@ -1249,7 +1249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
         const merged = Object.assign(tmp4);
         const merged1 = Object.assign(gradientOverride.customThemeSettings);
         obj2.theme = gradientOverride.theme;
-        const tmp64 = collapsed(closure_21, obj2);
+        const tmp64 = v65535(closure_21, obj2);
         let tmp65 = tmp64;
         if (withOverlay) {
           const obj3 = { style: styles.absolute, children: null };
@@ -1259,7 +1259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
           const obj5 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, overlayOpacity) };
           items2[1] = obj5;
           obj4.style = items2;
-          items1[1] = collapsed(View, obj4);
+          items1[1] = v65535(View, obj4);
           obj3.children = items1;
           tmp65 = closure_1_11(View, obj3);
           const tmpResult10 = ColorUtils;
@@ -1271,7 +1271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
       const obj6 = {};
       const merged2 = Object.assign(tmp4);
       obj6.gradient = gradientOverride;
-      const tmp51 = collapsed(closure_18, obj6);
+      const tmp51 = v65535(closure_18, obj6);
       client_themes_ClientThemesUtils;
       let tmp54 = tmp51;
       if (withOverlay) {
@@ -1282,7 +1282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
         const obj9 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp53) };
         items4[1] = obj9;
         obj8.style = items4;
-        items3[1] = collapsed(View, obj8);
+        items3[1] = v65535(View, obj8);
         obj7.children = items3;
         tmp54 = closure_1_11(View, obj7);
         const tmpResult12 = ColorUtils;
@@ -1295,7 +1295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
     const merged3 = Object.assign(tmp4);
     obj10.activeGuildTheme = tmp11;
     obj10.theme = tmp7;
-    const tmp42 = collapsed(closure_23, obj10);
+    const tmp42 = v65535(closure_23, obj10);
     let tmp43 = tmp42;
     if (withOverlay) {
       const obj11 = { style: styles.absolute, children: null };
@@ -1305,7 +1305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
       const obj13 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, overlayOpacity) };
       items6[1] = obj13;
       obj12.style = items6;
-      items5[1] = collapsed(View, obj12);
+      items5[1] = v65535(View, obj12);
       obj11.children = items5;
       tmp43 = closure_1_11(View, obj11);
       const tmpResult13 = ColorUtils;
@@ -1318,7 +1318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
         const merged4 = Object.assign(tmp4);
         const merged5 = Object.assign(customThemeDisplaySettings.customTheme);
         obj14.theme = customThemeDisplaySettings.baseTheme;
-        const tmp33 = collapsed(closure_21, obj14);
+        const tmp33 = v65535(closure_21, obj14);
         let tmp34 = tmp33;
         if (withOverlay) {
           const obj15 = { style: styles.absolute, children: null };
@@ -1328,7 +1328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
           const obj17 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, overlayOpacity) };
           items8[1] = obj17;
           obj16.style = items8;
-          items7[1] = collapsed(View, obj16);
+          items7[1] = v65535(View, obj16);
           obj15.children = items7;
           tmp34 = closure_1_11(View, obj15);
           const tmpResult14 = ColorUtils;
@@ -1341,7 +1341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
       const obj18 = {};
       const merged6 = Object.assign(tmp4);
       obj18.gradient = preset;
-      const tmp20 = collapsed(closure_18, obj18);
+      const tmp20 = v65535(closure_18, obj18);
       client_themes_ClientThemesUtils;
       let tmp23 = tmp20;
       if (withOverlay) {
@@ -1352,7 +1352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
         const obj21 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp22) };
         items10[1] = obj21;
         obj20.style = items10;
-        items9[1] = collapsed(View, obj20);
+        items9[1] = v65535(View, obj20);
         obj19.children = items9;
         tmp23 = closure_1_11(View, obj19);
         const tmpResult16 = ColorUtils;
@@ -1383,7 +1383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
         const merged1 = Object.assign(merged);
         const merged2 = Object.assign(gradientOverride.customThemeSettings);
         obj3.theme = gradientOverride.theme;
-        const tmp59 = collapsed(closure_21, obj3);
+        const tmp59 = v65535(closure_21, obj3);
         let tmp60 = tmp59;
         if (withOverlay) {
           const obj4 = { style: styles.absolute, children: null };
@@ -1393,7 +1393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
           const obj6 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, num) };
           items2[1] = obj6;
           obj5.style = items2;
-          items1[1] = collapsed(View, obj5);
+          items1[1] = v65535(View, obj5);
           obj4.children = items1;
           tmp60 = closure_1_11(View, obj4);
           const tmp5Result = ColorUtils;
@@ -1405,7 +1405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
       const obj7 = {};
       const merged3 = Object.assign(merged);
       obj7.gradient = gradientOverride;
-      const tmp46 = collapsed(closure_18, obj7);
+      const tmp46 = v65535(closure_18, obj7);
       client_themes_ClientThemesUtils;
       let tmp49 = tmp46;
       if (withOverlay) {
@@ -1416,7 +1416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
         const obj10 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp48) };
         items4[1] = obj10;
         obj9.style = items4;
-        items3[1] = collapsed(View, obj9);
+        items3[1] = v65535(View, obj9);
         obj8.children = items3;
         tmp49 = closure_1_11(View, obj8);
         const tmp5Result8 = ColorUtils;
@@ -1429,7 +1429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
     const merged4 = Object.assign(merged);
     obj11.activeGuildTheme = tmp6;
     obj11.theme = tmp4;
-    const tmp37 = collapsed(closure_23, obj11);
+    const tmp37 = v65535(closure_23, obj11);
     let tmp38 = tmp37;
     if (withOverlay) {
       const obj12 = { style: styles.absolute, children: null };
@@ -1439,7 +1439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
       const obj14 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, num) };
       items6[1] = obj14;
       obj13.style = items6;
-      items5[1] = collapsed(View, obj13);
+      items5[1] = v65535(View, obj13);
       obj12.children = items5;
       tmp38 = closure_1_11(View, obj12);
       const tmp5Result9 = ColorUtils;
@@ -1452,7 +1452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
         const merged5 = Object.assign(merged);
         const merged6 = Object.assign(customThemeDisplaySettings.customTheme);
         obj15.theme = customThemeDisplaySettings.baseTheme;
-        const tmp28 = collapsed(closure_21, obj15);
+        const tmp28 = v65535(closure_21, obj15);
         let tmp29 = tmp28;
         if (withOverlay) {
           const obj16 = { style: styles.absolute, children: null };
@@ -1462,7 +1462,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
           const obj18 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, num) };
           items8[1] = obj18;
           obj17.style = items8;
-          items7[1] = collapsed(View, obj17);
+          items7[1] = v65535(View, obj17);
           obj16.children = items7;
           tmp29 = closure_1_11(View, obj16);
           const tmp5Result10 = ColorUtils;
@@ -1475,7 +1475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
       const obj19 = {};
       const merged7 = Object.assign(merged);
       obj19.gradient = preset;
-      const tmp15 = collapsed(closure_18, obj19);
+      const tmp15 = v65535(closure_18, obj19);
       client_themes_ClientThemesUtils;
       let tmp18 = tmp15;
       if (withOverlay) {
@@ -1486,7 +1486,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ThemedGr
         const obj22 = { backgroundColor: ColorUtils.hexWithOpacity(overlayColor, tmp17) };
         items10[1] = obj22;
         obj21.style = items10;
-        items9[1] = collapsed(View, obj21);
+        items9[1] = v65535(View, obj21);
         obj20.children = items9;
         tmp18 = closure_1_11(View, obj20);
         const tmp5Result12 = ColorUtils;

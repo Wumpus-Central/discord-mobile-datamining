@@ -1,10 +1,10 @@
-// === Module 9184: useGetGameForAppId ===
+// === Module 9193: useGetGameForAppId ===
 
-// Module 9184 (useGetGameForAppId)
+// Module 9193 (useGetGameForAppId)
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7234 */;
-import useGame from "useGame" /* 7383 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7241 */;
+import useGame from "useGame" /* 7390 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2022 */;
 
@@ -95,7 +95,7 @@ export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
     cResult[1] = found1;
   } else {
     _require = tmp4;
-    const games = tmp(7383).useGames(tmp4);
+    const games = tmp(7390).useGames(tmp4);
     const _Symbol2 = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [GameStore];
@@ -115,12 +115,12 @@ export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
     } else {
       tmp13 = cResult[5];
     }
-    const tmpResult = tmp(7383);
+    const tmpResult = tmp(7390);
     return tmp(504).useStateFromStoresArray(tmp11, tmp13);
   }
   const obj = require("c");
 }) : (function useGetGamesForAppIds(arg0) {
-  const tmp = memo(7234)(arg0);
+  const tmp = memo(7241)(arg0);
   _require = tmp;
   const items = [tmp];
   memo = noop.useMemo(() => {

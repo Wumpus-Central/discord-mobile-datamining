@@ -1,19 +1,19 @@
-// === Module 18312: FramePanelPIPView ===
+// === Module 18380: FramePanelPIPView ===
 
-// Module 18312 (FramePanelPIPView)
+// Module 18380 (FramePanelPIPView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11802 */;
-import FrameStackLevel from "FrameStackLevel" /* 11806 */;
-import ActivityPanelPIPView from "ActivityPanelPIPView" /* 18288 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 18310 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11828 */;
+import FrameStackLevel from "FrameStackLevel" /* 11832 */;
+import ActivityPanelPIPView from "ActivityPanelPIPView" /* 18356 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 18378 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6754 */;
+import FramesStore from "FramesStore" /* 6761 */;
 
 require = fn;
-const FramesConstants = fn(6755);
+const FramesConstants = fn(6762);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
-const portraitSafeAreasConfig = fn(18193).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(18263).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

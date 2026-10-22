@@ -1,6 +1,6 @@
-// === Module 7502: Constants ===
+// === Module 7509: Constants ===
 
-// Module 7502 (Constants)
+// Module 7509 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gplay/native/Constants.tsx");

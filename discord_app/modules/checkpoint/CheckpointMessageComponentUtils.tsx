@@ -1,16 +1,16 @@
-// === Module 6016: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 6023: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 6016 (checkpoint/CheckpointMessageComponentUtils)
+// Module 6023 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
 import Server from "Server" /* 2000 */;
 import _modDef3056 from "module_3056" /* 3056 */;
 import _modDef3088 from "module_3088" /* 3088 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4915 */;
-import CheckpointUtils from "CheckpointUtils" /* 6004 */;
-import CheckpointTrait from "CheckpointTrait" /* 6018 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6019 */;
-import CheckpointConstants from "CheckpointConstants" /* 5995 */;
+import CheckpointUtils from "CheckpointUtils" /* 6011 */;
+import CheckpointTrait from "CheckpointTrait" /* 6025 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6026 */;
+import CheckpointConstants from "CheckpointConstants" /* 6002 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -218,6 +218,13 @@ export const getCharacterLayerUrls = function getCharacterLayerUrls(character, a
   });
   return items;
 };
+export const formatCheckpoint2026PowerLevel = function formatCheckpoint2026PowerLevel(arg0) {
+  const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "short" });
+  return numberFormat.format(arg0);
+};
+export const getCheckpoint2026PowerBarUnits = function getCheckpoint2026PowerBarUnits(arg0) {
+  return Math.min(Math.max(Math.round(arg0 / 100 * hasOwnProperty), React4), React3);
+};
 export { transformCheckpoint2026StatsToRowGeneratedComponent };
 export const transformCheckpoint2026CardToRowGeneratedComponent = function transformCheckpoint2026CardToRowGeneratedComponent(checkpointData) {
   checkpointData = checkpointData.checkpointData;
@@ -233,7 +240,7 @@ export const transformCheckpoint2026CardToRowGeneratedComponent = function trans
     let tmp10;
     if (obj4.getIsCheckpointEnabled("getCheckpointClickable")) {
       const obj3 = { ariaDescription: null };
-      const intl = character(tmp2[8]).intl;
+      const intl = character(tmp2[7]).intl;
       obj3.ariaDescription = intl.string(tmp(tmp2[11]).r8GEbK);
       tmp10 = obj3;
     }

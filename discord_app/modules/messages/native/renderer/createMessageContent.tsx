@@ -1,38 +1,38 @@
-// === Module 8245: createMessageContent ===
+// === Module 8254: createMessageContent ===
 
-// Module 8245 (createMessageContent)
+// Module 8254 (createMessageContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1128 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6661 */;
-import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7673 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8109 */;
-import GuildTagConstants from "GuildTagConstants" /* 8250 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8251 */;
-import MessageCountUtils from "MessageCountUtils" /* 8252 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8253 */;
-import _modDef8254 from "module_8254" /* 8254 */;
-import transformMessageComponentsDefault from "transformMessageComponents" /* 8569 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6668 */;
+import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7680 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8118 */;
+import GuildTagConstants from "GuildTagConstants" /* 8259 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8260 */;
+import MessageCountUtils from "MessageCountUtils" /* 8261 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8262 */;
+import _modDef8263 from "module_8263" /* 8263 */;
+import transformMessageComponentsDefault from "transformMessageComponents" /* 8578 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4990 */;
-import EmojiStore from "EmojiStore" /* 6704 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8114 */;
-import InteractionStore from "InteractionStore" /* 8246 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
+import EmojiStore from "EmojiStore" /* 6711 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8123 */;
+import InteractionStore from "InteractionStore" /* 8255 */;
 import LurkingStore from "LurkingStore" /* 4902 */;
-import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8247 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8256 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7380 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7387 */;
 import ThemeStore from "ThemeStore" /* 1207 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
-import UploadStore from "UploadStore" /* 8249 */;
+import UploadStore from "UploadStore" /* 8258 */;
 import UserStore from "UserStore" /* 1392 */;
-import MessageConstants from "MessageConstants" /* 4971 */;
+import MessageConstants from "MessageConstants" /* 4974 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 
@@ -69,7 +69,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 const obj3 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: true, archivedIconUrl: null, backgroundColor: null };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8254);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8263);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -1125,7 +1125,7 @@ const processColor = _mod17.processColor;
 const ReferencedMessageState = ReferencedMessageStore2.ReferencedMessageState;
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_24, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: closure_25, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_26 } = MessageConstants);
 const ReferencedMessageRowState = RowGeneratorConstants.ReferencedMessageRowState;
-({ MessageTypes: closure_28, MessageStates: closure_29, MessageFlags: closure_30, ChannelTypes: items } = Constants);
+({ MessageTypes: closure_28, MessageStates: closure_29, MessageFlags: closure_30, ChannelTypes: closure_31 } = Constants);
 const GuildTagBadgeSize = GuildTagConstants.GuildTagBadgeSize;
 let result = size.fileFinishedImporting("modules/messages/native/renderer/createMessageContent.tsx");
 

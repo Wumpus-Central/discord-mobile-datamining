@@ -1,15 +1,15 @@
-// === Module 14016: AppStoreOverlayMediaCarousel ===
+// === Module 14052: AppStoreOverlayMediaCarousel ===
 
-// Module 14016 (AppStoreOverlayMediaCarousel)
+// Module 14052 (AppStoreOverlayMediaCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsActions from "AnalyticsActions" /* 7767 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7776 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 14017 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 14018 */;
+import AnalyticsActions from "AnalyticsActions" /* 7776 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7785 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 14053 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 14054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 require = fn;
 function getMeasurableUrl(type) {
@@ -77,7 +77,7 @@ const NOOP = fn(1098).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, mediaItem: null, media: null, playIconWrapper: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16, alignItems: "center" };
@@ -296,7 +296,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppSto
       }
     }
     const obj2 = { media, index, mediaViewerSources, tileSize, recordMediaSize, onGetGamePress };
-    const tmp9 = collapsed(closure_16, obj2);
+    const tmp9 = v65535(closure_16, obj2);
     cResult[0] = index;
     cResult[1] = media;
     cResult[2] = mediaViewerSources;
@@ -319,7 +319,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppSto
       }
     }
     const obj3 = { media, index, mediaViewerSources, tileSize, onGetGamePress };
-    const tmp5 = collapsed(AppStoreOverlayTrailerItem, obj3);
+    const tmp5 = v65535(AppStoreOverlayTrailerItem, obj3);
     cResult[7] = index;
     cResult[8] = media;
     cResult[9] = mediaViewerSources;
@@ -333,10 +333,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppSto
   const type = media.type;
   if ("screenshot" === type) {
     const obj2 = { media, index, mediaViewerSources, tileSize, recordMediaSize: tmp, onGetGamePress };
-    return collapsed(closure_16, obj2);
+    return v65535(closure_16, obj2);
   } else if ("trailer" === type) {
     const obj = { media, index, mediaViewerSources, tileSize, onGetGamePress };
-    return collapsed(AppStoreOverlayTrailerItem, obj);
+    return v65535(AppStoreOverlayTrailerItem, obj);
   }
 });
 ReactCompilerGating = fn(558);
@@ -766,7 +766,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
       obj.tileSize = AppStoreOverlayMediaSize.getMediaTileSize(value);
       obj.recordMediaSize = recordMediaSize;
       obj.onGetGamePress = onGetGamePress;
-      return collapsed(closure_18, obj, "" + media.type + "-" + index);
+      return v65535(closure_18, obj, "" + media.type + "-" + index);
     });
     obj2.children = length(memo1, obj5);
     tmp15 = length(tmp3(tmp4[19]).GestureDetector, obj2);

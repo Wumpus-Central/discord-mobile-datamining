@@ -1,20 +1,20 @@
-// === Module 11595: XboxInstallAlert ===
+// === Module 11612: XboxInstallAlert ===
 
-// Module 11595 (XboxInstallAlert)
+// Module 11612 (XboxInstallAlert)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import LinkingDefault from "Linking" /* 5642 */;
-import common_AlertDefault from "common/Alert" /* 5958 */;
-import _modDef11596 from "module_11596" /* 11596 */;
+import LinkingDefault from "Linking" /* 5646 */;
+import common_AlertDefault from "common/Alert" /* 5965 */;
+import _modDef11613 from "module_11613" /* 11613 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GameConsoleConstants = fn(9583);
+const GameConsoleConstants = fn(9595);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { externalLinkIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
 obj2.externalLinkIcon = size;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   }
   if (cResult[4] !== tmp4.externalLinkIcon) {
     const fn = function _() {
-      return jsx(native.Icon, { source: _modDef11596, style: closure_0.externalLinkIcon });
+      return jsx(native.Icon, { source: _modDef11613, style: closure_0.externalLinkIcon });
     };
     cResult[4] = tmp4.externalLinkIcon;
     cResult[5] = fn;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef11596, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef11613, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = closure_0(1384);

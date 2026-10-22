@@ -1,6 +1,6 @@
-// === Module 10090: GIFPickerActionCreators ===
+// === Module 10102: GIFPickerActionCreators ===
 
-// Module 10090 (GIFPickerActionCreators)
+// Module 10102 (GIFPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1128 */;
 import frecency_user_settings from "frecency_user_settings" /* 1247 */;
@@ -8,13 +8,13 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import v1 from "v1" /* 1281 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import URLUtilsDefault from "URLUtils" /* 1386 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5693 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5888 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9676 */;
-import GifProvider from "GifProvider" /* 10091 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10092 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5895 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9688 */;
+import GifProvider from "GifProvider" /* 10103 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10104 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10089 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10101 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -328,7 +328,7 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
           obj3.order = num + 1;
           gifs.gifs[tmp23] = obj3;
           const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
-          if (FavoriteGIFs.toBinary(gifs).length > collapsed) {
+          if (FavoriteGIFs.toBinary(gifs).length > v65535) {
             const obj5 = { title: null, body: null };
             const intl = util.intl;
             obj5.title = intl.string(util.t["+XYXtZ"]);

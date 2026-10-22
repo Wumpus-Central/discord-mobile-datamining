@@ -1,6 +1,6 @@
-// === Module 15261: WindowsMediaFoundationGpuEncode ===
+// === Module 15305: WindowsMediaFoundationGpuEncode ===
 
-// Module 15261 (WindowsMediaFoundationGpuEncode)
+// Module 15305 (WindowsMediaFoundationGpuEncode)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

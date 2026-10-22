@@ -1,23 +1,23 @@
-// === Module 18021: FavoritesEmptyState ===
+// === Module 18091: FavoritesEmptyState ===
 
-// Module 18021 (FavoritesEmptyState)
+// Module 18091 (FavoritesEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3412 from "module_3412" /* 3412 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import Stack_Stack from "Stack/Stack" /* 5957 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10798 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 11098 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13755 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import Stack_Stack from "Stack/Stack" /* 5964 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10815 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 11115 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 }, text: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

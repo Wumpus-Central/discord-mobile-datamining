@@ -1,6 +1,6 @@
-// === Module 5716: VoiceCallTypes ===
+// === Module 5721: VoiceCallTypes ===
 
-// Module 5716 (VoiceCallTypes)
+// Module 5721 (VoiceCallTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_calls/VoiceCallTypes.tsx");

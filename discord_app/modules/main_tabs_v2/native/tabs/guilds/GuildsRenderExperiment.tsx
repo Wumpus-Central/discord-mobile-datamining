@@ -1,6 +1,6 @@
-// === Module 17269: GuildsRenderExperiment ===
+// === Module 17339: GuildsRenderExperiment ===
 
-// Module 17269 (GuildsRenderExperiment)
+// Module 17339 (GuildsRenderExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

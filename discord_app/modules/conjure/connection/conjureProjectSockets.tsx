@@ -1,6 +1,6 @@
-// === Module 10677: conjureProjectSockets ===
+// === Module 10689: conjureProjectSockets ===
 
-// Module 10677 (conjureProjectSockets)
+// Module 10689 (conjureProjectSockets)
 import size from "module_2" /* 2 */;
 
 const map = new Map();

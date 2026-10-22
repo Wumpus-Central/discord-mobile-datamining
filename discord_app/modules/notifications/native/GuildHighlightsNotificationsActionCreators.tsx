@@ -1,10 +1,10 @@
-// === Module 10000: GuildHighlightsNotificationsActionCreators ===
+// === Module 10012: GuildHighlightsNotificationsActionCreators ===
 
-// Module 10000 (GuildHighlightsNotificationsActionCreators)
+// Module 10012 (GuildHighlightsNotificationsActionCreators)
 import Constants from "Constants" /* 1087 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Constants2 from "Constants" /* 10001 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Constants2 from "Constants" /* 10013 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -60,5 +60,5 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     AnalyticsUtilsDefault.track(AnalyticEvents.FEEDBACK_FORM_SUBMITTED, obj3);
   };
   obj2.feedbackSettings = obj3;
-  obj.openLazy(require("asyncRequireImpl")(10002, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+  obj.openLazy(require("asyncRequireImpl")(10014, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
 };

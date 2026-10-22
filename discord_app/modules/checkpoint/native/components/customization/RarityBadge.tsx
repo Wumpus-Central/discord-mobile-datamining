@@ -1,14 +1,14 @@
-// === Module 12914: RarityBadge ===
+// === Module 12950: RarityBadge ===
 
-// Module 12914 (RarityBadge)
+// Module 12950 (RarityBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5996 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6341 */;
-import inlineStyles from "inlineStyles" /* 7938 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9383 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6003 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6348 */;
+import inlineStyles from "inlineStyles" /* 7946 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,11 +17,11 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(5995);
+const CheckpointConstants = fn(6002);
 ({ CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire, CHECKPOINT_NITRO_BADGE_GRADIENT_ID: closure_7, CHECKPOINT_RARITY_COLORS: closure_8, CHECKPOINT_RARITY_LABEL_MESSAGES: closure_9 } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 const obj2 = { badge: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "center" }, badgeShape: { position: "absolute", top: 0, left: 0 }, badgeContent: null, badgeLabel: null, badgeHidden: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "center" };
 obj2.badgeContent = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RarityBa
               let tmp28 = tmp9;
               if (tmp9) {
                 const obj3 = { size: "xxs", color: nativeDefault.colors.BLACK };
-                tmp28 = collapsed(NitroWheelIcon.NitroWheelIcon, obj3);
+                tmp28 = v65535(NitroWheelIcon.NitroWheelIcon, obj3);
               }
               cResult[14] = tmp9;
               cResult[15] = tmp28;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RarityBa
             tmp31 = tmp34;
           }
           const obj6 = { variant: "experimental/mono-md/bold", style: badgeLabel, children: tmp21 };
-          const tmp26 = collapsed(Text_Text.Text, obj6);
+          const tmp26 = v65535(Text_Text.Text, obj6);
           cResult[11] = tmp4.badgeLabel;
           cResult[12] = tmp21;
           cResult[13] = tmp26;
@@ -160,19 +160,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RarityBa
         const obj7 = { children: null };
         const obj8 = { id, x1: "0", y1: "0", x2: "1", y2: "0", children: null };
         const obj9 = { offset: "0", stopColor: 32 };
-        const items2 = [collapsed(inlineStyles.Stop, obj9), ];
+        const items2 = [v65535(inlineStyles.Stop, obj9), ];
         const obj10 = { offset: "1", stopColor: 19 };
-        items2[1] = collapsed(inlineStyles.Stop, obj10);
+        items2[1] = v65535(inlineStyles.Stop, obj10);
         obj8.children = items2;
         obj7.children = closure_1_11(inlineStyles.LinearGradient, obj8);
-        tmp15 = collapsed(inlineStyles.Defs, obj7);
+        tmp15 = v65535(inlineStyles.Defs, obj7);
       }
       const items3 = [tmp15, ];
       const obj11 = { points: null, fill: null };
       const tmp14 = inlineStylesDefault;
       obj11.points = CheckpointCustomizationUtils.getChamferedRectPoints(size.width, size.height, 6);
       obj11.fill = dependencyMap2[rarity];
-      items3[1] = collapsed(inlineStyles.Polygon, obj11);
+      items3[1] = v65535(inlineStyles.Polygon, obj11);
       size1.children = items3;
       tmp12Result = closure_1_11(tmp14, size1);
       const tmpResult = CheckpointCustomizationUtils;
@@ -236,19 +236,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RarityBa
       const obj3 = { children: null };
       const obj4 = { id, x1: "0", y1: "0", x2: "1", y2: "0", children: null };
       const obj5 = { offset: "0", stopColor: 32 };
-      const items1 = [collapsed(inlineStyles.Stop, obj5), ];
+      const items1 = [v65535(inlineStyles.Stop, obj5), ];
       const obj6 = { offset: "1", stopColor: 19 };
-      items1[1] = collapsed(inlineStyles.Stop, obj6);
+      items1[1] = v65535(inlineStyles.Stop, obj6);
       obj4.children = items1;
       obj3.children = closure_1_11(inlineStyles.LinearGradient, obj4);
-      tmp11 = collapsed(inlineStyles.Defs, obj3);
+      tmp11 = v65535(inlineStyles.Defs, obj3);
     }
     const items2 = [tmp11, ];
     const obj7 = { points: null, fill: null };
     const tmp10 = inlineStylesDefault;
     obj7.points = CheckpointCustomizationUtils.getChamferedRectPoints(size.width, size.height, 6);
     obj7.fill = dependencyMap2[rarity];
-    items2[1] = collapsed(inlineStyles.Polygon, obj7);
+    items2[1] = v65535(inlineStyles.Polygon, obj7);
     size1.children = items2;
     tmp5Result = closure_1_11(tmp10, size1);
     const tmp3Result = CheckpointCustomizationUtils;
@@ -258,10 +258,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RarityBa
   const obj9 = { variant: "experimental/mono-md/bold", style: tmp.badgeLabel, children: null };
   const intl = util.intl;
   obj9.children = intl.string(dependencyMap3[rarity]);
-  const items4 = [collapsed(Text_Text.Text, obj9), ];
+  const items4 = [v65535(Text_Text.Text, obj9), ];
   if (tmp17Result) {
     const obj10 = { size: "xxs", color: nativeDefault.colors.BLACK };
-    tmp17Result = collapsed(NitroWheelIcon.NitroWheelIcon, obj10);
+    tmp17Result = v65535(NitroWheelIcon.NitroWheelIcon, obj10);
   }
   items4[1] = tmp17Result;
   obj8.children = items4;

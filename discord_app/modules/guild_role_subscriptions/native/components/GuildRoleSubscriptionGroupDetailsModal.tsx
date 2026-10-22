@@ -1,28 +1,28 @@
-// === Module 19087: GuildRoleSubscriptionGroupDetailsModal ===
+// === Module 19154: GuildRoleSubscriptionGroupDetailsModal ===
 
-// Module 19087 (GuildRoleSubscriptionGroupDetailsModal)
+// Module 19154 (GuildRoleSubscriptionGroupDetailsModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Form from "Form" /* 8910 */;
-import FormHeaderDefault from "FormHeader" /* 9004 */;
-import FormStylesDefault from "FormStyles" /* 15036 */;
-import FormSeparatorDefault from "FormSeparator" /* 16399 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19083 */;
-import FormImagePicker from "FormImagePicker" /* 19089 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19090 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Form from "Form" /* 8919 */;
+import FormHeaderDefault from "FormHeader" /* 9013 */;
+import FormStylesDefault from "FormStyles" /* 15080 */;
+import FormSeparatorDefault from "FormSeparator" /* 16468 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19150 */;
+import FormImagePicker from "FormImagePicker" /* 19156 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19157 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 19088 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19155 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(16387);
+const GuildRoleSubscriptionsConstants = fn(16456);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1087).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({ coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: 16 }, paddedContainer: { paddingHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0) {
@@ -134,7 +134,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0
                   const obj7 = { children: null };
                   const items = [tmp10, tmp21, tmp25, tmp30, tmp35];
                   obj7.children = items;
-                  const tmp42 = collapsed(closure_1_11, obj7);
+                  const tmp42 = v65535(closure_1_11, obj7);
                   cResult[26] = tmp25;
                   cResult[27] = tmp30;
                   cResult[28] = tmp35;
@@ -158,7 +158,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0
         const obj9 = { style: tmp13, children: null };
         const items1 = [tmp14, tmp18];
         obj9.children = items1;
-        const tmp24 = collapsed(View, obj9);
+        const tmp24 = v65535(View, obj9);
         cResult[11] = tmp4.paddedContainer;
         cResult[12] = tmp14;
         cResult[13] = tmp18;
@@ -192,7 +192,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0
   obj6.children = intl2.string(util.t["0ng4rB"]);
   items1[1] = React6(Text_Text.Text, obj6);
   obj4.children = items1;
-  items[1] = collapsed(View, obj4);
+  items[1] = v65535(View, obj4);
   items[2] = React6(FormSeparatorDefault, { style: tmp.paddedContainer });
   const obj8 = { style: tmp2.header, children: null };
   const obj5 = { style: tmp.coverPhoto, image: cover, imageUploadSize: UPLOAD_BANNER_SIZE.width, previewShape: FormImagePicker.PreviewShape.SQUIRCLE, setImage: setCover, disabled: roleSubscriptionSettingsDisabled, standalone: true, size: 114 };
@@ -207,7 +207,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content(arg0
   obj9.disabled = roleSubscriptionSettingsDisabled;
   items[4] = React6(Form.FormInput, obj9);
   obj2.children = items;
-  return collapsed(closure_1_11, obj2);
+  return v65535(closure_1_11, obj2);
 });
 let closure_13 = tmp5;
 ReactCompilerGating = fn(558);

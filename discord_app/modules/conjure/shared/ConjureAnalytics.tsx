@@ -1,14 +1,15 @@
-// === Module 10676: ConjureAnalytics ===
+// === Module 10688: ConjureAnalytics ===
 
-// Module 10676 (ConjureAnalytics)
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5693 */;
-import ConjureUtils from "ConjureUtils" /* 7322 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+// Module 10688 (ConjureAnalytics)
+import PlatformUtils from "PlatformUtils" /* 1384 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
+import ConjureUtils from "ConjureUtils" /* 7329 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
 
 require = fn;
-function projectFields(project_id) {
-  const project = ConjureProjectStore.getProject(project_id);
-  const obj = { project_id, project_name: null, application_id: null, preview_application_id: null, install_scope: null };
+function projectFields(projectId) {
+  const project = ConjureProjectStore.getProject(projectId);
+  const obj = { project_id: projectId, project_name: null, application_id: null, preview_application_id: null, install_scope: null };
   let name;
   if (project != null) {
     name = project.name;
@@ -47,8 +48,8 @@ function projectFields(project_id) {
   obj.install_scope = install_scope;
   return obj;
 }
-function conjureLocation(project_id, isPreview) {
-  const project = ConjureProjectStore.getProject(project_id);
+function conjureLocation(projectId, isPreview) {
+  const project = ConjureProjectStore.getProject(projectId);
   if (isPreview) {
     let preview_guild_id;
     if (!tmp2) {
@@ -201,4 +202,65 @@ export const trackConjurePublishActionClicked = function trackConjurePublishActi
   obj2.install_scope = installScope;
   obj2.action = action;
   AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_PUBLISH_ACTION_CLICKED, obj2);
+};
+export const trackConjureRatingSubmitted = function trackConjureRatingSubmitted(projectId) {
+  projectId = projectId.projectId;
+  const obj2 = {};
+  ({ turnId, rating, publishReason, surface } = projectId);
+  const merged = Object.assign(projectFields(projectId));
+  const merged1 = Object.assign(conjureLocation(projectId, true));
+  obj2.turn_id = turnId;
+  obj2.rating = rating;
+  obj2.publish_reason = publishReason;
+  obj2.surface = surface;
+  const obj = AppAnalyticsUtils;
+  let str = "android";
+  if (!obj3.isAndroid()) {
+    let str2 = "ios";
+    if (!tmpResult.isIOS()) {
+      let str3 = "web";
+      if (tmpResult2.isDesktop()) {
+        str3 = "desktop";
+      }
+      str2 = str3;
+      tmpResult2 = PlatformUtils;
+    }
+    str = str2;
+    tmpResult = PlatformUtils;
+  }
+  obj2.client_platform = str;
+  obj.trackWithMetadata(AnalyticEvents.CONJURE_RATING_SUBMITTED, obj2);
+  obj3 = PlatformUtils;
+};
+export const trackConjureRatingFeedbackSubmitted = function trackConjureRatingFeedbackSubmitted(projectId, substr) {
+  projectId = projectId.projectId;
+  const obj2 = {};
+  ({ turnId, rating, publishReason, surface } = projectId);
+  const merged = Object.assign(projectFields(projectId));
+  const merged1 = Object.assign(conjureLocation(projectId, true));
+  obj2.turn_id = turnId;
+  obj2.rating = rating;
+  obj2.publish_reason = publishReason;
+  obj2.surface = surface;
+  const obj = AppAnalyticsUtils;
+  let str = "android";
+  if (!obj3.isAndroid()) {
+    let str2 = "ios";
+    if (!tmpResult.isIOS()) {
+      let str3 = "web";
+      if (tmpResult2.isDesktop()) {
+        str3 = "desktop";
+      }
+      str2 = str3;
+      tmpResult2 = PlatformUtils;
+    }
+    str = str2;
+    tmpResult = PlatformUtils;
+  }
+  const obj4 = {};
+  obj2.client_platform = str;
+  const merged2 = Object.assign(obj2);
+  obj4.feedback_text = substr;
+  obj.trackWithMetadata(AnalyticEvents.CONJURE_RATING_FEEDBACK_SUBMITTED, obj4);
+  obj3 = PlatformUtils;
 };

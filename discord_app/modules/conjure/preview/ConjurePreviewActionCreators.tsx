@@ -1,15 +1,15 @@
-// === Module 10698: ConjurePreviewActionCreators ===
+// === Module 10710: ConjurePreviewActionCreators ===
 
-// Module 10698 (ConjurePreviewActionCreators)
+// Module 10710 (ConjurePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6753 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10700 */;
-import leaveFrame from "leaveFrame" /* 10723 */;
-import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 10741 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6760 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10712 */;
+import leaveFrame from "leaveFrame" /* 10735 */;
+import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 10753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
-import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 10699 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
+import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 10711 */;
 
 require = fn;
 let closure_8 = async function _loadConjurePreviewDm() {
@@ -30,8 +30,8 @@ const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePrevie
 export const reloadConjureAppFrames = function reloadConjureAppFrames(application_id) {
   ConjurePlatformUtilsDefault.reloadAppFrames(application_id);
 };
-export const reloadConjureProjectFrames = function reloadConjureProjectFrames(arg0) {
-  const project = ConjureProjectStore.getProject(arg0);
+export const reloadConjureProjectFrames = function reloadConjureProjectFrames(projectId) {
+  const project = ConjureProjectStore.getProject(projectId);
   if (null != project) {
     ConjurePlatformUtilsDefault.reloadAppFrames(project.application_id);
     if (!obj2.isPreviewlessProject(project)) {

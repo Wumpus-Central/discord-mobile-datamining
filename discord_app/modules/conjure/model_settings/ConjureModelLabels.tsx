@@ -1,6 +1,6 @@
-// === Module 11699: ConjureModelLabels ===
+// === Module 11716: ConjureModelLabels ===
 
-// Module 11699 (ConjureModelLabels)
+// Module 11716 (ConjureModelLabels)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import size from "module_2" /* 2 */;
@@ -40,4 +40,3 @@ export const tierTooltip = function tierTooltip(title, arg1) {
   return obj;
 };
 export const THINKING_LABELS = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" };
-export const PROVIDER_LABELS = { anthropic: "Anthropic", openai: "OpenAI", deepseek: "DeepSeek", xai: "xAI", moonshotai: "Moonshot AI" };

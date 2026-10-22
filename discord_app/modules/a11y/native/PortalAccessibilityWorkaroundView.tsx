@@ -1,6 +1,6 @@
-// === Module 13446: PortalAccessibilityWorkaroundView ===
+// === Module 13482: PortalAccessibilityWorkaroundView ===
 
-// Module 13446 (PortalAccessibilityWorkaroundView)
+// Module 13482 (PortalAccessibilityWorkaroundView)
 import c from "c" /* 576 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ let _default = fn(17).View;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1384);
 if (PlatformUtils.isIOS()) {
-  _default = fn(13447).default;
+  _default = fn(13483).default;
 }
 const ReactCompilerGating = fn(558);
 const size = fn(2);

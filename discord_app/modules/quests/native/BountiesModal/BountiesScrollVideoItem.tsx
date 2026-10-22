@@ -1,19 +1,19 @@
-// === Module 16183: BountiesScrollVideoItem ===
+// === Module 16225: BountiesScrollVideoItem ===
 
-// Module 16183 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 6694 */;
-import AdCreativeType from "AdCreativeType" /* 6696 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14046 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16184 */;
+// Module 16225 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 6701 */;
+import AdCreativeType from "AdCreativeType" /* 6703 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14080 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9410 */;
-import BountyStore from "BountyStore" /* 7750 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9421 */;
+import BountyStore from "BountyStore" /* 7759 */;
 
 require = fn;
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6689).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6696).BOUNTY_ORB_AMOUNT;
 let jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useResumeOnActive(isActive) {
@@ -731,10 +731,10 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(14046).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(14080).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(6696).AdCreativeType.BOUNTY,
-    questContent: bounty(6694).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(6703).AdCreativeType.BOUNTY,
+    questContent: bounty(6701).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

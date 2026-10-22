@@ -1,27 +1,27 @@
-// === Module 12440: ConjureDebugScene ===
+// === Module 12470: ConjureDebugScene ===
 
-// Module 12440 (ConjureDebugScene)
+// Module 12470 (ConjureDebugScene)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
-import CopyIcon from "CopyIcon" /* 5664 */;
-import ClipboardUtils from "ClipboardUtils" /* 7262 */;
-import conjureDebugConnection from "conjureDebugConnection" /* 10691 */;
-import conjureTraceRequests2 from "conjureTraceRequests" /* 11792 */;
-import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12441 */;
-import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12450 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
+import CopyIcon from "CopyIcon" /* 5668 */;
+import ClipboardUtils from "ClipboardUtils" /* 7269 */;
+import conjureDebugConnection from "conjureDebugConnection" /* 10703 */;
+import conjureTraceRequests2 from "conjureTraceRequests" /* 11813 */;
+import ConjurePerfTraceTab from "ConjurePerfTraceTab" /* 12471 */;
+import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 12480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10662 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10674 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const subscribeDebugBacklog = fn(10656).subscribeDebugBacklog;
+const subscribeDebugBacklog = fn(10668).subscribeDebugBacklog;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabs: null, content: null, report: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabs = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_12 };

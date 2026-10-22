@@ -1,12 +1,12 @@
-// === Module 18082: UserProfileYourFriendsCard ===
+// === Module 18152: UserProfileYourFriendsCard ===
 
-// Module 18082 (UserProfileYourFriendsCard)
+// Module 18152 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import native from "native" /* 1202 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7707 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7716 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1087).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1202).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({ facepile: { flexDirection: "row", alignItems: "center" }, avatars: { flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
 let obj = { direction: fn(1202).CutoutDirection.RIGHT, inset: -4 };
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9043).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9052).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

@@ -1,30 +1,30 @@
-// === Module 11407: RPCHelpers ===
+// === Module 11424: RPCHelpers ===
 
-// Module 11407 (RPCHelpers)
+// Module 11424 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
 import UrlDefault from "Url" /* 1389 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5605 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5969 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7543 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8786 */;
-import transformUserDefault from "transformUser" /* 9222 */;
-import RPCErrorDefault from "RPCError" /* 9224 */;
-import transformMessage from "transformMessage" /* 11408 */;
-import LeakyBucketDefault from "LeakyBucket" /* 11410 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5609 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7550 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8795 */;
+import transformUserDefault from "transformUser" /* 9231 */;
+import RPCErrorDefault from "RPCError" /* 9233 */;
+import transformMessage from "transformMessage" /* 11425 */;
+import LeakyBucketDefault from "LeakyBucket" /* 11427 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
 import ApplicationRecord from "ApplicationRecord" /* 2024 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import MessageStore from "MessageStore" /* 5990 */;
-import PresenceStore from "PresenceStore" /* 5694 */;
+import MessageStore from "MessageStore" /* 5997 */;
+import PresenceStore from "PresenceStore" /* 5698 */;
 import UserStore from "UserStore" /* 1392 */;
-import VoiceStateStore from "VoiceStateStore" /* 5612 */;
+import VoiceStateStore from "VoiceStateStore" /* 5616 */;
 import URLUtils from "URLUtils" /* 1386 */;
 import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 5590 */;
+import RegexUtils from "RegexUtils" /* 5594 */;
 
 require = fn;
 function validateOrigin(arg0) {
@@ -242,7 +242,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
   }
 };
 const GUILD_VOCAL_CHANNEL_TYPES = fn(4825).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6357);
+let Constants = fn(6364);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1087);
 ({ ActivityActionTypes: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, MAX_MESSAGES_PER_CHANNEL: closure_18, RPCCloseCodes: closure_19, RPCErrors: closure_20, RTCConnectionStates: closure_21 } = Constants);
@@ -264,6 +264,13 @@ if (str2.includes(".")) {
   }
   tmp5 = str2;
   obj2 = /^\d+$/;
+}
+function transformBigFlag(permissions) {
+  let str = permissions;
+  if (typeof permissions !== "bigint") {
+    str = permissions.toString();
+  }
+  return str;
 }
 function transformVoiceState(arg0, id, userId) {
   userId = userId.userId;
@@ -297,6 +304,24 @@ export const containsSameValues = function containsSameValues(arg0, arg1) {
   return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
 };
 export { validateOrigin };
+export { transformBigFlag };
+export const transformRole = function transformRole(id) {
+  const obj = { id: id.id, name: id.name, color: id.color, colors: null, hoist: null, position: null, permissions: null, managed: null, mentionable: null, icon: null, unicode_emoji: null, tags: null, flags: null };
+  let colors = id.colors;
+  if (colors == null) {
+    const obj2 = { primary_color: id.color, secondary_color: null, tertiary_color: null };
+    colors = obj2;
+  }
+  obj.colors = colors;
+  ({ hoist: obj.hoist, position: obj.position, permissions } = id);
+  let str = permissions;
+  if (typeof permissions !== "bigint") {
+    str = permissions.toString();
+  }
+  obj.permissions = str;
+  ({ managed: obj.managed, mentionable: obj.mentionable, icon: obj.icon, unicodeEmoji: obj.unicode_emoji, tags: obj.tags, flags: obj.flags } = id);
+  return obj;
+};
 export const transformChannel = function transformChannel(channel, result) {
   let nSFW = channel;
   closure_1 = result;
@@ -335,10 +360,10 @@ export const transformChannel = function transformChannel(channel, result) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          const obj = { nick: closure_1(5969).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj = { nick: closure_1(5976).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9222)(user);
+          obj.user = closure_1(9231)(user);
           return obj;
         }
       });

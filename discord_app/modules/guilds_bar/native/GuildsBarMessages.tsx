@@ -1,17 +1,17 @@
-// === Module 17584: GuildsBarMessages ===
+// === Module 17654: GuildsBarMessages ===
 
-// Module 17584 (GuildsBarMessages)
+// Module 17654 (GuildsBarMessages)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ChatIcon from "ChatIcon" /* 8518 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17570 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17573 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17585 */;
-import HomeDrawerDirectMessagesRowDefault from "HomeDrawerDirectMessagesRow" /* 17586 */;
+import ChatIcon from "ChatIcon" /* 8527 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17640 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17643 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17655 */;
+import HomeDrawerDirectMessagesRowDefault from "HomeDrawerDirectMessagesRow" /* 17656 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -118,7 +118,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   });
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = nativeDefault.colors;
-  const obj3 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "dm-expanded-children", externalChildren: "guild-row", expandedChildren: "rgba(0, 0, 0, 1)", children: "rgba(0, 0, 0, 0)" };
+  const obj3 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "guild-row", externalChildren: "rgba(0, 0, 0, 1)", expandedChildren: "rgba(0, 0, 0, 0)", children: "rgba(255, 255, 255, 1)" };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = util.intl;
@@ -126,5 +126,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj3.externalChildren = badge;
   obj3.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
   obj3.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "dm-expanded-children", externalChildren: "guild-row", expandedChildren: "rgba(0, 0, 0, 1)", children: "rgba(0, 0, 0, 0)" });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "guild-row", externalChildren: "rgba(0, 0, 0, 1)", expandedChildren: "rgba(0, 0, 0, 0)", children: "rgba(255, 255, 255, 1)" });
 }));

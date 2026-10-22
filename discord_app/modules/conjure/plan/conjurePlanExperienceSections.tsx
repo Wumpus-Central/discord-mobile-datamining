@@ -1,9 +1,9 @@
-// === Module 12379: conjurePlanExperienceSections ===
+// === Module 12405: conjurePlanExperienceSections ===
 
-// Module 12379 (conjurePlanExperienceSections)
+// Module 12405 (conjurePlanExperienceSections)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 12359 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 12385 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanExperienceSections.tsx");

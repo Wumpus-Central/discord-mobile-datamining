@@ -1,19 +1,19 @@
-// === Module 9196: GuildBadgeV2 ===
+// === Module 9205: GuildBadgeV2 ===
 
-// Module 9196 (GuildBadgeV2)
+// Module 9205 (GuildBadgeV2)
 import c from "c" /* 576 */;
-import GuildTraits from "GuildTraits" /* 9194 */;
-import BadgeCategory from "BadgeCategory" /* 9195 */;
+import GuildTraits from "GuildTraits" /* 9203 */;
+import BadgeCategory from "BadgeCategory" /* 9204 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const native = Icon(1202);
-const shared = Icon(4973);
-const GuildBadgeImageSource = Icon(9197);
+const shared = Icon(4976);
+const GuildBadgeImageSource = Icon(9206);
 require = fn;
 let closure_2 = ["guild", "size"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_5 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

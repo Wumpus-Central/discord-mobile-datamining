@@ -1,9 +1,9 @@
-// === Module 17863: useOtherGuildJoinRequestsForUser ===
+// === Module 17933: useOtherGuildJoinRequestsForUser ===
 
-// Module 17863 (useOtherGuildJoinRequestsForUser)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6822 */;
+// Module 17933 (useOtherGuildJoinRequestsForUser)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6829 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6823 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6830 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

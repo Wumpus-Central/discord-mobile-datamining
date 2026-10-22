@@ -1,14 +1,14 @@
-// === Module 11743: useConjureAppSettingsForm ===
+// === Module 11760: useConjureAppSettingsForm ===
 
-// Module 11743 (useConjureAppSettingsForm)
+// Module 11760 (useConjureAppSettingsForm)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
-import conjureSettingValues from "conjureSettingValues" /* 11744 */;
-import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 11745 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11747 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11749 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
+import conjureSettingValues from "conjureSettingValues" /* 11761 */;
+import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 11774 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11776 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11778 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,35 +16,34 @@ import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
-import ConjureChatStore from "ConjureChatStore" /* 10657 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10674 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10686 */;
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(10656).sendUserMessage;
 const jsxProd = fn(21);
-({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
+({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const ConjureSettingsChannelSheet = "ConjureSettingsChannelSheet";
 const ConjureSettingsPickerSheet = "ConjureSettingsPickerSheet";
-const createStyles = fn(4966);
-let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
-let obj3 = { gap: nativeDefault.space.PX_16 };
+const createStyles = fn(4969);
+let obj2 = { linkedField: { gap: nativeDefault.space.PX_4 }, section: null, secretRow: null, secretRowInfo: null };
+let obj3 = { gap: nativeDefault.space.PX_4 };
+obj2.section = { gap: nativeDefault.space.PX_16 };
+let obj4 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
-let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
+let obj5 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
 obj2.secretRowInfo = { flex: 1, gap: nativeDefault.space.PX_4 };
-let closure_20 = createStyles.createStyles(obj2);
+let closure_17 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureChannelSettingRow(def) {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureChannelSettingRow(def) {
   let tmp2 = onChange;
-  const cResult = def(onChange[30]).c(42);
+  const cResult = def(onChange[28]).c(42);
   def = def.def;
   ({ hint, value } = def);
   importDefault = value;
   ({ disabled, onChange } = def);
   ({ fallback, projectId, isPreview } = def);
-  let obj = def(onChange[30]);
-  const conjureSettingsGuildId = def(onChange[31]).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(onChange[28]);
+  const conjureSettingsGuildId = def(onChange[29]).useConjureSettingsGuildId(projectId, isPreview);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildChannelStore];
     cResult[0] = items;
@@ -70,8 +69,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
-  let obj2 = def(onChange[31]);
-  label = def(tmp2[15]).useStateFromStores(first, tmp7, tmp8);
+  let obj2 = def(onChange[29]);
+  label = def(tmp2[12]).useStateFromStores(first, tmp7, tmp8);
   let tmp9 = fallback;
   if (null != conjureSettingsGuildId) {
     tmp9 = fallback;
@@ -109,17 +108,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                         }
                                         class E {
                                           constructor() {
-                                            obj = closure_0(closure_2[36]);
+                                            obj = closure_0(closure_2[34]);
                                             obj1 = { content: null, key: null, stackingBehavior: "stack" };
                                             obj5 = { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
                                             obj6 = { title: def.label };
                                             obj5.header = obj6;
-                                            tmp = closure_1(closure_2[37]);
+                                            tmp = closure_1(closure_2[35]);
                                             obj5.guild = closure_8.getGuild(closure_3);
                                             obj5.channels = closure_4;
                                             obj5.selectedChannel = c5;
-                                            intl = closure_0(closure_2[18]).intl;
-                                            obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[19])["jtBVV+"]);
+                                            intl = closure_0(closure_2[16]).intl;
+                                            obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[17])["jtBVV+"]);
                                             obj5.onSelect = function onSelect(id) {
                                               let str;
                                               if (id != null) {
@@ -137,7 +136,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                           }
                                         }
                                         let obj3 = { hasIcons: tmp20, children: tmp42 };
-                                        const tmp45 = closure_15(tmp12, obj3);
+                                        const tmp45 = closure_12(tmp12, obj3);
                                         cResult[38] = tmp12;
                                         cResult[39] = tmp42;
                                         cResult[40] = tmp20;
@@ -150,17 +149,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                             }
                             class E {
                               constructor() {
-                                obj = closure_0(closure_2[36]);
+                                obj = closure_0(closure_2[34]);
                                 obj1 = { content: null, key: null, stackingBehavior: "stack" };
                                 obj5 = { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
                                 obj6 = { title: def.label };
                                 obj5.header = obj6;
-                                tmp = closure_1(closure_2[37]);
+                                tmp = closure_1(closure_2[35]);
                                 obj5.guild = closure_8.getGuild(closure_3);
                                 obj5.channels = closure_4;
                                 obj5.selectedChannel = c5;
-                                intl = closure_0(closure_2[18]).intl;
-                                obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[19])["jtBVV+"]);
+                                intl = closure_0(closure_2[16]).intl;
+                                obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[17])["jtBVV+"]);
                                 obj5.onSelect = function onSelect(id) {
                                   let str;
                                   if (id != null) {
@@ -178,7 +177,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                               }
                             }
                             let obj4 = { label: tmp16, subLabel: tmp17, arrow: tmp18, disabled: tmp19, trailing: tmp38, onPress: tmp41 };
-                            const tmp43 = closure_15(tmp11, obj4);
+                            const tmp43 = closure_12(tmp11, obj4);
                             cResult[30] = tmp11;
                             cResult[31] = tmp38;
                             cResult[32] = tmp41;
@@ -194,17 +193,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                     }
                     class E {
                       constructor() {
-                        obj = closure_0(closure_2[36]);
+                        obj = closure_0(closure_2[34]);
                         obj1 = { content: null, key: null, stackingBehavior: "stack" };
                         obj5 = { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
                         obj6 = { title: def.label };
                         obj5.header = obj6;
-                        tmp = closure_1(closure_2[37]);
+                        tmp = closure_1(closure_2[35]);
                         obj5.guild = closure_8.getGuild(closure_3);
                         obj5.channels = closure_4;
                         obj5.selectedChannel = c5;
-                        intl = closure_0(closure_2[18]).intl;
-                        obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[19])["jtBVV+"]);
+                        intl = closure_0(closure_2[16]).intl;
+                        obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[17])["jtBVV+"]);
                         obj5.onSelect = function onSelect(id) {
                           let str;
                           if (id != null) {
@@ -230,7 +229,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                     tmp41 = E;
                   }
                   const obj5 = { text: cResult[15] };
-                  const tmp40 = closure_15(cResult[10], obj5);
+                  const tmp40 = closure_12(cResult[10], obj5);
                   cResult[21] = cResult[10];
                   cResult[22] = cResult[15];
                   cResult[23] = tmp40;
@@ -241,31 +240,31 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           }
         }
       }
-      tmp(tmp2[32]);
+      tmp(tmp2[30]);
       found = arr3.find((id) => id.id === value);
       if (found == null) {
         found = null;
       }
-      const TableRowGroup = tmp(tmp2[22]).TableRowGroup;
-      const TableRow = tmp(tmp2[33]).TableRow;
+      const TableRowGroup = tmp(tmp2[18]).TableRowGroup;
+      const TableRow = tmp(tmp2[31]).TableRow;
       const label2 = def.label;
-      const TableRowTrailingText = tmp(tmp2[34]).TableRowTrailingText;
+      const TableRowTrailingText = tmp(tmp2[32]).TableRowTrailingText;
       if (null != found) {
-        tmp2 = tmp2[35];
+        tmp2 = tmp2[33];
         const tmpResult4 = tmp(tmp2);
         class E {
           constructor() {
-            obj = closure_0(closure_2[36]);
+            obj = closure_0(closure_2[34]);
             obj1 = { content: null, key: null, stackingBehavior: "stack" };
             obj5 = { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
             obj6 = { title: def.label };
             obj5.header = obj6;
-            tmp = closure_1(closure_2[37]);
+            tmp = closure_1(closure_2[35]);
             obj5.guild = closure_8.getGuild(closure_3);
             obj5.channels = closure_4;
             obj5.selectedChannel = c5;
-            intl = closure_0(closure_2[18]).intl;
-            obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[19])["jtBVV+"]);
+            intl = closure_0(closure_2[16]).intl;
+            obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[17])["jtBVV+"]);
             obj5.onSelect = function onSelect(id) {
               let str;
               if (id != null) {
@@ -286,17 +285,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       } else {
         class E {
           constructor() {
-            obj = closure_0(closure_2[36]);
+            obj = closure_0(closure_2[34]);
             obj1 = { content: null, key: null, stackingBehavior: "stack" };
             obj5 = { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
             obj6 = { title: def.label };
             obj5.header = obj6;
-            tmp = closure_1(closure_2[37]);
+            tmp = closure_1(closure_2[35]);
             obj5.guild = closure_8.getGuild(closure_3);
             obj5.channels = closure_4;
             obj5.selectedChannel = c5;
-            intl = closure_0(closure_2[18]).intl;
-            obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[19])["jtBVV+"]);
+            intl = closure_0(closure_2[16]).intl;
+            obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[17])["jtBVV+"]);
             obj5.onSelect = function onSelect(id) {
               let str;
               if (id != null) {
@@ -341,8 +340,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   c4 = undefined;
   let found;
   ({ projectId, isPreview, hint, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(11745).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(11745);
+  const conjureSettingsGuildId = def(11774).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(11774);
   const items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -354,7 +353,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   }, items1);
   if (null != conjureSettingsGuildId) {
     if (null != stateFromStores) {
-      const result = tmp(7322).conjureSettingChannels(stateFromStores, def.channel_filter);
+      const result = tmp(7329).conjureSettingChannels(stateFromStores, def.channel_filter);
       c4 = result;
       found = result.find((id) => id.id === importDefault);
       if (found == null) {
@@ -362,7 +361,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       }
       let obj3 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
       if (null != found) {
-        const tmpResult2 = tmp(5586);
+        const tmpResult2 = tmp(5590);
         let channelName = tmpResult2.computeChannelName(found, UserStore, RelationshipStore, true);
       } else {
         let intl = tmp(1128).intl;
@@ -370,7 +369,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       }
       let obj4 = { hasIcons: false, children: null };
       const obj5 = { text: channelName };
-      obj3.trailing = closure_15(tmp(6893).TableRowTrailingText, obj5);
+      obj3.trailing = closure_12(tmp(6900).TableRowTrailingText, obj5);
       obj3.onPress = function onPress() {
         const obj2 = { content: null, key: null, stackingBehavior: "stack" };
         const obj3 = { header: { title: def.label }, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
@@ -391,41 +390,41 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           }
           return closure_1_2(str);
         };
-        obj2.content = value2(ChannelPickerActionSheetDefault, obj3);
+        obj2.content = __initData(ChannelPickerActionSheetDefault, obj3);
         obj2.key = ConjureSettingsChannelSheet;
         obj.showActionSheet(obj2);
       };
-      obj4.children = closure_15(tmp(6882).TableRow, obj3);
-      return closure_15(tmp(6966).TableRowGroup, obj4);
+      obj4.children = closure_12(tmp(6889).TableRow, obj3);
+      return closure_12(tmp(6973).TableRowGroup, obj4);
     }
   }
   return fallback;
 });
 ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePickerSettingRow(def) {
-  const cResult = def(conjureSettingsGuildId[30]).c(27);
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePickerSettingRow(def) {
+  const cResult = def(conjureSettingsGuildId[28]).c(27);
   def = def.def;
   ({ hint, value, disabled, onChange } = def);
   ({ projectId, isPreview, fallback } = def);
-  let obj = def(conjureSettingsGuildId[30]);
-  conjureSettingsGuildId = def(conjureSettingsGuildId[31]).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(conjureSettingsGuildId[28]);
+  conjureSettingsGuildId = def(conjureSettingsGuildId[29]).useConjureSettingsGuildId(projectId, isPreview);
   let prop = onChange;
-  const tmp6 = onChange(conjureSettingsGuildId[31])(conjureSettingsGuildId, def);
+  const tmp6 = onChange(conjureSettingsGuildId[29])(conjureSettingsGuildId, def);
   if (cResult[0] !== value) {
-    const result = tmp(tmp2[31]).conjureSettingPickedIds(value);
+    const result = tmp(tmp2[29]).conjureSettingPickedIds(value);
     cResult[0] = value;
     cResult[1] = result;
     let arr = result;
-    const tmpResult = tmp(tmp2[31]);
+    const tmpResult = tmp(tmp2[29]);
   } else {
     arr = cResult[1];
   }
-  let obj2 = def(conjureSettingsGuildId[31]);
+  let obj2 = def(conjureSettingsGuildId[29]);
   let tmp8 = null;
   if ("user" === def.type) {
     tmp8 = conjureSettingsGuildId;
   }
-  const conjureMemberRequests = def(conjureSettingsGuildId[38]).useConjureMemberRequests(tmp8, arr);
+  const conjureMemberRequests = def(conjureSettingsGuildId[36]).useConjureMemberRequests(tmp8, arr);
   if (null != conjureSettingsGuildId) {
     if (null != tmp6) {
       if (cResult[2] === def.multiple) {
@@ -440,13 +439,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                   constructor() {
                     tmp = closure_0;
                     tmp2 = closure_2;
-                    obj = closure_0(closure_2[36]);
+                    obj = closure_0(closure_2[34]);
                     tmp3 = jsx;
                     obj1 = { guildId: closure_2, type: def.type, channelFilter: def.channel_filter, title: def.label, maxPicks: null, selected: null, onSubmit: null };
                     num = 1;
-                    tmp4 = closure_1(closure_2[39]);
+                    tmp4 = closure_1(closure_2[37]);
                     if (closure_3) {
-                      num = tmp(tmp2[31]).MAX_CONJURE_SETTING_PICKS;
+                      num = tmp(tmp2[29]).MAX_CONJURE_SETTING_PICKS;
                     }
                     obj4 = { content: null, key: null, stackingBehavior: "stack" };
                     obj1.maxPicks = num;
@@ -469,8 +468,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                     return;
                   }
                 }
-                let tmp22 = closure_15(tmp(tmp2[34]).TableRowTrailingText, obj3);
-                const tmp24 = closure_15(tmp(tmp2[34]).TableRowTrailingText, obj3);
+                let tmp22 = closure_12(tmp(tmp2[32]).TableRowTrailingText, obj3);
+                const tmp24 = closure_12(tmp(tmp2[32]).TableRowTrailingText, obj3);
               } else {
                 tmp22 = cResult[11];
               }
@@ -502,13 +501,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                               constructor() {
                                 tmp = closure_0;
                                 tmp2 = closure_2;
-                                obj = closure_0(closure_2[36]);
+                                obj = closure_0(closure_2[34]);
                                 tmp3 = jsx;
                                 obj1 = { guildId: closure_2, type: def.type, channelFilter: def.channel_filter, title: def.label, maxPicks: null, selected: null, onSubmit: null };
                                 num = 1;
-                                tmp4 = closure_1(closure_2[39]);
+                                tmp4 = closure_1(closure_2[37]);
                                 if (closure_3) {
-                                  num = tmp(tmp2[31]).MAX_CONJURE_SETTING_PICKS;
+                                  num = tmp(tmp2[29]).MAX_CONJURE_SETTING_PICKS;
                                 }
                                 obj4 = { content: null, key: null, stackingBehavior: "stack" };
                                 obj1.maxPicks = num;
@@ -534,8 +533,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                             obj5.disabled = disabled;
                             obj5.trailing = tmp22;
                             obj5.onPress = tmp25;
-                            obj4.children = closure_15(tmp(tmp2[33]).TableRow, obj5);
-                            const tmp28 = closure_15(tmp(tmp2[22]).TableRowGroup, obj4);
+                            obj4.children = closure_12(tmp(tmp2[31]).TableRow, obj5);
+                            const tmp28 = closure_12(tmp(tmp2[18]).TableRowGroup, obj4);
                             cResult[21] = def.label;
                             cResult[22] = disabled;
                             cResult[23] = hint;
@@ -554,13 +553,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                 constructor() {
                   tmp = closure_0;
                   tmp2 = closure_2;
-                  obj = closure_0(closure_2[36]);
+                  obj = closure_0(closure_2[34]);
                   tmp3 = jsx;
                   obj1 = { guildId: closure_2, type: def.type, channelFilter: def.channel_filter, title: def.label, maxPicks: null, selected: null, onSubmit: null };
                   num = 1;
-                  tmp4 = closure_1(closure_2[39]);
+                  tmp4 = closure_1(closure_2[37]);
                   if (closure_3) {
-                    num = tmp(tmp2[31]).MAX_CONJURE_SETTING_PICKS;
+                    num = tmp(tmp2[29]).MAX_CONJURE_SETTING_PICKS;
                   }
                   obj4 = { content: null, key: null, stackingBehavior: "stack" };
                   obj1.maxPicks = num;
@@ -604,11 +603,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         };
         cResult[9] = fn;
       }
-      tmp(tmp2[31]);
+      tmp(tmp2[29]);
       closure_3 = tmp16;
       if (true === def.multiple) {
-        const intl2 = tmp(tmp2[18]).intl;
-        prop = prop(tmp2[19])["LPs/Pv"];
+        const intl2 = tmp(tmp2[16]).intl;
+        prop = prop(tmp2[17])["LPs/Pv"];
         const obj6 = { count: arr.length };
         let formatToPlainStringResult = intl2.formatToPlainString(prop, obj6);
       } else {
@@ -618,8 +617,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           formatToPlainStringResult = found.label;
         }
         if (formatToPlainStringResult == null) {
-          const intl = tmp(tmp2[18]).intl;
-          formatToPlainStringResult = intl.string(prop(tmp2[19]).rn7w7I);
+          const intl = tmp(tmp2[16]).intl;
+          formatToPlainStringResult = intl.string(prop(tmp2[17]).rn7w7I);
         }
       }
       cResult[2] = def.multiple;
@@ -639,24 +638,24 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   c4 = undefined;
   closure_5 = undefined;
   ({ projectId, isPreview, hint, disabled, fallback } = def);
-  conjureSettingsGuildId = def(conjureSettingsGuildId[31]).useConjureSettingsGuildId(projectId, isPreview);
+  conjureSettingsGuildId = def(conjureSettingsGuildId[29]).useConjureSettingsGuildId(projectId, isPreview);
   const tmp5 = require("useConjureSettingPickerOptions")(conjureSettingsGuildId, def);
-  let obj = def(conjureSettingsGuildId[31]);
-  const result = def(conjureSettingsGuildId[31]).conjureSettingPickedIds(value);
+  let obj = def(conjureSettingsGuildId[29]);
+  const result = def(conjureSettingsGuildId[29]).conjureSettingPickedIds(value);
   c3 = result;
-  let obj2 = def(conjureSettingsGuildId[31]);
+  let obj2 = def(conjureSettingsGuildId[29]);
   let tmp6 = null;
   if ("user" === def.type) {
     tmp6 = conjureSettingsGuildId;
   }
-  const conjureMemberRequests = def(conjureSettingsGuildId[38]).useConjureMemberRequests(tmp6, result);
+  const conjureMemberRequests = def(conjureSettingsGuildId[36]).useConjureMemberRequests(tmp6, result);
   if (null != conjureSettingsGuildId) {
     if (null != tmp5) {
-      const withSavedPicksResult = tmp(tmp2[31]).withSavedPicks(tmp5, value, (id) => ({ id, label: id }));
+      const withSavedPicksResult = tmp(tmp2[29]).withSavedPicks(tmp5, value, (id) => ({ id, label: id }));
       c4 = withSavedPicksResult;
       closure_5 = tmp11;
       if (true === def.multiple) {
-        const intl2 = tmp(tmp2[18]).intl;
+        const intl2 = tmp(tmp2[16]).intl;
         const obj4 = { count: result.length };
         let formatToPlainStringResult = intl2.formatToPlainString(require("module_3830")["LPs/Pv"], obj4);
       } else {
@@ -666,14 +665,14 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           formatToPlainStringResult = found.label;
         }
         if (formatToPlainStringResult == null) {
-          const intl = tmp(tmp2[18]).intl;
+          const intl = tmp(tmp2[16]).intl;
           formatToPlainStringResult = intl.string(require("module_3830").rn7w7I);
         }
       }
       const obj5 = { hasIcons: false, children: null };
       const obj6 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
       const obj7 = { text: formatToPlainStringResult };
-      obj6.trailing = closure_15(tmp(tmp2[34]).TableRowTrailingText, obj7);
+      obj6.trailing = closure_12(tmp(tmp2[32]).TableRowTrailingText, obj7);
       obj6.onPress = function onPress() {
         const obj2 = { guildId: conjureSettingsGuildId, type: def.type, channelFilter: def.channel_filter, title: def.label, maxPicks: null, selected: null, onSubmit: null };
         let num = 1;
@@ -696,12 +695,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           }
           closure_1_1(tmp3);
         };
-        obj3.content = value2(ConjureGuildPickerSheetDefault, obj2);
+        obj3.content = __initData(ConjureGuildPickerSheetDefault, obj2);
         obj3.key = ConjureSettingsPickerSheet;
         obj.showActionSheet(obj3);
       };
-      obj5.children = closure_15(tmp(tmp2[33]).TableRow, obj6);
-      return closure_15(tmp(tmp2[22]).TableRowGroup, obj5);
+      obj5.children = closure_12(tmp(tmp2[31]).TableRow, obj6);
+      return closure_12(tmp(tmp2[18]).TableRowGroup, obj5);
     }
   }
   return fallback;
@@ -715,16 +714,16 @@ export default function useConjureAppSettingsForm(projectId) {
   if (notifyAgent === undefined) {
     notifyAgent = false;
   }
+  const onSaved = projectId.onSaved;
   let flag = projectId.isPreview;
   if (flag === undefined) {
     flag = false;
   }
-  let first;
-  c9 = undefined;
   c10 = undefined;
-  let memo;
+  c11 = undefined;
+  let found;
   let memo3;
-  closure_19 = undefined;
+  closure_20 = undefined;
   function hintFor(def) {
     let hint;
     if (def != null) {
@@ -743,8 +742,8 @@ export default function useConjureAppSettingsForm(projectId) {
     }
     let stringResult;
     if (true === requires_rebuild) {
-      const intl = projectId(flag[18]).intl;
-      stringResult = intl.string(notifyAgent(flag[19])["4kCM6H"]);
+      const intl = projectId(onSaved[16]).intl;
+      stringResult = intl.string(notifyAgent(onSaved[17])["4kCM6H"]);
     }
     items[1] = stringResult;
     let type;
@@ -755,11 +754,11 @@ export default function useConjureAppSettingsForm(projectId) {
     if ("secret" === type) {
       if (null != def.hosts) {
         if (def.hosts.length > 0) {
-          const intl2 = projectId(flag[18]).intl;
+          const intl2 = projectId(onSaved[16]).intl;
           const obj = { hosts: null };
           const hosts = def.hosts;
           obj.hosts = hosts.join(", ");
-          formatToPlainStringResult = intl2.formatToPlainString(notifyAgent(flag[19]).Ww9HFO, obj);
+          formatToPlainStringResult = intl2.formatToPlainString(notifyAgent(onSaved[17]).Ww9HFO, obj);
         }
       }
     }
@@ -791,14 +790,14 @@ export default function useConjureAppSettingsForm(projectId) {
         }
         obj2.children = options2.map((label) => {
           closure_0 = label;
-          return memo1(projectId(flag[23]).TableCheckboxRow, {
+          return first2(projectId(onSaved[19]).TableCheckboxRow, {
             label: label.label,
             checked: items.includes(label.value),
             disabled,
             onPress(arg0) {
               closure_0 = arg0;
-              closure_2_13(false);
-              closure_2_6((arg0) => {
+              closure_2_14(false);
+              closure_2_7((arg0) => {
                 const obj = {};
                 const merged = Object.assign(arg0);
                 if (value) {
@@ -814,7 +813,7 @@ export default function useConjureAppSettingsForm(projectId) {
             }
           }, label.value);
         });
-        return memo1(projectId(flag[22]).TableRowGroup, obj2, found.key);
+        return first2(projectId(onSaved[18]).TableRowGroup, obj2, found.key);
       }
     }
     if ("select" === found.type) {
@@ -830,8 +829,8 @@ export default function useConjureAppSettingsForm(projectId) {
         hasIcons: false,
         defaultValue: tmp39,
         onChange(arg0) {
-            closure_1_13(false);
-            closure_1_6((arg0) => {
+            closure_1_14(false);
+            closure_1_7((arg0) => {
               const obj = {};
               const merged = Object.assign(arg0);
               obj[key.key] = key;
@@ -846,8 +845,8 @@ export default function useConjureAppSettingsForm(projectId) {
       if (options == null) {
         options = [];
       }
-      obj3.children = options.map((label) => memo1(closure_0(flag[25]).TableRadioRow, { label: label.label, value: label.value }, label.value));
-      return memo1(projectId(flag[24]).TableRadioGroup, obj3, found.key);
+      obj3.children = options.map((label) => disabled(closure_0(onSaved[21]).TableRadioRow, { label: label.label, value: label.value }, label.value));
+      return first2(projectId(onSaved[20]).TableRadioGroup, obj3, found.key);
     } else if ("checkbox" === found.type) {
       let tmp25 = first[found.key];
       if (tmp25 == null) {
@@ -860,8 +859,8 @@ export default function useConjureAppSettingsForm(projectId) {
         checked: true === tmp25,
         disabled: first2,
         onPress(arg0) {
-            closure_1_13(false);
-            closure_1_6((arg0) => {
+            closure_1_14(false);
+            closure_1_7((arg0) => {
               const obj = {};
               const merged = Object.assign(arg0);
               obj[key.key] = key;
@@ -869,8 +868,8 @@ export default function useConjureAppSettingsForm(projectId) {
             });
           }
       };
-      obj4.children = memo1(projectId(flag[23]).TableCheckboxRow, obj11);
-      return memo1(projectId(flag[22]).TableRowGroup, obj4, found.key);
+      obj4.children = first2(projectId(onSaved[19]).TableCheckboxRow, obj11);
+      return first2(projectId(onSaved[18]).TableRowGroup, obj4, found.key);
     } else {
       if ("role" !== found.type) {
         if ("user" !== found.type) {
@@ -886,8 +885,8 @@ export default function useConjureAppSettingsForm(projectId) {
             obj.value = tmp9;
             obj.disabled = first2;
             obj.onChange = function onChange(arg0) {
-              closure_1_13(false);
-              closure_1_6((arg0) => {
+              closure_1_14(false);
+              closure_1_7((arg0) => {
                 const obj = {};
                 const merged = Object.assign(arg0);
                 obj[key.key] = key;
@@ -895,7 +894,7 @@ export default function useConjureAppSettingsForm(projectId) {
               });
             };
             obj.fallback = renderTextSetting(found, tmp);
-            tmp14Result = memo1(renderValueSetting, obj, found.key);
+            tmp14Result = first2(map, obj, found.key);
           } else {
             tmp14Result = renderTextSetting(found, tmp);
           }
@@ -909,8 +908,8 @@ export default function useConjureAppSettingsForm(projectId) {
       obj12.value = tmp19;
       obj12.disabled = first2;
       obj12.onChange = function onChange(arg0) {
-        closure_1_13(false);
-        closure_1_6((arg0) => {
+        closure_1_14(false);
+        closure_1_7((arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
           obj[key.key] = key;
@@ -918,55 +917,86 @@ export default function useConjureAppSettingsForm(projectId) {
         });
       };
       obj12.fallback = renderTextSetting(found, tmp);
-      tmp14Result = memo1(renderTextSetting, obj12, found.key);
+      tmp14Result = first2(memo3, obj12, found.key);
     }
   }
-  function renderTextSetting(label, description) {
-    closure_0 = label;
-    let obj = first[label.key];
+  function renderTextSetting(multiline, description) {
+    closure_0 = multiline;
+    let obj = first[multiline.key];
     if (obj == null) {
-      obj = memo1[label.key];
+      obj = memo1[multiline.key];
     }
-    const obj2 = { label: label.label, description, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, keyboardType: null, value: null, onChange: null, disabled: null };
-    let tmp3;
-    if ("number" === label.type) {
-      let str2 = "numbers-and-punctuation";
-      if (null != label.min) {
-        str2 = "numbers-and-punctuation";
-        if (label.min >= 0) {
-          if (null == label.step) {
-            let str3 = "number-pad";
-          } else {
-            const _Number = Number;
-            str3 = "decimal-pad";
+    if (true === multiline.multiline) {
+      const obj2 = { label: multiline.label, description, value: null, onChange: null, disabled: null };
+      let str6 = "";
+      if (typeof obj === "string") {
+        str6 = obj;
+      }
+      obj2.value = str6;
+      obj2.onChange = function onChange(arg0) {
+        closure_1_14(false);
+        closure_1_7((arg0) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj[key.key] = key;
+          return obj;
+        });
+      };
+      obj2.disabled = first2;
+      let tmp15Result = first2(projectId(onSaved[22]).TextArea, obj2, multiline.key);
+    } else {
+      const obj3 = { style: closure_4.linkedField, children: null };
+      const obj4 = { label: multiline.label, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, keyboardType: null, value: null, onChange: null, disabled: null };
+      let tmp3;
+      if ("number" === multiline.type) {
+        let str2 = "numbers-and-punctuation";
+        if (null != multiline.min) {
+          str2 = "numbers-and-punctuation";
+          if (multiline.min >= 0) {
+            if (null == multiline.step) {
+              let str3 = "number-pad";
+            } else {
+              const _Number = Number;
+              str3 = "decimal-pad";
+            }
+            str2 = str3;
           }
-          str2 = str3;
+        }
+        tmp3 = str2;
+      }
+      obj4.keyboardType = tmp3;
+      const _Array = Array;
+      if (Array.isArray(obj)) {
+        let str4 = obj.join(", ");
+      } else {
+        str4 = "";
+        if (null != obj) {
+          const _String = String;
+          str4 = String(obj);
         }
       }
-      tmp3 = str2;
-    }
-    obj2.keyboardType = tmp3;
-    if (Array.isArray(obj)) {
-      let str4 = obj.join(", ");
-    } else {
-      str4 = "";
-      if (null != obj) {
-        const _String = String;
-        str4 = String(obj);
+      obj4.value = str4;
+      obj4.onChange = function onChange(arg0) {
+        closure_1_14(false);
+        closure_1_7((arg0) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj[key.key] = key;
+          return obj;
+        });
+      };
+      obj4.disabled = first2;
+      const items = [first2(projectId(onSaved[23]).TextInput, obj4), ];
+      let tmp6 = null;
+      if (null != description) {
+        const obj5 = { text: description, variant: "text-xs/normal", color: "text-muted" };
+        tmp6 = first2(notifyAgent(onSaved[24]), obj5);
       }
+      items[1] = tmp6;
+      obj3.children = items;
+      tmp15Result = closure_13(first, obj3, multiline.key);
     }
-    obj2.value = str4;
-    obj2.onChange = function onChange(arg0) {
-      closure_1_13(false);
-      closure_1_6((arg0) => {
-        const obj = {};
-        const merged = Object.assign(arg0);
-        obj[key.key] = key;
-        return obj;
-      });
-    };
-    obj2.disabled = first2;
-    return memo1(projectId(flag[26]).TextInput, obj2, label.key);
+    return tmp15Result;
   }
   function renderSecret(value) {
     closure_0 = value;
@@ -981,82 +1011,91 @@ export default function useConjureAppSettingsForm(projectId) {
     const tmp2 = hintFor(value.def);
     if (value.set) {
       if (true !== _undefined[value.name]) {
-        const obj2 = { style: closure_3.secretRow, children: null };
-        const obj3 = { style: closure_3.secretRowInfo, children: null };
+        const obj2 = { style: closure_4.secretRow, children: null };
+        const obj3 = { style: closure_4.secretRowInfo, children: null };
         const obj4 = { variant: "text-sm/medium", color: "text-default", children: label };
-        const items = [memo1(projectId(flag[27]).Text, obj4), memo1(projectId(flag[27]).Text, { variant: "text-sm/normal", color: "text-muted", children: "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022" }), ];
-        let tmp9Result = null;
+        const items = [first2(projectId(onSaved[25]).Text, obj4), first2(projectId(onSaved[25]).Text, { variant: "text-sm/normal", color: "text-muted", children: "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022" }), ];
+        let tmp14Result = null;
         if (null != tmp2) {
-          const obj5 = { variant: "text-xs/normal", color: "text-muted", children: tmp2 };
-          tmp9Result = memo1(projectId(tmp11[27]).Text, obj5);
+          const obj5 = { text: tmp2, variant: "text-xs/normal", color: "text-muted" };
+          tmp14Result = first2(notifyAgent(onSaved[24]), obj5);
         }
-        items[2] = tmp9Result;
+        items[2] = tmp14Result;
         obj3.children = items;
-        const items1 = [found(closure_6, obj3), ];
+        const items1 = [closure_13(first, obj3), ];
         const obj6 = { variant: "secondary", size: "sm", text: null, accessibilityLabel: null, disabled: null, onPress: null };
-        const intl = projectId(tmp11[18]).intl;
-        obj6.text = intl.string(notifyAgent(flag[19]).RsvBGf);
-        const intl2 = projectId(tmp11[18]).intl;
+        const intl = projectId(onSaved[16]).intl;
+        obj6.text = intl.string(notifyAgent(onSaved[17]).RsvBGf);
+        const intl2 = projectId(onSaved[16]).intl;
         const obj7 = { label };
-        obj6.accessibilityLabel = intl2.formatToPlainString(notifyAgent(flag[19]).WjoM7z, obj7);
+        obj6.accessibilityLabel = intl2.formatToPlainString(notifyAgent(onSaved[17]).WjoM7z, obj7);
         obj6.disabled = first2;
         obj6.onPress = function onPress() {
-          return c10((arg0) => {
+          return c11((arg0) => {
             const obj = {};
             const merged = Object.assign(arg0);
             obj[name.name] = true;
             return obj;
           });
         };
-        items1[1] = memo1(projectId(flag[28]).Button, obj6);
+        items1[1] = first2(projectId(onSaved[26]).Button, obj6);
         obj2.children = items1;
-        let tmp4Result = found(closure_6, obj2, value.name);
+        let tmp4Result = closure_13(first, obj2, value.name);
       }
       return tmp4Result;
     }
-    let obj = { label, description: tmp2, placeholder: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, disabled: null };
+    let obj = { style: closure_4.linkedField, children: null };
+    const obj8 = { label, placeholder: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, disabled: null };
     let str;
     if (value.set) {
       str = "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022";
     }
-    obj.placeholder = str;
+    obj8.placeholder = str;
     let str2 = first1[value.name];
     if (str2 == null) {
       str2 = "";
     }
-    obj.value = str2;
-    obj.onChange = function onChange(arg0) {
+    obj8.value = str2;
+    obj8.onChange = function onChange(arg0) {
       const name = arg0;
-      closure_1_13(false);
-      closure_1_8((arg0) => {
+      closure_1_14(false);
+      closure_1_9((arg0) => {
         const obj = {};
         const merged = Object.assign(arg0);
         obj[name.name] = name;
         return obj;
       });
     };
-    obj.disabled = first2;
-    tmp4Result = memo1(projectId(flag[26]).TextInput, obj, value.name);
+    obj8.disabled = first2;
+    const items2 = [first2(projectId(onSaved[23]).TextInput, obj8), ];
+    let tmp6Result = null;
+    if (null != tmp2) {
+      const obj9 = { text: tmp2, variant: "text-xs/normal", color: "text-muted" };
+      tmp6Result = first2(notifyAgent(onSaved[24]), obj9);
+    }
+    items2[1] = tmp6Result;
+    obj.children = items2;
+    tmp4Result = closure_13(first, obj, value.name);
   }
-  let tmp = hintFor();
-  asyncGeneratorStep = tmp;
-  let items = [memo];
-  const stateFromStores = projectId(flag[15]).useStateFromStores(items, () => ConjureSettingsStore.getSettings(projectId));
-  let tmp5 = stateFromStores(first.useState({}), 2);
-  first = tmp5[0];
-  closure_6 = tmp5[1];
-  const tmp7 = stateFromStores(first.useState({}), 2);
+  let tmp = found();
+  channels = tmp;
+  let items = [c11];
+  const stateFromStores = projectId(onSaved[12]).useStateFromStores(items, () => ConjureSettingsStore.getSettings(projectId));
+  let tmp5 = channels(stateFromStores.useState({}), 2);
+  const first = tmp5[0];
+  closure_7 = tmp5[1];
+  const tmp7 = channels(stateFromStores.useState({}), 2);
   const first1 = tmp7[0];
-  closure_8 = tmp7[1];
-  let obj = projectId(flag[15]);
-  [c9, c10] = stateFromStores(first.useState({}), 2);
-  const tmp10 = stateFromStores(first.useState(false), 2);
+  closure_9 = tmp7[1];
+  let obj = projectId(onSaved[12]);
+  [c10, c11] = channels(stateFromStores.useState({}), 2);
+  const tmp10 = channels(stateFromStores.useState(false), 2);
   const first2 = tmp10[0];
-  closure_12 = tmp10[1];
-  const tmp12 = stateFromStores(first.useState(false), 2);
-  closure_13 = tmp12[1];
+  closure_13 = tmp10[1];
+  const tmp12 = channels(stateFromStores.useState(false), 2);
+  closure_14 = tmp12[1];
   let items1 = [stateFromStores];
-  memo = first.useMemo(() => {
+  const memo = stateFromStores.useMemo(() => {
     let schema;
     if (stateFromStores != null) {
       schema = stateFromStores.schema;
@@ -1066,8 +1105,8 @@ export default function useConjureAppSettingsForm(projectId) {
     }
     return schema;
   }, items1);
-  const items2 = [stateFromStores];
-  const memo1 = first.useMemo(() => {
+  let items2 = [stateFromStores];
+  const memo1 = stateFromStores.useMemo(() => {
     let obj;
     if (stateFromStores != null) {
       obj = stateFromStores.values;
@@ -1078,7 +1117,7 @@ export default function useConjureAppSettingsForm(projectId) {
     return obj;
   }, items2);
   const items3 = [memo, stateFromStores];
-  const memo2 = first.useMemo(() => {
+  const memo2 = stateFromStores.useMemo(() => {
     let secrets;
     if (stateFromStores != null) {
       secrets = stateFromStores.secrets;
@@ -1099,7 +1138,7 @@ export default function useConjureAppSettingsForm(projectId) {
       return obj;
     });
   }, items3);
-  let found = memo.filter((type) => "secret" !== type.type);
+  found = memo.filter((type) => "secret" !== type.type);
   const map = new Map(memo2.map((name) => {
     const items = [name.name, name];
     return items;
@@ -1116,7 +1155,7 @@ export default function useConjureAppSettingsForm(projectId) {
     return someResult;
   });
   const items4 = [memo, first1, memo1, first];
-  let tmp9 = stateFromStores(first.useState({}), 2);
+  let tmp9 = channels(stateFromStores.useState({}), 2);
   memo3 = obj2.useMemo(() => {
     const values = {};
     function _loop(arg0) {
@@ -1139,7 +1178,7 @@ export default function useConjureAppSettingsForm(projectId) {
     }
     const entries = Object.entries(first);
     while (tmp2 !== undefined) {
-      let tmp5 = stateFromStores(tmp3, 2);
+      let tmp5 = closure_4(tmp3, 2);
       closure_1 = tmp5[1];
       let _loopResult = _loop(tmp5[0]);
       continue;
@@ -1148,7 +1187,7 @@ export default function useConjureAppSettingsForm(projectId) {
     const entries1 = Object.entries(first1);
     tmp2 = entries[Symbol.iterator]();
     while (tmp8 !== undefined) {
-      let tmp11 = stateFromStores(tmp9, 2);
+      let tmp11 = closure_4(tmp9, 2);
       [tmp12, str] = tmp11;
       if ("" !== str.trim()) {
         obj2[tmp12] = str.trim();
@@ -1164,176 +1203,142 @@ export default function useConjureAppSettingsForm(projectId) {
     const merged = Object.assign(obj4);
     const obj5 = {};
     tmp8 = entries1[Symbol.iterator]();
-    const merged1 = Object.assign(projectId(flag[16]).conjureSecretsSubmission(memo, obj2));
+    const merged1 = Object.assign(projectId(onSaved[13]).conjureSecretsSubmission(memo, obj2));
     return obj5;
   }, items4);
-  closure_19 = tmp18;
-  const items5 = [null != memo3.values || null != memo3.secrets, notifyAgent, projectId, first2, memo3];
+  closure_20 = tmp18;
+  const items5 = [null != memo3.values || null != memo3.secrets, notifyAgent, onSaved, projectId, first2, memo3];
   let tmp20 = null;
-  const callback = obj2.useCallback(asyncGeneratorStep(async () => {
-    if (c7 === 2) {
-      c7 = 3;
+  const callback = obj2.useCallback(flag(function*() {
+    if (c5 === 2) {
+      c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
       try {
-        c7 = 2;
-        if (0 === c6) {
+        c5 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            c7 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_3 = tmp4;
-            dependencyMap = tmp8;
+            closure_1 = tmp4;
+            projectId = tmp8;
             let rebuildRequired;
-            let project2;
-            if (closure_19) {
+            if (closure_20) {
               if (!first2) {
-                closure_12(true);
-                project(false);
-                c5 = 2;
-                c6 = 3;
-                c7 = 1;
-                const obj8 = { value: _null(10760).submitProjectSettings(projectId, memo3), done: false };
-                return obj8;
+                closure_13(true);
+                closure_14(false);
+                c3 = 2;
+                c4 = 3;
+                c5 = 1;
+                const obj5 = { value: projectId(tmp36[14]).submitProjectSettings(projectId, memo3), done: false };
+                return obj5;
               }
             }
-            c7 = 3;
+            c5 = 3;
             return { value: true, done: true };
           }
         } else if (1 === tmp8) {
-          c5 = 0;
-          closure_131_12(false);
-          throw closure_4;
+          c3 = 0;
+          closure_129_13(false);
+          throw tmp36;
         } else if (2 === tmp8) {
-          c5 = 1;
-          closure_131_13(true);
-          c5 = 0;
-          closure_131_12(false);
-          c7 = 3;
+          c3 = 1;
+          closure_129_14(true);
+          c3 = 0;
+          closure_129_13(false);
+          c5 = 3;
           return { value: false, done: true };
         } else if (arg0 === 1) {
-          c7 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 0;
-          closure_131_12(false);
-          c7 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          c3 = 0;
+          closure_129_13(false);
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
         } else {
           rebuildRequired = value.rebuildRequired;
-          if (!closure_131_1) {
-            if (!closure_1_11.hasPendingSettingsRequest(closure_131_0)) {
-              if (!rebuildRequired) {
-                project2 = project.getProject(closure_131_0);
-                let application_id;
-                if (project2 != null) {
-                  application_id = project2.application_id;
-                }
-                _null = application_id;
-                if (application_id == null) {
-                  _null = null;
-                }
-                _null(10722).restartAppFrames(_null);
-                let isPreviewlessProjectResult = null != project2;
-                if (isPreviewlessProjectResult) {
-                  isPreviewlessProjectResult = _null(6753).isPreviewlessProject(project2);
-                  const obj2 = _null(6753);
-                }
-                if (!isPreviewlessProjectResult) {
-                  let prop;
-                  if (project2 != null) {
-                    prop = project2.preview_application_id;
-                  }
-                  let _null2 = prop;
-                  if (prop == null) {
-                    _null2 = null;
-                  }
-                  _null(10722).restartAppFrames(_null2);
-                  const obj3 = _null(10722);
-                }
-                const obj = _null(10722);
-              }
-              closure_131_6({});
-              closure_131_8({});
-              closure_131_10({});
-              c5 = 0;
-              closure_131_12(false);
-              c7 = 3;
-            }
-            const projectRebuild = _null(10760).requestProjectRebuild(closure_131_0);
-            const obj4 = _null(10760);
+          const obj7 = { rebuildRequired, notifyAgent: closure_129_1 };
+          const result = projectId(tmp36[15]).settleProjectSettingsSave(closure_129_0, obj7);
+          closure_129_7({});
+          closure_129_9({});
+          closure_129_11({});
+          if (closure_129_2 != null) {
+            closure_129_2();
           }
-          const intl = _null(1128).intl;
-          closure_1_12(closure_131_0, intl.string(_null2(3830)["08bsJL"]));
+          c3 = 0;
+          closure_129_13(false);
+          c5 = 3;
+          return { value: true, done: true };
         }
-      } catch (tmp82) {
-        closure_4 = tmp82;
-        if (tmp5 === c5) {
-          c7 = tmp3;
-          throw tmp82;
-        } else if (tmp2 === tmp84) {
-          c6 = tmp2;
+      } catch (tmp36) {
+        if (tmp5 === c3) {
+          c5 = tmp3;
+          throw tmp36;
+        } else if (tmp2 === tmp38) {
+          c4 = tmp2;
         } else {
-          c6 = tmp;
+          c4 = tmp;
         }
       }
     }
   }), items5);
   if (tmp12[0]) {
     let obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
-    let intl = tmp2(tmp3[18]).intl;
-    obj3.children = intl.string(notifyAgent(tmp3[19])["A5TC+K"]);
-    tmp20 = memo1(tmp2(tmp3[27]).Text, obj3);
+    let intl = tmp2(tmp3[16]).intl;
+    obj3.children = intl.string(notifyAgent(tmp3[17])["A5TC+K"]);
+    tmp20 = first2(tmp2(tmp3[25]).Text, obj3);
   }
   let obj4 = { style: tmp.section, children: null };
   let tmp25 = null;
   if (null != note) {
     tmp25 = null;
     if ("" !== note) {
-      let obj5 = { variant: "text-sm/normal", color: "text-default", children: note };
-      tmp25 = memo1(tmp2(tmp3[27]).Text, obj5);
+      let obj5 = { text: note, variant: "text-sm/normal", color: "text-default" };
+      tmp25 = first2(notifyAgent(tmp3[24]), obj5);
     }
   }
   const items6 = [tmp25, , , ];
-  let tmp27 = null;
+  let tmp28 = null;
   if (null != stateFromStores) {
-    tmp27 = null;
+    tmp28 = null;
     if (0 === found.length) {
-      tmp27 = null;
+      tmp28 = null;
       if (0 === memo2.length) {
         let obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        let intl2 = tmp2(tmp3[18]).intl;
-        obj6.children = intl2.string(notifyAgent(tmp3[19]).lJJayk);
-        tmp27 = memo1(tmp2(tmp3[27]).Text, obj6);
+        let intl2 = tmp2(tmp3[16]).intl;
+        obj6.children = intl2.string(notifyAgent(tmp3[17]).lJJayk);
+        tmp28 = first2(tmp2(tmp3[25]).Text, obj6);
       }
     }
   }
-  items6[1] = tmp27;
+  items6[1] = tmp28;
   if (found1.length > 0) {
-    let tmp32 = null;
+    let tmp33 = null;
     if (someResult) {
       let obj7 = { variant: "text-xs/normal", color: "text-muted", children: null };
-      const intl3 = tmp2(tmp3[18]).intl;
-      obj7.children = intl3.string(notifyAgent(tmp3[19]).dsHRPK);
-      tmp32 = memo1(tmp2(tmp3[27]).Text, obj7);
+      const intl3 = tmp2(tmp3[16]).intl;
+      obj7.children = intl3.string(notifyAgent(tmp3[17]).dsHRPK);
+      tmp33 = first2(tmp2(tmp3[25]).Text, obj7);
     }
     let obj8 = { children: null };
     const items7 = [
-      tmp32,
+      tmp33,
       found1.map(function renderScoped(item) {
           closure_0 = item;
           value = map.get(item);
@@ -1350,21 +1355,21 @@ export default function useConjureAppSettingsForm(projectId) {
         })
     ];
     obj8.children = items7;
-    let mapped = tmp23(map, obj8);
+    let mapped = tmp23(closure_14, obj8);
   } else {
     mapped = found.map(renderValueSetting);
   }
-  let obj9 = { fields: found(closure_6, obj4), secretFields: null, loaded: null, valueCount: null, secretCount: null, isScoped: null, canSave: null, saving: null, submit: null };
+  let obj9 = { fields: closure_13(first, obj4), secretFields: null, loaded: null, valueCount: null, secretCount: null, isScoped: null, canSave: null, saving: null, submit: null };
   items6[2] = mapped;
   items6[3] = tmp20;
   obj4.children = items6;
   const obj10 = { style: tmp.section, children: null };
   let obj11 = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl4 = tmp2(tmp3[18]).intl;
-  obj11.children = intl4.string(notifyAgent(flag[19]).dsHRPK);
-  const items8 = [memo1(projectId(flag[27]).Text, obj11), memo2.map(renderSecret), tmp20];
+  const intl4 = tmp2(tmp3[16]).intl;
+  obj11.children = intl4.string(notifyAgent(onSaved[17]).dsHRPK);
+  const items8 = [first2(projectId(onSaved[25]).Text, obj11), memo2.map(renderSecret), tmp20];
   obj10.children = items8;
-  obj9.secretFields = found(closure_6, obj10);
+  obj9.secretFields = closure_13(first, obj10);
   obj9.loaded = null != stateFromStores;
   obj9.valueCount = found.length;
   obj9.secretCount = memo2.length;

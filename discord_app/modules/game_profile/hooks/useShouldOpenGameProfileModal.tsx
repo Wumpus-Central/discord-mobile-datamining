@@ -1,11 +1,11 @@
-// === Module 9207: useShouldOpenGameProfileModal ===
+// === Module 9216: useShouldOpenGameProfileModal ===
 
-// Module 9207 (useShouldOpenGameProfileModal)
+// Module 9216 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import FlagUtilsAll from "FlagUtils" /* 1405 */;
-import utils from "utils" /* 5594 */;
-import GameFlags from "GameFlags" /* 9208 */;
+import utils from "utils" /* 5598 */;
+import GameFlags from "GameFlags" /* 9217 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2022 */;
 
@@ -316,8 +316,8 @@ export { RejectionReason };
 export { trackEntryPoint };
 export { isGameDisabled };
 export { gameIsAcceptable };
-export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
-  const game = GameStore.getGame(gameId);
+export const gameIdIsAcceptable = function gameIdIsAcceptable(arg0) {
+  const game = GameStore.getGame(arg0);
   if (null == game) {
     const items = [obj.NoMatch];
     let arr = items;

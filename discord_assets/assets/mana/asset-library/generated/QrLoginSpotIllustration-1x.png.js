@@ -1,6 +1,6 @@
-// === Module 14999: ? ===
+// === Module 15043: ? ===
 
-// Module 14999
+// Module 15043
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QrLoginSpotIllustration-1x.png.js");

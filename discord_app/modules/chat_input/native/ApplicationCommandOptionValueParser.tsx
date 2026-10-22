@@ -1,14 +1,14 @@
-// === Module 12018: ApplicationCommandOptionValueParser ===
+// === Module 12039: ApplicationCommandOptionValueParser ===
 
-// Module 12018 (ApplicationCommandOptionValueParser)
+// Module 12039 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import Server from "Server" /* 2000 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import MessageParser from "MessageParser" /* 7730 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import MessageParser from "MessageParser" /* 7739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6749 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6756 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
@@ -43,7 +43,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(5586).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(5590).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -78,7 +78,7 @@ function getChannels(getGuildId, arr) {
   }
 }
 let closure_6 = fn(4825).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5964);
+const ChannelAutocompleteConstants = fn(5971);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {
 

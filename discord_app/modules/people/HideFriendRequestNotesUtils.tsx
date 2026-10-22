@@ -1,8 +1,8 @@
-// === Module 14327: HideFriendRequestNotesUtils ===
+// === Module 14370: HideFriendRequestNotesUtils ===
 
-// Module 14327 (HideFriendRequestNotesUtils)
+// Module 14370 (HideFriendRequestNotesUtils)
 import UserSettings from "UserSettings" /* 4797 */;
-import useUserIsTeen from "useUserIsTeen" /* 8099 */;
+import useUserIsTeen from "useUserIsTeen" /* 8108 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 
 const require = globalThis.__r;

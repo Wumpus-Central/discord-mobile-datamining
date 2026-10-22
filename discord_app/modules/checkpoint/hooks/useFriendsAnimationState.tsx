@@ -1,8 +1,8 @@
-// === Module 12899: useFriendsAnimationState ===
+// === Module 12933: useFriendsAnimationState ===
 
-// Module 12899 (useFriendsAnimationState)
+// Module 12933 (useFriendsAnimationState)
 import c from "c" /* 576 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6342 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6349 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

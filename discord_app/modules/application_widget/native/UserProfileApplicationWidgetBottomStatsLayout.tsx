@@ -1,16 +1,16 @@
-// === Module 11912: UserProfileApplicationWidgetBottomStatsLayout ===
+// === Module 11938: UserProfileApplicationWidgetBottomStatsLayout ===
 
-// Module 11912 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 11938 (UserProfileApplicationWidgetBottomStatsLayout)
 import nativeDefault from "native" /* 587 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11821 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11907 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11847 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11933 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { statsGrid: { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_12 }, stat: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_12 };
 obj2.stat = { width: "47%", gap: nativeDefault.space.PX_4 };
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           const obj2 = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
           const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2), ];
           if ("value" === iter.label.status) {
-            Text = Text(5216).Text;
+            Text = Text(5220).Text;
             const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
             iter = iter.label.text;
             obj3.children = iter;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           } else {
             tmp5Result = null;
             if ("skeleton" === iter.label.status) {
-              tmp5Result = React3(Text(11908).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+              tmp5Result = React3(Text(11934).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
             }
           }
           items[1] = tmp5Result;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         const obj2 = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
         const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2), ];
         if ("value" === iter.label.status) {
-          Text = Text(5216).Text;
+          Text = Text(5220).Text;
           const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
           iter = iter.label.text;
           obj3.children = iter;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {
-            tmp5Result = React3(Text(11908).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+            tmp5Result = React3(Text(11934).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
           }
         }
         items[1] = tmp5Result;

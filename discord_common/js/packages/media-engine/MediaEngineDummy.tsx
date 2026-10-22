@@ -1,9 +1,9 @@
-// === Module 5793: MediaEngineDummy ===
+// === Module 5798: MediaEngineDummy ===
 
-// Module 5793 (MediaEngineDummy)
-import MediaEngineEvent from "MediaEngineEvent" /* 5729 */;
-import Constants from "Constants" /* 5700 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5723 */;
+// Module 5798 (MediaEngineDummy)
+import MediaEngineEvent from "MediaEngineEvent" /* 5734 */;
+import Constants from "Constants" /* 5704 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5728 */;
 import size from "module_2" /* 2 */;
 
 function Video() {
@@ -96,6 +96,18 @@ prototype["setGoLiveSource"] = function setGoLiveSource() {
 };
 prototype["setClipsSource"] = function setClipsSource() {
 
+};
+prototype["startSnapshotCapture"] = function startSnapshotCapture() {
+
+};
+prototype["stopSnapshotCapture"] = function stopSnapshotCapture() {
+
+};
+prototype["setSnapshotSource"] = function setSnapshotSource() {
+
+};
+prototype["getSnapshotStats"] = function getSnapshotStats() {
+  return Promise.resolve(null);
 };
 prototype["setClipsQualitySettings"] = function setClipsQualitySettings() {
   return false;

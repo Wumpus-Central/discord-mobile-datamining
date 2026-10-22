@@ -1,12 +1,12 @@
-// === Module 8904: EditGuildEventWhere ===
+// === Module 8913: EditGuildEventWhere ===
 
-// Module 8904 (EditGuildEventWhere)
+// Module 8913 (EditGuildEventWhere)
 import util from "util" /* 1128 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
 import _modDef2049 from "module_2049" /* 2049 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8848 */;
-import EntityUtils from "EntityUtils" /* 8852 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8965 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8857 */;
+import EntityUtils from "EntityUtils" /* 8861 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -42,14 +42,14 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(6763).isGuildScheduledEventActive;
+let closure_8 = fn(6770).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(4827);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
 const Constants = fn(1087);
 ({ Permissions: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_16 = createStyles.createStyles({ channelSelection: { marginTop: 16 }, error: { paddingVertical: 8 }, text: { marginTop: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     }
     function handleChangeEventEntityType(entityType) {
       _slicedToArray(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef2049(guildEvent.scheduledStartTime);
         if (obj2 == null) {
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
       entityType: guildEvent.entityType,
       onChange: function handleChangeEventEntityType(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "Array" };
+        const obj = { entityType, scheduledEndTime: "r" };
         if (entityType === constants.EXTERNAL) {
           let obj2 = _modDef2049(guildEvent.scheduledStartTime);
           if (obj2 == null) {
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     entityType: guildEvent.entityType,
     onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef2049(guildEvent.scheduledStartTime);
         if (obj2 == null) {

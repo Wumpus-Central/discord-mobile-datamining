@@ -1,13 +1,13 @@
-// === Module 14992: MidjourneyOnboardingUtils ===
+// === Module 15036: MidjourneyOnboardingUtils ===
 
-// Module 14992 (MidjourneyOnboardingUtils)
+// Module 15036 (MidjourneyOnboardingUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
-const MidjourneyOnboardingConstants = fn(14993);
+const MidjourneyOnboardingConstants = fn(15037);
 ({ MIDJOURNEY_BOT_ID: closure_4, MIDJOURNEY_GUILD_ID: hasOwnProperty } = MidjourneyOnboardingConstants);
 const ReactCompilerGating = fn(558);
 function isMidjourneyOnboardingFlow() {

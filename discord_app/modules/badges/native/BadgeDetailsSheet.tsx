@@ -1,30 +1,30 @@
-// === Module 11076: BadgeDetailsSheet ===
+// === Module 11093: BadgeDetailsSheet ===
 
-// Module 11076 (BadgeDetailsSheet)
+// Module 11093 (BadgeDetailsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5668 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8650 */;
-import BadgeUtils from "BadgeUtils" /* 11072 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11075 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11091 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5672 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8659 */;
+import BadgeUtils from "BadgeUtils" /* 11089 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 11092 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11108 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import UserStore from "UserStore" /* 1392 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8645 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8654 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1087).UserSettingsSections;
-const ActionSheetConstants = fn(5248);
+const ActionSheetConstants = fn(5252);
 ({ ACTION_SHEET_MAX_WIDTH: c10, ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_11 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { content: { flexGrow: 1 }, page: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, swipePage: null, header: null, betaPill: null, graphic: null, graphicAnimated: null, identity: null, centeredText: null, eyebrow: null, uppercase: null, accessoryLine: null, accessoryDot: null, card: null, descriptionGroup: null, divider: null, notice: null, noticeIcon: null, noticeText: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.swipePage = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };

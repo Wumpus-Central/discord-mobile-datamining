@@ -1,8 +1,8 @@
-// === Module 12948: useTypingUsersIds ===
+// === Module 12984: useTypingUsersIds ===
 
-// Module 12948 (useTypingUsersIds)
+// Module 12984 (useTypingUsersIds)
 import RelationshipStore from "RelationshipStore" /* 4911 */;
-import TypingStore from "TypingStore" /* 12947 */;
+import TypingStore from "TypingStore" /* 12983 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = globalThis.__r;

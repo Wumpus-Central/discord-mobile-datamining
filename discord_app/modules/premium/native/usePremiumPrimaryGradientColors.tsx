@@ -1,9 +1,9 @@
-// === Module 14620: usePremiumPrimaryGradientColors ===
+// === Module 14664: usePremiumPrimaryGradientColors ===
 
-// Module 14620 (usePremiumPrimaryGradientColors)
+// Module 14664 (usePremiumPrimaryGradientColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5234 */;
+import useToken from "useToken" /* 5238 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

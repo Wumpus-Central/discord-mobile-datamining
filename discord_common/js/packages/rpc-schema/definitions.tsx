@@ -1,15 +1,15 @@
-// === Module 15622: definitions ===
+// === Module 15666: definitions ===
 
-// Module 15622 (definitions)
+// Module 15666 (definitions)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import Constants2 from "Constants" /* 2027 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5608 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8786 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10607 */;
-import ActivityPlatform from "ActivityPlatform" /* 11403 */;
-import SKUTypes from "SKUTypes" /* 15623 */;
-import helpers from "helpers" /* 15624 */;
-import contextMenuIcons from "contextMenuIcons" /* 15625 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5612 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8795 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10619 */;
+import ActivityPlatform from "ActivityPlatform" /* 11420 */;
+import SKUTypes from "SKUTypes" /* 15667 */;
+import helpers from "helpers" /* 15668 */;
+import contextMenuIcons from "contextMenuIcons" /* 15669 */;
 import Constants from "Constants" /* 1098 */;
 import size from "module_2" /* 2 */;
 
@@ -515,6 +515,68 @@ class Message {
     return objectResult18.meta({ className: "Message" });
   }
 }
+class Role {
+  constructor(arg0) {
+    obj = { id: null, name: null, color: null, colors: null, hoist: null, position: null, permissions: null, managed: null, mentionable: null, icon: null, unicode_emoji: null, tags: null, flags: null };
+    stringResult = global.string();
+    requiredResult = stringResult.required();
+    obj.id = requiredResult.meta({ className: "GuildRoleId" });
+    stringResult1 = global.string();
+    obj.name = stringResult1.required();
+    numberResult = global.number();
+    obj.color = numberResult.required();
+    obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
+    numberResult1 = global.number();
+    obj1.primary_color = numberResult1.required();
+    numberResult2 = global.number();
+    allowResult = numberResult2.allow(null);
+    optionalResult = allowResult.optional();
+    obj1.secondary_color = optionalResult.required();
+    numberResult3 = global.number();
+    allowResult1 = numberResult3.allow(null);
+    optionalResult1 = allowResult1.optional();
+    obj1.tertiary_color = optionalResult1.required();
+    objectResult = global.object(obj1);
+    obj.colors = objectResult.required();
+    booleanResult = global.boolean();
+    obj.hoist = booleanResult.required();
+    numberResult4 = global.number();
+    obj.position = numberResult4.required();
+    stringResult2 = global.string();
+    regexResult = stringResult2.regex(/^\d+$/);
+    metaResult = regexResult.meta({ format: "bigint", className: "SerializedBigFlag" });
+    obj.permissions = metaResult.required();
+    booleanResult1 = global.boolean();
+    obj.managed = booleanResult1.required();
+    booleanResult2 = global.boolean();
+    obj.mentionable = booleanResult2.required();
+    stringResult3 = global.string();
+    allowResult2 = stringResult3.allow(null);
+    obj.icon = allowResult2.required();
+    stringResult4 = global.string();
+    allowResult3 = stringResult4.allow(null);
+    obj.unicode_emoji = allowResult3.required();
+    obj36 = { bot_id: null, integration_id: null, premium_subscriber: null, subscription_listing_id: null, available_for_purchase: null, guild_connections: null };
+    stringResult5 = global.string();
+    obj36.bot_id = stringResult5.optional();
+    stringResult6 = global.string();
+    obj36.integration_id = stringResult6.optional();
+    validResult = global.valid(null);
+    obj36.premium_subscriber = validResult.optional();
+    stringResult7 = global.string();
+    obj36.subscription_listing_id = stringResult7.optional();
+    validResult1 = global.valid(null);
+    obj36.available_for_purchase = validResult1.optional();
+    validResult2 = global.valid(null);
+    obj36.guild_connections = validResult2.optional();
+    objectResult1 = global.object(obj36);
+    obj.tags = objectResult1.required();
+    numberResult5 = global.number();
+    obj.flags = numberResult5.required();
+    objectResult2 = global.object(obj);
+    return objectResult2.meta({ className: "Role" });
+  }
+}
 class Sku {
   constructor(arg0) {
     obj = { id: null, name: null, type: null, price: null, application_id: null, flags: null, release_date: null };
@@ -915,6 +977,40 @@ let obj9 = {
     return obj;
   }
 };
+let obj10 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { image_url: string.string().required() };
+    return obj;
+  }
+};
+let obj11 = {
+  embeddedAppSDK: true,
+  response: "Array",
+  request(string) {
+    const obj = { mediaUrl: null };
+    const stringResult = string.string();
+    obj.mediaUrl = string.string().required().max(1024);
+    return obj;
+  }
+};
+let obj13 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(array) {
+    const obj = { participants: null };
+    const arrayResult = array.array();
+    const obj2 = { nickname: null };
+    const obj3 = User(array);
+    obj2.nickname = array.string().description("Server nickname. Not unique.");
+    const keys = obj3.keys(obj2);
+    const stringResult = array.string();
+    const metaResult = keys.meta({ className: "ActivityParticipant" });
+    obj.participants = arrayResult.items(keys.meta({ className: "ActivityParticipant" }).required()).required();
+    return obj;
+  }
+};
 let obj15 = {
   request: "Array",
   response(boolean) {
@@ -1000,13 +1096,139 @@ const obj34 = {
     return obj;
   }
 };
-const obj60 = {
+const obj37 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(array) {
+    const obj = { relationships: null };
+    const arrayResult = array.array();
+    const obj2 = { type: null, user: null, presence: null };
+    const requiredResult = array.array().required();
+    obj2.type = array.number().required();
+    const numberResult = array.number();
+    obj2.user = User(array).required();
+    const obj3 = { status: null, activity: null };
+    const obj6 = User(array);
+    obj3.status = array.string().required();
+    const stringResult = array.string();
+    obj3.activity = Activity(array).allow(null);
+    obj2.presence = array.object(obj3);
+    obj.relationships = requiredResult.items(array.object(obj2));
+    return obj;
+  }
+};
+const obj39 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { surface: EmbeddedSurface(string).required(), launch: null, platform: null };
+    const obj3 = { custom_id: null, referrer_id: null, interaction_id: null };
+    const obj2 = EmbeddedSurface(string);
+    obj3.custom_id = string.string().optional();
+    const stringResult = string.string();
+    obj3.referrer_id = string.string().optional();
+    const stringResult1 = string.string();
+    obj3.interaction_id = string.string().optional();
+    const stringResult2 = string.string();
+    obj.launch = string.object(obj3).required();
+    const objectResult = string.object(obj3);
+    obj.platform = joiEnum(string, "ActivityPlatform").required();
+    return obj;
+  }
+};
+const obj41 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(arg0) {
+    return User(arg0).allow(null);
+  }
+};
+const obj44 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { quest_id: string.string().required(), enrolled_at: null, completed_at: null, external_cta_url: null };
+    const stringResult = string.string();
+    const stringResult1 = string.string();
+    obj.enrolled_at = string.string().allow(null).optional();
+    const allowResult = string.string().allow(null);
+    const stringResult2 = string.string();
+    obj.completed_at = string.string().allow(null).optional();
+    const allowResult1 = string.string().allow(null);
+    obj.external_cta_url = string.string().required();
+    return obj;
+  }
+};
+const obj45 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { ticket: string.string().required() };
+    return obj;
+  }
+};
+const obj50 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(boolean) {
+    const obj = { enabled: boolean.boolean().required() };
+    return obj;
+  }
+};
+const obj51 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(boolean) {
+    const obj = { iosKeyboardResizesView: boolean.boolean().optional() };
+    return obj;
+  }
+};
+const obj52 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { locale: string.string().required() };
+    return obj;
+  }
+};
+const obj56 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(string) {
+    const obj = { permissions: null };
+    const stringResult = string.string();
+    const regexResult = string.string().regex(/^\d+$/);
+    obj.permissions = string.string().regex(/^\d+$/).meta({ format: "bigint", className: "SerializedBigFlag" }).required();
+    return obj;
+  }
+};
+const obj57 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(array) {
+    const obj = { skus: null };
+    const arrayResult = array.array();
+    obj.skus = array.array().items(Sku(array)).required();
+    return obj;
+  }
+};
+const obj58 = {
+  embeddedAppSDK: true,
+  request: "Array",
+  response(array) {
+    const obj = { entitlements: null };
+    const arrayResult = array.array();
+    obj.entitlements = array.array().items(RPCEntitlement(array)).required();
+    return obj;
+  }
+};
+const obj62 = {
   request: "Array",
   response(arg0) {
     return Channel(arg0).allow(null);
   }
 };
-const obj65 = {
+const obj67 = {
   request: "Array",
   response(array) {
     const obj = { guilds: null };
@@ -1046,30 +1268,15 @@ let items = [
     return keys.meta({ className: "ActivityParticipant" });
   },
   Message,
+  Role,
   Sku
 ];
 const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/definitions.tsx");
 
 export { RPCEnums };
 export const RPCCommandSchemas = {
-  [helpers.RPCCommand.INITIATE_IMAGE_UPLOAD]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { image_url: string.string().required() };
-      return obj;
-    }
-  },
-  [helpers.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: {
-    embeddedAppSDK: true,
-    response: "Array",
-    request(string) {
-      const obj = { mediaUrl: null };
-      const stringResult = string.string();
-      obj.mediaUrl = string.string().required().max(1024);
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.INITIATE_IMAGE_UPLOAD]: obj10,
+  [helpers.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: obj11,
   [helpers.RPCCommand.AUTHENTICATE]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1117,22 +1324,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(array) {
-      const obj = { participants: null };
-      const arrayResult = array.array();
-      const obj2 = { nickname: null };
-      const obj3 = User(array);
-      obj2.nickname = array.string().description("Server nickname. Not unique.");
-      const keys = obj3.keys(obj2);
-      const stringResult = array.string();
-      const metaResult = keys.meta({ className: "ActivityParticipant" });
-      obj.participants = arrayResult.items(keys.meta({ className: "ActivityParticipant" }).required()).required();
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj13,
   [helpers.RPCCommand.RELAUNCH_FRAME]: {
     request(string) {
       const obj = { build: null };
@@ -1765,27 +1957,36 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_RELATIONSHIPS]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(array) {
-      const obj = { relationships: null };
-      const arrayResult = array.array();
-      const obj2 = { type: null, user: null, presence: null };
-      const requiredResult = array.array().required();
-      obj2.type = array.number().required();
-      const numberResult = array.number();
-      obj2.user = User(array).required();
-      const obj3 = { status: null, activity: null };
-      const obj6 = User(array);
-      obj3.status = array.string().required();
-      const stringResult = array.string();
-      obj3.activity = Activity(array).allow(null);
-      obj2.presence = array.object(obj3);
-      obj.relationships = requiredResult.items(array.object(obj2));
+  [helpers.RPCCommand.CAPTURE_SCREEN]: {
+    request(number) {
+      const obj = { max_width: null, max_height: null };
+      const numberResult = number.number();
+      const integerResult = number.number().integer();
+      const minResult = number.number().integer().min(1);
+      obj.max_width = number.number().integer().min(1).max(1920).optional();
+      const maxResult = number.number().integer().min(1).max(1920);
+      const numberResult1 = number.number();
+      const integerResult1 = number.number().integer();
+      const minResult1 = number.number().integer().min(1);
+      obj.max_height = number.number().integer().min(1).max(1920).optional();
       return obj;
+    },
+    response(string) {
+      const size = { status: null, image: null, width: null, height: null };
+      const stringResult = string.string();
+      size.status = string.string().valid("ok", "permission_required", "permission_denied", "unsupported", "no_game").required();
+      const validResult = string.string().valid("ok", "permission_required", "permission_denied", "unsupported", "no_game");
+      size.image = string.string().optional();
+      const stringResult1 = string.string();
+      const numberResult = string.number();
+      size.width = string.number().integer().optional();
+      const integerResult = string.number().integer();
+      const numberResult1 = string.number();
+      size.height = string.number().integer().optional();
+      return size;
     }
   },
+  [helpers.RPCCommand.GET_RELATIONSHIPS]: obj37,
   [helpers.RPCCommand.INVITE_USER_EMBEDDED]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1797,25 +1998,7 @@ export const RPCCommandSchemas = {
     },
     response: "Reflect"
   },
-  [helpers.RPCCommand.GET_CONTEXT]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { surface: EmbeddedSurface(string).required(), launch: null, platform: null };
-      const obj3 = { custom_id: null, referrer_id: null, interaction_id: null };
-      const obj2 = EmbeddedSurface(string);
-      obj3.custom_id = string.string().optional();
-      const stringResult = string.string();
-      obj3.referrer_id = string.string().optional();
-      const stringResult1 = string.string();
-      obj3.interaction_id = string.string().optional();
-      const stringResult2 = string.string();
-      obj.launch = string.object(obj3).required();
-      const objectResult = string.object(obj3);
-      obj.platform = joiEnum(string, "ActivityPlatform").required();
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.GET_CONTEXT]: obj39,
   [helpers.RPCCommand.GET_USER]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1828,6 +2011,7 @@ export const RPCCommandSchemas = {
       return User(arg0).allow(null);
     }
   },
+  [helpers.RPCCommand.GET_CURRENT_USER]: obj41,
   [helpers.RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1859,30 +2043,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_QUEST]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { quest_id: string.string().required(), enrolled_at: null, completed_at: null, external_cta_url: null };
-      const stringResult = string.string();
-      const stringResult1 = string.string();
-      obj.enrolled_at = string.string().allow(null).optional();
-      const allowResult = string.string().allow(null);
-      const stringResult2 = string.string();
-      obj.completed_at = string.string().allow(null).optional();
-      const allowResult1 = string.string().allow(null);
-      obj.external_cta_url = string.string().required();
-      return obj;
-    }
-  },
-  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { ticket: string.string().required() };
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.GET_QUEST]: obj44,
+  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj45,
   [helpers.RPCCommand.SET_RUNS_IN_BACKGROUND]: {
     request(boolean) {
       const obj = { enabled: boolean.boolean().required() };
@@ -1933,30 +2095,9 @@ export const RPCCommandSchemas = {
     },
     response: "Reflect"
   },
-  [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(boolean) {
-      const obj = { enabled: boolean.boolean().required() };
-      return obj;
-    }
-  },
-  [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(boolean) {
-      const obj = { iosKeyboardResizesView: boolean.boolean().optional() };
-      return obj;
-    }
-  },
-  [helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { locale: string.string().required() };
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj50,
+  [helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj51,
+  [helpers.RPCCommand.USER_SETTINGS_GET_LOCALE]: obj52,
   [helpers.RPCCommand.SET_ORIENTATION_LOCK_STATE]: {
     embeddedAppSDK: true,
     request(number) {
@@ -1980,7 +2121,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "color", response: "k" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "context", response: "add" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1997,37 +2138,9 @@ export const RPCCommandSchemas = {
       return boolean.object(obj).default({ opened: null });
     }
   },
-  [helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(string) {
-      const obj = { permissions: null };
-      const stringResult = string.string();
-      const regexResult = string.string().regex(/^\d+$/);
-      obj.permissions = string.string().regex(/^\d+$/).meta({ format: "bigint", className: "SerializedBigFlag" }).required();
-      return obj;
-    }
-  },
-  [helpers.RPCCommand.GET_SKUS_EMBEDDED]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(array) {
-      const obj = { skus: null };
-      const arrayResult = array.array();
-      obj.skus = array.array().items(Sku(array)).required();
-      return obj;
-    }
-  },
-  [helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: {
-    embeddedAppSDK: true,
-    request: "Array",
-    response(array) {
-      const obj = { entitlements: null };
-      const arrayResult = array.array();
-      obj.entitlements = array.array().items(RPCEntitlement(array)).required();
-      return obj;
-    }
-  },
+  [helpers.RPCCommand.GET_CHANNEL_PERMISSIONS]: obj56,
+  [helpers.RPCCommand.GET_SKUS_EMBEDDED]: obj57,
+  [helpers.RPCCommand.GET_ENTITLEMENTS_EMBEDDED]: obj58,
   [helpers.RPCCommand.START_PURCHASE]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2080,7 +2193,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: obj60,
+  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: obj62,
   [helpers.RPCCommand.SELECT_VOICE_CHANNEL]: {
     request(string) {
       const obj = { channel_id: null, timeout: null, force: null, navigate: null };
@@ -2207,7 +2320,22 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_GUILDS]: obj65,
+  [helpers.RPCCommand.GET_GUILDS]: obj67,
+  [helpers.RPCCommand.GET_ROLES]: {
+    embeddedAppSDK: true,
+    request(string) {
+      const obj = { guild_id: null };
+      const stringResult = string.string();
+      obj.guild_id = string.string().required().meta({ className: "GuildId" });
+      return obj;
+    },
+    response(array) {
+      const obj = { roles: null };
+      const arrayResult = array.array();
+      obj.roles = array.array().items(Role(array)).required();
+      return obj;
+    }
+  },
   [helpers.RPCCommand.AUTHORIZE]: {
     embeddedAppSDK: true,
     request(string) {

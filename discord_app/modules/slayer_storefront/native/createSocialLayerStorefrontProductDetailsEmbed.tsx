@@ -1,22 +1,22 @@
-// === Module 11174: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11191: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11174 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11191 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1128 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _modDef3700 from "module_3700" /* 3700 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7234 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7307 */;
-import StorefrontUtils from "StorefrontUtils" /* 7312 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8251 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11175 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7241 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7314 */;
+import StorefrontUtils from "StorefrontUtils" /* 7319 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8260 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11192 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import SKUStore from "SKUStore" /* 6803 */;
+import SKUStore from "SKUStore" /* 6810 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7784).InviteTypes;
+const InviteTypes = fn(7793).InviteTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
@@ -201,5 +201,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
     const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(7234)(stateFromStoresArray);
+  memo(7241)(stateFromStoresArray);
 });

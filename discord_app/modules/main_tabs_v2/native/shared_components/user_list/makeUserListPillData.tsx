@@ -1,8 +1,8 @@
-// === Module 10577: makeUserListPillData ===
+// === Module 10589: makeUserListPillData ===
 
-// Module 10577 (makeUserListPillData)
+// Module 10589 (makeUserListPillData)
 import native from "native" /* 1202 */;
-import UserUtilsDefault from "UserUtils" /* 5015 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 13515: ? ===
+// === Module 13551: ? ===
 
-// Module 13515
+// Module 13551
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AppleIllocon-2x.png.js");

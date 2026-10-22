@@ -1,11 +1,11 @@
-// === Module 18094: VoiceChannelAppSetting ===
+// === Module 18164: VoiceChannelAppSetting ===
 
-// Module 18094 (VoiceChannelAppSetting)
+// Module 18164 (VoiceChannelAppSetting)
 import c from "c" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import useVoiceChannelApp from "useVoiceChannelApp" /* 18095 */;
-import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet" /* 18098 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import useVoiceChannelApp from "useVoiceChannelApp" /* 18165 */;
+import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet" /* 18168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ function VoiceChannelAppRow(guildId) {
   obj3.icon = tmp8Result;
   obj3.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(18098, dependencyMap.paths), VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, { guildId, selectedApplicationId: application_id, onChange });
+    obj.openLazy(asyncRequireImpl(18168, dependencyMap.paths), VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, { guildId, selectedApplicationId: application_id, onChange });
   };
   obj2.children = jsx(guildId(application_id[9]).TableRow, { label: name, accessibilityLabel: "" + stringResult + " " + name, icon: null, onPress: null, arrow: true });
   return jsx(guildId(application_id[8]).TableRowGroup, { title: stringResult, description: null, hasIcons: null, children: null });

@@ -1,6 +1,6 @@
-// === Module 10602: isGameActivity ===
+// === Module 10614: isGameActivity ===
 
-// Module 10602 (isGameActivity)
+// Module 10614 (isGameActivity)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

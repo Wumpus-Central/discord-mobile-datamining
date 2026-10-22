@@ -1,24 +1,24 @@
-// === Module 13924: ChannelHeaderShared ===
+// === Module 13960: ChannelHeaderShared ===
 
-// Module 13924 (ChannelHeaderShared)
+// Module 13960 (ChannelHeaderShared)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useToken from "useToken" /* 5234 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import Pressables from "Pressables" /* 6887 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7054 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8478 */;
-import BotTagDefault from "BotTag" /* 9094 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10619 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10646 */;
-import _modDef13925 from "module_13925" /* 13925 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13926 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useToken from "useToken" /* 5238 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import Pressables from "Pressables" /* 6894 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7061 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8487 */;
+import BotTagDefault from "BotTag" /* 9103 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10631 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10658 */;
+import _modDef13961 from "module_13961" /* 13961 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
@@ -29,7 +29,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let c11 = 16;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 }, channelIcon: { marginRight: 12, flexShrink: 0 }, channelIconWrapper: { width: 32, height: 32, justifyContent: "center", alignItems: "center" }, guildChannelIcon: null, subTitleContainer: null, appSubTitle: null, appIcon: null, appName: null, noApp: null, skeletonIcon: null, skeletonName: null, parentChannelName: null };
   const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               }
               let tmp13 = !tmp4;
               if (!tmp4) {
-                const obj6 = { source: _modDef13925, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
+                const obj6 = { source: _modDef13961, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp5.arrowIcon };
                 tmp13 = closure_1_8(native.Icon, obj6);
               }
               cResult[7] = tmp4;
@@ -273,7 +273,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13925, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13961, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -327,7 +327,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserAv
       }
     }
   }
-  const obj2 = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status, isMobileOnline, isVROnline, style: tmp4.channelIcon, autoStatusCutout: null };
+  const obj2 = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status, isMobileOnline, isVROnline, style: tmp4.channelIcon, autoStatusCutout: "jsona" };
   const tmp7 = closure_1_8(native.Avatar, obj2);
   cResult[0] = isMobileOnline;
   cResult[1] = isVROnline;
@@ -339,7 +339,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserAv
 }) : (function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: null, isVROnline: true, style: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Rldl90b29scw==", autoStatusCutout: null };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", isMobileOnline: null, isVROnline: "9353860856bfc05333c0c56840083d00", style: "uk.messages.9353860856bfc05333c0c56840083d00.compiled.messages", autoStatusCutout: "jsona" };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;
@@ -426,7 +426,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
           const obj2 = { children: null };
           const items = [tmp5, tmp7];
           obj2.children = items;
-          const tmp13 = React6(collapsed, obj2);
+          const tmp13 = React6(v65535, obj2);
           cResult[8] = tmp5;
           cResult[9] = tmp7;
           cResult[10] = tmp13;
@@ -481,7 +481,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
     tmp6Result = closure_1_8(Text_Text.Text, obj3);
   }
   children[1] = tmp6Result;
-  return React6(collapsed, { children });
+  return React6(v65535, { children });
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function ParentChannelSubTitle(channel) {

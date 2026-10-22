@@ -1,8 +1,8 @@
-// === Module 17775: ContentInventoryEntryRow ===
+// === Module 17845: ContentInventoryEntryRow ===
 
-// Module 17775 (ContentInventoryEntryRow)
-import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 17776 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 17783 */;
+// Module 17845 (ContentInventoryEntryRow)
+import GamingLikeEntryRowDefault from "GamingLikeEntryRow" /* 17846 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 17853 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 
@@ -38,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentI
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8589).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8589).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8589).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8598).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8598).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8598).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           if (visible == null) {
             visible = false;
           }
@@ -90,9 +90,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentI
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8589).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8589).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8589).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8598).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8598).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8598).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           const obj2 = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;

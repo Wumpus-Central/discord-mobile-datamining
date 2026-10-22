@@ -1,10 +1,10 @@
-// === Module 15584: AccessibilityActionCreators ===
+// === Module 15628: AccessibilityActionCreators ===
 
-// Module 15584 (AccessibilityActionCreators)
+// Module 15628 (AccessibilityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5848 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const StickerAnimationSettings = fn(4800).StickerAnimationSettings;

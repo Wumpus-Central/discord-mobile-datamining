@@ -1,25 +1,25 @@
-// === Module 18931: GuildSettingsModalIntegrationPlatform ===
+// === Module 18998: GuildSettingsModalIntegrationPlatform ===
 
-// Module 18931 (GuildSettingsModalIntegrationPlatform)
+// Module 18998 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AvatarUtils from "AvatarUtils" /* 1417 */;
-import shared from "shared" /* 4973 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5889 */;
-import common_AlertDefault from "common/Alert" /* 5958 */;
-import PlatformsDefault from "Platforms" /* 6481 */;
-import TableRow from "TableRow" /* 6882 */;
-import NavigatorHeader from "NavigatorHeader" /* 6903 */;
-import TableRowGroup from "TableRowGroup" /* 6966 */;
-import TableSwitchRow from "TableSwitchRow" /* 7272 */;
-import HeaderActionButton from "HeaderActionButton" /* 7462 */;
-import openUserSettings from "openUserSettings" /* 7467 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8965 */;
-import IntegrationTypes from "IntegrationTypes" /* 18862 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18892 */;
+import shared from "shared" /* 4976 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5896 */;
+import common_AlertDefault from "common/Alert" /* 5965 */;
+import PlatformsDefault from "Platforms" /* 6488 */;
+import TableRow from "TableRow" /* 6889 */;
+import NavigatorHeader from "NavigatorHeader" /* 6910 */;
+import TableRowGroup from "TableRowGroup" /* 6973 */;
+import TableSwitchRow from "TableSwitchRow" /* 7279 */;
+import HeaderActionButton from "HeaderActionButton" /* 7469 */;
+import openUserSettings from "openUserSettings" /* 7474 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8974 */;
+import IntegrationTypes from "IntegrationTypes" /* 18929 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18959 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8966 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8975 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -28,7 +28,7 @@ const Constants = fn(1087);
 ({ GuildSettingsSections: metroRequire, HelpdeskArticles: closure_7, PlatformTypes: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { form: { paddingTop: nativeDefault.space.PX_16 }, trailingWrapper: { flexDirection: "row", alignItems: "center" }, platformIcon: { width: 24, height: 24 } };
 let closure_13 = createStyles.createStyles(obj2);
 const Component = noop.Component;
@@ -123,10 +123,10 @@ IntegrationItem.prototype["render"] = function render() {
       const obj3 = { style: styles.trailingWrapper, children: null };
       let syncing = integration.syncing;
       if (syncing) {
-        syncing = collapsed(React3, { animating: true, size: "small" });
+        syncing = v65535(React3, { animating: true, size: "small" });
       }
       obj3.children = syncing;
-      obj2.trailing = collapsed(React4, obj3);
+      obj2.trailing = v65535(React4, obj3);
       obj2.arrow = integration.enabled && !integration.syncing;
       obj2.icon = null;
       let enabled = integration.enabled;
@@ -143,7 +143,7 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      const items = [collapsed(TableRow.TableRow, obj2), ];
+      const items = [v65535(TableRow.TableRow, obj2), ];
       const obj5 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj5.value = Boolean(self.state.enabled);
@@ -151,7 +151,7 @@ IntegrationItem.prototype["render"] = function render() {
       obj5.onValueChange = self.handleToggleEnabled;
       const intl = util.intl;
       obj5.label = intl.string(util.t.vQC6vR);
-      items[1] = collapsed(TableSwitchRow.TableSwitchRow, obj5);
+      items[1] = v65535(TableSwitchRow.TableSwitchRow, obj5);
       obj4.children = items;
       return closure_1_11(TableRowGroup.TableRowGroup, obj4);
     } else {
@@ -161,7 +161,7 @@ IntegrationItem.prototype["render"] = function render() {
       const icon = { source: null, style: null };
       icon.source = tmpResult.makeSource(shared.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
       icon.style = styles.platformIcon;
-      collapsed(tmp8Result, icon);
+      v65535(tmp8Result, icon);
       const tmp14 = shared.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
     }
   } else {
@@ -178,10 +178,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   ({ contentContainerStyle, platformType } = closeGuildSettings);
   closeGuildSettings = closeGuildSettings.closeGuildSettings;
   let obj = platformType(576);
-  const token = platformType(5234).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
+  const token = platformType(5238).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
   const tmp6 = closure_13();
   dependencyMap = tmp6;
-  let obj2 = platformType(5234);
+  let obj2 = platformType(5238);
   const navigation = platformType(1505).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [hasChanges];
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const submitting = stateFromStoresObject.submitting;
   hasChanges = stateFromStoresObject.hasChanges;
   guild = stateFromStoresObject.guild;
-  const tmp11 = closeGuildSettings(5187)();
+  const tmp11 = closeGuildSettings(5191)();
   constants2 = tmp11;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [hasChanges];
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       }
     }
     const obj4 = { headerLeft: undefined, title: null, headerRight: null };
-    value = tmp4(6481).get(platformType);
+    value = tmp4(6488).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     obj4.title = name;
     obj4.headerRight = function headerRight() {
       if (submitting) {
-        let tmp2 = collapsed(NavigatorHeader.HeaderSubmittingIndicator, {});
+        let tmp2 = v65535(NavigatorHeader.HeaderSubmittingIndicator, {});
       } else {
         tmp2 = null;
         if (hasChanges) {
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
           const intl = util.intl;
           obj.text = intl.string(util.t["R3BPH+"]);
           obj.onPress = onSave;
-          tmp2 = collapsed(HeaderActionButton.HeaderActionButton, obj);
+          tmp2 = v65535(HeaderActionButton.HeaderActionButton, obj);
         }
       }
       return tmp2;
@@ -408,10 +408,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       tmp28 = tmp49;
       tmp29 = forResult;
       tmp30 = tmp43;
-      Form = tmp(8910).Form;
-      Stack = tmp(5957).Stack;
+      Form = tmp(8919).Form;
+      Stack = tmp(5964).Stack;
     }
-    const tmp4Result = tmp4(6481);
+    const tmp4Result = tmp4(6488);
   }
   cResult[4] = stateFromStores;
   cResult[5] = closeGuildSettings;
@@ -444,17 +444,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj2);
     }
   }
-  const token = platformType(5234).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
+  const token = platformType(5238).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_13();
   dependencyMap = tmp5;
-  let obj = platformType(5234);
+  let obj = platformType(5238);
   const navigation = platformType(1505).useNavigation();
   let obj2 = platformType(1505);
   const items = [c5];
   const stateFromStoresObject = platformType(504).useStateFromStoresObject(items, () => ({ guild: _undefined.getGuild(), submitting: _undefined.isSubmitting(), hasChanges: _undefined.hasChanges() }));
   const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  constants2 = closeGuildSettings(5187)();
+  constants2 = closeGuildSettings(5191)();
   const obj4 = platformType(504);
   const items1 = [c5];
   const stateFromStores = platformType(504).useStateFromStores(items1, () => _undefined.getProps().integrations);
@@ -469,7 +469,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(6481).get(platformType);
+    value = tmp3(6488).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -481,7 +481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     obj3.title = name;
     obj3.headerRight = function headerRight() {
       if (submitting) {
-        let tmp2 = collapsed(NavigatorHeader.HeaderSubmittingIndicator, {});
+        let tmp2 = v65535(NavigatorHeader.HeaderSubmittingIndicator, {});
       } else {
         tmp2 = null;
         if (c5) {
@@ -489,7 +489,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
           const intl = util.intl;
           obj.text = intl.string(util.t["R3BPH+"]);
           obj.onPress = onSave;
-          tmp2 = collapsed(HeaderActionButton.HeaderActionButton, obj);
+          tmp2 = v65535(HeaderActionButton.HeaderActionButton, obj);
         }
       }
       return tmp2;
@@ -529,10 +529,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     const obj11 = { children: null };
     const items2 = [mapped, ];
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_10(tmp(5216).Text, obj12);
+    items2[1] = closure_10(tmp(5220).Text, obj12);
     obj9.children = items2;
-    obj8.children = closure_11(tmp(5957).Stack, obj9);
-    const items3 = [closure_10(tmp(8910).Form, obj8), closure_10(tmp(5574).NavScrim, {})];
+    obj8.children = closure_11(tmp(5964).Stack, obj9);
+    const items3 = [closure_10(tmp(8919).Form, obj8), closure_10(tmp(5578).NavScrim, {})];
     obj11.children = items3;
     return closure_11(closure_12, obj11);
   }

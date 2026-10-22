@@ -1,6 +1,6 @@
-// === Module 18809: Overview ===
+// === Module 18876: Overview ===
 
-// Module 18809 (Overview)
+// Module 18876 (Overview)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 4815 */;
@@ -15,7 +15,7 @@ const Constants = fn(1087);
 ({ Endpoints: closure_7, VerificationModalScenes: closure_8, VerificationTypes: closure_9, HelpdeskArticles } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, containerInner: { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" }, title: null, body: null, blocks: null, verificationType: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.title = { marginTop: 20, fontSize: 17, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Overview
     }
   }
   const fn2 = function b() {
-    return collapsed(closure_2_11, {
+    return v65535(closure_2_11, {
       children: stateFromStores.map((item) => {
         if (item === constants.CAPTCHA) {
           let obj = { text: null, onPress: null, grow: true };
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Overview
   const items1 = [navigation, stateFromStores, tmp.verificationType];
   let obj3 = { style: tmp.container, children: null };
   let obj4 = { style: tmp.containerInner, children: null };
-  const callback = noop.useCallback(() => collapsed(closure_2_11, {
+  const callback = noop.useCallback(() => v65535(closure_2_11, {
     children: stateFromStores.map((item) => {
       if (item === constants.CAPTCHA) {
         let obj = { text: null, onPress: null, grow: true };

@@ -1,6 +1,6 @@
-// === Module 12846: CheckpointStatsUtils ===
+// === Module 12878: CheckpointStatsUtils ===
 
-// Module 12846 (CheckpointStatsUtils)
+// Module 12878 (CheckpointStatsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
 import UserRecord from "UserRecord" /* 1406 */;
@@ -21,12 +21,53 @@ export const getCheckpointTopPercent = function getCheckpointTopPercent(prop) {
   }
   return bound;
 };
+export const hasCheckpointSidekick = function hasCheckpointSidekick(sidekick) {
+  sidekick = undefined;
+  if (sidekick != null) {
+    sidekick = sidekick.sidekick;
+  }
+  return null != sidekick;
+};
+export const hasCheckpointSquad = function hasCheckpointSquad(sidekick) {
+  sidekick = undefined;
+  if (sidekick != null) {
+    sidekick = sidekick.sidekick;
+  }
+  let tmp2 = null != sidekick;
+  if (tmp2) {
+    let num;
+    if (sidekick != null) {
+      const users = sidekick.users;
+      if (users != null) {
+        num = users.length;
+      }
+    }
+    if (num == null) {
+      num = 0;
+    }
+    tmp2 = num > 0;
+  }
+  return tmp2;
+};
 export const hasCheckpointVoiceMinutes = function hasCheckpointVoiceMinutes(voice) {
   let num;
   if (voice != null) {
     voice = voice.voice;
     if (voice != null) {
       num = voice.totalVoiceMinutes;
+    }
+  }
+  if (num == null) {
+    num = 0;
+  }
+  return Math.round(num) > 0;
+};
+export const hasCheckpointMessages = function hasCheckpointMessages(messages) {
+  let num;
+  if (messages != null) {
+    messages = messages.messages;
+    if (messages != null) {
+      num = messages.numMessagesSent;
     }
   }
   if (num == null) {
@@ -46,6 +87,33 @@ export const hasCheckpointGuilds = function hasCheckpointGuilds(guilds) {
     num = 0;
   }
   return num > 0;
+};
+export const hasCheckpointEmojis = function hasCheckpointEmojis(stats) {
+  let num;
+  if (stats != null) {
+    const emojis = stats.emojis;
+    if (emojis != null) {
+      num = emojis.numEmojisSent;
+    }
+  }
+  if (num == null) {
+    num = 0;
+  }
+  let tmp = Math.round(num) > 0;
+  if (tmp) {
+    let num2;
+    if (stats != null) {
+      const emojis2 = stats.emojis;
+      if (emojis2 != null) {
+        num2 = emojis2.emojis.length;
+      }
+    }
+    if (num2 == null) {
+      num2 = 0;
+    }
+    tmp = num2 > 0;
+  }
+  return tmp;
 };
 export const statsFromServer = function statsFromServer(stats) {
   ({ voice, messages, emojis, games, sidekick, users, power } = stats);

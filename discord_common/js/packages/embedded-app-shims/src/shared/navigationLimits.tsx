@@ -1,8 +1,8 @@
-// === Module 11427: navigationLimits ===
+// === Module 11444: navigationLimits ===
 
-// Module 11427 (navigationLimits)
-import Safe5 from "Safe" /* 11428 */;
-import constants from "constants" /* 11430 */;
+// Module 11444 (navigationLimits)
+import Safe5 from "Safe" /* 11445 */;
+import constants from "constants" /* 11447 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/embedded-app-shims/src/shared/navigationLimits.tsx");

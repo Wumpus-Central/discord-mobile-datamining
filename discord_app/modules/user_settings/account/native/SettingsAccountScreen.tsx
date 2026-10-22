@@ -1,22 +1,22 @@
-// === Module 15848: SettingsAccountScreen ===
+// === Module 15890: SettingsAccountScreen ===
 
-// Module 15848 (SettingsAccountScreen)
+// Module 15890 (SettingsAccountScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import useMountEffectDefault from "useMountEffect" /* 5245 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6656 */;
-import TableRowGroup from "TableRowGroup" /* 6966 */;
-import MFAUtils from "MFAUtils" /* 7023 */;
-import SettingBuilders from "SettingBuilders" /* 11155 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12723 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 15852 */;
-import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 15853 */;
-import SettingLayoutDefault from "SettingLayout" /* 15856 */;
+import useMountEffectDefault from "useMountEffect" /* 5249 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6663 */;
+import TableRowGroup from "TableRowGroup" /* 6973 */;
+import MFAUtils from "MFAUtils" /* 7030 */;
+import SettingBuilders from "SettingBuilders" /* 11172 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12755 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 15894 */;
+import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 15895 */;
+import SettingLayoutDefault from "SettingLayout" /* 15898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 15849 */;
+import WebAuthnStore from "WebAuthnStore" /* 15891 */;
 
 require = fn;
 function getAccountSettings() {
@@ -27,12 +27,12 @@ function getAccountSettings() {
   ({ ACCOUNT_USERNAME: arr[0], ACCOUNT_DISPLAY_NAME: arr[1], ACCOUNT_EMAIL: arr[2], ACCOUNT_PHONE: arr[3], ACCOUNT_AGE_GROUP_ADULT: arr[4], ACCOUNT_AGE_GROUP_NON_ADULT: arr[5], ACCOUNT_AGE_GROUP_ASSIGNED_ADULT: arr[6] } = MobileUserSettings);
   obj.settings = items;
   const items1 = [obj, , , ];
-  const obj2 = { label: collapsed(closure_15, {}), settings: null };
+  const obj2 = { label: v65535(closure_15, {}), settings: null };
   const items2 = [, , , , , ];
   ({ ACCOUNT_CHANGE_PASSWORD: arr3[0], ACCOUNT_WEB_AUTHN_VIEW: arr3[1], ACCOUNT_ENABLE_2FA: arr3[2], ACCOUNT_VIEW_BACKUP_CODES: arr3[3], ACCOUNT_REMOVE_2FA: arr3[4], ACCOUNT_SMS_BACKUP: arr3[5] } = MobileUserSettings);
   obj2.settings = items2;
   items1[1] = obj2;
-  const obj3 = { label: collapsed(closure_16, {}), settings: null };
+  const obj3 = { label: v65535(closure_16, {}), settings: null };
   const items3 = [, ];
   ({ ACCOUNT_AGE_GROUP: arr4[0], ACCOUNT_STANDING: arr4[1] } = MobileUserSettings);
   obj3.settings = items3;
@@ -47,11 +47,11 @@ function getAccountSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8308).MobileUserSettings;
+const MobileUserSettings = fn(8317).MobileUserSettings;
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { upsellPasswordless: { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, upsellImagePasswordless: { height: "100%", width: "100%" } };
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -86,7 +86,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Passwo
   }
   if (cResult[4] !== tmp4.upsellImagePasswordless) {
     const obj4 = { style: tmp8, children: null };
-    const obj5 = { source: tmp(15850), resizeMode: "contain", style: tmp4.upsellImagePasswordless };
+    const obj5 = { source: tmp(15892), resizeMode: "contain", style: tmp4.upsellImagePasswordless };
     obj4.children = closure_10(FastImageDefault, obj5);
     const tmp14 = closure_10(View, obj4);
     cResult[4] = tmp4.upsellImagePasswordless;
@@ -113,7 +113,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Passwo
     const obj8 = { variant: "heading-lg/medium", color: "mobile-text-heading-primary", children: null };
     const intl = tmp(1128).intl;
     obj8.children = intl.string(tmp(1128).t["+Svv46"]);
-    const tmp19 = closure_10(tmp(5216).Heading, obj8);
+    const tmp19 = closure_10(tmp(5220).Heading, obj8);
     cResult[8] = tmp19;
     let tmp17 = tmp19;
   } else {
@@ -123,7 +123,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Passwo
     const obj9 = { variant: "text-md/normal", color: "text-muted", children: null };
     const intl2 = tmp(1128).intl;
     obj9.children = intl2.string(tmp(1128).t.S0g2K9);
-    const tmp22 = closure_10(tmp(5216).Text, obj9);
+    const tmp22 = closure_10(tmp(5220).Text, obj9);
     cResult[9] = tmp22;
     let tmp20 = tmp22;
   } else {
@@ -146,7 +146,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Passwo
   }
   if (cResult[12] !== tmp6) {
     const obj11 = { text: tmp24, onPress: tmp6, size: "sm" };
-    const tmp28 = closure_10(tmp(5226).Button, obj11);
+    const tmp28 = closure_10(tmp(5230).Button, obj11);
     cResult[12] = tmp6;
     cResult[13] = tmp28;
     let tmp26 = tmp28;
@@ -199,7 +199,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Passwo
   const items2 = [tmp9, tmp33];
   obj17.children = items2;
   obj16.children = closure_11(View, obj17);
-  const tmp39 = closure_10(navigation(6884).Card, obj16);
+  const tmp39 = closure_10(navigation(6891).Card, obj16);
   cResult[17] = tmp33;
   cResult[18] = tmp9;
   cResult[19] = tmp39;
@@ -214,7 +214,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Passwo
   const obj5 = { style: { width: 70, height: 70 }, children: null };
   const obj6 = { source: null, resizeMode: "contain", style: null };
   const obj = require("useNavigation");
-  obj6.source = require("module_15850");
+  obj6.source = require("module_15892");
   obj6.style = tmp.upsellImagePasswordless;
   obj5.children = closure_10(FastImageDefault, obj6);
   const items = [closure_10(View, obj5), ];
@@ -300,7 +300,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
     const obj2 = { title: null };
     const intl = tmp(1128).intl;
     obj2.title = intl.string(tmp(1128).t.fuTmEJ);
-    const tmp20 = closure_10(tmp(6966).TableRowGroupTitle, obj2);
+    const tmp20 = closure_10(tmp(6973).TableRowGroupTitle, obj2);
     cResult[7] = tmp20;
     let tmp18 = tmp20;
   } else {
@@ -327,7 +327,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
   first = tmp3[0];
   closure_1 = tmp5;
   let obj = first(504);
-  const isUserVerified = first(15851).useIsUserVerified();
+  const isUserVerified = first(15893).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = noop.useMemo(() => {
     let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -351,7 +351,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
   const obj4 = { title: null };
   const intl = tmp(1128).intl;
   obj4.title = intl.string(first(1128).t.fuTmEJ);
-  items3[1] = closure_10(first(6966).TableRowGroupTitle, obj4);
+  items3[1] = closure_10(first(6973).TableRowGroupTitle, obj4);
   obj3.children = items3;
   return closure_11(closure_12, obj3);
 });
@@ -368,7 +368,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
   } else {
     if (cResult[2] !== cResult[1]) {
       const obj3 = { title: tmp5 };
-      const tmp10 = collapsed(TableRowGroup.TableRowGroupTitle, obj3);
+      const tmp10 = v65535(TableRowGroup.TableRowGroupTitle, obj3);
       cResult[2] = tmp5;
       cResult[3] = tmp10;
       let tmp8 = tmp10;
@@ -381,7 +381,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
   const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
   const intl = util.intl;
   const t = util.t;
-  return collapsed(TableRowGroup.TableRowGroupTitle, { title: intl.string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]) });
+  return v65535(TableRowGroup.TableRowGroupTitle, { title: intl.string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]) });
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountSecurityPage() {
@@ -397,7 +397,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { node: first };
-    const tmp11 = collapsed(SettingLayoutDefault, obj3);
+    const tmp11 = v65535(SettingLayoutDefault, obj3);
     cResult[1] = tmp11;
     let tmp8 = tmp11;
   } else {
@@ -409,7 +409,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
     const obj = require("SettingBuilders");
     return obj.createList({ sections: getAccountSettings(), ListHeaderComponent: SettingsAccountHeaderDefault });
   }, []);
-  return collapsed(SettingLayoutDefault, { node });
+  return v65535(SettingLayoutDefault, { node });
 });
 ReactCompilerGating = fn(558);
 let obj3 = { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
@@ -429,7 +429,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   useMountEffectDefault(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp8 = collapsed(closure_18, {});
+    const tmp8 = v65535(closure_18, {});
     cResult[1] = tmp8;
     let tmp5 = tmp8;
   } else {
@@ -440,5 +440,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   useMountEffectDefault(() => {
     const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
   });
-  return collapsed(closure_18, {});
+  return v65535(closure_18, {});
 }));

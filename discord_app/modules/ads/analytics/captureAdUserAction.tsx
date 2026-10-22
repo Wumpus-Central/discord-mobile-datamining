@@ -1,21 +1,21 @@
-// === Module 9532: captureAdUserAction ===
+// === Module 9542: captureAdUserAction ===
 
-// Module 9532 (captureAdUserAction)
+// Module 9542 (captureAdUserAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import v1 from "v1" /* 1281 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import AdCreativeType from "AdCreativeType" /* 6696 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7725 */;
-import QuestDataUtils from "QuestDataUtils" /* 7747 */;
-import getQuestLogger from "getQuestLogger" /* 7758 */;
-import AnalyticsActions from "AnalyticsActions" /* 7767 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7776 */;
-import AdDataUtils from "AdDataUtils" /* 7777 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7782 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 9533 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9535 */;
+import AdCreativeType from "AdCreativeType" /* 6703 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7734 */;
+import QuestDataUtils from "QuestDataUtils" /* 7756 */;
+import getQuestLogger from "getQuestLogger" /* 7767 */;
+import AnalyticsActions from "AnalyticsActions" /* 7776 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7785 */;
+import AdDataUtils from "AdDataUtils" /* 7786 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7791 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 9543 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9545 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7751 */;
+import QuestStore from "QuestStore" /* 7760 */;
 
 require = fn;
 function emitClickEventWithCreative() {
@@ -434,9 +434,9 @@ const AnalyticEvents = fn(1087).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
 
-export const captureAdUserAction = function captureAdUserAction(captureAdUserActionResult1) {
+export const captureAdUserAction = function captureAdUserAction(type) {
   try {
-    const type = captureAdUserActionResult1.type;
+    type = type.type;
     if (captureAdUserActionTypes.AdUserActionType.END_CONTENT_LOAD === type) {
       (function handleEndContentLoadAction(adCreativeType) {
         if (adCreativeType.adCreativeType === AdCreativeType.AdCreativeType.QUEST) {
@@ -479,7 +479,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           tmp2Result9.trackAdContentEvent(obj5);
           const tmp2Result10 = AnalyticsTypes;
         }
-      })(captureAdUserActionResult1);
+      })(type);
     } else if (captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL === type) {
       (function handleClickInternalAction() {
         const self = this;
@@ -490,7 +490,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      })(type).catch(reportCaptureAdUserActionError);
       const promise3 = (function handleClickInternalAction() {
         const self = this;
         const apply = closure_1_8.apply;
@@ -500,7 +500,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1);
+      })(type);
     } else if (captureAdUserActionTypes.AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
       (function handleClickExternalAdvertiserCtaAction() {
         const self = this;
@@ -511,7 +511,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      })(type).catch(reportCaptureAdUserActionError);
       const promise2 = (function handleClickExternalAdvertiserCtaAction() {
         const self = this;
         const apply = closure_1_9.apply;
@@ -521,7 +521,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1);
+      })(type);
     } else if (captureAdUserActionTypes.AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
       (function handleViewInternalSurfaceImpressionAction() {
         const self = this;
@@ -532,7 +532,7 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      })(type).catch(reportCaptureAdUserActionError);
       const promise = (function handleViewInternalSurfaceImpressionAction() {
         const self = this;
         const apply = closure_1_11.apply;
@@ -542,9 +542,9 @@ export const captureAdUserAction = function captureAdUserAction(captureAdUserAct
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(captureAdUserActionResult1);
+      })(type);
     } else if (captureAdUserActionTypes.AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
-      handleViewImpression(captureAdUserActionResult1);
+      handleViewImpression(type);
     }
   } catch (tmp13) {
     reportCaptureAdUserActionError(tmp13);

@@ -1,7 +1,7 @@
-// === Module 14828: SequencedLottieAnimationView ===
+// === Module 14872: SequencedLottieAnimationView ===
 
-// Module 14828 (SequencedLottieAnimationView)
-import _modDef5211 from "module_5211" /* 5211 */;
+// Module 14872 (SequencedLottieAnimationView)
+import _modDef5215 from "module_5215" /* 5215 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -77,7 +77,7 @@ prototype["render"] = function render() {
   const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
   ({ handleSetRef: obj3.ref, handleComplete: obj3.onAnimationFinish } = this);
-  obj2.children = jsx(_modDef5211, { source, style: null });
+  obj2.children = jsx(_modDef5215, { source, style: null });
   return <View style={null}>{null}</View>;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };

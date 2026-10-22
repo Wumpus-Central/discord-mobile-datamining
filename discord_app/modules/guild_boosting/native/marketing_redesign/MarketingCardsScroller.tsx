@@ -1,12 +1,12 @@
-// === Module 13377: MarketingCardsScroller ===
+// === Module 13413: MarketingCardsScroller ===
 
-// Module 13377 (MarketingCardsScroller)
+// Module 13413 (MarketingCardsScroller)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 require = fn;
 let closure_3 = ["ref"];
@@ -16,10 +16,10 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
 let size = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
-const ColorUtils = fn(4963);
+const ColorUtils = fn(4966);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];
@@ -781,7 +781,7 @@ export const MarketingCardsScroller = ReactCompilerGating.isReactCompilerEnabled
     }
     obj.importantForAccessibility = str;
     obj.children = children;
-    return collapsed(closure_2_8, obj);
+    return v65535(closure_2_8, obj);
   });
   const items7 = [stateFromStores(closure_7, obj5), , ];
   if (tmp26Result) {

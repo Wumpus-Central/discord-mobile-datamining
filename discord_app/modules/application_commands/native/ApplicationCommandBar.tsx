@@ -1,15 +1,15 @@
-// === Module 13187: ApplicationCommandBar ===
+// === Module 13223: ApplicationCommandBar ===
 
-// Module 13187 (ApplicationCommandBar)
+// Module 13223 (ApplicationCommandBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import usePreviousDefault from "usePrevious" /* 6639 */;
-import Pressables from "Pressables" /* 6887 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13011 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 13188 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import usePreviousDefault from "usePrevious" /* 6646 */;
+import Pressables from "Pressables" /* 6894 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13047 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 13224 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { applicationCommandBar: { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" }, applicationIcon: null, applicationTopWrapperScrollView: null, applicationName: null, applicationOptionalOptionsDivider: null, applicationOptionalOptionsDividerWithNoRequired: null, applicationOptionalOptionsIndicator: null, applicationDescriptionContainer: null, applicationDescriptionDivider: null, applicationCommandOption: null, applicationCommandOptionText: null, activeCommandOption: null, activeCommandOptionText: null, completeCommandOptionText: null, errorCommandOptionText: null, optionDescriptionContainer: null, descriptionEllipsis: null, descriptionEllipsisDots: null, completeCommandOption: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md, marginRight: 16 };
 obj2.applicationIcon = size;
@@ -35,8 +35,8 @@ obj2.applicationDescriptionContainer = { flexShrink: 1 };
 let obj3 = { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" };
 obj2.applicationDescriptionDivider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let obj4 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
-obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6686).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
-let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6686).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6693).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(6693).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
 obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.activeCommandOption = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -51,7 +51,7 @@ obj2.descriptionEllipsis = { marginLeft: 10, backgroundColor: nativeDefault.colo
 const obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.completeCommandOption = { backgroundColor: fn(6686).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+obj2.completeCommandOption = { backgroundColor: fn(6693).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationCommandOptionItem(arg0) {
@@ -166,7 +166,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Applic
               const obj3 = { accessibilityLabel: tmp11, accessibilityRole: "button", disabled: flag, style: tmp14 };
               const merged = Object.assign(tmp6);
               obj3.children = tmp18;
-              const tmp26 = collapsed(Pressables.PressableOpacity, obj3);
+              const tmp26 = v65535(Pressables.PressableOpacity, obj3);
               cResult[18] = flag;
               cResult[19] = tmp6;
               cResult[20] = tmp11;
@@ -176,7 +176,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Applic
               tmp21 = tmp26;
             }
             const obj4 = { style: tmp17, numberOfLines: 1, children: tmp4.displayName };
-            const tmp20 = collapsed(native.LegacyText, obj4);
+            const tmp20 = v65535(native.LegacyText, obj4);
             cResult[15] = tmp4.displayName;
             cResult[16] = tmp17;
             cResult[17] = tmp20;
@@ -270,11 +270,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Applic
     errorCommandOptionText = tmp2.errorCommandOptionText;
   }
   items1[3] = errorCommandOptionText;
-  obj.children = collapsed(native.LegacyText, { style: items1, numberOfLines: 1, children: option.displayName });
-  return collapsed(Pressables.PressableOpacity, obj);
+  obj.children = v65535(native.LegacyText, { style: items1, numberOfLines: 1, children: option.displayName });
+  return v65535(Pressables.PressableOpacity, obj);
 });
 fn(558);
-const obj12 = { backgroundColor: fn(6686).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+const obj12 = { backgroundColor: fn(6693).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((optionState) => {
   const cResult = c.c(34);
@@ -345,7 +345,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((optionState) =
                                   }
                                 }
                                 const obj3 = { accessibilityRole: str, disabled: tmp19, onPress: tmp17, children: tmp33 };
-                                const tmp39 = collapsed(Pressables.PressableOpacity, obj3);
+                                const tmp39 = v65535(Pressables.PressableOpacity, obj3);
                                 cResult[29] = str;
                                 cResult[30] = tmp17;
                                 cResult[31] = tmp19;
@@ -369,7 +369,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((optionState) =
                       let tmp31 = null;
                       if (tmp12 !== first1) {
                         ({ descriptionEllipsis: obj6.style, descriptionEllipsisDots: obj6.dotStyle } = tmp4);
-                        tmp31 = collapsed(DescriptionEllipsisDefault, { style: null, dotStyle: null });
+                        tmp31 = v65535(DescriptionEllipsisDefault, { style: null, dotStyle: null });
                         const obj5 = { style: null, dotStyle: null };
                       }
                       cResult[20] = tmp12;
@@ -380,7 +380,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((optionState) =
                       tmp30 = tmp31;
                     }
                     const obj7 = { style: tmp4.applicationDescriptionContainer, children: cResult[16] };
-                    const tmp29 = collapsed(ref, obj7);
+                    const tmp29 = v65535(ref, obj7);
                     cResult[17] = tmp4.applicationDescriptionContainer;
                     cResult[18] = cResult[16];
                     cResult[19] = tmp29;
@@ -402,7 +402,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((optionState) =
           } else {
             obj14 = { lineClamp, onLayout: tmp18, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null != option ? option.displayDescription : command.displayDescription };
           }
-          const tmp21Result = collapsed(Text_Text.Text, obj14);
+          const tmp21Result = v65535(Text_Text.Text, obj14);
           cResult[11] = command;
           cResult[12] = lineClamp;
           cResult[13] = tmp18;
@@ -523,18 +523,18 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((optionState) =
   } else {
     obj5 = { lineClamp, onLayout: onDescriptionLayout, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null != option ? option.displayDescription : option.command.displayDescription };
   }
-  obj3.children = collapsed(Text_Text.Text, obj5);
-  const items2 = [collapsed(ref, obj3), ];
+  obj3.children = v65535(Text_Text.Text, obj5);
+  const items2 = [v65535(ref, obj3), ];
   let tmp15Result = null;
   if (tmp10 !== first1) {
     ({ descriptionEllipsis: obj6.style, descriptionEllipsisDots: obj6.dotStyle } = tmp);
-    tmp15Result = collapsed(DescriptionEllipsisDefault, { style: null, dotStyle: null });
+    tmp15Result = v65535(DescriptionEllipsisDefault, { style: null, dotStyle: null });
     const obj11 = { style: null, dotStyle: null };
   }
   items2[1] = tmp15Result;
   obj2.children = items2;
   obj.children = __initData(ref, obj2);
-  return collapsed(Pressables.PressableOpacity, obj);
+  return v65535(Pressables.PressableOpacity, obj);
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandBar.tsx");
@@ -1107,9 +1107,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
   let tmp22 = null != memo;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = c10(section(5651), obj4);
+    tmp22 = c10(section(5655), obj4);
   }
-  const items5 = [tmp22, c10(command(5216).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
+  const items5 = [tmp22, c10(command(5220).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
   let options = command.options;
   let mapped;
   if (options != null) {
@@ -1151,7 +1151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
     const obj7 = { style: tmp.applicationOptionalOptionsIndicator, lineClamp: 1, variant: "eyebrow", color: "text-muted", children: null };
     const intl = tmp12(1128).intl;
     obj7.children = intl.string(tmp12(1128).t.U19GM3);
-    items7[1] = tmp25(tmp12(5216).Text, obj7);
+    items7[1] = tmp25(tmp12(5220).Text, obj7);
     const options1 = command.options;
     let mapped1;
     if (options1 != null) {
@@ -1181,7 +1181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
   }
   items5[3] = tmp19Result;
   obj3.children = items5;
-  const items8 = [closure_12(ref, obj3), c10(command(8910).FormDivider, { style: tmp.applicationDescriptionDivider }), c10(closure_15, { command, option: currentOption, optionState: tmp17 }), c10(command(8910).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [closure_12(ref, obj3), c10(command(8919).FormDivider, { style: tmp.applicationDescriptionDivider }), c10(closure_15, { command, option: currentOption, optionState: tmp17 }), c10(command(8919).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj2.children = items8;
   return closure_12(ref, obj2);
 });

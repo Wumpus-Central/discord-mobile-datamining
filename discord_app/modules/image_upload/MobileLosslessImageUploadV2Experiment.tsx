@@ -1,6 +1,6 @@
-// === Module 8145: MobileLosslessImageUploadV2Experiment ===
+// === Module 8154: MobileLosslessImageUploadV2Experiment ===
 
-// Module 8145 (MobileLosslessImageUploadV2Experiment)
+// Module 8154 (MobileLosslessImageUploadV2Experiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

@@ -1,20 +1,20 @@
-// === Module 12435: chat_input/ChatInputNativeComponent ===
+// === Module 12465: chat_input/ChatInputNativeComponent ===
 
-// Module 12435 (chat_input/ChatInputNativeComponent)
+// Module 12465 (chat_input/ChatInputNativeComponent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import ColorUtils from "ColorUtils" /* 4963 */;
-import shared from "shared" /* 4973 */;
-import useTheme from "useTheme" /* 5187 */;
-import ChatInputNativeComponent from "ChatInputNativeComponent" /* 12420 */;
+import ColorUtils from "ColorUtils" /* 4966 */;
+import shared from "shared" /* 4976 */;
+import useTheme from "useTheme" /* 5191 */;
+import ChatInputNativeComponent from "ChatInputNativeComponent" /* 12450 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4990 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { style: { flex: 1 }, textColor: { color: nativeDefault.colors.TEXT_DEFAULT }, placeholderColor: null };
 let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.placeholderColor = { color: nativeDefault.colors.TEXT_MUTED };
@@ -79,7 +79,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputNat
     num6 = 1;
   }
   if (maxHeight == null) {
-    maxHeight = tmp10(12436)(onMaxHeightChanged);
+    maxHeight = tmp10(12466)(onMaxHeightChanged);
   }
   if (cResult[4] === tmp15) {
     if (cResult[5] === accessible) {

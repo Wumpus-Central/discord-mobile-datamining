@@ -1,23 +1,23 @@
-// === Module 18243: FileUploadSpotIllustration ===
+// === Module 18311: FileUploadSpotIllustration ===
 
-// Module 18243 (FileUploadSpotIllustration)
+// Module 18311 (FileUploadSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import assetHelpers from "assetHelpers" /* 6974 */;
-import _modDef18244 from "module_18244" /* 18244 */;
-import _modDef18245 from "module_18245" /* 18245 */;
-import _modDef18246 from "module_18246" /* 18246 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import assetHelpers from "assetHelpers" /* 6981 */;
+import _modDef18312 from "module_18312" /* 18312 */;
+import _modDef18313 from "module_18313" /* 18313 */;
+import _modDef18314 from "module_18314" /* 18314 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18244 }, 3: null };
-let obj2 = { uri: _modDef18244 };
-obj[2] = { uri: _modDef18245 };
-const obj3 = { uri: _modDef18245 };
-obj[3] = { uri: _modDef18246 };
+let obj = { 1: null, 2: { uri: _modDef18312 }, 3: null };
+let obj2 = { uri: _modDef18312 };
+obj[2] = { uri: _modDef18313 };
+const obj3 = { uri: _modDef18313 };
+obj[3] = { uri: _modDef18314 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18246 };
+const obj4 = { uri: _modDef18314 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FileUploadSpotIllustration.native.tsx");
 

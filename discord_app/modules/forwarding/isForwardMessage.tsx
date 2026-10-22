@@ -1,6 +1,6 @@
-// === Module 5584: isForwardMessage ===
+// === Module 5588: isForwardMessage ===
 
-// Module 5584 (isForwardMessage)
+// Module 5588 (isForwardMessage)
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

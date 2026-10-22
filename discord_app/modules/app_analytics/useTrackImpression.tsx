@@ -1,17 +1,17 @@
-// === Module 9319: useTrackImpression ===
+// === Module 9330: useTrackImpression ===
 
-// Module 9319 (useTrackImpression)
+// Module 9330 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1267 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import _modDef1357 from "module_1357" /* 1357 */;
-import useMountEffectDefault from "useMountEffect" /* 5245 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5693 */;
-import uniqueIdDefault from "uniqueId" /* 6652 */;
+import useMountEffectDefault from "useMountEffect" /* 5249 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
+import uniqueIdDefault from "uniqueId" /* 6659 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 const require = globalThis.__r;
 
@@ -49,7 +49,7 @@ function trackImpression(type) {
     channel_id = SelectedChannelStore.getChannelId(guild_id);
   }
   const tmpResult = AnalyticsUtils2;
-  const obj2 = { impression_type: type, location: collapsed() };
+  const obj2 = { impression_type: type, location: v65535() };
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
   const tmpResult4 = AppAnalyticsUtils;
   const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(channel_id)));
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5245)(() => {
+  obj(5249)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1357(ref.current, current);
       if (!tmp6) {

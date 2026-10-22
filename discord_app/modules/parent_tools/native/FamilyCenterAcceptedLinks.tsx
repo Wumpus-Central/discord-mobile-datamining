@@ -1,21 +1,21 @@
-// === Module 16088: FamilyCenterAcceptedLinks ===
+// === Module 16130: FamilyCenterAcceptedLinks ===
 
-// Module 16088 (FamilyCenterAcceptedLinks)
+// Module 16130 (FamilyCenterAcceptedLinks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import _modDef2536 from "module_2536" /* 2536 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import useUserLinks from "useUserLinks" /* 8100 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8101 */;
-import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 16089 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 16090 */;
-import _modDef16095 from "module_16095" /* 16095 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import useUserLinks from "useUserLinks" /* 8109 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8110 */;
+import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 16131 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 16132 */;
+import _modDef16137 from "module_16137" /* 16137 */;
 import noop from "module_19" /* 19 */;
 
 const util = intl(1128);
-const Text_Text = intl(5216);
-const useAgeSpecificText2 = intl(12771);
+const Text_Text = intl(5220);
+const useAgeSpecificText2 = intl(12803);
 require = fn;
 function FamilyCenterAcceptedLinkRow(otherUser) {
   let tmp4Result = null;
@@ -30,27 +30,27 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     const obj3 = { name: str1 };
     obj.accessibilityLabel = intl.formatToPlainString(_modDef2536.T7DUoU, obj3);
     obj.onPress = function handleDisconnect() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16093, dependencyMap.paths), { otherUser: str });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16135, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj4 = { size: str(1202).Icon.Sizes.SMALL, disableColor: true, source: _modDef16095 };
+    const obj4 = { size: str(1202).Icon.Sizes.SMALL, disableColor: true, source: _modDef16137 };
     obj.children = closure_6(str(1202).Icon, obj4);
-    obj2.actions = closure_6(str(6887).PressableOpacity, obj);
+    obj2.actions = closure_6(str(6894).PressableOpacity, obj);
     tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj2);
   }
   return tmp4Result;
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7623);
+const FamilyCenterConstants = fn(7630);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: hasOwnProperty } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4966);
+let createStyles = fn(4969);
 let obj2 = { container: { marginTop: 24 }, content: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, empty: { padding: 20, alignSelf: "center" }, header: { marginBottom: 10 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md };
-createStyles = fn(4966);
+createStyles = fn(4969);
 let obj6 = { actionButton: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj6.actionButton = size;

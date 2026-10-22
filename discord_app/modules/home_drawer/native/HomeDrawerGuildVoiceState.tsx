@@ -1,22 +1,22 @@
-// === Module 17594: HomeDrawerGuildVoiceState ===
+// === Module 17664: HomeDrawerGuildVoiceState ===
 
-// Module 17594 (HomeDrawerGuildVoiceState)
+// Module 17664 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import LinearGradientDefault from "LinearGradient" /* 5240 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11644 */;
-import AvatarPile from "AvatarPile" /* 14208 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 14914 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import LinearGradientDefault from "LinearGradient" /* 5244 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11661 */;
+import AvatarPile from "AvatarPile" /* 14246 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 14958 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5699 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6690 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5703 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ const GUILD_VOCAL_CHANNELS_KEY = fn(4899).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1087).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4966);
+let createStyles = fn(4969);
 let obj2 = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj2.streamPreviewShadow = { borderRadius: nativeDefault.radii.sm };
@@ -90,7 +90,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceU
           }
           const obj3 = { style: tmp5, children: null };
           const obj4 = { size: guildId(1202).AvatarSizes.XSMALL, names: tmp6, totalCount: tmp10, children: cResult[8] };
-          obj3.children = closure_11(guildId(14208).AvatarPile, obj4);
+          obj3.children = closure_11(guildId(14246).AvatarPile, obj4);
           const tmp18 = closure_11(View, obj3);
           cResult[11] = tmp6;
           cResult[12] = cResult[8];
@@ -131,7 +131,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceU
   }
   return tmp;
 });
-createStyles = fn(4966);
+createStyles = fn(4969);
 let obj4 = { tag: null, tagText: null };
 const rect1 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: nativeDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
 obj4.tag = rect1;

@@ -1,13 +1,13 @@
-// === Module 11924: WidgetStore ===
+// === Module 14322: WidgetStore ===
 
-// Module 11924 (WidgetStore)
+// Module 14322 (WidgetStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1392 */;
-import UserProfileStore from "UserProfileStore" /* 7680 */;
+import UserProfileStore from "UserProfileStore" /* 7687 */;
 
 require = fn;
 let c6 = null;

@@ -1,10 +1,10 @@
-// === Module 8810: showShareActionSheet ===
+// === Module 8819: showShareActionSheet ===
 
-// Module 8810 (showShareActionSheet)
+// Module 8819 (showShareActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8811 */;
-import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8812 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8820 */;
+import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8821 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "toCharArray$esjava$1", mediaStagingOptions: "Symbol" };
+    mediaShareParams = { mediaFallbackUrl: "r", mediaStagingOptions: "emoji" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

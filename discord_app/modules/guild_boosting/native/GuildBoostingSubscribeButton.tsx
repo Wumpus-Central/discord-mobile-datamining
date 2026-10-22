@@ -1,10 +1,10 @@
-// === Module 7487: GuildBoostingSubscribeButton ===
+// === Module 7494: GuildBoostingSubscribeButton ===
 
-// Module 7487 (GuildBoostingSubscribeButton)
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 7489 */;
+// Module 7494 (GuildBoostingSubscribeButton)
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 7496 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7488 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7495 */;
 
 require = fn;
 function handleBoostPress() {
@@ -81,7 +81,7 @@ let closure_15 = async function _handleBoostPress() {
 let View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticsObjects: closure_7, AnalyticsObjectTypes: closure_8, AnalyticsPages: closure_9, NOOP: c10 } = Constants);
-let closure_11 = fn(6678).PremiumGuildSubscribeModalScenes;
+let closure_11 = fn(6685).PremiumGuildSubscribeModalScenes;
 const FractionalPremiumStates = fn(1394).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   const items2 = [tmp3, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout, guild.id, analyticsSection, stateFromStores, previousGuildSubscriptionSlot, analyticsLocations, callback];
   jsx = intent.useCallback(() => {
     if (closure_6) {
-      let tmp9 = collapsed;
+      let tmp9 = v65535;
     } else if (stateFromStores) {
       tmp9 = callback(guild.id, previousGuildSubscriptionSlot);
     } else {

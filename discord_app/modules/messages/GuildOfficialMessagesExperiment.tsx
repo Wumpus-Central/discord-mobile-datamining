@@ -1,7 +1,7 @@
-// === Module 7345: GuildOfficialMessagesExperiment ===
+// === Module 7352: GuildOfficialMessagesExperiment ===
 
-// Module 7345 (GuildOfficialMessagesExperiment)
-import createExperiment from "module_5170" /* 5170 */;
+// Module 7352 (GuildOfficialMessagesExperiment)
+import createExperiment from "module_5174" /* 5174 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-03_guild_official_messages", label: "Guild Official Messages", defaultConfig: { enabled: false }, treatments: null };

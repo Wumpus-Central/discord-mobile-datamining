@@ -9,9 +9,9 @@ import dismissible_content from "dismissible_content" /* 4805 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4809 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 4812 */;
 import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4819 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5013 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5623 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5624 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5016 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5627 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5628 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
@@ -46,7 +46,7 @@ function markDismissibleContentAsDismissedPreProcessing(content, forceTrack) {
   if (tmp) {
     trackDismissibleContentDismissed(content, forceTrack);
   }
-  tmp = collapsed(content) || forceTrack.forceTrack;
+  tmp = v65535(content) || forceTrack.forceTrack;
   const guildId = forceTrack.guildId;
   DismissibleContentFrameworkActionCreators.handleDCDismissed(content, guildId);
 }
@@ -614,7 +614,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "a" };
+      return { isDismissed: false, lastDismissedAtMs: "Array" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

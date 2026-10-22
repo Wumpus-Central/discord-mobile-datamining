@@ -1,11 +1,11 @@
-// === Module 7047: BackgroundImage ===
+// === Module 7054: BackgroundImage ===
 
-// Module 7047 (BackgroundImage)
+// Module 7054 (BackgroundImage)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4973 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import _modDef7048 from "module_7048" /* 7048 */;
-import _modDef7049 from "module_7049" /* 7049 */;
+import shared from "shared" /* 4976 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import _modDef7055 from "module_7055" /* 7055 */;
+import _modDef7056 from "module_7056" /* 7056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Backgrou
     tmp13 = obj4;
   } else {
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result2 = _modDef7048;
+      let tmp5Result2 = _modDef7055;
     } else {
-      tmp5Result2 = _modDef7049;
+      tmp5Result2 = _modDef7056;
     }
     tmpResult = shared;
   }
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Backgrou
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = flag(5187)();
+  const tmp = flag(5191)();
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
@@ -76,15 +76,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Backgrou
     } else {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
-        tmp2 = 7048;
+        tmp2 = 7055;
         let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = _modDef7049;
+        tmp4Result = _modDef7056;
       }
       obj2 = shared;
     }
   }, items);
   const merged = Object.assign(memo);
-  obj.children = jsx(flag(5651), {});
+  obj.children = jsx(flag(5655), {});
   return <closure_4 style={absoluteFill.absoluteFill}>{null}</closure_4>;
 });

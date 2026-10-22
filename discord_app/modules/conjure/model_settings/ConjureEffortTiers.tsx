@@ -1,14 +1,14 @@
-// === Module 11698: ConjureEffortTiers ===
+// === Module 11715: ConjureEffortTiers ===
 
-// Module 11698 (ConjureEffortTiers)
+// Module 11715 (ConjureEffortTiers)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 11699 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 11716 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
-let closure_2 = ["thinking"];
-let closure_3 = ["fast"];
+let closure_3 = ["thinking"];
+let closure_4 = ["fast"];
 let obj = { simple: _modDef3830.Mqb8mc, balanced: _modDef3830.zCZfA6, complex: _modDef3830["8l2atm"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
@@ -51,7 +51,7 @@ export const conjureWithTier = function conjureWithTier(tier, tier2) {
   if (tier2 !== tier.tier) {
     const thinking = tier.thinking;
     obj = {};
-    const merged = Object.assign(_objectWithoutProperties(tier, closure_2));
+    const merged = Object.assign(_objectWithoutProperties(tier, closure_3));
     obj.tier = tier2;
     tmp = obj;
   }
@@ -97,7 +97,7 @@ export const conjureCeilingSupportsFast = function conjureCeilingSupportsFast(se
   return tmp5;
 };
 export const conjureNormalizeFast = function conjureNormalizeFast(conjurePickTierModelResult) {
-  const tmp = _objectWithoutProperties(conjurePickTierModelResult, closure_3);
+  const tmp = _objectWithoutProperties(conjurePickTierModelResult, closure_4);
   let tmp2 = tmp;
   if (true === conjurePickTierModelResult.fast) {
     obj = {};
@@ -106,4 +106,15 @@ export const conjureNormalizeFast = function conjureNormalizeFast(conjurePickTie
     tmp2 = obj;
   }
   return tmp2;
+};
+export const conjureCanPickModel = function conjureCanPickModel(choices) {
+  return choices.main.length > 0;
+};
+export const conjureCustomizeMessage = function conjureCustomizeMessage(choices) {
+  if (choices.main.length > 0) {
+    let qSViP4 = _modDef3830.eGqPbV;
+  } else {
+    qSViP4 = _modDef3830.qSViP4;
+  }
+  return qSViP4;
 };

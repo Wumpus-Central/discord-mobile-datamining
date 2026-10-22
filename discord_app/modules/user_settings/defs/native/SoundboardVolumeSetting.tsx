@@ -1,12 +1,12 @@
-// === Module 16435: SoundboardVolumeSetting ===
+// === Module 16504: SoundboardVolumeSetting ===
 
-// Module 16435 (SoundboardVolumeSetting)
+// Module 16504 (SoundboardVolumeSetting)
 import util from "util" /* 1128 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7421 */;
-import SoundboardUtils from "SoundboardUtils" /* 7429 */;
-import SettingsConstants from "SettingsConstants" /* 8308 */;
-import SettingBuilders from "SettingBuilders" /* 11155 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7428 */;
+import SoundboardUtils from "SoundboardUtils" /* 7436 */;
+import SettingsConstants from "SettingsConstants" /* 8317 */;
+import SettingBuilders from "SettingBuilders" /* 11172 */;
 import size from "module_2" /* 2 */;
 
 const volumeSlider = SettingBuilders.createVolumeSlider({

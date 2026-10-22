@@ -1,20 +1,20 @@
-// === Module 13874: AddImageDescriptionModal ===
+// === Module 13910: AddImageDescriptionModal ===
 
-// Module 13874 (AddImageDescriptionModal)
+// Module 13910 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9988 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8269 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8278 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7608).DraftType;
+const DraftType = fn(7615).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, imageContainer: null, image: null, placeholderText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
@@ -135,9 +135,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
             const obj2 = {};
             const merged = Object.assign(dependencyMap);
             obj2.description = ref.current;
-            id(9622).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-            const obj = id(9622);
-            id(13873).close();
+            id(9634).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+            const obj = id(9634);
+            id(13909).close();
           });
           let merged = Object.assign(arg0);
           return renderHeaderTextButton({});
@@ -220,9 +220,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
           const obj2 = {};
           const merged = Object.assign(dependencyMap);
           obj2.description = ref.current;
-          id(9622).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-          const obj = id(9622);
-          id(13873).close();
+          id(9634).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+          const obj = id(9634);
+          id(13909).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddImage
     screenKey: "addImageDescriptionModal",
     title: first,
     render() {
-      return collapsed(closure_13, { source, channelId, id });
+      return v65535(closure_13, { source, channelId, id });
     }
   });
   cResult[1] = channelId;
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddImage
   const intl = util.intl;
   obj.title = intl.string(util.t["5S2AK+"]);
   obj.render = function render() {
-    return collapsed(closure_13, { source, channelId, id });
+    return v65535(closure_13, { source, channelId, id });
   };
   return closure_10(ModalStackNavigatorDefault, obj);
 });

@@ -1,23 +1,23 @@
-// === Module 16221: BountiesScrollRecapPage ===
+// === Module 16263: BountiesScrollRecapPage ===
 
-// Module 16221 (BountiesScrollRecapPage)
+// Module 16263 (BountiesScrollRecapPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7053 */;
-import common_Video from "common/Video" /* 8754 */;
-import APNGPlayer from "APNGPlayer" /* 9359 */;
-import OrbsIcon from "OrbsIcon" /* 9387 */;
-import _modDef16222 from "module_16222" /* 16222 */;
-import _modDef16223 from "module_16223" /* 16223 */;
-import _modDef16224 from "module_16224" /* 16224 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7060 */;
+import common_Video from "common/Video" /* 8763 */;
+import APNGPlayer from "APNGPlayer" /* 9370 */;
+import OrbsIcon from "OrbsIcon" /* 9398 */;
+import _modDef16264 from "module_16264" /* 16264 */;
+import _modDef16265 from "module_16265" /* 16265 */;
+import _modDef16266 from "module_16266" /* 16266 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { root: { overflow: "hidden", borderRadius: lg, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, content: null, centeredCopy: null, orbsBackground: null, headerLabel: null, titleRow: null, actions: null, orbAmount: null };
   const obj2 = { overflow: "hidden", borderRadius: lg, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -52,7 +52,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   ({ style, reducedMotion } = arg0);
   if (obj2.isAndroid()) {
     if (cResult[0] !== !reducedMotion) {
-      const obj3 = { url: _modDef16222, style: React3.absoluteFillObject, autoplay: tmp10 };
+      const obj3 = { url: _modDef16264, style: React3.absoluteFillObject, autoplay: tmp10 };
       const tmp15 = timestampProducer(APNGPlayer.APNGPlayer, obj3);
       cResult[0] = tmp10;
       cResult[1] = tmp15;
@@ -75,7 +75,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   } else {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj5 = { uri: _modDef16223 };
+      const obj5 = { uri: _modDef16265 };
       cResult[5] = obj5;
       let tmp5 = obj5;
     } else {
@@ -99,12 +99,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
   ({ style, reducedMotion } = arg0);
   if (obj.isAndroid()) {
     const obj2 = { style, needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, pointerEvents: "none", children: null };
-    const obj3 = { url: _modDef16222, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+    const obj3 = { url: _modDef16264, style: React3.absoluteFillObject, autoplay: !reducedMotion };
     obj2.children = timestampProducer(APNGPlayer.APNGPlayer, obj3);
     let tmp3Result = timestampProducer(React4, obj2);
   } else {
     const obj4 = { source: null, style: null, resizeMode: "contain", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
-    const obj5 = { uri: _modDef16223 };
+    const obj5 = { uri: _modDef16265 };
     obj4.source = obj5;
     obj4.style = style;
     obj4.paused = reducedMotion;
@@ -141,7 +141,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { uri: _modDef16224 };
+      const obj3 = { uri: _modDef16266 };
       cResult[5] = obj3;
       let tmp13 = obj3;
     } else {
@@ -385,7 +385,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
   obj3.style = items1;
   const obj4 = { style: React3.absoluteFillObject, pointerEvents: "none", children: null };
   const obj5 = { source: null, style: null, resizeMode: "cover", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
-  obj5.source = { uri: _modDef16224 };
+  obj5.source = { uri: _modDef16266 };
   obj5.style = React3.absoluteFillObject;
   obj5.paused = stateFromStores;
   const items2 = [timestampProducer(common_Video.VideoComponent, obj5), timestampProducer(closure_10, { style: tmp.orbsBackground, reducedMotion: stateFromStores })];
@@ -402,7 +402,7 @@ export const BountiesScrollRecapPage = ReactCompilerGating.isReactCompilerEnable
   const obj11 = { accessible: true, accessibilityRole: "text", accessibilityLabel: "+" + orbAmount, children: null };
   const obj12 = { style: tmp.titleRow, children: null };
   const items6 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false }), ];
-  const obj6 = { uri: _modDef16224 };
+  const obj6 = { uri: _modDef16266 };
   const obj7 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
   items6[1] = timestampProducer(Text_Text.Text, { variant: "display-lg", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount });
   obj12.children = items6;

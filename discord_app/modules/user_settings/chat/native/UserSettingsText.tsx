@@ -1,19 +1,19 @@
-// === Module 16647: UserSettingsText ===
+// === Module 16716: UserSettingsText ===
 
-// Module 16647 (UserSettingsText)
+// Module 16716 (UserSettingsText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5848 */;
-import TableRadioRow from "TableRadioRow" /* 6963 */;
-import TableRadioGroup from "TableRadioGroup" /* 6964 */;
-import TableRowGroup from "TableRowGroup" /* 6966 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7066 */;
-import TableSwitchRow from "TableSwitchRow" /* 7272 */;
-import _modDef10125 from "module_10125" /* 10125 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5855 */;
+import TableRadioRow from "TableRadioRow" /* 6970 */;
+import TableRadioGroup from "TableRadioGroup" /* 6971 */;
+import TableRowGroup from "TableRowGroup" /* 6973 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7073 */;
+import TableSwitchRow from "TableSwitchRow" /* 7279 */;
+import _modDef10137 from "module_10137" /* 10137 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
@@ -29,7 +29,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                       }
                       function renderNitroUpsellText() {
                         const obj = { style: closure_0.nitroUpsell, children: null };
-                        const items = [__initData(native.Icon, { source: _modDef10125, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
+                        const items = [__initData(native.Icon, { source: _modDef10137, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
                         const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
                         const intl = util.intl;
                         obj3.children = intl.format(util.t.uW1zul, {

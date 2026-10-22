@@ -1,11 +1,11 @@
-// === Module 14854: GatewayCompressionHandler ===
+// === Module 14898: GatewayCompressionHandler ===
 
-// Module 14854 (GatewayCompressionHandler)
+// Module 14898 (GatewayCompressionHandler)
 import LoggerDefault from "Logger" /* 3 */;
-import ProcessArgs2 from "ProcessArgs" /* 7287 */;
-import GatewayZstdUtils from "GatewayZstdUtils" /* 14855 */;
-import NativeCompressionModule from "NativeCompressionModule" /* 14856 */;
-import _mod14857 from "module_14857" /* 14857 */;
+import ProcessArgs2 from "ProcessArgs" /* 7294 */;
+import GatewayZstdUtils from "GatewayZstdUtils" /* 14899 */;
+import NativeCompressionModule from "NativeCompressionModule" /* 14900 */;
+import _mod14901 from "module_14901" /* 14901 */;
 import size from "module_2" /* 2 */;
 
 const items = [];
@@ -88,7 +88,7 @@ prototype2["close"] = function close() {
 items.push(fn);
 const fn2 = (arg0) => {
   const tmp2 = new tmp(arg0, new.target, tmp, new.target);
-  tmp2._pako = _mod14857;
+  tmp2._pako = _mod14901;
   tmp2._usesZstd = false;
   tmp2._zstdDecoder = null;
   tmp2._zstdStream = null;
@@ -216,7 +216,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod14857;
+  applyArgumentsResult._pako = _mod14901;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;

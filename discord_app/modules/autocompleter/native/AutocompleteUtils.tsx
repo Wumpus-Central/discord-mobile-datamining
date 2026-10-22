@@ -1,12 +1,12 @@
-// === Module 10070: autocompleter/AutocompleteUtils ===
+// === Module 10082: autocompleter/AutocompleteUtils ===
 
-// Module 10070 (autocompleter/AutocompleteUtils)
+// Module 10082 (autocompleter/AutocompleteUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import UserUtilsDefault from "UserUtils" /* 5015 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import TimestampUtils from "TimestampUtils" /* 8475 */;
-import FormDividerDefault from "FormDivider" /* 8914 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import TimestampUtils from "TimestampUtils" /* 8484 */;
+import FormDividerDefault from "FormDivider" /* 8923 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
@@ -16,13 +16,13 @@ require = fn;
 let closure_3 = fn(4825).isGuildSelectableChannelType;
 const Constants = fn(1087);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10071);
+const ApplicationCommandsConstants = fn(10083);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5964);
+const ChannelAutocompleteConstants = fn(5971);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -84,7 +84,7 @@ export const getItemLayout = function getItemLayout(arg0, index) {
       type = tmp2.type;
     }
   }
-  const tmp3 = type === constants.EMOJI ? React6 : collapsed;
+  const tmp3 = type === constants.EMOJI ? React6 : v65535;
   const obj = { length: tmp3, offset: null, index };
   const result = index * tmp3;
   obj.offset = result + Math.max(0, (index - 1) * hairlineWidth);

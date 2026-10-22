@@ -1,6 +1,6 @@
-// === Module 10524: HeadlessSlayerStorefrontPurchaseRunner ===
+// === Module 10536: HeadlessSlayerStorefrontPurchaseRunner ===
 
-// Module 10524 (HeadlessSlayerStorefrontPurchaseRunner)
+// Module 10536 (HeadlessSlayerStorefrontPurchaseRunner)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-let useNativeCheckoutStore = fn(7513).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7520).useNativeCheckoutStore;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

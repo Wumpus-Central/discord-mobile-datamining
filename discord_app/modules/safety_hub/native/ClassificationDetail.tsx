@@ -1,24 +1,24 @@
-// === Module 12721: ClassificationDetail ===
+// === Module 12753: ClassificationDetail ===
 
-// Module 12721 (ClassificationDetail)
+// Module 12753 (ClassificationDetail)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import _modDef3154 from "module_3154" /* 3154 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import LinkingDefault from "Linking" /* 5642 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6447 */;
-import MetricEvents from "MetricEvents" /* 6452 */;
-import TableRow from "TableRow" /* 6882 */;
-import SafetyHubModels from "SafetyHubModels" /* 7875 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9001 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12725 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12727 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import LinkingDefault from "Linking" /* 5646 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6454 */;
+import MetricEvents from "MetricEvents" /* 6459 */;
+import TableRow from "TableRow" /* 6889 */;
+import SafetyHubModels from "SafetyHubModels" /* 7883 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9010 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12757 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12759 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import SafetyHubStore from "SafetyHubStore" /* 7898 */;
+import SafetyHubStore from "SafetyHubStore" /* 7906 */;
 
 require = fn;
 function ClassificationPolicyCard(policyExplainerLink) {
@@ -42,7 +42,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-      const tmp19 = closure_13(tmp10(10901).ShieldIcon, obj2);
+      const tmp19 = closure_13(tmp10(10918).ShieldIcon, obj2);
       cResult[2] = tmp19;
       let tmp16 = tmp19;
     } else {
@@ -69,7 +69,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     }
     if (cResult[7] !== tmp24) {
       const obj5 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: tmp24 };
-      const tmp28 = closure_13(tmp10(5216).Text, obj5);
+      const tmp28 = closure_13(tmp10(5220).Text, obj5);
       cResult[7] = tmp24;
       cResult[8] = tmp28;
       let tmp26 = tmp28;
@@ -120,14 +120,14 @@ function ClassificationPolicyCard(policyExplainerLink) {
     };
     const obj11 = { style: tmp2.classificationPolicyCardIcon, children: null };
     const obj12 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-    obj11.children = closure_13(policyExplainerLink(10901).ShieldIcon, obj12);
+    obj11.children = closure_13(policyExplainerLink(10918).ShieldIcon, obj12);
     const items = [closure_13(closure_4, obj11), ];
     const obj13 = { style: tmp2.classificationPolicyCardContent, children: null };
     const obj14 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = policyExplainerLink(1128).intl;
     const obj15 = { classificationDescription: policyExplainerLink.classificationTypeText };
     obj14.children = intl.format(policyExplainerLink(1128).t.zxUdpj, obj15);
-    obj13.children = closure_13(policyExplainerLink(5216).Text, obj14);
+    obj13.children = closure_13(policyExplainerLink(5220).Text, obj14);
     items[1] = closure_13(closure_4, obj13);
     obj10.children = items;
     obj.children = closure_14(TouchableHitBoxDefault, obj10);
@@ -136,12 +136,12 @@ function ClassificationPolicyCard(policyExplainerLink) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7874);
+const SafetyHubConstants = fn(7882);
 ({ SafetyHubAnalyticsActionSource: closure_9, SafetyHubAnalyticsActions: c10, SafetyHubLinks: closure_11 } = SafetyHubConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, appealWindowExpiredContainer: null, appealWindowExpiredText: null, confirmMinimumAgeSection: null, guidelinesFooter: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, bulletText: null, redirectButtonWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.container = { display: "flex", flexDirection: "column", height: "100%", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32 };
@@ -298,7 +298,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Classi
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5216).Text, { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
+  obj.children = closure_13(classificationTypeText(5220).Text, { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
   return closure_13(closure_4, obj);
 });
 ReactCompilerGating = fn(558);
@@ -905,7 +905,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function LetUsK
   }
   if (cResult[2] !== tmp4) {
     const obj3 = { variant: "text-sm/normal", color: "text-muted", children: tmp4 };
-    const tmp8 = closure_13(tmp(5216).Text, obj3);
+    const tmp8 = closure_13(tmp(5220).Text, obj3);
     cResult[2] = tmp4;
     cResult[3] = tmp8;
     let tmp6 = tmp8;
@@ -1368,7 +1368,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
                     current = ref.current;
                     ({ classificationState, source } = current);
                     ({ accountStanding, classificationId, hasFlaggedContent } = current);
-                    const obj3 = { action: collapsed.ViewViolationDetail, account_standing: accountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
+                    const obj3 = { action: v65535.ViewViolationDetail, account_standing: accountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
                     const _Number = Number;
                     const items = [Number(classificationId)];
                     obj3.classification_ids = items;
@@ -1493,7 +1493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
                 }
               }
               function onPressLetUsKnow() {
-                const obj3 = { action: collapsed.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
+                const obj3 = { action: v65535.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
                 const items = [Number(classificationId)];
                 obj3.classification_ids = items;
                 let SystemDM = source;
@@ -1647,7 +1647,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
       const current = ref.current;
       ({ classificationState, source } = current);
       ({ accountStanding, classificationId, hasFlaggedContent } = current);
-      obj3 = { action: collapsed.ViewViolationDetail, account_standing: accountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
+      obj3 = { action: v65535.ViewViolationDetail, account_standing: accountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
       const _Number = Number;
       const items = [Number(classificationId)];
       obj3.classification_ids = items;
@@ -1685,7 +1685,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
       let tmp20Result5 = closure_13(closure_33, {});
     } else {
       function onPressLetUsKnow() {
-        obj3 = { action: collapsed.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
+        obj3 = { action: v65535.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
         const items = [Number(classificationId)];
         obj3.classification_ids = items;
         let SystemDM = source;

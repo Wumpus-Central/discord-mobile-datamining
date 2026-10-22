@@ -1,16 +1,16 @@
-// === Module 17627: UnreadBars ===
+// === Module 17697: UnreadBars ===
 
-// Module 17627 (UnreadBars)
+// Module 17697 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import HapticUtils from "HapticUtils" /* 5194 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5195 */;
-import TransitionGroup from "TransitionGroup" /* 13207 */;
+import HapticUtils from "HapticUtils" /* 5198 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5199 */;
+import TransitionGroup from "TransitionGroup" /* 13243 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
-import TextStyles from "TextStyles" /* 6630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import TextStyles from "TextStyles" /* 6637 */;
 
 const require = globalThis.__r;
 
@@ -21,16 +21,16 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const BEFORE = "BEFORE";
 const AFTER = "AFTER";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { unreadText: null, unread: null, mention: null };
 let merged = Object.assign(TextStyles(fn(1087).Fonts.DISPLAY_SEMIBOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 obj2.unreadText = {};
 let obj4 = { margin: 8, height: 24, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md, backgroundColor: null };
-let ColorUtils = fn(4963);
+let ColorUtils = fn(4966);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.9);
 obj2.unread = obj4;
 const obj6 = { backgroundColor: null };
-ColorUtils = fn(4963);
+ColorUtils = fn(4966);
 obj6.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.9);
 obj2.mention = obj6;
 let closure_12 = createStyles.createLegacyClassComponentStyles(obj2);
@@ -159,7 +159,7 @@ prototype["render"] = function render() {
   return closure_1_8(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
-UnreadBar.contextType = fn(5020).ThemeContext;
+UnreadBar.contextType = fn(5023).ThemeContext;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/UnreadBars.tsx");
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadBa
                   tmp20[0] = noop.Fragment;
                   const items1 = [tmp11, tmp16];
                   tmp20[1] = items1;
-                  const tmp22 = closure_9(tmp(13207).TransitionGroup, tmp20);
+                  const tmp22 = closure_9(tmp(13243).TransitionGroup, tmp20);
                   cResult[18] = tmp11;
                   cResult[19] = tmp16;
                   cResult[20] = tmp22;

@@ -1,14 +1,14 @@
-// === Module 15655: users ===
+// === Module 15699: users ===
 
-// Module 15655 (users)
-import transformUserDefault from "transformUser" /* 9222 */;
+// Module 15699 (users)
+import transformUserDefault from "transformUser" /* 9231 */;
 import UserStore from "UserStore" /* 1392 */;
 
-const Constants = fn(6357);
+const Constants = fn(6364);
 ({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1087).RPCCommands;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15621);
+let CONTEXT_MENU_ICON_NAMES = fn(15665);
 const obj3 = {
   scope: null,
   handler(args) {
@@ -23,6 +23,21 @@ const obj3 = {
 const items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj3);
+CONTEXT_MENU_ICON_NAMES = fn(15665);
+const obj5 = {
+  scope: null,
+  handler() {
+    const currentUser = UserStore.getCurrentUser();
+    let tmp2 = null;
+    if (null != currentUser) {
+      tmp2 = transformUserDefault(currentUser);
+    }
+    return tmp2;
+  }
+};
+const items1 = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
+obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
+obj[RPCCommands.GET_CURRENT_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CURRENT_USER, obj5);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/users.tsx");
 

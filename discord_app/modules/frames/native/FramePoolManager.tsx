@@ -1,10 +1,10 @@
-// === Module 11804: FramePoolManager ===
+// === Module 11830: FramePoolManager ===
 
-// Module 11804 (FramePoolManager)
-import leaveFrame from "leaveFrame" /* 10723 */;
-import FrameStackLevel from "FrameStackLevel" /* 11806 */;
-import FramePoolActionCreators from "FramePoolActionCreators" /* 11807 */;
-import AbstractFramePoolManager from "AbstractFramePoolManager" /* 11805 */;
+// Module 11830 (FramePoolManager)
+import leaveFrame from "leaveFrame" /* 10735 */;
+import FrameStackLevel from "FrameStackLevel" /* 11832 */;
+import FramePoolActionCreators from "FramePoolActionCreators" /* 11833 */;
+import AbstractFramePoolManager from "AbstractFramePoolManager" /* 11831 */;
 
 require = fn;
 class FramePoolManager extends tmp4 {

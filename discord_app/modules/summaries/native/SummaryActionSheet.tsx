@@ -1,22 +1,22 @@
-// === Module 11263: SummaryActionSheet ===
+// === Module 11280: SummaryActionSheet ===
 
-// Module 11263 (SummaryActionSheet)
+// Module 11280 (SummaryActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5132 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import ToastUtils from "ToastUtils" /* 5644 */;
-import ChannelUtils from "ChannelUtils" /* 5974 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8263 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8280 */;
-import showShareActionSheet from "showShareActionSheet" /* 8810 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5136 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import ToastUtils from "ToastUtils" /* 5648 */;
+import ChannelUtils from "ChannelUtils" /* 5981 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8272 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8289 */;
+import showShareActionSheet from "showShareActionSheet" /* 8819 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 5990 */;
-import SummaryStore from "SummaryStore" /* 9967 */;
+import MessageStore from "MessageStore" /* 5997 */;
+import SummaryStore from "SummaryStore" /* 9979 */;
 
 require = fn;
 const View = fn(17).View;
@@ -24,7 +24,7 @@ const Constants = fn(1087);
 ({ AnalyticsSections: closure_8, MessageFlags: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { summaryContainer: { padding: 16, margin: 16, marginBottom: 24, justifyContent: "center", alignItems: "center" }, summaryContent: { textAlign: "center" }, summaryIconContainer: { marginBottom: 8, borderRadius: nativeDefault.radii.round, border: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, summaryIcon: null, summaryTopic: null, divider: null, actionsContainer: null };
 let size = { margin: 8, width: 20, height: 20, tintColor: nativeDefault.colors.WHITE };
 obj2.summaryIcon = size;
@@ -72,8 +72,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = channel.guild_id;
       }
       const obj2 = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(10002, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-      const tmp7 = asyncRequireImpl(10002, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(10014, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+      const tmp7 = asyncRequireImpl(10014, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];
@@ -182,7 +182,7 @@ export const openSummaryDividerActionSheet = function openSummaryDividerActionSh
     const _HermesInternal = HermesInternal;
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(11263, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
-    const tmp5 = asyncRequireImpl(11263, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11280, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
+    const tmp5 = asyncRequireImpl(11280, dependencyMap.paths);
   }
 };

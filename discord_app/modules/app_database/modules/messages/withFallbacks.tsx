@@ -1,12 +1,12 @@
-// === Module 7572: withFallbacks ===
+// === Module 7579: withFallbacks ===
 
-// Module 7572 (withFallbacks)
-import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7566 */;
-import isReadableChannel from "isReadableChannel" /* 7570 */;
-import isLimitedChannel from "isLimitedChannel" /* 7571 */;
+// Module 7579 (withFallbacks)
+import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7573 */;
+import isReadableChannel from "isReadableChannel" /* 7577 */;
+import isLimitedChannel from "isLimitedChannel" /* 7578 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import SortedGuildStore from "SortedGuildStore" /* 6680 */;
+import SortedGuildStore from "SortedGuildStore" /* 6687 */;
 
 require = fn;
 function isSaveableChannel(item10025) {

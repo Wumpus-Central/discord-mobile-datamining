@@ -1,24 +1,26 @@
-// === Module 5721: destroy ===
+// === Module 5726: destroy ===
 
-// Module 5721 (destroy)
+// Module 5726 (destroy)
 import formatDefault from "format" /* 1367 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
 import inject from "inject" /* 2016 */;
-import VideoDefault from "Video" /* 5724 */;
-import CameraDefault from "Camera" /* 5728 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 5729 */;
-import pollConnectionStatsDefault from "pollConnectionStats" /* 5730 */;
-import ConnectionDefault from "Connection" /* 5732 */;
-import Devices from "Devices" /* 5792 */;
+import VideoDefault from "Video" /* 5729 */;
+import CameraDefault from "Camera" /* 5733 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 5734 */;
+import pollConnectionStatsDefault from "pollConnectionStats" /* 5735 */;
+import ConnectionDefault from "Connection" /* 5737 */;
+import Devices from "Devices" /* 5797 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5723 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5728 */;
 
 require = fn;
-let Constants = fn(5700);
-({ QUEUE_METRICS_INTERVAL_MS: hasOwnProperty, SIDECHAIN_COMPRESSION_MAX_RATIO: metroRequire, SIDECHAIN_COMPRESSION_MAX_THRESHOLD: closure_7, SIDECHAIN_COMPRESSION_MIN_RATIO: closure_8, SIDECHAIN_COMPRESSION_MIN_THRESHOLD: closure_9, ProcessPriority: c10 } = Constants);
-Constants = fn(5722);
-({ ClipsRecordingEvent: closure_11, DEFAULT_VOLUME: closure_12, DeviceTypes: map1, DISABLED_DEVICE_ID: closure_14, Features: closure_15, MediaEngineContextTypes: closure_16, NativeFeatures: closure_17, WATCHDOG_TIMEOUT_MS: closure_18 } = Constants);
+let closure_3 = ["id", "useGraphicsCapture", "useGraphicsCaptureApiLevel"];
+let Constants = fn(5704);
+({ QUEUE_METRICS_INTERVAL_MS: closure_7, SIDECHAIN_COMPRESSION_MAX_RATIO: closure_8, SIDECHAIN_COMPRESSION_MAX_THRESHOLD: closure_9, SIDECHAIN_COMPRESSION_MIN_RATIO: c10, SIDECHAIN_COMPRESSION_MIN_THRESHOLD: closure_11, ProcessPriority: closure_12 } = Constants);
+Constants = fn(5727);
+({ ClipsRecordingEvent: map1, DEFAULT_VOLUME: closure_14, DeviceTypes: closure_15, DISABLED_DEVICE_ID: closure_16, Features: closure_17, MediaEngineContextTypes: closure_18, NativeFeatures: closure_19, WATCHDOG_TIMEOUT_MS: closure_20 } = Constants);
 class MediaEngineNative extends tmp4 {
   constructor() {
     closure_0 = undefined;
@@ -27,8 +29,8 @@ class MediaEngineNative extends tmp4 {
     closure_129_0 = obj;
     tmp11 = closure_2;
     tmp10 = c1;
-    obj.Video = c1(closure_2[5]);
-    obj.Camera = c1(closure_2[6]);
+    obj.Video = c1(closure_2[6]);
+    obj.Camera = c1(closure_2[7]);
     obj.audioInputDeviceId = DISABLED_DEVICE_ID;
     obj.audioOutputDeviceId = DISABLED_DEVICE_ID;
     obj.videoInputDeviceId = DISABLED_DEVICE_ID;
@@ -43,7 +45,7 @@ class MediaEngineNative extends tmp4 {
     obj.clipsRecordingEventContext = { id: "", soundshareId: 0, applicationName: "" };
     obj.clipsRecordingEventHandlerRegistered = false;
     tmp13 = closure_0;
-    logger1 = new closure_0(closure_2[7]).Logger("MediaEngineNative");
+    logger1 = new closure_0(closure_2[8]).Logger("MediaEngineNative");
     obj.logger = logger1;
     obj.handleDeviceChange = function handleDeviceChange() {
       if (items === undefined) {
@@ -64,7 +66,7 @@ class MediaEngineNative extends tmp4 {
       obj.emit(MediaEngineEvent.MediaEngineEvent.DeviceChange, sanitizeDevicesResult, sanitizeDevicesResult1, Devices.sanitizeDevices(constants2.VIDEO_INPUT, items2));
     };
     obj.handleVolumeChange = function handleVolumeChange(arg0, arg1) {
-      obj.emit(MediaEngineEvent.MediaEngineEvent.VolumeChange, arg0 * __initData, arg1 * __initData);
+      obj.emit(MediaEngineEvent.MediaEngineEvent.VolumeChange, arg0 * closure_2_14, arg1 * closure_2_14);
     };
     obj.handleVoiceActivity = function handleVoiceActivity(arg0, arg1) {
       const timestamp = Date.now();
@@ -89,18 +91,18 @@ class MediaEngineNative extends tmp4 {
       const item = connections.forEach((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, closure_1, "MediaEngineNative.handleActiveSinksChange"));
     };
     obj.handleNewListener = function handleNewListener(arg0) {
-      if (obj(dependencyMap[9]).MediaEngineEvent.VoiceActivity === arg0) {
+      if (obj(dependencyMap[10]).MediaEngineEvent.VoiceActivity === arg0) {
         if (null != tmpResult.getVoiceEngine().setEmitVADLevel2) {
-          const voiceEngine = obj(dependencyMap[8]).getVoiceEngine();
+          const voiceEngine = obj(dependencyMap[9]).getVoiceEngine();
           voiceEngine.setEmitVADLevel2(true);
-          const tmpResult3 = obj(dependencyMap[8]);
+          const tmpResult3 = obj(dependencyMap[9]);
         } else {
-          const voiceEngine1 = obj(dependencyMap[8]).getVoiceEngine();
+          const voiceEngine1 = obj(dependencyMap[9]).getVoiceEngine();
           voiceEngine1.setEmitVADLevel(true, false, {});
-          const tmpResult4 = obj(dependencyMap[8]);
+          const tmpResult4 = obj(dependencyMap[9]);
         }
-        tmpResult = obj(dependencyMap[8]);
-      } else if (obj(dependencyMap[9]).MediaEngineEvent.DeviceChange === arg0) {
+        tmpResult = obj(dependencyMap[9]);
+      } else if (obj(dependencyMap[10]).MediaEngineEvent.DeviceChange === arg0) {
         deviceChangeGeneration = deviceChangeGeneration.deviceChangeGeneration;
         const items = [deviceChangeGeneration.getAudioInputDevices(), deviceChangeGeneration.getAudioOutputDevices(), deviceChangeGeneration.getVideoInputDevices()];
         Promise.all(items).then((result) => {
@@ -166,7 +168,7 @@ class MediaEngineNative extends tmp4 {
     };
     logger = obj.logger;
     enableNativeLoggerResult = logger.enableNativeLogger(true);
-    obj2 = closure_0(closure_2[8]);
+    obj2 = closure_0(closure_2[9]);
     voiceEngine = obj2.getVoiceEngine();
     result = voiceEngine.setDeviceChangeCallback(obj.handleDeviceChange);
     result1 = voiceEngine.setVolumeChangeCallback(obj.handleVolumeChange);
@@ -210,9 +212,9 @@ class MediaEngineNative extends tmp4 {
     }
     onResult = obj.on("removeListener", obj.handleRemoveListener);
     onResult1 = obj.on("newListener", obj.handleNewListener);
-    tmp13Result = tmp13(tmp11[8]);
+    tmp13Result = tmp13(tmp11[9]);
     if (null != tmp13Result.getVoiceEngine().getAudioSubsystem) {
-      tmp13Result1 = tmp13(tmp11[8]);
+      tmp13Result1 = tmp13(tmp11[9]);
       voiceEngine1 = tmp13Result1.getVoiceEngine();
       audioSubsystem = voiceEngine1.getAudioSubsystem((audioSubsystem, audioLayer) => {
         obj.audioSubsystem = audioSubsystem;
@@ -237,7 +239,7 @@ class MediaEngineNative extends tmp4 {
         }
       });
     }
-    tmp36 = tmp10(tmp11[10])(obj);
+    tmp36 = tmp10(tmp11[11])(obj);
     closure_130_0 = obj;
     pollMetrics = function pollMetrics() {
       const self = this;
@@ -304,7 +306,7 @@ class MediaEngineNative extends tmp4 {
           } else if (arg0 !== 2) {
             closure_128_1 = value;
             closure_128_1.periodMs = periodMs;
-            closure_129_0.emit(v0(5729).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
+            closure_129_0.emit(v0(5734).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
             const _setTimeout = setTimeout;
             const timerId = setTimeout(closure_129_2, periodMs);
           }
@@ -318,7 +320,7 @@ class MediaEngineNative extends tmp4 {
       }
     };
     closure_130_1 = false;
-    onResult2 = obj.on(tmp13(tmp11[9]).MediaEngineEvent.Destroy, () => {
+    onResult2 = obj.on(tmp13(tmp11[10]).MediaEngineEvent.Destroy, () => {
       c1 = true;
       return true;
     });
@@ -381,6 +383,8 @@ prototype["supports"] = function supports(arg0) {
           return inject.supportsFeature(constants5.CLIPS_RECORDING_READY_EVENTS);
         } else if (constants3.UNIFIED_CAPTURE_BROKER === arg0) {
           return inject.supportsFeature(constants5.UNIFIED_CAPTURE_BROKER);
+        } else if (constants3.CONJURE_SNAPSHOT === arg0) {
+          return inject.supportsFeature(constants5.CONJURE_SNAPSHOT);
         } else if (constants3.WINDOW_PREVIEWS === arg0) {
           return inject.supportsFeature(constants5.WINDOW_PREVIEWS);
         } else if (constants3.AUDIO_DEBUG_STATE === arg0) {
@@ -489,10 +493,10 @@ prototype["supports"] = function supports(arg0) {
         }
       }
     }
-    const tmp100 = formatDefault;
+    const tmp103 = formatDefault;
     let family;
-    if (tmp100 != null) {
-      const os = tmp100.os;
+    if (tmp103 != null) {
+      const os = tmp103.os;
       if (os != null) {
         family = os.family;
       }
@@ -500,7 +504,7 @@ prototype["supports"] = function supports(arg0) {
     let isMatch = null != family;
     if (isMatch) {
       isMatch = /^win/i.test(formatDefault.os.family);
-      const obj35 = /^win/i;
+      const obj36 = /^win/i;
     }
     return isMatch;
   }
@@ -518,8 +522,8 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   if (flag) {
     flag = self.supports(constants3.VIDEO);
   }
-  obj3 = self(5732).create(arg0, arg1, videoSupported, flag);
-  obj3.on(obj3(5737).BaseConnectionEvent.Destroy, (arg0) => {
+  obj3 = self(5737).create(arg0, arg1, videoSupported, flag);
+  obj3.on(obj3(5742).BaseConnectionEvent.Destroy, (arg0) => {
     const connections = self.connections;
     connections.delete(arg0);
     if (self.connectionsEmpty()) {
@@ -531,15 +535,15 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
       }
     }
   });
-  obj3.on(obj3(5737).BaseConnectionEvent.Connected, () => {
+  obj3.on(obj3(5742).BaseConnectionEvent.Connected, () => {
     obj3.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj3));
   });
-  obj3.on(obj3(5737).BaseConnectionEvent.Silence, (arg0) => {
+  obj3.on(obj3(5742).BaseConnectionEvent.Silence, (arg0) => {
     self.emit(MediaEngineEvent.MediaEngineEvent.Silence, arg0);
   });
   let connections = self.connections;
   connections.add(obj3);
-  let obj2 = self(5732);
+  let obj2 = self(5737);
   let HIGH = videoSupported.processPriority;
   if (HIGH == null) {
     HIGH = constants.HIGH;
@@ -553,14 +557,14 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
     }
     const tmpResult2 = tmp(2016);
   }
-  self.emit(obj3(5729).MediaEngineEvent.Connection, obj3);
+  self.emit(obj3(5734).MediaEngineEvent.Connection, obj3);
   return obj3;
 };
 prototype["shouldConnectionBroadcastVideo"] = function shouldConnectionBroadcastVideo(context) {
   let hasDesktopSourceResult = context.context === constants4.DEFAULT;
   if (hasDesktopSourceResult) {
     const self = this;
-    hasDesktopSourceResult = this.videoInputDeviceId !== closure_1_14;
+    hasDesktopSourceResult = this.videoInputDeviceId !== value3;
   }
   if (!hasDesktopSourceResult) {
     hasDesktopSourceResult = context.hasDesktopSource();
@@ -598,17 +602,17 @@ prototype["setInputVolume"] = function setInputVolume(arg0) {
   let tmp = arg0;
   const voiceEngine = inject.getVoiceEngine();
   if (arg0 == null) {
-    tmp = __initData;
+    tmp = closure_1_14;
   }
-  voiceEngine.setInputVolume(tmp / __initData);
+  voiceEngine.setInputVolume(tmp / closure_1_14);
 };
 prototype["setOutputVolume"] = function setOutputVolume(arg0) {
   let tmp = arg0;
   const voiceEngine = inject.getVoiceEngine();
   if (arg0 == null) {
-    tmp = __initData;
+    tmp = closure_1_14;
   }
-  voiceEngine.setOutputVolume(tmp / __initData);
+  voiceEngine.setOutputVolume(tmp / closure_1_14);
 };
 prototype["getAudioInputDevices"] = function getAudioInputDevices() {
   return Devices.getAudioInputDevices();
@@ -640,7 +644,7 @@ prototype["setAudioInputDevice"] = function setAudioInputDevice(audioInputDevice
     voiceEngine.setInputDevice(audioInputDeviceId);
     const tmpResult = tmp(2016);
   } else {
-    const audioInputDevices = tmp(5792).getAudioInputDevices();
+    const audioInputDevices = tmp(5797).getAudioInputDevices();
     audioInputDevices.then((arr) => {
       let found = arr.find((id) => id.id === audioInputDeviceId);
       if (found == null) {
@@ -651,7 +655,7 @@ prototype["setAudioInputDevice"] = function setAudioInputDevice(audioInputDevice
         voiceEngine.setInputDevice(found.index);
       }
     });
-    const tmpResult2 = tmp(5792);
+    const tmpResult2 = tmp(5797);
   }
   self.emit(require("MediaEngineEvent").MediaEngineEvent.SelectedDeviceChange, constants2.AUDIO_INPUT, this.audioInputDeviceId, audioInputDeviceId);
   obj = require("inject");
@@ -668,7 +672,7 @@ prototype["setAudioOutputDevice"] = function setAudioOutputDevice(audioOutputDev
     voiceEngine.setOutputDevice(audioOutputDeviceId);
     const tmpResult = tmp(2016);
   } else {
-    const audioOutputDevices = tmp(5792).getAudioOutputDevices();
+    const audioOutputDevices = tmp(5797).getAudioOutputDevices();
     audioOutputDevices.then((arr) => {
       let found = arr.find((id) => id.id === audioOutputDeviceId);
       if (found == null) {
@@ -679,7 +683,7 @@ prototype["setAudioOutputDevice"] = function setAudioOutputDevice(audioOutputDev
         voiceEngine.setOutputDevice(found.index);
       }
     });
-    const tmpResult2 = tmp(5792);
+    const tmpResult2 = tmp(5797);
   }
   self.emit(require("MediaEngineEvent").MediaEngineEvent.SelectedDeviceChange, constants2.AUDIO_OUTPUT, this.audioOutputDeviceId, audioOutputDeviceId);
   obj = require("inject");
@@ -737,7 +741,7 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
           if (null != closure_128_0) {
             let id = closure_128_0.id;
           } else {
-            id = closure_1_14;
+            id = closure_1_16;
           }
           closure_128_1 = id;
           if (closure_128_1 === closure_129_1.videoInputDeviceId) {
@@ -758,7 +762,7 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
               const obj = tmp2(2016);
             }
             if (forEach == closure_128_0) {
-              closure_128_2 = closure_1_14;
+              closure_128_2 = closure_1_16;
               const voiceEngine1 = tmp2(2016).getVoiceEngine();
               voiceEngine1.setVideoInputDevice(closure_128_2);
               const obj3 = tmp2(2016);
@@ -875,6 +879,203 @@ prototype["setClipsSource"] = function setClipsSource(quality) {
       }
     }
   }
+};
+prototype["startSnapshotCapture"] = function startSnapshotCapture(width, arg1) {
+  closure_0 = arg1;
+  let self = this;
+  const voiceEngine = inject.getVoiceEngine();
+  if (tmp) {
+    let num = width.width;
+    if (num == null) {
+      num = 0;
+    }
+    let size = { width: num, height: null, intervalMs: null };
+    let num2 = width.height;
+    if (num2 == null) {
+      num2 = 0;
+    }
+    size.height = num2;
+    size.intervalMs = width.intervalMs;
+    closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2, arg3, arg4) => {
+      closure_0 = arg0;
+      let logger = arg1;
+      closure_2 = arg2;
+      closure_3 = arg3;
+      closure_4 = arg4;
+      c9 = 0;
+      c10 = 0;
+      c8 = 0;
+      return (async (arg0, value, arg2, arg3, arg4) => {
+        if (c10 === 2) {
+          c10 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp8 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          try {
+            c10 = 2;
+            if (0 === c9) {
+              if (arg0 === 1) {
+                c10 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c10 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_6 = tmp4;
+                closure_5 = tmp6;
+                closure_133_0 = closure_0;
+                closure_133_1 = logger;
+                closure_133_2 = closure_2;
+                closure_133_3 = closure_3;
+                closure_133_4 = closure_4;
+                c8 = 2;
+                c9 = 3;
+                c10 = 1;
+                const obj4 = { value: Promise.resolve(), done: false };
+                return obj4;
+              }
+            } else if (1 === tmp9) {
+              c8 = 0;
+              const signalSnapshotProcessed4 = closure_2.signalSnapshotProcessed;
+              if (signalSnapshotProcessed4 != null) {
+                const result = signalSnapshotProcessed4(closure_133_0);
+              }
+              throw closure_7;
+            } else {
+              if (2 === tmp9) {
+                c8 = 1;
+                closure_133_5 = closure_7;
+                logger = logger.logger;
+                logger.error("Snapshot consumer failed:", closure_133_5);
+              } else if (3 === tmp9) {
+                if (arg0 === 1) {
+                  c10 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c8 = 0;
+                  const signalSnapshotProcessed2 = closure_2.signalSnapshotProcessed;
+                  if (signalSnapshotProcessed2 != null) {
+                    const result1 = signalSnapshotProcessed2(closure_133_0);
+                  }
+                  c10 = 3;
+                  const obj5 = { value, done: true };
+                  return obj5;
+                } else {
+                  const size = { image: closure_133_1, mimeType: "image/png", width: closure_133_2, height: closure_133_3, encodeMs: closure_133_4 };
+                  c9 = 4;
+                  c10 = 1;
+                  const obj6 = { value: closure_0(size), done: false };
+                  return obj6;
+                }
+              } else if (arg0 === 1) {
+                c10 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c8 = 0;
+                const signalSnapshotProcessed = closure_2.signalSnapshotProcessed;
+                if (signalSnapshotProcessed != null) {
+                  const result2 = signalSnapshotProcessed(closure_133_0);
+                }
+                c10 = 3;
+                const obj = { value, done: true };
+                return obj;
+              } else {
+                c8 = 1;
+              }
+              c8 = 0;
+              const signalSnapshotProcessed3 = closure_2.signalSnapshotProcessed;
+              if (signalSnapshotProcessed3 != null) {
+                const result3 = signalSnapshotProcessed3(closure_133_0);
+              }
+              c10 = 3;
+              return { value: "IconComponent", done: null };
+            }
+          } catch (tmp51) {
+            closure_7 = tmp51;
+            if (tmp5 === c8) {
+              c10 = tmp3;
+              throw tmp51;
+            } else if (tmp2 === tmp53) {
+              c9 = tmp2;
+            } else {
+              c9 = tmp;
+            }
+          }
+        }
+      })();
+    });
+    voiceEngine.startSnapshotCapture(size, function() {
+      self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    });
+  }
+  tmp = null != voiceEngine.startSnapshotCapture && null != voiceEngine.signalSnapshotProcessed;
+};
+prototype["stopSnapshotCapture"] = function stopSnapshotCapture() {
+  const voiceEngine = inject.getVoiceEngine();
+  const stopSnapshotCapture = voiceEngine.stopSnapshotCapture;
+  if (stopSnapshotCapture != null) {
+    stopSnapshotCapture();
+  }
+};
+prototype["setSnapshotSource"] = function setSnapshotSource(useGraphicsCapture) {
+  const voiceEngine = inject.getVoiceEngine();
+  if (null != voiceEngine.setSnapshotSource) {
+    if (null != useGraphicsCapture) {
+      ({ id, useGraphicsCaptureApiLevel } = useGraphicsCapture);
+      const tmp4 = _objectWithoutProperties(useGraphicsCapture, closure_3);
+      if (obj3.test(id)) {
+        const obj2 = {};
+        const merged = Object.assign(tmp4);
+        obj2.id = id;
+        if (useGraphicsCaptureApiLevel == null) {
+          let num = 0;
+          if (useGraphicsCapture.useGraphicsCapture) {
+            num = 1;
+          }
+          useGraphicsCaptureApiLevel = num;
+        }
+        obj2.graphicsCaptureApiLevel = useGraphicsCaptureApiLevel;
+        voiceEngine.setSnapshotSource(obj2);
+      } else {
+        const self = this;
+        const logger = this.logger;
+        const _HermesInternal = HermesInternal;
+        logger.warn("setSnapshotSource: rejected " + id + "; only game windows can be snapshotted");
+        voiceEngine.setSnapshotSource({ id: "" });
+      }
+      obj3 = /^window:\d+$/;
+    } else {
+      voiceEngine.setSnapshotSource({ id: "" });
+    }
+  }
+};
+prototype["getSnapshotStats"] = function getSnapshotStats() {
+  const voiceEngine = inject.getVoiceEngine();
+  const getSnapshotStats = voiceEngine.getSnapshotStats;
+  let snapshotStats;
+  if (getSnapshotStats != null) {
+    snapshotStats = getSnapshotStats();
+  }
+  if (snapshotStats == null) {
+    snapshotStats = Promise.resolve(null);
+  }
+  return snapshotStats;
 };
 prototype["setClipsQualitySettings"] = function setClipsQualitySettings(arg0, arg1, arg2, arg3) {
   const voiceEngine = inject.getVoiceEngine();
@@ -1308,13 +1509,13 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview(arg0, arg1
             return obj3;
           } else {
             closure_128_0 = undefined;
-            const voiceEngine = tmp2(dependencyMap[8]).getVoiceEngine();
+            const voiceEngine = tmp2(dependencyMap[9]).getVoiceEngine();
             if (null != voiceEngine.setPreviewsUseWgc) {
               voiceEngine.setPreviewsUseWgc(closure_3);
             }
-            const obj9 = tmp2(dependencyMap[8]);
+            const obj9 = tmp2(dependencyMap[9]);
             if (null != tmp21Result.getVoiceEngine().getSingleWindowPreview) {
-              const voiceEngine1 = tmp2(tmp22[8]).getVoiceEngine();
+              const voiceEngine1 = tmp2(tmp22[9]).getVoiceEngine();
               c1 = 1;
               dependencyMap = 1;
               const obj4 = { value: voiceEngine1.getSingleWindowPreview(tmp2, closure_1, closure_2), done: false };
@@ -1323,7 +1524,7 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview(arg0, arg1
               dependencyMap = 3;
               return { value: null, done: true };
             }
-            tmp21Result = tmp2(dependencyMap[8]);
+            tmp21Result = tmp2(dependencyMap[9]);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -1452,7 +1653,7 @@ prototype["getCodecSurvey"] = function getCodecSurvey() {
   } else {
     resolved = new Promise((arg0, fn) => {
       closure_0 = arg0;
-      const voiceEngine = self(dependencyMap[8]).getVoiceEngine();
+      const voiceEngine = self(dependencyMap[9]).getVoiceEngine();
       if (null != voiceEngine.getCodecSurvey) {
         const codecSurvey = voiceEngine.getCodecSurvey((codecSurvey) => {
           self.codecSurvey = codecSurvey;
@@ -1540,7 +1741,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
   const replay = ConnectionDefault.createReplay(arg0, arg1);
   let tmp2 = null;
   if (null != replay) {
-    replay.on(self(5737).BaseConnectionEvent.Destroy, (arg0) => {
+    replay.on(self(5742).BaseConnectionEvent.Destroy, (arg0) => {
       const connections = self.connections;
       connections.delete(arg0);
       if (self.connectionsEmpty()) {
@@ -1550,7 +1751,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
     let connections = self.connections;
     connections.add(replay);
     self(2016).setProcessPriority(constants.HIGH);
-    self.emit(self(5729).MediaEngineEvent.Connection, replay);
+    self.emit(self(5734).MediaEngineEvent.Connection, replay);
     tmp2 = replay;
     const obj3 = self(2016);
   }
@@ -1676,8 +1877,8 @@ prototype["setSidechainCompression"] = function setSidechainCompression(arg0) {
 };
 prototype["setSidechainCompressionStrength"] = function setSidechainCompressionStrength(arg0) {
   const diff = 100 - arg0;
-  const sum = React6 + (React5 - React6) * diff / 100;
-  const sum1 = closure_1_8 + (timestampProducer - closure_1_8) * diff / 100;
+  const sum = closure_1_11 + (React6 - closure_1_11) * diff / 100;
+  const sum1 = v65535 + (closure_1_8 - v65535) * diff / 100;
   const voiceEngine = inject.getVoiceEngine();
   const applySidechainCompressionSettings = voiceEngine.applySidechainCompressionSettings;
   if (applySidechainCompressionSettings != null) {
@@ -1751,7 +1952,7 @@ prototype["fetchAsyncResources"] = function fetchAsyncResources() {
 prototype["getDeviceOSVolume"] = function getDeviceOSVolume(arg0) {
   closure_0 = arg0;
   return (async () => {
-    const voiceEngine = v3(dependencyMap[8]).getVoiceEngine();
+    const voiceEngine = v3(dependencyMap[9]).getVoiceEngine();
     const getDeviceOSVolume = voiceEngine.getDeviceOSVolume;
     if (getDeviceOSVolume != null) {
       const deviceOSVolume = getDeviceOSVolume(closure_0);
@@ -1763,7 +1964,7 @@ prototype["getDeviceOSVolume"] = function getDeviceOSVolume(arg0) {
 prototype["getDeviceOSMuted"] = function getDeviceOSMuted(arg0) {
   closure_0 = arg0;
   return (async () => {
-    const voiceEngine = v3(dependencyMap[8]).getVoiceEngine();
+    const voiceEngine = v3(dependencyMap[9]).getVoiceEngine();
     const getDeviceOSMuted = voiceEngine.getDeviceOSMuted;
     if (getDeviceOSMuted != null) {
       const deviceOSMuted = getDeviceOSMuted(closure_0);
@@ -1800,7 +2001,7 @@ prototype["watchdogTick"] = function watchdogTick() {
       }
     }
     self.watchdogTick();
-  }, closure_18);
+  }, closure_20);
 };
 prototype["connectionsEmpty"] = function connectionsEmpty() {
   return 0 === this.connections.size;

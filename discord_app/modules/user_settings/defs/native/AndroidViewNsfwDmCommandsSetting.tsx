@@ -1,17 +1,17 @@
-// === Module 16010: AndroidViewNsfwDmCommandsSetting ===
+// === Module 16052: AndroidViewNsfwDmCommandsSetting ===
 
-// Module 16010 (AndroidViewNsfwDmCommandsSetting)
+// Module 16052 (AndroidViewNsfwDmCommandsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6636 */;
-import AgeGateUtils from "AgeGateUtils" /* 6641 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7293 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 7294 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7859 */;
-import SettingsConstants from "SettingsConstants" /* 8308 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6643 */;
+import AgeGateUtils from "AgeGateUtils" /* 6648 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7300 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 7301 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7867 */;
+import SettingsConstants from "SettingsConstants" /* 8317 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11155 */;
+import SettingBuilders from "SettingBuilders" /* 11172 */;
 import size from "module_2" /* 2 */;
 
 const PlatformUtils = tmp(1384);

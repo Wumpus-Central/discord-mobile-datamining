@@ -1,9 +1,9 @@
-// === Module 9409: useFetchVirtualCurrencyBalance ===
+// === Module 9420: useFetchVirtualCurrencyBalance ===
 
-// Module 9409 (useFetchVirtualCurrencyBalance)
+// Module 9420 (useFetchVirtualCurrencyBalance)
 import _mod19 from "module_19" /* 19 */;
-import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9411 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9410 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9422 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9421 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

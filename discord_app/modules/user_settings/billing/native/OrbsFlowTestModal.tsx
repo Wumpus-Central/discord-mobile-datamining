@@ -1,18 +1,18 @@
-// === Module 16896: OrbsFlowTestModal ===
+// === Module 16965: OrbsFlowTestModal ===
 
-// Module 16896 (OrbsFlowTestModal)
+// Module 16965 (OrbsFlowTestModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5575 */;
-import LayerScope from "LayerScope" /* 5579 */;
-import Stack_Stack from "Stack/Stack" /* 5957 */;
-import HeaderShared from "HeaderShared" /* 9657 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9989 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 16897 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 16899 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
+import LayerScope from "LayerScope" /* 5583 */;
+import Stack_Stack from "Stack/Stack" /* 5964 */;
+import HeaderShared from "HeaderShared" /* 9669 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10001 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 16966 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 16968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -70,15 +70,15 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9701);
+const NativeStackNavigator = fn(9713);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsFlowTestModal() {
   const cResult = accessibilityNativeStackOptions(576).c(5);
   let obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7074).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7081).useAccessibilityNativeStackOptions();
   if (cResult[0] !== accessibilityNativeStackOptions) {
     const fn = function n(navigation) {
       const obj = {
@@ -186,7 +186,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Balanc
   const obj3 = { spacing: 16, style: tmp4.container, children: null };
   const items = [tmp5, tmp8];
   obj3.children = items;
-  const tmp13 = collapsed(Stack_Stack.Stack, obj3);
+  const tmp13 = v65535(Stack_Stack.Stack, obj3);
   cResult[3] = tmp4.container;
   cResult[4] = tmp5;
   cResult[5] = tmp13;
@@ -196,7 +196,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Balanc
   const obj = { spacing: 16, style: tmp.container, children: null };
   const items = [React6(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }), React6(BalanceWidgetMenuDefault, {})];
   obj.children = items;
-  return collapsed(Stack_Stack.Stack, obj);
+  return v65535(Stack_Stack.Stack, obj);
 });
 ReactCompilerGating = fn(558);
 const component = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsFlowTest() {
@@ -242,7 +242,7 @@ const component = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsF
         const obj4 = { style: tmp4.wrap, contentContainerStyle: tmp7, children: null };
         const items = [tmp8, tmp9, tmp10];
         obj4.children = items;
-        obj3.children = collapsed(React5, obj4);
+        obj3.children = v65535(React5, obj4);
         const tmp21 = React6(LayerScope.LayerScope, obj3);
         cResult[9] = tmp4.wrap;
         cResult[10] = tmp7;
@@ -264,7 +264,7 @@ const component = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsF
   const obj2 = { style: closure_12().wrap, contentContainerStyle: { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right }, children: null };
   const items = [React6(closure_13, {}), React6(BalanceWidgetPillSection, {}), React6(OrbCheckoutMenuDefault, {})];
   obj2.children = items;
-  obj.children = collapsed(React5, obj2);
+  obj.children = v65535(React5, obj2);
   return React6(LayerScope.LayerScope, obj);
 });
 const obj7 = { flexDirection: "row", justifyContent: "center", marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };

@@ -1,16 +1,16 @@
-// === Module 9343: SocialLayerStorefrontEligibilityHooks ===
+// === Module 9354: SocialLayerStorefrontEligibilityHooks ===
 
-// Module 9343 (SocialLayerStorefrontEligibilityHooks)
+// Module 9354 (SocialLayerStorefrontEligibilityHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8788 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8797 */;
 import noop from "module_19" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9344 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9355 */;
 import RunningGameStore from "RunningGameStore" /* 2021 */;
-import UserProfileStore from "UserProfileStore" /* 7680 */;
+import UserProfileStore from "UserProfileStore" /* 7687 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import PresenceStore from "PresenceStore" /* 5694 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7309 */;
+import PresenceStore from "PresenceStore" /* 5698 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7316 */;
 
 require = fn;
 fn(558);
@@ -139,7 +139,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUsersPlay
   const obj = userIds(576);
   const stateFromStoresArray = userIds(504).useStateFromStoresArray(first, tmp7, tmp8);
   const tmpResult = userIds(504);
-  const slayerStorefrontDevApplicationIdOverride = userIds(9345).useSlayerStorefrontDevApplicationIdOverride();
+  const slayerStorefrontDevApplicationIdOverride = userIds(9356).useSlayerStorefrontDevApplicationIdOverride();
   if (null == slayerStorefrontDevApplicationIdOverride) {
     return stateFromStoresArray;
   } else {
@@ -151,7 +151,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUsersPlay
     cResult[5] = slayerStorefrontDevApplicationIdOverride;
     cResult[6] = items2;
   }
-  const tmpResult2 = userIds(9345);
+  const tmpResult2 = userIds(9356);
 }) : (function useUsersPlayingStorefrontEnabledGamesApplicationIds(userIds) {
   userIds = userIds.userIds;
   let stateFromStoresArray;

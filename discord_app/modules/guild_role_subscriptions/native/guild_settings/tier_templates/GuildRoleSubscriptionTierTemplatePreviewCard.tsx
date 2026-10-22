@@ -1,19 +1,19 @@
-// === Module 19140: GuildRoleSubscriptionTierTemplatePreviewCard ===
+// === Module 19207: GuildRoleSubscriptionTierTemplatePreviewCard ===
 
-// Module 19140 (GuildRoleSubscriptionTierTemplatePreviewCard)
+// Module 19207 (GuildRoleSubscriptionTierTemplatePreviewCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5693 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7053 */;
-import _modDef7226 from "module_7226" /* 7226 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 19144 */;
-import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 19146 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5697 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7060 */;
+import _modDef7233 from "module_7233" /* 7233 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 19211 */;
+import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 19213 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const Constants = fn(1087);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 }, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, separator: null, contentContainer: null, contentHeader: null, viewEntireTemplateFooter: null, viewEntireTemplateFooterUnderline: null };
 let obj3 = { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 };
 obj2.subscriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_SUBTLE };
@@ -67,7 +67,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
         const obj3 = { variant: typeConsolidationEyebrow.variant, color: "text-muted", style: tmp6, children: null };
         const items = [tmp7, " ", title];
         obj3.children = items;
-        const tmp12 = collapsed(Text_Text.Text, obj3);
+        const tmp12 = v65535(Text_Text.Text, obj3);
         cResult[7] = typeConsolidationEyebrow.variant;
         cResult[8] = tmp6;
         cResult[9] = tmp7;
@@ -98,7 +98,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   obj2.style = items;
   const items1 = [React6(Text_Text.Text, { variant: typeConsolidationEyebrow.variant, color: "text-default", style: tmp.contentHeader, children: count }), " ", title];
   obj2.children = items1;
-  return collapsed(Text_Text.Text, obj2);
+  return v65535(Text_Text.Text, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Separator() {
@@ -158,7 +158,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Benefi
   const obj4 = { children: null };
   const items = [tmp4, tmp6, tmp9];
   obj4.children = items;
-  const tmp13 = collapsed(newPricesToPick, obj4);
+  const tmp13 = v65535(newPricesToPick, obj4);
   cResult[5] = tmp4;
   cResult[6] = tmp9;
   cResult[7] = tmp13;
@@ -173,7 +173,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Benefi
   const obj = { children: null };
   const items = [tmp3, React6(native.Spacer, { size: 2 }), React6(Text_Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: children.description })];
   obj.children = items;
-  return collapsed(newPricesToPick, obj);
+  return v65535(newPricesToPick, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelBenefitShowCase(channel) {
@@ -239,7 +239,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   const obj5 = { style: tmp6, children: null };
   const items = [tmp7, tmp10, tmp13];
   obj5.children = items;
-  const tmp17 = collapsed(newPricesToPick, obj5);
+  const tmp17 = v65535(newPricesToPick, obj5);
   cResult[8] = tmp7;
   cResult[9] = tmp13;
   cResult[10] = tmp17;
@@ -249,7 +249,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   const obj2 = { style: { flexDirection: "row", alignItems: "center" }, children: null };
   const items = [React6(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(type), { size: "xs" }), React6(native.Spacer, { size: 4 }), React6(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
   obj2.children = items;
-  return React6(closure_14, { title: collapsed(newPricesToPick, obj2), description });
+  return React6(closure_14, { title: v65535(newPricesToPick, obj2), description });
 });
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEntireTemplateFooter() {
@@ -274,7 +274,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEn
     const obj4 = { style: tmp4.viewEntireTemplateFooterUnderline };
     items[2] = React6(newPricesToPick, obj4);
     obj3.children = items;
-    const tmp14 = collapsed(newPricesToPick, obj3);
+    const tmp14 = v65535(newPricesToPick, obj3);
     cResult[2] = tmp4.viewEntireTemplateFooterUnderline;
     cResult[3] = tmp14;
     let tmp10 = tmp14;
@@ -283,7 +283,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEn
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj5 = { children: null };
-    const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7226, style: null };
+    const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7233, style: null };
     const obj7 = { transform: null };
     const items1 = [{ rotate: "180deg" }];
     obj7.transform = items1;
@@ -304,7 +304,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEn
   const obj8 = { style: tmp4.viewEntireTemplateFooter, children: null };
   const items2 = [tmp10, tmp15];
   obj8.children = items2;
-  const tmp21 = collapsed(newPricesToPick, obj8);
+  const tmp21 = v65535(newPricesToPick, obj8);
   cResult[5] = tmp4.viewEntireTemplateFooter;
   cResult[6] = tmp10;
   cResult[7] = tmp21;
@@ -318,9 +318,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEn
   obj3.children = intl.string(util.t.kejaOD);
   const items = [React6(Text_Text.Text, obj3), React6(native.Spacer, { size: 3 }), React6(newPricesToPick, { style: tmp.viewEntireTemplateFooterUnderline })];
   obj2.children = items;
-  const items1 = [collapsed(newPricesToPick, obj2), ];
+  const items1 = [v65535(newPricesToPick, obj2), ];
   const obj5 = { children: null };
-  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7226, style: null };
+  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7233, style: null };
   const obj7 = { transform: null };
   const items2 = [{ rotate: "180deg" }];
   obj7.transform = items2;
@@ -328,7 +328,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEn
   obj5.children = React6(native.Icon, obj6);
   items1[1] = React6(newPricesToPick, obj5);
   obj.children = items1;
-  return collapsed(newPricesToPick, obj);
+  return v65535(newPricesToPick, obj);
 });
 ReactCompilerGating = fn(558);
 let obj7 = { paddingVertical: 16, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, marginLeft: -16, marginRight: -16, marginTop: 16 };
@@ -489,7 +489,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                                 tmp63 = cResult[45];
                               }
                               function handleViewEntireTemplate() {
-                                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19141, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview });
+                                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19208, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview });
                               }
                               if (cResult[46] === handleViewEntireTemplate) {
                                 if (cResult[47] === tmp4.contentContainer) {
@@ -878,7 +878,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   callback1 = obj3.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19145, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19212, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
     } else {
       handleCreateFromTemplate(selectedTemplate, arg1);
     }
@@ -888,7 +888,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19141, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19208, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
     },
     children: null
   };

@@ -1,9 +1,9 @@
-// === Module 18078: useOwnsAnyBadge ===
+// === Module 18148: useOwnsAnyBadge ===
 
-// Module 18078 (useOwnsAnyBadge)
-import useBadgesDefault from "useBadges" /* 8697 */;
+// Module 18148 (useOwnsAnyBadge)
+import useBadgesDefault from "useBadges" /* 8706 */;
 import UserStore from "UserStore" /* 1392 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8645 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8654 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

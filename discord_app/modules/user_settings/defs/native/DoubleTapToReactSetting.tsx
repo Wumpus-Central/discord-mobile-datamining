@@ -1,10 +1,10 @@
-// === Module 17122: DoubleTapToReactSetting ===
+// === Module 17191: DoubleTapToReactSetting ===
 
-// Module 17122 (DoubleTapToReactSetting)
+// Module 17191 (DoubleTapToReactSetting)
 import util from "util" /* 1128 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import SettingsConstants from "SettingsConstants" /* 8308 */;
-import SettingBuilders from "SettingBuilders" /* 11155 */;
+import SettingsConstants from "SettingsConstants" /* 8317 */;
+import SettingBuilders from "SettingBuilders" /* 11172 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

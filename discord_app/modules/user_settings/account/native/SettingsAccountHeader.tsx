@@ -1,16 +1,16 @@
-// === Module 15853: SettingsAccountHeader ===
+// === Module 15895: SettingsAccountHeader ===
 
-// Module 15853 (SettingsAccountHeader)
+// Module 15895 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import TableRow from "TableRow" /* 6882 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6900 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7072 */;
-import openUserSettings from "openUserSettings" /* 7467 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15854 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import TableRow from "TableRow" /* 6889 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6907 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7079 */;
+import openUserSettings from "openUserSettings" /* 7474 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15896 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -18,10 +18,10 @@ import UserStore from "UserStore" /* 1392 */;
 require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1087).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7393).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7400).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -214,8 +214,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[11] = header;
   cResult[12] = tmp15;
   cResult[13] = tmp18;
-  cResult[14] = collapsed(View, obj4);
-  const tmp20 = collapsed(View, obj4);
+  cResult[14] = v65535(View, obj4);
+  const tmp20 = v65535(View, obj4);
 }) : (function SettingsAccountHeader() {
   const tmp = closure_11();
   const items = [UserStore];
@@ -245,7 +245,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     items2[1] = tmp14;
     obj4.children = items2;
-    let tmp9Result = collapsed(View, obj4);
+    let tmp9Result = v65535(View, obj4);
   } else {
     tmp9Result = null;
   }

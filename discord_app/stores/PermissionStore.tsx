@@ -300,7 +300,7 @@ prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   const obj = { canManageGuild: this.can(Permissions.MANAGE_GUILD, guild), canManageChannels: this.can(Permissions.MANAGE_CHANNELS, guild), canManageRoles: this.can(Permissions.MANAGE_ROLES, guild), canManageBans: this.can(Permissions.BAN_MEMBERS, guild), canManageNicknames: this.can(Permissions.MANAGE_NICKNAMES, guild), canManageGuildExpressions: this.can(Permissions.MANAGE_GUILD_EXPRESSIONS, guild) || self.can(Permissions.CREATE_GUILD_EXPRESSIONS, guild), canViewAuditLog: self.can(Permissions.VIEW_AUDIT_LOG, guild), canViewAuditLogV2: self.can(Permissions.VIEW_AUDIT_LOG, guild), canManageWebhooks: self.can(Permissions.MANAGE_WEBHOOKS, guild), canViewGuildAnalytics: self.can(Permissions.VIEW_GUILD_ANALYTICS, guild), canAccessMembersPage: self.canAccessMemberSafetyPage(guild), isGuildAdmin: self.can(Permissions.ADMINISTRATOR, guild), isOwner: null, isOwnerWithRequiredMfaLevel: null, guild: null };
   let tmp4 = null != currentUser;
   if (tmp4) {
-    tmp4 = collapsed(guild, currentUser);
+    tmp4 = v65535(guild, currentUser);
   }
   obj.isOwner = tmp4;
   let tmp6 = null != currentUser;
@@ -398,7 +398,7 @@ prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, stateFrom
   if (user instanceof UserRecord) {
     id = user.id;
   }
-  if (collapsed(stateFromStores, id)) {
+  if (v65535(stateFromStores, id)) {
     return false;
   } else {
     const self = this;

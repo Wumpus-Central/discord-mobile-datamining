@@ -1,7 +1,7 @@
-// === Module 19080: PreviewableListingImageUtil ===
+// === Module 19147: PreviewableListingImageUtil ===
 
-// Module 19080 (PreviewableListingImageUtil)
-import ListingImageUtilAll from "ListingImageUtil" /* 19081 */;
+// Module 19147 (PreviewableListingImageUtil)
+import ListingImageUtilAll from "ListingImageUtil" /* 19148 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/PreviewableListingImageUtil.tsx");

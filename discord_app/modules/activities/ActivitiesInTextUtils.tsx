@@ -1,6 +1,6 @@
-// === Module 8841: ActivitiesInTextUtils ===
+// === Module 8850: ActivitiesInTextUtils ===
 
-// Module 8841 (ActivitiesInTextUtils)
+// Module 8850 (ActivitiesInTextUtils)
 import ChannelTypes from "ChannelTypes" /* 1108 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import PermissionStore from "PermissionStore" /* 4901 */;

@@ -1,24 +1,24 @@
-// === Module 15916: SafetyHubViolationsContainer ===
+// === Module 15958: SafetyHubViolationsContainer ===
 
-// Module 15916 (SafetyHubViolationsContainer)
+// Module 15958 (SafetyHubViolationsContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7873 */;
-import SafetyHubModels from "SafetyHubModels" /* 7875 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9001 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12722 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7881 */;
+import SafetyHubModels from "SafetyHubModels" /* 7883 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9010 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12754 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7898 */;
+import SafetyHubStore from "SafetyHubStore" /* 7906 */;
 
 const util = chevron(1128);
-const Text_Text = chevron(5216);
-const WarningIcon = chevron(7933);
-const ChevronSmallDownIcon2 = chevron(11026);
-const ChevronSmallUpIcon = chevron(14775);
+const Text_Text = chevron(5220);
+const WarningIcon = chevron(7941);
+const ChevronSmallDownIcon2 = chevron(11043);
+const ChevronSmallUpIcon = chevron(14819);
 require = fn;
 function ClassificationDetail(classification) {
   classification = classification.classification;
@@ -81,7 +81,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12720, dependencyMap.paths), { classificationId: id, source: closure_2_8.StandingTab });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12752, dependencyMap.paths), { classificationId: id, source: closure_2_8.StandingTab });
     },
     children: null
   };
@@ -101,12 +101,12 @@ function ClassificationDetail(classification) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7874);
+const SafetyHubConstants = fn(7882);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { connectedContainer: { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 }, container: null, header: null, detailContainerOuter: null, detailContainerOuterNew: null, detailContainerInner: null, iconBackground: null, chevron: null, incidentDate: null, incidentDateNew: null, newText: null, emptyState: null, separator: null, moreButtonContainer: null, moreButton: null, headerTextContainer: null };
 let obj3 = { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 };
 obj2.container = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };
@@ -217,7 +217,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Safety
                   const obj5 = { onPress: onClick, style: tmp3.header, children: null };
                   const items = [tmp10, tmp24, cResult[20]];
                   obj5.children = items;
-                  const tmp34 = __initData(tmp6(9001), obj5);
+                  const tmp34 = __initData(tmp6(9010), obj5);
                   cResult[21] = onClick;
                   cResult[22] = tmp3.header;
                   cResult[23] = tmp10;
@@ -505,7 +505,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   const tmp = opened;
   [tmp8, dependencyMap] = safetyHubAccountStanding(stateFromStores.useState(3), 2);
   const tmp7 = safetyHubAccountStanding(stateFromStores.useState(3), 2);
-  safetyHubAccountStanding = opened(12724).useSafetyHubAccountStanding();
+  safetyHubAccountStanding = opened(12756).useSafetyHubAccountStanding();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
     const fn = function y() {
@@ -518,7 +518,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   } else {
     [tmp10, tmp11] = cResult;
   }
-  const obj3 = opened(12724);
+  const obj3 = opened(12756);
   stateFromStores = tmp(504).useStateFromStores(tmp10, tmp11);
   if (cResult[2] === classifications) {
     if (cResult[3] === tmp8) {
@@ -661,8 +661,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   const tmp4 = first1(is_dsa_eligible.useState(3), 2);
   first1 = tmp4[0];
   is_dsa_eligible = tmp4[1];
-  const safetyHubAccountStanding = classifications(12724).useSafetyHubAccountStanding();
-  let obj = classifications(12724);
+  const safetyHubAccountStanding = classifications(12756).useSafetyHubAccountStanding();
+  let obj = classifications(12756);
   const items = [memo];
   const stateFromStores = classifications(504).useStateFromStores(items, () => memo.getIsDsaEligible());
   const items1 = [classifications, first1];
@@ -710,7 +710,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
       const intl = classifications(1128).intl;
       const obj11 = { nextPageSize: num };
       obj10.children = intl.format(classifications(1128).t["9Ml56H"], obj11);
-      obj9.children = closure_11(classifications(5216).Text, obj10);
+      obj9.children = closure_11(classifications(5220).Text, obj10);
       obj8.children = closure_11(safetyHubAccountStanding, obj9);
       items5[1] = closure_11(tmp12, obj8);
       obj6.children = items5;

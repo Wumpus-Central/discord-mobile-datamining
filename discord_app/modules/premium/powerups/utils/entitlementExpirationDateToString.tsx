@@ -1,6 +1,6 @@
-// === Module 13332: entitlementExpirationDateToString ===
+// === Module 13368: entitlementExpirationDateToString ===
 
-// Module 13332 (entitlementExpirationDateToString)
+// Module 13368 (entitlementExpirationDateToString)
 import LocaleStore from "LocaleStore" /* 2068 */;
 
 const size = fn(2);

@@ -1,18 +1,18 @@
-// === Module 15043: ShareEmbed ===
+// === Module 15087: ShareEmbed ===
 
-// Module 15043 (ShareEmbed)
+// Module 15087 (ShareEmbed)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6859 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6866 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { flexDirection: "row", height: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, containerRevamp: { borderWidth: 0 }, thumbnail: { width: 80 }, contentContainer: { flex: 1, flexDirection: "column", justifyContent: "center", paddingLeft: 12, paddingRight: 24 }, authorView: { flexDirection: "row", alignItems: "center", marginBottom: 3 }, authorThumbnail: null, loadingSpinner: null };
 let size = { height: 16, width: 16, borderRadius: nativeDefault.radii.sm, marginRight: 4 };
 obj2.authorThumbnail = size;
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShareEmb
       let tmp9Result = null != memo;
       if (tmp9Result) {
         let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-        tmp9Result = closure_5(isLoadingEmbed(5651), obj2);
+        tmp9Result = closure_5(isLoadingEmbed(5655), obj2);
       }
       let obj3 = { children: null };
       const items6 = [tmp9Result, ];

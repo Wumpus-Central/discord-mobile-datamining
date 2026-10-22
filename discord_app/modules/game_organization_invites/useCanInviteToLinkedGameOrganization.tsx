@@ -1,6 +1,6 @@
-// === Module 15101: useCanInviteToLinkedGameOrganization ===
+// === Module 15145: useCanInviteToLinkedGameOrganization ===
 
-// Module 15101 (useCanInviteToLinkedGameOrganization)
+// Module 15145 (useCanInviteToLinkedGameOrganization)
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import PermissionStore from "PermissionStore" /* 4901 */;

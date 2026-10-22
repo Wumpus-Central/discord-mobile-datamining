@@ -1,20 +1,8 @@
-// === Module 10545: GiftAnimationData ===
+// === Module 10557: GiftAnimationData ===
 
-// Module 10545 (GiftAnimationData)
+// Module 10557 (GiftAnimationData)
 import PremiumConstants from "PremiumConstants" /* 1394 */;
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8427 */;
-import _mod10546 from "module_10546" /* 10546 */;
-import _mod10547 from "module_10547" /* 10547 */;
-import _mod10548 from "module_10548" /* 10548 */;
-import _mod10549 from "module_10549" /* 10549 */;
-import _mod10550 from "module_10550" /* 10550 */;
-import _mod10551 from "module_10551" /* 10551 */;
-import _mod10552 from "module_10552" /* 10552 */;
-import _mod10553 from "module_10553" /* 10553 */;
-import _mod10554 from "module_10554" /* 10554 */;
-import _mod10555 from "module_10555" /* 10555 */;
-import _mod10556 from "module_10556" /* 10556 */;
-import _mod10557 from "module_10557" /* 10557 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8436 */;
 import _mod10558 from "module_10558" /* 10558 */;
 import _mod10559 from "module_10559" /* 10559 */;
 import _mod10560 from "module_10560" /* 10560 */;
@@ -27,6 +15,18 @@ import _mod10566 from "module_10566" /* 10566 */;
 import _mod10567 from "module_10567" /* 10567 */;
 import _mod10568 from "module_10568" /* 10568 */;
 import _mod10569 from "module_10569" /* 10569 */;
+import _mod10570 from "module_10570" /* 10570 */;
+import _mod10571 from "module_10571" /* 10571 */;
+import _mod10572 from "module_10572" /* 10572 */;
+import _mod10573 from "module_10573" /* 10573 */;
+import _mod10574 from "module_10574" /* 10574 */;
+import _mod10575 from "module_10575" /* 10575 */;
+import _mod10576 from "module_10576" /* 10576 */;
+import _mod10577 from "module_10577" /* 10577 */;
+import _mod10578 from "module_10578" /* 10578 */;
+import _mod10579 from "module_10579" /* 10579 */;
+import _mod10580 from "module_10580" /* 10580 */;
+import _mod10581 from "module_10581" /* 10581 */;
 import size from "module_2" /* 2 */;
 
 const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;
@@ -45,45 +45,13 @@ export const getLottieType = function getLottieType(giftStyle) {
 export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACTION) {
   if (PremiumGiftStyles.STANDARD_BOX === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10546;
-    } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10547;
-    } else {
-      return _mod10548;
-    }
-  } else if (PremiumGiftStyles.CAKE === giftStyle) {
-    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10549;
-    } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10550;
-    } else {
-      return _mod10551;
-    }
-  } else if (PremiumGiftStyles.CHEST === giftStyle) {
-    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10552;
-    } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10553;
-    } else {
-      return _mod10554;
-    }
-  } else if (PremiumGiftStyles.COFFEE === giftStyle) {
-    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
-      return _mod10555;
-    } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
-      return _mod10556;
-    } else {
-      return _mod10557;
-    }
-  } else if (PremiumGiftStyles.SEASONAL_STANDARD_BOX === giftStyle) {
-    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return _mod10558;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
       return _mod10559;
     } else {
       return _mod10560;
     }
-  } else if (PremiumGiftStyles.SEASONAL_CAKE === giftStyle) {
+  } else if (PremiumGiftStyles.CAKE === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return _mod10561;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
@@ -91,7 +59,7 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
     } else {
       return _mod10563;
     }
-  } else if (PremiumGiftStyles.SEASONAL_CHEST === giftStyle) {
+  } else if (PremiumGiftStyles.CHEST === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return _mod10564;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
@@ -99,13 +67,45 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
     } else {
       return _mod10566;
     }
-  } else if (PremiumGiftStyles.SEASONAL_COFFEE === giftStyle) {
+  } else if (PremiumGiftStyles.COFFEE === giftStyle) {
     if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return _mod10567;
     } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
       return _mod10568;
     } else {
       return _mod10569;
+    }
+  } else if (PremiumGiftStyles.SEASONAL_STANDARD_BOX === giftStyle) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
+      return _mod10570;
+    } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
+      return _mod10571;
+    } else {
+      return _mod10572;
+    }
+  } else if (PremiumGiftStyles.SEASONAL_CAKE === giftStyle) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
+      return _mod10573;
+    } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
+      return _mod10574;
+    } else {
+      return _mod10575;
+    }
+  } else if (PremiumGiftStyles.SEASONAL_CHEST === giftStyle) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
+      return _mod10576;
+    } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
+      return _mod10577;
+    } else {
+      return _mod10578;
+    }
+  } else if (PremiumGiftStyles.SEASONAL_COFFEE === giftStyle) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
+      return _mod10579;
+    } else if (PremiumGiftingUtils.AnimationState.LOOP === ACTION) {
+      return _mod10580;
+    } else {
+      return _mod10581;
     }
   } else {
     if (PremiumGiftStyles.SNOWGLOBE !== giftStyle) {

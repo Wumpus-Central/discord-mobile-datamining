@@ -1,11 +1,11 @@
-// === Module 18117: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 18187: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 18117 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 18187 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 587 */;
 import PermissionUtils from "PermissionUtils" /* 4906 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9176 */;
-import DenyIcon from "DenyIcon" /* 9728 */;
-import SlashIcon from "SlashIcon" /* 18118 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9185 */;
+import DenyIcon from "DenyIcon" /* 9740 */;
+import SlashIcon from "SlashIcon" /* 18188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const md = nativeDefault.radii.md;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { ternaryCheckBox: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" }, iconWrapper: { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" }, icon: null, denyActive: null, denySelected: null, allowActive: null, allowSelected: null, passthroughSelected: null, passthroughActive: null, disabled: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
 obj.icon = { marginHorizontal: nativeDefault.space.PX_8 };

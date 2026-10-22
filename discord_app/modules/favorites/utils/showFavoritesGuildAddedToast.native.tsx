@@ -1,9 +1,9 @@
-// === Module 10804: showFavoritesGuildAddedToast ===
+// === Module 10821: showFavoritesGuildAddedToast ===
 
-// Module 10804 (showFavoritesGuildAddedToast)
+// Module 10821 (showFavoritesGuildAddedToast)
 import util from "util" /* 1128 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5645 */;
-import StarIcon from "StarIcon" /* 9907 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5649 */;
+import StarIcon from "StarIcon" /* 9919 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx");

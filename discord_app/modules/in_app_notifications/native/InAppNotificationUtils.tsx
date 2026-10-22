@@ -1,16 +1,16 @@
-// === Module 13642: InAppNotificationUtils ===
+// === Module 13678: InAppNotificationUtils ===
 
-// Module 13642 (InAppNotificationUtils)
+// Module 13678 (InAppNotificationUtils)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import v1 from "v1" /* 1281 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5584 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5693 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5588 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5697 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(13643).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(13679).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1087);
 ({ AnalyticEvents: hasOwnProperty, ChannelTypes: metroRequire, InAppNotificationTypes: closure_7, MessageEmbedTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const ReactCompilerGating = fn(558);

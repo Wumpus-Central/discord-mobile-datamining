@@ -1,6 +1,6 @@
-// === Module 10756: conjureDevicePermissions ===
+// === Module 10768: conjureDevicePermissions ===
 
-// Module 10756 (conjureDevicePermissions)
+// Module 10768 (conjureDevicePermissions)
 import util from "util" /* 1128 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import _modDef3830 from "module_3830" /* 3830 */;
@@ -30,8 +30,8 @@ export const isConjureDevicePermissionName = function isConjureDevicePermissionN
 export const isConjureDevicePermissionSupported = function isConjureDevicePermissionSupported(permission) {
   return obj[permission].isSupported();
 };
-export const getConjureDevicePermissionLabel = function getConjureDevicePermissionLabel(item) {
-  return obj[item].getLabel();
+export const getConjureDevicePermissionLabel = function getConjureDevicePermissionLabel(arg0) {
+  return obj[arg0].getLabel();
 };
 export const getConjureDevicePermissionPromptTitle = function getConjureDevicePermissionPromptTitle(app) {
   const intl = util.intl;

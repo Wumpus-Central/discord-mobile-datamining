@@ -1,29 +1,29 @@
-// === Module 18946: action_sheet/AddMembersActionSheet ===
+// === Module 19013: action_sheet/AddMembersActionSheet ===
 
-// Module 18946 (action_sheet/AddMembersActionSheet)
+// Module 19013 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4975 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5022 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import RegexUtilsDefault from "RegexUtils" /* 5590 */;
-import GuildUtilsDefault from "GuildUtils" /* 6808 */;
-import FormCheckbox from "FormCheckbox" /* 6880 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8965 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10780 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 18945 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4978 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import RegexUtilsDefault from "RegexUtils" /* 5594 */;
+import GuildUtilsDefault from "GuildUtils" /* 6815 */;
+import FormCheckbox from "FormCheckbox" /* 6887 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8974 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10797 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 19012 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(18940).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(19007).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, inputContainer: null, tagAvatar: null, emptyStateText: null, addMembersDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.inputContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 };
@@ -590,7 +590,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMembers
       AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.ZGVL3g, obj), "polite");
     }
   }, items1);
-  const tmp9 = require("module_7199");
+  const tmp9 = require("module_7206");
   if (inActionSheet) {
     let FlashList = tmp9.BottomSheetFlashList;
     let ErpIY3 = require;

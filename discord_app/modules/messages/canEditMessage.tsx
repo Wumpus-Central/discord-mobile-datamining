@@ -1,9 +1,9 @@
-// === Module 11269: canEditMessage ===
+// === Module 11286: canEditMessage ===
 
-// Module 11269 (canEditMessage)
-import isForwardMessageDefault from "isForwardMessage" /* 5584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5992 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6795 */;
+// Module 11286 (canEditMessage)
+import isForwardMessageDefault from "isForwardMessage" /* 5588 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5999 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6802 */;
 import Constants from "Constants" /* 1087 */;
 import size from "module_2" /* 2 */;
 

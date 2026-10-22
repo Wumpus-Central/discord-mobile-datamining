@@ -1,7 +1,7 @@
-// === Module 13249: showChannelFollowingActionSheet ===
+// === Module 13285: showChannelFollowingActionSheet ===
 
-// Module 13249 (showChannelFollowingActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
+// Module 13285 (showChannelFollowingActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
   _require = id;
   importDefault = guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(require("asyncRequireImpl")(13250, dependencyMap.paths), "NewChannelFollower." + id, {
+  obj.openLazy(require("asyncRequireImpl")(13286, dependencyMap.paths), "NewChannelFollower." + id, {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId,

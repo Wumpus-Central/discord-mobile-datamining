@@ -1,6 +1,6 @@
-// === Module 5175: AuthInviteStore ===
+// === Module 5179: AuthInviteStore ===
 
-// Module 5175 (AuthInviteStore)
+// Module 5179 (AuthInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;

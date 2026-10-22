@@ -1,26 +1,26 @@
-// === Module 15659: commands/conjureDevicePermissions ===
+// === Module 15703: commands/conjureDevicePermissions ===
 
-// Module 15659 (commands/conjureDevicePermissions)
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15605 */;
+// Module 15703 (commands/conjureDevicePermissions)
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15649 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2045 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 15660 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10767 */;
 
 const require = fn;
-const Constants = fn(6357);
+const Constants = fn(6364);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1087).RPCCommands;
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
 const set = new Set();
 let obj2 = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15621);
+let CONTEXT_MENU_ICON_NAMES = fn(15665);
 obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_DEVICE_PERMISSIONS, {
   scope: obj,
   handler(socket) {
     const frame = validateConjureAppFrameDefault(socket.socket).frame;
     const obj = { permissions: null };
-    const prop = frame(10756).CONJURE_DEVICE_PERMISSION_NAMES;
+    const prop = frame(10768).CONJURE_DEVICE_PERMISSION_NAMES;
     obj.permissions = prop.map((permission) => {
       if (obj.isConjureDevicePermissionSupported(permission)) {
         const obj2 = { permission, state: null };
@@ -38,7 +38,7 @@ obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCComm
     return obj;
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(15621);
+CONTEXT_MENU_ICON_NAMES = fn(15665);
 obj2[RPCCommands.REQUEST_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_DEVICE_PERMISSIONS, {
   scope: obj,
   handler(arg0) {

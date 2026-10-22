@@ -1,10 +1,10 @@
-// === Module 18987: BansEmpty ===
+// === Module 19054: BansEmpty ===
 
-// Module 18987 (BansEmpty)
+// Module 19054 (BansEmpty)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4973 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import _mod8688 from "module_8688" /* 8688 */;
+import shared from "shared" /* 4976 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import _mod8697 from "module_8697" /* 8697 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,50 +16,50 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBansEmpty
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_18988");
+          return require("module_19055");
         },
       darker() {
-          return require("module_18989");
+          return require("module_19056");
         },
       light() {
-          return require("module_18990");
+          return require("module_19057");
         }
     };
-    const illustrationSource = _mod8688.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8697.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8688;
+    const tmpResult = _mod8697;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useBansEmptySource() {
   const obj = shared;
-  return _mod8688.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8697.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_18988");
+      return require("module_19055");
     },
     darker() {
-      return require("module_18989");
+      return require("module_19056");
     },
     light() {
-      return require("module_18990");
+      return require("module_19057");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getBansEmptySource(theme) {
-  return _mod8688.getIllustrationSource(theme, {
+  return _mod8697.getIllustrationSource(theme, {
     dark() {
-      return require("module_18988");
+      return require("module_19055");
     },
     darker() {
-      return require("module_18989");
+      return require("module_19056");
     },
     light() {
-      return require("module_18990");
+      return require("module_19057");
     }
   });
 }

@@ -1,21 +1,21 @@
-// === Module 13449: ChatPlaceholder ===
+// === Module 13485: ChatPlaceholder ===
 
-// Module 13449 (ChatPlaceholder)
+// Module 13485 (ChatPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5575 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13450 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 13451 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 13452 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 13486 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 13487 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 13488 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = tmp14(5035);
+const ReanimatedRexportDefault = tmp14(5038);
 require = fn;
-let closure_4 = fn(9740).useChatInputContainerHeight;
+let closure_4 = fn(9752).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { placeholder: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

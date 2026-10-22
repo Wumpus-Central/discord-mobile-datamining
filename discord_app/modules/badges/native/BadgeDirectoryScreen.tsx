@@ -1,19 +1,19 @@
-// === Module 11069: BadgeDirectoryScreen ===
+// === Module 11086: BadgeDirectoryScreen ===
 
-// Module 11069 (BadgeDirectoryScreen)
+// Module 11086 (BadgeDirectoryScreen)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6903 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11068 */;
-import BadgeDirectoryViewDefault from "BadgeDirectoryView" /* 11070 */;
+import NavigatorHeader from "NavigatorHeader" /* 6910 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11085 */;
+import BadgeDirectoryViewDefault from "BadgeDirectoryView" /* 11087 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let c6 = "badge-directory";
-const createStyles = fn(4966);
-let obj2 = { sheetHeader: { height: fn(5250).NAV_BAR_HEIGHT }, view: null };
-let obj3 = { height: fn(5250).NAV_BAR_HEIGHT };
+const createStyles = fn(4969);
+let obj2 = { sheetHeader: { height: fn(5254).NAV_BAR_HEIGHT }, view: null };
+let obj3 = { height: fn(5254).NAV_BAR_HEIGHT };
 obj2.view = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -83,10 +83,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
     if (cResult[6] === stateFromStores1) {
       const _Symbol = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const headerCloseButton = Navigator(6903).getHeaderCloseButton(Navigator(11068).closeBadgeDirectoryScreen);
+        const headerCloseButton = Navigator(6910).getHeaderCloseButton(Navigator(11085).closeBadgeDirectoryScreen);
         cResult[8] = headerCloseButton;
         let tmp15 = headerCloseButton;
-        const NavigatorResult2 = Navigator(6903);
+        const NavigatorResult2 = Navigator(6910);
       } else {
         tmp15 = cResult[8];
       }
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
               if (cResult[14] === view.sheetHeader) {
               }
             }
-            Navigator = Navigator(7074).Navigator;
+            Navigator = Navigator(7081).Navigator;
             const obj2 = { screens: sheetHeader, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
             ({ sheetHeader: obj9.headerStyle, view: obj9.viewStyle } = view);
             tmp = <Navigator screens={sheetHeader} initialRouteName={initialRouteName} headerStatusBarHeight={0} headerStyle={null} viewStyle={null} />;
@@ -118,13 +118,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
               return tmp18;
             }
             const obj3 = { screens: sheetHeader, initialRouteName, viewStyle: view.view };
-            const tmp21 = jsx(Navigator(11096).Modal, { screens: sheetHeader, initialRouteName, viewStyle: view.view });
+            const tmp21 = jsx(Navigator(11113).Modal, { screens: sheetHeader, initialRouteName, viewStyle: view.view });
             cResult[17] = sheetHeader;
             cResult[18] = view.view;
             cResult[19] = tmp21;
             tmp18 = tmp21;
           }
-          NavigatorResult3 = Navigator(11068);
+          NavigatorResult3 = Navigator(11085);
         }
       }
       const obj4 = {};
@@ -209,10 +209,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
       if (tmp2Result.isBadgeDirectoryIOSPageSheet()) {
         const obj4 = { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
         ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-        let tmp9Result = jsx(tmp2(7074).Navigator, { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null });
+        let tmp9Result = jsx(tmp2(7081).Navigator, { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null });
       } else {
         const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-        tmp9Result = jsx(tmp2(11096).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+        tmp9Result = jsx(tmp2(11113).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
       }
       return tmp9Result;
     }

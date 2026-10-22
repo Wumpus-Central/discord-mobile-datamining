@@ -1,13 +1,13 @@
-// === Module 17466: NewMemberActionsProgress ===
+// === Module 17536: NewMemberActionsProgress ===
 
-// Module 17466 (NewMemberActionsProgress)
+// Module 17536 (NewMemberActionsProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinearGradientDefault from "LinearGradient" /* 5240 */;
+import LinearGradientDefault from "LinearGradient" /* 5244 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7302 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8277 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7309 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8286 */;
 
 require = fn;
 const View = fn(17).View;
@@ -15,7 +15,7 @@ const StaticChannelRoute = fn(4828).StaticChannelRoute;
 const GuildMemberFlags = fn(4887).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, progressForeground: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj2.progressForeground = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: nativeDefault.radii.round, height: 8 };
@@ -47,7 +47,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Progre
     }
     if (cResult[6] !== tmp6) {
       const obj3 = { style: tmp6, colors: tmp7, useAngle: true, angle: -90 };
-      const tmp11 = collapsed(LinearGradientDefault, obj3);
+      const tmp11 = v65535(LinearGradientDefault, obj3);
       cResult[6] = tmp6;
       cResult[7] = tmp11;
       let tmp8 = tmp11;
@@ -61,7 +61,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Progre
       return tmp12;
     }
     const obj4 = { style: tmp3.progressBackground, children: tmp8 };
-    const tmp15 = collapsed(View, obj4);
+    const tmp15 = v65535(View, obj4);
     cResult[8] = tmp3.progressBackground;
     cResult[9] = tmp8;
     cResult[10] = tmp15;
@@ -81,8 +81,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Progre
   items[1] = obj3;
   obj2.style = items;
   obj2.colors = ["rgba(103, 203, 134, 1)", "rgba(59, 165, 92, 1)"];
-  obj.children = collapsed(LinearGradientDefault, obj2);
-  return collapsed(View, obj);
+  obj.children = v65535(LinearGradientDefault, obj2);
+  return v65535(View, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx");

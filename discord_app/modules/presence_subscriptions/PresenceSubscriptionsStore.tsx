@@ -1,11 +1,11 @@
-// === Module 11158: PresenceSubscriptionsStore ===
+// === Module 11175: PresenceSubscriptionsStore ===
 
-// Module 11158 (PresenceSubscriptionsStore)
+// Module 11175 (PresenceSubscriptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11159 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11176 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PresenceStore from "PresenceStore" /* 5694 */;
+import PresenceStore from "PresenceStore" /* 5698 */;
 
 function handleConnectionOpenOrResumed() {
   closure_5 = {};

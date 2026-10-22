@@ -1,27 +1,27 @@
-// === Module 11254: ChannelMembersActionSheet ===
+// === Module 11271: ChannelMembersActionSheet ===
 
-// Module 11254 (ChannelMembersActionSheet)
+// Module 11271 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useNavigation from "useNavigation" /* 1505 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5247 */;
-import BottomSheetModal from "BottomSheetModal" /* 5251 */;
-import Pressables from "Pressables" /* 6887 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7225 */;
-import SettingsIcon from "SettingsIcon" /* 7465 */;
-import InlineNotice from "InlineNotice" /* 7929 */;
-import RowButton from "RowButton" /* 8912 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8932 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8949 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10051 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10807 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11253 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11255 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11256 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5251 */;
+import BottomSheetModal from "BottomSheetModal" /* 5255 */;
+import Pressables from "Pressables" /* 6894 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7232 */;
+import SettingsIcon from "SettingsIcon" /* 7472 */;
+import InlineNotice from "InlineNotice" /* 7937 */;
+import RowButton from "RowButton" /* 8921 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8941 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8958 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10063 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10824 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11270 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11272 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11273 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
@@ -35,7 +35,7 @@ const Constants = fn(1087);
 ({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { paddingHorizontal: 16, flex: 1 }, sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 }, warning: { margin: 16, marginBottom: 0 } };
 let closure_13 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -147,9 +147,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelM
   const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp17, B, tmp20);
   const tmpResult6 = channelId(504);
   navigation = channelId(1505).useNavigation();
-  tmp5(5586)(stateFromStores);
+  tmp5(5590)(stateFromStores);
   const tmpResult7 = channelId(1505);
-  const appChannelBotUserId = channelId(11255).useAppChannelBotUserId(stateFromStores);
+  const appChannelBotUserId = channelId(11272).useAppChannelBotUserId(stateFromStores);
   if (null != stateFromStores) {
     class B {
       constructor() {

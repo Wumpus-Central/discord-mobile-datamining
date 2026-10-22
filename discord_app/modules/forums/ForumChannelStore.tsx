@@ -1,8 +1,8 @@
-// === Module 12981: ForumChannelStore ===
+// === Module 13017: ForumChannelStore ===
 
-// Module 12981 (ForumChannelStore)
+// Module 13017 (ForumChannelStore)
 import _modDef38 from "module_38" /* 38 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8271 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8280 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 11093: BadgeTierGrid ===
+// === Module 11110: BadgeTierGrid ===
 
-// Module 11093 (BadgeTierGrid)
+// Module 11110 (BadgeTierGrid)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, grid: null, row: null, item: null, progressLabel: null, icon: null, dimmedIcon: null, subtitleRow: null, centeredText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.grid = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
     let intl = badge(1128).intl;
     let obj3 = { username: targetUsername };
     obj2.children = intl.formatToPlainString(badge(1128).t.KyTwIh, obj3);
-    isViewingOtherUser = closure_4(badge(5216).Text, obj2);
+    isViewingOtherUser = closure_4(badge(5220).Text, obj2);
   }
   let items = [isViewingOtherUser, ];
   let obj4 = { style: tmp.grid, accessibilityRole: "list", children: null };
@@ -254,8 +254,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
   if (tiers == null) {
     tiers = [];
   }
-  const tmp9 = isViewingOtherUser(9913);
-  obj4.children = isViewingOtherUser(9913)(tiers, 3).map((arr) => React4(View, {
+  const tmp9 = isViewingOtherUser(9925);
+  obj4.children = isViewingOtherUser(9925)(tiers, 3).map((arr) => React4(View, {
     style: row.row,
     collapsable: false,
     children: arr.map((owned) => {
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
       if (complex_icon_static_url == null) {
         complex_icon_static_url = owned.complex_icon_static_url;
       }
-      const tierRowSubtitle = badge(11072).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
+      const tierRowSubtitle = badge(11089).getTierRowSubtitle({ tier: owned, isUnlocked: owned, isViewingOtherUser, isViewerOnUpgradeableNitro });
       const intl = badge(1128).intl;
       const t = badge(1128).t;
       const items = [owned.name, tierRowSubtitle, intl.string(owned ? t.sTFApF : t.uHtDcT)];
@@ -289,8 +289,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
         }
         items1[1] = dimmedIcon;
         obj4.style = items1;
-        tmp9Result = closure_2_4(isViewingOtherUser(11064), obj4);
-        const tmp11 = isViewingOtherUser(11064);
+        tmp9Result = closure_2_4(isViewingOtherUser(11081), obj4);
+        const tmp11 = isViewingOtherUser(11081);
       }
       const items2 = [tmp9Result, , ];
       let tmp13Result = null != owned.name;
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
           str = "text-default";
         }
         const obj5 = { variant: "text-sm/semibold", color: str, style: item.centeredText, children: owned.name };
-        tmp13Result = closure_2_4(badge(5216).Text, obj5);
+        tmp13Result = closure_2_4(badge(5220).Text, obj5);
       }
       items2[1] = tmp13Result;
       let tmp5Result = "" !== tierRowSubtitle;
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
         let tmp15 = !owned;
         if (!owned) {
           const obj7 = { size: "xxs", color: isViewingOtherUser(587).colors.ICON_MUTED };
-          tmp15 = closure_2_4(badge(8542).LockIcon, obj7);
+          tmp15 = closure_2_4(badge(8551).LockIcon, obj7);
         }
         const items3 = [tmp15, ];
         let str2 = "text-muted";
@@ -317,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeTie
           str2 = "text-default";
         }
         const obj8 = { variant: "text-sm/normal", color: str2, style: item.centeredText, children: tierRowSubtitle };
-        items3[1] = closure_2_4(badge(5216).Text, obj8);
+        items3[1] = closure_2_4(badge(5220).Text, obj8);
         obj6.children = items3;
         tmp5Result = closure_2_5(closure_3, obj6);
       }

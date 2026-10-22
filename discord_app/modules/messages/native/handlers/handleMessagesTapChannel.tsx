@@ -1,7 +1,7 @@
-// === Module 11187: handleMessagesTapChannel ===
+// === Module 11204: handleMessagesTapChannel ===
 
-// Module 11187 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7425 */;
+// Module 11204 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7432 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 4843 */;

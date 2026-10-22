@@ -1,6 +1,6 @@
-// === Module 5652: FastImageApngExperiment ===
+// === Module 5656: FastImageApngExperiment ===
 
-// Module 5652 (FastImageApngExperiment)
+// Module 5656 (FastImageApngExperiment)
 import initializeDefault from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1901 */;
@@ -14,13 +14,7 @@ export const initializeFastImageApngExperiment = function initializeFastImageApn
   if (obj.isAndroid()) {
     const initialized = initializeDefault.initialized;
     initialized.then(() => {
-      const obj = { location: "loaded" };
-      const enabled = config.getConfig(obj, { autoTrackExposure: false }).enabled;
-      const result = NativeImageManagerModuleDefault.setFastImageApngEnabled(enabled);
-      const obj2 = config;
-      if (obj4.isFastImageApngEnabled() === enabled) {
-        config = obj2.getConfig(obj);
-      }
+      const result = NativeImageManagerModuleDefault.setFastImageApngEnabled(config.getConfig({ location: "loaded" }).enabled);
     });
   }
   obj = PlatformUtils;

@@ -1,11 +1,11 @@
-// === Module 18908: useLoadGuildStickerWithCreator ===
+// === Module 18975: useLoadGuildStickerWithCreator ===
 
-// Module 18908 (useLoadGuildStickerWithCreator)
+// Module 18975 (useLoadGuildStickerWithCreator)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import GuildStickersStore from "GuildStickersStore" /* 6746 */;
+import GuildStickersStore from "GuildStickersStore" /* 6753 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadG
       const abortController = new AbortController();
       const signal = abortController.signal;
       closure_0 = asyncGeneratorStep(async () => {
-        await _null(10113).fetchGuildStickersWithCreator(_null, c1);
+        await _null(10125).fetchGuildStickersWithCreator(_null, c1);
         if (1 === tmp7) {
           c3 = 0;
           signal("error");

@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4906 */;
-import useChannelName from "useChannelName" /* 5586 */;
+import useChannelName from "useChannelName" /* 5590 */;
 import GatedChannelStore from "GatedChannelStore" /* 4873 */;
 import FavoriteStore from "FavoriteStore" /* 4824 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -184,7 +184,7 @@ function handleGuildRoleUpdate(guildId) {
 }
 function hasElevatedPermissions(user, context) {
   obj = BigFlagUtilsAll;
-  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), constants2);
+  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), closure_1_20);
 }
 function handleFavoritesUpdate() {
   rebuildGuildChannels(constants);

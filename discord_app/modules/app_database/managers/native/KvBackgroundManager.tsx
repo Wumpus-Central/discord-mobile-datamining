@@ -1,18 +1,18 @@
-// === Module 18620: KvBackgroundManager ===
+// === Module 18688: KvBackgroundManager ===
 
-// Module 18620 (KvBackgroundManager)
+// Module 18688 (KvBackgroundManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1104 */;
-import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 18621 */;
+import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 18689 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 13197 */;
-import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 7564 */;
-import FileSystemStore from "FileSystemStore" /* 7565 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
+import MultiAccountStore from "MultiAccountStore" /* 13233 */;
+import SaveableChannelsStore_mod from "SaveableChannelsStore" /* 7571 */;
+import FileSystemStore from "FileSystemStore" /* 7572 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
 
 let require = fn;
-let SaveableChannelsStore = fn(7564);
+let SaveableChannelsStore = fn(7571);
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: metroRequire, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: closure_7 } = SaveableChannelsStore);
 let SaveableChannelsStore = SaveableChannelsStore_mod;
 let closure_10 = 5 * DurationsDefault.Millis.MINUTE;

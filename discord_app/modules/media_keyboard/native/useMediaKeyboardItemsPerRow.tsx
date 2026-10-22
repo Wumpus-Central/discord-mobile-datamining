@@ -1,6 +1,6 @@
-// === Module 10390: useMediaKeyboardItemsPerRow ===
+// === Module 10402: useMediaKeyboardItemsPerRow ===
 
-// Module 10390 (useMediaKeyboardItemsPerRow)
+// Module 10402 (useMediaKeyboardItemsPerRow)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,15 +11,15 @@ let result = size.fileFinishedImporting("modules/media_keyboard/native/useMediaK
 
 export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEnabled() ? (function useMediaKeyboardItemsPerRow() {
   const cResult = num(576).c(6);
-  const tmp4 = ref(5136)();
+  const tmp4 = ref(5140)();
   num = 8;
-  if (num(5136).WindowSizeClassifier.XLARGE !== tmp4) {
+  if (num(5140).WindowSizeClassifier.XLARGE !== tmp4) {
     num = 6;
-    if (tmp(5136).WindowSizeClassifier.LARGE !== tmp4) {
+    if (tmp(5140).WindowSizeClassifier.LARGE !== tmp4) {
       num = 4;
-      if (tmp(5136).WindowSizeClassifier.NORMAL !== tmp4) {
+      if (tmp(5140).WindowSizeClassifier.NORMAL !== tmp4) {
         num = 3;
-        if (tmp(5136).WindowSizeClassifier.SMALL !== tmp4) {
+        if (tmp(5140).WindowSizeClassifier.SMALL !== tmp4) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
           const error = new Error("Unknown window size classifier: " + tmp4);
@@ -58,15 +58,15 @@ export const useMediaKeyboardItemsPerRow = ReactCompilerGating.isReactCompilerEn
   tmp15 = obj3;
   const obj = num(576);
 }) : (function useMediaKeyboardItemsPerRow() {
-  const tmp2 = itemsPageSizeRef(5136)();
+  const tmp2 = itemsPageSizeRef(5140)();
   let itemsPerRow = 8;
-  if (itemsPerRow(5136).WindowSizeClassifier.XLARGE !== tmp2) {
+  if (itemsPerRow(5140).WindowSizeClassifier.XLARGE !== tmp2) {
     itemsPerRow = 6;
-    if (tmp3(5136).WindowSizeClassifier.LARGE !== tmp2) {
+    if (tmp3(5140).WindowSizeClassifier.LARGE !== tmp2) {
       itemsPerRow = 4;
-      if (tmp3(5136).WindowSizeClassifier.NORMAL !== tmp2) {
+      if (tmp3(5140).WindowSizeClassifier.NORMAL !== tmp2) {
         itemsPerRow = 3;
-        if (tmp3(5136).WindowSizeClassifier.SMALL !== tmp2) {
+        if (tmp3(5140).WindowSizeClassifier.SMALL !== tmp2) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
           const error = new Error("Unknown window size classifier: " + tmp2);

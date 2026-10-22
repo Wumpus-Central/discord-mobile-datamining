@@ -1,8 +1,8 @@
-// === Module 15924: TwoFASetupModalActionCreators ===
+// === Module 15966: TwoFASetupModalActionCreators ===
 
-// Module 15924 (TwoFASetupModalActionCreators)
+// Module 15966 (TwoFASetupModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
 import size from "module_2" /* 2 */;
 
 const TWO_FA_SETUP_MODAL_KEY = "TWO_FA_SETUP_MODAL_KEY";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 
 export default {
   open(initialRouteName) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15925, dependencyMap.paths), { initialRouteName }, TWO_FA_SETUP_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15967, dependencyMap.paths), { initialRouteName }, TWO_FA_SETUP_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(TWO_FA_SETUP_MODAL_KEY);

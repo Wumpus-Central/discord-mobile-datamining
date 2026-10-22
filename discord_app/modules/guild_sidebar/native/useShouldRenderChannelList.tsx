@@ -1,13 +1,13 @@
-// === Module 17518: useShouldRenderChannelList ===
+// === Module 17588: useShouldRenderChannelList ===
 
-// Module 17518 (useShouldRenderChannelList)
+// Module 17588 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5132 */;
-import RootNavigationRef from "RootNavigationRef" /* 5133 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5136 */;
+import RootNavigationRef from "RootNavigationRef" /* 5137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7562 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6475 */;
+import CacheStore from "CacheStore" /* 7569 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6482 */;
 
 require = fn;
 const ComponentActions = fn(1087).ComponentActions;
@@ -135,8 +135,8 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
       }
     }
     function checkNavigationState() {
-      const obj = first(5132);
-      const rootNavigationRef = first(5133).getRootNavigationRef();
+      const obj = first(5136);
+      const rootNavigationRef = first(5137).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -145,14 +145,14 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5133);
+      const obj2 = first(5137);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
       let ComponentDispatch = first(1123).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5133).getRootNavigationRef();
+      let rootNavigationRef = first(5137).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }

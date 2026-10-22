@@ -1,6 +1,6 @@
-// === Module 12781: ? ===
+// === Module 12813: ? ===
 
-// Module 12781
+// Module 12813
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EnvelopeSpotIllustration-3x.png.js");

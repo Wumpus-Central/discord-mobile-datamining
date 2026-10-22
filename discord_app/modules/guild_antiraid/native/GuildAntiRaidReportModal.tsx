@@ -1,13 +1,13 @@
-// === Module 15110: GuildAntiRaidReportModal ===
+// === Module 15154: GuildAntiRaidReportModal ===
 
-// Module 15110 (GuildAntiRaidReportModal)
+// Module 15154 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import NavigatorHeader from "NavigatorHeader" /* 6903 */;
-import TableRowGroup from "TableRowGroup" /* 6966 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import NavigatorHeader from "NavigatorHeader" /* 6910 */;
+import TableRowGroup from "TableRowGroup" /* 6973 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,12 +16,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15111);
+const GuildReportRaidModalConstants = fn(15155);
 ({ getReportRaidHelpArticleURL: closure_7, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, headerSubtitle: { textAlign: "center", marginTop: 8 }, formBody: { marginTop: 24 }, formRow: { paddingVertical: 2 }, submitButtonContainer: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.submitButtonContainer = rect;
@@ -36,7 +36,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
   dependencyMap = tmp4;
   if (cResult[0] !== tmp4.formRow) {
     const fn = function n(arg0) {
-      return collapsed(Text_Text.Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: closure_2_8(arg0) });
+      return v65535(Text_Text.Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: closure_2_8(arg0) });
     };
     cResult[0] = tmp4.formRow;
     cResult[1] = fn;
@@ -66,7 +66,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
   }
   if (cResult[4] !== tmp4.headerSubtitle) {
     const obj3 = { style: headerSubtitle, variant: "text-sm/medium", color: "text-default", children: tmp7 };
-    const tmp11 = closure_10(tmp(5216).Text, obj3);
+    const tmp11 = closure_10(tmp(5220).Text, obj3);
     cResult[4] = tmp4.headerSubtitle;
     cResult[5] = tmp11;
     let tmp9 = tmp11;
@@ -80,7 +80,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
       }
       if (cResult[10] !== tmp13) {
         const obj4 = { hasIcons: false, children: tmp13 };
-        const tmp17 = closure_10(tmp(6966).TableRowGroup, obj4);
+        const tmp17 = closure_10(tmp(6973).TableRowGroup, obj4);
         cResult[10] = tmp13;
         cResult[11] = tmp17;
         let tmp15 = tmp17;
@@ -115,7 +115,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           }
           if (cResult[21] !== onSubmit) {
             const obj6 = { size: "md", text: tmp25, onPress: onSubmit };
-            const tmp29 = closure_10(tmp(5226).Button, obj6);
+            const tmp29 = closure_10(tmp(5230).Button, obj6);
             cResult[21] = onSubmit;
             cResult[22] = tmp29;
             let tmp27 = tmp29;
@@ -191,7 +191,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
   const tmp = closure_13();
   dependencyMap = tmp;
   const items = [tmp];
-  closure_3 = noop.useCallback((arg0) => collapsed(Text_Text.Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: closure_2_8(arg0) }), items);
+  closure_3 = noop.useCallback((arg0) => v65535(Text_Text.Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: closure_2_8(arg0) }), items);
   const obj = { style: tmp.container, children: null };
   const callback = noop.useCallback(() => {
     require("Linking").openURL(closure_1_7());
@@ -441,9 +441,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAnt
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(12663).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(12663);
-            tmp2(12663).handleReportRaid(guildId);
+            const result = tmp2(12695).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(12695);
+            tmp2(12695).handleReportRaid(guildId);
             const intl = tmp2(1128).intl;
             c1 = 1;
             dependencyMap = 1;

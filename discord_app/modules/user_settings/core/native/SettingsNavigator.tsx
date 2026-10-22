@@ -1,21 +1,21 @@
-// === Module 18186: SettingsNavigator ===
+// === Module 18256: SettingsNavigator ===
 
-// Module 18186 (SettingsNavigator)
+// Module 18256 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Pressables from "Pressables" /* 6887 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7070 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15860 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 17677 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 18187 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Pressables from "Pressables" /* 6894 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7077 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15902 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 17747 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 18257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15858 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15900 */;
 
 const require = globalThis.__r;
 
@@ -27,13 +27,13 @@ function LeftAlignedHeaderTitle(children) {
   if (usePersistentBadge != null) {
     persistentBadge = usePersistentBadge();
   }
-  const tmp5 = collapsed(Text_Text.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer, children: children.title });
+  const tmp5 = v65535(Text_Text.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer, children: children.title });
   let tmp6 = tmp5;
   if (null != persistentBadge) {
     const obj = { style: tmp.headerContainerRow, children: null };
     const items = [tmp5, ];
     const obj2 = { badge: persistentBadge };
-    items[1] = collapsed(closure_14, obj2);
+    items[1] = v65535(closure_14, obj2);
     obj.children = items;
     tmp6 = closure_1_11(View, obj);
   }
@@ -44,9 +44,9 @@ const Constants = fn(1087);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9701);
+const NativeStackNavigator = fn(9713);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.headerContainer = { width: "100%", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
@@ -63,7 +63,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: native.BetaSizes.SMALL };
-      const tmp7 = collapsed(native.BetaTag, obj2);
+      const tmp7 = v65535(native.BetaTag, obj2);
       cResult[0] = tmp7;
       let first = tmp7;
     } else {
@@ -74,7 +74,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
 }) : (function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
     const obj = { size: native.BetaSizes.SMALL };
-    return collapsed(native.BetaTag, obj);
+    return v65535(native.BetaTag, obj);
   }
 });
 ReactCompilerGating = fn(558);
@@ -305,10 +305,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -338,10 +338,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -370,10 +370,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -403,10 +403,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -431,10 +431,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -475,10 +475,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -503,10 +503,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -543,10 +543,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -573,10 +573,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -605,10 +605,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -634,10 +634,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -666,10 +666,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -694,10 +694,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -726,10 +726,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -753,10 +753,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -789,10 +789,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -816,10 +816,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl = util.intl;
             obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
             obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-            obj2.children = collapsed(View, obj3);
-            obj.children = collapsed(Pressables.PressableOpacity, obj2);
-            return collapsed(View, obj);
+            const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+            obj2.children = v65535(View, obj3);
+            obj.children = v65535(Pressables.PressableOpacity, obj2);
+            return v65535(View, obj);
           };
         }
       }
@@ -842,10 +842,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const intl = util.intl;
               obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
               obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-              const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-              obj2.children = collapsed(View, obj3);
-              obj.children = collapsed(Pressables.PressableOpacity, obj2);
-              return collapsed(View, obj);
+              const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+              obj2.children = v65535(View, obj3);
+              obj.children = v65535(Pressables.PressableOpacity, obj2);
+              return v65535(View, obj);
             };
           }
         }
@@ -874,10 +874,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 const intl = util.intl;
                 obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
                 obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-                const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-                obj2.children = collapsed(View, obj3);
-                obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                return collapsed(View, obj);
+                const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+                obj2.children = v65535(View, obj3);
+                obj.children = v65535(Pressables.PressableOpacity, obj2);
+                return v65535(View, obj);
               };
             }
           }
@@ -913,10 +913,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 const intl = util.intl;
                 obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
                 obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-                const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-                obj2.children = collapsed(View, obj3);
-                obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                return collapsed(View, obj);
+                const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+                obj2.children = v65535(View, obj3);
+                obj.children = v65535(Pressables.PressableOpacity, obj2);
+                return v65535(View, obj);
               };
             }
           }
@@ -940,10 +940,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 const intl = util.intl;
                 obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
                 obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-                const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-                obj2.children = collapsed(View, obj3);
-                obj.children = collapsed(Pressables.PressableOpacity, obj2);
-                return collapsed(View, obj);
+                const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+                obj2.children = v65535(View, obj3);
+                obj.children = v65535(Pressables.PressableOpacity, obj2);
+                return v65535(View, obj);
               };
             }
           }
@@ -1098,10 +1098,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj2.hitSlop = BackIconWithBadge.BACK_ICON_WITH_BADGE_HIT_SLOP;
-    const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: collapsed(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
-    obj2.children = collapsed(View, obj3);
-    obj.children = collapsed(Pressables.PressableOpacity, obj2);
-    return collapsed(View, obj);
+    const obj3 = { style: navigation.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: v65535(BackIconWithBadge.SettingsLeftIconWithBadge, { navigation }) };
+    obj2.children = v65535(View, obj3);
+    obj.children = v65535(Pressables.PressableOpacity, obj2);
+    return v65535(View, obj);
   }, items3);
   const memo1 = noop.useMemo(() => ({
     transitionEnd(data) {

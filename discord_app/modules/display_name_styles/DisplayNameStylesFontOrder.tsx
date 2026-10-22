@@ -1,7 +1,7 @@
-// === Module 16521: DisplayNameStylesFontOrder ===
+// === Module 16590: DisplayNameStylesFontOrder ===
 
-// Module 16521 (DisplayNameStylesFontOrder)
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 15760 */;
+// Module 16590 (DisplayNameStylesFontOrder)
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 15802 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNa
 export const useVisibleFontOrder = ReactCompilerGating.isReactCompilerEnabled() ? (function useVisibleFontOrder() {
   return DisplayNameStylesFlywheelExperiment.useIsDisplayNameStylesFlywheelSettersEnabled("font-order") ? items1 : items;
 }) : (function useVisibleFontOrder() {
-  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(15760).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(15802).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return noop.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? items1 : items, items);
 });

@@ -1,16 +1,16 @@
-// === Module 14330: UserProfileContactButtons ===
+// === Module 14373: UserProfileContactButtons ===
 
-// Module 14330 (UserProfileContactButtons)
+// Module 14373 (UserProfileContactButtons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7388 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7391 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11118 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13430 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 13915 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7395 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7398 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11135 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13466 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13951 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
@@ -23,7 +23,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1087).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, flexGrow: { flex: 1 }, iconButtonGroup: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.iconButtonGroup = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
@@ -113,9 +113,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   ({ hasCustomProfileTheme, location: _location, ButtonComponent } = user);
   let obj = user(576);
   const tmp4 = trackUserProfileAction;
-  trackUserProfileAction = user(8643).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = user(8652).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (_location == null) {
-    _location = trackUserProfileAction(7230)().newestAnalyticsLocation;
+    _location = trackUserProfileAction(7237)().newestAnalyticsLocation;
   }
   if (cResult[0] !== _location) {
     let obj3 = { location: _location };
@@ -126,8 +126,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
     tmp5 = cResult[1];
   }
   dependencyMap = tmp5;
-  let obj2 = user(8643);
-  const gameFriendsForUser = user(14244).useGameFriendsForUser(user.id);
+  let obj2 = user(8652);
+  const gameFriendsForUser = user(14282).useGameFriendsForUser(user.id);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RelationshipStore];
     cResult[2] = items;
@@ -145,10 +145,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   } else {
     tmp8 = cResult[4];
   }
-  const tmpResult = user(14244);
+  const tmpResult = user(14282);
   const stateFromStores = user(504).useStateFromStores(tmp6, tmp8);
   const tmpResult2 = user(504);
-  const name = tmp4(5015).useName(user);
+  const name = tmp4(5018).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -157,9 +157,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp(14331).UserClockIcon;
+          let UserPlusIcon = tmp(14374).UserClockIcon;
         } else {
-          UserPlusIcon = tmp(5654).UserPlusIcon;
+          UserPlusIcon = tmp(5658).UserPlusIcon;
         }
         if (cResult[5] !== (stateFromStores === RelationshipTypes.PENDING_OUTGOING)) {
           const intl = tmp(1128).intl;
@@ -259,19 +259,19 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8643).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8652).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7230)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7237)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8643);
+  let obj = user(8652);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(14244).useGameFriendsForUser(user.id);
-  const tmp3Result = user(14244);
+  const gameFriendsForUser = user(14282).useGameFriendsForUser(user.id);
+  const tmp3Result = user(14282);
   const items = [RelationshipStore];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(5015).useName(user);
+  userDisplayName = tmp(5018).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -280,9 +280,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(14331).UserClockIcon;
+          let UserPlusIcon = tmp3(14374).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(5654).UserPlusIcon;
+          UserPlusIcon = tmp3(5658).UserPlusIcon;
         }
         const intl = tmp3(1128).intl;
         const string = intl.string;

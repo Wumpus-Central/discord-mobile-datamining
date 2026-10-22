@@ -1,13 +1,13 @@
-// === Module 12810: ChannelTabsStore ===
+// === Module 12842: ChannelTabsStore ===
 
-// Module 12810 (ChannelTabsStore)
+// Module 12842 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
-import TabsExperimentDefault from "TabsExperiment" /* 12811 */;
+import TabsExperimentDefault from "TabsExperiment" /* 12843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
 function handleChannelDelete(channel) {
@@ -460,53 +460,67 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       const obj2 = obj3(1385);
     }
     if (enabled) {
-      if (0 !== tabs.length) {
-        if (null != id) {
-          const found = tabs.find((id) => id.id === id);
-          if (null != found) {
-            obj3 = { kind: "route", routePath, routeLabel: routePath.routeLabel };
-            if (found.pinned) {
-              if (arr.length >= 25) {
-                return false;
-              } else {
-                const obj4 = { id: null };
-                const _String = String;
-                closure_9 = tmp8 + 1;
-                obj4.id = String(+closure_9);
-                let merged = Object.assign(obj3);
-                obj4.pinned = false;
-                let items = [obj3];
-                obj4.entries = items;
-                obj4.index = 0;
-                const items1 = [];
-                items1[HermesBuiltin.arraySpread(tabs, 0)] = obj4;
-                tabs = items1;
-                id = obj4.id;
-              }
+      obj3 = { kind: "route", routePath, routeLabel: routePath.routeLabel };
+      if (0 === tabs.length) {
+        const obj4 = { id: null };
+        const _String2 = String;
+        closure_9 = tmp16 + 1;
+        obj4.id = String(+closure_9);
+        let merged = Object.assign(obj3);
+        obj4.pinned = false;
+        let items = [obj3];
+        obj4.entries = items;
+        obj4.index = 0;
+        const items1 = [obj4];
+        tabs = items1;
+        let id = obj4.id;
+      } else if (null == id) {
+        return false;
+      } else {
+        const found = tabs.find((id) => id.id === id);
+        if (null != found) {
+          if (found.pinned) {
+            if (arr.length >= 25) {
+              return false;
             } else {
-              tabs = arr.map((id) => {
-                if (id.id !== c8) {
-                  return id;
-                } else {
-                  const entries = id.entries;
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = obj3;
-                  const obj = { id: null, pinned: null };
-                  ({ id: obj.id, pinned: obj.pinned } = id);
-                  const diff = items.length - 1;
-                  const merged = Object.assign(obj3);
-                  obj.entries = items;
-                  obj.index = diff;
-                  return obj;
-                }
-              });
+              const obj5 = { id: null };
+              const _String = String;
+              closure_9 = tmp8 + 1;
+              obj5.id = String(+closure_9);
+              const merged1 = Object.assign(obj3);
+              obj5.pinned = false;
+              const items2 = [obj3];
+              obj5.entries = items2;
+              obj5.index = 0;
+              const items3 = [];
+              items3[HermesBuiltin.arraySpread(tabs, 0)] = obj5;
+              tabs = items3;
+              id = obj5.id;
             }
+          } else {
+            tabs = arr.map((id) => {
+              if (id.id !== c8) {
+                return id;
+              } else {
+                const entries = id.entries;
+                const items = [];
+                items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = obj3;
+                const obj = { id: null, pinned: null };
+                ({ id: obj.id, pinned: obj.pinned } = id);
+                const diff = items.length - 1;
+                const merged = Object.assign(obj3);
+                obj.entries = items;
+                obj.index = diff;
+                return obj;
+              }
+            });
           }
-          return false;
         }
+        return false;
       }
+    } else {
+      return false;
     }
-    return false;
   },
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
     ({ channelId, guildId } = arg0);

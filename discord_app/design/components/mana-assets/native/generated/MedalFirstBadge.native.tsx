@@ -1,23 +1,23 @@
-// === Module 10632: MedalFirstBadge ===
+// === Module 10644: MedalFirstBadge ===
 
-// Module 10632 (MedalFirstBadge)
+// Module 10644 (MedalFirstBadge)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import assetHelpers from "assetHelpers" /* 6974 */;
-import _modDef10633 from "module_10633" /* 10633 */;
-import _modDef10634 from "module_10634" /* 10634 */;
-import _modDef10635 from "module_10635" /* 10635 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import assetHelpers from "assetHelpers" /* 6981 */;
+import _modDef10645 from "module_10645" /* 10645 */;
+import _modDef10646 from "module_10646" /* 10646 */;
+import _modDef10647 from "module_10647" /* 10647 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10633 }, 3: null };
-let obj2 = { uri: _modDef10633 };
-obj[2] = { uri: _modDef10634 };
-const obj3 = { uri: _modDef10634 };
-obj[3] = { uri: _modDef10635 };
+let obj = { 1: null, 2: { uri: _modDef10645 }, 3: null };
+let obj2 = { uri: _modDef10645 };
+obj[2] = { uri: _modDef10646 };
+const obj3 = { uri: _modDef10646 };
+obj[3] = { uri: _modDef10647 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef10635 };
+const obj4 = { uri: _modDef10647 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MedalFirstBadge.native.tsx");
 

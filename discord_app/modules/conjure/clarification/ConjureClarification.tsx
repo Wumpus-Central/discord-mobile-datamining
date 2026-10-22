@@ -1,6 +1,6 @@
-// === Module 12383: ConjureClarification ===
+// === Module 12409: ConjureClarification ===
 
-// Module 12383 (ConjureClarification)
+// Module 12409 (ConjureClarification)
 import util from "util" /* 1128 */;
 import _modDef3830 from "module_3830" /* 3830 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -226,7 +226,7 @@ export const clarificationEntities = function clarificationEntities(project, ite
     }
   });
 };
-export const entityAnswer = function entityAnswer(input, entities, str, guildId) {
+export const entityAnswer = function entityAnswer(input, c10, str, guildId) {
   closure_0 = input;
   const trimmed = str.trim();
   obj = { kind: "entities", entities };
@@ -243,7 +243,7 @@ export const entityAnswer = function entityAnswer(input, entities, str, guildId)
   }
   const merged1 = Object.assign(obj3);
   const items = [
-    ...entities.map((name) => {
+    ...c10.map((name) => {
       name = name.name;
       if (name.startsWith(dependencyMap[closure_0])) {
         let name2 = name.name;

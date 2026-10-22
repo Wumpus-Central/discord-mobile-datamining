@@ -1,9 +1,9 @@
-// === Module 15063: GuildBadgeLeaf ===
+// === Module 15107: GuildBadgeLeaf ===
 
-// Module 15063 (GuildBadgeLeaf)
+// Module 15107 (GuildBadgeLeaf)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7938 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15056 */;
+import inlineStyles from "inlineStyles" /* 7946 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15100 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

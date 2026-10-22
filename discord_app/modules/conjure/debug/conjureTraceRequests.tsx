@@ -1,6 +1,6 @@
-// === Module 11792: conjureTraceRequests ===
+// === Module 11813: conjureTraceRequests ===
 
-// Module 11792 (conjureTraceRequests)
+// Module 11813 (conjureTraceRequests)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

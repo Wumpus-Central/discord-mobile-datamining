@@ -1,22 +1,22 @@
-// === Module 11954: useActivityShelfItem ===
+// === Module 11975: useActivityShelfItem ===
 
-// Module 11954 (useActivityShelfItem)
+// Module 11975 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import Server from "Server" /* 2000 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4890 */;
-import getPlatformDefault from "getPlatform" /* 5615 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6790 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7234 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10728 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11290 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11382 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11383 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11436 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11955 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11956 */;
+import getPlatformDefault from "getPlatform" /* 5619 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6797 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7241 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10740 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 11309 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11399 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11400 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11453 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11976 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11977 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
 
 require = fn;
@@ -38,8 +38,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = closure_10({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(7230)().analyticsLocations;
-  closure_13 = context(11383)();
+  analyticsLocations = context(7237)().analyticsLocations;
+  closure_13 = context(11400)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -305,7 +305,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(2026).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1087).ApplicationFlags;
-const MAIN_SURFACE = fn(6755).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6762).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);

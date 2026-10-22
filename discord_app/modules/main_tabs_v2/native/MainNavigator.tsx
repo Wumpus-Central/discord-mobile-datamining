@@ -1,22 +1,22 @@
-// === Module 17183: MainNavigator ===
+// === Module 17253: MainNavigator ===
 
-// Module 17183 (MainNavigator)
+// Module 17253 (MainNavigator)
 import c from "c" /* 576 */;
 import PlatformUtils2 from "PlatformUtils" /* 1384 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1503 */;
 import KeyboardTypes from "KeyboardTypes" /* 1631 */;
-import DeviceUtils from "DeviceUtils" /* 4923 */;
-import ChatInputUtils from "ChatInputUtils" /* 5141 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9989 */;
-import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11502 */;
-import StartupProfiler from "StartupProfiler" /* 12940 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15184 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17185 */;
-import AutoAnalytics from "AutoAnalytics" /* 18022 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18069 */;
-import AppComponents from "AppComponents" /* 18259 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 18500 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18531 */;
+import DeviceUtils from "DeviceUtils" /* 4926 */;
+import ChatInputUtils from "ChatInputUtils" /* 5145 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10001 */;
+import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11519 */;
+import StartupProfiler from "StartupProfiler" /* 12976 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 15228 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 17255 */;
+import AutoAnalytics from "AutoAnalytics" /* 18092 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 18139 */;
+import AppComponents from "AppComponents" /* 18327 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 18568 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -79,19 +79,19 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17184).StackNavigationAnimationSettings;
+let closure_7 = fn(17254).StackNavigationAnimationSettings;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const mainNavigator = "mainNavigator";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_14 = createStyles.createStyles({ flex: { flex: 1 } });
 let PlatformUtils = fn(1384);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  PlatformUtils = fn(4923).getSystemVersionMajor() <= 15;
-  let obj4 = fn(4923);
+  PlatformUtils = fn(4926).getSystemVersionMajor() <= 15;
+  let obj4 = fn(4926);
 }
 let closure_16 = createAccessibleNativeStackNavigatorDefault();
 const Screen = createChatPanelNativeStackNavigatorDefault();
@@ -106,7 +106,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp8 = collapsed(first.default, {});
+    const tmp8 = v65535(first.default, {});
     cResult[1] = tmp8;
     let tmp6 = tmp8;
   } else {
@@ -114,7 +114,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
   }
   return tmp6;
 }) : (function WrappedAutoAnalytics() {
-  return collapsed(AutoAnalytics.default, {});
+  return v65535(AutoAnalytics.default, {});
 });
 const options = Object.freeze({ animation: "none" });
 ReactCompilerGating = fn(558);
@@ -143,20 +143,20 @@ function getChannelScreen() {
             type = action.type;
           }
         }
-        obj = animation(5141);
+        obj = animation(5145);
         if ("GO_BACK" === type) {
           let SWIPE = constants2.BACK_BUTTON;
         } else {
           SWIPE = constants2.SWIPE;
         }
-        closure_1_1(5693).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-        const obj4 = closure_1_1(5693);
+        closure_1_1(5697).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+        const obj4 = closure_1_1(5697);
       }
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(9657).renderHeader };
+      const obj = { headerShown: true, header: styles(9669).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(9657).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -661,7 +661,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         },
         children: null
       };
-      const items = [collapsed(closure_17.Screen, { name: "tabs", getComponent: getTabsComponent, options }), ];
+      const items = [v65535(closure_17.Screen, { name: "tabs", getComponent: getTabsComponent, options }), ];
       let animation;
       if (accessibilityNativeStackOptions != null) {
         animation = accessibilityNativeStackOptions.animation;
@@ -673,7 +673,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         animation = closure_7.animation;
       }
       const obj3 = { children: null };
-      items[1] = collapsed(closure_17.Screen, {
+      items[1] = v65535(closure_17.Screen, {
         name: "channel",
         getId(params) {
           return params.params.screenKey;
@@ -693,20 +693,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 type = action.type;
               }
             }
-            obj = animation(5141);
+            obj = animation(5145);
             if ("GO_BACK" === type) {
               let SWIPE = constants2.BACK_BUTTON;
             } else {
               SWIPE = constants2.SWIPE;
             }
-            closure_1_1(5693).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-            const obj4 = closure_1_1(5693);
+            closure_1_1(5697).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+            const obj4 = closure_1_1(5697);
           }
         },
         options(arg0) {
-          const obj = { headerShown: true, header: styles(9657).renderHeader };
+          const obj = { headerShown: true, header: styles(9669).renderHeader };
           ({ navigation, route } = arg0);
-          const merged = Object.assign(styles(9657).getDefaultChannelStackHeaderProps(navigation, route));
+          const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
           const merged1 = Object.assign(animation2);
           obj.animation = animation;
           return obj;
@@ -747,7 +747,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         },
         children: null
       };
-      const items = [collapsed(closure_17.Screen, { name: "tabs", getComponent: getTabsComponent, options }), ];
+      const items = [v65535(closure_17.Screen, { name: "tabs", getComponent: getTabsComponent, options }), ];
       let animation;
       if (accessibilityNativeStackOptions != null) {
         animation = accessibilityNativeStackOptions.animation;
@@ -759,7 +759,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         animation = closure_7.animation;
       }
       const obj3 = { children: null };
-      items[1] = collapsed(closure_17.Screen, {
+      items[1] = v65535(closure_17.Screen, {
         name: "channel",
         getId(params) {
           return params.params.screenKey;
@@ -779,20 +779,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 type = action.type;
               }
             }
-            obj = animation(5141);
+            obj = animation(5145);
             if ("GO_BACK" === type) {
               let SWIPE = constants2.BACK_BUTTON;
             } else {
               SWIPE = constants2.SWIPE;
             }
-            closure_1_1(5693).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-            const obj4 = closure_1_1(5693);
+            closure_1_1(5697).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+            const obj4 = closure_1_1(5697);
           }
         },
         options(arg0) {
-          const obj = { headerShown: true, header: styles(9657).renderHeader };
+          const obj = { headerShown: true, header: styles(9669).renderHeader };
           ({ navigation, route } = arg0);
-          const merged = Object.assign(styles(9657).getDefaultChannelStackHeaderProps(navigation, route));
+          const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
           const merged1 = Object.assign(animation2);
           obj.animation = animation;
           return obj;
@@ -832,7 +832,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let tmpResult = null;
     const tmp9 = ParentalConsentWarningBannerDefault;
     if (stateFromStores) {
-      tmpResult = collapsed(closure_21, {});
+      tmpResult = v65535(closure_21, {});
     }
     let items = [tmpResult, ];
     let obj3 = { profile: null, children: null };
@@ -846,7 +846,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       children: null
     };
     let items1 = [
-      collapsed(closure_16.Screen, {
+      v65535(closure_16.Screen, {
         name: "main",
         options,
         children() {
@@ -857,7 +857,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               if (closure_1_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(9657).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(9669).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(animation2);
               return { orientation: str, headerShown: false };
             },
@@ -895,20 +895,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     type = action.type;
                   }
                 }
-                obj = animation(5141);
+                obj = animation(5145);
                 if ("GO_BACK" === type) {
                   let SWIPE = constants2.BACK_BUTTON;
                 } else {
                   SWIPE = constants2.SWIPE;
                 }
-                closure_1_1(5693).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-                const obj4 = closure_1_1(5693);
+                closure_1_1(5697).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+                const obj4 = closure_1_1(5697);
               }
             },
             options(arg0) {
-              const obj = { headerShown: true, header: styles(9657).renderHeader };
+              const obj = { headerShown: true, header: styles(9669).renderHeader };
               ({ navigation, route } = arg0);
-              const merged = Object.assign(styles(9657).getDefaultChannelStackHeaderProps(navigation, route));
+              const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
               const merged1 = Object.assign(animation2);
               obj.animation = animation;
               return obj;
@@ -921,12 +921,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return closure_2_11(closure_2_12, obj3);
         }
       }),
-      collapsed(closure_16.Screen, { name: "search", getComponent: getSearchComponent }),
-      collapsed(closure_16.Screen, {
+      v65535(closure_16.Screen, { name: "search", getComponent: getSearchComponent }),
+      v65535(closure_16.Screen, {
         name: "conversations",
         getComponent: getConversationsComponent,
         options() {
-          return stateFromStores(9989)();
+          return stateFromStores(10001)();
         }
       }),
     ,
@@ -945,18 +945,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "channel-secondary-view-chat",
       getComponent: getChannelSecondaryViewChatComponent,
       options() {
-        return stateFromStores(9989)();
+        return stateFromStores(10001)();
       },
       listeners: { beforeRemove: resetChatKeyboard }
     };
-    items1[3] = collapsed(closure_16.Screen, obj8);
-    items1[4] = collapsed(closure_16.Screen, { name: "auth", getComponent: getAuthComponent, options });
+    items1[3] = v65535(closure_16.Screen, obj8);
+    items1[4] = v65535(closure_16.Screen, { name: "auth", getComponent: getAuthComponent, options });
     const obj11 = { name: "account-standing", getComponent: getAccountStanding, options: null };
     let merged = Object.assign(options);
     obj11.options = { presentation: "fullScreenModal", gestureEnabled: false };
-    items1[5] = collapsed(closure_16.Screen, obj11);
-    items1[6] = collapsed(closure_16.Screen, { name: "orbs-arcade-game", getComponent: getOrbsArcadeGameComponent, options: { presentation: "fullScreenModal", animation: "slide_from_bottom", gestureEnabled: false, orientation: "portrait" } });
-    items1[7] = collapsed(closure_16.Screen, {
+    items1[5] = v65535(closure_16.Screen, obj11);
+    items1[6] = v65535(closure_16.Screen, { name: "orbs-arcade-game", getComponent: getOrbsArcadeGameComponent, options: { presentation: "fullScreenModal", animation: "slide_from_bottom", gestureEnabled: false, orientation: "portrait" } });
+    items1[7] = v65535(closure_16.Screen, {
       name: "you",
       options() {
         const tmp2 = stateFromStores(first[41]);
@@ -1001,7 +1001,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(stateFromStores(9989)({ presentation: str }));
+        const merged = Object.assign(stateFromStores(10001)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -1059,7 +1059,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             if (closure_1_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(9657).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(9669).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(animation2);
             return { orientation: str, headerShown: false };
           },
@@ -1097,20 +1097,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   type = action.type;
                 }
               }
-              obj = animation(5141);
+              obj = animation(5145);
               if ("GO_BACK" === type) {
                 let SWIPE = constants2.BACK_BUTTON;
               } else {
                 SWIPE = constants2.SWIPE;
               }
-              closure_1_1(5693).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-              const obj4 = closure_1_1(5693);
+              closure_1_1(5697).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+              const obj4 = closure_1_1(5697);
             }
           },
           options(arg0) {
-            const obj = { headerShown: true, header: styles(9657).renderHeader };
+            const obj = { headerShown: true, header: styles(9669).renderHeader };
             ({ navigation, route } = arg0);
-            const merged = Object.assign(styles(9657).getDefaultChannelStackHeaderProps(navigation, route));
+            const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
             const merged1 = Object.assign(animation2);
             obj.animation = animation;
             return obj;
@@ -1128,7 +1128,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "conversations",
       getComponent: getConversationsComponent,
       options() {
-        return stateFromStores(9989)();
+        return stateFromStores(10001)();
       }
     };
     const obj9 = { beforeRemove: resetChatKeyboard };
@@ -1145,11 +1145,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj18 = { children: null };
     obj15.listeners = { beforeRemove: fn };
     obj15.getComponent = getFriendsNavigatorComponent;
-    items1[8] = collapsed(closure_16.Screen, obj15);
-    items1[9] = collapsed(closure_16.Screen, {
+    items1[8] = v65535(closure_16.Screen, obj15);
+    items1[9] = v65535(closure_16.Screen, {
       name: "settings",
       options() {
-        const tmp = stateFromStores(9989);
+        const tmp = stateFromStores(10001);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -1162,17 +1162,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       },
       getComponent: getSettingsComponent
     });
-    items1[10] = collapsed(closure_16.Screen, {
+    items1[10] = v65535(closure_16.Screen, {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(9989)({ lockOrientation: false });
+        return stateFromStores(10001)({ lockOrientation: false });
       }
     });
     const obj19 = {
       name: "settings",
       options() {
-        const tmp = stateFromStores(9989);
+        const tmp = stateFromStores(10001);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -1189,14 +1189,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(9989)({ lockOrientation: false });
+        return stateFromStores(10001)({ lockOrientation: false });
       }
     };
     tmp5Result = PlatformUtils2;
-    items1[11] = collapsed(closure_16.Screen, { name: "message-requests", options: getNavigationModalPresentationDefault(), getComponent: getMessageRequestsComponent });
+    items1[11] = v65535(closure_16.Screen, { name: "message-requests", options: getNavigationModalPresentationDefault(), getComponent: getMessageRequestsComponent });
     const obj21 = { name: "message-requests", options: getNavigationModalPresentationDefault(), getComponent: getMessageRequestsComponent };
-    items1[12] = collapsed(closure_16.Screen, { name: "context-menu-commands", options: getNavigationModalPresentationDefault(), getComponent: getContextMenuCommandNavigatorComponent });
-    items1[13] = collapsed(closure_16.Screen, {
+    items1[12] = v65535(closure_16.Screen, { name: "context-menu-commands", options: getNavigationModalPresentationDefault(), getComponent: getContextMenuCommandNavigatorComponent });
+    items1[13] = v65535(closure_16.Screen, {
       name: "modal",
       getId(params) {
         return params.params.modal.key;
@@ -1217,21 +1217,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           str2 = str3;
         }
-        const merged = Object.assign(stateFromStores(9989)({ presentation: str2 }));
+        const merged = Object.assign(stateFromStores(10001)({ presentation: str2 }));
         return obj;
       },
       getComponent: getModalComponent
     });
     obj4.children = items1;
     obj3.children = closure_2_11(closure_16.Navigator, obj4);
-    items[1] = collapsed(tmp2Result, obj3);
+    items[1] = v65535(tmp2Result, obj3);
     obj18.children = items;
     obj17.children = closure_2_11(tmp10, obj18);
-    obj16.children = collapsed(tmp9, obj17);
-    const items2 = [collapsed(tmp8, obj16), AppComponents.APP_EXTRA_COMPONENTS, AppComponents.APP_EXTRA_COMPONENTS_NEVER_FREEZE, AppComponents.APP_EXTRA_COMPONENTS_EXTERNAL_PIP];
+    obj16.children = v65535(tmp9, obj17);
+    const items2 = [v65535(tmp8, obj16), AppComponents.APP_EXTRA_COMPONENTS, AppComponents.APP_EXTRA_COMPONENTS_NEVER_FREEZE, AppComponents.APP_EXTRA_COMPONENTS_EXTERNAL_PIP];
     obj2.children = items2;
     obj.children = closure_2_11(tmp7, obj2);
-    return collapsed(tmp4, obj);
+    return v65535(tmp4, obj);
   }, items1);
 }));
 export const MAIN_NAVIGATOR_ID = "mainNavigator";

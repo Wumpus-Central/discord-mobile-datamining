@@ -1,8 +1,8 @@
-// === Module 5869: NetworkQuality ===
+// === Module 5876: NetworkQuality ===
 
-// Module 5869 (NetworkQuality)
-import TimeUtils from "TimeUtils" /* 5704 */;
-import NetworkStore from "NetworkStore" /* 5870 */;
+// Module 5876 (NetworkQuality)
+import TimeUtils from "TimeUtils" /* 5708 */;
+import NetworkStore from "NetworkStore" /* 5877 */;
 
 require = fn;
 const Constants = fn(1087);

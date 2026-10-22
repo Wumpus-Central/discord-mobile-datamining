@@ -1,26 +1,23 @@
-// === Module 8404: useMaybeFetchReferralsRemaining ===
+// === Module 8413: useMaybeFetchReferralsRemaining ===
 
-// Module 8404 (useMaybeFetchReferralsRemaining)
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7482 */;
+// Module 8413 (useMaybeFetchReferralsRemaining)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7539 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7546 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PremiumConstants = fn(1394);
-({ PremiumTypes: metroRequire, FractionalPremiumStates: closure_7 } = PremiumConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
 
 export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetchReferralsRemaining(arg0) {
-  const cResult = require("c").c(11);
+  const cResult = require("c").c(10);
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
-    const fn = function f() {
+    const fn = function o() {
       return currentUser.getCurrentUser();
     };
     cResult[0] = items;
@@ -34,133 +31,76 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
   const tmpResult = require("initialize");
   const hasDiscountApplied = require("PremiumSubscriptionOfferUtil").useHasDiscountApplied();
-  const tmpResult4 = require("PremiumSubscriptionOfferUtil");
+  const tmpResult3 = require("PremiumSubscriptionOfferUtil");
   const hasActiveTrial = require("PremiumSubscriptionTrialUtil").useHasActiveTrial();
-  const tmp11 = useFractionalPremiumInfoDefault();
   if (cResult[2] === stateFromStores) {
-    if (cResult[3] === tmp11) {
-      if (cResult[4] === hasActiveTrial) {
-        if (cResult[5] === hasDiscountApplied) {
-          let tmp12 = cResult[6];
-        }
-        importDefault = tmp12;
-        if (cResult[7] === tmp4) {
-          if (cResult[8] === tmp12) {
-            let tmp16 = cResult[9];
-            let tmp17 = cResult[10];
-          }
-          const effect = noop.useEffect(tmp16, tmp17);
-          class S {
-            constructor() {
-              tmp = closure_1;
-              if (closure_1) {
-                tmp2 = closure_0;
-                tmp = !closure_0;
-              }
-              if (tmp) {
-                tmp3 = closure_5;
-                result = closure_5.checkAndFetchReferralsRemaining();
-              }
-              return;
-            }
-          }
-        }
-        class S {
-          constructor() {
-            tmp = closure_1;
-            if (closure_1) {
-              tmp2 = closure_0;
-              tmp = !closure_0;
-            }
-            if (tmp) {
-              tmp3 = closure_5;
-              result = closure_5.checkAndFetchReferralsRemaining();
-            }
-            return;
-          }
-        }
-        const items1 = [tmp12, tmp4];
-        cResult[7] = tmp4;
-        cResult[8] = tmp12;
-        cResult[9] = S;
-        cResult[10] = items1;
-        tmp17 = items1;
-        tmp16 = S;
+    if (cResult[3] === hasActiveTrial) {
+      if (cResult[4] === hasDiscountApplied) {
+        let tmp10 = cResult[5];
       }
+      dependencyMap = tmp10;
+      if (cResult[6] === tmp4) {
+        if (cResult[7] === tmp10) {
+          let tmp13 = cResult[8];
+          let tmp14 = cResult[9];
+        }
+        const effect = noop.useEffect(tmp13, tmp14);
+      }
+      const fn2 = function b() {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = !closure_0;
+        }
+        if (tmp) {
+          const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
+        }
+      };
+      const items1 = [tmp10, tmp4];
+      cResult[6] = tmp4;
+      cResult[7] = tmp10;
+      cResult[8] = fn2;
+      cResult[9] = items1;
+      tmp14 = items1;
+      tmp13 = fn2;
     }
   }
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
   }
-  let fetched = true === verified;
-  if (fetched) {
-    fetched = tmp(1991).isPremiumExactly(stateFromStores, closure_6.TIER_2);
-    const tmpResult6 = tmp(1991);
-  }
-  if (fetched) {
-    fetched = tmp11.fetched;
-  }
-  if (fetched) {
-    fetched = tmp11.fractionalState !== constants.FP_ONLY;
-  }
-  if (fetched) {
-    fetched = !hasDiscountApplied;
-  }
-  if (fetched) {
-    fetched = !hasActiveTrial;
-  }
+  const tmp12 = true === verified && stateFromStores.hasPaidTier2Subscription() && !hasDiscountApplied && !hasActiveTrial;
   cResult[2] = stateFromStores;
-  cResult[3] = tmp11;
-  cResult[4] = hasActiveTrial;
-  cResult[5] = hasDiscountApplied;
-  cResult[6] = fetched;
-  tmp12 = fetched;
-  const tmpResult5 = require("PremiumSubscriptionTrialUtil");
+  cResult[3] = hasActiveTrial;
+  cResult[4] = hasDiscountApplied;
+  cResult[5] = tmp12;
+  tmp10 = tmp12;
+  const tmpResult4 = require("PremiumSubscriptionTrialUtil");
 }) : (function useMaybeFetchReferralsRemaining() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
-  let fetched;
+  dependencyMap = undefined;
   const items = [UserStore];
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
-  let tmp = flag;
-  const hasDiscountApplied = flag(8405).useHasDiscountApplied();
-  const obj2 = flag(8405);
-  const hasActiveTrial = flag(8406).useHasActiveTrial();
-  const tmp6 = fetched(7482)();
+  const hasDiscountApplied = flag(8414).useHasDiscountApplied();
+  const obj3 = flag(8414);
   let verified;
+  const hasActiveTrial = flag(8415).useHasActiveTrial();
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
   }
-  fetched = true === verified;
-  if (fetched) {
-    fetched = tmp(1991).isPremiumExactly(stateFromStores, closure_6.TIER_2);
-    const tmpResult = tmp(1991);
-  }
-  if (fetched) {
-    fetched = tmp6.fetched;
-  }
-  if (fetched) {
-    fetched = tmp6.fractionalState !== constants.FP_ONLY;
-  }
-  if (fetched) {
-    fetched = !hasDiscountApplied;
-  }
-  if (fetched) {
-    fetched = !hasActiveTrial;
-  }
-  const items1 = [fetched, flag];
+  const tmp4 = true === verified && stateFromStores.hasPaidTier2Subscription() && !hasDiscountApplied && !hasActiveTrial;
+  dependencyMap = tmp4;
+  const items1 = [tmp4, flag];
   const effect = noop.useEffect(() => {
-    let tmp = fetched;
-    if (fetched) {
+    let tmp = closure_1;
+    if (closure_1) {
       tmp = !flag;
     }
     if (tmp) {
       const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
-  const obj3 = flag(8406);
 });

@@ -1,17 +1,17 @@
-// === Module 7068: UserSettingsConfirmPassword ===
+// === Module 7075: UserSettingsConfirmPassword ===
 
-// Module 7068 (UserSettingsConfirmPassword)
+// Module 7075 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6986 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7012 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7069 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7070 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7072 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6993 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7019 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7076 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7077 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7079 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1087).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
@@ -269,7 +269,7 @@ export const UserSettingsConfirmPasswordWrapped = ReactCompilerGating.isReactCom
   if (cResult[0] !== settingNavigationRoute.params) {
     const obj3 = {};
     const merged = Object.assign(settingNavigationRoute.params);
-    const tmp8 = collapsed(UserSettingsConfirmPasswordInner, obj3);
+    const tmp8 = v65535(UserSettingsConfirmPasswordInner, obj3);
     cResult[0] = settingNavigationRoute.params;
     cResult[1] = tmp8;
     let tmp3 = tmp8;
@@ -279,5 +279,5 @@ export const UserSettingsConfirmPasswordWrapped = ReactCompilerGating.isReactCom
   return tmp3;
 }) : (function UserSettingsConfirmPasswordWrapped() {
   const merged = Object.assign(useSettingNavigationRoute.useSettingNavigationRoute().params);
-  return collapsed(UserSettingsConfirmPasswordInner, {});
+  return v65535(UserSettingsConfirmPasswordInner, {});
 });

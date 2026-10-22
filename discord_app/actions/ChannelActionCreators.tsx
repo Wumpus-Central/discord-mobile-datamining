@@ -1,22 +1,21 @@
-// === Module 7388: ChannelActionCreators ===
+// === Module 7395: ChannelActionCreators ===
 
-// Module 7388 (ChannelActionCreators)
+// Module 7395 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import HTTPUtils from "HTTPUtils" /* 1297 */;
-import shared from "shared" /* 4973 */;
-import RootNavigationRef from "RootNavigationRef" /* 5133 */;
-import transitionToChannel from "transitionToChannel" /* 5689 */;
-import preloadChannelDefault from "preloadChannel" /* 5691 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6613 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6800 */;
+import shared from "shared" /* 4976 */;
+import RootNavigationRef from "RootNavigationRef" /* 5137 */;
+import transitionToChannel from "transitionToChannel" /* 5693 */;
+import preloadChannelDefault from "preloadChannel" /* 5695 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6620 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6807 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7389 */;
+import ChangelogStore from "ChangelogStore" /* 7396 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import ReadStateStore from "ReadStateStore" /* 6750 */;
+import ReadStateStore from "ReadStateStore" /* 6757 */;
 
 const require = globalThis.__r;
 
@@ -408,29 +407,42 @@ export default {
     if (arg2 === undefined) {
       flag2 = false;
     }
+    let flag3;
     if (isChangelogChannelDefault(id)) {
       const obj = { last_changelog_id: ChangelogStore.latestChangelogId(), unread_count: ReadStateStore.getUnreadCount(id) };
       AnalyticsUtilsDefault.track(constants.CHANGE_LOG_DM_REMOVED, obj);
       const tmpResult = AnalyticsUtilsDefault;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
-    if (flag) {
-      router_utils.transitionTo(constants2.FRIENDS);
+    const channel = ChannelStore.getChannel(id);
+    flag3 = undefined;
+    if (channel != null) {
+      flag3 = channel.isMultiUserDM();
     }
-    const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
+    if (flag3 == null) {
+      flag3 = false;
+    }
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
+    if (flag) {
+      flag3(1114).transitionTo(constants2.FRIENDS);
+      const obj6 = flag3(1114);
+    }
+    const HTTP = flag3(1297).HTTP;
+    const request = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
-    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    request.rejectWithError = flag3(1297).rejectWithMigratedError();
+    const obj8 = flag3(1297);
     const delResult = HTTP.del(request);
     return HTTP.del(request).then(() => {
-      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
-      const intl = require("util").intl;
-      AccessibilityAnnouncer.announce(intl.string(require("util").t.nRbucl));
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      const t = util.t;
+      AccessibilityAnnouncer.announce(intl.string(flag3 ? t["Gdj/qt"] : t.nRbucl));
     }).catch(() => {
-      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
-      const intl = require("util").intl;
-      AccessibilityAnnouncer.announce(intl.string(require("util").t.ndXVI5));
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      const t = util.t;
+      AccessibilityAnnouncer.announce(intl.string(flag3 ? t.AKajgt : t.ndXVI5));
     });
   },
   bulkLeaveGroupDMs(channel_ids) {
@@ -532,8 +544,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7401).checkGuildTemplateDirty(closure_128_2);
-        name(7401);
+        const result = name(7408).checkGuildTemplateDirty(closure_128_2);
+        name(7408);
       }
       return closure_128_1;
     })();

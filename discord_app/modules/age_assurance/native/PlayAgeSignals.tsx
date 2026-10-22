@@ -1,7 +1,7 @@
-// === Module 8059: PlayAgeSignals ===
+// === Module 8067: PlayAgeSignals ===
 
-// Module 8059 (PlayAgeSignals)
-import NativePlayAgeSignalsModuleDefault from "NativePlayAgeSignalsModule" /* 8060 */;
+// Module 8067 (PlayAgeSignals)
+import NativePlayAgeSignalsModuleDefault from "NativePlayAgeSignalsModule" /* 8068 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

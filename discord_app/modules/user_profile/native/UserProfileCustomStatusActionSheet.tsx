@@ -1,22 +1,22 @@
-// === Module 11021: UserProfileCustomStatusActionSheet ===
+// === Module 11038: UserProfileCustomStatusActionSheet ===
 
-// Module 11021 (UserProfileCustomStatusActionSheet)
+// Module 11038 (UserProfileCustomStatusActionSheet)
 import nativeDefault from "native" /* 587 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5969 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 8711 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11005 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 11022 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11023 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5976 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8720 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11022 */;
+import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 11039 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11040 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7281);
+const Constants = fn(7288);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { statusPreviewContainer: { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 }, avatarContainer: { height: AVATAR_CONTAINER_SIZE, width: AVATAR_CONTAINER_SIZE, alignItems: "center", justifyContent: "center" }, avatarStatus: null, customStatusBubble: null };
 let obj3 = { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 };
 obj2.avatarStatus = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

@@ -1,10 +1,10 @@
-// === Module 13888: AppInteractionInfoActionSheet ===
+// === Module 13924: AppInteractionInfoActionSheet ===
 
-// Module 13888 (AppInteractionInfoActionSheet)
+// Module 13924 (AppInteractionInfoActionSheet)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8632 */;
-import UserActionCreators from "UserActionCreators" /* 8634 */;
-import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 13889 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8641 */;
+import UserActionCreators from "UserActionCreators" /* 8643 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 13925 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import GuildStore from "GuildStore" /* 4843 */;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles({ itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" }, itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -28,20 +28,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   const bottom = useSafeAreaInsetsDefault().bottom;
   if (cResult[0] !== onBack) {
     const obj2 = { onBack };
-    const tmp8 = closure_8(tmp5(13889), obj2);
+    const tmp8 = closure_8(tmp5(13925), obj2);
     cResult[0] = onBack;
     cResult[1] = tmp8;
   }
   const interactionMetadata = message.interactionMetadata;
   let tmp9;
   if (interactionMetadata != null) {
-    tmp9 = interactionMetadata.authorizing_integration_owners[tmp(undefined, 5585).ApplicationIntegrationType.USER_INSTALL];
+    tmp9 = interactionMetadata.authorizing_integration_owners[tmp(undefined, 5589).ApplicationIntegrationType.USER_INSTALL];
   }
   importDefault = tmp9;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp10;
   if (interactionMetadata2 != null) {
-    tmp10 = interactionMetadata2.authorizing_integration_owners[tmp(undefined, 5585).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp10 = interactionMetadata2.authorizing_integration_owners[tmp(undefined, 5589).ApplicationIntegrationType.GUILD_INSTALL];
   }
   dependencyMap = tmp10;
   const interactionMetadata3 = message.interactionMetadata;
@@ -163,11 +163,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
             return closure_7.getUser(id);
           }
         }
-        const obj3 = { guild: stateFromStores1, size: tmp(6862).GuildIconSizes.SMALL_32 };
-        const tmp37 = closure_8(tmp5(6862), obj3);
+        const obj3 = { guild: stateFromStores1, size: tmp(6869).GuildIconSizes.SMALL_32 };
+        const tmp37 = closure_8(tmp5(6869), obj3);
         cResult[15] = stateFromStores1;
         cResult[16] = tmp37;
-        const tmp5Result = tmp5(6862);
+        const tmp5Result = tmp5(6869);
       } else {
         class F {
           constructor() {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
           }
         }
         const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
-        const tmp39 = closure_8(tmp(5216).Text, obj4);
+        const tmp39 = closure_8(tmp(5220).Text, obj4);
         cResult[17] = stateFromStores1.name;
         cResult[18] = tmp39;
       } else {
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
           }
         }
         const obj6 = { variant: "text-xs/medium", color: "text-subtle", children: tmp40 };
-        const tmp43 = closure_8(tmp(5216).Text, obj6);
+        const tmp43 = closure_8(tmp(5220).Text, obj6);
         cResult[21] = tmp40;
         cResult[22] = tmp43;
       } else {
@@ -312,16 +312,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
         const items4 = [closure_8(tmp(1202).Avatar, obj10), ];
         const obj11 = { style: tmp4.itemLabel, children: null };
         const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp25.username };
-        const items5 = [closure_8(tmp(5216).Text, obj12), ];
+        const items5 = [closure_8(tmp(5220).Text, obj12), ];
         const obj13 = { variant: "text-xs/medium", color: "text-subtle", children: null };
         const intl = tmp(1128).intl;
         obj13.children = intl.string(tmp(1128).t["04gxNg"]);
-        items5[1] = closure_8(tmp(5216).Text, obj13);
+        items5[1] = closure_8(tmp(5220).Text, obj13);
         obj11.children = items5;
         items4[1] = closure_9(stateFromStores, obj11);
         obj9.children = items4;
         tmp52[1] = closure_9(stateFromStores, obj9);
-        tmp51 = closure_8(tmp(6887).PressableOpacity, tmp52);
+        tmp51 = closure_8(tmp(6894).PressableOpacity, tmp52);
       }
       cResult[56] = guildId;
       cResult[57] = tmp25;
@@ -366,13 +366,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   let tmp5;
   const memo = noop.useMemo(() => closure_2_8(ContextMenuSubmenuActionSheetHeaderDefault, { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 5585).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 5589).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 5585).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 5589).ApplicationIntegrationType.GUILD_INSTALL];
   }
   noop = tmp7;
   const interactionMetadata3 = message.interactionMetadata;
@@ -413,21 +413,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   }
   if (null != stateFromStores1) {
     const obj5 = { style: tmp.itemContainer, children: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(6862).GuildIconSizes.SMALL_32 };
-    const items5 = [closure_8(onBack(6862), obj6), ];
+    const obj6 = { guild: stateFromStores1, size: tmp10(6869).GuildIconSizes.SMALL_32 };
+    const items5 = [closure_8(onBack(6869), obj6), ];
     const obj7 = { style: tmp.itemLabel, children: null };
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
-    const items6 = [closure_8(tmp10(5216).Text, obj8), ];
+    const items6 = [closure_8(tmp10(5220).Text, obj8), ];
     const obj9 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp10(1128).intl;
     const obj10 = { application: message.author.username };
     obj9.children = intl2.format(tmp10(1128).t.ShLXXB, obj10);
-    items6[1] = closure_8(tmp10(5216).Text, obj9);
+    items6[1] = closure_8(tmp10(5220).Text, obj9);
     obj7.children = items6;
     items5[1] = closure_9(id, obj7);
     obj5.children = items5;
     let tmp26 = closure_9(id, obj5);
-    const tmp2Result = onBack(6862);
+    const tmp2Result = onBack(6869);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
@@ -442,17 +442,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
       const items7 = [closure_8(tmp10(1202).Avatar, obj13), ];
       const obj14 = { style: tmp.itemLabel, children: null };
       const obj15 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.username };
-      const items8 = [closure_8(tmp10(5216).Text, obj15), ];
+      const items8 = [closure_8(tmp10(5220).Text, obj15), ];
       const obj16 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const intl = tmp10(1128).intl;
       const obj17 = { application: message.author.username };
       obj16.children = intl.format(tmp10(1128).t.ShLXXB, obj17);
-      items8[1] = closure_8(tmp10(5216).Text, obj16);
+      items8[1] = closure_8(tmp10(5220).Text, obj16);
       obj14.children = items8;
       items7[1] = closure_9(id, obj14);
       obj12.children = items7;
       obj11.children = closure_9(id, obj12);
-      tmp26 = closure_8(tmp10(6887).PressableOpacity, obj11);
+      tmp26 = closure_8(tmp10(6894).PressableOpacity, obj11);
     }
   }
   const obj18 = { header: memo, bodyStyles: { paddingBottom: onBack(1633)().bottom }, children: null };
@@ -470,18 +470,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
     const items10 = [closure_8(tmp10(1202).Avatar, obj21), ];
     const obj22 = { style: tmp.itemLabel, children: null };
     const obj23 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp15.username };
-    const items11 = [closure_8(tmp10(5216).Text, obj23), ];
+    const items11 = [closure_8(tmp10(5220).Text, obj23), ];
     const obj24 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl3 = tmp10(1128).intl;
     obj24.children = intl3.string(tmp10(1128).t["04gxNg"]);
-    items11[1] = closure_8(tmp10(5216).Text, obj24);
+    items11[1] = closure_8(tmp10(5220).Text, obj24);
     obj22.children = items11;
     items10[1] = closure_9(id, obj22);
     obj20.children = items10;
     obj19.children = closure_9(id, obj20);
-    tmp32 = closure_8(tmp10(6887).PressableOpacity, obj19);
+    tmp32 = closure_8(tmp10(6894).PressableOpacity, obj19);
   }
   items9[1] = tmp32;
   obj18.children = items9;
-  return closure_9(message(5247).BottomSheet, obj18);
+  return closure_9(message(5251).BottomSheet, obj18);
 });

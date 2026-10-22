@@ -1,6 +1,6 @@
-// === Module 16019: IOSConversationSuggestionsSetting ===
+// === Module 16061: IOSConversationSuggestionsSetting ===
 
-// Module 16019 (IOSConversationSuggestionsSetting)
+// Module 16061 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
@@ -29,7 +29,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConv
 });
 fn(17).NativeModules.IntentsHandler;
 ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11155);
+const SettingBuilders = fn(11172);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSConversationSuggestionsSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,7 +65,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8308).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8317).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSConversationSuggestionsSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

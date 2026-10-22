@@ -1,8 +1,8 @@
-// === Module 17049: FeaturedFirstCardCoachmarkAnchor ===
+// === Module 17118: FeaturedFirstCardCoachmarkAnchor ===
 
-// Module 17049 (FeaturedFirstCardCoachmarkAnchor)
+// Module 17118 (FeaturedFirstCardCoachmarkAnchor)
 import c from "c" /* 576 */;
-import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 17050 */;
+import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 17119 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

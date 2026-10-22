@@ -1,11 +1,11 @@
-// === Module 15839: GuildProfileEmptyState ===
+// === Module 15881: GuildProfileEmptyState ===
 
-// Module 15839 (GuildProfileEmptyState)
+// Module 15881 (GuildProfileEmptyState)
 import util from "util" /* 1128 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 15840 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 15882 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");

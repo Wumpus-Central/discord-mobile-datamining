@@ -1,6 +1,6 @@
-// === Module 16759: NativeDiskUsageModule ===
+// === Module 16828: NativeDiskUsageModule ===
 
-// Module 16759 (NativeDiskUsageModule)
+// Module 16828 (NativeDiskUsageModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

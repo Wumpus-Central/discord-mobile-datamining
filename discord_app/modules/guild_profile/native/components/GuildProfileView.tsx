@@ -1,23 +1,23 @@
-// === Module 9189: GuildProfileView ===
+// === Module 9198: GuildProfileView ===
 
-// Module 9189 (GuildProfileView)
+// Module 9198 (GuildProfileView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 4835 */;
-import themes from "themes" /* 4988 */;
-import native from "native" /* 5020 */;
-import useThemeDefault from "useTheme" /* 5187 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useToken from "useToken" /* 5234 */;
-import LinearGradientDefault from "LinearGradient" /* 5240 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 9190 */;
-import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9191 */;
-import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9192 */;
-import GuildProfileGamesDefault from "GuildProfileGames" /* 9204 */;
-import GuildProfileTraitsDefault from "GuildProfileTraits" /* 14072 */;
+import themes from "themes" /* 4991 */;
+import native from "native" /* 5023 */;
+import useThemeDefault from "useTheme" /* 5191 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useToken from "useToken" /* 5238 */;
+import LinearGradientDefault from "LinearGradient" /* 5244 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 9199 */;
+import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9200 */;
+import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9201 */;
+import GuildProfileGamesDefault from "GuildProfileGames" /* 9213 */;
+import GuildProfileTraitsDefault from "GuildProfileTraits" /* 14106 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
@@ -26,7 +26,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1087).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, colorBanner: { height: 140, width: "100%" }, imageBanner: { height: 140, width: "100%", resizeMode: "cover" }, body: { marginTop: 12, paddingHorizontal: 16, gap: 16 }, error: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, buttonContainer: { marginTop: 160 }, header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, restrictedAcronym: null };
 let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.avatarBackground = size;
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   }
   if (tmp5Result) {
     const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp5Result = closure_7(guildProfile(5216).Text, obj3);
+    tmp5Result = closure_7(guildProfile(5220).Text, obj3);
   }
   const items2 = [tmp5Result, closure_7(GuildProfileGamesDefault, { profile: guildProfile }), closure_7(GuildProfileTraitsDefault, { profile: guildProfile })];
   obj2.children = items2;

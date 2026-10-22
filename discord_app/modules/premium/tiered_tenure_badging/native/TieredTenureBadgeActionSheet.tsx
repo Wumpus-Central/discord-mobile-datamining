@@ -1,17 +1,17 @@
-// === Module 11030: TieredTenureBadgeActionSheet ===
+// === Module 11047: TieredTenureBadgeActionSheet ===
 
-// Module 11030 (TieredTenureBadgeActionSheet)
+// Module 11047 (TieredTenureBadgeActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import openUserSettings from "openUserSettings" /* 7467 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7689 */;
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8632 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11031 */;
-import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11056 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import openUserSettings from "openUserSettings" /* 7474 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7696 */;
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8641 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11048 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11073 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -26,7 +26,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { headerContainer: { paddingHorizontal: 24, alignItems: "center" }, title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 }, rowContainer: { flexDirection: "row", width: "100%", height: 160, gap: 8, justifyContent: "center", alignItems: "center", marginTop: 24 }, rowContainerWithUsersBadge: { height: 186 }, badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 }, usersBadgeContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.sm }, badgeName: { marginTop: 8 }, badgeRequirement: { marginTop: 4 }, badgePremiumSince: { width: 90, marginTop: 4, textAlign: "center" }, footer: { marginHorizontal: 24 } };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -100,7 +100,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tiered
                       const date = new Date(premiumSince);
                       obj5.date = date;
                       obj4.children = intl2.formatToPlainString(util.t.Hu4jfi, obj5);
-                      tmp38 = collapsed(Text_Text.Text, obj4);
+                      tmp38 = v65535(Text_Text.Text, obj4);
                     }
                     cResult[28] = isUsersBadge;
                     cResult[29] = premiumSince;
@@ -109,7 +109,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tiered
                     tmp37 = tmp38;
                   }
                   const obj6 = { style: tmp4.badgeRequirement, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: tmp15 };
-                  const tmp36 = collapsed(Text_Text.Text, obj6);
+                  const tmp36 = v65535(Text_Text.Text, obj6);
                   cResult[25] = tmp4.badgeRequirement;
                   cResult[26] = tmp15;
                   cResult[27] = tmp36;
@@ -119,7 +119,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tiered
             }
           }
           const obj7 = { style: tmp8, variant: tmp9, color: tmp10, children: tmp11 };
-          const tmp33 = collapsed(tmp6, obj7);
+          const tmp33 = v65535(tmp6, obj7);
           cResult[19] = tmp6;
           cResult[20] = tmp8;
           cResult[21] = tmp9;
@@ -164,7 +164,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tiered
     if (cResult[14] === tmp4.badgeContainer) {
       if (cResult[17] !== small) {
         const obj8 = { resizeMode: "contain", source: small };
-        const tmp24 = collapsed(FastImageDefault, obj8);
+        const tmp24 = v65535(FastImageDefault, obj8);
         cResult[17] = small;
         cResult[18] = tmp24;
       }
@@ -203,13 +203,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tiered
     items[1] = usersBadgeContainer;
     obj2.style = items;
     const obj3 = { resizeMode: "contain", source: small };
-    const items1 = [collapsed(FastImageDefault, obj3), , , ];
+    const items1 = [v65535(FastImageDefault, obj3), , , ];
     const obj4 = { style: tmp.badgeName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
     obj4.children = intl.string(tieredTenureBadgeData.nameUnformatted);
-    items1[1] = collapsed(Text_Text.Text, obj4);
+    items1[1] = v65535(Text_Text.Text, obj4);
     const obj5 = { style: tmp.badgeRequirement, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: tmp7 };
-    items1[2] = collapsed(Text_Text.Text, obj5);
+    items1[2] = v65535(Text_Text.Text, obj5);
     if (isUsersBadge) {
       isUsersBadge = null != premiumSince;
     }
@@ -221,7 +221,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Tiered
       const date = new Date(premiumSince);
       obj7.date = date;
       obj6.children = intl2.formatToPlainString(util.t.Hu4jfi, obj7);
-      isUsersBadge = collapsed(Text_Text.Text, obj6);
+      isUsersBadge = v65535(Text_Text.Text, obj6);
     }
     items1[3] = isUsersBadge;
     obj2.children = items1;
@@ -524,7 +524,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TieredTe
                                       rowContainerWithUsersBadge = closure_1.rowContainerWithUsersBadge;
                                     }
                                     items[1] = rowContainerWithUsersBadge;
-                                    return collapsed(View, {
+                                    return v65535(View, {
                                       style: items,
                                       children: arr.map((badge, index) => {
                                         const obj = { badge, isUsersBadge: null, premiumSince: null };
@@ -770,7 +770,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TieredTe
         rowContainerWithUsersBadge = closure_1.rowContainerWithUsersBadge;
       }
       items[1] = rowContainerWithUsersBadge;
-      return collapsed(View, {
+      return v65535(View, {
         style: items,
         children: arr.map((badge, index) => {
           const obj = { badge, isUsersBadge: null, premiumSince: null };

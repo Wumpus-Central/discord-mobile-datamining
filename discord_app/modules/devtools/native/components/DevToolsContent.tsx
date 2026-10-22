@@ -1,20 +1,20 @@
-// === Module 16947: DevToolsContent ===
+// === Module 17016: DevToolsContent ===
 
-// Module 16947 (DevToolsContent)
+// Module 17016 (DevToolsContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import HapticUtils from "HapticUtils" /* 5194 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Pressables from "Pressables" /* 6887 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 12469 */;
-import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 12471 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15723 */;
-import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 16948 */;
+import HapticUtils from "HapticUtils" /* 5198 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Pressables from "Pressables" /* 6894 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 12499 */;
+import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 12501 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15765 */;
+import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 17017 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10975 */;
-import ExperimentStore from "ExperimentStore" /* 5172 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10992 */;
+import ExperimentStore from "ExperimentStore" /* 5176 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1261 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { devToolsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 }, sortingIcons: null, button: null, disabledButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
 obj.sortingIcons = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -113,14 +113,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDev
       let tmp7;
       if (null != stateFromStores) {
         const obj2 = { label: "Build override: ", value: tmp5 };
-        tmp7 = collapsed(memoResult, obj2, first);
+        tmp7 = v65535(memoResult, obj2, first);
       }
       return tmp7;
     } else if ("experiments" === first) {
       let tmp2;
       if (sum > 0) {
         const obj = { label: "Experiments overridden: ", value: sum.toString() };
-        tmp2 = collapsed(memoResult, obj, first);
+        tmp2 = v65535(memoResult, obj, first);
       }
       return tmp2;
     }
@@ -156,14 +156,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDev
       let tmp7;
       if (null != closure_0) {
         const obj2 = { label: "Build override: ", value: tmp5 };
-        tmp7 = collapsed(memoResult, obj2, tmp);
+        tmp7 = v65535(memoResult, obj2, tmp);
       }
       return tmp7;
     } else if ("experiments" === tmp) {
       let tmp2;
       if (closure_1 > 0) {
         const obj = { label: "Experiments overridden: ", value: closure_1.toString() };
-        tmp2 = collapsed(memoResult, obj, tmp);
+        tmp2 = v65535(memoResult, obj, tmp);
       }
       return tmp2;
     }
@@ -175,7 +175,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   ({ label, value } = arg0);
   if (cResult[0] !== value) {
     const obj2 = { variant: "text-xs/semibold", children: value };
-    const tmp6 = collapsed(Text_Text.Text, obj2);
+    const tmp6 = v65535(Text_Text.Text, obj2);
     cResult[0] = value;
     cResult[1] = tmp6;
     let tmp4 = tmp6;
@@ -199,7 +199,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
 }) : (function DevToolsContentSubLabel(arg0) {
   ({ label, value } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  const items = [label, collapsed(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
+  const items = [label, v65535(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
   obj.children = items;
   return closure_1_11(Text_Text.Text, obj);
 }));
@@ -230,7 +230,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp10 = closure_10(tmp(12469).ArrowSmallUpIcon, {});
+      const tmp10 = closure_10(tmp(12499).ArrowSmallUpIcon, {});
       cResult[5] = tmp10;
       let tmp8 = tmp10;
     } else {
@@ -293,7 +293,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
                 return;
               }
             }
-            const tmp18 = closure_10(tmp(12471).ArrowSmallDownIcon, {});
+            const tmp18 = closure_10(tmp(12501).ArrowSmallDownIcon, {});
             cResult[15] = tmp18;
             const tmp17 = tmp18;
           } else {
@@ -319,7 +319,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
             }
           }
           const obj2 = { onPress: C, disabled: end, style: tmp16, accessibilityRole: "button", accessibilityLabel: "Shift down", children: tmp17 };
-          const tmp21 = closure_10(tmp(6887).PressableOpacity, obj2);
+          const tmp21 = closure_10(tmp(6894).PressableOpacity, obj2);
           cResult[16] = end;
           cResult[17] = C;
           cResult[18] = tmp16;
@@ -332,7 +332,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     }
     const obj3 = { onPress: tmp5, disabled: start, style: tmp6, accessibilityRole: "button", accessibilityLabel: "Shift up", children: tmp8 };
-    const tmp13 = closure_10(tmp(6887).PressableOpacity, obj3);
+    const tmp13 = closure_10(tmp(6894).PressableOpacity, obj3);
     cResult[6] = start;
     cResult[7] = tmp5;
     cResult[8] = tmp6;

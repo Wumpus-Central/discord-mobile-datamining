@@ -1,12 +1,12 @@
-// === Module 9209: useResolveGameForProfile ===
+// === Module 9218: useResolveGameForProfile ===
 
-// Module 9209 (useResolveGameForProfile)
+// Module 9218 (useResolveGameForProfile)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7234 */;
-import useGame from "useGame" /* 7383 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7796 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7797 */;
-import useResolveGameDefault from "useResolveGame" /* 9210 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7241 */;
+import useGame from "useGame" /* 7390 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7804 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7805 */;
+import useResolveGameDefault from "useResolveGame" /* 9219 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 16714: AppIconRows ===
+// === Module 16783: AppIconRows ===
 
-// Module 16714 (AppIconRows)
+// Module 16783 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import AppIconTypes from "AppIconTypes" /* 9824 */;
-import AppIconUtils from "AppIconUtils" /* 14657 */;
-import AppIconRowDefault from "AppIconRow" /* 16715 */;
+import AppIconTypes from "AppIconTypes" /* 9836 */;
+import AppIconUtils from "AppIconUtils" /* 14701 */;
+import AppIconRowDefault from "AppIconRow" /* 16784 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13019 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13055 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackwardsCompatibleAppIconRows(arg0) {
@@ -41,7 +41,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
   } else {
     onLongPress = cResult[0];
   }
-  const TableRowGroup = tmp(6966).TableRowGroup;
+  const TableRowGroup = tmp(6973).TableRowGroup;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
     const stringResult = intl.string(tmp(1128).t.N4YDao);
@@ -121,7 +121,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(6966).TableRowGroup, obj2);
+    obj.children = closure_9(merged(6973).TableRowGroup, obj2);
     return closure_9(View, obj);
   }
 });
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIconR
                     const obj3 = { children: null };
                     const items1 = [tmp14, tmp24];
                     obj3.children = items1;
-                    const tmp31 = closure_1_11(collapsed, obj3);
+                    const tmp31 = closure_1_11(v65535, obj3);
                     cResult[23] = tmp14;
                     cResult[24] = tmp24;
                     cResult[25] = tmp31;
@@ -288,5 +288,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIconR
   obj5.children = React6(closure_13, obj6);
   items1[1] = React6(View, obj5);
   obj7.children = items1;
-  return closure_1_11(collapsed, obj7);
+  return closure_1_11(v65535, obj7);
 });

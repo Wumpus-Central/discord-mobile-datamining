@@ -1,6 +1,6 @@
-// === Module 12349: ? ===
+// === Module 12375: ? ===
 
-// Module 12349
+// Module 12375
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BotIllocon-3x.png.js");

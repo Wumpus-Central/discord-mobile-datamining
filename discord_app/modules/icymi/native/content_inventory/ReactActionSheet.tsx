@@ -1,25 +1,25 @@
-// === Module 17780: ReactActionSheet ===
+// === Module 17850: ReactActionSheet ===
 
-// Module 17780 (ReactActionSheet)
+// Module 17850 (ReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5207 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8800 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9783 */;
-import ICYMIContext from "ICYMIContext" /* 17728 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13019 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5211 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8809 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9795 */;
+import ICYMIContext from "ICYMIContext" /* 17798 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13055 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5248).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, base: { position: "relative" }, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -751,10 +751,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ReactA
               return obj3;
             } else {
               closure_5(true);
-              v1(8800).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8800);
+              v1(8809).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8809);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8800).feedItemActioned(obj4);
+              v1(8809).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };
@@ -1003,8 +1003,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReactAct
     const obj2 = { children: null };
     const obj3 = {};
     const merged1 = Object.assign(tmp4);
-    obj2.children = collapsed(closure_14, obj3);
-    const tmp15 = collapsed(ICYMIContext.ICYMIContextProvider, obj2);
+    obj2.children = v65535(closure_14, obj3);
+    const tmp15 = v65535(ICYMIContext.ICYMIContextProvider, obj2);
     cResult[2] = tmp4;
     cResult[3] = tmp15;
     let tmp9 = tmp15;
@@ -1020,8 +1020,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ReactAct
     const obj = { children: null };
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj.children = collapsed(closure_14, obj2);
-    return collapsed(ICYMIContext.ICYMIContextProvider, obj);
+    obj.children = v65535(closure_14, obj2);
+    return v65535(ICYMIContext.ICYMIContextProvider, obj);
   }
 });
 export const getStatusReplyContent = function getStatusReplyContent(reply) {

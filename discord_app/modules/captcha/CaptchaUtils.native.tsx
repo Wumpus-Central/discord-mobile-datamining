@@ -1,14 +1,14 @@
-// === Module 18544: captcha/CaptchaUtils ===
+// === Module 18612: captcha/CaptchaUtils ===
 
-// Module 18544 (captcha/CaptchaUtils)
+// Module 18612 (captcha/CaptchaUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6445 */;
-import ActionSheetStore from "ActionSheetStore" /* 5193 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6452 */;
+import ActionSheetStore from "ActionSheetStore" /* 5197 */;
 
 require = fn;
-const CAPTCHA_MODAL_KEY = fn(6453).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(6460).CAPTCHA_MODAL_KEY;
 let obj = {
   showCaptcha(options, arg1) {
     _require = arg1;
@@ -30,7 +30,7 @@ let obj = {
     };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(require("asyncRequireImpl")(18545, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
+    obj2.openLazy(require("asyncRequireImpl")(18613, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
   },
   showCaptchaAsync(nextResult1) {
     if (arg1 === undefined) {

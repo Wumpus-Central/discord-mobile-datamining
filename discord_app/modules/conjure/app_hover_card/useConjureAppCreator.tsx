@@ -1,8 +1,8 @@
-// === Module 13770: useConjureAppCreator ===
+// === Module 13806: useConjureAppCreator ===
 
-// Module 13770 (useConjureAppCreator)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12274 */;
-import ImagePreload from "ImagePreload" /* 13772 */;
+// Module 13806 (useConjureAppCreator)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12297 */;
+import ImagePreload from "ImagePreload" /* 13808 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (conjureProjectId == null) {
     conjureProjectId = null;
   }
-  const tmp4Result = owner_user_id(13771)(conjureProjectId, arg1, arg2);
+  const tmp4Result = owner_user_id(13807)(conjureProjectId, arg1, arg2);
   ({ project, remixProject } = tmp4Result);
   owner_user_id = undefined;
   if (project != null) {
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   cResult[3] = items3;
   tmp9 = items3;
   tmp8 = fn;
-  const tmp4 = owner_user_id(13771);
+  const tmp4 = owner_user_id(13807);
 }) : (function useConjureAppCreator(conjureProjectId, arg1, arg2) {
   _require = conjureProjectId;
   importDefault = arg2;

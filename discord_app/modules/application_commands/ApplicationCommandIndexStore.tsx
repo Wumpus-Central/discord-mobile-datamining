@@ -1,6 +1,6 @@
-// === Module 9607: ApplicationCommandIndexStore ===
+// === Module 9619: ApplicationCommandIndexStore ===
 
-// Module 9607 (ApplicationCommandIndexStore)
+// Module 9619 (ApplicationCommandIndexStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
@@ -8,26 +8,26 @@ import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
 import Server from "Server" /* 2000 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5616 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6806 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6809 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7607 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9611 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9612 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9613 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9615 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 10163 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5620 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6813 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6816 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7614 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9623 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9624 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9625 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9627 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 10175 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9608 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9620 */;
 import LocaleStore from "LocaleStore" /* 2068 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import UserStore from "UserStore" /* 1392 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9609 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9621 */;
 
 const require = globalThis.__r;
 const initializeDefault = initialize;
@@ -289,11 +289,11 @@ function handleFetchSuccess(arg0) {
           }
           let obj = {};
           let tmp19 = id;
-          let obj2 = id(7607);
+          let obj2 = id(7614);
           let merged = Object.assign(obj2.getApplicationCommandSection(toApplication(tmp6), false));
           let keyPermissionsResult;
           if (null != tmp6.permissions) {
-            let tmp19Result = tmp19(7610);
+            let tmp19Result = tmp19(7617);
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
           }
           let obj7 = { descriptor: null, commands: null };
@@ -315,7 +315,7 @@ function handleFetchSuccess(arg0) {
       const membersById = GuildActionCreatorsDefault.requestMembersById(target.guildId, items);
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(7607).buildApplicationCommands(application_commands.map((description_default) => {
+    const applicationCommands = id(7614).buildApplicationCommands(application_commands.map((description_default) => {
       const obj = {};
       const merged = Object.assign(description_default);
       let str = description_default.description_default;
@@ -374,7 +374,7 @@ function handleFetchSuccess(arg0) {
     obj8.result = obj9;
     obj8.fetchState = { fetching: false };
     updateIndex(target, obj8, flag);
-    const obj6 = id(7607);
+    const obj6 = id(7614);
     tmp32 = "guild" === target.type && set.size > 0;
     tmp64 = set;
   }
@@ -427,7 +427,7 @@ function handleStaleUserIndex() {
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(9613).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(9625).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -439,7 +439,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(9613).ScoreMethod.NONE;
+    NONE = NONE(9625).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -458,10 +458,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(9613).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(9613).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(9615).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(9615);
+  if (builtIns !== NONE(9625).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(9625).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(9627).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(9627);
   } else {
     builtInCommands = [];
   }
@@ -630,7 +630,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(NONE(9615).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(9627).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -644,7 +644,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(9613).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(9625).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {
@@ -1047,7 +1047,7 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
   }
   return constants4.COMMAND_NAME_STARTS_WITH;
 }
-const ApplicationCommandConstants = fn(5963);
+const ApplicationCommandConstants = fn(5970);
 ({ BuiltInSectionId: closure_15, DISCOVERY_COMMANDS_FRECENCY_LIMIT: closure_16 } = ApplicationCommandConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18 } = Constants);
@@ -2675,7 +2675,7 @@ export const useDiscoveryState = ReactCompilerGating.isReactCompilerEnabled() ? 
         let tmp5 = cResult[3];
       }
       _require = tmp5;
-      const topCommands = tmp(9614).useTopCommands(tmp5);
+      const topCommands = tmp(9626).useTopCommands(tmp5);
       if (cResult[4] === tmp5) {
         if (cResult[5] === commands) {
           if (cResult[6] === descriptors) {
@@ -2770,7 +2770,7 @@ export const useDiscoveryState = ReactCompilerGating.isReactCompilerEnabled() ? 
               return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
             }
           }
-          tmp16[0] = tmp(9615).BUILT_IN_SECTIONS[constants.FRECENCY];
+          tmp16[0] = tmp(9627).BUILT_IN_SECTIONS[constants.FRECENCY];
           tmp16[1] = spliceResult;
           cResult[28] = spliceResult;
           cResult[29] = tmp16;
@@ -2815,7 +2815,7 @@ export const useDiscoveryState = ReactCompilerGating.isReactCompilerEnabled() ? 
         cResult[24] = sectionedCommands;
         cResult[25] = obj4;
       }
-      const tmpResult = tmp(9614);
+      const tmpResult = tmp(9626);
     }
   }
   let tmp6;

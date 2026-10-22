@@ -1,17 +1,17 @@
-// === Module 12271: ConjureMessageRow ===
+// === Module 12294: ConjureMessageRow ===
 
-// Module 12271 (ConjureMessageRow)
+// Module 12294 (ConjureMessageRow)
 import nativeDefault from "native" /* 587 */;
-import conjureChatTurns from "conjureChatTurns" /* 10658 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11769 */;
-import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 12193 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12200 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 12228 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 12242 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12278 */;
-import ConjureChatRestore from "ConjureChatRestore" /* 12282 */;
-import conjureQueuedMessage from "conjureQueuedMessage" /* 12284 */;
-import ConjureActivityBox from "ConjureActivityBox" /* 12304 */;
+import conjureChatTurns from "conjureChatTurns" /* 10670 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11802 */;
+import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 12214 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12221 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 12251 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 12265 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12301 */;
+import ConjureChatRestore from "ConjureChatRestore" /* 12306 */;
+import conjureQueuedMessage from "conjureQueuedMessage" /* 12308 */;
+import ConjureActivityBox from "ConjureActivityBox" /* 12330 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
 
@@ -22,27 +22,27 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4966);
-let obj = { row: { position: "relative", paddingLeft: fn(12263).MESSAGE_CONTENT_INSET, paddingRight: fn(12263).MESSAGE_EDGE_INSET, paddingVertical: fn(12272).ROW_PAD, gap: fn(12272).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
-let obj3 = { position: "relative", paddingLeft: fn(12263).MESSAGE_CONTENT_INSET, paddingRight: fn(12263).MESSAGE_EDGE_INSET, paddingVertical: fn(12272).ROW_PAD, gap: fn(12272).BLOCK_GAP };
-obj.rowGroupStart = { marginTop: fn(12272).GROUP_GAP };
-let obj4 = { marginTop: fn(12272).GROUP_GAP };
-obj.boundaryRow = { paddingHorizontal: fn(12263).MESSAGE_EDGE_INSET, paddingVertical: fn(12272).ROW_PAD };
-const rect = { position: "absolute", left: fn(12263).MESSAGE_EDGE_INSET, top: fn(12272).ROW_PAD };
+const createStyles = fn(4969);
+let obj = { row: { position: "relative", paddingLeft: fn(12286).MESSAGE_CONTENT_INSET, paddingRight: fn(12286).MESSAGE_EDGE_INSET, paddingVertical: fn(12295).ROW_PAD, gap: fn(12295).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
+let obj3 = { position: "relative", paddingLeft: fn(12286).MESSAGE_CONTENT_INSET, paddingRight: fn(12286).MESSAGE_EDGE_INSET, paddingVertical: fn(12295).ROW_PAD, gap: fn(12295).BLOCK_GAP };
+obj.rowGroupStart = { marginTop: fn(12295).GROUP_GAP };
+let obj4 = { marginTop: fn(12295).GROUP_GAP };
+obj.boundaryRow = { paddingHorizontal: fn(12286).MESSAGE_EDGE_INSET, paddingVertical: fn(12295).ROW_PAD };
+const rect = { position: "absolute", left: fn(12286).MESSAGE_EDGE_INSET, top: fn(12295).ROW_PAD };
 obj.avatar = rect;
-let obj5 = { paddingHorizontal: fn(12263).MESSAGE_EDGE_INSET, paddingVertical: fn(12272).ROW_PAD };
-obj.spoken = { position: "relative", gap: fn(12272).BLOCK_GAP };
-const rect1 = { left: fn(12263).MESSAGE_EDGE_INSET - fn(12263).MESSAGE_CONTENT_INSET, top: 0 };
+let obj5 = { paddingHorizontal: fn(12286).MESSAGE_EDGE_INSET, paddingVertical: fn(12295).ROW_PAD };
+obj.spoken = { position: "relative", gap: fn(12295).BLOCK_GAP };
+const rect1 = { left: fn(12286).MESSAGE_EDGE_INSET - fn(12286).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj6 = { position: "relative", gap: fn(12272).BLOCK_GAP };
-obj.avatarSpokenReplying = { top: fn(12273).REPLY_PREVIEW_HEIGHT + fn(12272).BLOCK_GAP };
-let obj7 = { top: fn(12273).REPLY_PREVIEW_HEIGHT + fn(12272).BLOCK_GAP };
+let obj6 = { position: "relative", gap: fn(12295).BLOCK_GAP };
+obj.avatarSpokenReplying = { top: fn(12296).REPLY_PREVIEW_HEIGHT + fn(12295).BLOCK_GAP };
+let obj7 = { top: fn(12296).REPLY_PREVIEW_HEIGHT + fn(12295).BLOCK_GAP };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj8 = { marginBottom: -nativeDefault.space.PX_4 };
-obj.activityBox = { marginLeft: -fn(12272).RAIL_INDENT };
+obj.activityBox = { marginLeft: -fn(12295).RAIL_INDENT };
 let closure_10 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj9 = { marginLeft: -fn(12272).RAIL_INDENT };
+let obj9 = { marginLeft: -fn(12295).RAIL_INDENT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageRow.tsx");
 
@@ -164,7 +164,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         const _Symbol = Symbol;
                         if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
                           const items = [onTogglePlan];
-                          function xe() {
+                          function fe() {
                             const currentUser = onTogglePlan.getCurrentUser();
                             let id;
                             if (currentUser != null) {
@@ -173,8 +173,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                             return id;
                           }
                           cResult[36] = items;
-                          cResult[37] = xe;
-                          let tmp35 = xe;
+                          cResult[37] = fe;
+                          let tmp35 = fe;
                           let tmp34 = items;
                         } else {
                           tmp34 = cResult[36];
@@ -234,7 +234,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                   }
                                                                   cResult[67] = message.agentReaction;
                                                                   cResult[68] = tmp130;
-                                                                  class Ie {
+                                                                  class Re {
                                                                     constructor() {
                                                                       obj = closure_0(closure_2[20]);
                                                                       obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -270,7 +270,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                   }
                                                                 }
                                                                 let obj3 = { style: null, onLongPress: null, accessible: false, children: null };
-                                                                class Ie {
+                                                                class Re {
                                                                   constructor() {
                                                                     obj = closure_0(closure_2[20]);
                                                                     obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -311,7 +311,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                 tmp127 = replied(tmp40(tmp2[29]), obj4);
                                                               }
                                                               cResult[64] = tmp30;
-                                                              class Ie {
+                                                              class Re {
                                                                 constructor() {
                                                                   obj = closure_0(closure_2[20]);
                                                                   obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -347,7 +347,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                             combined = "" + intl2.string(tmp(tmp2[26]).t.KD6OJJ) + ": " + conjureMentionNames;
                                                           }
                                                           const obj6 = { variant: "text-md/normal", color: "text-default", accessibilityLabel: combined, children: null };
-                                                          class Ie {
+                                                          class Re {
                                                             constructor() {
                                                               obj = closure_0(closure_2[20]);
                                                               obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -390,7 +390,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                           tmp121Result = null;
                                                         }
                                                         cResult[59] = tmp25;
-                                                        class Ie {
+                                                        class Re {
                                                           constructor() {
                                                             obj = closure_0(closure_2[20]);
                                                             obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -423,7 +423,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                   if (groupStart) {
                                                     const obj9 = { style: tmp4.header, children: null };
                                                     const obj10 = { userId: message.user_id, at: null };
-                                                    class Ie {
+                                                    class Re {
                                                       constructor() {
                                                         obj = closure_0(closure_2[20]);
                                                         obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -449,7 +449,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                     tmp116 = replied(planSuperseded, obj9);
                                                   }
                                                   cResult[54] = groupStart;
-                                                  class Ie {
+                                                  class Re {
                                                     constructor() {
                                                       obj = closure_0(closure_2[20]);
                                                       obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -482,7 +482,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                               if (groupStart) {
                                                 const obj11 = { style: tmp4.avatar, children: null };
                                                 { userId: null }.userId = message.user_id;
-                                                class Ie {
+                                                class Re {
                                                   constructor() {
                                                     obj = closure_0(closure_2[20]);
                                                     obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -508,7 +508,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                 const obj12 = { userId: null };
                                               }
                                               cResult[50] = groupStart;
-                                              class Ie {
+                                              class Re {
                                                 constructor() {
                                                   obj = closure_0(closure_2[20]);
                                                   obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -547,7 +547,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                               if (null != message.contextSwitch) {
                                                 const obj13 = { style: tmp4.boundaryRow, children: null };
                                                 const obj14 = { projectId, contextSwitch: null };
-                                                class Ie {
+                                                class Re {
                                                   constructor() {
                                                     obj = closure_0(closure_2[20]);
                                                     obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -573,7 +573,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                 tmp107 = replied(planSuperseded, obj13);
                                               }
                                               cResult[77] = message.contextSwitch;
-                                              class Ie {
+                                              class Re {
                                                 constructor() {
                                                   obj = closure_0(closure_2[20]);
                                                   obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -612,7 +612,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                       return tmp102;
                                                     }
                                                     const obj15 = { style: tmp31, children: null };
-                                                    class Ie {
+                                                    class Re {
                                                       constructor() {
                                                         obj = closure_0(closure_2[20]);
                                                         obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -642,7 +642,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                   }
                                                   const obj16 = { projectId, event: message.projectEvent };
                                                   const tmp101 = replied(tmp40(tmp2[32]), obj16);
-                                                  class Ie {
+                                                  class Re {
                                                     constructor() {
                                                       obj = closure_0(closure_2[20]);
                                                       obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -683,7 +683,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                       return tmp95;
                                                     }
                                                     const obj17 = { style: tmp31, children: null };
-                                                    class Ie {
+                                                    class Re {
                                                       constructor() {
                                                         obj = closure_0(closure_2[20]);
                                                         obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -713,7 +713,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                   }
                                                   const obj18 = { projectId, notice: message.publishNotice };
                                                   const tmp94 = replied(tmp40(tmp2[33]), obj18);
-                                                  class Ie {
+                                                  class Re {
                                                     constructor() {
                                                       obj = closure_0(closure_2[20]);
                                                       obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -749,7 +749,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                   cResult[93] = stringResult;
                                                 }
                                                 const _Symbol5 = Symbol;
-                                                class Ie {
+                                                class Re {
                                                   constructor() {
                                                     obj = closure_0(closure_2[20]);
                                                     obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -774,7 +774,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                 if (cResult[95] !== tmp4.activityBox) {
                                                   const obj19 = { style: tmp4.activityBox, children: tmp83 };
                                                   const tmp87 = replied(planSuperseded, obj19);
-                                                  class Ie {
+                                                  class Re {
                                                     constructor() {
                                                       obj = closure_0(closure_2[20]);
                                                       obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -819,7 +819,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                   const proposal = message.proposal;
                                                 }
                                                 const turnSettledResult2 = tmp(tmp2[11]).turnSettled(message);
-                                                class Ie {
+                                                class Re {
                                                   constructor() {
                                                     obj = closure_0(closure_2[20]);
                                                     obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -871,7 +871,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                     if (restoreProposal == null) {
                                                       restoreProposal = null;
                                                     }
-                                                    class Ie {
+                                                    class Re {
                                                       constructor() {
                                                         obj = closure_0(closure_2[20]);
                                                         obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -970,7 +970,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                                       if (atResult != null) {
                                                                                         index = atResult.index;
                                                                                       }
-                                                                                      class Ie {
+                                                                                      class Re {
                                                                                         constructor() {
                                                                                           obj = closure_0(closure_2[20]);
                                                                                           obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -1002,7 +1002,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                                       const tmpResult23 = tmp(tmp2[11]);
                                                                                       cResult[127] = message;
                                                                                       cResult[128] = tmp(tmp2[11]).turnSettled(message);
-                                                                                      class Ie {
+                                                                                      class Re {
                                                                                         constructor() {
                                                                                           obj = closure_0(closure_2[20]);
                                                                                           obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -1029,7 +1029,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                                       const tmp75 = cResult[128];
                                                                                     }
                                                                                     closure_26 = tmp77;
-                                                                                    class Ie {
+                                                                                    class Re {
                                                                                       constructor() {
                                                                                         obj = closure_0(closure_2[20]);
                                                                                         obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -1096,7 +1096,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                                               }
                                                                               cResult[104] = tmp59;
                                                                               cResult[105] = tmp30;
-                                                                              class Ie {
+                                                                              class Re {
                                                                                 constructor() {
                                                                                   obj = closure_0(closure_2[20]);
                                                                                   obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -1179,7 +1179,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                               }
                             }
                           }
-                          class Ie {
+                          class Re {
                             constructor() {
                               obj = closure_0(closure_2[20]);
                               obj1 = { content: closure_15, userId: user_id, onQueuedAction: null, onRestoreVersion: null, onViewTrace: null };
@@ -1209,7 +1209,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                           cResult[46] = projectId;
                           cResult[47] = tmp41;
                           cResult[48] = tmp38;
-                          cResult[49] = Ie;
+                          cResult[49] = Re;
                         }
                         let turnRestoreEntryResult = null;
                         if (null != onRestoreVersion) {
@@ -1349,6 +1349,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     body = message.content;
   }
   trimmed = body.trim();
+  const tmp12 = groupStart;
   const conjureMentionNames = projectId(groupStart[15]).useConjureMentionNames(trimmed);
   if ("user" === message.role) {
     let result = tmp11(tmp12[16]).withoutInlineFileMentions(message.attachments, message.content);
@@ -1378,7 +1379,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   let obj2 = projectId(groupStart[15]);
   const items9 = [onTogglePlan];
-  stateFromStores = projectId(groupStart[17]).useStateFromStores(items9, () => {
+  stateFromStores = projectId(tmp12[17]).useStateFromStores(items9, () => {
     const currentUser = onTogglePlan.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -1394,7 +1395,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return turnRestoreEntryResult;
   }, items10);
-  const tmp19 = message(groupStart[19])(projectId, message);
+  const tmp19 = message(tmp12[19])(projectId, message);
   closure_19 = tmp19;
   const items11 = [trimmed, user_id, projectId, message, stateFromStores, memo5, onRestoreVersion, tmp19];
   const callback3 = checklistSuperseded.useCallback(() => {
@@ -1424,28 +1425,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if ("user" === message.role) {
         if ("" === trimmed) {
           if (null == memo4) {
-            let tmp87Result2 = null;
+            let tmp88Result2 = null;
           }
-          return tmp87Result2;
+          return tmp88Result2;
         }
         let obj3 = { style: items8, onLongPress: tmp22, accessible: false, children: null };
-        let tmp89 = null;
+        let tmp90 = null;
         if (groupStart) {
           let obj4 = { style: tmp.avatar, children: null };
           const obj5 = { userId: message.user_id };
           obj4.children = replied(tmp11(tmp12[24]).ConjureUserAvatar, obj5);
-          tmp89 = replied(planSuperseded, obj4);
+          tmp90 = replied(planSuperseded, obj4);
         }
-        const items12 = [tmp89, , , , ];
-        let tmp92 = null;
+        const items12 = [tmp90, , , , ];
+        let tmp93 = null;
         if (groupStart) {
           const obj6 = { style: tmp.header, children: null };
-          ({ user_id: obj54.userId, created_at: obj54.at } = message);
+          ({ user_id: obj55.userId, created_at: obj55.at } = message);
           obj6.children = replied(tmp11(tmp12[24]).ConjureUserHeader, { userId: null, at: null });
-          tmp92 = replied(planSuperseded, obj6);
+          tmp93 = replied(planSuperseded, obj6);
           const obj7 = { userId: null, at: null };
         }
-        items12[1] = tmp92;
+        items12[1] = tmp93;
         if (tmp21) {
           let combined;
           if (!groupStart) {
@@ -1454,12 +1455,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             combined = "" + intl3.string(tmp11(tmp12[26]).t.KD6OJJ) + ": " + conjureMentionNames;
           }
           const obj8 = { variant: "text-md/normal", color: "text-default", accessibilityLabel: combined, children: null };
-          let tmp98 = null;
+          let tmp99 = null;
           if (null != memo4) {
             const obj9 = { label: memo4.label, variant: "text-md/medium" };
-            tmp98 = replied(tmp18(tmp12[27]), obj9);
+            tmp99 = replied(tmp18(tmp12[27]), obj9);
           }
-          const items13 = [tmp98, , ];
+          const items13 = [tmp99, , ];
           let str5 = null;
           if (null != memo4) {
             str5 = null;
@@ -1471,34 +1472,34 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj10 = { text: trimmed, variant: "text-md/normal" };
           items13[2] = replied(tmp18(tmp12[28]), obj10);
           obj8.children = items13;
-          let tmp87Result = tmp87(tmp11(tmp12[25]).Text, obj8);
+          let tmp88Result = tmp88(tmp11(tmp12[25]).Text, obj8);
         } else {
-          tmp87Result = null;
+          tmp88Result = null;
         }
-        items12[2] = tmp87Result;
-        let tmp101 = null;
+        items12[2] = tmp88Result;
+        let tmp102 = null;
         if (null != tmp14) {
           const obj11 = { projectId, attachments: tmp14 };
-          tmp101 = replied(tmp18(tmp12[29]), obj11);
+          tmp102 = replied(tmp18(tmp12[29]), obj11);
         }
-        items12[3] = tmp101;
-        let tmp103 = null;
+        items12[3] = tmp102;
+        let tmp104 = null;
         if (null != message.agentReaction) {
           const obj12 = { reaction: message.agentReaction };
-          tmp103 = replied(tmp18(tmp12[30]), obj12);
+          tmp104 = replied(tmp18(tmp12[30]), obj12);
         }
-        items12[4] = tmp103;
+        items12[4] = tmp104;
         obj3.children = items12;
-        tmp87Result2 = tmp87(onToggleChecklist, obj3);
+        tmp88Result2 = tmp88(onToggleChecklist, obj3);
       } else if ("context_boundary" === message.kind) {
-        let tmp83 = null;
+        let tmp84 = null;
         if (null != message.contextSwitch) {
           const obj13 = { style: tmp.boundaryRow, children: null };
           const obj14 = { projectId, contextSwitch: message.contextSwitch };
           obj13.children = replied(tmp18(tmp12[31]), obj14);
-          tmp83 = replied(planSuperseded, obj13);
+          tmp84 = replied(planSuperseded, obj13);
         }
-        return tmp83;
+        return tmp84;
       } else {
         if ("project_event" === message.kind) {
           if (null != message.projectEvent) {
@@ -1560,7 +1561,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             tmp28 = secretRequest;
           }
           if ("open" === secretRequestStatus) {
-            const tmp11Result12 = tmp11(tmp12[36]);
+            const tmp11Result13 = tmp11(tmp12[36]);
             const tmp30 = tmp11(tmp12[36]).activeAwaitingUser(message, isNewest);
             const activeAwaitingUserResult = tmp11(tmp12[36]).activeAwaitingUser(message, isNewest);
           }
@@ -1626,7 +1627,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmp11Result11 = tmp11(tmp12[11]);
+          const tmp11Result12 = tmp11(tmp12[11]);
           const obj23 = { steps: message.steps, content: trimmed, hasProposal: null != proposal, hasLiveClarification: null != clarification, hasAttachments: null != tmp14 };
           const turnPresentation = tmp11(tmp12[37]).resolveTurnPresentation(obj23);
           ({ showsClosingMessage, replyKey: c23 } = turnPresentation);
@@ -1665,7 +1666,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmp11Result13 = tmp11(tmp12[37]);
+          const tmp11Result14 = tmp11(tmp12[37]);
           const turnLeadsWithStretchResult = tmp11(tmp12[37]).turnLeadsWithStretch(tmp41, turnPresentation);
           c24 = turnLeadsWithStretchResult;
           const found = memo1.filter((hasWork) => hasWork.hasWork);
@@ -1674,10 +1675,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           if (atResult != null) {
             index = atResult.index;
           }
-          const tmp11Result14 = tmp11(tmp12[37]);
+          const tmp11Result15 = tmp11(tmp12[37]);
           const tmp45 = !tmp11(tmp12[11]).turnSettled(message);
           closure_26 = tmp45;
-          const tmp11Result15 = tmp11(tmp12[11]);
+          const tmp11Result16 = tmp11(tmp12[11]);
           const obj24 = { turnActive: tmp45 };
           open = tmp11(tmp12[12]).turnLifecycle(memo1, obj24).open;
           let avatarSpokenReplying = groupStart;
@@ -1693,7 +1694,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
             obj25.onJump = tmp51;
             tmp49Result = replied(tmp18(tmp12[7]), obj25);
-            const tmp18Result5 = tmp18(tmp12[7]);
+            const tmp18Result6 = tmp18(tmp12[7]);
           }
           const items14 = [tmp49Result, , ];
           const items15 = [, , ];
@@ -1830,7 +1831,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           if ("side_reply" === message.kind) {
             const obj36 = { variant: "text-xs/normal", color: "text-muted", children: tmp11(tmp12[40]).midTurnCaption(message.acknowledges) };
             tmp52Result17 = tmp52(tmp11(tmp12[25]).Text, obj36);
-            const tmp11Result17 = tmp11(tmp12[40]);
+            const tmp11Result18 = tmp11(tmp12[40]);
           }
           items17[2] = tmp52Result17;
           let tmp52Result18 = null;
@@ -1840,20 +1841,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           items17[3] = tmp52Result18;
           if (null != items18) {
-            const tmp18Result6 = tmp18(tmp12[41]);
+            const tmp18Result7 = tmp18(tmp12[41]);
             if (items18 == null) {
               items18 = [];
             }
             const obj38 = { children: null };
             const obj39 = { todos: items18, provisional: provisionalTodo, agents: memo3, live: null, superseded: null, expanded: null, onToggleExpanded: null };
-            const tmp18Result7 = tmp18(tmp12[42]);
+            const tmp18Result8 = tmp18(tmp12[42]);
             obj39.live = tmp11(tmp12[43]).checklistLive(message);
             obj39.superseded = checklistSuperseded;
             obj39.expanded = checklistExpanded;
             obj39.onToggleExpanded = callback;
-            obj38.children = tmp52(tmp18Result7, obj39);
-            let tmp52Result19 = tmp52(tmp18Result6, obj38);
-            const tmp11Result18 = tmp11(tmp12[43]);
+            obj38.children = tmp52(tmp18Result8, obj39);
+            let tmp52Result19 = tmp52(tmp18Result7, obj38);
+            const tmp11Result19 = tmp11(tmp12[43]);
           } else {
             tmp52Result19 = null;
           }
@@ -1900,14 +1901,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           items17[8] = tmp52Result23;
           let tmp52Result24 = null;
           if (null != tmp32) {
-            const obj44 = { projectId, request: tmp32 };
+            const obj44 = { projectId, request: tmp32, askId: message.id };
             tmp52Result24 = tmp52(tmp18(tmp12[48]), obj44);
           }
           items17[9] = tmp52Result24;
           let tmp52Result25 = null;
           if (null != tmp26) {
-            const obj45 = { projectId, cta: tmp26 };
-            tmp52Result25 = tmp52(tmp18(tmp12[49]), obj45);
+            const obj45 = { projectId, turnId: null, cta: null };
+            const tmp18Result9 = tmp18(tmp12[49]);
+            obj45.turnId = tmp11(tmp12[11]).turnIdOfSegment(message);
+            obj45.cta = tmp26;
+            tmp52Result25 = tmp52(tmp18Result9, obj45);
+            const tmp11Result20 = tmp11(tmp12[11]);
           }
           items17[10] = tmp52Result25;
           let tmp52Result26 = null;
@@ -1931,7 +1936,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
             obj47.onRestore = fn;
             tmp52Result27 = tmp52(tmp18(tmp12[51]), obj47);
-            const tmp18Result8 = tmp18(tmp12[51]);
+            const tmp18Result10 = tmp18(tmp12[51]);
           }
           items17[12] = tmp52Result27;
           let tmp52Result28 = null;
@@ -1942,10 +1947,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           items17[13] = tmp52Result28;
           obj34.children = items17;
           tmp46Result2 = tmp46(tmp53, obj34);
-          const tmp11Result16 = tmp11(tmp12[12]);
+          const tmp11Result17 = tmp11(tmp12[12]);
         }
       }
     }
   }
-  const tmp11Result10 = projectId(groupStart[17]);
+  const tmp11Result11 = projectId(tmp12[17]);
 }));

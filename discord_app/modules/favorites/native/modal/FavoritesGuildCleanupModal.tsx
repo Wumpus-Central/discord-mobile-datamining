@@ -1,16 +1,16 @@
-// === Module 17395: FavoritesGuildCleanupModal ===
+// === Module 17465: FavoritesGuildCleanupModal ===
 
-// Module 17395 (FavoritesGuildCleanupModal)
+// Module 17465 (FavoritesGuildCleanupModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef3412 from "module_3412" /* 3412 */;
-import useChannelNameDefault from "useChannelName" /* 5586 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6879 */;
-import TableRadioRow from "TableRadioRow" /* 6963 */;
-import Modal from "Modal" /* 11096 */;
-import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 17398 */;
+import useChannelNameDefault from "useChannelName" /* 5590 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6886 */;
+import TableRadioRow from "TableRadioRow" /* 6970 */;
+import Modal from "Modal" /* 11113 */;
+import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 17468 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroller: { flex: 1 }, content: null, actions: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -658,7 +658,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
       const intl = closure_1_0(1128).intl;
       obj.text = intl.string(closure_1_0(1128).t["ETE/oC"]);
       obj.onPress = onPress;
-      return closure_1_6(closure_1_0(5226).Button, obj);
+      return closure_1_6(closure_1_0(5230).Button, obj);
     };
     obj2.render = function render() {
       return closure_1_6(closure_1_11, {});

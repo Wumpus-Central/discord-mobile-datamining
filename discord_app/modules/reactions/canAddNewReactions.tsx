@@ -1,7 +1,7 @@
-// === Module 8305: canAddNewReactions ===
+// === Module 8314: canAddNewReactions ===
 
-// Module 8305 (canAddNewReactions)
-import GuildVerificationStore from "GuildVerificationStore" /* 6615 */;
+// Module 8314 (canAddNewReactions)
+import GuildVerificationStore from "GuildVerificationStore" /* 6622 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
 
 const Permissions = fn(1087).Permissions;

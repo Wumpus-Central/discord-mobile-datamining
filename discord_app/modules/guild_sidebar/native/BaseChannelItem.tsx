@@ -1,26 +1,26 @@
-// === Module 13157: BaseChannelItem ===
+// === Module 13193: BaseChannelItem ===
 
-// Module 13157 (BaseChannelItem)
+// Module 13193 (BaseChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import native2 from "native" /* 8872 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13158 */;
-import TouchableBackgroundDefault from "TouchableBackground" /* 13159 */;
+import native2 from "native" /* 8881 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13194 */;
+import TouchableBackgroundDefault from "TouchableBackground" /* 13195 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const utils_PlatformUtils = Text(1385);
-const Text_Text = Text(5216);
+const Text_Text = Text(5220);
 require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11982);
+const RedesignChannelListConstants = fn(12003);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
-const UnreadSetting = fn(6684).UnreadSetting;
+const UnreadSetting = fn(6691).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
@@ -97,7 +97,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelS
     const obj4 = { experimental_useNativeText: tmp9, lineClamp: 1 };
     const merged = Object.assign(tmp3);
     obj4.children = subtitle;
-    tmp = collapsed(Text, obj4);
+    tmp = v65535(Text, obj4);
     cResult[4] = tmp3;
     cResult[5] = subtitle;
     cResult[6] = tmp9;
@@ -121,7 +121,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelS
         obj2 = { experimental_useNativeText: tmp8, lineClamp: 1 };
         const merged = Object.assign(obj);
         obj2.children = subtitle;
-        tmp4Result = collapsed(Text_Text.Text, obj2);
+        tmp4Result = v65535(Text_Text.Text, obj2);
       }
       return tmp4Result;
     }
@@ -182,10 +182,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelI
                       str = str2;
                     }
                     obj2.color = str;
-                    let tmp14Result = collapsed(IconComponent, obj2);
+                    let tmp14Result = v65535(IconComponent, obj2);
                   } else {
                     const obj3 = { disableColor, size: native.Icon.Sizes.CUSTOM, style: tmp7, source };
-                    tmp14Result = collapsed(native.Icon, obj3);
+                    tmp14Result = v65535(native.Icon, obj3);
                   }
                   cResult[10] = IconComponent;
                   cResult[11] = disableColor;
@@ -260,10 +260,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelI
         str = str2;
       }
       obj2.color = str;
-      let tmp12Result = collapsed(IconComponent, obj2);
+      let tmp12Result = v65535(IconComponent, obj2);
     } else {
       const obj = { disableColor, size: native.Icon.Sizes.CUSTOM, style: items, source };
-      tmp12Result = collapsed(native.Icon, obj);
+      tmp12Result = v65535(native.Icon, obj);
     }
     return tmp12Result;
   } else {
@@ -328,7 +328,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelN
             tmp18 = tmp21;
           }
           const obj4 = { mode, subtitle };
-          const tmp17 = collapsed(closure_14, obj4);
+          const tmp17 = v65535(closure_14, obj4);
           cResult[7] = mode;
           cResult[8] = subtitle;
           cResult[9] = tmp17;
@@ -340,7 +340,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelN
       obj5.lineClamp = 1;
       obj5.style = tmp7;
       obj5.children = name;
-      const tmp13 = collapsed(Text_Text.Text, obj5);
+      const tmp13 = v65535(Text_Text.Text, obj5);
       cResult[3] = name;
       cResult[4] = obj2;
       cResult[5] = tmp7;
@@ -375,9 +375,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChannelN
     const items = [tmp.channelName, textStyle];
     obj3.style = items;
     obj3.children = name;
-    const items1 = [collapsed(tmp5, obj3), ];
+    const items1 = [v65535(tmp5, obj3), ];
     const obj4 = { mode, subtitle };
-    items1[1] = collapsed(closure_14, obj4);
+    items1[1] = v65535(closure_14, obj4);
     obj.children = items1;
     return closure_1_11(View, obj);
   }
@@ -524,7 +524,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
           ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
         }
         obj4.resolvedUnreadSetting = ALL_MESSAGES;
-        collapsed(StaticChannelIndicatorDefault, obj4);
+        v65535(StaticChannelIndicatorDefault, obj4);
       }
     }
   }
@@ -575,9 +575,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(13159);
+      let AnimatedPressableHighlight = hideIcon(13195);
     } else {
-      AnimatedPressableHighlight = mode(8872).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8881).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -592,8 +592,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_10(hideIcon(13158), obj3);
-    const tmp9 = hideIcon(13158);
+    closure_10(hideIcon(13194), obj3);
+    const tmp9 = hideIcon(13194);
   }
 });
 export const ChannelModes = obj2;

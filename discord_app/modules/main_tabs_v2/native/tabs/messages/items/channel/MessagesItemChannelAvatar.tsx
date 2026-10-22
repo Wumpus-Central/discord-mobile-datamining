@@ -1,19 +1,19 @@
-// === Module 17288: MessagesItemChannelAvatar ===
+// === Module 17358: MessagesItemChannelAvatar ===
 
-// Module 17288 (MessagesItemChannelAvatar)
+// Module 17358 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 587 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10646 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10658 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5694 */;
-import TypingStore from "TypingStore" /* 12947 */;
+import PresenceStore from "PresenceStore" /* 5698 */;
+import TypingStore from "TypingStore" /* 12983 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11982).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(12003).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = { borderRadius: nativeDefault.radii.round, marginRight: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;
@@ -392,7 +392,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return isMobileOnlineResult;
           }
         }
-        const obj3 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: "enabled", autoStatusCutout: false };
+        const obj3 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: false, autoStatusCutout: false };
         if (!stateFromStores2.isSystemUser()) {
           class H {
             constructor() {
@@ -538,7 +538,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: "enabled", autoStatusCutout: false };
+      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: false, autoStatusCutout: false };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
@@ -549,7 +549,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1202).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: "enabled", autoStatusCutout: false });
+      tmp11Result = jsx(tmp3(1202).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: false, autoStatusCutout: false });
     }
   }
   return tmp11Result;

@@ -1,6 +1,6 @@
-// === Module 8252: MessageCountUtils ===
+// === Module 8261: MessageCountUtils ===
 
-// Module 8252 (MessageCountUtils)
+// Module 8261 (MessageCountUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1128 */;
 import ThreadConstants from "ThreadConstants" /* 1127 */;

@@ -1,26 +1,26 @@
-// === Module 10459: GiftingBadgeInfoActionSheet ===
+// === Module 10471: GiftingBadgeInfoActionSheet ===
 
-// Module 10459 (GiftingBadgeInfoActionSheet)
+// Module 10471 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef2632 from "module_2632" /* 2632 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10460 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10463 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10472 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10475 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8645 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8654 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8645).getSingleRequirementThreshold;
+let closure_7 = fn(8654).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, headerContainer: null, title: null, description: null, tierCards: null, tierCard: null, iconWrapper: null };
 let obj3 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.headerContainer = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [BadgeDirectoryStore];
     const fn = function x() {
-      return badgeById.getBadgeById(closure_0(8637).BadgeId.GIFTING);
+      return badgeById.getBadgeById(closure_0(8646).BadgeId.GIFTING);
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
         }
       }
       const obj2 = { style: title, variant: "heading-xl/semibold", color: "text-strong", accessibilityRole: "header", children: tmp20 };
-      const tmp23 = closure_9(tmp(5216).Text, obj2);
+      const tmp23 = closure_9(tmp(5220).Text, obj2);
       cResult[12] = tmp4.title;
       cResult[13] = tmp23;
     } else {
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
         }
       }
       let obj3 = { style: tmp4.description, variant: "text-md/medium", color: "text-default", children: tmp24 };
-      const tmp27 = closure_9(tmp(5216).Text, obj3);
+      const tmp27 = closure_9(tmp(5220).Text, obj3);
       cResult[15] = tmp4.description;
       cResult[16] = tmp27;
     } else {
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
   const tmp = closure_11();
   _require = tmp;
   let items = [BadgeDirectoryStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8637).BadgeId.GIFTING));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8646).BadgeId.GIFTING));
   let obj = require("initialize");
   const items1 = [AccessibilityStore];
   importDefault = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
         }
         items[2] = tmp12Result;
         obj.children = items;
-        return collapsed(View, obj, children.key);
+        return v65535(View, obj, children.key);
       });
     }
   }

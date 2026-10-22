@@ -1,14 +1,14 @@
-// === Module 17392: useFavoritesGuildHideAction ===
+// === Module 17462: useFavoritesGuildHideAction ===
 
-// Module 17392 (useFavoritesGuildHideAction)
+// Module 17462 (useFavoritesGuildHideAction)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1114 */;
 import util from "util" /* 1128 */;
 import _modDef3412 from "module_3412" /* 3412 */;
 import FavoritesUtils from "FavoritesUtils" /* 4846 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10792 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10809 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
 const Routes = fn(1087).Routes;

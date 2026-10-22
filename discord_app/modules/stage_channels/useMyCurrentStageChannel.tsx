@@ -1,6 +1,6 @@
-// === Module 11501: useMyCurrentStageChannel ===
+// === Module 11518: useMyCurrentStageChannel ===
 
-// Module 11501 (useMyCurrentStageChannel)
+// Module 11518 (useMyCurrentStageChannel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ChannelStore from "ChannelStore" /* 4821 */;

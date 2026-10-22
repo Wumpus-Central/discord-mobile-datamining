@@ -1,7 +1,7 @@
-// === Module 8278: trackChannelOpenedClickstream ===
+// === Module 8287: trackChannelOpenedClickstream ===
 
-// Module 8278 (trackChannelOpenedClickstream)
-import Clickstream from "Clickstream" /* 7552 */;
+// Module 8287 (trackChannelOpenedClickstream)
+import Clickstream from "Clickstream" /* 7559 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;

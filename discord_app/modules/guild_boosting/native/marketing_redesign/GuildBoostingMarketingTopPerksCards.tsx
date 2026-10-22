@@ -1,16 +1,16 @@
-// === Module 14804: GuildBoostingMarketingTopPerksCards ===
+// === Module 14848: GuildBoostingMarketingTopPerksCards ===
 
-// Module 14804 (GuildBoostingMarketingTopPerksCards)
+// Module 14848 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5210 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import _modDef14805 from "module_14805" /* 14805 */;
-import _mod14806 from "module_14806" /* 14806 */;
-import _modDef14807 from "module_14807" /* 14807 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5214 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import _modDef14849 from "module_14849" /* 14849 */;
+import _mod14850 from "module_14850" /* 14850 */;
+import _modDef14851 from "module_14851" /* 14851 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 }, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
 let size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
 obj2.cardGraphic = size;
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14805 };
+      const obj = { style, source: _modDef14849 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   },
@@ -51,7 +51,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod14806, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod14850, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     }
   },
@@ -65,7 +65,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14807 };
+      const obj = { style, source: _modDef14851 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   }
@@ -82,7 +82,7 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    const obj = { style, source: _modDef14805 };
+    const obj = { style, source: _modDef14849 };
     return hasOwnProperty(FastImageDefault, obj);
   }
 };
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   }
   if (cResult[1] !== tmp4.heading) {
     let obj2 = { style: heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: first };
-    const tmp9 = closure_5(tmp(5216).Heading, obj2);
+    const tmp9 = closure_5(tmp(5220).Heading, obj2);
     cResult[1] = tmp4.heading;
     cResult[2] = tmp9;
     let tmp7 = tmp9;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
             tmp17 = tmp20;
           }
           const obj4 = { itemCount: items.length, cardWidth: 324, cardMarginRight: 16, contentContainerStyle: tmp10, children: tmp11 };
-          const tmp16 = closure_5(tmp(13377).MarketingCardsScroller, obj4);
+          const tmp16 = closure_5(tmp(13413).MarketingCardsScroller, obj4);
           cResult[9] = tmp4.scrollerContent;
           cResult[10] = tmp11;
           cResult[11] = tmp16;

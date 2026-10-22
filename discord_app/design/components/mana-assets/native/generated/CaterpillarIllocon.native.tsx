@@ -1,23 +1,23 @@
-// === Module 12326: CaterpillarIllocon ===
+// === Module 12352: CaterpillarIllocon ===
 
-// Module 12326 (CaterpillarIllocon)
+// Module 12352 (CaterpillarIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import assetHelpers from "assetHelpers" /* 6974 */;
-import _modDef12327 from "module_12327" /* 12327 */;
-import _modDef12328 from "module_12328" /* 12328 */;
-import _modDef12329 from "module_12329" /* 12329 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import assetHelpers from "assetHelpers" /* 6981 */;
+import _modDef12353 from "module_12353" /* 12353 */;
+import _modDef12354 from "module_12354" /* 12354 */;
+import _modDef12355 from "module_12355" /* 12355 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12327 }, 3: null };
-const obj2 = { uri: _modDef12327 };
-obj[2] = { uri: _modDef12328 };
-const obj3 = { uri: _modDef12328 };
-obj[3] = { uri: _modDef12329 };
+let obj = { 1: null, 2: { uri: _modDef12353 }, 3: null };
+const obj2 = { uri: _modDef12353 };
+obj[2] = { uri: _modDef12354 };
+const obj3 = { uri: _modDef12354 };
+obj[3] = { uri: _modDef12355 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12329 };
+const obj4 = { uri: _modDef12355 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const CaterpillarIllocon = ReactCompilerGating.isReactCompilerEnabled() ?
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6974).getAssetSource(obj);
+  obj.source = num(6981).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

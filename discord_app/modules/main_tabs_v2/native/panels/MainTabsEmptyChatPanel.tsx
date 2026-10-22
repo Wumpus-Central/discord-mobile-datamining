@@ -1,19 +1,19 @@
-// === Module 18020: MainTabsEmptyChatPanel ===
+// === Module 18090: MainTabsEmptyChatPanel ===
 
-// Module 18020 (MainTabsEmptyChatPanel)
+// Module 18090 (MainTabsEmptyChatPanel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import FavoritesHooks from "FavoritesHooks" /* 10793 */;
-import useDrawerWidth from "useDrawerWidth" /* 11171 */;
-import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 18021 */;
+import FavoritesHooks from "FavoritesHooks" /* 10810 */;
+import useDrawerWidth from "useDrawerWidth" /* 11188 */;
+import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 18091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_6 = createStyles.createStyles((left, marginTop) => {
   const obj = { container: null };
   const obj2 = {};

@@ -1,10 +1,10 @@
-// === Module 11485: HandRequestDenyIcon ===
+// === Module 11502: HandRequestDenyIcon ===
 
-// Module 11485 (HandRequestDenyIcon)
+// Module 11502 (HandRequestDenyIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5650 */;
-import _mod11486 from "module_11486" /* 11486 */;
+import BaseIconImage from "BaseIconImage" /* 5654 */;
+import _mod11503 from "module_11503" /* 11503 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const HandRequestDenyIcon = ReactCompilerGating.isReactCompilerEnabled() 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11486;
+    const tmpResult = _mod11503;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const HandRequestDenyIcon = ReactCompilerGating.isReactCompilerEnabled() 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11486, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11503, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

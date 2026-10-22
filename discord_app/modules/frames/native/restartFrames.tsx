@@ -1,9 +1,9 @@
-// === Module 10722: restartFrames ===
+// === Module 10734: restartFrames ===
 
-// Module 10722 (restartFrames)
-import leaveFrame from "leaveFrame" /* 10723 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10724 */;
-import FramesStore from "FramesStore" /* 6754 */;
+// Module 10734 (restartFrames)
+import leaveFrame from "leaveFrame" /* 10735 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10736 */;
+import FramesStore from "FramesStore" /* 6761 */;
 
 require = fn;
 function restartFrame(item10016) {
@@ -27,14 +27,14 @@ function restartFrame(item10016) {
   }
   const launchFrameResult = FramesActionCreatorsDefault.launchFrame({ applicationId: item10016.applicationId, surface: item10016.surface, launch });
 }
-const isLaunched = fn(6755).isLaunched;
+const isLaunched = fn(6762).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 
 export { restartFrame };
-export const restartAppFrames = function restartAppFrames(c0) {
-  closure_0 = c0;
-  if (null != c0) {
+export const restartAppFrames = function restartAppFrames(application_id) {
+  closure_0 = application_id;
+  if (null != application_id) {
     const items = [];
     HermesBuiltin.arraySpread(FramesStore.getAllFrames(), 0);
     const found = items.filter((applicationId) => applicationId.applicationId === closure_0);

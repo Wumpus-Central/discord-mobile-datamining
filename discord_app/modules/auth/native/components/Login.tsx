@@ -1,16 +1,16 @@
-// === Module 7013: Login ===
+// === Module 7020: Login ===
 
-// Module 7013 (Login)
+// Module 7020 (Login)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5889 */;
-import Pressables from "Pressables" /* 6887 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7015 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5896 */;
+import Pressables from "Pressables" /* 6894 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7022 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7014 */;
+import PhoneStore from "PhoneStore" /* 7021 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ const View = fn(17).View;
 const AuthStates = fn(1087).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;
@@ -82,7 +82,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkButton(a
           }
         }
         const obj2 = { style: containerStyle, hitSlop: first, accessibilityRole: "button", onPress, children: tmp5 };
-        const tmp9 = collapsed(Pressables.PressableOpacity, obj2);
+        const tmp9 = v65535(Pressables.PressableOpacity, obj2);
         cResult[6] = containerStyle;
         cResult[7] = onPress;
         cResult[8] = tmp5;
@@ -91,7 +91,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkButton(a
       }
     }
   }
-  const tmp6 = collapsed(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text });
+  const tmp6 = v65535(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text });
   cResult[1] = text;
   cResult[2] = str2;
   cResult[3] = textStyle;
@@ -108,7 +108,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkButton(a
   if (str2 === undefined) {
     str2 = "text-link";
   }
-  return collapsed(Pressables.PressableOpacity, { style: containerStyle, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", onPress, children: collapsed(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text }) });
+  return v65535(Pressables.PressableOpacity, { style: containerStyle, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", onPress, children: v65535(Text_Text.Text, { style: textStyle, variant: str, color: str2, children: text }) });
 });
 let closure_13 = tmp3;
 const size = fn(2);

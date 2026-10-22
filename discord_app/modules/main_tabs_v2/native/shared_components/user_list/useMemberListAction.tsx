@@ -1,13 +1,13 @@
-// === Module 11234: useMemberListAction ===
+// === Module 11251: useMemberListAction ===
 
-// Module 11234 (useMemberListAction)
+// Module 11251 (useMemberListAction)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 4805 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4991 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9010 */;
-import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11235 */;
-import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11247 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11253 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9019 */;
+import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11252 */;
+import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11264 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11270 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
@@ -23,11 +23,11 @@ const View = fn(17).View;
 const Constants = fn(1087);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "toCharArray$esjava$1", listActionHeight: "Symbol" };
-const createStyles = fn(4966);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10581).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_14 = { listActionRenderer: "r", listActionHeight: "emoji" };
+const createStyles = fn(4969);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10593).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);
-let obj2 = { wrapper: { paddingTop: fn(10581).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
+let obj2 = { wrapper: { paddingTop: fn(10593).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMembe
     if (channel != null) {
       id = channel.id;
     }
-    id(7123)();
+    id(7130)();
     [r10096, dependencyMap] = noop.useState(undefined);
     const _Symbol = Symbol;
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {

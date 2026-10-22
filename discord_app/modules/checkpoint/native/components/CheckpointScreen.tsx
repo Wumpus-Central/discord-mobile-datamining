@@ -1,19 +1,19 @@
-// === Module 12863: CheckpointScreen ===
+// === Module 12895: CheckpointScreen ===
 
-// Module 12863 (CheckpointScreen)
+// Module 12895 (CheckpointScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5575 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5579 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHECKPOINT_NAV_HEIGHT = fn(5995).CHECKPOINT_NAV_HEIGHT;
+const CHECKPOINT_NAV_HEIGHT = fn(6002).CHECKPOINT_NAV_HEIGHT;
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles({ container: { height: "100%", width: "100%" }, scroll: { width: "100%" }, scrollContent: { flexGrow: 1 } });
 fn(558);
 const ReactCompilerGating = fn(558);

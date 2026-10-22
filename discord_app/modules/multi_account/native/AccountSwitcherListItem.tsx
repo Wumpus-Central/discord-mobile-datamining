@@ -1,29 +1,29 @@
-// === Module 17195: AccountSwitcherListItem ===
+// === Module 17265: AccountSwitcherListItem ===
 
-// Module 17195 (AccountSwitcherListItem)
+// Module 17265 (AccountSwitcherListItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import UserUtilsDefault from "UserUtils" /* 5015 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5022 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Pressables from "Pressables" /* 6887 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5025 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Pressables from "Pressables" /* 6894 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1406 */;
-import StreamerModeStore from "StreamerModeStore" /* 5016 */;
+import StreamerModeStore from "StreamerModeStore" /* 5019 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const initialize = CircleCheckIcon(504);
-const CircleInformationIcon = CircleCheckIcon(5668);
-const CircleCheckIcon2 = CircleCheckIcon(7244);
+const CircleInformationIcon = CircleCheckIcon(5672);
+const CircleCheckIcon2 = CircleCheckIcon(7251);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(13197).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(13233).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatusIcon(user) {
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
   }
   ({ accountSwitcherListItem, accountInfo } = tmp5);
   if (cResult[12] !== tmp15) {
-    { user: null, guildId: "Array" }.user = tmp15;
+    { user: null, guildId: "r" }.user = tmp15;
     class U {
       constructor() {
         return closure_1_7.getCurrentUser();
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     cResult[12] = tmp15;
     cResult[13] = tmp35;
     let tmp33 = tmp35;
-    const obj6 = { user: null, guildId: "Array" };
+    const obj6 = { user: null, guildId: "r" };
   } else {
     tmp33 = cResult[13];
   }
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
                       const merged = Object.assign(sortHandlers);
                       const items2 = [leading, tmp54, tmp57];
                       tmp61.children = items2;
-                      const tmp65 = collapsed(PressableOpacity, tmp61, user.id);
+                      const tmp65 = v65535(PressableOpacity, tmp61, user.id);
                       cResult[38] = PressableOpacity;
                       cResult[39] = accessibilityRole;
                       cResult[40] = accessibilityState;
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
                 const obj8 = { style: accountInfo, children: null };
                 const items3 = [tmp33, tmp51];
                 obj8.children = items3;
-                const tmp56 = collapsed(React4, obj8);
+                const tmp56 = v65535(React4, obj8);
                 cResult[31] = tmp5.accountInfo;
                 cResult[32] = tmp33;
                 cResult[33] = tmp51;
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
             const obj9 = { style: tmp36, children: null };
             const items4 = [tmp48, tmp22];
             obj9.children = items4;
-            const tmp53 = collapsed(React4, obj9);
+            const tmp53 = v65535(React4, obj9);
             cResult[27] = tmp22;
             cResult[28] = tmp5.accountListTag;
             cResult[29] = tmp48;
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
         const obj10 = { style: tmp37, children: null };
         const items5 = [tmp41, tmp45];
         obj10.children = items5;
-        const tmp50 = collapsed(React4, obj10);
+        const tmp50 = v65535(React4, obj10);
         cResult[23] = tmp5.tagContainer;
         cResult[24] = tmp41;
         cResult[25] = tmp45;
@@ -472,7 +472,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, , ];
     const obj8 = { style: tmp.accountInfo, children: null };
-    const obj9 = { user: obj3, guildId: "Array" };
+    const obj9 = { user: obj3, guildId: "r" };
     const items3 = [React6(native.Avatar, obj9), ];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };
@@ -497,18 +497,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     }
     items4[1] = tmp18Result;
     obj11.children = items4;
-    const items5 = [collapsed(React4, obj11), tmp8];
+    const items5 = [v65535(React4, obj11), tmp8];
     obj10.children = items5;
-    items3[1] = collapsed(React4, obj10);
+    items3[1] = v65535(React4, obj10);
     obj8.children = items3;
-    items2[1] = collapsed(React4, obj8);
+    items2[1] = v65535(React4, obj8);
     if (undefined === trailing) {
       const obj16 = { user };
       trailing = React6(closure_12, obj16);
     }
     items2[2] = trailing;
     obj6.children = items2;
-    return collapsed(PressableOpacity, obj6, user.id);
+    return v65535(PressableOpacity, obj6, user.id);
   }
   tmp8 = null;
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {

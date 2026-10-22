@@ -1,18 +1,18 @@
-// === Module 8262: ReactionActionCreators ===
+// === Module 8271: ReactionActionCreators ===
 
-// Module 8262 (ReactionActionCreators)
+// Module 8271 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1104 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
 import util from "util" /* 1128 */;
 import EmojiUtils from "EmojiUtils" /* 4919 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5207 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5888 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8263 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5211 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5895 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 5990 */;
+import MessageStore from "MessageStore" /* 5997 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -89,11 +89,11 @@ function makeURL(type) {
     name = emoji.name;
   }
   if (null == userId) {
-    let REACTIONSResult = collapsed.REACTIONS(channelId, messageId, name);
+    let REACTIONSResult = v65535.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
-    REACTIONSResult = collapsed.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
+    REACTIONSResult = v65535.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
-    REACTIONSResult = collapsed.REACTION(channelId, messageId, name, userId);
+    REACTIONSResult = v65535.REACTION(channelId, messageId, name, userId);
   }
   return REACTIONSResult;
 }
@@ -786,7 +786,7 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(4973).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = channelId(4976).AccessibilityAnnouncer;
                   intl = channelId(1128).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };

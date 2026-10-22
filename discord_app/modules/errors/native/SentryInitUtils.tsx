@@ -12,10 +12,10 @@ import DesignIds from "DesignIds" /* 1370 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1383 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
-import DeviceUtils from "DeviceUtils" /* 4923 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6448 */;
-import MetricEvents from "MetricEvents" /* 6452 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 15280 */;
+import DeviceUtils from "DeviceUtils" /* 4926 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6455 */;
+import MetricEvents from "MetricEvents" /* 6459 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 15324 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -553,8 +553,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6447).increment(obj6, true);
-  const tmp26Result = tmp26(6447);
+  tmp26(6454).increment(obj6, true);
+  const tmp26Result = tmp26(6454);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1087);
@@ -634,7 +634,7 @@ export const initSentry = function initSentry() {
           if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35220300000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@352.3.0-2+352203", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35220400000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@352.4.0-2+352204", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -665,7 +665,7 @@ export const initSentry = function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod686;
-          _mod686.setTag("buildNumber", "35220300000000");
+          _mod686.setTag("buildNumber", "35220400000000");
           const tmp15Result17 = _mod686;
           _mod686.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod686;

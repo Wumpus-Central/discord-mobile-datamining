@@ -1,48 +1,53 @@
-// === Module 18328: VoicePanelHeader ===
+// === Module 18396: VoicePanelHeader ===
 
-// Module 18328 (VoicePanelHeader)
+// Module 18396 (VoicePanelHeader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import timing from "timing" /* 5188 */;
-import spring from "spring" /* 5229 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10854 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 11463 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11618 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18305 */;
-import useStableParticipant from "useStableParticipant" /* 18333 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import timing from "timing" /* 5192 */;
+import spring from "spring" /* 5233 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 10871 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11480 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11635 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18373 */;
+import useStableParticipant from "useStableParticipant" /* 18401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
-import ExperimentStore from "ExperimentStore" /* 5172 */;
-import StageMusicStore from "StageMusicStore" /* 11451 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
+import ExperimentStore from "ExperimentStore" /* 5176 */;
+import StageMusicStore from "StageMusicStore" /* 11468 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
-import SpeakingStore from "SpeakingStore" /* 6664 */;
+import SpeakingStore from "SpeakingStore" /* 6671 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10848);
+const VoicePanelConstants = fn(10865);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(10851).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(10846).VoicePanelControlsModes;
-const ParticipantTypes = fn(5614).ParticipantTypes;
+const EDGE_GUTTER = fn(10868).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
+const ParticipantTypes = fn(5618).ParticipantTypes;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(4966);
-let obj = { headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%", paddingBottom: EDGE_GUTTER, overflow: "hidden" }, blurStyles: null, leftWrapper: null, rightWrapper: null, headerOuter: null, headerInner: null, headerContentWrapper: null, stroke: null, strokeAlt: null, strokeContainer: null, focusedSpeakingDotWrapper: null, focusedSpeakingDot: null, shieldIconMargin: null };
+const createStyles = fn(4969);
+let obj = { headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%" }, headerSurface: null, blurStyles: null, leftWrapper: null, rightWrapper: null, headerOuter: null, headerInner: null, headerContentWrapper: null, stroke: null, strokeAlt: null, strokeContainer: null, focusedSpeakingDotWrapper: null, focusedSpeakingDot: null, shieldIconMargin: null };
 let obj3 = {};
-let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.opacity = 0.7;
-obj.blurStyles = obj3;
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj3.paddingBottom = EDGE_GUTTER;
+obj3.overflow = "hidden";
+obj.headerSurface = obj3;
+let obj4 = {};
+const merged1 = Object.assign(StyleSheet.absoluteFillObject);
+obj4.opacity = 0.7;
+obj.blurStyles = obj4;
 obj.leftWrapper = { position: "relative", justifyContent: "flex-start", flexDirection: "row", alignItems: "center", flexShrink: 1, gap: 12 };
 obj.rightWrapper = { flexDirection: "row", alignItems: "center", gap: 12, paddingLeft: 12 };
 obj.headerOuter = { flexDirection: "row", alignItems: "center" };
@@ -58,9 +63,9 @@ obj.focusedSpeakingDot = size1;
 obj.shieldIconMargin = { marginLeft: -8 };
 let closure_26 = createStyles.createStyles(obj);
 const constants = { DOWN: 0, [0]: "DOWN", LEFT: 1, [1]: "LEFT" };
-let obj4 = {};
-const merged1 = Object.assign(MODE_CHANGE_PHYSICS);
-obj4.overshootClamping = true;
+let obj5 = {};
+const merged2 = Object.assign(MODE_CHANGE_PHYSICS);
+obj5.overshootClamping = true;
 const __initData = { code: "function VoicePanelHeaderTsx1(){const{isHeaderHidden,focused,scrollPosition}=this.__closure;return!isHeaderHidden.get()&&(focused.get()!=null||scrollPosition.get()>0);}" };
 const __initData2 = { code: "function VoicePanelHeaderTsx2(){const{withSpring,showHeaderBlur}=this.__closure;return{blurAmount:withSpring(showHeaderBlur.get()?0.3:0)};}" };
 const __initData3 = { code: "function VoicePanelHeaderTsx3(){const{withSpring,showHeaderBlur,HEADER_CHANGE_PHYSICS}=this.__closure;return{opacity:withSpring(showHeaderBlur.get()?1:0,HEADER_CHANGE_PHYSICS)};}" };
@@ -99,21 +104,21 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     }
     return { blurAmount: spring.withSpring(num) };
   };
-  obj4 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue };
-  fn2.__closure = obj4;
+  const obj3 = isHeaderHidden(focused[22]);
+  fn2.__closure = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue };
   fn2.__workletHash = 10074943135400;
   fn2.__initData = __initData2;
-  const animatedProps = isHeaderHidden(focused[22]).useAnimatedProps(fn2);
-  const obj3 = isHeaderHidden(focused[22]);
+  const animatedProps = obj3.useAnimatedProps(fn2);
+  obj5 = isHeaderHidden(focused[22]);
   const fn3 = function c() {
     let num = 0;
     if (derivedValue.get()) {
       num = 1;
     }
-    return { opacity: spring.withSpring(num, obj4) };
+    return { opacity: spring.withSpring(num, obj5) };
   };
-  const obj5 = isHeaderHidden(focused[22]);
-  fn3.__closure = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj4 };
+  const obj4 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue };
+  fn3.__closure = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj5 };
   fn3.__workletHash = 2825977044105;
   fn3.__initData = __initData3;
   const animatedStyle = obj5.useAnimatedStyle(fn3);
@@ -187,7 +192,7 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[4] = tmp10;
   tmp9 = tmp10;
   const obj11 = { style: tmp3.blurStyles, blurStyle: "ultra-thin", blurTheme: "dark", animatedProps };
-  const obj6 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj4 };
+  const obj6 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj5 };
 }) : (function HeaderBlur(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   const scrollPosition = isHeaderHidden.scrollPosition;
@@ -222,23 +227,23 @@ let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   fn2.__workletHash = 850837345455;
   fn2.__initData = __initData5;
   const animatedProps = obj2.useAnimatedProps(fn2);
-  obj4 = isHeaderHidden(focused[22]);
+  const obj3 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue };
   const fn3 = function u() {
     let num = 0;
     if (derivedValue.get()) {
       num = 1;
     }
-    return { opacity: spring.withSpring(num, obj4) };
+    return { opacity: spring.withSpring(num, obj5) };
   };
-  const obj3 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue };
-  fn3.__closure = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj4 };
+  obj5 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj5 };
+  fn3.__closure = obj5;
   fn3.__workletHash = 6395364000396;
   fn3.__initData = __initData6;
-  const animatedStyle = obj4.useAnimatedStyle(fn3);
+  const animatedStyle = isHeaderHidden(focused[22]).useAnimatedStyle(fn3);
   const obj6 = { style: null, pointerEvents: "none", children: null };
   const items = [StyleSheet.absoluteFill, animatedStyle];
   obj6.style = items;
-  const obj5 = { withSpring: isHeaderHidden(focused[23]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj4 };
+  const obj4 = isHeaderHidden(focused[22]);
   const items1 = [closure_23(scrollPosition(focused[24]), { style: tmp.blurStyles, blurStyle: "ultra-thin", blurTheme: "dark", animatedProps }), ];
   const obj8 = { style: tmp.strokeContainer, children: null };
   const obj7 = { style: tmp.blurStyles, blurStyle: "ultra-thin", blurTheme: "dark", animatedProps };
@@ -285,7 +290,7 @@ let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         return value;
       }
     }
-    obj4 = { focused, controlsSpecs, VoicePanelControlsModes, speaking: sharedValue };
+    const obj4 = { focused, controlsSpecs, VoicePanelControlsModes, speaking: sharedValue };
     S.__closure = obj4;
     S.__workletHash = 297593450050;
     S.__initData = __initData7;
@@ -300,7 +305,7 @@ let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         return { opacity };
       }
     }
-    const obj5 = { showSpeakingIndicator: derivedValue };
+    obj5 = { showSpeakingIndicator: derivedValue };
     H.__closure = obj5;
     H.__workletHash = 10090467727535;
     H.__initData = __initData8;
@@ -421,7 +426,7 @@ let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   derivedValue = id(controlsSpecs[22]).useDerivedValue(fn);
   const obj2 = id(controlsSpecs[22]);
   const obj3 = { focused, controlsSpecs, VoicePanelControlsModes, speaking: sharedValue };
-  const fn2 = function _() {
+  const fn2 = function h() {
     let opacity = 0;
     if (derivedValue.get()) {
       opacity = 1;
@@ -432,10 +437,10 @@ let closure_40 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   fn2.__workletHash = 898986210230;
   fn2.__initData = __initData10;
   const animatedStyle = id(controlsSpecs[22]).useAnimatedStyle(fn2);
-  const obj5 = { style: null, pointerEvents: "none", children: null };
+  obj5 = { style: null, pointerEvents: "none", children: null };
   const items1 = [tmp5.focusedSpeakingDotWrapper, animatedStyle];
   obj5.style = items1;
-  obj4 = id(controlsSpecs[22]);
+  const obj4 = id(controlsSpecs[22]);
   obj5.children = closure_23(focused(controlsSpecs[26]), { style: tmp5.focusedSpeakingDot });
   return closure_23(focused(controlsSpecs[26]), obj5);
 }));
@@ -477,7 +482,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
         cResult[2] = stateFromStores;
         cResult[3] = stringResult;
       } else {
-        const tmp4Result = importDefault(stateFromStores ? 11462 : 8437);
+        const tmp4Result = importDefault(stateFromStores ? 11479 : 8446);
         if (cResult[4] !== stateFromStores) {
           const fn2 = function p() {
             return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -531,7 +536,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 11462 : 8437),
+        icon: importDefault(stateFromStores ? 11479 : 8446),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }
@@ -545,23 +550,25 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicM
 const __initData11 = { code: "function VoicePanelHeaderTsx11(){const{focused}=this.__closure;var _focused$get;return(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id;}" };
 const __initData12 = { code: "function VoicePanelHeaderTsx12(manualId,previousManualId){const{runOnJS,handleFocusChange}=this.__closure;if(manualId!==previousManualId){runOnJS(handleFocusChange)(manualId);}}" };
 const __initData13 = { code: "function VoicePanelHeaderTsx13(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,mode,VoicePanelModes,gestureState,connected,EDGE_GUTTER}=this.__closure;const specs=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(mode.get()===VoicePanelModes.PIP||gestureState.get().active&&!gestureState.get().requiresPop&&connected.get()||mode.get()===VoicePanelModes.DISMISSED&&connected.get()){return-(specs.height+EDGE_GUTTER);}return 0;}" };
-const __initData14 = { code: "function VoicePanelHeaderTsx14(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,mode,VoicePanelModes,connected,EDGE_GUTTER,withTiming,OPACITY_TIMING,withSpring,yOffset,wrapperOffset,DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,UI_SHOW_HIDE_PHYSICS}=this.__closure;const specs_0=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);const pipMode=mode.get()===VoicePanelModes.PIP;const height=!connected.get()?specs_0.height-specs_0.paddingTop+EDGE_GUTTER:specs_0.height;const paddingTop=!connected.get()?EDGE_GUTTER:specs_0.paddingTop;return{...specs_0,paddingTop:paddingTop,borderTopLeftRadius:!connected.get()?24:0,borderTopRightRadius:!connected.get()?24:0,height:height,opacity:withTiming(pipMode||mode.get()===VoicePanelModes.DISMISSED?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(yOffset.get(),!connected.get()&&wrapperOffset.get().gestureActive?DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE:UI_SHOW_HIDE_PHYSICS)}]};}" };
-const __initData15 = { code: "function VoicePanelHeaderTsx15(){const{controlsSpecs,VoicePanelControlsModes,isScreenReaderEnabled}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&!isScreenReaderEnabled;}" };
-const __initData16 = { code: "function VoicePanelHeaderTsx16(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,withTiming,isHeaderHidden,OPACITY_TIMING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const{height:height_0}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);return{opacity:withTiming(isHeaderHidden.get()?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(isHeaderHidden.get()?-height_0:0,MODE_CHANGE_PHYSICS)}]};}" };
-const __initData17 = { code: "function VoicePanelHeaderTsx17(){const{isHeaderHidden}=this.__closure;return{pointerEvents:isHeaderHidden.get()?\"none\":\"box-none\",importantForAccessibility:isHeaderHidden.get()?\"no-hide-descendants\":\"auto\",accessibilityElementsHidden:isHeaderHidden.get()};}" };
-const __initData18 = { code: "function VoicePanelHeaderTsx18(){const{focused}=this.__closure;var _focused$get;return(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id;}" };
-const __initData19 = { code: "function VoicePanelHeaderTsx19(manualId,previousManualId){const{runOnJS,handleFocusChange}=this.__closure;if(manualId!==previousManualId){runOnJS(handleFocusChange)(manualId);}}" };
-const __initData20 = { code: "function VoicePanelHeaderTsx20(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,mode,VoicePanelModes,gestureState,connected,EDGE_GUTTER}=this.__closure;const specs=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(mode.get()===VoicePanelModes.PIP||gestureState.get().active&&!gestureState.get().requiresPop&&connected.get()||mode.get()===VoicePanelModes.DISMISSED&&connected.get()){return-(specs.height+EDGE_GUTTER);}return 0;}" };
-const __initData21 = { code: "function VoicePanelHeaderTsx21(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,mode,VoicePanelModes,connected,EDGE_GUTTER,withTiming,OPACITY_TIMING,withSpring,yOffset,wrapperOffset,DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,UI_SHOW_HIDE_PHYSICS}=this.__closure;const specs_0=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);const pipMode=mode.get()===VoicePanelModes.PIP;const height=!connected.get()?specs_0.height-specs_0.paddingTop+EDGE_GUTTER:specs_0.height;const paddingTop=!connected.get()?EDGE_GUTTER:specs_0.paddingTop;return{...specs_0,paddingTop:paddingTop,borderTopLeftRadius:!connected.get()?24:0,borderTopRightRadius:!connected.get()?24:0,height:height,opacity:withTiming(pipMode||mode.get()===VoicePanelModes.DISMISSED?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(yOffset.get(),!connected.get()&&wrapperOffset.get().gestureActive?DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE:UI_SHOW_HIDE_PHYSICS)}]};}" };
-const __initData22 = { code: "function VoicePanelHeaderTsx22(){const{controlsSpecs,VoicePanelControlsModes,isScreenReaderEnabled}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&!isScreenReaderEnabled;}" };
-const __initData23 = { code: "function VoicePanelHeaderTsx23(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,withTiming,isHeaderHidden,OPACITY_TIMING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const{height:height_0}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);return{opacity:withTiming(isHeaderHidden.get()?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(isHeaderHidden.get()?-height_0:0,MODE_CHANGE_PHYSICS)}]};}" };
-const __initData24 = { code: "function VoicePanelHeaderTsx24(){const{isHeaderHidden}=this.__closure;return{pointerEvents:isHeaderHidden.get()?'none':'box-none',importantForAccessibility:isHeaderHidden.get()?'no-hide-descendants':'auto',accessibilityElementsHidden:isHeaderHidden.get()};}" };
+const __initData14 = { code: "function VoicePanelHeaderTsx14(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,connected,EDGE_GUTTER}=this.__closure;const specs_0=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);return{height:!connected.get()?specs_0.height-specs_0.paddingTop+EDGE_GUTTER:specs_0.height};}" };
+const __initData15 = { code: "function VoicePanelHeaderTsx15(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,mode,VoicePanelModes,connected,EDGE_GUTTER,withTiming,OPACITY_TIMING,withSpring,yOffset,wrapperOffset,DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,UI_SHOW_HIDE_PHYSICS}=this.__closure;const specs_1=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);const pipMode=mode.get()===VoicePanelModes.PIP;return{paddingTop:!connected.get()?EDGE_GUTTER:specs_1.paddingTop,paddingLeft:specs_1.paddingLeft,paddingRight:specs_1.paddingRight,borderTopLeftRadius:!connected.get()?24:0,borderTopRightRadius:!connected.get()?24:0,opacity:withTiming(pipMode||mode.get()===VoicePanelModes.DISMISSED?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(yOffset.get(),!connected.get()&&wrapperOffset.get().gestureActive?DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE:UI_SHOW_HIDE_PHYSICS)}]};}" };
+const __initData16 = { code: "function VoicePanelHeaderTsx16(){const{controlsSpecs,VoicePanelControlsModes,isScreenReaderEnabled}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&!isScreenReaderEnabled;}" };
+const __initData17 = { code: "function VoicePanelHeaderTsx17(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,withTiming,isHeaderHidden,OPACITY_TIMING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const{height:height}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);return{opacity:withTiming(isHeaderHidden.get()?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(isHeaderHidden.get()?-height:0,MODE_CHANGE_PHYSICS)}]};}" };
+const __initData18 = { code: "function VoicePanelHeaderTsx18(){const{isHeaderHidden}=this.__closure;return{pointerEvents:isHeaderHidden.get()?\"none\":\"box-none\",importantForAccessibility:isHeaderHidden.get()?\"no-hide-descendants\":\"auto\",accessibilityElementsHidden:isHeaderHidden.get()};}" };
+const __initData19 = { code: "function VoicePanelHeaderTsx19(){const{focused}=this.__closure;var _focused$get;return(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id;}" };
+const __initData20 = { code: "function VoicePanelHeaderTsx20(manualId,previousManualId){const{runOnJS,handleFocusChange}=this.__closure;if(manualId!==previousManualId){runOnJS(handleFocusChange)(manualId);}}" };
+const __initData21 = { code: "function VoicePanelHeaderTsx21(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,mode,VoicePanelModes,gestureState,connected,EDGE_GUTTER}=this.__closure;const specs=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(mode.get()===VoicePanelModes.PIP||gestureState.get().active&&!gestureState.get().requiresPop&&connected.get()||mode.get()===VoicePanelModes.DISMISSED&&connected.get()){return-(specs.height+EDGE_GUTTER);}return 0;}" };
+const __initData22 = { code: "function VoicePanelHeaderTsx22(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,connected,EDGE_GUTTER}=this.__closure;const specs_0=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);return{height:!connected.get()?specs_0.height-specs_0.paddingTop+EDGE_GUTTER:specs_0.height};}" };
+const __initData23 = { code: "function VoicePanelHeaderTsx23(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,mode,VoicePanelModes,connected,EDGE_GUTTER,withTiming,OPACITY_TIMING,withSpring,yOffset,wrapperOffset,DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE,UI_SHOW_HIDE_PHYSICS}=this.__closure;const specs_1=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);const pipMode=mode.get()===VoicePanelModes.PIP;return{paddingTop:!connected.get()?EDGE_GUTTER:specs_1.paddingTop,paddingLeft:specs_1.paddingLeft,paddingRight:specs_1.paddingRight,borderTopLeftRadius:!connected.get()?24:0,borderTopRightRadius:!connected.get()?24:0,opacity:withTiming(pipMode||mode.get()===VoicePanelModes.DISMISSED?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(yOffset.get(),!connected.get()&&wrapperOffset.get().gestureActive?DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE:UI_SHOW_HIDE_PHYSICS)}]};}" };
+const __initData24 = { code: "function VoicePanelHeaderTsx24(){const{controlsSpecs,VoicePanelControlsModes,isScreenReaderEnabled}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&!isScreenReaderEnabled;}" };
+const __initData25 = { code: "function VoicePanelHeaderTsx25(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,withTiming,isHeaderHidden,OPACITY_TIMING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const{height:height}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);return{opacity:withTiming(isHeaderHidden.get()?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(isHeaderHidden.get()?-height:0,MODE_CHANGE_PHYSICS)}]};}" };
+const __initData26 = { code: "function VoicePanelHeaderTsx26(){const{isHeaderHidden}=this.__closure;return{pointerEvents:isHeaderHidden.get()?'none':'box-none',importantForAccessibility:isHeaderHidden.get()?'no-hide-descendants':'auto',accessibilityElementsHidden:isHeaderHidden.get()};}" };
 ReactCompilerGating = fn(558);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeader.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelHeader(wrapperOffset) {
-  const cResult = wrapperOffset(channelId[21]).c(107);
+  const cResult = wrapperOffset(channelId[21]).c(113);
   wrapperOffset = wrapperOffset.wrapperOffset;
   const gestureState = wrapperOffset.gestureState;
   const tmp4 = closure_26();
@@ -598,15 +605,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   let obj3 = wrapperOffset(channelId[36]);
   const stateFromStores = wrapperOffset(channelId[29]).useStateFromStores(first, tmp10, tmp11);
-  let tmp13 = gestureState(channelId[37])(channelId);
+  const tmp13 = gestureState(channelId[37])(channelId);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    obj4 = { location: "VoicePanelHeader" };
+    let obj4 = { location: "VoicePanelHeader" };
     cResult[4] = obj4;
     let tmp14 = obj4;
   } else {
     tmp14 = cResult[4];
   }
-  const tmpResult = wrapperOffset(channelId[29]);
+  let tmpResult = wrapperOffset(channelId[29]);
   const treatment = gestureState(channelId[38]).useConfig(tmp14).treatment;
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [derivedValue1, token, ChannelStore, connected];
@@ -616,7 +623,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp15 = cResult[5];
   }
   if (cResult[6] !== channelId) {
-    function ce() {
+    function le() {
       const channel = ChannelStore.getChannel(channelId);
       let channelName;
       if (null != channel) {
@@ -630,17 +637,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const items3 = [channelId];
     cResult[6] = channelId;
-    cResult[7] = ce;
+    cResult[7] = le;
     cResult[8] = items3;
     let tmp21 = items3;
-    let tmp20 = ce;
+    let tmp20 = le;
   } else {
     tmp20 = cResult[7];
     tmp21 = cResult[8];
   }
   const tmp5Result = gestureState(channelId[38]);
   const stateFromStores1 = wrapperOffset(channelId[29]).useStateFromStores(tmp15, tmp20, tmp21);
-  const tmpResult16 = wrapperOffset(channelId[29]);
+  const tmpResult17 = wrapperOffset(channelId[29]);
   [tmp24, AuthenticationStore] = focused(controlsSpecs.useState(undefined), 2);
   const tmp23 = focused(controlsSpecs.useState(undefined), 2);
   [tmp26, ChannelStore] = focused(controlsSpecs.useState(null), 2);
@@ -658,7 +665,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     AuthenticationStore(Dispatcher);
   }
   const tmp25 = focused(controlsSpecs.useState(null), 2);
-  function ge() {
+  function _e() {
     value = focused.get();
     let id;
     if (value != null) {
@@ -666,40 +673,73 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return id;
   }
-  ge.__closure = { focused };
-  ge.__workletHash = 8016082904457;
-  ge.__initData = __initData11;
-  function ue(arg0, arg1) {
+  _e.__closure = { focused };
+  _e.__workletHash = 8016082904457;
+  _e.__initData = __initData11;
+  function ge(arg0, arg1) {
     if (arg0 !== arg1) {
       ReanimatedRexport.runOnJS(handleFocusChange)(arg0);
     }
   }
-  const tmpResult17 = wrapperOffset(channelId[22]);
-  ue.__closure = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
-  ue.__workletHash = 9918394343352;
-  ue.__initData = __initData12;
-  const animatedReaction = tmpResult17.useAnimatedReaction(ge, ue);
-  let obj5 = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
+  const tmpResult18 = wrapperOffset(channelId[22]);
+  ge.__closure = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
+  ge.__workletHash = 9918394343352;
+  ge.__initData = __initData12;
+  const animatedReaction = tmpResult18.useAnimatedReaction(_e, ge);
+  obj5 = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
   token = wrapperOffset(channelId[40]).useToken(tmp5(tmp2[19]).modules.mobile.VOICE_PANEL_GUTTER);
-  const tmpResult18 = wrapperOffset(channelId[40]);
-  function me() {
-    if (mode.get() === VoicePanelModes.PIP) {
-      let num = -tmpResult.height + EDGE_GUTTER;
-    } else {
-      num = 0;
-      if (mode.get() === tmp3.DISMISSED) {
-        num = 0;
-      }
-    }
-    return num;
-  }
-  const tmpResult19 = wrapperOffset(channelId[22]);
-  me.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, gestureState, connected, EDGE_GUTTER };
-  me.__workletHash = 2737204369147;
-  me.__initData = __initData13;
-  const derivedValue = tmpResult19.useDerivedValue(me);
-  const obj6 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, gestureState, connected, EDGE_GUTTER };
+  const tmpResult19 = wrapperOffset(channelId[40]);
   class Te {
+    constructor() {
+      tmp = closure_1(closure_2[41]);
+      obj = mode;
+      tmpResult = tmp(safeArea.get(), closure_12);
+      if (mode.get() === VoicePanelModes.PIP) {
+        tmp6 = EDGE_GUTTER;
+        num = -tmpResult.height + EDGE_GUTTER;
+      } else {
+        obj2 = gestureState;
+        if (gestureState.get().active) {
+          if (!obj2.get().requiresPop) {
+            tmp4 = connected;
+          }
+        }
+        num = 0;
+        if (obj.get() === tmp3.DISMISSED) {
+          tmp5 = connected;
+          num = 0;
+        }
+      }
+      return num;
+    }
+  }
+  const tmpResult20 = wrapperOffset(channelId[22]);
+  Te.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, gestureState, connected, EDGE_GUTTER };
+  Te.__workletHash = 2737204369147;
+  Te.__initData = __initData13;
+  const derivedValue = tmpResult20.useDerivedValue(Te);
+  const obj6 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, gestureState, connected, EDGE_GUTTER };
+  class Ce {
+    constructor() {
+      tmp = closure_1(closure_2[41]);
+      tmpResult = tmp(safeArea.get(), closure_12);
+      height = tmpResult.height;
+      if (connected.get()) {
+        sum = height;
+      } else {
+        tmp3 = EDGE_GUTTER;
+        sum = height - tmpResult.paddingTop + EDGE_GUTTER;
+      }
+      return { height: sum };
+    }
+  }
+  const tmpResult21 = wrapperOffset(channelId[22]);
+  Ce.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, connected, EDGE_GUTTER };
+  Ce.__workletHash = 9724674813169;
+  Ce.__initData = __initData14;
+  const animatedStyle = tmpResult21.useAnimatedStyle(Ce);
+  const obj7 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, connected, EDGE_GUTTER };
+  class De {
     constructor() {
       tmp = closure_2;
       tmp2 = closure_1(closure_2[41]);
@@ -708,17 +748,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj2 = connected;
       value = mode.get();
       tmp5 = VoicePanelModes;
-      height = tmp2Result.height;
-      if (connected.get()) {
-        sum = height;
-      } else {
-        tmp6 = EDGE_GUTTER;
-        sum = height - tmp2Result.paddingTop + EDGE_GUTTER;
-      }
-      obj1 = {};
-      tmp8 = obj2.get() ? tmp2Result.paddingTop : EDGE_GUTTER;
-      merged = Object.assign(tmp2Result);
-      obj1.paddingTop = tmp8;
+      obj1 = { paddingTop: connected.get() ? tmp2Result.paddingTop : EDGE_GUTTER, paddingLeft: tmp2Result.paddingLeft, paddingRight: tmp2Result.paddingRight, borderTopLeftRadius: null, borderTopRightRadius: null, opacity: null, transform: null };
       num = 24;
       num2 = 24;
       if (obj2.get()) {
@@ -729,8 +759,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         num = 0;
       }
       obj1.borderTopRightRadius = num;
-      obj1.height = sum;
-      tmp10 = closure_0;
+      tmp6 = closure_0;
       obj4 = closure_0(tmp[42]);
       if (value === VoicePanelModes.PIP) {
         num3 = 0;
@@ -738,77 +767,66 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         num3 = 1;
       }
       obj1.opacity = obj4.withTiming(num3, closure_25);
-      tmp10Result = tmp10(tmp[23]);
+      tmp6Result = tmp6(tmp[23]);
       value1 = closure_13.get();
       if (!obj2.get()) {
-        tmp12 = wrapperOffset;
+        tmp8 = wrapperOffset;
         if (wrapperOffset.get().gestureActive) {
-          tmp13 = closure_18;
+          tmp9 = closure_18;
         }
         obj7 = { translateY: null };
-        obj7.translateY = tmp10Result.withSpring(value1, tmp13);
+        obj7.translateY = tmp6Result.withSpring(value1, tmp9);
         items = [];
         items[0] = obj7;
         obj1.transform = items;
         return obj1;
       }
-      tmp13 = UI_SHOW_HIDE_PHYSICS;
+      tmp9 = UI_SHOW_HIDE_PHYSICS;
       return;
     }
   }
-  const tmpResult20 = wrapperOffset(channelId[22]);
-  Te.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[42]).withTiming, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, UI_SHOW_HIDE_PHYSICS };
-  Te.__workletHash = 9971353242678;
-  Te.__initData = __initData14;
-  const animatedStyle = tmpResult20.useAnimatedStyle(Te);
-  const obj7 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[42]).withTiming, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, UI_SHOW_HIDE_PHYSICS };
-  class Ce {
-    constructor() {
-      tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
-      if (tmp) {
-        tmp2 = closure_8;
-        tmp = !closure_8;
-      }
-      return tmp;
-    }
-  }
-  Ce.__closure = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
-  Ce.__workletHash = 12045427211815;
-  Ce.__initData = __initData15;
-  derivedValue1 = wrapperOffset(channelId[22]).useDerivedValue(Ce);
-  const obj8 = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
-  const tmpResult21 = wrapperOffset(channelId[22]);
-  class De {
-    constructor() {
-      tmp = closure_2;
-      tmp2 = closure_1(closure_2[41]);
-      tmp3 = closure_0;
-      obj = closure_0(closure_2[42]);
-      obj2 = closure_14;
-      num = 1;
-      if (closure_14.get()) {
-        num = 0;
-      }
-      obj1 = { opacity: obj.withTiming(num, closure_25), transform: null };
-      tmp3Result = tmp3(tmp[23]);
-      num2 = 0;
-      if (obj2.get()) {
-        num2 = -tmp2(safeArea.get(), closure_12).height;
-      }
-      obj6 = { translateY: tmp3Result.withSpring(num2, MODE_CHANGE_PHYSICS) };
-      items = [];
-      items[0] = obj6;
-      obj1.transform = items;
-      return obj1;
-    }
-  }
   const tmpResult22 = wrapperOffset(channelId[22]);
-  De.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, withTiming: wrapperOffset(channelId[42]).withTiming, isHeaderHidden: derivedValue1, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, MODE_CHANGE_PHYSICS };
-  De.__workletHash = 11509667866329;
-  De.__initData = __initData16;
+  De.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[42]).withTiming, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, UI_SHOW_HIDE_PHYSICS };
+  De.__workletHash = 2433528387381;
+  De.__initData = __initData15;
   const animatedStyle1 = tmpResult22.useAnimatedStyle(De);
-  const obj9 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, withTiming: wrapperOffset(channelId[42]).withTiming, isHeaderHidden: derivedValue1, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, MODE_CHANGE_PHYSICS };
+  const obj8 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[42]).withTiming, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, UI_SHOW_HIDE_PHYSICS };
+  function ye() {
+    let tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
+    if (tmp) {
+      tmp = !isScreenReaderEnabled;
+    }
+    return tmp;
+  }
+  ye.__closure = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
+  ye.__workletHash = 15015047770436;
+  ye.__initData = __initData16;
+  derivedValue1 = wrapperOffset(channelId[22]).useDerivedValue(ye);
+  const obj9 = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
+  const tmpResult23 = wrapperOffset(channelId[22]);
   function be() {
+    const tmp2 = calculateVoicePanelHeaderSpecsDefault;
+    let num = 1;
+    if (derivedValue1.get()) {
+      num = 0;
+    }
+    const obj3 = { opacity: timing.withTiming(num, closure_25), transform: null };
+    let num2 = 0;
+    if (derivedValue1.get()) {
+      num2 = -tmp2(safeArea.get(), token).height;
+    }
+    const tmp3Result = spring;
+    const items = [{ translateY: spring.withSpring(num2, MODE_CHANGE_PHYSICS) }];
+    obj3.transform = items;
+    return obj3;
+  }
+  const tmpResult24 = wrapperOffset(channelId[22]);
+  be.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, withTiming: wrapperOffset(channelId[42]).withTiming, isHeaderHidden: derivedValue1, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, MODE_CHANGE_PHYSICS };
+  be.__workletHash = 27171065880;
+  be.__initData = __initData17;
+  const animatedStyle2 = tmpResult24.useAnimatedStyle(be);
+  const obj10 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, withTiming: wrapperOffset(channelId[42]).withTiming, isHeaderHidden: derivedValue1, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, MODE_CHANGE_PHYSICS };
+  function ve() {
     let str = "box-none";
     if (derivedValue1.get()) {
       str = "none";
@@ -822,22 +840,22 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj2.accessibilityElementsHidden = derivedValue1.get();
     return obj2;
   }
-  be.__closure = { isHeaderHidden: derivedValue1 };
-  be.__workletHash = 13251177319922;
-  be.__initData = __initData17;
-  const animatedProps = wrapperOffset(channelId[22]).useAnimatedProps(be);
-  const tmpResult23 = wrapperOffset(channelId[22]);
+  ve.__closure = { isHeaderHidden: derivedValue1 };
+  ve.__workletHash = 5001013322077;
+  ve.__initData = __initData18;
+  const animatedProps = wrapperOffset(channelId[22]).useAnimatedProps(ve);
+  const tmpResult25 = wrapperOffset(channelId[22]);
   const canInviteMembers = wrapperOffset(channelId[43]).useCanInviteMembers(channelId);
-  const tmpResult24 = wrapperOffset(channelId[43]);
+  const tmpResult26 = wrapperOffset(channelId[43]);
   wrapperOffset(channelId[44]).useInviteMembersCallback(channelId);
-  const tmpResult25 = wrapperOffset(channelId[44]);
-  const tmp36 = gestureState(channelId[45])();
-  wrapperOffset(channelId[46]).useNavigatorBackPressHandler(tmp36);
+  const tmpResult27 = wrapperOffset(channelId[44]);
+  const tmp37 = gestureState(channelId[45])();
+  wrapperOffset(channelId[46]).useNavigatorBackPressHandler(tmp37);
   if (null != tmp26) {
     let DOWN = constants.LEFT;
-    let tmp38 = constants;
+    let tmp39 = constants;
   } else {
-    tmp38 = constants;
+    tmp39 = constants;
     DOWN = constants.DOWN;
   }
   if (cResult[9] === tmp13) {
@@ -846,22 +864,22 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
         let id = AuthenticationStore.getId();
         cResult[12] = id;
-        let tmp43 = id;
+        let tmp44 = id;
       } else {
-        tmp43 = cResult[12];
+        tmp44 = cResult[12];
       }
-      const tmp46 = tmp5(tmp2[47])(tmp43, channelId, guildId);
-      MODE_CHANGE_PHYSICS = tmp46;
+      const tmp47 = tmp5(tmp2[47])(tmp44, channelId, guildId);
+      MODE_CHANGE_PHYSICS = tmp47;
       const _Symbol2 = Symbol;
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
         const items4 = [handleFocusChange];
         cResult[13] = items4;
-        let tmp47 = items4;
+        let tmp48 = items4;
       } else {
-        tmp47 = cResult[13];
+        tmp48 = cResult[13];
       }
-      if (cResult[14] !== tmp46) {
-        class Le {
+      if (cResult[14] !== tmp47) {
+        class Be {
           constructor() {
             tmp = closure_15;
             if (null != closure_15) {
@@ -925,13 +943,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return;
           }
         }
-        const items5 = [tmp46];
-        cResult[14] = tmp46;
-        cResult[15] = Le;
+        const items5 = [tmp47];
+        cResult[14] = tmp47;
+        cResult[15] = Be;
         cResult[16] = items5;
-        let tmp50 = items5;
+        let tmp51 = items5;
       } else {
-        class Le {
+        class Be {
           constructor() {
             tmp = closure_15;
             if (null != closure_15) {
@@ -995,53 +1013,203 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return;
           }
         }
-        tmp50 = cResult[16];
+        tmp51 = cResult[16];
       }
-      const stateFromStores2 = tmp(tmp2[29]).useStateFromStores(tmp47, Le, tmp50);
+      const stateFromStores2 = tmp(tmp2[29]).useStateFromStores(tmp48, Be, tmp51);
       const _Symbol3 = Symbol;
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
         }
-        cResult[17] = Be;
+        cResult[17] = tmp54;
       } else {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
         }
       }
-      if (DOWN === tmp38.LEFT) {
+      if (DOWN === tmp39.LEFT) {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
@@ -1050,34 +1218,134 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (cResult[18] !== "0deg") {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
         }
-        const obj10 = { rotateZ: str };
-        const items6 = [obj10];
-        tmp54[0] = items6;
+        const obj11 = { rotateZ: str };
+        const items6 = [obj11];
+        tmp56[0] = items6;
         cResult[18] = str;
-        cResult[19] = tmp54;
+        cResult[19] = tmp56;
       } else {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
@@ -1086,50 +1354,200 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (cResult[20] !== channelId) {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
         }
-        tmp56[0] = channelId;
+        tmp58[0] = channelId;
         cResult[20] = channelId;
-        cResult[21] = tmp56;
+        cResult[21] = tmp58;
       } else {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
         }
       }
-      const tmpResult27 = tmp(tmp2[29]);
-      const isSecureFramesUIEnabled = tmp(tmp2[49]).useIsSecureFramesUIEnabled(tmp56);
+      const tmpResult29 = tmp(tmp2[29]);
+      const isSecureFramesUIEnabled = tmp(tmp2[49]).useIsSecureFramesUIEnabled(tmp58);
       if (tmp26 === ParticipantTypes.USER) {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
@@ -1137,14 +1555,64 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (null != tmp24) {
           class Be {
             constructor() {
-              closure_0 = handleFocusChange.getVideoDeviceId();
-              keys = Object.keys(handleFocusChange.getVideoDevices());
-              found = keys.find((item) => item !== closure_0);
-              if (null != found) {
-                tmp2 = gestureState;
-                tmp3 = channelId;
-                obj = gestureState(channelId[48]);
-                setVideoDeviceResult = obj.setVideoDevice(found);
+              tmp = closure_15;
+              if (null != closure_15) {
+                tmp10 = closure_0;
+                tmp11 = closure_2;
+                obj3 = closure_0(closure_2[47]);
+                if (obj3.isStableUserParticipant(tmp)) {
+                  tmp10Result = tmp10(tmp11[47]);
+                  if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                    obj2 = closure_11;
+                    videoDevices = closure_11.getVideoDevices();
+                    tmp3 = globalThis;
+                    _Object = Object;
+                    keys = Object.keys(videoDevices);
+                    num = 2;
+                    if (keys.length >= 2) {
+                      videoDeviceId = obj2.getVideoDeviceId();
+                      closure_0 = videoDeviceId;
+                      tmp13 = videoDevices[videoDeviceId];
+                      facing = undefined;
+                      if (tmp13 != null) {
+                        facing = tmp13.facing;
+                      }
+                      found = keys.find((item) => item !== videoDeviceId);
+                      if (null != found) {
+                        tmp7 = videoDevices[found];
+                        facing1 = undefined;
+                        if (tmp7 != null) {
+                          facing1 = tmp7.facing;
+                        }
+                        tmp6 = facing1;
+                      }
+                      if (null != facing) {
+                        if (null != tmp6) {
+                          str3 = "back";
+                          if ("back" === facing) {
+                            str = "front";
+                            if ("front" === tmp6) {
+                              intl3 = tmp10(tmp11[31]).intl;
+                              stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                            }
+                          }
+                          str2 = "front";
+                          if ("front" === facing) {
+                            if ("back" === tmp6) {
+                              intl2 = tmp10(tmp11[31]).intl;
+                              stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                            }
+                          }
+                          intl = tmp10(tmp11[31]).intl;
+                          stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                        }
+                        return stringResult;
+                      }
+                      intl4 = tmp10(tmp11[31]).intl;
+                      stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                    }
+                  }
+                }
               }
               return;
             }
@@ -1154,30 +1622,130 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (cResult[22] === channelId) {
         class Be {
           constructor() {
-            closure_0 = handleFocusChange.getVideoDeviceId();
-            keys = Object.keys(handleFocusChange.getVideoDevices());
-            found = keys.find((item) => item !== closure_0);
-            if (null != found) {
-              tmp2 = gestureState;
-              tmp3 = channelId;
-              obj = gestureState(channelId[48]);
-              setVideoDeviceResult = obj.setVideoDevice(found);
+            tmp = closure_15;
+            if (null != closure_15) {
+              tmp10 = closure_0;
+              tmp11 = closure_2;
+              obj3 = closure_0(closure_2[47]);
+              if (obj3.isStableUserParticipant(tmp)) {
+                tmp10Result = tmp10(tmp11[47]);
+                if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                  obj2 = closure_11;
+                  videoDevices = closure_11.getVideoDevices();
+                  tmp3 = globalThis;
+                  _Object = Object;
+                  keys = Object.keys(videoDevices);
+                  num = 2;
+                  if (keys.length >= 2) {
+                    videoDeviceId = obj2.getVideoDeviceId();
+                    closure_0 = videoDeviceId;
+                    tmp13 = videoDevices[videoDeviceId];
+                    facing = undefined;
+                    if (tmp13 != null) {
+                      facing = tmp13.facing;
+                    }
+                    found = keys.find((item) => item !== videoDeviceId);
+                    if (null != found) {
+                      tmp7 = videoDevices[found];
+                      facing1 = undefined;
+                      if (tmp7 != null) {
+                        facing1 = tmp7.facing;
+                      }
+                      tmp6 = facing1;
+                    }
+                    if (null != facing) {
+                      if (null != tmp6) {
+                        str3 = "back";
+                        if ("back" === facing) {
+                          str = "front";
+                          if ("front" === tmp6) {
+                            intl3 = tmp10(tmp11[31]).intl;
+                            stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                          }
+                        }
+                        str2 = "front";
+                        if ("front" === facing) {
+                          if ("back" === tmp6) {
+                            intl2 = tmp10(tmp11[31]).intl;
+                            stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                          }
+                        }
+                        intl = tmp10(tmp11[31]).intl;
+                        stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                      return stringResult;
+                    }
+                    intl4 = tmp10(tmp11[31]).intl;
+                    stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                }
+              }
             }
             return;
           }
         }
-        const isUserSecureFramesVerified = tmp(tmp2[50]).useIsUserSecureFramesVerified(tmp60);
+        const isUserSecureFramesVerified = tmp(tmp2[50]).useIsUserSecureFramesVerified(tmp62);
         if (tmp26 === ParticipantTypes.STREAM) {
           class Be {
             constructor() {
-              closure_0 = handleFocusChange.getVideoDeviceId();
-              keys = Object.keys(handleFocusChange.getVideoDevices());
-              found = keys.find((item) => item !== closure_0);
-              if (null != found) {
-                tmp2 = gestureState;
-                tmp3 = channelId;
-                obj = gestureState(channelId[48]);
-                setVideoDeviceResult = obj.setVideoDevice(found);
+              tmp = closure_15;
+              if (null != closure_15) {
+                tmp10 = closure_0;
+                tmp11 = closure_2;
+                obj3 = closure_0(closure_2[47]);
+                if (obj3.isStableUserParticipant(tmp)) {
+                  tmp10Result = tmp10(tmp11[47]);
+                  if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                    obj2 = closure_11;
+                    videoDevices = closure_11.getVideoDevices();
+                    tmp3 = globalThis;
+                    _Object = Object;
+                    keys = Object.keys(videoDevices);
+                    num = 2;
+                    if (keys.length >= 2) {
+                      videoDeviceId = obj2.getVideoDeviceId();
+                      closure_0 = videoDeviceId;
+                      tmp13 = videoDevices[videoDeviceId];
+                      facing = undefined;
+                      if (tmp13 != null) {
+                        facing = tmp13.facing;
+                      }
+                      found = keys.find((item) => item !== videoDeviceId);
+                      if (null != found) {
+                        tmp7 = videoDevices[found];
+                        facing1 = undefined;
+                        if (tmp7 != null) {
+                          facing1 = tmp7.facing;
+                        }
+                        tmp6 = facing1;
+                      }
+                      if (null != facing) {
+                        if (null != tmp6) {
+                          str3 = "back";
+                          if ("back" === facing) {
+                            str = "front";
+                            if ("front" === tmp6) {
+                              intl3 = tmp10(tmp11[31]).intl;
+                              stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                            }
+                          }
+                          str2 = "front";
+                          if ("front" === facing) {
+                            if ("back" === tmp6) {
+                              intl2 = tmp10(tmp11[31]).intl;
+                              stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                            }
+                          }
+                          intl = tmp10(tmp11[31]).intl;
+                          stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                        }
+                        return stringResult;
+                      }
+                      intl4 = tmp10(tmp11[31]).intl;
+                      stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                    }
+                  }
+                }
               }
               return;
             }
@@ -1185,14 +1753,64 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           if (null != tmp24) {
             class Be {
               constructor() {
-                closure_0 = handleFocusChange.getVideoDeviceId();
-                keys = Object.keys(handleFocusChange.getVideoDevices());
-                found = keys.find((item) => item !== closure_0);
-                if (null != found) {
-                  tmp2 = gestureState;
-                  tmp3 = channelId;
-                  obj = gestureState(channelId[48]);
-                  setVideoDeviceResult = obj.setVideoDevice(found);
+                tmp = closure_15;
+                if (null != closure_15) {
+                  tmp10 = closure_0;
+                  tmp11 = closure_2;
+                  obj3 = closure_0(closure_2[47]);
+                  if (obj3.isStableUserParticipant(tmp)) {
+                    tmp10Result = tmp10(tmp11[47]);
+                    if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                      obj2 = closure_11;
+                      videoDevices = closure_11.getVideoDevices();
+                      tmp3 = globalThis;
+                      _Object = Object;
+                      keys = Object.keys(videoDevices);
+                      num = 2;
+                      if (keys.length >= 2) {
+                        videoDeviceId = obj2.getVideoDeviceId();
+                        closure_0 = videoDeviceId;
+                        tmp13 = videoDevices[videoDeviceId];
+                        facing = undefined;
+                        if (tmp13 != null) {
+                          facing = tmp13.facing;
+                        }
+                        found = keys.find((item) => item !== videoDeviceId);
+                        if (null != found) {
+                          tmp7 = videoDevices[found];
+                          facing1 = undefined;
+                          if (tmp7 != null) {
+                            facing1 = tmp7.facing;
+                          }
+                          tmp6 = facing1;
+                        }
+                        if (null != facing) {
+                          if (null != tmp6) {
+                            str3 = "back";
+                            if ("back" === facing) {
+                              str = "front";
+                              if ("front" === tmp6) {
+                                intl3 = tmp10(tmp11[31]).intl;
+                                stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                              }
+                            }
+                            str2 = "front";
+                            if ("front" === facing) {
+                              if ("back" === tmp6) {
+                                intl2 = tmp10(tmp11[31]).intl;
+                                stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                              }
+                            }
+                            intl = tmp10(tmp11[31]).intl;
+                            stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                          }
+                          return stringResult;
+                        }
+                        intl4 = tmp10(tmp11[31]).intl;
+                        stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                    }
+                  }
                 }
                 return;
               }
@@ -1202,30 +1820,130 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (cResult[25] === channelId) {
           class Be {
             constructor() {
-              closure_0 = handleFocusChange.getVideoDeviceId();
-              keys = Object.keys(handleFocusChange.getVideoDevices());
-              found = keys.find((item) => item !== closure_0);
-              if (null != found) {
-                tmp2 = gestureState;
-                tmp3 = channelId;
-                obj = gestureState(channelId[48]);
-                setVideoDeviceResult = obj.setVideoDevice(found);
+              tmp = closure_15;
+              if (null != closure_15) {
+                tmp10 = closure_0;
+                tmp11 = closure_2;
+                obj3 = closure_0(closure_2[47]);
+                if (obj3.isStableUserParticipant(tmp)) {
+                  tmp10Result = tmp10(tmp11[47]);
+                  if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                    obj2 = closure_11;
+                    videoDevices = closure_11.getVideoDevices();
+                    tmp3 = globalThis;
+                    _Object = Object;
+                    keys = Object.keys(videoDevices);
+                    num = 2;
+                    if (keys.length >= 2) {
+                      videoDeviceId = obj2.getVideoDeviceId();
+                      closure_0 = videoDeviceId;
+                      tmp13 = videoDevices[videoDeviceId];
+                      facing = undefined;
+                      if (tmp13 != null) {
+                        facing = tmp13.facing;
+                      }
+                      found = keys.find((item) => item !== videoDeviceId);
+                      if (null != found) {
+                        tmp7 = videoDevices[found];
+                        facing1 = undefined;
+                        if (tmp7 != null) {
+                          facing1 = tmp7.facing;
+                        }
+                        tmp6 = facing1;
+                      }
+                      if (null != facing) {
+                        if (null != tmp6) {
+                          str3 = "back";
+                          if ("back" === facing) {
+                            str = "front";
+                            if ("front" === tmp6) {
+                              intl3 = tmp10(tmp11[31]).intl;
+                              stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                            }
+                          }
+                          str2 = "front";
+                          if ("front" === facing) {
+                            if ("back" === tmp6) {
+                              intl2 = tmp10(tmp11[31]).intl;
+                              stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                            }
+                          }
+                          intl = tmp10(tmp11[31]).intl;
+                          stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                        }
+                        return stringResult;
+                      }
+                      intl4 = tmp10(tmp11[31]).intl;
+                      stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                    }
+                  }
+                }
               }
               return;
             }
           }
-          const isStreamSecureFramesVerified = tmp(tmp2[50]).useIsStreamSecureFramesVerified(tmp63);
+          const isStreamSecureFramesVerified = tmp(tmp2[50]).useIsStreamSecureFramesVerified(tmp65);
           if (ParticipantTypes.STREAM !== tmp26) {
             class Be {
               constructor() {
-                closure_0 = handleFocusChange.getVideoDeviceId();
-                keys = Object.keys(handleFocusChange.getVideoDevices());
-                found = keys.find((item) => item !== closure_0);
-                if (null != found) {
-                  tmp2 = gestureState;
-                  tmp3 = channelId;
-                  obj = gestureState(channelId[48]);
-                  setVideoDeviceResult = obj.setVideoDevice(found);
+                tmp = closure_15;
+                if (null != closure_15) {
+                  tmp10 = closure_0;
+                  tmp11 = closure_2;
+                  obj3 = closure_0(closure_2[47]);
+                  if (obj3.isStableUserParticipant(tmp)) {
+                    tmp10Result = tmp10(tmp11[47]);
+                    if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                      obj2 = closure_11;
+                      videoDevices = closure_11.getVideoDevices();
+                      tmp3 = globalThis;
+                      _Object = Object;
+                      keys = Object.keys(videoDevices);
+                      num = 2;
+                      if (keys.length >= 2) {
+                        videoDeviceId = obj2.getVideoDeviceId();
+                        closure_0 = videoDeviceId;
+                        tmp13 = videoDevices[videoDeviceId];
+                        facing = undefined;
+                        if (tmp13 != null) {
+                          facing = tmp13.facing;
+                        }
+                        found = keys.find((item) => item !== videoDeviceId);
+                        if (null != found) {
+                          tmp7 = videoDevices[found];
+                          facing1 = undefined;
+                          if (tmp7 != null) {
+                            facing1 = tmp7.facing;
+                          }
+                          tmp6 = facing1;
+                        }
+                        if (null != facing) {
+                          if (null != tmp6) {
+                            str3 = "back";
+                            if ("back" === facing) {
+                              str = "front";
+                              if ("front" === tmp6) {
+                                intl3 = tmp10(tmp11[31]).intl;
+                                stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                              }
+                            }
+                            str2 = "front";
+                            if ("front" === facing) {
+                              if ("back" === tmp6) {
+                                intl2 = tmp10(tmp11[31]).intl;
+                                stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                              }
+                            }
+                            intl = tmp10(tmp11[31]).intl;
+                            stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                          }
+                          return stringResult;
+                        }
+                        intl4 = tmp10(tmp11[31]).intl;
+                        stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                    }
+                  }
                 }
                 return;
               }
@@ -1233,14 +1951,64 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             if (ParticipantTypes.USER !== tmp26) {
               class Be {
                 constructor() {
-                  closure_0 = handleFocusChange.getVideoDeviceId();
-                  keys = Object.keys(handleFocusChange.getVideoDevices());
-                  found = keys.find((item) => item !== closure_0);
-                  if (null != found) {
-                    tmp2 = gestureState;
-                    tmp3 = channelId;
-                    obj = gestureState(channelId[48]);
-                    setVideoDeviceResult = obj.setVideoDevice(found);
+                  tmp = closure_15;
+                  if (null != closure_15) {
+                    tmp10 = closure_0;
+                    tmp11 = closure_2;
+                    obj3 = closure_0(closure_2[47]);
+                    if (obj3.isStableUserParticipant(tmp)) {
+                      tmp10Result = tmp10(tmp11[47]);
+                      if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                        obj2 = closure_11;
+                        videoDevices = closure_11.getVideoDevices();
+                        tmp3 = globalThis;
+                        _Object = Object;
+                        keys = Object.keys(videoDevices);
+                        num = 2;
+                        if (keys.length >= 2) {
+                          videoDeviceId = obj2.getVideoDeviceId();
+                          closure_0 = videoDeviceId;
+                          tmp13 = videoDevices[videoDeviceId];
+                          facing = undefined;
+                          if (tmp13 != null) {
+                            facing = tmp13.facing;
+                          }
+                          found = keys.find((item) => item !== videoDeviceId);
+                          if (null != found) {
+                            tmp7 = videoDevices[found];
+                            facing1 = undefined;
+                            if (tmp7 != null) {
+                              facing1 = tmp7.facing;
+                            }
+                            tmp6 = facing1;
+                          }
+                          if (null != facing) {
+                            if (null != tmp6) {
+                              str3 = "back";
+                              if ("back" === facing) {
+                                str = "front";
+                                if ("front" === tmp6) {
+                                  intl3 = tmp10(tmp11[31]).intl;
+                                  stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                                }
+                              }
+                              str2 = "front";
+                              if ("front" === facing) {
+                                if ("back" === tmp6) {
+                                  intl2 = tmp10(tmp11[31]).intl;
+                                  stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                                }
+                              }
+                              intl = tmp10(tmp11[31]).intl;
+                              stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                            }
+                            return stringResult;
+                          }
+                          intl4 = tmp10(tmp11[31]).intl;
+                          stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                        }
+                      }
+                    }
                   }
                   return;
                 }
@@ -1250,14 +2018,64 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           if (tmp13) {
             class Be {
               constructor() {
-                closure_0 = handleFocusChange.getVideoDeviceId();
-                keys = Object.keys(handleFocusChange.getVideoDevices());
-                found = keys.find((item) => item !== closure_0);
-                if (null != found) {
-                  tmp2 = gestureState;
-                  tmp3 = channelId;
-                  obj = gestureState(channelId[48]);
-                  setVideoDeviceResult = obj.setVideoDevice(found);
+                tmp = closure_15;
+                if (null != closure_15) {
+                  tmp10 = closure_0;
+                  tmp11 = closure_2;
+                  obj3 = closure_0(closure_2[47]);
+                  if (obj3.isStableUserParticipant(tmp)) {
+                    tmp10Result = tmp10(tmp11[47]);
+                    if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                      obj2 = closure_11;
+                      videoDevices = closure_11.getVideoDevices();
+                      tmp3 = globalThis;
+                      _Object = Object;
+                      keys = Object.keys(videoDevices);
+                      num = 2;
+                      if (keys.length >= 2) {
+                        videoDeviceId = obj2.getVideoDeviceId();
+                        closure_0 = videoDeviceId;
+                        tmp13 = videoDevices[videoDeviceId];
+                        facing = undefined;
+                        if (tmp13 != null) {
+                          facing = tmp13.facing;
+                        }
+                        found = keys.find((item) => item !== videoDeviceId);
+                        if (null != found) {
+                          tmp7 = videoDevices[found];
+                          facing1 = undefined;
+                          if (tmp7 != null) {
+                            facing1 = tmp7.facing;
+                          }
+                          tmp6 = facing1;
+                        }
+                        if (null != facing) {
+                          if (null != tmp6) {
+                            str3 = "back";
+                            if ("back" === facing) {
+                              str = "front";
+                              if ("front" === tmp6) {
+                                intl3 = tmp10(tmp11[31]).intl;
+                                stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                              }
+                            }
+                            str2 = "front";
+                            if ("front" === facing) {
+                              if ("back" === tmp6) {
+                                intl2 = tmp10(tmp11[31]).intl;
+                                stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                              }
+                            }
+                            intl = tmp10(tmp11[31]).intl;
+                            stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                          }
+                          return stringResult;
+                        }
+                        intl4 = tmp10(tmp11[31]).intl;
+                        stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                    }
+                  }
                 }
                 return;
               }
@@ -1267,106 +2085,426 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           if (cResult[28] === animatedStyle) {
             class Be {
               constructor() {
-                closure_0 = handleFocusChange.getVideoDeviceId();
-                keys = Object.keys(handleFocusChange.getVideoDevices());
-                found = keys.find((item) => item !== closure_0);
-                if (null != found) {
-                  tmp2 = gestureState;
-                  tmp3 = channelId;
-                  obj = gestureState(channelId[48]);
-                  setVideoDeviceResult = obj.setVideoDevice(found);
+                tmp = closure_15;
+                if (null != closure_15) {
+                  tmp10 = closure_0;
+                  tmp11 = closure_2;
+                  obj3 = closure_0(closure_2[47]);
+                  if (obj3.isStableUserParticipant(tmp)) {
+                    tmp10Result = tmp10(tmp11[47]);
+                    if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                      obj2 = closure_11;
+                      videoDevices = closure_11.getVideoDevices();
+                      tmp3 = globalThis;
+                      _Object = Object;
+                      keys = Object.keys(videoDevices);
+                      num = 2;
+                      if (keys.length >= 2) {
+                        videoDeviceId = obj2.getVideoDeviceId();
+                        closure_0 = videoDeviceId;
+                        tmp13 = videoDevices[videoDeviceId];
+                        facing = undefined;
+                        if (tmp13 != null) {
+                          facing = tmp13.facing;
+                        }
+                        found = keys.find((item) => item !== videoDeviceId);
+                        if (null != found) {
+                          tmp7 = videoDevices[found];
+                          facing1 = undefined;
+                          if (tmp7 != null) {
+                            facing1 = tmp7.facing;
+                          }
+                          tmp6 = facing1;
+                        }
+                        if (null != facing) {
+                          if (null != tmp6) {
+                            str3 = "back";
+                            if ("back" === facing) {
+                              str = "front";
+                              if ("front" === tmp6) {
+                                intl3 = tmp10(tmp11[31]).intl;
+                                stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                              }
+                            }
+                            str2 = "front";
+                            if ("front" === facing) {
+                              if ("back" === tmp6) {
+                                intl2 = tmp10(tmp11[31]).intl;
+                                stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                              }
+                            }
+                            intl = tmp10(tmp11[31]).intl;
+                            stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                          }
+                          return stringResult;
+                        }
+                        intl4 = tmp10(tmp11[31]).intl;
+                        stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                      }
+                    }
+                  }
                 }
                 return;
               }
             }
-            if (cResult[31] === focused) {
+            if (cResult[31] === animatedStyle1) {
               class Be {
                 constructor() {
-                  closure_0 = handleFocusChange.getVideoDeviceId();
-                  keys = Object.keys(handleFocusChange.getVideoDevices());
-                  found = keys.find((item) => item !== closure_0);
-                  if (null != found) {
-                    tmp2 = gestureState;
-                    tmp3 = channelId;
-                    obj = gestureState(channelId[48]);
-                    setVideoDeviceResult = obj.setVideoDevice(found);
+                  tmp = closure_15;
+                  if (null != closure_15) {
+                    tmp10 = closure_0;
+                    tmp11 = closure_2;
+                    obj3 = closure_0(closure_2[47]);
+                    if (obj3.isStableUserParticipant(tmp)) {
+                      tmp10Result = tmp10(tmp11[47]);
+                      if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                        obj2 = closure_11;
+                        videoDevices = closure_11.getVideoDevices();
+                        tmp3 = globalThis;
+                        _Object = Object;
+                        keys = Object.keys(videoDevices);
+                        num = 2;
+                        if (keys.length >= 2) {
+                          videoDeviceId = obj2.getVideoDeviceId();
+                          closure_0 = videoDeviceId;
+                          tmp13 = videoDevices[videoDeviceId];
+                          facing = undefined;
+                          if (tmp13 != null) {
+                            facing = tmp13.facing;
+                          }
+                          found = keys.find((item) => item !== videoDeviceId);
+                          if (null != found) {
+                            tmp7 = videoDevices[found];
+                            facing1 = undefined;
+                            if (tmp7 != null) {
+                              facing1 = tmp7.facing;
+                            }
+                            tmp6 = facing1;
+                          }
+                          if (null != facing) {
+                            if (null != tmp6) {
+                              str3 = "back";
+                              if ("back" === facing) {
+                                str = "front";
+                                if ("front" === tmp6) {
+                                  intl3 = tmp10(tmp11[31]).intl;
+                                  stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                                }
+                              }
+                              str2 = "front";
+                              if ("front" === facing) {
+                                if ("back" === tmp6) {
+                                  intl2 = tmp10(tmp11[31]).intl;
+                                  stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                                }
+                              }
+                              intl = tmp10(tmp11[31]).intl;
+                              stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                            }
+                            return stringResult;
+                          }
+                          intl4 = tmp10(tmp11[31]).intl;
+                          stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                        }
+                      }
+                    }
                   }
                   return;
                 }
               }
+              if (cResult[34] === focused) {
+                class Be {
+                  constructor() {
+                    tmp = closure_15;
+                    if (null != closure_15) {
+                      tmp10 = closure_0;
+                      tmp11 = closure_2;
+                      obj3 = closure_0(closure_2[47]);
+                      if (obj3.isStableUserParticipant(tmp)) {
+                        tmp10Result = tmp10(tmp11[47]);
+                        if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                          obj2 = closure_11;
+                          videoDevices = closure_11.getVideoDevices();
+                          tmp3 = globalThis;
+                          _Object = Object;
+                          keys = Object.keys(videoDevices);
+                          num = 2;
+                          if (keys.length >= 2) {
+                            videoDeviceId = obj2.getVideoDeviceId();
+                            closure_0 = videoDeviceId;
+                            tmp13 = videoDevices[videoDeviceId];
+                            facing = undefined;
+                            if (tmp13 != null) {
+                              facing = tmp13.facing;
+                            }
+                            found = keys.find((item) => item !== videoDeviceId);
+                            if (null != found) {
+                              tmp7 = videoDevices[found];
+                              facing1 = undefined;
+                              if (tmp7 != null) {
+                                facing1 = tmp7.facing;
+                              }
+                              tmp6 = facing1;
+                            }
+                            if (null != facing) {
+                              if (null != tmp6) {
+                                str3 = "back";
+                                if ("back" === facing) {
+                                  str = "front";
+                                  if ("front" === tmp6) {
+                                    intl3 = tmp10(tmp11[31]).intl;
+                                    stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                                  }
+                                }
+                                str2 = "front";
+                                if ("front" === facing) {
+                                  if ("back" === tmp6) {
+                                    intl2 = tmp10(tmp11[31]).intl;
+                                    stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                                  }
+                                }
+                                intl = tmp10(tmp11[31]).intl;
+                                stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                              }
+                              return stringResult;
+                            }
+                            intl4 = tmp10(tmp11[31]).intl;
+                            stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                          }
+                        }
+                      }
+                    }
+                    return;
+                  }
+                }
+              }
+              const obj12 = { isHeaderHidden: derivedValue1, scrollPosition, focused };
+              const tmp72 = closure_23(closure_35, obj12);
+              cResult[34] = focused;
+              cResult[35] = derivedValue1;
+              cResult[36] = scrollPosition;
+              cResult[37] = tmp72;
             }
-            const obj11 = { isHeaderHidden: derivedValue1, scrollPosition, focused };
-            const tmp69 = closure_23(closure_35, obj11);
-            cResult[31] = focused;
-            cResult[32] = derivedValue1;
-            cResult[33] = scrollPosition;
-            cResult[34] = tmp69;
+            const items7 = [tmp4.headerSurface, animatedStyle1];
+            cResult[31] = animatedStyle1;
+            cResult[32] = tmp4.headerSurface;
+            cResult[33] = items7;
           }
-          const items7 = [tmp4.headerWrapper, animatedStyle];
+          const items8 = [tmp4.headerWrapper, animatedStyle];
           cResult[28] = animatedStyle;
           cResult[29] = tmp4.headerWrapper;
-          cResult[30] = items7;
-          const tmpResult30 = tmp(tmp2[50]);
+          cResult[30] = items8;
+          const tmpResult32 = tmp(tmp2[50]);
         }
-        const obj12 = { streamKey: null, channelId };
+        const obj13 = { streamKey: null, channelId };
         cResult[25] = channelId;
         cResult[26] = null;
-        cResult[27] = obj12;
-        tmp63 = obj12;
-        const tmpResult29 = tmp(tmp2[50]);
+        cResult[27] = obj13;
+        tmp65 = obj13;
+        const tmpResult31 = tmp(tmp2[50]);
       }
-      const obj13 = { userId: null, channelId };
+      const obj14 = { userId: null, channelId };
       cResult[22] = channelId;
       cResult[23] = null;
-      cResult[24] = obj13;
-      tmp60 = obj13;
-      const tmpResult28 = tmp(tmp2[49]);
+      cResult[24] = obj14;
+      tmp62 = obj14;
+      const tmpResult30 = tmp(tmp2[49]);
     }
   }
-  if (DOWN === tmp38.LEFT) {
+  if (DOWN === tmp39.LEFT) {
     class Be {
       constructor() {
-        closure_0 = handleFocusChange.getVideoDeviceId();
-        keys = Object.keys(handleFocusChange.getVideoDevices());
-        found = keys.find((item) => item !== closure_0);
-        if (null != found) {
-          tmp2 = gestureState;
-          tmp3 = channelId;
-          obj = gestureState(channelId[48]);
-          setVideoDeviceResult = obj.setVideoDevice(found);
+        tmp = closure_15;
+        if (null != closure_15) {
+          tmp10 = closure_0;
+          tmp11 = closure_2;
+          obj3 = closure_0(closure_2[47]);
+          if (obj3.isStableUserParticipant(tmp)) {
+            tmp10Result = tmp10(tmp11[47]);
+            if (tmp10Result.stableParticipantHasVideo(tmp)) {
+              obj2 = closure_11;
+              videoDevices = closure_11.getVideoDevices();
+              tmp3 = globalThis;
+              _Object = Object;
+              keys = Object.keys(videoDevices);
+              num = 2;
+              if (keys.length >= 2) {
+                videoDeviceId = obj2.getVideoDeviceId();
+                closure_0 = videoDeviceId;
+                tmp13 = videoDevices[videoDeviceId];
+                facing = undefined;
+                if (tmp13 != null) {
+                  facing = tmp13.facing;
+                }
+                found = keys.find((item) => item !== videoDeviceId);
+                if (null != found) {
+                  tmp7 = videoDevices[found];
+                  facing1 = undefined;
+                  if (tmp7 != null) {
+                    facing1 = tmp7.facing;
+                  }
+                  tmp6 = facing1;
+                }
+                if (null != facing) {
+                  if (null != tmp6) {
+                    str3 = "back";
+                    if ("back" === facing) {
+                      str = "front";
+                      if ("front" === tmp6) {
+                        intl3 = tmp10(tmp11[31]).intl;
+                        stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                      }
+                    }
+                    str2 = "front";
+                    if ("front" === facing) {
+                      if ("back" === tmp6) {
+                        intl2 = tmp10(tmp11[31]).intl;
+                        stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                      }
+                    }
+                    intl = tmp10(tmp11[31]).intl;
+                    stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                  return stringResult;
+                }
+                intl4 = tmp10(tmp11[31]).intl;
+                stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+              }
+            }
+          }
         }
         return;
       }
     }
-    let stringResult = obj23.string(tmp(tmp2[31]).t["9M6OdC"]);
+    let stringResult = obj25.string(tmp(tmp2[31]).t["9M6OdC"]);
   } else {
     class Be {
       constructor() {
-        closure_0 = handleFocusChange.getVideoDeviceId();
-        keys = Object.keys(handleFocusChange.getVideoDevices());
-        found = keys.find((item) => item !== closure_0);
-        if (null != found) {
-          tmp2 = gestureState;
-          tmp3 = channelId;
-          obj = gestureState(channelId[48]);
-          setVideoDeviceResult = obj.setVideoDevice(found);
+        tmp = closure_15;
+        if (null != closure_15) {
+          tmp10 = closure_0;
+          tmp11 = closure_2;
+          obj3 = closure_0(closure_2[47]);
+          if (obj3.isStableUserParticipant(tmp)) {
+            tmp10Result = tmp10(tmp11[47]);
+            if (tmp10Result.stableParticipantHasVideo(tmp)) {
+              obj2 = closure_11;
+              videoDevices = closure_11.getVideoDevices();
+              tmp3 = globalThis;
+              _Object = Object;
+              keys = Object.keys(videoDevices);
+              num = 2;
+              if (keys.length >= 2) {
+                videoDeviceId = obj2.getVideoDeviceId();
+                closure_0 = videoDeviceId;
+                tmp13 = videoDevices[videoDeviceId];
+                facing = undefined;
+                if (tmp13 != null) {
+                  facing = tmp13.facing;
+                }
+                found = keys.find((item) => item !== videoDeviceId);
+                if (null != found) {
+                  tmp7 = videoDevices[found];
+                  facing1 = undefined;
+                  if (tmp7 != null) {
+                    facing1 = tmp7.facing;
+                  }
+                  tmp6 = facing1;
+                }
+                if (null != facing) {
+                  if (null != tmp6) {
+                    str3 = "back";
+                    if ("back" === facing) {
+                      str = "front";
+                      if ("front" === tmp6) {
+                        intl3 = tmp10(tmp11[31]).intl;
+                        stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                      }
+                    }
+                    str2 = "front";
+                    if ("front" === facing) {
+                      if ("back" === tmp6) {
+                        intl2 = tmp10(tmp11[31]).intl;
+                        stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                      }
+                    }
+                    intl = tmp10(tmp11[31]).intl;
+                    stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                  }
+                  return stringResult;
+                }
+                intl4 = tmp10(tmp11[31]).intl;
+                stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+              }
+            }
+          }
         }
         return;
       }
     }
-    const string = tmp41.string;
+    const string = tmp42.string;
     const t = tmp(tmp2[31]).t;
     if (tmp13) {
       class Be {
         constructor() {
-          closure_0 = handleFocusChange.getVideoDeviceId();
-          keys = Object.keys(handleFocusChange.getVideoDevices());
-          found = keys.find((item) => item !== closure_0);
-          if (null != found) {
-            tmp2 = gestureState;
-            tmp3 = channelId;
-            obj = gestureState(channelId[48]);
-            setVideoDeviceResult = obj.setVideoDevice(found);
+          tmp = closure_15;
+          if (null != closure_15) {
+            tmp10 = closure_0;
+            tmp11 = closure_2;
+            obj3 = closure_0(closure_2[47]);
+            if (obj3.isStableUserParticipant(tmp)) {
+              tmp10Result = tmp10(tmp11[47]);
+              if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                obj2 = closure_11;
+                videoDevices = closure_11.getVideoDevices();
+                tmp3 = globalThis;
+                _Object = Object;
+                keys = Object.keys(videoDevices);
+                num = 2;
+                if (keys.length >= 2) {
+                  videoDeviceId = obj2.getVideoDeviceId();
+                  closure_0 = videoDeviceId;
+                  tmp13 = videoDevices[videoDeviceId];
+                  facing = undefined;
+                  if (tmp13 != null) {
+                    facing = tmp13.facing;
+                  }
+                  found = keys.find((item) => item !== videoDeviceId);
+                  if (null != found) {
+                    tmp7 = videoDevices[found];
+                    facing1 = undefined;
+                    if (tmp7 != null) {
+                      facing1 = tmp7.facing;
+                    }
+                    tmp6 = facing1;
+                  }
+                  if (null != facing) {
+                    if (null != tmp6) {
+                      str3 = "back";
+                      if ("back" === facing) {
+                        str = "front";
+                        if ("front" === tmp6) {
+                          intl3 = tmp10(tmp11[31]).intl;
+                          stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                        }
+                      }
+                      str2 = "front";
+                      if ("front" === facing) {
+                        if ("back" === tmp6) {
+                          intl2 = tmp10(tmp11[31]).intl;
+                          stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                        }
+                      }
+                      intl = tmp10(tmp11[31]).intl;
+                      stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                    }
+                    return stringResult;
+                  }
+                  intl4 = tmp10(tmp11[31]).intl;
+                  stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                }
+              }
+            }
           }
           return;
         }
@@ -1374,14 +2512,64 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     } else {
       class Be {
         constructor() {
-          closure_0 = handleFocusChange.getVideoDeviceId();
-          keys = Object.keys(handleFocusChange.getVideoDevices());
-          found = keys.find((item) => item !== closure_0);
-          if (null != found) {
-            tmp2 = gestureState;
-            tmp3 = channelId;
-            obj = gestureState(channelId[48]);
-            setVideoDeviceResult = obj.setVideoDevice(found);
+          tmp = closure_15;
+          if (null != closure_15) {
+            tmp10 = closure_0;
+            tmp11 = closure_2;
+            obj3 = closure_0(closure_2[47]);
+            if (obj3.isStableUserParticipant(tmp)) {
+              tmp10Result = tmp10(tmp11[47]);
+              if (tmp10Result.stableParticipantHasVideo(tmp)) {
+                obj2 = closure_11;
+                videoDevices = closure_11.getVideoDevices();
+                tmp3 = globalThis;
+                _Object = Object;
+                keys = Object.keys(videoDevices);
+                num = 2;
+                if (keys.length >= 2) {
+                  videoDeviceId = obj2.getVideoDeviceId();
+                  closure_0 = videoDeviceId;
+                  tmp13 = videoDevices[videoDeviceId];
+                  facing = undefined;
+                  if (tmp13 != null) {
+                    facing = tmp13.facing;
+                  }
+                  found = keys.find((item) => item !== videoDeviceId);
+                  if (null != found) {
+                    tmp7 = videoDevices[found];
+                    facing1 = undefined;
+                    if (tmp7 != null) {
+                      facing1 = tmp7.facing;
+                    }
+                    tmp6 = facing1;
+                  }
+                  if (null != facing) {
+                    if (null != tmp6) {
+                      str3 = "back";
+                      if ("back" === facing) {
+                        str = "front";
+                        if ("front" === tmp6) {
+                          intl3 = tmp10(tmp11[31]).intl;
+                          stringResult = intl3.string(tmp10(tmp11[31]).t["/R1SBx"]);
+                        }
+                      }
+                      str2 = "front";
+                      if ("front" === facing) {
+                        if ("back" === tmp6) {
+                          intl2 = tmp10(tmp11[31]).intl;
+                          stringResult = intl2.string(tmp10(tmp11[31]).t["7YZ/Si"]);
+                        }
+                      }
+                      intl = tmp10(tmp11[31]).intl;
+                      stringResult = intl.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                    }
+                    return stringResult;
+                  }
+                  intl4 = tmp10(tmp11[31]).intl;
+                  stringResult = intl4.string(tmp10(tmp11[31]).t["t9eQ/g"]);
+                }
+              }
+            }
           }
           return;
         }
@@ -1391,7 +2579,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[9] = tmp13;
   cResult[10] = DOWN;
   cResult[11] = stringResult;
-  const tmpResult26 = wrapperOffset(channelId[46]);
+  const tmpResult28 = wrapperOffset(channelId[46]);
 }) : (function VoicePanelHeader(wrapperOffset) {
   wrapperOffset = wrapperOffset.wrapperOffset;
   const gestureState = wrapperOffset.gestureState;
@@ -1418,9 +2606,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let items = [c10];
   const items1 = [channelId];
   const stateFromStores = wrapperOffset(channelId[29]).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  let tmp39Result12 = gestureState(channelId[37])(channelId);
+  let tmp40Result12 = gestureState(channelId[37])(channelId);
   let obj3 = wrapperOffset(channelId[29]);
-  obj4 = gestureState(channelId[38]);
+  let obj4 = gestureState(channelId[38]);
   const items2 = [derivedValue1, token, c10, connected];
   const items3 = [channelId];
   const stateFromStores1 = wrapperOffset(channelId[29]).useStateFromStores(items2, () => {
@@ -1435,7 +2623,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return channelName;
   }, items3);
-  let obj5 = wrapperOffset(channelId[29]);
+  obj5 = wrapperOffset(channelId[29]);
   [tmp11, c9] = focused(controlsSpecs.useState(undefined), 2);
   const tmp10 = focused(controlsSpecs.useState(undefined), 2);
   [tmp13, c10] = focused(controlsSpecs.useState(null), 2);
@@ -1463,8 +2651,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return id;
   };
   fn.__closure = { focused };
-  fn.__workletHash = 3671264887776;
-  fn.__initData = __initData18;
+  fn.__workletHash = 13360529041025;
+  fn.__initData = __initData19;
   const fn2 = function u(arg0, arg1) {
     if (arg0 !== arg1) {
       ReanimatedRexport.runOnJS(callback)(arg0);
@@ -1472,13 +2660,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   };
   const obj6 = wrapperOffset(channelId[22]);
   fn2.__closure = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
-  fn2.__workletHash = 3195747765779;
-  fn2.__initData = __initData19;
+  fn2.__workletHash = 3863557916793;
+  fn2.__initData = __initData20;
   const animatedReaction = obj6.useAnimatedReaction(fn, fn2);
   const obj7 = { runOnJS: wrapperOffset(channelId[22]).runOnJS, handleFocusChange };
   token = wrapperOffset(channelId[40]).useToken(gestureState(channelId[19]).modules.mobile.VOICE_PANEL_GUTTER);
   const obj8 = wrapperOffset(channelId[40]);
-  function _e() {
+  function pe() {
     if (mode.get() === VoicePanelModes.PIP) {
       let num = -tmpResult.height + EDGE_GUTTER;
     } else {
@@ -1490,23 +2678,35 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return num;
   }
   const obj9 = wrapperOffset(channelId[22]);
-  _e.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, gestureState, connected, EDGE_GUTTER };
-  _e.__workletHash = 11122710925211;
-  _e.__initData = __initData20;
-  const derivedValue = obj9.useDerivedValue(_e);
+  pe.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, gestureState, connected, EDGE_GUTTER };
+  pe.__workletHash = 4432667021114;
+  pe.__initData = __initData21;
+  const derivedValue = obj9.useDerivedValue(pe);
   const obj10 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, gestureState, connected, EDGE_GUTTER };
-  function pe() {
+  class Se {
+    constructor() {
+      tmp = closure_1(closure_2[41]);
+      tmpResult = tmp(safeArea.get(), closure_12);
+      height = tmpResult.height;
+      if (connected.get()) {
+        sum = height;
+      } else {
+        tmp3 = EDGE_GUTTER;
+        sum = height - tmpResult.paddingTop + EDGE_GUTTER;
+      }
+      return { height: sum };
+    }
+  }
+  const obj11 = wrapperOffset(channelId[22]);
+  Se.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, connected, EDGE_GUTTER };
+  Se.__workletHash = 13652046153012;
+  Se.__initData = __initData22;
+  const animatedStyle = obj11.useAnimatedStyle(Se);
+  const obj12 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, connected, EDGE_GUTTER };
+  function fe() {
     const tmp2Result = calculateVoicePanelHeaderSpecsDefault(safeArea.get(), token);
     value = mode.get();
-    const height = tmp2Result.height;
-    if (connected.get()) {
-      let sum = height;
-    } else {
-      sum = height - tmp2Result.paddingTop + EDGE_GUTTER;
-    }
-    const obj3 = {};
-    const merged = Object.assign(tmp2Result);
-    obj3.paddingTop = connected.get() ? tmp2Result.paddingTop : EDGE_GUTTER;
+    const obj3 = { paddingTop: connected.get() ? tmp2Result.paddingTop : EDGE_GUTTER, paddingLeft: tmp2Result.paddingLeft, paddingRight: tmp2Result.paddingRight, borderTopLeftRadius: null, borderTopRightRadius: null, opacity: null, transform: null };
     let num = 24;
     let num2 = 24;
     if (connected.get()) {
@@ -1517,8 +2717,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       num = 0;
     }
     obj3.borderTopRightRadius = num;
-    obj3.height = sum;
-    const tmp8 = connected.get() ? tmp2Result.paddingTop : EDGE_GUTTER;
     if (value === VoicePanelModes.PIP) {
       let num3 = 0;
     } else {
@@ -1528,23 +2726,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     value2 = derivedValue.get();
     if (!connected.get()) {
       if (wrapperOffset.get().gestureActive) {
-        let tmp13 = DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE;
+        let tmp9 = DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE;
       }
-      const obj5 = { translateY: tmp10Result.withSpring(value2, tmp13) };
+      obj5 = { translateY: tmp6Result.withSpring(value2, tmp9) };
       const items = [obj5];
       obj3.transform = items;
       return obj3;
     }
-    tmp13 = UI_SHOW_HIDE_PHYSICS;
-    tmp10Result = spring;
+    tmp9 = UI_SHOW_HIDE_PHYSICS;
+    tmp6Result = spring;
   }
-  const obj11 = wrapperOffset(channelId[22]);
-  pe.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[42]).withTiming, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, UI_SHOW_HIDE_PHYSICS };
-  pe.__workletHash = 13938557240528;
-  pe.__initData = __initData21;
-  const animatedStyle = obj11.useAnimatedStyle(pe);
-  const obj12 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[42]).withTiming, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, UI_SHOW_HIDE_PHYSICS };
-  class Se {
+  const obj13 = wrapperOffset(channelId[22]);
+  fe.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[42]).withTiming, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, UI_SHOW_HIDE_PHYSICS };
+  fe.__workletHash = 15844160278128;
+  fe.__initData = __initData23;
+  const animatedStyle1 = obj13.useAnimatedStyle(fe);
+  const obj14 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, mode, VoicePanelModes, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[42]).withTiming, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE, UI_SHOW_HIDE_PHYSICS };
+  class He {
     constructor() {
       tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
       if (tmp) {
@@ -1554,35 +2752,43 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return tmp;
     }
   }
-  Se.__closure = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
-  Se.__workletHash = 5927654807363;
-  Se.__initData = __initData22;
-  derivedValue1 = wrapperOffset(channelId[22]).useDerivedValue(Se);
-  const obj13 = wrapperOffset(channelId[22]);
-  const obj14 = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
-  function fe() {
-    const tmp2 = calculateVoicePanelHeaderSpecsDefault;
-    let num = 1;
-    if (derivedValue1.get()) {
-      num = 0;
-    }
-    const obj3 = { opacity: timing.withTiming(num, closure_25), transform: null };
-    let num2 = 0;
-    if (derivedValue1.get()) {
-      num2 = -tmp2(safeArea.get(), token).height;
-    }
-    const tmp3Result = spring;
-    const items = [{ translateY: spring.withSpring(num2, MODE_CHANGE_PHYSICS) }];
-    obj3.transform = items;
-    return obj3;
-  }
+  He.__closure = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
+  He.__workletHash = 7957810318213;
+  He.__initData = __initData24;
+  derivedValue1 = wrapperOffset(channelId[22]).useDerivedValue(He);
   const obj15 = wrapperOffset(channelId[22]);
-  fe.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, withTiming: wrapperOffset(channelId[42]).withTiming, isHeaderHidden: derivedValue1, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, MODE_CHANGE_PHYSICS: DOWN };
-  fe.__workletHash = 11151013494207;
-  fe.__initData = __initData23;
-  const animatedStyle1 = obj15.useAnimatedStyle(fe);
-  const obj16 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, withTiming: wrapperOffset(channelId[42]).withTiming, isHeaderHidden: derivedValue1, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, MODE_CHANGE_PHYSICS: DOWN };
-  class He {
+  const obj16 = { controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled };
+  class Ee {
+    constructor() {
+      tmp = closure_2;
+      tmp2 = closure_1(closure_2[41]);
+      tmp3 = closure_0;
+      obj = closure_0(closure_2[42]);
+      obj2 = closure_14;
+      num = 1;
+      if (closure_14.get()) {
+        num = 0;
+      }
+      obj1 = { opacity: obj.withTiming(num, closure_25), transform: null };
+      tmp3Result = tmp3(tmp[23]);
+      num2 = 0;
+      if (obj2.get()) {
+        num2 = -tmp2(safeArea.get(), closure_12).height;
+      }
+      obj6 = { translateY: tmp3Result.withSpring(num2, MODE_CHANGE_PHYSICS) };
+      items = [];
+      items[0] = obj6;
+      obj1.transform = items;
+      return obj1;
+    }
+  }
+  const obj17 = wrapperOffset(channelId[22]);
+  Ee.__closure = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, withTiming: wrapperOffset(channelId[42]).withTiming, isHeaderHidden: derivedValue1, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, MODE_CHANGE_PHYSICS: DOWN };
+  Ee.__workletHash = 10565055547481;
+  Ee.__initData = __initData25;
+  const animatedStyle2 = obj17.useAnimatedStyle(Ee);
+  const obj18 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[41]), safeArea, edgeGutter: token, withTiming: wrapperOffset(channelId[42]).withTiming, isHeaderHidden: derivedValue1, OPACITY_TIMING, withSpring: wrapperOffset(channelId[23]).withSpring, MODE_CHANGE_PHYSICS: DOWN };
+  class Ie {
     constructor() {
       obj = closure_14;
       str = "box-none";
@@ -1599,38 +2805,38 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return obj1;
     }
   }
-  He.__closure = { isHeaderHidden: derivedValue1 };
-  He.__workletHash = 9531590342194;
-  He.__initData = __initData24;
-  const animatedProps = wrapperOffset(channelId[22]).useAnimatedProps(He);
-  const obj17 = wrapperOffset(channelId[22]);
+  Ie.__closure = { isHeaderHidden: derivedValue1 };
+  Ie.__workletHash = 1667970934768;
+  Ie.__initData = __initData26;
+  const animatedProps = wrapperOffset(channelId[22]).useAnimatedProps(Ie);
+  const obj19 = wrapperOffset(channelId[22]);
   let canInviteMembers = wrapperOffset(channelId[43]).useCanInviteMembers(channelId);
-  const obj18 = wrapperOffset(channelId[43]);
-  const obj19 = wrapperOffset(channelId[44]);
-  const tmp24 = gestureState(channelId[45])();
+  const obj20 = wrapperOffset(channelId[43]);
+  const obj21 = wrapperOffset(channelId[44]);
+  const tmp25 = gestureState(channelId[45])();
   const inviteMembersCallback = wrapperOffset(channelId[44]).useInviteMembersCallback(channelId);
-  wrapperOffset(channelId[46]).useNavigatorBackPressHandler(tmp24);
+  wrapperOffset(channelId[46]).useNavigatorBackPressHandler(tmp25);
   if (null != tmp13) {
     DOWN = constants.LEFT;
-    let tmp26 = constants;
+    let tmp27 = constants;
   } else {
-    tmp26 = constants;
+    tmp27 = constants;
     DOWN = constants.DOWN;
   }
-  if (DOWN === tmp26.LEFT) {
+  if (DOWN === tmp27.LEFT) {
     let intl2 = tmp5(tmp3[31]).intl;
     let stringResult = intl2.string(tmp5(tmp3[31]).t["9M6OdC"]);
   } else {
     let intl = tmp5(tmp3[31]).intl;
     const string = intl.string;
     const t = tmp5(tmp3[31]).t;
-    if (tmp39Result12) {
+    if (tmp40Result12) {
       stringResult = string(t.RLCTQG);
     } else {
       stringResult = string(t["5lPjGj"]);
     }
   }
-  const obj20 = wrapperOffset(channelId[46]);
+  const obj22 = wrapperOffset(channelId[46]);
   const tmp2ResultResult = gestureState(channelId[47])(AuthenticationStore.getId(), channelId, guildId);
   UI_SHOW_HIDE_PHYSICS = tmp2ResultResult;
   let tmp2Result = gestureState(channelId[47]);
@@ -1707,23 +2913,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp5Result = wrapperOffset(channelId[29]);
   const isSecureFramesUIEnabled = wrapperOffset(channelId[49]).useIsSecureFramesUIEnabled({ channelId });
   const tmp5Result4 = wrapperOffset(channelId[49]);
-  let tmp36 = null;
+  let tmp37 = null;
   if (tmp13 === ParticipantTypes.USER) {
-    tmp36 = null;
+    tmp37 = null;
     if (null != tmp11) {
-      tmp36 = tmp11;
+      tmp37 = tmp11;
     }
   }
-  const isUserSecureFramesVerified = wrapperOffset(channelId[50]).useIsUserSecureFramesVerified({ userId: tmp36, channelId });
+  const isUserSecureFramesVerified = wrapperOffset(channelId[50]).useIsUserSecureFramesVerified({ userId: tmp37, channelId });
   const tmp5Result5 = wrapperOffset(channelId[50]);
-  let tmp38 = null;
+  let tmp39 = null;
   if (tmp13 === ParticipantTypes.STREAM) {
-    tmp38 = null;
+    tmp39 = null;
     if (null != tmp11) {
-      tmp38 = tmp11;
+      tmp39 = tmp11;
     }
   }
-  let flag = wrapperOffset(channelId[50]).useIsStreamSecureFramesVerified({ streamKey: tmp38, channelId });
+  let flag = wrapperOffset(channelId[50]).useIsStreamSecureFramesVerified({ streamKey: tmp39, channelId });
   if (ParticipantTypes.STREAM !== tmp13) {
     flag = false;
     if (ParticipantTypes.USER === tmp13) {
@@ -1731,107 +2937,112 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   let ONYX;
-  if (tmp39Result12) {
+  if (tmp40Result12) {
     ONYX = ThemeTypes.ONYX;
   }
-  const obj21 = { theme: ONYX, children: null };
-  const obj22 = { style: null, pointerEvents: "box-none", layout, children: null };
+  const obj23 = { theme: ONYX, children: null };
+  const obj24 = { style: null, pointerEvents: "box-none", layout, children: null };
   const items8 = [tmp.headerWrapper, animatedStyle];
-  obj22.style = items8;
+  obj24.style = items8;
   const tmp5Result6 = wrapperOffset(channelId[50]);
-  const items9 = [closure_23(closure_35, { isHeaderHidden: derivedValue1, scrollPosition, focused }), , ];
-  let tmp39Result = tmp39Result12;
-  if (tmp39Result12) {
-    const obj23 = { baseColor: tmp2(tmp3[19]).colors.BLACK, minHeight: 0 };
-    tmp39Result = closure_23(tmp2(tmp3[51]), obj23);
-    const tmp2Result12 = tmp2(tmp3[51]);
+  const obj25 = { style: null, pointerEvents: "box-none", children: null };
+  const items9 = [tmp.headerSurface, animatedStyle1];
+  obj25.style = items9;
+  const tmp2Result12 = gestureState(channelId[26]);
+  const items10 = [closure_23(closure_35, { isHeaderHidden: derivedValue1, scrollPosition, focused }), , ];
+  let tmp40Result = tmp40Result12;
+  if (tmp40Result12) {
+    const obj26 = { baseColor: tmp2(tmp3[19]).colors.BLACK, minHeight: 0 };
+    tmp40Result = closure_23(tmp2(tmp3[51]), obj26);
+    const tmp2Result14 = tmp2(tmp3[51]);
   }
-  items9[1] = tmp39Result;
-  const obj24 = { style: tmp.headerContentWrapper, pointerEvents: "box-none", layout, children: null };
-  let tmp39Result7 = null;
-  const tmp2Result11 = gestureState(channelId[26]);
-  if (tmp13 === ParticipantTypes.USER) {
-    const obj25 = { isHeaderHidden: derivedValue1 };
-    tmp39Result7 = closure_23(tmp2(tmp3[52]), obj25);
-  }
-  const items10 = [tmp39Result7, ];
-  const obj26 = { style: null, animatedProps, children: null };
-  const items11 = [tmp.headerOuter, animatedStyle1];
-  obj26.style = items11;
+  items10[1] = tmp40Result;
+  const obj27 = { style: tmp.headerContentWrapper, pointerEvents: "box-none", layout, children: null };
+  let tmp40Result7 = null;
   const tmp2Result13 = gestureState(channelId[26]);
-  const obj27 = { style: tmp.leftWrapper, pointerEvents: "box-none", children: null };
-  const tmp2Result14 = gestureState(channelId[26]);
-  const obj28 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
-  const tmp2Result15 = gestureState(channelId[25]);
-  obj28.icon = gestureState(channelId[53]);
-  obj28.accessibilityLabel = stringResult;
-  obj28.onPress = tmp24;
-  obj28.style = memo;
-  const items12 = [closure_23(gestureState(channelId[35]), obj28), ];
-  const obj29 = { style: tmp.headerInner, children: null };
-  const tmp2Result16 = gestureState(channelId[35]);
-  const items13 = [closure_23(gestureState(channelId[54]), {}), ];
-  let tmp39Result8 = null;
+  if (tmp13 === ParticipantTypes.USER) {
+    const obj28 = { isHeaderHidden: derivedValue1 };
+    tmp40Result7 = closure_23(tmp2(tmp3[52]), obj28);
+  }
+  const items11 = [tmp40Result7, ];
+  const obj29 = { style: null, animatedProps, children: null };
+  const items12 = [tmp.headerOuter, animatedStyle2];
+  obj29.style = items12;
+  const tmp2Result15 = gestureState(channelId[26]);
+  const obj30 = { style: tmp.leftWrapper, pointerEvents: "box-none", children: null };
+  const tmp2Result16 = gestureState(channelId[26]);
+  const obj31 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
+  const tmp2Result17 = gestureState(channelId[25]);
+  obj31.icon = gestureState(channelId[53]);
+  obj31.accessibilityLabel = stringResult;
+  obj31.onPress = tmp25;
+  obj31.style = memo;
+  const items13 = [closure_23(gestureState(channelId[35]), obj31), ];
+  const obj32 = { style: tmp.headerInner, children: null };
+  const tmp2Result18 = gestureState(channelId[35]);
+  const items14 = [closure_23(gestureState(channelId[54]), {}), ];
+  let tmp40Result8 = null;
   if (isSecureFramesUIEnabled) {
-    tmp39Result8 = null;
+    tmp40Result8 = null;
     if (flag) {
-      const obj30 = { size: "xs", color: tmp2(tmp3[19]).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
-      tmp39Result8 = closure_23(tmp5(tmp3[55]).ShieldLockIcon, obj30);
+      const obj33 = { size: "xs", color: tmp2(tmp3[19]).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
+      tmp40Result8 = closure_23(tmp5(tmp3[55]).ShieldLockIcon, obj33);
     }
   }
-  items13[1] = tmp39Result8;
-  obj29.children = items13;
-  items12[1] = closure_24(gestureState(channelId[26]), obj29);
-  obj27.children = items12;
-  const items14 = [closure_24(tmp2Result15, obj27), ];
-  const obj31 = { style: tmp.rightWrapper, layout, children: null };
-  const tmp2Result17 = gestureState(channelId[26]);
-  const items15 = [closure_23(closure_40, {}), , , , , , ];
-  let tmp39Result9 = channelType === tmp5(tmp3[56]).ChannelTypes.GUILD_STAGE_VOICE;
-  if (tmp39Result9) {
-    const obj32 = { channelId };
-    tmp39Result9 = closure_23(closure_41, obj32);
+  items14[1] = tmp40Result8;
+  obj32.children = items14;
+  items13[1] = closure_24(gestureState(channelId[26]), obj32);
+  obj30.children = items13;
+  const items15 = [closure_24(tmp2Result17, obj30), ];
+  const obj34 = { style: tmp.rightWrapper, layout, children: null };
+  const tmp2Result19 = gestureState(channelId[26]);
+  const items16 = [closure_23(closure_40, {}), , , , , , ];
+  let tmp40Result9 = channelType === tmp5(tmp3[56]).ChannelTypes.GUILD_STAGE_VOICE;
+  if (tmp40Result9) {
+    const obj35 = { channelId };
+    tmp40Result9 = closure_23(closure_41, obj35);
   }
-  items15[1] = tmp39Result9;
-  items15[2] = closure_23(gestureState(channelId[57]), { isConnectedToVoiceChannel: tmp39Result12, channelId });
-  let tmp39Result10 = null;
+  items16[1] = tmp40Result9;
+  items16[2] = closure_23(gestureState(channelId[57]), { isConnectedToVoiceChannel: tmp40Result12, channelId });
+  let tmp40Result10 = null;
   if (null != stateFromStores) {
-    const obj33 = { channel: stateFromStores, inCall: tmp39Result12 };
-    tmp39Result10 = closure_23(tmp2(tmp3[58]), obj33);
+    const obj36 = { channel: stateFromStores, inCall: tmp40Result12 };
+    tmp40Result10 = closure_23(tmp2(tmp3[58]), obj36);
   }
-  items15[3] = tmp39Result10;
+  items16[3] = tmp40Result10;
   if (canInviteMembers) {
-    const obj34 = { icon: tmp2(tmp3[59]), accessibilityLabel: null, onPress: null };
+    const obj37 = { icon: tmp2(tmp3[59]), accessibilityLabel: null, onPress: null };
     let intl3 = tmp5(tmp3[31]).intl;
-    const obj35 = { channelName: stateFromStores1 };
-    obj34.accessibilityLabel = intl3.formatToPlainString(tmp5(tmp3[31]).t["dHHb/2"], obj35);
-    obj34.onPress = inviteMembersCallback;
-    canInviteMembers = closure_23(tmp2(tmp3[35]), obj34);
-    const tmp2Result19 = tmp2(tmp3[35]);
+    const obj38 = { channelName: stateFromStores1 };
+    obj37.accessibilityLabel = intl3.formatToPlainString(tmp5(tmp3[31]).t["dHHb/2"], obj38);
+    obj37.onPress = inviteMembersCallback;
+    canInviteMembers = closure_23(tmp2(tmp3[35]), obj37);
+    const tmp2Result21 = tmp2(tmp3[35]);
   }
-  items15[4] = canInviteMembers;
-  let tmp39Result11 = null;
+  items16[4] = canInviteMembers;
+  let tmp40Result11 = null;
   if (null != stateFromStores2) {
-    const obj36 = { icon: tmp2(tmp3[60]), onPress: callback1, accessibilityLabel: stateFromStores2 };
-    tmp39Result11 = closure_23(tmp2(tmp3[35]), obj36);
-    const tmp2Result20 = tmp2(tmp3[35]);
+    const obj39 = { icon: tmp2(tmp3[60]), onPress: callback1, accessibilityLabel: stateFromStores2 };
+    tmp40Result11 = closure_23(tmp2(tmp3[35]), obj39);
+    const tmp2Result22 = tmp2(tmp3[35]);
   }
-  items15[5] = tmp39Result11;
-  if (tmp39Result12) {
-    tmp39Result12 = obj4.useConfig({ location: "VoicePanelHeader" }).treatment === tmp5(tmp3[38]).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
+  items16[5] = tmp40Result11;
+  if (tmp40Result12) {
+    tmp40Result12 = obj4.useConfig({ location: "VoicePanelHeader" }).treatment === tmp5(tmp3[38]).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
   }
-  if (tmp39Result12) {
-    const obj37 = { channelId };
-    tmp39Result12 = closure_23(tmp2(tmp3[61]), obj37);
+  if (tmp40Result12) {
+    const obj40 = { channelId };
+    tmp40Result12 = closure_23(tmp2(tmp3[61]), obj40);
   }
-  items15[6] = tmp39Result12;
-  obj31.children = items15;
-  items14[1] = closure_24(gestureState(channelId[26]), obj31);
-  obj26.children = items14;
-  items10[1] = closure_24(tmp2Result14, obj26);
-  obj24.children = items10;
-  items9[2] = closure_24(tmp2Result13, obj24);
-  obj22.children = items9;
-  obj21.children = closure_24(tmp2Result11, obj22);
-  return closure_23(wrapperOffset(channelId[62]).ThemeContextProvider, obj21);
+  items16[6] = tmp40Result12;
+  obj34.children = items16;
+  items15[1] = closure_24(gestureState(channelId[26]), obj34);
+  obj29.children = items15;
+  items11[1] = closure_24(tmp2Result16, obj29);
+  obj27.children = items11;
+  items10[2] = closure_24(tmp2Result15, obj27);
+  obj25.children = items10;
+  obj24.children = closure_24(tmp2Result13, obj25);
+  obj23.children = closure_23(tmp2Result12, obj24);
+  return closure_23(wrapperOffset(channelId[62]).ThemeContextProvider, obj23);
 }));

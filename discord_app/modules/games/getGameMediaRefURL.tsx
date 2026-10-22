@@ -2,28 +2,27 @@
 
 // Module 2032 (getGameMediaRefURL)
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import StringUtils from "StringUtils" /* 2033 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2037 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
-export default function getGameMediaRefURL(id, type, size) {
-  if (null == type) {
-    return null;
-  } else {
-    type = type.type;
+export default function getGameMediaRefURL(id, value, size) {
+  let tmp = null != value;
+  if (tmp) {
+    tmp = !StringUtils.isNullOrEmpty(value.value);
+  }
+  if (tmp) {
+    const type = value.type;
     if ("hash" === type) {
-      let tmp8 = null;
-      if (!obj3.isNullOrEmpty(type.value)) {
-        const obj2 = { id, hash: type.value };
-        const merged = Object.assign(size);
-        let gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj2);
-        if (gameAssetURL == null) {
-          gameAssetURL = null;
-        }
-        tmp8 = gameAssetURL;
+      const obj3 = { id, hash: value.value };
+      const merged = Object.assign(size);
+      let gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj3);
+      if (gameAssetURL == null) {
+        gameAssetURL = null;
       }
-      return tmp8;
+      return gameAssetURL;
     } else if ("url" === type) {
       size = undefined;
       if (size != null) {
@@ -40,9 +39,18 @@ export default function getGameMediaRefURL(id, type, size) {
         format = size.format;
       }
       obj5.format = format;
-      return ImageProxyUtils.getSizedImageAssetURL(type.value, obj5);
+      return ImageProxyUtils.getSizedImageAssetURL(value.value, obj5);
     } else {
       return null;
     }
+  } else {
+    return null;
   }
+};
+export const hasGameMediaRef = function hasGameMediaRef(cover) {
+  let tmp = null != cover;
+  if (tmp) {
+    tmp = !StringUtils.isNullOrEmpty(cover.value);
+  }
+  return tmp;
 };

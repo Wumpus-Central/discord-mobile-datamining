@@ -1,18 +1,18 @@
-// === Module 16403: NavigateForwardButton ===
+// === Module 16472: NavigateForwardButton ===
 
-// Module 16403 (NavigateForwardButton)
+// Module 16472 (NavigateForwardButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import Pressables from "Pressables" /* 6887 */;
-import _modDef16404 from "module_16404" /* 16404 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import Pressables from "Pressables" /* 6894 */;
+import _modDef16473 from "module_16473" /* 16473 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flexDirection: "row", padding: 16 }, text: { flexGrow: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Navigate
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: _modDef16404 };
+      const obj2 = { source: _modDef16473 };
       const tmp11 = React3(native.Icon, obj2);
       cResult[3] = tmp11;
       let tmp8 = tmp11;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Navigate
   ({ onPress, text } = arg0);
   const tmp = closure_5();
   const obj = { style: tmp.container, onPress, children: null };
-  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef16404 })];
+  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef16473 })];
   obj.children = items;
   return React4(Pressables.PressableHighlight, obj);
 });

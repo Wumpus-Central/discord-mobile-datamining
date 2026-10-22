@@ -1,24 +1,24 @@
-// === Module 6853: MemberVerificationModal ===
+// === Module 6860: MemberVerificationModal ===
 
-// Module 6853 (MemberVerificationModal)
+// Module 6860 (MemberVerificationModal)
 import nativeDefault from "native" /* 587 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4995 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5035 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6814 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5038 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6821 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6854 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6861 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 let View = fn(17).View;
-const MemberVerificationFormConstants = fn(6855);
+const MemberVerificationFormConstants = fn(6862);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1202).Icon);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

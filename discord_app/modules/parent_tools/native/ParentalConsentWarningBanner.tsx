@@ -1,12 +1,12 @@
-// === Module 18531: ParentalConsentWarningBanner ===
+// === Module 18599: ParentalConsentWarningBanner ===
 
-// Module 18531 (ParentalConsentWarningBanner)
+// Module 18599 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import openUserSettings from "openUserSettings" /* 7467 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7624 */;
-import tinycolorDefault from "tinycolor" /* 7637 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import openUserSettings from "openUserSettings" /* 7474 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7631 */;
+import tinycolorDefault from "tinycolor" /* 7644 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,14 +15,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7623).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7630).FamilyCenterSubPages;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = 28 + nativeDefault.space.PX_16;
 const locations = [0.5875, 1];
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { strip: null, pressable: null, label: null, link: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.strip = rect;
@@ -60,12 +60,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Parental
   const obj7 = require("useGlobalStatusIndicatorState");
   const token = require("useToken").useToken(daysRemaining(587).colors.BACKGROUND_FEEDBACK_WARNING);
   if (cResult[0] !== token) {
-    const obj9 = Gfqlpa(7637)(token);
-    const toRgbStringResult = Gfqlpa(7637)(token).setAlpha(0).toRgbString();
+    const obj9 = Gfqlpa(7644)(token);
+    const toRgbStringResult = Gfqlpa(7644)(token).setAlpha(0).toRgbString();
     cResult[0] = token;
     cResult[1] = toRgbStringResult;
     let tmp8 = toRgbStringResult;
-    const setAlphaResult = Gfqlpa(7637)(token).setAlpha(0);
+    const setAlphaResult = Gfqlpa(7644)(token).setAlpha(0);
   } else {
     tmp8 = cResult[1];
   }
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Parental
           tmp27[0] = items1;
           const obj11 = { pointerEvents: "none", style: StyleSheet.absoluteFill, colors: tmp10, locations, start: null, end: null };
           ({ START: obj14.start, END: obj14.end } = closure_10);
-          const items2 = [closure_11(Gfqlpa(5240), obj11), ];
+          const items2 = [closure_11(Gfqlpa(5244), obj11), ];
           let obj12 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, style: null, children: null };
           const intl = obj(1128).intl;
           obj12.accessibilityHint = intl.string(Gfqlpa(2536).O2HKdA);
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Parental
             formatResult = obj18.format(Gfqlpa(2536).ZBK5mM, obj17);
           }
           obj15.children = formatResult;
-          obj15 = closure_11(obj(5216).Text, obj15);
+          obj15 = closure_11(obj(5220).Text, obj15);
           obj12.children = obj15;
           obj12 = closure_11(closure_4, obj12);
           items2[1] = obj12;

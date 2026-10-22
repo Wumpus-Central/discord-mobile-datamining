@@ -1,6 +1,6 @@
-// === Module 7254: getConnectionsRoles ===
+// === Module 7261: getConnectionsRoles ===
 
-// Module 7254 (getConnectionsRoles)
+// Module 7261 (getConnectionsRoles)
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import BigFlagUtils from "BigFlagUtils" /* 1099 */;

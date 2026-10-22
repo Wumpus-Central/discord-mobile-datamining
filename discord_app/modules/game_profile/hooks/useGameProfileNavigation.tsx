@@ -1,6 +1,6 @@
-// === Module 9254: useGameProfileNavigation ===
+// === Module 9263: useGameProfileNavigation ===
 
-// Module 9254 (useGameProfileNavigation)
+// Module 9263 (useGameProfileNavigation)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 const require = fn;
 let obj = {};
-obj[fn(9255).GameProfileNavTab.OVERVIEW] = fn(9205).GameProfileTrackActionActions.Overview;
-obj[fn(9255).GameProfileNavTab.COMMUNITIES] = fn(9205).GameProfileTrackActionActions.Communities;
-obj[fn(9255).GameProfileNavTab.COMMERCE] = fn(9205).GameProfileTrackActionActions.GameShop;
+obj[fn(9264).GameProfileNavTab.OVERVIEW] = fn(9214).GameProfileTrackActionActions.Overview;
+obj[fn(9264).GameProfileNavTab.COMMUNITIES] = fn(9214).GameProfileTrackActionActions.Communities;
+obj[fn(9264).GameProfileNavTab.COMMERCE] = fn(9214).GameProfileTrackActionActions.GameShop;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileNavigation.tsx");

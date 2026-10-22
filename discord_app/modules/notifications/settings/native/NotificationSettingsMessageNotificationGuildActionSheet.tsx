@@ -1,17 +1,17 @@
-// === Module 13670: NotificationSettingsMessageNotificationGuildActionSheet ===
+// === Module 13706: NotificationSettingsMessageNotificationGuildActionSheet ===
 
-// Module 13670 (NotificationSettingsMessageNotificationGuildActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7189 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7194 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10940 */;
+// Module 13706 (NotificationSettingsMessageNotificationGuildActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7196 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7201 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10957 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6683 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6690 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1087).UserNotificationSettings;
-const UnreadSetting = fn(6684).UnreadSetting;
+const UnreadSetting = fn(6691).UnreadSetting;
 let closure_6 = fn(1097).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
         }
       }
       let obj3 = { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-      const tmp12 = jsx(unread(13671), { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
+      const tmp12 = jsx(unread(13707), { context: "guild", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
       cResult[6] = notification;
       cResult[7] = tmp5;
       cResult[8] = tmp8;
@@ -105,5 +105,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(13671), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(13707), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 });

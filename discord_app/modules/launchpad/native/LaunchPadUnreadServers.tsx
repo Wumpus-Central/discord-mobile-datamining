@@ -1,27 +1,27 @@
-// === Module 18509: LaunchPadUnreadServers ===
+// === Module 18577: LaunchPadUnreadServers ===
 
-// Module 18509 (LaunchPadUnreadServers)
+// Module 18577 (LaunchPadUnreadServers)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5689 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7388 */;
-import transitionToGuild from "transitionToGuild" /* 7426 */;
-import isGuildSelectableDefault from "isGuildSelectable" /* 18515 */;
+import transitionToChannel from "transitionToChannel" /* 5693 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7395 */;
+import transitionToGuild from "transitionToGuild" /* 7433 */;
+import isGuildSelectableDefault from "isGuildSelectable" /* 18583 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import ReadStateStore from "ReadStateStore" /* 6750 */;
+import ReadStateStore from "ReadStateStore" /* 6757 */;
 import UserStore from "UserStore" /* 1392 */;
 
 require = fn;
 function renderHistorySection() {
-  return collapsed(closure_15, {});
+  return v65535(closure_15, {});
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const ChannelTypes = fn(1087).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj = { listWrapper: { marginTop: 8 }, list: { marginBottom: 4, flexShrink: 0 }, maskStrokeStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, privateChannelWrapper: { position: "relative", paddingVertical: 2, justifyContent: "center", alignItems: "center" }, privateChannelIcon: { width: 48, height: 48, borderRadius: 24, overflow: "hidden" }, badgeWrapper: { position: "absolute", top: "50%", left: "50%", marginLeft: 6, marginTop: 6 }, guildWrapper: { paddingVertical: 2, justifyContent: "center", alignItems: "center" }, guildHistorySeparatorWrapper: { flex: 1, justifyContent: "center", alignItems: "center" }, guildHistorySeparator: null };
 let size = { width: 2, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj.guildHistorySeparator = size;
@@ -70,7 +70,7 @@ let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const obj3 = { size: 48, borderRadius: 16, guildId, selected, onPress: tmp4, onLongPress: tmp5, backgroundColor: tmp3.maskStrokeStyle.backgroundColor };
-    const tmp9 = closure_10(onGuildSelect(18510), obj3);
+    const tmp9 = closure_10(onGuildSelect(18578), obj3);
     cResult[5] = guildId;
     cResult[6] = tmp5;
     cResult[7] = tmp4;
@@ -100,7 +100,7 @@ let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(18510), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
+  obj.children = closure_10(onGuildSelect(18578), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
   return closure_10(closure_5, obj);
 }));
 ReactCompilerGating = fn(558);
@@ -379,7 +379,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
   const tmp2 = closure_12();
   if (cResult[0] !== tmp2.guildHistorySeparator) {
     const obj2 = { style: tmp2.guildHistorySeparator };
-    const tmp6 = collapsed(hasOwnProperty, obj2);
+    const tmp6 = v65535(hasOwnProperty, obj2);
     cResult[0] = tmp2.guildHistorySeparator;
     cResult[1] = tmp6;
     let tmp3 = tmp6;
@@ -392,7 +392,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
     }
     return tmp7;
   }
-  const tmp8 = collapsed(hasOwnProperty, { style: tmp2.guildHistorySeparatorWrapper, children: tmp3 });
+  const tmp8 = v65535(hasOwnProperty, { style: tmp2.guildHistorySeparatorWrapper, children: tmp3 });
   cResult[2] = tmp2.guildHistorySeparatorWrapper;
   cResult[3] = tmp3;
   cResult[4] = tmp8;
@@ -400,8 +400,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
   const obj3 = { style: tmp2.guildHistorySeparatorWrapper, children: tmp3 };
 }) : (function HistorySeparator() {
   const tmp = closure_12();
-  const obj = { style: tmp.guildHistorySeparatorWrapper, children: collapsed(hasOwnProperty, { style: tmp.guildHistorySeparator }) };
-  return collapsed(hasOwnProperty, obj);
+  const obj = { style: tmp.guildHistorySeparatorWrapper, children: v65535(hasOwnProperty, { style: tmp.guildHistorySeparator }) };
+  return v65535(hasOwnProperty, obj);
 });
 ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -628,7 +628,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp14 = null != tmp12;
       if (tmp14) {
         const obj2 = { channelId: tmp12 };
-        tmp14 = collapsed(closure_14, obj2);
+        tmp14 = v65535(closure_14, obj2);
       }
       return tmp14;
     } else if (arg0 >= 1) {
@@ -640,7 +640,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp6 = null != tmp3;
       if (tmp6) {
         const obj = { guildId: tmp3, selected: selectedGuildId === tmp3, onGuildSelect };
-        tmp6 = collapsed(closure_13, obj);
+        tmp6 = v65535(closure_13, obj);
       }
       return tmp6;
     } else {

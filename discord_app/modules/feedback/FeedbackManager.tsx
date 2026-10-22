@@ -1,13 +1,13 @@
-// === Module 18623: feedback/FeedbackManager ===
+// === Module 18691: feedback/FeedbackManager ===
 
-// Module 18623 (feedback/FeedbackManager)
+// Module 18691 (feedback/FeedbackManager)
 import _mod12 from "module_12" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import UserSettings from "UserSettings" /* 4797 */;
-import FeedbackConfig from "FeedbackConfig" /* 18625 */;
-import HotspotStore from "hotspot/HotspotStore" /* 7286 */;
-import FeedbackOverrideStore from "FeedbackOverrideStore" /* 18624 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
+import FeedbackConfig from "FeedbackConfig" /* 18693 */;
+import HotspotStore from "hotspot/HotspotStore" /* 7293 */;
+import FeedbackOverrideStore from "FeedbackOverrideStore" /* 18692 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
 
 require = fn;
 function optOutEligibilityCheck(hotspot) {
@@ -117,7 +117,7 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
-const Constants = fn(10003);
+const Constants = fn(10015);
 ({ FeedbackTypePrecedence: closure_4, MAX_REPRESENTABLE_DATE: hasOwnProperty } = Constants);
 class FeedbackManager extends tmp3 {
   constructor() {

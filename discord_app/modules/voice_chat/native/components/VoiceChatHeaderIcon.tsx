@@ -1,29 +1,29 @@
-// === Module 11569: VoiceChatHeaderIcon ===
+// === Module 11586: VoiceChatHeaderIcon ===
 
-// Module 11569 (VoiceChatHeaderIcon)
+// Module 11586 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1202 */;
-import native2 from "native" /* 5020 */;
-import Pressables from "Pressables" /* 6887 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11477 */;
+import native2 from "native" /* 5023 */;
+import Pressables from "Pressables" /* 6894 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11494 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6750 */;
+import ReadStateStore from "ReadStateStore" /* 6757 */;
 
 require = fn;
 const View = fn(17).View;
 const ThemeTypes = fn(1087).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
-obj2.chatIconContainer = { marginRight: 12, height: fn(5250).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+obj2.chatIconContainer = { marginRight: 12, height: fn(5254).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-let obj3 = { marginRight: 12, height: fn(5250).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+let obj3 = { marginRight: 12, height: fn(5254).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);

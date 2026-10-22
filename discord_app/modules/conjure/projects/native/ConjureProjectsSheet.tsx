@@ -1,23 +1,23 @@
-// === Module 14057: ConjureProjectsSheet ===
+// === Module 14091: ConjureProjectsSheet ===
 
-// Module 14057 (ConjureProjectsSheet)
+// Module 14091 (ConjureProjectsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
 import _modDef3830 from "module_3830" /* 3830 */;
-import RootNavigationRef from "RootNavigationRef" /* 5133 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
-import useMountEffectDefault from "useMountEffect" /* 5245 */;
-import BottomSheetModal from "BottomSheetModal" /* 5251 */;
-import TableRowGroup from "TableRowGroup" /* 6966 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7225 */;
-import ActionSheet from "ActionSheet" /* 7275 */;
-import ConjureCreateSheet from "ConjureCreateSheet" /* 11677 */;
-import openConjureProject from "openConjureProject" /* 13412 */;
+import RootNavigationRef from "RootNavigationRef" /* 5137 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
+import useMountEffectDefault from "useMountEffect" /* 5249 */;
+import BottomSheetModal from "BottomSheetModal" /* 5255 */;
+import TableRowGroup from "TableRowGroup" /* 6973 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7232 */;
+import ActionSheet from "ActionSheet" /* 7282 */;
+import ConjureCreateSheet from "ConjureCreateSheet" /* 11694 */;
+import openConjureProject from "openConjureProject" /* 13448 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
 
 const require = globalThis.__r;
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -25,11 +25,11 @@ const ConjureCreateSheetDefault = ConjureCreateSheet;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const ConjureBuilderRouteStore = fn(7298);
+const ConjureBuilderRouteStore = fn(7305);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ConjureProjectsSheet = "ConjureProjectsSheet";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { paddingBottom: nativeDefault.space.PX_16 + arg0 }, state: null };
   const obj2 = { paddingBottom: nativeDefault.space.PX_16 + arg0 };
@@ -45,18 +45,18 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     fallbackGuildId = entry.fallbackGuildId;
   }
   if (cResult[0] !== entry) {
-    const result = tmp(11679).describeConjureProjectRow(entry);
+    const result = tmp(11696).describeConjureProjectRow(entry);
     cResult[0] = entry;
     cResult[1] = result;
     let tmp4 = result;
-    const tmpResult = tmp(11679);
+    const tmpResult = tmp(11696);
   } else {
     tmp4 = cResult[1];
   }
   ({ serverName, label } = tmp4);
   if (cResult[2] !== entry.project) {
     let obj2 = { project: entry.project, size: "list" };
-    const tmp9 = closure_6(fallbackGuildId(11763), obj2);
+    const tmp9 = closure_6(fallbackGuildId(11796), obj2);
     cResult[2] = entry.project;
     cResult[3] = tmp9;
     let tmp6 = tmp9;
@@ -95,7 +95,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
       }
     }
     let obj3 = { label: entry.name, subLabel: serverName, accessibilityLabel: label, icon: tmp6, trailing: tmp10, disabled: tmp14, onPress: tmp15 };
-    const tmp18 = closure_6(tmp(6882).TableRow, obj3);
+    const tmp18 = closure_6(tmp(6889).TableRow, obj3);
     cResult[9] = label;
     cResult[10] = entry.name;
     cResult[11] = serverName;
@@ -145,9 +145,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
   if (fallbackGuildId == null) {
     fallbackGuildId = entry.fallbackGuildId;
   }
-  const result = entry(11679).describeConjureProjectRow(entry);
+  const result = entry(11696).describeConjureProjectRow(entry);
   ({ serverName, label } = result);
-  let obj2 = { label: entry.name, subLabel: serverName, accessibilityLabel: label, icon: closure_6(fallbackGuildId(11763), { project: entry.project, size: "list" }), trailing: null, disabled: null, onPress: null };
+  let obj2 = { label: entry.name, subLabel: serverName, accessibilityLabel: label, icon: closure_6(fallbackGuildId(11796), { project: entry.project, size: "list" }), trailing: null, disabled: null, onPress: null };
   let tmp2Result;
   if ("building" === entry.activity) {
     tmp2Result = closure_6(ActivityIndicator, {});
@@ -182,7 +182,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
       openConjureProject.openConjureProject(tmp, entry.projectId);
     }
   };
-  return closure_6(entry(6882).TableRow, obj2);
+  return closure_6(entry(6889).TableRow, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProjectGroup(arg0) {
@@ -201,7 +201,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
           return tmp8;
         }
         const obj2 = { title, hasIcons: true, children: cResult[2] };
-        const tmp10 = closure_6(fallbackGuildId(6966).TableRowGroup, obj2);
+        const tmp10 = closure_6(fallbackGuildId(6973).TableRowGroup, obj2);
         cResult[5] = cResult[2];
         cResult[6] = title;
         cResult[7] = tmp10;
@@ -254,8 +254,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
       let obj2 = { label: null, icon: null, arrow: true, onPress: null };
       const intl = tmp(1128).intl;
       obj2.label = intl.string(_modDef3830.UPLaGM);
-      const obj3 = { IconComponent: tmp(11751).UserIcon };
-      obj2.icon = closure_6(tmp(6882).TableRow.Icon, obj3);
+      const obj3 = { IconComponent: tmp(11780).UserIcon };
+      obj2.icon = closure_6(tmp(6889).TableRow.Icon, obj3);
       obj2.onPress = function onPress() {
         const obj2 = {
           key: ConjureCreateSheet.CONJURE_CREATE_SHEET_KEY,
@@ -263,9 +263,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
             guildId: forMeGuildId,
             initialInstallScope: "user",
             onCreated(projectId, id) {
-              closure_1_1(5192).hideAllActionSheets();
-              const obj = closure_1_1(5192);
-              const rootNavigationRef = forMeGuildId(5133).getRootNavigationRef();
+              closure_1_1(5196).hideAllActionSheets();
+              const obj = closure_1_1(5196);
+              const rootNavigationRef = forMeGuildId(5137).getRootNavigationRef();
               if (null != rootNavigationRef) {
                 if (rootNavigationRef.isReady()) {
                   const state = rootNavigationRef.getState();
@@ -287,14 +287,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
                   }
                 }
               }
-              const obj2 = forMeGuildId(5133);
-              forMeGuildId(13412).openConjureProject(id, projectId);
+              const obj2 = forMeGuildId(5137);
+              forMeGuildId(13448).openConjureProject(id, projectId);
             }
           })
         };
         ActionSheetActionCreators.showActionSheet(obj2);
       };
-      tmp6 = closure_6(tmp(6882).TableRow, obj2);
+      tmp6 = closure_6(tmp(6889).TableRow, obj2);
     }
     cResult[0] = tmp4;
     cResult[1] = tmp6;
@@ -307,11 +307,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function i(guild) {
         let obj = { label: guild.name, icon: null, arrow: true, onPress: null };
-        let obj2 = { guild, size: guild(6862).GuildIconSizes.SMALL_32 };
-        obj.icon = closure_6(closure_1(6862), obj2);
+        let obj2 = { guild, size: guild(6869).GuildIconSizes.SMALL_32 };
+        obj.icon = closure_6(closure_1(6869), obj2);
         obj.onPress = function onPress() {
           ActionSheetActionCreatorsDefault.hideAllActionSheets();
-          const rootNavigationRef = forMeGuildId(5133).getRootNavigationRef();
+          const rootNavigationRef = forMeGuildId(5137).getRootNavigationRef();
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
               const state = rootNavigationRef.getState();
@@ -333,10 +333,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
               }
             }
           }
-          const obj2 = forMeGuildId(5133);
-          forMeGuildId(13412).openConjureProject(guild.id, undefined);
+          const obj2 = forMeGuildId(5137);
+          forMeGuildId(13448).openConjureProject(guild.id, undefined);
         };
-        return closure_6(guild(6882).TableRow, obj, guild.id);
+        return closure_6(guild(6889).TableRow, obj, guild.id);
       };
       cResult[4] = fn;
       let tmp11 = fn;
@@ -360,7 +360,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
     const obj4 = { title, description, hasIcons: true, children: null };
     const items = [tmp5, cResult[3]];
     obj4.children = items;
-    const tmp16 = closure_7(tmp(6966).TableRowGroup, obj4);
+    const tmp16 = closure_7(tmp(6973).TableRowGroup, obj4);
     cResult[5] = description;
     cResult[6] = tmp5;
     cResult[7] = cResult[3];
@@ -382,8 +382,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
       let obj2 = { label: null, icon: null, arrow: true, onPress: null };
       const intl = tmp3(1128).intl;
       obj2.label = intl.string(_modDef3830.UPLaGM);
-      const obj3 = { IconComponent: tmp3(11751).UserIcon };
-      obj2.icon = closure_6(tmp3(6882).TableRow.Icon, obj3);
+      const obj3 = { IconComponent: tmp3(11780).UserIcon };
+      obj2.icon = closure_6(tmp3(6889).TableRow.Icon, obj3);
       obj2.onPress = function onPress() {
         let obj2 = {
           key: ConjureCreateSheet.CONJURE_CREATE_SHEET_KEY,
@@ -391,9 +391,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
             guildId: forMeGuildId,
             initialInstallScope: "user",
             onCreated(projectId, id) {
-              closure_1_1(5192).hideAllActionSheets();
-              const obj = closure_1_1(5192);
-              const rootNavigationRef = forMeGuildId(5133).getRootNavigationRef();
+              closure_1_1(5196).hideAllActionSheets();
+              const obj = closure_1_1(5196);
+              const rootNavigationRef = forMeGuildId(5137).getRootNavigationRef();
               if (null != rootNavigationRef) {
                 if (rootNavigationRef.isReady()) {
                   const state = rootNavigationRef.getState();
@@ -415,24 +415,24 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
                   }
                 }
               }
-              const obj2 = forMeGuildId(5133);
-              forMeGuildId(13412).openConjureProject(id, projectId);
+              const obj2 = forMeGuildId(5137);
+              forMeGuildId(13448).openConjureProject(id, projectId);
             }
           })
         };
         ActionSheetActionCreators.showActionSheet(obj2);
       };
-      tmp5 = closure_6(tmp3(6882).TableRow, obj2);
+      tmp5 = closure_6(tmp3(6889).TableRow, obj2);
     }
     const items = [
       tmp5,
       guilds.map((guild) => {
           let obj = { label: guild.name, icon: null, arrow: true, onPress: null };
-          let obj2 = { guild, size: guild(6862).GuildIconSizes.SMALL_32 };
-          obj.icon = closure_6(closure_1(6862), obj2);
+          let obj2 = { guild, size: guild(6869).GuildIconSizes.SMALL_32 };
+          obj.icon = closure_6(closure_1(6869), obj2);
           obj.onPress = function onPress() {
             ActionSheetActionCreatorsDefault.hideAllActionSheets();
-            const rootNavigationRef = forMeGuildId(5133).getRootNavigationRef();
+            const rootNavigationRef = forMeGuildId(5137).getRootNavigationRef();
             if (null != rootNavigationRef) {
               if (rootNavigationRef.isReady()) {
                 const state = rootNavigationRef.getState();
@@ -454,14 +454,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildG
                 }
               }
             }
-            const obj2 = forMeGuildId(5133);
-            forMeGuildId(13412).openConjureProject(guild.id, undefined);
+            const obj2 = forMeGuildId(5137);
+            forMeGuildId(13448).openConjureProject(guild.id, undefined);
           };
-          return closure_6(guild(6882).TableRow, obj, guild.id);
+          return closure_6(guild(6889).TableRow, obj, guild.id);
         })
     ];
     obj.children = items;
-    let tmp = closure_7(forMeGuildId(6966).TableRowGroup, obj);
+    let tmp = closure_7(forMeGuildId(6973).TableRowGroup, obj);
   } else {
     tmp = null;
   }
@@ -474,11 +474,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
   const cResult = stateFromStores1(576).c(47);
   let state = closure_9(0);
   const obj = stateFromStores1(576);
-  const conjureProjects = stateFromStores1(11679).useConjureProjects(ConjureProjectsSheet);
-  const obj2 = stateFromStores1(11679);
-  const conjureEligibleGuilds = stateFromStores1(11679).useConjureEligibleGuilds(ConjureProjectsSheet);
-  const obj3 = stateFromStores1(11679);
-  const conjureForMeGuildId = stateFromStores1(11679).useConjureForMeGuildId(ConjureProjectsSheet);
+  const conjureProjects = stateFromStores1(11696).useConjureProjects(ConjureProjectsSheet);
+  const obj2 = stateFromStores1(11696);
+  const conjureEligibleGuilds = stateFromStores1(11696).useConjureEligibleGuilds(ConjureProjectsSheet);
+  const obj3 = stateFromStores1(11696);
+  const conjureForMeGuildId = stateFromStores1(11696).useConjureForMeGuildId(ConjureProjectsSheet);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjureProjectStore];
     const fn = function h() {
@@ -491,7 +491,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
   } else {
     [tmp3, tmp4] = cResult;
   }
-  const obj4 = stateFromStores1(11679);
+  const obj4 = stateFromStores1(11696);
   const stateFromStores = Stack(504).useStateFromStores(tmp3, tmp4);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [SelectedGuildStore];
@@ -517,7 +517,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
             const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
             const intl4 = Stack(1128).intl;
             obj5.children = intl4.string(_modDef3830.DJAPMO);
-            const tmp75 = closure_6(Stack(5216).Text, obj5);
+            const tmp75 = closure_6(Stack(5220).Text, obj5);
             cResult[8] = tmp75;
             let tmp72 = tmp75;
           } else {
@@ -531,7 +531,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
             obj6.onPress = function onPress() {
               return stateFromStores1(dependencyMap[26]).listProjects();
             };
-            const tmp79 = closure_6(Stack(5226).Button, obj6);
+            const tmp79 = closure_6(Stack(5230).Button, obj6);
             cResult[9] = tmp79;
             let tmp76 = tmp79;
           } else {
@@ -541,7 +541,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
             const obj8 = { style: state.state, align: "center", spacing: nativeDefault.space.PX_12, children: null };
             const items2 = [tmp72, tmp76];
             obj8.children = items2;
-            const tmp83 = closure_7(Stack(5957).Stack, obj8);
+            const tmp83 = closure_7(Stack(5964).Stack, obj8);
             cResult[10] = state.state;
             cResult[11] = tmp83;
           }
@@ -551,7 +551,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
             const obj10 = { variant: "text-md/semibold", color: "text-strong", children: null };
             const intl = Stack(1128).intl;
             obj10.children = intl.string(_modDef3830.snY8uu);
-            const tmp53 = closure_6(Stack(5216).Text, obj10);
+            const tmp53 = closure_6(Stack(5220).Text, obj10);
             cResult[12] = tmp53;
             let tmp50 = tmp53;
           } else {
@@ -573,9 +573,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
               const obj13 = { spacing: nativeDefault.space.PX_4, children: null };
               const items3 = [tmp50, ];
               const obj14 = { variant: "text-sm/normal", color: "text-muted", children: tmp54 };
-              items3[1] = closure_6(Stack(5216).Text, obj14);
+              items3[1] = closure_6(Stack(5220).Text, obj14);
               obj13.children = items3;
-              const tmp63 = closure_7(Stack(5957).Stack, obj13);
+              const tmp63 = closure_7(Stack(5964).Stack, obj13);
               cResult[15] = tmp54;
               cResult[16] = tmp63;
               let tmp59 = tmp63;
@@ -595,7 +595,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
               const obj15 = { spacing: nativeDefault.space.PX_16, children: null };
               const items4 = [tmp59, tmp64];
               obj15.children = items4;
-              const tmp71 = closure_7(Stack(5957).Stack, obj15);
+              const tmp71 = closure_7(Stack(5964).Stack, obj15);
               cResult[20] = tmp59;
               cResult[21] = tmp64;
               cResult[22] = tmp71;
@@ -624,14 +624,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
       const obj17 = { variant: "text-sm/normal", color: "text-muted", children: null };
       const intl6 = Stack(1128).intl;
       obj17.children = intl6.string(_modDef3830["XE+JXX"]);
-      const tmp92 = closure_6(Stack(5216).Text, obj17);
+      const tmp92 = closure_6(Stack(5220).Text, obj17);
       cResult[5] = tmp92;
       let tmp89 = tmp92;
     } else {
       tmp89 = cResult[5];
     }
     if (cResult[6] !== state.state) {
-      Stack = Stack(5957).Stack;
+      Stack = Stack(5964).Stack;
       const obj18 = { style: state.state, align: "center", spacing: nativeDefault.space.PX_8, children: null };
       items5 = [tmp85, tmp89];
       obj18.children = items5;
@@ -789,7 +789,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
               const obj20 = { spacing: nativeDefault.space.PX_24, children: null };
               const items6 = [tmp28, tmp35, tmp42];
               obj20.children = items6;
-              const tmp48 = closure_7(Stack(5957).Stack, obj20);
+              const tmp48 = closure_7(Stack(5964).Stack, obj20);
               cResult[43] = tmp35;
               cResult[44] = tmp42;
               cResult[45] = tmp28;
@@ -867,23 +867,23 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
           const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl6 = tmp2(1128).intl;
           obj7.children = intl6.string(_modDef3830.DJAPMO);
-          const items2 = [closure_6(tmp2(5216).Text, obj7), ];
+          const items2 = [closure_6(tmp2(5220).Text, obj7), ];
           const obj8 = { variant: "secondary", size: "sm", text: null, onPress: null };
           const intl7 = tmp2(1128).intl;
           obj8.text = intl7.string(_modDef3830["WFJ/vb"]);
           obj8.onPress = function onPress() {
             return closure_0(dependencyMap[26]).listProjects();
           };
-          items2[1] = closure_6(tmp2(5226).Button, obj8);
+          items2[1] = closure_6(tmp2(5230).Button, obj8);
           obj6.children = items2;
-          let tmp29Result = closure_7(tmp2(5957).Stack, obj6);
+          let tmp29Result = closure_7(tmp2(5964).Stack, obj6);
         } else {
           const obj9 = { spacing: nativeDefault.space.PX_16, children: null };
           const obj10 = { spacing: nativeDefault.space.PX_4, children: null };
           const obj11 = { variant: "text-md/semibold", color: "text-strong", children: null };
           const intl9 = tmp2(1128).intl;
           obj11.children = intl9.string(_modDef3830.snY8uu);
-          const items3 = [closure_6(tmp2(5216).Text, obj11), ];
+          const items3 = [closure_6(tmp2(5220).Text, obj11), ];
           if (0 === conjureEligibleGuilds.length) {
             const intl5 = tmp2(1128).intl;
             let stringResult = intl5.string(_modDef3830.f5o5pk);
@@ -893,13 +893,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
             stringResult = intl4.formatToPlainString(_modDef3830.NiXcSi, obj12);
           }
           const obj13 = { variant: "text-sm/normal", color: "text-muted", children: stringResult };
-          items3[1] = closure_6(tmp2(5216).Text, obj13);
+          items3[1] = closure_6(tmp2(5220).Text, obj13);
           obj10.children = items3;
-          const items4 = [closure_7(tmp2(5957).Stack, obj10), ];
+          const items4 = [closure_7(tmp2(5964).Stack, obj10), ];
           const obj14 = { guilds: conjureEligibleGuilds, forMeGuildId: conjureForMeGuildId };
           items4[1] = closure_6(closure_12, obj14);
           obj9.children = items4;
-          tmp29Result = closure_7(tmp2(5957).Stack, obj9);
+          tmp29Result = closure_7(tmp2(5964).Stack, obj9);
         }
       }
       return tmp29Result;
@@ -909,9 +909,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
     const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl8 = tmp2(1128).intl;
     obj16.children = intl8.string(_modDef3830["XE+JXX"]);
-    items5[1] = closure_6(tmp2(5216).Text, obj16);
+    items5[1] = closure_6(tmp2(5220).Text, obj16);
     obj15.children = items5;
-    tmp29Result = closure_7(tmp2(5957).Stack, obj15);
+    tmp29Result = closure_7(tmp2(5964).Stack, obj15);
   } else {
     const found = conjureEligibleGuilds.find((id) => id.id === closure_0);
     let id;
@@ -950,7 +950,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
     obj20.guilds = conjureEligibleGuilds;
     items6[2] = closure_6(closure_12, obj20);
     obj17.children = items6;
-    return closure_7(tmp2(5957).Stack, obj17);
+    return closure_7(tmp2(5964).Stack, obj17);
   }
   const obj5 = require("initialize");
 });

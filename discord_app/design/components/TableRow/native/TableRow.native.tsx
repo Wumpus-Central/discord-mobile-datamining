@@ -1,18 +1,18 @@
-// === Module 6882: TableRow ===
+// === Module 6889: TableRow ===
 
-// Module 6882 (TableRow)
+// Module 6889 (TableRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import useToken from "useToken" /* 5234 */;
-import useFontScale from "useFontScale" /* 5235 */;
-import TableRowDivider from "TableRowDivider" /* 6877 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6883 */;
-import Card from "Card" /* 6884 */;
-import TableRowArrow from "TableRowArrow" /* 6891 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6893 */;
-import DragIcon from "DragIcon" /* 6894 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import useToken from "useToken" /* 5238 */;
+import useFontScale from "useFontScale" /* 5239 */;
+import TableRowDivider from "TableRowDivider" /* 6884 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6890 */;
+import Card from "Card" /* 6891 */;
+import TableRowArrow from "TableRowArrow" /* 6898 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6900 */;
+import DragIcon from "DragIcon" /* 6901 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const style = { padding: 0 };
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRow(arg
                                       const obj3 = { adjustSpacingForIcon: tmp28 };
                                       items[1] = closure_1_8(TableRowDivider.TableRowDivider, obj3);
                                       obj2.children = items;
-                                      tmp40 = collapsed(React6, obj2);
+                                      tmp40 = v65535(React6, obj2);
                                     }
                                     cResult[38] = tmp32;
                                     cResult[39] = tmp28;
@@ -286,14 +286,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRow(arg
       const obj3 = { adjustSpacingForIcon: null != icon };
       items[1] = closure_1_8(TableRowDivider.TableRowDivider, obj3);
       obj2.children = items;
-      tmp11 = collapsed(React6, obj2);
+      tmp11 = v65535(React6, obj2);
     }
   }
   return tmp11;
 });
-tmp4.Icon = fn(6890).TableRowIcon;
-tmp4.Arrow = fn(6891).TableRowArrow;
-tmp4.TrailingText = fn(6893).TableRowTrailingText;
+tmp4.Icon = fn(6897).TableRowIcon;
+tmp4.Arrow = fn(6898).TableRowArrow;
+tmp4.TrailingText = fn(6900).TableRowTrailingText;
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInner(disabled) {
   const cResult = c.c(53);
@@ -397,7 +397,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInne
                                                 const obj3 = { style: tmp16, children: null };
                                                 const items = [tmp17, tmp24, tmp44, tmp48, tmp52];
                                                 obj3.children = items;
-                                                const tmp58 = collapsed(React5, obj3);
+                                                const tmp58 = v65535(React5, obj3);
                                                 cResult[46] = tmp44;
                                                 cResult[47] = tmp48;
                                                 cResult[48] = tmp52;
@@ -423,7 +423,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInne
                                         const obj5 = { style: tmp11.content, children: null };
                                         const items1 = [tmp36, tmp40];
                                         obj5.children = items1;
-                                        const tmp47 = collapsed(React5, obj5);
+                                        const tmp47 = v65535(React5, obj5);
                                         cResult[36] = tmp11.content;
                                         cResult[37] = tmp36;
                                         cResult[38] = tmp40;
@@ -452,7 +452,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInne
                             const obj7 = { style: tmp11.labels, accessible: tmp28, accessibilityRole: str2, children: null };
                             const items3 = [tmp29, tmp32];
                             obj7.children = items3;
-                            const tmp39 = collapsed(React5, obj7);
+                            const tmp39 = v65535(React5, obj7);
                             cResult[26] = tmp11.labels;
                             cResult[27] = tmp29;
                             cResult[28] = tmp32;
@@ -627,7 +627,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInne
   }
   items2[1] = tmp24;
   obj9.children = items2;
-  const items3 = [collapsed(React5, obj9), ];
+  const items3 = [v65535(React5, obj9), ];
   let tmp27 = null != tmp;
   if (tmp27) {
     const obj12 = { style: null, children: null };
@@ -639,7 +639,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInne
   }
   items3[1] = tmp27;
   obj8.children = items3;
-  items1[2] = collapsed(React5, obj8);
+  items1[2] = v65535(React5, obj8);
   let tmp29 = null != trailing && null == tmp;
   if (tmp29) {
     const obj13 = { style: tmp8.trailing, children: trailing };
@@ -651,7 +651,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInne
   }
   items1[4] = arrow;
   obj4.children = items1;
-  return collapsed(React5, obj4);
+  return v65535(React5, obj4);
 });
 let closure_13 = tmp5;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 17631: useGuildsBarSelectedGuildScroller ===
+// === Module 17701: useGuildsBarSelectedGuildScroller ===
 
-// Module 17631 (useGuildsBarSelectedGuildScroller)
+// Module 17701 (useGuildsBarSelectedGuildScroller)
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 const require = globalThis.__r;
 

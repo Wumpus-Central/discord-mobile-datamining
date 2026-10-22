@@ -1,13 +1,13 @@
-// === Module 12393: ConjureSecretRequestCard ===
+// === Module 12420: ConjureSecretRequestCard ===
 
-// Module 12393 (ConjureSecretRequestCard)
+// Module 12420 (ConjureSecretRequestCard)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5192 */;
-import spring from "spring" /* 5229 */;
-import springPresets from "springPresets" /* 5230 */;
-import ConjureSecretsSheet from "ConjureSecretsSheet" /* 12394 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5196 */;
+import spring from "spring" /* 5233 */;
+import springPresets from "springPresets" /* 5234 */;
+import ConjureSecretsSheet from "ConjureSecretsSheet" /* 12421 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 const ConjureSecretsSheetDefault = ConjureSecretsSheet;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, cardAwaiting: null, status: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.cardAwaiting = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -32,7 +32,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/native/ConjureSecretRequestCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureSecretRequestCard(projectId) {
-  const cResult = projectId(secretRequestStatusChanged[7]).c(84);
+  const cResult = projectId(secretRequestStatusChanged[7]).c(86);
   projectId = projectId.projectId;
   ({ cardId, request } = projectId);
   ({ status, awaiting } = projectId);
@@ -84,8 +84,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         }
         cResult[6] = items;
         cResult[7] = R;
-        let tmp13 = R;
-        const tmp12 = items;
+        let tmp14 = R;
+        const tmp13 = items;
       } else {
         class E {
           constructor(arg0) {
@@ -93,10 +93,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
             return obj;
           }
         }
-        tmp13 = cResult[7];
+        tmp14 = cResult[7];
       }
       const tmpResult = tmp(tmp2[11]);
-      const stateFromStores = tmp(tmp2[12]).useStateFromStores(tmp12, tmp13);
+      const stateFromStores = tmp(tmp2[12]).useStateFromStores(tmp13, tmp14);
       const tmpResult3 = tmp(tmp2[12]);
       const sharedValue = tmp(tmp2[13]).useSharedValue(1);
       if (cResult[8] === secretRequestStatusChanged) {
@@ -107,29 +107,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
           }
         }
       }
-      const fn2 = function j() {
-        if (secretRequestStatusChanged) {
-          if (!stateFromStores) {
-            const result = sharedValue.set(0);
-            const result1 = sharedValue.set(spring.withSpring(1, springPresets.SUBTLE_SPRING));
+      class O {
+        constructor() {
+          if (closure_2) {
+            tmp = closure_3;
+            if (!closure_3) {
+              tmp2 = closure_4;
+              num = 0;
+              result = closure_4.set(0);
+              tmp4 = closure_0;
+              tmp5 = closure_2;
+              obj = closure_0(closure_2[14]);
+              num2 = 1;
+              result1 = closure_4.set(obj.withSpring(1, closure_0(closure_2[15]).SUBTLE_SPRING));
+            }
+            return;
           }
+          result2 = closure_4.set(1);
+          return;
         }
-        const result2 = sharedValue.set(1);
-      };
+      }
       cResult[8] = secretRequestStatusChanged;
       cResult[9] = sharedValue;
       cResult[10] = stateFromStores;
-      cResult[11] = fn2;
+      cResult[11] = O;
       const tmpResult4 = tmp(tmp2[13]);
     }
   }
-  const fn = function x() {
-    const obj2 = { content: timestampProducer(ConjureSecretsSheetDefault, { projectId, request }), key: ConjureSecretsSheet.CONJURE_SECRETS_SHEET_KEY };
-    ActionSheetActionCreators.showActionSheet(obj2);
-  };
   cResult[0] = projectId;
   cResult[1] = request;
-  cResult[2] = fn;
+  cResult[2] = tmp6;
   let obj = projectId(secretRequestStatusChanged[7]);
 }) : (function ConjureSecretRequestCard(projectId) {
   projectId = projectId.projectId;
@@ -197,8 +204,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     const obj6 = { style: animatedStyle, children: null };
     const obj7 = { style: tmp.card, children: null };
     const obj8 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-    const intl10 = tmp4(tmp5[17]).intl;
-    obj8.children = intl10.string(request(tmp5[18]).CTxtdV);
+    const intl9 = tmp4(tmp5[17]).intl;
+    obj8.children = intl9.string(request(tmp5[18]).CTxtdV);
     obj7.children = closure_6(tmp4(tmp5[16]).Text, obj8);
     obj6.children = closure_6(request(tmp5[19]), obj7);
     let tmp30Result = closure_6(request(tmp5[13]).View, obj6);
@@ -207,12 +214,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     const obj9 = { style: animatedStyle, children: null };
     const obj10 = { style: tmp.card, children: null };
     const obj11 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-    const intl8 = tmp4(tmp5[17]).intl;
-    obj11.children = intl8.string(request(tmp5[18]).HCQvpO);
+    const intl7 = tmp4(tmp5[17]).intl;
+    obj11.children = intl7.string(request(tmp5[18]).HCQvpO);
     const items4 = [closure_6(tmp4(tmp5[16]).Text, obj11), ];
     const obj12 = { label: null, size: "xs", items: null };
-    const intl9 = tmp4(tmp5[17]).intl;
-    obj12.label = intl9.string(request(tmp5[18]).HCQvpO);
+    const intl8 = tmp4(tmp5[17]).intl;
+    obj12.label = intl8.string(request(tmp5[18]).HCQvpO);
     obj12.items = memo;
     items4[1] = closure_6(tmp4(tmp5[20]).TagGroup, obj12);
     obj10.children = items4;
@@ -222,8 +229,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   } else if ("pending" === status) {
     const obj13 = { style: tmp.card, children: null };
     const obj14 = { label: null, size: "xs", items: null };
-    const intl7 = tmp4(tmp5[17]).intl;
-    obj14.label = intl7.string(request(tmp5[18]).HCQvpO);
+    const intl6 = tmp4(tmp5[17]).intl;
+    obj14.label = intl6.string(request(tmp5[18]).HCQvpO);
     obj14.items = memo;
     obj13.children = closure_6(tmp4(tmp5[20]).TagGroup, obj14);
     tmp30Result = closure_6(request(tmp5[19]), obj13);
@@ -242,15 +249,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     items5[1] = closure_6(tmp4(tmp5[16]).Text, obj20);
     obj17.children = items5;
     const items6 = [closure_7(sharedValue, obj17), ];
-    const obj21 = { label: null, size: "xs", items: null };
-    const intl6 = tmp4(tmp5[17]).intl;
-    obj21.label = intl6.string(request(tmp5[18]).sfp7Up);
-    obj21.items = memo;
-    items6[1] = closure_6(tmp4(tmp5[20]).TagGroup, obj21);
-    obj16.children = items6;
-    obj15.children = closure_7(request(tmp5[19]), obj16);
-    tmp30Result = closure_6(request(tmp5[13]).View, obj15);
+    const obj21 = { variant: "text-sm/normal", color: "text-default", children: null };
     const tmp10Result7 = request(tmp5[19]);
+    let fields = request.fields;
+    obj21.children = tmp4(tmp5[22]).conjureConnectedKeysSummary(fields.map((label) => label.label));
+    items6[1] = closure_6(tmp4(tmp5[16]).Text, obj21);
+    obj16.children = items6;
+    obj15.children = closure_7(tmp10Result7, obj16);
+    tmp30Result = closure_6(request(tmp5[13]).View, obj15);
+    const tmp4Result = tmp4(tmp5[22]);
   } else {
     const items7 = [tmp.card, ];
     let cardAwaiting = null != awaiting;
@@ -262,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     obj22.style = items7;
     let tmp14 = null;
     if (null != awaiting) {
-      tmp14 = closure_6(tmp4(tmp5[22]).ConjureAwaitingPulseRing, {});
+      tmp14 = closure_6(tmp4(tmp5[23]).ConjureAwaitingPulseRing, {});
     }
     const items8 = [tmp14, , , , ];
     let str = "text-muted";
@@ -292,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       const obj26 = { variant: "primary", size: "sm", onPress: callback, text: null };
       const intl4 = tmp4(tmp5[17]).intl;
       obj26.text = intl4.string(request(tmp5[18]).EK8tKY);
-      items8[4] = closure_6(tmp4(tmp5[23]).Button, obj26);
+      items8[4] = closure_6(tmp4(tmp5[24]).Button, obj26);
       obj22.children = items8;
       tmp30Result = closure_7(tmp10Result8, obj22);
     }

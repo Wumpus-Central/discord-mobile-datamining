@@ -1,16 +1,16 @@
-// === Module 17304: MessagesEmptyState ===
+// === Module 17374: MessagesEmptyState ===
 
-// Module 17304 (MessagesEmptyState)
+// Module 17374 (MessagesEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
 import useNavigation from "useNavigation" /* 1505 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import components_Button_Button from "components/Button/Button" /* 5226 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8655 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9319 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16266 */;
-import ActivitiesTogetherSpotIllustration from "ActivitiesTogetherSpotIllustration" /* 17305 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import components_Button_Button from "components/Button/Button" /* 5230 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8664 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9330 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16336 */;
+import ActivitiesTogetherSpotIllustration from "ActivitiesTogetherSpotIllustration" /* 17375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

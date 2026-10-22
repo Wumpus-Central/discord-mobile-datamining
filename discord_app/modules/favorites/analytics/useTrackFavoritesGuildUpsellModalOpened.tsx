@@ -1,10 +1,10 @@
-// === Module 10797: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10814: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10797 (useTrackFavoritesGuildUpsellModalOpened)
+// Module 10814 (useTrackFavoritesGuildUpsellModalOpened)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7230 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7237 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

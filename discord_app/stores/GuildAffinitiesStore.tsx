@@ -1,9 +1,9 @@
-// === Module 8792: GuildAffinitiesStore ===
+// === Module 8801: GuildAffinitiesStore ===
 
-// Module 8792 (GuildAffinitiesStore)
+// Module 8801 (GuildAffinitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8793 */;
+import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8802 */;
 import GuildStore from "GuildStore" /* 4843 */;
 
 require = fn;

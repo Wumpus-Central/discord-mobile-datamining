@@ -1,14 +1,14 @@
-// === Module 16546: CustomTypingIndicatorEmojiSlots ===
+// === Module 16615: CustomTypingIndicatorEmojiSlots ===
 
-// Module 16546 (CustomTypingIndicatorEmojiSlots)
+// Module 16615 (CustomTypingIndicatorEmojiSlots)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import spring from "spring" /* 5229 */;
-import springPresets from "springPresets" /* 5230 */;
-import EmojiDefault from "Emoji" /* 7206 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9783 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 12966 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import spring from "spring" /* 5233 */;
+import springPresets from "springPresets" /* 5234 */;
+import EmojiDefault from "Emoji" /* 7213 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9795 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13002 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,8 +20,8 @@ const jsx = fn(21).jsx;
 let c7 = 28;
 let c8 = 0.4;
 let c9 = 1.14;
-let items = [fn(16547).EmojiAngryFaceWithHornsIcon, fn(16549).EmojiColdFaceIcon, fn(16551).EmojiCowboyHatFaceIcon, fn(16553).EmojiCryingFaceIcon, fn(16555).EmojiDisguisedFaceIcon, fn(16557).EmojiFaceVomitingIcon, fn(16559).EmojiFaceWithMonocleIcon, fn(16561).EmojiFaceWithSpiralEyesIcon, fn(16563).EmojiMeltingFaceIcon, fn(16565).EmojiMoneyMouthFaceIcon, fn(16567).EmojiNerdFaceIcon, fn(16569).EmojiPartyingFaceIcon, fn(16571).EmojiSalutingFaceIcon, fn(16573).EmojiSkullIcon, fn(16575).EmojiSmilingFaceWithHornsIcon, fn(16577).EmojiSmilingFaceWithSunglassesIcon, fn(16579).EmojiSquintingFaceWithTongueIcon, fn(16581).EmojiUpsideDownFaceIcon, fn(16583).EmojiWoozyFaceIcon, fn(16585).EmojiZanyFaceIcon, fn(16587).EmojiRollingOnTheFloorLaughingIcon, fn(16589).EmojiSmilingFaceWithHeartsIcon];
-const createStyles = fn(4966);
+let items = [fn(16616).EmojiAngryFaceWithHornsIcon, fn(16618).EmojiColdFaceIcon, fn(16620).EmojiCowboyHatFaceIcon, fn(16622).EmojiCryingFaceIcon, fn(16624).EmojiDisguisedFaceIcon, fn(16626).EmojiFaceVomitingIcon, fn(16628).EmojiFaceWithMonocleIcon, fn(16630).EmojiFaceWithSpiralEyesIcon, fn(16632).EmojiMeltingFaceIcon, fn(16634).EmojiMoneyMouthFaceIcon, fn(16636).EmojiNerdFaceIcon, fn(16638).EmojiPartyingFaceIcon, fn(16640).EmojiSalutingFaceIcon, fn(16642).EmojiSkullIcon, fn(16644).EmojiSmilingFaceWithHornsIcon, fn(16646).EmojiSmilingFaceWithSunglassesIcon, fn(16648).EmojiSquintingFaceWithTongueIcon, fn(16650).EmojiUpsideDownFaceIcon, fn(16652).EmojiWoozyFaceIcon, fn(16654).EmojiZanyFaceIcon, fn(16656).EmojiRollingOnTheFloorLaughingIcon, fn(16658).EmojiSmilingFaceWithHeartsIcon];
+const createStyles = fn(4969);
 let closure_11 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiGlyph(emoji) {
@@ -126,8 +126,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
     obj.transform = items2;
     return obj;
   };
-  let obj2 = pressed(5035);
-  fn.__closure = { pressed, withSpring: pressed(5229).withSpring, interpolate: pressed(5035).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY, ON_PRESS_SPRING: pressed(5230).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE };
+  let obj2 = pressed(5038);
+  fn.__closure = { pressed, withSpring: pressed(5233).withSpring, interpolate: pressed(5038).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY, ON_PRESS_SPRING: pressed(5234).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE };
   fn.__workletHash = 16574219123934;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -158,7 +158,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
   cResult[4] = tmp6;
   cResult[5] = tmp10;
   tmp9 = tmp10;
-  let obj3 = { pressed, withSpring: pressed(5229).withSpring, interpolate: pressed(5035).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY, ON_PRESS_SPRING: pressed(5230).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE };
+  let obj3 = { pressed, withSpring: pressed(5233).withSpring, interpolate: pressed(5038).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY, ON_PRESS_SPRING: pressed(5234).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE };
 }) : (function PlaceholderEmojiGlyph(pressed) {
   pressed = pressed.pressed;
   const fn = function o() {
@@ -176,8 +176,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
     obj.transform = items2;
     return obj;
   };
-  let obj = pressed(5035);
-  fn.__closure = { pressed, withSpring: pressed(5229).withSpring, interpolate: pressed(5035).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY, ON_PRESS_SPRING: pressed(5230).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE };
+  let obj = pressed(5038);
+  fn.__closure = { pressed, withSpring: pressed(5233).withSpring, interpolate: pressed(5038).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY, ON_PRESS_SPRING: pressed(5234).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE };
   fn.__workletHash = 4597331743997;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -418,5 +418,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
     obj.onChange = onChange;
     return <closure_16 key={index} index={index} emoji={null} emojisKey={null} placeholderIcon={null} onChange={null} />;
   });
-  return jsx(emojis(5957).Stack, { direction: "horizontal", spacing: 8, children: null });
+  return jsx(emojis(5964).Stack, { direction: "horizontal", spacing: 8, children: null });
 });

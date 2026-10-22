@@ -1,10 +1,10 @@
-// === Module 10672: ConjurePublishStatusStore ===
+// === Module 10684: ConjurePublishStatusStore ===
 
-// Module 10672 (ConjurePublishStatusStore)
+// Module 10684 (ConjurePublishStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6752 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6759 */;
 
 require = fn;
 const map = new Map();
@@ -26,8 +26,8 @@ prototype["getPublishStatus"] = function getPublishStatus(projectId) {
   }
   return value;
 };
-prototype["isProjectPublishing"] = function isProjectPublishing(projectId) {
-  return set.has(projectId);
+prototype["isProjectPublishing"] = function isProjectPublishing(arg0) {
+  return set.has(arg0);
 };
 prototype["getPublishApprovalUrl"] = function getPublishApprovalUrl(arg0) {
   value = map1.get(arg0);

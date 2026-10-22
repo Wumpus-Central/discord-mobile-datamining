@@ -1,27 +1,31 @@
-// === Module 9262: GameProfileHeader ===
+// === Module 9271: GameProfileHeader ===
 
-// Module 9262 (GameProfileHeader)
+// Module 9271 (GameProfileHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5035 */;
-import LinearGradientDefault from "LinearGradient" /* 5240 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import SKUUtils from "SKUUtils" /* 9263 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9264 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5038 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import LinearGradientDefault from "LinearGradient" /* 5244 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import SKUUtils from "SKUUtils" /* 9272 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9273 */;
+import GameCoverArtDefault from "GameCoverArt" /* 9274 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 9276 */;
+import _modDef9278 from "module_9278" /* 9278 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9260);
+const GameProfileConstants = fn(9269);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 114;
 let c9 = "rgba(0,0,0,0.3)";
-const createStyles = fn(4966);
-let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, image: null, titleContainer: null, titleRow: null, title: null, wavingWumpus: null, textShadow: null };
+const createStyles = fn(4969);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, titleContainer: null, titleRow: null, title: null, wavingWumpus: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;
 obj2.artHeroImage = { height: "100%", width: "100%", resizeMode: "cover" };
@@ -35,7 +39,6 @@ let size = { width: 85, height: 114, borderRadius: nativeDefault.radii.sm, backg
 obj2.coverContainer = size;
 const size1 = { width: 85, height: 85, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
 obj2.iconContainer = size1;
-obj2.image = { width: "100%", height: "100%" };
 obj2.titleContainer = { flex: 1, flexDirection: "column", alignItems: "flex-start" };
 let obj5 = { borderRadius: nativeDefault.radii.sm };
 obj2.titleRow = { flexDirection: "row", alignItems: "flex-end", alignSelf: "stretch", gap: nativeDefault.space.PX_8 };
@@ -52,7 +55,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileHeader.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileHeader(arg0) {
-  const cResult = c.c(64);
+  const cResult = c.c(58);
   ({ game, scrollY, onHeightMeasured } = arg0);
   const tmp4 = closure_10();
   if (scrollY == null) {
@@ -74,18 +77,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     cResult[1] = joined;
   }
   const tmp9 = useGameProfileHeroBackgroundURLDefault(game, 1024);
-  if (cResult[2] !== game) {
-    const coverURL = game.getCoverURL(c8);
-    cResult[2] = game;
-    cResult[3] = coverURL;
-  }
-  if (cResult[4] !== game) {
-    const iconURL = game.getIconURL(c8);
-    cResult[4] = game;
-    cResult[5] = iconURL;
-  }
-  if (cResult[6] !== onHeightMeasured) {
-    class P {
+  if (cResult[2] !== onHeightMeasured) {
+    class I {
       constructor(arg0) {
         if (onHeightMeasured != null) {
           tmp2 = arg0;
@@ -94,10 +87,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
         return;
       }
     }
-    cResult[6] = onHeightMeasured;
-    cResult[7] = P;
+    cResult[2] = onHeightMeasured;
+    cResult[3] = I;
   } else {
-    class P {
+    class I {
       constructor(arg0) {
         if (onHeightMeasured != null) {
           tmp2 = arg0;
@@ -107,8 +100,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       }
     }
   }
-  if (cResult[8] === animatedStyle) {
-    class P {
+  if (cResult[4] === animatedStyle) {
+    class I {
       constructor(arg0) {
         if (onHeightMeasured != null) {
           tmp2 = arg0;
@@ -117,8 +110,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
         return;
       }
     }
-    if (cResult[11] === tmp9) {
-      class P {
+    if (cResult[7] === tmp9) {
+      class I {
         constructor(arg0) {
           if (onHeightMeasured != null) {
             tmp2 = arg0;
@@ -127,8 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           return;
         }
       }
-      if (cResult[14] !== tmp4.container.backgroundColor) {
-        class P {
+      if (cResult[10] !== tmp4.container.backgroundColor) {
+        class I {
           constructor(arg0) {
             if (onHeightMeasured != null) {
               tmp2 = arg0;
@@ -138,10 +131,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           }
         }
         const items = [c9, tmp4.container.backgroundColor];
-        cResult[14] = tmp4.container.backgroundColor;
-        cResult[15] = items;
+        cResult[10] = tmp4.container.backgroundColor;
+        cResult[11] = items;
       } else {
-        class P {
+        class I {
           constructor(arg0) {
             if (onHeightMeasured != null) {
               tmp2 = arg0;
@@ -151,8 +144,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           }
         }
       }
-      if (cResult[16] === tmp4.artHeroGradient) {
-        class P {
+      if (cResult[12] === tmp4.artHeroGradient) {
+        class I {
           constructor(arg0) {
             if (onHeightMeasured != null) {
               tmp2 = arg0;
@@ -161,8 +154,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             return;
           }
         }
-        if (cResult[19] === tmp17) {
-          class P {
+        if (cResult[15] === tmp11) {
+          class I {
             constructor(arg0) {
               if (onHeightMeasured != null) {
                 tmp2 = arg0;
@@ -172,24 +165,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             }
           }
         }
-        const obj3 = { style: tmp17, children: null };
-        const items1 = [tmp18, tmp21];
+        const obj3 = { style: tmp11, children: null };
+        const items1 = [tmp12, tmp15];
         obj3.children = items1;
-        const tmp26 = React5(ReanimatedRexportDefault.View, obj3);
-        cResult[19] = tmp17;
-        cResult[20] = tmp18;
-        cResult[21] = tmp21;
-        cResult[22] = tmp26;
+        const tmp20 = React5(ReanimatedRexportDefault.View, obj3);
+        cResult[15] = tmp11;
+        cResult[16] = tmp12;
+        cResult[17] = tmp15;
+        cResult[18] = tmp20;
       }
-      const obj4 = { colors: tmp20, style: tmp4.artHeroGradient };
-      const tmp23 = timestampProducer(LinearGradientDefault, obj4);
-      cResult[16] = tmp4.artHeroGradient;
-      cResult[17] = tmp20;
-      cResult[18] = tmp23;
+      const obj4 = { colors: tmp14, style: tmp4.artHeroGradient };
+      const tmp17 = timestampProducer(LinearGradientDefault, obj4);
+      cResult[12] = tmp4.artHeroGradient;
+      cResult[13] = tmp14;
+      cResult[14] = tmp17;
     }
-    let tmp19 = null != tmp9;
-    if (tmp19) {
-      class P {
+    let tmp13 = null != tmp9;
+    if (tmp13) {
+      class I {
         constructor(arg0) {
           if (onHeightMeasured != null) {
             tmp2 = arg0;
@@ -202,132 +195,103 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       const obj6 = { uri: tmp9 };
       obj5.source = obj6;
       obj5.style = tmp4.artHeroImage;
-      tmp19 = timestampProducer(FastImageDefault, obj5);
+      tmp13 = timestampProducer(FastImageDefault, obj5);
     }
-    cResult[11] = tmp9;
-    cResult[12] = tmp4.artHeroImage;
-    cResult[13] = tmp19;
+    cResult[7] = tmp9;
+    cResult[8] = tmp4.artHeroImage;
+    cResult[9] = tmp13;
   }
   const items2 = [tmp4.artHero, animatedStyle];
-  cResult[8] = animatedStyle;
-  cResult[9] = tmp4.artHero;
-  cResult[10] = items2;
+  cResult[4] = animatedStyle;
+  cResult[5] = tmp4.artHero;
+  cResult[6] = items2;
   const tmpResult = ReanimatedRexport;
-}) : (function GameProfileHeader(game) {
-  game = game.game;
-  ({ scrollY, onHeightMeasured } = game);
+}) : (function GameProfileHeader(arg0) {
+  ({ game, scrollY, onHeightMeasured } = arg0);
   scrollY = undefined;
   const tmp = closure_10();
   if (scrollY == null) {
     scrollY = obj.useSharedValue(0);
   }
-  obj = game(scrollY[8]);
-  class C {
-    constructor() {
-      obj = { top: -Math.max(0, -closure_2.get()) };
-      return obj;
-    }
-  }
-  C.__closure = { effectiveScrollY: scrollY };
-  C.__workletHash = 17327557152577;
-  C.__initData = __initData2;
+  obj = ReanimatedRexport;
+  const fn = function f() {
+    return { top: -Math.max(0, -scrollY.get()) };
+  };
+  fn.__closure = { effectiveScrollY: scrollY };
+  fn.__workletHash = 17327557152577;
+  fn.__initData = __initData2;
   const genres = game.genres;
-  const animatedStyle = game(scrollY[8]).useAnimatedStyle(C);
-  const mapped = genres.map(tmp2(tmp3[9]).getGenreText);
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const mapped = genres.map(SKUUtils.getGenreText);
   const joined = mapped.join(", ");
   const l30Rank = game.l30Rank;
-  const tmp7 = onHeightMeasured(scrollY[10])(game, 1024);
-  const items = [game];
-  const memo = noop.useMemo(() => game.getCoverURL(c8), items);
-  const items1 = [game];
-  const memo1 = noop.useMemo(() => game.getIconURL(c8), items1);
-  const items2 = [onHeightMeasured];
+  const tmp7 = useGameProfileHeroBackgroundURLDefault(game, 1024);
+  const items = [onHeightMeasured];
   const obj2 = {
     style: tmp.container,
     onLayout: noop.useCallback((nativeEvent) => {
       if (onHeightMeasured != null) {
         tmp(nativeEvent.nativeEvent.layout.height);
       }
-    }, items2),
+    }, items),
     children: null
   };
   const obj3 = { style: null, children: null };
-  const items3 = [tmp.artHero, animatedStyle];
-  obj3.style = items3;
-  let tmp12 = null != tmp7;
-  if (tmp12) {
+  const items1 = [tmp.artHero, animatedStyle];
+  obj3.style = items1;
+  let tmp10 = null != tmp7;
+  if (tmp10) {
     const obj4 = { source: null, style: null };
     const obj5 = { uri: tmp7 };
     obj4.source = obj5;
     obj4.style = tmp.artHeroImage;
-    tmp12 = closure_6(onHeightMeasured(tmp3[11]), obj4);
+    tmp10 = timestampProducer(FastImageDefault, obj4);
   }
-  const items4 = [tmp12, ];
+  const items2 = [tmp10, ];
   const obj6 = { colors: null, style: tmp.artHeroGradient };
-  const items5 = [c9, tmp.container.backgroundColor];
-  obj6.colors = items5;
-  items4[1] = closure_6(onHeightMeasured(scrollY[12]), obj6);
-  obj3.children = items4;
-  const items6 = [closure_7(onHeightMeasured(scrollY[8]).View, obj3), ];
+  const items3 = [c9, tmp.container.backgroundColor];
+  obj6.colors = items3;
+  items2[1] = timestampProducer(LinearGradientDefault, obj6);
+  obj3.children = items2;
+  const items4 = [React5(ReanimatedRexportDefault.View, obj3), ];
   const obj7 = { style: tmp.headerContent, children: null };
-  const obj8 = { style: tmp.shadowContainer, children: null };
-  if (null != memo) {
-    const obj9 = { style: tmp.coverContainer, children: null };
-    const obj10 = { source: null, style: null };
-    const obj11 = { uri: memo };
-    obj10.source = obj11;
-    obj10.style = tmp.image;
-    obj9.children = closure_6(onHeightMeasured(tmp3[11]), obj10);
-    let obj12 = obj9;
-  } else {
-    obj12 = { style: tmp.iconContainer, children: null };
-    let tmp14Result = null != memo1;
-    if (tmp14Result) {
-      const obj13 = { source: null, style: null };
-      const obj14 = { uri: memo1 };
-      obj13.source = obj14;
-      obj13.style = tmp.image;
-      tmp14Result = closure_6(onHeightMeasured(tmp3[11]), obj13);
-    }
-    obj12.children = tmp14Result;
+  const obj8 = { style: tmp.shadowContainer, children: timestampProducer(GameCoverArtDefault, { game, coverImageSize: v114, iconImageSize: v114, coverContainerStyle: tmp.coverContainer, iconContainerStyle: tmp.iconContainer }) };
+  const items5 = [timestampProducer(View, obj8), ];
+  const obj10 = { style: tmp.titleContainer, children: null };
+  let tmp12Result = null != l30Rank;
+  if (tmp12Result) {
+    const obj11 = { rank: l30Rank };
+    tmp12Result = timestampProducer(GameProfileRankPillDefault, obj11);
   }
-  obj8.children = closure_6(View, obj12);
-  const items7 = [closure_6(View, obj8), ];
-  const obj15 = { style: tmp.titleContainer, children: null };
-  let tmp14Result4 = null != l30Rank;
-  if (tmp14Result4) {
-    const obj16 = { rank: l30Rank };
-    tmp14Result4 = closure_6(onHeightMeasured(tmp3[13]), obj16);
+  const items6 = [tmp12Result, , ];
+  const obj12 = { style: tmp.titleRow, children: null };
+  const obj13 = { variant: "heading-xxl/semibold", color: "text-overlay-light", lineClamp: 2, style: null, children: game.name };
+  const items7 = [, ];
+  ({ textShadow: arr9[0], title: arr9[1] } = tmp);
+  obj13.style = items7;
+  const items8 = [timestampProducer(Text_Text.Text, obj13), ];
+  let tmp12Result3 = game.id === hasOwnProperty;
+  if (tmp12Result3) {
+    const obj14 = { source: _modDef9278, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    tmp12Result3 = timestampProducer(FastImageDefault, obj14);
+    const tmp6Result = FastImageDefault;
   }
-  const items8 = [tmp14Result4, , ];
-  const obj17 = { style: tmp.titleRow, children: null };
-  const obj18 = { variant: "heading-xxl/semibold", color: "text-overlay-light", lineClamp: 2, style: null, children: game.name };
-  const items9 = [, ];
-  ({ textShadow: arr11[0], title: arr11[1] } = tmp);
-  obj18.style = items9;
-  const items10 = [closure_6(game(scrollY[14]).Text, obj18), ];
-  let tmp14Result5 = game.id === closure_5;
-  if (tmp14Result5) {
-    const obj19 = { source: onHeightMeasured(tmp3[15]), style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
-    tmp14Result5 = closure_6(onHeightMeasured(tmp3[11]), obj19);
-    const tmp6Result = onHeightMeasured(tmp3[11]);
-  }
-  items10[1] = tmp14Result5;
-  obj17.children = items10;
-  items8[1] = closure_7(View, obj17);
-  let tmp14Result6 = null;
+  items8[1] = tmp12Result3;
+  obj12.children = items8;
+  items6[1] = React5(View, obj12);
+  let tmp12Result4 = null;
   if (null != joined) {
-    tmp14Result6 = null;
+    tmp12Result4 = null;
     if ("" !== joined) {
-      const obj20 = { variant: "text-md/normal", color: "text-overlay-light", lineClamp: 2, style: tmp.textShadow, children: joined };
-      tmp14Result6 = closure_6(tmp2(tmp3[14]).Text, obj20);
+      const obj15 = { variant: "text-md/normal", color: "text-overlay-light", lineClamp: 2, style: tmp.textShadow, children: joined };
+      tmp12Result4 = timestampProducer(Text_Text.Text, obj15);
     }
   }
-  items8[2] = tmp14Result6;
-  obj15.children = items8;
-  items7[1] = closure_7(View, obj15);
-  obj7.children = items7;
-  items6[1] = closure_7(View, obj7);
-  obj2.children = items6;
-  return closure_7(View, obj2);
+  items6[2] = tmp12Result4;
+  obj10.children = items6;
+  items5[1] = React5(View, obj10);
+  obj7.children = items5;
+  items4[1] = React5(View, obj7);
+  obj2.children = items4;
+  return React5(View, obj2);
 });

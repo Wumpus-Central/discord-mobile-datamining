@@ -1,27 +1,27 @@
-// === Module 12617: GameOrganizationJoinModal ===
+// === Module 12649: GameOrganizationJoinModal ===
 
-// Module 12617 (GameOrganizationJoinModal)
+// Module 12649 (GameOrganizationJoinModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import _modDef2406 from "module_2406" /* 2406 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import NavigatorHeader from "NavigatorHeader" /* 6903 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12618 */;
-import StepModal from "StepModal" /* 12619 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import NavigatorHeader from "NavigatorHeader" /* 6910 */;
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12650 */;
+import StepModal from "StepModal" /* 12651 */;
 import noop from "module_19" /* 19 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10976 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10993 */;
 
 require = fn;
 function closeModal() {
   ModalActionCreatorsDefault.pop();
 }
-let closure_5 = fn(10977).GameOrganizationInviteStates;
+let closure_5 = fn(10994).GameOrganizationInviteStates;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = { CONFIRM: "CONFIRM" };
 let items = [obj.CONFIRM];
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj3 = { container: { padding: nativeDefault.space.PX_16 }, text: { textAlign: "center" } };
 let closure_10 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
@@ -95,7 +95,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confir
     }
     let displayNoun = importDefault;
     const obj2 = { displayNoun: container.displayNoun };
-    const Stack = intl(5957).Stack;
+    const Stack = intl(5964).Stack;
     const PX_24 = nativeDefault.space.PX_24;
     const container2 = text.container;
     if (cResult[14] === container.organization.name) {
@@ -106,7 +106,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confir
           return;
         }
       }
-      const Button = intl(5226).Button;
+      const Button = intl(5230).Button;
       intl = intl(1128).intl;
       const obj3 = { noun: tmp7 };
       formatToPlainStringResult = intl.formatToPlainString(displayNoun(2406)["Cz/ZUM"], obj3);
@@ -125,7 +125,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confir
       cResult[13] = tmp8;
     }
     const obj4 = { variant: "heading-xl/bold", style: text.text, children: container.organization.name };
-    const tmp10 = closure_6(intl(5216).Text, obj4);
+    const tmp10 = closure_6(intl(5220).Text, obj4);
     cResult[14] = container.organization.name;
     cResult[15] = text.text;
     cResult[16] = tmp10;
@@ -154,15 +154,15 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confir
     const obj2 = { displayNoun: stateFromStores.displayNoun };
     const obj3 = { spacing: nativeDefault.space.PX_24, style: tmp.container, children: null };
     const obj4 = { variant: "heading-xl/bold", style: tmp.text, children: stateFromStores.organization.name };
-    const items1 = [closure_6(tmp2(5216).Text, obj4), ];
+    const items1 = [closure_6(tmp2(5220).Text, obj4), ];
     const obj5 = { text: null, size: "lg", onPress: null };
     const intl = tmp2(1128).intl;
     const obj6 = { noun: getGameOrganizationDisplayNounDefault(obj2) };
     obj5.text = intl.formatToPlainString(_modDef2406["Cz/ZUM"], obj6);
     obj5.onPress = tmp5;
-    items1[1] = closure_6(tmp2(5226).Button, obj5);
+    items1[1] = closure_6(tmp2(5230).Button, obj5);
     obj3.children = items1;
-    return closure_7(tmp2(5957).Stack, obj3);
+    return closure_7(tmp2(5964).Stack, obj3);
   }
   obj = code(504);
 });

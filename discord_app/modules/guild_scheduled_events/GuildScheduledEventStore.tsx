@@ -1,6 +1,6 @@
-// === Module 6763: GuildScheduledEventStore ===
+// === Module 6770: GuildScheduledEventStore ===
 
-// Module 6763 (GuildScheduledEventStore)
+// Module 6770 (GuildScheduledEventStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -551,19 +551,6 @@ const guildScheduledEventStore = new GuildScheduledEventStore(DispatcherDefault,
       closure_9 = closure_9 + 1;
       return true;
     }
-  },
-  GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: function handleGuildScheduledEventExceptionsDelete(eventId) {
-    value = secondaryIndexMap.get(eventId.eventId);
-    let flag = null != value;
-    if (flag) {
-      const obj2 = {};
-      const merged = Object.assign(value);
-      obj2.guild_scheduled_event_exceptions = [];
-      const result = secondaryIndexMap.set(obj2.id, obj2);
-      closure_9 = closure_9 + 1;
-      flag = true;
-    }
-    return flag;
   },
   LOGOUT: function handleLogout() {
     secondaryIndexMap.clear();

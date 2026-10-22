@@ -1,6 +1,6 @@
-// === Module 6283: ? ===
+// === Module 6290: ? ===
 
-// Module 6283
+// Module 6290
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/wearable/angel_wings.png.js");

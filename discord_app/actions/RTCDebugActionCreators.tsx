@@ -1,6 +1,6 @@
-// === Module 5719: RTCDebugActionCreators ===
+// === Module 5724: RTCDebugActionCreators ===
 
-// Module 5719 (RTCDebugActionCreators)
+// Module 5724 (RTCDebugActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DiscordNativeDefault from "DiscordNative" /* 4783 */;
 import size from "module_2" /* 2 */;

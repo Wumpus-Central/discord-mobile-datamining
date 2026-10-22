@@ -1,10 +1,10 @@
-// === Module 12649: GiftIntentGifModal ===
+// === Module 12681: GiftIntentGifModal ===
 
-// Module 12649 (GiftIntentGifModal)
+// Module 12681 (GiftIntentGifModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import NavigatorHeader from "NavigatorHeader" /* 6903 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import NavigatorHeader from "NavigatorHeader" /* 6910 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -71,10 +71,10 @@ let closure_14 = async function _sendGiftIntentGif(arg0) {
 };
 let View = fn(17).View;
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const MessageSendLocation = fn(4971).MessageSendLocation;
+const MessageSendLocation = fn(4974).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, messageContainer: null, pickerContainer: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.messageContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };

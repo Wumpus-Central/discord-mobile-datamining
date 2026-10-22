@@ -1,10 +1,10 @@
-// === Module 11703: ChatShieldIcon ===
+// === Module 11720: ChatShieldIcon ===
 
-// Module 11703 (ChatShieldIcon)
+// Module 11720 (ChatShieldIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5650 */;
-import _mod11704 from "module_11704" /* 11704 */;
+import BaseIconImage from "BaseIconImage" /* 5654 */;
+import _mod11721 from "module_11721" /* 11721 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChatShieldIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11704;
+    const tmpResult = _mod11721;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChatShieldIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11704, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11721, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

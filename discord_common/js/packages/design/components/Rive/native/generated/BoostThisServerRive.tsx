@@ -1,9 +1,9 @@
-// === Module 5083: BoostThisServerRive ===
+// === Module 5087: BoostThisServerRive ===
 
-// Module 5083 (BoostThisServerRive)
+// Module 5087 (BoostThisServerRive)
 import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 5029 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5082 */;
+import BaseRive from "BaseRive" /* 5032 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5086 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -123,7 +123,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostT
           }
         }
       }
-      obj2 = { ref: tmp6, src: require("module_5084"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: null, renderDataBinding: null };
+      obj2 = { ref: tmp6, src: require("module_5088"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: null, renderDataBinding: null };
       class D {
         constructor(arg0) {
           tmp = closure_10[closure_2];
@@ -145,7 +145,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostT
       }
       obj2.renderDataBinding = tmp14;
       let merged = Object.assign(tmp7);
-      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_5084"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: null, renderDataBinding: null });
+      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_5088"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: null, renderDataBinding: null });
       cResult[12] = str;
       cResult[13] = str2;
       cResult[14] = tmp6;

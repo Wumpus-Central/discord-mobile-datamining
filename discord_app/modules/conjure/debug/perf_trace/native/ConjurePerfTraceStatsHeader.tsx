@@ -1,16 +1,16 @@
-// === Module 12443: ConjurePerfTraceStatsHeader ===
+// === Module 12473: ConjurePerfTraceStatsHeader ===
 
-// Module 12443 (ConjurePerfTraceStatsHeader)
+// Module 12473 (ConjurePerfTraceStatsHeader)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12444 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 12474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let createStyles = fn(4966);
+let createStyles = fn(4969);
 let obj2 = { op: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, model: null, tool: null, setup: null, worktree: null, sandbox: null, build: null, platform: null, other: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.model = { backgroundColor: nativeDefault.colors.ICON_FEEDBACK_NOTIFICATION };
@@ -29,7 +29,7 @@ obj2.platform = { backgroundColor: nativeDefault.colors.ICON_MUTED };
 const obj10 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.other = { backgroundColor: nativeDefault.colors.ICON_SUBTLE };
 const styles = createStyles.createStyles(obj2);
-createStyles = fn(4966);
+createStyles = fn(4969);
 const obj13 = { header: null, bar: null, legend: null, legendItem: null, swatch: null };
 const obj11 = { backgroundColor: nativeDefault.colors.ICON_SUBTLE };
 obj13.header = { gap: nativeDefault.space.PX_4 };
@@ -51,11 +51,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const cResult = stats(576).c(25);
   stats = stats.stats;
   if (cResult[0] !== stats) {
-    const perfModelSummaryResult = tmp(12444).perfModelSummary(stats);
+    const perfModelSummaryResult = tmp(12474).perfModelSummary(stats);
     cResult[0] = stats;
     cResult[1] = perfModelSummaryResult;
     let tmp4 = perfModelSummaryResult;
-    const tmpResult = tmp(12444);
+    const tmpResult = tmp(12474);
   } else {
     tmp4 = cResult[1];
   }
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   let tmp25 = null;
                   if (null != tmp4) {
                     let obj2 = { variant: "text-sm/normal", color: "text-default", children: tmp4 };
-                    tmp25 = closure_3(tmp(5216).Text, obj2);
+                    tmp25 = closure_3(tmp(5220).Text, obj2);
                   }
                   cResult[18] = tmp4;
                   cResult[19] = tmp25;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
             }
           }
         }
-        const PERF_CATEGORIES = tmp(10692).PERF_CATEGORIES;
+        const PERF_CATEGORIES = tmp(10704).PERF_CATEGORIES;
         const mapped = PERF_CATEGORIES.map((item) => {
           const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
           const obj2 = { style: closure_1.legendItem, children: null };
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   let obj = stats(576);
 }) : (function ConjurePerfTraceStatsHeader(stats) {
   stats = stats.stats;
-  const perfModelSummaryResult = stats(12444).perfModelSummary(stats);
+  const perfModelSummaryResult = stats(12474).perfModelSummary(stats);
   const tmp4 = closure_6();
   dependencyMap = styles();
   let obj2 = { style: tmp4.header, children: null };
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   });
   let items = [closure_3(dependencyMap, obj3), , ];
   const obj4 = { style: tmp4.legend, children: null };
-  const PERF_CATEGORIES = stats(10692).PERF_CATEGORIES;
+  const PERF_CATEGORIES = stats(10704).PERF_CATEGORIES;
   obj4.children = PERF_CATEGORIES.map((item) => {
     const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
     const obj2 = { style: closure_1.legendItem, children: null };
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   let tmp7Result = null;
   if (null != perfModelSummaryResult) {
     let obj5 = { variant: "text-sm/normal", color: "text-default", children: perfModelSummaryResult };
-    tmp7Result = closure_3(stats(5216).Text, obj5);
+    tmp7Result = closure_3(stats(5220).Text, obj5);
   }
   items[2] = tmp7Result;
   obj2.children = items;

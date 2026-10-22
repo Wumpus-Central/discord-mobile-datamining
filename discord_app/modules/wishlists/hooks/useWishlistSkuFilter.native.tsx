@@ -1,10 +1,10 @@
-// === Module 10511: useWishlistSkuFilter ===
+// === Module 10523: useWishlistSkuFilter ===
 
-// Module 10511 (useWishlistSkuFilter)
+// Module 10523 (useWishlistSkuFilter)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_3 = fn(7308).WishlistRecommendationReason;
+let closure_3 = fn(7315).WishlistRecommendationReason;
 const SKUProductLines = fn(1087).SKUProductLines;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

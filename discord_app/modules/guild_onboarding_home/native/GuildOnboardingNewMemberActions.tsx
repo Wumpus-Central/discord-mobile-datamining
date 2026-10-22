@@ -1,17 +1,17 @@
-// === Module 17841: GuildOnboardingNewMemberActions ===
+// === Module 17911: GuildOnboardingNewMemberActions ===
 
-// Module 17841 (GuildOnboardingNewMemberActions)
+// Module 17911 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 587 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13052 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 13088 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6704 */;
+import EmojiStore from "EmojiStore" /* 6711 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7302 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8277 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7309 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8286 */;
 
 require = fn;
 const View = fn(17).View;
@@ -20,7 +20,7 @@ const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
 const GuildMemberFlags = fn(4887).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { actionsContainer: { paddingHorizontal: 12 }, actionsHeader: { display: "flex", marginBottom: 16 }, actionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center" }, channelNameContainer: { flex: 1, marginHorizontal: 8 }, icon: null, emoji: null, textEmoji: null, emojiPlaceholder: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.xs };
 obj2.icon = size;

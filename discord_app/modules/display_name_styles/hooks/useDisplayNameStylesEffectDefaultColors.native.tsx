@@ -1,11 +1,11 @@
-// === Module 10623: useDisplayNameStylesEffectDefaultColors ===
+// === Module 10635: useDisplayNameStylesEffectDefaultColors ===
 
-// Module 10623 (useDisplayNameStylesEffectDefaultColors)
+// Module 10635 (useDisplayNameStylesEffectDefaultColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1411 */;
-import useToken from "useToken" /* 5234 */;
+import useToken from "useToken" /* 5238 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

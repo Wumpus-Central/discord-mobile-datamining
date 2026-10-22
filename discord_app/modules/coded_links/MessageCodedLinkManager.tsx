@@ -1,13 +1,13 @@
-// === Module 18689: MessageCodedLinkManager ===
+// === Module 18757: MessageCodedLinkManager ===
 
-// Module 18689 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 5681 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18702 */;
+// Module 18757 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 5685 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18770 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7544 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7551 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import InviteStore from "InviteStore" /* 5682 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7193 */;
+import InviteStore from "InviteStore" /* 5686 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7200 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {
@@ -164,7 +164,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj3 = { value, done: true };
                                                       return obj3;
                                                     } else {
-                                                      const useGameOrganizationInviteFetch = tmp4(18697).useGameOrganizationInviteFetch;
+                                                      const useGameOrganizationInviteFetch = tmp4(18765).useGameOrganizationInviteFetch;
                                                       const items = [code];
                                                       v1 = 1;
                                                       dependencyMap = 1;
@@ -179,7 +179,7 @@ function resolveMessageCodedLinks(content) {
                                                     const obj = { value, done: true };
                                                     return obj;
                                                   } else {
-                                                    v1(12622)(closure_128_0).catch(closure_1_6);
+                                                    v1(12654)(closure_128_0).catch(closure_1_6);
                                                     dependencyMap = 3;
                                                     return { value: "IconComponent", done: null };
                                                   }
@@ -377,7 +377,7 @@ function resolveMessageCodedLinks(content) {
                                                           const obj3 = { value, done: true };
                                                           return obj3;
                                                         } else {
-                                                          const useGameOrganizationInviteFetch = tmp4(18697).useGameOrganizationInviteFetch;
+                                                          const useGameOrganizationInviteFetch = tmp4(18765).useGameOrganizationInviteFetch;
                                                           const items = [code];
                                                           v1 = 1;
                                                           dependencyMap = 1;
@@ -392,7 +392,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj = { value, done: true };
                                                         return obj;
                                                       } else {
-                                                        v1(12622)(closure_128_0).catch(closure_1_6);
+                                                        v1(12654)(closure_128_0).catch(closure_1_6);
                                                         dependencyMap = 3;
                                                         return { value: "IconComponent", done: null };
                                                       }

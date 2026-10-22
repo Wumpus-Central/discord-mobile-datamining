@@ -1,18 +1,18 @@
-// === Module 12024: home/EmptyState ===
+// === Module 12045: home/EmptyState ===
 
-// Module 12024 (home/EmptyState)
+// Module 12045 (home/EmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11116 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11948 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11133 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" }, textContainer: { textAlign: "center" } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -1,11 +1,11 @@
-// === Module 18414: useIsVoicePanelParticipantFocusable ===
+// === Module 18482: useIsVoicePanelParticipantFocusable ===
 
-// Module 18414 (useIsVoicePanelParticipantFocusable)
+// Module 18482 (useIsVoicePanelParticipantFocusable)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import participantHasVideo from "participantHasVideo" /* 10853 */;
+import participantHasVideo from "participantHasVideo" /* 10870 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4820 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6751 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6621 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6758 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6628 */;
 import MediaEngineStore from "MediaEngineStore" /* 2014 */;
 
 const require = globalThis.__r;
@@ -55,7 +55,7 @@ function isVoicePanelParticipantFocusable(guildId, channelId, id2) {
     }
   }
 }
-const CallConstants = fn(5614);
+const CallConstants = fn(5618);
 ({ isActivityParticipant: metroRequire, isStreamParticipant: closure_7, isUserParticipant: closure_8 } = CallConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

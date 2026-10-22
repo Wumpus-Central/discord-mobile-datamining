@@ -1,13 +1,13 @@
-// === Module 10821: markUnread ===
+// === Module 10838: markUnread ===
 
-// Module 10821 (markUnread)
+// Module 10838 (markUnread)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8263 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import MessageStore from "MessageStore" /* 5990 */;
+import MessageStore from "MessageStore" /* 5997 */;
 import UserStore from "UserStore" /* 1392 */;
 
 const require = fn;
@@ -123,7 +123,7 @@ let closure_11 = async function _markUnread(arg0) {
     }
   }
 };
-const shouldBadgeMessage = fn(6750).shouldBadgeMessage;
+const shouldBadgeMessage = fn(6757).shouldBadgeMessage;
 const Endpoints = fn(1087).Endpoints;
 let closure_10 = new LoggerDefault("markUnread");
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 16204: ClosedCaptionsIcon ===
+// === Module 16246: ClosedCaptionsIcon ===
 
-// Module 16204 (ClosedCaptionsIcon)
+// Module 16246 (ClosedCaptionsIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5650 */;
-import _mod16205 from "module_16205" /* 16205 */;
+import BaseIconImage from "BaseIconImage" /* 5654 */;
+import _mod16247 from "module_16247" /* 16247 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ClosedCaptionsIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16205;
+    const tmpResult = _mod16247;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ClosedCaptionsIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16205, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16247, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

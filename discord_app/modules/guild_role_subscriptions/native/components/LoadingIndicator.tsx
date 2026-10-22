@@ -1,13 +1,13 @@
-// === Module 16397: LoadingIndicator ===
+// === Module 16466: LoadingIndicator ===
 
-// Module 16397 (LoadingIndicator)
+// Module 16466 (LoadingIndicator)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_4 = createStyles.createStyles({ indicator: { margin: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

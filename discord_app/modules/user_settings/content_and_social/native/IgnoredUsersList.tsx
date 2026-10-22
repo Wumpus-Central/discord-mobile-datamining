@@ -1,18 +1,18 @@
-// === Module 15976: IgnoredUsersList ===
+// === Module 16018: IgnoredUsersList ===
 
-// Module 15976 (IgnoredUsersList)
+// Module 16018 (IgnoredUsersList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import TableRowGroup from "TableRowGroup" /* 6966 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7200 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7230 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7255 */;
-import Blocked from "Blocked" /* 15969 */;
-import IgnoredUserRowDefault from "IgnoredUserRow" /* 15977 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import TableRowGroup from "TableRowGroup" /* 6973 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7207 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7237 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7262 */;
+import Blocked from "Blocked" /* 16011 */;
+import IgnoredUserRowDefault from "IgnoredUserRow" /* 16019 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 
@@ -22,7 +22,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { list: { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, sectionLabelStyle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };

@@ -1,11 +1,11 @@
-// === Module 6771: SearchMessageStore ===
+// === Module 6778: SearchMessageStore ===
 
-// Module 6771 (SearchMessageStore)
+// Module 6778 (SearchMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ReactionUtils from "ReactionUtils" /* 4913 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5992 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6353 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5999 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6360 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;

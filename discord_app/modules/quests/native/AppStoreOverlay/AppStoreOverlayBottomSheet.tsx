@@ -1,17 +1,17 @@
-// === Module 14011: AppStoreOverlayBottomSheet ===
+// === Module 14047: AppStoreOverlayBottomSheet ===
 
-// Module 14011 (AppStoreOverlayBottomSheet)
-import openURLDefault from "openURL" /* 5638 */;
-import AnalyticsActions from "AnalyticsActions" /* 7767 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 14008 */;
-import AppStoreOverlayBody from "AppStoreOverlayBody" /* 14012 */;
+// Module 14047 (AppStoreOverlayBottomSheet)
+import openURLDefault from "openURL" /* 5642 */;
+import AnalyticsActions from "AnalyticsActions" /* 7776 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 14044 */;
+import AppStoreOverlayBody from "AppStoreOverlayBody" /* 14048 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_7 = createStyles.createStyles({ headerBar: { zIndex: 1 }, bodyContainer: { flex: 1, minHeight: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

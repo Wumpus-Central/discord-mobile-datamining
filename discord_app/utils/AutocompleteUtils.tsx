@@ -1,6 +1,6 @@
-// === Module 6687: AutocompleteUtils ===
+// === Module 6694: AutocompleteUtils ===
 
-// Module 6687 (AutocompleteUtils)
+// Module 6694 (AutocompleteUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -9,39 +9,39 @@ import GlobalUtils from "GlobalUtils" /* 1388 */;
 import StringUtils from "StringUtils" /* 2033 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4802 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4906 */;
-import UserUtilsDefault from "UserUtils" /* 5015 */;
-import useChannelName from "useChannelName" /* 5586 */;
-import RegexUtilsDefault from "RegexUtils" /* 5590 */;
-import StickersTypes from "StickersTypes" /* 6468 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6806 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6807 */;
-import GuildUtilsDefault from "GuildUtils" /* 6808 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7301 */;
-import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 7418 */;
-import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 7419 */;
-import isSoundValidDefault from "isSoundValid" /* 7427 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
+import useChannelName from "useChannelName" /* 5590 */;
+import RegexUtilsDefault from "RegexUtils" /* 5594 */;
+import StickersTypes from "StickersTypes" /* 6475 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6813 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6814 */;
+import GuildUtilsDefault from "GuildUtils" /* 6815 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7308 */;
+import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 7425 */;
+import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 7426 */;
+import isSoundValidDefault from "isSoundValid" /* 7434 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6704 */;
-import SoundboardStore from "SoundboardStore" /* 5986 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6744 */;
-import StickersStore from "StickersStore" /* 6745 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6749 */;
+import EmojiStore from "EmojiStore" /* 6711 */;
+import SoundboardStore from "SoundboardStore" /* 5993 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6751 */;
+import StickersStore from "StickersStore" /* 6752 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6756 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4903 */;
 import UserRecord from "UserRecord" /* 1406 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import FrecencyStore from "FrecencyStore" /* 6802 */;
+import FrecencyStore from "FrecencyStore" /* 6809 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4899 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildRoleStore from "GuildRoleStore" /* 4875 */;
 import GuildStore from "GuildStore" /* 4843 */;
-import MessageStore from "MessageStore" /* 5990 */;
+import MessageStore from "MessageStore" /* 5997 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import PresenceStore from "PresenceStore" /* 5694 */;
+import PresenceStore from "PresenceStore" /* 5698 */;
 import RelationshipStore from "RelationshipStore" /* 4911 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 4872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4992 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 import UserStore from "UserStore" /* 1392 */;
-import SKUStore from "SKUStore" /* 6803 */;
+import SKUStore from "SKUStore" /* 6810 */;
 
 const require = globalThis.__r;
 
@@ -416,7 +416,7 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(6688);
+const InAppNavigationRecord = fn(6695);
 ({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: metroRequire } = InAppNavigationRecord);
 const ChannelRecord = fn(4825);
 ({ ChannelRecordBase: map1, isGuildChannelType: closure_14, isGuildSelectableChannelType: closure_15, isGuildVocalChannelType: closure_16, isThread: closure_17, PrivateChannelRecord: closure_18, UnknownChannelRecord: closure_19 } = ChannelRecord);
@@ -428,18 +428,18 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1087);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(6804).AutocompleterResultTypes;
+fn(6811).AutocompleterResultTypes;
 const StaticChannelId = fn(4828).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(6805).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(6805).default.MENTION_HERE;
-const MENTION_GAME = fn(6805).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(6805).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(6805).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(6812).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(6812).default.MENTION_HERE;
+const MENTION_GAME = fn(6812).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(6812).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(6812).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({ lastFrecencyVersion: null, lastRelationshipVersion: null, lastPrivateChannelsVersion: null, cache: null });
@@ -849,10 +849,10 @@ export default {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + closure_1_1(5590).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + closure_1_1(5594).escape(toLocaleLowerCaseResult), "i");
         obj.exactQuery = regExp;
-        const obj2 = closure_1_1(5590);
-        const regExp1 = new RegExp(closure_1_1(5590).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = closure_1_1(5594);
+        const regExp1 = new RegExp(closure_1_1(5594).escape(toLocaleLowerCaseResult), "i");
         obj.containQuery = regExp1;
         return obj;
       });
@@ -860,17 +860,17 @@ export default {
         let toLocaleLowerCaseResult = query.toLocaleLowerCase();
         let obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: true };
         const _RegExp = RegExp;
-        let obj2 = closure_1(5590);
+        let obj2 = closure_1(5594);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + closure_1(5590).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + closure_1(5594).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj.exactQuery = regExp;
         const _RegExp2 = RegExp;
-        const str = closure_1(5590).escape(toLocaleLowerCaseResult);
-        const obj3 = closure_1(5590);
-        let regExp1 = new RegExp(closure_1(5590).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = closure_1(5594).escape(toLocaleLowerCaseResult);
+        const obj3 = closure_1(5594);
+        let regExp1 = new RegExp(closure_1(5594).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj.containQuery = regExp1;
         mapped.unshift(obj);
-        const str6 = closure_1(5590).escape(toLocaleLowerCaseResult);
+        const str6 = closure_1(5594).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -1741,7 +1741,21 @@ export default {
       type,
       allowEmptyQueries: null
     };
-    obj.channels = this.queryChannels(obj2).map((record) => record.record);
+    obj.channels = this.queryChannels({
+      query: channelTypes.query,
+      guildId: channel.getGuildId(),
+      limit: "r",
+      fuzzy: "IconComponent",
+      filter(type) {
+        let hasItem = null == channelTypes;
+        if (!hasItem) {
+          hasItem = channelTypes.includes(type.type);
+        }
+        return hasItem;
+      },
+      type,
+      allowEmptyQueries: null
+    }).map((record) => record.record);
     return obj;
   },
   queryApplicationCommandChannelResults(limit) {
@@ -1835,11 +1849,11 @@ export default {
         const _RegExp = RegExp;
         let obj2 = toLocaleLowerCaseResult(2033);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(5590).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(5594).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(5590);
+        const obj3 = nextResult(5594);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(5590).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(5594).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = StickersStore.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((item, index) => {
@@ -1862,12 +1876,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(6468).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(6475).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6468).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(6475).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6468).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(6475).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -1904,11 +1918,11 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7420);
+              obj2 = flag(7427);
             }
           });
         });
-        const obj4 = nextResult(5590);
+        const obj4 = nextResult(5594);
       }
     }
     let iter2 = items[Symbol.iterator]();

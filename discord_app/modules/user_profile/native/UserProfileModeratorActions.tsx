@@ -1,30 +1,30 @@
-// === Module 14229: UserProfileModeratorActions ===
+// === Module 14267: UserProfileModeratorActions ===
 
-// Module 14229 (UserProfileModeratorActions)
+// Module 14267 (UserProfileModeratorActions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1128 */;
 import FlagUtils from "FlagUtils" /* 1405 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 4829 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5192 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6651 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6809 */;
-import TableRow from "TableRow" /* 6882 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7849 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 12668 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12674 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 12692 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 12694 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13430 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5196 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6658 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6816 */;
+import TableRow from "TableRow" /* 6889 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7857 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 12700 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 12706 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 12724 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 12726 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13466 */;
 import noop from "module_19" /* 19 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6665 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6672 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildChannelStore from "GuildChannelStore" /* 4899 */;
 import GuildMemberStore from "GuildMemberStore" /* 4881 */;
 import GuildStore from "GuildStore" /* 4843 */;
 import PermissionStore from "PermissionStore" /* 4901 */;
-import VoiceStateStore from "VoiceStateStore" /* 5612 */;
+import VoiceStateStore from "VoiceStateStore" /* 5616 */;
 
 require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(4899).GUILD_VOCAL_CHANNELS_KEY;
@@ -32,7 +32,7 @@ const Constants = fn(1087);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 let GuildMemberFlags = fn(4887).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { cardContainer: { paddingBottom: 0 }, refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_16 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -364,7 +364,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[36]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11747, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11776, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(<closure_17 key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />);
       }
@@ -393,7 +393,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12670, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12702, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {
@@ -401,7 +401,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(6651).pop();
+              guildId(6658).pop();
             }
           });
         };

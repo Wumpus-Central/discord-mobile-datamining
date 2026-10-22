@@ -16,13 +16,13 @@ import _modDef2600 from "module_2600" /* 2600 */;
 import _modDef3250 from "module_3250" /* 3250 */;
 import BillingUtils from "BillingUtils" /* 4785 */;
 import DateUtils from "DateUtils" /* 4794 */;
-import openURLDefault from "openURL" /* 5638 */;
-import FileSizeUtils from "FileSizeUtils" /* 6358 */;
-import PriceUtils from "PriceUtils" /* 7316 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8122 */;
-import CheckoutError from "CheckoutError" /* 10995 */;
-import useFPDurationLeft from "useFPDurationLeft" /* 14663 */;
-import ProductCatalog from "ProductCatalog" /* 15189 */;
+import openURLDefault from "openURL" /* 5642 */;
+import FileSizeUtils from "FileSizeUtils" /* 6365 */;
+import PriceUtils from "PriceUtils" /* 7323 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8131 */;
+import CheckoutError from "CheckoutError" /* 11012 */;
+import useFPDurationLeft from "useFPDurationLeft" /* 14707 */;
+import ProductCatalog from "ProductCatalog" /* 15233 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1392 */;
@@ -681,7 +681,7 @@ function getPlanDescription(arg0) {
                       duration = activeDiscountInfo.duration;
                     }
                     if (duration == null) {
-                      duration = constants2;
+                      duration = closure_1_20;
                     }
                     obj18.numMonths = duration;
                     formatResult2 = formatToPlainString(t["3ZiutU"], obj18);
@@ -699,7 +699,7 @@ function getPlanDescription(arg0) {
                       duration1 = activeDiscountInfo.duration;
                     }
                     if (duration1 == null) {
-                      duration1 = constants2;
+                      duration1 = closure_1_20;
                     }
                     obj20.numMonths = duration1;
                     formatResult2 = formatToPlainString(t["G6+XOT"], obj20);
@@ -1221,7 +1221,7 @@ const isNoneSubscription = fn(2051).isNoneSubscription;
 let Constants = fn(1087);
 ({ InvoiceStatusTypes: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1, SubscriptionStatusTypes: closure_14 } = Constants);
 const PremiumConstants = fn(1394);
-({ DISCOUNTS: closure_15, ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK: closure_16, DEFAULT_APPLE_GRACE_PERIOD_DAYS: closure_17, DEFAULT_GOOGLE_GRACE_PERIOD_DAYS: closure_18, DEFAULT_MAX_GRACE_PERIOD_DAYS: closure_19, DISCOUNT_DURATION_FALLBACK: closure_20, DISCOUNT_PERCENTAGE_FALLBACK: closure_21, DiscountUserUsageLimitIntervalTypes: closure_22, FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS: closure_23, FractionalPremiumIntervalTypes: closure_24, FractionalPremiumStates: closure_25, MAX_ACCOUNT_HOLD_DAYS: closure_26, MAX_PAYMENT_PROCESSING_TIME_DAYS: closure_27, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_28, PAID_SUBSCRIPTION_MAX_BILLING_RETRY_DAYS: closure_29, PAID_SUBSCRIPTION_MAX_GRACE_PERIOD_DAYS: closure_30, PREMIUM_GUILD_SUBSCRIPTION_PLANS: items, PREMIUM_PLANS: closure_32, PREMIUM_SKU_TO_MONTHLY_PLAN: closure_33, PREMIUM_TIER_2_PLANS: closure_34, PREMIUM_TIER_2_REVERSE_FOLLOWUP_TRIAL_ID: closure_35, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID: closure_36, PREMIUM_TYPE_DISPLAY_NAME: closure_37, PremiumSubscriptionSKUs: closure_38, PremiumTypes: closure_39, PremiumUserLimits: closure_40, SubscriptionIntervalTypes: closure_41, SubscriptionPlanInfo: closure_42, SubscriptionPlans } = PremiumConstants);
+({ DISCOUNTS: closure_15, ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK: closure_16, DEFAULT_APPLE_GRACE_PERIOD_DAYS: closure_17, DEFAULT_GOOGLE_GRACE_PERIOD_DAYS: closure_18, DEFAULT_MAX_GRACE_PERIOD_DAYS: closure_19, DISCOUNT_DURATION_FALLBACK: closure_20, DISCOUNT_PERCENTAGE_FALLBACK: closure_21, DiscountUserUsageLimitIntervalTypes: closure_22, FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS: closure_23, FractionalPremiumIntervalTypes: closure_24, FractionalPremiumStates: closure_25, MAX_ACCOUNT_HOLD_DAYS: closure_26, MAX_PAYMENT_PROCESSING_TIME_DAYS: closure_27, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_28, PAID_SUBSCRIPTION_MAX_BILLING_RETRY_DAYS: closure_29, PAID_SUBSCRIPTION_MAX_GRACE_PERIOD_DAYS: closure_30, PREMIUM_GUILD_SUBSCRIPTION_PLANS: closure_31, PREMIUM_PLANS: closure_32, PREMIUM_SKU_TO_MONTHLY_PLAN: items, PREMIUM_TIER_2_PLANS: closure_34, PREMIUM_TIER_2_REVERSE_FOLLOWUP_TRIAL_ID: closure_35, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID: closure_36, PREMIUM_TYPE_DISPLAY_NAME: closure_37, PremiumSubscriptionSKUs: closure_38, PremiumTypes: closure_39, PremiumUserLimits: closure_40, SubscriptionIntervalTypes: closure_41, SubscriptionPlanInfo: closure_42, SubscriptionPlans } = PremiumConstants);
 ({ TRIAL_FOR_EVERYONE_OFFER_EXPIRES_APPROACHING_THRESHOLD: closure_44, USER_PREMIUM_OFFER_EXPIRES_APPROACHING_4_DAY_THRESHOLD: closure_45, USER_PREMIUM_OFFER_EXPIRES_APPROACHING_7_DAY_THRESHOLD: closure_46 } = PremiumConstants);
 let closure_47 = fn(2066).getPremiumGroupProductName;
 Constants = fn(1098);
@@ -2562,7 +2562,7 @@ obj6.isPremiumSku = function isPremiumSku(skuId) {
   return skuId === __initData10.TIER_0 || skuId === __initData10.TIER_1 || skuId === __initData10.TIER_2;
 };
 obj6.getIntervalMonths = getIntervalMonths;
-obj6.getUserMaxFileSize = fn(9858).getUserMaxFileSize;
+obj6.getUserMaxFileSize = fn(9870).getUserMaxFileSize;
 obj6.getSkuIdForPlan = getSkuIdForPlan;
 obj6.getSkuIdForPremiumType = function getSkuIdForPremiumType(premiumType) {
   if (__initData11.TIER_0 === premiumType) {

@@ -1,6 +1,6 @@
-// === Module 5834: SpatialAudioForVoiceExperiment ===
+// === Module 5841: SpatialAudioForVoiceExperiment ===
 
-// Module 5834 (SpatialAudioForVoiceExperiment)
+// Module 5841 (SpatialAudioForVoiceExperiment)
 import ApexExperiment from "ApexExperiment" /* 1455 */;
 import size from "module_2" /* 2 */;
 

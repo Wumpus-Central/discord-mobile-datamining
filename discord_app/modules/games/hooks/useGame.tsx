@@ -1,8 +1,8 @@
-// === Module 7383: useGame ===
+// === Module 7390: useGame ===
 
-// Module 7383 (useGame)
+// Module 7390 (useGame)
 import DurationsDefault from "Durations" /* 1104 */;
-import GameActionCreators from "GameActionCreators" /* 7384 */;
+import GameActionCreators from "GameActionCreators" /* 7391 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2022 */;
@@ -14,13 +14,13 @@ const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1087).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
-  get(gameId) {
-    if (null == gameId) {
+  get(item) {
+    if (null == item) {
       return null;
-    } else if (GameStore.hasNoData(gameId)) {
+    } else if (GameStore.hasNoData(item)) {
       let NO_DATA = require("initialize").NO_DATA;
     } else {
-      NO_DATA = GameStore.getGame(gameId);
+      NO_DATA = GameStore.getGame(item);
       if (NO_DATA == null) {
         NO_DATA = null;
       }

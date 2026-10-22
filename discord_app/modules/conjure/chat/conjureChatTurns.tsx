@@ -1,8 +1,8 @@
-// === Module 10658: conjureChatTurns ===
+// === Module 10670: conjureChatTurns ===
 
-// Module 10658 (conjureChatTurns)
-import conjureStepTimeline from "conjureStepTimeline" /* 10659 */;
-import conjureChatHistory from "conjureChatHistory" /* 10660 */;
+// Module 10670 (conjureChatTurns)
+import conjureStepTimeline from "conjureStepTimeline" /* 10671 */;
+import conjureChatHistory from "conjureChatHistory" /* 10672 */;
 import size from "module_2" /* 2 */;
 
 function findOpenTurn(map) {
@@ -132,6 +132,19 @@ export const isSegmentOfTurn = function isSegmentOfTurn(value, turnId) {
   }
   return tmp;
 };
+export const turnIdOfSegment = function turnIdOfSegment(message) {
+  if (null != message.turn_id) {
+    let turn_id = message.turn_id;
+  } else {
+    const id = message.id;
+    turn_id = null;
+    if (id.startsWith(conjureChatHistory.TURN_ENTRY_PREFIX)) {
+      const id1 = message.id;
+      turn_id = id1.slice(conjureChatHistory.TURN_ENTRY_PREFIX.length);
+    }
+  }
+  return turn_id;
+};
 export const findTurnSegment = function findTurnSegment(arr3, activeTurnId) {
   if (null == activeTurnId) {
     return -1;
@@ -156,14 +169,14 @@ export const findTurnSegment = function findTurnSegment(arr3, activeTurnId) {
     return -1;
   }
 };
-export const resolveTurnIndex = function resolveTurnIndex(arr3, activeTurnId) {
+export const resolveTurnIndex = function resolveTurnIndex(value, activeTurnId) {
   let num = -1;
   if (null != activeTurnId) {
-    let diff = arr3.length - 1;
+    let diff = value.length - 1;
     num = -1;
     if (0 <= diff) {
       while (true) {
-        let tmp3 = arr3[diff];
+        let tmp3 = value[diff];
         let tmp4 = tmp3.turn_id === activeTurnId;
         if (!tmp4) {
           let _HermesInternal = HermesInternal;
@@ -185,10 +198,10 @@ export const resolveTurnIndex = function resolveTurnIndex(arr3, activeTurnId) {
   if (-1 !== num) {
     return num;
   } else {
-    let diff1 = arr3.length - 1;
+    let diff1 = value.length - 1;
     if (0 <= diff1) {
       while (true) {
-        let tmp8 = arr3[diff1];
+        let tmp8 = value[diff1];
         if ("assistant" === tmp8.role) {
           let hasTerminalStepResult = true === tmp8.finished || true === tmp8.continued || "" !== tmp8.content || null != tmp8.proposal || null != tmp8.clarification || null != tmp8.intake;
           if (!hasTerminalStepResult) {

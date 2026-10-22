@@ -1,10 +1,10 @@
-// === Module 13123: TiktokNeutralIcon ===
+// === Module 13159: TiktokNeutralIcon ===
 
-// Module 13123 (TiktokNeutralIcon)
+// Module 13159 (TiktokNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5650 */;
-import _mod13124 from "module_13124" /* 13124 */;
+import BaseIconImage from "BaseIconImage" /* 5654 */;
+import _mod13160 from "module_13160" /* 13160 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const TiktokNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13124;
+    const tmpResult = _mod13160;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const TiktokNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13124, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13160, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

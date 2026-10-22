@@ -1,10 +1,10 @@
-// === Module 18327: VoiceControlsToggleNuxActionSheet ===
+// === Module 18395: VoiceControlsToggleNuxActionSheet ===
 
-// Module 18327 (VoiceControlsToggleNuxActionSheet)
+// Module 18395 (VoiceControlsToggleNuxActionSheet)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4967 */;
+import AccessibilityStore from "AccessibilityStore" /* 4970 */;
 
 const require = globalThis.__r;
 
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4" };
 let c11 = "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png";
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { videoContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, bottomSheetWrapper: { paddingHorizontal: 24 }, contentContainer: { flex: 1, alignItems: "center", paddingTop: 24, paddingBottom: 16 }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, marginBottom: 24, textAlign: "center" } };
 let closure_12 = createStyles.createStyles(obj2);
 let c13 = 2.0875;

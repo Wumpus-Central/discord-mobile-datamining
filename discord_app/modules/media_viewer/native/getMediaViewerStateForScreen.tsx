@@ -1,13 +1,13 @@
-// === Module 14141: getMediaViewerStateForScreen ===
+// === Module 14175: getMediaViewerStateForScreen ===
 
-// Module 14141 (getMediaViewerStateForScreen)
-import MediaSourceUtil from "MediaSourceUtil" /* 8721 */;
+// Module 14175 (getMediaViewerStateForScreen)
+import MediaSourceUtil from "MediaSourceUtil" /* 8730 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 
-export default function getMediaViewerStateForScreen(width, height, cResult) {
-  const size = MediaSourceUtil.flattenSource(cResult, true);
+export default function getMediaViewerStateForScreen(width, height, sources) {
+  const size = MediaSourceUtil.flattenSource(sources, true);
   if (null == size) {
     const size1 = { maximumZoomScale: 1, width, height };
     return size1;

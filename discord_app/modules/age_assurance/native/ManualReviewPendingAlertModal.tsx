@@ -1,10 +1,10 @@
-// === Module 8076: ManualReviewPendingAlertModal ===
+// === Module 8085: ManualReviewPendingAlertModal ===
 
-// Module 8076 (ManualReviewPendingAlertModal)
+// Module 8085 (ManualReviewPendingAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1128 */;
 import _modDef3154 from "module_3154" /* 3154 */;
-import AlertModal from "AlertModal" /* 5894 */;
+import AlertModal from "AlertModal" /* 5901 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

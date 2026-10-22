@@ -1,15 +1,15 @@
-// === Module 9874: usePremiumFeatureUpsellGetNitro ===
+// === Module 9886: usePremiumFeatureUpsellGetNitro ===
 
-// Module 9874 (usePremiumFeatureUpsellGetNitro)
-import ChatInputUtils from "ChatInputUtils" /* 5141 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6442 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7230 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7511 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8409 */;
+// Module 9886 (usePremiumFeatureUpsellGetNitro)
+import ChatInputUtils from "ChatInputUtils" /* 5145 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6449 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7237 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7518 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8418 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import UserOfferStore from "UserOfferStore" /* 7537 */;
+import UserOfferStore from "UserOfferStore" /* 7544 */;
 
 require = fn;
 const PremiumTypes = fn(1394).PremiumTypes;
@@ -78,14 +78,14 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           onPress();
         }).catch(() => {
           const intl = closure_1_0(1128).intl;
-          page(5644).presentFailedToast(intl.string(closure_1_0(1128).t.R0RpRX));
+          page(5648).presentFailedToast(intl.string(closure_1_0(1128).t.R0RpRX));
         }).finally(() => closure_1_4(false));
         const catchPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
           onPress();
         }).catch(() => {
           const intl = closure_1_0(1128).intl;
-          page(5644).presentFailedToast(intl.string(closure_1_0(1128).t.R0RpRX));
+          page(5648).presentFailedToast(intl.string(closure_1_0(1128).t.R0RpRX));
         });
       }
     }

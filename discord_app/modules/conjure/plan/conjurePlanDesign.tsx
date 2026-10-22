@@ -1,20 +1,20 @@
-// === Module 12367: conjurePlanDesign ===
+// === Module 12393: conjurePlanDesign ===
 
-// Module 12367 (conjurePlanDesign)
+// Module 12393 (conjurePlanDesign)
 import _modDef3830 from "module_3830" /* 3830 */;
-import conjurePlanTags from "conjurePlanTags" /* 12365 */;
+import conjurePlanTags from "conjurePlanTags" /* 12391 */;
 
 require = fn;
 const CONJURE_PLAN_DESIGN_ALTS = {};
-CONJURE_PLAN_DESIGN_ALTS[fn(6753).ConjureSupportedSurface.APP_CHANNEL] = _modDef3830["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6753).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3830["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6753).ConjureSupportedSurface.ACTIVITY] = _modDef3830["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6753).ConjureSupportedSurface.OVERLAY] = _modDef3830["rPpf5/"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6753).ConjureSupportedSurface.PROFILE_WIDGET] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6753).ConjureSupportedSurface.AUTOMOD] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6753).ConjureSupportedSurface.BOT] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6753).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
-const items = [fn(6753).ConjureSupportedSurface.ACTIVITY, fn(6753).ConjureSupportedSurface.APP_CHANNEL, fn(6753).ConjureSupportedSurface.VOICE_CHANNEL, fn(6753).ConjureSupportedSurface.OVERLAY];
+CONJURE_PLAN_DESIGN_ALTS[fn(6760).ConjureSupportedSurface.APP_CHANNEL] = _modDef3830["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6760).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3830["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6760).ConjureSupportedSurface.ACTIVITY] = _modDef3830["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6760).ConjureSupportedSurface.OVERLAY] = _modDef3830["rPpf5/"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6760).ConjureSupportedSurface.PROFILE_WIDGET] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6760).ConjureSupportedSurface.AUTOMOD] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6760).ConjureSupportedSurface.BOT] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6760).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
+const items = [fn(6760).ConjureSupportedSurface.ACTIVITY, fn(6760).ConjureSupportedSurface.APP_CHANNEL, fn(6760).ConjureSupportedSurface.VOICE_CHANNEL, fn(6760).ConjureSupportedSurface.OVERLAY];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanDesign.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 14973: SignPostIcon ===
+// === Module 15017: SignPostIcon ===
 
-// Module 14973 (SignPostIcon)
+// Module 15017 (SignPostIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5650 */;
-import _mod14974 from "module_14974" /* 14974 */;
+import BaseIconImage from "BaseIconImage" /* 5654 */;
+import _mod15018 from "module_15018" /* 15018 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const SignPostIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14974;
+    const tmpResult = _mod15018;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const SignPostIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14974, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15018, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

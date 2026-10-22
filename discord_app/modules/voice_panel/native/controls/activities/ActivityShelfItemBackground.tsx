@@ -1,16 +1,16 @@
-// === Module 18402: ActivityShelfItemBackground ===
+// === Module 18470: ActivityShelfItemBackground ===
 
-// Module 18402 (ActivityShelfItemBackground)
+// Module 18470 (ActivityShelfItemBackground)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import NativeViewDefault from "NativeView" /* 6865 */;
-import BrokenImageDefault from "BrokenImage" /* 11995 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import NativeViewDefault from "NativeView" /* 6872 */;
+import BrokenImageDefault from "BrokenImage" /* 12016 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_6 = createStyles.createStyles((aspectRatio) => {
   const obj = { previewImage: { alignItems: "center", justifyContent: "center", backgroundColor: "black" }, activityImage: { width: "100%", aspectRatio } };
   return obj;

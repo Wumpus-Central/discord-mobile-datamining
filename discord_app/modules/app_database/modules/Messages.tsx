@@ -1,17 +1,17 @@
-// === Module 7563: modules/Messages ===
+// === Module 7570: modules/Messages ===
 
-// Module 7563 (modules/Messages)
+// Module 7570 (modules/Messages)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 4847 */;
 import _mod4848 from "module_4848" /* 4848 */;
-import requireSortedDescending from "requireSortedDescending" /* 6474 */;
-import isReadableChannel from "isReadableChannel" /* 7570 */;
-import KvMessage2 from "KvMessage" /* 7573 */;
+import requireSortedDescending from "requireSortedDescending" /* 6481 */;
+import isReadableChannel from "isReadableChannel" /* 7577 */;
+import KvMessage2 from "KvMessage" /* 7580 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6475 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6482 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
-import SaveableChannelsStore from "SaveableChannelsStore" /* 7564 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7571 */;
 
 require = fn;
 let closure_8 = new LoggerDefault("Messages");

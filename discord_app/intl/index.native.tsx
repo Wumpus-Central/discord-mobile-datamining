@@ -4,8 +4,8 @@
 import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1129 */;
 import intl_util from "intl/util" /* 1130 */;
 import native from "native" /* 1202 */;
-import IntlLink from "IntlLink" /* 10739 */;
-import _modDef15332 from "module_15332" /* 15332 */;
+import IntlLink from "IntlLink" /* 10751 */;
+import _modDef15376 from "module_15376" /* 15376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,7 +67,7 @@ export const getLanguages = fn(1130).getLanguages;
 export const useSyncMessages = function useSyncMessages(arg0) {
   return intl_util.useSyncMessages(arg0, withFormattersResult);
 };
-export const t = fn(15327)._defaultMessages;
-export const international = _modDef15332;
+export const t = fn(15371)._defaultMessages;
+export const international = _modDef15376;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

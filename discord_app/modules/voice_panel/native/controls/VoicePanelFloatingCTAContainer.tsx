@@ -1,16 +1,16 @@
-// === Module 18437: VoicePanelFloatingCTAContainer ===
+// === Module 18505: VoicePanelFloatingCTAContainer ===
 
-// Module 18437 (VoicePanelFloatingCTAContainer)
+// Module 18505 (VoicePanelFloatingCTAContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5020 */;
-import spring from "spring" /* 5229 */;
-import Stack_Stack from "Stack/Stack" /* 5957 */;
-import RowButton from "RowButton" /* 8912 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11993 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12121 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13047 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18336 */;
+import native from "native" /* 5023 */;
+import spring from "spring" /* 5233 */;
+import Stack_Stack from "Stack/Stack" /* 5964 */;
+import RowButton from "RowButton" /* 8921 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12014 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12140 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13083 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 18404 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -18,11 +18,11 @@ import ChannelStore from "ChannelStore" /* 4821 */;
 
 require = fn;
 let closure_3 = ["trailing"];
-const UI_SHOW_HIDE_PHYSICS = fn(10848).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(10851).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(10865).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(10868).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let obj2 = { container: null };
 const rect = { zIndex: 1, position: "absolute", bottom: 0, left: "50%", overflow: "hidden", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 obj2.container = rect;

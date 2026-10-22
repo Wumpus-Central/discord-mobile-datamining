@@ -1,13 +1,13 @@
-// === Module 5957: Stack/Stack ===
+// === Module 5964: Stack/Stack ===
 
-// Module 5957 (Stack/Stack)
+// Module 5964 (Stack/Stack)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4966);
+const createStyles = fn(4969);
 let closure_4 = createStyles.createStyles((gap, arg1, alignItems, justifyContent) => {
   const stack = { width: "100%", gap, alignItems, justifyContent, flexDirection: null };
   let str = "column";

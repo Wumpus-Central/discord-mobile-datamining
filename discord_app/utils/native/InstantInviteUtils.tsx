@@ -1,8 +1,8 @@
-// === Module 9013: utils/InstantInviteUtils ===
+// === Module 9022: utils/InstantInviteUtils ===
 
-// Module 9013 (utils/InstantInviteUtils)
+// Module 9022 (utils/InstantInviteUtils)
 import util from "util" /* 1128 */;
-import canViewInviteModal from "canViewInviteModal" /* 8863 */;
+import canViewInviteModal from "canViewInviteModal" /* 8872 */;
 import ChannelStore from "ChannelStore" /* 4821 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4899 */;
 import PermissionStore from "PermissionStore" /* 4901 */;

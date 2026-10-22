@@ -1,10 +1,10 @@
-// === Module 10951: TagsIcon ===
+// === Module 10968: TagsIcon ===
 
-// Module 10951 (TagsIcon)
+// Module 10968 (TagsIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5650 */;
-import _mod10952 from "module_10952" /* 10952 */;
+import BaseIconImage from "BaseIconImage" /* 5654 */;
+import _mod10969 from "module_10969" /* 10969 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const TagsIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10952;
+    const tmpResult = _mod10969;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const TagsIcon = ReactCompilerGating.isReactCompilerEnabled() ? (function
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10952, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10969, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

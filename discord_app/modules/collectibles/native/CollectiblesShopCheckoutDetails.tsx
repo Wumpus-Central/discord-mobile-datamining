@@ -1,6 +1,6 @@
-// === Module 13781: CollectiblesShopCheckoutDetails ===
+// === Module 13817: CollectiblesShopCheckoutDetails ===
 
-// Module 13781 (CollectiblesShopCheckoutDetails)
+// Module 13817 (CollectiblesShopCheckoutDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1090 */;
@@ -8,33 +8,33 @@ import util from "util" /* 1128 */;
 import utils from "utils" /* 1992 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import Text_Text from "Text/Text" /* 5216 */;
-import FastImageDefault from "FastImage" /* 5651 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7638 */;
-import useShopProductItems from "useShopProductItems" /* 8624 */;
-import useCurrentUser from "useCurrentUser" /* 8631 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8656 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8681 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 9348 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9361 */;
-import NameplateDefault from "Nameplate" /* 9369 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9373 */;
-import _modDef9395 from "module_9395" /* 9395 */;
-import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9396 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9406 */;
-import getProductName from "getProductName" /* 9423 */;
-import _modDef13782 from "module_13782" /* 13782 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13783 */;
+import Text_Text from "Text/Text" /* 5220 */;
+import FastImageDefault from "FastImage" /* 5655 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7645 */;
+import useShopProductItems from "useShopProductItems" /* 8633 */;
+import useCurrentUser from "useCurrentUser" /* 8640 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8665 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8690 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9359 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9372 */;
+import NameplateDefault from "Nameplate" /* 9380 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9384 */;
+import _modDef9406 from "module_9406" /* 9406 */;
+import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9407 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9417 */;
+import getProductName from "getProductName" /* 9434 */;
+import _modDef13818 from "module_13818" /* 13818 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 13819 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const EXTERNAL_PRODUCT_SKU_IDS = fn(1089).EXTERNAL_PRODUCT_SKU_IDS;
-const CollectiblesPreviewConstants = fn(9349);
+const CollectiblesPreviewConstants = fn(9360);
 ({ BUNDLE_PREVIEW_CONFIG: metroRequire, SAMPLE_PROFILE_ASPECT_RATIO } = CollectiblesPreviewConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4966);
+let createStyles = fn(4969);
 let obj2 = { externalProductImage: { width: 45, height: 45 }, bundlePreviewContainer: { alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.xs }, bundlePreviewScale: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, productContainer: null, productDetailsContainer: null, productPreviewContainer: null, productDetails: null, productDetailsTextContainer: null, errorContainer: null };
 let obj3 = { alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.xs };
 obj2.productContainer = { borderRadius: nativeDefault.radii.lg, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -48,7 +48,7 @@ obj2.productDetailsTextContainer = { flexShrink: 1, gap: nativeDefault.space.PX_
 let obj7 = { flexShrink: 1, gap: nativeDefault.space.PX_4 };
 obj2.errorContainer = { height: 36, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(4966);
+createStyles = fn(4969);
 let closure_10 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -58,16 +58,16 @@ let closure_10 = createStyles.createStyles((arg0) => {
     BORDER_FEEDBACK_CRITICAL = colors.BORDER_FEEDBACK_CRITICAL;
     tmp4 = importDefault;
   }
-  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(587).space.PX_16, backgroundColor: "__packager_asset" } };
+  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(587).space.PX_16, backgroundColor: "__initData" } };
   return obj;
 });
-createStyles = fn(4966);
+createStyles = fn(4969);
 const obj11 = { profileEffectContainer: null, profileEffect: null };
 let size = { position: "relative", width: "100%", height: "100%", borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj11.profileEffectContainer = size;
 obj11.profileEffect = { position: "absolute", width: "100%", aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO, top: 0 };
 let closure_11 = createStyles.createStyles(obj11);
-createStyles = fn(4966);
+createStyles = fn(4969);
 const obj12 = { nameplate: null };
 let obj8 = { height: 36, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
 obj12.nameplate = { borderRadius: nativeDefault.radii.xs };
@@ -82,7 +82,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
   } else {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef13782 };
+      const obj2 = { uri: _modDef13818 };
       cResult[0] = obj2;
       let first = obj2;
     } else {
@@ -142,7 +142,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, accessibilityLabel: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: _modDef13782 };
+    const obj3 = { uri: _modDef13818 };
     obj2.source = obj3;
     obj2.accessibilityLabel = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;
@@ -466,7 +466,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collec
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef9395 };
+      const obj2 = { uri: _modDef9406 };
       cResult[2] = obj2;
       let tmp31 = obj2;
     } else {
@@ -569,7 +569,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collec
     return React5(FractionalNitroCoinIllustration.FractionalNitroCoinIllustration, size);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const obj = { source: null, style: null };
-    const obj2 = { uri: _modDef9395 };
+    const obj2 = { uri: _modDef9406 };
     obj.source = obj2;
     obj.style = tmp.externalProductImage;
     return React5(FastImageDefault, obj);
@@ -1147,7 +1147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
     const obj6 = { variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
     let intl = tmp3(1128).intl;
     obj6.children = intl.string(tmp3(1128).t["3YfczA"]);
-    obj5.children = closure_7(tmp3(5216).Text, obj6);
+    obj5.children = closure_7(tmp3(5220).Text, obj6);
     flag3 = closure_7(View, obj5);
   }
   items3[1] = flag3;
