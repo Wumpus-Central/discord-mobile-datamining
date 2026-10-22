@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "ec62a0adb2a6736a93fafc0b9d7dfef7", name: "vi.messages.ec62a0adb2a6736a93fafc0b9d7dfef7.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ec58bf96c6588d5215316bd58185df8c", name: "HashmarkIcon", type: "png" });

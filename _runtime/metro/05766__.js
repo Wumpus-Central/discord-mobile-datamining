@@ -1,12 +1,22 @@
 // === Module 5766: ? ===
 
 // Module 5766
-import baseGetAllKeys from "baseGetAllKeys" /* 668 */;
-import _mod5749 from "module_5749" /* 5749 */;
-import keysIn from "keysIn" /* 5751 */;
+import _mod523 from "module_523" /* 523 */;
 
+let prototype;
+if (_mod523) {
+  prototype = _mod523.prototype;
+}
+let valueOf;
+if (prototype) {
+  valueOf = prototype.valueOf;
+}
 
-export default function getAllKeysIn(arg0) {
-  const tmp = baseGetAllKeys;
-  return tmp(arg0, keysIn, _mod5749);
+export default function cloneSymbol(arg0) {
+  if (valueOf) {
+    const call = valueOf.call;
+    Object(typeof call === "unknown" ? valueOf() : call(arg0));
+  } else {
+    return {};
+  }
 };

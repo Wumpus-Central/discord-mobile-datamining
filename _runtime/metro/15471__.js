@@ -1,7 +1,5 @@
 // === Module 15471: ? ===
 
 // Module 15471
-import _mod15449 from "module_15449" /* 15449 */;
 
-
-export default _mod15449({}.isPrototypeOf);
+export const collations = ["big5han", "compat", "dict", "direct", "ducet", "emoji", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "search", "searchjl", "standard", "stroke", "trad", "unihan", "zhuyin"];

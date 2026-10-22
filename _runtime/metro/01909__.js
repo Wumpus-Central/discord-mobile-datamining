@@ -218,6 +218,6 @@ defineProperty.defineProperty(MessageFormat, "__addLocaleData", {
 let defineProperty = defineProperty_mod;
 defineProperty.defineProperty(MessageFormat, "__parse", { value: SyntaxError.default.parse });
 let defineProperty = defineProperty_mod;
-defineProperty.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "enabled" });
+defineProperty.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "unicodeVersion" });
 
 export default MessageFormat;

@@ -1,13 +1,7 @@
 // === Module 5436: ? ===
 
 // Module 5436
-import _mod17 from "module_17" /* 17 */;
+import _modDef5437 from "module_5437" /* 5437 */;
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: null };
-const obj2 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.pointerEvents = "box-none";
-obj.container = obj2;
 
-export const styles = StyleSheet.create(obj);
+export default _modDef5437;

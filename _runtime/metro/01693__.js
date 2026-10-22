@@ -1094,7 +1094,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
           const obj5 = { collapsable: false };
           if (obj9.isFabric()) {
             const obj6 = {};
-            const merged = Object.assign(collapsed.flatten(result.style));
+            const merged = Object.assign(v65535.flatten(result.style));
             const merged1 = Object.assign(self.state.settledProps);
             const obj8 = { nativeID: combined };
             const merged2 = Object.assign(result);

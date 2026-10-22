@@ -1,71 +1,33 @@
 // === Module 12506: ? ===
 
 // Module 12506
-import _mod12480 from "module_12480" /* 12480 */;
-import _mod12485 from "module_12485" /* 12485 */;
-import _mod12497 from "module_12497" /* 12497 */;
-import _mod12498 from "module_12498" /* 12498 */;
-import ScopeClass from "ScopeClass" /* 12500 */;
+import _mod12507 from "module_12507" /* 12507 */;
+import _mod12510 from "module_12510" /* 12510 */;
 
 require = arg1;
 const dependencyMap = arg6;
+function instrumentError() {
+  onerror = _mod12510.GLOBAL_OBJ.onerror;
+  _mod12510.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
+    _mod12507.triggerHandlers("error", { column, error, line, msg, url });
+    if (!onerror) {
+      return onerror;
+    } else {
+      const self = this;
+      const apply = onerror.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+    const obj = { column, error, line, msg, url };
+  };
+  _mod12510.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+}
+let onerror = null;
 
-export const getClient = function getClient() {
-  const mainCarrier = _mod12497.getMainCarrier();
-  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
-};
-export const getCurrentScope = function getCurrentScope() {
-  const mainCarrier = _mod12497.getMainCarrier();
-  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-};
-export const getGlobalScope = function getGlobalScope() {
-  return _mod12480.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getIsolationScope = function getIsolationScope() {
-  const mainCarrier = _mod12497.getMainCarrier();
-  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-};
-export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod12485.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-};
-export const withIsolationScope = function withIsolationScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12497.getMainCarrier();
-  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
-    }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
-  }
-};
-export const withScope = function withScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12497.getMainCarrier();
-  const asyncContextStrategy = _mod12498.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
-    }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
-  }
+export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod12507.addHandler("error", errorCallback);
+  _mod12507.maybeInstrument("error", instrumentError);
 };

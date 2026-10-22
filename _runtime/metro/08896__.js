@@ -1,37 +1,7 @@
 // === Module 8896: ? ===
 
 // Module 8896
-import _mod8897 from "module_8897" /* 8897 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
 
-export const getNativeComponent = () => {
-  try {
-    return hasOwnProperty("RNDatePicker");
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod8897.getInstallationErrorMessage());
-    }
-  }
-};
-export const getNativeModule = () => {
-  try {
-    if (React4) {
-      RNDatePicker = React4.get("RNDatePicker");
-    } else {
-      RNDatePicker = RNDatePicker.RNDatePicker;
-    }
-    return RNDatePicker;
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod8897.getInstallationErrorMessage());
-    }
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "597f6d42c10c1b83f08e644762fab88e", name: "ic_voice_channel_16px", type: "png" });

@@ -1,0 +1,56 @@
+// === Module 15600: OverlayCreator ===
+
+// Module 15600 (OverlayCreator)
+import noop from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import module_15601_mod from "module_15601" /* 15601 */;
+import _isNativeReflectConstruct_mod from "module_15602" /* 15602 */;
+import jsxProd from "jsxProd" /* 21 */;
+
+if (noop) {
+  const __esModule = noop.__esModule;
+}
+let module_15601 = module_15601_mod;
+if (!module_15601) {
+  let obj = { default: module_15601 };
+  let tmp4 = obj;
+} else {
+  tmp4 = module_15601;
+}
+module_15601 = tmp4;
+let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
+if (!_isNativeReflectConstruct) {
+  let obj2 = { default: _isNativeReflectConstruct };
+  let tmp6 = obj2;
+} else {
+  tmp6 = _isNativeReflectConstruct;
+}
+_isNativeReflectConstruct = tmp6;
+
+export default function OverlayCreator() {
+  return function overlay() {
+    closure_0 = closure_1.default();
+    return {
+      onCommand(type) {
+        if ("overlay" === type.type) {
+          closure_0.emit("overlay", type.payload);
+        }
+      },
+      features: {
+        overlay(emitter) {
+          return () => {
+            let obj = arg0;
+            if (arg0 === undefined) {
+              obj = {};
+            }
+            const obj2 = { style: { flex: 1 }, children: null };
+            const merged = Object.assign(obj);
+            const items = [<emitter />, <_isNativeReflectConstruct.default emitter={emitter} />];
+            obj2.children = items;
+            return <RN.View style={{ flex: 1 }}>{null}</RN.View>;
+          };
+        }
+      }
+    };
+  };
+};

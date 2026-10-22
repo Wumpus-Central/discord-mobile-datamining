@@ -1,7 +1,12 @@
 // === Module 11704: ? ===
 
 // Module 11704
-import registerAsset from "module_1134" /* 1134 */;
+import _mod11703 from "module_11703" /* 11703 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c633d33c98eaf36e731a0f2d3f8db716", name: "ChatShieldIcon", type: "png" });
+export const keepLocalCopy = function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod11703.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+};

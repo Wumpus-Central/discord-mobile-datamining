@@ -4,4 +4,4 @@
 import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "7b7fda4b104811c7ab69187b97a7e04e", name: "ic_shield_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 16, height: 16, scales: [1, 2, 3], hash: "2b87933d8084823c9896755fb55aa5f1", name: "ic_spotify_white_16px", type: "png" });

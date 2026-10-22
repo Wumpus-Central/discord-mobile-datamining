@@ -1,9 +1,11 @@
 // === Module 15509: ? ===
 
 // Module 15509
-import _mod17 from "module_17" /* 17 */;
-import setupURLPolyfill_mod from "setupURLPolyfill" /* 15510 */;
+import _mod15493 from "module_15493" /* 15493 */;
+import _mod15510 from "module_15510" /* 15510 */;
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+let closure_2 = _mod15493({}.hasOwnProperty);
+
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod15510(arg0), arg1);
+});

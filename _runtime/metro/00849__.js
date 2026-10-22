@@ -260,7 +260,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               closure_136_6 = undefined;
               closure_136_7 = undefined;
               value4 = undefined;
-              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "enabled", cacheCreationInputTokens: "colors", cacheReadInputTokens: "toCharArray$esjava$1", toolCalls: [], activeToolBlocks: {} };
+              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "emoji", cacheCreationInputTokens: "section", cacheReadInputTokens: "toCharArray$esjava$1", toolCalls: [], activeToolBlocks: {} };
               closure_136_2 = obj5;
               closure_136_4 = false;
               closure_136_5 = false;
@@ -1056,7 +1056,7 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "enabled", cacheCreationInputTokens: "colors", cacheReadInputTokens: "toCharArray$esjava$1", toolCalls: [], activeToolBlocks: {} };
+  closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "emoji", cacheCreationInputTokens: "section", cacheReadInputTokens: "toCharArray$esjava$1", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
     processEvent(arg0, closure_2, closure_1, closure_0);
   });

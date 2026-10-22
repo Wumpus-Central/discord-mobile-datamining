@@ -4,60 +4,34 @@
 import noop from "module_19" /* 19 */;
 
 
-export const useAutoPlay = function useAutoPlay(autoPlay) {
-  autoPlay = autoPlay.autoPlay;
-  closure_0 = tmp;
-  const autoPlayReverse = autoPlay.autoPlayReverse;
-  closure_1 = tmp2;
-  const autoPlayInterval = autoPlay.autoPlayInterval;
-  const prev = iter.prev;
-  const next = iter.next;
-  noop.useRef();
-  noop.useRef(!(undefined !== autoPlay && autoPlay));
-  const items = [undefined !== autoPlayReverse && autoPlayReverse, autoPlayInterval, prev, next];
-  const callback = noop.useCallback(() => {
-    if (!ref2.current) {
-      if (ref.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref.current);
+export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {
+  closure_0 = arg0;
+  const items = [arg0];
+  const effect = noop.useEffect(() => {
+    const size = closure_0;
+    ({ defaultIndex, dataLength } = closure_0);
+    if (typeof defaultIndex === "number") {
+      if (dataLength > 0) {
+        const _Error3 = Error;
+        const error = new Error("DefaultIndex must be in the range of data length.");
+        throw error;
       }
-      const _setTimeout = setTimeout;
-      ref.current = setTimeout(() => {
-        if (closure_1_1) {
-          const obj2 = { onFinished };
-          prev(obj2);
-        } else {
-          const obj = { onFinished };
-          next(obj);
+    }
+    if (!size.mode) {
+      if (!size.vertical) {
+        if (!size.width) {
+          const _Error = Error;
+          const error1 = new Error("`width` must be specified for horizontal carousels.");
+          throw error1;
         }
-      }, autoPlayInterval);
+      }
+      if (size.vertical) {
+        if (!size.height) {
+          const _Error2 = Error;
+          const error2 = new Error("`height` must be specified for vertical carousels.");
+          throw error2;
+        }
+      }
     }
   }, items);
-  const items1 = [undefined !== autoPlay && autoPlay];
-  const pause = noop.useCallback(() => {
-    if (closure_0) {
-      if (ref.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-      }
-      closure_6.current = true;
-    }
-  }, items1);
-  const items2 = [callback, undefined !== autoPlay && autoPlay];
-  const start = noop.useCallback(() => {
-    if (closure_0) {
-      closure_6.current = false;
-      callback();
-    }
-  }, items2);
-  const items3 = [pause, start, undefined !== autoPlay && autoPlay];
-  const effect = noop.useEffect(() => {
-    if (closure_0) {
-      start();
-    } else {
-      pause();
-    }
-    return pause;
-  }, items3);
-  return { pause, start };
 };

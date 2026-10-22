@@ -1,7 +1,21 @@
 // === Module 10432: ? ===
 
 // Module 10432
-import registerAsset from "module_1134" /* 1134 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef10433 from "module_10433" /* 10433 */;
 
+const useRef = _mod19.useRef;
+let closure_3 = [];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 140.5, height: 89.5, scales: [2, 3], hash: "26fec1ac0e2aea05499090830fe99884", name: "img_boost_hands", type: "png" });
+export default function useStableMemo(cResult, cResult2) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  } else if (!_modDef10433(cResult2, tmp2.current)) {
+    tmp.current = cResult();
+    tmp2.current = cResult2;
+  }
+  return tmp.current;
+};

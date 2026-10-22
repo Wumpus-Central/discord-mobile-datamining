@@ -1,12 +1,7 @@
 // === Module 5006: ? ===
 
 // Module 5006
-let fn = Array.isArray;
-if (!fn) {
-  fn = (arg0) => {
-    const call = toString.call;
-    return "[object Array]" == (typeof call === "unknown" ? toString() : call(arg0));
-  };
-}
+import _mod5007 from "module_5007" /* 5007 */;
 
-export default fn;
+
+export default _mod5007;

@@ -2,17 +2,17 @@
 
 // Module 5069
 import c from "c" /* 576 */;
-import _mod5066 from "module_5066" /* 5066 */;
+import _mod5070 from "module_5070" /* 5070 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getBooleanProperty(booleanProperty, arg1) {
-  return booleanProperty.booleanProperty(arg1);
+function getNumberProperty(numberProperty, arg1) {
+  return numberProperty.numberProperty(arg1);
 }
 
-export const useRiveBoolean = function useRiveBoolean(arg0, arg1) {
+export const useRiveNumber = function useRiveNumber(arg0, arg1) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5066.useRiveProperty(arg1, arg0, getBooleanProperty);
+  [tmp3, tmp4, tmp5] = _mod5070.useRiveProperty(arg1, arg0, getNumberProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

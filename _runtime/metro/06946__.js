@@ -1,89 +1,126 @@
 // === Module 6946: ? ===
 
 // Module 6946
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-const MaskedView = ["maskElement", "children"];
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, StyleSheet: closure_7, requireNativeComponent } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let closure_11 = requireNativeComponent("RNCMaskedView");
-class MaskedView {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, MaskedView);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(MaskedView);
-    tmp3 = closure_3;
-    if (c10()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result._hasWarnedInvalidRenderMask = false;
-    return tmp3Result;
-  }
-}
-_inherits(MaskedView, noop.Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ maskElement, children } = props);
-    const tmp = _objectWithoutProperties(props, MaskedView);
-    if (noop.isValidElement(maskElement)) {
-      const obj2 = {};
-      const merged = Object.assign(tmp);
-      const obj3 = { pointerEvents: "none", style: absoluteFill.absoluteFill, children: maskElement };
-      const items = [closure_1_8(timestampProducer, obj3), children];
-      obj2.children = items;
-      let tmp9 = React6(closure_11, obj2);
-    } else {
-      if (!self._hasWarnedInvalidRenderMask) {
-        const _console = console;
-        console.warn("MaskedView: Invalid `maskElement` prop was passed to MaskedView. Expected a React Element. No mask will render.");
-        self._hasWarnedInvalidRenderMask = true;
+if (typeof Object.is === "function") {
+  const _Object = Object;
+} else {
+  is = function is(arg0, arg1) {
+    let tmp = arg0 === arg1;
+    if (tmp) {
+      let tmp2 = 0 !== arg0;
+      if (!tmp2) {
+        tmp2 = 1 / arg0 === 1 / arg1;
       }
-      const obj = {};
-      const merged1 = Object.assign(tmp);
-      obj.children = children;
-      tmp9 = closure_1_8(timestampProducer, obj);
+      tmp = tmp2;
     }
-    return tmp9;
-  }
-};
-let items = [entry];
+    if (!tmp) {
+      tmp = arg0 != arg0 && arg1 != arg1;
+      const tmp3 = arg0 != arg0 && arg1 != arg1;
+    }
+    return tmp;
+  };
+}
+({ useSyncExternalStore: closure_1, useRef: c2, useEffect: c3, useMemo: closure_4, useDebugValue: hasOwnProperty } = noop);
 
-export default _createClass(MaskedView, items);
+export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) => {
+  closure_0 = arg1;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  closure_3 = arg4;
+  let tmp = closure_2(null);
+  if (null === tmp.current) {
+    const obj = { hasValue: false, value: null };
+    let current = obj;
+    tmp.current = obj;
+  } else {
+    current = tmp.current;
+  }
+  let items = [arg1, arg2, arg3, arg4];
+  const tmp2 = current(() => {
+    c2 = false;
+    let tmp = null;
+    if (undefined !== closure_1) {
+      tmp = closure_1;
+    }
+    closure_3 = tmp;
+    const items = [
+      () => {
+        const tmp = closure_0();
+        if (c2) {
+          let tmp3 = value;
+          if (!is(closure_0, tmp)) {
+            let tmp9 = _true(tmp);
+            if (undefined === closure_3) {
+              closure_0 = tmp;
+              value = tmp9;
+            }
+            closure_0 = tmp;
+            tmp9 = tmp5;
+          }
+          tmp5 = value;
+        } else {
+          c2 = true;
+          closure_0 = tmp;
+          tmp3 = _true(tmp);
+          if (undefined !== closure_3) {
+            if (current.hasValue) {
+              value = current.value;
+              if (tmp4(value, tmp3)) {
+                tmp3 = value;
+              }
+            }
+          }
+          value = tmp3;
+        }
+        return tmp3;
+      },
+
+    ];
+    let fn;
+    if (null !== tmp) {
+      fn = () => {
+        const tmp = closure_3();
+        if (c2) {
+          let tmp3 = value;
+          if (!is(closure_0, tmp)) {
+            let tmp10 = _true(tmp);
+            if (undefined === closure_3) {
+              closure_0 = tmp;
+              value = tmp10;
+            }
+            closure_0 = tmp;
+            tmp10 = tmp6;
+          }
+          tmp6 = value;
+        } else {
+          c2 = true;
+          closure_0 = tmp;
+          tmp3 = _true(tmp);
+          if (undefined !== closure_3) {
+            if (current.hasValue) {
+              value = current.value;
+              if (closure_3(value, tmp3)) {
+                tmp3 = value;
+              }
+            }
+          }
+          value = tmp3;
+        }
+        return tmp3;
+      };
+    }
+    items[1] = fn;
+    return items;
+  }, items);
+  let tmp3 = closure_1(arg0, tmp2[0], tmp2[1]);
+  value = tmp3;
+  const items1 = [tmp3];
+  closure_3(() => {
+    current.hasValue = true;
+    current.value = value;
+  }, items1);
+  value(tmp3);
+  return tmp3;
+};

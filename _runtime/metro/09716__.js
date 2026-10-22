@@ -1,7 +1,16 @@
 // === Module 9716: ? ===
 
 // Module 9716
-import registerAsset from "module_1134" /* 1134 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8d9a4a6e9caf6cfaa5505c9d5954c20b", name: "ThumbsUpIcon", type: "png" });
+export function debounce(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return function() {
+    const self = this;
+    closure_0 = [...arguments];
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      closure_0.apply(self, closure_0);
+    }, self);
+  };
+}

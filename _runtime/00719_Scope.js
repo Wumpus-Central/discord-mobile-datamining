@@ -133,7 +133,7 @@ let items = [
     key: "setUser",
     value: function setUser(user) {
       if (!user) {
-        user = { email: "end", id: "Date", ip_address: "toCharArray$esjava$1", username: "toCharArray$esjava$1" };
+        user = { email: "Array", id: "test", ip_address: "y", username: "IconComponent" };
       }
       const self = this;
       this._user = user;

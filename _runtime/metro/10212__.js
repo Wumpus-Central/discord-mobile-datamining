@@ -1,211 +1,117 @@
 // === Module 10212: ? ===
 
 // Module 10212
-import assignSimilarDate from "assignSimilarDate" /* 10179 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import ReferenceWithTimezone from "ReferenceWithTimezone" /* 10188 */;
+import Meridiem from "Meridiem" /* 10190 */;
 
-let self = this;
-const ForwardDateRefiner = require;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+require = arg1;
+const dependencyMap = arg6;
+function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
+  const day = dateWithAdjustedTimezone.getDay();
+  if ("this" === next) {
+    const diff = sum - dateWithAdjustedTimezone.getDay();
+    sum = diff;
+    if (diff < 0) {
+      sum = diff + 7;
     }
-    if (!fn) {
-      fn = function t(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
+    return sum;
+  } else if ("last" === next) {
+    const diff1 = sum - dateWithAdjustedTimezone.getDay();
+    let diff2 = diff1;
+    if (diff1 >= 0) {
+      diff2 = diff1 - 7;
     }
-    const _Object3 = Object;
-    let closure_6 = fn(assignSimilarDate);
-    class ForwardDateRefiner {
-      constructor() {
-        tmp = closure_3(this, ForwardDateRefiner);
-        return;
+    return diff2;
+  } else if ("next" === next) {
+    if (day == Meridiem.Weekday.SUNDAY) {
+      let num12 = 7;
+      if (sum != Meridiem.Weekday.SUNDAY) {
+        num12 = sum;
       }
-    }
-    const entry = {
-      key: "refine",
-      value: function refine(option, arr) {
-            const self = this;
-            if (option.option.forwardDate) {
-              const item = arr.forEach((start) => {
-                option = start;
-                const reference = option.reference;
-                const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
-                start = start.start;
-                if (start.isOnlyTime()) {
-                  const start2 = start.start;
-                  if (obj.reference.instant > start2.date()) {
-                    const reference2 = obj.reference;
-                    const dateWithAdjustedTimezone1 = reference2.getDateWithAdjustedTimezone();
-                    const _Date = Date;
-                    const date = new Date(dateWithAdjustedTimezone1);
-                    date.setDate(date.getDate() + 1);
-                    closure_1_6.implySimilarDate(start.start, date);
-                    obj.debug(() => {
-                      console.log("" + self.constructor.name + " adjusted " + closure_0 + " time from the ref date (" + dateWithAdjustedTimezone1 + ") to the following day (" + date + ")");
-                    });
-                    let end2 = start.end;
-                    if (end2) {
-                      const end = start.end;
-                      end2 = end.isOnlyTime();
-                    }
-                    if (end2) {
-                      closure_1_6.implySimilarDate(start.end, date);
-                      ({ start: start3, end: end3 } = start);
-                      if (dateResult > end3.date()) {
-                        date.setDate(date.getDate() + 1);
-                        closure_1_6.implySimilarDate(start.end, date);
-                      }
-                      dateResult = start3.date();
-                    }
-                  }
-                }
-                const start4 = start.start;
-                let tmp5 = dateWithAdjustedTimezone;
-                if (start4.isOnlyWeekdayComponent()) {
-                  const start5 = start.start;
-                  tmp5 = dateWithAdjustedTimezone;
-                  if (dateWithAdjustedTimezone > start5.date()) {
-                    const start11 = start.start;
-                    value = start11.get("weekday");
-                    const diff = value - dateWithAdjustedTimezone.getDay();
-                    let sum = diff;
-                    if (diff <= 0) {
-                      sum = diff + 7;
-                    }
-                    const obj2 = { day: sum };
-                    const addDurationResult = option(self[3]).addDuration(dateWithAdjustedTimezone, obj2);
-                    option(self[2]).implySimilarDate(start.start, addDurationResult);
-                    obj.debug(() => {
-                      console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.start + ")");
-                    });
-                    tmp5 = addDurationResult;
-                    if (start.end) {
-                      const end4 = start.end;
-                      tmp5 = addDurationResult;
-                      if (end4.isOnlyWeekdayComponent()) {
-                        const end5 = start.end;
-                        value2 = end5.get("weekday");
-                        const diff1 = value2 - addDurationResult.getDay();
-                        let sum1 = diff1;
-                        if (diff1 <= 0) {
-                          sum1 = diff1 + 7;
-                        }
-                        const obj3 = { day: sum1 };
-                        const addDurationResult1 = tmp7(self[3]).addDuration(addDurationResult, obj3);
-                        tmp7(self[2]).implySimilarDate(start.end, addDurationResult1);
-                        obj.debug(() => {
-                          console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.end + ")");
-                        });
-                        tmp5 = addDurationResult1;
-                      }
-                    }
-                  }
-                }
-                const start6 = start.start;
-                if (start6.isDateWithUnknownYear()) {
-                  const start7 = start.start;
-                  if (tmp5 > start7.date()) {
-                    const start12 = start.start;
-                    let num3 = 0;
-                    if (tmp5 > start12.date()) {
-                      while (true) {
-                        ({ start: start8, start: start9 } = start);
-                        let implyResult = start8.imply("year", start9.get("year") + 1);
-                        let obj6 = option;
-                        let debugResult3 = option.debug(() => {
-                          console.log("" + self.constructor.name + " adjusted " + start + " year (" + start.start + ")");
-                        });
-                        let end6 = start.end;
-                        if (end6) {
-                          let end7 = start.end;
-                          end6 = !end7.isCertain("year");
-                        }
-                        if (end6) {
-                          ({ end: end8, end: end9 } = start);
-                          let implyResult1 = end8.imply("year", end9.get("year") + 1);
-                          let debugResult4 = obj6.debug(() => {
-                            console.log("" + self.constructor.name + " adjusted " + start + " month (" + start.start + ")");
-                          });
-                        }
-                        let sum2 = num3 + 1;
-                        if (sum2 >= 3) {
-                          break;
-                        } else {
-                          let start10 = start.start;
-                          num3 = sum2;
-                          if (tmp5 <= start10.date()) {
-                            break;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              });
-            }
-            return arr;
+      let sum3 = num12;
+    } else if (day == Meridiem.Weekday.SATURDAY) {
+      let num9 = 7;
+      if (sum != Meridiem.Weekday.SATURDAY) {
+        let num10 = 8;
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          num10 = 1 + sum;
+        }
+        num9 = num10;
+      }
+      sum3 = num9;
+    } else {
+      if (sum < day) {
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          const diff3 = sum - dateWithAdjustedTimezone.getDay();
+          let sum1 = diff3;
+          if (diff3 < 0) {
+            sum1 = diff3 + 7;
           }
-    };
-    let items = [entry];
-    exports.default = _createClass(ForwardDateRefiner, items);
+          sum3 = sum1;
+        }
+      }
+      const diff4 = sum - dateWithAdjustedTimezone.getDay();
+      let sum2 = diff4;
+      if (diff4 < 0) {
+        sum2 = diff4 + 7;
+      }
+      sum3 = sum2 + 7;
+    }
+    return sum3;
   } else {
-    const _Object2 = Object;
+    const diff5 = sum - dateWithAdjustedTimezone.getDay();
+    let diff6 = diff5;
+    if (diff5 >= 0) {
+      diff6 = diff5 - 7;
+    }
+    const diff7 = sum - dateWithAdjustedTimezone.getDay();
+    let sum4 = diff7;
+    if (diff7 < 0) {
+      sum4 = diff7 + 7;
+    }
+    if (sum4 < -diff6) {
+      diff6 = sum4;
+    }
+    return diff6;
   }
-} else {
-  let _Object = Object;
 }
+
+export const createParsingComponentsAtWeekday = function createParsingComponentsAtWeekday(reference, sum, next) {
+  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
+  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({ day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next) });
+  addDurationAsImpliedResult.assign("weekday", sum);
+  return addDurationAsImpliedResult;
+};
+export { getDaysToWeekday };
+export const getDaysToWeekdayClosest = function getDaysToWeekdayClosest(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  const diff2 = arg1 - getDay.getDay();
+  let sum = diff2;
+  if (diff2 < 0) {
+    sum = diff2 + 7;
+  }
+  if (sum < -diff1) {
+    diff1 = sum;
+  }
+  return diff1;
+};
+export const getDaysForwardToWeekday = function getDaysForwardToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let sum = diff;
+  if (diff < 0) {
+    sum = diff + 7;
+  }
+  return sum;
+};
+export const getBackwardDaysToWeekday = function getBackwardDaysToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  return diff1;
+};

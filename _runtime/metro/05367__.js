@@ -1,19 +1,29 @@
 // === Module 5367: ? ===
 
 // Module 5367
-import ComposedGestureName from "ComposedGestureName" /* 5338 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 5347 */;
-import _mod5362 from "module_5362" /* 5362 */;
+import _mod5326 from "module_5326" /* 5326 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 5351 */;
+import _mod5368 from "module_5368" /* 5368 */;
+import _mod5370 from "module_5370" /* 5370 */;
 
 require = arg1;
 const dependencyMap = arg6;
-let closure_2 = {};
 
-export const useFlingGesture = function useFlingGesture() {
-  let tmp = cResult;
-  if (cResult === undefined) {
-    tmp = closure_2;
+export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
+  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
+  let reanimatedEventHandler;
+  if (!disableReanimated.disableReanimated) {
+    const Reanimated = _mod5326.Reanimated;
+    let handler;
+    if (Reanimated != null) {
+      handler = Reanimated.useHandler(memoizedGestureCallbacks);
+    }
+    const tmpResult = _mod5370;
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, disableReanimated.changeEventCalculator, disableReanimated.fillInDefaultValues);
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod5362.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+  let animatedEventHandler;
+  if (disableReanimated.dispatchesAnimatedEvents) {
+    animatedEventHandler = disableReanimated.onUpdate;
+  }
+  return { jsEventHandler: _mod5368.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated), reanimatedEventHandler, animatedEventHandler };
 };

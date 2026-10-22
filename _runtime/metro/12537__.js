@@ -1,25 +1,9 @@
 // === Module 12537: ? ===
 
 // Module 12537
-import _mod12493 from "module_12493" /* 12493 */;
-import _mod12523 from "module_12523" /* 12523 */;
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
-  let result = arg2;
-  const items = [{ type: "client_report" }, ];
-  if (!arg2) {
-    result = _mod12493.dateTimestampInSeconds();
-  }
-  items[1] = { timestamp: result, discarded_events };
-  if (dsn) {
-    const obj3 = { dsn };
-    let obj4 = obj3;
-  } else {
-    obj4 = {};
-  }
-  const items1 = [items];
-  return _mod12523.createEnvelope(obj4, items1);
-};
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

@@ -1,9 +1,21 @@
 // === Module 15440: ? ===
 
 // Module 15440
-import _mod15506 from "module_15506" /* 15506 */;
-import module_15441 from "module_15441" /* 15441 */;
+import _mod15430 from "module_15430" /* 15430 */;
+import BestAvailableLocale from "BestAvailableLocale" /* 15433 */;
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod15506;
-module_15441(obj, { assign: _mod15506 });
+require = arg1;
+const dependencyMap = arg6;
+
+export const LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {
+  const items = [];
+  for (let num = 0; num < arg1.length; num = num + 1) {
+    let str = arg1[num];
+    let replaced = str.replace(_mod15430.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
+    if (BestAvailableLocaleResult) {
+      let arr = items.push(BestAvailableLocaleResult);
+    }
+  }
+  return items;
+};

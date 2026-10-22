@@ -2680,7 +2680,7 @@ let closure_130_9 = function quantize(arg0, arg1, arg2) {
   }
   const uint8Array2 = new Uint8Array(length2 >> 2);
   if (arr2.length <= 60) {
-    collapsed(uint8Array, uint8Array2, uint8Array1);
+    v65535(uint8Array, uint8Array2, uint8Array1);
     let num7 = 0;
     if (0 < uint8Array2.length) {
       do {
@@ -2753,7 +2753,7 @@ let closure_130_9 = function quantize(arg0, arg1, arg2) {
           length5 = uint8Array1.length;
         } while (num14 < length5);
       }
-      let tmp40 = collapsed(uint8Array, uint8Array2, uint8Array1);
+      let tmp40 = v65535(uint8Array, uint8Array2, uint8Array1);
       if (0.997 < tmp40 / num8) {
         break;
       } else {
