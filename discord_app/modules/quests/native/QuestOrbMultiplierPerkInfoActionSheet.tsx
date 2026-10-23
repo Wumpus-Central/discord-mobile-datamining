@@ -625,9 +625,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
       multiplier = multiplier.multiplier;
       const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-      const result = multiplier(9568).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+      const result = multiplier(9591).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
       dependencyMap = result;
-      let obj = multiplier(9568);
+      let obj = multiplier(9591);
       const items = [orbMultiplierEligibility];
       const items1 = [result, orbMultiplierEligibility, multiplier];
       const memo = noop.useMemo(() => {
@@ -662,14 +662,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
       let obj3 = {
         visible:
-          orbMultiplierEligibility === multiplier(9568).QuestOrbMultiplierEligibilityType.NITRO ||
-          orbMultiplierEligibility === multiplier(9568).QuestOrbMultiplierEligibilityType.UPSELL,
+          orbMultiplierEligibility === multiplier(9591).QuestOrbMultiplierEligibilityType.NITRO ||
+          orbMultiplierEligibility === multiplier(9591).QuestOrbMultiplierEligibilityType.UPSELL,
         children: null,
       };
       const tmp4 =
-        orbMultiplierEligibility === multiplier(9568).QuestOrbMultiplierEligibilityType.NITRO ||
-        orbMultiplierEligibility === multiplier(9568).QuestOrbMultiplierEligibilityType.UPSELL;
+        orbMultiplierEligibility === multiplier(9591).QuestOrbMultiplierEligibilityType.NITRO ||
+        orbMultiplierEligibility === multiplier(9591).QuestOrbMultiplierEligibilityType.UPSELL;
       obj3.children = closure_8(closure_14, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-      obj2.children = closure_8(orbMultiplierEligibility(16421), obj3);
-      return closure_8(multiplier(5251).BottomSheet, obj2);
+      obj2.children = closure_8(orbMultiplierEligibility(16471), obj3);
+      return closure_8(multiplier(5263).BottomSheet, obj2);
     };

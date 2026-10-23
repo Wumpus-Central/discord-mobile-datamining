@@ -6,7 +6,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05255_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05267_BottomSheetModal.js";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
@@ -108,7 +108,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[19] !== option.title) {
                         const obj2 = { variant: "text-md/normal", children: option.title };
-                        const tmp33 = closure_8(tmp(5220).Text, obj2);
+                        const tmp33 = closure_8(tmp(5232).Text, obj2);
                         cResult[19] = option.title;
                         cResult[20] = tmp33;
                         let tmp31 = tmp33;
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                             trailing: tmp28,
                             onPress: tmp13,
                           };
-                          const tmp41 = closure_8(onSelect(7220), obj3);
+                          const tmp41 = closure_8(onSelect(7233), obj3);
                           cResult[25] = tmp16;
                           cResult[26] = tmp13;
                           cResult[27] = tmp34;
@@ -163,7 +163,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     if (canBeNew) {
                       tmp29 = null;
                       if (option.isUnseen) {
-                        tmp29 = closure_8(tmp(7218).Badge, { type: "new", variant: "primary" });
+                        tmp29 = closure_8(tmp(7231).Badge, { type: "new", variant: "primary" });
                       }
                     }
                     cResult[16] = canBeNew;
@@ -201,9 +201,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 str = "";
               }
               obj8.name = str;
-              obj7.children = closure_8(onSelect(7212), obj8);
+              obj7.children = closure_8(onSelect(7225), obj8);
               let tmp20Result = closure_8(View, obj7);
-              const tmp23 = onSelect(7212);
+              const tmp23 = onSelect(7225);
             } else {
               const emoji6 = option.emoji;
               let name1;

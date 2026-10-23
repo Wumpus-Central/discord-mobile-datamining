@@ -6,5 +6,6 @@ const result = size.fileFinishedImporting("modules/application_account_linking/A
 export const AuthorizeFlow = { RPC: "rpc", WEB: "web" };
 export const ApplicationAccountLinkingConstants = {
   ACTIVISION_APPLICATION_ID: "1526711602038968440",
+  CALL_OF_DUTY_APPLICATION_ID: "1554868854029811803",
   IMGUI_APPLICATION_ID: "1412940519742636124",
 };

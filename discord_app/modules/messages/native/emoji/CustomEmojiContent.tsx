@@ -21,7 +21,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const EmojiSourceDataTypes = fn(6869).EmojiSourceDataTypes;
+const EmojiSourceDataTypes = fn(6882).EmojiSourceDataTypes;
 const Constants = fn(1087);
 ({
   UserSettingsSections: closure_11,
@@ -344,7 +344,7 @@ export default function CustomEmojiContent(emojiNode) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(9928, dependencyMap.paths),
+            asyncRequireImpl(9950, dependencyMap.paths),
             "EmojiOptionsActionSheet",
             { emojiSrc: emojiNode.src },
             "stack",

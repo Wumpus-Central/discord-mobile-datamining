@@ -842,8 +842,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(10180).createNonce();
-      let obj2 = onMessageSuccess(10180);
+      nonce = onMessageSuccess(10202).createNonce();
+      let obj2 = onMessageSuccess(10202);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -859,7 +859,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
     const obj7 = {
-      interactionType: onMessageSuccess(6005).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(6017).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
@@ -919,8 +919,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(8125).MessageDataType.COMMAND, message };
-    message(8125).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(8138).MessageDataType.COMMAND, message };
+    message(8138).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -941,7 +941,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[27]);
     });
-    const obj6 = message(8125);
+    const obj6 = message(8138);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -1290,14 +1290,14 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1128).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(8586);
-            obj2.maxSize = closure_0(8136).sizeString(dependencyMap);
+            const obj = closure_2(8598);
+            obj2.maxSize = closure_0(8148).sizeString(dependencyMap);
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1128).t.fxEKdS, obj2),
             );
-            const obj3 = closure_0(8136);
+            const obj3 = closure_0(8148);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));

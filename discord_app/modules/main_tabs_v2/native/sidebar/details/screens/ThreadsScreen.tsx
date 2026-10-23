@@ -21,7 +21,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       ({ style, channel } = arg0);
       const tmp3 = closure_9();
       let obj = channel(576);
-      const canStartThread = channel(7354).useCanStartThread(channel);
+      const canStartThread = channel(7367).useCanStartThread(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { includeKeyboardHeight: true };
         cResult[0] = obj3;
@@ -107,12 +107,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp3.container;
       cResult[6] = items;
       tmp9 = items;
-      let obj2 = channel(7354);
+      let obj2 = channel(7367);
     }
   : function ThreadsScreen(channel) {
       channel = channel.channel;
       const tmp = closure_9();
-      const canStartThread = channel(7354).useCanStartThread(channel);
+      const canStartThread = channel(7367).useCanStartThread(channel);
       const items = [channel];
       const callback = noop.useCallback(() => {
         const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
@@ -130,7 +130,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
       let tmp10;
-      let obj = channel(7354);
+      let obj = channel(7367);
       if (canStartThread) {
         tmp10 = callback;
       }

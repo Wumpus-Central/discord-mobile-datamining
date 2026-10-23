@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import utils_ColorUtils from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

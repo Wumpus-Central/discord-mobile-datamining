@@ -73,7 +73,9 @@ export const conjureSettingsSummary = function conjureSettingsSummary(settingsRe
       } else {
         if ("role" !== type) {
           if ("user" !== type) {
-            stringResult = mapped.join(", ");
+            if ("game" !== type) {
+              stringResult = mapped.join(", ");
+            }
           }
         }
         const intl2 = util.intl;

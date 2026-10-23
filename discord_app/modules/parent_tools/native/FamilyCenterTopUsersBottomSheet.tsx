@@ -33,7 +33,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp7;
           } else {
             if (cResult[11] !== tmp8) {
-              const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "Array" };
+              const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "r" };
               const tmp20 = React4(native.Avatar, obj2);
               cResult[11] = tmp8;
               cResult[12] = tmp20;
@@ -98,7 +98,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { label: null, subLabel: null, icon: null };
         obj2.label = UserUtilsDefault.getName(user);
         obj2.subLabel = topUserOrGuildDescription;
-        const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
+        const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
         obj2.icon = React4(native.Avatar, obj4);
         return React4(TableRow2.TableRow, obj2);
       }

@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef17081 from "../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
+import _modDef17125 from "../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -27,9 +27,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = _slicedToArray(noop.useState(false), 2);
       [tmp9, r10029] = noop.useState(false);
       const tmp8 = _slicedToArray(noop.useState(false), 2);
-      const obj3 = visible(17078);
-      [r10035, r10036] = visible(17078).useCanRotate();
-      const tmp10 = _slicedToArray(visible(17078).useCanRotate(), 2);
+      const obj3 = visible(17122);
+      [r10035, r10036] = visible(17122).useCanRotate();
+      const tmp10 = _slicedToArray(visible(17122).useCanRotate(), 2);
       const tmp11 = _slicedToArray(noop.useState(false), 2);
       const first1 = _slicedToArray(noop.useState("primary"), 2)[0];
       const tmp12 = _slicedToArray(noop.useState("primary"), 2);
@@ -67,7 +67,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_1(false);
           }
         }
-        tmp21[0] = _modDef17081;
+        tmp21[0] = _modDef17125;
         cResult[2] = tmp21;
       } else {
         class Y {
@@ -208,7 +208,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           buttonVariant: null,
           gradientColor: null,
         };
-        const obj2 = { type: "image", src: { uri: _modDef17081 }, aspectRatio: first5 };
+        const obj2 = { type: "image", src: { uri: _modDef17125 }, aspectRatio: first5 };
         obj.graphic = obj2;
         obj.experimental_withBlurBackground = first1;
         let str2;

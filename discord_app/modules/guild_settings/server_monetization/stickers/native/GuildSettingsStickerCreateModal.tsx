@@ -66,8 +66,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId: require, stickerId } = arg0);
       dependencyMap = undefined;
       c3 = undefined;
-      ({ onGoBack: c2, ref: c3 } = stickerId(10004)());
-      const tmp2 = stickerId(10004)();
+      ({ onGoBack: c2, ref: c3 } = stickerId(10026)());
+      const tmp2 = stickerId(10026)();
       const tmp3 = c3;
       const intl = util.intl;
       if (null != stickerId) {
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tdhW5b = util.t["3DzNjU"];
       }
-      const tmp4 = stickerId(10007);
+      const tmp4 = stickerId(10029);
       return tmp3(tmp4, {
         screenKey: "guild-settings-sticker-create",
         title: intl.string(tdhW5b),

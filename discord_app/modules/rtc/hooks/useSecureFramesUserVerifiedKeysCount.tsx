@@ -1,5 +1,5 @@
 // discord_app/modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx
-import _mod9157 from "../../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9180 from "../../../../discord_common/js/packages/libdave/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import VerifiedKeyStore from "../VerifiedKeyStore.tsx";
 
@@ -50,10 +50,10 @@ export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactC
       } else if (cResult[0] !== keyToOmit) {
         const _Uint8Array = Uint8Array;
         const uint8Array = new Uint8Array(keyToOmit);
-        const serializeKeyResult = tmp(9157).serializeKey(uint8Array);
+        const serializeKeyResult = tmp(9180).serializeKey(uint8Array);
         cResult[0] = keyToOmit;
         cResult[1] = serializeKeyResult;
-        const tmpResult2 = tmp(9157);
+        const tmpResult2 = tmp(9180);
       }
       const obj = userId(576);
     }
@@ -68,7 +68,7 @@ export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactC
         } else {
           const _Uint8Array = Uint8Array;
           const uint8Array = new Uint8Array(keyToOmit);
-          return _mod9157.serializeKey(uint8Array);
+          return _mod9180.serializeKey(uint8Array);
         }
       }, items);
       const items1 = [VerifiedKeyStore];

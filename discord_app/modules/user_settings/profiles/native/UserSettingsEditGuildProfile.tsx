@@ -33,10 +33,10 @@ export default function UserSettingsEditGuildProfile() {
     GuildIdentityActionCreators.setCurrentGuild(dependencyMap.id);
   }
   let tmp = closure_9();
-  const tmp4 = guild(7238);
+  const tmp4 = guild(7251);
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp7 = guild(15897)();
+  const tmp7 = guild(15930)();
   guild = tmp7.guild;
   ({ resetPending: dependencyMap, handleSubmit: noop } = tmp7);
   let obj = stateFromStores(504);
@@ -56,11 +56,11 @@ export default function UserSettingsEditGuildProfile() {
   }, items2);
   if (null != stateFromStores) {
     if (null != guild) {
-      let obj3 = { value: tmp4(guild(7263).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
+      let obj3 = { value: tmp4(guild(7276).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
       const obj4 = { style: tmp.guildSelector, children: null };
       const obj5 = { icon: null, label: null, arrow: true, onPress: null };
-      const obj6 = { guild, size: tmp5(6868).GuildIconSizes.XSMALL };
-      obj5.icon = closure_7(tmp2(6868), obj6);
+      const obj6 = { guild, size: tmp5(6881).GuildIconSizes.XSMALL };
+      obj5.icon = closure_7(tmp2(6881), obj6);
       obj5.label = guild.name;
       obj5.onPress = function onPress() {
         maybeShowUnsavedChangesAlertDefault({
@@ -85,15 +85,15 @@ export default function UserSettingsEditGuildProfile() {
           onSave,
         });
       };
-      obj4.children = closure_7(tmp5(6888).TableRow, obj5);
+      obj4.children = closure_7(tmp5(6901).TableRow, obj5);
       const items3 = [closure_7(hasUnsavedChanges, obj4)];
       const obj7 = { currentUser: stateFromStores };
       const _HermesInternal = HermesInternal;
-      const tmp2Result = tmp2(6868);
-      items3[1] = closure_7(tmp2(15902), obj7, "" + stateFromStores.id + "-" + guild.id);
+      const tmp2Result = tmp2(6881);
+      items3[1] = closure_7(tmp2(15935), obj7, "" + stateFromStores.id + "-" + guild.id);
       obj3.children = items3;
-      return closure_8(tmp5(7238).AnalyticsLocationProvider, obj3);
+      return closure_8(tmp5(7251).AnalyticsLocationProvider, obj3);
     }
   }
-  return closure_7(guild(15899), {});
+  return closure_7(guild(15932), {});
 }

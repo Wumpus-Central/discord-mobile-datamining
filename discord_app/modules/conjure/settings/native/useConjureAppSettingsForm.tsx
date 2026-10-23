@@ -410,8 +410,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   c4 = undefined;
   let found;
   ({ projectId, isPreview, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(11786).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(11786);
+  const conjureSettingsGuildId = def(11805).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(11805);
   const items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -423,7 +423,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   }, items1);
   if (null != conjureSettingsGuildId) {
     if (null != stateFromStores) {
-      const result = tmp(7330).conjureSettingChannels(stateFromStores, def.channel_filter);
+      const result = tmp(7343).conjureSettingChannels(stateFromStores, def.channel_filter);
       c4 = result;
       found = result.find((id) => id.id === importDefault);
       if (found == null) {
@@ -432,14 +432,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       let obj3 = { label: def.label, subLabel: null, arrow: true, disabled: null, trailing: null, onPress: null };
       let tmp6Result;
       if (null != hint) {
-        let obj4 = { variant: "text-xs/medium", color: "text-subtle", children: tmp(11775).conjureLinkedNodes(hint, "text-xs/medium") };
-        tmp6Result = closure_12(tmp(5220).Text, obj4);
-        const tmpResult3 = tmp(11775);
+        let obj4 = { variant: "text-xs/medium", color: "text-subtle", children: tmp(11794).conjureLinkedNodes(hint, "text-xs/medium") };
+        tmp6Result = closure_12(tmp(5232).Text, obj4);
+        const tmpResult3 = tmp(11794);
       }
       obj3.subLabel = tmp6Result;
       obj3.disabled = disabled;
       if (null != found) {
-        const tmpResult4 = tmp(5590);
+        const tmpResult4 = tmp(5602);
         let channelName = tmpResult4.computeChannelName(found, UserStore, RelationshipStore, true);
       } else {
         let intl = tmp(1128).intl;
@@ -447,7 +447,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       }
       const obj5 = { hasIcons: false, children: null };
       const obj6 = { text: channelName };
-      obj3.trailing = closure_12(tmp(6899).TableRowTrailingText, obj6);
+      obj3.trailing = closure_12(tmp(6912).TableRowTrailingText, obj6);
       obj3.onPress = function onPress() {
         const obj2 = { content: null, key: null, stackingBehavior: "stack" };
         const obj3 = { header: { title: def.label }, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
@@ -472,8 +472,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         obj2.key = ConjureSettingsChannelSheet;
         obj.showActionSheet(obj2);
       };
-      obj5.children = closure_12(tmp(6888).TableRow, obj3);
-      return closure_12(tmp(6972).TableRowGroup, obj5);
+      obj5.children = closure_12(tmp(6901).TableRow, obj3);
+      return closure_12(tmp(6985).TableRowGroup, obj5);
     }
   }
   return fallback;

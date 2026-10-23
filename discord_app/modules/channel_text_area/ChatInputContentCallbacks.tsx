@@ -177,9 +177,9 @@ export const useHereMentionCallback = ReactCompilerGating.isReactCompilerEnabled
                 if (!(arr.length < 5 || arr.length > closure_1_3)) {
                   let flag = -1 !== arr.indexOf(memo);
                   if (flag) {
-                    closure_0(7362).subscribeChannel(closure_1_1, dependencyMap, closure_0(7360).DEFAULT_RANGES);
+                    closure_0(7375).subscribeChannel(closure_1_1, dependencyMap, closure_0(7373).DEFAULT_RANGES);
                     flag = true;
-                    const obj = closure_0(7362);
+                    const obj = closure_0(7375);
                   }
                   tmp9 = flag;
                 }

@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import _modDef9679 from "../../../../_runtime/metro/09679__.js";
+import _modDef9701 from "../../../../_runtime/metro/09701__.js";
 import useYouBarSettingsSafeArea from "../../main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -143,7 +143,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
         cResult[10] = tmp27;
         cResult[11] = tmp34;
       }
-      const obj6 = { source: _modDef9679, color: buttonColor2, accessibilityLabel: tmp24, onPress: S };
+      const obj6 = { source: _modDef9701, color: buttonColor2, accessibilityLabel: tmp24, onPress: S };
       const tmp30 = React4(HeaderShared.HeaderIconButton, obj6);
       cResult[6] = buttonColor2;
       cResult[7] = S;
@@ -172,7 +172,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
     obj9.paddingTop = youBarSettingsCustomHeaderPaddingTop1;
     obj8.style = obj9;
     const obj10 = { style: tmp4.backButton, children: null };
-    const obj14 = { source: _modDef9679, color: buttonColor, accessibilityLabel: null, onPress: null };
+    const obj14 = { source: _modDef9701, color: buttonColor, accessibilityLabel: null, onPress: null };
     const intl = util.intl;
     obj14.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj14.onPress = function onPress() {

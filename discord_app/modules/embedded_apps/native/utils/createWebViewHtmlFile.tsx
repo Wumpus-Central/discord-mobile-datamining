@@ -2,7 +2,7 @@
 import NativeFileModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import bridgeProtocol from "../../../../../discord_common/js/packages/embedded-app-shims/src/native-shell/bridgeProtocol.tsx";
-import _modDef11443 from "../../../../../_runtime/metro/11443__.js";
+import _modDef11463 from "../../../../../_runtime/metro/11463__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -18,7 +18,7 @@ function generateWebViewHtml(arg0) {
     str2 = ' csp="' + iframeCsp + '"';
   }
   if (null != shimBridgeSecret) {
-    const tmp4 = _modDef11443;
+    const tmp4 = _modDef11463;
     const _JSON = JSON;
     const _JSON2 = JSON;
     const json = JSON.stringify(shimBridgeSecret);
@@ -199,7 +199,7 @@ let closure_9 = async function _createWebViewHtmlFile(arg0) {
     }
   }
 };
-let closure_4 = fn(10736).EMBEDDED_APP_FRAME_ELEMENT_ID;
+let closure_4 = fn(10758).EMBEDDED_APP_FRAME_ELEMENT_ID;
 const discord_activity_data = "discord_activity_data";
 let c7 = null;
 const size = fn(2);

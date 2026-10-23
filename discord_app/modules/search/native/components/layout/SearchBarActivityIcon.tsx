@@ -9,7 +9,7 @@ import SearchQueryStore from "../../stores/SearchQueryStore.tsx";
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(9691).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(9713).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4969);

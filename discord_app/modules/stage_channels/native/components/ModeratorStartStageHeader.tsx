@@ -11,7 +11,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4969);
 let obj = {
   header: {
-    height: fn(5254).NAV_BAR_HEIGHT,
+    height: fn(5266).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 8,
@@ -22,7 +22,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  height: fn(5254).NAV_BAR_HEIGHT,
+  height: fn(5266).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 8,

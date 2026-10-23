@@ -5,7 +5,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const utils_StringUtils = Text(2034);
-const Text_Text = Text(5220);
+const Text_Text = Text(5232);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

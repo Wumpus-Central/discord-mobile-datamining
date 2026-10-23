@@ -21,10 +21,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = analyticsLocations(576).c(17);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const amplitudinalSoundboardVolume = tmp(7437).getAmplitudinalSoundboardVolume();
+        const amplitudinalSoundboardVolume = tmp(7450).getAmplitudinalSoundboardVolume();
         cResult[0] = amplitudinalSoundboardVolume;
         let first = amplitudinalSoundboardVolume;
-        const tmpResult = tmp(7437);
+        const tmpResult = tmp(7450);
       } else {
         first = cResult[0];
       }
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[12] !== tmp4.text) {
           const obj4 = { style: tmp4.text, variant: "text-sm/medium", children: tmp20 };
-          const tmp25 = closure_5(tmp(5220).Text, obj4);
+          const tmp25 = closure_5(tmp(5232).Text, obj4);
           cResult[12] = tmp4.text;
           cResult[13] = tmp25;
           let tmp23 = tmp25;
@@ -108,8 +108,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [tmp18, tmp23];
         obj7.children = items;
         obj6.subLabel = closure_7(closure_6, obj7);
-        obj5.children = closure_5(tmp(6888).TableRow, obj6);
-        const tmp30 = closure_5(tmp(11570).UserSettingsTableRowGroup, obj5);
+        obj5.children = closure_5(tmp(6901).TableRow, obj6);
+        const tmp30 = closure_5(tmp(11590).UserSettingsTableRowGroup, obj5);
         cResult[14] = tmp23;
         cResult[15] = tmp18;
         cResult[16] = tmp30;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function SoundboardVolume() {
       const tmp = closure_8();
-      const amplitudinalSoundboardVolume = analyticsLocations(7437).getAmplitudinalSoundboardVolume();
+      const amplitudinalSoundboardVolume = analyticsLocations(7450).getAmplitudinalSoundboardVolume();
       analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
       const obj2 = { title: null, hasIcons: false, children: null };
       const intl = analyticsLocations(1128).intl;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         accessibilityLabel: null,
       };
-      const obj = analyticsLocations(7437);
+      const obj = analyticsLocations(7450);
       const intl3 = analyticsLocations(1128).intl;
       obj6.accessibilityLabel = intl3.string(analyticsLocations(1128).t.kbFsAD);
       obj5.children = closure_5(VolumeSliderDefault, obj6);
@@ -152,9 +152,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { helpCenterArticle: null };
       obj8.helpCenterArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
       obj7.children = intl4.format(analyticsLocations(1128).t.BPbGq7, obj8);
-      items[1] = closure_5(analyticsLocations(5220).Text, obj7);
+      items[1] = closure_5(analyticsLocations(5232).Text, obj7);
       obj4.children = items;
       obj3.subLabel = closure_7(closure_6, obj4);
-      obj2.children = closure_5(analyticsLocations(6888).TableRow, obj3);
-      return closure_5(analyticsLocations(11570).UserSettingsTableRowGroup, obj2);
+      obj2.children = closure_5(analyticsLocations(6901).TableRow, obj3);
+      return closure_5(analyticsLocations(11590).UserSettingsTableRowGroup, obj2);
     };

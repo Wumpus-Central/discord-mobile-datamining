@@ -171,7 +171,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
           obj2 = {
             ref: tmp6,
-            src: tmp(5094),
+            src: tmp(5106),
             artboard: str,
             artboardProperties,
             artboardViewModelInstances,
@@ -199,9 +199,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let merged = Object.assign(tmp7);
-          const tmp22 = jsx(tmp(5032).BaseRive, {
+          const tmp22 = jsx(tmp(5044).BaseRive, {
             ref: tmp6,
-            src: tmp(5094),
+            src: tmp(5106),
             artboard: str,
             artboardProperties,
             artboardViewModelInstances,

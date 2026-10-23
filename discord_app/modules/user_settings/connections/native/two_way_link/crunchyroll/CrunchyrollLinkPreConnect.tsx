@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
-import _modDef14048 from "../../../../../../../_runtime/metro/14048__.js";
+import _modDef14072 from "../../../../../../../_runtime/metro/14072__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const constants = fn(14044).CrunchyrollLinkModalScenes;
+const constants = fn(14068).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1087).PlatformTypes;
-const redirectDestination = fn(8801).CRUNCHYROLL_LINK_DEST_ORIGIN;
+const redirectDestination = fn(8824).CRUNCHYROLL_LINK_DEST_ORIGIN;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_8 = createStyles.createStyles({ image: { width: 152, height: 123 } });
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: N,
         onNext: tmp6,
-        img: _modDef14048,
+        img: _modDef14072,
         imgStyle: tmp4.image,
         title: tmp8,
         body: tmp9,
@@ -93,21 +93,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = N;
       cResult[7] = tmp6;
       cResult[8] = tmp4.image;
-      cResult[9] = jsx(navigation(9599).TwoWayLinkPreConnect, {
+      cResult[9] = jsx(navigation(9622).TwoWayLinkPreConnect, {
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: N,
         onNext: tmp6,
-        img: _modDef14048,
+        img: _modDef14072,
         imgStyle: tmp4.image,
         title: tmp8,
         body: tmp9,
         redirectDestination,
       });
-      const tmp12 = jsx(navigation(9599).TwoWayLinkPreConnect, {
+      const tmp12 = jsx(navigation(9622).TwoWayLinkPreConnect, {
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: N,
         onNext: tmp6,
-        img: _modDef14048,
+        img: _modDef14072,
         imgStyle: tmp4.image,
         title: tmp8,
         body: tmp9,
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: callback1,
         onNext: callback,
-        img: _modDef14048,
+        img: _modDef14072,
         imgStyle: tmp.image,
         title: null,
         body: null,
@@ -140,11 +140,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = navigation(1128).intl;
       obj2.body = intl2.string(navigation(1128).t.oS4NEH);
       obj2.redirectDestination = redirectDestination;
-      return jsx(navigation(9599).TwoWayLinkPreConnect, {
+      return jsx(navigation(9622).TwoWayLinkPreConnect, {
         platformType: PlatformTypes.CRUNCHYROLL,
         onError: callback1,
         onNext: callback,
-        img: _modDef14048,
+        img: _modDef14072,
         imgStyle: tmp.image,
         title: null,
         body: null,

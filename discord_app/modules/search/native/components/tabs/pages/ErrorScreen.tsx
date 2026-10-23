@@ -4,7 +4,7 @@ import AccessibilityAnnouncer2 from "../../../../../../../discord_common/js/pack
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp(5220);
+const Text_Text = tmp(5232);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

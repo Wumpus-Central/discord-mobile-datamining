@@ -18,7 +18,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AbortCodes = fn(1087).AbortCodes;
-const UserRowModes = fn(10593).UserRowModes;
+const UserRowModes = fn(10615).UserRowModes;
 const MessageSendLocation = fn(4974).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -845,7 +845,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   c5 = 2;
                   c6 = 1;
-                  const obj6 = { value: entry(17870).sendMessageWithEmbed(obj5), done: false };
+                  const obj6 = { value: entry(17914).sendMessageWithEmbed(obj5), done: false };
                   return obj6;
                 }
               } else if (1 === tmp7) {
@@ -953,7 +953,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                 };
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: entry(17870).sendMessageWithEmbed(obj6), done: false };
+                const obj7 = { value: entry(17914).sendMessageWithEmbed(obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp7) {

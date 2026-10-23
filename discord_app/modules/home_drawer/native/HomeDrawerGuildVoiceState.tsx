@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05256_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
 import AvatarPile from "../../../design/components/Pile/native/AvatarPile.native.tsx";
@@ -110,7 +110,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 totalCount: tmp10,
                 children: cResult[8],
               };
-              obj3.children = closure_11(guildId(14260).AvatarPile, obj4);
+              obj3.children = closure_11(guildId(14284).AvatarPile, obj4);
               const tmp18 = closure_11(View, obj3);
               cResult[11] = tmp6;
               cResult[12] = cResult[8];

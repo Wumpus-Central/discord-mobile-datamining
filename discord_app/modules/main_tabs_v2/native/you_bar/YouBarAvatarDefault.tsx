@@ -11,7 +11,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16357);
+const YouBarConstants = fn(16407);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,

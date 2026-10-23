@@ -75,8 +75,8 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
   }
 }
 let items = [
-  fn(9566).QuestRewardExpirationMode.PREMIUM_EXTENSION,
-  fn(9566).QuestRewardExpirationMode.PREMIUM_PERMANENT,
+  fn(9589).QuestRewardExpirationMode.PREMIUM_EXTENSION,
+  fn(9589).QuestRewardExpirationMode.PREMIUM_PERMANENT,
 ];
 const set = new Set(items);
 const size = fn(2);

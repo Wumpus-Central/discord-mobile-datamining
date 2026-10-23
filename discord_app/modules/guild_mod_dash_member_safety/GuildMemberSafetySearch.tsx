@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import CommunicationDisabledUtils from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import AutomodPermissionUtils from "../guild_automod/AutomodPermissionUtils.tsx";
-import _modDef5790 from "../../../_runtime/metro/05790__.js";
+import _modDef5802 from "../../../_runtime/metro/05802__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -84,7 +84,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = _modDef5790(this._searchState, closure_4);
+  this.hasDefaultQuery = _modDef5802(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {

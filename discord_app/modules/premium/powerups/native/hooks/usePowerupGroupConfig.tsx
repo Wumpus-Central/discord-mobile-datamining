@@ -3,8 +3,8 @@ import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import _modDef2568 from "../../GuildPowerups.messages.js";
 import GuildTagUtils from "../../../../guild_tag/GuildTagUtils.tsx";
-import _modDef13409 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
-import _modDef13410 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
+import _modDef13432 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
+import _modDef13433 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const stringResult = intl.string(_modDef2568.KC9HRW);
           const intl2 = tmp(1128).intl;
           const stringResult1 = intl2.string(_modDef2568.GJiSmP);
-          const obj2 = { staticUrl: _modDef13409, animatedUrl: _modDef13410 };
+          const obj2 = { staticUrl: _modDef13432, animatedUrl: _modDef13433 };
           cResult[3] = stringResult;
           cResult[4] = stringResult1;
           cResult[5] = obj2;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             image: tmp10,
             disabledReason: tmp14,
             badge: "IconComponent",
-            forceStaticImages: "IconComponent",
+            forceStaticImages: false,
           };
           cResult[8] = tmp14;
           cResult[9] = obj3;
@@ -116,13 +116,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             image: null,
             disabledReason: null,
             badge: "IconComponent",
-            forceStaticImages: "IconComponent",
+            forceStaticImages: false,
           };
           const intl = util.intl;
           obj2.title = intl.string(_modDef2568.KC9HRW);
           const intl2 = util.intl;
           obj2.description = intl2.string(_modDef2568.GJiSmP);
-          const obj3 = { staticUrl: _modDef13409, animatedUrl: _modDef13410 };
+          const obj3 = { staticUrl: _modDef13432, animatedUrl: _modDef13433 };
           obj2.image = obj3;
           let stringResult;
           if (!stateFromStores) {

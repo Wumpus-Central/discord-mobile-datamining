@@ -126,7 +126,7 @@ let closure_3 = [
 ];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11182);
+const SettingRendererConstants = fn(11205);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -747,8 +747,8 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(15922).useHighlightSettingItem(setting);
-  let obj = trailing(15922);
+  let highlightSettingItem = trailing(15955).useHighlightSettingItem(setting);
+  let obj = trailing(15955);
   const items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => _undefined.locale);
   trailing = undefined;
@@ -792,18 +792,18 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   let tmp12Result = null;
   if (null != IconComponent) {
     const obj4 = { IconComponent, variant };
-    tmp12Result = closure_14(tmp(6888).TableRow.Icon, obj4);
+    tmp12Result = closure_14(tmp(6901).TableRow.Icon, obj4);
   }
   obj3.icon = tmp12Result;
   let tmp12Result2 = null;
   if (null != trailing) {
     const obj5 = { text: trailing };
-    tmp12Result2 = closure_14(tmp(6888).TableRow.TrailingText, obj5);
+    tmp12Result2 = closure_14(tmp(6901).TableRow.TrailingText, obj5);
   }
   obj3.trailing = tmp12Result2;
   obj3.start = start;
   obj3.end = end;
-  const children = [closure_14(trailing(6888).TableRow, obj3)];
+  const children = [closure_14(trailing(6901).TableRow, obj3)];
   if (highlightSettingItem) {
     const obj6 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj6);

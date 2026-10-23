@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5220);
+const Text_Text = Text(5232);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

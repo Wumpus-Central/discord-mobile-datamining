@@ -8,7 +8,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7017 from "../../../../_runtime/metro/07017__.js";
+import _modDef7030 from "../../../../_runtime/metro/07030__.js";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import ScheduledMessagesUtils from "../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageTypes.tsx";
@@ -22,7 +22,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7616).DraftType;
+const DraftType = fn(7629).DraftType;
 const Constants = fn(1087);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -93,7 +93,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
     tmp15 = bound;
   }
   if (cResult[4] !== tmp4.floatingCloseIcon) {
-    const obj5 = { source: _modDef7017, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
+    const obj5 = { source: _modDef7030, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
     const tmp18 = __initData(native.Icon, obj5);
     cResult[4] = tmp4.floatingCloseIcon;
     cResult[5] = tmp18;
@@ -161,7 +161,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
   }
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
-  obj6.children = __initData(native.Icon, { source: _modDef7017, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj6.children = __initData(native.Icon, { source: _modDef7030, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   obj5.children = __initData(Pressables.PressableOpacity, obj6);
   items[1] = __initData(component, obj5);
   obj3.children = items;
@@ -809,7 +809,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
     tmp15 = bound;
   }
   if (cResult[4] !== tmp4.floatingCloseIcon) {
-    const obj5 = { source: _modDef7017, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
+    const obj5 = { source: _modDef7030, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
     const tmp18 = __initData(native.Icon, obj5);
     cResult[4] = tmp4.floatingCloseIcon;
     cResult[5] = tmp18;
@@ -883,11 +883,11 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
   obj4.hitSlop = tmp9;
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = __initData(Text_Text.Text, obj3);
-  obj4.children = __initData(native.Icon, { source: _modDef7017, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj4.children = __initData(native.Icon, { source: _modDef7030, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   const items = [tmp8, ];
-  const obj5 = { source: _modDef7017, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef7030, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = __initData(component, { style: tmp.floatingRightActions, children: __initData(Pressables.PressableOpacity, obj4) });
   obj7.children = items;
   obj6.children = map1(closure_1_14, obj7);
@@ -949,7 +949,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
         tmp23 = bound;
       }
       if (cResult[10] !== tmp4.floatingCloseIcon) {
-        const obj6 = { source: _modDef7017, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
+        const obj6 = { source: _modDef7030, size: native.Icon.Sizes.CUSTOM, style: tmp4.floatingCloseIcon };
         const tmp26 = __initData(native.Icon, obj6);
         cResult[10] = tmp4.floatingCloseIcon;
         cResult[11] = tmp26;
@@ -1041,11 +1041,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatIn
   obj6.hitSlop = tmp9;
   obj6.onPress = onCancelScheduling;
   const tmp8 = __initData(Pressables.PressableOpacity, obj3);
-  obj6.children = __initData(native.Icon, { source: _modDef7017, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj6.children = __initData(native.Icon, { source: _modDef7030, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   const obj8 = { style: tmp.contextBarRow, children: null };
   const obj9 = { children: null };
   const items = [tmp8, ];
-  const obj7 = { source: _modDef7017, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj7 = { source: _modDef7030, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = __initData(component, { style: tmp.floatingRightActions, children: __initData(Pressables.PressableOpacity, obj6) });
   obj9.children = items;
   obj8.children = map1(closure_1_14, obj9);
@@ -1060,18 +1060,18 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contex
   const cResult = backgroundColor(576).c(9);
   ({ children, ref } = arg0);
   obj = backgroundColor(576);
-  backgroundColor = closure_16(backgroundColor(5130).useGradientValue(backgroundColor(5130).GradientPercentage.END)).contextBar.backgroundColor;
+  backgroundColor = closure_16(backgroundColor(5142).useGradientValue(backgroundColor(5142).GradientPercentage.END)).contextBar.backgroundColor;
   const tmp3 = closure_17();
-  const obj2 = backgroundColor(5130);
-  const sharedValue = backgroundColor(5038).useSharedValue(0);
-  const obj3 = backgroundColor(5038);
+  const obj2 = backgroundColor(5142);
+  const sharedValue = backgroundColor(5050).useSharedValue(0);
+  const obj3 = backgroundColor(5050);
   let fn = function l() {
     return { backgroundColor, maxHeight: sharedValue.get() };
   };
   fn.__closure = { stylesBackgroundColor: backgroundColor, heightSv: sharedValue };
   fn.__workletHash = 16731072716488;
   fn.__initData = __initData;
-  const animatedStyle = backgroundColor(5038).useAnimatedStyle(fn);
+  const animatedStyle = backgroundColor(5050).useAnimatedStyle(fn);
   dependencyMap = first.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function o() {
@@ -1090,16 +1090,16 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contex
       constructor() {
         obj = {
           componentDidAppear() {
-                  const result = sharedValue.set(backgroundColor(5192).withTiming(60, obj));
+                  const result = sharedValue.set(backgroundColor(5204).withTiming(60, obj));
                 },
           componentDidEnter() {
-                  const result = sharedValue.set(backgroundColor(5192).withTiming(60, obj));
+                  const result = sharedValue.set(backgroundColor(5204).withTiming(60, obj));
                 },
           componentWillLeave(current) {
                   dependencyMap.current = current;
                   const fn = function n() { ... };
-                  obj = backgroundColor(5192);
-                  fn.__closure = { runOnJS: backgroundColor(5038).runOnJS, handleTransitionFinished };
+                  obj = backgroundColor(5204);
+                  fn.__closure = { runOnJS: backgroundColor(5050).runOnJS, handleTransitionFinished };
                   fn.__workletHash = 10908592279914;
                   fn.__initData = __initData;
                   const result = sharedValue.set(obj.withTiming(0, closure_2_15, "respect-motion-settings", fn));
@@ -1115,16 +1115,16 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contex
       constructor() {
         obj = {
           componentDidAppear() {
-                  const result = sharedValue.set(backgroundColor(5192).withTiming(60, obj));
+                  const result = sharedValue.set(backgroundColor(5204).withTiming(60, obj));
                 },
           componentDidEnter() {
-                  const result = sharedValue.set(backgroundColor(5192).withTiming(60, obj));
+                  const result = sharedValue.set(backgroundColor(5204).withTiming(60, obj));
                 },
           componentWillLeave(current) {
                   dependencyMap.current = current;
                   const fn = function n() { ... };
-                  obj = backgroundColor(5192);
-                  fn.__closure = { runOnJS: backgroundColor(5038).runOnJS, handleTransitionFinished };
+                  obj = backgroundColor(5204);
+                  fn.__closure = { runOnJS: backgroundColor(5050).runOnJS, handleTransitionFinished };
                   fn.__workletHash = 10908592279914;
                   fn.__initData = __initData;
                   const result = sharedValue.set(obj.withTiming(0, closure_2_15, "respect-motion-settings", fn));
@@ -1140,16 +1140,16 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contex
       constructor() {
         obj = {
           componentDidAppear() {
-                  const result = sharedValue.set(backgroundColor(5192).withTiming(60, obj));
+                  const result = sharedValue.set(backgroundColor(5204).withTiming(60, obj));
                 },
           componentDidEnter() {
-                  const result = sharedValue.set(backgroundColor(5192).withTiming(60, obj));
+                  const result = sharedValue.set(backgroundColor(5204).withTiming(60, obj));
                 },
           componentWillLeave(current) {
                   dependencyMap.current = current;
                   const fn = function n() { ... };
-                  obj = backgroundColor(5192);
-                  fn.__closure = { runOnJS: backgroundColor(5038).runOnJS, handleTransitionFinished };
+                  obj = backgroundColor(5204);
+                  fn.__closure = { runOnJS: backgroundColor(5050).runOnJS, handleTransitionFinished };
                   fn.__workletHash = 10908592279914;
                   fn.__initData = __initData;
                   const result = sharedValue.set(obj.withTiming(0, closure_2_15, "respect-motion-settings", fn));
@@ -1163,16 +1163,16 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contex
         constructor() {
           obj = {
             componentDidAppear() {
-                      const result = sharedValue.set(backgroundColor(5192).withTiming(60, obj));
+                      const result = sharedValue.set(backgroundColor(5204).withTiming(60, obj));
                     },
             componentDidEnter() {
-                      const result = sharedValue.set(backgroundColor(5192).withTiming(60, obj));
+                      const result = sharedValue.set(backgroundColor(5204).withTiming(60, obj));
                     },
             componentWillLeave(current) {
                       dependencyMap.current = current;
                       const fn = function n() { ... };
-                      obj = backgroundColor(5192);
-                      fn.__closure = { runOnJS: backgroundColor(5038).runOnJS, handleTransitionFinished };
+                      obj = backgroundColor(5204);
+                      fn.__closure = { runOnJS: backgroundColor(5050).runOnJS, handleTransitionFinished };
                       fn.__workletHash = 10908592279914;
                       fn.__initData = __initData;
                       const result = sharedValue.set(obj.withTiming(0, closure_2_15, "respect-motion-settings", fn));
@@ -1184,7 +1184,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contex
       return tmp10;
     }
     const obj6 = { style: tmp9, children };
-    const tmp13 = closure_12(sharedValue(5038).View, obj6);
+    const tmp13 = closure_12(sharedValue(5050).View, obj6);
     cResult[6] = children;
     cResult[7] = tmp9;
     cResult[8] = tmp13;
@@ -1194,7 +1194,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Contex
   cResult[3] = animatedStyle;
   cResult[4] = tmp3.floatingContextBar;
   cResult[5] = items;
-  const obj4 = backgroundColor(5038);
+  const obj4 = backgroundColor(5050);
 }) : (function ContextBarItem(arg0) {
   let backgroundColor;
   let ref1;

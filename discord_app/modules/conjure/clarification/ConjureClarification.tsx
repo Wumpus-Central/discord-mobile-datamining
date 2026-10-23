@@ -14,8 +14,8 @@ let closure_5 = {
   [ChannelTypes.GUILD_FORUM]: "forum",
   [ChannelTypes.GUILD_MEDIA]: "media",
 };
-let closure_6 = { channel: "#", role: "@", user: "@", project: "" };
-let obj = { channel: null, role: null, user: null, project: null };
+let closure_6 = { channel: "#", role: "@", user: "@", project: "", server: "" };
+let obj = { channel: null, role: null, user: null, project: null, server: null };
 let items = [_modDef3830["9+dfPT"], _modDef3830.pGSJqE];
 obj.channel = items;
 let items1 = [_modDef3830["2VkCoD"], _modDef3830.c8YlX8];
@@ -24,6 +24,8 @@ let items2 = [_modDef3830.GZIAxl, _modDef3830["4bptbQ"]];
 obj.user = items2;
 const items3 = [_modDef3830.twlOb6, _modDef3830.twlOb6];
 obj.project = items3;
+const items4 = [_modDef3830.ZWXDeI, _modDef3830.ZWXDeI];
+obj.server = items4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
 

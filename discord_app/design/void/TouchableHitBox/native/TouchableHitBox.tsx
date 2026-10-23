@@ -121,7 +121,7 @@ TouchableHitBox.prototype["render"] = function render() {
     children: null,
   });
 };
-TouchableHitBox.contextType = fn(5023).ThemeContext;
+TouchableHitBox.contextType = fn(5035).ThemeContext;
 TouchableHitBox.defaultProps = {
   onPress() {},
 };

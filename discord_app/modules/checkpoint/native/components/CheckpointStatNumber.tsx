@@ -19,7 +19,7 @@ function getTextPixels(value) {
   return Math.max(num - 1, 0);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6001).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6013).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let c7 = 2.5675675675675675;
 let c8 = 28.7;

@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import Suspender from "../../../../../_runtime/05925_Suspender.js";
+import Suspender from "../../../../../_runtime/05937_Suspender.js";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import VoicePanelChatViewDefault from "VoicePanelChatView.tsx";
@@ -24,7 +24,7 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(10873);
+const VoicePanelConstants = fn(10896);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

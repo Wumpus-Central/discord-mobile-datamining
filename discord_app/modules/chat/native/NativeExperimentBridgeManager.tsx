@@ -10,6 +10,7 @@ import VideoStutterMitigationExperimentDefault from "../../media_engine/VideoStu
 import NotificationLoadMessagesExperimentDefault from "../../cache/NotificationLoadMessagesExperiment.tsx";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import MediaPlaybackExperiment_mod from "../../media_playback/native/MediaPlaybackExperiment.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -104,6 +105,8 @@ function updateAndroidExperiments() {
   }
 }
 const NativeModules = _mod17.NativeModules;
+let MediaPlaybackExperiment = MediaPlaybackExperiment_mod;
+MediaPlaybackExperiment = MediaPlaybackExperiment.initializeMediaPlaybackExperiment();
 const prototype = function NativeExperimentBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   if (obj.isIOS()) {
@@ -119,8 +122,8 @@ const prototype = function NativeExperimentBridgeManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {}
+class prototype extends tmp3 {}
 const prototype1 = new prototype();
-let result = size.fileFinishedImporting("modules/chat/native/NativeExperimentBridgeManager.tsx");
+let result1 = size.fileFinishedImporting("modules/chat/native/NativeExperimentBridgeManager.tsx");
 
 export default prototype1;

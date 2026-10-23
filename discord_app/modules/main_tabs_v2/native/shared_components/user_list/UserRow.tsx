@@ -34,7 +34,7 @@ const UserUtilsDefault = UserUtils;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10593).UserRowModes;
+const UserRowModes = fn(10615).UserRowModes;
 const Constants = fn(1087);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -122,17 +122,17 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!isGameRelationship.isGameRelationship) {
         if (cResult[19] !== user) {
-          const userTag = applicationId(5018).getUserTag(user);
+          const userTag = applicationId(5023).getUserTag(user);
           cResult[19] = user;
           cResult[20] = userTag;
           let tmp12 = userTag;
-          const tmpResult2 = applicationId(5018);
+          const tmpResult2 = applicationId(5023);
         } else {
           tmp12 = cResult[20];
         }
         if (cResult[21] !== tmp12) {
           const obj3 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp12 };
-          const tmp16 = closure_14(applicationId(5220).Text, obj3);
+          const tmp16 = closure_14(applicationId(5232).Text, obj3);
           cResult[21] = tmp12;
           cResult[22] = tmp16;
         }
@@ -169,7 +169,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 color: "text-subtle",
                 children: stateFromStores.name,
               };
-              const tmp24 = closure_14(applicationId(5220).Text, obj5);
+              const tmp24 = closure_14(applicationId(5232).Text, obj5);
               cResult[13] = stateFromStores.name;
               cResult[14] = tmp24;
               let tmp22 = tmp24;
@@ -386,7 +386,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "Array" };
+      let obj2 = { accessibilityActions: items, actions: "r" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -447,11 +447,11 @@ export default noop.memo(function UserRow(type) {
             location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(5648).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(5648);
+                const result = type(5660).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(5660);
               } else {
-                const result1 = type(5648).presentFriendRequestAcceptedToast();
-                obj = type(5648);
+                const result1 = type(5660).presentFriendRequestAcceptedToast();
+                obj = type(5660);
               }
             },
           });
@@ -560,14 +560,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(10605)(channel, false);
+                const obj2 = user(10627)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
                 const tmp3 = user(38);
                 obj = { recipientIds: current.id };
-                user(7396).openPrivateChannel(obj);
-                const tmpResult = user(7396);
+                user(7409).openPrivateChannel(obj);
+                const tmpResult = user(7409);
               }
             });
         };
@@ -616,14 +616,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10605)(channel, false);
+          const obj2 = user(10627)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           obj = { recipientIds: current.id };
-          user(7396).openPrivateChannel(obj);
-          const tmpResult = user(7396);
+          user(7409).openPrivateChannel(obj);
+          const tmpResult = user(7409);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -641,11 +641,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
           if (null != closure_0) {
-            const result = type(5648).presentGameFriendRequestAcceptedToast();
-            const obj2 = type(5648);
+            const result = type(5660).presentGameFriendRequestAcceptedToast();
+            const obj2 = type(5660);
           } else {
-            const result1 = type(5648).presentFriendRequestAcceptedToast();
-            obj = type(5648);
+            const result1 = type(5660).presentFriendRequestAcceptedToast();
+            obj = type(5660);
           }
         },
       };
@@ -677,10 +677,10 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8648, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8666, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8648, dependencyMap.paths);
+      const promise = asyncRequireImpl(8666, dependencyMap.paths);
     } else {
       tmp(user);
     }

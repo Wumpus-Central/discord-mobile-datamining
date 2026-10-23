@@ -25,9 +25,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useOverlayLayoutDriver() {
       const cResult = sharedValue(576).c(6);
       let obj = sharedValue(576);
-      sharedValue = sharedValue(5038).useSharedValue(0);
-      const obj2 = sharedValue(5038);
-      const mediaViewerDimensions = sharedValue(8764).useMediaViewerDimensions();
+      sharedValue = sharedValue(5050).useSharedValue(0);
+      const obj2 = sharedValue(5050);
+      const mediaViewerDimensions = sharedValue(8782).useMediaViewerDimensions();
       ({ height, width } = mediaViewerDimensions);
       if (cResult[0] !== sharedValue) {
         const fn = function n() {
@@ -55,12 +55,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = width;
       cResult[5] = items;
       tmp5 = items;
-      const obj3 = sharedValue(8764);
+      const obj3 = sharedValue(8782);
     }
   : function useOverlayLayoutDriver() {
-      sharedValue = sharedValue(5038).useSharedValue(0);
-      let obj = sharedValue(5038);
-      const mediaViewerDimensions = sharedValue(8764).useMediaViewerDimensions();
+      sharedValue = sharedValue(5050).useSharedValue(0);
+      let obj = sharedValue(5050);
+      const mediaViewerDimensions = sharedValue(8782).useMediaViewerDimensions();
       const items = [sharedValue, ,];
       ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
       const effect = noop.useEffect(() => {

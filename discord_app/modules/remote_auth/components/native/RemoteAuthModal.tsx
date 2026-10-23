@@ -13,8 +13,8 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef15052 from "../../../../../_runtime/metro/15052__.js";
-import _modDef15054 from "../../../../../_runtime/metro/15054__.js";
+import _modDef15077 from "../../../../../_runtime/metro/15077__.js";
+import _modDef15079 from "../../../../../_runtime/metro/15079__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -234,11 +234,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           .then((body) => {
             dependencyMap(body.body.handshake_token);
             closure_1_1(constants.LOADED);
-            const result = remoteAuthFingerprint(5581).DeprecatedLayoutAnimation();
+            const result = remoteAuthFingerprint(5593).DeprecatedLayoutAnimation();
           })
           .catch(() => {
             closure_1_1(constants.NOT_FOUND);
-            const result = remoteAuthFingerprint(5581).DeprecatedLayoutAnimation();
+            const result = remoteAuthFingerprint(5593).DeprecatedLayoutAnimation();
           });
       }, items);
       if (constants.LOADING === tmp3) {
@@ -321,7 +321,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { scale };
-          const tmp18 = closure_7(tmp(15055).QrLoginSpotIllustration, obj4);
+          const tmp18 = closure_7(tmp(15080).QrLoginSpotIllustration, obj4);
           cResult[7] = tmp18;
           let tmp15 = tmp18;
         } else {
@@ -341,7 +341,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { variant: "heading-md/extrabold", children: null };
           const intl = tmp(1128).intl;
           obj6.children = intl.string(tmp(1128).t.jD2pqF);
-          const tmp25 = closure_7(tmp(5220).Heading, obj6);
+          const tmp25 = closure_7(tmp(5232).Heading, obj6);
           cResult[10] = tmp25;
           let tmp23 = tmp25;
         } else {
@@ -392,7 +392,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[20] !== tmp11) {
               const obj8 = { variant: "secondary", text: tmp37, onPress: tmp11 };
-              const tmp41 = closure_7(tmp(5230).Button, obj8);
+              const tmp41 = closure_7(tmp(5242).Button, obj8);
               cResult[20] = tmp11;
               cResult[21] = tmp41;
               let tmp39 = tmp41;
@@ -426,7 +426,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj10 = { style: tmp4.buttonGroup, children: null };
             const items2 = [tmp34, tmp39];
             obj10.children = items2;
-            const tmp44 = closure_8(tmp(6681).ButtonGroup, obj10);
+            const tmp44 = closure_8(tmp(6694).ButtonGroup, obj10);
             cResult[22] = tmp4.buttonGroup;
             cResult[23] = tmp34;
             cResult[24] = tmp39;
@@ -435,7 +435,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj11 = { text: tmp32, onPress: tmp12, disabled: tmp14 };
-        const tmp36 = closure_7(tmp(5230).Button, obj11, combined);
+        const tmp36 = closure_7(tmp(5242).Button, obj11, combined);
         cResult[15] = tmp12;
         cResult[16] = tmp14;
         cResult[17] = combined;
@@ -793,7 +793,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = closure_10();
       const top = useSafeAreaInsetsDefault().top;
       if (cResult[0] !== tmp3.imageStyle) {
-        const obj2 = { source: _modDef15054, style: tmp3.imageStyle };
+        const obj2 = { source: _modDef15079, style: tmp3.imageStyle };
         const tmp8 = React5(FastImageDefault, obj2);
         cResult[0] = tmp3.imageStyle;
         cResult[1] = tmp8;
@@ -870,7 +870,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: null, source: null };
       const items1 = [tmp3.logo, tmp9];
       obj8.style = items1;
-      obj8.source = _modDef15052;
+      obj8.source = _modDef15077;
       const tmp12 = React5(FastImageDefault, obj8);
       cResult[4] = tmp3.logo;
       cResult[5] = tmp9;
@@ -881,12 +881,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function RemoteAuth(arg0) {
       const tmp = closure_10();
       const obj = { style: tmp.background, children: null };
-      const obj2 = { source: _modDef15054, style: tmp.imageStyle };
+      const obj2 = { source: _modDef15079, style: tmp.imageStyle };
       const items = [React5(FastImageDefault, obj2), ,];
       const obj3 = { style: null, source: null };
       const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
       obj3.style = items1;
-      obj3.source = _modDef15052;
+      obj3.source = _modDef15077;
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { style: tmp.mainCard, children: null };

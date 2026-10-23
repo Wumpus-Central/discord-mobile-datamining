@@ -6,7 +6,7 @@ import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(10675).interruptTurn;
+const interruptTurn = fn(10697).interruptTurn;
 let c6 = 2400;
 let c7 = 5000;
 fn(558);

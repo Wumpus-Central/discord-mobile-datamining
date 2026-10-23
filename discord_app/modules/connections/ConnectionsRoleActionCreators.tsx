@@ -9,7 +9,7 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -30,12 +30,13 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_4 = tmp3;
-          closure_3 = tmp2;
+          closure_4 = tmp2;
+          closure_3 = tmp5;
           closure_131_0 = closure_0;
           closure_131_1 = closure_1;
           closure_131_2 = undefined;
           closure_131_3 = undefined;
+          closure_131_4 = undefined;
           let mapped = dependencyMap.map((arr) =>
             arr.map((connectionType) => ({
               connection_type: connectionType.connectionType,
@@ -58,27 +59,10 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
           request.body = mapped;
           c5 = 1;
           c6 = 1;
-          const obj5 = {
-            value: HTTP.put(request).then((body) => {
-              if (body.body.length > 0) {
-                body = body.body;
-                const mapped = body.map((arr) =>
-                  arr.map((connectionType) => ({
-                    connectionType: connectionType.connection_type,
-                    connectionMetadataField: connectionType.connection_metadata_field,
-                    applicationId: connectionType.application_id,
-                    operator: connectionType.operator,
-                    value: connectionType.value,
-                  })),
-                );
-              }
-              return [];
-            }),
-            done: false,
-          };
+          const obj5 = { value: HTTP.put(request), done: false };
           return obj5;
         }
-      } else if (1 === tmp6) {
+      } else if (1 === tmp5) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -88,6 +72,19 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
           return obj7;
         } else {
           closure_131_2 = value;
+          closure_131_3 = [];
+          if (closure_131_2.body.length > 0) {
+            const body = closure_131_2.body;
+            closure_131_3 = body.map((arr) =>
+              arr.map((connectionType) => ({
+                connectionType: connectionType.connection_type,
+                connectionMetadataField: connectionType.connection_metadata_field,
+                applicationId: connectionType.application_id,
+                operator: connectionType.operator,
+                value: connectionType.value,
+              })),
+            );
+          }
           c5 = 2;
           c6 = 1;
           const obj8 = {
@@ -104,13 +101,13 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
         const obj9 = { value, done: true };
         return obj9;
       } else {
-        closure_131_3 = value;
-        if (null != closure_131_3) {
+        closure_131_4 = value;
+        if (null != closure_131_4) {
           const obj10 = {
             type: "GUILD_ROLE_MEMBER_COUNT_UPDATE",
             guildId: closure_131_0,
             roleId: closure_131_1,
-            count: closure_131_3,
+            count: closure_131_4,
           };
           closure_132_1(closure_132_2[3]).dispatch(obj10);
           const obj = closure_132_1(closure_132_2[3]);
@@ -118,15 +115,15 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
         const obj11 = {
           type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
           roleId: closure_131_1,
-          roleConnectionConfigurations: closure_131_2,
+          roleConnectionConfigurations: closure_131_3,
         };
         closure_132_1(closure_132_2[3]).dispatch(obj11);
         c6 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp28) {
+    } catch (tmp29) {
       c6 = tmp;
-      throw tmp28;
+      throw tmp29;
     }
   }
 };

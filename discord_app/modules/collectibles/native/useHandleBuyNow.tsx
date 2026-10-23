@@ -40,7 +40,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7634).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7647).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -52,14 +52,14 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_4(false);
-          v1(5196).hideAllActionSheets();
-          const obj = v1(5196);
+          v1(5208).hideAllActionSheets();
+          const obj = v1(5208);
           const obj8 = {
             product: closure_128_0,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(13896).open(obj8);
+          v1(13919).open(obj8);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(13835)({
+  const tmp3 = onBuySettled(13858)({
     product,
     analyticsLocations,
     onPurchaseComplete() {

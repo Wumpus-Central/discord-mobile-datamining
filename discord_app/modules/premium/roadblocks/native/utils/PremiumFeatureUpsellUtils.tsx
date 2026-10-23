@@ -2,8 +2,8 @@
 import Constants from "../../../../../Constants.tsx";
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
 import SentryUtilsDefault from "../../../../../utils/SentryUtils.native.tsx";
-import SoundboardTypes from "../../../../soundboard/SoundboardTypes.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import SoundboardTypes from "../../../../soundboard/SoundboardTypes.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const AnalyticsPages = Constants.AnalyticsPages;

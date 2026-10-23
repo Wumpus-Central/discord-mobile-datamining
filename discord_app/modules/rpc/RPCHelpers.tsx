@@ -8,6 +8,7 @@ import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
+import transformAvatarDecorationDefault from "helpers/transformAvatarDecoration.tsx";
 import RPCErrorDefault from "RPCError.tsx";
 import transformMessage from "helpers/transformMessage.tsx";
 import LeakyBucketDefault from "../../../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx";
@@ -151,7 +152,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
             application2 = closure_133_5.createFromServer(closure_134_4);
             if (!closure_133_25(closure_134_2, closure_134_4.rpc_origins)) {
               const obj9 = { closeCode: closure_133_19.INVALID_ORIGIN };
-              const tmp16 = new closure_133_1(closure_133_2[23])(obj9, "Invalid Origin");
+              const tmp16 = new closure_133_1(closure_133_2[24])(obj9, "Invalid Origin");
               throw tmp16;
             }
           }
@@ -216,7 +217,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else if (1 === tmp7) {
         c6 = 0;
         const obj6 = { closeCode: closure_131_19.CLOSE_ABNORMAL };
-        const tmp16 = new closure_131_1(closure_131_2[23])(obj6, "Socket closed during throttle");
+        const tmp16 = new closure_131_1(closure_131_2[24])(obj6, "Socket closed during throttle");
         throw tmp16;
       } else if (arg0 === 1) {
         c7 = 3;
@@ -243,7 +244,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
   }
 };
 const GUILD_VOCAL_CHANNEL_TYPES = fn(4825).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6363);
+let Constants = fn(6376);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1087);
 ({
@@ -361,6 +362,64 @@ export const transformRole = function transformRole(id) {
   } = id);
   return obj;
 };
+export const transformGuildMember = function transformGuildMember(userId) {
+  const obj = {
+    user_id: userId.userId,
+    guild_id: userId.guildId,
+    nick: null,
+    avatar: null,
+    avatar_decoration_data: null,
+    banner: null,
+    roles: null,
+    joined_at: null,
+    premium_since: null,
+    communication_disabled_until: null,
+    pending: null,
+    flags: null,
+  };
+  let nick = userId.nick;
+  if (nick == null) {
+    nick = null;
+  }
+  obj.nick = nick;
+  let avatar = userId.avatar;
+  if (avatar == null) {
+    avatar = null;
+  }
+  obj.avatar = avatar;
+  obj.avatar_decoration_data = transformAvatarDecorationDefault(userId.avatarDecoration);
+  let banner = userId.banner;
+  if (banner == null) {
+    banner = null;
+  }
+  obj.banner = banner;
+  ({ roles: obj.roles, joinedAt } = userId);
+  if (joinedAt == null) {
+    joinedAt = null;
+  }
+  obj.joined_at = joinedAt;
+  let premiumSince = userId.premiumSince;
+  if (premiumSince == null) {
+    premiumSince = null;
+  }
+  obj.premium_since = premiumSince;
+  let prop = userId.communicationDisabledUntil;
+  if (prop == null) {
+    prop = null;
+  }
+  obj.communication_disabled_until = prop;
+  let flag = userId.isPending;
+  if (flag == null) {
+    flag = false;
+  }
+  obj.pending = flag;
+  let num = userId.flags;
+  if (num == null) {
+    num = 0;
+  }
+  obj.flags = num;
+  return obj;
+};
 export const transformChannel = function transformChannel(channel, result) {
   let nSFW = channel;
   closure_1 = result;
@@ -418,7 +477,7 @@ export const transformChannel = function transformChannel(channel, result) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(5975).getName(dependencyMap, id.id, user),
+            nick: closure_1(5987).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -427,7 +486,7 @@ export const transformChannel = function transformChannel(channel, result) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9238)(user);
+          obj.user = closure_1(9261)(user);
           return obj;
         }
       });

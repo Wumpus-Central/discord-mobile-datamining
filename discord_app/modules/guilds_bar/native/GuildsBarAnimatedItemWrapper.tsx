@@ -11,8 +11,8 @@ require = fn;
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return closure_1_8(closure_18, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5241).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(17650);
+const IOS_POINTER_STYLE = fn(5253).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(17694);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

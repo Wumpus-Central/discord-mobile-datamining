@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef14037 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef14061 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const constants = fn(14033).PlayStationLinkModalScenes;
+const constants = fn(14057).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
@@ -54,7 +54,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
             return;
           }
         }
-        tmp9[0] = _modDef14037;
+        tmp9[0] = _modDef14061;
         cResult[4] = tmp9;
       } else {
         class S {
@@ -100,7 +100,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
       cResult[8] = tmp6;
       cResult[9] = platformType;
       cResult[10] = tmp4.image;
-      cResult[11] = jsx(navigation(9599).TwoWayLinkPreConnect, {
+      cResult[11] = jsx(navigation(9622).TwoWayLinkPreConnect, {
         platformType,
         onError: S,
         onNext: tmp6,
@@ -109,7 +109,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
         title: tmp11,
         body: tmp12,
       });
-      const tmp15 = jsx(navigation(9599).TwoWayLinkPreConnect, {
+      const tmp15 = jsx(navigation(9622).TwoWayLinkPreConnect, {
         platformType,
         onError: S,
         onNext: tmp6,
@@ -131,7 +131,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
       const callback1 = noop.useCallback(() => {
         navigation.push(constants.ERROR, {});
       }, items1);
-      const memo = noop.useMemo(() => ({ uri: _modDef14037 }), []);
+      const memo = noop.useMemo(() => ({ uri: _modDef14061 }), []);
       const obj2 = {
         platformType: platformType.platformType,
         onError: callback1,
@@ -145,7 +145,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
       obj2.title = intl.string(navigation(1128).t["6n+UPR"]);
       const intl2 = navigation(1128).intl;
       obj2.body = intl2.string(navigation(1128).t.JaaqIf);
-      return jsx(navigation(9599).TwoWayLinkPreConnect, {
+      return jsx(navigation(9622).TwoWayLinkPreConnect, {
         platformType: platformType.platformType,
         onError: callback1,
         onNext: callback,

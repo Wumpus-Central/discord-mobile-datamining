@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05255_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05267_BottomSheetModal.js";
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

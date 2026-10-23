@@ -28,53 +28,49 @@ export const getCheckpointFlow = function getCheckpointFlow(flag) {
 export const getCheckpointRoutes = function getCheckpointRoutes(arg0, arg1) {
   _require = arg1;
   if (arg0 === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(12898).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp(12917).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(12899).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(12918).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   return prop.filter((item) => {
-    if (null != obj[item]) {
-      let tmpResult = null != closure_0;
-      if (tmpResult) {
-        tmpResult = tmp(tmp6);
-      }
-      return tmpResult;
+    if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
+      return false;
+    } else if (null != obj[item]) {
+      return null != closure_0 && tmp2(closure_0);
     } else {
-      let tmp4 = null == tmp3;
-      if (!tmp4) {
-        tmp4 = undefined === closure_0 || tmp3(closure_0);
-        const tmp5 = undefined === closure_0 || tmp3(closure_0);
+      let tmp6 = null == tmp5;
+      if (!tmp6) {
+        tmp6 = undefined === closure_0 || tmp5(closure_0);
+        const tmp7 = undefined === closure_0 || tmp5(closure_0);
       }
-      return tmp4;
+      return tmp6;
     }
   });
 };
 export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(arg0, arg1, arg2, arg3) {
   _require = arg3;
   if (arg0 === require("CheckpointNavigation").CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(12898).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp(12917).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(12899).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(12918).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const found = prop.filter((item) => {
-    if (null != obj[item]) {
-      let tmpResult = null != closure_0;
-      if (tmpResult) {
-        tmpResult = tmp(tmp6);
-      }
-      return tmpResult;
+    if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
+      return false;
+    } else if (null != obj[item]) {
+      return null != closure_0 && tmp2(closure_0);
     } else {
-      let tmp4 = null == tmp3;
-      if (!tmp4) {
-        tmp4 = undefined === closure_0 || tmp3(closure_0);
-        const tmp5 = undefined === closure_0 || tmp3(closure_0);
+      let tmp6 = null == tmp5;
+      if (!tmp6) {
+        tmp6 = undefined === closure_0 || tmp5(closure_0);
+        const tmp7 = undefined === closure_0 || tmp5(closure_0);
       }
-      return tmp4;
+      return tmp6;
     }
   });
   const index = found.indexOf(arg1);
   if (-1 === index) {
-    let INTRODUCTION = tmp(6348).CheckpointRoute.INTRODUCTION;
+    let INTRODUCTION = tmp(6361).CheckpointRoute.INTRODUCTION;
   } else {
     INTRODUCTION = found[index + arg2];
     if (INTRODUCTION == null) {

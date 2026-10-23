@@ -105,12 +105,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   const tmp11 = _slicedToArray(noop.useState("active" === closure_5.currentState), 2);
-  const scaledImageUrl = isAnimatedAsset(9560).getScaledImageUrl({ assetUrl, width, height });
+  const scaledImageUrl = isAnimatedAsset(9583).getScaledImageUrl({ assetUrl, width, height });
   cResult[7] = assetUrl;
   cResult[8] = height;
   cResult[9] = width;
   cResult[10] = scaledImageUrl;
-  const tmpResult4 = isAnimatedAsset(9560);
+  const tmpResult4 = isAnimatedAsset(9583);
 }) : (function QuestDockRewardTile(assetUrl) {
   assetUrl = assetUrl.assetUrl;
   const isAnimatedAsset = assetUrl.isAnimatedAsset;

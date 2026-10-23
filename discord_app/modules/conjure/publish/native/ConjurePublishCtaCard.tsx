@@ -20,7 +20,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = projectId(576).c(7);
       projectId = projectId.projectId;
       const publish = projectId.publish;
-      const context = noop.useContext(projectId(11828).ConjurePublishActionContext);
+      const context = noop.useContext(projectId(11847).ConjurePublishActionContext);
       if (cResult[0] === context) {
         if (cResult[1] === projectId) {
           let tmp6 = cResult[2];
@@ -35,8 +35,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj2 = { direction: "horizontal", children: null };
         const obj3 = { text: publish.label, variant: "primary", size: "sm", loading: tmp5, onPress: tmp6 };
-        obj2.children = closure_4(tmp(5230).Button, obj3);
-        const tmp9 = closure_4(tmp(5963).Stack, obj2);
+        obj2.children = closure_4(tmp(5242).Button, obj3);
+        const tmp9 = closure_4(tmp(5975).Stack, obj2);
         cResult[3] = publish.label;
         cResult[4] = tmp5;
         cResult[5] = tmp6;

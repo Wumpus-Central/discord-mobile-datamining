@@ -11,14 +11,14 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7521);
+const NativeCheckoutStore = fn(7534);
 ({
   createNativeStore: closure_7,
   NativeCheckoutStoreContext: closure_8,
   NativeCheckoutStoreContextOrNull: closure_9,
 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-let ItemPurchaseType = fn(5684).ItemPurchaseType;
+let ItemPurchaseType = fn(5696).ItemPurchaseType;
 const PaymentGateways = fn(1098).PaymentGateways;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
@@ -421,7 +421,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         checkoutAnalyticsFields: View,
         analyticsInitialStep: closure_7,
       } = children);
-      const contextMetadata = order(5585)(() => {
+      const contextMetadata = order(5597)(() => {
         let id;
         if (order != null) {
           id = order.id;
@@ -434,7 +434,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { message: "Checkout session ID: " + id };
         return { loadId: id, startTime: Date.now() };
       });
-      redux = order(5585)(() => {
+      redux = order(5597)(() => {
         const obj = {};
         const merged = Object.assign(View);
         obj.load_id = contextMetadata.loadId;
@@ -456,7 +456,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         ),
         1,
       )[0];
-      order(5249)(() => {
+      order(5261)(() => {
         if (null != View) {
           const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
           const obj3 = {};
@@ -501,8 +501,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { checkoutSucceeded: tmp2, order: null };
             ({ id: obj3.id, status: obj3.status } = orderRecord);
             obj2.order = { id: null, status: null };
-            checkoutInitParameters(10542).discardDraftOrder(obj2);
-            const obj = checkoutInitParameters(10542);
+            checkoutInitParameters(10564).discardDraftOrder(obj2);
+            const obj = checkoutInitParameters(10564);
             const obj5 = { id: null, status: null };
           }
         },

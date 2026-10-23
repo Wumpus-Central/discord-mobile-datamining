@@ -2,8 +2,8 @@
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import StickersTypes from "../StickersTypes.tsx";
 import StickerCategoryUtils from "../StickerCategoryUtils.tsx";
-import _modDef10136 from "../../../../_runtime/metro/10136__.js";
-import _modDef10137 from "../../../../_runtime/metro/10137__.js";
+import _modDef10158 from "../../../../_runtime/metro/10158__.js";
+import _modDef10159 from "../../../../_runtime/metro/10159__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10134).useStickerPickerStore;
+const useStickerPickerStore = fn(10156).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1087).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
 const ReactCompilerGating = fn(558);
@@ -152,9 +152,9 @@ export const useStickerCategories = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (type.type === StickersTypes.StickerCategoryTypes.FAVORITE) {
-          let tmp14 = _modDef10136;
+          let tmp14 = _modDef10158;
         } else {
-          tmp14 = _modDef10137;
+          tmp14 = _modDef10159;
         }
         const obj3 = {};
         const merged1 = Object.assign(type);

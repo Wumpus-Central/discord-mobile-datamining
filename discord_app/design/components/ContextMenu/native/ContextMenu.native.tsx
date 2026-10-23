@@ -5,7 +5,7 @@ import shared from "../../../shared.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05283_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05295_LegacyBaseButton.js";
 import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";

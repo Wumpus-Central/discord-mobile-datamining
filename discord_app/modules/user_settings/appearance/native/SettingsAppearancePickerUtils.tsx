@@ -266,7 +266,7 @@ export const useLaunchWelcomeSystemTheme = ReactCompilerGating.isReactCompilerEn
     }
   : function useLaunchWelcomeSystemTheme() {
       const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-      token = token(5238).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+      token = token(5250).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
       let items = [token];
       return noop.useMemo(() => {
         const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-require = fn;
+const require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx");
@@ -11,19 +11,27 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 export default {
   handleShowEmojiUpsellAlert(guildId) {
     guildId = guildId.guildId;
-    actions_AlertActionCreatorsDefault.openLazy({
-      importer() {
-        return asyncRequireImpl(9837, dependencyMap.paths).then((result) => {
-          closure_0 = result.default;
-          return (arg0) => {
-            const obj = {};
-            const merged = Object.assign(arg0);
-            obj.guildId = guildId;
-            return <closure_0 />;
-          };
-        });
-      },
-      isDismissable: false,
+    const obj2 = { importer: null, isDismissable: false };
+    importDefault = asyncGeneratorStep(async () => {
+      await tmp2(paths[5])(paths[4], paths.paths);
+      closure_128_0 = value.default;
+      return (arg0) => {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj.guildId = guildId;
+        return <closure_1_0 />;
+      };
     });
+    obj2.importer = function importer() {
+      const self = this;
+      const apply = closure_1.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    };
+    actions_AlertActionCreatorsDefault.openLazy(obj2);
   },
 };

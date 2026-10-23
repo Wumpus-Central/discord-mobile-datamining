@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = BaseButton(5220);
-const Button_BaseButton = BaseButton(5240);
-const BaseIconButton = BaseButton(7945);
+const Text_Text = BaseButton(5232);
+const Button_BaseButton = BaseButton(5252);
+const BaseIconButton = BaseButton(7958);
 require = fn;
 let closure_3 = ["label", "grow", "accessibilityLabel", "maxFontSizeMultiplier", "accessibilityHint", "ref"];
 const jsxProd = fn(21);

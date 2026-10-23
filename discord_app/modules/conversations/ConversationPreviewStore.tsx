@@ -111,8 +111,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(5593).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(5593).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(5605).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(5605).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;

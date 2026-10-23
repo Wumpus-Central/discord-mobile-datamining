@@ -3,13 +3,13 @@ import FramesActionCreatorsDefault from "../../../../frames/FramesActionCreators
 import validateConjureAppFrameDefault from "../../../helpers/validateConjureAppFrame.tsx";
 import FramesStore from "../../../../frames/FramesStore.tsx";
 
-const Constants = fn(6363);
+const Constants = fn(6376);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1087).RPCCommands;
-const ActivityPanelModes = fn(5595).ActivityPanelModes;
-const FrameIntent = fn(6761).FrameIntent;
+const ActivityPanelModes = fn(5607).ActivityPanelModes;
+const FrameIntent = fn(6774).FrameIntent;
 const obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15678);
+const CONTEXT_MENU_ICON_NAMES = fn(15699);
 const obj3 = {
   scope: null,
   handler(args) {

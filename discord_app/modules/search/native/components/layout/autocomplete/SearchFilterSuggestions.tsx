@@ -20,7 +20,7 @@ function getSuggestionsKey(arr) {
 }
 let closure_3 = ["text", "searchTokenType", "onPress"];
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9690).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9712).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj = { card: null };
@@ -507,12 +507,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(17979).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(18023).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(17979);
-  const validFilterTokens = searchContext(17988).useValidFilterTokens(searchContext);
+  let obj = searchContext(18023);
+  const validFilterTokens = searchContext(18032).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -550,7 +550,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(17988);
+  let obj2 = searchContext(18032);
   const fn = function _() {
     return dismissed.get();
   };
@@ -562,8 +562,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       ReanimatedRexport.runOnJS(closure_8)(closure_18);
     }
   };
-  const obj3 = searchContext(5038);
-  fn2.__closure = { runOnJS: searchContext(5038).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
+  const obj3 = searchContext(5050);
+  fn2.__closure = { runOnJS: searchContext(5050).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
   fn2.__workletHash = 4958389658939;
   fn2.__initData = __initData6;
   const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
@@ -601,5 +601,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return memo(closure_1_11, {}, text.text);
     })}</View></closure_17>;
   }, items4);
-  return memo(searchContext(5023).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
+  return memo(searchContext(5035).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
 }));

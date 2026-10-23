@@ -317,9 +317,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return prop;
     }
   : function useChannelSafeAreaBottomStyles(arg0) {
-      const token = gradientBottom(5238).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-      let obj = gradientBottom(5238);
-      gradientBottom = gradientBottom(9685).useGradientBottom();
+      const token = gradientBottom(5250).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+      let obj = gradientBottom(5250);
+      gradientBottom = gradientBottom(9707).useGradientBottom();
       let backgroundColor1;
       if (gradientBottom != null) {
         backgroundColor1 = gradientBottom.backgroundColor;

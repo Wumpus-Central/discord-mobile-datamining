@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         name = thread.name;
       }
       let obj2 = {
-        header: jsx(message(7233).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+        header: jsx(message(7246).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
         children: null,
       };
       obj.subtitle = name;
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
       } else {
         const obj6 = { variant: "text-md/normal", color: "text-default", children: action.notice };
-        tmp4Result = jsx(tmp5(5220).Text, {
+        tmp4Result = jsx(tmp5(5232).Text, {
           variant: "text-md/normal",
           color: "text-default",
           children: action.notice,
@@ -220,8 +220,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3.children = tmp4Result;
       obj2.children = <View style={tmp.content}>{null}</View>;
-      return jsx(message(7283).ActionSheet, {
-        header: jsx(message(7233).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+      return jsx(message(7296).ActionSheet, {
+        header: jsx(message(7246).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
         children: null,
       });
     };

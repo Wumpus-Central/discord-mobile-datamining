@@ -17,8 +17,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(11571).isMobileOverlaySupported;
-const guideURL = fn(11572).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(11591).isMobileOverlaySupported;
+const guideURL = fn(11592).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);

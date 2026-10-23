@@ -34,12 +34,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       onChange = onChange.onChange;
       ({ emojiId, emojiName } = emoji);
       const tmp4 = closure_6();
-      const tmp6 = onChange(15093)();
+      const tmp6 = onChange(15118)();
       if (cResult[0] === emojiId) {
         if (cResult[1] === emojiName) {
           let tmp7 = cResult[2];
         }
-        const emojiByIdOrName = guildId(16514).useEmojiByIdOrName(guildId, tmp7);
+        const emojiByIdOrName = guildId(16561).useEmojiByIdOrName(guildId, tmp7);
         if (cResult[3] === tmp7) {
           if (cResult[4] === guildId) {
             if (cResult[6] === guildId) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const _Symbol = Symbol;
                       if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                        let obj2 = { size: guildId(1202).Icon.Sizes.MEDIUM, source: tmp5(11520) };
+                        let obj2 = { size: guildId(1202).Icon.Sizes.MEDIUM, source: tmp5(11540) };
                         const tmp32 = closure_4(guildId(1202).Icon, obj2);
                         cResult[20] = tmp32;
                         let tmp30 = tmp32;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj3 = { style: tmp19, accessibilityRole: "link", onPress: tmp18, children: null };
                       const items = [tmp11, tmp26, tmp30];
                       obj3.children = items;
-                      const tmp35 = closure_5(tmp5(9017), obj3);
+                      const tmp35 = closure_5(tmp5(9040), obj3);
                       cResult[21] = tmp11;
                       cResult[22] = tmp18;
                       cResult[23] = tmp19;
@@ -147,16 +147,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (null != tmp7) {
           const obj5 = { guildId, id: tmp7 };
-          let tmp15 = closure_4(tmp5(16513), obj5);
+          let tmp15 = closure_4(tmp5(16560), obj5);
         } else {
-          const obj6 = { resizeMode: "contain", source: tmp5(19205) };
-          tmp15 = closure_4(tmp5(5655), obj6);
-          const tmp5Result = tmp5(5655);
+          const obj6 = { resizeMode: "contain", source: tmp5(19249) };
+          tmp15 = closure_4(tmp5(5667), obj6);
+          const tmp5Result = tmp5(5667);
         }
         cResult[3] = tmp7;
         cResult[4] = guildId;
         cResult[5] = tmp15;
-        const tmpResult = guildId(16514);
+        const tmpResult = guildId(16561);
       }
       let result = emojiId;
       if (emojiId == null) {
@@ -185,17 +185,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         emojiId = tmp2(4915).convertSurrogateToName(emojiName, false);
         const tmp2Result = tmp2(4915);
       }
-      const tmp4 = onChange(15093)();
-      const emojiByIdOrName = guildId(16514).useEmojiByIdOrName(guildId, emojiId);
+      const tmp4 = onChange(15118)();
+      const emojiByIdOrName = guildId(16561).useEmojiByIdOrName(guildId, emojiId);
       if (null != emojiId) {
         let obj = { guildId, id: emojiId };
-        let tmp9 = closure_4(tmp2(16513), obj);
+        let tmp9 = closure_4(tmp2(16560), obj);
         let tmp10 = closure_4;
       } else {
-        const obj3 = { resizeMode: "contain", source: tmp2(19205) };
-        tmp9 = closure_4(tmp2(5655), obj3);
+        const obj3 = { resizeMode: "contain", source: tmp2(19249) };
+        tmp9 = closure_4(tmp2(5667), obj3);
         tmp10 = closure_4;
-        const tmp2Result3 = tmp2(5655);
+        const tmp2Result3 = tmp2(5667);
       }
       const obj4 = {
         style: null,
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp.container, tmp4.textInput];
       obj4.style = items;
       const items1 = [tmp9, ,];
-      let obj2 = guildId(16514);
+      let obj2 = guildId(16561);
       const items2 = [tmp.content];
       const obj5 = { style: items2, children: null };
       items2[1] = null != emojiByIdOrName ? tmp.text : tmp.placeholder;
@@ -237,8 +237,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj5.children = allEmojiNamesString;
       items1[1] = tmp10(guildId(1202).LegacyText, obj5);
-      const tmp2Result4 = onChange(9017);
-      items1[2] = tmp10(guildId(1202).Icon, { size: guildId(1202).Icon.Sizes.MEDIUM, source: onChange(11520) });
+      const tmp2Result4 = onChange(9040);
+      items1[2] = tmp10(guildId(1202).Icon, { size: guildId(1202).Icon.Sizes.MEDIUM, source: onChange(11540) });
       obj4.children = items1;
       return closure_5(tmp2Result4, obj4);
     };

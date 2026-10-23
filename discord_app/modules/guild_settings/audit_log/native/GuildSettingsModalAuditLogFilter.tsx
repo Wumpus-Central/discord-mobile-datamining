@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06812_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/06825_fuzzysearch.js";
 import FormRadio from "../../../../design/components/Forms/native/FormRadio.native.tsx";
 import DetailedGuildIdentityUserRowDefault from "../../native/DetailedGuildIdentityUserRow.tsx";
 import AuditLogUtils from "../AuditLogUtils.tsx";
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return;
                                 }
                               }
-                              const tmp26 = closure_9(filterType(7130).SearchBar, obj5);
+                              const tmp26 = closure_9(filterType(7143).SearchBar, obj5);
                               cResult[25] = tmp20;
                               cResult[26] = tmp26;
                               let tmp24 = tmp26;

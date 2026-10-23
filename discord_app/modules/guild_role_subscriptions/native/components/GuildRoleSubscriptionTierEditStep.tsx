@@ -215,7 +215,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
       obj.style = items;
-      obj.children = closure_1_8(tmp5(5230).Button, {
+      obj.children = closure_1_8(tmp5(5242).Button, {
         loading: submitting,
         disabled: !canProceedToNextStep,
         text: stringResult,

@@ -11,8 +11,8 @@ import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilder
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(16758).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8318).MobileUserSettings;
+let closure_4 = fn(16802).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8330).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

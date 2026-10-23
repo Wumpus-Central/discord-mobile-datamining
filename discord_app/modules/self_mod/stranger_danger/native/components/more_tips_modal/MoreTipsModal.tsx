@@ -7,7 +7,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import MonitoringAgentDefault from "../../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef8100 from "../../../../../../../_runtime/metro/08100__.js";
+import _modDef8113 from "../../../../../../../_runtime/metro/08113__.js";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
 import SafetyTipsSectionDefault from "../../../../shared/native/SafetyTipsSection.tsx";
 import WasThisHelpfulSectionDefault from "WasThisHelpfulSection.tsx";
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return warningId(senderId[14]).popWithKey(channelId);
                 },
-                source: _modDef8100,
+                source: _modDef8113,
                 iconSize: native.IconSizes.MEDIUM,
                 accessibilityLabel: null,
               };

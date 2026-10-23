@@ -8,7 +8,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import QuestTypes from "../QuestTypes.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
-import _modDef8100 from "../../../../_runtime/metro/08100__.js";
+import _modDef8113 from "../../../../_runtime/metro/08113__.js";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import QuestContentImpressionTracker from "QuestContentImpressionTracker.native.tsx";
 import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet.tsx";
@@ -21,7 +21,7 @@ import UnenrolledActivityQuestStore from "../UnenrolledActivityQuestStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(6695).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(6708).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const constants = { MAIN: "main" };
@@ -121,7 +121,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
   const checked = tmp11[0];
   dependencyMap = tmp11[1];
   if (cResult[4] !== quest) {
-    const activityApplicationId = tmp(7783).getActivityApplicationId(quest);
+    const activityApplicationId = tmp(7796).getActivityApplicationId(quest);
     class I {
       constructor() {
         return closure_1_9.getState().autoEnroll;
@@ -129,7 +129,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
     }
     cResult[5] = activityApplicationId;
     let tmp13 = activityApplicationId;
-    const tmpResult10 = tmp(7783);
+    const tmpResult10 = tmp(7796);
   } else {
     tmp13 = cResult[5];
   }
@@ -141,7 +141,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
     if (cResult[7] === questTaskDetails) {
       let tmp16 = cResult[8];
     }
-    const questsInstructionsToWinReward = tmp(14091).useQuestsInstructionsToWinReward(tmp16);
+    const questsInstructionsToWinReward = tmp(14115).useQuestsInstructionsToWinReward(tmp16);
     class I {
       constructor() {
         return closure_1_9.getState().autoEnroll;
@@ -174,10 +174,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  const obj4 = { questContent: tmp4(6698).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: tmp4(7786).QuestContentCTA.START_QUEST, sourceQuestContent: tmp4(6698).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
+                  const obj4 = { questContent: tmp4(6711).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: tmp4(7799).QuestContentCTA.START_QUEST, sourceQuestContent: tmp4(6711).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
                   c1 = 1;
                   c2 = 1;
-                  const obj6 = { value: tmp4(9547).enrollInQuest(tmp4.id, obj4), done: false };
+                  const obj6 = { value: tmp4(9570).enrollInQuest(tmp4.id, obj4), done: false };
                   return obj6;
                 }
               } else if (arg0 === 1) {
@@ -188,7 +188,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
                 const obj = { value, done: true };
                 return obj;
               } else {
-                first(6657).pop();
+                first(6670).pop();
                 c2 = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -268,12 +268,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
       } else {
         tmp30 = cResult[18];
       }
-      const checkboxA11yNative = tmp(5025).useCheckboxA11yNative(tmp30);
+      const checkboxA11yNative = tmp(5037).useCheckboxA11yNative(tmp30);
       ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-      const tmpResult14 = tmp(5025);
-      const isQuestAccessSuspended = tmp(9546).useIsQuestAccessSuspended();
-      const tmpResult15 = tmp(9546);
-      trackQuestContentClickedWithImpression = tmp(16311).useTrackQuestContentClickedWithImpression();
+      const tmpResult14 = tmp(5037);
+      const isQuestAccessSuspended = tmp(9569).useIsQuestAccessSuspended();
+      const tmpResult15 = tmp(9569);
+      trackQuestContentClickedWithImpression = tmp(16343).useTrackQuestContentClickedWithImpression();
       if (cResult[19] === quest.id) {
         if (cResult[20] === trackQuestContentClickedWithImpression) {
           let tmp34 = cResult[21];
@@ -402,7 +402,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
                                         return closure_1_9.getState().autoEnroll;
                                       }
                                     }
-                                    const tmp80 = closure_11(tmp(5230).Button, obj7);
+                                    const tmp80 = closure_11(tmp(5242).Button, obj7);
                                     cResult[59] = tmp27;
                                     cResult[60] = tmp80;
                                     let tmp78 = tmp80;
@@ -470,7 +470,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
                                           }
                                         }
                                         obj11.children = obj31.string(tmp(1128).t["931n1T"]);
-                                        const tmp94 = closure_11(tmp(5220).Text, obj11);
+                                        const tmp94 = closure_11(tmp(5232).Text, obj11);
                                         cResult[71] = tmp94;
                                         let tmp92 = tmp94;
                                       } else {
@@ -503,7 +503,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
                                                 tmp104[3] = tmp35;
                                                 const items1 = [tmp66, tmp99];
                                                 tmp104[4] = items1;
-                                                const tmp105 = closure_12(tmp(5963).Stack, tmp104);
+                                                const tmp105 = closure_12(tmp(5975).Stack, tmp104);
                                                 cResult[81] = tmp7.container;
                                                 cResult[82] = tmp66;
                                                 cResult[83] = tmp99;
@@ -552,7 +552,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
                                 }
                               }
                               const obj15 = { size: "lg", text: tmp70, onPress: tmp25, disabled: isQuestAccessSuspended, onPressDisabled: tmp72 };
-                              const tmp75 = closure_11(tmp(5230).Button, obj15);
+                              const tmp75 = closure_11(tmp(5242).Button, obj15);
                               cResult[54] = tmp25;
                               cResult[55] = isQuestAccessSuspended;
                               cResult[56] = tmp72;
@@ -592,7 +592,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
                       const obj18 = { variant: "text-sm/normal", color: "text-subtle", style: tmp57, children: null };
                       const items7 = [tmp58, "\u00A0", questsInstructionsToWinReward];
                       obj18.children = items7;
-                      const tmp62 = closure_12(tmp(5220).Text, obj18);
+                      const tmp62 = closure_12(tmp(5232).Text, obj18);
                       cResult[43] = questsInstructionsToWinReward;
                       cResult[44] = tmp58;
                       cResult[45] = tmp62;
@@ -644,7 +644,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
               }
             }
             const size = { quest, height: v87, width: v87, style: tmp7.questRewardTile };
-            const tmp42 = closure_11(checked(14087), size);
+            const tmp42 = closure_11(checked(14111), size);
             cResult[26] = quest;
             cResult[27] = tmp7.questRewardTile;
             cResult[28] = tmp42;
@@ -670,7 +670,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
       cResult[20] = trackQuestContentClickedWithImpression;
       cResult[21] = fn;
       tmp34 = fn;
-      const tmpResult16 = tmp(16311);
+      const tmpResult16 = tmp(16343);
     } else {
       if (cResult[9] === id.icon) {
       }
@@ -687,7 +687,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
       cResult[11] = applicationIconSource;
       const obj10 = checked(1417);
     }
-    const tmpResult13 = tmp(14091);
+    const tmpResult13 = tmp(14115);
   }
   const obj22 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: require("QuestTypes").QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
   cResult[6] = quest;
@@ -698,8 +698,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
 }) : (function QuestActivityUnenrolledModalInner(quest) {
   quest = quest.quest;
   let trackQuestContentClickedWithImpression;
-  const theme = quest(5191).useTheme();
-  let obj = quest(5191);
+  const theme = quest(5203).useTheme();
+  let obj = quest(5203);
   const tmp4 = closure_15(quest(4991).isThemeDark(theme));
   let obj2 = quest(4991);
   const items = [UnenrolledActivityQuestStore];
@@ -707,14 +707,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
   const checked = tmp5[0];
   dependencyMap = tmp5[1];
   let obj3 = quest(504);
-  let obj4 = quest(7242);
-  const getOrFetchApplication = obj4.useGetOrFetchApplication(quest(7783).getActivityApplicationId(quest));
-  const obj5 = quest(7783);
-  const questTaskDetails = quest(9546).useQuestTaskDetails(quest);
-  let obj6 = quest(9546);
-  const obj7 = quest(14091);
+  let obj4 = quest(7255);
+  const getOrFetchApplication = obj4.useGetOrFetchApplication(quest(7796).getActivityApplicationId(quest));
+  const obj5 = quest(7796);
+  const questTaskDetails = quest(9569).useQuestTaskDetails(quest);
+  let obj6 = quest(9569);
+  const obj7 = quest(14115);
   const items1 = [getOrFetchApplication];
-  const questsInstructionsToWinReward = obj7.useQuestsInstructionsToWinReward({ quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: quest(6698).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL });
+  const questsInstructionsToWinReward = obj7.useQuestsInstructionsToWinReward({ quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: quest(6711).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL });
   const memo = noop.useMemo(() => {
     let applicationIconSource = null;
     if (null != getOrFetchApplication) {
@@ -751,10 +751,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = { questContent: tmp4(6698).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: tmp4(7786).QuestContentCTA.START_QUEST, sourceQuestContent: tmp4(6698).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
+            const obj4 = { questContent: tmp4(6711).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: tmp4(7799).QuestContentCTA.START_QUEST, sourceQuestContent: tmp4(6711).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(9547).enrollInQuest(quest.id, obj4), done: false };
+            const obj6 = { value: tmp4(9570).enrollInQuest(quest.id, obj4), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -765,7 +765,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
           const obj = { value, done: true };
           return obj;
         } else {
-          v1(6657).pop();
+          v1(6670).pop();
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -775,13 +775,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
       }
     }
   }), items2);
-  const obj8 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: quest(6698).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
-  const checkboxA11yNative = quest(5025).useCheckboxA11yNative({ checked });
+  const obj8 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: quest(6711).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
+  const checkboxA11yNative = quest(5037).useCheckboxA11yNative({ checked });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  const obj9 = quest(5025);
-  const isQuestAccessSuspended = quest(9546).useIsQuestAccessSuspended();
-  const obj10 = quest(9546);
-  trackQuestContentClickedWithImpression = quest(16311).useTrackQuestContentClickedWithImpression();
+  const obj9 = quest(5037);
+  const isQuestAccessSuspended = quest(9569).useIsQuestAccessSuspended();
+  const obj10 = quest(9569);
+  trackQuestContentClickedWithImpression = quest(16343).useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
     trackQuestContentClickedWithImpression({ questId: quest.id, questContent: QuestTypes.QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: AnalyticsTypes.QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: QuestTypes.QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL });
@@ -795,13 +795,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
   if (tmp18Result) {
     const obj16 = { style: tmp4.appIconContainer, children: null };
     const obj17 = { source: memo, style: tmp4.appIcon };
-    obj16.children = closure_11(checked(5655), obj17);
+    obj16.children = closure_11(checked(5667), obj17);
     tmp18Result = closure_11(closure_7, obj16);
   }
   const items4 = [tmp18Result, ];
   const obj18 = { style: tmp4.rewardTileContainer, children: null };
   const size = { quest, height: v87, width: v87, style: tmp4.questRewardTile };
-  obj18.children = closure_11(checked(14087), size);
+  obj18.children = closure_11(checked(14111), size);
   items4[1] = closure_11(closure_7, obj18);
   obj15.children = items4;
   obj14.children = closure_12(closure_7, obj15);
@@ -810,12 +810,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
   const obj20 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: { textAlign: "center" }, children: null };
   const intl = tmp(1128).intl;
   obj20.children = intl.string(quest(1128).t.IrNgN4);
-  const items6 = [closure_11(quest(5220).Text, obj20), ];
+  const items6 = [closure_11(quest(5232).Text, obj20), ];
   const obj21 = { variant: "text-sm/normal", color: "text-subtle", style: { textAlign: "center" }, children: null };
   const intl2 = tmp(1128).intl;
   const items7 = [intl2.format(quest(1128).t.V3NSJx, { questName: quest.config.messages.questName }), "\u00A0", questsInstructionsToWinReward];
   obj21.children = items7;
-  items6[1] = closure_12(quest(5220).Text, obj21);
+  items6[1] = closure_12(quest(5232).Text, obj21);
   obj19.children = items6;
   items5[1] = closure_12(closure_7, obj19);
   obj13.children = items5;
@@ -832,7 +832,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
     tmp21 = callback1;
   }
   obj25.onPressDisabled = tmp21;
-  const items9 = [closure_11(quest(5230).Button, obj25), ];
+  const items9 = [closure_11(quest(5242).Button, obj25), ];
   const obj26 = { size: "lg", text: null, onPress: null, variant: "secondary" };
   const intl4 = tmp(1128).intl;
   obj26.text = intl4.string(quest(1128).t.fyT2ol);
@@ -840,7 +840,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
     const result = QuestActionCreators.dismissQuestActivityModal(quest.id);
     ModalActionCreatorsDefault.pop();
   };
-  items9[1] = closure_11(quest(5230).Button, obj26);
+  items9[1] = closure_11(quest(5242).Button, obj26);
   obj24.children = items9;
   const items10 = [closure_12(closure_7, obj24), ];
   const obj27 = { accessibilityRole, accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
@@ -852,17 +852,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestA
     QuestActionCreators.setAutoEnroll(!first);
   };
   obj27.style = { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: 8 };
-  const items11 = [closure_11(quest(6886).FormCheckbox, { checked }), ];
+  const items11 = [closure_11(quest(6899).FormCheckbox, { checked }), ];
   const obj28 = { variant: "text-sm/normal", color: "text-subtle", children: null };
   const intl6 = tmp(1128).intl;
   obj28.children = intl6.string(quest(1128).t["931n1T"]);
-  items11[1] = closure_11(quest(5220).Text, obj28);
+  items11[1] = closure_11(quest(5232).Text, obj28);
   obj27.children = items11;
   items10[1] = closure_12(closure_6, obj27);
   obj23.children = items10;
   items8[1] = closure_12(closure_7, obj23);
   obj12.children = items8;
-  return closure_12(quest(5963).Stack, obj12);
+  return closure_12(quest(5975).Stack, obj12);
 });
 ReactCompilerGating = fn(558);
 const headerLeft = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseButton() {
@@ -877,7 +877,7 @@ const headerLeft = ReactCompilerGating.isReactCompilerEnabled() ? (function Clos
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef8100, onPress: first, accessibilityLabel: null };
+    const obj2 = { source: _modDef8113, onPress: first, accessibilityLabel: null };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     const tmp8 = closure_1_11(HeaderActionButton.HeaderActionButton, obj2);
@@ -889,7 +889,7 @@ const headerLeft = ReactCompilerGating.isReactCompilerEnabled() ? (function Clos
   return tmp5;
 }) : (function CloseButton() {
   const obj = {
-    source: _modDef8100,
+    source: _modDef8113,
     onPress: function onClose() {
       return ModalActionCreatorsDefault.pop();
     },
@@ -985,7 +985,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestAct
       };
       tmp11[constants.MAIN] = obj2;
       const obj3 = { screens: tmp11, initialRouteName: constants.MAIN };
-      const tmp15 = closure_11(tmp(11122).Modal, obj3);
+      const tmp15 = closure_11(tmp(11145).Modal, obj3);
       cResult[5] = stateFromStores;
       cResult[6] = tmp15;
       const tmp10 = tmp15;
@@ -1019,7 +1019,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestAct
           const obj = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: null };
           const intl = questId(1128).intl;
           obj.children = intl.string(questId(1128).t.l7E81v);
-          return closure_1_11(questId(5220).Text, obj);
+          return closure_1_11(questId(5232).Text, obj);
         },
       render() {
           return closure_2_11(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
@@ -1034,7 +1034,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestAct
     };
     obj2[constants.MAIN] = obj3;
     const obj4 = { screens: obj2, initialRouteName: constants.MAIN };
-    return closure_11(tmp(11122).Modal, obj4);
+    return closure_11(tmp(11145).Modal, obj4);
   }
   let obj = questId(504);
   tmp = questId;

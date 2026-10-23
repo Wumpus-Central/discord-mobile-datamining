@@ -5,13 +5,13 @@ import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objec
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = prop(1128);
-const native = prop(5125);
-const Text_Text = prop(5220);
-const useTextField = prop(7001);
-const InputFieldContainer2 = prop(7008);
-const NativeTextInput = prop(7011);
-const propsForNativeTextInput = prop(7014);
-const useCharacterLimitAnnouncement = prop(7167);
+const native = prop(5137);
+const Text_Text = prop(5232);
+const useTextField = prop(7014);
+const InputFieldContainer2 = prop(7021);
+const NativeTextInput = prop(7024);
+const propsForNativeTextInput = prop(7027);
+const useCharacterLimitAnnouncement = prop(7180);
 require = fn;
 let closure_2 = ["ref"];
 const View = fn(17).View;

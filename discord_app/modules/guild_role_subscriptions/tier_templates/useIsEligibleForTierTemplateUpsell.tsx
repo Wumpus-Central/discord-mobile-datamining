@@ -67,11 +67,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[4];
       }
       if (cResult[5] !== stateFromStores) {
-        const result = tmp(7345).canManageGuildRoleSubscriptions(stateFromStores);
+        const result = tmp(7358).canManageGuildRoleSubscriptions(stateFromStores);
         cResult[5] = stateFromStores;
         cResult[6] = result;
         let tmp17 = result;
-        const tmpResult4 = tmp(7345);
+        const tmpResult4 = tmp(7358);
       } else {
         tmp17 = cResult[6];
       }

@@ -7,8 +7,8 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 const initialize = obj(504);
 const utils_ColorUtils = obj(1105);
-const useToken = obj(5238);
-const UserProfileGradientUtils = obj(8700);
+const useToken = obj(5250);
+const UserProfileGradientUtils = obj(8718);
 require = fn;
 const ThemeTypes = fn(1098).ThemeTypes;
 const ReactCompilerGating = fn(558);

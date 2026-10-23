@@ -12,7 +12,7 @@ function handleConnectionOpen() {
   const ConnectionOpenTriggerPoint = ConnectionOpenTriggerPoint2.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
-const DebugExperiment = fn(14952);
+const DebugExperiment = fn(14976);
 const Store = initializeDefault.Store;
 class ExperimentTriggerPointStore extends Store {
   constructor() {

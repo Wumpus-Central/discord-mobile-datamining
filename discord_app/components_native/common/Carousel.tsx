@@ -2,7 +2,7 @@
 import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../design/void/native.tsx";
-import LegacyBaseButton from "../../../_runtime/05283_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../_runtime/05295_LegacyBaseButton.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -46,7 +46,7 @@ PageIndicator.prototype["render"] = function render() {
   obj3.style = items2;
   return React4(React2, obj3);
 };
-PageIndicator.contextType = fn(5023).ThemeContext;
+PageIndicator.contextType = fn(5035).ThemeContext;
 PageIndicator.defaultProps = { indicatorSpace: 10, indicatorSize: 20 };
 const ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
@@ -152,7 +152,7 @@ Carousel.prototype["render"] = function render() {
   obj2.children = items1;
   return hasOwnProperty(React2, obj2);
 };
-Carousel.contextType = fn(5023).ThemeContext;
+Carousel.contextType = fn(5035).ThemeContext;
 Carousel.defaultProps = { pageIndictor: true, width: 375 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Carousel.tsx");

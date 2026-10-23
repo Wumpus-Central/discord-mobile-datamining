@@ -9,7 +9,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import utils_getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
 import guild_profile_GuildProfileUtils from "../GuildProfileUtils.tsx";
@@ -380,7 +380,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (tmp5Result) {
         const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-        tmp5Result = closure_7(guildProfile(5220).Text, obj3);
+        tmp5Result = closure_7(guildProfile(5232).Text, obj3);
       }
       const items2 = [
         tmp5Result,

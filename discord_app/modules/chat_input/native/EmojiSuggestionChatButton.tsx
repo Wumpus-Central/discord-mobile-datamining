@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../_runtime/05283_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05295_LegacyBaseButton.js";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";

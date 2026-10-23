@@ -83,7 +83,7 @@ class NUFChannelsManager extends tmp2 {
           }
           if (isNewUserResult) {
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(14554, dependencyMap.paths),
+              asyncRequireImpl(14578, dependencyMap.paths),
               "NUFChannelsActionSheet",
             );
             const Storage2 = Storage3.Storage;
@@ -99,8 +99,8 @@ class NUFChannelsManager extends tmp2 {
       value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(5018).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(5018);
+        isNewUserResult = applyArgumentsResult(5023).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(5023);
       }
       return isNewUserResult;
     };

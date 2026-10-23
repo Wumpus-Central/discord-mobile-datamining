@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/components/ProgressCircle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../../_runtime/07947_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07960_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -59,7 +59,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return hasOwnProperty(View, obj);
 };
-ProgressCircle.contextType = fn(5023).ThemeContext;
+ProgressCircle.contextType = fn(5035).ThemeContext;
 ProgressCircle.defaultProps = { size: 20, strokeWidth: 0.9, color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/components/ProgressCircle.tsx");

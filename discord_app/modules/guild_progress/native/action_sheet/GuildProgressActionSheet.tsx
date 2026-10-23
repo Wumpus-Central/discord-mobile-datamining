@@ -22,7 +22,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(13325);
+const GuildProgressConstants = fn(13348);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1087);
 ({
@@ -280,14 +280,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj3;
               } else {
                 let base64;
-                tmp5(8981).init(View);
-                const obj6 = tmp5(8981);
-                tmp2(13330).hideActionSheet(id.id);
-                const obj7 = tmp2(13330);
+                tmp5(9004).init(View);
+                const obj6 = tmp5(9004);
+                tmp2(13353).hideActionSheet(id.id);
+                const obj7 = tmp2(13353);
                 const obj4 = { size };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj5 = { value: tmp5(8140).openImagePicker(obj4), done: false };
+                const obj5 = { value: tmp5(8152).openImagePicker(obj4), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -300,8 +300,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               base64 = value.base64;
               if (null != base64) {
-                tmp5(8981).updateIcon(closure_129_5, base64);
-                const obj = tmp5(8981);
+                tmp5(9004).updateIcon(closure_129_5, base64);
+                const obj = tmp5(9004);
               }
               c3 = 3;
               return { value: "IconComponent", done: null };

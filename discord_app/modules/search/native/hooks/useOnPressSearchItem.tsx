@@ -87,10 +87,10 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9691);
+const SearchConstants = fn(9713);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18003).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9690).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(18047).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9712).SearchFilterAddLocations;
 const Constants = fn(1087);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
 const StaticChannelRoute = fn(4828).StaticChannelRoute;
@@ -917,8 +917,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
       searchContext = text;
       const type = searchContext.type;
       if (constants4.DMS === type) {
-        const result = searchContext(13158).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-        let obj2 = searchContext(13158);
+        const result = searchContext(13181).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+        let obj2 = searchContext(13181);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
         if (null != obj) {
@@ -950,8 +950,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13158).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-      let obj2 = searchContext(13158);
+      const result = searchContext(13181).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+      let obj2 = searchContext(13181);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

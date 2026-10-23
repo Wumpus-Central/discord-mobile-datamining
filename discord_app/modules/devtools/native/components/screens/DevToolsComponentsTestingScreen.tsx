@@ -24,7 +24,7 @@ let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, 
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 let closure_9 = createStyles.createStyles(obj2);
-const InteractionComponentUtils = fn(6000);
+const InteractionComponentUtils = fn(6012);
 let obj6 = {
   type: fn(2000).ComponentType.STRING_SELECT,
   custom_id: "test",

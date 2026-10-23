@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { disabled: flag, text: tmp10, onPress: N };
-          const tmp21 = jsx(tmp(5230).Button, { disabled: flag, text: tmp10, onPress: N });
+          const tmp21 = jsx(tmp(5242).Button, { disabled: flag, text: tmp10, onPress: N });
           cResult[11] = tmp10;
           cResult[12] = flag;
           cResult[13] = N;
@@ -160,6 +160,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
         const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
       }, items1);
-      obj2.children = jsx(channel(5230).Button, { disabled: flag, text: stringResult, onPress: callback });
+      obj2.children = jsx(channel(5242).Button, { disabled: flag, text: stringResult, onPress: callback });
       return <View style={null}>{null}</View>;
     };

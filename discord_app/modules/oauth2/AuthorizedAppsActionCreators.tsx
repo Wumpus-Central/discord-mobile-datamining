@@ -37,33 +37,39 @@ function fetchAuthorizedApps() {
   return applyArgumentsResult;
 }
 let closure_10 = async function _fetchAuthorizedApps() {
-  c2 = 0;
-  c1 = 0;
+  c4 = 0;
+  c5 = 0;
+  c3 = 0;
   return (async (arg0) => {
-    if (c1 === 2) {
-      c1 = 3;
+    if (c5 === 2) {
+      c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
+        const obj2 = { value, done: true };
         return obj2;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
       try {
-        c1 = 2;
-        if (0 === c2) {
+        c5 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            c1 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c1 = 3;
+            c5 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = application_ids;
+            closure_129_1 = undefined;
+            c3 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = {
               url: OAUTH2_TOKENS.OAUTH2_TOKENS,
@@ -73,51 +79,55 @@ let closure_10 = async function _fetchAuthorizedApps() {
             };
             const obj4 = { application_ids };
             request.query = obj4;
-            value = HTTP.get(request);
-            c2 = 1;
-            c1 = 1;
-            const obj5 = {
-              value: value.then(
-                (body) => {
-                  const obj = c1(584);
-                  return obj.dispatch({
-                    type: "USER_AUTHORIZED_APPS_UPDATE",
-                    isFullFetch: null == closure_0,
-                    tokens: closure_2_8(body.body, closure_0),
-                  });
-                },
-                () => {
-                  if (null == closure_0) {
-                    let obj2 = { type: "full" };
-                  } else {
-                    obj2 = { type: "partial", applicationIds: tmp };
-                  }
-                  return c1(584).dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_FAILED", request: obj2 });
-                },
-              ),
-              done: false,
-            };
+            c4 = 2;
+            c5 = 1;
+            const obj5 = { value: HTTP.get(request), done: false };
             return obj5;
           }
+        } else if (1 === tmp7) {
+          c3 = 0;
+          let dispatch = closure_130_1(closure_130_2[4]).dispatch;
+          if (null == closure_129_0) {
+            let obj6 = { type: "full" };
+          } else {
+            obj6 = { type: "partial", applicationIds: closure_129_0 };
+          }
+          const obj7 = { type: "USER_AUTHORIZED_APPS_REQUEST_FAILED", request: obj6 };
+          dispatch = dispatch(obj7);
+          c5 = 3;
+          const tmp20 = closure_130_1(closure_130_2[4]);
         } else if (arg0 === 1) {
-          c1 = 3;
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c1 = 3;
-          let obj = { value, done: true };
-          return obj;
+          c3 = 0;
+          c5 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
-          c1 = 3;
-          return { value: "IconComponent", done: null };
+          closure_129_1 = value;
+          c3 = 0;
+          const obj9 = {
+            type: "USER_AUTHORIZED_APPS_UPDATE",
+            isFullFetch: null == closure_129_0,
+            tokens: closure_130_8(closure_129_1.body, closure_129_0),
+          };
+          c5 = 3;
+          const obj10 = { value: closure_130_1(closure_130_2[4]).dispatch(obj9), done: true };
+          return obj10;
         }
-      } catch (tmp5) {
-        c1 = tmp;
-        throw tmp5;
+      } catch (tmp24) {
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp24;
+        } else {
+          c4 = tmp;
+        }
       }
     }
   })();
 };
-const FetchState = fn(7188).FetchState;
+const FetchState = fn(7201).FetchState;
 const Endpoints = fn(1087).Endpoints;
 const batchInvocationManager = new fn(4816).BatchInvocationManager(fetchAuthorizedApps, {
   predicate(arg0) {

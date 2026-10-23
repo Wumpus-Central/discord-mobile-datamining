@@ -63,7 +63,7 @@ import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.t
 
 require = fn;
 let closure_3 = ["ref"];
-const PollsInteractionStore = fn(11006);
+const PollsInteractionStore = fn(11029);
 ({ useChannelPollInteractions: closure_30, useMessagePollInteractions: closure_31 } = PollsInteractionStore);
 const Constants = fn(1087);
 ({ ActivityActionTypes: closure_61, ChannelTypesSets: closure_62, ME: closure_63, MessageTypes: closure_64, Permissions: closure_65 } = Constants);

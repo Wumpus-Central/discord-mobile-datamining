@@ -8,9 +8,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef8749 from "../../../../../_runtime/metro/08749__.js";
-import PaginationDefault from "../../../../../_runtime/10492_Pagination.js";
-import _modDef11230 from "../../../../../_runtime/metro/11230__.js";
+import _modDef8767 from "../../../../../_runtime/metro/08767__.js";
+import PaginationDefault from "../../../../../_runtime/10514_Pagination.js";
+import _modDef11253 from "../../../../../_runtime/metro/11253__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19030);
+const GuildSettingsRoleConstants = fn(19074);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_14(_modDef8749, {
+        children: closure_14(_modDef8767, {
           maximumValue: values.length - 1,
           minimumTrackTintColor: values[value].color,
           minimumValue: closure_9.COSMETIC,
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { style: closure_3.templateContent, children: null };
               const items = [
                 closure_3_14(native.Icon, {
-                  source: _modDef11230,
+                  source: _modDef11253,
                   size: native.IconSizes.MEDIUM,
                   color: nativeDefault.unsafe_rawColors.GREEN_360,
                 }),

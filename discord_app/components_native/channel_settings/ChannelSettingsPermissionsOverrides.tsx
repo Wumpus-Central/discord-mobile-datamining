@@ -189,7 +189,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             const intl4 = closure_0(tmp5[27]).intl;
             obj18.confirmText = intl4.string(closure_0(tmp5[27]).t.psXQHP);
             obj18.onConfirm = function onConfirm() {
-              const obj = closure_1_1(5646);
+              const obj = closure_1_1(5658);
               obj.openURL(closure_1_1(2067).getArticleURL(constants.PERMISSIONS_TUTORIAL));
             };
             id(tmp5[26]).show(obj18);
@@ -315,7 +315,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           };
           const intl = closure_0(1128).intl;
           obj.label = intl.string(closure_0(1128).t.i4jeWR);
-          return closure_2_19(closure_0(9676).HeaderTextButton, obj);
+          return closure_2_19(closure_0(9698).HeaderTextButton, obj);
         },
       };
       navigation.setOptions(obj);
@@ -336,7 +336,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(require("Text/Text").Text, obj5);
   if (fromCreate.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = closure_19(id(10805), obj6);
+    let tmp12Result = closure_19(id(10828), obj6);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -347,7 +347,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       str = "";
     }
     const obj7 = { end: true, label: str, start: true, trailing: tmp13 };
-    tmp12Result = closure_19(tmp2(6888).TableRow, obj7);
+    tmp12Result = closure_19(tmp2(6901).TableRow, obj7);
   }
   let obj8 = { style: tmp.container, contentContainerStyle: null, children: null };
   const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1633)().bottom }];
@@ -360,7 +360,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     let intl = tmp2(1128).intl;
     let obj12 = { appName: tmp9.name };
     obj11.message = intl.format(tmp2(1128).t["Xq++FA"], obj12);
-    obj10.children = closure_19(tmp2(7938).InlineNotice, obj11);
+    obj10.children = closure_19(tmp2(7951).InlineNotice, obj11);
     tmp12Result2 = closure_19(closure_7, obj10);
   }
   items6[1] = tmp12Result2;
@@ -380,19 +380,19 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         const obj = {
           variant: "text-xs/medium",
           color: "text-subtle",
-          children: closure_1_0(18208).renderDescription(description.description),
+          children: closure_1_0(18252).renderDescription(description.description),
         };
-        const items = [closure_1_19(closure_1_0(5220).Text, obj)];
+        const items = [closure_1_19(closure_1_0(5232).Text, obj)];
         let tmp5Result = null;
         if (false !== tmp) {
           tmp5Result = null;
           if ("" !== tmp) {
             const obj3 = { variant: "text-xs/medium", color: "text-feedback-critical", children: tmp };
-            tmp5Result = closure_1_19(closure_1_0(5220).Text, obj3);
+            tmp5Result = closure_1_19(closure_1_0(5232).Text, obj3);
           }
         }
         items[1] = tmp5Result;
-        const obj2 = closure_1_0(18208);
+        const obj2 = closure_1_0(18252);
         const tmp3Result = closure_1_21(closure_1_20, { children: items });
         const tmp6Result = closure_1_0(1384);
         const obj4 = {
@@ -409,8 +409,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         obj5.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj4.trailing = closure_1_19(id(18209), obj5);
-        return closure_1_19(closure_1_0(6888).TableRow, obj4, "row-" + index);
+        obj4.trailing = closure_1_19(id(18253), obj5);
+        return closure_1_19(closure_1_0(6901).TableRow, obj4, "row-" + index);
       }),
     });
     return closure_2_19(React5, obj, "section-" + index);

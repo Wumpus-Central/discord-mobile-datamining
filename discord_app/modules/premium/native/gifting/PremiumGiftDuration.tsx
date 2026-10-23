@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   const cResult = planInterval(576).c(9);
   const tmp4 = closure_11();
   const obj = planInterval(576);
-  planInterval = planInterval(10427).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10449).useNativeGiftContext().planInterval;
   ({ durationContainer, durationTitle } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1128).intl;
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   }
   if (cResult[1] !== tmp4.durationTitle) {
     const obj3 = { style: durationTitle, variant: "text-sm/semibold", children: first };
-    const tmp9 = closure_6(tmp(5220).Text, obj3);
+    const tmp9 = closure_6(tmp(5232).Text, obj3);
     cResult[1] = tmp4.durationTitle;
     cResult[2] = tmp9;
     let tmp7 = tmp9;
@@ -332,15 +332,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   cResult[7] = tmp10;
   cResult[8] = tmp14;
   tmp13 = tmp14;
-  const obj2 = planInterval(10427);
+  const obj2 = planInterval(10449);
 }) : (function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(10427).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10449).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1128).intl;
   obj3.children = intl.string(planInterval(1128).t["8XT6Nf"]);
-  items = [closure_6(planInterval(5220).Text, obj3), ];
+  items = [closure_6(planInterval(5232).Text, obj3), ];
   items[1] = items.map((planInterval, index) => timestampProducer(closure_10, { selected: planInterval === planInterval, planInterval }, index));
   obj2.children = items;
   return closure_7(View, obj2);

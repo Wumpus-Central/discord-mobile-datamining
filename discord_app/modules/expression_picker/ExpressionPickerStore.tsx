@@ -1,8 +1,8 @@
 // discord_app/modules/expression_picker/ExpressionPickerStore.tsx
 import ExpressionPickerConstants from "ExpressionPickerConstants.tsx";
-import uniqueIdDefault from "../../../_runtime/06658_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/06671_uniqueId.js";
 import identity_mod from "../../../_runtime/metro/01269__.js";
-import 05150__ from "../../../_runtime/metro/05150__.js";
+import 05162__ from "../../../_runtime/metro/05162__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewT
 let closure_3 = Object.freeze({ activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, showEmojiPacks: false, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false });
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-const withEqualityFnResult = identity(module_5150.persist(() => closure_3, {
+const withEqualityFnResult = identity(module_5162.persist(() => closure_3, {
   name: "expression-picker-last-active-view",
   partialize(lastActiveView) {
     return { lastActiveView: lastActiveView.lastActiveView };

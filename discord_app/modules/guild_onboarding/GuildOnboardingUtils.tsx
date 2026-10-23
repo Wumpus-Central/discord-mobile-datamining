@@ -79,7 +79,7 @@ function areStatesEqual(arg0, arg1) {
   return tmp;
 }
 let closure_7 = fn(4899).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7181).OnboardingConnectionType;
+const OnboardingConnectionType = fn(7194).OnboardingConnectionType;
 const Constants = fn(1087);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
 const GuildMemberFlags = fn(4887).GuildMemberFlags;

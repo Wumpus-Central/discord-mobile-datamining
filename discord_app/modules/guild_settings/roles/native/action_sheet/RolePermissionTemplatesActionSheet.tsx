@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { title: null };
           let intl = tmp(1128).intl;
           obj2.title = intl.string(tmp(1128).t.KgCkoQ);
-          const tmp12 = jsx(tmp(7233).BottomSheetTitleHeader, { title: null });
+          const tmp12 = jsx(tmp(7246).BottomSheetTitleHeader, { title: null });
           cResult[7] = tmp12;
           const tmp11 = tmp12;
         } else {
@@ -139,14 +139,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { header: tmp11, startExpanded: true, children: null };
           const obj4 = { style: tmp4.templateContainer, children: tmp13 };
           obj3.children = <View style={tmp4.templateContainer}>{tmp13}</View>;
-          const tmp21 = jsx(tmp(7283).ActionSheet, { header: tmp11, startExpanded: true, children: null });
+          const tmp21 = jsx(tmp(7296).ActionSheet, { header: tmp11, startExpanded: true, children: null });
           cResult[11] = tmp4.templateContainer;
           cResult[12] = tmp13;
           cResult[13] = tmp21;
           tmp18 = tmp21;
         }
         const obj5 = { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId };
-        const tmp17 = jsx(onPermissionsChanged(19034), {
+        const tmp17 = jsx(onPermissionsChanged(19078), {
           onSelect: tmp10,
           location: constants2.GUILD_ROLE_TEMPLATE_POPOUT,
           guildId,
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             dependencyMap(closure_0);
           };
           obj2.onCancel = function onCancel() {
-            onPermissionsChanged(5196).hideActionSheet();
+            onPermissionsChanged(5208).hideActionSheet();
           };
           onPermissionsChanged(tmp9[11]).show(obj2);
           const obj = onPermissionsChanged(tmp9[11]);
@@ -233,12 +233,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj4.confirmText = intl4.string(util.t.p89ACt);
               obj4.onConfirm = function onConfirm() {
                 importDefault(closure_0);
-                closure_1_1(5196).hideActionSheet();
-                const obj = closure_1_1(5196);
-                const result = closure_0(5648).roleTemplateAppliedToast();
+                closure_1_1(5208).hideActionSheet();
+                const obj = closure_1_1(5208);
+                const result = closure_0(5660).roleTemplateAppliedToast();
               };
               obj4.onCancel = function onCancel() {
-                closure_1_1(5196).hideActionSheet();
+                closure_1_1(5208).hideActionSheet();
               };
               AlertActionCreatorsDefault.show(obj4);
             } else {
@@ -277,12 +277,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj4.confirmText = intl4.string(util.t.p89ACt);
                 obj4.onConfirm = function onConfirm() {
                   importDefault(closure_0);
-                  closure_1_1(5196).hideActionSheet();
-                  const obj = closure_1_1(5196);
-                  const result = closure_0(5648).roleTemplateAppliedToast();
+                  closure_1_1(5208).hideActionSheet();
+                  const obj = closure_1_1(5208);
+                  const result = closure_0(5660).roleTemplateAppliedToast();
                 };
                 obj4.onCancel = function onCancel() {
-                  closure_1_1(5196).hideActionSheet();
+                  closure_1_1(5208).hideActionSheet();
                 };
                 AlertActionCreatorsDefault.show(obj4);
               } else {

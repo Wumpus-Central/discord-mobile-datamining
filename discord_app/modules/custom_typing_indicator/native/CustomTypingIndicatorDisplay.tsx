@@ -5,10 +5,10 @@ import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = PressableOpacity(1128);
-const Text_Text = PressableOpacity(5220);
-const Stack_Stack = PressableOpacity(5963);
-const Pressables = PressableOpacity(6893);
-const CustomTypingIndicatorUtils = PressableOpacity(13003);
+const Text_Text = PressableOpacity(5232);
+const Stack_Stack = PressableOpacity(5975);
+const Pressables = PressableOpacity(6906);
+const CustomTypingIndicatorUtils = PressableOpacity(13026);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);

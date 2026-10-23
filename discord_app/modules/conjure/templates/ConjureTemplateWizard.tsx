@@ -76,7 +76,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
     }
   })();
 };
-const ConjureConnectionStore = fn(10675);
+const ConjureConnectionStore = fn(10697);
 ({ prepareTemplate: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");

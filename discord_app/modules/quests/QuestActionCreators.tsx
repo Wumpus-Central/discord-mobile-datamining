@@ -344,8 +344,8 @@ let closure_19 = async function _fetchCurrentQuests() {
         } else if (arg0 !== 2) {
           closure_129_1 = value;
           quests2 = closure_129_1.body.quests;
-          const found = quests2.filter((item) => closure_1_0(7769).isQuestWithKnownConfigVersion(item));
-          closure_129_3 = found.map((item) => closure_1_0(7769).questWithUserStatusFromServer(item));
+          const found = quests2.filter((item) => closure_1_0(7782).isQuestWithKnownConfigVersion(item));
+          closure_129_3 = found.map((item) => closure_1_0(7782).questWithUserStatusFromServer(item));
           closure_129_4 = closure_129_1.body.quest_enrollment_blocked_until;
           closure_129_5 = closure_129_1.body.quest_access_suspended_until;
           closure_129_6 = closure_129_3.filter((userStatus) => {
@@ -380,7 +380,7 @@ let closure_19 = async function _fetchCurrentQuests() {
           obj10.data = obj11;
           closure_130_1(closure_130_2[16]).addBreadcrumb(obj10);
           const excluded_quests = closure_129_1.body.excluded_quests;
-          closure_129_13 = excluded_quests.map((item) => closure_1_0(7769).excludedQuestFromServer(item));
+          closure_129_13 = excluded_quests.map((item) => closure_1_0(7782).excludedQuestFromServer(item));
           const obj9 = closure_130_1(closure_130_2[16]);
           const obj13 = {
             type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
@@ -1674,7 +1674,7 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (content != null) {
                   value = content.get(item);
                 }
-                return !closure_0(7757).earnedDecisionIsValid(value);
+                return !closure_0(7770).earnedDecisionIsValid(value);
               });
               closure_132_2 = found;
               if (0 !== found.length) {
@@ -1751,7 +1751,7 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
                   if (obj.isQuestWithKnownConfigVersion(tmp)) {
                     tmp2 = tmp;
                   }
-                  obj = closure_0(7769);
+                  obj = closure_0(7782);
                 }
                 items[1] = tmp2;
                 return items;
@@ -2551,15 +2551,15 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(9548).getVisibleGuildIdsMethod;
-const FetchStatus = fn(7763).FetchStatus;
-const ORBS_INTRO_QUEST_ID = fn(6695).ORBS_INTRO_QUEST_ID;
+const getVisibleGuildIdsMethod = fn(9571).getVisibleGuildIdsMethod;
+const FetchStatus = fn(7776).FetchStatus;
+const ORBS_INTRO_QUEST_ID = fn(6708).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1087);
 ({ AnalyticEvents: map1, Endpoints: closure_14 } = Constants);
 let items = [
-  fn(6698).QuestContent.QUEST_BAR,
-  fn(6698).QuestContent.QUEST_BAR_V2,
-  fn(6698).QuestContent.QUEST_BAR_MOBILE,
+  fn(6711).QuestContent.QUEST_BAR,
+  fn(6711).QuestContent.QUEST_BAR_V2,
+  fn(6711).QuestContent.QUEST_BAR_MOBILE,
 ];
 const set = new Set(items);
 const QuestEnrollmentResultType = {

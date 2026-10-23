@@ -10,7 +10,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(16569).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(16616).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);

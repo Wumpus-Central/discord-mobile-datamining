@@ -75,9 +75,9 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(16538);
+const FontScaleStore = fn(16585);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8318).MobileUserSettings;
+const MobileUserSettings = fn(8330).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);

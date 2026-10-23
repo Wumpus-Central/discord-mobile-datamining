@@ -254,15 +254,15 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const top = children.top;
       ({ bottom, left } = children);
       ({ right, leading: dependencyMap } = children);
-      const sharedValue = top(5038).useSharedValue(0);
-      let obj = top(5038);
-      const sharedValue1 = top(5038).useSharedValue(0);
-      const obj2 = top(5038);
-      const sharedValue2 = top(5038).useSharedValue(0.2);
-      const obj3 = top(5038);
-      const sharedValue3 = top(5038).useSharedValue(0);
-      let obj4 = top(5038);
-      const mountLayoutEffect = top(5249).useMountLayoutEffect(() => {
+      const sharedValue = top(5050).useSharedValue(0);
+      let obj = top(5050);
+      const sharedValue1 = top(5050).useSharedValue(0);
+      const obj2 = top(5050);
+      const sharedValue2 = top(5050).useSharedValue(0.2);
+      const obj3 = top(5050);
+      const sharedValue3 = top(5050).useSharedValue(0);
+      let obj4 = top(5050);
+      const mountLayoutEffect = top(5261).useMountLayoutEffect(() => {
         randomizeAnimationValues({
           positionValue: sharedValue,
           rotationValue: sharedValue1,
@@ -271,7 +271,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           leading,
         });
       });
-      const obj5 = top(5249);
+      const obj5 = top(5261);
       class S {
         constructor() {
           obj = { scale: closure_5.get() };
@@ -316,8 +316,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       S.__workletHash = 17194622427708;
       S.__initData = __initData2;
-      const style = top(5038).useAnimatedStyle(S);
-      return closure_11(left(5038).View, { style, children: children.emojiComponent });
+      const style = top(5050).useAnimatedStyle(S);
+      return closure_11(left(5050).View, { style, children: children.emojiComponent });
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1254,7 +1254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 emoji_name: closure_129_2.name,
                 emoji_animated: closure_129_2.animated,
                 recommended: closure_129_4.current,
-                location: tmp22(7263).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+                location: tmp22(7276).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
               };
               tmp22(1267).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
               const _setTimeout = setTimeout;

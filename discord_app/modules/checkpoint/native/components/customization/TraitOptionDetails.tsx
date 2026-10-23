@@ -26,7 +26,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp4;
       let tmp5 = null;
       if (!asset.hidden) {
-        if (asset.status === tmp(6025).CheckpointTraitOptionStatus.NITRO_LOCKED) {
+        if (asset.status === tmp(6038).CheckpointTraitOptionStatus.NITRO_LOCKED) {
           if (cResult[0] !== tmp4) {
             const intl = tmp(1128).intl;
             const obj2 = {
@@ -39,9 +39,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                     style: subscribeLink.subscribeLink,
                     onPress() {
                       const obj = { analyticsLocations: null };
-                      const items = [closure_1_1(7263).CHECKPOINT];
+                      const items = [closure_1_1(7276).CHECKPOINT];
                       obj.analyticsLocations = items;
-                      return closure_1_1(9769)(obj);
+                      return closure_1_1(9791)(obj);
                     },
                     accessibilityRole: "link",
                     children,
@@ -56,11 +56,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
         } else {
           if (cResult[2] !== asset) {
-            const assetDescription = tmp(6347).getAssetDescription(asset);
+            const assetDescription = tmp(6360).getAssetDescription(asset);
             cResult[2] = asset;
             cResult[3] = assetDescription;
             let tmp6 = assetDescription;
-            const tmpResult = tmp(6347);
+            const tmpResult = tmp(6360);
           } else {
             tmp6 = cResult[3];
           }
@@ -112,9 +112,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   style: subscribeLink.subscribeLink,
                   onPress() {
                     const obj = { analyticsLocations: null };
-                    const items = [closure_1_1(7263).CHECKPOINT];
+                    const items = [closure_1_1(7276).CHECKPOINT];
                     obj.analyticsLocations = items;
-                    return closure_1_1(9769)(obj);
+                    return closure_1_1(9791)(obj);
                   },
                   accessibilityRole: "link",
                   children,
@@ -125,8 +125,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           };
           let formatResult = format(_modDef3088["3Wq/bk"], obj);
         } else {
-          formatResult = format(6347).getAssetDescription(asset);
-          const formatResult1 = format(6347);
+          formatResult = format(6360).getAssetDescription(asset);
+          const formatResult1 = format(6360);
         }
       }
     };

@@ -5,10 +5,10 @@ import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef12684 from "../../../../_runtime/metro/12684__.js";
-import _modDef12685 from "../../../../_runtime/metro/12685__.js";
-import _modDef12686 from "../../../../_runtime/metro/12686__.js";
-import _modDef12687 from "../../../../_runtime/metro/12687__.js";
+import _modDef12703 from "../../../../_runtime/metro/12703__.js";
+import _modDef12704 from "../../../../_runtime/metro/12704__.js";
+import _modDef12705 from "../../../../_runtime/metro/12705__.js";
+import _modDef12706 from "../../../../_runtime/metro/12706__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -90,9 +90,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef12684;
+      let tmp10Result = _modDef12703;
     } else {
-      tmp10Result = _modDef12685;
+      tmp10Result = _modDef12704;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj)];
@@ -123,13 +123,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef12686;
+    obj5.source = _modDef12705;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef12687 };
+    const obj7 = { source: _modDef12706 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);
@@ -154,7 +154,7 @@ prototype["render"] = function render() {
   obj.children = timestampProducer(View, obj2);
   return hasOwnProperty(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(5023).ThemeContext;
+GuildIconUploader.contextType = fn(5035).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

@@ -12,7 +12,7 @@ require = fn;
 const Accessibility = fn(1087).Accessibility;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11181);
+const SettingBuilders = fn(11204);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useToastDurationSettingProps() {
       const cResult = c.c(15);
@@ -142,7 +142,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["3oxlia"]);
   },
-  parent: fn(8318).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8330).MobileUserSettings.ACCESSIBILITY,
   useProps: ReactCompilerGating.isReactCompilerEnabled()
     ? function useToastDurationSettingProps() {
         const cResult = c.c(15);

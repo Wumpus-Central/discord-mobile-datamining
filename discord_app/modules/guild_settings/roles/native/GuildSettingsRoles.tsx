@@ -38,7 +38,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(4876).isEveryoneRole;
-let closure_15 = fn(19026).GuildSettingsRoleEditSections;
+let closure_15 = fn(19070).GuildSettingsRoleEditSections;
 const Constants = fn(1087);
 ({
   GuildSettingsSections: closure_16,
@@ -1660,7 +1660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj8 = {
             style: tmp.emptyRolesIcon,
             size: tmp3(tmp4[46]).Icon.Sizes.LARGE,
-            source: require("../../../../../_runtime/metro/08968__.js"),
+            source: require("../../../../../_runtime/metro/08991__.js"),
           };
           obj7.leading = tmp37(tmp3(tmp4[46]).Icon, obj8);
           let obj9 = { variant: "text-md/semibold", color: "interactive-text-default", children: null };

@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj4;
               } else {
                 closure_0 = tmp4;
-                const obj8 = v1(8863);
+                const obj8 = v1(8886);
                 if (GuildScheduledEventStore) {
                   v1 = 2;
                   dependencyMap = 1;
@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj = { value, done: true };
                 return obj;
               }
-              v1(5196).hideActionSheet();
+              v1(5208).hideActionSheet();
               dependencyMap = 3;
               return { value: "IconComponent", done: null };
             }

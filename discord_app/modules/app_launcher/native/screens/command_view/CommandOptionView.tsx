@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
-import _modDef10164 from "../../../../../../_runtime/metro/10164__.js";
+import _modDef10186 from "../../../../../../_runtime/metro/10186__.js";
 import AppLauncherCommandOptionDefault from "../../options/AppLauncherCommandOption.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -154,17 +154,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_8();
       const items = [AccessibilityStore];
       const stateFromStores = option(504).useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
-      const ReduceMotion = option(5038).ReduceMotion;
+      const ReduceMotion = option(5050).ReduceMotion;
       const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
       const obj = option(504);
-      const optionEnteringAnimation = option(12107).useOptionEnteringAnimation();
+      const optionEnteringAnimation = option(12126).useOptionEnteringAnimation();
       let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
       if (set.has(option.type)) {
         if (option.required || isPreSelectedOption) {
           fn = (fn) => fn();
         }
-        const FadeOut = tmp2(5038).FadeOut;
-        const FadeInUp = tmp2(5038).FadeInUp;
+        const FadeOut = tmp2(5050).FadeOut;
+        const FadeInUp = tmp2(5050).FadeInUp;
         const obj2 = { transform: null };
         items1 = [{ translateY: -10 }];
         obj2.transform = items1;
@@ -184,8 +184,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {
           collapsable: false,
           entering: optionEnteringAnimation.EnteringAnimation,
-          exiting: tmp2(12107).ExitingAnimation,
-          layout: tmp2(12107).LayoutAnimation,
+          exiting: tmp2(12126).ExitingAnimation,
+          layout: tmp2(12126).LayoutAnimation,
           onLayout(arg0) {
             importDefault(arg0, option);
           },
@@ -200,7 +200,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-subtle",
             children: option.displayName,
           };
-          tmp17Result = closure_5(tmp2(5220).Text, obj7);
+          tmp17Result = closure_5(tmp2(5232).Text, obj7);
         }
         const items2 = [tmp17Result, , ,];
         const obj8 = {
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: option.displayDescription,
         };
-        items2[2] = closure_5(tmp2(5220).Text, obj9);
+        items2[2] = closure_5(tmp2(5232).Text, obj9);
         if (hasItem) {
           const obj10 = {
             collapsable: false,
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const obj11 = {
             style: tmp.optionErrorIcon,
-            source: _modDef10164,
+            source: _modDef10186,
             size: tmp2(1202).IconSizes.REFRESH_SMALL_16,
           };
           const items3 = [closure_5(tmp2(1202).Icon, obj11)];
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-feedback-critical",
             children: optionValidationResults[option.name].error,
           };
-          items3[1] = closure_5(tmp2(5220).Text, obj12);
+          items3[1] = closure_5(tmp2(5232).Text, obj12);
           obj10.children = items3;
           hasItem = closure_6(ReanimatedRexportDefault.View, obj10);
         }
@@ -259,10 +259,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.children = items2;
         obj5.children = closure_6(View, obj6);
         obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-        obj3.children = closure_5(tmp2(12115).AwaitAnimationContext, obj4);
-        return closure_5(tmp2(5038).LayoutAnimationConfig, obj3);
+        obj3.children = closure_5(tmp2(12134).AwaitAnimationContext, obj4);
+        return closure_5(tmp2(5050).LayoutAnimationConfig, obj3);
       } else {
         return null;
       }
-      const tmp2Result = option(12107);
+      const tmp2Result = option(12126);
     };

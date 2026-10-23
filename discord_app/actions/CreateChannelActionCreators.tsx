@@ -87,7 +87,7 @@ export default {
       trackedActionData: null,
       rejectWithError: null,
     };
-    const tmpResult = permissionOverwrites(6661);
+    const tmpResult = permissionOverwrites(6674);
     request.trackedActionData = {
       event: guildId(1275).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {

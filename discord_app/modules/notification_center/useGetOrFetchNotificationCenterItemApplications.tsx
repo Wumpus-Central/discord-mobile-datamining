@@ -6,10 +6,10 @@ const require = globalThis.__r;
 
 const require = fn;
 let items = [
-  fn(6773).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
-  fn(6773).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
-  fn(6773).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
-  fn(6773).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
+  fn(6786).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
+  fn(6786).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
+  fn(6786).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+  fn(6786).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
 ];
 let set = new Set(items);
 const ReactCompilerGating = fn(558);
@@ -45,7 +45,7 @@ export const useGetOrFetchNotificationCenterItemsApplications = ReactCompilerGat
       } else {
         _require = cResult[1];
       }
-      return set(7242)(tmp3);
+      return set(7255)(tmp3);
     }
   : function useGetOrFetchNotificationCenterItemsApplications(arg0) {
       closure_0 = arg0;

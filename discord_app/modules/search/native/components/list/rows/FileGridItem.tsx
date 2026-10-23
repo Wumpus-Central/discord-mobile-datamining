@@ -10,7 +10,7 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9691);
+const SearchConstants = fn(9713);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

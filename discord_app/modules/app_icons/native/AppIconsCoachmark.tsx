@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9911 from "../../../../_runtime/metro/09911__.js";
+import _modDef9933 from "../../../../_runtime/metro/09933__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef18309 from "../../../../_runtime/metro/18309__.js";
+import _modDef18353 from "../../../../_runtime/metro/18353__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        let obj2 = { source: _modDef18309, style: tmp4.image };
+        let obj2 = { source: _modDef18353, style: tmp4.image };
         const tmp19 = closure_7(FastImageDefault, obj2);
         cResult[10] = tmp4.image;
         cResult[11] = tmp19;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = {
-          source: _modDef9911,
+          source: _modDef9933,
           size: tmp(1202).IconSizes.MEDIUM,
           style: tmp4.nitroWheel,
           disableColor: true,
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
         const intl = tmp(1128).intl;
         obj5.children = intl.string(tmp(1128).t.EfA4Cq);
-        const tmp24 = closure_7(tmp(5220).Text, obj5);
+        const tmp24 = closure_7(tmp(5232).Text, obj5);
         cResult[14] = tmp24;
         const tmp23 = tmp24;
       } else {
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[27] = tmp36;
           }
           const obj7 = { variant: "text-md/normal", color: "text-default", style: tmp4.subtitle, children: tmp27 };
-          const tmp32 = closure_7(tmp(5220).Text, obj7);
+          const tmp32 = closure_7(tmp(5232).Text, obj7);
           cResult[20] = tmp4.subtitle;
           cResult[21] = tmp27;
           cResult[22] = tmp32;
@@ -356,13 +356,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.info, children: null };
       const obj5 = { source: null, style: null };
       const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-      obj5.source = _modDef18309;
+      obj5.source = _modDef18353;
       obj5.style = tmp.image;
       const items2 = [closure_7(FastImageDefault, obj5), ,];
       const obj6 = { style: tmp.titleContainer, children: null };
       const items3 = [
         closure_7(markAsDismissed(1202).Icon, {
-          source: _modDef9911,
+          source: _modDef9933,
           size: markAsDismissed(1202).IconSizes.MEDIUM,
           style: tmp.nitroWheel,
           disableColor: true,
@@ -371,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
       const intl = markAsDismissed(1128).intl;
       obj8.children = intl.string(markAsDismissed(1128).t.EfA4Cq);
-      items3[1] = closure_7(markAsDismissed(5220).Text, obj8);
+      items3[1] = closure_7(markAsDismissed(5232).Text, obj8);
       obj6.children = items3;
       items2[1] = closure_8(View, obj6);
       const obj9 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.D0XzaS);
       }
       obj9.children = stringResult;
-      items2[2] = closure_7(markAsDismissed(5220).Text, obj9);
+      items2[2] = closure_7(markAsDismissed(5232).Text, obj9);
       obj4.children = items2;
       const items4 = [closure_8(View, obj4)];
       const obj10 = { style: tmp.footer, children: null };
@@ -398,14 +398,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const result = AppIconUtils.navigateToAppIconSettings();
       };
-      const items5 = [closure_7(markAsDismissed(5230).Button, obj11)];
+      const items5 = [closure_7(markAsDismissed(5242).Button, obj11)];
       const obj12 = { variant: "secondary", text: null, onPress: null };
       const intl4 = tmp2(1128).intl;
       obj12.text = intl4.string(markAsDismissed(1128).t.iSrIIZ);
       obj12.onPress = callback;
-      items5[1] = closure_7(markAsDismissed(5230).Button, obj12);
+      items5[1] = closure_7(markAsDismissed(5242).Button, obj12);
       obj10.children = items5;
       items4[1] = closure_8(View, obj10);
       obj3.children = items4;
-      return closure_8(markAsDismissed(5251).BottomSheet, obj3);
+      return closure_8(markAsDismissed(5263).BottomSheet, obj3);
     };

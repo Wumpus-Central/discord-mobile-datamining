@@ -239,7 +239,7 @@ const ChannelRecord = fn(4825);
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7628).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7641).ChannelListGuildActionRow;
 const Constants = fn(1087);
 ({ ChannelTypes: closure_30, GuildFeatures: closure_31 } = Constants);
 const ChannelFlags = fn(4828).ChannelFlags;
@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "NOTIFICATION_CENTER_ITEM_DELETE",
+      version: "Enable Button",
     });
     merged.id = global;
     obj = closure_25;

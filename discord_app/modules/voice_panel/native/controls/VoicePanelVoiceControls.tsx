@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05283_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05295_LegacyBaseButton.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
@@ -21,7 +21,7 @@ const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment
 
 require = fn;
 function NOOP() {}
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(10871).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(10894).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
 const createStyles = fn(4969);

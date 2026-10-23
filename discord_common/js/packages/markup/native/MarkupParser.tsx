@@ -62,10 +62,10 @@ export default {
       return result;
     };
   },
-  reactParserFor(importDefaultResultResult) {
-    closure_0 = _modDef1951.parserFor(importDefaultResultResult);
+  reactParserFor(rules) {
+    closure_0 = _modDef1951.parserFor(rules);
     let obj2 = _modDef1951;
-    importDefault = obj2.reactFor(_modDef1951.ruleOutput(importDefaultResultResult, "react"));
+    importDefault = obj2.reactFor(_modDef1951.ruleOutput(rules, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {

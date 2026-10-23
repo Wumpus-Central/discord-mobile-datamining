@@ -272,11 +272,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult5 = tmp(504);
         const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-        const tmp20 = stateFromStores(17696)(arg0);
+        const tmp20 = stateFromStores(17740)(arg0);
         const tmpResult6 = tmp(504);
-        const token = tmp(5238).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-        const tmpResult7 = tmp(5238);
-        const token1 = tmp(5238).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+        const token = tmp(5250).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+        const tmpResult7 = tmp(5250);
+        const token1 = tmp(5250).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
         const diff = token1 - tmp(1202).BADGE_PADDING;
         if (cResult[12] !== diff) {
           class U {
@@ -797,7 +797,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = tmp4.topRightBadge;
         cResult[15] = tmp25;
         cResult[16] = items4;
-        const tmpResult8 = tmp(5238);
+        const tmpResult8 = tmp(5250);
       }
       class C {
         constructor() {

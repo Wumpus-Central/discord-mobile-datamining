@@ -126,11 +126,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(504);
-      const isVerifiedAdult = channelId(6639).useIsVerifiedAdult();
-      const obj2 = channelId(6639);
-      const obj3 = channelId(5630);
+      const isVerifiedAdult = channelId(6652).useIsVerifiedAdult();
+      const obj2 = channelId(6652);
+      const obj3 = channelId(5642);
       return (
-        channelId(5630).useIsFeatureAgeGated(channelId(6644).AgeGatedFeature.STAGE_SPEAKING) &&
+        channelId(5642).useIsFeatureAgeGated(channelId(6657).AgeGatedFeature.STAGE_SPEAKING) &&
         !isVerifiedAdult &&
         stateFromStores
       );
@@ -236,11 +236,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(504);
-      const isAgeVerified = channelId(6639).useIsAgeVerified();
-      const obj2 = channelId(6639);
-      const obj3 = channelId(5630);
+      const isAgeVerified = channelId(6652).useIsAgeVerified();
+      const obj2 = channelId(6652);
+      const obj3 = channelId(5642);
       return (
-        channelId(5630).useIsFeatureAgeGated(channelId(6644).AgeGatedFeature.STAGE_SPEAKING) &&
+        channelId(5642).useIsFeatureAgeGated(channelId(6657).AgeGatedFeature.STAGE_SPEAKING) &&
         !isAgeVerified &&
         stateFromStores
       );

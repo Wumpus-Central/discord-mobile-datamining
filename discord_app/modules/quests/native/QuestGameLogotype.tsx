@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let SPRING_CONFIG = {};
-const merged = Object.assign(fn(5234).springSlow);
+const merged = Object.assign(fn(5246).springSlow);
 SPRING_CONFIG.overshootClamping = true;
 const createStyles = fn(4969);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };
@@ -80,11 +80,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return obj1;
       }
     }
-    const obj3 = { withSpring: SvgUri(5233).withSpring, logoDimensionStyles: undefined, SPRING_CONFIG };
+    const obj3 = { withSpring: SvgUri(5245).withSpring, logoDimensionStyles: undefined, SPRING_CONFIG };
     H.__closure = obj3;
     H.__workletHash = 13667917221894;
     H.__initData = __initData;
-    const animatedStyle = SvgUri(5038).useAnimatedStyle(H);
+    const animatedStyle = SvgUri(5050).useAnimatedStyle(H);
     if (cResult[9] !== assetUrl) {
       class R {
         constructor() {
@@ -150,7 +150,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         obj4.style = items1;
-        SvgUri = SvgUri(7947).SvgUri;
+        SvgUri = SvgUri(7960).SvgUri;
         let size = { height: "100%", width: "100%", uri: assetUrl, onError };
         obj4.children = <SvgUri height="100%" width="100%" uri={assetUrl} onError={onError} />;
         let tmp18Result = <closure_5 style={null}>{null}</closure_5>;
@@ -203,7 +203,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[11] = animatedStyle;
     cResult[12] = style;
     cResult[13] = items3;
-    const SvgUriResult = SvgUri(5038);
+    const SvgUriResult = SvgUri(5050);
   } else {
     class R {
       constructor() {

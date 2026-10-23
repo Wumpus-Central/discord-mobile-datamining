@@ -7,8 +7,8 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const InputModes = fn(1087).InputModes;
-let closure_5 = fn(5252).ACTION_SHEET_HANDLE_SPACING;
-let sum = 2 * fn(11337).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
+let closure_5 = fn(5264).ACTION_SHEET_HANDLE_SPACING;
+let sum = 2 * fn(11360).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
 const metroRequire = sum;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

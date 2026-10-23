@@ -9,9 +9,9 @@ import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight.tsx"
 import ChatPlaceholderRowDefault from "ChatPlaceholderRow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = tmp14(5038);
+const ReanimatedRexportDefault = tmp14(5050);
 require = fn;
-let closure_4 = fn(9759).useChatInputContainerHeight;
+let closure_4 = fn(9781).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj = { placeholder: null };

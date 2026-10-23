@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6690).UnreadSetting;
+const UnreadSetting = fn(6703).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);

@@ -99,10 +99,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ActiveTimestamp(style) {
       const entry = style.entry;
-      const now = entry(14239).useTimestampTickedNow().now;
+      const now = entry(14263).useTimestampTickedNow().now;
       const items = [entry, now];
       const children = noop.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
-      return closure_6(entry(5220).Text, {
+      return closure_6(entry(5232).Text, {
         style: style.style,
         variant: "text-sm/medium",
         tabularNumbers: true,

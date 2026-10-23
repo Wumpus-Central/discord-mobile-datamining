@@ -13,8 +13,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(6695).QuestDockMode;
-const QuestDockConstants = fn(16354);
+const QuestDockMode = fn(6708).QuestDockMode;
+const QuestDockConstants = fn(16404);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } =
   QuestDockConstants);
 const VerticalGradient = fn(1087).VerticalGradient;
@@ -66,7 +66,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = activeQuestDockMode(576).c(7);
       ({ children, style } = arg0);
       const tmp3 = closure_17();
-      activeQuestDockMode = noop.useContext(activeQuestDockMode(16355).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = noop.useContext(activeQuestDockMode(16405).QuestDockGestureContext).activeQuestDockMode;
       let obj = activeQuestDockMode(576);
       const fn = function n() {
         let num = 0;
@@ -75,9 +75,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
       };
-      const obj2 = activeQuestDockMode(5038);
+      const obj2 = activeQuestDockMode(5050);
       fn.__closure = {
-        withSpring: activeQuestDockMode(5233).withSpring,
+        withSpring: activeQuestDockMode(5245).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -111,7 +111,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp5 = items;
       const obj3 = {
-        withSpring: activeQuestDockMode(5233).withSpring,
+        withSpring: activeQuestDockMode(5245).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -120,7 +120,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   : function QuestDockBackgroundMediaFade(arg0) {
       let activeQuestDockMode;
       ({ children, style } = arg0);
-      activeQuestDockMode = noop.useContext(activeQuestDockMode(16355).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = noop.useContext(activeQuestDockMode(16405).QuestDockGestureContext).activeQuestDockMode;
       const tmp = closure_17();
       const fn = function s() {
         let num = 0;
@@ -129,9 +129,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
       };
-      let obj = activeQuestDockMode(5038);
+      let obj = activeQuestDockMode(5050);
       fn.__closure = {
-        withSpring: activeQuestDockMode(5233).withSpring,
+        withSpring: activeQuestDockMode(5245).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,

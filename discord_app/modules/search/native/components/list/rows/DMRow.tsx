@@ -3,10 +3,10 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import _modDef8967 from "../../../../../../../_runtime/metro/08967__.js";
+import _modDef8990 from "../../../../../../../_runtime/metro/08990__.js";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef14760 from "../../../../../../../_runtime/metro/14760__.js";
+import _modDef14784 from "../../../../../../../_runtime/metro/14784__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -14,8 +14,8 @@ import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
 import PresenceStore from "../../../../../../stores/PresenceStore.tsx";
 import RelationshipStore from "../../../../../../stores/RelationshipStore.tsx";
 
-const UserUtils = Text(5018);
-const Text_Text = Text(5220);
+const UserUtils = Text(5023);
+const Text_Text = Text(5232);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
@@ -238,7 +238,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8967, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8990, disableColor: true };
         obj4.children = map1(native.Icon, obj5);
         tmp4Result = map1(timestampProducer, obj4);
       }
@@ -246,7 +246,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14760, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14784, disableColor: true };
         obj6.children = map1(native.Icon, obj7);
         tmp4Result3 = map1(timestampProducer, obj6);
       }

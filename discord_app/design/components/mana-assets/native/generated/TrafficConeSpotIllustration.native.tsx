@@ -1,21 +1,21 @@
 // discord_app/design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6977 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TrafficConeSpotIllustration-1x.png.js";
-import _modDef6978 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TrafficConeSpotIllustration-2x.png.js";
-import _modDef6979 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TrafficConeSpotIllustration-3x.png.js";
+import _modDef6990 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TrafficConeSpotIllustration-1x.png.js";
+import _modDef6991 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TrafficConeSpotIllustration-2x.png.js";
+import _modDef6992 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TrafficConeSpotIllustration-3x.png.js";
 import assetHelpers from "../assetHelpers.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef6977 }, 3: null };
-let obj2 = { uri: _modDef6977 };
-obj[2] = { uri: _modDef6978 };
-const obj3 = { uri: _modDef6978 };
-obj[3] = { uri: _modDef6979 };
+let obj = { 1: null, 2: { uri: _modDef6990 }, 3: null };
+let obj2 = { uri: _modDef6990 };
+obj[2] = { uri: _modDef6991 };
+const obj3 = { uri: _modDef6991 };
+obj[3] = { uri: _modDef6992 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef6979 };
+const obj4 = { uri: _modDef6992 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx",

@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== message) {
         const obj2 = { variant: "text-xs/medium", color: "text-feedback-critical", children: message };
-        const tmp13 = closure_4(tmp(5220).Text, obj2);
+        const tmp13 = closure_4(tmp(5232).Text, obj2);
         cResult[5] = message;
         cResult[6] = tmp13;
         let tmp11 = tmp13;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const size = { width: 16, height: 16, style: tmp.icon };
       const items1 = [
         closure_4(message(1202).WarningCircle, size),
-        closure_4(message(5220).Text, {
+        closure_4(message(5232).Text, {
           variant: "text-xs/medium",
           color: "text-feedback-critical",
           children: message,

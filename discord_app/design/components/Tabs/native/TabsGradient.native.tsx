@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexport = ReanimatedRexport2;

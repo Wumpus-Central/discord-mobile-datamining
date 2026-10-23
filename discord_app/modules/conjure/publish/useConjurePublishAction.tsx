@@ -413,13 +413,13 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(11829).PREVIEW_BOT_NOT_INSTALLED_CODE) {
-                      project = closure_0(10697).getProject(projectId);
+                    if (ok.code === closure_0(11848).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                      project = closure_0(10719).getProject(projectId);
                       project.catch(() => {});
-                      const tmp9Result = closure_0(10697);
+                      const tmp9Result = closure_0(10719);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(11829)(ok));
+                    const error = new Error(closure_1(11848)(ok));
                     throw error;
                   }
                 })
@@ -429,15 +429,15 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                     const intl = project(1128).intl;
                     closure_4.showConfirmation(intl.string(closure_1_1(3830).S6Px3n));
                     if (null != channel_skipped.guildId) {
-                      const tmpResult = project(8650);
-                      const profile = tmpResult.fetchProfile(project(10708).conjureProductionBotUserId(closure_3), {
+                      const tmpResult = project(8668);
+                      const profile = tmpResult.fetchProfile(project(10730).conjureProductionBotUserId(closure_3), {
                         withMutualGuilds: true,
                       });
                       profile.catch(() => {});
-                      const tmpResult3 = project(10708);
+                      const tmpResult3 = project(10730);
                     }
-                    result = project(10762).refreshPublishedProject(projectId, { isPreview: false });
-                    const tmpResult4 = project(10762);
+                    result = project(10784).refreshPublishedProject(projectId, { isPreview: false });
+                    const tmpResult4 = project(10784);
                     const catchPromise1 = result.catch(() => {});
                     const nextPromise = result
                       .catch(() => {})
@@ -534,13 +534,13 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(11829).PREVIEW_BOT_NOT_INSTALLED_CODE) {
-                      project = closure_0(10697).getProject(projectId);
+                    if (ok.code === closure_0(11848).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                      project = closure_0(10719).getProject(projectId);
                       project.catch(() => {});
-                      const tmp9Result = closure_0(10697);
+                      const tmp9Result = closure_0(10719);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(11829)(ok));
+                    const error = new Error(closure_1(11848)(ok));
                     throw error;
                   }
                 });
@@ -862,13 +862,13 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
                   set.add(closure_0);
                   c9 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f159428 = requestConsent;
+                  f159732 = requestConsent;
                   if (requestConsent == null) {
-                    f159428 = (arg0) => closure_2_18(arg0, closure_1_3);
+                    f159732 = (arg0) => closure_2_18(arg0, closure_1_3);
                   }
                   c10 = 3;
                   c11 = 1;
-                  const obj5 = { value: f159428(closure_0), done: false };
+                  const obj5 = { value: f159732(closure_0), done: false };
                   return obj5;
                 }
               }
@@ -974,7 +974,7 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
     }
   })();
 };
-let ConjureProjectStore = fn(6758);
+let ConjureProjectStore = fn(6771);
 ({ canPublishProject: closure_11, isProjectOwner: closure_12 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const Permissions = fn(1087).Permissions;

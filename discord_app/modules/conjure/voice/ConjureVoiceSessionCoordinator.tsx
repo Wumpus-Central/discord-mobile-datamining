@@ -14,7 +14,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 let obj2 = fn;
 const RPCErrors = fn(1087).RPCErrors;
-const Constants = fn(5704);
+const Constants = fn(5716);
 ({ Features: c10, MediaEngineContextTypes: closure_11 } = Constants);
 let closure_12 = { x: 0, y: 0, z: -1 };
 let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -166,15 +166,15 @@ prototype["start"] = function start(id) {
               );
               throw tmp15;
             }
-            tmp39Result2 = tmp39(15662);
+            tmp39Result2 = tmp39(15683);
           }
-          tmp39Result = tmp39(15662);
+          tmp39Result = tmp39(15683);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj11 = handleFrameLifecycleChange(15662);
+        obj11 = handleFrameLifecycleChange(15683);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -262,16 +262,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(15665);
+    obj2 = obj2(15686);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(15665).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(15686).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(15665);
+      const tmp11Result = tmp11(15686);
     }
     tmp11 = obj2;
   } else {
@@ -398,7 +398,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15666).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15687).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

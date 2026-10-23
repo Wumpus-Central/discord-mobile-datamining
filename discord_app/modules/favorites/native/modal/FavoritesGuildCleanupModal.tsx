@@ -725,7 +725,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl = closure_1_0(1128).intl;
           obj.text = intl.string(closure_1_0(1128).t["ETE/oC"]);
           obj.onPress = onPress;
-          return closure_1_6(closure_1_0(5230).Button, obj);
+          return closure_1_6(closure_1_0(5242).Button, obj);
         };
         obj2.render = function render() {
           return closure_1_6(closure_1_11, {});

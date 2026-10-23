@@ -7,7 +7,7 @@ import StringUtils from "../../../../utils/StringUtils.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
 import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import TextStylesDefault from "../../../rebrand/native/TextStyles.tsx";
 import PremiumFeaturesBackgroundDefault from "../../../user_settings/premium/native/PremiumFeaturesBackground.tsx";

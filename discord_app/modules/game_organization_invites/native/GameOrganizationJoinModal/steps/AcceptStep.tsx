@@ -17,7 +17,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const onPress = fn(12662).closeGameOrganizationJoinModal;
+const onPress = fn(12681).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4969);
@@ -137,7 +137,7 @@ export const AcceptStep = ReactCompilerGating.isReactCompilerEnabled()
       if (null == tmp6) {
         return null;
       } else {
-        ({ displayNoun, organization } = tmp6);
+        ({ displayNoun, linkedGuild } = tmp6);
         if (cResult[1] !== displayNoun) {
           const intl = util.intl;
           let str = displayNoun;
@@ -156,15 +156,10 @@ export const AcceptStep = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === tmp8) {
             let tmp10 = cResult[5];
           }
-          if (cResult[6] !== organization.iconUrl) {
-            const obj3 = {
-              name: "Fang\u2019s Corner",
-              iconUrl: organization.iconUrl,
-              presenceCount: 20,
-              memberCount: 200,
-            };
+          if (cResult[6] !== linkedGuild) {
+            const obj3 = { linkedGuild };
             const tmp15 = timestampProducer(GameOrganizationLinkedServerCardDefault, obj3);
-            cResult[6] = organization.iconUrl;
+            cResult[6] = linkedGuild;
             cResult[7] = tmp15;
             let tmp13 = tmp15;
           } else {
@@ -306,12 +301,7 @@ export const AcceptStep = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { displayNoun: str };
         obj4.children = intl6.formatToPlainString(_modDef2406.WmxMAI, obj6);
         const items = [timestampProducer(Text_Text.Text, obj4)];
-        const obj7 = {
-          name: "Fang\u2019s Corner",
-          iconUrl: tmp4.organization.iconUrl,
-          presenceCount: 20,
-          memberCount: 200,
-        };
+        const obj7 = { linkedGuild: tmp4.linkedGuild };
         items[1] = timestampProducer(GameOrganizationLinkedServerCardDefault, obj7);
         obj3.children = items;
         const items1 = [React5(Stack_Stack.Stack, obj3)];

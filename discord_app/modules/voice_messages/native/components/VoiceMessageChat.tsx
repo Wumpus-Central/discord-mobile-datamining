@@ -14,8 +14,8 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(12995).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(12996);
+let useVoiceMessagesUIStore = fn(13018).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(13019);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -334,7 +334,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
   const tmp6Result = useVoiceMessagesUIStore(D);
   closure_5 = tmp6Result;
   const tmp10 = first1(noop.useState(T), 2);
-  const token = animationValue(5238).useToken(nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_TEXT_STYLE);
+  const token = animationValue(5250).useToken(nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_TEXT_STYLE);
   if (cResult[4] === tmp6Result) {
     class D {
       constructor(arg0) {
@@ -461,7 +461,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
     Z.__closure = obj3;
     Z.__workletHash = 9127206038844;
     Z.__initData = __initData3;
-    const animatedStyle = tmp(5038).useAnimatedStyle(Z);
+    const animatedStyle = tmp(5050).useAnimatedStyle(Z);
     if (cResult[13] === animatedStyle) {
       class F {
         constructor() {
@@ -671,7 +671,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
           }
         }
         const obj5 = { style: tmp4.duration, variant: token, color: "text-default", tabularNumbers: true, children: tmp19 };
-        const tmp38 = closure_13(tmp(5220).Text, obj5);
+        const tmp38 = closure_13(tmp(5232).Text, obj5);
         class Z {
           constructor() {
             obj = { opacity: animationValue.get() };
@@ -700,7 +700,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
     cResult[13] = animatedStyle;
     cResult[14] = tmp4.durationContainer;
     cResult[15] = items2;
-    const tmpResult2 = tmp(5038);
+    const tmpResult2 = tmp(5050);
   }
   class G {
     constructor() {
@@ -740,7 +740,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
   cResult[5] = tmp7;
   cResult[6] = G;
   cResult[7] = items3;
-  const tmpResult = animationValue(5238);
+  const tmpResult = animationValue(5250);
 }) : (function Duration(animationValue) {
   animationValue = animationValue.animationValue;
   closure_3 = undefined;

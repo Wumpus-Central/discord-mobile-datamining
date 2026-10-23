@@ -393,7 +393,7 @@ export default noop.memo(
         c9 = undefined;
         let onReady;
         const tmp2 = onReady();
-        const surfaceDirectRendererExperiment = resizeMode(5824).useSurfaceDirectRendererExperiment(userId, {
+        const surfaceDirectRendererExperiment = resizeMode(5836).useSurfaceDirectRendererExperiment(userId, {
           location: "VideoRenderer",
         });
         let tmp6 = first1(noop.useState(0), 2);
@@ -407,10 +407,10 @@ export default noop.memo(
         closure_6 = tmp12;
         const tmp13 = first1(noop.useState(0), 2);
         const first3 = tmp13[0];
-        let obj = resizeMode(5824);
+        let obj = resizeMode(5836);
         [tmp17, c9] = first1(noop.useState(true), 2);
-        width(11388)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-        onReady = width(11389)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+        width(11411)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+        onReady = width(11412)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
         noop.useRef(null);
         const ref1 = noop.useRef(null);
         ref = noop.useRef({ width: 0, height: 0 });
@@ -497,7 +497,7 @@ export default noop.memo(
         }, items2);
         const tmp16 = first1(noop.useState(true), 2);
         const items3 = [width, first1, first2, first3, memo];
-        const store = resizeMode(8795).useStore((orientation) => orientation.orientation);
+        const store = resizeMode(8818).useStore((orientation) => orientation.orientation);
         const layoutEffect = noop.useLayoutEffect(() => {
           let isAndroidResult = PlatformUtils.isAndroid();
           if (isAndroidResult) {
@@ -574,10 +574,10 @@ export default noop.memo(
         }, items9);
         if (tmp17) {
           const obj3 = { animate: true, style: tmp2.spinner };
-          tmp35 = ref(tmp18(11391), obj3);
+          tmp35 = ref(tmp18(11414), obj3);
         }
-        const tmp37 = store === resizeMode(8795).OrientationType.PORTRAIT;
-        const obj2 = resizeMode(8795);
+        const tmp37 = store === resizeMode(8818).OrientationType.PORTRAIT;
+        const obj2 = resizeMode(8818);
         if (tmp3Result.isAndroid()) {
           const obj4 = { onLayout: callback2, style: null, children: null };
           const items10 = [tmp2.center, closure_6.absoluteFillObject];
@@ -599,10 +599,10 @@ export default noop.memo(
             onReady: callback1,
             style: memo2,
           };
-          const items11 = [ref(tmp18(11392), obj7), tmp35];
+          const items11 = [ref(tmp18(11415), obj7), tmp35];
           obj6.children = items11;
           obj5.children = c9(first2, obj6);
-          const items12 = [ref(tmp18(11394), obj5)];
+          const items12 = [ref(tmp18(11417), obj5)];
           const obj8 = { style: memo5, children: null };
           let tmp56 = null;
           if (!tmp17) {
@@ -622,7 +622,7 @@ export default noop.memo(
           items12[1] = ref(first2, obj8);
           obj4.children = items12;
           let tmp43Result1 = c9(tmp52, obj4);
-          const tmp18Result = tmp18(11394);
+          const tmp18Result = tmp18(11417);
         } else if (flag) {
           const obj9 = {
             ref,
@@ -647,7 +647,7 @@ export default noop.memo(
             onReady: callback1,
             style: memo1,
           };
-          const items13 = [ref(tmp18(11392), obj12)];
+          const items13 = [ref(tmp18(11415), obj12)];
           let tmp48 = null;
           if (tmp37) {
             let renderTagResult1;
@@ -683,7 +683,7 @@ export default noop.memo(
             onReady: callback1,
             style: memo1,
           };
-          const items17 = [ref(tmp18(11392), obj15), tmp35];
+          const items17 = [ref(tmp18(11415), obj15), tmp35];
           obj14.children = items17;
           tmp43Result1 = c9(first2, obj14);
         }

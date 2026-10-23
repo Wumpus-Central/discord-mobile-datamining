@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsProgressBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import openGuildPowerupsModalDefault from "utils/openGuildPowerupsModal.tsx";
 import GuildBoostingProgressBarActionCreators from "../../../guild_boosting/GuildBoostingProgressBarActionCreators.tsx";
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = guildId(576);
       const stateFromStores = guildId(573).useStateFromStores(first, tmp7, tmp8);
-      stateFromStores1(17573)(stateFromStores);
+      stateFromStores1(17617)(stateFromStores);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [GuildBoostingProgressBarPersistedStore];
         cResult[4] = items2;

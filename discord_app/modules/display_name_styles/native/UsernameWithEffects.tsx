@@ -178,7 +178,7 @@ export default noop.memo(
                 if (cResult[9] !== displayNameStylesFont) {
                   let tmp18;
                   if (null != displayNameStylesFont) {
-                    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
+                    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
                     tmp18 = obj3;
                   }
                   cResult[9] = displayNameStylesFont;
@@ -761,7 +761,7 @@ export default noop.memo(
         let STATIC = userName.effectDisplayType;
         ({ userId, guildId } = userName);
         if (STATIC === undefined) {
-          STATIC = userName(10639).EffectDisplayType.STATIC;
+          STATIC = userName(10661).EffectDisplayType.STATIC;
         }
         ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
         if (ignoreDisabledStylesSetting === undefined) {
@@ -781,18 +781,18 @@ export default noop.memo(
           }),
         );
         let num2;
-        const tmp6 = num2(6352)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
-        const displayNameStylesEnabled = userName(6353).useDisplayNameStylesEnabled({
+        const tmp6 = num2(6365)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
+        const displayNameStylesEnabled = userName(6366).useDisplayNameStylesEnabled({
           location: "UsernameWithEffects",
         });
-        const obj = userName(6353);
-        const displayNameStylesFont = userName(9197).useDisplayNameStylesFont({
+        const obj = userName(6366);
+        const displayNameStylesFont = userName(9220).useDisplayNameStylesFont({
           displayNameStyles: tmp6,
           ignoreDisabledStylesSetting,
         });
         let tmp10;
         if (null != displayNameStylesFont) {
-          const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
+          const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
           tmp10 = obj3;
         }
         let num = merged.lineClamp;
@@ -808,12 +808,12 @@ export default noop.memo(
           }
           tmp11 = tmp12;
         }
-        const obj2 = userName(9197);
-        const token = userName(5238).useToken(tmp4(587).colors.BACKGROUND_BASE_LOW);
-        const tmp7Result = userName(5238);
-        const token1 = userName(5238).useToken(tmp4(587).colors.WHITE);
-        const tmp7Result7 = userName(5238);
-        const displayNameStylesAccessibleColors = userName(10640).useDisplayNameStylesAccessibleColors({
+        const obj2 = userName(9220);
+        const token = userName(5250).useToken(tmp4(587).colors.BACKGROUND_BASE_LOW);
+        const tmp7Result = userName(5250);
+        const token1 = userName(5250).useToken(tmp4(587).colors.WHITE);
+        const tmp7Result7 = userName(5250);
+        const displayNameStylesAccessibleColors = userName(10662).useDisplayNameStylesAccessibleColors({
           displayNameStyles: tmp6,
           backgroundColor: token,
         });
@@ -833,9 +833,9 @@ export default noop.memo(
           colorVariants = tmp7(1409).generateColorVariants(first);
           const tmp7Result9 = tmp7(1409);
         }
-        const tmp7Result10 = userName(5225);
+        const tmp7Result10 = userName(5237);
         const tmp18 =
-          userName(5220).TextStyleSheet[tmp7Result10.useTypographyVariantRemap(tmp7Result10, merged.variant, false)];
+          userName(5232).TextStyleSheet[tmp7Result10.useTypographyVariantRemap(tmp7Result10, merged.variant, false)];
         const flattenResult = closure_9.flatten(merged.style);
         num2 = undefined;
         if (flattenResult != null) {
@@ -890,15 +890,15 @@ export default noop.memo(
         const tmp26Result = closure_14(str, num2);
         if (displayNameStylesEnabled) {
           if (null != tmp6) {
-            if (STATIC !== tmp7(10639).EffectDisplayType.PLAIN) {
+            if (STATIC !== tmp7(10661).EffectDisplayType.PLAIN) {
               if (null != colorVariants) {
                 const items1 = [merged.style, tmp11];
                 if (tmp7Result11.doesEffectImpactLayout(effectId)) {
                   const layoutImpact = tmp26Result.layoutImpact;
                 }
                 if (effectId === tmp7(1411).DisplayNameEffect.GUMMY) {
-                  const tmp4Result = tmp4(10643);
-                  let str3 = tmp7(5126).getNodeText(userName);
+                  const tmp4Result = tmp4(10665);
+                  let str3 = tmp7(5138).getNodeText(userName);
                   if (str3 == null) {
                     str3 = "";
                   }
@@ -963,7 +963,7 @@ export default noop.memo(
                           const items5 = [items1, tmp26Result.popBackLayer];
                           obj8.style = items5;
                           obj8.children = userName;
-                          const items6 = [closure_11(tmp7(5220).Text, obj8)];
+                          const items6 = [closure_11(tmp7(5232).Text, obj8)];
                           const obj9 = {};
                           const merged3 = Object.assign(merged);
                           obj9.textStrokeWidth = sum;
@@ -975,7 +975,7 @@ export default noop.memo(
                           const items7 = [items1, tmp26Result.popFrontLayer];
                           obj9.style = items7;
                           obj9.children = userName;
-                          items6[1] = closure_11(tmp7(5220).Text, obj9);
+                          items6[1] = closure_11(tmp7(5232).Text, obj9);
                           obj7.children = items6;
                           return closure_12(closure_6, obj7);
                         }
@@ -1016,7 +1016,7 @@ export default noop.memo(
                     obj11.textStrokeWidth = tmp30;
                     obj11.textStrokeColor = tmp29;
                     obj11.children = userName;
-                    return closure_11(tmp7(5220).Text, obj11);
+                    return closure_11(tmp7(5232).Text, obj11);
                   }
                   const mapped = displayNameStylesAccessibleColors.map((item) => closure_1_7(item));
                   const found = mapped.filter(tmp7(1388).isNotNullish);
@@ -1051,14 +1051,14 @@ export default noop.memo(
             obj12.style = items12;
             obj12.color = defaultColor;
             obj12.children = userName;
-            return closure_11(tmp7(5220).Text, obj12);
+            return closure_11(tmp7(5232).Text, obj12);
           }
         }
         const obj13 = {};
         const merged6 = Object.assign(merged);
         obj13.color = defaultColor;
         obj13.children = userName;
-        return closure_11(userName(5220).Text, obj13);
+        return closure_11(userName(5232).Text, obj13);
       },
 );
 export const AVERAGE_FONT_WIDTH_RATIO = 0.6;

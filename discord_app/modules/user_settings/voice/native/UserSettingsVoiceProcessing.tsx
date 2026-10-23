@@ -452,10 +452,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           label: tmp10,
           value: echoCancellation,
-          onValueChange: inputMode(11586).handleEchoCancellationChange,
+          onValueChange: inputMode(11606).handleEchoCancellationChange,
         };
-        obj2.children = closure_5(inputMode(7280).TableSwitchRow, obj3);
-        const tmp14 = closure_5(inputMode(11570).UserSettingsTableRowGroup, obj2);
+        obj2.children = closure_5(inputMode(7293).TableSwitchRow, obj3);
+        const tmp14 = closure_5(inputMode(11590).UserSettingsTableRowGroup, obj2);
         cResult[4] = echoCancellation;
         cResult[5] = tmp14;
         let tmp12 = tmp14;
@@ -487,9 +487,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           label: tmp19,
           subLabel: tmp20,
           value: automaticGainControl,
-          onValueChange: inputMode(11586).handleAutomaticGainControlChange,
+          onValueChange: inputMode(11606).handleAutomaticGainControlChange,
         };
-        const tmp25 = closure_5(inputMode(7280).TableSwitchRow, obj4);
+        const tmp25 = closure_5(inputMode(7293).TableSwitchRow, obj4);
         cResult[9] = automaticGainControl;
         cResult[10] = tmp25;
         let tmp23 = tmp25;
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { hasIcons: false, children: null };
           const items2 = [tmp23, tmp26];
           obj6.children = items2;
-          const tmp31 = closure_6(inputMode(11570).UserSettingsTableRowGroup, obj6);
+          const tmp31 = closure_6(inputMode(11590).UserSettingsTableRowGroup, obj6);
           cResult[15] = tmp23;
           cResult[16] = tmp26;
           cResult[17] = tmp31;
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj7.onValueChange = function onValueChange(vadUseKrisp) {
           return AudioActionCreatorsDefault.setMode(inputMode, { vadUseKrisp });
         };
-        tmp27 = closure_5(inputMode(7280).TableSwitchRow, obj7);
+        tmp27 = closure_5(inputMode(7293).TableSwitchRow, obj7);
       }
       cResult[11] = advancedVoiceActivitySupported;
       cResult[12] = inputMode;

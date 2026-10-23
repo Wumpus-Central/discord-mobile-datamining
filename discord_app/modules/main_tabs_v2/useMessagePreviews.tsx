@@ -122,10 +122,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disabled = useIsNsfwGatedDefault(guild_id);
       }
       if (!disabled) {
-        disabled = tmp4 === tmp(5629).MessagePreviewTypes.NONE;
+        disabled = tmp4 === tmp(5641).MessagePreviewTypes.NONE;
       }
       if (!disabled) {
-        let tmp10 = tmp4 === tmp(5629).MessagePreviewTypes.UNREADS;
+        let tmp10 = tmp4 === tmp(5641).MessagePreviewTypes.UNREADS;
         if (tmp10) {
           if (unread == null) {
             unread = stateFromStores;
@@ -152,10 +152,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disabled = useIsNsfwGatedDefault(guild_id);
       }
       if (!disabled) {
-        disabled = tmp === tmp2(5629).MessagePreviewTypes.NONE;
+        disabled = tmp === tmp2(5641).MessagePreviewTypes.NONE;
       }
       if (!disabled) {
-        let tmp6 = tmp === tmp2(5629).MessagePreviewTypes.UNREADS;
+        let tmp6 = tmp === tmp2(5641).MessagePreviewTypes.UNREADS;
         if (tmp6) {
           if (unread == null) {
             unread = stateFromStores;

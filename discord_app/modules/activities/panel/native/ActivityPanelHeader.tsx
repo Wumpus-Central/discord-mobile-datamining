@@ -15,12 +15,12 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
-const native = GestureDetector(5023);
-const LegacyBaseButton = GestureDetector(5283);
+const native = GestureDetector(5035);
+const LegacyBaseButton = GestureDetector(5295);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(5595);
+const ActivityPanelConstants = fn(5607);
 ({
   ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9,
@@ -117,7 +117,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const obj3 = { runOnJS: setMode(5038).runOnJS, setMode, ActivityPanelModes };
+                  const obj3 = { runOnJS: setMode(5050).runOnJS, setMode, ActivityPanelModes };
                   T.__closure = obj3;
                   T.__workletHash = 14504167937928;
                   T.__initData = __initData;
@@ -142,7 +142,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj4 = {
-                  mode: setMode(18381).MorphablePanelModes.PANEL,
+                  mode: setMode(18425).MorphablePanelModes.PANEL,
                   panGestureEnabled: true,
                   pipState,
                   swipeRequiresPop: true,
@@ -226,7 +226,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         items[2] = obj;
         return items;
       }, items1);
-      obj.runOnJS = landscape(5038).runOnJS;
+      obj.runOnJS = landscape(5050).runOnJS;
       obj.setMode = setMode;
       obj.ActivityPanelModes = ActivityPanelModes;
       fn.__closure = obj;
@@ -236,7 +236,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
       const callback = noop.useCallback(fn, items2);
       const obj3 = {
-        mode: landscape(18381).MorphablePanelModes.PANEL,
+        mode: landscape(18425).MorphablePanelModes.PANEL,
         panGestureEnabled: true,
         pipState,
         swipeRequiresPop: true,
@@ -244,7 +244,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         onPanMinimizeGestureEnd: callback,
         disableHorizontalSafeAreas: true,
       };
-      obj2.gesture = setMode(18381)(obj3);
+      obj2.gesture = setMode(18425)(obj3);
       obj2.headerWrapperStyles = memo;
       obj2.headerStyles = memo1;
       obj2.styles = tmp;

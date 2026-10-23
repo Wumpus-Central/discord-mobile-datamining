@@ -9,9 +9,9 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 
 const initialize = Stack(504);
 const util = Stack(1128);
-const Text_Text = Stack(5220);
-const Stack_Stack = Stack(5963);
-const GameControllerIcon = Stack(9592);
+const Text_Text = Stack(5232);
+const Stack_Stack = Stack(5975);
+const GameControllerIcon = Stack(9615);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -21,7 +21,7 @@ let obj2 = {
   sectionHeader: { gap: 2, paddingHorizontal: 4, paddingBottom: 2 },
   skeletonTile: null,
 };
-let size = { width: "100%", height: fn(16318).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, borderRadius: nativeDefault.radii.md };
+let size = { width: "100%", height: fn(16368).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, borderRadius: nativeDefault.radii.md };
 obj2.skeletonTile = size;
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

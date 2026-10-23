@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[19] === visible) {
                         let tmp19 = cResult[20];
                       }
-                      const coachmark = markAsDismissed(9817).useCoachmark(targetRef, tmp19);
+                      const coachmark = markAsDismissed(9839).useCoachmark(targetRef, tmp19);
                       return null;
                     }
                   }
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = {
           type: "rive",
-          rive: markAsDismissed(5031).BadgesCoachmarkRive,
+          rive: markAsDismissed(5043).BadgesCoachmarkRive,
           aspectRatio: "16/9",
           riveProps: null,
         };

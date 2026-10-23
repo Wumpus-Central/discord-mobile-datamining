@@ -105,7 +105,7 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5719).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(5731).getSystemAnalyticsInfo;
 let Constants = fn(1087);
 ({
   AnalyticEvents: closure_17,
@@ -114,10 +114,10 @@ let Constants = fn(1087);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(5800);
+const StreamSettingsConstants = fn(5812);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(5801).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5704);
+let closure_24 = fn(5813).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5716);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -3776,7 +3776,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5708).now();
+  const commitReceivedTime = _connection(5720).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3816,7 +3816,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5708).now();
+  const welcomeReceivedTime = _connection(5720).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

@@ -33,11 +33,11 @@ export default noop.memo(
         const tmp4 = closure_7();
         ref1 = noop.useRef(null);
         if (cResult[0] !== ref) {
-          const mergeRefsResult = tmp(5127).mergeRefs(ref, ref1);
+          const mergeRefsResult = tmp(5139).mergeRefs(ref, ref1);
           cResult[0] = ref;
           cResult[1] = mergeRefsResult;
           let tmp6 = mergeRefsResult;
-          const tmpResult = tmp(5127);
+          const tmpResult = tmp(5139);
         } else {
           tmp6 = cResult[1];
         }

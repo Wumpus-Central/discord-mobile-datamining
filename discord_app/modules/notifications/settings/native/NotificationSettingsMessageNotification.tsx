@@ -267,7 +267,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13720, dependencyMap.paths),
+        asyncRequireImpl(13743, dependencyMap.paths),
         "MessageNotificationGuildActionSheet",
         { guildId: style.guildId },
       );
@@ -285,7 +285,7 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).notification,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13722, dependencyMap.paths),
+        asyncRequireImpl(13745, dependencyMap.paths),
         "MessageNotificationChannelActionSheet",
         { channel: style.channel },
       );

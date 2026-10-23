@@ -1,6 +1,7 @@
 // discord_app/modules/conjure/settings/conjureSettingValues.tsx
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingValues.tsx");
 
 export const conjureSettingSubmitValue = function conjureSettingSubmitValue(found, num) {
@@ -96,4 +97,24 @@ export const conjureSecretsSubmission = function conjureSecretsSubmission(memo, 
     const merged = Object.assign(obj4);
     return obj;
   }
+};
+export const mergeSubmittedSettingValues = function mergeSubmittedSettingValues(values, values2) {
+  let obj = values2;
+  const obj2 = {};
+  const merged = Object.assign(values);
+  if (values2 == null) {
+    obj = {};
+  }
+  const entries = Object.entries(obj);
+  while (tmp5 !== undefined) {
+    let tmp8 = _slicedToArray(tmp6, 2);
+    [tmp9, tmp10] = tmp8;
+    if (null == tmp10) {
+      delete tmp[tmp2];
+    } else {
+      obj2[tmp9] = tmp11;
+    }
+    continue;
+  }
+  return obj2;
 };

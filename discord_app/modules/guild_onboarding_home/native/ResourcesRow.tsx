@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(17929).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(17973).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);
@@ -46,13 +46,13 @@ export default function ResourcesRow(guildId) {
             channelId.channelId,
           );
         },
-        children: closure_1_5(guildId(5220).Text, {
+        children: closure_1_5(guildId(5232).Text, {
           variant: "text-md/medium",
           color: "text-default",
           children: children.title,
         }),
       };
-      return closure_1_5(guildId(6893).PressableOpacity, obj, children.channelId);
+      return closure_1_5(guildId(6906).PressableOpacity, obj, children.channelId);
     }),
   ];
   let tmp6 = null;
@@ -60,7 +60,7 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17931, dependencyMap.paths), closure_4, { guildId });
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17975, dependencyMap.paths), closure_4, { guildId });
       },
       children: null,
     };
@@ -68,8 +68,8 @@ export default function ResourcesRow(guildId) {
     const intl = guildId(1128).intl;
     const obj4 = { count: arr.length - 2 };
     obj3.children = intl.format(guildId(1128).t.F6iMs4, obj4);
-    obj2.children = closure_5(guildId(5220).Text, obj3);
-    tmp6 = closure_5(guildId(6893).PressableOpacity, obj2);
+    obj2.children = closure_5(guildId(5232).Text, obj3);
+    tmp6 = closure_5(guildId(6906).PressableOpacity, obj2);
   }
   items[1] = tmp6;
   obj.children = items;

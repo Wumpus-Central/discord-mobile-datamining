@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const project_id = build.project_id;
           const name = tmp;
           let obj2 = {
-            content: closure_1_3(closure_1_1(11801), {
+            content: closure_1_3(closure_1_1(11820), {
               sheetKey,
               title: build[project_id],
               value: build.build,
@@ -210,13 +210,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj2.onConfirm = function onConfirm() {
                   return dependencyMap(closure_0);
                 };
-                project_id(5900).showConfirmModal(obj2);
+                project_id(5912).showConfirmModal(obj2);
               },
             }),
             key: sheetKey,
             stackingBehavior: "stack",
           };
-          build(5196).showActionSheet(obj2);
+          build(5208).showActionSheet(obj2);
         };
         return closure_1_3(_undefined(_undefined2[9]).TableRow, obj, build.project_id);
       });
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         let intl2 = tmp2(1128).intl;
         obj3.children = intl2.string(_modDef3830.dIEOrl);
-        tmp5Result = closure_3(tmp2(5220).Text, obj3);
+        tmp5Result = closure_3(tmp2(5232).Text, obj3);
       }
       items[1] = tmp5Result;
       obj.children = items;

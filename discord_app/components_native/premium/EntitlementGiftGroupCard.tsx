@@ -11,18 +11,18 @@ import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/nat
 import GiftCodeActionCreatorsDefault from "../../actions/GiftCodeActionCreators.tsx";
 import SubscriptionUtils from "../../utils/SubscriptionUtils.tsx";
 import ChevronSmallDownIcon from "../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import _modDef13843 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import _modDef14465 from "../../../_runtime/metro/14465__.js";
-import _modDef14466 from "../../../_runtime/metro/14466__.js";
-import _modDef14467 from "../../../_runtime/metro/14467__.js";
-import _modDef14468 from "../../../_runtime/metro/14468__.js";
-import _modDef14469 from "../../../_runtime/metro/14469__.js";
-import _modDef14470 from "../../../_runtime/metro/14470__.js";
-import _modDef14471 from "../../../_runtime/metro/14471__.js";
-import _modDef14472 from "../../../_runtime/metro/14472__.js";
-import _modDef14473 from "../../../_runtime/metro/14473__.js";
-import _modDef14476 from "../../../_runtime/metro/14476__.js";
-import _modDef14477 from "../../../_runtime/metro/14477__.js";
+import _modDef13866 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef14489 from "../../../_runtime/metro/14489__.js";
+import _modDef14490 from "../../../_runtime/metro/14490__.js";
+import _modDef14491 from "../../../_runtime/metro/14491__.js";
+import _modDef14492 from "../../../_runtime/metro/14492__.js";
+import _modDef14493 from "../../../_runtime/metro/14493__.js";
+import _modDef14494 from "../../../_runtime/metro/14494__.js";
+import _modDef14495 from "../../../_runtime/metro/14495__.js";
+import _modDef14496 from "../../../_runtime/metro/14496__.js";
+import _modDef14497 from "../../../_runtime/metro/14497__.js";
+import _modDef14500 from "../../../_runtime/metro/14500__.js";
+import _modDef14501 from "../../../_runtime/metro/14501__.js";
 import GiftCodeRowDefault from "GiftCodeRow.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../modules/applications/ApplicationStore.tsx";
@@ -261,35 +261,35 @@ prototype["renderHeader"] = function renderHeader(source, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef14465;
+    return _modDef14489;
   } else if (constants2.CAKE === giftStyle) {
-    return _modDef14467;
+    return _modDef14491;
   } else if (constants2.CHEST === giftStyle) {
-    return _modDef14468;
+    return _modDef14492;
   } else if (constants2.COFFEE === giftStyle) {
-    return _modDef14466;
+    return _modDef14490;
   } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
-    return _modDef14469;
+    return _modDef14493;
   } else if (constants2.SEASONAL_CAKE === giftStyle) {
-    return _modDef14470;
+    return _modDef14494;
   } else if (constants2.SEASONAL_CHEST === giftStyle) {
-    return _modDef14471;
+    return _modDef14495;
   } else if (constants2.SEASONAL_COFFEE === giftStyle) {
-    return _modDef14472;
+    return _modDef14496;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef13843 };
+    const obj = { uri: _modDef13866 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef14473;
+    return _modDef14497;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef14476;
+    return _modDef14500;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef14477;
+    return _modDef14501;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {
@@ -364,7 +364,7 @@ prototype["render"] = function render() {
     closure_14(closure_4, obj4);
   }
 };
-EntitlementGiftGroupCard.contextType = fn(5023).ThemeContext;
+EntitlementGiftGroupCard.contextType = fn(5035).ThemeContext;
 let items = [AuthenticationStore, SKUStore, ApplicationStore, GiftCodeStore, SubscriptionPlanStore];
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size = fn(2);

@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (arg1) {
         tmp5 = guild_id;
       }
-      const appChannelApplication = guild_id(7331).useAppChannelApplication(tmp5);
+      const appChannelApplication = guild_id(7344).useAppChannelApplication(tmp5);
       let tmp7 = null;
       if (arg1) {
         let conjureProjectId;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[2];
         tmp12 = cResult[3];
       }
-      const tmpResult = guild_id(7331);
+      const tmpResult = guild_id(7344);
       const stateFromStores = guild_id(504).useStateFromStores(first, tmp11, tmp12);
       let tmp16 = null != tmp7;
       const tmpResult3 = guild_id(504);
@@ -157,9 +157,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let formatToPlainStringResult;
         if (null != creator) {
           const intl = tmp(1128).intl;
-          const obj5 = { name: tmp(5018).getName(creator) };
+          const obj5 = { name: tmp(5023).getName(creator) };
           formatToPlainStringResult = intl.formatToPlainString(_modDef3830["6/x9LD"], obj5);
-          const tmpResult4 = tmp(5018);
+          const tmpResult4 = tmp(5023);
         }
         obj3.subtitle = formatToPlainStringResult;
         tmp20 = obj3;

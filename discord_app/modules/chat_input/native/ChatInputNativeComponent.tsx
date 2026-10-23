@@ -101,7 +101,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         num6 = 1;
       }
       if (maxHeight == null) {
-        maxHeight = tmp10(12476)(onMaxHeightChanged);
+        maxHeight = tmp10(12495)(onMaxHeightChanged);
       }
       tmpResult10 = PlatformUtils;
       const isMobileMarkdownFormatMenuEnabled =
@@ -274,7 +274,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         num2 = 1;
       }
       tmp4Result4 = PlatformUtils;
-      const tmp13 = tmp9(12476)(onMaxHeightChanged);
+      const tmp13 = tmp9(12495)(onMaxHeightChanged);
       const isMobileMarkdownFormatMenuEnabled =
         MobileMarkdownFormatMenuExperiment.useIsMobileMarkdownFormatMenuEnabled("ChatInputNativeComponent");
       const obj4 = {

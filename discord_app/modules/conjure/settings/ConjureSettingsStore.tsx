@@ -3,12 +3,20 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import DispatcherDefault from "../../../Dispatcher.tsx";
 
 const map = new Map();
-let closure_1 = [];
+const map1 = new Map();
+let closure_2 = [];
 const Store = initializeDefault.Store;
 class ConjureSettingsStore extends Store {}
 const prototype = ConjureSettingsStore.prototype;
 prototype["getSettings"] = function getSettings(arg0) {
   value = map.get(arg0);
+  if (value == null) {
+    value = null;
+  }
+  return value;
+};
+prototype["getLoadState"] = function getLoadState(arg0) {
+  value = map1.get(arg0);
   if (value == null) {
     value = null;
   }
@@ -21,13 +29,23 @@ prototype["getDeclaredConnections"] = function getDeclaredConnections(projectId)
     connections = value.connections;
   }
   if (connections == null) {
-    connections = closure_1;
+    connections = closure_2;
   }
   return connections;
 };
 const conjureSettingsStore = new ConjureSettingsStore(DispatcherDefault, {
   CONJURE_SETTINGS_SET: function handleSettingsSet(projectId) {
-    const result = map.set(projectId.projectId, projectId.settings);
+    projectId = projectId.projectId;
+    const result = map.set(projectId, projectId.settings);
+    const result1 = map1.set(projectId, "loaded");
+  },
+  CONJURE_SETTINGS_LOAD_STATE_SET: function handleLoadStateSet(arg0) {
+    ({ projectId, state } = arg0);
+    value = map1.get(projectId);
+    if (value !== state) {
+      const result = map1.set(projectId, state);
+    }
+    return false;
   },
 });
 const size = fn(2);

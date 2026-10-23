@@ -273,7 +273,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined,
   });
-  const favoritesCategories = favoriteChannels(10818).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10841).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -289,7 +289,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
       }
       closure_1 = null;
       const obj = {
-        isMuted: UserGuildSettingsStore.isChannelMuted(closure_1_20, id),
+        isMuted: UserGuildSettingsStore.isChannelMuted(closure_1_21, id),
         isCollapsed: collapsed.isCollapsed(id),
         record: categoryRecord,
         id,
@@ -566,24 +566,51 @@ function computeFavoritesState(favoriteChannels, arg1) {
       return null;
     },
     getSectionRowsFromChannel(arg0) {
-      items = [obj3, ...found1];
-      let num = 0;
-      if (0 < items.length) {
-        while (true) {
-          let num2 = 0;
-          if (0 < items[num].channelList.length) {
-            while (items[num].channelList[num2].id !== arg0) {
-              num2 = num2 + 1;
-              continue;
-            }
-            let obj = { section: num + ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS, row: num2 };
-            let items1 = [obj];
-            return items1;
+      if (null == arg0) {
+        return [];
+      } else {
+        items = [];
+        const items1 = [];
+        items2 = [];
+        const items3 = [obj3];
+        HermesBuiltin.arraySpread(found1, 1);
+        for (let num2 = 0; num2 < items3.length; num2 = num2 + 1) {
+          let tmp = items3[num2];
+          let tmp3 = null;
+          if (0 < num2) {
+            tmp3 = found1[num2 - 1];
           }
-          num = num + 1;
+          let tmp5 = null != tmp3;
+          if (tmp5) {
+            let str = tmp3.record.name;
+            let str2 = str.trim();
+            let formatted = str2.toLowerCase();
+            tmp5 = formatted === closure_2_20.toLowerCase();
+          }
+          let sum = num2 + ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+          for (let num = 0; num < tmp.channelList.length; num = num + 1) {
+            let tmp11 = tmp.channelList[num];
+            if (tmp11.id !== arg0) {
+              let threadIds = tmp11.threadIds;
+              let index = threadIds.indexOf(arg0);
+              if (index >= 0) {
+                obj2 = { section: sum, row: num, threadOffset: index };
+                let arr2 = items1.push(obj2);
+              }
+            } else {
+              let arr = items;
+              if (tmp5) {
+                arr = items2;
+              }
+              let obj = { section: sum, row: num };
+              let arr3 = arr.push(obj);
+            }
+          }
         }
+        const items4 = [];
+        HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(items, 0)));
+        return items4;
       }
-      return [];
     },
     forEachShownChannel(fn) {
       items = [obj3, ...found1];
@@ -629,8 +656,12 @@ const ChannelRecord = fn(4825);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: c10 } = ChannelRecord);
 let closure_19 = fn(4900).createFavoritesGuildChannelRecord;
 const FavoritesConstants = fn(4834);
-({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(7628).ChannelListChannelNoticeRow;
+({
+  FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_20,
+  FAVORITES_RAW_GUILD_ID: closure_21,
+  MAX_FAVORITE_CHANNELS: closure_22,
+} = FavoritesConstants);
+const constants = fn(7641).ChannelListChannelNoticeRow;
 const Permissions = fn(1098).Permissions;
 let items = [
   EmbeddedActivitiesStore,
@@ -843,7 +874,7 @@ export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerE
           }
         }
         let flag2 = false;
-        if (tmp20 <= tmp(7622).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+        if (tmp20 <= tmp(7635).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
           class I {
             constructor() {
               if (closure_2) {

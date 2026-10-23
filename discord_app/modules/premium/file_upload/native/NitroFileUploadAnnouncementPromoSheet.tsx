@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[3];
       }
       const obj = markAsDismissed(576);
-      const unmountEffect = markAsDismissed(5249).useUnmountEffect(tmp6);
+      const unmountEffect = markAsDismissed(5261).useUnmountEffect(tmp6);
       if (cResult[4] !== tmp5) {
         class I {
           constructor() {
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp10 = jsx(tmp(18333).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp10 = jsx(tmp(18377).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[6] = tmp10;
         const tmp9 = tmp10;
       } else {
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I };
-        const tmp22 = jsx(tmp(5230).Button, { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I });
+        const tmp22 = jsx(tmp(5242).Button, { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I });
         cResult[12] = I;
         cResult[13] = tmp22;
       } else {
@@ -173,18 +173,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = markAsDismissed(5249);
+      const tmpResult = markAsDismissed(5261);
       cResult[14] = I;
       cResult[15] = tmp11;
       cResult[16] = tmp21;
-      cResult[17] = jsx(markAsDismissed(10828).PromoSheet, {
+      cResult[17] = jsx(markAsDismissed(10851).PromoSheet, {
         illustration: tmp11,
         title: tmp14,
         description: tmp15,
         onDismiss: I,
         actions: tmp21,
       });
-      const tmp23 = jsx(markAsDismissed(10828).PromoSheet, {
+      const tmp23 = jsx(markAsDismissed(10851).PromoSheet, {
         illustration: tmp11,
         title: tmp14,
         description: tmp15,

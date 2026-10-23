@@ -70,8 +70,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = isVisible(576);
       const stateFromStores = isVisible(504).useStateFromStores(tmp6, tmp7);
       let tmpResult = isVisible(504);
-      const tmp5Result = stateFromStores(14752);
-      ({ openPayment, buttonText } = stateFromStores(14752)(stateFromStores(7263).PREMIUM_MARKETING_FLOATING_CTA));
+      const tmp5Result = stateFromStores(14776);
+      ({ openPayment, buttonText } = stateFromStores(14776)(stateFromStores(7276).PREMIUM_MARKETING_FLOATING_CTA));
       if (cResult[2] !== backgroundColor) {
         let obj3 = tmp5(683)(backgroundColor);
         const hexResult = tmp5(683)(backgroundColor).alpha(0).hex();
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj2 = {
-          withTiming: isVisible(5192).withTiming,
+          withTiming: isVisible(5204).withTiming,
           isVisible,
           useReducedMotion: stateFromStores,
           FADE_DURATION_MS,
@@ -128,8 +128,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         D.__closure = obj2;
         D.__workletHash = 4035217753570;
         D.__initData = __initData;
-        const animatedStyle = isVisible(5038).useAnimatedStyle(D);
-        const tmpResult3 = isVisible(5038);
+        const animatedStyle = isVisible(5050).useAnimatedStyle(D);
+        const tmpResult3 = isVisible(5050);
         const fn2 = function x() {
           let str = "none";
           if (isVisible.get()) {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fn2.__closure = obj4;
         fn2.__workletHash = 3205490118921;
         fn2.__initData = __initData2;
-        const animatedProps = isVisible(5038).useAnimatedProps(fn2);
+        const animatedProps = isVisible(5050).useAnimatedProps(fn2);
         if (cResult[7] === animatedStyle) {
           if (cResult[8] === tmp4.container) {
             let tmp20 = cResult[9];
@@ -363,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj6 = { animatedProps, style: tmp20, children: null };
                     const items2 = [tmp23, tmp33];
                     obj6.children = items2;
-                    const tmp37 = closure_8(tmp5(5038).View, obj6);
+                    const tmp37 = closure_8(tmp5(5050).View, obj6);
                     cResult[26] = animatedProps;
                     cResult[27] = tmp33;
                     cResult[28] = tmp20;
@@ -443,7 +443,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj8 = { onPress: openPayment, text: buttonText };
-                const tmp32 = closure_7(tmp5(10155), obj8);
+                const tmp32 = closure_7(tmp5(10177), obj8);
                 cResult[20] = buttonText;
                 cResult[21] = openPayment;
                 cResult[22] = tmp32;
@@ -466,7 +466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             end: null,
           };
           ({ START: obj9.start, END: obj9.end } = VerticalGradient);
-          const tmp26 = closure_7(tmp5(5244), obj10);
+          const tmp26 = closure_7(tmp5(5256), obj10);
           cResult[11] = tmp14;
           cResult[12] = tmp4.gradient;
           cResult[13] = tmp26;
@@ -477,14 +477,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = tmp4.container;
         cResult[9] = items4;
         tmp20 = items4;
-        const tmpResult4 = isVisible(5038);
+        const tmpResult4 = isVisible(5050);
       }
       const items5 = [tmp12, backgroundColor, backgroundColor];
       cResult[4] = backgroundColor;
       cResult[5] = tmp12;
       cResult[6] = items5;
       tmp14 = items5;
-      const tmp5ResultResult = stateFromStores(14752)(stateFromStores(7263).PREMIUM_MARKETING_FLOATING_CTA);
+      const tmp5ResultResult = stateFromStores(14776)(stateFromStores(7276).PREMIUM_MARKETING_FLOATING_CTA);
     }
   : function PremiumMarketingFloatingSubscribeButton(isVisible) {
       isVisible = isVisible.isVisible;

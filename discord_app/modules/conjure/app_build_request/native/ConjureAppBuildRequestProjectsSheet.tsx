@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/app_build_request/native/ConjureAppBuildRequestProjectsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05255_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05267_BottomSheetModal.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";

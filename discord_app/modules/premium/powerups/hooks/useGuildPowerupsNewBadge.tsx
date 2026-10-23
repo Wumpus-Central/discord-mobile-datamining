@@ -8,7 +8,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(5168).GuildPowerupNewPerkMarketingVersion;
+const constants = fn(5180).GuildPowerupNewPerkMarketingVersion;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
 let closure_8 = fn(4805).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 let ReactCompilerGating = fn(558);

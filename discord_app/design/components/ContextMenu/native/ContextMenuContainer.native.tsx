@@ -108,7 +108,7 @@ export const ContextMenuContainer = ReactCompilerGating.isReactCompilerEnabled()
               return tmp19;
             }
             const obj3 = { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey };
-            const tmp23 = jsx(tmp(5023).TransitionGroup, { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey });
+            const tmp23 = jsx(tmp(5035).TransitionGroup, { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey });
             cResult[10] = tmp6;
             cResult[11] = tmp18;
             cResult[12] = tmp23;

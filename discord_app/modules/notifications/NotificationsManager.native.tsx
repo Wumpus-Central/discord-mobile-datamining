@@ -87,7 +87,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(18835, dependencyMap.paths), closure_2_14, obj3);
+    obj2.openLazy(asyncRequireImpl(18879, dependencyMap.paths), closure_2_14, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -170,11 +170,11 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
     }
   }
 };
-const PermissionPromptType = fn(13245).PermissionPromptType;
+const PermissionPromptType = fn(13268).PermissionPromptType;
 const Constants = fn(1087);
 ({ RelationshipTypes: c10, GuildFeatures: closure_11, AnalyticEvents: closure_12 } = Constants);
-let closure_13 = fn(7853).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13246);
+let closure_13 = fn(7866).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13269);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_14, EventActionLocation: closure_15 } =
   NotificationPermissionConstants);
 const items = [,];
@@ -690,7 +690,7 @@ class NotificationsManager extends tmp4 {
               closure_128_0 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(7876).getNotificationAuthorizationStatus(), done: false };
+              const obj5 = { value: tmp5(7889).getNotificationAuthorizationStatus(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -702,7 +702,7 @@ class NotificationsManager extends tmp4 {
             return obj6;
           } else {
             closure_128_0 = value;
-            const result = tmp2(13248).updateNotificationAuthorizationStatus(closure_128_0);
+            const result = tmp2(13271).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
             return { value: "IconComponent", done: null };
           }

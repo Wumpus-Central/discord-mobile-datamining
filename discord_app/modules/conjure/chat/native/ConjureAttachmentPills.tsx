@@ -159,13 +159,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { name: id.name };
               obj.accessibilityLabel = intl.formatToPlainString(closure_1(3830).GtNukg, obj2);
               const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
-              obj.children = jsx(projectId(5220).Text, {
+              obj.children = jsx(projectId(5232).Text, {
                 variant: "text-xs/medium",
                 color: "text-default",
                 children: id.name,
               });
               let tmp12 = jsx(
-                projectId(6890).Card,
+                projectId(6903).Card,
                 {
                   style: closure_1.attachmentPill,
                   onPress() {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl2 = projectId(1128).intl;
               const obj6 = { name: id.name };
               obj5.children = intl2.formatToPlainString(closure_1(3830).nd81jR, obj6);
-              obj4.children = jsx(projectId(5220).Text, {
+              obj4.children = jsx(projectId(5232).Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 children: null,

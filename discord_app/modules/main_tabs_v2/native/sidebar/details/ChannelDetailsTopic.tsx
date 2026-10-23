@@ -11,7 +11,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10001);
+const ChannelDetailsConstants = fn(10023);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1087).VerticalGradient;
 const jsxProd = fn(21);
@@ -591,7 +591,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] === tmp7) {
         }
-        Text = Text(5220).Text;
+        Text = Text(5232).Text;
         const obj3 = {
           variant: "heading-sm/normal",
           color: "interactive-text-default",
@@ -626,7 +626,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { textAlign: channel.textAlign };
         obj2.style = obj3;
         obj2.children = stateFromStores;
-        tmp4 = closure_11(channel(5220).Text, obj2);
+        tmp4 = closure_11(channel(5232).Text, obj2);
       }
       return tmp4;
     };
@@ -670,7 +670,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] === tmp7) {
         }
-        Text = Text(5220).Text;
+        Text = Text(5232).Text;
         const obj3 = {
           variant: "heading-sm/normal",
           color: "interactive-text-default",
@@ -696,7 +696,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { textAlign: channel.textAlign };
         obj2.style = obj3;
         obj2.children = stateFromStores;
-        tmp4 = closure_11(channel(5220).Text, obj2);
+        tmp4 = closure_11(channel(5232).Text, obj2);
       }
       return tmp4;
     };

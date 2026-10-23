@@ -75,16 +75,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             style: actionBarCTAContainer,
             onPress: tmp6,
-            iconSource: channel(9024),
+            iconSource: channel(9047),
             iconStyle: promptIconStyle,
             completed: isLive,
             title: tmp8,
             subtitle: tmp9,
           };
-          const tmp15 = jsx(tmp(8926).FormCTA, {
+          const tmp15 = jsx(tmp(8949).FormCTA, {
             style: actionBarCTAContainer,
             onPress: tmp6,
-            iconSource: channel(9024),
+            iconSource: channel(9047),
             iconStyle: promptIconStyle,
             completed: isLive,
             title: tmp8,
@@ -110,7 +110,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      obj2 = guild(8919);
+      obj2 = guild(8942);
     }
   : function ScheduleEventPrompt(isLive) {
       ({ guild: require, channel } = isLive);
@@ -126,7 +126,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 { channel },
               );
           },
-          iconSource: channel(9024),
+          iconSource: channel(9047),
           iconStyle: tmp.promptIconStyle,
           completed: isLive.isLive,
           title: null,
@@ -145,7 +145,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 { channel },
               );
           },
-          iconSource: channel(9024),
+          iconSource: channel(9047),
           iconStyle: tmp.promptIconStyle,
           completed: isLive.isLive,
           title: null,
@@ -218,17 +218,17 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = {
               style: tmp7,
               onPress: tmp6,
-              iconSource: recurrenceId(9120),
+              iconSource: recurrenceId(9143),
               iconStyle: tmp8,
               iconContainerStyle: tmp9,
               completed: isLive,
               title: tmp10,
               subtitle: tmp12,
             };
-            const tmp18 = jsx(tmp(8926).FormCTA, {
+            const tmp18 = jsx(tmp(8949).FormCTA, {
               style: tmp7,
               onPress: tmp6,
-              iconSource: recurrenceId(9120),
+              iconSource: recurrenceId(9143),
               iconStyle: tmp8,
               iconContainerStyle: tmp9,
               completed: isLive,
@@ -265,7 +265,7 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      obj2 = event(8919);
+      obj2 = event(8942);
     }
   : function StartEventPrompt(event) {
       event = event.event;
@@ -283,7 +283,7 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
               recurrenceId,
             );
           },
-          iconSource: recurrenceId(9120),
+          iconSource: recurrenceId(9143),
           iconStyle: tmp.iconStyle,
           iconContainerStyle: null,
           completed: null,
@@ -300,7 +300,7 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp2(1128).intl;
         const obj4 = { startTime: tmp2(4794).calendarFormat(recurrenceId(2049)(scheduled_start_time)) };
         obj2.subtitle = intl2.formatToPlainString(tmp2(1128).t.PTebCR, obj4);
-        tmp4 = jsx(tmp2(8926).FormCTA, {
+        tmp4 = jsx(tmp2(8949).FormCTA, {
           style: tmp.actionBarCTAContainer,
           onPress: function handleStartEvent() {
             const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(
@@ -308,7 +308,7 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
               recurrenceId,
             );
           },
-          iconSource: recurrenceId(9120),
+          iconSource: recurrenceId(9143),
           iconStyle: tmp.iconStyle,
           iconContainerStyle: null,
           completed: null,

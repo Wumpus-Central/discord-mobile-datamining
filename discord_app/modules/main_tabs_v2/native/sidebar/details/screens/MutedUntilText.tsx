@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             );
           };
           obj2.children = intl5.format(N2NXMd, obj3);
-          return jsx(tmp15(5220).Text, {
+          return jsx(tmp15(5232).Text, {
             style: tmp.formHintText,
             variant: "text-sm/medium",
             color: "text-muted",
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return null;
       }
       obj = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult };
-      return jsx(tmp3(5220).Text, {
+      return jsx(tmp3(5232).Text, {
         style: tmp.formHintText,
         variant: "text-sm/medium",
         color: "text-muted",

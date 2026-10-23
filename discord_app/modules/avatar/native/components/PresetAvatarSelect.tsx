@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
         let intl = tmp(1128).intl;
         obj2.children = intl.string(tmp(1128).t.yP28YL);
-        const tmp7 = closure_4(tmp(5220).Text, obj2);
+        const tmp7 = closure_4(tmp(5232).Text, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
       } else {

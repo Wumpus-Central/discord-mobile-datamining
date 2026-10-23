@@ -6,8 +6,8 @@ import user from "../../../../discord_common/js/packages/protos/discord_protos/u
 import _modDef3832 from "../intl/CustomTypingIndicator.messages.js";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef13010 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef13011 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef13033 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef13034 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,7 +29,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [_modDef13010, _modDef13011, _modDef13010];
+        const items = [_modDef13033, _modDef13034, _modDef13033];
         cResult[0] = items;
         let first = items;
       } else {
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         textStyle: tmp.typingText,
         emojiSource: null,
       };
-      const items = [_modDef13010, _modDef13011, _modDef13010];
+      const items = [_modDef13033, _modDef13034, _modDef13033];
       obj2.emojiSource = items;
       obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, {
         name: "Locke",
@@ -138,8 +138,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = markAsDismissed(576);
       const tmp10 = analyticsLocations;
-      analyticsLocations = analyticsLocations(7238)(
-        analyticsLocations(7263).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK,
+      analyticsLocations = analyticsLocations(7251)(
+        analyticsLocations(7276).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK,
       ).analyticsLocations;
       if (cResult[2] !== markAsDismissed) {
         class P {
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = analyticsLocations;
       cResult[7] = markAsDismissed;
       cResult[8] = fn;
-      const tmp11 = analyticsLocations(7238);
+      const tmp11 = analyticsLocations(7251);
     }
   : function CustomTypingIndicatorProfileCoachmark(visible) {
       visible = visible.visible;

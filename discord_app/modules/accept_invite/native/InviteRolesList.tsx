@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
             const intl = tmp(1128).intl;
             obj2.children = intl.string(tmp(1128).t.stcSfI);
-            const tmp14 = closure_5(tmp(5220).Text, obj2);
+            const tmp14 = closure_5(tmp(5232).Text, obj2);
             cResult[6] = tmp14;
             let tmp12 = tmp14;
           } else {
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { spacing: 4, style, children: null };
                 const items2 = [tmp12, tmp20];
                 obj3.children = items2;
-                const tmp26 = closure_6(tmp(5963).Stack, obj3);
+                const tmp26 = closure_6(tmp(5975).Stack, obj3);
                 cResult[15] = style;
                 cResult[16] = tmp20;
                 cResult[17] = tmp26;
@@ -138,14 +138,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
           const intl = guild(1128).intl;
           obj2.children = intl.string(guild(1128).t.stcSfI);
-          const items1 = [closure_5(guild(5220).Text, obj2)];
+          const items1 = [closure_5(guild(5232).Text, obj2)];
           const obj3 = {
             style: tmp.rolesRow,
             children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)),
           };
           items1[1] = closure_5(View, obj3);
           obj.children = items1;
-          tmp2 = closure_6(guild(5963).Stack, obj);
+          tmp2 = closure_6(guild(5975).Stack, obj);
         }
       }
       return tmp2;

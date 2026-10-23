@@ -16,7 +16,7 @@ import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 const require = globalThis.__r;
 
 const utils_ColorUtils = obj(1105);
-const Contants = obj(16503);
+const Contants = obj(16550);
 require = fn;
 function getRoleEmojis(arr, arg1) {
   closure_0 = arg1;
@@ -183,7 +183,7 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
                   obj2.roles = items;
-                  return guildId(9920).updateEmoji(obj2);
+                  return guildId(9942).updateEmoji(obj2);
                 }
               });
               closure_129_16 = closure_129_14.map((item) => {
@@ -193,11 +193,11 @@ let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
                     const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(9920).updateEmoji(obj3);
-                    const obj2 = guildId(9920);
+                    let updateEmojiResult = guildId(9942).updateEmoji(obj3);
+                    const obj2 = guildId(9942);
                   } else {
-                    updateEmojiResult = guildId(9920).deleteEmoji(guildId, customEmojiById.id);
-                    const obj = guildId(9920);
+                    updateEmojiResult = guildId(9942).deleteEmoji(guildId, customEmojiById.id);
+                    const obj = guildId(9942);
                   }
                   return updateEmojiResult;
                 }
@@ -416,9 +416,9 @@ let closure_23 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(16501);
+const GuildRoleSubscriptionEditStore = fn(16548);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(16478).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(16525).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1087);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
@@ -1629,8 +1629,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   if (null != channelBenefits) {
                     const benefits = subscriptionListing.role_benefits.benefits;
                     const benefits1 = subscriptionListing.role_benefits.benefits;
-                    const found = benefits.filter(closure_1_0(16504).isChannelBenefit);
-                    const found1 = benefits1.filter(closure_1_0(16504).isIntangibleBenefit);
+                    const found = benefits.filter(closure_1_0(16551).isChannelBenefit);
+                    const found1 = benefits1.filter(closure_1_0(16551).isIntangibleBenefit);
                     if (channelBenefits == null) {
                       channelBenefits = found;
                     }
@@ -1644,8 +1644,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   }
                   if (!obj2.isEmpty(obj)) {
                     const obj4 = { guildId, groupListingId, listingId: editStateId, data: obj };
-                    subscriptionListing = closure_1_2(7340).updateSubscriptionListing(obj4);
-                    const obj3 = closure_1_2(7340);
+                    subscriptionListing = closure_1_2(7353).updateSubscriptionListing(obj4);
+                    const obj3 = closure_1_2(7353);
                   }
                   return subscriptionListing;
                 })(obj5),

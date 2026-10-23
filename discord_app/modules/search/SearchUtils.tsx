@@ -20,7 +20,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9691).SearchTabs;
+const SearchTabs = fn(9713).SearchTabs;
 const Constants = fn(1087);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({

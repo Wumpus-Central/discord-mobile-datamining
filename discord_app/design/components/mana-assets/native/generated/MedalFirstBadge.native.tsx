@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef10652 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-1x.png.js";
-import _modDef10653 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-2x.png.js";
-import _modDef10654 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-3x.png.js";
+import _modDef10674 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-1x.png.js";
+import _modDef10675 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-2x.png.js";
+import _modDef10676 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10652 }, 3: null };
-let obj2 = { uri: _modDef10652 };
-obj[2] = { uri: _modDef10653 };
-const obj3 = { uri: _modDef10653 };
-obj[3] = { uri: _modDef10654 };
+let obj = { 1: null, 2: { uri: _modDef10674 }, 3: null };
+let obj2 = { uri: _modDef10674 };
+obj[2] = { uri: _modDef10675 };
+const obj3 = { uri: _modDef10675 };
+obj[3] = { uri: _modDef10676 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef10654 };
+const obj4 = { uri: _modDef10676 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MedalFirstBadge.native.tsx");
 

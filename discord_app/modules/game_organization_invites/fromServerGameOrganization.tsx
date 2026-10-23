@@ -17,3 +17,12 @@ export const fromServerGameOrganization = function fromServerGameOrganization(ga
 export const fromServerGameOrganizationApplication = function fromServerGameOrganizationApplication(application) {
   return { id: application.id, name: application.name, iconUrl: application.icon_url };
 };
+export const fromServerGameOrganizationGuild = function fromServerGameOrganizationGuild(guild) {
+  return {
+    id: guild.id,
+    name: guild.name,
+    icon: guild.icon,
+    memberCount: guild.approximate_member_count,
+    presenceCount: guild.approximate_presence_count,
+  };
+};

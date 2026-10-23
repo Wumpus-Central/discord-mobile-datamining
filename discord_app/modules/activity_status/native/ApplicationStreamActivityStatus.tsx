@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp12 = !hideIcon;
       if (!hideIcon) {
-        const obj2 = { icon: tmp7(10618).TvIcon, style: iconStyle };
+        const obj2 = { icon: tmp7(10640).TvIcon, style: iconStyle };
         tmp12 = React3(ActivityStatusIconDefault, obj2);
       }
       const children = [tmp12];

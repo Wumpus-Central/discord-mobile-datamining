@@ -158,8 +158,8 @@ function searchEmojiSuggestions(channel) {
     return obj6;
   }
 }
-const LoadState = fn(6710).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(13264);
+const LoadState = fn(6723).LoadState;
+const EnglishEmojiSuggestionsConstants = fn(13287);
 ({ QUERY_DENYLIST: closure_7, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 let EmojiIntention = fn(1395).EmojiIntention;
 const re10 = /(\S+)\s$/;

@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { variant: "text-md/bold", color: "text-brand", children: null };
                 const intl4 = tmp(1128).intl;
                 obj4.children = intl4.string(tmp(1128).t.cpT0Cq);
-                const tmp16 = closure_3(tmp(5220).Text, obj4);
+                const tmp16 = closure_3(tmp(5232).Text, obj4);
                 cResult[23] = tmp16;
                 let tmp14 = tmp16;
               } else {
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   accessibilityLabel: tmp12,
                   children: tmp14,
                 };
-                const tmp19 = closure_3(tmp(6893).PressableOpacity, obj5);
+                const tmp19 = closure_3(tmp(6906).PressableOpacity, obj5);
                 cResult[24] = onClose;
                 cResult[25] = tmp19;
                 let tmp17 = tmp19;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: tmp6,
             };
-            const tmp10 = closure_3(tmp(5220).Text, obj8);
+            const tmp10 = closure_3(tmp(5232).Text, obj8);
             cResult[19] = informationHeader.informationHeader;
             cResult[20] = tmp6;
             cResult[21] = tmp10;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = informationHeader.informationContentDescription;
       cResult[13] = renderItem;
       tmp5 = renderItem;
-      tmpResult = informationHeader(6473);
+      tmpResult = informationHeader(6486);
     }
   : function StickerPackInformationPopout(stickerPack) {
       stickerPack = stickerPack.stickerPack;

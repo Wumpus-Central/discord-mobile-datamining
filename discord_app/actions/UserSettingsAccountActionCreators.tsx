@@ -134,7 +134,7 @@ const Constants = fn(1087);
   DEVICE_TOKEN: metroRequire,
   DEVICE_VOIP_TOKEN: closure_7,
 } = Constants);
-const PushNotificationConstants = fn(6656);
+const PushNotificationConstants = fn(6669);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -160,11 +160,10 @@ export const disableAccount = function disableAccount(password, arg1) {
   });
 };
 export { saveProfileAndAccountRequest };
-export const saveProfileAndAccountChanges = function saveProfileAndAccountChanges(accountUpdateForUpdateRequest) {
-  const avatar = accountUpdateForUpdateRequest.avatar;
-  const avatarId = accountUpdateForUpdateRequest.avatarId;
-  ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, vadColors, typingIndicatorStyle } =
-    accountUpdateForUpdateRequest);
+export const saveProfileAndAccountChanges = function saveProfileAndAccountChanges(avatar) {
+  avatar = avatar.avatar;
+  const avatarId = avatar.avatarId;
+  ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, typingIndicatorStyle } = avatar);
   ({
     username,
     discriminator,
@@ -176,7 +175,7 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     globalName,
     legacyUsername,
     avatarOriginalMd5,
-  } = accountUpdateForUpdateRequest);
+  } = avatar);
   avatarId(584).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
   const user = {
     username,
@@ -225,9 +224,6 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     user.display_name_effect_id = null;
     user.display_name_colors = null;
   }
-  if (undefined !== vadColors) {
-    user.vad_colors = vadColors;
-  }
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
@@ -256,10 +252,10 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const obj4 = { headers: null };
   const obj = avatarId(584);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7064).buildHeadersForMd5({
-    [avatar(7068).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+  obj4.headers = avatarId(7077).buildHeadersForMd5({
+    [avatar(7081).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
   });
-  let tmpResult = avatarId(7064);
+  let tmpResult = avatarId(7077);
   return saveProfileAndAccountRequest(user, obj4).then(
     (result) => {
       DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });

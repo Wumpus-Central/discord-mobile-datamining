@@ -18,7 +18,7 @@ import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper.
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UnreadSetting = fn(6690).UnreadSetting;
+const UnreadSetting = fn(6703).UnreadSetting;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()

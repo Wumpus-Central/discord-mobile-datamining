@@ -37,9 +37,9 @@ function handleShimPipeOpen(iframeId) {
     obj3.onDisconnect = function onDisconnect() {
       return EmbeddedAppShimActionCreators.disconnectShim(iframeId);
     };
-    const embeddedAppShimHost = iframeId(18703).createEmbeddedAppShimHost(tmp, obj3);
+    const embeddedAppShimHost = iframeId(18747).createEmbeddedAppShimHost(tmp, obj3);
     const result = map.set(iframeId, embeddedAppShimHost);
-    const obj5 = iframeId(18703);
+    const obj5 = iframeId(18747);
   }
 }
 function handleIFrameUnmount(id) {
@@ -53,8 +53,10 @@ function handleIFrameUnmount(id) {
 function updateParentStates() {
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
-    let obj = tmp5[1];
-    let setParentStateResult = obj.setParentState(getParentState(tmp5[0]));
+    [tmp6, obj] = tmp5;
+    if (null != FramesStore.getFrameByIframeId(tmp6)) {
+      let setParentStateResult = obj.setParentState(getParentState(tmp6));
+    }
     continue;
   }
   tmp2 = map[Symbol.iterator]();

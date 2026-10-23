@@ -299,13 +299,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6 = { style: tmp2.channelItemContent, children: null };
       const obj7 = { style: tmp2.channelItemTop, children: null };
       const items3 = [
-        React4(tmp6(5220).Text, {
+        React4(tmp6(5232).Text, {
           animated: true,
           style: flag ? animatedStyles.textNormal : animatedStyles.textMuted,
           variant: "redesign/channel-title/semibold",
           children: title,
         }),
-        React4(tmp6(5220).Text, {
+        React4(tmp6(5232).Text, {
           animated: true,
           style: animatedStyles.textMuted,
           variant: "text-xs/medium",
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
         animatedStyles.children = preview;
-        React4(tmp6(5220).Text, animatedStyles);
+        React4(tmp6(5232).Text, animatedStyles);
         const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
       }
       const obj8 = {

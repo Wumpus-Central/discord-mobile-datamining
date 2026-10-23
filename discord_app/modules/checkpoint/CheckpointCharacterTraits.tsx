@@ -246,7 +246,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop = null;
       }
       tmp = prop;
-    } else if (tmp3(6024).CheckpointTrait.OUTFIT === arg0) {
+    } else if (tmp3(6037).CheckpointTrait.OUTFIT === arg0) {
       const messages = c4.messages;
       let prop1;
       if (messages != null) {
@@ -256,7 +256,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop1 = null;
       }
       tmp = prop1;
-    } else if (tmp3(6024).CheckpointTrait.HAT === arg0) {
+    } else if (tmp3(6037).CheckpointTrait.HAT === arg0) {
       const guilds = c4.guilds;
       let prop2;
       if (guilds != null) {
@@ -269,7 +269,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop2 = null;
       }
       tmp = prop2;
-    } else if (tmp3(6024).CheckpointTrait.SHOES === arg0) {
+    } else if (tmp3(6037).CheckpointTrait.SHOES === arg0) {
       const emojis = c4.emojis;
       let prop3;
       if (emojis != null) {
@@ -279,7 +279,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop3 = null;
       }
       tmp = prop3;
-    } else if (tmp3(6024).CheckpointTrait.WEARABLE === arg0) {
+    } else if (tmp3(6037).CheckpointTrait.WEARABLE === arg0) {
       const games2 = c4.games;
       let prop4;
       if (games2 != null) {
@@ -289,7 +289,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop4 = null;
       }
       tmp = prop4;
-    } else if (tmp3(6024).CheckpointTrait.AURA === arg0) {
+    } else if (tmp3(6037).CheckpointTrait.AURA === arg0) {
       const games = c4.games;
       let prop5;
       if (games != null) {
@@ -299,7 +299,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop5 = null;
       }
       tmp = prop5;
-    } else if (tmp3(6024).CheckpointTrait.BASE === arg0) {
+    } else if (tmp3(6037).CheckpointTrait.BASE === arg0) {
       tmp = null;
     }
   }

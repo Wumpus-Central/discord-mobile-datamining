@@ -46,9 +46,9 @@ const obj7 = {
   INDEX_BOUNDS_PAGE_Y_OFFSET: 1,
   INDEX_BOUNDS_PAGE_X_OFFSET: 0,
   INDEX_BOUNDS_OFFSET: 4,
-  runOnJS: fn(5038).runOnJS,
-  triggerHapticFeedback: fn(5198).triggerHapticFeedback,
-  HapticFeedbackTypes: fn(5198).HapticFeedbackTypes,
+  runOnJS: fn(5050).runOnJS,
+  triggerHapticFeedback: fn(5210).triggerHapticFeedback,
+  HapticFeedbackTypes: fn(5210).HapticFeedbackTypes,
 };
 updateContextMenuState.__closure = obj7;
 updateContextMenuState.__workletHash = 10158111154044;

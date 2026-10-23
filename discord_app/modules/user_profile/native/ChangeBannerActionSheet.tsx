@@ -97,7 +97,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         userId: user.id,
         image: pendingAvatar,
       });
-      const tmp11 = pendingAccentColor(8655)(user.id);
+      const tmp11 = pendingAccentColor(8673)(user.id);
       if (pendingAvatarSrc == null) {
         pendingAvatarSrc = user.getAvatarURL(undefined, 80);
       }
@@ -162,7 +162,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp4.label) {
           const obj3 = { style: tmp4.label, text: tmp19 };
-          const tmp23 = closure_9(tmp(8926).FormLabel, obj3);
+          const tmp23 = closure_9(tmp(8949).FormLabel, obj3);
           cResult[10] = tmp4.label;
           cResult[11] = tmp23;
           let tmp21 = tmp23;
@@ -187,7 +187,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp30 = cResult[19];
             }
             if (cResult[20] !== tmp4.rowArrow) {
-              const obj4 = { style: tmp4.rowArrow, size: tmp(1202).Icon.Sizes.CUSTOM, source: tmp10(15800) };
+              const obj4 = { style: tmp4.rowArrow, size: tmp(1202).Icon.Sizes.CUSTOM, source: tmp10(15821) };
               const tmp35 = closure_9(tmp(1202).Icon, obj4);
               cResult[20] = tmp4.rowArrow;
               cResult[21] = tmp35;
@@ -210,7 +210,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { label: tmp21, trailing: tmp36, onPress: tmp18 };
-                  const tmp42 = closure_9(tmp(6888).TableRow, obj5);
+                  const tmp42 = closure_9(tmp(6901).TableRow, obj5);
                   cResult[27] = tmp18;
                   cResult[28] = tmp36;
                   cResult[29] = tmp21;
@@ -236,14 +236,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             color: "interactive-text-default",
             children: tmp28,
           };
-          const tmp32 = closure_9(tmp(5220).Text, obj7);
+          const tmp32 = closure_9(tmp(5232).Text, obj7);
           cResult[17] = tmp4.selectedColorHex;
           cResult[18] = tmp28;
           cResult[19] = tmp32;
           tmp30 = tmp32;
         }
         const obj8 = { style: tmp4.bannerColor, color: pendingAccentColor };
-        const tmp27 = closure_9(tmp10(15795), obj8);
+        const tmp27 = closure_9(tmp10(15816), obj8);
         cResult[12] = pendingAccentColor;
         cResult[13] = tmp4.bannerColor;
         cResult[14] = tmp27;
@@ -274,7 +274,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         userId: user.id,
         image: pendingAvatar,
       });
-      const tmp7 = pendingAccentColor(8655)(user.id);
+      const tmp7 = pendingAccentColor(8673)(user.id);
       if (pendingAvatarSrc == null) {
         pendingAvatarSrc = user.getAvatarURL(undefined, 80);
       }
@@ -314,7 +314,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.text = intl.string(require("util").t.xzNfPz);
       obj4.label = closure_9(require("Form").FormLabel, obj5);
       const obj6 = { style: tmp.selectedColor, children: null };
-      const items2 = [closure_9(pendingAccentColor(15795), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
+      const items2 = [closure_9(pendingAccentColor(15816), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
       const obj8 = {
         style: tmp.selectedColorHex,
         variant: "text-md/medium",
@@ -329,7 +329,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       items2[2] = closure_9(require("native").Icon, {
         style: tmp.rowArrow,
         size: require("native").Icon.Sizes.CUSTOM,
-        source: pendingAccentColor(15800),
+        source: pendingAccentColor(15821),
       });
       obj6.children = items2;
       obj4.trailing = closure_10(View, obj6);
@@ -406,14 +406,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   originalMd5 = closure_128_0.originalMd5;
                   if (null != base64) {
                     const obj8 = {
-                      assetOrigin: tmp2(7071).AssetOriginTypes.NEW_ASSET,
+                      assetOrigin: tmp2(7084).AssetOriginTypes.NEW_ASSET,
                       imageUri: base64,
                       description: "",
                       originalAsset: "Array",
                       originalMd5,
                     };
-                    tmp2(tmp2(15791).createPendingImage(obj8));
-                    const obj = tmp2(15791);
+                    tmp2(tmp2(15812).createPendingImage(obj8));
+                    const obj = tmp2(15812);
                   }
                   c3 = 3;
                   return { value: "IconComponent", done: null };
@@ -463,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] !== tmp8) {
           let tmp17 = tmp8;
           if (tmp8) {
-            tmp17 = closure_9(tmp(9401).NitroWheelIcon, {});
+            tmp17 = closure_9(tmp(9424).NitroWheelIcon, {});
           }
           cResult[8] = tmp8;
           cResult[9] = tmp17;
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 if (cResult[19] !== cResult[18]) {
                   let obj2 = { text: tmp26 };
-                  const tmp31 = closure_9(tmp(8926).FormLabel, obj2);
+                  const tmp31 = closure_9(tmp(8949).FormLabel, obj2);
                   cResult[19] = tmp26;
                   cResult[20] = tmp31;
                   let tmp29 = tmp31;
@@ -573,7 +573,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                       return tmp73;
                                                     }
                                                     let obj4 = { value: analyticsLocations, children: tmp70 };
-                                                    const tmp75 = closure_9(tmp(7238).AnalyticsLocationProvider, obj4);
+                                                    const tmp75 = closure_9(tmp(7251).AnalyticsLocationProvider, obj4);
                                                     cResult[60] = analyticsLocations;
                                                     cResult[61] = tmp70;
                                                     cResult[62] = tmp75;
@@ -582,7 +582,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                   const obj5 = { children: null };
                                                   const items = [tmp19, tmp67];
                                                   obj5.children = items;
-                                                  const tmp72 = closure_10(tmp(7283).ActionSheet, obj5);
+                                                  const tmp72 = closure_10(tmp(7296).ActionSheet, obj5);
                                                   cResult[57] = tmp67;
                                                   cResult[58] = tmp19;
                                                   cResult[59] = tmp72;
@@ -593,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             let obj6 = { hasIcons: false, children: null };
                                             const items1 = [tmp22, tmp55, tmp58, tmp62];
                                             obj6.children = items1;
-                                            const tmp69 = closure_10(tmp(6972).TableRowGroup, obj6);
+                                            const tmp69 = closure_10(tmp(6985).TableRowGroup, obj6);
                                             cResult[52] = tmp55;
                                             cResult[53] = tmp58;
                                             cResult[54] = tmp62;
@@ -617,9 +617,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       }
                                       let obj8 = { label: null, onPress: null };
                                       obj7.text = stringResult2;
-                                      obj8.label = closure_9(tmp(8926).FormLabel, obj7);
+                                      obj8.label = closure_9(tmp(8949).FormLabel, obj7);
                                       obj8.onPress = tmp12;
-                                      tmp64Result = closure_9(tmp(6888).TableRow, obj8);
+                                      tmp64Result = closure_9(tmp(6901).TableRow, obj8);
                                     }
                                     cResult[46] = tmp12;
                                     cResult[47] = removeText;
@@ -638,7 +638,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     const intl4 = tmp(1128).intl;
                                     obj9.label = intl4.string(tmp(1128).t["xsC+/y"]);
                                     obj9.onPress = onGifBannerSelect;
-                                    tmp59 = closure_9(tmp(6888).TableRow, obj9);
+                                    tmp59 = closure_9(tmp(6901).TableRow, obj9);
                                   }
                                   cResult[43] = tmp8;
                                   cResult[44] = onGifBannerSelect;
@@ -647,7 +647,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                               const obj10 = { label: tmp35, subLabel: tmp50, onPress: tmp54 };
-                              const tmp57 = closure_9(tmp(6888).TableRow, obj10);
+                              const tmp57 = closure_9(tmp(6901).TableRow, obj10);
                               cResult[39] = tmp35;
                               cResult[40] = tmp50;
                               cResult[41] = tmp54;
@@ -676,7 +676,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp45 = tmp46;
                         }
                         const obj14 = { style: tmp6.sublabel, numberOfLines: 2, text: cResult[29] };
-                        const tmp44 = closure_9(tmp(8926).FormSubLabel, obj14);
+                        const tmp44 = closure_9(tmp(8949).FormSubLabel, obj14);
                         cResult[30] = tmp6.sublabel;
                         cResult[31] = cResult[29];
                         cResult[32] = tmp44;
@@ -697,7 +697,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let tmp33 = !tmp8;
                 if (!tmp8) {
                   const obj16 = { style: tmp6.nitroWheel, size: "sm" };
-                  tmp33 = closure_9(tmp(9401).NitroWheelIcon, obj16);
+                  tmp33 = closure_9(tmp(9424).NitroWheelIcon, obj16);
                 }
                 cResult[21] = tmp8;
                 cResult[22] = tmp6.nitroWheel;
@@ -718,7 +718,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj18 = { title: tmp14, trailing: tmp16, titleWrapperStyle: null, titleContainerStyle: null };
         ({ titleWrapper: obj3.titleWrapperStyle, titleContainer: obj3.titleContainerStyle } = tmp6);
-        const tmp21 = closure_9(tmp(7233).BottomSheetTitleHeader, obj18);
+        const tmp21 = closure_9(tmp(7246).BottomSheetTitleHeader, obj18);
         cResult[10] = tmp6.titleContainer;
         cResult[11] = tmp6.titleWrapper;
         cResult[12] = tmp16;
@@ -773,11 +773,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_0 = undefined;
                 let base64;
                 let originalMd5;
-                tmp5(5196).hideActionSheet();
-                const obj4 = tmp5(5196);
+                tmp5(5208).hideActionSheet();
+                const obj4 = tmp5(5208);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj6 = { value: tmp5(8140).openImagePicker(closure_1_8), done: false };
+                const obj6 = { value: tmp5(8152).openImagePicker(closure_1_8), done: false };
                 return obj6;
               }
             } else if (dependencyMap === 1) {
@@ -793,14 +793,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               originalMd5 = closure_128_0.originalMd5;
               if (null != base64) {
                 const obj8 = {
-                  assetOrigin: tmp2(7071).AssetOriginTypes.NEW_ASSET,
+                  assetOrigin: tmp2(7084).AssetOriginTypes.NEW_ASSET,
                   imageUri: base64,
                   description: "",
                   originalAsset: "Array",
                   originalMd5,
                 };
-                closure_129_0(tmp2(15791).createPendingImage(obj8));
-                const obj = tmp2(15791);
+                closure_129_0(tmp2(15812).createPendingImage(obj8));
+                const obj = tmp2(15812);
               }
               c3 = 3;
               return { value: "IconComponent", done: null };
@@ -869,7 +869,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!flag) {
         const obj9 = { style: tmp.upsellButton, children: null };
         const obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-        obj9.children = closure_9(tmp2(15792), obj10);
+        obj9.children = closure_9(tmp2(15813), obj10);
         tmp4Result6 = closure_9(View, obj9);
       }
       items3[1] = tmp4Result6;

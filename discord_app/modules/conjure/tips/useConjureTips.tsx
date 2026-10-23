@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-let items = [fn(12284).CONJURE_TIP_LIVE_BEHIND_IDLE_MS, fn(12286).CONJURE_TIP_IDEAS_IDLE_MS];
+let items = [fn(12303).CONJURE_TIP_LIVE_BEHIND_IDLE_MS, fn(12305).CONJURE_TIP_IDEAS_IDLE_MS];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/tips/useConjureTips.tsx");

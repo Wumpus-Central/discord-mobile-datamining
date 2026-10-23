@@ -26,8 +26,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(12843).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10593).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12862).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10615).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(4969);
@@ -425,9 +425,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (forwardOptions(source[27])(message, closure_129_1)) {
                       const promise = new Promise((arg0) => {
                         closure_0 = arg0;
-                        closure_1_0(5896).openAlert(
+                        closure_1_0(5908).openAlert(
                           "staff-to-non-staff-forward",
-                          closure_1_15(forwardOptions(12849), {
+                          closure_1_15(forwardOptions(12868), {
                             onConfirm() {
                               return closure_0(true);
                             },

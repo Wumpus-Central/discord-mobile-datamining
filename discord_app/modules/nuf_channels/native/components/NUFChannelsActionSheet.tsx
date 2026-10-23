@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = jsx(tmp(14555).ServerChannelsAbstractUI, {});
+        const tmp11 = jsx(tmp(14579).ServerChannelsAbstractUI, {});
         const intl = tmp(1128).intl;
         const stringResult = intl.string(tmp(1128).t.Ay9424);
         const intl2 = tmp(1128).intl;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp19;
       }
-      const tmp20 = jsx(markAsDismissed(5251).BottomSheet, { onDismiss: tmp5, startExpanded: true, children: tmp15 });
+      const tmp20 = jsx(markAsDismissed(5263).BottomSheet, { onDismiss: tmp5, startExpanded: true, children: tmp15 });
       cResult[10] = tmp5;
       cResult[11] = tmp15;
       cResult[12] = tmp20;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const obj2 = {
-        illustration: jsx(markAsDismissed(14555).ServerChannelsAbstractUI, {}),
+        illustration: jsx(markAsDismissed(14579).ServerChannelsAbstractUI, {}),
         title: null,
         description: null,
         CTALabel: null,
@@ -126,13 +126,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.CTALabel = intl3.string(markAsDismissed(1128).t.BddRzS);
       obj2.onCTAPress = callback;
       obj.children = jsx(NUFTemplateV2Default, {
-        illustration: jsx(markAsDismissed(14555).ServerChannelsAbstractUI, {}),
+        illustration: jsx(markAsDismissed(14579).ServerChannelsAbstractUI, {}),
         title: null,
         description: null,
         CTALabel: null,
         onCTAPress: null,
       });
-      return jsx(markAsDismissed(5251).BottomSheet, {
+      return jsx(markAsDismissed(5263).BottomSheet, {
         onDismiss() {
           let tmpResult;
           if (markAsDismissed != null) {

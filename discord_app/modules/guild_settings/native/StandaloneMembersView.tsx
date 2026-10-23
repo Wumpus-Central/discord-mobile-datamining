@@ -131,11 +131,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp10;
       if (cResult[5] !== navigation) {
-        const headerCloseButton = tmp(6909).getHeaderCloseButton(() => navigation.goBack());
+        const headerCloseButton = tmp(6922).getHeaderCloseButton(() => navigation.goBack());
         cResult[5] = navigation;
         cResult[6] = headerCloseButton;
         let tmp11 = headerCloseButton;
-        const tmpResult = tmp(6909);
+        const tmpResult = tmp(6922);
       } else {
         tmp11 = cResult[6];
       }
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = { title: null };
           const intl = guildId(1128).intl;
           obj.title = intl.string(guildId(1128).t["9Oq93m"]);
-          return closure_1_6(guildId(6909).NavigatorHeader, obj);
+          return closure_1_6(guildId(6922).NavigatorHeader, obj);
         };
         cResult[7] = fn2;
         let tmp13 = fn2;

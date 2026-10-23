@@ -349,8 +349,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_9();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = closure_7(tmp(5220).Heading, { variant: "text-lg/bold", children: "Variants" });
-        const tmp9 = closure_7(tmp(5220).Text, {
+        const tmp8 = closure_7(tmp(5232).Heading, { variant: "text-lg/bold", children: "Variants" });
+        const tmp9 = closure_7(tmp(5232).Text, {
           variant: "text-sm/normal",
           color: "text-subtle",
           children:
@@ -426,8 +426,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
         items = [tmp5, tmp6, tmp10];
         obj3.children = items;
-        obj2.children = closure_8(tmp(5963).Stack, obj3);
-        const tmp17 = closure_7(tmp(6890).Card, obj2);
+        obj2.children = closure_8(tmp(5975).Stack, obj3);
+        const tmp17 = closure_7(tmp(6903).Card, obj2);
         cResult[4] = tmp10;
         cResult[5] = tmp17;
         let tmp13 = tmp17;

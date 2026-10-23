@@ -203,9 +203,9 @@ export default noop.memo(
                             }
                             return tmp26;
                           }
-                          const obj3 = { profile: fastListRef(12992).Profiles.Guilds, children: null };
+                          const obj3 = { profile: fastListRef(13015).Profiles.Guilds, children: null };
                           const obj4 = { gesture, children: tmp23 };
-                          obj3.children = closure_4(fastListRef(5283).GestureDetector, obj4);
+                          obj3.children = closure_4(fastListRef(5295).GestureDetector, obj4);
                           const tmp29 = closure_4(StartupProfilerDefault, obj3);
                           cResult[19] = gesture;
                           cResult[20] = tmp23;
@@ -281,7 +281,7 @@ export default noop.memo(
         closure_7(listProps, fastListRef);
         const obj = { profile: null, children: null };
         const tmp5 = useGuildsBarPropsDefault(fastListRef);
-        obj.profile = fastListRef(12992).Profiles.Guilds;
+        obj.profile = fastListRef(13015).Profiles.Guilds;
         const obj2 = { gesture, children: null };
         const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
         const tmp9 = StartupProfilerDefault;
@@ -308,7 +308,7 @@ export default noop.memo(
         const items1 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {})];
         obj3.children = items1;
         obj2.children = closure_5(tmp11, obj3);
-        obj.children = closure_4(fastListRef(5283).GestureDetector, obj2);
+        obj.children = closure_4(fastListRef(5295).GestureDetector, obj2);
         return closure_4(tmp9, obj);
       },
 );

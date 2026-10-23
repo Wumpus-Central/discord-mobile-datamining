@@ -19,7 +19,7 @@ import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Features = fn(5704).Features;
+const Features = fn(5716).Features;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);

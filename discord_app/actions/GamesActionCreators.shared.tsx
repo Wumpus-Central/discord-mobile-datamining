@@ -527,7 +527,7 @@ let closure_13 = async function _startActivity(arg0, arg1) {
   })();
 };
 const ActivityFlags = fn(1087).ActivityFlags;
-const MAIN_SURFACE = fn(6761).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6774).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.shared.tsx");
 

@@ -48,8 +48,9 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       organization: fromServerGameOrganization.fromServerGameOrganization(game_organization),
       application: null,
       displayNoun: null,
+      linkedGuild: null,
     };
-    ({ game_organization, application } = invite);
+    ({ game_organization, application, guild } = invite);
     obj.application = fromServerGameOrganization.fromServerGameOrganizationApplication(application);
     let display_noun;
     if (application_config != null) {
@@ -59,7 +60,9 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       display_noun = null;
     }
     obj.displayNoun = display_noun;
+    obj.linkedGuild = fromServerGameOrganization.fromServerGameOrganizationGuild(guild);
     const result = map.set(invite.code, obj);
+    const tmpResult = fromServerGameOrganization;
   },
   GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE: function handleResolveFailure(code) {
     code = code.code;

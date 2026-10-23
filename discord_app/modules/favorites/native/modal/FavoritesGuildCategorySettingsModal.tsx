@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function FavoritesGuildCategorySettingsModal(categoryId) {
       const cResult = categoryId(576).c(4);
       categoryId = categoryId.categoryId;
-      onGoBack = onGoBack(10006)().onGoBack;
+      onGoBack = onGoBack(10028)().onGoBack;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1128).intl;
         const stringResult = intl.string(tmp(1128).t["/uELTj"]);
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp7;
       }
-      const tmp8 = closure_8(onGoBack(10007), {
+      const tmp8 = closure_8(onGoBack(10029), {
         screenKey: "favoritesGuildCategorySettings",
         title: first,
         render() {
@@ -341,12 +341,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function FavoritesGuildCategorySettingsModal(categoryId) {
       categoryId = categoryId.categoryId;
       let onGoBack;
-      onGoBack = onGoBack(10006)().onGoBack;
+      onGoBack = onGoBack(10028)().onGoBack;
       const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
       const intl = categoryId(1128).intl;
       obj.title = intl.string(categoryId(1128).t["/uELTj"]);
       obj.render = function render() {
         return closure_2_8(closure_11, { categoryId, onGoBack });
       };
-      return closure_8(onGoBack(10007), obj);
+      return closure_8(onGoBack(10029), obj);
     };

@@ -348,14 +348,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "__initData",
+    error: "applicationId",
     localeData: _modDef2070,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "__initData" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "applicationId" });
       }
     },
     setLoadingFailed(error, arg1) {

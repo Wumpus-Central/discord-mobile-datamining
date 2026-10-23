@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/MethodPathIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../_runtime/07947_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07960_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let paths = icon.icon;
       const tmp3 = closure_5();
       const obj = token(576);
-      token = token(5238).useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
+      token = token(5250).useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
       if (cResult[0] === paths.paths) {
         if (cResult[1] === token) {
           if (cResult[5] !== cResult[2]) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[0] = paths;
       cResult[1] = token;
       cResult[2] = mapped;
-      const obj2 = token(5238);
+      const obj2 = token(5250);
     }
   : function MethodPathIcon(icon) {
       _require = undefined;

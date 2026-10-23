@@ -11,8 +11,8 @@ import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10143 from "../../_runtime/metro/10143__.js";
-import _modDef16821 from "../../_runtime/metro/16821__.js";
+import _modDef10165 from "../../_runtime/metro/10165__.js";
+import _modDef16865 from "../../_runtime/metro/16865__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -84,7 +84,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return closure_1_8(View, obj);
 };
-ListItem.contextType = fn(5023).ThemeContext;
+ListItem.contextType = fn(5035).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -198,7 +198,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef16821, obj4)];
+      const items = [closure_7(_modDef16865, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -248,14 +248,14 @@ prototype["renderVideo"] = function renderVideo() {
     const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef10143,
+      source: _modDef10165,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1202).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(6893).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(6906).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -270,7 +270,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return React5(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(5023).ThemeContext;
+ChangeLog.contextType = fn(5035).ThemeContext;
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useVideoDimensions() {

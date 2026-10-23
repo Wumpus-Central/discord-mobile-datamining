@@ -308,9 +308,8 @@ let closure_11 = async function _joinFrameActivity(arg0) {
   }
 };
 let closure_12 = async function _getActivityChannelId() {
-  closure_2 = tmp2;
-  const metadata = UserActivityActionCreators.getMetadata(closure_0, closure_1);
-  await metadata.catch(() => null);
+  await UserActivityActionCreators.getMetadata(closure_0, closure_1);
+  await "IconComponent";
   closure_130_0 = value;
   if (closure_130_0 != null) {
     const channel_id = closure_130_0.channel_id;

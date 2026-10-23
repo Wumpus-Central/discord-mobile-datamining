@@ -237,13 +237,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => closure_5(invite.channel), items);
       const obj2 = { children: null };
       const items1 = [
-        closure_8(invite(5220).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
+        closure_8(invite(5232).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
       ];
       const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
       const tmp = closure_10();
       items1[1] = closure_8(closure_11, { channel: memo, expiresAt: invite.getExpiresAt() });
       obj2.children = items1;
-      obj.children = closure_9(invite(5963).Stack, obj2);
+      obj.children = closure_9(invite(5975).Stack, obj2);
       return closure_8(View, obj);
     };
 export const InstantInviteDetails = tmp3;

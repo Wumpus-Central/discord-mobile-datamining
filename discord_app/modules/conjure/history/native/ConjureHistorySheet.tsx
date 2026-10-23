@@ -13,7 +13,7 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import TableRowGroup2 from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9115 from "../../../../../_runtime/metro/09115__.js";
+import _modDef9138 from "../../../../../_runtime/metro/09138__.js";
 import ContextMenu from "../../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import ConjureHistoryFormat from "../ConjureHistoryFormat.tsx";
 import conjureHistoryRequests from "../conjureHistoryRequests.tsx";
@@ -195,7 +195,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
         if (cResult[3] === renderItem) {
           if (cResult[7] !== cResult[4]) {
             const obj2 = { spacing: 16, children: tmp4 };
-            const tmp9 = closure_7(renderItem(5963).Stack, obj2);
+            const tmp9 = closure_7(renderItem(5975).Stack, obj2);
             cResult[7] = tmp4;
             cResult[8] = tmp9;
             let tmp7 = tmp9;
@@ -222,27 +222,27 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
     tmp5 = cResult[6];
   }
   let obj = renderItem(576);
-  const tmpResult = renderItem(11831);
-  const mapped = renderItem(11831).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
+  const tmpResult = renderItem(11850);
+  const mapped = renderItem(11850).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
   cResult[0] = getMs;
   cResult[1] = items;
   cResult[2] = nowMs;
   cResult[3] = renderItem;
   cResult[4] = mapped;
-  const groupHistoryByDayResult = renderItem(11831).groupHistoryByDay(items, getMs, nowMs);
+  const groupHistoryByDayResult = renderItem(11850).groupHistoryByDay(items, getMs, nowMs);
 }) : (function HistoryDayGroups(renderItem) {
   renderItem = renderItem.renderItem;
   ({ items, getMs, nowMs } = renderItem);
   let obj = { spacing: 16, children: null };
-  const obj2 = renderItem(11831);
-  obj.children = renderItem(11831).groupHistoryByDay(items, getMs, nowMs).map((label) => {
+  const obj2 = renderItem(11850);
+  obj.children = renderItem(11850).groupHistoryByDay(items, getMs, nowMs).map((label) => {
     label = label.label;
     const obj = { title: label, hasIcons: false, children: null };
     const items = label.items;
     obj.children = items.map(renderItem);
     return React5(TableRowGroup2.TableRowGroup, obj, label.key);
   });
-  return closure_7(renderItem(5963).Stack, obj);
+  return closure_7(renderItem(5975).Stack, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function VersionsPanel(restoreDisabled) {
@@ -618,7 +618,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Databa
                                 if (cResult[64] !== tmp9) {
                                   function ce(arg0) {
                                     ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-                                    return React5(IconButton.IconButton, { ref, icon: _modDef9115, size: "sm", variant: "secondary", accessibilityLabel, accessibilityActions, onAccessibilityAction, onPress });
+                                    return React5(IconButton.IconButton, { ref, icon: _modDef9138, size: "sm", variant: "secondary", accessibilityLabel, accessibilityActions, onAccessibilityAction, onPress });
                                   }
                                   cResult[64] = tmp9;
                                   cResult[65] = ce;
@@ -1329,7 +1329,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Databa
       align: "below",
       children(arg0) {
         ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-        return React5(IconButton.IconButton, { ref, icon: _modDef9115, size: "sm", variant: "secondary", accessibilityLabel, accessibilityActions, onAccessibilityAction, onPress });
+        return React5(IconButton.IconButton, { ref, icon: _modDef9138, size: "sm", variant: "secondary", accessibilityLabel, accessibilityActions, onAccessibilityAction, onPress });
       }
     })
   ];
@@ -1427,7 +1427,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
       if (cResult[9] === tmp16) {
         let tmp17 = cResult[10];
       }
-      const segmentedControlState = onChange(8876).useSegmentedControlState(tmp17);
+      const segmentedControlState = onChange(8899).useSegmentedControlState(tmp17);
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         const intl4 = onChange(1128).intl;
@@ -1439,7 +1439,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
       }
       if (cResult[12] !== segmentedControlState) {
         const obj5 = { state: segmentedControlState };
-        const tmp24 = closure_7(onChange(11804).Tabs, obj5);
+        const tmp24 = closure_7(onChange(11823).Tabs, obj5);
         cResult[12] = segmentedControlState;
         cResult[13] = tmp24;
         let tmp22 = tmp24;
@@ -1458,7 +1458,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
       cResult[15] = tmp22;
       cResult[16] = tmp28;
       tmp25 = tmp28;
-      const tmpResult = onChange(8876);
+      const tmpResult = onChange(8899);
     }
   }
   const obj7 = { items: tmp11, pageWidth: tmp5, defaultIndex: tmp13, onSetActiveIndex: tmp16 };
@@ -1487,7 +1487,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
     return items;
   }, []);
   const tmp = _slicedToArray(closure_17(), 2);
-  let obj = onChange(8876);
+  let obj = onChange(8899);
   let obj3 = { onLayout: tmp3, accessibilityLabel: null, children: null };
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
@@ -1501,7 +1501,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
   });
   let intl = onChange(1128).intl;
   obj3.accessibilityLabel = intl.string(_modDef3830["/2GnYy"]);
-  obj3.children = closure_7(onChange(11804).Tabs, { state: segmentedControlState });
+  obj3.children = closure_7(onChange(11823).Tabs, { state: segmentedControlState });
   return closure_7(View, obj3);
 });
 const size = fn(2);
@@ -1519,14 +1519,14 @@ export default function ConjureHistorySheet(projectId) {
   let onSaveBackup;
   const tmp3 = onSaveBackup(onRestoreVersion(1633)().bottom + onRestoreVersion(587).space.PX_16);
   [tmp5, tmp6] = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
-  const tmp7 = onRestoreVersion(12226)(projectId, projectId.installScope);
+  const tmp7 = onRestoreVersion(12245)(projectId, projectId.installScope);
   ({ sharedDatabase: c2, versions, databases, refreshAllBackups } = tmp7);
   versionTitles = tmp7.versionTitles;
   ({ previewBackups, previewBackupsLoading } = tmp7);
   const tmp4 = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
   conjureDatabaseBusy = require("conjureDatabaseLock").useConjureDatabaseBusy(projectId);
   let obj = require("conjureDatabaseLock");
-  const tmp10 = onRestoreVersion(11757)(projectId);
+  const tmp10 = onRestoreVersion(11777)(projectId);
   [tmp12, c6] = versionTitles(conjureDatabaseBusy.useState(false), 2);
   const refresh = versions.refresh;
   _require = refreshAllBackups(function*(arg0, arg1) {
@@ -1647,7 +1647,7 @@ export default function ConjureHistorySheet(projectId) {
               closure_128_0 = undefined;
               c2 = 1;
               v3 = 1;
-              const obj6 = { value: tmp2(12217).runConjureDataRewind(tmp2, tmp2), done: false };
+              const obj6 = { value: tmp2(12236).runConjureDataRewind(tmp2, tmp2), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -1664,8 +1664,8 @@ export default function ConjureHistorySheet(projectId) {
               const obj8 = { text: null };
               const intl2 = tmp2(1128).intl;
               obj8.text = intl2.string(tmp5(3830).yHchfE);
-              tmp5(5649).open("CONJURE_HISTORY_REWIND_DONE", obj8);
-              const obj2 = tmp5(5649);
+              tmp5(5661).open("CONJURE_HISTORY_REWIND_DONE", obj8);
+              const obj2 = tmp5(5661);
             } else {
               const intl = tmp2(1128).intl;
               if ("unconfirmed" === closure_128_0.code) {
@@ -1675,8 +1675,8 @@ export default function ConjureHistorySheet(projectId) {
               } else {
                 uyjFNZ = tmp5(3830).uyjFNZ;
               }
-              tmp2(5648).presentError(intl.string(uyjFNZ));
-              const obj = tmp2(5648);
+              tmp2(5660).presentError(intl.string(uyjFNZ));
+              const obj = tmp2(5660);
             }
             v3 = 3;
           }
@@ -1743,7 +1743,7 @@ export default function ConjureHistorySheet(projectId) {
   const items4 = [projectId, refreshAllBackups];
   onSaveBackup = conjureDatabaseBusy.useCallback((environment) => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(12228, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
+    return obj.openLazy(asyncRequireImpl(12247, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
   }, items4);
   let obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
   let obj3 = { children: null };
@@ -1769,14 +1769,14 @@ export default function ConjureHistorySheet(projectId) {
     let tmp16Result = tmp15(closure_15, obj6);
   } else if ("publishes" === tmp5) {
     let obj7 = { projectId };
-    tmp16Result = tmp15(tmp(12229), obj7, projectId);
+    tmp16Result = tmp15(tmp(12248), obj7, projectId);
   } else {
     let obj8 = { children: null };
     const obj9 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = tmp8(1128).intl;
-    const obj10 = { days: tmp8(12227).RESTORE_WINDOW_DAYS };
+    const obj10 = { days: tmp8(12246).RESTORE_WINDOW_DAYS };
     obj9.children = intl2.formatToPlainString(tmp(3830).ptsHZu, obj10);
-    const items6 = [tmp15(tmp8(5220).Text, obj9), databases.map((database) => React5(closure_16, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
+    const items6 = [tmp15(tmp8(5232).Text, obj9), databases.map((database) => React5(closure_16, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
     obj8.children = items6;
     tmp16Result = callback1(onRestoreBackup, obj8);
   }

@@ -10,7 +10,7 @@ import ConjureProjectStore_mod from "../../projects/ConjureProjectStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-let ConjureProjectStore = fn(6758);
+let ConjureProjectStore = fn(6771);
 ({ canPublishProject: closure_9, isProjectOwner: c10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
@@ -171,7 +171,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         items,
       );
       const tmp = setActiveIndex(noop.useState(0), 2);
-      obj = tabs(8876);
+      obj = tabs(8899);
       const segmentedControlState = obj.useSegmentedControlState({
         items: memo,
         pageWidth: tmp2,
@@ -193,10 +193,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { onLayout: callback, children: null };
       if (tabs.length > 3) {
         const obj4 = { state: segmentedControlState };
-        let tmp10Result = closure_12(tmp5(11804).Tabs, obj4);
+        let tmp10Result = closure_12(tmp5(11823).Tabs, obj4);
       } else {
         const obj5 = { state: segmentedControlState };
-        tmp10Result = closure_12(tmp5(9122).SegmentedControl, obj5);
+        tmp10Result = closure_12(tmp5(9145).SegmentedControl, obj5);
       }
       obj3.children = tmp10Result;
       return closure_12(View, obj3);
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      closure_15(ref(5579)(first).insets.bottom);
+      closure_15(ref(5591)(first).insets.bottom);
       ref = noop.useRef(null);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [ConjureProjectStore];
@@ -391,8 +391,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp5Result = tmp5(11755);
-      closure_3 = tmp5(11755)(projectId, undefined);
+      const tmp5Result = tmp5(11775);
+      closure_3 = tmp5(11775)(projectId, undefined);
       if (cResult[17] === isPreview) {
         class N {
           constructor() {
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[22] = scopeKeys;
       cResult[23] = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
       let obj3 = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
-      const tmp5ResultResult = tmp5(11755)(projectId, undefined);
+      const tmp5ResultResult = tmp5(11775)(projectId, undefined);
     }
   : function ConjureSettingsSheet(projectId) {
       projectId = projectId.projectId;

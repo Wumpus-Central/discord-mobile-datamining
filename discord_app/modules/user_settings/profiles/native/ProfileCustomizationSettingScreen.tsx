@@ -65,19 +65,19 @@ const result = size.fileFinishedImporting(
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function ProfileCustomizationSettingScreen() {
-        const cResult = obj5(576).c(56);
+        const cResult = obj5(576).c(57);
         useMaybeFetchCollectiblesRecommendationsDefault();
         closure_19();
         let obj = obj5(576);
-        const token = obj5(5238).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+        const token = obj5(5250).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
         obj5 = token;
-        const tmp8 = _slicedToArray(stateFromStores.useState(0), 2);
+        const tmp8 = _slicedToArray(noop.useState(0), 2);
         importDefault = tmp8[1];
-        [dependencyMap, closure_3] = stateFromStores.useState(false);
-        let obj2 = obj5(5238);
+        [dependencyMap, closure_3] = noop.useState(false);
+        let obj2 = obj5(5250);
         const nativeStackNavigation = obj5(1505).useNativeStackNavigation();
         let obj3 = obj5(1505);
-        const params = obj5(7075).useSettingNavigationRoute().params;
+        const params = obj5(7088).useSettingNavigationRoute().params;
         let autoFocusElement;
         if (params != null) {
           autoFocusElement = params.autoFocusElement;
@@ -96,32 +96,32 @@ export default noop.memo(
           tmp13 = cResult[1];
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
-          cResult[2] = H;
+          cResult[2] = B;
         } else {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
         }
-        let obj4 = obj5(7075);
+        let obj4 = obj5(7088);
         const obj6 = {
           items: tmp13,
           pageWidth: tmp8[0],
@@ -130,20 +130,20 @@ export default noop.memo(
           onPageChangeStart: null,
         };
         if (field === ProfileCustomizationSubsection.GUILD) {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
         }
         obj6.defaultIndex = 0;
-        obj6.onPageChange = H;
+        obj6.onPageChange = B;
         obj6.onPageChangeStart = function onPageChangeStart(arg0, onContinue) {
           const obj = {
             location: "ProfileCustomizationSettingScreen",
@@ -154,72 +154,73 @@ export default noop.memo(
           };
           return maybeShowUnsavedChangesAlertDefault(obj);
         };
-        const segmentedControlState = obj5(8876).useSegmentedControlState(obj6);
+        const segmentedControlState = obj5(8899).useSegmentedControlState(obj6);
         const activeIndex = segmentedControlState.activeIndex;
         const tmp18 = items[activeIndex.get(activeIndex)];
         if (tmp18 == null) {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
         }
-        const subSection = tmp18;
+        _objectWithoutProperties = tmp18;
         const tmp19 = useUserProfileEditFormDefault();
         if (cResult[3] !== tmp19) {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
-          closure_6 = tmp22;
+          asyncGeneratorStep = tmp22;
           const tmp25 = _objectWithoutProperties(tmp19, closure_3);
+          closure_6 = tmp25;
           cResult[3] = tmp19;
           cResult[4] = tmp25;
           cResult[5] = tmp22;
-          const tmp20 = tmp25;
         } else {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
-          closure_6 = cResult[5];
+          closure_6 = tmp20;
+          asyncGeneratorStep = cResult[5];
         }
         const tmp26 = useGuildProfileEditFormDefault();
         if (cResult[6] !== tmp26) {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
-          _objectWithoutProperties = tmp30;
+          _slicedToArray = tmp30;
           const handleSubmit = tmp26.handleSubmit;
-          _slicedToArray = handleSubmit;
+          noop = handleSubmit;
           const tmp33 = _objectWithoutProperties(tmp26, nativeStackNavigation);
           cResult[6] = tmp26;
           cResult[7] = tmp30;
@@ -227,37 +228,37 @@ export default noop.memo(
           cResult[9] = handleSubmit;
           let tmp28 = tmp33;
         } else {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
-          _objectWithoutProperties = tmp30;
+          _slicedToArray = tmp30;
           tmp28 = cResult[8];
-          _slicedToArray = cResult[9];
+          noop = cResult[9];
         }
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
           items = [UserProfileSettingsStore];
           class J {
             constructor() {
-              return closure_1_13.showNotice();
+              return closure_13.showNotice();
             }
           }
           cResult[10] = items;
@@ -265,31 +266,31 @@ export default noop.memo(
           let tmp35 = J;
           const tmp34 = items;
         } else {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
           tmp35 = cResult[11];
         }
-        const tmpResult = obj5(8876);
-        stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
-        closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
+        const tmpResult = obj5(8899);
+        const stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
+        ProfileCustomizationNavigationStore = tmp20.isSubmitting || tmp28.isSubmitting;
         if (cResult[12] === tmp29) {
-          class H {
+          class B {
             constructor(arg0) {
               first = closure_1_20[arg0];
               if (first == null) {
                 first = closure_1_20[0];
               }
               obj = { subsection: first.subSection };
-              setStateResult = closure_12.setState(obj);
+              setStateResult = isSubmitting.setState(obj);
               return;
             }
           }
@@ -297,11 +298,11 @@ export default noop.memo(
         class Y {
           constructor() {
             if (closure_5 === closure_14.GUILD) {
-              tmp3 = closure_9;
-              tmp2 = closure_9();
+              tmp3 = closure_10;
+              tmp2 = closure_10();
             } else {
-              tmp = closure_6;
-              tmp2 = closure_6();
+              tmp = closure_7;
+              tmp2 = closure_7();
             }
             return tmp2;
           }
@@ -317,9 +318,9 @@ export default noop.memo(
         const tmp4 = closure_19();
         const token = require("useToken").useToken(require("native").colors.MOBILE_ACTIONSHEET_BACKGROUND);
         _require = token;
-        const tmp7 = handleSubmit2(stateFromStores.useState(0), 2);
+        const tmp7 = guild(handleSubmit2.useState(0), 2);
         importDefault = tmp7[1];
-        const tmp8 = handleSubmit2(stateFromStores.useState(false), 2);
+        const tmp8 = guild(handleSubmit2.useState(false), 2);
         first = tmp8[0];
         closure_3 = tmp8[1];
         let obj = require("useToken");
@@ -330,7 +331,7 @@ export default noop.memo(
         if (params != null) {
           autoFocusElement = params.autoFocusElement;
         }
-        const field = onSave.useField("subsection");
+        const field = ProfileCustomizationNavigationStore.useField("subsection");
         _require = { autoFocusElement };
         const mapped = items.map((renderLabel) => {
           ({ id, renderPage } = renderLabel);
@@ -354,7 +355,7 @@ export default noop.memo(
           if (first == null) {
             first = 5;
           }
-          callback.setState({ subsection: first.subSection });
+          state.setState({ subsection: first.subSection });
         };
         obj5.onPageChangeStart = function onPageChangeStart(arg0, onContinue) {
           const obj = {
@@ -374,17 +375,16 @@ export default noop.memo(
         }
         const tmp17 = require("useUserProfileEditForm")();
         const handleSubmit = tmp17.handleSubmit;
-        const tmp5Result = require("SegmentedControlState");
+        const tmp18 = _objectWithoutProperties(tmp17, field);
+        _objectWithoutProperties = tmp18;
         const tmp19 = require("useGuildProfileEditForm")();
         guild = tmp19.guild;
         handleSubmit2 = tmp19.handleSubmit;
-        const tmp18 = guild(tmp17, field);
-        const tmp20 = guild(tmp19, first1);
-        items = [UserProfileSettingsStore];
-        stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
-          UserProfileSettingsStore.showNotice(),
-        );
-        closure_11 = tmp22;
+        const tmp5Result = require("SegmentedControlState");
+        const tmp20 = _objectWithoutProperties(tmp19, first1);
+        items = [onSave];
+        const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => callback.showNotice());
+        ProfileCustomizationNavigationStore = tmp22;
         const items1 = [field, handleSubmit, handleSubmit2];
         onSave = obj2.useCallback(() => {
           if (field === ProfileCustomizationSubsection.GUILD) {
@@ -411,7 +411,7 @@ export default noop.memo(
         }, items3);
         const effect2 = obj2.useEffect(
           () => () => {
-            onSave.resetState();
+            state.resetState();
           },
           [],
         );
@@ -426,7 +426,7 @@ export default noop.memo(
           let obj = {
             contentStyle: { backgroundColor },
             headerShadowVisible: false,
-            headerRight: closure_11
+            headerRight: closure_12
               ? () => closure_1_17(backgroundColor(first[29]).HeaderSubmittingIndicator, {})
               : () => {
                   let obj = { text: null, disabled: null, onPress: null };
@@ -493,24 +493,32 @@ export default noop.memo(
           closure_1(nativeEvent.nativeEvent.layout.width);
         }, []);
         const tmp5Result3 = require("useStateFromStores");
+        let tmp29 = stateFromStores;
         if (stateFromStores) {
-          stateFromStores = !tmp22;
+          let isWaitingForHexagonCampaignEnrollment = !tmp22;
+          if (tmp22) {
+            isWaitingForHexagonCampaignEnrollment = tmp18.isWaitingForHexagonCampaignEnrollment;
+          }
+          tmp29 = isWaitingForHexagonCampaignEnrollment;
         }
-        if (stateFromStores) {
-          stateFromStores = !first;
+        if (tmp29) {
+          tmp29 = !first;
         }
-        const preventRemove = require("Link").usePreventRemove(stateFromStores, (data) => {
+        const preventRemove = require("Link").usePreventRemove(tmp29, (data) => {
           const action = data.data.action;
-          const obj = {
-            location: "ProfileCustomizationSettingScreen",
-            hasUnsavedChanges: stateFromStores,
-            onReset: backgroundColor(first[23]).resetAllPending,
-            onContinue() {
-              return nativeStackNavigation.dispatch(action);
-            },
-            onSave,
-          };
-          closure_1(first[22])(obj);
+          if (!closure_8.isWaitingForHexagonCampaignEnrollment) {
+            const obj = {
+              location: "ProfileCustomizationSettingScreen",
+              hasUnsavedChanges: stateFromStores,
+              onReset: backgroundColor(first[23]).resetAllPending,
+              onContinue() {
+                return nativeStackNavigation.dispatch(action);
+              },
+              onSave,
+            };
+            closure_1(first[22])(obj);
+            const tmp3 = closure_1(first[22]);
+          }
         });
         const items5 = [first, nativeStackNavigation];
         const effect3 = obj2.useEffect(() => {
@@ -521,13 +529,13 @@ export default noop.memo(
         const obj6 = { style: tmp4.container, onLayout: callback1, children: null };
         const tmp5Result4 = require("Link");
         const items6 = [
-          closure_17(closure_11, {
+          closure_17(stateFromStores, {
             style: tmp4.controls,
             children: closure_17(require("Tabs/Tabs").Tabs, { state: segmentedControlState }),
           }),
           closure_17(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState }),
         ];
         obj6.children = items6;
-        return closure_18(closure_11, obj6);
+        return closure_18(stateFromStores, obj6);
       },
 );

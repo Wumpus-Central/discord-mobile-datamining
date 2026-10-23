@@ -1,7 +1,7 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchBottomFade.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import _modDef683 from "../../../../../../_runtime/metro/00683__.js";
-import LinearGradientDefault from "../../../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05256_LinearGradient.js";
 import useSearchHostSurface from "../useSearchHostSurface.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -81,7 +81,7 @@ export default noop.memo(
     : function SmartSearchBottomFade(height) {
         let searchHostSurfaceColor;
         const tmp = closure_7(height.height);
-        searchHostSurfaceColor = searchHostSurfaceColor(18061).useSearchHostSurfaceColor();
+        searchHostSurfaceColor = searchHostSurfaceColor(18105).useSearchHostSurfaceColor();
         let items = [searchHostSurfaceColor];
         const memo = noop.useMemo(() => {
           const obj = _modDef683(searchHostSurfaceColor);

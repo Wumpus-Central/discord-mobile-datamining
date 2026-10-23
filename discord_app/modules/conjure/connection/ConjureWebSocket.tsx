@@ -115,6 +115,19 @@ prototype["sendRetryRemix"] = function sendRetryRemix() {
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendKeepInstallScope"] = function sendKeepInstallScope() {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      socket.send(JSON.stringify({ type: "keep_install_scope" }));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendInterrupt"] = function sendInterrupt() {
   const self = this;
   if (null != this.socket) {

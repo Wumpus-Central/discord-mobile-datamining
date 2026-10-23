@@ -104,7 +104,7 @@ GuildInviteIcon.prototype["render"] = function render() {
 };
 GuildInviteIcon.defaultProps = { size: Sizes.SMALL, textScale: 1 };
 GuildInviteIcon.Sizes = Sizes;
-GuildInviteIcon.contextType = fn(5023).ThemeContext;
+GuildInviteIcon.contextType = fn(5035).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild/native/GuildInviteIcon.tsx");
 

@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (closure_5 == null) {
           str = "";
         }
-        closure_1_1(11044)({
+        closure_1_1(11067)({
           location: "UserProfileEditNote",
           hasUnsavedChanges: str !== closure_6,
           onReset() {

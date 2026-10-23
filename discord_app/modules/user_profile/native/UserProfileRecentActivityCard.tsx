@@ -91,8 +91,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8603).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8603).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8615).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8615).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -284,7 +284,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = "user-profile";
       cResult[5] = str.badges;
       cResult[6] = tmp10;
-      tmpResult = badgeCell(8804);
+      tmpResult = badgeCell(8827);
     }
   : function GamingEntryBadges(entry) {
       entry = entry.entry;
@@ -686,13 +686,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === user) {
             let tmp8 = cResult[5];
           }
-          const tmp9 = tmp6(14253)(tmp8);
+          const tmp9 = tmp6(14277)(tmp8);
           _require = tmp9;
           if (cResult[6] === tmp9) {
             if (cResult[7] === user.id) {
               let tmp10 = cResult[8];
             }
-            tmp6(14254)(tmp10);
+            tmp6(14278)(tmp10);
             let application_id;
             if ("application_id" in entry.extra) {
               application_id = entry.extra.application_id;
@@ -701,7 +701,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[10] === user.id) {
                 let tmp14 = cResult[11];
               }
-              const tmp15 = tmp6(9222)(tmp14);
+              const tmp15 = tmp6(9245)(tmp14);
               importDefault = tmp15;
               if (cResult[12] === tmp9) {
                 if (cResult[13] === tmp15) {

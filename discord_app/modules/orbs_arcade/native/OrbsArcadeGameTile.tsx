@@ -3,12 +3,12 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05256_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import OrbsArcadeRewardShelfDefault from "OrbsArcadeRewardShelf.tsx";
 import openOrbsArcadeSheets from "openOrbsArcadeSheets.tsx";
 import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton.tsx";
-import _modDef16345 from "../../../../_runtime/metro/16345__.js";
+import _modDef16395 from "../../../../_runtime/metro/16395__.js";
 import OrbsArcadeGameContextMenuDefault from "OrbsArcadeGameContextMenu.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
@@ -37,7 +37,7 @@ let obj5 = {
   card: { padding: 0, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   heroImage: { position: "absolute", top: 0, left: 0, right: 0, height: "79.567%", resizeMode: "cover" },
   heroGradient: StyleSheet.absoluteFillObject,
-  hero: { minHeight: fn(16318).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, justifyContent: "flex-end" },
+  hero: { minHeight: fn(16368).ORBS_ARCADE_GAME_TILE_MIN_HEIGHT, justifyContent: "flex-end" },
   overflowButton: null,
   content: null,
   copy: null,
@@ -125,7 +125,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[16] !== name) {
               const obj2 = { variant: "heading-lg/semibold", color: "text-strong", children: name };
-              const tmp26 = closure_6(tmp(5220).Heading, obj2);
+              const tmp26 = closure_6(tmp(5232).Heading, obj2);
               cResult[16] = name;
               cResult[17] = tmp26;
               let tmp24 = tmp26;
@@ -136,7 +136,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp28 = null;
               if (null != tmp6) {
                 const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: tmp6 };
-                tmp28 = closure_6(tmp(5220).Text, obj3);
+                tmp28 = closure_6(tmp(5232).Text, obj3);
               }
               cResult[18] = tmp6;
               cResult[19] = tmp28;
@@ -221,7 +221,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                           };
                                           const items3 = [tmp55, tmp63];
                                           obj7.children = items3;
-                                          const tmp69 = closure_7(tmp(6890).Card, obj7);
+                                          const tmp69 = closure_7(tmp(6903).Card, obj7);
                                           cResult[52] = tmp4.card;
                                           cResult[53] = tmp55;
                                           cResult[54] = tmp63;
@@ -266,7 +266,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj11 = { direction: str2, size: "md", style: tmp4.buttonGroup, children: null };
                       const items6 = [tmp38, cResult[31]];
                       obj11.children = items6;
-                      const tmp50 = closure_7(tmp(6681).ButtonGroup, obj11);
+                      const tmp50 = closure_7(tmp(6694).ButtonGroup, obj11);
                       cResult[32] = tmp4.buttonGroup;
                       cResult[33] = str2;
                       cResult[34] = tmp38;
@@ -285,7 +285,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                     obj12.onPress = function onPress() {
                       return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id);
                     };
-                    tmp43 = closure_6(tmp(5230).Button, obj12);
+                    tmp43 = closure_6(tmp(5242).Button, obj12);
                   }
                   cResult[28] = game.id;
                   cResult[29] = tmp6;
@@ -295,7 +295,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj13 = {
                   variant: "secondary",
                   size: "md",
-                  icon: _modDef16345,
+                  icon: _modDef16395,
                   accessibilityLabel: null,
                   onPress: null,
                 };
@@ -304,7 +304,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 obj13.onPress = function onPress() {
                   return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id);
                 };
-                tmp43 = closure_6(tmp(7944).IconButton, obj13);
+                tmp43 = closure_6(tmp(7957).IconButton, obj13);
               }
             }
             const obj14 = { style: tmp4.copy, children: null };
@@ -395,12 +395,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: tmp.content, children: null };
       const obj8 = { style: tmp.copy, children: null };
       const items4 = [
-        closure_6(game(5220).Heading, { variant: "heading-lg/semibold", color: "text-strong", children: game.name }),
+        closure_6(game(5232).Heading, { variant: "heading-lg/semibold", color: "text-strong", children: game.name }),
       ];
       let tmp12Result = null;
       if (null != tmp3) {
         const obj9 = { variant: "text-xs/medium", color: "text-subtle", children: tmp3 };
-        tmp12Result = closure_6(tmp4(5220).Text, obj9);
+        tmp12Result = closure_6(tmp4(5232).Text, obj9);
       }
       items4[1] = tmp12Result;
       obj8.children = items4;
@@ -416,7 +416,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const obj11 = {
             variant: "secondary",
             size: "md",
-            icon: _modDef16345,
+            icon: _modDef16395,
             accessibilityLabel: null,
             onPress: null,
           };
@@ -425,11 +425,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           obj11.onPress = function onPress() {
             return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id);
           };
-          let tmp12Result2 = closure_6(tmp4(7944).IconButton, obj11);
+          let tmp12Result2 = closure_6(tmp4(7957).IconButton, obj11);
         }
         items6[1] = tmp12Result2;
         obj10.children = items6;
-        items5[2] = closure_7(tmp4(6681).ButtonGroup, obj10);
+        items5[2] = closure_7(tmp4(6694).ButtonGroup, obj10);
         obj7.children = items5;
         items2[2] = closure_7(closure_3, obj7);
         obj3.children = items2;
@@ -439,7 +439,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         obj12.children = closure_6(OrbsArcadeGameContextMenuDefault, obj13);
         items7[1] = closure_6(closure_3, obj12);
         obj2.children = items7;
-        return closure_7(game(6890).Card, obj2);
+        return closure_7(game(6903).Card, obj2);
       }
       tmp12Result2 = null;
       if (null != tmp3) {
@@ -449,7 +449,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         obj14.onPress = function onPress() {
           return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id);
         };
-        tmp12Result2 = closure_6(tmp4(5230).Button, obj14);
+        tmp12Result2 = closure_6(tmp4(5242).Button, obj14);
       }
       const obj = game(504);
     };

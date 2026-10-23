@@ -438,7 +438,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[36]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11788, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11807, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(
           <closure_17 key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />,
@@ -469,7 +469,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12721, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12740, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {
@@ -477,7 +477,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(6657).pop();
+              guildId(6670).pop();
             },
           });
         };

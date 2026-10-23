@@ -155,13 +155,13 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(19061, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(19105, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
-const Constants = fn(7261);
+const Constants = fn(7274);
 ({
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9,
@@ -538,9 +538,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ locked, integrations } = guild);
       closure_13();
       let obj = guild(576);
-      const applicationIdentityLinkedRolesEnabled = guild(19062).useApplicationIdentityLinkedRolesEnabled(guild.id);
-      let obj2 = guild(19062);
-      const applicationIdentityLinkedRolesEnabled1 = guild(19064).useApplicationIdentityLinkedRolesEnabled(
+      const applicationIdentityLinkedRolesEnabled = guild(19106).useApplicationIdentityLinkedRolesEnabled(guild.id);
+      let obj2 = guild(19106);
+      const applicationIdentityLinkedRolesEnabled1 = guild(19108).useApplicationIdentityLinkedRolesEnabled(
         guild.id,
         "guild_settings_roles_edit_connections",
       );
@@ -616,7 +616,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         dependencyMap = tmp15;
-        if (tmp15 === tmp(7260).ConnectionConfigurationRuleOperator.OR) {
+        if (tmp15 === tmp(7273).ConnectionConfigurationRuleOperator.OR) {
           class S {
             constructor() {
               editedRoleConnectionConfigurationsMap = closure_6.getEditedRoleConnectionConfigurationsMap();
@@ -656,7 +656,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items2;
       tmp10 = items2;
       tmp9 = fn;
-      let obj3 = guild(19064);
+      let obj3 = guild(19108);
     }
   : function GuildSettingsRolesEditConnectionsControls(guild) {
       guild = guild.guild;
@@ -818,7 +818,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj9 = {
         handleConnectionTapped(connectionType, applicationId) {
           const items = [...memo];
-          const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "y", value: null };
+          const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "e", value: null };
           items.push(obj);
           if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
             if (0 === items.length) {

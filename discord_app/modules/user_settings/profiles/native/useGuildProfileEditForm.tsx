@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8629).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8647).IGNORE_GUILD_IDS;
 let FormStates = fn(1087).FormStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -619,7 +619,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             closure_3 = tmp3;
             if (!closure_15) {
               if (null != stateFromStores) {
-                const guildMemberChangesForUpdateRequest = stateFromStores(11158).getGuildMemberChangesForUpdateRequest(
+                const guildMemberChangesForUpdateRequest = stateFromStores(11181).getGuildMemberChangesForUpdateRequest(
                   {
                     pendingAvatar,
                     pendingNickname,
@@ -629,12 +629,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   },
                 );
                 closure_131_0 = guildMemberChangesForUpdateRequest;
-                stateFromStores(11158);
+                stateFromStores(11181);
                 let id;
                 if (selectedGuild != null) {
                   id = selectedGuild.id;
                 }
-                const profileChangesForUpdateRequest = stateFromStores(11158).getProfileChangesForUpdateRequest(
+                const profileChangesForUpdateRequest = stateFromStores(11181).getProfileChangesForUpdateRequest(
                   {
                     pendingBanner,
                     pendingBio,
@@ -656,11 +656,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const v2 = 1;
                   c6 = 1;
                   return {
-                    value: stateFromStores(11162).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest),
+                    value: stateFromStores(11185).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest),
                     done: false,
                   };
                 }
-                stateFromStores(11158);
+                stateFromStores(11181);
               }
             }
             yield "IconComponent";
@@ -687,8 +687,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       assetOrigin = closure_132_1.assetOrigin;
                     }
                     obj12.avatarAssetOrigin = assetOrigin;
-                    const result = stateFromStores(7070).trackUserAvatarUpdated(obj12);
-                    stateFromStores(7070);
+                    const result = stateFromStores(7083).trackUserAvatarUpdated(obj12);
+                    stateFromStores(7083);
                   }
                 } else {
                   let avatar;
@@ -699,16 +699,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   if (null != avatar) {
-                    const aPIError = new stateFromStores(6359).APIError(closure_131_4);
+                    const aPIError = new stateFromStores(6372).APIError(closure_131_4);
                     const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("avatar");
                     stateFromStores = firstFieldErrorMessage;
                     if (firstFieldErrorMessage == null) {
                       const intl = stateFromStores(1128).intl;
                       stateFromStores = intl.string(stateFromStores(1128).t.s35OuK);
                     }
-                    const result1 = stateFromStores(15807).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+                    const result1 = stateFromStores(15829).showGenericGuildProfileUpdateFailureToast(stateFromStores);
                     closure_131_3 = true;
-                    stateFromStores(15807);
+                    stateFromStores(15829);
                   }
                 }
                 let tmp50 = closure_131_2;
@@ -738,13 +738,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 ok1 = closure_131_8.ok;
               }
               if (!ok1) {
-                const aPIError1 = new stateFromStores(6359).APIError(closure_131_8);
+                const aPIError1 = new stateFromStores(6372).APIError(closure_131_8);
                 const firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                 if (null != firstFieldErrorMessage2) {
                   const result2 =
-                    stateFromStores(15807).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+                    stateFromStores(15829).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
                   closure_131_3 = true;
-                  stateFromStores(15807);
+                  stateFromStores(15829);
                 }
               }
               let tmp24 = closure_131_2;
@@ -767,10 +767,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (!tmp62) {
               const intl2 = stateFromStores(1128).intl;
-              const result3 = stateFromStores(15807).showGenericGuildProfileUpdateFailureToast(
+              const result3 = stateFromStores(15829).showGenericGuildProfileUpdateFailureToast(
                 intl2.string(stateFromStores(1128).t.s35OuK),
               );
-              stateFromStores(15807);
+              stateFromStores(15829);
             }
             if (closure_131_2) {
               closure_132_13.delay();

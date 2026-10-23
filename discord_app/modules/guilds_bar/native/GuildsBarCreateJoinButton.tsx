@@ -221,7 +221,7 @@ export default noop.memo(
           expandedChildren: tmp12,
           children: tmp18,
         };
-        const tmp22 = jsx(tmp17(17662), {
+        const tmp22 = jsx(tmp17(17706), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -265,9 +265,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: 4,
-          expandedChildren: "a_6",
-          children: null,
+          label: 5,
+          expandedChildren: "favorite_emojis",
+          children: "message",
         };
         const intl = util.intl;
         obj4.label = intl.string(util.t.l5WIbf);
@@ -284,9 +284,9 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: 4,
-          expandedChildren: "a_6",
-          children: null,
+          label: 5,
+          expandedChildren: "favorite_emojis",
+          children: "message",
         });
         return <View style={tmp.stretch}>{null}</View>;
       },

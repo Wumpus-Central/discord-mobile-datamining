@@ -29,7 +29,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
     };
 fn(17).NativeModules.IntentsHandler;
 ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11181);
+const SettingBuilders = fn(11204);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIOSConversationSuggestionsSettingValue() {
       const cResult = c.c(2);
@@ -67,7 +67,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8318).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8330).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIOSConversationSuggestionsSettingValue() {
         const cResult = c.c(2);

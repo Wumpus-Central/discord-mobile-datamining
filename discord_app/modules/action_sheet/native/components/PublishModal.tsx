@@ -14,11 +14,11 @@ const createStyles = fn(4969);
 let obj2 = {
   alertContainer: { paddingTop: 16 },
   alertLoading: { paddingTop: 62, paddingBottom: 46 },
-  alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(6692).DARK_PRIMARY_300_LIGHT_PRIMARY_400 },
+  alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(6705).DARK_PRIMARY_300_LIGHT_PRIMARY_400 },
 };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(6692).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+let obj3 = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(6705).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
 

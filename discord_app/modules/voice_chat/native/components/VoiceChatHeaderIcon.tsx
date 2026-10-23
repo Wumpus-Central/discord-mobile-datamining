@@ -28,12 +28,12 @@ obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
 obj2.chatIconContainer = {
   marginRight: 12,
-  height: fn(5254).NAV_BAR_HEIGHT,
+  height: fn(5266).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
 };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-let obj3 = { marginRight: 12, height: fn(5254).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+let obj3 = { marginRight: 12, height: fn(5266).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);

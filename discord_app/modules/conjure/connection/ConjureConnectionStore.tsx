@@ -24,7 +24,7 @@ require = fn;
 function setConnState(projectId, open) {
   DispatcherDefault.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId, connState: open });
 }
-function appendLocalUserMessage(projectId, nonce) {
+function appendLocalUserMessage(projectId, nonce, arg2) {
   nonce = nonce.nonce;
   ({ content, attachments } = nonce);
   const currentUser = UserStore.getCurrentUser();
@@ -41,6 +41,7 @@ function appendLocalUserMessage(projectId, nonce) {
     userId: null,
     timestamp: null,
     attachments: null,
+    held: null,
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
@@ -51,6 +52,7 @@ function appendLocalUserMessage(projectId, nonce) {
   obj2 = DispatcherDefault;
   obj3.timestamp = new Date().toISOString();
   obj3.attachments = attachments;
+  obj3.held = undefined;
   obj2.dispatch(obj3);
   const date = new Date();
 }
@@ -71,6 +73,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     userId: null,
     timestamp: null,
     attachments: null,
+    held: "emoji",
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
@@ -396,16 +399,16 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
               return closure_2_20(projectId, closure_1_1, arg0);
             };
             obj.onClose = function onClose() {
-              projectId(10772).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
-              obj = projectId(10772);
-              const result = projectId(10782).rejectPendingPublishSchedule(projectId);
-              obj2 = projectId(10782);
-              const result1 = projectId(10772).rejectPendingPatchNotesDraft(
+              projectId(10794).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
+              obj = projectId(10794);
+              const result = projectId(10804).rejectPendingPublishSchedule(projectId);
+              obj2 = projectId(10804);
+              const result1 = projectId(10794).rejectPendingPatchNotesDraft(
                 projectId,
                 "Connection closed before the draft arrived",
               );
-              const obj3 = projectId(10772);
-              const result2 = projectId(10761).clearConjurePreviewClaims(projectId);
+              const obj3 = projectId(10794);
+              const result2 = projectId(10783).clearConjurePreviewClaims(projectId);
               if (closure_1_1.disposed) {
                 const obj6 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
                 closure_1(584).dispatch(obj6);
@@ -427,7 +430,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
                 closure_1_1.pendingTemplatePrep = null;
                 const obj5 = closure_1(584);
               }
-              const obj4 = projectId(10761);
+              const obj4 = projectId(10783);
             };
             obj.onError = function onError() {};
             ws.open(obj);
@@ -549,40 +552,40 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(10676).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(10684);
-const ConjureSmartContextStore = fn(10685);
-const ConjureDebugLogStore = fn(10686);
-const ConjureLiveReloadStore = fn(10688);
-const ConjureModelSettingsStore = fn(10689);
-const ConjureOverlayBackgroundStore = fn(10690);
-const ConjurePublishStatusStore = fn(10691);
-const ConjureRemixStore = fn(10692);
-const ConjureSettingsStore = fn(10693);
+const getOlderHistoryCursor = fn(10698).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10706);
+const ConjureSmartContextStore = fn(10707);
+const ConjureDebugLogStore = fn(10708);
+const ConjureLiveReloadStore = fn(10710);
+const ConjureModelSettingsStore = fn(10711);
+const ConjureOverlayBackgroundStore = fn(10712);
+const ConjurePublishStatusStore = fn(10713);
+const ConjureRemixStore = fn(10714);
+const ConjureSettingsStore = fn(10715);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(10709).browserSessionsFrameHandlers);
-const merged1 = Object.assign(fn(10694).chatFrameHandlers);
-const merged2 = Object.assign(fn(10710).debugFrameHandlers);
-const merged3 = Object.assign(fn(10712).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(10714).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(10715).modelSettingsFrameHandlers);
-const merged6 = Object.assign(fn(10716).previewFrameHandlers);
-const merged7 = Object.assign(fn(10772).publishFrameHandlers);
-const merged8 = Object.assign(fn(10782).publishScheduleFrameHandlers);
-const merged9 = Object.assign(fn(10784).remixFrameHandlers);
-const merged10 = Object.assign(fn(10785).settingsFrameHandlers);
-const merged11 = Object.assign(fn(10786).smartContextFrameHandlers);
+let merged = Object.assign(fn(10731).browserSessionsFrameHandlers);
+const merged1 = Object.assign(fn(10716).chatFrameHandlers);
+const merged2 = Object.assign(fn(10732).debugFrameHandlers);
+const merged3 = Object.assign(fn(10734).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(10736).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(10737).modelSettingsFrameHandlers);
+const merged6 = Object.assign(fn(10738).previewFrameHandlers);
+const merged7 = Object.assign(fn(10794).publishFrameHandlers);
+const merged8 = Object.assign(fn(10804).publishScheduleFrameHandlers);
+const merged9 = Object.assign(fn(10806).remixFrameHandlers);
+const merged10 = Object.assign(fn(10807).settingsFrameHandlers);
+const merged11 = Object.assign(fn(10809).smartContextFrameHandlers);
 let obj2 = {};
-const merged12 = Object.assign(fn(10787).appBuildRequestStepHandlers);
-const merged13 = Object.assign(fn(10694).chatStepHandlers);
-const merged14 = Object.assign(fn(10710).debugStepHandlers);
-const merged15 = Object.assign(fn(10716).previewStepHandlers);
-const merged16 = Object.assign(fn(10788).projectStepHandlers);
-const merged17 = Object.assign(fn(10772).publishStepHandlers);
+const merged12 = Object.assign(fn(10810).appBuildRequestStepHandlers);
+const merged13 = Object.assign(fn(10716).chatStepHandlers);
+const merged14 = Object.assign(fn(10732).debugStepHandlers);
+const merged15 = Object.assign(fn(10738).previewStepHandlers);
+const merged16 = Object.assign(fn(10811).projectStepHandlers);
+const merged17 = Object.assign(fn(10794).publishStepHandlers);
 const set1 = new Set([
   "hello",
   "history",
@@ -661,6 +664,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/connection/ConjureConnectionStore.tsx");
 
 export default conjureConnectionStore;
+export const optimisticMessageId = function optimisticMessageId(arg0) {
+  return "optimistic:" + arg0;
+};
 export const subscribeDebugBacklog = function subscribeDebugBacklog(projectId) {
   closure_0 = projectId;
   let num = map3.get(projectId);
@@ -789,7 +795,14 @@ export const sendUserMessage = function sendUserMessage(projectId, str, arg2) {
   }
 };
 export const showUserMessage = function showUserMessage(projectId, str, arg2) {
-  const nonce = createNonce.createNonce();
+  obj = arg3;
+  if (arg3 === undefined) {
+    obj = {};
+  }
+  ({ nonce, held } = obj);
+  if (nonce === undefined) {
+    nonce = createNonce.createNonce();
+  }
   let tmp4;
   const trimmed = str.trim();
   if (null != arg2) {
@@ -803,7 +816,7 @@ export const showUserMessage = function showUserMessage(projectId, str, arg2) {
     id = currentUser.id;
   }
   const result = map2.set(nonce, id);
-  const obj4 = {
+  const obj5 = {
     type: "CONJURE_CHAT_MESSAGE_APPEND",
     projectId,
     content: trimmed,
@@ -811,17 +824,19 @@ export const showUserMessage = function showUserMessage(projectId, str, arg2) {
     userId: null,
     timestamp: null,
     attachments: null,
+    held: null,
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
   if (currentUser1 != null) {
     id1 = currentUser1.id;
   }
-  obj4.userId = id1;
-  const obj3 = DispatcherDefault;
-  obj4.timestamp = new Date().toISOString();
-  obj4.attachments = tmp4;
-  obj3.dispatch(obj4);
+  obj5.userId = id1;
+  const obj4 = DispatcherDefault;
+  obj5.timestamp = new Date().toISOString();
+  obj5.attachments = tmp4;
+  obj5.held = held;
+  obj4.dispatch(obj5);
   const date = new Date();
   return { nonce, messageKey: "optimistic:" + nonce };
 };

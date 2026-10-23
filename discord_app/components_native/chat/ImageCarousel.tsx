@@ -8,7 +8,7 @@ import ReanimatedRexportDefault from "../../modules/reanimated/ReanimatedRexport
 import timing from "../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../design/animation/reanimated/spring/spring.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7017 from "../../../_runtime/metro/07017__.js";
+import _modDef7030 from "../../../_runtime/metro/07030__.js";
 import Upload from "../../lib/uploader/Upload.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../modules/media_uploads/native/showUploadPreviewActionSheet.tsx";
@@ -20,8 +20,8 @@ import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7616).DraftType;
-const ImageCarouselConstants = fn(10392);
+const DraftType = fn(7629).DraftType;
+const ImageCarouselConstants = fn(10414);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
@@ -144,7 +144,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useTileEntranceAnimatedStyle(arg0) {
       const cResult = sharedValue(576).c(5);
       let obj = sharedValue(576);
-      sharedValue = sharedValue(5038).useSharedValue(0);
+      sharedValue = sharedValue(5050).useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function l() {
           const result = sharedValue.set(1);
@@ -177,30 +177,30 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         };
         let obj3 = {
-          withTiming: tmp(5192).withTiming,
+          withTiming: tmp(5204).withTiming,
           animatedStylePropValue: sharedValue,
           STANDARD_EASING: tmp(1202).STANDARD_EASING,
-          withSpring: tmp(5233).withSpring,
+          withSpring: tmp(5245).withSpring,
         };
         fn2.__closure = obj3;
         fn2.__workletHash = 14689938623095;
         fn2.__initData = __initData;
-        return tmp(5038).useAnimatedStyle(fn2);
+        return tmp(5050).useAnimatedStyle(fn2);
       }
       let items = [sharedValue, arg0];
       cResult[2] = sharedValue;
       cResult[3] = arg0;
       cResult[4] = items;
       tmp6 = items;
-      let obj2 = sharedValue(5038);
+      let obj2 = sharedValue(5050);
     }
   : function useTileEntranceAnimatedStyle(arg0) {
-      sharedValue = sharedValue(5038).useSharedValue(0);
+      sharedValue = sharedValue(5050).useSharedValue(0);
       let items = [sharedValue, arg0];
       const effect = noop.useEffect(() => {
         const result = sharedValue.set(1);
       }, items);
-      let obj = sharedValue(5038);
+      let obj = sharedValue(5050);
       const fn = function l() {
         const obj = { opacity: null, transform: null };
         const obj3 = { duration: 300, easing: null };
@@ -217,12 +217,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items;
         return obj;
       };
-      let obj2 = sharedValue(5038);
+      let obj2 = sharedValue(5050);
       fn.__closure = {
-        withTiming: sharedValue(5192).withTiming,
+        withTiming: sharedValue(5204).withTiming,
         animatedStylePropValue: sharedValue,
         STANDARD_EASING: sharedValue(1202).STANDARD_EASING,
-        withSpring: sharedValue(5233).withSpring,
+        withSpring: sharedValue(5245).withSpring,
       };
       fn.__workletHash = 1893609222612;
       fn.__initData = __initData2;
@@ -1218,7 +1218,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                             if (cResult[37] !== tmp4.closeButtonIcon) {
                                               const obj3 = {
-                                                source: _modDef7017,
+                                                source: _modDef7030,
                                                 size: native.Icon.Sizes.MEDIUM,
                                                 color: nativeDefault.unsafe_rawColors.PRIMARY_500,
                                                 style: tmp4.closeButtonIcon,
@@ -1452,7 +1452,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const items6 = [tmp.closeContainer, tmp8];
       obj6.style = items6;
       obj6.children = closure_1_11(native.Icon, {
-        source: _modDef7017,
+        source: _modDef7030,
         size: native.Icon.Sizes.MEDIUM,
         color: nativeDefault.unsafe_rawColors.PRIMARY_500,
         style: tmp.closeButtonIcon,

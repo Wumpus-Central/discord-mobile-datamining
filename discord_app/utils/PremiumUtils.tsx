@@ -14,13 +14,13 @@ import _modDef2600 from "../modules/premium/gifting/PremiumGifting.messages.js";
 import _modDef3250 from "../modules/premium/premium_group/PremiumGroup.messages.js";
 import BillingUtils from "BillingUtils.tsx";
 import DateUtils from "DateUtils.tsx";
+import ProductCatalog from "../modules/premium/ProductCatalog.tsx";
+import NitroFileUploadExperiments from "../modules/premium/experiments/NitroFileUploadExperiments.tsx";
 import openURLDefault from "../lib/openURL.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import PriceUtils from "PriceUtils.tsx";
-import NitroFileUploadExperiments from "../modules/premium/experiments/NitroFileUploadExperiments.tsx";
 import CheckoutError from "../modules/checkout/CheckoutError.tsx";
 import useFPDurationLeft from "../modules/billing/hooks/useFPDurationLeft.tsx";
-import ProductCatalog from "../modules/premium/ProductCatalog.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import noop from "../../_runtime/metro/00019__.js";
 import UserStore from "../stores/UserStore.tsx";
@@ -2804,7 +2804,7 @@ obj6.isPremiumSku = function isPremiumSku(skuId) {
   return skuId === __initData10.TIER_0 || skuId === __initData10.TIER_1 || skuId === __initData10.TIER_2;
 };
 obj6.getIntervalMonths = getIntervalMonths;
-obj6.getUserMaxFileSize = fn(9877).getUserMaxFileSize;
+obj6.getUserMaxFileSize = fn(5029).getUserMaxFileSize;
 obj6.getSkuIdForPlan = getSkuIdForPlan;
 obj6.getSkuIdForPremiumType = function getSkuIdForPremiumType(premiumType) {
   if (__initData11.TIER_0 === premiumType) {

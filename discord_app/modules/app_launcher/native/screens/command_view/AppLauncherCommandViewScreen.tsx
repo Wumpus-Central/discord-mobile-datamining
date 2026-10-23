@@ -22,14 +22,14 @@ import AppLauncherContext from "../../AppLauncherContext.tsx";
 import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
 import ApplicationCommandOptionValueParser from "../../../../chat_input/native/ApplicationCommandOptionValueParser.tsx";
-import _modDef12058 from "../../../../../../_runtime/metro/12058__.js";
-import _modDef12059 from "../../../../../../_runtime/metro/12059__.js";
+import _modDef12077 from "../../../../../../_runtime/metro/12077__.js";
+import _modDef12078 from "../../../../../../_runtime/metro/12078__.js";
 import AppLauncherCommandViewHeader from "AppLauncherCommandViewHeader.tsx";
 import ApplicationCommandValidationUtils from "../../../../application_commands/ApplicationCommandValidationUtils.tsx";
 import application_commands_ApplicationCommandValidationUtils from "../../../../application_commands/native/ApplicationCommandValidationUtils.tsx";
 import CommandOptionViewDefault from "CommandOptionView.tsx";
-import _modDef12157 from "../../../../../../_runtime/metro/12157__.js";
-import _modDef12158 from "../../../../../../_runtime/metro/12158__.js";
+import _modDef12176 from "../../../../../../_runtime/metro/12176__.js";
+import _modDef12177 from "../../../../../../_runtime/metro/12177__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -1184,7 +1184,7 @@ function AppLauncherCommandViewInner(command) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ActivityIndicator: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(9626);
+const ApplicationCommandIndexStore = fn(9649);
 ({ useContextIndexState: closure_11, useUserIndexState: closure_12 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1504);
 ({
@@ -1221,7 +1221,7 @@ let obj2 = {
 };
 let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.optionsContainer = {
-  paddingTop: fn(12099).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12118).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1242,7 +1242,7 @@ obj2.submitButton = { flex: 1, overflow: "hidden" };
 obj2.optionalOptionsSectionTitle = { marginTop: 36 };
 obj2.optionalOptionList = { marginTop: 12 };
 let obj4 = {
-  paddingTop: fn(12099).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12118).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1275,11 +1275,11 @@ let obj6 = {
   borderRadius: nativeDefault.radii.lg,
 };
 obj2.emptyStateContainer = {
-  paddingTop: fn(12099).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12118).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   flex: 1,
 };
 obj2.failureStateButtonWrapper = { marginTop: 24, alignSelf: "center" };
-let obj7 = { paddingTop: fn(12099).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+let obj7 = { paddingTop: fn(12118).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 obj2.failureStateButtonPill = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };
 obj2.commandNameContainer = { alignItems: "center", justifyContent: "center", textAlign: "center" };
 let obj8 = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };
@@ -1344,9 +1344,9 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
               tmp14 = closure_0;
               tmp15 = closure_3;
               fn = function e() {
-                const obj = onHeightChange(5038);
-                return onHeightChange(5038).runOnJS(onHeightChange(5198).triggerHapticFeedback)(
-                  onHeightChange(5198).HapticFeedbackTypes.IMPACT_LIGHT,
+                const obj = onHeightChange(5050);
+                return onHeightChange(5050).runOnJS(onHeightChange(5210).triggerHapticFeedback)(
+                  onHeightChange(5210).HapticFeedbackTypes.IMPACT_LIGHT,
                 );
               };
               obj13 = { runOnJS: null, triggerHapticFeedback: null, HapticFeedbackTypes: null };
@@ -1607,9 +1607,9 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { translateX: null };
           const obj9 = timing;
           const fn = function e() {
-            const obj = closure_1_0(5038);
-            return closure_1_0(5038).runOnJS(closure_1_0(5198).triggerHapticFeedback)(
-              closure_1_0(5198).HapticFeedbackTypes.IMPACT_LIGHT,
+            const obj = closure_1_0(5050);
+            return closure_1_0(5050).runOnJS(closure_1_0(5210).triggerHapticFeedback)(
+              closure_1_0(5210).HapticFeedbackTypes.IMPACT_LIGHT,
             );
           };
           const obj7 = {
@@ -2392,8 +2392,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = {
             style: emptyState,
-            lightSource: _modDef12157,
-            darkSource: _modDef12158,
+            lightSource: _modDef12176,
+            darkSource: _modDef12177,
             title: tmp6,
             body: tmp7,
             children: tmp12,
@@ -2428,8 +2428,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.emptyStateContainer, children: null };
       const obj3 = {
         style: tmp.emptyState,
-        lightSource: _modDef12157,
-        darkSource: _modDef12158,
+        lightSource: _modDef12176,
+        darkSource: _modDef12177,
         title: null,
         body: null,
         children: null,
@@ -2538,8 +2538,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj6 = {
                 style: tmp4.emptyState,
-                lightSource: _modDef12058,
-                darkSource: _modDef12059,
+                lightSource: _modDef12077,
+                darkSource: _modDef12078,
                 title: tmp15,
                 body: tmp16,
                 children: tmp21,
@@ -2602,8 +2602,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [guild(React5, obj3)];
       const obj6 = {
         style: tmp.emptyState,
-        lightSource: _modDef12058,
-        darkSource: _modDef12059,
+        lightSource: _modDef12077,
+        darkSource: _modDef12078,
         title: null,
         body: null,
         children: null,

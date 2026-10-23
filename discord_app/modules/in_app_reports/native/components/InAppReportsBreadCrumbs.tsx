@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (0 === found.length) {
             return null;
           } else if (cResult[2] !== menuName) {
-            const REPORT_TO_MOD = tmp(8096).ReportMenuTypeSets.REPORT_TO_MOD;
+            const REPORT_TO_MOD = tmp(8109).ReportMenuTypeSets.REPORT_TO_MOD;
             const hasItem = REPORT_TO_MOD.has(menuName);
             const intl = tmp(1128).intl;
             const string = intl.string;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               variant: "text-xs/bold",
               children: cResult[3],
             };
-            const tmp15 = closure_7(tmp(5220).Text, obj4);
+            const tmp15 = closure_7(tmp(5232).Text, obj4);
             cResult[4] = tmp5.title;
             cResult[5] = cResult[3];
             cResult[6] = tmp15;

@@ -4,13 +4,13 @@ import util from "../../../../intl/index.native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05283_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05295_LegacyBaseButton.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import KrispLogo from "KrispLogo.tsx";
-import _modDef11591 from "../../../../../_runtime/metro/11591__.js";
-import _modDef11592 from "../../../../../_runtime/metro/11592__.js";
+import _modDef11611 from "../../../../../_runtime/metro/11611__.js";
+import _modDef11612 from "../../../../../_runtime/metro/11612__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -88,7 +88,7 @@ function getVoiceSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8318).MobileUserSettings;
+const MobileUserSettings = fn(8330).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
@@ -108,9 +108,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_12();
       const tmp6 = useThemeDefault();
       if (obj2.isThemeLight(tmp6)) {
-        let tmp5Result = _modDef11591;
+        let tmp5Result = _modDef11611;
       } else {
-        tmp5Result = _modDef11592;
+        tmp5Result = _modDef11612;
       }
       ({ krisp, logo } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -178,9 +178,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_12();
       const tmp4 = useThemeDefault();
       if (obj.isThemeLight(tmp4)) {
-        let tmp2Result = _modDef11591;
+        let tmp2Result = _modDef11611;
       } else {
-        tmp2Result = _modDef11592;
+        tmp2Result = _modDef11612;
       }
       const obj2 = { style: tmp.krisp, children: null };
       const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

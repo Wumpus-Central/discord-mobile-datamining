@@ -6,9 +6,9 @@ import getSoundboardEmojiUrlDefault from "../../../../../soundboard/native/utils
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const util = BottomSheet(1128);
-const Text_Text = BottomSheet(5220);
-const Sheet_BottomSheet = BottomSheet(5251);
-const getSoundmojiASTFromString = BottomSheet(5991);
+const Text_Text = BottomSheet(5232);
+const Sheet_BottomSheet = BottomSheet(5263);
+const getSoundmojiASTFromString = BottomSheet(6003);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

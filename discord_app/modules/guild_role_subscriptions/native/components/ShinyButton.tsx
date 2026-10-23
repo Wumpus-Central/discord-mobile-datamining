@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import BaseTextButton from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import _modDef9840 from "../../../../../_runtime/metro/09840__.js";
+import _modDef9862 from "../../../../../_runtime/metro/09862__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp17Result;
         if (!tmp5) {
-          const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9840, style: null };
+          const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9862, style: null };
           const items = [tmp13.sparkleIcon];
           let disabled2 = tmp4;
           if (tmp4) {
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj3.style = items;
           tmp17Result = jsx(native.Icon, {
             size: native.Icon.Sizes.REFRESH_SMALL_16,
-            source: _modDef9840,
+            source: _modDef9862,
             style: null,
           });
         }
@@ -152,14 +152,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.pillStyle = items;
       let tmp3Result;
       if (!loading) {
-        const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9840, style: null };
+        const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9862, style: null };
         const items1 = [tmp2.sparkleIcon];
         if (disabled) {
           disabled = tmp2.disabled;
         }
         items1[1] = disabled;
         obj2.style = items1;
-        tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9840, style: null });
+        tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9862, style: null });
       }
       obj.icon = tmp3Result;
       const merged1 = Object.assign(merged);

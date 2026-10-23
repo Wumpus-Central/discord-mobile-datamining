@@ -28,7 +28,13 @@ const obj2 = {
   COLOR_WAVE: "ColorWaveIcon",
   MIDNIGHT_PRISM: "MidnightPrismIcon",
 };
-const obj3 = { DRIP: "DripIcon", SLIMY: "SlimyIcon", ZOMBIE: "ZombieIcon", CLYDE_STEIN: "ClydeSteinIcon" };
+const obj3 = {
+  DRIP: "DripIcon",
+  SLIMY: "SlimyIcon",
+  ZOMBIE: "ZombieIcon",
+  CLYDE_STEIN: "ClydeSteinIcon",
+  HEXAGON: "HexagonIcon",
+};
 const merged = Object.assign(obj);
 const merged1 = Object.assign(obj2);
 const merged2 = Object.assign(obj3);

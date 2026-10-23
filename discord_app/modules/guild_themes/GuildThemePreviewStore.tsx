@@ -30,7 +30,7 @@ function handleEnd() {
   }
   return flag;
 }
-const GuildThemePreviewConstants = fn(5165);
+const GuildThemePreviewConstants = fn(5177);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
 const timeout = new fn(4816).Timeout();
 let closure_5 = {
@@ -160,7 +160,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: tmp, customUserThemeSettings: "Array" };
+      const obj2 = { presetId: tmp, customUserThemeSettings: "r" };
       const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {
@@ -185,7 +185,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: "Array", customUserThemeSettings: 0 };
+      const obj2 = { presetId: "Array", customUserThemeSettings: "caboose" };
       const obj3 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       const items = [];
       HermesBuiltin.arraySpread(colors, 0);

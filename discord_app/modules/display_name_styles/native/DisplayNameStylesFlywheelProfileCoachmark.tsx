@@ -205,6 +205,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2,
       );
       const obj2 = markAsDismissed(2053);
-      const coachmark = visible(9817).useCoachmark(visible.targetRef, memo);
+      const coachmark = visible(9839).useCoachmark(visible.targetRef, memo);
       return null;
     };

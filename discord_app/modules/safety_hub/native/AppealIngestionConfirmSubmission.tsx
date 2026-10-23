@@ -94,10 +94,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
               closure_1_1(584).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
               const obj = closure_1_1(584);
               const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-              closure_1_1(5196).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              closure_1_1(5208).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
             onClose() {
-              return closure_1_1(5196).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              return closure_1_1(5208).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
           },
         );

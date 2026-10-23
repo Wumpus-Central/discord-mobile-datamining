@@ -25,7 +25,7 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
   }
   return tmp3;
 };
-PremiumUnverifiedWarning.contextType = fn(5023).ThemeContext;
+PremiumUnverifiedWarning.contextType = fn(5035).ThemeContext;
 let items = [UserStore];
 const obj3 = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
 const size = fn(2);

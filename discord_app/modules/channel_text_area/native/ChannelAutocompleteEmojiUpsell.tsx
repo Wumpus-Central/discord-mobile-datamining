@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp18 = items1;
             }
             const obj6 = { style: title, accessibilityRole: "header", variant: "text-sm/medium", children: tmp11 };
-            const tmp15 = closure_5(tmp(5220).Text, obj6);
+            const tmp15 = closure_5(tmp(5232).Text, obj6);
             cResult[10] = tmp4.title;
             cResult[11] = tmp11;
             cResult[12] = tmp15;

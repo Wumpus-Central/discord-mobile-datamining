@@ -331,7 +331,7 @@ function useInitialResults(disabled) {
   return { initialResults: selectedUnreadGuild.useDeferredValue(memo1), unreadPrivateChannelIds: stateFromStores, unreadGuilds: stateFromStoresArray, guildHistory: memo, selectedUnreadGuild, setSelectedUnreadGuild: tmp3[1] };
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6788);
+let NavigationHistoryStore = fn(6801);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(4825);
@@ -1151,7 +1151,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   return closure_28(sharedValue, obj6);
 }));
 const results = [];
-let items = [fn(9043).AutocompleterResultTypes.GUILD, fn(9043).AutocompleterResultTypes.TEXT_CHANNEL, fn(9043).AutocompleterResultTypes.GROUP_DM, fn(9043).AutocompleterResultTypes.VOICE_CHANNEL, fn(9043).AutocompleterResultTypes.USER];
+let items = [fn(9066).AutocompleterResultTypes.GUILD, fn(9066).AutocompleterResultTypes.TEXT_CHANNEL, fn(9066).AutocompleterResultTypes.GROUP_DM, fn(9066).AutocompleterResultTypes.VOICE_CHANNEL, fn(9066).AutocompleterResultTypes.USER];
 ReactCompilerGating = fn(558);
 let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWrapperStyles() {
   const cResult = c.c(5);

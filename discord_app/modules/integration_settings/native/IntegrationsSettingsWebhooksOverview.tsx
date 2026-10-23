@@ -599,7 +599,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
   const items = [
-    closure_20(webhookType(5220).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
+    closure_20(webhookType(5232).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
     ,
   ];
   let tmp4Result = webhookType === constants3.INCOMING;
@@ -609,7 +609,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(18220).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(18264).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1128).intl;
       dkHRkE = webhookType(1128).t.dkHRkE;
@@ -640,7 +640,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       }),
     };
     const obj4 = { children: null };
-    items[2] = closure_20(webhookType(6972).TableRowGroup, obj3);
+    items[2] = closure_20(webhookType(6985).TableRowGroup, obj3);
     obj4.children = items;
     return closure_22(closure_21, obj4);
   }
@@ -661,7 +661,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return closure_1_22(guild, obj);
 };
-WebhooksOverview.contextType = fn(5023).ThemeContext;
+WebhooksOverview.contextType = fn(5035).ThemeContext;
 let closure_28 = [];
 ReactCompilerGating = fn(558);
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

@@ -25,16 +25,16 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10873);
+const VoicePanelConstants = fn(10896);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(10876).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
-const ParticipantTypes = fn(5618).ParticipantTypes;
+const EDGE_GUTTER = fn(10899).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10894).VoicePanelControlsModes;
+const ParticipantTypes = fn(5630).ParticipantTypes;
 const ThemeTypes = fn(1098).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
@@ -562,7 +562,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[2] = stateFromStores;
             cResult[3] = stringResult;
           } else {
-            const tmp4Result = importDefault(stateFromStores ? 11490 : 8447);
+            const tmp4Result = importDefault(stateFromStores ? 11510 : 8459);
             if (cResult[4] !== stateFromStores) {
               const fn2 = function p() {
                 return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -617,7 +617,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = {
             accessibilityLabel: stringResult,
-            icon: importDefault(stateFromStores ? 11490 : 8447),
+            icon: importDefault(stateFromStores ? 11510 : 8459),
             onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             },

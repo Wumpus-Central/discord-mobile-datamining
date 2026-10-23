@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = markAsDismissed(576);
-      const unmountEffect = markAsDismissed(5249).useUnmountEffect(tmp7);
+      const unmountEffect = markAsDismissed(5261).useUnmountEffect(tmp7);
       if (cResult[4] !== U) {
         class A {
           constructor() {
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = markAsDismissed(5249);
+      const tmpResult = markAsDismissed(5261);
       ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, A, constants.PREMIUM_UPSELL_FILE_UPLOAD));
       if (cResult[6] !== onPress) {
         class M {
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp16 = jsx(tmp(18333).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp16 = jsx(tmp(18377).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[10] = tmp16;
         const tmp15 = tmp16;
       } else {
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 };
-        const tmp31 = jsx(tmp(10828).PromoSheet, {
+        const tmp31 = jsx(tmp(10851).PromoSheet, {
           illustration: tmp17,
           title: tmp20,
           description: tmp21,
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[21] = tmp17;
         cResult[22] = tmp31;
       }
-      const tmp28 = jsx(markAsDismissed(5230).Button, {
+      const tmp28 = jsx(markAsDismissed(5242).Button, {
         grow: true,
         size: "lg",
         variant: "primary",

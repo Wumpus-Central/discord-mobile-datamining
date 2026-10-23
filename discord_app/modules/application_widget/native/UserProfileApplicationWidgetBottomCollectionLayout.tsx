@@ -4,9 +4,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5220);
-const resolvedValuesFromUserApplicationIdentityProfile = Text(11861);
-const UserProfileApplicationWidgetSkeletons = Text(11948);
+const Text_Text = Text(5232);
+const resolvedValuesFromUserApplicationIdentityProfile = Text(11880);
+const UserProfileApplicationWidgetSkeletons = Text(11967);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

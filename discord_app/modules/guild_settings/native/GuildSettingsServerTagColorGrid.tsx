@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8260);
+const GuildTagConstants = fn(8272);
 ({
   GUILD_TAG_BADGE_PALETTE_PRESETS: closure_4,
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: hasOwnProperty,

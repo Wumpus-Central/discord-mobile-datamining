@@ -238,10 +238,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return closure_10.getCustomGuildScore(guildId);
               }
             }
-            const numberToCustomScoreResult = tmp2(8815).numberToCustomScore(stateFromStores1);
+            const numberToCustomScoreResult = tmp2(8838).numberToCustomScore(stateFromStores1);
             cResult[12] = stateFromStores1;
             cResult[13] = numberToCustomScoreResult;
-            const tmp2Result5 = tmp2(8815);
+            const tmp2Result5 = tmp2(8838);
           } else {
             class N {
               constructor() {
@@ -417,7 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               let tmp50 = navigation;
-              if (first1 !== navigation(7622).SECTION_INDEX_GUILD_ACTIONS) {
+              if (first1 !== navigation(7635).SECTION_INDEX_GUILD_ACTIONS) {
                 class R {
                   constructor() {
                     return closure_6.getGuild(guildId);
@@ -636,9 +636,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ICYMIStore.getCustomGuildScore(guildId),
       );
       const tmp2Result = navigation(504);
-      const numberToCustomScoreResult = navigation(8815).numberToCustomScore(stateFromStores1);
+      const numberToCustomScoreResult = navigation(8838).numberToCustomScore(stateFromStores1);
       noop = numberToCustomScoreResult;
-      const tmp2Result3 = navigation(8815);
+      const tmp2Result3 = navigation(8838);
       const items3 = [ChannelListStore];
       guildChannels = navigation(504).useStateFromStoresObject(items3, () =>
         ChannelListStore.getGuild(guildId),
@@ -760,6 +760,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.renderItem = callback;
       obj4.data = memo;
       obj4.keyExtractor = keyExtractor;
-      obj3.children = closure_11(navigation(7205).AnimatedFlashList, obj4);
+      obj3.children = closure_11(navigation(7218).AnimatedFlashList, obj4);
       return closure_11(guildChannels, obj3);
     };

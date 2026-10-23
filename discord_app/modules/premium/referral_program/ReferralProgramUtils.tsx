@@ -100,7 +100,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
   ? function useIsReferralProgramPopoverShowable() {
       const cResult = stateFromStores1(576).c(7);
       let obj = stateFromStores1(576);
-      let isEligibleSenderForReferralProgram = stateFromStores1(8413).useIsEligibleSenderForReferralProgram(false);
+      let isEligibleSenderForReferralProgram = stateFromStores1(8425).useIsEligibleSenderForReferralProgram(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReferralTrialStore];
         const fn = function t() {
@@ -113,7 +113,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj2 = stateFromStores1(8413);
+      const obj2 = stateFromStores1(8425);
       const stateFromStores = stateFromStores1(504).useStateFromStores(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ReferralTrialStore];
@@ -227,8 +227,8 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
       return tmp17;
     }
   : function useIsReferralProgramPopoverShowable() {
-      let isEligibleSenderForReferralProgram = stateFromStores1(8413).useIsEligibleSenderForReferralProgram(false);
-      let obj = stateFromStores1(8413);
+      let isEligibleSenderForReferralProgram = stateFromStores1(8425).useIsEligibleSenderForReferralProgram(false);
+      let obj = stateFromStores1(8425);
       const items = [ReferralTrialStore];
       const stateFromStores = stateFromStores1(504).useStateFromStores(items, () =>
         ReferralTrialStore.getReferralsRemaining(),

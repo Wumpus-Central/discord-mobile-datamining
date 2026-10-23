@@ -19,6 +19,7 @@ const items = [
   CheckpointNavigation.CheckpointRoute.GAME_TIME_AURA,
   CheckpointNavigation.CheckpointRoute.FINALIZE_CHARACTER,
   CheckpointNavigation.CheckpointRoute.SUMMARY,
+  CheckpointNavigation.CheckpointRoute.SHARE,
   CheckpointNavigation.CheckpointRoute.PROFILE_WIDGET,
 ];
 const result = size.fileFinishedImporting("modules/checkpoint/flows/CheckpointNoSharedDataFlow.tsx");

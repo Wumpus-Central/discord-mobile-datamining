@@ -280,8 +280,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(constants3.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7188).FetchState;
-const constants = fn(8652).TrackUserProfileProperties;
+const FetchState = fn(7201).FetchState;
+const constants = fn(8670).TrackUserProfileProperties;
 const Constants = fn(1087);
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = Constants);
 const StatusTypes = fn(1098).StatusTypes;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet.tsx";
 import MobileStickerPickerUpsellRestyleExperiment from "../../../experiments/MobileStickerPickerUpsellRestyleExperiment.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 

@@ -50,8 +50,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           let items = [];
         } else {
-          items = guild(10708).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(10708);
+          items = guild(10730).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(10730);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -60,8 +60,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(10708).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(10708);
+          canRemoveConjureBotResult = guild(10730).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(10730);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -69,8 +69,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(10708).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(10708);
+          canRemoveConjureBotResult = guild(10730).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(10730);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;

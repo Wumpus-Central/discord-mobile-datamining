@@ -6,30 +6,30 @@ import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
 import FastImageDefault from "../common/FastImage.tsx";
 import common_AlertDefault from "../common/Alert.tsx";
-import _modDef7533 from "../../../_runtime/metro/07533__.js";
-import _modDef7534 from "../../../_runtime/metro/07534__.js";
-import _modDef8424 from "../../../_runtime/metro/08424__.js";
-import _modDef10444 from "../../../_runtime/metro/10444__.js";
-import _modDef10445 from "../../../_runtime/metro/10445__.js";
-import _modDef10446 from "../../../_runtime/metro/10446__.js";
-import _modDef10447 from "../../../_runtime/metro/10447__.js";
-import _modDef10448 from "../../../_runtime/metro/10448__.js";
-import _modDef10449 from "../../../_runtime/metro/10449__.js";
-import _modDef10450 from "../../../_runtime/metro/10450__.js";
-import _modDef10451 from "../../../_runtime/metro/10451__.js";
-import _modDef10452 from "../../../_runtime/metro/10452__.js";
-import _modDef10453 from "../../../_runtime/metro/10453__.js";
-import _modDef10454 from "../../../_runtime/metro/10454__.js";
-import _modDef10455 from "../../../_runtime/metro/10455__.js";
-import _modDef10456 from "../../../_runtime/metro/10456__.js";
-import _modDef10457 from "../../../_runtime/metro/10457__.js";
-import _modDef10458 from "../../../_runtime/metro/10458__.js";
-import _modDef10459 from "../../../_runtime/metro/10459__.js";
-import _modDef10460 from "../../../_runtime/metro/10460__.js";
-import _modDef10461 from "../../../_runtime/metro/10461__.js";
-import _modDef10462 from "../../../_runtime/metro/10462__.js";
-import _modDef10463 from "../../../_runtime/metro/10463__.js";
-import _modDef10464 from "../../../_runtime/metro/10464__.js";
+import _modDef7546 from "../../../_runtime/metro/07546__.js";
+import _modDef7547 from "../../../_runtime/metro/07547__.js";
+import _modDef8436 from "../../../_runtime/metro/08436__.js";
+import _modDef10466 from "../../../_runtime/metro/10466__.js";
+import _modDef10467 from "../../../_runtime/metro/10467__.js";
+import _modDef10468 from "../../../_runtime/metro/10468__.js";
+import _modDef10469 from "../../../_runtime/metro/10469__.js";
+import _modDef10470 from "../../../_runtime/metro/10470__.js";
+import _modDef10471 from "../../../_runtime/metro/10471__.js";
+import _modDef10472 from "../../../_runtime/metro/10472__.js";
+import _modDef10473 from "../../../_runtime/metro/10473__.js";
+import _modDef10474 from "../../../_runtime/metro/10474__.js";
+import _modDef10475 from "../../../_runtime/metro/10475__.js";
+import _modDef10476 from "../../../_runtime/metro/10476__.js";
+import _modDef10477 from "../../../_runtime/metro/10477__.js";
+import _modDef10478 from "../../../_runtime/metro/10478__.js";
+import _modDef10479 from "../../../_runtime/metro/10479__.js";
+import _modDef10480 from "../../../_runtime/metro/10480__.js";
+import _modDef10481 from "../../../_runtime/metro/10481__.js";
+import _modDef10482 from "../../../_runtime/metro/10482__.js";
+import _modDef10483 from "../../../_runtime/metro/10483__.js";
+import _modDef10484 from "../../../_runtime/metro/10484__.js";
+import _modDef10485 from "../../../_runtime/metro/10485__.js";
+import _modDef10486 from "../../../_runtime/metro/10486__.js";
 import ShineAnimationDefault from "ShineAnimation.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -37,34 +37,34 @@ require = fn;
 function getActivatedImage(cResult, arg1) {
   if (PremiumUtils.Branding.TIER_0 === cResult) {
     if (tmpResult.isThemeDark(arg1)) {
-      let tmp10Result = _modDef10455;
+      let tmp10Result = _modDef10477;
     } else {
-      tmp10Result = _modDef10456;
+      tmp10Result = _modDef10478;
     }
     return tmp10Result;
   } else if (PremiumUtils.Branding.TIER_1 === cResult) {
     if (tmpResult4.isThemeDark(arg1)) {
-      let tmp8Result = _modDef10457;
+      let tmp8Result = _modDef10479;
     } else {
-      tmp8Result = _modDef10458;
+      tmp8Result = _modDef10480;
     }
     return tmp8Result;
   } else if (PremiumUtils.Branding.TIER_2 === cResult) {
     if (tmpResult5.isThemeDark(arg1)) {
-      let tmp6Result = _modDef10459;
+      let tmp6Result = _modDef10481;
     } else {
-      tmp6Result = _modDef10460;
+      tmp6Result = _modDef10482;
     }
     return tmp6Result;
   } else if (PremiumUtils.Branding.BUNDLE === cResult) {
     if (tmpResult6.isThemeDark(arg1)) {
-      let tmp4Result = _modDef10461;
+      let tmp4Result = _modDef10483;
     } else {
-      tmp4Result = _modDef10462;
+      tmp4Result = _modDef10484;
     }
     return tmp4Result;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === cResult) {
-    return _modDef10463;
+    return _modDef10485;
   }
 }
 function getDescription(arg0, arg1) {
@@ -113,7 +113,7 @@ obj2.description = {
   lineHeight: 16,
   textAlign: "center",
   marginTop: 20,
-  color: fn(6692).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+  color: fn(6705).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
 };
 let closure_7 = createStyles.createStyles(obj2);
 createStyles = fn(4969);
@@ -161,7 +161,7 @@ let obj4 = {
   lineHeight: 16,
   textAlign: "center",
   marginTop: 20,
-  color: fn(6692).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+  color: fn(6705).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumActivatedAlert.tsx");
@@ -225,18 +225,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp9) {
         if (PremiumUtils.Branding.TIER_0 === tmp9) {
-          let tmp7Result = _modDef10444;
+          let tmp7Result = _modDef10466;
         } else if (PremiumUtils.Branding.TIER_1 === tmp9) {
-          tmp7Result = _modDef10445;
+          tmp7Result = _modDef10467;
         } else {
           if (PremiumUtils.Branding.TIER_2 === tmp9) {
-            tmp7Result = _modDef10446;
+            tmp7Result = _modDef10468;
           } else if (PremiumUtils.Branding.BUNDLE !== tmp9) {
             if (PremiumUtils.Branding.PREMIUM_GUILD === tmp9) {
-              tmp7Result = _modDef10448;
+              tmp7Result = _modDef10470;
             }
           }
-          tmp7Result = _modDef10447;
+          tmp7Result = _modDef10469;
         }
         cResult[3] = tmp9;
         cResult[4] = tmp7Result;
@@ -247,18 +247,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[8] !== tmp9) {
             if (PremiumUtils.Branding.TIER_0 === tmp9) {
-              let tmp7Result4 = _modDef10452;
+              let tmp7Result4 = _modDef10474;
             } else {
               if (PremiumUtils.Branding.TIER_1 === tmp9) {
-                tmp7Result4 = _modDef10453;
+                tmp7Result4 = _modDef10475;
               } else if (PremiumUtils.Branding.BUNDLE !== tmp9) {
                 if (PremiumUtils.Branding.TIER_2 !== tmp9) {
                   if (PremiumUtils.Branding.PREMIUM_GUILD === tmp9) {
-                    tmp7Result4 = _modDef10454;
+                    tmp7Result4 = _modDef10476;
                   }
                 }
               }
-              tmp7Result4 = _modDef8424;
+              tmp7Result4 = _modDef8436;
             }
             cResult[8] = tmp9;
             cResult[9] = tmp7Result4;
@@ -273,18 +273,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[16] !== tmp9) {
                   if (PremiumUtils.Branding.TIER_0 === tmp9) {
-                    let tmp7Result5 = _modDef7533;
+                    let tmp7Result5 = _modDef7546;
                   } else if (PremiumUtils.Branding.TIER_1 === tmp9) {
-                    tmp7Result5 = _modDef7534;
+                    tmp7Result5 = _modDef7547;
                   } else {
                     if (PremiumUtils.Branding.TIER_2 === tmp9) {
-                      tmp7Result5 = _modDef10449;
+                      tmp7Result5 = _modDef10471;
                     } else if (PremiumUtils.Branding.BUNDLE !== tmp9) {
                       if (PremiumUtils.Branding.PREMIUM_GUILD === tmp9) {
-                        tmp7Result5 = _modDef10451;
+                        tmp7Result5 = _modDef10473;
                       }
                     }
-                    tmp7Result5 = _modDef10450;
+                    tmp7Result5 = _modDef10472;
                   }
                   cResult[16] = tmp9;
                   cResult[17] = tmp7Result5;
@@ -414,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               let tmp31 = null;
               if (tmp9 === PremiumUtils.Branding.BUNDLE) {
-                const obj12 = { source: _modDef10464, style: tmp4.logoPlusPremiumGuild };
+                const obj12 = { source: _modDef10486, style: tmp4.logoPlusPremiumGuild };
                 tmp31 = hasOwnProperty(FastImageDefault, obj12);
                 const tmp7Result6 = FastImageDefault;
               }
@@ -485,37 +485,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: tmp.header, children: null };
       const tmp4Result = common_AlertDefault;
       if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-        let tmp4Result10 = _modDef10444;
+        let tmp4Result10 = _modDef10466;
       } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-        tmp4Result10 = _modDef10445;
+        tmp4Result10 = _modDef10467;
       } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-        tmp4Result10 = _modDef10446;
+        tmp4Result10 = _modDef10468;
       } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-        tmp4Result10 = _modDef10447;
+        tmp4Result10 = _modDef10469;
       } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-        tmp4Result10 = _modDef10448;
+        tmp4Result10 = _modDef10470;
       }
       const items = [hasOwnProperty(FastImageDefault, { source: tmp4Result10, style: tmp.headerBackground }), , ,];
       const obj8 = { source: tmp4Result10, style: tmp.headerBackground };
       const tmp4Result9 = FastImageDefault;
       if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-        let tmp4Result12 = _modDef10452;
+        let tmp4Result12 = _modDef10474;
       } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-        tmp4Result12 = _modDef10453;
+        tmp4Result12 = _modDef10475;
       } else {
         if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
           if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
             if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-              tmp4Result12 = _modDef10454;
+              tmp4Result12 = _modDef10476;
             }
           }
         }
-        tmp4Result12 = _modDef8424;
+        tmp4Result12 = _modDef8436;
       }
       items[1] = hasOwnProperty(FastImageDefault, { source: tmp4Result12, style: tmp9.logo });
       let tmp15Result = null;
       if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-        const obj10 = { source: _modDef10464, style: tmp.logoPlusPremiumGuild };
+        const obj10 = { source: _modDef10486, style: tmp.logoPlusPremiumGuild };
         tmp15Result = hasOwnProperty(FastImageDefault, obj10);
         const tmp4Result13 = FastImageDefault;
       }
@@ -523,15 +523,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj9 = { source: tmp4Result12, style: tmp9.logo };
       const tmp4Result11 = FastImageDefault;
       if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-        let tmp4Result15 = _modDef7533;
+        let tmp4Result15 = _modDef7546;
       } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-        tmp4Result15 = _modDef7534;
+        tmp4Result15 = _modDef7547;
       } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-        tmp4Result15 = _modDef10449;
+        tmp4Result15 = _modDef10471;
       } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-        tmp4Result15 = _modDef10450;
+        tmp4Result15 = _modDef10472;
       } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-        tmp4Result15 = _modDef10451;
+        tmp4Result15 = _modDef10473;
       }
       const obj11 = { source: tmp4Result15, style: null };
       const items1 = [tmp10.headerImage, tmp.headerImage];

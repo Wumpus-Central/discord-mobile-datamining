@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[1] !== tmp4.title) {
           const obj2 = { style: title, accessibilityRole: "header", variant: "text-xs/bold", children: first };
-          const tmp9 = closure_3(tmp(5220).Text, obj2);
+          const tmp9 = closure_3(tmp(5232).Text, obj2);
           cResult[1] = tmp4.title;
           cResult[2] = tmp9;
           let tmp7 = tmp9;

@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-          settingType: tmp2(18916).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18960).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-          settingType: tmp2(18916).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18960).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
           label: null,
           disabled: null,
         };
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
-          settingType: tmp2(18916).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
+          settingType: tmp2(18960).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
@@ -238,9 +238,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj9.disabled = !stateFromStores1;
         items4[2] = closure_8(closure_12, obj9);
         obj6.children = items4;
-        obj5.children = closure_9(tmp2(6972).TableRowGroup, obj6);
-        obj4.children = closure_8(tmp2(5963).Stack, obj5);
-        const items5 = [closure_8(tmp2(8926).Form, obj4), closure_8(tmp2(5578).NavScrim, {})];
+        obj5.children = closure_9(tmp2(6985).TableRowGroup, obj6);
+        obj4.children = closure_8(tmp2(5975).Stack, obj5);
+        const items5 = [closure_8(tmp2(8949).Form, obj4), closure_8(tmp2(5590).NavScrim, {})];
         obj3.children = items5;
         tmp6 = closure_9(closure_10, obj3);
       }

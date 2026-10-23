@@ -944,7 +944,7 @@ export default noop.memo(
                 obj3.renderItem = renderAlertItem;
                 obj3.getItemKey = getAlertItemKey;
                 obj3.wrapChildren = wrapAlerts;
-                const tmp22 = closure_12(tmp(5023).TransitionGroup, obj3);
+                const tmp22 = closure_12(tmp(5035).TransitionGroup, obj3);
                 cResult[10] = tmp17;
                 cResult[11] = tmp22;
                 let tmp18 = tmp22;

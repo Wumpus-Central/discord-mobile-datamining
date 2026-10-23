@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AILoaderConstants = fn(11853);
+const AILoaderConstants = fn(11872);
 ({
   AI_LOADER_CYCLE_MS: hasOwnProperty,
   AI_LOADER_GAP_EM: metroRequire,
@@ -269,7 +269,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const stagger = index.stagger;
       const tmp = closure_16(size);
       const glyph = tmp;
-      const sharedValue = index(5038).useSharedValue(0);
+      const sharedValue = index(5050).useSharedValue(0);
       let items = [cycle, index, sharedValue, stagger];
       const effect = cycle.useEffect(() => {
         const result = sharedValue.set(0);
@@ -288,7 +288,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         );
         return () => index(color[7]).cancelAnimation(sharedValue);
       }, items);
-      let obj = index(5038);
+      let obj = index(5050);
       class R {
         constructor() {
           value = closure_6.get();
@@ -330,10 +330,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       R.__workletHash = 6102802507505;
       R.__initData = __initData2;
       const obj4 = { style: tmp.slot, children: null };
-      const animatedStyle = index(5038).useAnimatedStyle(R);
-      let obj2 = index(5038);
+      const animatedStyle = index(5050).useAnimatedStyle(R);
+      let obj2 = index(5050);
       let obj3 = { trackStepAt, progress: sharedValue, size };
-      obj4.children = jsx(size(5038).View, {
+      obj4.children = jsx(size(5050).View, {
         style: animatedStyle,
         children: closure_7.map((children) =>
           jsx(
@@ -363,7 +363,7 @@ export const AILoader = noop.memo(
           str = color;
         }
         const tmp4 = closure_16(num);
-        const reducedMotion = num2.useContext(num(5023).AccessibilityPreferencesContext).reducedMotion;
+        const reducedMotion = num2.useContext(num(5035).AccessibilityPreferencesContext).reducedMotion;
         const tmp5 = reducedMotion.enabled ? closure_8 : closure_5;
         dependencyMap = tmp5;
         num2 = 0;
@@ -463,7 +463,7 @@ export const AILoader = noop.memo(
         }
         const accessibilityLabel = size.accessibilityLabel;
         let num2;
-        const reducedMotion = num2.useContext(num(5023).AccessibilityPreferencesContext).reducedMotion;
+        const reducedMotion = num2.useContext(num(5035).AccessibilityPreferencesContext).reducedMotion;
         dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
         num2 = 0;
         if (!reducedMotion.enabled) {

@@ -2,7 +2,7 @@
 import util from "../../../../intl/index.native.tsx";
 import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
-import _modDef11783 from "../../../../../_runtime/metro/11783__.js";
+import _modDef11802 from "../../../../../_runtime/metro/11802__.js";
 import ChatInputParser from "../../../chat_input/native/ChatInputParser.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export const conjureFilePillIcon = function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11783).uri;
+  return Image.resolveAssetSource(_modDef11802).uri;
 };
 export const conjurePillText = function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -58,7 +58,7 @@ export const conjureUserPillLabel = function conjureUserPillLabel(id) {
 export const decodeConjurePills = function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12309).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(12328).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -109,7 +109,7 @@ export const decodeConjurePills = function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11783).uri;
+        uri = Image.resolveAssetSource(_modDef11802).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);

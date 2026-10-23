@@ -349,7 +349,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      let tmp = referrerId({ context, applicationId: str, fetchesApplication });
+      const tmp = referrerId({ context, applicationId: str, fetchesApplication });
       analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
       closure_12 = useCurrentEmbeddedActivityDefault();
       if (null == application) {
@@ -442,10 +442,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         });
       } else if (obj.JOIN === tmp) {
         return asyncGeneratorStep(async () => {
-          if (c0 === 2) {
-            c0 = 3;
+          if (dependencyMap === 2) {
+            dependencyMap = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -456,72 +456,79 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           } else {
             try {
-              c0 = 2;
-              if (0 === v1) {
+              dependencyMap = 2;
+              if (0 === v2) {
                 if (arg0 === 1) {
-                  c0 = 3;
+                  dependencyMap = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  c0 = 3;
+                  dependencyMap = 3;
                   const obj3 = { value, done: true };
                   return obj3;
-                } else if (!launchingActivity.isLaunchingActivity()) {
-                  const obj4 = {
-                    applicationId: str,
-                    activityChannelId: null,
-                    locationObject: null,
-                    analyticsLocations: null,
-                    componentId: null,
-                    sectionName: null,
-                    source: null,
-                    customId: null,
-                    referrerId: null,
-                  };
-                  let id;
-                  if ("channel" === context.type) {
-                    id = context.channel.id;
+                } else {
+                  closure_0 = tmp2;
+                  if (!launchingActivity.isLaunchingActivity()) {
+                    const obj4 = {
+                      applicationId: str,
+                      activityChannelId: null,
+                      locationObject: null,
+                      analyticsLocations: null,
+                      componentId: null,
+                      sectionName: null,
+                      source: null,
+                      customId: null,
+                      referrerId: null,
+                    };
+                    let id;
+                    if ("channel" === context.type) {
+                      id = context.channel.id;
+                    }
+                    obj4.activityChannelId = id;
+                    obj4.locationObject = locationObject;
+                    obj4.analyticsLocations = analyticsLocations;
+                    obj4.componentId = componentId;
+                    obj4.sectionName = sectionName;
+                    obj4.source = source;
+                    obj4.customId = customId;
+                    obj4.referrerId = referrerId;
+                    v2 = 1;
+                    dependencyMap = 1;
+                    const obj5 = { value: v2(dependencyMap[19])(obj4), done: false };
+                    return obj5;
                   }
-                  obj4.activityChannelId = id;
-                  obj4.locationObject = locationObject;
-                  obj4.analyticsLocations = analyticsLocations;
-                  obj4.componentId = componentId;
-                  obj4.sectionName = sectionName;
-                  obj4.source = source;
-                  obj4.customId = customId;
-                  obj4.referrerId = referrerId;
-                  const tmp7 = v1(dependencyMap[19]);
-                  v1 = 1;
-                  c0 = 1;
-                  const obj5 = {
-                    value: v1(dependencyMap[19])(obj4).then((result) => {
-                      let tmp = result;
-                      if (result) {
-                        let tmp2Result;
-                        if (closure_1_2 != null) {
-                          const obj = { applicationId };
-                          tmp2Result = tmp2(obj);
-                        }
-                        tmp = tmp2Result;
-                      }
-                      return tmp;
-                    }),
-                    done: false,
-                  };
-                  return obj5;
+                }
+              } else if (1 === tmp5) {
+                if (arg0 === 1) {
+                  dependencyMap = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  dependencyMap = 3;
+                  const obj6 = { value, done: true };
+                  return obj6;
+                } else if (value) {
+                  let tmp7Result;
+                  if (closure_128_2 != null) {
+                    const obj7 = { applicationId: closure_128_10 };
+                    tmp7Result = tmp7(obj7);
+                  }
+                  v2 = 2;
+                  dependencyMap = 1;
+                  const obj8 = { value: tmp7Result, done: false };
+                  return obj8;
                 }
               } else if (arg0 === 1) {
-                c0 = 3;
+                dependencyMap = 3;
                 throw value;
               } else if (arg0 === 2) {
-                c0 = 3;
-                let obj = { value, done: true };
+                dependencyMap = 3;
+                const obj = { value, done: true };
                 return obj;
               }
-              c0 = 3;
+              dependencyMap = 3;
               return { value: "IconComponent", done: null };
-            } catch (tmp17) {
-              c0 = tmp;
-              throw tmp17;
+            } catch (tmp24) {
+              dependencyMap = tmp;
+              throw tmp24;
             }
           }
         });

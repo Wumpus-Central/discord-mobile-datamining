@@ -22,7 +22,7 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
 }
 let closure_3 = ["ref"];
 const View = fn(17).View;
-const IMAGE_SIZE = fn(9805).IMAGE_SIZE;
+const IMAGE_SIZE = fn(9827).IMAGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles((arg0) => {

@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp = closure_6();
       const tmp5 = item;
-      const applicationCommandsIconSource = item(13063).getApplicationCommandsIconSource(section);
+      const applicationCommandsIconSource = item(13086).getApplicationCommandsIconSource(section);
       const obj2 = {
         accessibilityLabel: memo,
         onPress,
@@ -379,13 +379,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp8Result = null != applicationCommandsIconSource;
       if (tmp8Result) {
         const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-        tmp8Result = jsx(section(5655), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+        tmp8Result = jsx(section(5667), { style: tmp.commandIcon, source: applicationCommandsIconSource });
       }
       obj2.icon = tmp8Result;
-      obj2.trailing = jsx(tmp5(5666).SendMessageIcon, {});
+      obj2.trailing = jsx(tmp5(5678).SendMessageIcon, {});
       obj2.start = start;
       obj2.end = end;
-      return jsx(item(6888).TableRow, {
+      return jsx(item(6901).TableRow, {
         accessibilityLabel: memo,
         onPress,
         label: item.displayName,

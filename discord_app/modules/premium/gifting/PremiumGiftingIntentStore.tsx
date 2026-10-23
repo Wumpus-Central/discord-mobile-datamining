@@ -129,7 +129,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8435).categorizeFriendAnniversariesByAffinity(
+          const result = highestAffinity(8447).categorizeFriendAnniversariesByAffinity(
             closure_11,
             (userId) => {
               const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
@@ -142,14 +142,14 @@ function generateFriendAnniversaries(c15) {
             true,
           );
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8435);
+          const highestAffinityResult = highestAffinity(8447);
         }
         sampleSizeResult = _null;
       }
       sampleSizeResult = _modDef12.sampleSize(found, c15);
     }
   }
-  obj2 = set2(8436);
+  obj2 = set2(8448);
 }
 const Consents = fn(1087).Consents;
 let closure_10 = {

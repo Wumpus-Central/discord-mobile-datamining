@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/native/ShopNitroUpsellPromoSheet.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
+import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import PremiumUpsellUtils from "../../../utils/native/PremiumUpsellUtils.tsx";
-import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
 import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";

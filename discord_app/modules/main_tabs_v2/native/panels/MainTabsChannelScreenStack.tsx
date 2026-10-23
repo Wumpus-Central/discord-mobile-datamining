@@ -10,8 +10,8 @@ import useBaseAppContainerDimensionsDefault from "../../../screen/native/useBase
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useMountEffect from "../../../../hooks/useMountEffect.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05283_LegacyBaseButton.js";
-import Suspender from "../../../../../_runtime/05925_Suspender.js";
+import LegacyBaseButton from "../../../../../_runtime/05295_LegacyBaseButton.js";
+import Suspender from "../../../../../_runtime/05937_Suspender.js";
 import ChatViewWidthContextDefault from "../../../chat/native/ChatViewWidthContext.tsx";
 import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext.tsx";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
@@ -32,7 +32,7 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9677).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9699).ONYX_BORDER_WIDTH;
 const Constants = fn(1087);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
 let ThemeTypes = fn(1098).ThemeTypes;

@@ -8,8 +8,8 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11164 from "../../../../../_runtime/metro/11164__.js";
-import _modDef11165 from "../../../../../_runtime/metro/11165__.js";
+import _modDef11187 from "../../../../../_runtime/metro/11187__.js";
+import _modDef11188 from "../../../../../_runtime/metro/11188__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -45,15 +45,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       ({ container, body } = tmp4);
       if (obj2.useTheme().dark) {
-        let tmp5Result = _modDef11164;
+        let tmp5Result = _modDef11187;
         let tmp7 = importDefault;
       } else {
-        tmp5Result = _modDef11165;
+        tmp5Result = _modDef11188;
         tmp7 = importDefault;
       }
       if (cResult[0] !== tmp5Result) {
         const obj3 = { source: tmp5Result };
-        const tmp10 = hasOwnProperty(tmp7(5655), obj3);
+        const tmp10 = hasOwnProperty(tmp7(5667), obj3);
         cResult[0] = tmp5Result;
         cResult[1] = tmp10;
         let tmp8 = tmp10;
@@ -169,9 +169,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
       if (theme.dark) {
-        let tmp8Result = _modDef11164;
+        let tmp8Result = _modDef11187;
       } else {
-        tmp8Result = _modDef11165;
+        tmp8Result = _modDef11188;
       }
       const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
       const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

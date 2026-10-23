@@ -505,11 +505,11 @@ class EmbeddedActivitiesManager extends tmp3 {
     applyArgumentsResult.handleActivityLaunchSuccess = function handleActivityLaunchSuccess(arg0) {
       ({ applicationId: closure_0, nonce: closure_1 } = arg0);
       const timerId = setTimeout(() => {
-        const tmp6 = applyArgumentsResult(15673).awaitingAnalyticsContext[closure_0];
+        const tmp6 = applyArgumentsResult(15694).awaitingAnalyticsContext[closure_0];
         let tmp7;
         if (null != tmp6) {
           if (tmp6.nonce === nonce) {
-            const awaitingAnalyticsContext = applyArgumentsResult(15673).awaitingAnalyticsContext;
+            const awaitingAnalyticsContext = applyArgumentsResult(15694).awaitingAnalyticsContext;
             delete tmp[tmp2];
             tmp7 = tmp6;
           }
@@ -597,10 +597,10 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleActivityLaunchCancel = function handleActivityLaunchCancel(arg0) {
       ({ nonce, applicationId } = arg0);
-      const tmp5 = applyArgumentsResult(15673).awaitingAnalyticsContext[applicationId];
+      const tmp5 = applyArgumentsResult(15694).awaitingAnalyticsContext[applicationId];
       if (null != tmp5) {
         if (tmp5.nonce === nonce) {
-          const awaitingAnalyticsContext = applyArgumentsResult(15673).awaitingAnalyticsContext;
+          const awaitingAnalyticsContext = applyArgumentsResult(15694).awaitingAnalyticsContext;
           delete tmp[tmp2];
         }
       }
@@ -733,7 +733,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     if (getChannel !== closure_131_1) {
                       set = 2;
                       c6 = 1;
-                      const obj6 = { value: getChannel(6794).fetchApplication(closure_131_1), done: false };
+                      const obj6 = { value: getChannel(6807).fetchApplication(closure_131_1), done: false };
                       return obj6;
                     }
                   } else {
@@ -754,10 +754,10 @@ class EmbeddedActivitiesManager extends tmp3 {
                 closure_131_7 = value;
                 if (!obj26.getIsActivitiesEnabledForCurrentPlatform()) {
                   const intl = applyArgumentsResult(1128).intl;
-                  getChannel(10759)(intl.string(applyArgumentsResult(1128).t.UXoQTp));
-                  const tmp48 = getChannel(10759);
+                  getChannel(10781)(intl.string(applyArgumentsResult(1128).t.UXoQTp));
+                  const tmp48 = getChannel(10781);
                 }
-                obj26 = applyArgumentsResult(11342);
+                obj26 = applyArgumentsResult(11365);
               }
             } else {
               if (3 === getChannel) {
@@ -773,11 +773,11 @@ class EmbeddedActivitiesManager extends tmp3 {
                   activityConfigs = closure_131_9.activityConfigs;
                   applications = closure_131_9.applications;
                   const obj10 = { applicationId: closure_131_1, activityConfigs, applications };
-                  if (null == getChannel(11362)(obj10)) {
+                  if (null == getChannel(11385)(obj10)) {
                     const obj12 = { guildId: closure_131_8, force: true };
                     set = 4;
                     c6 = 1;
-                    const obj13 = { value: applyArgumentsResult(11344).fetchShelf(obj12), done: false };
+                    const obj13 = { value: applyArgumentsResult(11367).fetchShelf(obj12), done: false };
                     return obj13;
                   }
                 }
@@ -796,7 +796,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     activityConfigs: closure_131_12.activityConfigs,
                     applications: closure_131_12.applications,
                   };
-                  getChannel(11362)(obj17);
+                  getChannel(11385)(obj17);
                 }
               } else if (5 === getChannel) {
                 if (arg0 === 1) {
@@ -846,7 +846,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 obj19.inviterUserId = closure_131_4;
                 set = 6;
                 c6 = 1;
-                const obj21 = { value: applyArgumentsResult(11415).maybeJoinEmbeddedActivity(obj19), done: false };
+                const obj21 = { value: applyArgumentsResult(11435).maybeJoinEmbeddedActivity(obj19), done: false };
                 return obj21;
               } else {
                 const obj22 = {
@@ -858,7 +858,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 };
                 set = 5;
                 c6 = 1;
-                const obj23 = { value: getChannel(11315).launch(obj22), done: false };
+                const obj23 = { value: getChannel(11338).launch(obj22), done: false };
                 return obj23;
               }
             }
@@ -879,14 +879,14 @@ class EmbeddedActivitiesManager extends tmp3 {
               const obj24 = { guildId: closure_131_8 };
               set = 3;
               c6 = 1;
-              const obj25 = { value: applyArgumentsResult(11344).fetchShelf(obj24), done: false };
+              const obj25 = { value: applyArgumentsResult(11367).fetchShelf(obj24), done: false };
               return obj25;
             } else {
               const intl2 = applyArgumentsResult(1128).intl;
-              getChannel(10759)(intl2.string(applyArgumentsResult(1128).t.uGDCcw));
-              const tmp64 = getChannel(10759);
+              getChannel(10781)(intl2.string(applyArgumentsResult(1128).t.uGDCcw));
+              const tmp64 = getChannel(10781);
             }
-            tmp58 = getChannel(11413);
+            tmp58 = getChannel(11433);
           }
         } catch (tmp93) {
           c6 = tmp;
@@ -928,14 +928,14 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleInteractionQueue = function handleInteractionQueue(arg0) {
       ({ nonce, data } = arg0);
-      if (null == applyArgumentsResult(15673).awaitingAnalyticsContext[data.applicationId]) {
-        if (data.interactionType === applyArgumentsResult(6005).InteractionTypes.APPLICATION_COMMAND) {
+      if (null == applyArgumentsResult(15694).awaitingAnalyticsContext[data.applicationId]) {
+        if (data.interactionType === applyArgumentsResult(6017).InteractionTypes.APPLICATION_COMMAND) {
           const items = [AnalyticsLocationDefault.INTERACTION_APPLICATION_COMMAND];
           let tmp3 = items;
-        } else if (data.interactionType === applyArgumentsResult(6005).InteractionTypes.MESSAGE_COMPONENT) {
+        } else if (data.interactionType === applyArgumentsResult(6017).InteractionTypes.MESSAGE_COMPONENT) {
           const items1 = [AnalyticsLocationDefault.INTERACTION_MESSAGE_COMPONENT];
           tmp3 = items1;
-        } else if (data.interactionType === applyArgumentsResult(6005).InteractionTypes.MODAL_SUBMIT) {
+        } else if (data.interactionType === applyArgumentsResult(6017).InteractionTypes.MODAL_SUBMIT) {
           const items2 = [AnalyticsLocationDefault.INTERACTION_MODAL_SUBMIT];
           tmp3 = items2;
         }
@@ -948,7 +948,7 @@ class EmbeddedActivitiesManager extends tmp3 {
         }
         if (flag) {
           const obj2 = { nonce: nonce2, locations, source };
-          applyArgumentsResult(15673).awaitingAnalyticsContext[applicationId] = obj2;
+          applyArgumentsResult(15694).awaitingAnalyticsContext[applicationId] = obj2;
           flag = true;
         }
         if (flag) {
@@ -960,7 +960,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       nonce = nonce.nonce;
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
-          const tmp6 = applyArgumentsResult(15673).awaitingAnalyticsContext[tmp3];
+          const tmp6 = applyArgumentsResult(15694).awaitingAnalyticsContext[tmp3];
           if (null != tmp6) {
             tmp6.interactionId = tmp;
           }
@@ -975,11 +975,11 @@ class EmbeddedActivitiesManager extends tmp3 {
           closure_0 = tmp4;
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const tmp6 = applyArgumentsResult(15673).awaitingAnalyticsContext[closure_0];
+            const tmp6 = applyArgumentsResult(15694).awaitingAnalyticsContext[closure_0];
             let tmp7;
             if (null != tmp6) {
               if (tmp6.nonce === nonce) {
-                const awaitingAnalyticsContext = applyArgumentsResult(15673).awaitingAnalyticsContext;
+                const awaitingAnalyticsContext = applyArgumentsResult(15694).awaitingAnalyticsContext;
                 delete tmp[tmp2];
                 tmp7 = tmp6;
               }
@@ -994,10 +994,10 @@ class EmbeddedActivitiesManager extends tmp3 {
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
           delete tmp3[tmp4];
-          const tmp9 = applyArgumentsResult(15673).awaitingAnalyticsContext[tmp6];
+          const tmp9 = applyArgumentsResult(15694).awaitingAnalyticsContext[tmp6];
           if (null != tmp9) {
             if (tmp9.nonce === nonce) {
-              const awaitingAnalyticsContext = applyArgumentsResult(15673).awaitingAnalyticsContext;
+              const awaitingAnalyticsContext = applyArgumentsResult(15694).awaitingAnalyticsContext;
               delete tmp[tmp2];
             }
           }

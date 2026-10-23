@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let intl = badge(1128).intl;
         let obj3 = { username: targetUsername };
         obj2.children = intl.formatToPlainString(badge(1128).t.KyTwIh, obj3);
-        isViewingOtherUser = closure_4(badge(5220).Text, obj2);
+        isViewingOtherUser = closure_4(badge(5232).Text, obj2);
       }
       let items = [isViewingOtherUser];
       let obj4 = { style: tmp.grid, accessibilityRole: "list", children: null };
@@ -301,8 +301,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tiers == null) {
         tiers = [];
       }
-      const tmp9 = isViewingOtherUser(9932);
-      obj4.children = isViewingOtherUser(9932)(tiers, 3).map((arr) =>
+      const tmp9 = isViewingOtherUser(9954);
+      obj4.children = isViewingOtherUser(9954)(tiers, 3).map((arr) =>
         React4(
           View,
           {
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (complex_icon_static_url == null) {
                 complex_icon_static_url = owned.complex_icon_static_url;
               }
-              const tierRowSubtitle = badge(11098).getTierRowSubtitle({
+              const tierRowSubtitle = badge(11121).getTierRowSubtitle({
                 tier: owned,
                 isUnlocked: owned,
                 isViewingOtherUser,
@@ -344,8 +344,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 items1[1] = dimmedIcon;
                 obj4.style = items1;
-                tmp9Result = closure_2_4(isViewingOtherUser(11090), obj4);
-                const tmp11 = isViewingOtherUser(11090);
+                tmp9Result = closure_2_4(isViewingOtherUser(11113), obj4);
+                const tmp11 = isViewingOtherUser(11113);
               }
               const items2 = [tmp9Result, ,];
               let tmp13Result = null != owned.name;
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   style: item.centeredText,
                   children: owned.name,
                 };
-                tmp13Result = closure_2_4(badge(5220).Text, obj5);
+                tmp13Result = closure_2_4(badge(5232).Text, obj5);
               }
               items2[1] = tmp13Result;
               let tmp5Result = "" !== tierRowSubtitle;
@@ -369,7 +369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let tmp15 = !owned;
                 if (!owned) {
                   const obj7 = { size: "xxs", color: isViewingOtherUser(587).colors.ICON_MUTED };
-                  tmp15 = closure_2_4(badge(8552).LockIcon, obj7);
+                  tmp15 = closure_2_4(badge(8564).LockIcon, obj7);
                 }
                 const items3 = [tmp15];
                 let str2 = "text-muted";
@@ -382,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   style: item.centeredText,
                   children: tierRowSubtitle,
                 };
-                items3[1] = closure_2_4(badge(5220).Text, obj8);
+                items3[1] = closure_2_4(badge(5232).Text, obj8);
                 obj6.children = items3;
                 tmp5Result = closure_2_5(closure_3, obj6);
               }

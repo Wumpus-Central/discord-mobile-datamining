@@ -114,7 +114,7 @@ export default function GuildSettingsRoleMembers(guild) {
           const obj2 = { text: null, variant: "critical" };
           const intl = name(1128).intl;
           obj2.text = intl.string(name(1128).t.fEptJP);
-          found(5649).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
+          found(5661).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
         });
       };
       obj2.confirmColor = guild(locked[15]).ButtonColors.RED;
@@ -131,7 +131,7 @@ export default function GuildSettingsRoleMembers(guild) {
       location_section: "Members",
     });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(19036, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
+    obj2.openLazy(asyncRequireImpl(19080, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
       guild,
       role,
     });

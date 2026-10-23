@@ -231,7 +231,7 @@ let closure_10 = async function _launchOrbsArcadeGame(arg0, arg1) {
     }
   })();
 };
-const FramesConstants = fn(6761);
+const FramesConstants = fn(6774);
 ({ MAIN_SURFACE: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/launchOrbsArcadeGame.tsx");

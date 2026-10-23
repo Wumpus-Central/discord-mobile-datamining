@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = channelId(576);
       const stateFromStores = channelId(573).useStateFromStores(first, tmp6, tmp7);
       const tmpResult = channelId(573);
-      const dismissModalCallback = channelId(5900).useDismissModalCallback();
+      const dismissModalCallback = channelId(5912).useDismissModalCallback();
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp14 = jsx(VoicePanelLockedIconDefault, {});
         const intl = tmp(1128).intl;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[9] !== dismissModalCallback) {
         const obj3 = { variant: "secondary", text: tmp18, onPress: dismissModalCallback };
-        const tmp22 = jsx(tmp(5900).AlertActionButton, {
+        const tmp22 = jsx(tmp(5912).AlertActionButton, {
           variant: "secondary",
           text: tmp18,
           onPress: dismissModalCallback,
@@ -95,12 +95,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp23;
       }
-      const tmp24 = jsx(channelId(5900).AlertModal, { header: tmp10, title: tmp11, content: tmp16, actions: tmp20 });
+      const tmp24 = jsx(channelId(5912).AlertModal, { header: tmp10, title: tmp11, content: tmp16, actions: tmp20 });
       cResult[11] = tmp16;
       cResult[12] = tmp20;
       cResult[13] = tmp24;
       tmp23 = tmp24;
-      const tmpResult2 = channelId(5900);
+      const tmpResult2 = channelId(5912);
     }
   : function VoicePanelMaxCapacityAlert(channelId) {
       channelId = channelId.channelId;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(573);
-      const obj2 = channelId(5900);
+      const obj2 = channelId(5912);
       const obj3 = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
       const intl = channelId(1128).intl;
       obj3.title = intl.string(channelId(1128).t.hHbsQj);
@@ -131,9 +131,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { variant: "secondary", text: null, onPress: null };
       const intl3 = channelId(1128).intl;
       obj4.text = intl3.string(channelId(1128).t["NX+WJN"]);
-      obj4.onPress = channelId(5900).useDismissModalCallback();
-      obj3.actions = jsx(channelId(5900).AlertActionButton, { variant: "secondary", text: null, onPress: null });
-      return jsx(channelId(5900).AlertModal, {
+      obj4.onPress = channelId(5912).useDismissModalCallback();
+      obj3.actions = jsx(channelId(5912).AlertActionButton, { variant: "secondary", text: null, onPress: null });
+      return jsx(channelId(5912).AlertModal, {
         header: jsx(VoicePanelLockedIconDefault, {}),
         title: null,
         content: null,

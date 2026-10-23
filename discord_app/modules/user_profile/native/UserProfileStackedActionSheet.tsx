@@ -121,7 +121,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             obj3.ItemSeparatorComponent = tmp12;
             obj3.contentContainerStyle = tmp15;
             obj3.renderItem = tmp16;
-            const tmp21 = closure_8(tmp(7205).BottomSheetFlashList, obj3);
+            const tmp21 = closure_8(tmp(7218).BottomSheetFlashList, obj3);
             cResult[16] = arr;
             cResult[17] = tmp5;
             cResult[18] = tmp10.list;
@@ -177,7 +177,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         index = index.index;
         return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
       };
-      return closure_8(data(7205).BottomSheetFlashList, obj);
+      return closure_8(data(7218).BottomSheetFlashList, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -259,7 +259,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
         return closure_2_8(Form.FormDivider, { style: divider.divider });
       };
-      return closure_8(renderItem(5255).BottomSheetSectionList, obj);
+      return closure_8(renderItem(5267).BottomSheetSectionList, obj);
     };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");

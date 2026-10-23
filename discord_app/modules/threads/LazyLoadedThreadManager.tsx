@@ -55,9 +55,9 @@ function loadThread(channelId) {
       } else {
         const _location = location;
         let obj2 = { path: null, exact: true };
-        const RouteParam = tmp13(5013).RouteParam;
-        const tmp13Result = tmp13(5000);
-        const RouteParam2 = tmp13(5013).RouteParam;
+        const RouteParam = tmp13(5018).RouteParam;
+        const tmp13Result = tmp13(5005);
+        const RouteParam2 = tmp13(5018).RouteParam;
         obj2.path = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj2);
         const HTTP = tmp13(1297).HTTP;
@@ -85,7 +85,7 @@ function loadThread(channelId) {
           })
           .catch(() => {
             closure_11[id] = { type: "NOT_FOUND" };
-            const obj2 = { id, guild_id: null, parent_id: "Array" };
+            const obj2 = { id, guild_id: null, parent_id: "r" };
             let guildId;
             if (closure_1 != null) {
               const params = closure_1.params;
@@ -116,9 +116,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/LazyLoadedThreadManager.tsx");
 
 export default {
-  getLoadState(key10013) {
+  getLoadState(arg0) {
     let type;
-    if (dependencyMap[key10013] != null) {
+    if (dependencyMap[arg0] != null) {
       type = tmp.type;
     }
     return type;
@@ -133,7 +133,7 @@ export default {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
-        if (nextResult !== items1(7308).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(7321).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (!isStaticChannelRoute(tmp9)) {
             if (null == ChannelStore.getChannel(tmp9)) {
               let tmp18 = dependencyMap[tmp9];

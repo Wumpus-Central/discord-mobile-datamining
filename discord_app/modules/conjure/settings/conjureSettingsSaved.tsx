@@ -5,7 +5,7 @@ import conjureSettingsConnection from "conjureSettingsConnection.tsx";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 
 require = fn;
-const sendUserMessage = fn(10675).sendUserMessage;
+const sendUserMessage = fn(10697).sendUserMessage;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsSaved.tsx");
 

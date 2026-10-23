@@ -17,6 +17,7 @@ const DISPLAY_NAME_STYLES_FONT_FAMILY_MAP = {
   [DisplayNameFont.DisplayNameFont.ORBITRON]: "Mainframe-Bold",
   [DisplayNameFont.DisplayNameFont.NEW_ROCKER]: "Headbang-Normal",
   [DisplayNameFont.DisplayNameFont.KALAM]: "Journal-Bold",
+  [DisplayNameFont.DisplayNameFont.HEXAGON]: "Pricedown-Bold",
 };
 const result = size.fileFinishedImporting("modules/display_name_styles/native/useDisplayNameStylesFont.tsx");
 

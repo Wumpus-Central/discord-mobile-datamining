@@ -18,32 +18,32 @@ function createNativePlaceholderConfig(listFooter) {
     borderRadius: "Array",
     borderTopLeftRadius: "defineProperty",
     borderTopRightRadius: "ix",
-    borderBottomLeftRadius: "channel",
+    borderBottomLeftRadius: "gap",
     borderBottomRightRadius: "guildId",
-    divider: "includes",
-    dividerColor: "Array",
-    dividerPaddingLeft: "toCharArray$esjava$1",
-    dividerPaddingRight: "section",
-    placeholderShape: "limit",
-    placeholderShapeColor: "r",
-    placeholderShapeCount: "toCharArray$esjava$1",
-    placeholderShapeGap: "guildId",
-    placeholderShapePaddingHorizontal: "Path",
-    placeholderShapePaddingVertical: "Array",
-    placeholderFeedBackgroundColor: "toCharArray$esjava$1",
-    placeholderFeedColor: "values",
-    placeholderFeedLabelPadding: "e",
-    placeholderFeedLabelPaddingInnerRatio: "r",
-    placeholderFeedLabelSize: "toCharArray$esjava$1",
-    placeholderFeedLabelSecondarySize: "push",
-    placeholderFeedPadding: "lineClamp",
-    placeholderFeedShape: "Array",
+    divider: "ix",
+    dividerColor: "Reflect",
+    dividerPaddingLeft: "intl",
+    dividerPaddingRight: "ix",
+    placeholderShape: "push",
+    placeholderShapeColor: "raw",
+    placeholderShapeCount: "ix",
+    placeholderShapeGap: "forEach",
+    placeholderShapePaddingHorizontal: "guildId",
+    placeholderShapePaddingVertical: "ix",
+    placeholderFeedBackgroundColor: "has",
+    placeholderFeedColor: "guildId",
+    placeholderFeedLabelPadding: "ix",
+    placeholderFeedLabelPaddingInnerRatio: "Reflect",
+    placeholderFeedLabelSize: "__initData",
+    placeholderFeedLabelSecondarySize: "toCharArray$esjava$1",
+    placeholderFeedPadding: "toCharArray$esjava$1",
+    placeholderFeedShape: "toCharArray$esjava$1",
     placeholderFeedShapeSize: "toCharArray$esjava$1",
     placeholderType: NONE,
-    width: "<string:400883714>",
-    height: "<string:3242721281>",
-    verticalAlignment: "<string:2653683714>",
-    horizontalAlignment: "<string:2984050689>",
+    width: 12544,
+    height: 0,
+    verticalAlignment: 17924080,
+    horizontalAlignment: 35722112,
   };
   if (null == listFooter) {
     return size;
@@ -162,9 +162,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(7142).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(7155).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(7142).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(7155).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

@@ -34,6 +34,7 @@ const obj = {
   SIDEKICK_LEAVE: "sidekick_leave",
   FINALIZE_CHARACTER: "finalize_character",
   SUMMARY: "summary",
+  SHARE: "share",
   PROFILE_WIDGET: "profile_widget",
 };
 const items = [, , , , , ,];
@@ -78,6 +79,7 @@ const obj3 = {
   SQUAD: "squad",
   SIDEKICK: "sidekick",
   SUMMARY: "summary",
+  SHARE: "share",
 };
 let closure_1 = {
   [obj.HOME]: { characterStage: obj2.IDLE },
@@ -112,6 +114,7 @@ let closure_1 = {
   [obj.SIDEKICK_LEAVE]: { characterStage: obj2.ASSEMBLED, statsScreen: obj3.SIDEKICK },
   [obj.FINALIZE_CHARACTER]: { characterStage: obj2.FINALIZE },
   [obj.SUMMARY]: { characterStage: obj2.SUMMARY, statsScreen: obj3.SUMMARY },
+  [obj.SHARE]: { characterStage: obj2.SUMMARY, statsScreen: obj3.SHARE },
   [obj.PROFILE_WIDGET]: { characterStage: obj2.PROFILE_WIDGET },
 };
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointNavigation.tsx");

@@ -21,12 +21,12 @@ export default function openVideoQuestModal(questId) {
       }
     }
     if (null == completedAt) {
-      sourceQuestContent(16378)();
+      sourceQuestContent(16428)();
     }
   }
   const v4Result = v1All.v4();
   importAll = v4Result;
-  const obj3 = sourceQuestContent(6657);
+  const obj3 = sourceQuestContent(6670);
   const obj4 = {
     questId,
     questContentPosition,
@@ -37,6 +37,6 @@ export default function openVideoQuestModal(questId) {
     },
     sourceQuestContent,
   };
-  const tmp8 = questId(2002)(16386, dependencyMap.paths);
-  return obj3.pushLazy(tmp8, obj4, questId(14079).getVideoQuestModalKey(questId));
+  const tmp8 = questId(2002)(16436, dependencyMap.paths);
+  return obj3.pushLazy(tmp8, obj4, questId(14103).getVideoQuestModalKey(questId));
 }

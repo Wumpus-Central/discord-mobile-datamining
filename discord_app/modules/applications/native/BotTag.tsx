@@ -278,7 +278,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if ("sm" === size) {
         str3 = "text-xxs/semibold";
       }
-      items1[1] = hasOwnProperty(tmp17(5220).Text, {
+      items1[1] = hasOwnProperty(tmp17(5232).Text, {
         variant: str3,
         lineClamp: 1,
         maxFontSizeMultiplier: 2,

@@ -11,7 +11,7 @@ const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(5195).timingSlowDuration;
+let closure_9 = 5000 + fn(5207).timingSlowDuration;
 const createStyles = fn(4969);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };

@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(6769).isGuildScheduledEventActive;
+let closure_5 = fn(6782).isGuildScheduledEventActive;
 fn(4827).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

@@ -14,13 +14,13 @@ const require = globalThis.__r;
 const AttachmentPreviewDefault = AttachmentPreview;
 
 const util = obj(1128);
-const InteractionComponentUtils = obj(6000);
-const FileSizeUtils = obj(6364);
-const TableRow = obj(6888);
-const FileUpIcon = obj(11744);
+const InteractionComponentUtils = obj(6012);
+const FileSizeUtils = obj(6377);
+const TableRow = obj(6901);
+const FileUpIcon = obj(11764);
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(7616).DraftType;
+const DraftType = fn(7629).DraftType;
 const NOOP = fn(1087).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -772,7 +772,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           extensions: allowedExtensions,
           uploadLimit: InteractionModal,
           onDismissKeyboard() {
-            return InteractionModal(10396).hideMediaKeyboardActionSheet();
+            return InteractionModal(10418).hideMediaKeyboardActionSheet();
           },
           onRestoreKeyboard: effectiveUploadLimit,
           onSelectFiles(arg0) {
@@ -805,7 +805,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const result = InteractionModal(customId[31]).hideMediaKeyboardActionSheet();
               if (item.isIncluded) {
                 const found = currentUploads.find((item) =>
-                  InteractionModal(8138).doesImageMatchUpload(item.node.image, item),
+                  InteractionModal(8150).doesImageMatchUpload(item.node.image, item),
                 );
                 if (null != found) {
                   callback1(found.id);
@@ -826,9 +826,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj.handleViewAllDialog(obj2);
             },
             onManageLimited() {
-              obj = InteractionModal(10395);
+              obj = InteractionModal(10417);
               const result = obj.handleLimitedPickerDialog({
-                onDismissKeyboard: InteractionModal(10396).hideMediaKeyboardActionSheet,
+                onDismissKeyboard: InteractionModal(10418).hideMediaKeyboardActionSheet,
                 onRestoreKeyboard,
               });
             },

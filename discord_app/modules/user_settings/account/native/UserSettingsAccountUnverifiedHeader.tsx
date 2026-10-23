@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const initialize = PressableOpacity(504);
-const Text_Text = PressableOpacity(5220);
-const Pressables = PressableOpacity(6893);
+const Text_Text = PressableOpacity(5232);
+const Pressables = PressableOpacity(6906);
 require = fn;
 function handleOpenEmailVerification() {
   EmailVerificationModalActionCreatorsDefault.open();

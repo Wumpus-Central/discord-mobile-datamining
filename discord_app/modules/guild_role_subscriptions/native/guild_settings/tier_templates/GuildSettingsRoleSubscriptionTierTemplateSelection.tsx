@@ -14,7 +14,7 @@ import GuildRoleSubscriptionTierTemplatesStore from "../../../tier_templates/Gui
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, TouchableOpacity: closure_7, View: closure_8 } = get_ActivityIndicator);
-const usePriceTiers = fn(19178).usePriceTiers;
+const usePriceTiers = fn(19222).usePriceTiers;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -55,7 +55,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }
       } else if (null != error) {
         if (cResult[2] !== error.message) {
-          Text = Text(5220).Text;
+          Text = Text(5232).Text;
           const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
           const items = ["Error: ", error.message];
           obj3.children = items;
@@ -132,10 +132,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 obj5.ItemSeparatorComponent = sum;
-                sum = Text(19230).CARD_WIDTH + v16;
+                sum = Text(19274).CARD_WIDTH + v16;
                 obj5.snapToInterval = sum;
                 obj5.renderItem = tmp9;
-                const tmp13 = closure_13(Text(7205).FlashList, obj5);
+                const tmp13 = closure_13(Text(7218).FlashList, obj5);
                 cResult[11] = tmp9;
                 cResult[12] = templates;
                 cResult[13] = tmp13;
@@ -175,7 +175,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         let obj = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
         const items = ["Error: ", error.message];
         obj.children = items;
-        tmp3 = closure_14(guildId(5220).Text, obj);
+        tmp3 = closure_14(guildId(5232).Text, obj);
       } else {
         tmp3 = null;
         if (null != templates) {
@@ -202,7 +202,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
               obj.style = size;
               return closure_1_13(closure_1_8, obj);
             };
-            obj3.snapToInterval = guildId(19230).CARD_WIDTH + v16;
+            obj3.snapToInterval = guildId(19274).CARD_WIDTH + v16;
             obj3.renderItem = function renderItem(template) {
               return map1(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
                 template: template.item,
@@ -212,7 +212,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                 editGroupId: guildId,
               });
             };
-            tmp3 = closure_13(guildId(7205).FlashList, obj3);
+            tmp3 = closure_13(guildId(7218).FlashList, obj3);
           }
         }
       }

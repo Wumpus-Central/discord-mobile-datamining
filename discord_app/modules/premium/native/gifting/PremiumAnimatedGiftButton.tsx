@@ -329,7 +329,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       }, items1);
       let FadeOut;
       if (!stateFromStores) {
-        FadeOut = tmp(5038).FadeOut;
+        FadeOut = tmp(5050).FadeOut;
       }
       const obj5 = { exiting: FadeOut, children: null };
       const items2 = [tmp7.containerRefresh, style];
@@ -349,7 +349,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       const merged = Object.assign(accessibilityState);
       obj6.accessibilityState = { disabled };
       const merged1 = Object.assign(arg0);
-      obj6.children = jsx(tmp3(5214), {
+      obj6.children = jsx(tmp3(5226), {
         ref: tmp9,
         style: tmp7.animationRefresh,
         source: { uri: animationDataUrl },
@@ -363,5 +363,5 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
         accessibilityRole: "button",
         accessibilityState: null,
       });
-      return jsx(stateFromStores(5038).View, { exiting: FadeOut, children: null });
+      return jsx(stateFromStores(5050).View, { exiting: FadeOut, children: null });
     };

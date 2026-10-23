@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05255_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05267_BottomSheetModal.js";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import GuildRoleSubscriptionCard from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";

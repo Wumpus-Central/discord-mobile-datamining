@@ -26,8 +26,8 @@ let obj2 = {
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
   hasMediaOptions: "application",
-  source: null,
-  incrementableActions: null,
+  source: "sub",
+  incrementableActions: "_mapCommon",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

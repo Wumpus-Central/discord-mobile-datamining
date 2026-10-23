@@ -15,8 +15,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11248 from "../../../../_runtime/metro/11248__.js";
-import _modDef11249 from "../../../../_runtime/metro/11249__.js";
+import _modDef11271 from "../../../../_runtime/metro/11271__.js";
+import _modDef11272 from "../../../../_runtime/metro/11272__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -49,11 +49,11 @@ function generateMetadataForPlatform(arg0) {
   }
 }
 const View = fn(17).View;
-let Constants = fn(7289);
+let Constants = fn(7302);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8 } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(7261).MetadataFields;
+const MetadataFields = fn(7274).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1202).Icon.Sizes.REFRESH_SMALL_16;
@@ -117,7 +117,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
         cResult[11] = tmp24;
         tmp21 = tmp24;
       }
-      const obj4 = { source: _modDef11249, color: WHITE };
+      const obj4 = { source: _modDef11272, color: WHITE };
       const merged = Object.assign(tmp6);
       const tmp20 = __initData(native2.Icon, obj4);
       cResult[5] = WHITE;
@@ -125,7 +125,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       cResult[7] = tmp20;
       tmp15 = tmp20;
     }
-    const obj5 = { source: _modDef11248, color: PLATFORM_TWITTER };
+    const obj5 = { source: _modDef11271, color: PLATFORM_TWITTER };
     const merged1 = Object.assign(tmp6);
     const tmp14 = __initData(native2.Icon, obj5);
     cResult[2] = PLATFORM_TWITTER;
@@ -151,10 +151,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11248, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11271, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [__initData(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11249, color: WHITE };
+    const obj5 = { source: _modDef11272, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = __initData(native2.Icon, obj5);
     obj3.children = items;
@@ -839,7 +839,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   application = application.application;
   const tmp4 = closure_16();
   let obj = trackUserProfileAction(576);
-  trackUserProfileAction = trackUserProfileAction(8659).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = trackUserProfileAction(8677).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] !== application) {
     const iconSource = application.getIconSource(closure_7);
     cResult[0] = application;
@@ -892,7 +892,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
         }
         const obj5 = { label: str, icon: tmp14, onPress: tmp8, onLongPress: tmp8, accessibilityLabel: joined, accessibilityHint: tmp12, accessibilityRole: "button" };
-        const tmp20 = closure_12(tmp(6888).TableRow, obj5);
+        const tmp20 = closure_12(tmp(6901).TableRow, obj5);
         cResult[13] = tmp12;
         cResult[14] = joined;
         cResult[15] = tmp8;
@@ -904,7 +904,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp15;
       if (null != tmp5) {
         const obj6 = { size, source: tmp5, style: tmp4.applicationIcon };
-        tmp15 = closure_12(tmp(5654).BaseIconImage, obj6);
+        tmp15 = closure_12(tmp(5666).BaseIconImage, obj6);
       }
       cResult[10] = tmp5;
       cResult[11] = tmp4;
@@ -929,7 +929,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[3] = trackUserProfileAction;
   cResult[4] = fn;
   tmp8 = fn;
-  let obj2 = trackUserProfileAction(8659);
+  let obj2 = trackUserProfileAction(8677);
 }) : (function UserAccountApplicationConnection(application) {
   application = application.application;
   let str;
@@ -1271,8 +1271,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
 }) : (function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(5023).useThemeContext().theme;
-  const obj = userId(5023);
+  const theme = userId(5035).useThemeContext().theme;
+  const obj = userId(5035);
   const items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -1280,7 +1280,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(14365)(userId));
+  ({ connections, appIdentities } = theme(14389)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -1294,8 +1294,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
     obj4.style = userId.style;
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(6972).TableRowGroup, obj5);
-    return closure_12(tmp5(7288), obj4);
+    obj4.children = closure_12(tmp2(6985).TableRowGroup, obj5);
+    return closure_12(tmp5(7301), obj4);
   }
   return null;
 });

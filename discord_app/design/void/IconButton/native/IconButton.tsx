@@ -16,7 +16,7 @@ let obj3 = {
     borderRadius: nativeDefault.radii.xs,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: fn(6692).DARK_PRIMARY_700_LIGHT_PRIMARY_230,
+    backgroundColor: fn(6705).DARK_PRIMARY_700_LIGHT_PRIMARY_230,
   },
   small: { height: Sizes.SMALL_24, width: Sizes.SMALL_24 },
   medium: { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 },
@@ -30,10 +30,10 @@ const obj4 = {
   borderRadius: nativeDefault.radii.xs,
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: fn(6692).DARK_PRIMARY_700_LIGHT_PRIMARY_230,
+  backgroundColor: fn(6705).DARK_PRIMARY_700_LIGHT_PRIMARY_230,
 };
 const obj5 = { borderRadius: Sizes.SMALL_24 / 2 };
-obj3.icon = { tintColor: fn(6692).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+obj3.icon = { tintColor: fn(6705).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 let closure_7 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -190,7 +190,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.disableColor = disableColor;
       obj2.source = source;
       obj.children = jsx(size(1202).Icon, { size: REFRESH_SMALL_16, style: null, disableColor: null, source: null });
-      return jsx(size(6893).PressableOpacity, {
+      return jsx(size(6906).PressableOpacity, {
         accessibilityRole: "button",
         accessibilityLabel: tmp6,
         accessibilityElementsHidden: accessibilityHidden,

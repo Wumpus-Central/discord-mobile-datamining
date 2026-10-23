@@ -83,7 +83,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp18;
         tmp15 = tmp18;
       }
-      const tmp14 = jsx(channelId(9676).GenericHeaderTitle, {
+      const tmp14 = jsx(channelId(9698).GenericHeaderTitle, {
         title,
         subtitle: tmp12,
         variant: "heading-lg/semibold",
@@ -117,7 +117,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "heading-lg/semibold",
         subtitleColor: "text-muted",
       };
-      obj2.children = jsx(channelId(9676).GenericHeaderTitle, {
+      obj2.children = jsx(channelId(9698).GenericHeaderTitle, {
         title: channelId.title,
         subtitle: useChannelNameDefault(stateFromStores, true),
         variant: "heading-lg/semibold",

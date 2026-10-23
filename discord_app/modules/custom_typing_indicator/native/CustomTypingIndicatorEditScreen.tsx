@@ -102,14 +102,14 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16635, dependencyMap.paths),
+      asyncRequireImpl(16679, dependencyMap.paths),
       "CustomTypingIndicatorTypingSuggestionPickerSheet",
       { initialValue: first2, onChange },
     );
   }, items4);
   const callback2 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16636, dependencyMap.paths),
+      asyncRequireImpl(16680, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );

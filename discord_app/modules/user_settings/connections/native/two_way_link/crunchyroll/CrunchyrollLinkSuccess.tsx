@@ -6,7 +6,7 @@ import components_Button_Button from "../../../../../../design/components/Button
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef14051 from "../../../../../../../_runtime/metro/14051__.js";
+import _modDef14075 from "../../../../../../../_runtime/metro/14075__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       ({ container, content } = twoWayLinkStyles);
       if (cResult[0] !== tmp4.image) {
-        const obj3 = { source: _modDef14051, style: tmp4.image };
+        const obj3 = { source: _modDef14075, style: tmp4.image };
         const tmp10 = React4(FastImageDefault, obj3);
         cResult[0] = tmp4.image;
         cResult[1] = tmp10;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: twoWayLinkStyles.container, children: null };
       const obj3 = { style: twoWayLinkStyles.content, children: null };
       const obj4 = { source: null, style: null };
-      obj4.source = _modDef14051;
+      obj4.source = _modDef14075;
       obj4.style = tmp.image;
       const items = [React4(FastImageDefault, obj4), ,];
       const obj5 = {

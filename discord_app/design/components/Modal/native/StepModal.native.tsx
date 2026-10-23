@@ -22,7 +22,7 @@ const rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(5254).NAV_BAR_HEIGHT,
+  height: fn(5266).NAV_BAR_HEIGHT,
   zIndex: 1,
 };
 obj2.stepContainer = rect;

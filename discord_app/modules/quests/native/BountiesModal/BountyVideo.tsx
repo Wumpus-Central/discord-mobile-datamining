@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
 import AssetUtils from "../../lib/AssetUtils.tsx";
 import BountiesModalProgress from "BountiesModalProgress.tsx";
 import pickBountyVideoRendition from "../../../ads/utils/pickBountyVideoRendition.tsx";
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
   ActivityIndicator: closure_7,
   Pressable: closure_8,
 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(16236);
+const BountiesModalConstants = fn(16269);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: c10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);

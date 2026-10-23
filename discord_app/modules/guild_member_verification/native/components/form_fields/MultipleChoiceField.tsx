@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj2 = { defaultValue: response, onChange: M, hasIcons, children: tmp14 };
-            const tmp20 = closure_4(onChange(6970).TableRadioGroup, obj2);
+            const tmp20 = closure_4(onChange(6983).TableRadioGroup, obj2);
             cResult[11] = hasIcons;
             cResult[12] = response;
             cResult[13] = M;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: label,
         };
-        const tmp11 = closure_4(onChange(5220).Text, obj3);
+        const tmp11 = closure_4(onChange(5232).Text, obj3);
         cResult[3] = label;
         cResult[4] = tmp4.formHeader;
         cResult[5] = tmp11;

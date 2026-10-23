@@ -13,6 +13,7 @@ const DisplayNameStylesConstants = fn(1410);
   DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4,
   DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty,
   getColorPresetsForEffect: metroRequire,
+  HEXAGON_CAMPAIGN_FONTS: closure_7,
 } = DisplayNameStylesConstants);
 let items = [
   fn(1411).DisplayNameEffect.NEON,
@@ -177,16 +178,33 @@ export const generateRandomDisplayNameStyles = function generateRandomDisplayNam
   visibleFontOrder,
   visibleEffectOrder,
 ) {
+  let arr = visibleFontOrder;
   const tmp = visibleEffectOrder[Math.floor(Math, Math.random(Math) * visibleEffectOrder.length)];
-  const arr = timestampProducer(tmp);
-  const obj = {
-    fontId: visibleFontOrder[Math.floor(Math, Math.random(Math) * visibleFontOrder.length)],
-    effectId: tmp,
-    colors: null,
-  };
-  const items = [...arr[Math.floor(Math, Math.random(Math) * arr.length)]];
+  const found = visibleFontOrder.filter((item) => !closure_1_7.includes(item));
+  if (found.length > 0) {
+    arr = found;
+  }
+  const arr3 = timestampProducer(tmp);
+  const obj = { fontId: arr[Math.floor(Math, Math.random(Math) * arr.length)], effectId: tmp, colors: null };
+  const items = [...arr3[Math.floor(Math, Math.random(Math) * arr3.length)]];
   obj.colors = items;
   return obj;
+};
+export const normalizeDisplayNameStylesForApply = function normalizeDisplayNameStylesForApply(effectId, defaultColor) {
+  let tmp = effectId;
+  if (effectId.effectId === DisplayNameEffect.DisplayNameEffect.SOLID) {
+    tmp = effectId;
+    if (effectId.colors.length > 0) {
+      tmp = effectId;
+      if (effectId.colors[0] === defaultColor) {
+        const obj = {};
+        const merged = Object.assign(effectId);
+        obj.colors = [];
+        tmp = obj;
+      }
+    }
+  }
+  return tmp;
 };
 export const hasNonLatinLetters = function hasNonLatinLetters(displayName) {
   if (null == displayName) {

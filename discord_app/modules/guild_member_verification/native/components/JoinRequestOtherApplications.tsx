@@ -114,7 +114,7 @@ export default noop.memo(
             if (cResult[2] === userId) {
               let tmp5 = cResult[3];
             }
-            row = tmp(17955).useOtherGuildJoinRequestsForUser(tmp5);
+            row = tmp(17999).useOtherGuildJoinRequestsForUser(tmp5);
             if (0 === row.length) {
               return null;
             } else {
@@ -129,7 +129,7 @@ export default noop.memo(
               }
               if (cResult[5] !== tmp4.label) {
                 let obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp4.label, children: tmp6 };
-                const tmp10 = closure_6(tmp(5220).Text, obj2);
+                const tmp10 = closure_6(tmp(5232).Text, obj2);
                 cResult[5] = tmp4.label;
                 cResult[6] = tmp10;
                 let tmp8 = tmp10;
@@ -211,7 +211,7 @@ export default noop.memo(
               cResult[13] = fn;
               tmp13 = fn;
             }
-            const tmpResult = tmp(17955);
+            const tmpResult = tmp(17999);
           }
         }
         let obj5 = { guildId, userId, selectedJoinRequestId };
@@ -238,7 +238,7 @@ export default noop.memo(
           let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
           const intl = tmp2(1128).intl;
           obj3.children = intl.string(tmp2(1128).t["hxa+G3"]);
-          let items = [closure_6(tmp2(5220).Text, obj3)];
+          let items = [closure_6(tmp2(5232).Text, obj3)];
           let obj4 = {
             style: tmp.container,
             children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

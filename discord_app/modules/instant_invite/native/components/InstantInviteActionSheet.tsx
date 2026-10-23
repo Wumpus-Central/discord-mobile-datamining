@@ -18,7 +18,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7794).InviteTargetTypes;
+const InviteTargetTypes = fn(7807).InviteTargetTypes;
 const Permissions = fn(1087).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);

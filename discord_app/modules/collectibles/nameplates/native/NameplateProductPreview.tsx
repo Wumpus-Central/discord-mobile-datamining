@@ -6,7 +6,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05256_LinearGradient.js";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ProfileCustomizationUtils from "../../../profile_customization/ProfileCustomizationUtils.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
@@ -74,11 +74,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores = initialize.useStateFromStores(tmp11, tmp12);
         if (cResult[5] !== currentUser) {
-          const name = tmp8(5018).getName(currentUser);
+          const name = tmp8(5023).getName(currentUser);
           cResult[5] = currentUser;
           cResult[6] = name;
           let id = name;
-          const tmp8Result = tmp8(5018);
+          const tmp8Result = tmp8(5023);
         } else {
           id = cResult[6];
         }
@@ -90,7 +90,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp16 = cResult[8];
         }
-        if (null == tmp8(6352)(tmp16)) {
+        if (null == tmp8(6365)(tmp16)) {
           if (cResult[12] === tmp9) {
             if (cResult[13] === tmp22) {
               if (cResult[14] === currentUser) {
@@ -119,8 +119,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             size: native.AvatarSizes.NORMAL,
             avatarDecoration: tmp9,
             animate: !stateFromStores,
-            autoStatusCutout: false,
-            "aria-hidden": false,
+            autoStatusCutout: null,
+            "aria-hidden": null,
           };
           const tmp25 = timestampProducer(native.Avatar, obj5);
           cResult[12] = tmp9;
@@ -131,7 +131,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           if (cResult[9] === id) {
           }
-          tmp8 = tmp8(10638);
+          tmp8 = tmp8(10660);
           const obj6 = {
             userId: currentUser.id,
             userName: id,
@@ -201,8 +201,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.AvatarSizes.NORMAL,
           avatarDecoration,
           animate: !stateFromStores,
-          autoStatusCutout: false,
-          "aria-hidden": false,
+          autoStatusCutout: null,
+          "aria-hidden": null,
         };
         return timestampProducer(native.Avatar, obj);
       }, items1);

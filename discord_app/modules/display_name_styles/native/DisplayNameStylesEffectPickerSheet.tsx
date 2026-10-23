@@ -538,10 +538,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       first = undefined;
       closure_5 = undefined;
       const tmp = closure_9();
-      let obj = userId(8639);
-      const visibleEffectOrder = userId(16613).useVisibleEffectOrder();
-      let obj2 = userId(16613);
-      const displayNameStylesNewEffects = userId(16614).useDisplayNameStylesNewEffects(visibleEffectOrder);
+      let obj = userId(8657);
+      const visibleEffectOrder = userId(16659).useVisibleEffectOrder();
+      let obj2 = userId(16659);
+      const displayNameStylesNewEffects = userId(16660).useDisplayNameStylesNewEffects(visibleEffectOrder);
       ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
       [first, closure_5] = first.useState(selectedEffectId);
       closure_6 = tmp7;
@@ -559,8 +559,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp2(1128).intl;
         obj6.text = intl2.string(tmp2(1128).t.XqMe3N);
         obj6.onPress = tmp8;
-        obj5.trailing = closure_7(tmp2(5230).Button, obj6);
-        obj4.header = closure_7(onSelectEffect(16618), obj5);
+        obj5.trailing = closure_7(tmp2(5242).Button, obj6);
+        obj4.header = closure_7(onSelectEffect(16662), obj5);
         const obj7 = { style: tmp.container, children: null };
         const obj8 = { style: tmp.contentContainer, children: null };
         const obj9 = {
@@ -587,11 +587,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             );
           }),
         };
-        obj8.children = closure_7(tmp2(5963).Stack, obj9);
+        obj8.children = closure_7(tmp2(5975).Stack, obj9);
         obj7.children = closure_7(closure_5, obj8);
         obj4.children = closure_7(closure_5, obj7);
-        tmp9 = closure_7(tmp2(5251).BottomSheet, obj4);
-        const tmp12 = onSelectEffect(16618);
+        tmp9 = closure_7(tmp2(5263).BottomSheet, obj4);
+        const tmp12 = onSelectEffect(16662);
       }
       return tmp9;
     };

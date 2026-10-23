@@ -19,10 +19,10 @@ export default function PerLetterEffect(name) {
   const items1 = [closure_7().container, containerStyle];
   obj.style = items1;
   const memo = noop.useMemo(() => {
-    const regex = colors(10644)();
+    const regex = colors(10666)();
     closure_1 = 0;
-    let obj = name(10645);
-    return name(10645)
+    let obj = name(10667);
+    return name(10667)
       .splitGraphemes(regex)
       .map((children, index) => {
         regex.lastIndex = 0;
@@ -61,6 +61,6 @@ export default function PerLetterEffect(name) {
   const items2 = [textStyle, { lineHeight: "r" }];
   obj2.style = items2;
   obj2.children = memo;
-  obj.children = jsx(name(5220).Text, {});
+  obj.children = jsx(name(5232).Text, {});
   return <closure_4 style={null}>{null}</closure_4>;
 }

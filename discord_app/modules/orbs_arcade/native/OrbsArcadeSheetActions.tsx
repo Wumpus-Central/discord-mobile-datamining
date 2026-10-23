@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === sheetKey) {
             if (cResult[4] !== game) {
               const obj2 = { game, size: "lg" };
-              const tmp11 = closure_3(sheetKey(16336), obj2);
+              const tmp11 = closure_3(sheetKey(16386), obj2);
               cResult[4] = game;
               cResult[5] = tmp11;
               let tmp8 = tmp11;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp13 = null;
               if (null != tmp4) {
                 ({ text: obj5.text, onPress: obj5.onPress } = tmp4);
-                tmp13 = closure_3(game(5230).Button, {
+                tmp13 = closure_3(game(5242).Button, {
                   grow: true,
                   size: "lg",
                   variant: "secondary",
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { direction, size: "lg", style, children: null };
             const items = [tmp8, tmp12];
             obj4.children = items;
-            const tmp17 = closure_4(game(6681).ButtonGroup, obj4);
+            const tmp17 = closure_4(game(6694).ButtonGroup, obj4);
             cResult[8] = direction;
             cResult[9] = style;
             cResult[10] = tmp8;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp11Result = null;
       if (null != tmp5) {
         ({ text: obj4.text, onPress: obj4.onPress } = tmp5);
-        tmp11Result = closure_3(game(5230).Button, {
+        tmp11Result = closure_3(game(5242).Button, {
           grow: true,
           size: "lg",
           variant: "secondary",
@@ -143,6 +143,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       items[1] = tmp11Result;
       obj3.children = items;
-      return closure_4(game(6681).ButtonGroup, obj3);
+      return closure_4(game(6694).ButtonGroup, obj3);
     };
 export { OrbsArcadeSheetSecondaryAction };

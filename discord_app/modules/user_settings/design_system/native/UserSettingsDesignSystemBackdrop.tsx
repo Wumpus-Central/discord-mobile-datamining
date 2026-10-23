@@ -143,11 +143,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
       };
-      const obj2 = showBackdrop(5038);
+      const obj2 = showBackdrop(5050);
       fn.__closure = {
-        withSpring: showBackdrop(5233).withSpring,
+        withSpring: showBackdrop(5245).withSpring,
         showBackdrop,
-        SUBTLE_SPRING: showBackdrop(5234).SUBTLE_SPRING,
+        SUBTLE_SPRING: showBackdrop(5246).SUBTLE_SPRING,
       };
       fn.__workletHash = 7978288613287;
       fn.__initData = __initData;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         items[2] = closure_6(closure_9, obj7);
         obj4.children = items;
-        const tmp17 = closure_7(tmp(5963).Stack, obj4);
+        const tmp17 = closure_7(tmp(5975).Stack, obj4);
         cResult[1] = tmp17;
         let tmp13 = tmp17;
       } else {
@@ -227,17 +227,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (showBackdrop) {
         const obj9 = { onDismiss: first1, children: null };
         const obj10 = { style: animatedStyle, blur: tmp9, onDismiss: first1 };
-        const items2 = [closure_6(tmp(5570).Backdrop, obj10)];
+        const items2 = [closure_6(tmp(5582).Backdrop, obj10)];
         const obj11 = { style: tmp4.backdropContent, pointerEvents: "box-none", children: null };
         const obj12 = { children: null };
         const obj13 = { variant: "text-md/normal", children: null };
         const items3 = ["blur style: ", tmp9];
         obj13.children = items3;
-        obj12.children = closure_7(tmp(5220).Text, obj13);
-        obj11.children = closure_6(tmp(6890).Card, obj12);
+        obj12.children = closure_7(tmp(5232).Text, obj13);
+        obj11.children = closure_6(tmp(6903).Card, obj12);
         items2[1] = closure_6(closure_5, obj11);
         obj9.children = items2;
-        tmp19 = closure_7(tmp(5953).Dialog, obj9);
+        tmp19 = closure_7(tmp(5965).Dialog, obj9);
       }
       cResult[2] = animatedStyle;
       cResult[3] = tmp9;
@@ -246,9 +246,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp19;
       tmp18 = tmp19;
       const obj3 = {
-        withSpring: showBackdrop(5233).withSpring,
+        withSpring: showBackdrop(5245).withSpring,
         showBackdrop,
-        SUBTLE_SPRING: showBackdrop(5234).SUBTLE_SPRING,
+        SUBTLE_SPRING: showBackdrop(5246).SUBTLE_SPRING,
       };
     }
   : function UserSettingsDesignSystemBackdrop() {
@@ -265,11 +265,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
       };
-      let obj = showBackdrop(5038);
+      let obj = showBackdrop(5050);
       fn.__closure = {
-        withSpring: showBackdrop(5233).withSpring,
+        withSpring: showBackdrop(5245).withSpring,
         showBackdrop,
-        SUBTLE_SPRING: showBackdrop(5234).SUBTLE_SPRING,
+        SUBTLE_SPRING: showBackdrop(5246).SUBTLE_SPRING,
       };
       fn.__workletHash = 5659195678596;
       fn.__initData = __initData2;
@@ -306,24 +306,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj4.children = items;
-      const items1 = [closure_7(showBackdrop(5963).Stack, obj4)];
+      const items1 = [closure_7(showBackdrop(5975).Stack, obj4)];
       if (showBackdrop) {
         function handleClose() {
           closure_1(false);
         }
         const obj5 = { onDismiss: handleClose, children: null };
         const obj6 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
-        const items2 = [closure_6(tmp8(5570).Backdrop, obj6)];
+        const items2 = [closure_6(tmp8(5582).Backdrop, obj6)];
         const obj7 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
         const obj8 = { children: null };
         const obj9 = { variant: "text-md/normal", children: null };
         const items3 = ["blur style: ", tmp6];
         obj9.children = items3;
-        obj8.children = closure_7(tmp8(5220).Text, obj9);
-        obj7.children = closure_6(tmp8(6890).Card, obj8);
+        obj8.children = closure_7(tmp8(5232).Text, obj9);
+        obj7.children = closure_6(tmp8(6903).Card, obj8);
         items2[1] = closure_6(closure_5, obj7);
         obj5.children = items2;
-        showBackdrop = closure_7(tmp8(5953).Dialog, obj5);
+        showBackdrop = closure_7(tmp8(5965).Dialog, obj5);
       }
       items1[1] = showBackdrop;
       obj3.children = items1;

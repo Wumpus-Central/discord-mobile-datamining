@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef10414 from "../../../../_runtime/metro/10414__.js";
+import _modDef10436 from "../../../../_runtime/metro/10436__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -51,7 +51,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
         tmp5 = cResult[1];
       }
       if (cResult[2] !== tmp4.icon) {
-        const obj3 = { source: _modDef10414, style: tmp4.icon, color: tmp4.icon.color };
+        const obj3 = { source: _modDef10436, style: tmp4.icon, color: tmp4.icon.color };
         const tmp12 = React4(native.Icon, obj3);
         cResult[2] = tmp4.icon;
         cResult[3] = tmp12;
@@ -128,7 +128,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
       const obj = { style: tmp.container, children: null };
       const items = [
         React4(View, { style: tmp.imageContainer }),
-        React4(native.Icon, { source: _modDef10414, style: tmp.icon, color: tmp.icon.color }),
+        React4(native.Icon, { source: _modDef10436, style: tmp.icon, color: tmp.icon.color }),
       ];
       const obj4 = { children: null };
       const obj5 = {

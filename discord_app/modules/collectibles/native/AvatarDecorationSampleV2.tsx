@@ -4,7 +4,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9380 from "../../../../_runtime/metro/09380__.js";
+import _modDef9403 from "../../../../_runtime/metro/09403__.js";
 import CutoutableAvatarDecorationDefault from "components/CutoutableAvatarDecoration.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp7 = cResult[2];
         }
         if (null == avatarSource) {
-          avatarSource = _modDef9380;
+          avatarSource = _modDef9403;
         }
         if (cResult[3] === tmp7) {
           if (cResult[4] === avatarSource) {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
       items[1] = solidAvatar;
       if (null == avatarSource) {
-        avatarSource = _modDef9380;
+        avatarSource = _modDef9403;
       }
       const obj2 = { children: null };
       obj.source = avatarSource;

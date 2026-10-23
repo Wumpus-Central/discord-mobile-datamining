@@ -5,10 +5,10 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_7 = async function _createProxyTicket(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
+  if (c7 === 2) {
+    c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
+  } else if (tmp6 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -19,57 +19,67 @@ let closure_7 = async function _createProxyTicket(arg0) {
     }
   } else {
     try {
-      c6 = 2;
-      if (0 === c5) {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          c6 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
+          c7 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_4 = tmp2;
-          closure_3 = tmp3;
+          closure_4 = tmp3;
+          closure_3 = tmp7;
           closure_131_0 = closure_0;
           closure_131_1 = closure_1;
           closure_131_2 = closure_2;
           closure_131_3 = undefined;
-          const tmp27 = prefetchKey(closure_0, closure_1, closure_2);
-          value = map.get(tmp27);
-          map.delete(tmp27);
+          const tmp30 = prefetchKey(closure_0, closure_1, closure_2);
+          value = map.get(tmp30);
+          map.delete(tmp30);
           if (null != value) {
             const _Date = Date;
             if (value.expiresAt > Date.now()) {
-              const ticket = value.ticket;
               c5 = 1;
-              c6 = 1;
-              const obj4 = { value: ticket.catch(() => null), done: false };
+              c6 = 2;
+              c7 = 1;
+              const obj4 = { value: value.ticket, done: false };
               return obj4;
             }
           }
         }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
       } else {
-        closure_131_3 = value;
-        if (null != closure_131_3) {
-          c6 = 3;
-          const obj = { value: closure_131_3, done: true };
-          return obj;
+        if (1 === tmp7) {
+          c5 = 0;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_131_3 = value;
+          if (null == closure_131_3) {
+            c5 = 0;
+          }
         }
+        c5 = 0;
+        c7 = 3;
+        const obj = { value: closure_131_3, done: true };
+        return obj;
       }
-      c6 = 3;
-      const obj6 = { value: closure_132_9(closure_131_0, closure_131_1, closure_131_2), done: true };
-      return obj6;
-    } catch (tmp17) {
-      c6 = tmp;
-      throw tmp17;
+      closure_132_9(closure_131_0, closure_131_1, closure_131_2);
+      c7 = 3;
+    } catch (tmp18) {
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp18;
+      } else {
+        c6 = tmp;
+      }
     }
   }
 };

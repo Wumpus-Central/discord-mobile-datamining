@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default {
   open(initialRouteName) {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(15985, dependencyMap.paths),
+      asyncRequireImpl(16018, dependencyMap.paths),
       { initialRouteName },
       TWO_FA_SETUP_MODAL_KEY,
     );

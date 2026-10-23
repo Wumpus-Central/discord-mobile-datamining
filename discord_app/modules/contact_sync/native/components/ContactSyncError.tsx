@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.error,
             children: error,
           };
-          const tmp10 = jsx(tmp(5220).Text, {
+          const tmp10 = jsx(tmp(5232).Text, {
             variant: "text-sm/medium",
             color: "text-feedback-critical",
             style: tmp4.error,

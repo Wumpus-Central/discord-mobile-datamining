@@ -177,7 +177,7 @@ prototype["render"] = function render() {
   return closure_1_8(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
-UnreadBar.contextType = fn(5023).ThemeContext;
+UnreadBar.contextType = fn(5035).ThemeContext;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/UnreadBars.tsx");
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp20[0] = noop.Fragment;
                       const items1 = [tmp11, tmp16];
                       tmp20[1] = items1;
-                      const tmp22 = closure_9(tmp(13259).TransitionGroup, tmp20);
+                      const tmp22 = closure_9(tmp(13282).TransitionGroup, tmp20);
                       cResult[18] = tmp11;
                       cResult[19] = tmp16;
                       cResult[20] = tmp22;

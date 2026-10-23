@@ -91,7 +91,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(10070).updateChannel({ rtcRegion: tmp });
+  self(10092).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     ChannelSettingsActionCreatorsDefault.saveChannel(self.props.channel.id, { rtcRegion });
   });
@@ -116,7 +116,7 @@ prototype["render"] = function render() {
   const tmp = closure_8(this.context);
   return jsx(Form.Form, { style: closure_8(this.context).form, children: this.renderRegions() });
 };
-ChannelSettingsChangeRTCRegion.contextType = fn(5023).ThemeContext;
+ChannelSettingsChangeRTCRegion.contextType = fn(5035).ThemeContext;
 const ReactCompilerGating = fn(558);
 const obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,

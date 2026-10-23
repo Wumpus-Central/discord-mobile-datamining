@@ -58,11 +58,11 @@ export default noop.memo(
               let obj = require;
               let result = dependencyMap;
               if (isChatLockedOpen) {
-                obj = obj(17344);
+                obj = obj(17388);
                 result = obj.convertPortraitToLandscapeScreens();
               } else {
-                obj(5145).dismissKeyboard();
-                const objResult = obj(5145);
+                obj(5157).dismissKeyboard();
+                const objResult = obj(5157);
                 const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
               }
               closure_4.current = true;
@@ -522,11 +522,11 @@ export default noop.memo(
             let obj = require;
             let result = dependencyMap;
             if (isChatLockedOpen) {
-              obj = obj(17344);
+              obj = obj(17388);
               result = obj.convertPortraitToLandscapeScreens();
             } else {
-              obj(5145).dismissKeyboard();
-              const objResult = obj(5145);
+              obj(5157).dismissKeyboard();
+              const objResult = obj(5157);
               const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
             }
             closure_4.current = true;

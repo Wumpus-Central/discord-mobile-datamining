@@ -11,8 +11,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(12014).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6690).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(12033).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6703).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4969);

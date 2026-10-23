@@ -284,9 +284,10 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   const obj13 = { style: null, children: null };
   const items6 = [tmp.nav, { marginTop: rect.top, marginLeft: rect.left, marginRight: rect.right }];
   obj13.style = items6;
-  const obj14 = { uri: null, style: null };
+  const obj14 = { animatedUri: null, staticUri: null, style: null };
   const tmp7Result2 = _slicedToArray(noop.useState(false), 2);
-  obj14.uri = require("../../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js");
+  obj14.animatedUri = require("../../../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js");
+  obj14.staticUri = require("../../../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js");
   obj14.style = tmp.logo;
   const items7 = [closure_15(require("CheckpointApngPlayer"), obj14)];
   const obj15 = { style: tmp.headerActions, children: null };
@@ -341,7 +342,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         disableSwitching: hasItem,
         disabled: tmp30,
       };
-      tmp35Result = closure_15(tmp5(tmp3[35]).FinalizeTraitTabs, obj20);
+      tmp35Result = closure_15(tmp5(tmp3[36]).FinalizeTraitTabs, obj20);
     }
     const items10 = [tmp35Result];
     const obj21 = {
@@ -350,11 +351,11 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
       showEarnedCount: !tmp14,
       onSelectOption: tmp5(tmp3[12]).selectCharacterTrait,
     };
-    items10[1] = closure_15(tmp2(tmp3[36]), obj21);
+    items10[1] = closure_15(tmp2(tmp3[37]), obj21);
     obj18.children = items10;
     result = closure_17(tmp37, obj18);
     const obj19 = { marginLeft: null, marginRight: null, marginBottom: null };
-    const tmp2Result11 = tmp2(tmp3[36]);
+    const tmp2Result11 = tmp2(tmp3[37]);
   }
   items4[3] = result;
   const obj22 = {
@@ -388,7 +389,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         message: tmp5,
         source: "checkpoint",
         customSendHandler() {
-          closure_0(first[40]).closeForwardModal();
+          closure_0(first[41]).closeForwardModal();
           transition(1, { skipThrottle: true });
           return Promise.resolve();
         },
@@ -397,7 +398,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         message: tmp5,
         source: "checkpoint",
         customSendHandler() {
-          closure_0(first[40]).closeForwardModal();
+          closure_0(first[41]).closeForwardModal();
           transition(1, { skipThrottle: true });
           return Promise.resolve();
         },
@@ -428,8 +429,8 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12893).CheckpointFetchStates;
-const CheckpointConstants = fn(6001);
+const CheckpointFetchStates = fn(12912).CheckpointFetchStates;
+const CheckpointConstants = fn(6013);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);
 const ThemeTypes = fn(1098).ThemeTypes;

@@ -82,11 +82,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = stats(576).c(25);
       stats = stats.stats;
       if (cResult[0] !== stats) {
-        const perfModelSummaryResult = tmp(12485).perfModelSummary(stats);
+        const perfModelSummaryResult = tmp(12504).perfModelSummary(stats);
         cResult[0] = stats;
         cResult[1] = perfModelSummaryResult;
         let tmp4 = perfModelSummaryResult;
-        const tmpResult = tmp(12485);
+        const tmpResult = tmp(12504);
       } else {
         tmp4 = cResult[1];
       }
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       let tmp25 = null;
                       if (null != tmp4) {
                         let obj2 = { variant: "text-sm/normal", color: "text-default", children: tmp4 };
-                        tmp25 = closure_3(tmp(5220).Text, obj2);
+                        tmp25 = closure_3(tmp(5232).Text, obj2);
                       }
                       cResult[18] = tmp4;
                       cResult[19] = tmp25;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const PERF_CATEGORIES = tmp(10711).PERF_CATEGORIES;
+            const PERF_CATEGORIES = tmp(10733).PERF_CATEGORIES;
             const mapped = PERF_CATEGORIES.map((item) => {
               const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
               const obj2 = { style: closure_1.legendItem, children: null };
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ConjurePerfTraceStatsHeader(stats) {
       stats = stats.stats;
-      const perfModelSummaryResult = stats(12485).perfModelSummary(stats);
+      const perfModelSummaryResult = stats(12504).perfModelSummary(stats);
       const tmp4 = closure_6();
       dependencyMap = styles();
       let obj2 = { style: tmp4.header, children: null };
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       let items = [closure_3(dependencyMap, obj3), ,];
       const obj4 = { style: tmp4.legend, children: null };
-      const PERF_CATEGORIES = stats(10711).PERF_CATEGORIES;
+      const PERF_CATEGORIES = stats(10733).PERF_CATEGORIES;
       obj4.children = PERF_CATEGORIES.map((item) => {
         const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
         const obj2 = { style: closure_1.legendItem, children: null };
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp7Result = null;
       if (null != perfModelSummaryResult) {
         let obj5 = { variant: "text-sm/normal", color: "text-default", children: perfModelSummaryResult };
-        tmp7Result = closure_3(stats(5220).Text, obj5);
+        tmp7Result = closure_3(stats(5232).Text, obj5);
       }
       items[2] = tmp7Result;
       obj2.children = items;

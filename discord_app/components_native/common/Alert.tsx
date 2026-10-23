@@ -324,7 +324,7 @@ prototype["render"] = function render() {
   }
   return tmp2Result;
 };
-Alert.contextType = fn(5023).ThemeContext;
+Alert.contextType = fn(5035).ThemeContext;
 const obj7 = { borderRadius: nativeDefault.radii.sm };
 Alert.defaultProps = { confirmColor: fn(1202).ButtonColors.BRAND, autoCloseOnConfirm: true };
 const ReactCompilerGating = fn(558);

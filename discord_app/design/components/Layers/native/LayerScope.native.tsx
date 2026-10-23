@@ -9,7 +9,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(5584).LayerContext);
+  const context = noop.useContext(zIndex(5596).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   const items = [context];

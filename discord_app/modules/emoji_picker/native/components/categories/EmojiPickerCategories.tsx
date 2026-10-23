@@ -8,7 +8,7 @@ import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategoryTypes = fn(6713).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6726).EmojiCategoryTypes;
 const Constants = fn(1087);
 ({
   AnalyticEvents: hasOwnProperty,

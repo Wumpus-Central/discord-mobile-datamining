@@ -4,10 +4,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05283_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05295_LegacyBaseButton.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef11376 from "../../../../../_runtime/metro/11376__.js";
+import _modDef11399 from "../../../../../_runtime/metro/11399__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[5];
         }
         if (cResult[6] !== tmp4.image) {
-          const obj3 = { source: _modDef11376, style: tmp4.image, resizeMode: "contain" };
+          const obj3 = { source: _modDef11399, style: tmp4.image, resizeMode: "contain" };
           const tmp19 = hasOwnProperty(FastImageDefault, obj3);
           cResult[6] = tmp4.image;
           cResult[7] = tmp19;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj4 = { source: null, style: null, resizeMode: "contain" };
       const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-      obj4.source = _modDef11376;
+      obj4.source = _modDef11399;
       obj4.style = tmp.image;
       items[1] = hasOwnProperty(FastImageDefault, obj4);
       const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };

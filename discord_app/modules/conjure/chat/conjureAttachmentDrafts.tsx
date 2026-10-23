@@ -127,10 +127,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10675).sendUserMessage;
+const sendUserMessage = fn(10697).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5149).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5161).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;

@@ -17,13 +17,13 @@ export const generateDirectoryRows = function generateDirectoryRows(directoryIsF
   if (0 === arr.length) {
     return [];
   } else if (currentCategoryId !== DirectoryEntryCategories.ALL) {
-    const obj4 = set(13124);
-    return set(13124)
+    const obj4 = set(13147);
+    return set(13147)
       .rankGuildEntries(arr)
       .map((entry) => ({ type: constants.ENTRY, entry }));
   } else {
     const items = [];
-    const rankByDateAddedResult = set(13124).rankByDateAdded(arr);
+    const rankByDateAddedResult = set(13147).rankByDateAdded(arr);
     const _Set = Set;
     set = new Set(rankByDateAddedResult.map((guildId) => guildId.guildId));
     let combined = items;
@@ -36,8 +36,8 @@ export const generateDirectoryRows = function generateDirectoryRows(directoryIsF
       combined = items.concat(rankByDateAddedResult.map((entry) => ({ type: constants.ENTRY, entry })));
     }
     const found = arr.filter((guildId) => !set.has(guildId.guildId));
-    const obj5 = set(13124);
-    const result = set(13124).orderByTotalMemberCount(found);
+    const obj5 = set(13147);
+    const result = set(13147).orderByTotalMemberCount(found);
     let combined1 = combined;
     if (result.length > 0) {
       const obj2 = { type: obj.HEADER, header: null };

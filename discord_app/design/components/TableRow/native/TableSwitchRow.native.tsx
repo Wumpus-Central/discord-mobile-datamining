@@ -287,7 +287,7 @@ export const TableSwitchRow = ReactCompilerGating.isReactCompilerEnabled()
             str = "text-feedback-critical";
           }
           const obj7 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
-          tmp10Result = React5(tmp3(5220).Text, obj7);
+          tmp10Result = React5(tmp3(5232).Text, obj7);
         }
         const items1 = [tmp10Result, trailing];
         obj6.children = items1;

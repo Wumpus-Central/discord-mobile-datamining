@@ -11,8 +11,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useScreenNameSharedValue() {
       const cResult = sharedValue(576).c(3);
       let obj = sharedValue(576);
-      let rootNavigationRef = sharedValue(5137).getRootNavigationRef();
-      const obj2 = sharedValue(5137);
+      let rootNavigationRef = sharedValue(5149).getRootNavigationRef();
+      const obj2 = sharedValue(5149);
       let isReadyResult;
       if (rootNavigationRef != null) {
         isReadyResult = rootNavigationRef.isReady();
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp3 = unknown;
       }
-      sharedValue = sharedValue(5038).useSharedValue(tmp3);
+      sharedValue = sharedValue(5050).useSharedValue(tmp3);
       if (cResult[0] !== sharedValue) {
         const fn = function u() {
           const rootNavigationRef = sharedValue(dependencyMap[3]).getRootNavigationRef();
@@ -71,8 +71,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return sharedValue;
     }
   : function useScreenNameSharedValue() {
-      let rootNavigationRef = sharedValue(5137).getRootNavigationRef();
-      let obj = sharedValue(5137);
+      let rootNavigationRef = sharedValue(5149).getRootNavigationRef();
+      let obj = sharedValue(5149);
       let isReadyResult;
       if (rootNavigationRef != null) {
         isReadyResult = rootNavigationRef.isReady();
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp2 = unknown;
       }
-      sharedValue = sharedValue(5038).useSharedValue(tmp2);
+      sharedValue = sharedValue(5050).useSharedValue(tmp2);
       const items = [sharedValue];
       const effect = noop.useEffect(() => {
         function handleStateChange() {

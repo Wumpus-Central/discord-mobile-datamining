@@ -72,7 +72,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 ReanimatedRexport.runOnJS(tmp)();
               }
             };
-            const obj2 = { onPanFinalize, runOnJS: tmp(5038).runOnJS };
+            const obj2 = { onPanFinalize, runOnJS: tmp(5050).runOnJS };
             fn3.__closure = obj2;
             fn3.__workletHash = 2479115151384;
             fn3.__initData = __initData3;
@@ -87,7 +87,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[9] === tmp6) {
                 let tmp8 = cResult[10];
               }
-              const panGesture = tmp(5283).usePanGesture(tmp8);
+              const panGesture = tmp(5295).usePanGesture(tmp8);
               if (cResult[11] !== panGesture) {
                 const obj3 = { gesture: panGesture };
                 cResult[11] = panGesture;

@@ -192,7 +192,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           let obj3 = { id, name: id };
           obj2.emoji = obj3;
           obj2.userId = userId;
-          obj2.reactionType = channelId(5211).ReactionTypes.VOTE;
+          obj2.reactionType = channelId(5223).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj2);
           continue;
         }
@@ -754,7 +754,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(12180).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(12199).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -790,7 +790,7 @@ let closure_28 = async function _createPoll(arg0) {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-              const obj = guildId(9643);
+              const obj = guildId(9666);
               const result = obj.handleUploadMessageAttachmentsErrors({
                 file,
                 guildId: guildId.getGuildId(),
@@ -890,8 +890,8 @@ let closure_29 = async function _endPollEarly(arg0) {
   ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
   return "Reflect";
 };
-const DraftType = fn(7616).DraftType;
-const PollsInteractionStore = fn(11006);
+const DraftType = fn(7629).DraftType;
+const PollsInteractionStore = fn(11029);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

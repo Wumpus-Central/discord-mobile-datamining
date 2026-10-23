@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guild = guild.guild;
       const application = guild.application;
       const tmp4 = closure_15();
-      guild(8795);
+      guild(8818);
       if (null == application) {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -495,11 +495,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              tmp52[0] = application(10725);
-              const tmp53 = closure_12(application(5655), tmp52);
+              tmp52[0] = application(10747);
+              const tmp53 = closure_12(application(5667), tmp52);
               cResult[26] = tmp53;
               const tmp49 = tmp53;
-              const tmp51 = application(5655);
+              const tmp51 = application(5667);
             } else {
               class M {
                 constructor() {
@@ -554,7 +554,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               obj4.children = tmp56;
-              const tmp58 = closure_12(tmp(5220).Text, obj4);
+              const tmp58 = closure_12(tmp(5232).Text, obj4);
               cResult[28] = tmp4.text;
               cResult[29] = tmp58;
             } else {
@@ -653,7 +653,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               obj6.children = tmp7;
-              tmp60 = closure_12(tmp(5220).Text, obj6);
+              tmp60 = closure_12(tmp(5232).Text, obj6);
             }
             cResult[30] = tmp4.text;
             cResult[31] = tmp7;

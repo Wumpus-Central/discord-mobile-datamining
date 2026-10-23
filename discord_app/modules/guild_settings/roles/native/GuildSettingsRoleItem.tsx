@@ -29,7 +29,7 @@ let obj = {
   gradient: null,
   image: null,
 };
-let prop = fn(5220).TextStyleSheet["text-md/semibold"];
+let prop = fn(5232).TextStyleSheet["text-md/semibold"];
 let num;
 if (prop != null) {
   num = prop.lineHeight;
@@ -1020,7 +1020,7 @@ export default noop.memo(
                       c1 = 1;
                       c2 = 1;
                       const obj6 = {
-                        value: tmp2(11241).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                        value: tmp2(11264).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                         done: false,
                       };
                       return obj6;
@@ -1033,7 +1033,7 @@ export default noop.memo(
                     const obj = { value, done: true };
                     return obj;
                   }
-                  onPress(6815).deleteRole(guildId, tmp2.id);
+                  onPress(6828).deleteRole(guildId, tmp2.id);
                   c2 = 3;
                   return { value: "IconComponent", done: null };
                 } catch (tmp16) {
@@ -1182,7 +1182,7 @@ export default noop.memo(
                           c1 = 1;
                           c2 = 1;
                           const obj6 = {
-                            value: tmp2(11241).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                            value: tmp2(11264).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                             done: false,
                           };
                           return obj6;
@@ -1329,7 +1329,7 @@ export default noop.memo(
           if (null != prop) {
             const obj23 = {
               size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16,
-              source: require("../../../../../_runtime/metro/09840__.js"),
+              source: require("../../../../../_runtime/metro/09862__.js"),
               "aria-label": null,
               style: null,
             };

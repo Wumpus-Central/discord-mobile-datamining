@@ -856,7 +856,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const MobileHomeDrawerExperiment = tmp(5142).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = tmp(5154).MobileHomeDrawerExperiment;
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -885,7 +885,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return guildFolderById;
       });
-      const MobileHomeDrawerExperiment = folderId(5142).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = folderId(5154).MobileHomeDrawerExperiment;
       let tmp3 = null;
       if (null != stateFromStores) {
         tmp3 = null;

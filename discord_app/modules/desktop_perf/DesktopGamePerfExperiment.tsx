@@ -11,6 +11,8 @@ let closure_2 = ApexExperiment.createApexExperiment({
     overlayOnlyAnimatesItself: false,
     fullscreenPopupOcclusion: false,
     overlayHiddenWavePaused: false,
+    renderOverlayWhileMinimized: false,
+    notificationIconCpuCanvas: false,
   },
   variations: {
     0: {
@@ -18,12 +20,16 @@ let closure_2 = ApexExperiment.createApexExperiment({
       overlayOnlyAnimatesItself: false,
       fullscreenPopupOcclusion: false,
       overlayHiddenWavePaused: false,
+      renderOverlayWhileMinimized: false,
+      notificationIconCpuCanvas: false,
     },
     1: {
       nativeSystemCpuTimes: true,
       overlayOnlyAnimatesItself: true,
       fullscreenPopupOcclusion: true,
       overlayHiddenWavePaused: true,
+      renderOverlayWhileMinimized: true,
+      notificationIconCpuCanvas: true,
     },
   },
 });
@@ -74,4 +80,23 @@ export const getIsOverlayHiddenWavePausedEnabled = function getIsOverlayHiddenWa
     overlayHiddenWavePaused = closure_2.getConfig({ location: "overlay_voice_user" }).overlayHiddenWavePaused;
   }
   return overlayHiddenWavePaused;
+};
+export const getIsRenderOverlayWhileMinimizedEnabled = function getIsRenderOverlayWhileMinimizedEnabled(location) {
+  let renderOverlayWhileMinimized = PlatformUtils.isDesktop();
+  if (renderOverlayWhileMinimized) {
+    renderOverlayWhileMinimized = PlatformUtils.isWindows();
+    const tmpResult = PlatformUtils;
+  }
+  if (renderOverlayWhileMinimized) {
+    const obj2 = { location };
+    renderOverlayWhileMinimized = closure_2.getConfig(obj2).renderOverlayWhileMinimized;
+  }
+  return renderOverlayWhileMinimized;
+};
+export const getIsNotificationIconCpuCanvasEnabled = function getIsNotificationIconCpuCanvasEnabled() {
+  let notificationIconCpuCanvas = PlatformUtils.isDesktop();
+  if (notificationIconCpuCanvas) {
+    notificationIconCpuCanvas = closure_2.getConfig({ location: "icon_cropping_utils" }).notificationIconCpuCanvas;
+  }
+  return notificationIconCpuCanvas;
 };

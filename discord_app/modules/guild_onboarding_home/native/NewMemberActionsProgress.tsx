@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05244_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05256_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStore.tsx";

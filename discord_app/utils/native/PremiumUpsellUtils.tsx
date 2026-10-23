@@ -5,12 +5,12 @@ import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
 import PremiumUtils from "../PremiumUtils.tsx";
 import ChatInputUtils from "ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef9649 from "../../../_runtime/metro/09649__.js";
-import _modDef9650 from "../../../_runtime/metro/09650__.js";
-import _modDef9651 from "../../../_runtime/metro/09651__.js";
-import _modDef9652 from "../../../_runtime/metro/09652__.js";
-import _modDef9653 from "../../../_runtime/metro/09653__.js";
-import _modDef9654 from "../../../_runtime/metro/09654__.js";
+import _modDef9672 from "../../../_runtime/metro/09672__.js";
+import _modDef9673 from "../../../_runtime/metro/09673__.js";
+import _modDef9674 from "../../../_runtime/metro/09674__.js";
+import _modDef9675 from "../../../_runtime/metro/09675__.js";
+import _modDef9676 from "../../../_runtime/metro/09676__.js";
+import _modDef9677 from "../../../_runtime/metro/09677__.js";
 import openPremiumModalDefault from "../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../modules/user_settings/premium/native/PremiumFeaturesCards.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -54,7 +54,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = skuId === closure_8.TIER_0;
       }
       if (tmp12) {
-        TIER_2_LEADING = tmp(stringResult[20]).PremiumFeatureCardOrder.TIER_0_LEADING;
+        TIER_2_LEADING = tmp(stringResult[21]).PremiumFeatureCardOrder.TIER_0_LEADING;
       } else {
         if (constants3.UPLOAD !== arg0) {
           if (constants3.ANIMATED_EMOJI !== arg0) {
@@ -70,7 +70,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               const ANIMATED_AVATAR = constants3.ANIMATED_AVATAR;
                             }
                           }
-                          TIER_2_LEADING = tmp(stringResult[20]).PremiumFeatureCardOrder.TIER_0_LEADING;
+                          TIER_2_LEADING = tmp(stringResult[21]).PremiumFeatureCardOrder.TIER_0_LEADING;
                         }
                       }
                     }
@@ -80,7 +80,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        TIER_2_LEADING = tmp(stringResult[20]).PremiumFeatureCardOrder.TIER_2_LEADING;
+        TIER_2_LEADING = tmp(stringResult[21]).PremiumFeatureCardOrder.TIER_2_LEADING;
       }
       if (cResult[1] === _location) {
         if (cResult[2] === arg1) {
@@ -156,19 +156,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       class P {
         constructor() {
           tmp = closure_2;
-          obj = closure_0(closure_2[21]);
+          obj = closure_0(closure_2[22]);
           bestActiveInput = obj.getBestActiveInput();
           if (bestActiveInput != null) {
             closeCustomKeyboardResult = bestActiveInput.closeCustomKeyboard();
           }
-          obj3 = closure_1(tmp[22]);
+          obj3 = closure_1(tmp[23]);
           obj1 = { location: closure_1 };
           trackResult = obj3.track(AnalyticEvents.PREMIUM_PROMOTION_OPENED, obj1);
-          obj5 = closure_1(tmp[23]);
+          obj5 = closure_1(tmp[24]);
           hideAllActionSheetsResult = obj5.hideAllActionSheets();
           obj8 = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
           obj9 = {};
-          tmp5 = closure_1(tmp[24]);
+          tmp5 = closure_1(tmp[25]);
           merged = Object.assign(closure_1);
           obj9.object = AnalyticsObjects.BUTTON_CTA;
           obj8.analyticsLocation = obj9;
@@ -349,8 +349,8 @@ export default {
         flag = !analyticsLocation(analyticsLocations[10]).canUsePremiumProfileCustomization(currentUser);
         const obj8 = analyticsLocation(analyticsLocations[10]);
       } else if (constants3.APP_ICONS === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUsePremiumAppIcons(currentUser);
-        const obj7 = analyticsLocation(analyticsLocations[10]);
+        flag = !initialUpsellKey(analyticsLocations[17]).canUseAllAppIcons(currentUser);
+        const obj7 = initialUpsellKey(analyticsLocations[17]);
       } else if (constants3.GLOBAL_STICKER === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[10]).canUseCustomStickersEverywhere(currentUser);
         const obj6 = analyticsLocation(analyticsLocations[10]);
@@ -374,7 +374,7 @@ export default {
       if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
         let obj = {
           importer() {
-            return asyncRequireImpl(9841, dependencyMap.paths).then((result) => {
+            return asyncRequireImpl(9863, dependencyMap.paths).then((result) => {
               closure_0 = result.default;
               return (arg0) => {
                 const obj = {};
@@ -404,7 +404,7 @@ export default {
 export const getUpsellItems = function getUpsellItems() {
   const obj = {
     key: constants3.GLOBAL_EMOJI,
-    image: _modDef9649,
+    image: _modDef9672,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -418,7 +418,7 @@ export const getUpsellItems = function getUpsellItems() {
   const items = [obj, , , , ,];
   const obj2 = {
     key: constants3.ANIMATED_EMOJI,
-    image: _modDef9650,
+    image: _modDef9673,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -432,7 +432,7 @@ export const getUpsellItems = function getUpsellItems() {
   items[1] = obj2;
   const obj3 = {
     key: constants3.ANIMATED_AVATAR,
-    image: _modDef9651,
+    image: _modDef9674,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -444,7 +444,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl9 = util.intl;
   obj3.description = intl9.format(util.t["Tso/Fn"], {});
   items[2] = obj3;
-  const obj4 = { key: constants3.UPLOAD, image: _modDef9652, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = { key: constants3.UPLOAD, image: _modDef9675, activeTitle: null, passiveTitle: null, description: null };
   const intl10 = util.intl;
   obj4.activeTitle = intl10.string(util.t["1EOZqw"]);
   const intl11 = util.intl;
@@ -456,7 +456,7 @@ export const getUpsellItems = function getUpsellItems() {
   obj5.maxUploadPremium = PremiumUtils.getMaxFileSizeForPremiumType(React6.TIER_2);
   obj4.description = intl12.format(util.t.DUT5IC, obj5);
   items[3] = obj4;
-  const obj7 = { key: constants3.BADGE, image: _modDef9653, activeTitle: null, passiveTitle: null, description: null };
+  const obj7 = { key: constants3.BADGE, image: _modDef9676, activeTitle: null, passiveTitle: null, description: null };
   const intl14 = util.intl;
   obj7.activeTitle = intl14.string(util.t["602BK4"]);
   const intl15 = util.intl;
@@ -466,7 +466,7 @@ export const getUpsellItems = function getUpsellItems() {
   items[4] = obj7;
   const obj8 = {
     key: constants3.APP_ICONS,
-    image: _modDef9654,
+    image: _modDef9677,
     activeTitle: null,
     passiveTitle: null,
     description: null,

@@ -4,7 +4,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05283_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05295_LegacyBaseButton.js";
 import useMuteStates from "../../../../video_calls/useMuteStates.tsx";
 import MicrophoneDenyIcon from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";

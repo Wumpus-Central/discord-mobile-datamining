@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef18017 from "../../../../../_runtime/metro/18017__.js";
+import _modDef18061 from "../../../../../_runtime/metro/18061__.js";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -332,10 +332,10 @@ export default noop.memo(
           const items3 = [,];
           ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
           obj4.style = items3;
-          let obj5 = { size: max(1202).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef18017 };
+          let obj5 = { size: max(1202).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef18061 };
           const items4 = [closure_4(max(1202).Icon, obj5)];
           let obj6 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-          items4[1] = closure_4(max(5220).Text, obj6);
+          items4[1] = closure_4(max(5232).Text, obj6);
           obj4.children = items4;
           obj3.children = closure_5(tmp6, obj4);
           tmp8Result = tmp8(tmp6, obj3);

@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef8104 from "../../../../../_runtime/metro/08104__.js";
+import _modDef8117 from "../../../../../_runtime/metro/08117__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,8 +20,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(2);
       const tmp4 = closure_4();
       if (cResult[0] !== tmp4.tintColor) {
-        const obj2 = { source: _modDef8104, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor };
-        const tmp8 = jsx(native.Icon, { source: _modDef8104, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor });
+        const obj2 = { source: _modDef8117, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor };
+        const tmp8 = jsx(native.Icon, { source: _modDef8117, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor });
         cResult[0] = tmp4.tintColor;
         cResult[1] = tmp8;
         let tmp5 = tmp8;
@@ -32,5 +32,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function Arrow() {
       const tmp = closure_4();
-      return jsx(native.Icon, { source: _modDef8104, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+      return jsx(native.Icon, { source: _modDef8117, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
     };

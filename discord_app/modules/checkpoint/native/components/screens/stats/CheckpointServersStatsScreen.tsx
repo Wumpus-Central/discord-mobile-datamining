@@ -8,7 +8,8 @@ import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
-import _modDef12921 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12941 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12942 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
 import CheckpointGuildStatsDefault from "../../CheckpointGuildStats.tsx";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
@@ -20,7 +21,7 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6001);
+const CheckpointConstants = fn(6013);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
@@ -308,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ({ container, header, heading, title } = tmp4);
           if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-            const tmp12 = closure_6(tmp(9622).ServerIcon, obj2);
+            const tmp12 = closure_6(tmp(9645).ServerIcon, obj2);
             cResult[26] = tmp12;
             let tmp9 = tmp12;
           } else {
@@ -393,7 +394,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   tmp5 = closure_1;
                                   tmp6 = closure_2;
                                   tmp8 = null;
-                                  tmp7 = closure_1(closure_2[19]);
+                                  tmp7 = closure_1(closure_2[20]);
                                   if (numMessagesSent == null) {
                                     numMessagesSent = 0;
                                   }
@@ -434,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 tmp5 = closure_1;
                                 tmp6 = closure_2;
                                 tmp8 = null;
-                                tmp7 = closure_1(closure_2[19]);
+                                tmp7 = closure_1(closure_2[20]);
                                 if (numMessagesSent == null) {
                                   numMessagesSent = 0;
                                 }
@@ -477,7 +478,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             tmp5 = closure_1;
                             tmp6 = closure_2;
                             tmp8 = null;
-                            tmp7 = closure_1(closure_2[19]);
+                            tmp7 = closure_1(closure_2[20]);
                             if (numMessagesSent == null) {
                               numMessagesSent = 0;
                             }
@@ -510,7 +511,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp5 = closure_1;
                           tmp6 = closure_2;
                           tmp8 = null;
-                          tmp7 = closure_1(closure_2[19]);
+                          tmp7 = closure_1(closure_2[20]);
                           if (numMessagesSent == null) {
                             numMessagesSent = 0;
                           }
@@ -573,7 +574,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp55 = cResult[4];
         }
         if (cResult[5] !== tmp4.globe) {
-          const obj12 = { uri: null, style: null };
+          const obj12 = { animatedUri: null, staticUri: null, style: null };
           class B {
             constructor(arg0, arg1) {
               ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
@@ -587,7 +588,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp5 = closure_1;
                 tmp6 = closure_2;
                 tmp8 = null;
-                tmp7 = closure_1(closure_2[19]);
+                tmp7 = closure_1(closure_2[20]);
                 if (numMessagesSent == null) {
                   numMessagesSent = 0;
                 }
@@ -603,7 +604,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return tmp2(tmp3, obj, guild.id);
             }
           }
-          obj12.uri = _modDef12921;
+          obj12.animatedUri = _modDef12941;
+          obj12.staticUri = _modDef12942;
           obj12.style = tmp4.globe;
           const tmp60 = closure_6(tmp59, obj12);
           cResult[5] = tmp4.globe;
@@ -626,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp5 = closure_1;
               tmp6 = closure_2;
               tmp8 = null;
-              tmp7 = closure_1(closure_2[19]);
+              tmp7 = closure_1(closure_2[20]);
               if (numMessagesSent == null) {
                 numMessagesSent = 0;
               }
@@ -657,7 +659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp5 = closure_1;
                 tmp6 = closure_2;
                 tmp8 = null;
-                tmp7 = closure_1(closure_2[19]);
+                tmp7 = closure_1(closure_2[20]);
                 if (numMessagesSent == null) {
                   numMessagesSent = 0;
                 }
@@ -701,7 +703,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp5 = closure_1;
                   tmp6 = closure_2;
                   tmp8 = null;
-                  tmp7 = closure_1(closure_2[19]);
+                  tmp7 = closure_1(closure_2[20]);
                   if (numMessagesSent == null) {
                     numMessagesSent = 0;
                   }
@@ -750,7 +752,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp5 = closure_1;
                         tmp6 = closure_2;
                         tmp8 = null;
-                        tmp7 = closure_1(closure_2[19]);
+                        tmp7 = closure_1(closure_2[20]);
                         if (numMessagesSent == null) {
                           numMessagesSent = 0;
                         }
@@ -791,7 +793,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp5 = closure_1;
                       tmp6 = closure_2;
                       tmp8 = null;
-                      tmp7 = closure_1(closure_2[19]);
+                      tmp7 = closure_1(closure_2[20]);
                       if (numMessagesSent == null) {
                         numMessagesSent = 0;
                       }
@@ -827,7 +829,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     tmp5 = closure_1;
                     tmp6 = closure_2;
                     tmp8 = null;
-                    tmp7 = closure_1(closure_2[19]);
+                    tmp7 = closure_1(closure_2[20]);
                     if (numMessagesSent == null) {
                       numMessagesSent = 0;
                     }
@@ -910,7 +912,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { style: tmp.heading, children: null };
           const obj6 = { style: tmp.title, children: null };
           const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-          const items1 = [closure_6(tmp2(9622).ServerIcon, obj7)];
+          const items1 = [closure_6(tmp2(9645).ServerIcon, obj7)];
           const obj8 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
           const tmp16 = CheckpointScreenDefault;
           const intl3 = tmp2(1128).intl;
@@ -974,9 +976,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj13 = { style: tmp.header, children: null };
       const obj14 = { style: tmp.globalHeading, children: null };
       let obj = require("initialize");
-      const obj15 = { uri: null, style: null };
+      const obj15 = { animatedUri: null, staticUri: null, style: null };
       const tmp6 = CheckpointScreenDefault;
-      obj15.uri = _modDef12921;
+      obj15.animatedUri = _modDef12941;
+      obj15.staticUri = _modDef12942;
       obj15.style = tmp.globe;
       const items6 = [closure_6(CheckpointApngPlayerDefault, obj15)];
       const obj16 = { children: null };
