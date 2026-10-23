@@ -1,58 +1,93 @@
 // _runtime/metro/12577__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _createClass from "00042__createClass.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import _wrapNativeSuper from "00158__wrapNativeSuper.js";
+import _mod12539 from "12539__.js";
+import spanTimeInputToSeconds from "../12544_spanTimeInputToSeconds.js";
+import _mod12567 from "12567__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+require = arg1;
+const dependencyMap = arg6;
+
+export const logSpanEnd = function logSpanEnd(spanContext) {
+  if (_mod12567.DEBUG_BUILD) {
+    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class SentryError {
-  constructor(arg0) {
-    str = require;
-    if (require === undefined) {
-      str = "warn";
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
     }
-    self = this;
-    tmp = closure_0(this, SentryError);
-    items = [];
-    items[0] = global;
-    tmp2 = c2;
-    obj = c2(SentryError);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
+    const spanId = spanContext.spanContext().spanId;
+    const tmpResult = spanTimeInputToSeconds;
+    let str3 = "";
+    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
+      str3 = "root ";
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.message = global;
-    tmp3Result.logLevel = str;
-    return tmp3Result;
+    const _HermesInternal = HermesInternal;
+    const combined = '[Tracing] Finishing "' + str2 + '" ' + str3 + 'span "' + str + '" with ID ' + spanId;
+    const logger = _mod12539.logger;
+    logger.log(combined);
+    tmpResult2 = spanTimeInputToSeconds;
   }
-}
-_classCallCheck = SentryError;
-_inherits(SentryError, _wrapNativeSuper(Error));
-
-export const SentryError = _createClass(SentryError);
+};
+export const logSpanStart = function logSpanStart(spanContext) {
+  if (_mod12567.DEBUG_BUILD) {
+    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
+    }
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const parent_span_id = spanToJSONResult.parent_span_id;
+    const tmpResult = spanTimeInputToSeconds;
+    const tmpResult4 = spanTimeInputToSeconds;
+    const spanIsSampledResult = spanTimeInputToSeconds.spanIsSampled(spanContext);
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    let str3 = "unsampled";
+    if (spanIsSampledResult) {
+      str3 = "sampled";
+    }
+    let str5 = "";
+    if (rootSpan === spanContext) {
+      str5 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const _HermesInternal2 = HermesInternal;
+    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
+    const items = ["op: " + str2, ,];
+    const _HermesInternal3 = HermesInternal;
+    items[1] = "name: " + str;
+    const _HermesInternal4 = HermesInternal;
+    items[2] = "ID: " + spanContext.spanContext().spanId;
+    if (parent_span_id) {
+      const _HermesInternal5 = HermesInternal;
+      items.push("parent ID: " + parent_span_id);
+    }
+    if (rootSpan !== spanContext) {
+      const tmpResult6 = spanTimeInputToSeconds;
+      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
+      const _HermesInternal6 = HermesInternal;
+      items.push("root ID: " + rootSpan.spanContext().spanId);
+      if (op2) {
+        const _HermesInternal7 = HermesInternal;
+        items.push("root op: " + op2);
+      }
+      if (description2) {
+        const _HermesInternal8 = HermesInternal;
+        items.push("root description: " + description2);
+      }
+      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
+    }
+    const logger = _mod12539.logger;
+    const _HermesInternal9 = HermesInternal;
+    logger.log("" + combined + "\n  " + items.join("\n  "));
+    const tmpResult5 = spanTimeInputToSeconds;
+  }
+};

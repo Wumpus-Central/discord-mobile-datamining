@@ -1,14 +1,11 @@
 // _runtime/metro/05418__.js
-import _modDef5416 from "05416__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const TouchableOpacity = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,95 +24,58 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_3 = ["style"];
-get_ActivityIndicator = fn(17);
-({ Animated: closure_8, Easing: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-class TouchableOpacity {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(scale, scale2) {
+  if (undefined === scale2) {
+    const obj2 = { scaleChange: scale.scale };
+    let obj = obj2;
+  } else {
+    obj = { scaleChange: scale.scale / scale2.scale };
+  }
+  const merged = Object.assign(scale);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 9876979738005;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}",
+};
+class PinchGesture {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = hasOwnProperty(this, TouchableOpacity);
-    items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(TouchableOpacity);
-    tmp3 = metroRequire;
-    if (closure_13()) {
+    tmp = closure_0(this, PinchGesture);
+    tmp2 = c2;
+    obj = c2(PinchGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = v65535.flatten(closure_0.props.style) || {};
-      let num = 1;
-      if (null != tmp.opacity) {
-        const opacity = tmp.opacity;
-        num = opacity.valueOf();
-      }
-      return num;
-    };
-    value = new closure_8.Value(tmp3Result.getChildStyleOpacityWithDefault());
-    tmp3Result.opacity = value;
-    tmp3Result.setOpacityTo = (toValue, duration) => {
-      const obj = { toValue, duration, easing: React6.inOut(React6.quad), useNativeDriver: null };
-      let flag = closure_0.props.useNativeAnimations;
-      if (flag == null) {
-        flag = true;
-      }
-      obj.useNativeDriver = flag;
-      closure_2_8.timing(closure_0.opacity, obj).start();
-      const timingResult = closure_2_8.timing(closure_0.opacity, obj);
-    };
-    tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === TouchableOpacity(5416).TOUCHABLE_STATE.BEGAN) {
-        closure_0.setOpacityTo(closure_0.props.activeOpacity, 0);
-      } else {
-        if (!tmp3) {
-          closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
-        }
-        tmp3 =
-          arg1 !== TouchableOpacity(5416).TOUCHABLE_STATE.UNDETERMINED &&
-          arg1 !== TouchableOpacity(5416).TOUCHABLE_STATE.MOVED_OUTSIDE;
-      }
-    };
+    tmp3Result.handlerName = "PinchGestureHandler";
     return tmp3Result;
   }
 }
-_inherits(TouchableOpacity, fn(19).Component);
+_classCallCheck = PinchGesture;
+_inherits(PinchGesture, fn(5316).ContinousBaseGesture);
 const entry = {
-  key: "render",
-  value: function render() {
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
     const self = this;
-    const props = this.props;
-    let style = props.style;
-    if (undefined === style) {
-      style = {};
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
     }
-    const obj = {};
-    const tmp = _objectWithoutProperties(props, closure_3);
-    const merged = Object.assign(tmp);
-    const items = [style, { opacity: self.opacity }];
-    obj.style = items;
-    obj.onStateChange = self.onStateChange;
-    if (self.props.children) {
-      let children = self.props.children;
-    } else {
-      children = <closure_1_11 />;
-    }
-    obj.children = children;
-    return jsx(_modDef5416, {});
+    const items = [arg0];
+    return fn(items);
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(TouchableOpacity, items);
-let obj = {};
-let merged = Object.assign(_modDef5416.defaultProps);
-obj.activeOpacity = 0.2;
-importDefaultResultResult.defaultProps = obj;
 
-export default importDefaultResultResult;
+export const PinchGesture = _createClass(PinchGesture, items);

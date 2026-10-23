@@ -1,14 +1,12 @@
 // _runtime/metro/10364__.js
-import repeatedTimeunitPattern from "../10192_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10199_AbstractParserWithWordBoundaryChecking.js";
-import _mod10361 from "10361__.js";
+import AbstractParserWithWordBoundaryChecking from "../10221_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMonthNameParser = require;
+const ESCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,20 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "((?:in)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10361.MONTH_DICTIONARY) +
-    ")\\s*(?:[,-]?\\s*(" +
-    _mod10361.YEAR_PATTERN +
-    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
-  "i",
-);
-class ENMonthNameParser {
+class ESCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMonthNameParser);
+    tmp = c2(this, ESCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMonthNameParser);
+    obj = closure_4(ESCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -55,47 +45,46 @@ class ENMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ESCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return regExp;
+    return /(?:esta\s*)?(mañana|tarde|medianoche|mediodia|mediodía|noche)(?=\W|$)/i;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!ENMonthNameParser(10361).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
+      const formatted = arg1[1].toLowerCase();
+      if ("tarde" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10219).Meridiem.PM);
+        parsingComponents.imply("hour", 15);
+      } else if ("noche" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10219).Meridiem.PM);
+        parsingComponents.imply("hour", 22);
+      } else if ("ma\u00F1ana" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10219).Meridiem.AM);
+        parsingComponents.imply("hour", 6);
+      } else if ("medianoche" === formatted) {
+        const _Date = Date;
+        const date = new Date(refDate.getTime());
+        date.setDate(date.getDate() + 1);
+        ESCasualTimeParser(10220).assignSimilarDate(parsingComponents, date);
+        ESCasualTimeParser(10220).implySimilarTime(parsingComponents, date);
+        parsingComponents.imply("hour", 0);
+        parsingComponents.imply("minute", 0);
+        parsingComponents.imply("second", 0);
+      } else if ("mediodia" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10219).Meridiem.AM);
+        parsingComponents.imply("hour", 12);
       }
-      let str2 = index[1];
-      if (!str2) {
-        str2 = "";
-      }
-      const parsingResult = createParsingResult.createParsingResult(
-        index.index + str2.length,
-        index.index + index[0].length,
-      );
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = ENMonthNameParser(10361).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", ENMonthNameParser(10361).parseYear(index[3]));
-      } else {
-        const start3 = parsingResult.start;
-        start3.imply("year", ENMonthNameParser(10193).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
-      }
-      return parsingResult;
+      return parsingComponents;
     },
   },
 ];
 
-export default _createClass(ENMonthNameParser, items);
+export default _createClass(ESCasualTimeParser, items);

@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/standard",
-  width: 144,
-  height: 150,
-  scales: [1],
-  hash: "8ea6c899915dc4dfb91fde69307aaf42",
-  name: "chest_idle",
+  httpServerLocation: "/assets/modules/collectibles/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "ac29907d56ae7a9f27a9104ef7aade6e",
+  name: "img_none",
   type: "png",
 });

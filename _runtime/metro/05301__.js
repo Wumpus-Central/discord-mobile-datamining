@@ -1,11 +1,3 @@
 // _runtime/metro/05301__.js
-import _mod17 from "00017__.js";
-import _mod19 from "00019__.js";
-import _modDef5302 from "05302__.js";
 
-const use = _mod19.use;
-const Platform = _mod17.Platform;
-
-export const useEnsureGestureHandlerRootView = function useEnsureGestureHandlerRootView() {
-  use(_modDef5302);
-};
+export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };

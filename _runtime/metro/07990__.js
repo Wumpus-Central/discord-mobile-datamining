@@ -1,6 +1,6 @@
 // _runtime/metro/07990__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7986 from "07986__.js";
+import _modDef7984 from "07984__.js";
 import _modDef7991 from "07991__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeComposite = fn;
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeComposite {
+class ClipPath {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeComposite);
+    tmp = closure_3(this, ClipPath);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeComposite);
+    obj = hasOwnProperty(ClipPath);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,37 +49,19 @@ class FeComposite {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeComposite, _modDef7986);
+_inherits(ClipPath, _modDef7984);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(FeComposite(7985).extractFilter(this.props));
-    const obj2 = FeComposite(7985);
-    const merged1 = Object.assign(FeComposite(7985).extractFeComposite(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const props = this.props;
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(7975).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeComposite, items);
-importDefaultResultResult.displayName = "FeComposite";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.k1 = 0;
-obj.k2 = 0;
-obj.k3 = 0;
-obj.k4 = 0;
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

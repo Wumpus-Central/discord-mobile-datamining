@@ -1,32 +1,129 @@
 // _runtime/metro/15611__.js
+import _mod17 from "00017__.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import base64Decode from "../15612_base64Decode.js";
+import _createClass from "00042__createClass.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import _wrapNativeSuper from "00158__wrapNativeSuper.js";
 
-export const getReactNativeDimensionsWithDimensions = function getReactNativeDimensionsWithDimensions(width, value) {
+let QuotaExceededError = global;
+function _isNativeReflectConstruct() {
   try {
-    let obj = {};
-    let obj2 = {};
-    if (width) {
-      const obj5 = { screenWidth: null, screenHeight: null, screenScale: null, screenFontScale: null };
-      const _Math = Math;
-      obj5.screenWidth = Math.ceil(width.width);
-      const _Math2 = Math;
-      obj5.screenHeight = Math.ceil(width.height);
-      ({ scale: obj3.screenScale, fontScale: obj3.screenFontScale } = width);
-      obj = obj5;
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (value) {
-      const obj9 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
-      const _Math3 = Math;
-      obj9.windowWidth = Math.ceil(value.width);
-      const _Math4 = Math;
-      obj9.windowHeight = Math.ceil(value.height);
-      ({ scale: obj4.windowScale, fontScale: obj4.windowFontScale } = value);
-      obj2 = obj9;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturn;
+const NativeModules = _mod17.NativeModules;
+class TypeMismatchError {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, QuotaExceededError);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(QuotaExceededError);
+    tmp3 = closure_4;
+    if (metroRequire()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    const obj10 = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(obj2);
-    return obj10;
-  } catch (err) {
-    return null;
+    return tmp3(self, constructResult);
   }
-};
+}
+QuotaExceededError = TypeMismatchError;
+_inherits(TypeMismatchError, _wrapNativeSuper(Error));
+let closure_8 = _createClass(TypeMismatchError);
+class QuotaExceededError {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, QuotaExceededError);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(QuotaExceededError);
+    tmp3 = closure_4;
+    if (metroRequire()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(QuotaExceededError, _wrapNativeSuper(Error));
+let closure_9 = _createClass(QuotaExceededError);
+if (typeof global.crypto !== "object") {
+  global.crypto = {};
+}
+if (typeof global.crypto.getRandomValues !== "function") {
+  global.crypto.getRandomValues = function getRandomValues(uint8Array) {
+    if (!(uint8Array instanceof Int8Array)) {
+      const _Uint8Array = Uint8Array;
+      if (!(uint8Array instanceof Uint8Array)) {
+        const _Int16Array = Int16Array;
+        if (!(uint8Array instanceof Int16Array)) {
+          const _Uint16Array = Uint16Array;
+          if (!(uint8Array instanceof Uint16Array)) {
+            const _Int32Array = Int32Array;
+            if (!(uint8Array instanceof Int32Array)) {
+              const _Uint32Array = Uint32Array;
+              if (!(uint8Array instanceof Uint32Array)) {
+                const _Uint8ClampedArray = Uint8ClampedArray;
+                if (!(uint8Array instanceof Uint8ClampedArray)) {
+                  const tmp4 = new closure_8("Expected an integer array");
+                  throw tmp4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    if (uint8Array.byteLength > 65536) {
+      const tmp19 = new closure_9("Can only request a maximum of 65536 bytes");
+      throw tmp19;
+    } else {
+      const byteLength = uint8Array.byteLength;
+      if (NativeModules.RNGetRandomValues) {
+        const RNGetRandomValues = NativeModules.RNGetRandomValues;
+        let randomBase64 = RNGetRandomValues.getRandomBase64(byteLength);
+      } else if (NativeModules.ExpoRandom) {
+        const ExpoRandom2 = NativeModules.ExpoRandom;
+        randomBase64 = ExpoRandom2.getRandomBase64String(byteLength);
+      } else if (QuotaExceededError.ExpoModules) {
+        const ExpoRandom = QuotaExceededError.ExpoModules.ExpoRandom;
+        randomBase64 = ExpoRandom.getRandomBase64String(byteLength);
+      } else {
+        const _Error = Error;
+        const error = new Error("Native module not found");
+        throw error;
+      }
+      const _Uint8Array2 = Uint8Array;
+      uint8Array = new Uint8Array(uint8Array.buffer, uint8Array.byteOffset, uint8Array.byteLength);
+      base64Decode(randomBase64, uint8Array);
+      return uint8Array;
+    }
+  };
+}

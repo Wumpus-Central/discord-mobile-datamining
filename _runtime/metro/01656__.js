@@ -290,11 +290,11 @@ export const KeyboardProvider = (enabled) => {
     style: null,
     onKeyboardMoveReanimated: null,
     onKeyboardMoveStart: "Boolean",
-    onKeyboardMove: "nl-BQ",
+    onKeyboardMove: "nl-BE",
     onKeyboardMoveInteractive: "nl",
-    onKeyboardMoveEnd: 0,
-    onFocusedInputLayoutChangedReanimated: null,
-    children: "Boolean",
+    onKeyboardMoveEnd: false,
+    onFocusedInputLayoutChangedReanimated: false,
+    children: null,
   };
   let tmp18 = updateSharedValues;
   let tmp19 = updateSharedValues;

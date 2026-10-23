@@ -1,11 +1,14 @@
 // _runtime/metro/05440__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _mod5279 from "05279__.js";
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: null };
-const obj2 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.pointerEvents = "box-none";
-obj.container = obj2;
+const useContext = _mod19.useContext;
 
-export const styles = StyleSheet.create(obj);
+export const useBottomSheetGestureHandlers = () => {
+  const tmp = useContext(_mod5279.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+};

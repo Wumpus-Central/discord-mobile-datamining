@@ -1,308 +1,137 @@
 // _runtime/metro/05545__.js
-import Cancellable from "../05546_Cancellable.js";
-import asyncGeneratorStep from "05528__.js";
-import _slicedToArray from "05485__.js";
+import _mod5542 from "05542__.js";
+import noop from "00019__.js";
 
-require = fn;
-function getFormattedString(js) {
-  js = js.js;
-  let averageFPS;
-  if (js != null) {
-    averageFPS = js.averageFPS;
-  }
-  const js2 = js.js;
-  let minFPS;
-  if (js2 != null) {
-    minFPS = js2.minFPS;
-  }
-  const js3 = js.js;
-  let maxFPS;
-  if (js3 != null) {
-    maxFPS = js3.maxFPS;
-  }
-  let str = "";
-  const combined = "Results:\n\nJS FPS: Avg: " + averageFPS + " | Min: " + minFPS + " | Max: " + maxFPS + "\n\n";
-  if (js.suggestions.length > 0) {
-    const suggestions = js.suggestions;
-    const mapped = suggestions.map((item, index) => "" + index + 1 + ". " + item);
-    const _HermesInternal = HermesInternal;
-    str = "Suggestions:\n\n" + mapped.join("\n");
-  }
-  return combined + str;
-}
-function runScrollBenchmark(arg0, arg1, arg2) {
-  const self = this;
-  const apply = closure_10.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_10 = async function _runScrollBenchmark(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_0 = ref;
-          closure_131_1 = closure_1;
-          closure_131_2 = closure_2;
-          let horizontal;
-          closure_131_4 = undefined;
-          closure_131_5 = undefined;
-          closure_131_6 = undefined;
-          if (ref.current) {
-            horizontal = ref.current.props.horizontal;
-            let current = ref.current;
-            if (current) {
-              const size = current.getWindowSize();
-              const size2 = current.getChildContainerDimensions();
-              const diff = size2.width - size.width;
-              closure_131_4 = diff;
-              const diff1 = size2.height - size.height;
-              closure_131_5 = diff1;
-              function scrollNow(arg0, arg1) {
-                const current = ref.current;
-                if (current != null) {
-                  let tmp = arg1;
-                  if (closure_1_3) {
-                    tmp = arg0;
-                  }
-                  const obj = { offset: tmp, animated: false };
-                  current.scrollToOffset(obj);
-                }
-              }
-              closure_131_6 = scrollNow;
-              const obj5 = Cancellable;
-              c5 = 1;
-              c6 = 1;
-              const obj6 = { value: obj5.autoScroll(scrollNow, 0, 0, diff, diff1, closure_2, closure_1), done: false };
-              return obj6;
-            }
-          }
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          const obj2 = closure_132_0(closure_132_1[3]);
-          c5 = 2;
-          c6 = 1;
-          const obj8 = {
-            value: obj2.autoScroll(closure_131_6, closure_131_4, closure_131_5, 0, 0, closure_131_2, closure_131_1),
-            done: false,
-          };
-          return obj8;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        let obj = { value, done: true };
-        return obj;
-      }
-      c6 = 3;
-      return { value: "IconComponent", done: null };
-    } catch (tmp26) {
-      c6 = tmp;
-      throw tmp26;
-    }
-  }
-};
-const noop = fn(19);
-({ useEffect: closure_4, useState: hasOwnProperty, useCallback: metroRequire, useRef: closure_7 } = noop);
+({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
 
-export const useBenchmark = function useBenchmark(arg0, arg1) {
+export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
+  closure_0 = recyclerViewManager;
   closure_1 = arg1;
-  let obj = arg2;
-  if (arg2 === undefined) {
-    obj = {};
+  hasOwnProperty(false);
+  hasOwnProperty(false);
+  hasOwnProperty(false);
+  hasOwnProperty(Date.now());
+  const data = recyclerViewManager.props.data;
+  const _requestAnimationFrame = _mod5542.useUnmountAwareAnimationFrame().requestAnimationFrame;
+  let num = 0;
+  if (recyclerViewManager.hasLayout()) {
+    num = recyclerViewManager.getWindowSize().height;
   }
-  let isBenchmarkRunning;
-  closure_5 = undefined;
-  let startBenchmark;
-  let tmp = isBenchmarkRunning(closure_5(false), 2);
-  isBenchmarkRunning = tmp[0];
-  closure_4 = tmp[1];
-  closure_5 = closure_7(null);
-  const items = [arg1, arg0, isBenchmarkRunning, ,];
-  ({ repeatCount: arr[3], speedMultiplier: arr[4] } = obj);
-  startBenchmark = startBenchmark(() => {
-    if (!isBenchmarkRunning) {
-      const cancellable = new ref(closure_1[3]).Cancellable();
-      ref = cancellable;
-      closure_5.current = cancellable;
-      closure_1 = [];
-      if (ref.current) {
-        const data = tmp8.current.props.data;
-        let length;
-        if (data != null) {
-          length = data.length;
+  let num2 = 0;
+  if (recyclerViewManager.hasLayout()) {
+    num2 = recyclerViewManager.getChildContainerDimensions().height;
+  }
+  let num3 = 0;
+  if (recyclerViewManager.hasLayout()) {
+    num3 = recyclerViewManager.getWindowSize().width;
+  }
+  let num4 = 0;
+  if (recyclerViewManager.hasLayout()) {
+    num4 = recyclerViewManager.getChildContainerDimensions().width;
+  }
+  const items = [recyclerViewManager];
+  const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
+  const checkBounds = React2(() => {
+    closure_5.current = Date.now();
+    const props = closure_0.props;
+    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } =
+      props);
+    let num;
+    if (maintainVisibleContentPosition != null) {
+      num = maintainVisibleContentPosition.autoscrollToBottomThreshold;
+    }
+    if (num == null) {
+      num = -1;
+    }
+    if (closure_0.getIsFirstLayoutComplete()) {
+      const absoluteLastScrollOffset = closure_0.getAbsoluteLastScrollOffset();
+      const size = closure_0.getChildContainerDimensions();
+      const size2 = closure_0.getWindowSize();
+      const tmp3 = true === props.horizontal ? size2.width : size2.height;
+      const sum = (tmp2 ? size.width : size.height) + closure_0.firstItemOffset;
+      if (tmp3 > 0) {
+        if (onEndReached) {
+          if (onEndReachedThreshold == null) {
+            onEndReachedThreshold = 0.5;
+          }
+          const _Math = Math;
+          const result = onEndReachedThreshold * tmp3;
+          const tmp6 = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result;
+          let tmp7 = tmp6;
+          if (tmp6) {
+            tmp7 = !ref.current;
+          }
+          if (tmp7) {
+            ref.current = true;
+            onEndReached();
+          }
+          ref.current = tmp6;
         }
-        if (Number(length) <= 0) {
-          const _Error = Error;
-          const error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
-          throw error;
+        if (onStartReached) {
+          if (onStartReachedThreshold == null) {
+            onStartReachedThreshold = 0.2;
+          }
+          let tmp13 = tmp12;
+          if (absoluteLastScrollOffset <= onStartReachedThreshold * tmp3) {
+            tmp13 = !ref2.current;
+          }
+          if (tmp13) {
+            ref2.current = true;
+            onStartReached();
+          }
+          ref2.current = absoluteLastScrollOffset <= onStartReachedThreshold * tmp3;
+        }
+        if (!tmp2) {
+          if (num >= 0) {
+            const _Math2 = Math;
+            const result1 = num * tmp3;
+            closure_4.current = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result1;
+          }
         }
       }
-      closure_4(true);
-      ref = obj(function* () {
-        if (c3 === 2) {
-          c3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          try {
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_128_0 = undefined;
-                closure_128_1 = undefined;
-                closure_128_2 = undefined;
-                closure_128_3 = undefined;
-                const jSFPSMonitor = new tmp2(tmp5[5]).JSFPSMonitor();
-                closure_128_0 = jSFPSMonitor;
-                jSFPSMonitor.startTracking();
-                closure_128_1 = 0;
-                let num8 = closure_2_2.repeatCount;
-                if (!num8) {
-                  num8 = 1;
-                }
-                if (tmp54 >= num8) {
-                  closure_128_2 = closure_128_0.stopAndGetData();
-                  if (closure_128_2.averageFPS < 35) {
-                    tmp5.push(
-                      "Your average JS FPS is low. This can indicate that your components are doing too much work. Try to optimize your components and reduce re-renders if any",
-                    );
-                  }
-                  (function computeSuggestions(current, arr) {
-                    current = current.current;
-                    if (current) {
-                      current = current.current.props.data.length < 200;
-                    }
-                    if (current) {
-                      arr = arr.push(
-                        "Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.",
-                      );
-                    }
-                  })(tmp2, tmp5);
-                  closure_128_3 = (function generateResult(js, suggestions, isCancelled) {
-                    return { js, suggestions, interrupted: isCancelled.isCancelled() };
-                  })(closure_128_2, tmp5, tmp2);
-                  if (!tmp2.isCancelled()) {
-                    closure_128_3.formattedString = getFormattedString(closure_128_3);
-                  }
-                  tmp5(closure_128_3);
-                  closure_2_4(false);
-                  c3 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-                tmp54 = closure_128_1;
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_128_1 = closure_128_1 + 1;
-              let num4 = closure_2_2.repeatCount;
-              if (!num4) {
-                num4 = 1;
-              }
-            }
-            let num11 = closure_2_2.speedMultiplier;
-            if (!num11) {
-              num11 = 1;
-            }
-            c2 = 1;
-            c3 = 1;
-            const obj4 = { value: runScrollBenchmark(tmp2, tmp2, num11), done: false };
-            return obj4;
-          } catch (tmp43) {
-            c3 = tmp;
-            throw tmp43;
-          }
-        }
-      });
-      (function runBenchmark() {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })();
-      tmp = ref;
-      tmp2 = closure_1;
     }
   }, items);
-  closure_4(() => {
-    if (!obj.startManually) {
-      let num = tmp.startDelayInMs;
-      if (!num) {
-        num = 3000;
-      }
-      const timeout = setTimeout(() => {
-        startBenchmark();
-      }, num);
-      return () => {
-        clearTimeout(closure_0);
-        if (ref.current) {
-          const current = ref.current;
-          current.cancel();
-        }
-      };
+  const tmp2 = React2(() => {
+    let current = props.isOffsetProjectionEnabled;
+    if (current) {
+      current = ref3.current;
     }
-  }, []);
-  return { startBenchmark, isBenchmarkRunning };
+    if (current) {
+      ref3.current = false;
+      _requestAnimationFrame(() => {
+        const maintainVisibleContentPosition = props.props.maintainVisibleContentPosition;
+        let flag;
+        if (maintainVisibleContentPosition != null) {
+          flag = maintainVisibleContentPosition.animateAutoScrollToBottom;
+        }
+        if (flag == null) {
+          flag = true;
+        }
+        const current = ref.current;
+        if (current != null) {
+          if (flag) {
+            flag = !props.ignoreScrollEvents;
+          }
+          const obj = { animated: flag };
+          current.scrollToEnd(obj);
+        }
+      });
+    }
+  }, items1);
+  closure_7 = tmp2;
+  const items2 = [data];
+  React4(() => {
+    closure_2.current = false;
+  }, items2);
+  const items3 = [data, tmp2, num, num3];
+  React3(() => {
+    closure_7();
+  }, items3);
+  const items4 = [num2, num4, recyclerViewManager.firstItemOffset, tmp2];
+  React3(() => {
+    if (Date.now() - ref4.current >= 100) {
+      closure_7();
+    }
+  }, items4);
+  return { checkBounds };
 };
-export { getFormattedString };

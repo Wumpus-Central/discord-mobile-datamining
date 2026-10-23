@@ -1,11 +1,11 @@
 // _runtime/metro/06388__.js
 
-export default function isPrimitive(fn) {
-  let tmp = null === fn;
-  if (!tmp) {
-    let tmp2 = typeof fn !== "function";
+export default function isObject(fn) {
+  let tmp = fn;
+  if (tmp) {
+    let tmp2 = typeof fn === "function";
     if (typeof fn !== "function") {
-      tmp2 = typeof fn !== "object";
+      tmp2 = typeof fn === "object";
     }
     tmp = tmp2;
   }

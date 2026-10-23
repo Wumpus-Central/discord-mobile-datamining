@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 375,
-  height: 301,
+  width: 351,
+  height: 100,
   scales: [2, 3],
-  hash: "66755272db25a38d2c195d1bf5a25e70",
-  name: "img_top_pattern_light",
+  hash: "7e6a8bbab7f30fd349a76227a78736a2",
+  name: "img_subheader_error_mobile_v2_light",
   type: "png",
 });

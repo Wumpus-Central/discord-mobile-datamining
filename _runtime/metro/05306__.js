@@ -1,108 +1,173 @@
 // _runtime/metro/05306__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import _modDef5318 from "05318__.js";
-import attachHandlers from "../05331_attachHandlers.js";
-import noop_mod from "00019__.js";
+import ButtonComponentDefault from "../05391_ButtonComponent.js";
+import _mod5393 from "05393__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import noop from "00019__.js";
+import 05307__ from "05307__.js";
 
-let noop = noop_mod;
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-
-export const GestureDetector = (gesture) => {
-  if (gesture.gesture) {
-    gesture = gesture.gesture;
-    (function propagateDetectorConfig(gesture, gesture) {
-      const items = ["userSelect", "enableContextMenu", "touchAction"];
-      for (const item10008 of items) {
-        let tmp2 = arg0[item10008];
-        if (undefined !== tmp2) {
-          let toGestureArrayResult = arg1.toGestureArray();
-          for (const item10018 of toGestureArrayResult) {
-            item10018.config[tmp] = tmp3;
-            continue;
-          }
-        }
-        continue;
-      }
-    })(gesture, gesture);
-    let items = [gesture];
-    let gesturesToAttach = current2(() => gesture.toGestureArray(), items);
-    const someResult = gesturesToAttach.some((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-    webEventHandlers = gesture(webEventHandlers[2]).useWebEventHandlers();
-    const current = detectorUpdater({
-      firstRender: true,
-      viewRef: null,
-      previousViewTag: -1,
-      forceRebuildReanimatedEvent: false,
-    }).current;
-    const obj3 = {
-      attachedGestures: [],
-      animatedEventHandler: null,
-      animatedHandlers: null,
-      shouldUseReanimated: someResult,
-      isMounted: false,
-    };
-    current2 = noop.useRef(obj3).current;
-    const obj4 = gesture(webEventHandlers[3]);
-    detectorUpdater = obj4.useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers);
-    const obj2 = gesture(webEventHandlers[2]);
-    const viewRefHandler = gesture(webEventHandlers[4]).useViewRefHandler(current, detectorUpdater);
-    let needsToReattachResult = current.firstRender || current.forceRebuildReanimatedEvent;
-    if (!needsToReattachResult) {
-      needsToReattachResult = tmp9(tmp10[5]).needsToReattach(current2, gesturesToAttach);
-      const tmp9Result = tmp9(tmp10[5]);
-    }
-    current.forceRebuildReanimatedEvent = false;
-    const obj5 = gesture(webEventHandlers[4]);
-    const animatedGesture = gesture(webEventHandlers[6]).useAnimatedGesture(current2, needsToReattachResult);
-    const tmp9Result5 = gesture(webEventHandlers[6]);
-    const isomorphicLayoutEffect = gesture(webEventHandlers[7]).useIsomorphicLayoutEffect(() => {
-      current2.isMounted = true;
-      gesturesToAttach = attachHandlers;
-      const tmp = _modDef5318(current.viewRef);
-      gesturesToAttach.attachHandlers({
-        preparedGesture: current2,
-        gestureConfig: gesture,
-        gesturesToAttach,
-        webEventHandlersRef: webEventHandlers,
-        viewTag: _modDef5318(current.viewRef),
-      });
-      return () => {
-        current2.isMounted = false;
-        gesture(webEventHandlers[10]).dropHandlers(current2);
-      };
-    }, []);
-    const items1 = [gesture];
-    current(() => {
-      if (current.firstRender) {
-        tmp.firstRender = false;
-      } else {
-        detectorUpdater();
-      }
-    }, items1);
-    const tmp9Result6 = gesture(webEventHandlers[7]);
-    const mountReactions = gesture(webEventHandlers[11]).useMountReactions(detectorUpdater, current2);
-    const tmp9Result8 = gesture(webEventHandlers[12]);
-    if (someResult) {
-      const obj6 = {
-        ref: viewRefHandler,
-        onGestureHandlerEvent: current2.animatedEventHandler,
-        children: gesture.children,
-      };
-      let tmp28Result = (
-        <tmp9Result8.AnimatedWrap ref={viewRefHandler} onGestureHandlerEvent={current2.animatedEventHandler}>
-          {gesture.children}
-        </tmp9Result8.AnimatedWrap>
-      );
-    } else {
-      const obj7 = { ref: viewRefHandler, children: gesture.children };
-      tmp28Result = <tmp9Result8.Wrap ref={viewRefHandler}>{gesture.children}</tmp9Result8.Wrap>;
-    }
-    return tmp28Result;
-  } else {
-    const _Error = Error;
-    const error = new Error("GestureDetector must have a gesture prop provided.");
-    throw error;
+require = fn;
+let closure_2 = ["onLongPress", "onPress", "onActiveStateChange", "style"];
+let closure_3 = ["children", "style", "activeOpacity", "underlayColor"];
+let closure_4 = ["children", "style", "ref"];
+const useRef = fn(19).useRef;
+get_ActivityIndicator = fn(17);
+const Animated = get_ActivityIndicator.Animated;
+({ Platform, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const ButtonComponent = module_5307(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
+class RawButton {
+  constructor(arg0) {
+    obj = {};
+    merged = Object.assign(global);
+    obj.needsOffscreenAlphaCompositing = true;
+    return jsx(closure_11, obj);
   }
+}
+class BaseButton {
+  constructor(arg0) {
+    closure_0 = global;
+    closure_1 = useRef(false);
+    closure_2 = useRef(undefined);
+    num = global.delayLongPress;
+    if (num == null) {
+      num = 600;
+    }
+    c3 = num;
+    ({ onLongPress, onPress, onActiveStateChange } = global);
+    tmp = closure_5(global, closure_2);
+    wrappedLongPress = function wrappedLongPress() {
+      closure_1.current = true;
+      if (closure_1_4 != null) {
+        tmp();
+      }
+    };
+    obj = closure_0(closure_1[6]);
+    tVProps = obj.getTVProps(tmp);
+    obj1 = { style: null };
+    items = [, ];
+    items[0] = global.style;
+    items[1] = false;
+    obj1.style = items;
+    merged = Object.assign(tmp);
+    merged1 = Object.assign(tVProps);
+    obj1.onBegin = function onBegin(pointerInside) {
+      if (pointerInside.pointerInside) {
+        if (useRef != null) {
+          tmp(true);
+        }
+        closure_1.current = false;
+        if (closure_1_4) {
+          const _setTimeout = setTimeout;
+          closure_2.current = setTimeout(wrappedLongPress, num);
+        }
+        const onBegin = delayLongPress.onBegin;
+        if (onBegin != null) {
+          onBegin(pointerInside);
+        }
+      }
+    };
+    obj1.onActivate = function onActivate(pointerInside) {
+      pointerInside = pointerInside.pointerInside;
+      if (!pointerInside) {
+        pointerInside = undefined === ref2.current;
+      }
+      if (!pointerInside) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(ref2.current);
+        ref2.current = undefined;
+      }
+      const onActivate = delayLongPress.onActivate;
+      if (onActivate != null) {
+        onActivate(pointerInside);
+      }
+    };
+    obj1.onDeactivate = function onDeactivate(dependencyMap) {
+      const onDeactivate = delayLongPress.onDeactivate;
+      if (onDeactivate != null) {
+        onDeactivate(dependencyMap);
+      }
+    };
+    obj1.onFinalize = function onFinalize(canceled) {
+      if (useRef != null) {
+        tmp(false);
+      }
+      let current = canceled.canceled;
+      if (!current) {
+        current = ref.current;
+      }
+      if (!current) {
+        if (_objectWithoutProperties != null) {
+          tmp4(canceled.pointerInside);
+        }
+      }
+      if (undefined !== ref2.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(ref2.current);
+        ref2.current = undefined;
+      }
+      const onFinalize = delayLongPress.onFinalize;
+      if (onFinalize != null) {
+        onFinalize(canceled);
+      }
+    };
+    return jsx(RawButton, obj1);
+  }
+}
+let closure_14 = Animated.createAnimatedComponent(BaseButton);
+const underlay = StyleSheet.create({ underlay: { position: "absolute", left: 0, right: 0, bottom: 0, top: 0 } });
+
+export { RawButton };
+export { BaseButton };
+export const RectButton = (children) => {
+  let onActiveStateChange = children;
+  ({ style, activeOpacity, underlayColor } = children);
+  let str = "black";
+  if (undefined !== underlayColor) {
+    str = underlayColor;
+  }
+  value = new Animated.Value(0);
+  if (style == null) {
+    style = {};
+  }
+  const flattenResult = StyleSheet.flatten(style);
+  const obj = {};
+  const merged = Object.assign(_objectWithoutProperties(children, closure_3));
+  obj.style = flattenResult;
+  obj.onActiveStateChange = function onActiveStateChange(arg0) {
+    onActiveStateChange = onActiveStateChange.onActiveStateChange;
+    if (onActiveStateChange != null) {
+      onActiveStateChange(arg0);
+    }
+  };
+  const obj2 = { style: null };
+  const items = [underlay.underlay, { opacity: useRef(value).current, backgroundColor: str, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
+  obj2.style = items;
+  const items1 = [React6(Animated.View, obj2), children.children];
+  obj.children = items1;
+  return v65535(BaseButton, obj);
 };
+export const BorderlessButton = (ref) => {
+  let onActiveStateChange = ref;
+  value = new Animated.Value(1);
+  const current = useRef(value).current;
+  ref = ref.ref;
+  ({ children, style } = ref);
+  const obj = { borderless: true };
+  const merged = Object.assign(_objectWithoutProperties(ref, closure_4));
+  if (ref == null) {
+    ref = null;
+  }
+  obj.ref = ref;
+  obj.onActiveStateChange = function onActiveStateChange(arg0) {
+    onActiveStateChange = onActiveStateChange.onActiveStateChange;
+    if (onActiveStateChange != null) {
+      onActiveStateChange(arg0);
+    }
+  };
+  const items = [style, false];
+  obj.style = items;
+  obj.children = children;
+  return React6(closure_14, obj);
+};
+export const PureNativeButton = ButtonComponentDefault;

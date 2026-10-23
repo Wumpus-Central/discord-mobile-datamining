@@ -1,31 +1,13 @@
 // _runtime/metro/12524__.js
-import _mod12518 from "12518__.js";
-import _mod12521 from "12521__.js";
+import registerAsset from "01134__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentUnhandledRejection() {
-  onunhandledrejection = _mod12521.GLOBAL_OBJ.onunhandledrejection;
-  _mod12521.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
-    _mod12518.triggerHandlers("unhandledrejection", arg0);
-    if (!onunhandledrejection) {
-      return !onunhandledrejection;
-    } else {
-      const self = this;
-      const apply = onunhandledrejection.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-    }
-  };
-  _mod12521.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
-}
-let onunhandledrejection = null;
-
-export const addGlobalUnhandledRejectionInstrumentationHandler =
-  function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
-    _mod12518.addHandler("unhandledrejection", errorCallback);
-    _mod12518.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
-  };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e605304dde4d78202fb1f94d6df2847d",
+  name: "ListNumberedIcon",
+  type: "png",
+});

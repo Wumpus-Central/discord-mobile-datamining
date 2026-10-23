@@ -1,19 +1,5 @@
 // _runtime/metro/15525__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+import _mod15526 from "15526__.js";
+import _mod15530 from "15530__.js";
+
+export default (arg0) => _mod15526(_mod15530(arg0));

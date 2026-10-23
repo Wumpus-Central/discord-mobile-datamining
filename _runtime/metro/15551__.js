@@ -1,11 +1,12 @@
 // _runtime/metro/15551__.js
-import _mod15524 from "15524__.js";
+import _mod15546 from "15546__.js";
+import _mod15552 from "15552__.js";
 
 export default (arg0) => {
-  if (_mod15524(arg0)) {
+  if (_mod15546(arg0)) {
     return arg0;
   } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
+    const tmp6 = new TypeError(_mod15552(arg0) + " is not a function");
+    throw tmp6;
   }
 };

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "0532db77ab79fc799b897b15ddfe70e2",
-  name: "img_account_sync_playstation_light",
+  hash: "cfcfafbb4f4daed7fd4c8d1f431ce58f",
+  name: "img_account_sync_xbox_light",
   type: "png",
 });

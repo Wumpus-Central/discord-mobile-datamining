@@ -1,12 +1,12 @@
 // _runtime/metro/08007__.js
-import _modDef7986 from "07986__.js";
+import _modDef7999 from "07999__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeImage = arg1;
+const FeDisplacementMap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeImage {
+class FeDisplacementMap {
   constructor() {
     self = this;
-    tmp = c2(this, FeImage);
+    tmp = c2(this, FeDisplacementMap);
     tmp2 = closure_4;
-    obj = closure_4(FeImage);
+    obj = closure_4(FeDisplacementMap);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,17 +45,17 @@ class FeImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeImage, _modDef7986);
+_inherits(FeDisplacementMap, _modDef7999);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeImage(7963).warnUnimplementedFilter();
+    const result = FeDisplacementMap(7976).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
+const importDefaultResultResult = _createClass(FeDisplacementMap, items);
+importDefaultResultResult.displayName = "FeDisplacementMap";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

@@ -1,33 +1,53 @@
 // _runtime/metro/05918__.js
-import get_ActivityIndicator from "00017__.js";
+import RNSLog2 from "../05919_RNSLog.js";
+import _mod5923 from "05923__.js";
+import _modDef5924 from "05924__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import noop from "00019__.js";
 
-({ Platform, UIManager: closure_0 } = get_ActivityIndicator);
+require = fn;
+let closure_3 = ["android", "ios"];
+let closure_4 = ["children", "direction", "nativeContainerStyle", "onTabSelected", "navStateRequest"];
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const fillParent = StyleSheet.create({ fillParent: { flex: 1, width: "100%", height: "100%" } });
 
-export const isNativePlatformSupported = true;
-export const enableScreens = function enableScreens() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
+export default function TabsHost(arg0) {
+  const RNSLog = RNSLog2.RNSLog;
+  RNSLog.log("TabsHost render");
+  ({ android, ios } = arg0);
+  const tmp2 = _objectWithoutProperties(arg0, closure_3);
+  const nativeContainerStyle = tmp2.nativeContainerStyle;
+  ({ children, direction, onTabSelected, navStateRequest } = tmp2);
+  const ref = noop.useRef(null);
+  const tmp3 = _objectWithoutProperties(tmp2, closure_4);
+  const obj2 = {
+    style: null,
+    navStateRequest,
+    onTabSelected: _mod5923.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected,
+    nativeContainerBackgroundColor: null,
+    ref: null,
+  };
+  const items = [fillParent.fillParent, { direction }];
+  obj2.style = items;
+  let backgroundColor;
+  if (nativeContainerStyle != null) {
+    backgroundColor = nativeContainerStyle.backgroundColor;
   }
-  if (flag) {
-    flag = !viewManagerConfig.getViewManagerConfig("RNSScreen");
+  obj2.nativeContainerBackgroundColor = backgroundColor;
+  obj2.ref = ref;
+  const merged = Object.assign(tmp3);
+  let prop;
+  if (android != null) {
+    prop = android.tabBarRespectsIMEInsets;
   }
-  if (flag) {
-    const _console = console;
-    console.error(
-      "Screen native module hasn't been linked. Please check the react-native-screens README for more details",
-    );
-  }
-};
-export function enableFreeze() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-}
-export function screensEnabled() {
-  return flag;
-}
-export function freezeEnabled() {
-  return flag;
+  obj2.tabBarRespectsIMEInsets = prop;
+  obj2.children = children;
+  return jsx(_modDef5924, {
+    style: null,
+    navStateRequest,
+    onTabSelected: _mod5923.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected,
+    nativeContainerBackgroundColor: null,
+    ref: null,
+  });
 }

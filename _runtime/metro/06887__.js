@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "5967259ca8cb17c5090eb349838b5289",
-  name: "CheckmarkSmallBoldIcon",
+  hash: "fb8db2c451f0cd706524543233306348",
+  name: "ic_partnered_guild_icon_blurple_24px",
   type: "png",
 });

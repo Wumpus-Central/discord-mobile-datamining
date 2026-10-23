@@ -1,45 +1,40 @@
 // _runtime/metro/15584__.js
-import _typeof from "15585__.js";
+import _mod15523 from "15523__.js";
+import _mod15524 from "15524__.js";
+import _mod15526 from "15526__.js";
+import _mod15527 from "15527__.js";
+import _mod15544 from "15544__.js";
+import _mod15553 from "15553__.js";
+import _mod15573 from "15573__.js";
+import _mod15585 from "15585__.js";
 
-if (_typeof) {
-  if (typeof _typeof === "object") {
-    let _default = _typeof;
-  }
-  let obj = globalThis;
-  const _Intl = Intl;
-  if (typeof Intl === "undefined") {
-    if (undefined !== global) {
-      obj = { PluralRules: _default.default };
-      global.Intl = obj;
-      _default = _default.default;
-      _default.polyfill = true;
-    } else {
-      const _window = window;
-      if (typeof window === "undefined") {
-        const self = this;
-        const obj2 = { PluralRules: _default.default };
-        this.Intl = obj2;
+let closure_4 = _mod15527([].concat);
+if (!assign) {
+  assign = function assign(arg0, arg1) {
+    const tmp = _mod15544(arg0);
+    const f = _mod15573.f;
+    for (let num = 1; length > num; num = num + 1) {
+      let tmp5 = _mod15526(arguments[num]);
+      if (f) {
+        let tmp8 = _mod15585(tmp5);
+        let arr = closure_4(tmp8, f(tmp5));
+      } else {
+        arr = _mod15585(tmp5);
       }
-    }
-    obj = { PluralRules: _default.default };
-    obj.window.Intl = obj;
-  } else {
-    const _Intl5 = Intl;
-    if (Intl.PluralRules) {
-      const _Intl2 = Intl;
-      if (Intl.PluralRules.prototype.selectRange) {
-        const items = ["en", "es", "ru", "zh"];
-        const _Intl4 = Intl;
-        if (PluralRules.supportedLocalesOf(items).length < items.length) {
-          const _Intl6 = Intl;
-          Intl.PluralRules = _default.default;
-          _default.default.polyfill = true;
+      let length2 = arr.length;
+      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
+        let tmp9 = arr[num2];
+        let tmp12 = _mod15523;
+        if (tmp12) {
+          tmp12 = !_mod15553(tmp2, tmp5, tmp9);
+        }
+        if (!tmp12) {
+          tmp[tmp9] = tmp5[tmp9];
         }
       }
     }
-    const _Intl3 = Intl;
-    Intl.PluralRules = _default.default;
-    _default.default.polyfill = true;
-  }
+    return tmp;
+  };
 }
-_default = { default: _typeof };
+
+export default assign;

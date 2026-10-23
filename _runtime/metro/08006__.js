@@ -1,12 +1,12 @@
 // _runtime/metro/08006__.js
-import _modDef7986 from "07986__.js";
+import _modDef7999 from "07999__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let FeFuncA = arg1;
+const FeDiffuseLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,149 +25,38 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeComponentTransferFunction {
+class FeDiffuseLighting {
   constructor() {
     self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
+    tmp = c2(this, FeDiffuseLighting);
     tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
+    obj = closure_4(FeDiffuseLighting);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "UNKNOWN";
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-FeFuncA = FeComponentTransferFunction;
-_inherits(FeComponentTransferFunction, _modDef7986);
+_inherits(FeDiffuseLighting, _modDef7999);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeFuncA(7963).warnUnimplementedFilter();
+    const result = FeDiffuseLighting(7976).warnUnimplementedFilter();
     return null;
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(FeComponentTransferFunction, items);
-importDefaultResultResult.defaultProps = {
-  type: "identity",
-  tableValues: [],
-  slope: 1,
-  intercept: 0,
-  amplitude: 1,
-  exponent: 1,
-  offset: 0,
-};
-class FeFuncR {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "R";
-    return tmp3Result;
-  }
-}
-FeFuncA = FeFuncR;
-_inherits(FeFuncR, importDefaultResultResult);
-const importDefaultResultResult1 = _createClass(FeFuncR);
-importDefaultResultResult1.displayName = "FeFuncR";
-class FeFuncG {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "G";
-    return tmp3Result;
-  }
-}
-FeFuncA = FeFuncG;
-_inherits(FeFuncG, importDefaultResultResult);
-const importDefaultResultResult2 = _createClass(FeFuncG);
-importDefaultResultResult2.displayName = "FeFuncG";
-class FeFuncB {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "B";
-    return tmp3Result;
-  }
-}
-FeFuncA = FeFuncB;
-_inherits(FeFuncB, importDefaultResultResult);
-const importDefaultResultResult3 = _createClass(FeFuncB);
-importDefaultResultResult3.displayName = "FeFuncB";
-class FeFuncA {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = c2(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(FeFuncA);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "A";
-    return tmp3Result;
-  }
-}
-_inherits(FeFuncA, importDefaultResultResult);
-const importDefaultResultResult4 = _createClass(FeFuncA);
-importDefaultResultResult4.displayName = "FeFuncA";
+const items = [entry];
+const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
+importDefaultResultResult.displayName = "FeDiffuseLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;
-export const FeFuncR = importDefaultResultResult1;
-export const FeFuncG = importDefaultResultResult2;
-export const FeFuncB = importDefaultResultResult3;
-export const FeFuncA = importDefaultResultResult4;

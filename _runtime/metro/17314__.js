@@ -1,13 +1,16 @@
 // _runtime/metro/17314__.js
-import registerAsset from "01134__.js";
+import _modDef17312 from "17312__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 182,
-  height: 128,
-  scales: [2, 3],
-  hash: "d91cbec9959285a2fc129da0bb393a90",
-  name: "img_wump_trash_dark",
-  type: "png",
-});
+export default function useReanimatedTransitionProgress() {
+  const context = noop.useContext(_modDef17312);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error(
+      "Couldn't find values for reanimated transition progress. Are you inside a screen in Native Stack?",
+    );
+    throw error;
+  } else {
+    return context;
+  }
+}

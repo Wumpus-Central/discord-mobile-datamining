@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "fafabb480947132bdcfe14b00de0893d",
-  name: "ObjectIcon",
+  hash: "3246c14a68781de782d6622fffa7ce47",
+  name: "StarOutlineIcon",
   type: "png",
 });

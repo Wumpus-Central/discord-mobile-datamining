@@ -1,173 +1,334 @@
 // _runtime/metro/05294__.js
-import ButtonComponentDefault from "../05379_ButtonComponent.js";
-import _mod5381 from "05381__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import noop from "00019__.js";
-import 05295__ from "05295__.js";
+import cancelAnimation from "../01658_cancelAnimation.js";
+import value2 from "../05268_value2.js";
+import LegacyBaseButton from "../05295_LegacyBaseButton.js";
 
-require = fn;
-let closure_2 = ["onLongPress", "onPress", "onActiveStateChange", "style"];
-let closure_3 = ["children", "style", "activeOpacity", "underlayColor"];
-let closure_4 = ["children", "style", "ref"];
-const useRef = fn(19).useRef;
-get_ActivityIndicator = fn(17);
-const Animated = get_ActivityIndicator.Animated;
-({ Platform, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const ButtonComponent = module_5295(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
-class RawButton {
-  constructor(arg0) {
-    obj = {};
-    merged = Object.assign(global);
-    obj.needsOffscreenAlphaCompositing = true;
-    return jsx(closure_11, obj);
-  }
-}
-class BaseButton {
-  constructor(arg0) {
-    closure_0 = global;
-    closure_1 = useRef(false);
-    closure_2 = useRef(undefined);
-    num = global.delayLongPress;
-    if (num == null) {
-      num = 600;
+const require = globalThis.__r;
+
+require = arg1;
+let dependencyMap = arg6;
+let __initData = {
+  code: "function pnpm_useScrollEventsHandlersDefaultTs1(){const{_lockableScrollableContentOffsetY}=this.__closure;return _lockableScrollableContentOffsetY.value;}",
+};
+let closure_3 = {
+  code: "function pnpm_useScrollEventsHandlersDefaultTs2(_lockableScrollableContentOffsetY){const{lockableScrollableContentOffsetY}=this.__closure;if(lockableScrollableContentOffsetY){lockableScrollableContentOffsetY.value=_lockableScrollableContentOffsetY;}}",
+};
+let closure_4 = {
+  code: "function pnpm_useScrollEventsHandlersDefaultTs3({contentOffset:{y:y}},context){const{animatedSheetState,SHEET_STATE,animatedHandleGestureState,State,animatedScrollableState,SCROLLABLE_STATE,isLockingScroll,scrollTo,scrollableRef,scrollableContentOffsetY,_lockableScrollableContentOffsetY}=this.__closure;if(animatedSheetState.value===SHEET_STATE.EXTENDED||animatedSheetState.value===SHEET_STATE.FILL_PARENT){context.shouldLockInitialPosition=false;}if(animatedHandleGestureState.value===State.ACTIVE){context.shouldLockInitialPosition=true;context.initialContentOffsetY=y;}if(animatedScrollableState.value===SCROLLABLE_STATE.LOCKED){var _context$initialConte;if(isLockingScroll.value){return;}const lockPosition=context.shouldLockInitialPosition?(_context$initialConte=context.initialContentOffsetY)!==null&&_context$initialConte!==void 0?_context$initialConte:0:0;isLockingScroll.value=true;scrollTo(scrollableRef,0,lockPosition,false);isLockingScroll.value=false;scrollableContentOffsetY.value=lockPosition;_lockableScrollableContentOffsetY.value=lockPosition;return;}_lockableScrollableContentOffsetY.value=y;}",
+};
+let closure_5 = {
+  code: "function pnpm_useScrollEventsHandlersDefaultTs4({contentOffset:{y:y}},context){const{scrollableContentOffsetY,_lockableScrollableContentOffsetY,rootScrollableContentOffsetY,animatedSheetState,SHEET_STATE}=this.__closure;scrollableContentOffsetY.value=y;_lockableScrollableContentOffsetY.value=y;rootScrollableContentOffsetY.value=y;context.initialContentOffsetY=y;if(animatedSheetState.value!==SHEET_STATE.EXTENDED&&animatedSheetState.value!==SHEET_STATE.FILL_PARENT&&y>0){context.shouldLockInitialPosition=true;}else{context.shouldLockInitialPosition=false;}}",
+};
+const value = {
+  code: "function pnpm_useScrollEventsHandlersDefaultTs5({contentOffset:{y:y}},context){const{animatedScrollableState,SCROLLABLE_STATE,isLockingScroll,scrollTo,scrollableRef,scrollableContentOffsetY,_lockableScrollableContentOffsetY,animatedAnimationState,ANIMATION_STATE,rootScrollableContentOffsetY}=this.__closure;if(animatedScrollableState.value===SCROLLABLE_STATE.LOCKED){var _context$initialConte;if(isLockingScroll.value){return;}const lockPosition=context.shouldLockInitialPosition?(_context$initialConte=context.initialContentOffsetY)!==null&&_context$initialConte!==void 0?_context$initialConte:0:0;isLockingScroll.value=true;scrollTo(scrollableRef,0,lockPosition,false);isLockingScroll.value=false;scrollableContentOffsetY.value=lockPosition;_lockableScrollableContentOffsetY.value=lockPosition;return;}if(animatedAnimationState.value!==ANIMATION_STATE.RUNNING){scrollableContentOffsetY.value=y;_lockableScrollableContentOffsetY.value=y;rootScrollableContentOffsetY.value=y;}}",
+};
+let closure_7 = {
+  code: "function pnpm_useScrollEventsHandlersDefaultTs6({contentOffset:{y:y}},context){const{animatedScrollableState,SCROLLABLE_STATE,isLockingScroll,scrollTo,scrollableRef,scrollableContentOffsetY,_lockableScrollableContentOffsetY,animatedAnimationState,ANIMATION_STATE,rootScrollableContentOffsetY}=this.__closure;if(animatedScrollableState.value===SCROLLABLE_STATE.LOCKED){var _context$initialConte;if(isLockingScroll.value){return;}const lockPosition=context.shouldLockInitialPosition?(_context$initialConte=context.initialContentOffsetY)!==null&&_context$initialConte!==void 0?_context$initialConte:0:0;isLockingScroll.value=true;scrollTo(scrollableRef,0,lockPosition,false);isLockingScroll.value=false;scrollableContentOffsetY.value=0;_lockableScrollableContentOffsetY.value=0;return;}if(animatedAnimationState.value!==ANIMATION_STATE.RUNNING){scrollableContentOffsetY.value=y;_lockableScrollableContentOffsetY.value=y;rootScrollableContentOffsetY.value=y;}}",
+};
+
+export const useScrollEventsHandlersDefault = (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
+  _require = animatedRef;
+  dependencyMap = sharedValue;
+  __initData = lockableScrollableContentOffsetY;
+  const bottomSheetInternal = require("05275__.js").useBottomSheetInternal();
+  const animatedSheetState = bottomSheetInternal.animatedSheetState;
+  const animatedScrollableState = bottomSheetInternal.animatedScrollableState;
+  const animatedAnimationState = bottomSheetInternal.animatedAnimationState;
+  const animatedHandleGestureState = bottomSheetInternal.animatedHandleGestureState;
+  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
+  const obj = require("05275__.js");
+  sharedValue = require("cancelAnimation").useSharedValue(0);
+  const obj2 = require("cancelAnimation");
+  const sharedValue1 = require("cancelAnimation").useSharedValue(false);
+  const obj3 = require("cancelAnimation");
+  const fn = function _() {
+    return sharedValue.value;
+  };
+  fn.__closure = { _lockableScrollableContentOffsetY: sharedValue };
+  fn.__workletHash = 4812983890833;
+  fn.__initData = __initData;
+  class T {
+    constructor(arg0) {
+      if (closure_2) {
+        tmp2 = animatedRef;
+        tmp.value = animatedRef;
+      }
+      return;
     }
-    c3 = num;
-    ({ onLongPress, onPress, onActiveStateChange } = global);
-    tmp = closure_5(global, closure_2);
-    wrappedLongPress = function wrappedLongPress() {
-      closure_1.current = true;
-      if (closure_1_4 != null) {
-        tmp();
-      }
-    };
-    obj = closure_0(closure_1[6]);
-    tVProps = obj.getTVProps(tmp);
-    obj1 = { style: null };
-    items = [, ];
-    items[0] = global.style;
-    items[1] = false;
-    obj1.style = items;
-    merged = Object.assign(tmp);
-    merged1 = Object.assign(tVProps);
-    obj1.onBegin = function onBegin(pointerInside) {
-      if (pointerInside.pointerInside) {
-        if (useRef != null) {
-          tmp(true);
-        }
-        closure_1.current = false;
-        if (closure_1_4) {
-          const _setTimeout = setTimeout;
-          closure_2.current = setTimeout(wrappedLongPress, num);
-        }
-        const onBegin = delayLongPress.onBegin;
-        if (onBegin != null) {
-          onBegin(pointerInside);
-        }
-      }
-    };
-    obj1.onActivate = function onActivate(pointerInside) {
-      pointerInside = pointerInside.pointerInside;
-      if (!pointerInside) {
-        pointerInside = undefined === ref2.current;
-      }
-      if (!pointerInside) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref2.current);
-        ref2.current = undefined;
-      }
-      const onActivate = delayLongPress.onActivate;
-      if (onActivate != null) {
-        onActivate(pointerInside);
-      }
-    };
-    obj1.onDeactivate = function onDeactivate(dependencyMap) {
-      const onDeactivate = delayLongPress.onDeactivate;
-      if (onDeactivate != null) {
-        onDeactivate(dependencyMap);
-      }
-    };
-    obj1.onFinalize = function onFinalize(canceled) {
-      if (useRef != null) {
-        tmp(false);
-      }
-      let current = canceled.canceled;
-      if (!current) {
-        current = ref.current;
-      }
-      if (!current) {
-        if (_objectWithoutProperties != null) {
-          tmp4(canceled.pointerInside);
-        }
-      }
-      if (undefined !== ref2.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref2.current);
-        ref2.current = undefined;
-      }
-      const onFinalize = delayLongPress.onFinalize;
-      if (onFinalize != null) {
-        onFinalize(canceled);
-      }
-    };
-    return jsx(RawButton, obj1);
   }
-}
-let closure_14 = Animated.createAnimatedComponent(BaseButton);
-const underlay = StyleSheet.create({ underlay: { position: "absolute", left: 0, right: 0, bottom: 0, top: 0 } });
-
-export { RawButton };
-export { BaseButton };
-export const RectButton = (children) => {
-  let onActiveStateChange = children;
-  ({ style, activeOpacity, underlayColor } = children);
-  let str = "black";
-  if (undefined !== underlayColor) {
-    str = underlayColor;
+  T.__closure = { lockableScrollableContentOffsetY };
+  T.__workletHash = 2896583663542;
+  T.__initData = animatedSheetState;
+  const animatedReaction = require("cancelAnimation").useAnimatedReaction(fn, T);
+  const obj5 = { handleOnScroll: null, handleOnBeginDrag: null, handleOnEndDrag: null, handleOnMomentumEnd: null };
+  const obj4 = require("cancelAnimation");
+  class E {
+    constructor(arg0, arg1) {
+      y = animatedRef.contentOffset.y;
+      tmp = closure_0;
+      tmp2 = closure_1;
+      iter = animatedSheetState;
+      tmp3 = animatedSheetState.value !== closure_0(closure_1[2]).SHEET_STATE.EXTENDED;
+      if (tmp3) {
+        tmp3 = iter.value !== tmp(tmp2[2]).SHEET_STATE.FILL_PARENT;
+      }
+      if (!tmp3) {
+        flag = false;
+        sharedValue.shouldLockInitialPosition = false;
+      }
+      if (closure_6.value === tmp(tmp2[3]).State.ACTIVE) {
+        flag2 = true;
+        sharedValue.shouldLockInitialPosition = true;
+        sharedValue.initialContentOffsetY = y;
+      }
+      if (animatedScrollableState.value === tmp(tmp2[2]).SCROLLABLE_STATE.LOCKED) {
+        tmp5 = closure_9;
+        if (closure_9.value) {
+          return;
+        } else {
+          num = 0;
+          if (sharedValue.shouldLockInitialPosition) {
+            num2 = sharedValue.initialContentOffsetY;
+            tmp6 = null;
+            if (num2 == null) {
+              num2 = 0;
+            }
+            num = num2;
+          }
+          flag3 = true;
+          tmp5.value = true;
+          tmpResult = tmp(tmp2[1]);
+          tmp7 = closure_0;
+          flag4 = false;
+          tmp8 = tmpResult;
+          num3 = 0;
+          tmp9 = num;
+          flag5 = false;
+          scrollToResult = tmpResult.scrollTo(closure_0, 0, num, false);
+          tmp5.value = false;
+          tmp11 = closure_1;
+          closure_1.value = num;
+          tmp12 = closure_8;
+          closure_8.value = num;
+          return;
+        }
+      } else {
+        tmp4 = closure_8;
+        closure_8.value = y;
+        return;
+      }
+    }
   }
-  value = new Animated.Value(0);
-  if (style == null) {
-    style = {};
+  const obj6 = require("cancelAnimation");
+  E.__closure = {
+    animatedSheetState,
+    SHEET_STATE: require("value2").SHEET_STATE,
+    animatedHandleGestureState,
+    State: require("LegacyBaseButton").State,
+    animatedScrollableState,
+    SCROLLABLE_STATE: require("value2").SCROLLABLE_STATE,
+    isLockingScroll: sharedValue1,
+    scrollTo: require("cancelAnimation").scrollTo,
+    scrollableRef: animatedRef,
+    scrollableContentOffsetY: sharedValue,
+    _lockableScrollableContentOffsetY: sharedValue,
+  };
+  E.__workletHash = 9115820423560;
+  E.__initData = animatedScrollableState;
+  const items = [animatedRef, sharedValue, animatedScrollableState, animatedSheetState, sharedValue1];
+  obj5.handleOnScroll = obj6.useWorkletCallback(E, items);
+  const obj7 = {
+    animatedSheetState,
+    SHEET_STATE: require("value2").SHEET_STATE,
+    animatedHandleGestureState,
+    State: require("LegacyBaseButton").State,
+    animatedScrollableState,
+    SCROLLABLE_STATE: require("value2").SCROLLABLE_STATE,
+    isLockingScroll: sharedValue1,
+    scrollTo: require("cancelAnimation").scrollTo,
+    scrollableRef: animatedRef,
+    scrollableContentOffsetY: sharedValue,
+    _lockableScrollableContentOffsetY: sharedValue,
+  };
+  class O {
+    constructor(arg0, arg1) {
+      y = animatedRef.contentOffset.y;
+      closure_1.value = y;
+      closure_8.value = y;
+      closure_7.value = y;
+      sharedValue.initialContentOffsetY = y;
+      iter = animatedSheetState;
+      tmp = closure_0;
+      tmp2 = closure_1;
+      if (animatedSheetState.value !== closure_0(closure_1[2]).SHEET_STATE.EXTENDED) {
+        if (iter.value !== tmp(tmp2[2]).SHEET_STATE.FILL_PARENT) {
+          num = 0;
+          if (y > 0) {
+            flag = true;
+            sharedValue.shouldLockInitialPosition = true;
+          }
+          return;
+        }
+      }
+      sharedValue.shouldLockInitialPosition = false;
+      return;
+    }
   }
-  const flattenResult = StyleSheet.flatten(style);
-  const obj = {};
-  const merged = Object.assign(_objectWithoutProperties(children, closure_3));
-  obj.style = flattenResult;
-  obj.onActiveStateChange = function onActiveStateChange(arg0) {
-    onActiveStateChange = onActiveStateChange.onActiveStateChange;
-    if (onActiveStateChange != null) {
-      onActiveStateChange(arg0);
+  const obj8 = require("cancelAnimation");
+  O.__closure = {
+    scrollableContentOffsetY: sharedValue,
+    _lockableScrollableContentOffsetY: sharedValue,
+    rootScrollableContentOffsetY: animatedScrollableContentOffsetY,
+    animatedSheetState,
+    SHEET_STATE: require("value2").SHEET_STATE,
+  };
+  O.__workletHash = 13124284367046;
+  O.__initData = animatedAnimationState;
+  const items1 = [sharedValue, animatedSheetState, animatedScrollableContentOffsetY];
+  obj5.handleOnBeginDrag = obj8.useWorkletCallback(O, items1);
+  const obj9 = {
+    scrollableContentOffsetY: sharedValue,
+    _lockableScrollableContentOffsetY: sharedValue,
+    rootScrollableContentOffsetY: animatedScrollableContentOffsetY,
+    animatedSheetState,
+    SHEET_STATE: require("value2").SHEET_STATE,
+  };
+  const fn2 = function b(contentOffset, shouldLockInitialPosition) {
+    const y = contentOffset.contentOffset.y;
+    if (animatedScrollableState.value === value2.SCROLLABLE_STATE.LOCKED) {
+      if (!sharedValue1.value) {
+        let num = 0;
+        if (shouldLockInitialPosition.shouldLockInitialPosition) {
+          let num2 = shouldLockInitialPosition.initialContentOffsetY;
+          if (num2 == null) {
+            num2 = 0;
+          }
+          num = num2;
+        }
+        sharedValue1.value = true;
+        const tmpResult = cancelAnimation;
+        tmpResult.scrollTo(closure_0, 0, num, false);
+        sharedValue1.value = false;
+        closure_1.value = num;
+        sharedValue.value = num;
+      }
+    } else if (animatedAnimationState.value !== value2.ANIMATION_STATE.RUNNING) {
+      closure_1.value = y;
+      sharedValue.value = y;
+      animatedScrollableContentOffsetY.value = y;
     }
   };
-  const obj2 = { style: null };
-  const items = [underlay.underlay, { opacity: useRef(value).current, backgroundColor: str, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
-  obj2.style = items;
-  const items1 = [React6(Animated.View, obj2), children.children];
-  obj.children = items1;
-  return v65535(BaseButton, obj);
-};
-export const BorderlessButton = (ref) => {
-  let onActiveStateChange = ref;
-  value = new Animated.Value(1);
-  const current = useRef(value).current;
-  ref = ref.ref;
-  ({ children, style } = ref);
-  const obj = { borderless: true };
-  const merged = Object.assign(_objectWithoutProperties(ref, closure_4));
-  if (ref == null) {
-    ref = null;
-  }
-  obj.ref = ref;
-  obj.onActiveStateChange = function onActiveStateChange(arg0) {
-    onActiveStateChange = onActiveStateChange.onActiveStateChange;
-    if (onActiveStateChange != null) {
-      onActiveStateChange(arg0);
-    }
+  const obj10 = require("cancelAnimation");
+  fn2.__closure = {
+    animatedScrollableState,
+    SCROLLABLE_STATE: require("value2").SCROLLABLE_STATE,
+    isLockingScroll: sharedValue1,
+    scrollTo: require("cancelAnimation").scrollTo,
+    scrollableRef: animatedRef,
+    scrollableContentOffsetY: sharedValue,
+    _lockableScrollableContentOffsetY: sharedValue,
+    animatedAnimationState,
+    ANIMATION_STATE: require("value2").ANIMATION_STATE,
+    rootScrollableContentOffsetY: animatedScrollableContentOffsetY,
   };
-  const items = [style, false];
-  obj.style = items;
-  obj.children = children;
-  return React6(closure_14, obj);
+  fn2.__workletHash = 13045900298602;
+  fn2.__initData = animatedHandleGestureState;
+  const items2 = [
+    animatedRef,
+    sharedValue,
+    animatedAnimationState,
+    animatedScrollableState,
+    animatedScrollableContentOffsetY,
+    sharedValue1,
+  ];
+  obj5.handleOnEndDrag = obj10.useWorkletCallback(fn2, items2);
+  const obj11 = {
+    animatedScrollableState,
+    SCROLLABLE_STATE: require("value2").SCROLLABLE_STATE,
+    isLockingScroll: sharedValue1,
+    scrollTo: require("cancelAnimation").scrollTo,
+    scrollableRef: animatedRef,
+    scrollableContentOffsetY: sharedValue,
+    _lockableScrollableContentOffsetY: sharedValue,
+    animatedAnimationState,
+    ANIMATION_STATE: require("value2").ANIMATION_STATE,
+    rootScrollableContentOffsetY: animatedScrollableContentOffsetY,
+  };
+  class C {
+    constructor(arg0, arg1) {
+      y = animatedRef.contentOffset.y;
+      tmp = closure_0;
+      tmp2 = closure_1;
+      if (animatedScrollableState.value === closure_0(closure_1[2]).SCROLLABLE_STATE.LOCKED) {
+        tmp7 = closure_9;
+        if (closure_9.value) {
+          return;
+        } else {
+          tmp8 = sharedValue;
+          num = 0;
+          num2 = 0;
+          if (sharedValue.shouldLockInitialPosition) {
+            num3 = sharedValue.initialContentOffsetY;
+            tmp9 = null;
+            if (num3 == null) {
+              num3 = 0;
+            }
+            num2 = num3;
+          }
+          flag = true;
+          tmp7.value = true;
+          tmpResult = tmp(tmp2[1]);
+          tmp10 = closure_0;
+          flag2 = false;
+          tmp11 = tmpResult;
+          num4 = 0;
+          tmp12 = num2;
+          flag3 = false;
+          scrollToResult = tmpResult.scrollTo(closure_0, 0, num2, false);
+          tmp7.value = false;
+          tmp14 = closure_1;
+          closure_1.value = 0;
+          tmp15 = closure_8;
+          closure_8.value = 0;
+          return;
+        }
+      } else {
+        tmp3 = animatedAnimationState;
+        if (animatedAnimationState.value !== tmp(tmp2[2]).ANIMATION_STATE.RUNNING) {
+          tmp4 = closure_1;
+          closure_1.value = y;
+          tmp5 = closure_8;
+          closure_8.value = y;
+          tmp6 = closure_7;
+          closure_7.value = y;
+        }
+        return;
+      }
+    }
+  }
+  const obj12 = require("cancelAnimation");
+  C.__closure = {
+    animatedScrollableState,
+    SCROLLABLE_STATE: require("value2").SCROLLABLE_STATE,
+    isLockingScroll: sharedValue1,
+    scrollTo: require("cancelAnimation").scrollTo,
+    scrollableRef: animatedRef,
+    scrollableContentOffsetY: sharedValue,
+    _lockableScrollableContentOffsetY: sharedValue,
+    animatedAnimationState,
+    ANIMATION_STATE: require("value2").ANIMATION_STATE,
+    rootScrollableContentOffsetY: animatedScrollableContentOffsetY,
+  };
+  C.__workletHash = 15342705131849;
+  C.__initData = animatedScrollableContentOffsetY;
+  const items3 = [
+    sharedValue,
+    animatedRef,
+    animatedAnimationState,
+    animatedScrollableState,
+    animatedScrollableContentOffsetY,
+    sharedValue1,
+  ];
+  obj5.handleOnMomentumEnd = obj12.useWorkletCallback(C, items3);
+  return obj5;
 };
-export const PureNativeButton = ButtonComponentDefault;

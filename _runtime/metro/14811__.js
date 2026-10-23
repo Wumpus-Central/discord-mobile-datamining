@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 64,
-  height: 64,
-  scales: [1],
-  hash: "7820559d802b687a2589b1c9f32203ab",
-  name: "img_wumpus_nitro_boost",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 20,
+  height: 20,
+  scales: [2, 3],
+  hash: "4f7f3933dfbb31e71ae1545e9b3d82b6",
+  name: "sticker",
   type: "png",
 });

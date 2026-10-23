@@ -1,174 +1,47 @@
 // _runtime/metro/05286__.js
-import _mod17 from "00017__.js";
-import handlerIDToTag from "../05287_handlerIDToTag.js";
-import _mod5289 from "05289__.js";
-import _mod5290 from "05290__.js";
-import TouchEventType from "../05291_TouchEventType.js";
+import value2 from "../05268_value2.js";
 
-function onGestureHandlerEvent(handlerTag) {
-  const findHandlerResult = handlerIDToTag.findHandler(handlerTag.handlerTag);
-  if (findHandlerResult) {
-    if (null != handlerTag.oldState) {
-      if (handlerTag.oldState === _mod5289.State.UNDETERMINED) {
-        if (handlerTag.state === _mod5289.State.BEGAN) {
-          const handlers11 = findHandlerResult.handlers;
-          const onBegin = handlers11.onBegin;
-          if (onBegin != null) {
-            onBegin(handlerTag);
-          }
-        }
-      }
-      if (handlerTag.oldState === _mod5289.State.BEGAN) {
-        if (handlerTag.state === _mod5289.State.ACTIVE) {
-          const handlers6 = findHandlerResult.handlers;
-          const onStart = handlers6.onStart;
-          if (onStart != null) {
-            onStart(handlerTag);
-          }
-          closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
-        }
-      }
-      if (handlerTag.oldState !== handlerTag.state) {
-        if (handlerTag.state === _mod5289.State.END) {
-          if (handlerTag.oldState === _mod5289.State.ACTIVE) {
-            const handlers9 = findHandlerResult.handlers;
-            const onEnd2 = handlers9.onEnd;
-            if (onEnd2 != null) {
-              onEnd2(handlerTag, true);
-            }
-          }
-          const handlers10 = findHandlerResult.handlers;
-          const onFinalize2 = handlers10.onFinalize;
-          if (onFinalize2 != null) {
-            onFinalize2(handlerTag, true);
-          }
-          closure_6[findHandlerResult.handlers.handlerTag] = undefined;
-        }
-      }
-      let tmp18 = handlerTag.state !== _mod5289.State.FAILED;
-      if (tmp18) {
-        tmp18 = handlerTag.state !== _mod5289.State.CANCELLED;
-      }
-      if (!tmp18) {
-        tmp18 = handlerTag.oldState === handlerTag.state;
-      }
-      if (!tmp18) {
-        if (handlerTag.oldState === _mod5289.State.ACTIVE) {
-          const handlers7 = findHandlerResult.handlers;
-          const onEnd = handlers7.onEnd;
-          if (onEnd != null) {
-            onEnd(handlerTag, false);
-          }
-        }
-        const handlers8 = findHandlerResult.handlers;
-        const onFinalize = handlers8.onFinalize;
-        if (onFinalize != null) {
-          onFinalize(handlerTag, false);
-        }
-        map.delete(handlerTag.handlerTag);
-        closure_6[findHandlerResult.handlers.handlerTag] = undefined;
-      }
-    } else if (null != handlerTag.eventType) {
-      if (!map.has(handlerTag.handlerTag)) {
-        const GestureStateManager = _mod5290.GestureStateManager;
-        const result = map.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
-      }
-      value = map.get(handlerTag.handlerTag);
-      const eventType = handlerTag.eventType;
-      if (TouchEventType.TouchEventType.TOUCHES_DOWN === eventType) {
-        const handlers5 = findHandlerResult.handlers;
-        if (handlers5 != null) {
-          const onTouchesDown = handlers5.onTouchesDown;
-          if (onTouchesDown != null) {
-            onTouchesDown(handlerTag, value);
-          }
-        }
-      } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === eventType) {
-        const handlers4 = findHandlerResult.handlers;
-        if (handlers4 != null) {
-          const onTouchesMove = handlers4.onTouchesMove;
-          if (onTouchesMove != null) {
-            onTouchesMove(handlerTag, value);
-          }
-        }
-      } else if (TouchEventType.TouchEventType.TOUCHES_UP === eventType) {
-        const handlers3 = findHandlerResult.handlers;
-        if (handlers3 != null) {
-          const onTouchesUp = handlers3.onTouchesUp;
-          if (onTouchesUp != null) {
-            onTouchesUp(handlerTag, value);
-          }
-        }
-      } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === eventType) {
-        const handlers13 = findHandlerResult.handlers;
-        if (handlers13 != null) {
-          const onTouchesCancelled = handlers13.onTouchesCancelled;
-          if (onTouchesCancelled != null) {
-            onTouchesCancelled(handlerTag, value);
-          }
-        }
-      }
+const cancelAnimation = tmp3(1658);
+require = fn;
+const dependencyMap = arg6;
+fn = function n(arg0) {
+  ({ point, configs, velocity } = arg0);
+  if (velocity === undefined) {
+    velocity = 0;
+  }
+  ({ overrideReduceMotion, onComplete } = arg0);
+  if (!configs) {
+    configs = value2.ANIMATION_CONFIGS;
+  }
+  if (overrideReduceMotion) {
+    configs.reduceMotion = overrideReduceMotion;
+  }
+  if (!("duration" in configs)) {
+    if (!("easing" in configs)) {
+      let TIMING = value2.ANIMATION_METHOD.SPRING;
+    }
+    if (TIMING === value2.ANIMATION_METHOD.TIMING) {
+      let withTimingResult = cancelAnimation.withTiming(point, configs, onComplete);
+      const tmp3Result = cancelAnimation;
     } else {
-      const handlers12 = findHandlerResult.handlers;
-      const onUpdate = handlers12.onUpdate;
-      if (onUpdate != null) {
-        onUpdate(handlerTag);
-      }
-      if (tmp9) {
-        const handlers = findHandlerResult.handlers;
-        const onChange = handlers.onChange;
-        if (onChange != null) {
-          const handlers2 = findHandlerResult.handlers;
-          const changeEventCalculator = handlers2.changeEventCalculator;
-          let result1;
-          if (changeEventCalculator != null) {
-            result1 = changeEventCalculator(handlerTag, closure_6[findHandlerResult.handlers.handlerTag]);
-          }
-          onChange(result1);
-        }
-        closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
-      }
-      tmp9 = findHandlerResult.handlers.onChange && findHandlerResult.handlers.changeEventCalculator;
+      const _Object = Object;
+      const obj = { velocity };
+      withTimingResult = cancelAnimation.withSpring(point, Object.assign(obj, configs), onComplete);
+      const tmp3Result2 = cancelAnimation;
     }
-  } else {
-    const result2 = handlerIDToTag.findOldGestureHandler(handlerTag.handlerTag);
-    if (result2) {
-      const obj2 = { nativeEvent: handlerTag };
-      if (null != handlerTag.oldState) {
-        result2.onGestureStateChange(obj2);
-      } else {
-        result2.onGestureEvent(obj2);
-      }
-    }
-    const tmpResult = handlerIDToTag;
+    return withTimingResult;
   }
-}
-const DeviceEventEmitter = _mod17.DeviceEventEmitter;
-let closure_3 = null;
-let closure_4 = null;
-const map = new Map();
-let closure_6 = [];
+  TIMING = value2.ANIMATION_METHOD.TIMING;
+};
+fn.__closure = {
+  ANIMATION_CONFIGS: fn(5268).ANIMATION_CONFIGS,
+  ANIMATION_METHOD: fn(5268).ANIMATION_METHOD,
+  withTiming: fn(1658).withTiming,
+  withSpring: fn(1658).withSpring,
+};
+fn.__workletHash = 17032227615993;
+fn.__initData = {
+  code: "function pnpm_animateTs1({point:point,configs:configs,velocity=0,overrideReduceMotion:overrideReduceMotion,onComplete:onComplete}){const{ANIMATION_CONFIGS,ANIMATION_METHOD,withTiming,withSpring}=this.__closure;if(!configs){configs=ANIMATION_CONFIGS;}if(overrideReduceMotion){configs.reduceMotion=overrideReduceMotion;}const type='duration'in configs||'easing'in configs?ANIMATION_METHOD.TIMING:ANIMATION_METHOD.SPRING;if(type===ANIMATION_METHOD.TIMING){return withTiming(point,configs,onComplete);}return withSpring(point,Object.assign({velocity:velocity},configs),onComplete);}",
+};
 
-export { onGestureHandlerEvent };
-export const startListening = function startListening() {
-  if (closure_3) {
-    closure_3.remove();
-    closure_3 = null;
-  }
-  if (closure_4) {
-    closure_4.remove();
-    closure_4 = null;
-  }
-  closure_3 = DeviceEventEmitter.addListener("onGestureHandlerEvent", onGestureHandlerEvent);
-  closure_4 = DeviceEventEmitter.addListener("onGestureHandlerStateChange", onGestureHandlerEvent);
-};
-export const stopListening = function stopListening() {
-  if (closure_3) {
-    closure_3.remove();
-    closure_3 = null;
-  }
-  if (closure_4) {
-    closure_4.remove();
-    closure_4 = null;
-  }
-};
+export const animate = fn;

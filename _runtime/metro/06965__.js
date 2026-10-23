@@ -1,67 +1,88 @@
 // _runtime/metro/06965__.js
-import _mod1636 from "01636__.js";
-import FrameSizeProvider from "../06942_FrameSizeProvider.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Dimensions, Platform, StyleSheet, View: c3 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const size = Dimensions.get("window");
-const width = size.width;
-let num = 0;
-if (undefined !== width) {
-  num = width;
-}
-const height = size.height;
-let num2 = 0;
-if (undefined !== height) {
-  num2 = height;
-}
-if (null == fn(1636).initialWindowMetrics) {
-  let obj = { frame: null, insets: null };
-  const size1 = { x: 0, y: 0, width: num, height: num2 };
-  obj.frame = size1;
-  obj.insets = { top: 0, left: 0, right: 0, bottom: 0 };
-  let initialWindowMetrics = obj;
-} else {
-  initialWindowMetrics = fn(1636).initialWindowMetrics;
-}
-class SafeAreaProviderCompat {
-  constructor(arg0) {
-    ({ children, style } = global);
-    closure_2 = undefined;
-    closure_2 = closure_2.useContext(children(style[3]).SafeAreaInsetsContext);
-    obj = {
-      initialFrame: initialWindowMetrics.frame,
-      render(onLayout) {
-        onLayout = onLayout.onLayout;
-        if (closure_2) {
-          const obj2 = { ref: tmp, onLayout, style: null, children: null };
-          const items = [container.container, style];
-          obj2.style = items;
-          obj2.children = children;
-          let tmp2Result = (
-            <React3 ref={tmp} onLayout={onLayout} style={null}>
-              {null}
-            </React3>
-          );
-        } else {
-          const obj = { initialMetrics: initialWindowMetrics, style, onLayout, children };
-          tmp2Result = jsx(_mod1636.SafeAreaProvider, {
-            initialMetrics: initialWindowMetrics,
-            style,
-            onLayout,
-            children,
-          });
-        }
-        return tmp2Result;
-      },
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
-    return jsx(children(style[4]).FrameSizeProvider, obj);
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+const MaskedView = ["maskElement", "children"];
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, StyleSheet: closure_7, requireNativeComponent } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let closure_11 = requireNativeComponent("RNCMaskedView");
+class MaskedView {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = c2(this, MaskedView);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(MaskedView);
+    tmp3 = closure_3;
+    if (c10()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._hasWarnedInvalidRenderMask = false;
+    return tmp3Result;
   }
 }
-SafeAreaProviderCompat.initialMetrics = initialWindowMetrics;
-const styles = StyleSheet.create({ container: { flex: 1 } });
+_inherits(MaskedView, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ maskElement, children } = props);
+    const tmp = _objectWithoutProperties(props, MaskedView);
+    if (noop.isValidElement(maskElement)) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = { pointerEvents: "none", style: absoluteFill.absoluteFill, children: maskElement };
+      const items = [closure_1_8(timestampProducer, obj3), children];
+      obj2.children = items;
+      let tmp9 = React6(closure_11, obj2);
+    } else {
+      if (!self._hasWarnedInvalidRenderMask) {
+        const _console = console;
+        console.warn(
+          "MaskedView: Invalid `maskElement` prop was passed to MaskedView. Expected a React Element. No mask will render.",
+        );
+        self._hasWarnedInvalidRenderMask = true;
+      }
+      const obj = {};
+      const merged1 = Object.assign(tmp);
+      obj.children = children;
+      tmp9 = closure_1_8(timestampProducer, obj);
+    }
+    return tmp9;
+  },
+};
+let items = [entry];
 
-export { SafeAreaProviderCompat };
+export default _createClass(MaskedView, items);

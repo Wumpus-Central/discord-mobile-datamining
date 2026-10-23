@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4ff7b09e67486edcd0ad75a5131670be",
-  name: "CirclePlayIcon-primary",
+  hash: "eb011b89d6ca95998a19fc9752810bf1",
+  name: "MinecraftNeutralIcon-tertiary",
   type: "png",
 });

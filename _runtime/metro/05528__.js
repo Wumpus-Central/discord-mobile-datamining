@@ -1,36 +1,41 @@
 // _runtime/metro/05528__.js
-function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
-  try {
-    const iter = arg0[arg5](arg6);
-    value = iter.value;
-    if (iter.done) {
-      fn(value);
-    } else {
-      const resolved = Promise.resolve(value);
-      resolved.then(arg3, arg4);
-    }
-  } catch (tmp13) {
-    fn2(tmp13);
-  }
-}
+import _mod5529 from "05529__.js";
 
-export default function _asyncToGenerator(arg0) {
-  closure_0 = arg0;
-  return function () {
-    const self = this;
-    closure_1 = arguments;
-    return new Promise((arg0, arg1) => {
-      _self = arg0;
-      closure_1 = arg1;
-      function _next(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+function _get() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect2 = Reflect;
+    if (Reflect.get) {
+      const _Reflect = Reflect;
+      exports = get.bind();
+    }
+    module.exports = exports;
+    const apply = exports.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
+    } else {
+      applyArgumentsResult = apply(null, arguments);
+    }
+    return applyArgumentsResult;
+  }
+  exports = (arg0, arg1, arg2) => {
+    const tmp = _mod5529(arg0, arg1);
+    if (tmp) {
+      const _Object = Object;
+      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
+      if (iter.get) {
+        let tmp3 = arg2;
+        const get = iter.get;
+        const call = get.call;
+        if (arguments.length < 3) {
+          tmp3 = arg0;
+        }
+        typeof call === "unknown" ? get() : call(tmp3);
+      } else {
+        return iter.value;
       }
-      function _throw(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
-      }
-      const applyResult = _self.apply(self, closure_1);
-      closure_2 = applyResult;
-      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
-    });
+    }
   };
 }
+let exports = _get;
+
+export default _get;

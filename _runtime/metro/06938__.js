@@ -1,10 +1,16 @@
 // _runtime/metro/06938__.js
+import Link from "../01506_Link.js";
+import noop from "00019__.js";
 
-export const getDefaultSidebarWidth = (width) => {
-  width = width.width;
-  let num = 360;
-  if (width - 56 <= 360) {
-    num = width - 56;
-  }
-  return num;
+require = fn;
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
+
+export const Background = function Background(style) {
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
+  const obj2 = {};
+  const merged1 = Object.assign(merged);
+  const items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
+  obj2.style = items;
+  return <Animated.View />;
 };

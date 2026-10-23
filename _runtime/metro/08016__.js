@@ -1,6 +1,6 @@
 // _runtime/metro/08016__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7961 from "07961__.js";
+import _modDef7999 from "07999__.js";
 import _modDef8017 from "08017__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const ForeignObject = fn;
+const FeMerge = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class ForeignObject {
+class FeMerge {
   constructor() {
     self = this;
-    tmp = closure_3(this, ForeignObject);
+    tmp = closure_3(this, FeMerge);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ForeignObject);
+    obj = hasOwnProperty(FeMerge);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,21 +49,19 @@ class ForeignObject {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ForeignObject, _modDef7961);
+_inherits(FeMerge, _modDef7999);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(ForeignObject(7962).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
+    const merged = Object.assign(FeMerge(7998).extractFilter(this.props));
+    const obj2 = FeMerge(7998);
+    const merged1 = Object.assign(FeMerge(7998).extractFeMerge(this.props, this));
     return (
       <tmp
         ref={function ref(arg0) {
@@ -74,8 +72,9 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(ForeignObject, items);
-importDefaultResultResult.displayName = "ForeignObject";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

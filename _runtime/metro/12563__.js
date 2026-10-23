@@ -1,131 +1,210 @@
 // _runtime/metro/12563__.js
-import spanTimeInputToSeconds from "../12525_spanTimeInputToSeconds.js";
-import _mod12564 from "12564__.js";
-import _mod12567 from "12567__.js";
-import __SENTRY_DEBUG__ from "12519__.js";
-import consoleSandbox from "12520__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
-  const sdkMetadataForEnvelopeHeader = _mod12564.getSdkMetadataForEnvelopeHeader(sdk);
-  let str = "event";
-  if (type.type) {
-    str = "event";
-    if ("replay_event" !== type.type) {
-      str = type.type;
+const SyncPromise = require;
+const obj = { PENDING: 0 };
+obj[0] = "PENDING";
+obj.RESOLVED = 1;
+obj[1] = "RESOLVED";
+obj.REJECTED = 2;
+obj[2] = "REJECTED";
+class SyncPromise {
+  constructor(arg0) {
+    self = this;
+    tmp = SyncPromise;
+    tmp2 = closure_3(this, SyncPromise);
+    __init = SyncPromise.prototype.__init;
+    call = __init.call;
+    if (typeof call === "unknown") {
+      __initResult = __init();
+    } else {
+      callResult = call(self);
     }
+    __init2 = tmp.prototype.__init2;
+    call2 = __init2.call;
+    if (typeof call2 === "unknown") {
+      __init2Result = __init2();
+    } else {
+      call2Result = call2(self);
+    }
+    __init3 = tmp.prototype.__init3;
+    call3 = __init3.call;
+    if (typeof call3 === "unknown") {
+      __init3Result = __init3();
+    } else {
+      call3Result = call3(self);
+    }
+    __init4 = tmp.prototype.__init4;
+    call4 = __init4.call;
+    if (typeof call4 === "unknown") {
+      __init4 = __init4();
+    } else {
+      call4Result = call4(self);
+    }
+    self._state = c2.PENDING;
+    self._handlers = [];
+    return;
   }
-  if (sdk) {
-    sdk = sdk.sdk;
-  }
-  if (sdk) {
-    type.sdk = type.sdk || {};
-    let name = type.sdk.name;
-    if (!name) {
-      name = sdk.name;
-    }
-    type.sdk.name = name;
-    let version = type.sdk.version;
-    if (!version) {
-      version = sdk.version;
-    }
-    type.sdk.version = version;
-    let integrations = type.sdk.integrations;
-    if (!integrations) {
-      integrations = [];
-    }
-    const items = [];
-    const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
-    const tmp9 = sdk.integrations || [];
-    HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
-    type.sdk.integrations = items;
-    let packages = type.sdk.packages;
-    if (!packages) {
-      packages = [];
-    }
-    const items1 = [];
-    const arraySpreadResult5 = HermesBuiltin.arraySpread(packages, 0);
-    const tmp17 = sdk.packages || [];
-    HermesBuiltin.arraySpread(tmp17, arraySpreadResult5);
-    type.sdk.packages = items1;
-  }
-  const eventEnvelopeHeaders = _mod12564.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
-  delete tmp[tmp2];
-  const items2 = [{ type: str }, type];
-  const tmp3Result = _mod12564;
-  const items3 = [items2];
-  return _mod12564.createEnvelope(eventEnvelopeHeaders, items3);
+}
+const entry = {
+  key: "then",
+  value: function then(arg0, arg1) {
+    const self = this;
+    closure_1 = arg0;
+    closure_0 = arg1;
+    SyncPromise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const _handlers = self._handlers;
+      const items = [
+        false,
+        (arg0) => {
+          if (closure_1) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_0(arg0);
+          }
+        },
+        (arg0) => {
+          if (closure_0) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_1(arg0);
+          }
+        },
+      ];
+      _handlers.push(items);
+      self._executeHandlers();
+    });
+    return Object.create(SyncPromise.prototype);
+  },
 };
-export const createSessionEnvelope = function createSessionEnvelope(toJSON, url, sdk, arg3) {
-  const sdkMetadataForEnvelopeHeader = _mod12564.getSdkMetadataForEnvelopeHeader(sdk);
-  const obj2 = { sent_at: null };
-  obj2.sent_at = new Date().toISOString();
-  let tmp4 = sdkMetadataForEnvelopeHeader;
-  if (sdkMetadataForEnvelopeHeader) {
-    const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
-    tmp4 = obj3;
-  }
-  const merged = Object.assign(tmp4);
-  let tmp6 = arg3 && url;
-  if (tmp6) {
-    const obj4 = { dsn: _mod12567.dsnToString(url) };
-    tmp6 = obj4;
-    const tmpResult = _mod12567;
-  }
-  const merged1 = Object.assign(tmp6);
-  if ("aggregates" in toJSON) {
-    const items = [{ type: "sessions" }, toJSON];
-    let items1 = items;
-  } else {
-    items1 = [{ type: "session" }, toJSON.toJSON()];
-  }
-  const date = new Date();
-  const items2 = [items1];
-  return _mod12564.createEnvelope(obj2, items2);
+let items = [
+  entry,
+  {
+    key: "catch",
+    value: function _catch(arg0) {
+      return this.then((result) => result, arg0);
+    },
+  },
+  {
+    key: "finally",
+    value: function _finally(arg0) {
+      const self = this;
+      closure_0 = arg0;
+      SyncPromise((arg0, arg1) => {
+        closure_0 = arg0;
+        _self = arg1;
+        return _self
+          .then(
+            (result) => {
+              c3 = false;
+              closure_2 = result;
+              if (closure_0) {
+                tmp();
+              }
+            },
+            (arg0) => {
+              c3 = true;
+              closure_2 = arg0;
+              if (closure_0) {
+                tmp();
+              }
+            },
+          )
+          .then(() => {
+            if (c3) {
+              closure_1(closure_2);
+            } else {
+              closure_0(closure_2);
+            }
+          });
+      });
+      return Object.create(SyncPromise.prototype);
+    },
+  },
+  {
+    key: "__init",
+    value: function __init() {
+      const self = this;
+      this._resolve = (arg0) => {
+        self._setResult(obj.RESOLVED, arg0);
+      };
+    },
+  },
+  {
+    key: "__init2",
+    value: function __init2() {
+      const self = this;
+      this._reject = (arg0) => {
+        self._setResult(obj.REJECTED, arg0);
+      };
+    },
+  },
+  {
+    key: "__init3",
+    value: function __init3() {
+      const self = this;
+      this._setResult = (_state, _value) => {
+        if (self._state === self.PENDING) {
+          if (obj2.isThenable(_value)) {
+            _value.then(self._resolve, self._reject);
+          } else {
+            self._state = _state;
+            self._value = _value;
+            self._executeHandlers();
+          }
+          obj2 = SyncPromise(12546);
+        }
+      };
+    },
+  },
+  {
+    key: "__init4",
+    value: function __init4() {
+      const self = this;
+      this._executeHandlers = () => {
+        if (self._state !== obj.PENDING) {
+          const _handlers = self._handlers;
+          const substr = _handlers.slice();
+          self._handlers = [];
+          const item = substr.forEach((item) => {
+            if (!item[0]) {
+              if (_state._state === constants.RESOLVED) {
+                item[1](_state._value);
+              }
+              if (_state._state === constants.REJECTED) {
+                item[2](_state._value);
+              }
+              item[0] = true;
+            }
+          });
+        }
+      };
+    },
+  },
+];
+const _moduleResult = _createClass(SyncPromise, items);
+
+export const SyncPromise = _moduleResult;
+export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
+  closure_0 = arg0;
+  return new _moduleResult((arg0, fn) => {
+    fn(closure_0);
+  });
 };
-export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
-  const dynamicSamplingContextFromSpan = beforeSendSpan(12556).getDynamicSamplingContextFromSpan(arg0[0]);
-  let dsn = getDsn;
-  if (getDsn) {
-    dsn = getDsn.getDsn();
-  }
-  let tunnel = getDsn;
-  if (getDsn) {
-    tunnel = getDsn.getOptions().tunnel;
-  }
-  const obj = beforeSendSpan(12556);
-  const obj2 = { sent_at: new Date().toISOString() };
-  const tmp2 = beforeSendSpan;
-  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
-    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
-  })(dynamicSamplingContextFromSpan);
-  if (tmp7) {
-    const obj3 = { trace: dynamicSamplingContextFromSpan };
-    tmp7 = obj3;
-  }
-  const merged = Object.assign(tmp7);
-  let tmp9 = tunnel && dsn;
-  if (tmp9) {
-    const obj4 = { dsn: tmp2(12567).dsnToString(dsn) };
-    tmp9 = obj4;
-    const tmp2Result = tmp2(12567);
-  }
-  const merged1 = Object.assign(tmp9);
-  beforeSendSpan = getDsn;
-  if (getDsn) {
-    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
-  }
-  if (beforeSendSpan) {
-    const fn2 = (arg0) => {
-      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
-      if (!tmp3) {
-        spanTimeInputToSeconds.showSpanDropWarning();
-        const tmpResult = spanTimeInputToSeconds;
-      }
-      return tmp3;
-    };
-  } else {
-    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
-  }
-  arg0[Symbol.iterator]();
-  const date = new Date();
+export const resolvedSyncPromise = function resolvedSyncPromise(item) {
+  closure_0 = item;
+  return new _moduleResult((fn) => {
+    fn(closure_0);
+  });
 };

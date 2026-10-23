@@ -1,20 +1,24 @@
 // _runtime/metro/05766__.js
-import _mod523 from "00523__.js";
+import arrayPush from "../00669_arrayPush.js";
+import stubArray from "../00670_stubArray.js";
+import _mod671 from "00671__.js";
+import _mod5762 from "05762__.js";
 
-let prototype;
-if (_mod523) {
-  prototype = _mod523.prototype;
-}
-let valueOf;
-if (prototype) {
-  valueOf = prototype.valueOf;
+if (Object.getOwnPropertySymbols) {
+  let fn = (arg0) => {
+    let tmp = arg0;
+    const items = [];
+    if (arg0) {
+      do {
+        let tmp4 = arrayPush;
+        let tmp4Result = tmp4(items, stubArray(tmp));
+        tmp = _mod5762(tmp);
+      } while (tmp);
+    }
+    return items;
+  };
+} else {
+  fn = _mod671;
 }
 
-export default function cloneSymbol(arg0) {
-  if (valueOf) {
-    const call = valueOf.call;
-    Object(typeof call === "unknown" ? valueOf() : call(arg0));
-  } else {
-    return {};
-  }
-}
+export default fn;

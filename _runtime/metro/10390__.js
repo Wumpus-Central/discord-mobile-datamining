@@ -1,13 +1,72 @@
 // _runtime/metro/10390__.js
-import registerAsset from "01134__.js";
+import AbstractParserWithWordBoundaryChecking from "../10221_AbstractParserWithWordBoundaryChecking.js";
+import _mod10383 from "10383__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0f6346bda6a1fe957f683601cddba824",
-  name: "IdIcon",
-  type: "png",
-});
+const ENTimeUnitAgoFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+const regExp = new RegExp("(" + _mod10383.TIME_UNITS_PATTERN + ")\\s{0,5}(?:fa|prima|precedente)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + _mod10383.TIME_UNITS_PATTERN + ")\\s{0,5}fa(?=(?:\\W|$))", "i");
+class ENTimeUnitAgoFormatParser {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, ENTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
+  }
+}
+_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.strictMode ? regExp1 : regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = ENTimeUnitAgoFormatParser(10383).parseDuration(arg1[1]);
+      const ParsingComponents = ENTimeUnitAgoFormatParser(10217).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        ENTimeUnitAgoFormatParser(10216).reverseDuration(ENTimeUnitAgoFormatParser(10383).parseDuration(arg1[1])),
+      );
+    },
+  },
+];
+
+export default _createClass(ENTimeUnitAgoFormatParser, items);

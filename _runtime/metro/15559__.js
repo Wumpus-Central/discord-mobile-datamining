@@ -1,26 +1,42 @@
 // _runtime/metro/15559__.js
-import _mod15522 from "15522__.js";
-import getOwnPropertyDescriptor_mod from "15502__.js";
+import _mod15524 from "15524__.js";
+import _mod15546 from "15546__.js";
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod15522(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {}.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod15546(arg1)) {
+          tmp11Result = _mod15524;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
+        }
+      }
+    }
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  tmp3 = tmp5;
 }
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
+};
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
 
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export default isForced;

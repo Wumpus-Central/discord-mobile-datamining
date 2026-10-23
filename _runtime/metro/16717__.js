@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "7eb9487d4dac00095f8ed2d2c80b21a8",
-  name: "lt",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "86bac5d1c2c3692fd913c76c5af70f86",
+  name: "EmojiUpsideDownFaceIcon",
   type: "png",
 });

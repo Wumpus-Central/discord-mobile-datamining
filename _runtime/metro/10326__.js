@@ -1,12 +1,13 @@
 // _runtime/metro/10326__.js
-import _mod10323 from "10323__.js";
+import AbstractParserWithWordBoundaryChecking from "../10221_AbstractParserWithWordBoundaryChecking.js";
+import NUMBER from "../10322_NUMBER.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeUnitAgoFormatParser = require;
+const ZHHansWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +26,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUTimeUnitAgoFormatParser {
+const keys = Object.keys(NUMBER.WEEKDAY_OFFSET);
+const regExp = new RegExp("(?:\u661F\u671F|\u793C\u62DC|\u5468)(?<weekday>" + keys.join("|") + ")");
+class ZHHansWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, RUTimeUnitAgoFormatParser);
+    tmp = c2(this, ZHHansWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitAgoFormatParser);
+    obj = closure_4(ZHHansWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,28 +48,54 @@ class RUTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeUnitAgoFormatParser, _mod10323.AbstractParserWithLeftBoundaryChecking);
+_inherits(ZHHansWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(" + RUTimeUnitAgoFormatParser(10321).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))"
-    );
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = RUTimeUnitAgoFormatParser(10321).parseDuration(arg1[1]);
-      const ParsingComponents = RUTimeUnitAgoFormatParser(10195).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        RUTimeUnitAgoFormatParser(10194).reverseDuration(RUTimeUnitAgoFormatParser(10321).parseDuration(arg1[1])),
-      );
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp2 = ZHHansWeekdayParser(10322).WEEKDAY_OFFSET[index.groups.weekday];
+      if (undefined === tmp2) {
+        return null;
+      } else {
+        const _Date = Date;
+        const refDate = createParsingResult.refDate;
+        const date = new Date(refDate.getTime());
+        const diff = tmp2 - date.getDay();
+        const _Math3 = Math;
+        const _Math4 = Math;
+        const absolute = Math.abs(diff - 7);
+        let diff1 = diff;
+        if (absolute < Math.abs(diff)) {
+          diff1 = diff - 7;
+        }
+        const _Math = Math;
+        const _Math2 = Math;
+        const absolute1 = Math.abs(diff1 + 7);
+        let sum = diff1;
+        if (absolute1 < Math.abs(diff1)) {
+          sum = diff1 + 7;
+        }
+        date.setDate(date.getDate() + sum);
+        const start = parsingResult.start;
+        start.assign("weekday", tmp2);
+        const start2 = parsingResult.start;
+        start2.imply("day", date.getDate());
+        const start3 = parsingResult.start;
+        start3.imply("month", date.getMonth() + 1);
+        const start4 = parsingResult.start;
+        start4.imply("year", date.getFullYear());
+        return parsingResult;
+      }
     },
   },
 ];
 
-export default _createClass(RUTimeUnitAgoFormatParser, items);
+export default _createClass(ZHHansWeekdayParser, items);

@@ -1,38 +1,25 @@
 // _runtime/metro/15512__.js
-import withoutSetter from "../15513_withoutSetter.js";
-import _mod15524 from "15524__.js";
-import _mod15526 from "15526__.js";
-import _mod15529 from "15529__.js";
-import _mod15532 from "15532__.js";
-import _mod15533 from "15533__.js";
+const require = globalThis.__r;
 
-let closure_3 = withoutSetter("toPrimitive");
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0, arg1) => {
-  if (_mod15524(arg0)) {
-    if (!_mod15526(arg0)) {
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("15513__.js").units;
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
       let str = arg1;
-      const tmp4 = _mod15529(arg0, closure_3);
-      if (tmp4) {
-        if (undefined === str) {
-          str = "default";
-        }
-        const tmp5 = _mod15532(tmp4, arg0, str);
-        if (_mod15524(tmp5)) {
-          if (!_mod15526(tmp5)) {
-            const tmp9 = new TypeError("Can't convert object to primitive value");
-            throw tmp9;
-          }
-        }
-        return tmp5;
-      } else {
-        let str2 = str;
-        if (undefined === str) {
-          str2 = "number";
-        }
-        return _mod15533(arg0, str2);
+      if (undefined === arg1) {
+        str = "en";
       }
-    }
-  }
-  return arg0;
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
 };

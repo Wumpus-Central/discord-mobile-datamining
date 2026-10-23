@@ -1,39 +1,22 @@
 // _runtime/metro/06392__.js
-import _Symbol from "../01311__Symbol.js";
 import callBoundIntrinsic from "../01341_callBoundIntrinsic.js";
-import regexTester from "../01468_regexTester.js";
+import properlyBoxed from "../06393_properlyBoxed.js";
+import _mod6395 from "06395__.js";
+import RequireObjectCoercible from "../06397_RequireObjectCoercible.js";
+import shimArrayPrototypeMap from "../06458_shimArrayPrototypeMap.js";
+import callBind from "../01476_callBind.js";
+import defineProperty from "06412__.js";
 
-let closure_0 = callBoundIntrinsic("Object.prototype.toString");
-if (_Symbol()) {
-  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
-  let closure_2 = regexTester(/^Symbol\(.*\)$/);
-  module.exports = function isSymbol(obj) {
-    if (typeof obj === "symbol") {
-      return true;
-    } else {
-      if (obj) {
-        if (typeof obj === "object") {
-          if ("[object Symbol]" === closure_0(obj)) {
-            try {
-              return (function isRealSymbolObject(arg0) {
-                const valueOfResult = arg0.valueOf();
-                let tmp2 = typeof valueOfResult === "symbol";
-                if (typeof valueOfResult === "symbol") {
-                  tmp2 = closure_1_2(closure_1_1(arg0));
-                }
-                return tmp2;
-              })(obj);
-            } catch (err) {
-              return false;
-            }
-          }
-        }
-      }
-      return false;
-    }
-  };
-} else {
-  module.exports = function isSymbol(arg0) {
-    return false;
-  };
+let closure_2 = callBind.apply(properlyBoxed());
+let closure_3 = callBoundIntrinsic("Array.prototype.slice");
+function map(arg0, arg1) {
+  RequireObjectCoercible(arg0);
+  return closure_2(arg0, closure_3(arguments, 1));
 }
+const obj = { getPolyfill: null, implementation: null, shim: null };
+obj.getPolyfill = properlyBoxed;
+obj.implementation = _mod6395;
+obj.shim = shimArrayPrototypeMap;
+defineProperty(map, obj);
+
+export default map;

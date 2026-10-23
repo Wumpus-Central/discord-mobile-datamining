@@ -1,20 +1,22 @@
 // _runtime/metro/08227__.js
-import _mod8225 from "08225__.js";
+import _mod8212 from "08212__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const obj = {
-  1: "InteroperabilityIndex",
-  2: null,
-  4096: "RelatedImageFileFormat",
-  4097: "RelatedImageWidth",
-  4098: "RelatedImageHeight",
-};
-obj[2] = {
-  name: "InteroperabilityVersion",
-  description(value) {
-    return _mod8225.getStringValue(value);
+let c2 = 0;
+let c3 = "<?xpacket begin";
+
+export default {
+  isXMLFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod8212.getStringFromDataView(dataView, c2, length.length) === length;
+    }
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    const xmpChunks = [];
+    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
+    return { xmpChunks };
   },
 };
-
-export default obj;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "21db92a27b93246affffebffc643fa50",
-  name: "RobotIcon",
+  hash: "c633d33c98eaf36e731a0f2d3f8db716",
+  name: "ChatShieldIcon",
   type: "png",
 });

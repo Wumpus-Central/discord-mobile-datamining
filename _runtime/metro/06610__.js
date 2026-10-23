@@ -4,10 +4,10 @@ import registerAsset from "01134__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 500,
+  height: 500,
   scales: [1],
-  hash: "85e85e0480cc3ad94f292bfe35b1a958",
-  name: "img_amazon_music",
+  hash: "616273d32c59119d9bbc8a05ccfb9362",
+  name: "img_account_sync_letterboxd_white",
   type: "svg",
 });

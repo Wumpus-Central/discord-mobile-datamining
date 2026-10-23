@@ -1,17 +1,9 @@
 // _runtime/metro/05297__.js
-import animatedComponentDefault from "../05298_animatedComponent.js";
-import get_ActivityIndicator from "00017__.js";
+import _mod5298 from "05298__.js";
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
+require = arg1;
+const dependencyMap = arg6;
 
-export const GestureDetectorType = {
-  Native: 0,
-  [0]: "Native",
-  Virtual: 1,
-  [1]: "Virtual",
-  Intercepting: 2,
-  [2]: "Intercepting",
+export const initialize = function initialize() {
+  _mod5298.startListening();
 };
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

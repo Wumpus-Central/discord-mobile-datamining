@@ -1,31 +1,18 @@
 // _runtime/metro/05218__.js
-import _mod17 from "00017__.js";
+import PATTERN_CHARS_mod from "../05219_PATTERN_CHARS.js";
 
-const Image = _mod17.Image;
+const obj = { success: null, error: null, warning: null, heartbeat: null, tripleClick: null, notification: null };
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.success = PATTERN_CHARS.pattern("oO.O");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.error = PATTERN_CHARS.pattern("OO.OO");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.warning = PATTERN_CHARS.pattern("O.O");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.heartbeat = PATTERN_CHARS.pattern("oO--oO");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.tripleClick = PATTERN_CHARS.pattern("o.o.o");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.notification = PATTERN_CHARS.pattern("o-O=o");
 
-export const parsePossibleSources = function parsePossibleSources(source) {
-  const uri = source.uri;
-  if (typeof source === "string") {
-    const obj2 = { sourceName: source };
-    let obj = obj2;
-  } else {
-    if (typeof source === "object") {
-      if (!uri) {
-        obj = { sourceJson: null };
-        const _JSON = JSON;
-        obj.sourceJson = JSON.stringify(source);
-      }
-    }
-    if (typeof source !== "object") {
-      if (typeof source === "number") {
-        const obj3 = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
-      }
-    }
-    if (uri.includes(".lottie")) {
-      const obj4 = { sourceDotLottieURI: uri };
-    } else {
-      const obj5 = { sourceURL: uri };
-    }
-  }
-  return obj;
-};
+export const Patterns = obj;

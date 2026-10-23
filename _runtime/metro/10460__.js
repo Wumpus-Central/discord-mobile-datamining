@@ -1,13 +1,10 @@
 // _runtime/metro/10460__.js
-import registerAsset from "01134__.js";
+import _slicedToArray from "00032__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 279,
-  height: 48,
-  scales: [2, 3],
-  hash: "e03e83c5ddeddb7941bbe7457ccf1a98",
-  name: "img_nitro_tier_2_activated_light",
-  type: "png",
-});
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
+
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return framebus(() => closure_0({}), []);
+}

@@ -1,13 +1,6 @@
 // _runtime/metro/19154__.js
-import registerAsset from "01134__.js";
+const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 159,
-  height: 105.5,
-  scales: [2, 3],
-  hash: "deeeb1ec32f8166fcc70387b3490f426",
-  name: "role_subscription_lanyard_illo",
-  type: "png",
-});
+export default function hasUnicodeWord(arg0) {
+  return re0.test(arg0);
+}

@@ -1,7 +1,12 @@
 // _runtime/metro/07908__.js
-import baseAssignValue from "../00679_baseAssignValue.js";
-import _mod7909 from "07909__.js";
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-export default _mod7909((arg0, arg1, arg2) => {
-  baseAssignValue(arg0, arg2, arg1);
-});
+export default (str) => {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
+  }
+};

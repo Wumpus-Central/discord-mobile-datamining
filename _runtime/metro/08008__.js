@@ -1,12 +1,11 @@
 // _runtime/metro/08008__.js
-import _modDef7986 from "07986__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeMorphology = arg1;
+const FeDistantLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +24,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeMorphology {
+class FeDistantLight {
   constructor() {
     self = this;
-    tmp = c2(this, FeMorphology);
+    tmp = c2(this, FeDistantLight);
     tmp2 = closure_4;
-    obj = closure_4(FeMorphology);
+    obj = closure_4(FeDistantLight);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,18 +44,17 @@ class FeMorphology {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeMorphology, _modDef7986);
+_inherits(FeDistantLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeMorphology(7963).warnUnimplementedFilter();
+    const result = FeDistantLight(7976).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeMorphology, items);
-importDefaultResultResult.displayName = "FeMorphology";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const importDefaultResultResult = _createClass(FeDistantLight, items);
+importDefaultResultResult.displayName = "FeDistantLight";
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

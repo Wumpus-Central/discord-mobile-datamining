@@ -1,6 +1,11 @@
 // _runtime/metro/15572__.js
-import _mod15573 from "15573__.js";
-import _mod15580 from "15580__.js";
+import _mod15545 from "15545__.js";
 
-export const URL = _mod15573;
-export const URLSearchParams = _mod15580;
+export default (arg0) => {
+  if (_mod15545(arg0)) {
+    return arg0;
+  } else {
+    const tmp5 = new TypeError(String(arg0) + " is not an object");
+    throw tmp5;
+  }
+};

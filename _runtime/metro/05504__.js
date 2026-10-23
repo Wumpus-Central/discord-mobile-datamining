@@ -1,13 +1,31 @@
 // _runtime/metro/05504__.js
-import noop from "00019__.js";
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
-
-export const RecyclerViewContextProvider = context.Provider;
-export const useRecyclerViewContext = function useRecyclerViewContext() {
-  return useContext(context);
-};
-export const useFlashListContext = function useFlashListContext() {
-  return useContext(context);
-};
+export default function _objectWithoutPropertiesLoose(obj, arr) {
+  if (null == obj) {
+    return {};
+  } else {
+    obj = {};
+    for (const key10007 in arg0) {
+      hasOwnProperty = {}.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
+      } else {
+        hasOwnPropertyResult = call(arg0, key10007);
+      }
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        if (-1 !== arg1.indexOf(key10007)) {
+          continue;
+        } else {
+          obj[key10007] = arg0[key10007];
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    return obj;
+  }
+}

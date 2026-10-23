@@ -1,31 +1,19 @@
 // _runtime/metro/05481__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _mod5272 from "05272__.js";
 
-const Platform = _mod17.Platform;
+_mod19.useCallback;
 
-export const isNewArch = function isNewArch() {
-  if (undefined !== c1) {
-    return c1;
-  } else {
-    try {
-      let prop;
-      if (global != null) {
-        prop = global.nativeFabricUIManager;
-      }
-      let flag = Boolean(prop);
-      if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
-      }
-      if (!flag) {
-        flag = Boolean(__turboModuleProxy);
-      }
-      if (!flag) {
-        flag = false;
-      }
-      c1 = flag;
-      return c1;
-    } catch (err) {
-      c1 = true;
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod5272.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
     }
-  }
+  }, items);
+  return obj2;
 };

@@ -1,7 +1,29 @@
 // _runtime/metro/15508__.js
-import _mod15506 from "15506__.js";
+const require = globalThis.__r;
 
-let closure_0 = _mod15506({}.toString);
-let closure_1 = _mod15506("".slice);
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) =>
+    (function isSupportedNumberingSystem(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-nu-");
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+          if ("123" === memoizedNumberFormat.format(123)) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
+  );
+};

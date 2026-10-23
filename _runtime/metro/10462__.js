@@ -1,13 +1,22 @@
 // _runtime/metro/10462__.js
-import registerAsset from "01134__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 302,
-  height: 42,
-  scales: [2, 3],
-  hash: "2192040384b5c0bcacd48b43d2555bec",
-  name: "img_plan_activated_light",
-  type: "png",
-});
+export default function areHookInputsEqual(arg0, arg1) {
+  if (arg0.length !== arg1.length) {
+    return false;
+  } else {
+    if (0 < arg1.length) {
+      let num3 = 0;
+      if (0 < arg0.length) {
+        const _Object = Object;
+        while (Object.is(arg0[num3], arg1[num3])) {
+          let sum = num3 + 1;
+          if (sum < arg1.length) {
+            num3 = sum;
+          }
+        }
+        return false;
+      }
+    }
+    return true;
+  }
+}

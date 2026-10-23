@@ -1,29 +1,40 @@
 // _runtime/metro/05517__.js
-import _mod5515 from "05515__.js";
+import RecyclerViewManager from "../05518_RecyclerViewManager.js";
+import _slicedToArray from "05497__.js";
 
-export default function _superPropBase(arg0, key10009) {
-  hasOwnProperty = {}.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  let tmp = arg0;
-  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-    let tmp4 = _mod5515(arg0);
-    tmp = tmp4;
-    if (null !== tmp4) {
-      while (true) {
-        let hasOwnProperty2 = {}.hasOwnProperty;
-        let call2 = hasOwnProperty2.call;
-        tmp = tmp4;
-        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
-          break;
-        } else {
-          tmp4 = _mod5515(tmp4);
-          tmp = tmp4;
-          if (null === tmp4) {
-            break;
-          }
-        }
-      }
-    }
-  }
-  return tmp;
-}
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+
+export const useRecyclerViewManager = (data) => {
+  let recyclerViewManager = velocityTracker(
+    closure_5(() => {
+      recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
+      return recyclerViewManager;
+    }),
+    1,
+  )[0];
+  velocityTracker = velocityTracker(
+    closure_5(() => {
+      velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
+      return velocityTracker;
+    }),
+    1,
+  )[0];
+  const items = [data];
+  closure_4(() => {
+    recyclerViewManager.updateProps(closure_0);
+  }, items);
+  const items1 = [data.data];
+  closure_4(() => {
+    recyclerViewManager.processDataUpdate();
+  }, items1);
+  closure_3(() => {
+    recyclerViewManager.restoreIfNeeded();
+    return () => {
+      recyclerViewManager.dispose();
+      velocityTracker.cleanUp();
+    };
+  }, []);
+  return { recyclerViewManager, velocityTracker };
+};

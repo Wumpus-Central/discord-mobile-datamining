@@ -3,11 +3,11 @@ import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_profile/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0e02f6accc59d44ac3827104886762f1",
-  name: "boost",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "98e013109b389eb9fdfad5277cb35b88",
+  name: "ic_moderator",
   type: "png",
 });

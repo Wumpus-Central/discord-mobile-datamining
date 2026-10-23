@@ -1,19 +1,16 @@
 // _runtime/metro/05469__.js
-import _mod19 from "00019__.js";
-import _mod5260 from "05260__.js";
+import _mod17 from "00017__.js";
+import value2 from "../05268_value2.js";
 
-_mod19.useCallback;
-
-export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
-  const bottomSheetInternal = _mod5260.useBottomSheetInternal();
-  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj2 = { setContentSize: null };
-  const items = [enableDynamicSizing, animatedContentHeight];
-  obj2.setContentSize = useCallback((arg0) => {
-    if (enableDynamicSizing) {
-      const result = animatedContentHeight.set(arg0);
-    }
-  }, items);
-  return obj2;
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
+const size = {
+  alignSelf: "center",
+  width: (7.5 * value2.WINDOW_WIDTH) / 100,
+  height: 4,
+  borderRadius: 4,
+  backgroundColor: "rgba(0, 0, 0, 0.75)",
 };
+obj.indicator = size;
+
+export const styles = StyleSheet.create(obj);

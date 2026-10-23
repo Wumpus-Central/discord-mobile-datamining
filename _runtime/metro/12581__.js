@@ -1,32 +1,50 @@
 // _runtime/metro/12581__.js
-import _mod12526 from "12526__.js";
-import _mod12564 from "12564__.js";
+import _mod12539 from "12539__.js";
+import spanTimeInputToSeconds from "../12544_spanTimeInputToSeconds.js";
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../12554_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
 import _mod12567 from "12567__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
-  const obj = { sent_at: new Date().toISOString() };
-  if (sdk) {
-    sdk = sdk.sdk;
+export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  if (activeSpan === undefined) {
+    activeSpan = spanTimeInputToSeconds.getActiveSpan();
   }
-  if (sdk) {
-    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
-    obj.sdk = obj2;
+  let rootSpan = activeSpan;
+  if (activeSpan) {
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
   }
-  let tmp = arg3;
-  if (arg3) {
-    tmp = url;
+  if (rootSpan) {
+    if (_mod12567.DEBUG_BUILD) {
+      const logger = _mod12539.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
+    }
+    const obj2 = {};
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj2);
   }
-  if (tmp) {
-    obj.dsn = _mod12567.dsnToString(url);
+};
+export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
+  if (arr) {
+    if (0 !== arr.length) {
+      let obj = {};
+      const item = arr.forEach((attributes) => {
+        const tmp = attributes.attributes || {};
+        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
+        }
+        if (tmp4) {
+          obj = { value: tmp3, unit: tmp2 };
+          obj[attributes.name] = obj;
+        }
+      });
+      return obj;
+    }
   }
-  if (contexts) {
-    obj.trace = _mod12526.dropUndefinedKeys(contexts);
-  }
-  const items = [{ type: "check_in" }, arg0];
-  const date = new Date();
-  const items1 = [items];
-  return _mod12564.createEnvelope(obj, items1);
 };

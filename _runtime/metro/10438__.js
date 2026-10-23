@@ -1,10 +1,13 @@
 // _runtime/metro/10438__.js
-import _slicedToArray from "00032__.js";
+import registerAsset from "01134__.js";
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
-
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return framebus(() => closure_0({}), []);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f8d879d772069d05fdb56edf802c6c07",
+  name: "CameraIcon",
+  type: "png",
+});
