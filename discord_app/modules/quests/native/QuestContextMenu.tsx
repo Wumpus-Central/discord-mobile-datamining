@@ -11,15 +11,14 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import _modDef9108 from "../../../../_runtime/metro/09108__.js";
+import _modDef9115 from "../../../../_runtime/metro/09115__.js";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
-import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
-import _modDef16317 from "../../../../_runtime/metro/16317__.js";
+import _modDef16345 from "../../../../_runtime/metro/16345__.js";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -29,7 +28,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef9108;
+  obj.icon = _modDef9115;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -47,7 +46,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestContextMenu.
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function QuestContextMenu(arg0) {
-        const cResult = quest(handleProgress[9]).c(89);
+        const cResult = quest(handleProgress[9]).c(88);
         ({ children, quest } = arg0);
         ({ showShareLink, additionalItems, sourceQuestContent } = arg0);
         if (undefined === children) {
@@ -66,18 +65,18 @@ export default noop.memo(
         ({ handleComplete, handleProgress } = questPreviewActions);
         ({ handleResetDismissibilityClick, handleResetStatusClick, handleOverridePreviewClick } = questPreviewActions);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const items1 = [getQuestImpressionId];
-          class S {
+          const items1 = [QuestStore];
+          class T {
             constructor() {
               return closure_6.getQuestPreviewOverride(quest(handleProgress[11]).QuestContent.QUEST_BAR_MOBILE);
             }
           }
           const items2 = [];
           cResult[2] = items1;
-          cResult[3] = S;
+          cResult[3] = T;
           cResult[4] = items2;
           let tmp9 = items2;
-          let tmp8 = S;
+          let tmp8 = T;
           let tmp7 = items1;
         } else {
           tmp7 = cResult[2];
@@ -86,95 +85,107 @@ export default noop.memo(
         }
         let tmpResult = quest(handleProgress[10]);
         const stateFromStores = quest(handleProgress[12]).useStateFromStores(tmp7, tmp8, tmp9);
-        const tmpResult5 = quest(handleProgress[12]);
-        const trackQuestContentClickedWithImpression = quest(
-          handleProgress[13],
-        ).useTrackQuestContentClickedWithImpression();
-        const tmpResult6 = quest(handleProgress[13]);
-        getQuestImpressionId = quest(handleProgress[14]).useGetQuestImpressionId();
+        let tmpResult4 = quest(handleProgress[12]);
+        const getQuestImpressionId = quest(handleProgress[13]).useGetQuestImpressionId();
         if (cResult[5] !== quest) {
-          const externalCtaLabel = quest(handleProgress[15]).getExternalCtaLabel(quest);
-          class S {
+          const externalCtaLabel = quest(handleProgress[14]).getExternalCtaLabel(quest);
+          class T {
             constructor() {
               return closure_6.getQuestPreviewOverride(quest(handleProgress[11]).QuestContent.QUEST_BAR_MOBILE);
             }
           }
           cResult[6] = externalCtaLabel;
-          let tmp14 = externalCtaLabel;
-          const tmpResult8 = quest(handleProgress[15]);
+          let tmp13 = externalCtaLabel;
+          const tmpResult6 = quest(handleProgress[14]);
         } else {
-          tmp14 = cResult[6];
+          tmp13 = cResult[6];
         }
         if (cResult[7] === quest.config) {
           if (cResult[8] === tmp4) {
-            let tmp16 = cResult[9];
+            let tmp15 = cResult[9];
           }
-          closure_7 = tmp16;
+          QuestStore = tmp15;
           if (cResult[10] === getQuestImpressionId) {
             if (cResult[11] === quest) {
               if (cResult[12] === sourceQuestContent) {
-                let tmp18 = cResult[13];
+                let tmp17 = cResult[13];
               }
               if (cResult[14] === getQuestImpressionId) {
-                if (cResult[15] === tmp16) {
+                if (cResult[15] === tmp15) {
                   if (cResult[16] === quest.id) {
                     if (cResult[19] === quest) {
                       if (cResult[22] !== quest.id) {
-                        class X {
+                        class G {
                           constructor() {
-                            obj = closure_0(closure_2[25]);
+                            obj = closure_0(closure_2[24]);
                             return obj.manuallyStartConsoleQuest(quest.id, true);
                           }
                         }
-                        class H {
+                        class D {
                           constructor() {
-                            obj = closure_1(closure_2[23]);
-                            obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
-                            obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
-                            obj1.creative = obj5;
-                            obj6 = {
-                              content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE,
-                              ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
-                              sourceQuestContent,
-                            };
-                            obj1.trackingCtx = obj6;
-                            showModalResult = obj.showModal(obj1);
+                            if (closure_6) {
+                              tmp = closure_0;
+                              tmp2 = closure_2;
+                              obj = closure_0(closure_2[14]);
+                              tmp3 = quest;
+                              obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
+                              obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
+                              obj1.ctaContent = closure_0(closure_2[20]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
+                              tmp4 = closure_5;
+                              obj1.impressionId = closure_5();
+                              tmp5 = sourceQuestContent;
+                              obj1.sourceQuestContent = sourceQuestContent;
+                              copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
+                              AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+                              intl = closure_0(closure_2[7]).intl;
+                              announceResult = AccessibilityAnnouncer.announce(
+                                intl.string(closure_0(closure_2[7]).t["+5kSoW"]),
+                              );
+                            }
                             return;
                           }
                         }
-                        class S {
+                        class T {
                           constructor() {
                             return closure_6.getQuestPreviewOverride(
                               quest(handleProgress[11]).QuestContent.QUEST_BAR_MOBILE,
                             );
                           }
                         }
-                        cResult[23] = X;
+                        cResult[23] = G;
                       } else {
-                        class X {
+                        class G {
                           constructor() {
-                            obj = closure_0(closure_2[25]);
+                            obj = closure_0(closure_2[24]);
                             return obj.manuallyStartConsoleQuest(quest.id, true);
                           }
                         }
                       }
-                      class H {
+                      class D {
                         constructor() {
-                          obj = closure_1(closure_2[23]);
-                          obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
-                          obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
-                          obj1.creative = obj5;
-                          obj6 = {
-                            content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE,
-                            ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
-                            sourceQuestContent,
-                          };
-                          obj1.trackingCtx = obj6;
-                          showModalResult = obj.showModal(obj1);
+                          if (closure_6) {
+                            tmp = closure_0;
+                            tmp2 = closure_2;
+                            obj = closure_0(closure_2[14]);
+                            tmp3 = quest;
+                            obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
+                            obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
+                            obj1.ctaContent = closure_0(closure_2[20]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
+                            tmp4 = closure_5;
+                            obj1.impressionId = closure_5();
+                            tmp5 = sourceQuestContent;
+                            obj1.sourceQuestContent = sourceQuestContent;
+                            copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
+                            AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+                            intl = closure_0(closure_2[7]).intl;
+                            announceResult = AccessibilityAnnouncer.announce(
+                              intl.string(closure_0(closure_2[7]).t["+5kSoW"]),
+                            );
+                          }
                           return;
                         }
                       }
-                      class S {
+                      class T {
                         constructor() {
                           return closure_6.getQuestPreviewOverride(
                             quest(handleProgress[11]).QuestContent.QUEST_BAR_MOBILE,
@@ -182,32 +193,40 @@ export default noop.memo(
                         }
                       }
                       let obj2 = {
-                        label: tmp14,
-                        IconComponent: quest(handleProgress[26]).LinkExternalSmallIcon,
-                        action: tmp18,
+                        label: tmp13,
+                        IconComponent: quest(handleProgress[25]).LinkExternalSmallIcon,
+                        action: tmp17,
                         accessibilityRole: "link",
                       };
-                      cResult[26] = tmp14;
-                      cResult[27] = tmp18;
+                      cResult[26] = tmp13;
+                      cResult[27] = tmp17;
                       cResult[28] = obj2;
                     }
-                    class H {
+                    class D {
                       constructor() {
-                        obj = closure_1(closure_2[23]);
-                        obj1 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
-                        obj5 = { type: closure_0(closure_2[24]).AdCreativeType.QUEST, quest };
-                        obj1.creative = obj5;
-                        obj6 = {
-                          content: closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE,
-                          ctaContent: closure_0(closure_2[21]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
-                          sourceQuestContent,
-                        };
-                        obj1.trackingCtx = obj6;
-                        showModalResult = obj.showModal(obj1);
+                        if (closure_6) {
+                          tmp = closure_0;
+                          tmp2 = closure_2;
+                          obj = closure_0(closure_2[14]);
+                          tmp3 = quest;
+                          obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
+                          obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
+                          obj1.ctaContent = closure_0(closure_2[20]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
+                          tmp4 = closure_5;
+                          obj1.impressionId = closure_5();
+                          tmp5 = sourceQuestContent;
+                          obj1.sourceQuestContent = sourceQuestContent;
+                          copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
+                          AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+                          intl = closure_0(closure_2[7]).intl;
+                          announceResult = AccessibilityAnnouncer.announce(
+                            intl.string(closure_0(closure_2[7]).t["+5kSoW"]),
+                          );
+                        }
                         return;
                       }
                     }
-                    class S {
+                    class T {
                       constructor() {
                         return closure_6.getQuestPreviewOverride(
                           quest(handleProgress[11]).QuestContent.QUEST_BAR_MOBILE,
@@ -216,23 +235,45 @@ export default noop.memo(
                     }
                     cResult[19] = quest;
                     cResult[20] = sourceQuestContent;
-                    cResult[21] = H;
+                    cResult[21] = tmp21;
                   }
                 }
               }
-              class S {
+              class D {
+                constructor() {
+                  if (closure_6) {
+                    tmp = closure_0;
+                    tmp2 = closure_2;
+                    obj = closure_0(closure_2[14]);
+                    tmp3 = quest;
+                    obj1 = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
+                    obj1.content = closure_0(closure_2[11]).QuestContent.QUEST_HOME_MOBILE;
+                    obj1.ctaContent = closure_0(closure_2[20]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
+                    tmp4 = closure_5;
+                    obj1.impressionId = closure_5();
+                    tmp5 = sourceQuestContent;
+                    obj1.sourceQuestContent = sourceQuestContent;
+                    copyShareLinkResult = obj.copyShareLink(quest.id, obj1);
+                    AccessibilityAnnouncer = closure_0(closure_2[21]).AccessibilityAnnouncer;
+                    intl = closure_0(closure_2[7]).intl;
+                    announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[7]).t["+5kSoW"]));
+                  }
+                  return;
+                }
+              }
+              class T {
                 constructor() {
                   return closure_6.getQuestPreviewOverride(quest(handleProgress[11]).QuestContent.QUEST_BAR_MOBILE);
                 }
               }
               cResult[14] = getQuestImpressionId;
-              cResult[15] = tmp16;
+              cResult[15] = tmp15;
               cResult[16] = quest.id;
               cResult[17] = sourceQuestContent;
-              cResult[18] = tmp21;
+              cResult[18] = D;
             }
           }
-          class S {
+          class T {
             constructor() {
               return closure_6.getQuestPreviewOverride(quest(handleProgress[11]).QuestContent.QUEST_BAR_MOBILE);
             }
@@ -240,24 +281,24 @@ export default noop.memo(
           cResult[10] = getQuestImpressionId;
           cResult[11] = quest;
           cResult[12] = sourceQuestContent;
-          cResult[13] = tmp19;
-          tmp18 = tmp19;
+          cResult[13] = tmp18;
+          tmp17 = tmp18;
         }
         let isShareableQuestResult = tmp4;
         if (undefined !== showShareLink && showShareLink) {
-          class X {
+          class G {
             constructor() {
-              obj = closure_0(closure_2[25]);
+              obj = closure_0(closure_2[24]);
               return obj.manuallyStartConsoleQuest(quest.id, true);
             }
           }
-          isShareableQuestResult = obj7.isShareableQuest(quest.config);
+          isShareableQuestResult = obj6.isShareableQuest(quest.config);
         }
         cResult[7] = quest.config;
         cResult[8] = undefined !== showShareLink && showShareLink;
         cResult[9] = isShareableQuestResult;
-        tmp16 = isShareableQuestResult;
-        const tmpResult7 = quest(handleProgress[14]);
+        tmp15 = isShareableQuestResult;
+        const tmpResult5 = quest(handleProgress[13]);
       }
     : function QuestContextMenu(children) {
         children = children.children;
@@ -301,16 +342,12 @@ export default noop.memo(
           [],
         );
         let obj2 = quest(sourceQuestContent[12]);
-        const trackQuestContentClickedWithImpression = quest(
-          sourceQuestContent[13],
-        ).useTrackQuestContentClickedWithImpression();
+        const getQuestImpressionId = quest(sourceQuestContent[13]).useGetQuestImpressionId();
         let obj3 = quest(sourceQuestContent[13]);
-        const getQuestImpressionId = quest(sourceQuestContent[14]).useGetQuestImpressionId();
-        const obj4 = quest(sourceQuestContent[14]);
-        const externalCtaLabel = quest(sourceQuestContent[15]).getExternalCtaLabel(quest);
+        const externalCtaLabel = quest(sourceQuestContent[14]).getExternalCtaLabel(quest);
         if (flag) {
-          flag = tmp(tmp2[16]).isShareableQuest(quest.config);
-          let tmpResult = tmp(tmp2[16]);
+          flag = tmp(tmp2[15]).isShareableQuest(quest.config);
+          let tmpResult = tmp(tmp2[15]);
         }
         let items1 = [quest, getQuestImpressionId, sourceQuestContent];
         action = handleResetDismissibilityClick.useCallback(() => {
@@ -390,7 +427,7 @@ export default noop.memo(
           const intl = util.intl;
           obj2.label = intl.string(util.t.GcsZKJ);
           obj2.action = callback2;
-          obj2.iconSource = _modDef16317;
+          obj2.iconSource = _modDef16345;
           items[1] = obj2;
           if (flag) {
             const obj3 = { label: null, IconComponent: null, action: null };
@@ -444,12 +481,12 @@ export default noop.memo(
           items[HermesBuiltin.arraySpread(memo1, 5)] = {
             label: "Copy Quest ID",
             action() {
-              return quest(sourceQuestContent[30]).copy(id.id);
+              return quest(sourceQuestContent[29]).copy(id.id);
             },
           };
           return items;
         }, items8);
-        const obj5 = quest(sourceQuestContent[15]);
+        const obj4 = quest(sourceQuestContent[14]);
         shouldShowQuestPreviewOverrides = quest(sourceQuestContent[10]).useShouldShowQuestPreviewOverrides(quest);
         const items9 = [handleOverridePreviewClick, quest.id];
         let id;
@@ -477,8 +514,8 @@ export default noop.memo(
           return obj;
         }, items9);
         const items10 = [memo, memo2, quest.preview, shouldShowQuestPreviewOverrides, memo3, additionalItems];
-        const items11 = [quest.id, trackQuestContentClickedWithImpression, getQuestImpressionId, sourceQuestContent];
-        const items12 = obj7.useMemo(() => {
+        const items11 = [quest.id, getQuestImpressionId, sourceQuestContent];
+        const items12 = obj6.useMemo(() => {
           if (null != additionalItems) {
             const items = [memo, tmp];
             let items1 = items;
@@ -497,36 +534,19 @@ export default noop.memo(
           }
           return tmp6;
         }, items10);
-        const onOpen = obj7.useCallback(() => {
-          if (
-            obj.shouldMigrateToAdAnalyticsInterface(
-              AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
-              "quest_context_menu",
-            )
-          ) {
-            const obj2 = {
-              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
-              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
-              adCreativeId: quest.id,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.OPEN_CONTEXT_MENU,
-              surfaceId: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
-              sourceQuestContent,
-              impressionId: getQuestImpressionId(),
-            };
-            captureAdUserAction.captureAdUserAction(obj2);
-            const tmpResult = captureAdUserAction;
-          } else {
-            const obj3 = {
-              questId: quest.id,
-              questContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.OPEN_CONTEXT_MENU,
-              sourceQuestContent,
-            };
-            trackQuestContentClickedWithImpression(obj3);
-          }
-          obj = AdAnalyticsInterfaceExperiment;
+        const onOpen = obj6.useCallback(() => {
+          const obj = captureAdUserAction;
+          obj.captureAdUserAction({
+            type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+            adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+            adCreativeId: quest.id,
+            questContentCTA: AnalyticsTypes.QuestContentCTA.OPEN_CONTEXT_MENU,
+            surfaceId: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
+            sourceQuestContent,
+            impressionId: getQuestImpressionId(),
+          });
         }, items11);
-        return handleResetHasBeenSeenClick(quest(sourceQuestContent[35]).ContextMenu, {
+        return handleResetHasBeenSeenClick(quest(sourceQuestContent[33]).ContextMenu, {
           items: items12,
           onOpen,
           triggerOnTap: true,

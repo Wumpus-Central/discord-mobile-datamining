@@ -9,7 +9,7 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SlowmodeStore from "../../stores/SlowmodeStore.tsx";
 
 require = fn;
-const SlowmodeType = fn(7744).SlowmodeType;
+const SlowmodeType = fn(7745).SlowmodeType;
 const ActivityActionTypes = fn(1087).ActivityActionTypes;
 const ChannelFlags = fn(4828).ChannelFlags;
 const ReactCompilerGating = fn(558);

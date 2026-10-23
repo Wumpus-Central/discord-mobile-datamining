@@ -2,6 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import GameOrganizationInviteConstants from "GameOrganizationInviteConstants.tsx";
+import fromServerGameOrganization from "fromServerGameOrganization.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const constants = GameOrganizationInviteConstants.GameOrganizationInviteStates;
@@ -40,22 +41,16 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS: function handleResolveSuccess(invite) {
     invite = invite.invite;
     map = new Map(map);
-    ({ game_organization, application, application_config } = invite);
+    const application_config = invite.application_config;
     const obj = {
       code: invite.code,
       state: constants.RESOLVED,
-      organization: {
-        id: game_organization.game_organization_id,
-        name: game_organization.name,
-        description: game_organization.description,
-        iconUrl: game_organization.icon_url,
-        applicationId: game_organization.application_id,
-        memberCount: game_organization.member_count,
-        maxMembers: game_organization.max_members,
-      },
-      application: { id: application.id, name: application.name, iconUrl: application.icon_url },
+      organization: fromServerGameOrganization.fromServerGameOrganization(game_organization),
+      application: null,
       displayNoun: null,
     };
+    ({ game_organization, application } = invite);
+    obj.application = fromServerGameOrganization.fromServerGameOrganizationApplication(application);
     let display_noun;
     if (application_config != null) {
       display_noun = application_config.display_noun;

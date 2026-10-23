@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp8, dependencyMap] = isScreenLandscape(noop.useState(0), 2);
         const obj2 = noop;
         const tmp7 = isScreenLandscape(noop.useState(0), 2);
-        isScreenLandscape = tmp(8664).useIsScreenLandscape();
+        isScreenLandscape = tmp(8671).useIsScreenLandscape();
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = cResult[3];
           tmp12 = cResult[4];
         }
-        const tmpResult = tmp(8664);
+        const tmpResult = tmp(8671);
         const stateFromStores = tmp(573).useStateFromStores(tmp11, tmp12);
         if (cResult[5] !== isScreenLandscape) {
           function setWidth(arg0) {
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           paused: stateFromStores,
           ariaHidden: true,
         };
-        obj3.children = closure_10(markAsDismissed(8763), size);
+        obj3.children = closure_10(markAsDismissed(8770), size);
         const tmp29 = closure_10(View, obj3);
         cResult[13] = tmp4.videoContainer;
         cResult[14] = result;
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         paused: stateFromStores,
         ariaHidden: true,
       };
-      obj5.children = closure_10(markAsDismissed(8763), size);
+      obj5.children = closure_10(markAsDismissed(8770), size);
       const items2 = [closure_10(View, obj5), ,];
       const obj6 = { style: tmp.info, children: null };
       const obj7 = {

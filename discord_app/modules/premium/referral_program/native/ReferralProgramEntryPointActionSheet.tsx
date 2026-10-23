@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef8410 from "../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
+import _modDef8411 from "../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -59,7 +59,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const callback = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.PRIMARY);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14684, dependencyMap.paths),
+      asyncRequireImpl(14698, dependencyMap.paths),
       "referral-program-share-action-sheet",
     );
   }, items);
@@ -69,7 +69,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const obj = { onDismiss: callback1, children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef8410 };
+  const obj4 = { uri: _modDef8411 };
   obj3.source = obj4;
   obj3.style = tmp.image;
   const items2 = [closure_6(FastImageDefault, obj3), , ,];

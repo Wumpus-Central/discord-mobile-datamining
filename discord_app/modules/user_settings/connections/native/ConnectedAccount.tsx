@@ -54,7 +54,7 @@ const Constants = fn(1087);
   HelpdeskArticles: closure_12,
   Fonts,
 } = Constants);
-const MetadataFields = fn(7260).MetadataFields;
+const MetadataFields = fn(7261).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const createStyles = fn(4969);
@@ -338,7 +338,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj8 = {
                   guild: integration.guild,
-                  size: tmp(6869).GuildIconSizes.SMALL,
+                  size: tmp(6868).GuildIconSizes.SMALL,
                   style: legacyClassComponentStyles.integrationGuildIcon,
                 };
                 const tmp30 = closure_14(GuildIconDefault, obj8);
@@ -440,7 +440,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: legacyClassComponentStyles.integrationContainerInternal, children: null };
         const obj7 = {
           guild: integration.guild,
-          size: tmp(6869).GuildIconSizes.SMALL,
+          size: tmp(6868).GuildIconSizes.SMALL,
           style: legacyClassComponentStyles.integrationGuildIcon,
         };
         const items4 = [closure_14(GuildIconDefault, obj7), ,];
@@ -798,36 +798,36 @@ prototype["renderMetadata"] = function renderMetadata() {
     metadata = {};
   }
   let stringResult = dependencyMap;
-  const createdAtDate = account(7259).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
+  const createdAtDate = account(7260).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let redditMetadataItems = tmp2(11234).generateRedditMetadataItems(metadata);
-    const tmp2Result = tmp2(11234);
+    let redditMetadataItems = tmp2(11243).generateRedditMetadataItems(metadata);
+    const tmp2Result = tmp2(11243);
   } else if (constants.STEAM === type) {
-    redditMetadataItems = tmp2(11234).generateSteamMetadataItems(metadata);
-    const tmp2Result6 = tmp2(11234);
+    redditMetadataItems = tmp2(11243).generateSteamMetadataItems(metadata);
+    const tmp2Result6 = tmp2(11243);
   } else {
     if (constants.BLUESKY !== type) {
       if (constants.TWITTER !== type) {
         if (constants.MASTODON !== type) {
           if (constants.EBAY === type) {
-            redditMetadataItems = tmp2(11234).generateEbayMetadataItems(metadata);
-            const tmp2Result7 = tmp2(11234);
+            redditMetadataItems = tmp2(11243).generateEbayMetadataItems(metadata);
+            const tmp2Result7 = tmp2(11243);
           } else if (constants.PAYPAL === type) {
-            redditMetadataItems = tmp2(11234).generatePaypalMetadataItems(metadata);
-            const tmp2Result8 = tmp2(11234);
+            redditMetadataItems = tmp2(11243).generatePaypalMetadataItems(metadata);
+            const tmp2Result8 = tmp2(11243);
           } else {
             redditMetadataItems = [];
             if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp2(11234).generateTikTokMetadataItems(metadata);
-              const tmp2Result9 = tmp2(11234);
+              redditMetadataItems = tmp2(11243).generateTikTokMetadataItems(metadata);
+              const tmp2Result9 = tmp2(11243);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11234).generateTwitterMetadataItems(metadata);
-    const tmp2Result10 = tmp2(11234);
+    redditMetadataItems = tmp2(11243).generateTwitterMetadataItems(metadata);
+    const tmp2Result10 = tmp2(11243);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -846,7 +846,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     });
   }
   if (0 === redditMetadataItems.length) {
-    value = self(6488).get(account.type);
+    value = self(6487).get(account.type);
     let hasMetadata;
     if (value != null) {
       hasMetadata = value.hasMetadata;
@@ -900,12 +900,12 @@ prototype["renderMetadata"] = function renderMetadata() {
       obj4.children = items1;
       closure_15(View, obj4);
     }
-    const obj14 = self(6488);
+    const obj14 = self(6487);
   } else {
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp19Result = closure_14(tmp2(9185).CheckmarkLargeBoldIcon, { size: "sm" });
+      let tmp19Result = closure_14(tmp2(9192).CheckmarkLargeBoldIcon, { size: "sm" });
     } else {
-      tmp19Result = closure_14(tmp2(11729).RefreshIcon, { size: "sm" });
+      tmp19Result = closure_14(tmp2(11740).RefreshIcon, { size: "sm" });
     }
     const obj12 = {
       size: "sm",
@@ -922,12 +922,12 @@ prototype["renderMetadata"] = function renderMetadata() {
     const obj13 = { style: tmp.metadataContainer, children: null };
     const obj15 = { style: tmp.metadataItemsContainer, children: redditMetadataItems };
     const items2 = [closure_14(View, obj15)];
-    const obj16 = { style: tmp.refreshButtonContainer, children: closure_14(tmp2(7943).IconButton, obj12) };
+    const obj16 = { style: tmp.refreshButtonContainer, children: closure_14(tmp2(7944).IconButton, obj12) };
     items2[1] = closure_14(View, obj16);
     obj13.children = items2;
     return closure_15(View, obj13);
   }
-  const obj2 = account(7259);
+  const obj2 = account(7260);
 };
 prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
   let tmp2 = null;

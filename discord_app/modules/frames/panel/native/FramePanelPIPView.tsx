@@ -9,13 +9,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({
   asLaunched: hasOwnProperty,
   FrameLayoutModes: metroRequire,
   getPipOrientationLockStateForFrame: closure_7,
 } = FramesConstants);
-const portraitSafeAreasConfig = fn(18263).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(18285).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

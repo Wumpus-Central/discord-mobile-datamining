@@ -7,6 +7,7 @@ import Stack_Stack from "../../../../design/components/Stack/native/Stack.native
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
+import Badge from "../../../../design/components/Badge/native/Badge.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import TagIcon from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
@@ -15,7 +16,6 @@ import ExperimentalCommonIcon from "../../../../design/components/Icon/native/re
 import ExperimentalRareIcon from "../../../../design/components/Icon/native/redesign/generated/ExperimentalRareIcon.tsx";
 import ExperimentalEpicIcon from "../../../../design/components/Icon/native/redesign/generated/ExperimentalEpicIcon.tsx";
 import ExperimentalMythicIcon2 from "../../../../design/components/Icon/native/redesign/generated/ExperimentalMythicIcon.tsx";
-import Badge_Badge from "../../../../design/components/Badge/native/Badge.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -222,7 +222,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj8 = { type: tmp16, variant: first, icon: tmp18 };
-          const tmp22 = React5(Badge_Badge.Badge, obj8);
+          const tmp22 = React5(Badge.Badge, obj8);
           cResult[7] = tmp16;
           cResult[8] = tmp18;
           cResult[9] = first;
@@ -288,7 +288,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { type: tmp15, variant: first, icon: null };
       if (!first3) {
         obj4.icon = undefined;
-        obj2.children = React5(Badge_Badge.Badge, obj4);
+        obj2.children = React5(Badge.Badge, obj4);
         items[1] = React5(timestampProducer, obj2);
         const obj5 = {
           title: "Variant",
@@ -369,9 +369,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           items = [React5(Text_Text.Text, { variant: "text-sm/medium", children: variant })];
           const obj3 = { style: badgeRow.badgeRow, children: null };
           const items1 = [
-            React5(Badge_Badge.Badge, { type: "new", variant }),
-            React5(Badge_Badge.Badge, { type: "beta", variant }),
-            React5(Badge_Badge.Badge, { type: { text: "Custom" }, variant }),
+            React5(Badge.Badge, { type: "new", variant }),
+            React5(Badge.Badge, { type: "beta", variant }),
+            React5(Badge.Badge, { type: { text: "Custom" }, variant }),
             ,
           ];
           const obj7 = { type: "new", variant, icon: null };
@@ -391,7 +391,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             StarIcon = StarIcon3.StarIcon;
           }
           obj7.icon = StarIcon;
-          items1[3] = React5(Badge_Badge.Badge, obj7);
+          items1[3] = React5(Badge.Badge, obj7);
           const obj8 = { type: { text: "Custom" }, variant, icon: null };
           if ("premium" === variant) {
             let StarIcon2 = LockIcon.LockIcon;
@@ -409,7 +409,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             StarIcon2 = StarIcon3.StarIcon;
           }
           obj8.icon = StarIcon2;
-          items1[4] = React5(Badge_Badge.Badge, obj8);
+          items1[4] = React5(Badge.Badge, obj8);
           obj3.children = items1;
           items[1] = closure_2_8(timestampProducer, obj3);
           obj.children = items;
@@ -426,8 +426,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
         items = [tmp5, tmp6, tmp10];
         obj3.children = items;
-        obj2.children = closure_8(tmp(5964).Stack, obj3);
-        const tmp17 = closure_7(tmp(6891).Card, obj2);
+        obj2.children = closure_8(tmp(5963).Stack, obj3);
+        const tmp17 = closure_7(tmp(6890).Card, obj2);
         cResult[4] = tmp10;
         cResult[5] = tmp17;
         let tmp13 = tmp17;
@@ -453,9 +453,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           items = [React5(Text_Text.Text, { variant: "text-sm/medium", children: variant })];
           const obj3 = { style: badgeRow.badgeRow, children: null };
           const items1 = [
-            React5(Badge_Badge.Badge, { type: "new", variant }),
-            React5(Badge_Badge.Badge, { type: "beta", variant }),
-            React5(Badge_Badge.Badge, { type: { text: "Custom" }, variant }),
+            React5(Badge.Badge, { type: "new", variant }),
+            React5(Badge.Badge, { type: "beta", variant }),
+            React5(Badge.Badge, { type: { text: "Custom" }, variant }),
             ,
           ];
           const obj7 = { type: "new", variant, icon: null };
@@ -475,7 +475,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             StarIcon = StarIcon3.StarIcon;
           }
           obj7.icon = StarIcon;
-          items1[3] = React5(Badge_Badge.Badge, obj7);
+          items1[3] = React5(Badge.Badge, obj7);
           const obj8 = { type: { text: "Custom" }, variant, icon: null };
           if ("premium" === variant) {
             let StarIcon2 = LockIcon.LockIcon;
@@ -493,7 +493,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             StarIcon2 = StarIcon3.StarIcon;
           }
           obj8.icon = StarIcon2;
-          items1[4] = React5(Badge_Badge.Badge, obj8);
+          items1[4] = React5(Badge.Badge, obj8);
           obj3.children = items1;
           items[1] = closure_2_8(timestampProducer, obj3);
           obj.children = items;
@@ -528,7 +528,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { type: null };
         const obj3 = { text };
         obj2.type = obj3;
-        const tmp13 = React5(Badge_Badge.Badge, obj2);
+        const tmp13 = React5(Badge.Badge, obj2);
         cResult[2] = tmp13;
         let tmp10 = tmp13;
       } else {
@@ -548,7 +548,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { text };
         obj5.type = obj6;
         obj5.icon = StarIcon3.StarIcon;
-        const tmp21 = React5(Badge_Badge.Badge, obj5);
+        const tmp21 = React5(Badge.Badge, obj5);
         cResult[5] = tmp21;
         let tmp18 = tmp21;
       } else {
@@ -568,7 +568,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { text };
         obj8.type = obj9;
         obj8.icon = ExperimentalEpicIcon.ExperimentalEpicIcon;
-        const tmp29 = React5(Badge_Badge.Badge, obj8);
+        const tmp29 = React5(Badge.Badge, obj8);
         cResult[8] = tmp29;
         let tmp26 = tmp29;
       } else {
@@ -620,17 +620,17 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj3 = { style: tmp.narrow, children: null };
       const obj4 = { type: { text } };
-      obj3.children = React5(Badge_Badge.Badge, obj4);
+      obj3.children = React5(Badge.Badge, obj4);
       items[2] = React5(timestampProducer, obj3);
       const obj6 = {
         style: tmp.narrow,
-        children: React5(Badge_Badge.Badge, { type: { text }, variant: "primary", icon: StarIcon3.StarIcon }),
+        children: React5(Badge.Badge, { type: { text }, variant: "primary", icon: StarIcon3.StarIcon }),
       };
       items[3] = React5(timestampProducer, obj6);
       const obj8 = { style: tmp.narrow, children: null };
       const obj5 = { text };
       const obj7 = { type: { text }, variant: "primary", icon: StarIcon3.StarIcon };
-      obj8.children = React5(Badge_Badge.Badge, {
+      obj8.children = React5(Badge.Badge, {
         type: { text },
         variant: "rarity-epic",
         icon: ExperimentalEpicIcon.ExperimentalEpicIcon,
@@ -792,7 +792,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
             const obj5 = { label: "TextBadge vs. default", legacy: tmp30, mana: null };
             const obj6 = { type: { text: "New" } };
-            obj5.mana = React5(Badge_Badge.Badge, obj6);
+            obj5.mana = React5(Badge.Badge, obj6);
             const tmp36 = React5(closure_16, obj5);
             cResult[15] = tmp36;
             let tmp33 = tmp36;
@@ -804,7 +804,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             const obj7 = {
               label: "NewTag vs. new",
               legacy: React5(native.NewTag, {}),
-              mana: React5(Badge_Badge.Badge, { type: "new" }),
+              mana: React5(Badge.Badge, { type: "new" }),
             };
             const tmp40 = React5(closure_16, obj7);
             cResult[16] = tmp40;
@@ -817,7 +817,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = {
               label: "NewTag vs. new, brand",
               legacy: React5(native.NewTag, {}),
-              mana: React5(Badge_Badge.Badge, { type: "new", variant: "primary" }),
+              mana: React5(Badge.Badge, { type: "new", variant: "primary" }),
             };
             const tmp44 = React5(closure_16, obj8);
             cResult[17] = tmp44;
@@ -830,7 +830,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             const obj9 = {
               label: "BetaTag vs. beta",
               legacy: React5(native.BetaTag, {}),
-              mana: React5(Badge_Badge.Badge, { type: "beta" }),
+              mana: React5(Badge.Badge, { type: "beta" }),
             };
             const tmp48 = React5(closure_16, obj9);
             cResult[18] = tmp48;
@@ -843,7 +843,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             const obj10 = {
               label: "BetaTag vs. beta, brand",
               legacy: React5(native.BetaTag, {}),
-              mana: React5(Badge_Badge.Badge, { type: "beta", variant: "primary" }),
+              mana: React5(Badge.Badge, { type: "beta", variant: "primary" }),
             };
             const tmp52 = React5(closure_16, obj10);
             cResult[19] = tmp52;
@@ -921,47 +921,47 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       items[3] = React5(closure_16, {
         label: "TextBadge vs. default",
         legacy: React5(native.TextBadge, { text: "New" }),
-        mana: React5(Badge_Badge.Badge, { type: { text: "New" } }),
+        mana: React5(Badge.Badge, { type: { text: "New" } }),
       });
       const obj7 = {
         label: "TextBadge vs. default",
         legacy: React5(native.TextBadge, { text: "New" }),
-        mana: React5(Badge_Badge.Badge, { type: { text: "New" } }),
+        mana: React5(Badge.Badge, { type: { text: "New" } }),
       };
       items[4] = React5(closure_16, {
         label: "NewTag vs. new",
         legacy: React5(native.NewTag, {}),
-        mana: React5(Badge_Badge.Badge, { type: "new" }),
+        mana: React5(Badge.Badge, { type: "new" }),
       });
       const obj8 = {
         label: "NewTag vs. new",
         legacy: React5(native.NewTag, {}),
-        mana: React5(Badge_Badge.Badge, { type: "new" }),
+        mana: React5(Badge.Badge, { type: "new" }),
       };
       items[5] = React5(closure_16, {
         label: "NewTag vs. new, brand",
         legacy: React5(native.NewTag, {}),
-        mana: React5(Badge_Badge.Badge, { type: "new", variant: "primary" }),
+        mana: React5(Badge.Badge, { type: "new", variant: "primary" }),
       });
       const obj9 = {
         label: "NewTag vs. new, brand",
         legacy: React5(native.NewTag, {}),
-        mana: React5(Badge_Badge.Badge, { type: "new", variant: "primary" }),
+        mana: React5(Badge.Badge, { type: "new", variant: "primary" }),
       };
       items[6] = React5(closure_16, {
         label: "BetaTag vs. beta",
         legacy: React5(native.BetaTag, {}),
-        mana: React5(Badge_Badge.Badge, { type: "beta" }),
+        mana: React5(Badge.Badge, { type: "beta" }),
       });
       const obj10 = {
         label: "BetaTag vs. beta",
         legacy: React5(native.BetaTag, {}),
-        mana: React5(Badge_Badge.Badge, { type: "beta" }),
+        mana: React5(Badge.Badge, { type: "beta" }),
       };
       items[7] = React5(closure_16, {
         label: "BetaTag vs. beta, brand",
         legacy: React5(native.BetaTag, {}),
-        mana: React5(Badge_Badge.Badge, { type: "beta", variant: "primary" }),
+        mana: React5(Badge.Badge, { type: "beta", variant: "primary" }),
       });
       obj2.children = items;
       obj.children = closure_1_8(Stack_Stack.Stack, obj2);
@@ -1068,7 +1068,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { type: { text: "New" } };
-          const tmp23 = React5(Badge_Badge.Badge, obj3);
+          const tmp23 = React5(Badge.Badge, obj3);
           cResult[9] = tmp23;
           let tmp21 = tmp23;
         } else {
@@ -1124,7 +1124,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol5 = Symbol;
             if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp50 = React5(Badge_Badge.Badge, { type: "beta", variant: "primary" });
+              const tmp50 = React5(Badge.Badge, { type: "beta", variant: "primary" });
               cResult[23] = tmp50;
               let tmp48 = tmp50;
             } else {
@@ -1160,7 +1160,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj7 = { title: "Column, default alignment (TextBadge, then Mana)", children: null };
                   const items1 = [tmp63];
                   const obj8 = { type: { text: "New" } };
-                  items1[1] = React5(Badge_Badge.Badge, obj8);
+                  items1[1] = React5(Badge.Badge, obj8);
                   obj7.children = items1;
                   const tmp70 = closure_1_8(closure_18, obj7);
                   cResult[33] = tmp70;
@@ -1180,7 +1180,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                 const _Symbol8 = Symbol;
                 if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
                   const obj10 = { type: { text: "New" } };
-                  const tmp76 = React5(Badge_Badge.Badge, obj10);
+                  const tmp76 = React5(Badge.Badge, obj10);
                   cResult[36] = tmp76;
                   let tmp74 = tmp76;
                 } else {
@@ -1233,7 +1233,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                   const _Symbol11 = Symbol;
                   if (cResult[47] === Symbol.for("react.memo_cache_sentinel")) {
                     const obj13 = { type: { text: "New" } };
-                    const tmp99 = React5(Badge_Badge.Badge, obj13);
+                    const tmp99 = React5(Badge.Badge, obj13);
                     cResult[47] = tmp99;
                     let tmp97 = tmp99;
                   } else {
@@ -1368,10 +1368,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { style: tmp.inlineRow, children: null };
       const items3 = [
         React5(Text_Text.Text, { variant: "text-md/semibold", children: "Channel name" }),
-        React5(timestampProducer, {
-          style: tmp.inlineBadge,
-          children: React5(Badge_Badge.Badge, { type: { text: "New" } }),
-        }),
+        React5(timestampProducer, { style: tmp.inlineBadge, children: React5(Badge.Badge, { type: { text: "New" } }) }),
       ];
       obj6.children = items3;
       items2[1] = closure_1_8(timestampProducer, obj6);
@@ -1388,29 +1385,26 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { style: tmp.inlineRow, children: null };
       const items6 = [React5(Text_Text.Text, { variant: "text-md/semibold", children: "Feature name" })];
       const obj5 = { text: "New", style: tmp.inlineBadge };
-      const obj7 = { style: tmp.inlineBadge, children: React5(Badge_Badge.Badge, { type: { text: "New" } }) };
+      const obj7 = { style: tmp.inlineBadge, children: React5(Badge.Badge, { type: { text: "New" } }) };
       items6[1] = React5(timestampProducer, {
         style: tmp.inlineBadge,
-        children: React5(Badge_Badge.Badge, { type: "beta", variant: "primary" }),
+        children: React5(Badge.Badge, { type: "beta", variant: "primary" }),
       });
       obj10.children = items6;
       items5[1] = closure_1_8(timestampProducer, obj10);
       obj8.children = items5;
       items[3] = closure_1_8(closure_18, obj8);
       const obj12 = { title: "Column, default alignment (TextBadge, then Mana)", children: null };
-      const items7 = [React5(native.TextBadge, { text: "New" }), React5(Badge_Badge.Badge, { type: { text: "New" } })];
+      const items7 = [React5(native.TextBadge, { text: "New" }), React5(Badge.Badge, { type: { text: "New" } })];
       obj12.children = items7;
       items[4] = closure_1_8(closure_18, obj12);
       const obj13 = { title: "Column with alignSelf: 'flex-start' (TextBadge, then Mana)", children: null };
       const items8 = [React5(native.TextBadge, { text: "New", style: tmp.selfStart })];
-      const obj11 = {
-        style: tmp.inlineBadge,
-        children: React5(Badge_Badge.Badge, { type: "beta", variant: "primary" }),
-      };
+      const obj11 = { style: tmp.inlineBadge, children: React5(Badge.Badge, { type: "beta", variant: "primary" }) };
       const obj14 = { text: "New", style: tmp.selfStart };
       items8[1] = React5(timestampProducer, {
         style: tmp.selfStartParent,
-        children: React5(Badge_Badge.Badge, { type: { text: "New" } }),
+        children: React5(Badge.Badge, { type: { text: "New" } }),
       });
       obj13.children = items8;
       items[5] = closure_1_8(closure_18, obj13);
@@ -1425,7 +1419,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj18 = { style: tmp.trailingRow, children: null };
       const items11 = [
         React5(Text_Text.Text, { variant: "text-md/normal", children: "Notifications" }),
-        React5(Badge_Badge.Badge, { type: { text: "New" } }),
+        React5(Badge.Badge, { type: { text: "New" } }),
       ];
       obj18.children = items11;
       items10[1] = closure_1_8(timestampProducer, obj18);

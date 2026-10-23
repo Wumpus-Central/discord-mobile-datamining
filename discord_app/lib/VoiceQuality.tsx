@@ -336,7 +336,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp35.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(5870).Histogram();
+                prop = new closure_0(5869).Histogram();
               }
               bufferStats.audioJitterBufferHistogram = prop;
               bufferStats.audioJitterTarget = type.audioJitterTarget;
@@ -345,7 +345,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp35.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(5870).Histogram();
+                prop1 = new closure_0(5869).Histogram();
               }
               bufferStats.audioJitterTargetHistogram = prop1;
               bufferStats.audioJitterDelay = type.audioJitterDelay;
@@ -354,7 +354,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp35.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(5870).Histogram();
+                prop2 = new closure_0(5869).Histogram();
               }
               bufferStats.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj.relativeReceptionDelay, relativePlayoutDelay: obj.relativePlayoutDelay } =

@@ -84,7 +84,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp14;
           tmp11 = tmp14;
         }
-        const obj3 = { style: tmp4.raisedHand, source: tmp6(11506), color: PRIMARY_800 };
+        const obj3 = { style: tmp4.raisedHand, source: tmp6(11517), color: PRIMARY_800 };
         const tmp10 = hasOwnProperty(native.Icon, obj3);
         cResult[3] = PRIMARY_800;
         cResult[4] = tmp4.raisedHand;
@@ -116,7 +116,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = {
         style: items,
-        children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11506), color: PRIMARY_800 }),
+        children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11517), color: PRIMARY_800 }),
       };
       items[1] = activeBackground;
       return hasOwnProperty(View, obj);
@@ -162,11 +162,11 @@ export default noop.memo(
           }
           const stateFromStores = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
           if (cResult[7] !== rtsState) {
-            const result = tmp(6674).isRequestedToSpeakAll(rtsState);
+            const result = tmp(6673).isRequestedToSpeakAll(rtsState);
             cResult[7] = rtsState;
             cResult[8] = result;
             let tmp14 = result;
-            const tmpResult3 = tmp(6674);
+            const tmpResult3 = tmp(6673);
           } else {
             tmp14 = cResult[8];
           }
@@ -219,7 +219,7 @@ export default noop.memo(
                                   if (cResult[38] !== blocked) {
                                     let tmp41 = blocked;
                                     if (blocked) {
-                                      tmp41 = closure_5(tmp(11650).BlockedStatus, {});
+                                      tmp41 = closure_5(tmp(11661).BlockedStatus, {});
                                     }
                                     cResult[38] = blocked;
                                     cResult[39] = tmp41;
@@ -230,7 +230,7 @@ export default noop.memo(
                                   if (cResult[40] !== ignored) {
                                     let tmp44 = ignored;
                                     if (ignored) {
-                                      tmp44 = closure_5(tmp(11650).IgnoredStatus, {});
+                                      tmp44 = closure_5(tmp(11661).IgnoredStatus, {});
                                     }
                                     cResult[40] = ignored;
                                     cResult[41] = tmp44;
@@ -276,7 +276,7 @@ export default noop.memo(
                                               let tmp58 = stateFromStores;
                                               if (stateFromStores) {
                                                 const obj3 = {
-                                                  source: tmp5(11671),
+                                                  source: tmp5(11682),
                                                   size: tmp(1202).Icon.Sizes.SMALL,
                                                   color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                 };
@@ -423,7 +423,7 @@ export default noop.memo(
                 }
               }
             }
-            const name = tmp5(5976).getName(tmp7, channel.id, user);
+            const name = tmp5(5975).getName(tmp7, channel.id, user);
             let tmp22 = blocked;
             if (!blocked) {
               tmp22 = ignored;
@@ -431,7 +431,7 @@ export default noop.memo(
             const LegacyPressable = tmp(5283).LegacyPressable;
             const intl = tmp(1128).intl;
             const obj11 = { name };
-            const tmp5Result = tmp5(5976);
+            const tmp5Result = tmp5(5975);
             cResult[12] = blocked;
             cResult[13] = channel.id;
             cResult[14] = tmp7;

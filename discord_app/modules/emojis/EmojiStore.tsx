@@ -95,7 +95,7 @@ let closure_39 = async function _loadSavedEmojis() {
               const obj6 = {
                 value: React(4867).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () =>
-                    closure_2_1(6715).getAsync(closure_1_0),
+                    closure_2_1(6714).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,
@@ -160,7 +160,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let flag = closure_0(6749).canUseRoleSubscriptionIAP(guildId);
+      let flag = closure_0(6748).canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis === "function") {
         if (flag === undefined) {
           flag = false;
@@ -180,7 +180,7 @@ function updateGuildEmoji(guildId) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj = closure_0(6749);
+      obj = closure_0(6748);
     }
   }
 }
@@ -346,7 +346,7 @@ function handleRoleUpdate(guildId) {
 const EmojiConstants = fn(1395);
 ({ EmojiDisabledReasons: closure_18, EmojiIntention: closure_19 } = EmojiConstants);
 const NULL_STRING_GUILD_ID = fn(1087).NULL_STRING_GUILD_ID;
-const EmojiCategories = fn(6714).EmojiCategories;
+const EmojiCategories = fn(6713).EmojiCategories;
 const UserSettingsTypes = fn(1097).UserSettingsTypes;
 let items = [
   EmojiCategories.TOP_GUILD_EMOJI.toString(),

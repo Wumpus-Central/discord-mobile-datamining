@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7882);
+const SafetyHubConstants = fn(7883);
 ({ AppealIngestionSignal: closure_4, AppealIngestionSignalOrder: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -170,7 +170,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12782, dependencyMap.paths),
+        asyncRequireImpl(12801, dependencyMap.paths),
         "AppealIngestionFreeTextAppealReasonActionSheet",
         obj3,
       );
@@ -180,14 +180,14 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = closure_8();
   const formRow = tmp;
-  dependencyMap = isDsaEligible(12754).useSafetyHubAppealSignal();
+  dependencyMap = isDsaEligible(12773).useSafetyHubAppealSignal();
   const intl = isDsaEligible(1128).intl;
-  let obj = isDsaEligible(12754);
+  let obj = isDsaEligible(12773);
   const intl2 = isDsaEligible(1128).intl;
   const stringResult = intl.string(isDsaEligible(1128).t["C5q+pW"]);
   let obj2 = { children: null };
   const items = [
-    closure_6(isDsaEligible(12760).AppealIngestionModalHeader, {
+    closure_6(isDsaEligible(12779).AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: intl2.string(isDsaEligible(1128).t.VEcRhw),
     }),
@@ -196,7 +196,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   const obj4 = { style: tmp.form, children: null };
   const stringResult1 = intl2.string(isDsaEligible(1128).t.VEcRhw);
   const items1 = [
-    closure_6(isDsaEligible(8919).FormSection, {
+    closure_6(isDsaEligible(8926).FormSection, {
       sectionBodyStyle: tmp.formSection,
       accessibilityRole: "radiogroup",
       children: closure_5.map((signal, index) =>
@@ -215,8 +215,8 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj6.children = closure_6(isDsaEligible(5220).Text, obj7);
   items1[1] = closure_6(handleAppealSignalSelect, obj6);
   obj4.children = items1;
-  obj3.children = closure_7(isDsaEligible(8919).Form, obj4);
+  obj3.children = closure_7(isDsaEligible(8926).Form, obj4);
   items[1] = closure_6(handleAppealSignalSelect, obj3);
   obj2.children = items;
-  return closure_7(isDsaEligible(12760).AppealIngestionModalScreen, obj2);
+  return closure_7(isDsaEligible(12779).AppealIngestionModalScreen, obj2);
 }

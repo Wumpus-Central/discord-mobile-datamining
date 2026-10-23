@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["children"];
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(9713);
+const NativeStackNavigator = fn(9720);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -21,7 +21,7 @@ export default noop.memo(
     ? function PaymentFlowTestModal() {
         const cResult = accessibilityNativeStackOptions(576).c(5);
         let obj = accessibilityNativeStackOptions(576);
-        accessibilityNativeStackOptions = accessibilityNativeStackOptions(7081).useAccessibilityNativeStackOptions();
+        accessibilityNativeStackOptions = accessibilityNativeStackOptions(7080).useAccessibilityNativeStackOptions();
         if (cResult[0] !== accessibilityNativeStackOptions) {
           const fn = function l(navigation) {
             const obj = {

@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 tmp5Result = null;
                 if ("skeleton" === iter.label.status) {
-                  tmp5Result = React3(Text(11934).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+                  tmp5Result = React3(Text(11948).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
                 }
               }
               items[1] = tmp5Result;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               tmp5Result = null;
               if ("skeleton" === iter.label.status) {
-                tmp5Result = React3(Text(11934).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
+                tmp5Result = React3(Text(11948).TextSkeleton, { variant: "text-xs/normal", widthChars: 6 });
               }
             }
             items[1] = tmp5Result;

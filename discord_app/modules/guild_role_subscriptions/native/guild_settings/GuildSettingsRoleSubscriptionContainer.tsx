@@ -6,8 +6,8 @@ import RoleSubscriptionSettingsDisabledContext from "../../RoleSubscriptionSetti
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const ErrorBlockDefault = tmp13(12183);
-const WarningNoticeDefault = tmp13(19109);
+const ErrorBlockDefault = tmp13(12194);
+const WarningNoticeDefault = tmp13(19132);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);

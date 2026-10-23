@@ -112,7 +112,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   return obj;
 }
 let View = fn(17).View;
-const SafetyHubConstants = fn(7882);
+const SafetyHubConstants = fn(7883);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
@@ -634,7 +634,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj6 = {
-                      value: tmp27(12755).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                      value: tmp27(12774).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                       done: false,
                     };
                     return obj6;
@@ -649,8 +649,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   if (body != null) {
                     code = body.code;
                   }
-                  closure_129_4(safetyHubAppealSignal(7881).getRequestReviewErrorFromCode(code));
-                  const obj2 = safetyHubAppealSignal(7881);
+                  closure_129_4(safetyHubAppealSignal(7882).getRequestReviewErrorFromCode(code));
+                  const obj2 = safetyHubAppealSignal(7882);
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;

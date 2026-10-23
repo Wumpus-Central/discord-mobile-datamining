@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import _modDef7233 from "../../../../../_runtime/metro/07233__.js";
+import _modDef7234 from "../../../../../_runtime/metro/07234__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp8 = cResult[5];
           }
           if (cResult[6] !== tmp4.collapseIcon) {
-            const obj4 = { source: _modDef7233, style: tmp4.collapseIcon };
+            const obj4 = { source: _modDef7234, style: tmp4.collapseIcon };
             const tmp16 = closure_6(collapsed(1202).Icon, obj4);
             cResult[6] = tmp4.collapseIcon;
             cResult[7] = tmp16;
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: tmp.collapseButton, children: null };
       const obj8 = { style: animatedStyle, children: null };
       let obj2 = { withTiming: collapsed(5192).withTiming, collapsed };
-      obj8.children = closure_6(tmp2(1202).Icon, { source: _modDef7233, style: tmp.collapseIcon });
+      obj8.children = closure_6(tmp2(1202).Icon, { source: _modDef7234, style: tmp.collapseIcon });
       obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
       items1[2] = closure_6(closure_4, obj7);
       obj4.children = items1;

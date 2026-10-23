@@ -9,7 +9,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(6623).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(6622).STAGE_BOOSTING_SHEET_KEY;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_7,
@@ -114,11 +114,11 @@ export default function StageBoostingActionSheet(channel) {
       });
     }
     const string3Result1 = string3(t1.pqPQL0);
-    dependencyMap = tmp(6680).useActualStageSpeakerCount(channel.id);
-    const tmpResult3 = tmp(6680);
-    useReducedMotion = tmp(6680).useStageParticipantsCount(
+    dependencyMap = tmp(6679).useActualStageSpeakerCount(channel.id);
+    const tmpResult3 = tmp(6679);
+    useReducedMotion = tmp(6679).useStageParticipantsCount(
       channel.id,
-      tmp(6674).StageChannelParticipantNamedIndex.AUDIENCE,
+      tmp(6673).StageChannelParticipantNamedIndex.AUDIENCE,
     );
     stateFromStores2(5249)(() => {
       AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_VIEWED, {
@@ -168,7 +168,7 @@ export default function StageBoostingActionSheet(channel) {
       obj5.onPress = handleClose;
       items5[1] = closure_14(tmp(5230).Button, obj5);
       obj3.children = items5;
-      let tmp24Result = closure_15(tmp(6682).ButtonGroup, obj3);
+      let tmp24Result = closure_15(tmp(6681).ButtonGroup, obj3);
       let tmp24 = closure_14;
     } else {
       tmp24 = closure_14;
@@ -188,15 +188,15 @@ export default function StageBoostingActionSheet(channel) {
     }
     const obj8 = { title: string3Result1, description: stringResult, illustration: null, actions: null };
     if (tmp9) {
-      let tmp24Result2 = tmp24(tmp(14875).HoldingGemSpotIllustration, { accessible: false });
+      let tmp24Result2 = tmp24(tmp(14889).HoldingGemSpotIllustration, { accessible: false });
     } else {
-      const obj9 = { source: tmp22(14879) };
+      const obj9 = { source: tmp22(14893) };
       tmp24Result2 = tmp24(tmp22(5655), obj9);
       const tmp22Result = tmp22(5655);
     }
     obj8.illustration = tmp24Result2;
     obj8.actions = tmp24Result;
-    return tmp24(tmp(10820).PromoSheet, obj8);
+    return tmp24(tmp(10828).PromoSheet, obj8);
   }
   const tmpResult = channel(504);
 }

@@ -31,7 +31,7 @@ function restartFrame(item10016) {
     launch,
   });
 }
-const isLaunched = fn(6762).isLaunched;
+const isLaunched = fn(6761).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/restartFrames.tsx");
 

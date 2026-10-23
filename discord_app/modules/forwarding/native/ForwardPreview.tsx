@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = new tmp4(8117)();
+            const obj3 = new tmp4(8118)();
             obj3.setOptions({
               renderEmbeds: false,
               renderReactions: false,
@@ -141,7 +141,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               message: tmp15,
               rowGenerator: tmp10,
             };
-            const tmp19 = closure_5(tmp4(9742), obj2);
+            const tmp19 = closure_5(tmp4(9749), obj2);
             cResult[10] = tmp8;
             cResult[11] = tmp15;
             cResult[12] = tmp19;

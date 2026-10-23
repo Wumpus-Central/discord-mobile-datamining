@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj4;
               } else {
                 closure_0 = tmp4;
-                const obj8 = v1(8856);
+                const obj8 = v1(8863);
                 if (GuildScheduledEventStore) {
                   v1 = 2;
                   dependencyMap = 1;

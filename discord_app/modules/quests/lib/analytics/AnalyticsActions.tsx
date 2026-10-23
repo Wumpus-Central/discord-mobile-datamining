@@ -889,6 +889,37 @@ export const trackAdContentQuestBarOrDockModeChange = function trackAdContentQue
     sourceQuestContent,
   });
 };
+export const trackQuestContentRenderingFailure = function trackQuestContentRenderingFailure(arg0) {
+  ({ questId, questContent, sourceQuestContent, reason, impressionId } = arg0);
+  const contentProperties = AnalyticsTypes.getContentProperties(questContent);
+  trackQuestEvent({
+    questId,
+    event: AnalyticEvents.QUEST_CONTENT_RENDERING_FAILURE,
+    properties: {
+      content_id: contentProperties.content_id,
+      content_name: contentProperties.content_name,
+      reason,
+      impression_id: impressionId,
+    },
+    sourceQuestContent,
+  });
+};
+export const trackAdContentRenderingFailure = function trackAdContentRenderingFailure(arg0) {
+  ({ adContentId, adCreativeType, questContent, sourceQuestContent, reason, impressionId } = arg0);
+  const contentProperties = AnalyticsTypes.getContentProperties(questContent);
+  trackAdContentEvent({
+    adContentId,
+    adCreativeType,
+    event: AnalyticEvents.QUEST_CONTENT_RENDERING_FAILURE,
+    properties: {
+      content_id: contentProperties.content_id,
+      content_name: contentProperties.content_name,
+      reason,
+      impression_id: impressionId,
+    },
+    sourceQuestContent,
+  });
+};
 export const trackQuestEmbedFallbackViewed = function trackQuestEmbedFallbackViewed(questId, EXCLUDED_QUEST) {
   AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.QUEST_EMBED_FALLBACK_VIEWED, {
     quest_id: questId,

@@ -6,13 +6,13 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import _modDef5678 from "../../../../../_runtime/metro/05678__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7175 from "../../../../../_runtime/metro/07175__.js";
-import _modDef8309 from "../../../../../_runtime/metro/08309__.js";
-import _modDef11221 from "../../../../../_runtime/metro/11221__.js";
-import _modDef11226 from "../../../../../_runtime/metro/11226__.js";
-import _modDef13643 from "../../../../../_runtime/metro/13643__.js";
-import _modDef17049 from "../../../../../_runtime/metro/17049__.js";
-import _modDef17050 from "../../../../../_runtime/metro/17050__.js";
+import _modDef7174 from "../../../../../_runtime/metro/07174__.js";
+import _modDef8310 from "../../../../../_runtime/metro/08310__.js";
+import _modDef11230 from "../../../../../_runtime/metro/11230__.js";
+import _modDef11235 from "../../../../../_runtime/metro/11235__.js";
+import _modDef13657 from "../../../../../_runtime/metro/13657__.js";
+import _modDef17071 from "../../../../../_runtime/metro/17071__.js";
+import _modDef17072 from "../../../../../_runtime/metro/17072__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -23,14 +23,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let items = [
-  _modDef13643,
-  _modDef7175,
-  _modDef8309,
-  _modDef11226,
+  _modDef13657,
+  _modDef7174,
+  _modDef8310,
+  _modDef11235,
   _modDef5678,
-  _modDef17049,
-  _modDef17050,
-  _modDef11221,
+  _modDef17071,
+  _modDef17072,
+  _modDef11230,
 ];
 let closure_10 = [
   "Launch Probe!",
@@ -95,8 +95,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "<string:1358955361>",
-              action: "<string:1027714453>",
+              variant: "person i brudsl\u00F6ja",
+              action: "brudsl\u00F6ja",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -124,8 +124,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "<string:1358955361>",
-              action: "<string:1027714453>",
+              variant: "person i brudsl\u00F6ja",
+              action: "brudsl\u00F6ja",
             };
             let str = "default";
             if (index === closure_0 - 1) {
@@ -185,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { triggerOnLongPress: tmp4, items: tmp5, align, title: "Sample title", children: C };
-        const tmp19 = closure_7(tmp(9731).ContextMenu, obj5);
+        const tmp19 = closure_7(tmp(9738).ContextMenu, obj5);
         cResult[11] = align;
         cResult[12] = tmp5;
         cResult[13] = C;
@@ -229,8 +229,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 label: length[index % length.length],
                 IconComponent: "a",
                 iconSource: length2[index % length2.length],
-                variant: "<string:1358955361>",
-                action: "<string:1027714453>",
+                variant: "person i brudsl\u00F6ja",
+                action: "brudsl\u00F6ja",
               };
               let str = "default";
               if (index === closure_0 - 1) {
@@ -253,8 +253,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               label: length[index % length.length],
               IconComponent: "a",
               iconSource: length2[index % length2.length],
-              variant: "<string:1358955361>",
-              action: "<string:1027714453>",
+              variant: "person i brudsl\u00F6ja",
+              action: "brudsl\u00F6ja",
             };
             let str = "default";
             if (index === closure_0 - 1) {

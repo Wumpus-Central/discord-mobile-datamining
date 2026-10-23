@@ -116,7 +116,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   const intl = tmp(1128).intl;
                   const stringResult = intl.string(tmp(1128).t["3Qcx6K"]);
                   const obj4 = { size: "md", color: onTrackPress(587).colors.INTERACTIVE_ICON_DEFAULT };
-                  const tmp17 = closure_15(tmp(7049).EyeIcon, obj4);
+                  const tmp17 = closure_15(tmp(7048).EyeIcon, obj4);
                   cResult[9] = stringResult;
                   cResult[10] = tmp17;
                   let tmp13 = tmp17;
@@ -217,7 +217,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = tmp2(1128).intl;
       obj3.accessibilityLabel = intl.string(handlePreviewPress(1128).t["3Qcx6K"]);
       const obj2 = handlePreviewPress(4976);
-      obj3.children = closure_15(handlePreviewPress(7049).EyeIcon, {
+      obj3.children = closure_15(handlePreviewPress(7048).EyeIcon, {
         size: "md",
         color: onTrackPress(587).colors.INTERACTIVE_ICON_DEFAULT,
       });
@@ -1583,17 +1583,17 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       skuId = skuId.skuId;
       const initialVariantIndex = skuId.initialVariantIndex;
       ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-      const collectiblesShopProduct = skuId(9445).useCollectiblesShopProduct(skuId, {
+      const collectiblesShopProduct = skuId(9452).useCollectiblesShopProduct(skuId, {
         needsCategory: false,
         seedCategoryStore: true,
       });
       const product = collectiblesShopProduct.product;
       dependencyMap = product;
       ({ state, retry } = collectiblesShopProduct);
-      const obj = skuId(9445);
-      const getOrFetchPurchases = skuId(10460).useGetOrFetchPurchases();
+      const obj = skuId(9452);
+      const getOrFetchPurchases = skuId(10467).useGetOrFetchPurchases();
       ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-      const obj2 = skuId(10460);
+      const obj2 = skuId(10467);
       const ref1 = noop.useRef(null);
       const items = [product, skuId, initialVariantIndex];
       if ("ready" === state) {
@@ -1633,7 +1633,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if ("error" === state) {
-        const obj5 = { Illustration: tmp(8696).NoResults, body: null, children: null };
+        const obj5 = { Illustration: tmp(8703).NoResults, body: null, children: null };
         const intl = tmp(1128).intl;
         obj5.body = intl.string(tmp(1128).t.eAn6z2);
         const obj6 = { text: null, onPress: null };
@@ -1643,7 +1643,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.children = closure_15(tmp(5230).Button, obj6);
         closure_15(tmp(1202).EmptyState, obj5);
       } else {
-        closure_15(initialVariantIndex(14420), {});
+        closure_15(initialVariantIndex(14434), {});
       }
       ref = noop.useRef(null);
     };

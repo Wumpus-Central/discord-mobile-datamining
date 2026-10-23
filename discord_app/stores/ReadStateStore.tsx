@@ -819,7 +819,7 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6770).isEventUpcoming;
+const isEventUpcoming = fn(6769).isEventUpcoming;
 const ChannelRecord = fn(4825);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1087);
@@ -830,7 +830,7 @@ const ActivityPanelConstants = fn(5595);
 const ChannelConstants = fn(4828);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
 const GuildScheduledEventStatus = fn(4827).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6691).ReadStateTypes;
+const ReadStateTypes = fn(6690).ReadStateTypes;
 const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -1924,14 +1924,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6804, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6803, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6804, dependencyMap.paths);
+          const promise = asyncRequireImpl(6803, dependencyMap.paths);
         }
       }
     });
@@ -3246,7 +3246,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "krisp", isExplicitUserAction: "STREAM_START", trackAnalytics: null });
+    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "noiseSuppression", isExplicitUserAction: true, trackAnalytics: "switch" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3633,7 +3633,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "Reflect", isExplicitUserAction: "text", trackAnalytics: "\n" });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "Reflect", isExplicitUserAction: "S_ch", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

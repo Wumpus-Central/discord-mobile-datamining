@@ -205,7 +205,6 @@ export const ExperimentFlags = {
   WMF_GPU_ENCODE: "wmf_gpu_encode",
   USE_LIBOPENH264_DECODER: "use_libopenh264_decoder",
   SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS: "swallow_volume_only_speaking_events",
-  BROWSER_TRANSCEIVER_PADDING_REMOVAL: "browser_transceiver_padding_removal",
   INTEL_GPU_DISABLE: "intel_gpu_disable",
   WEB_STREAMING_MAINTAIN_FRAMERATE: "web_streaming_maintain_framerate",
   WEB_STREAMING_BALANCED: "web_streaming_balanced",

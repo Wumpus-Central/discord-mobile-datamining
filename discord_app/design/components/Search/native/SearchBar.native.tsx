@@ -1,7 +1,7 @@
-// discord_app/design/components/TextField/native/SearchField.native.tsx
+// discord_app/design/components/Search/native/SearchBar.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import TextField from "TextField.native.tsx";
+import TextField from "../../TextField/native/TextField.native.tsx";
 import MagnifyingGlassIcon from "../../Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,11 +10,8 @@ require = fn;
 let closure_2 = ["ref"];
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
-
-export const SearchField = ReactCompilerGating.isReactCompilerEnabled()
-  ? function SearchField(ref) {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function SearchBar(ref) {
       const cResult = c.c(7);
       if (cResult[0] !== ref) {
         const tmp8 = _objectWithoutProperties(ref.ref, closure_2);
@@ -54,7 +51,7 @@ export const SearchField = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp13;
       tmp11 = tmp13;
     }
-  : function SearchField(ref) {
+  : function SearchBar(ref) {
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       const obj = { placeholder: null, returnKeyType: "search", ref: null };
       const intl = util.intl;
@@ -68,3 +65,8 @@ export const SearchField = ReactCompilerGating.isReactCompilerEnabled()
       obj.clearable = true;
       return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
     };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Search/native/SearchBar.native.tsx");
+
+export const SearchBar = tmp3;
+export const SearchField = tmp3;

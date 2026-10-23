@@ -10,7 +10,7 @@ let size = {
   showSecondaryPIP: null,
   scale: null,
 };
-const ReanimatedHelperTypes = fn(7155);
+const ReanimatedHelperTypes = fn(7154);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 let ReactCompilerGating = fn(558);

@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function FormRadio(selected) {
       const cResult = c.c(3);
       const tmp3 = closure_4();
-      const tmp4Result = importDefault(selected.selected ? 7228 : 7229);
+      const tmp4Result = importDefault(selected.selected ? 7229 : 7230);
       if (cResult[0] === tmp3.radio) {
         if (cResult[1] === tmp4Result) {
           let tmp6 = cResult[2];
@@ -32,6 +32,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function FormRadio(selected) {
       const obj = { style: closure_4().radio, source: null };
       const tmp = closure_4();
-      obj.source = importDefault(selected.selected ? 7228 : 7229);
+      obj.source = importDefault(selected.selected ? 7229 : 7230);
       return jsx(FastImageDefault, { style: closure_4().radio, source: null });
     };

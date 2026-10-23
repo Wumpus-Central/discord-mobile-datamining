@@ -41,7 +41,7 @@ export default noop.memo(
           transparentBorder = tmp4.transparentBorder;
         }
         let obj = guildId(576);
-        const clientThemesOverride = guildId(9678).useClientThemesOverride();
+        const clientThemesOverride = guildId(9685).useClientThemesOverride();
         const tmp7 = noPadding.noPadding ? tmp4.containerNoPadding : tmp4.container;
         if (cResult[0] === tmp7) {
           if (cResult[1] === clientThemesOverride) {
@@ -126,21 +126,21 @@ export default noop.memo(
           }
           if (!renderIcon) {
             const obj4 = { size: "sm", color: "channel-icon", style: tmp4.redesignChannelIcon };
-            const tmp10Result = tmp10(guildId(8557).VoiceNormalIcon, obj4);
+            const tmp10Result = tmp10(guildId(8558).VoiceNormalIcon, obj4);
             cResult[3] = renderIcon;
             cResult[4] = stageIcon;
             stageIcon = tmp4.redesignChannelIcon;
             cResult[5] = stageIcon;
             cResult[6] = tmp10Result;
           }
-          const StageIcon = guildId(8553).StageIcon;
+          const StageIcon = guildId(8554).StageIcon;
         }
         const items2 = [tmp7, clientThemesOverride];
         cResult[0] = tmp7;
         cResult[1] = clientThemesOverride;
         cResult[2] = items2;
         tmp8 = items2;
-        const tmpResult = guildId(9678);
+        const tmpResult = guildId(9685);
       }
     : function UserSummaryItem(guildId) {
         guildId = guildId.guildId;
@@ -151,11 +151,11 @@ export default noop.memo(
           transparentBorder = tmp.transparentBorder;
         }
         const obj2 = { style: null, children: null };
-        const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(9678).useClientThemesOverride()];
+        const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(9685).useClientThemesOverride()];
         obj2.style = items;
         if (renderIcon) {
           if (stageIcon) {
-            let VoiceNormalIcon = tmp4(8553).StageIcon;
+            let VoiceNormalIcon = tmp4(8554).StageIcon;
           }
           const obj3 = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
           const items1 = [closure_4(VoiceNormalIcon, obj3)];
@@ -186,8 +186,8 @@ export default noop.memo(
           obj2.children = items1;
           return tmp5(tmp6, obj2);
         }
-        VoiceNormalIcon = tmp4(8557).VoiceNormalIcon;
-        let obj = guildId(9678);
+        VoiceNormalIcon = tmp4(8558).VoiceNormalIcon;
+        let obj = guildId(9685);
       },
 );
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

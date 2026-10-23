@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const native = Stack(1202);
-const Stack_Stack = Stack(5964);
-const DetailedGuildIdentityUserRow = Stack(10797);
+const Stack_Stack = Stack(5963);
+const DetailedGuildIdentityUserRow = Stack(10805);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

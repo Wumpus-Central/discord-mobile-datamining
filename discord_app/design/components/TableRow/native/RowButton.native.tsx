@@ -394,9 +394,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return jsx(Card.InternalCard, obj4);
     };
-tmp2.Icon = fn(6897).TableRowIcon;
+tmp2.Icon = fn(6896).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6897).TableRowIconProps;
+export const RowButtonIconProps = fn(6896).TableRowIconProps;
 export const RowButton = tmp2;

@@ -203,11 +203,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         ({ channelTitle: channelTitle2, channelIcon } = channelTitle);
         if (cResult[5] !== stateFromStores) {
-          const channelIcon1 = tmp(8487).getChannelIcon(stateFromStores);
+          const channelIcon1 = tmp(8488).getChannelIcon(stateFromStores);
           cResult[5] = stateFromStores;
           cResult[6] = channelIcon1;
           let tmp14 = channelIcon1;
-          const tmpResult2 = tmp(8487);
+          const tmpResult2 = tmp(8488);
         } else {
           tmp14 = cResult[6];
         }
@@ -267,14 +267,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = {
           style: tmp.channelIcon,
           size: tmp2(1202).Icon.Sizes.CUSTOM,
-          source: tmp2(8487).getChannelIcon(stateFromStores),
+          source: tmp2(8488).getChannelIcon(stateFromStores),
         };
         const items2 = [closure_5(tmp2(1202).Icon, obj4)];
         const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
         items2[1] = closure_5(tmp2(5220).Text, obj5);
         obj3.children = items2;
         tmp8 = closure_6(View, obj3);
-        const tmp2Result = tmp2(8487);
+        const tmp2Result = tmp2(8488);
       }
       if (null != benefit.emoji_id) {
         let str = benefit.emoji_id;

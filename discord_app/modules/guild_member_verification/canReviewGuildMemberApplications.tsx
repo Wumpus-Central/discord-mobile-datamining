@@ -57,8 +57,8 @@ export const useCanReviewGuildMemberApplications = ReactCompilerGating.isReactCo
           hasItem = PermissionStore.can(constants2.KICK_MEMBERS, stateFromStores);
         }
         if (hasItem) {
-          hasItem = tmp(6880).guildHasVerificationGate(stateFromStores);
-          const tmpResult2 = tmp(6880);
+          hasItem = tmp(6879).guildHasVerificationGate(stateFromStores);
+          const tmpResult2 = tmp(6879);
         }
         cResult[3] = stateFromStores;
         cResult[4] = hasItem;

@@ -24,14 +24,14 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(10865);
+const VoicePanelConstants = fn(10873);
 ({ VoicePanelCTACard: c10, VoicePanelModes: closure_11, MODE_CHANGE_PHYSICS: closure_12, SPEAKING_PHYSICS: map1, VoicePanelCardItemType: closure_14 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18344).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(10868).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18366).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(10876).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
 const ParticipantTypes = fn(5618).ParticipantTypes;
-const SCALE_PHYSICS = fn(10866).SCALE_PHYSICS;
+const SCALE_PHYSICS = fn(10874).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
@@ -2174,7 +2174,7 @@ let closure_60 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSha
   });
   return { sharedTransitionState, cardGestureEnabled: cardGestureEnabled[0] };
 });
-let closure_61 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
+let closure_61 = { isSelf: false, hasVideo: false, user: { id: "r" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING, scale, sharedValue2) {
   if (flag === undefined) {
     flag = false;
@@ -3552,7 +3552,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp41 = tmp56;
         }
       }
-      const obj10 = { isRinging: tmp13, avatarURI: "r", avatarDecoration: "toCharArray$esjava$1", layout: layoutTransition2, layoutPhysics: physics };
+      const obj10 = { isRinging: tmp13, avatarURI: "r", avatarDecoration: "ix", layout: layoutTransition2, layoutPhysics: physics };
       const tmp59 = closure_21(closure_43, obj10);
       cResult[54] = tmp13;
       cResult[55] = layoutTransition2;
@@ -3834,7 +3834,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       tmp29 = closure_21;
     }
   }
-  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "toCharArray$esjava$1", layout: layoutTransition, layoutPhysics: physics };
+  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "ix", layout: layoutTransition, layoutPhysics: physics };
   tmp31Result = closure_21(closure_43, obj13);
   tmp29 = closure_21;
   const tmp5Result16 = scrollPosition(id2[15]);

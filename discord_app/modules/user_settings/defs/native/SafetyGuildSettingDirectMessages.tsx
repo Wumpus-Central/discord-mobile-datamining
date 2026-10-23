@@ -10,10 +10,10 @@ import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAll
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17169);
+const UserSettingsSafetySelectedGuildStore = fn(17191);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11173).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+let closure_6 = fn(11182).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -123,7 +123,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return stringResult;
       }
     };
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useTitle() {
       const cResult = c.c(2);
@@ -194,7 +194,7 @@ const toggle = SettingBuilders.createToggle({
         return stringResult;
       },
   useDescription: tmp5,
-  parent: fn(8317).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8318).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: tmp4,
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     const tmp = closure_4();

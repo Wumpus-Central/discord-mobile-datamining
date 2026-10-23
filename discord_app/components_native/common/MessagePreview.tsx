@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      return jsx(onBeforeJumpToMessage(9748).ChatPreview, {
+      return jsx(onBeforeJumpToMessage(9755).ChatPreview, {
         channelId: channelId.channelId,
         messages: stateFromStoresObject.messages,
         jumpToChatProps: memo,

@@ -18,6 +18,9 @@ export default {
   isActivityPopoutOpen() {
     return false;
   },
+  hasOwnPictureInPicture() {
+    return false;
+  },
   isPictureInPicture(surface) {
     const tmp = React4(surface);
     let activityPanelMode;

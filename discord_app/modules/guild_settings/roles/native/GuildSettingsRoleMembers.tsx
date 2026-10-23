@@ -131,7 +131,7 @@ export default function GuildSettingsRoleMembers(guild) {
       location_section: "Members",
     });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(19013, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
+    obj2.openLazy(asyncRequireImpl(19036, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
       guild,
       role,
     });
@@ -186,7 +186,7 @@ export default function GuildSettingsRoleMembers(guild) {
   const items5 = [
     closure_8(callback, {
       style: tmp.containerSearchBar,
-      children: closure_8(guild(locked[23]).SearchField, { onChange: tmp3 }),
+      children: closure_8(guild(locked[23]).SearchBar, { onChange: tmp3 }),
     }),
   ];
   const obj8 = { style: guild.contentContainerStyle, children: null };

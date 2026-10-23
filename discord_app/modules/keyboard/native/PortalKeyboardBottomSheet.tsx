@@ -33,8 +33,8 @@ let size = {
   borderTopLeftRadius: nativeDefault.radii.none,
   borderTopRightRadius: nativeDefault.radii.none,
   width: "100%",
-  height: fn(8881).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
-  marginBottom: -fn(8881).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  height: fn(8888).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  marginBottom: -fn(8888).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
 };
 obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };

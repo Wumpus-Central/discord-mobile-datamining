@@ -167,6 +167,7 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
             runsInBackground: false,
             poolVisibility: "unpooled",
             muted: false,
+            userMuted: false,
           };
           const _Date = Date;
           obj5.connectedSince = Date.now();
@@ -385,10 +386,11 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         if (flag2) {
           const obj2 = {};
           const merged = Object.assign(value);
+          const data = value.data;
           const obj3 = {};
-          const merged1 = Object.assign(value.data);
+          const merged1 = Object.assign(data);
           obj3.poolVisibility = poolVisibility;
-          obj3.muted = "hidden" === poolVisibility;
+          obj3.muted = "hidden" === poolVisibility || data.userMuted;
           obj2.data = obj3;
           const result = map.set(frameId, obj2);
           flag2 = true;
@@ -396,6 +398,32 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
         tmp4 = flag2;
       }
       flag = tmp4;
+    }
+    return flag;
+  },
+  FRAME_SET_USER_MUTED: function handleSetUserMuted(arg0) {
+    ({ frameId, muted } = arg0);
+    let flag = false;
+    if (null != frameId) {
+      value = map.get(frameId);
+      let tmp3 = React5(value);
+      if (tmp3) {
+        let flag2 = value.data.userMuted !== muted;
+        if (flag2) {
+          const obj2 = {};
+          const merged = Object.assign(value);
+          const data = value.data;
+          const obj3 = {};
+          const merged1 = Object.assign(data);
+          obj3.userMuted = muted;
+          obj3.muted = "hidden" === data.poolVisibility || muted;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
+          flag2 = true;
+        }
+        tmp3 = flag2;
+      }
+      flag = tmp3;
     }
     return flag;
   },

@@ -960,28 +960,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBot
   ({ onBack, sourceQuestContent } = quest);
   ({ onConnectConsoleNext, onDefib, style, withSafeArea } = quest);
   const tmp = useQuestRewardClaimHandler({ quest, sourceQuestContent });
-  const questTaskDetails = quest(9539).useQuestTaskDetails(quest);
-  let obj = quest(9539);
-  const isQuestProgressing = quest(9539).useIsQuestProgressing(quest);
-  const obj2 = quest(9539);
-  const obj3 = quest(9539);
-  const xboxAndPlaystationAccounts = quest(9539).useConnectedAccounts().xboxAndPlaystationAccounts;
+  const questTaskDetails = quest(9546).useQuestTaskDetails(quest);
+  let obj = quest(9546);
+  const isQuestProgressing = quest(9546).useIsQuestProgressing(quest);
+  const obj2 = quest(9546);
+  const obj3 = quest(9546);
+  const xboxAndPlaystationAccounts = quest(9546).useConnectedAccounts().xboxAndPlaystationAccounts;
   const items = [quest, xboxAndPlaystationAccounts];
   const memo = noop.useMemo(() => QuestPlatformUtils.supportedConsoles(quest).filter((item) => {
     closure_0 = item;
     return null != xboxAndPlaystationAccounts.find((type) => type.type === closure_0);
   }), items);
-  const obj4 = quest(9539);
-  const hasWatchVideoOnMobileTasks = quest(16327).useHasWatchVideoOnMobileTasks(quest.config);
-  const obj5 = quest(16327);
-  const mobileActivityQuest = quest(16327).useMobileActivityQuest(quest);
+  const obj4 = quest(9546);
+  const hasWatchVideoOnMobileTasks = quest(16350).useHasWatchVideoOnMobileTasks(quest.config);
+  const obj5 = quest(16350);
+  const mobileActivityQuest = quest(16350).useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  const obj6 = quest(16327);
-  const primaryCtaCopy = quest(14077).usePrimaryCtaCopy({ quest, application: questApplication });
-  const obj7 = quest(14077);
+  const obj6 = quest(16350);
+  const primaryCtaCopy = quest(14091).usePrimaryCtaCopy({ quest, application: questApplication });
+  const obj7 = quest(14091);
   const userStatus = quest.userStatus;
   let completedAt;
-  const obj8 = quest(16361);
+  const obj8 = quest(16384);
   const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
@@ -991,19 +991,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBot
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
   }
-  const mobileActivityPressHandler = quest(16361).useMobileActivityPressHandler({ questId: quest.id, sourceQuestContent, launchMobileActivity });
+  const mobileActivityPressHandler = quest(16384).useMobileActivityPressHandler({ questId: quest.id, sourceQuestContent, launchMobileActivity });
   const tmp11 = null != completedAt;
-  const isQuestAccessSuspended = quest(9539).useIsQuestAccessSuspended();
-  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16355) };
+  const isQuestAccessSuspended = quest(9546).useIsQuestAccessSuspended();
+  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(16378) };
   let tmp40Result6 = null;
-  if (step !== quest(16357).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(16380).QuestBottomSheetStep.TASK_SELECT) {
     const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-    if (tmp2(16357).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (tmp2(16380).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
       let tmp40Result = closure_10(closure_16, obj12);
     } else {
       tmp40Result = null;
-      if (tmp2(16357).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (tmp2(16380).QuestBottomSheetStep.TASK_STATUS === step) {
         if (tmp11) {
           const obj13 = { questId: quest.id, onPress: tmp.claim, disabled: tmp13, loading: null, sourceQuestContent: null };
           let isClaiming = tmp.isLoading;
@@ -1030,16 +1030,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBot
           const merged1 = Object.assign(tmp28);
           tmp40Result4 = closure_10(closure_15, obj14);
         } else if (isMobileActivityQuest) {
-          const obj15 = { grow: true, size: "lg", onPress: mobileActivityPressHandler, text: primaryCtaCopy, icon: tmp2(9536).getPrimaryCtaIcon(quest) };
+          const obj15 = { grow: true, size: "lg", onPress: mobileActivityPressHandler, text: primaryCtaCopy, icon: tmp2(9543).getPrimaryCtaIcon(quest) };
           let tmp23 = null;
           if (isQuestAccessSuspended) {
             tmp23 = obj10;
           }
           const merged2 = Object.assign(tmp23);
           tmp40Result4 = closure_10(tmp2(5230).Button, obj15);
-          const tmp2Result2 = tmp2(9536);
+          const tmp2Result2 = tmp2(9543);
         } else {
-          if (_slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(6699).TaskPlatformScreen.CONSOLE) {
+          if (_slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(6698).TaskPlatformScreen.CONSOLE) {
             if (!isQuestProgressing) {
               const obj16 = { questId: quest.id, loading: isDefibrilating, disabled: isDefibrilating, onPress: onDefib, sourceQuestContent };
               let tmp17 = null;
@@ -1062,9 +1062,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBot
       const obj18 = { accessibilityLabel: null, variant: "secondary", icon: null, onPress: null, size: "lg" };
       const intl = tmp2(1128).intl;
       obj18.accessibilityLabel = intl.string(tmp2(1128).t["13/7kX"]);
-      obj18.icon = closure_10(tmp2(6914).ArrowLargeLeftIcon, {});
+      obj18.icon = closure_10(tmp2(6913).ArrowLargeLeftIcon, {});
       obj18.onPress = onBack;
-      tmp40Result5 = closure_10(tmp2(7943).IconButton, obj18);
+      tmp40Result5 = closure_10(tmp2(7944).IconButton, obj18);
     }
     obj11.backButton = tmp40Result5;
     obj11.style = style;

@@ -23,7 +23,7 @@ const ConjureCreateSheetDefault = ConjureCreateSheet;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const ConjureBuilderRouteStore = fn(7305);
+const ConjureBuilderRouteStore = fn(7306);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ConjureProjectsSheet = "ConjureProjectsSheet";
@@ -44,18 +44,18 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         fallbackGuildId = entry.fallbackGuildId;
       }
       if (cResult[0] !== entry) {
-        const result = tmp(11696).describeConjureProjectRow(entry);
+        const result = tmp(11707).describeConjureProjectRow(entry);
         cResult[0] = entry;
         cResult[1] = result;
         let tmp4 = result;
-        const tmpResult = tmp(11696);
+        const tmpResult = tmp(11707);
       } else {
         tmp4 = cResult[1];
       }
       ({ serverName, label } = tmp4);
       if (cResult[2] !== entry.project) {
         let obj2 = { project: entry.project, size: "list" };
-        const tmp9 = closure_6(fallbackGuildId(11796), obj2);
+        const tmp9 = closure_6(fallbackGuildId(11808), obj2);
         cResult[2] = entry.project;
         cResult[3] = tmp9;
         let tmp6 = tmp9;
@@ -102,7 +102,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           disabled: tmp14,
           onPress: tmp15,
         };
-        const tmp18 = closure_6(tmp(6889).TableRow, obj3);
+        const tmp18 = closure_6(tmp(6888).TableRow, obj3);
         cResult[9] = label;
         cResult[10] = entry.name;
         cResult[11] = serverName;
@@ -153,13 +153,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (fallbackGuildId == null) {
         fallbackGuildId = entry.fallbackGuildId;
       }
-      const result = entry(11696).describeConjureProjectRow(entry);
+      const result = entry(11707).describeConjureProjectRow(entry);
       ({ serverName, label } = result);
       let obj2 = {
         label: entry.name,
         subLabel: serverName,
         accessibilityLabel: label,
-        icon: closure_6(fallbackGuildId(11796), { project: entry.project, size: "list" }),
+        icon: closure_6(fallbackGuildId(11808), { project: entry.project, size: "list" }),
         trailing: null,
         disabled: null,
         onPress: null,
@@ -198,7 +198,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           openConjureProject.openConjureProject(tmp, entry.projectId);
         }
       };
-      return closure_6(entry(6889).TableRow, obj2);
+      return closure_6(entry(6888).TableRow, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
@@ -218,7 +218,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp8;
             }
             const obj2 = { title, hasIcons: true, children: cResult[2] };
-            const tmp10 = closure_6(fallbackGuildId(6973).TableRowGroup, obj2);
+            const tmp10 = closure_6(fallbackGuildId(6972).TableRowGroup, obj2);
             cResult[5] = cResult[2];
             cResult[6] = title;
             cResult[7] = tmp10;
@@ -277,8 +277,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { label: null, icon: null, arrow: true, onPress: null };
           const intl = tmp(1128).intl;
           obj2.label = intl.string(_modDef3830.UPLaGM);
-          const obj3 = { IconComponent: tmp(11780).UserIcon };
-          obj2.icon = closure_6(tmp(6889).TableRow.Icon, obj3);
+          const obj3 = { IconComponent: tmp(11792).UserIcon };
+          obj2.icon = closure_6(tmp(6888).TableRow.Icon, obj3);
           obj2.onPress = function onPress() {
             const obj2 = {
               key: ConjureCreateSheet.CONJURE_CREATE_SHEET_KEY,
@@ -311,13 +311,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj2 = forMeGuildId(5137);
-                  forMeGuildId(13448).openConjureProject(id, projectId);
+                  forMeGuildId(13462).openConjureProject(id, projectId);
                 },
               }),
             };
             ActionSheetActionCreators.showActionSheet(obj2);
           };
-          tmp6 = closure_6(tmp(6889).TableRow, obj2);
+          tmp6 = closure_6(tmp(6888).TableRow, obj2);
         }
         cResult[0] = tmp4;
         cResult[1] = tmp6;
@@ -330,8 +330,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function i(guild) {
             let obj = { label: guild.name, icon: null, arrow: true, onPress: null };
-            let obj2 = { guild, size: guild(6869).GuildIconSizes.SMALL_32 };
-            obj.icon = closure_6(closure_1(6869), obj2);
+            let obj2 = { guild, size: guild(6868).GuildIconSizes.SMALL_32 };
+            obj.icon = closure_6(closure_1(6868), obj2);
             obj.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
               const rootNavigationRef = forMeGuildId(5137).getRootNavigationRef();
@@ -357,9 +357,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = forMeGuildId(5137);
-              forMeGuildId(13448).openConjureProject(guild.id, undefined);
+              forMeGuildId(13462).openConjureProject(guild.id, undefined);
             };
-            return closure_6(guild(6889).TableRow, obj, guild.id);
+            return closure_6(guild(6888).TableRow, obj, guild.id);
           };
           cResult[4] = fn;
           let tmp11 = fn;
@@ -383,7 +383,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { title, description, hasIcons: true, children: null };
         const items = [tmp5, cResult[3]];
         obj4.children = items;
-        const tmp16 = closure_7(tmp(6973).TableRowGroup, obj4);
+        const tmp16 = closure_7(tmp(6972).TableRowGroup, obj4);
         cResult[5] = description;
         cResult[6] = tmp5;
         cResult[7] = cResult[3];
@@ -406,8 +406,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { label: null, icon: null, arrow: true, onPress: null };
           const intl = tmp3(1128).intl;
           obj2.label = intl.string(_modDef3830.UPLaGM);
-          const obj3 = { IconComponent: tmp3(11780).UserIcon };
-          obj2.icon = closure_6(tmp3(6889).TableRow.Icon, obj3);
+          const obj3 = { IconComponent: tmp3(11792).UserIcon };
+          obj2.icon = closure_6(tmp3(6888).TableRow.Icon, obj3);
           obj2.onPress = function onPress() {
             let obj2 = {
               key: ConjureCreateSheet.CONJURE_CREATE_SHEET_KEY,
@@ -440,20 +440,20 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj2 = forMeGuildId(5137);
-                  forMeGuildId(13448).openConjureProject(id, projectId);
+                  forMeGuildId(13462).openConjureProject(id, projectId);
                 },
               }),
             };
             ActionSheetActionCreators.showActionSheet(obj2);
           };
-          tmp5 = closure_6(tmp3(6889).TableRow, obj2);
+          tmp5 = closure_6(tmp3(6888).TableRow, obj2);
         }
         const items = [
           tmp5,
           guilds.map((guild) => {
             let obj = { label: guild.name, icon: null, arrow: true, onPress: null };
-            let obj2 = { guild, size: guild(6869).GuildIconSizes.SMALL_32 };
-            obj.icon = closure_6(closure_1(6869), obj2);
+            let obj2 = { guild, size: guild(6868).GuildIconSizes.SMALL_32 };
+            obj.icon = closure_6(closure_1(6868), obj2);
             obj.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
               const rootNavigationRef = forMeGuildId(5137).getRootNavigationRef();
@@ -479,13 +479,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = forMeGuildId(5137);
-              forMeGuildId(13448).openConjureProject(guild.id, undefined);
+              forMeGuildId(13462).openConjureProject(guild.id, undefined);
             };
-            return closure_6(guild(6889).TableRow, obj, guild.id);
+            return closure_6(guild(6888).TableRow, obj, guild.id);
           }),
         ];
         obj.children = items;
-        let tmp = closure_7(forMeGuildId(6973).TableRowGroup, obj);
+        let tmp = closure_7(forMeGuildId(6972).TableRowGroup, obj);
       } else {
         tmp = null;
       }
@@ -499,11 +499,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = stateFromStores1(576).c(47);
       let state = closure_9(0);
       const obj = stateFromStores1(576);
-      const conjureProjects = stateFromStores1(11696).useConjureProjects(ConjureProjectsSheet);
-      const obj2 = stateFromStores1(11696);
-      const conjureEligibleGuilds = stateFromStores1(11696).useConjureEligibleGuilds(ConjureProjectsSheet);
-      const obj3 = stateFromStores1(11696);
-      const conjureForMeGuildId = stateFromStores1(11696).useConjureForMeGuildId(ConjureProjectsSheet);
+      const conjureProjects = stateFromStores1(11707).useConjureProjects(ConjureProjectsSheet);
+      const obj2 = stateFromStores1(11707);
+      const conjureEligibleGuilds = stateFromStores1(11707).useConjureEligibleGuilds(ConjureProjectsSheet);
+      const obj3 = stateFromStores1(11707);
+      const conjureForMeGuildId = stateFromStores1(11707).useConjureForMeGuildId(ConjureProjectsSheet);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureProjectStore];
         const fn = function h() {
@@ -516,7 +516,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp3, tmp4] = cResult;
       }
-      const obj4 = stateFromStores1(11696);
+      const obj4 = stateFromStores1(11707);
       const stateFromStores = Stack(504).useStateFromStores(tmp3, tmp4);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [SelectedGuildStore];
@@ -571,7 +571,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 };
                 const items2 = [tmp72, tmp76];
                 obj8.children = items2;
-                const tmp83 = closure_7(Stack(5964).Stack, obj8);
+                const tmp83 = closure_7(Stack(5963).Stack, obj8);
                 cResult[10] = state.state;
                 cResult[11] = tmp83;
               }
@@ -605,7 +605,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj14 = { variant: "text-sm/normal", color: "text-muted", children: tmp54 };
                   items3[1] = closure_6(Stack(5220).Text, obj14);
                   obj13.children = items3;
-                  const tmp63 = closure_7(Stack(5964).Stack, obj13);
+                  const tmp63 = closure_7(Stack(5963).Stack, obj13);
                   cResult[15] = tmp54;
                   cResult[16] = tmp63;
                   let tmp59 = tmp63;
@@ -625,7 +625,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj15 = { spacing: nativeDefault.space.PX_16, children: null };
                   const items4 = [tmp59, tmp64];
                   obj15.children = items4;
-                  const tmp71 = closure_7(Stack(5964).Stack, obj15);
+                  const tmp71 = closure_7(Stack(5963).Stack, obj15);
                   cResult[20] = tmp59;
                   cResult[21] = tmp64;
                   cResult[22] = tmp71;
@@ -661,7 +661,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           tmp89 = cResult[5];
         }
         if (cResult[6] !== state.state) {
-          Stack = Stack(5964).Stack;
+          Stack = Stack(5963).Stack;
           const obj18 = { style: state.state, align: "center", spacing: nativeDefault.space.PX_8, children: null };
           items5 = [tmp85, tmp89];
           obj18.children = items5;
@@ -819,7 +819,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj20 = { spacing: nativeDefault.space.PX_24, children: null };
                   const items6 = [tmp28, tmp35, tmp42];
                   obj20.children = items6;
-                  const tmp48 = closure_7(Stack(5964).Stack, obj20);
+                  const tmp48 = closure_7(Stack(5963).Stack, obj20);
                   cResult[43] = tmp35;
                   cResult[44] = tmp42;
                   cResult[45] = tmp28;
@@ -909,7 +909,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               };
               items2[1] = closure_6(tmp2(5230).Button, obj8);
               obj6.children = items2;
-              let tmp29Result = closure_7(tmp2(5964).Stack, obj6);
+              let tmp29Result = closure_7(tmp2(5963).Stack, obj6);
             } else {
               const obj9 = { spacing: nativeDefault.space.PX_16, children: null };
               const obj10 = { spacing: nativeDefault.space.PX_4, children: null };
@@ -928,11 +928,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj13 = { variant: "text-sm/normal", color: "text-muted", children: stringResult };
               items3[1] = closure_6(tmp2(5220).Text, obj13);
               obj10.children = items3;
-              const items4 = [closure_7(tmp2(5964).Stack, obj10)];
+              const items4 = [closure_7(tmp2(5963).Stack, obj10)];
               const obj14 = { guilds: conjureEligibleGuilds, forMeGuildId: conjureForMeGuildId };
               items4[1] = closure_6(closure_12, obj14);
               obj9.children = items4;
-              tmp29Result = closure_7(tmp2(5964).Stack, obj9);
+              tmp29Result = closure_7(tmp2(5963).Stack, obj9);
             }
           }
           return tmp29Result;
@@ -944,7 +944,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         obj16.children = intl8.string(_modDef3830["XE+JXX"]);
         items5[1] = closure_6(tmp2(5220).Text, obj16);
         obj15.children = items5;
-        tmp29Result = closure_7(tmp2(5964).Stack, obj15);
+        tmp29Result = closure_7(tmp2(5963).Stack, obj15);
       } else {
         const found = conjureEligibleGuilds.find((id) => id.id === closure_0);
         let id;
@@ -983,7 +983,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         obj20.guilds = conjureEligibleGuilds;
         items6[2] = closure_6(closure_12, obj20);
         obj17.children = items6;
-        return closure_7(tmp2(5964).Stack, obj17);
+        return closure_7(tmp2(5963).Stack, obj17);
       }
       const obj5 = require("initialize");
     };

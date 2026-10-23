@@ -9,8 +9,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(8667).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8685);
+let closure_5 = fn(8674).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8692);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } =
   ProfileFrameConstants);
 let jsx = fn(21).jsx;
@@ -849,7 +849,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       c9 = undefined;
       c10 = undefined;
       const tmp = c10();
-      const settled = frame(8686).usePreloadLayerImages({
+      const settled = frame(8693).usePreloadLayerImages({
         frame,
         containerWidth,
         profileThemeType,
@@ -867,7 +867,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           return result;
         });
       }, items);
-      let obj = frame(8686);
+      let obj = frame(8693);
       let num = 0;
       if (settled) {
         num = 1;
@@ -889,7 +889,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               overflowTop: c8,
               overflowBottom: c9,
               overflowHorizontal: c10,
-            } = containerWidth(8688)(frame, containerWidth));
+            } = containerWidth(8695)(frame, containerWidth));
             const obj4 = { style: null, children: null };
             const items2 = [tmp.container];
             const obj5 = { opacity: sharedValue };

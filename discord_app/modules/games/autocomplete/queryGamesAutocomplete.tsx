@@ -12,8 +12,8 @@ let closure_3 = debounce(
     const items = [arg0, arg1];
     const many = useGameAutocomplete.fetchMany(items);
   },
-  fn(9042).GAME_AUTOCOMPLETE_DEBOUNCE_MS,
-  { leading: true, maxWait: fn(9042).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
+  fn(9049).GAME_AUTOCOMPLETE_DEBOUNCE_MS,
+  { leading: true, maxWait: fn(9049).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
 );
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");

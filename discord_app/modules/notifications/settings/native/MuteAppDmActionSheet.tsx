@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_6();
       channel = channel.channel;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(tmp(9109).BellIcon, { size: "md", color: "interactive-text-default" });
+        const tmp7 = closure_4(tmp(9116).BellIcon, { size: "md", color: "interactive-text-default" });
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: closure_4(View, {
           style: tmp.iconBackground,
           "aria-hidden": true,
-          children: closure_4(channel(9109).BellIcon, { size: "md", color: "interactive-text-default" }),
+          children: closure_4(channel(9116).BellIcon, { size: "md", color: "interactive-text-default" }),
         }),
       };
       const items = [closure_4(View, obj3), , , ,];

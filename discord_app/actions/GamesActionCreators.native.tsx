@@ -144,8 +144,15 @@ export default {
   },
   getDetectableGames() {},
   deleteEntry() {},
-  launch() {
-    return Promise.resolve();
+  launch(arg0) {
+    closure_0 = arg0;
+    return (async () => {
+      await value(c2[9]).tryStartAsEmbeddedApp(closure_0);
+      if (value == null) {
+        value = false;
+      }
+      return value;
+    })();
   },
   join(arg0) {
     closure_0 = arg0;

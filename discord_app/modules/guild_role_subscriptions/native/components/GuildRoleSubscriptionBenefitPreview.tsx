@@ -6,14 +6,14 @@ import UnicodeEmojisDefault from "../../../emojis/UnicodeEmojis.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef11509 from "../../../../../_runtime/metro/11509__.js";
+import _modDef11520 from "../../../../../_runtime/metro/11520__.js";
 import GuildRoleSubscriptionTierTemplatesUtils from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
 import EmojiIconDefault from "EmojiIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16456).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(16478).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);
@@ -59,7 +59,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[12] !== tmp4) {
                 let tmp18 = true === tmp4;
                 if (tmp18) {
-                  const obj2 = { source: _modDef11509 };
+                  const obj2 = { source: _modDef11520 };
                   tmp18 = hasOwnProperty(native.Icon, obj2);
                 }
                 cResult[12] = tmp4;
@@ -136,7 +136,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = hasOwnProperty(View, obj3);
       let tmp4Result = true === flag;
       if (tmp4Result) {
-        const obj4 = { source: _modDef11509 };
+        const obj4 = { source: _modDef11520 };
         tmp4Result = hasOwnProperty(native.Icon, obj4);
       }
       items[2] = tmp4Result;

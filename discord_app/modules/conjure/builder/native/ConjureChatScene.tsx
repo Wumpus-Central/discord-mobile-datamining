@@ -40,14 +40,14 @@ const ConjureHistorySheetDefault = ConjureHistorySheet;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Keyboard: closure_7, View: closure_8 } = get_ActivityIndicator);
-const closeConnection = fn(10668).closeConnection;
-const conjureDesignFeedbackStore = fn(11801);
+const closeConnection = fn(10675).closeConnection;
+const conjureDesignFeedbackStore = fn(11813);
 ({
   enterConjureDesignFeedback: closure_11,
   exitConjureDesignFeedback: closure_12,
   useConjureDesignFeedback: map1,
 } = conjureDesignFeedbackStore);
-const isLaunched = fn(6762).isLaunched;
+const isLaunched = fn(6761).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const createStyles = fn(4969);
@@ -457,9 +457,9 @@ export default function ConjureChatScene(guildId) {
           obj7.application = application;
           obj7.guildId = closure_131_22;
           obj7.onClose = function onClose() {
-            const result = c0(11814).repairConjureGuildHints(closure_1_7, closure_1_22);
-            const obj = c0(11814);
-            result.finally(() => application(10690).getProject(closure_1_1)).catch(() => {});
+            const result = c0(11826).repairConjureGuildHints(closure_1_7, closure_1_22);
+            const obj = c0(11826);
+            result.finally(() => application(10697).getProject(closure_1_1)).catch(() => {});
           };
           let result = application3(tmp2[29]).openConjureAppInstallModal(obj7);
           const obj2 = application3(tmp2[29]);
@@ -692,7 +692,7 @@ export default function ConjureChatScene(guildId) {
       let fn;
       if (closure_24) {
         if (closure_36) {
-          fn = (color) => frameSurfaceOptions(closure_1_0(11043).ChevronSmallDownIcon, { size: "xs", color });
+          fn = (color) => frameSurfaceOptions(closure_1_0(11052).ChevronSmallDownIcon, { size: "xs", color });
         }
       }
       obj.renderTrailingIcon = fn;
@@ -705,7 +705,7 @@ export default function ConjureChatScene(guildId) {
             targets,
             target,
             onChange(mode) {
-              const previewTarget = closure_2_0(11820).selectPreviewTarget(
+              const previewTarget = closure_2_0(11834).selectPreviewTarget(
                 mode,
                 closure_1_16,
                 closure_1_19,
@@ -1116,7 +1116,7 @@ export default function ConjureChatScene(guildId) {
                   ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
                   const obj = {
                     ref,
-                    IconComponent: title(9613).MoreHorizontalIcon,
+                    IconComponent: title(9620).MoreHorizontalIcon,
                     onPress,
                     accessibilityLabel: null,
                     accessibilityActions: null,
@@ -1126,7 +1126,7 @@ export default function ConjureChatScene(guildId) {
                   obj.accessibilityLabel = intl.string(title(1128).t["UKOtz+"]);
                   obj.accessibilityActions = accessibilityActions;
                   obj.onAccessibilityAction = onAccessibilityAction;
-                  return closure_1_18(closure_1_1(11799), obj);
+                  return closure_1_18(closure_1_1(11811), obj);
                 },
               };
               items[1] = frameSurfaceOptions(title(navigation[70]).ContextMenu, obj2);

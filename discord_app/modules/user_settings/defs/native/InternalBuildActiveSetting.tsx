@@ -4,7 +4,7 @@ import MobileNativeUpdateStore from "../../../mobile_native_updater/MobileNative
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasCheckNativeUpdateSetting() {
       return (
@@ -23,7 +23,7 @@ const obj3 = {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(16815).MobilePhoneSettingsIcon,
+  IconComponent: fn(16837).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
@@ -49,7 +49,7 @@ export default SettingBuilders.createStatic({
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(16815).MobilePhoneSettingsIcon,
+  IconComponent: fn(16837).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },

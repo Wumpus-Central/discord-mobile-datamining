@@ -18,7 +18,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7793).InviteTargetTypes;
+const InviteTargetTypes = fn(7794).InviteTargetTypes;
 const Permissions = fn(1087).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
@@ -187,12 +187,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol2 = Symbol;
               if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
                 const items3 = [CreateInviteModalStore];
-                const fn = function x() {
-                  return error.getError();
-                };
+                class U {
+                  constructor() {
+                    return closure_1_8.getError();
+                  }
+                }
                 cResult[8] = items3;
-                cResult[9] = fn;
-                let tmp18 = fn;
+                cResult[9] = U;
+                let tmp18 = U;
                 let tmp17 = items3;
               } else {
                 tmp17 = cResult[8];
@@ -205,14 +207,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (null != stateFromStores) {
                   tmp23 = tmp5(tmp2[21])(stateFromStores);
                 }
-                let str2 = "";
-                if (null != tmp23) {
-                  str2 = tmp(tmp2[22]).getShareMessage(tmp23);
-                  const tmpResult4 = tmp(tmp2[22]);
+                class U {
+                  constructor() {
+                    return closure_1_8.getError();
+                  }
                 }
                 cResult[10] = stateFromStores;
                 cResult[11] = tmp23;
-                cResult[12] = str2;
+                cResult[12] = "";
                 class M {
                   constructor() {
                     if (null != code) {
@@ -519,6 +521,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
+                class U {
+                  constructor() {
+                    return closure_1_8.getError();
+                  }
+                }
                 cResult[16] = channel;
                 cResult[17] = stateFromStores;
                 cResult[18] = tmp22;
@@ -583,7 +590,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 cResult[20] = W;
               }
-              const fn2 = function z(userId) {
+              const fn = function z(userId) {
                 ActionSheetActionCreatorsDefault.hideActionSheet();
                 showUserProfileActionSheetDefault({
                   userId,
@@ -593,8 +600,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               cResult[13] = analyticsLocations;
               cResult[14] = channel.id;
-              cResult[15] = fn2;
-              const tmpResult3 = tmp(tmp2[20]);
+              cResult[15] = fn;
+              const tmpResult2 = tmp(tmp2[20]);
             }
           }
         }
@@ -863,7 +870,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             stringResult = intl4.formatToPlainString(tmp7(tmp3[28]).t["1UgGdm"], obj15);
           }
           obj14.placeholder = stringResult;
-          const items11 = [closure_13(tmp7(tmp3[34]).SearchField, obj14)];
+          const items11 = [closure_13(tmp7(tmp3[34]).SearchBar, obj14)];
           let tmp24Result2 = null == vanityURLCode;
           if (tmp24Result2) {
             const obj16 = { style: tmp.inviteAgeText, channel, canEditInvite: null == code };

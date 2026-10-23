@@ -95,8 +95,8 @@ let closure_9 = async function _prefetchGameOrganizationAccountLinkState(arg0) {
     }
   }
 };
-const FetchState = fn(7189).FetchState;
-let closure_8 = fn(10994).GameOrganizationInviteStates;
+const FetchState = fn(7188).FetchState;
+let closure_8 = fn(11002).GameOrganizationInviteStates;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/game_organization_invites/prefetchGameOrganizationAccountLinkState.tsx",

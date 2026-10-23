@@ -22,7 +22,7 @@ function renderChannelSecondaryViewChatHeader(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9713);
+const NativeStackNavigator = fn(9720);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4969);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_7();
       dependencyMap = tmp;
       const tmp2 = params(5132)();
-      const accessibilityNativeStackOptions = navigation(7081).useAccessibilityNativeStackOptions();
+      const accessibilityNativeStackOptions = navigation(7080).useAccessibilityNativeStackOptions();
       const channelId = params.channelId;
       const items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
       const memo = accessibilityNativeStackOptions.useMemo(() => {

@@ -13,9 +13,9 @@ const Text_Text = Text(5220);
 require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(12003);
+const RedesignChannelListConstants = fn(12014);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
-const UnreadSetting = fn(6691).UnreadSetting;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4969);
@@ -628,9 +628,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1[3] = channelInfo;
         obj.children = items1;
         if (flag) {
-          let AnimatedPressableHighlight = hideIcon(13195);
+          let AnimatedPressableHighlight = hideIcon(13211);
         } else {
-          AnimatedPressableHighlight = mode(8881).AnimatedPressableHighlight;
+          AnimatedPressableHighlight = mode(8888).AnimatedPressableHighlight;
         }
         obj2 = {};
         const merged1 = Object.assign(merged);
@@ -645,8 +645,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
         }
         obj3.resolvedUnreadSetting = ALL_MESSAGES;
-        closure_10(hideIcon(13194), obj3);
-        const tmp9 = hideIcon(13194);
+        closure_10(hideIcon(13210), obj3);
+        const tmp9 = hideIcon(13210);
       }
     };
 export const ChannelModes = obj2;

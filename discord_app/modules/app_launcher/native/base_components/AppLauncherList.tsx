@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
-import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import Search_SearchBar from "../../../../design/components/Search/native/SearchBar.native.tsx";
 import AppLauncherFlashList from "AppLauncherFlashList.tsx";
-import _modDef12101 from "../../../../../_runtime/metro/12101__.js";
+import _modDef12112 from "../../../../../_runtime/metro/12112__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -122,20 +122,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       let appLauncherFlashListProps;
       const bottom = appLauncherFlashListProps(1633)().bottom;
-      appLauncherFlashListProps = ref(12034).useAppLauncherFlashListProps();
+      appLauncherFlashListProps = ref(12045).useAppLauncherFlashListProps();
       const items = [appLauncherFlashListProps.scrollerRef, ref];
       const memo = noop.useMemo(() => mergeProps.mergeRefs(appLauncherFlashListProps.scrollerRef, ref), items);
       const obj3 = { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo };
       const items1 = [{ paddingBottom: bottom }, merged.contentContainerStyle];
       obj3.contentContainerStyle = items1;
-      const obj = ref(12034);
+      const obj = ref(12045);
       const merged1 = Object.assign(merged);
       ({
         onScroll: obj2.animatedOnScroll,
         gestureRef: obj2.simultaneousHandlers,
         animatedProps: obj2.animatedProps,
       } = appLauncherFlashListProps);
-      return jsx(appLauncherFlashListProps(12034), {
+      return jsx(appLauncherFlashListProps(12045), {
         contentContainerStyle: null,
         scrollIndicatorInsets: { bottom },
         ref: memo,
@@ -168,8 +168,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp10 = jsx(native.EmptyState, {
         style: emptyState,
         imageStyle: emptyStateImage,
-        lightSource: _modDef12101,
-        darkSource: _modDef12101,
+        lightSource: _modDef12112,
+        darkSource: _modDef12112,
         title: tmp5,
         body: tmp6,
       });
@@ -180,8 +180,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         style: emptyState,
         imageStyle: emptyStateImage,
-        lightSource: _modDef12101,
-        darkSource: _modDef12101,
+        lightSource: _modDef12112,
+        darkSource: _modDef12112,
         title: tmp5,
         body: tmp6,
       };
@@ -191,8 +191,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         style: tmp.emptyState,
         imageStyle: tmp.emptyStateImage,
-        lightSource: _modDef12101,
-        darkSource: _modDef12101,
+        lightSource: _modDef12112,
+        darkSource: _modDef12112,
         title: null,
         body: null,
       };
@@ -203,8 +203,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       return jsx(native.EmptyState, {
         style: tmp.emptyState,
         imageStyle: tmp.emptyStateImage,
-        lightSource: _modDef12101,
-        darkSource: _modDef12101,
+        lightSource: _modDef12112,
+        darkSource: _modDef12112,
         title: null,
         body: null,
       });
@@ -221,7 +221,7 @@ export const AppLauncherListSearchBar = ReactCompilerGating.isReactCompilerEnabl
       if (cResult[0] !== arg0) {
         const obj2 = { size: "md" };
         const merged = Object.assign(arg0);
-        const tmp10 = jsx(SearchField.SearchField, { size: "md" });
+        const tmp10 = jsx(Search_SearchBar.SearchBar, { size: "md" });
         cResult[0] = arg0;
         cResult[1] = tmp10;
         let tmp5 = tmp10;
@@ -244,6 +244,6 @@ export const AppLauncherListSearchBar = ReactCompilerGating.isReactCompilerEnabl
   : function AppLauncherListSearchBar(arg0) {
       const obj = { style: closure_8().searchBarContainer, children: null };
       const merged = Object.assign(arg0);
-      obj.children = jsx(SearchField.SearchField, { size: "md" });
+      obj.children = jsx(Search_SearchBar.SearchBar, { size: "md" });
       return <View style={closure_8().searchBarContainer}>{null}</View>;
     };

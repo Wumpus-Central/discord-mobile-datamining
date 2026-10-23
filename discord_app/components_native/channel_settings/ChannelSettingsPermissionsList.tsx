@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/06813_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06812_fuzzysearch.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -332,7 +332,7 @@ export default noop.memo(
           tmp12 = cResult[3];
         }
         if (cResult[4] !== stateFromStores) {
-          class B {
+          class G {
             constructor() {
               obj = closure_3;
               guildId = undefined;
@@ -349,11 +349,11 @@ export default noop.memo(
           }
           const items2 = [stateFromStores];
           cResult[4] = stateFromStores;
-          cResult[5] = B;
+          cResult[5] = G;
           cResult[6] = items2;
           let tmp15 = items2;
         } else {
-          class B {
+          class G {
             constructor() {
               obj = closure_3;
               guildId = undefined;
@@ -371,10 +371,10 @@ export default noop.memo(
           tmp15 = cResult[6];
         }
         const tmpResult = channelId(stateFromStores[13]);
-        const stateFromStoresObject = channelId(stateFromStores[13]).useStateFromStoresObject(tmp12, B, tmp15);
+        const stateFromStoresObject = channelId(stateFromStores[13]).useStateFromStoresObject(tmp12, G, tmp15);
         guildId = stateFromStoresObject.guildId;
         if (stateFromStores != null) {
-          class B {
+          class G {
             constructor() {
               obj = closure_3;
               guildId = undefined;
@@ -391,7 +391,7 @@ export default noop.memo(
           }
         }
         if (cResult[7] === guildId) {
-          class B {
+          class G {
             constructor() {
               obj = closure_3;
               guildId = undefined;
@@ -552,7 +552,7 @@ export default noop.memo(
         const intl = tmp2(tmp3[25]).intl;
         obj9.placeholder = intl.string(channelId(stateFromStores[25]).t["5h0QOP"]);
         obj9.onChange = tmp5[1];
-        obj8.children = closure_13(channelId(stateFromStores[24]).SearchField, obj9);
+        obj8.children = closure_13(channelId(stateFromStores[24]).SearchBar, obj9);
         const items5 = [closure_13(rows1, obj8)];
         if (0 !== (type === constants.ROLE ? rows1.length : rows.length)) {
           if (type === constants.ROLE) {

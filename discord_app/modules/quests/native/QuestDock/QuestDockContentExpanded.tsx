@@ -4,8 +4,8 @@ import QuestDockUtils from "QuestDockUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6696).QuestDockMode;
-let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16331).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6695).QuestDockMode;
+let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16354).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj = { wrapper: null };

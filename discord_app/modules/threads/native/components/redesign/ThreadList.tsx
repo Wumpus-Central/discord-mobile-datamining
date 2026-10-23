@@ -7,7 +7,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import _mod7206 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7205 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import RowButton from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
 import ThreadPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import ThreadListTableRowDefault from "ThreadListTableRow.tsx";
@@ -1094,7 +1094,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           obj5.ListFooterComponentStyle = footer;
           obj5.contentContainerStyle = contentContainerStyle;
-          obj.children = jsx(_mod7206.AnimatedFlashList, {
+          obj.children = jsx(_mod7205.AnimatedFlashList, {
             data: memo,
             ListHeaderComponent: memo2,
             ListHeaderComponentStyle: closure_3.header,

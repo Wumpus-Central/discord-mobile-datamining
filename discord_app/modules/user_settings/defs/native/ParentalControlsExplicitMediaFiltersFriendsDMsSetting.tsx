@@ -5,14 +5,14 @@ import useParentalControlSettings from "../../../parent_tools/hooks/useParentalC
 import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCenterControlledSettingsUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
-const ExplicitMediaRedactionUtils = obj(8571);
+const ExplicitMediaRedactionUtils = obj(8572);
 require = fn;
 const ReactCompilerGating = fn(558);
 function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["+uI23H"]);
 }
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useObscuredContentFriendsDmSettingValue() {
       let obj = require;
@@ -49,7 +49,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
-  parent: fn(8317).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8318).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useObscuredContentFriendsDmSettingValue() {
         let obj = require;
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       const intl = selectedTeenId(1128).intl;
-      const obj = selectedTeenId(16033);
+      const obj = selectedTeenId(16051);
       const stringResult = intl.string(selectedTeenId(1128).t.GYpoAq);
       const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl2 = selectedTeenId(1128).intl;
@@ -101,8 +101,8 @@ const pressable = SettingBuilders.createPressable({
       obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
       const items = [selectedTeenId(1211).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(16038).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(16038);
+      const result = selectedTeenId(16056).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(16056);
     }
   },
   unsearchable: true,

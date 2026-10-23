@@ -93,7 +93,7 @@ export default noop.memo(
             tmp18 = cResult[7];
           }
           if (cResult[8] !== handleTextChange) {
-            class H {
+            class M {
               constructor() {
                 current = closure_1.current;
                 if (current != null) {
@@ -105,9 +105,9 @@ export default noop.memo(
               }
             }
             cResult[8] = handleTextChange;
-            cResult[9] = H;
+            cResult[9] = M;
           } else {
-            class H {
+            class M {
               constructor() {
                 current = closure_1.current;
                 if (current != null) {
@@ -121,7 +121,7 @@ export default noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            class H {
+            class M {
               constructor() {
                 current = closure_1.current;
                 if (current != null) {
@@ -134,7 +134,7 @@ export default noop.memo(
             }
             cResult[10] = tmp22;
           } else {
-            class H {
+            class M {
               constructor() {
                 current = closure_1.current;
                 if (current != null) {
@@ -151,7 +151,7 @@ export default noop.memo(
           const _Symbol2 = Symbol;
           ({ container, header } = tmp4);
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            class H {
+            class M {
               constructor() {
                 current = closure_1.current;
                 if (current != null) {
@@ -166,7 +166,7 @@ export default noop.memo(
             cResult[11] = stringResult;
             const tmp24 = stringResult;
           } else {
-            class H {
+            class M {
               constructor() {
                 current = closure_1.current;
                 if (current != null) {
@@ -179,7 +179,7 @@ export default noop.memo(
             }
           }
           if (cResult[12] === tmp18) {
-            class H {
+            class M {
               constructor() {
                 current = closure_1.current;
                 if (current != null) {
@@ -191,7 +191,7 @@ export default noop.memo(
               }
             }
             if (cResult[15] === tmp4.header) {
-              class H {
+              class M {
                 constructor() {
                   current = closure_1.current;
                   if (current != null) {
@@ -203,7 +203,7 @@ export default noop.memo(
                 }
               }
               if (cResult[18] === bottomSheetIndex) {
-                class H {
+                class M {
                   constructor() {
                     current = closure_1.current;
                     if (current != null) {
@@ -256,7 +256,7 @@ export default noop.memo(
             onFocus: tmp18,
             round: true,
           };
-          const tmp28 = closure_9(channel(tmp2[17]).SearchField, obj7);
+          const tmp28 = closure_9(channel(tmp2[17]).SearchBar, obj7);
           cResult[12] = tmp18;
           cResult[13] = handleTextChange;
           cResult[14] = tmp28;
@@ -330,7 +330,7 @@ export default noop.memo(
         obj6.placeholder = intl.string(channel(handleTextChange[16]).t.KgK5qg);
         obj6.onChange = handleTextChange;
         obj6.onFocus = callback;
-        obj5.children = closure_9(channel(handleTextChange[17]).SearchField, obj6);
+        obj5.children = closure_9(channel(handleTextChange[17]).SearchBar, obj6);
         const items3 = [closure_9(closure_4, obj5), ,];
         const obj7 = { style: tmp.list, children: null };
         const obj8 = {

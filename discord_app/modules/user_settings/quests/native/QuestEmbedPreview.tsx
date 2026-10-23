@@ -191,14 +191,14 @@ export const QuestEmbedPreview = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp2(1128).intl;
         obj2.title = intl.string(tmp2(1128).t["habP/M"]);
         let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-        obj2.children = jsx(stateFromStores(9742), {
+        obj2.children = jsx(stateFromStores(9749), {
           rowGenerator: memo,
           message: memo1,
           horizontalOffset: 0,
           pointerEvents: "none",
         });
-        tmp6 = jsx(stateFromStores(16408), { title: null, children: null });
-        const tmp9 = stateFromStores(16408);
+        tmp6 = jsx(stateFromStores(16430), { title: null, children: null });
+        const tmp9 = stateFromStores(16430);
       }
       return tmp6;
     };

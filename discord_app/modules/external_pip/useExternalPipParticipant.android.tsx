@@ -57,7 +57,7 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
   }
 }
 const ParticipantTypes = fn(5618).ParticipantTypes;
-const VoicePanelModes = fn(10865).VoicePanelModes;
+const VoicePanelModes = fn(10873).VoicePanelModes;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {

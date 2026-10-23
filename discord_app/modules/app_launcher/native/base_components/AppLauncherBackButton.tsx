@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      const tmp6 = importDefault(tmp4 ? 6915 : 6918);
+      const tmp6 = importDefault(tmp4 ? 6914 : 6917);
       if (cResult[2] !== tmp4) {
         const intl = util.intl;
         const t = util.t;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: importDefault(canGoBackResult ? 6915 : 6918),
+        icon: importDefault(canGoBackResult ? 6914 : 6917),
         onPress: onPress.onPress,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1.5,
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return jsx(IconButton.IconButton, {
         size: "sm",
         variant: "secondary-overlay",
-        icon: importDefault(canGoBackResult ? 6915 : 6918),
+        icon: importDefault(canGoBackResult ? 6914 : 6917),
         onPress: onPress.onPress,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1.5,

@@ -10,12 +10,12 @@ const result = size.fileFinishedImporting("modules/checkpoint/hooks/useAutoSelec
 export const useAutoSelectTraitOption = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAutoSelectTraitOption(onSelectOption) {
       const cResult = c.c(11);
-      ({ visibleTraitOptions, selectedOptionId } = onSelectOption);
+      ({ availableTraitOptions, selectedOptionId } = onSelectOption);
       onSelectOption = onSelectOption.onSelectOption;
       const paused = onSelectOption.paused;
-      const first = visibleTraitOptions[0];
-      if (cResult[0] === selectedOptionId) {
-        if (cResult[1] === visibleTraitOptions) {
+      const first = availableTraitOptions[0];
+      if (cResult[0] === availableTraitOptions) {
+        if (cResult[1] === selectedOptionId) {
           closure_4 = tmp3;
           if (cResult[5] === first) {
             if (cResult[6] === tmp3) {
@@ -52,7 +52,7 @@ export const useAutoSelectTraitOption = ReactCompilerGating.isReactCompilerEnabl
         }
       }
       if (cResult[3] !== selectedOptionId) {
-        const fn = function s(optionId) {
+        const fn = function l(optionId) {
           return optionId.optionId === selectedOptionId;
         };
         cResult[3] = selectedOptionId;
@@ -61,16 +61,16 @@ export const useAutoSelectTraitOption = ReactCompilerGating.isReactCompilerEnabl
       } else {
         tmp4 = cResult[4];
       }
-      cResult[0] = selectedOptionId;
-      cResult[1] = visibleTraitOptions;
-      cResult[2] = visibleTraitOptions.some(tmp4);
-      const someResult = visibleTraitOptions.some(tmp4);
+      cResult[0] = availableTraitOptions;
+      cResult[1] = selectedOptionId;
+      cResult[2] = availableTraitOptions.some(tmp4);
+      const someResult = availableTraitOptions.some(tmp4);
     }
   : function useAutoSelectTraitOption(paused) {
-      ({ visibleTraitOptions, selectedOptionId: require, onSelectOption } = paused);
+      ({ availableTraitOptions, selectedOptionId: require, onSelectOption } = paused);
       paused = paused.paused;
-      const first = visibleTraitOptions[0];
-      const someResult = visibleTraitOptions.some((optionId) => optionId.optionId === require);
+      const first = availableTraitOptions[0];
+      const someResult = availableTraitOptions.some((optionId) => optionId.optionId === require);
       c4 = someResult;
       const items = [first, someResult, onSelectOption, paused];
       const effect = noop.useEffect(() => {

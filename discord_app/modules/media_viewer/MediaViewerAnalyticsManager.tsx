@@ -25,7 +25,7 @@ let obj2 = {
   channelId: "toCharArray$esjava$1",
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
-  hasMediaOptions: "Reflect",
+  hasMediaOptions: "application",
   source: null,
   incrementableActions: null,
 };

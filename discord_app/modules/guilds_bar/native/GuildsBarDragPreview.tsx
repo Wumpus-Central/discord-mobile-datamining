@@ -14,8 +14,8 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(6687).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17628).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(6686).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(17650).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4969);
 let closure_8 = createStyles.createStyles({
@@ -190,8 +190,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               parentId: "Reflect",
               name: "Array",
               color: "__packager_asset",
-              expanded: null,
-              children: null,
+              expanded: "justifyContent",
+              children: "position",
             };
             const items = [overNode];
             element.children = items;
@@ -380,8 +380,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               parentId: "Reflect",
               name: "Array",
               color: "__packager_asset",
-              expanded: null,
-              children: null,
+              expanded: "justifyContent",
+              children: "position",
             };
             const items = [tmp2];
             element.children = items;
@@ -891,12 +891,12 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: 24,
-                    scrollPosition: 24,
-                    dragRegion: "none",
-                    windowSize: "0 0 1512 510",
-                    dropComplete: "none",
-                    listInsets: "100%",
+                    gestureState: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+                    scrollPosition: null,
+                    dragRegion: 90,
+                    windowSize: null,
+                    dropComplete: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE",
+                    listInsets: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST",
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                   obj.overState = state;
@@ -991,12 +991,12 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: 24,
-                  scrollPosition: 24,
-                  dragRegion: "none",
-                  windowSize: "0 0 1512 510",
-                  dropComplete: "none",
-                  listInsets: "100%",
+                  gestureState: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+                  scrollPosition: null,
+                  dragRegion: 90,
+                  windowSize: null,
+                  dropComplete: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE",
+                  listInsets: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST",
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                 obj.overState = state;

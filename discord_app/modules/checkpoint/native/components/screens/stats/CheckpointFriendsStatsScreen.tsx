@@ -18,6 +18,7 @@ import MicrophoneIcon from "../../../../../../design/components/Icon/native/rede
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointStatNumberDefault from "../../CheckpointStatNumber.tsx";
+import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
 import useFriendsAnimationState from "../../../../hooks/useFriendsAnimationState.tsx";
 import useSidekickLeave from "../../../../hooks/useSidekickLeave.tsx";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -65,7 +66,7 @@ function SidekickMessageInput(user) {
             c3 = 2;
             c1 = 3;
             c4 = 1;
-            const obj6 = { value: tmp4(tmp40[32]).sendSidekickMessage(importDefault, id.id), done: false };
+            const obj6 = { value: tmp4(tmp40[33]).sendSidekickMessage(importDefault, id.id), done: false };
             return obj6;
           } else {
             c4 = 3;
@@ -74,8 +75,8 @@ function SidekickMessageInput(user) {
           if (2 === tmp8) {
             c3 = 1;
             const intl = tmp4(tmp40[23]).intl;
-            tmp4(tmp40[33]).presentError(intl.string(tmp4(tmp40[23]).t.fEptJP));
-            obj2 = tmp4(tmp40[33]);
+            tmp4(tmp40[34]).presentError(intl.string(tmp4(tmp40[23]).t.fEptJP));
+            obj2 = tmp4(tmp40[34]);
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -173,7 +174,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1128).intl;
     obj5.accessibilityLabel = intl2.string(user(1128).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(12806).GiftIcon, obj6);
+    obj5.children = closure_13(user(12825).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5)];
     const obj7 = {
       onPress: function handleSend() {
@@ -214,7 +215,7 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6002);
+const CheckpointConstants = fn(6001);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
@@ -363,8 +364,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           tmp18 = cResult[8];
         }
         if (cResult[9] !== tmp18) {
-          const obj4 = { variant: "display-lg", children: tmp18 };
-          const tmp23 = map1(CheckpointTextDefault, obj4);
+          const obj4 = { children: tmp18 };
+          const tmp23 = map1(CheckpointDisplayTextDefault, obj4);
           cResult[9] = tmp18;
           cResult[10] = tmp23;
           let tmp20 = tmp23;
@@ -438,10 +439,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = map1(tmp2, obj5);
       obj3.children = items;
       const items1 = [closure_1_14(React5, obj3)];
-      const obj6 = { variant: "display-lg", children: null };
+      const obj6 = { children: null };
       const stringResult = intl.string(_modDef3056.ZQakPR);
       obj6.children = title.toLocaleUpperCase();
-      items1[1] = map1(CheckpointTextDefault, obj6);
+      items1[1] = map1(CheckpointDisplayTextDefault, obj6);
       obj2.children = items1;
       const items2 = [
         closure_1_14(React5, obj2),

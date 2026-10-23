@@ -2,8 +2,8 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../design/shared.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import _modDef7054 from "../../../../../../_runtime/metro/07054__.js";
 import _modDef7055 from "../../../../../../_runtime/metro/07055__.js";
-import _modDef7056 from "../../../../../../_runtime/metro/07056__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -49,9 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = obj4;
       } else {
         if (tmpResult.isThemeDark(tmp6)) {
-          let tmp5Result2 = _modDef7055;
+          let tmp5Result2 = _modDef7054;
         } else {
-          tmp5Result2 = _modDef7056;
+          tmp5Result2 = _modDef7055;
         }
         tmpResult = shared;
       }
@@ -76,10 +76,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           let tmp2 = dependencyMap;
           if (obj2.isThemeDark(closure_2)) {
-            tmp2 = 7055;
+            tmp2 = 7054;
             let tmp4Result = importDefault(tmp2);
           } else {
-            tmp4Result = _modDef7056;
+            tmp4Result = _modDef7055;
           }
           obj2 = shared;
         }

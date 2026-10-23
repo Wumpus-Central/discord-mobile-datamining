@@ -5,8 +5,8 @@ import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Pressables = PressableHighlight(6894);
-const FireIcon2 = PressableHighlight(14102);
+const Pressables = PressableHighlight(6893);
+const FireIcon2 = PressableHighlight(14116);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

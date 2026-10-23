@@ -12,7 +12,7 @@ const dependencyMap = {
   sm: { width: 18, height: 18 },
   md: { width: 24, height: 24 },
   lg: { width: 32, height: 32 },
-  custom: { width: "r", height: "emoji" },
+  custom: { width: "Array", height: "Reflect" },
   refresh_sm: { width: 18, height: 18 },
 };
 const ReactCompilerGating = fn(558);

@@ -185,7 +185,7 @@ export default noop.memo(
           }
           if (cResult[3] !== tmp4) {
             const obj2 = { screens: tmp4, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" };
-            const tmp7 = closure_11(tmp(7081).Navigator, obj2);
+            const tmp7 = closure_11(tmp(7080).Navigator, obj2);
             cResult[3] = tmp4;
             cResult[4] = tmp7;
             let tmp5 = tmp7;
@@ -207,7 +207,7 @@ export default noop.memo(
               channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
             }
             obj.subtitle = channelName;
-            return closure_2_11(channelId(6910).NavigatorHeader, obj);
+            return closure_2_11(channelId(6909).NavigatorHeader, obj);
           },
           headerLeft: null,
           render: null,
@@ -242,7 +242,7 @@ export default noop.memo(
                 channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
               }
               obj.subtitle = channelName;
-              return closure_2_11(channelId(6910).NavigatorHeader, obj);
+              return closure_2_11(channelId(6909).NavigatorHeader, obj);
             },
             headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
             render() {
@@ -252,6 +252,6 @@ export default noop.memo(
           obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
           return obj;
         }, items);
-        return closure_11(channelId(7081).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+        return closure_11(channelId(7080).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
       },
 );

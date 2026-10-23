@@ -6,7 +6,6 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import UserProfileAvatarDefault from "UserProfileAvatar.tsx";
-import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
 import tracking_Tracking from "../../main_tabs_v2/native/tabs/you/tracking/Tracking.tsx";
 import getRandomCustomStatusPromptDefault from "../../custom_status/utils/getRandomCustomStatusPrompt.tsx";
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
@@ -42,10 +41,10 @@ const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 require = fn;
 const View = fn(17).View;
 const useIsContentShown = fn(4813).useIsContentShown;
-const UserProfileSections = fn(8645).UserProfileSections;
-let UserProfileThemeTypes = fn(7288).UserProfileThemeTypes;
+const UserProfileSections = fn(8652).UserProfileSections;
+let UserProfileThemeTypes = fn(7289).UserProfileThemeTypes;
 const ContentDismissActionType = fn(4818).ContentDismissActionType;
-const constants = fn(15773).UserProfileEditAutoFocusElement;
+const constants = fn(15787).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -1188,7 +1187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [,];
         ({ cards: arr2[0], profileContent: arr2[1] } = closure_5);
         obj2.style = items1;
-        const items2 = [map1(YouExpiringTrialOfferCardDefault, { navigateToPremium, style: items }), , , , , , , , ,];
+        const items2 = [map1(YouExpiringTrialOfferCardDefault, { navigateToPremium, style: items }), , , , , , , ,];
         let tmp3Result = !shouldShowExpiringTrialOfferCard;
         if (!shouldShowExpiringTrialOfferCard) {
           const obj4 = { navigateToPremium, navigateToShop, hasCustomProfileTheme };
@@ -1202,11 +1201,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2[2] = tmp3Result2;
         items2[3] = map1(UserProfileActivityDefault, { user, currentUser: user, style: items });
         items2[4] = map1(UserProfileAboutMeCardDefault, { userId: user.id, displayProfile });
-        items2[5] = map1(FormDividerDefault, {});
-        items2[6] = map1(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
-        items2[7] = map1(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
-        items2[8] = map1(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
-        items2[9] = map1(UserProfileNoteDefault, { userId: user.id });
+        items2[5] = map1(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
+        items2[6] = map1(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
+        items2[7] = map1(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
+        items2[8] = map1(UserProfileNoteDefault, { userId: user.id });
         obj2.children = items2;
         return closure_2_14(View, obj2);
       }, items7);
@@ -1289,10 +1287,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return items;
       }, items9);
       const tmp4Result10 = user(navigateToPremium[55]);
-      const measuredTabItems = user(navigateToPremium[68]).useMeasuredTabItems(memo);
+      const measuredTabItems = user(navigateToPremium[67]).useMeasuredTabItems(memo);
       ({ items, pageHeights } = measuredTabItems);
-      const tmp4Result11 = user(navigateToPremium[68]);
-      const tmp4Result12 = user(navigateToPremium[69]);
+      const tmp4Result11 = user(navigateToPremium[67]);
+      const tmp4Result12 = user(navigateToPremium[68]);
       segmentedControlState = tmp4Result12.useSegmentedControlState({
         pageWidth,
         defaultIndex: activeProfileTabSectionIndex,
@@ -1370,7 +1368,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items14 = [,];
       ({ customStatusBubble: arr15[0], customStatusBubbleInset: arr15[1] } = tmp3);
       obj18.style = items14;
-      items13[1] = enabled(navigateToFriends(navigateToPremium[70]), obj18);
+      items13[1] = enabled(navigateToFriends(navigateToPremium[69]), obj18);
       let isLoaded;
       if (tmp6 != null) {
         isLoaded = tmp6.isLoaded;
@@ -1405,8 +1403,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp43 = closure_21;
       const tmp4Result13 = user(navigateToPremium[43]);
-      obj21.status = user(navigateToPremium[71]).getStatusLabel(stateFromStores);
-      const tmp4Result14 = user(navigateToPremium[71]);
+      obj21.status = user(navigateToPremium[70]).getStatusLabel(stateFromStores);
+      const tmp4Result14 = user(navigateToPremium[70]);
       let intl2 = tmp4(tmp2[28]).intl;
       obj20.displayNameAccessibilityHint =
         "" +
@@ -1425,10 +1423,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj25 = { zIndex: 1, children: null };
       obj24.variant = str;
-      obj23.children = enabled(user(navigateToPremium[72]).Tabs, obj24);
+      obj23.children = enabled(user(navigateToPremium[71]).Tabs, obj24);
       const items15 = [
         enabled(closure_5, obj23),
-        enabled(navigateToFriends(navigateToPremium[68]), {
+        enabled(navigateToFriends(navigateToPremium[67]), {
           state: segmentedControlState,
           pageHeights,
           scrollPosition,
@@ -1439,6 +1437,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items13[3] = c14(closure_5, obj22);
       obj16.children = items13;
       obj25.children = c14(closure_5, obj16);
-      obj15.children = enabled(user(navigateToPremium[73]).LayerScope, obj25);
-      return enabled(navigateToFriends(navigateToPremium[74]).View, obj15);
+      obj15.children = enabled(user(navigateToPremium[72]).LayerScope, obj25);
+      return enabled(navigateToFriends(navigateToPremium[73]).View, obj15);
     };

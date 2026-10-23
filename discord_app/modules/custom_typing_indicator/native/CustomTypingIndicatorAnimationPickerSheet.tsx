@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl4 = map(1128).intl;
       obj7.label = intl4.string(content(3832)["8t5EiI"]);
       items1[3] = obj7;
-      const ActionSheet = map(7282).ActionSheet;
+      const ActionSheet = map(7283).ActionSheet;
       const content2 = previewRow.content;
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
         const intl5 = map(1128).intl;
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[17] === tmp13) {
             let tmp16 = cResult[18];
           }
-          Stack = map(5964).Stack;
+          Stack = map(5963).Stack;
           const items2 = [items1.slice(0, num), items1.slice(num, 4)];
           map = items2.map;
           const mapped = map((arr, arg1) =>
@@ -278,12 +278,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = onChange(576);
       obj10.typingSuggestion = map(1400).TypingSuggestion.UNSPECIFIED;
       obj9.config = obj10;
-      const tmp15 = closure_6(content(13000), obj9);
+      const tmp15 = closure_6(content(13016), obj9);
       cResult[13] = emojis;
       cResult[14] = content;
       cResult[15] = tmp15;
       tmp13 = tmp15;
-      const tmp10Result = content(13000);
+      const tmp10Result = content(13016);
     }
   : function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       onChange = onChange.onChange;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { config: null, size: 54 };
       const obj8 = { emojis, animation, typingSuggestion: onChange(1400).TypingSuggestion.UNSPECIFIED };
       obj7.config = obj8;
-      obj6.children = closure_6(animation(13000), obj7);
+      obj6.children = closure_6(animation(13016), obj7);
       const items1 = [closure_6(View, obj6)];
       const obj9 = { spacing: 8, children: null };
       const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -344,7 +344,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           index,
         ),
       );
-      items1[1] = closure_6(onChange(5964).Stack, obj9);
+      items1[1] = closure_6(onChange(5963).Stack, obj9);
       obj5.children = items1;
-      return closure_7(onChange(7282).ActionSheet, obj5);
+      return closure_7(onChange(7283).ActionSheet, obj5);
     };

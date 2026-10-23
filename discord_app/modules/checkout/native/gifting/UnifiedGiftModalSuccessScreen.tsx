@@ -49,7 +49,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(13834, dependencyMap.paths),
+        asyncRequireImpl(13848, dependencyMap.paths),
         obj2,
         "collectibles_shop_gift_badge_modal",
       );

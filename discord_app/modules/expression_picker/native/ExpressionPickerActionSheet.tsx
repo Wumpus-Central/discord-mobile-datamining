@@ -17,7 +17,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 let closure_5 = fn(5252).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10094).STICKER_FORMATS;
+const STICKER_FORMATS = fn(10101).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);

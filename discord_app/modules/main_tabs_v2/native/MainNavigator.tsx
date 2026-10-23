@@ -77,7 +77,7 @@ function getOrbsArcadeGameComponent() {
   return require("OrbsArcadeGameScreen").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(17254).StackNavigationAnimationSettings;
+let closure_7 = fn(17276).StackNavigationAnimationSettings;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -154,9 +154,9 @@ function getChannelScreen() {
       },
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(9669).renderHeader };
+      const obj = { headerShown: true, header: styles(9676).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -740,9 +740,9 @@ export default noop.memo(
                 },
               },
               options(arg0) {
-                const obj = { headerShown: true, header: styles(9669).renderHeader };
+                const obj = { headerShown: true, header: styles(9676).renderHeader };
                 ({ navigation, route } = arg0);
-                const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+                const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
                 const merged1 = Object.assign(animation2);
                 obj.animation = animation;
                 return obj;
@@ -831,9 +831,9 @@ export default noop.memo(
                 },
               },
               options(arg0) {
-                const obj = { headerShown: true, header: styles(9669).renderHeader };
+                const obj = { headerShown: true, header: styles(9676).renderHeader };
                 ({ navigation, route } = arg0);
-                const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+                const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
                 const merged1 = Object.assign(animation2);
                 obj.animation = animation;
                 return obj;
@@ -914,7 +914,7 @@ export default noop.memo(
                     if (closure_1_15) {
                       str = "default";
                     }
-                    const merged = Object.assign(animation(9669).getDefaultStackHeaderProps(navigation.navigation));
+                    const merged = Object.assign(animation(9676).getDefaultStackHeaderProps(navigation.navigation));
                     const merged1 = Object.assign(animation2);
                     return { orientation: str, headerShown: false };
                   },
@@ -963,9 +963,9 @@ export default noop.memo(
                     },
                   },
                   options(arg0) {
-                    const obj = { headerShown: true, header: styles(9669).renderHeader };
+                    const obj = { headerShown: true, header: styles(9676).renderHeader };
                     ({ navigation, route } = arg0);
-                    const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+                    const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
                     const merged1 = Object.assign(animation2);
                     obj.animation = animation;
                     return obj;
@@ -986,7 +986,7 @@ export default noop.memo(
               name: "conversations",
               getComponent: getConversationsComponent,
               options() {
-                return stateFromStores(10001)();
+                return stateFromStores(10008)();
               },
             }),
             ,
@@ -1004,7 +1004,7 @@ export default noop.memo(
             name: "channel-secondary-view-chat",
             getComponent: getChannelSecondaryViewChatComponent,
             options() {
-              return stateFromStores(10001)();
+              return stateFromStores(10008)();
             },
             listeners: { beforeRemove: resetChatKeyboard },
           };
@@ -1069,7 +1069,7 @@ export default noop.memo(
                 str = "modal";
               }
               const obj = {};
-              const merged = Object.assign(stateFromStores(10001)({ presentation: str }));
+              const merged = Object.assign(stateFromStores(10008)({ presentation: str }));
               const params3 = route.params;
               let presentation;
               if (params3 != null) {
@@ -1136,7 +1136,7 @@ export default noop.memo(
                   if (closure_1_15) {
                     str = "default";
                   }
-                  const merged = Object.assign(animation(9669).getDefaultStackHeaderProps(navigation.navigation));
+                  const merged = Object.assign(animation(9676).getDefaultStackHeaderProps(navigation.navigation));
                   const merged1 = Object.assign(animation2);
                   return { orientation: str, headerShown: false };
                 },
@@ -1185,9 +1185,9 @@ export default noop.memo(
                   },
                 },
                 options(arg0) {
-                  const obj = { headerShown: true, header: styles(9669).renderHeader };
+                  const obj = { headerShown: true, header: styles(9676).renderHeader };
                   ({ navigation, route } = arg0);
-                  const merged = Object.assign(styles(9669).getDefaultChannelStackHeaderProps(navigation, route));
+                  const merged = Object.assign(styles(9676).getDefaultChannelStackHeaderProps(navigation, route));
                   const merged1 = Object.assign(animation2);
                   obj.animation = animation;
                   return obj;
@@ -1208,7 +1208,7 @@ export default noop.memo(
             name: "conversations",
             getComponent: getConversationsComponent,
             options() {
-              return stateFromStores(10001)();
+              return stateFromStores(10008)();
             },
           };
           const obj9 = { beforeRemove: resetChatKeyboard };
@@ -1229,7 +1229,7 @@ export default noop.memo(
           items1[9] = v65535(closure_16.Screen, {
             name: "settings",
             options() {
-              const tmp = stateFromStores(10001);
+              const tmp = stateFromStores(10008);
               let obj2;
               if (obj.isIpadOS()) {
                 obj2 = { presentation: "modal" };
@@ -1246,13 +1246,13 @@ export default noop.memo(
             name: "sidebar",
             getComponent: getChannelDetailsComponent,
             options() {
-              return stateFromStores(10001)({ lockOrientation: false });
+              return stateFromStores(10008)({ lockOrientation: false });
             },
           });
           const obj19 = {
             name: "settings",
             options() {
-              const tmp = stateFromStores(10001);
+              const tmp = stateFromStores(10008);
               let obj2;
               if (obj.isIpadOS()) {
                 obj2 = { presentation: "modal" };
@@ -1269,7 +1269,7 @@ export default noop.memo(
             name: "sidebar",
             getComponent: getChannelDetailsComponent,
             options() {
-              return stateFromStores(10001)({ lockOrientation: false });
+              return stateFromStores(10008)({ lockOrientation: false });
             },
           };
           tmp5Result = PlatformUtils2;
@@ -1309,7 +1309,7 @@ export default noop.memo(
                 }
                 str2 = str3;
               }
-              const merged = Object.assign(stateFromStores(10001)({ presentation: str2 }));
+              const merged = Object.assign(stateFromStores(10008)({ presentation: str2 }));
               return obj;
             },
             getComponent: getModalComponent,

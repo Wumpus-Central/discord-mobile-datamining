@@ -21451,7 +21451,7 @@ function transformComponent(type, join) {
       const obj2 = { type: null, id: null, components: null };
       const found = mapped.filter(tmp(1388).isNotNullish);
       obj2.type = tmp(2000).ComponentType.ACTION_ROW;
-      obj2.id = tmp(6009).asComponentId(join.join(","));
+      obj2.id = tmp(6008).asComponentId(join.join(","));
       obj2.components = found;
       return obj2;
     } else if (tmp(2000).ComponentType.BUTTON === type2) {
@@ -21477,13 +21477,13 @@ function transformComponent(type, join) {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      let obj7 = { type: tmp(2000).ComponentType.BUTTON, id: tmp(6009).asComponentId(join.join(",")), customId: null, style: null, disabled: null, url: null, label: null, emoji: null, skuId: null };
+      let obj7 = { type: tmp(2000).ComponentType.BUTTON, id: tmp(6008).asComponentId(join.join(",")), customId: null, style: null, disabled: null, url: null, label: null, emoji: null, skuId: null };
       ({ custom_id: obj49.customId, style: obj49.style, disabled: obj49.disabled, url: obj49.url, label: obj49.label } = type);
       obj7.emoji = tmp38;
       obj7.skuId = type.sku_id;
       return obj7;
     } else if (tmp(2000).ComponentType.STRING_SELECT === type2) {
-      const obj8 = { type: tmp(2000).ComponentType.STRING_SELECT, id: tmp(6009).asComponentId(join.join(",")), customId: null, disabled: null, required: null, options: null, placeholder: null, minValues: null, maxValues: null };
+      const obj8 = { type: tmp(2000).ComponentType.STRING_SELECT, id: tmp(6008).asComponentId(join.join(",")), customId: null, disabled: null, required: null, options: null, placeholder: null, minValues: null, maxValues: null };
       ({ custom_id: obj44.customId, disabled: obj44.disabled, required: required9 } = type);
       if (required9 == null) {
         required9 = false;
@@ -21522,7 +21522,7 @@ function transformComponent(type, join) {
       ({ placeholder: obj44.placeholder, min_values: obj44.minValues, max_values: obj44.maxValues } = type);
       return obj8;
     } else if (tmp(2000).ComponentType.TEXT_INPUT === type2) {
-      const obj9 = { type: type.type, id: tmp(6009).asComponentId(join.join(",")), style: null, customId: null, label: null, value: null, placeholder: null, disabled: null, required: null, minLength: null, maxLength: null };
+      const obj9 = { type: type.type, id: tmp(6008).asComponentId(join.join(",")), style: null, customId: null, label: null, value: null, placeholder: null, disabled: null, required: null, minLength: null, maxLength: null };
       ({ style: obj42.style, custom_id: obj42.customId, label: obj42.label, value: obj42.value, placeholder: obj42.placeholder, disabled: obj42.disabled, required: required8 } = type);
       if (required8 == null) {
         required8 = false;
@@ -21531,7 +21531,7 @@ function transformComponent(type, join) {
       ({ min_length: obj42.minLength, max_length: obj42.maxLength } = type);
       return obj9;
     } else if (tmp(2000).ComponentType.USER_SELECT === type2) {
-      const obj10 = { type: tmp(2000).ComponentType.USER_SELECT, id: tmp(6009).asComponentId(join.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      const obj10 = { type: tmp(2000).ComponentType.USER_SELECT, id: tmp(6008).asComponentId(join.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
       ({ custom_id: obj40.customId, disabled: obj40.disabled, required: required7 } = type);
       if (required7 == null) {
         required7 = false;
@@ -21540,7 +21540,7 @@ function transformComponent(type, join) {
       ({ placeholder: obj40.placeholder, min_values: obj40.minValues, max_values: obj40.maxValues, default_values: obj40.defaultValues } = type);
       return obj10;
     } else if (tmp(2000).ComponentType.ROLE_SELECT === type2) {
-      const obj11 = { type: tmp(2000).ComponentType.ROLE_SELECT, id: tmp(6009).asComponentId(join.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      const obj11 = { type: tmp(2000).ComponentType.ROLE_SELECT, id: tmp(6008).asComponentId(join.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
       ({ custom_id: obj38.customId, disabled: obj38.disabled, required: required6 } = type);
       if (required6 == null) {
         required6 = false;
@@ -21549,7 +21549,7 @@ function transformComponent(type, join) {
       ({ placeholder: obj38.placeholder, min_values: obj38.minValues, max_values: obj38.maxValues, default_values: obj38.defaultValues } = type);
       return obj11;
     } else if (tmp(2000).ComponentType.MENTIONABLE_SELECT === type2) {
-      const obj13 = { type: tmp(2000).ComponentType.MENTIONABLE_SELECT, id: tmp(6009).asComponentId(join.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      const obj13 = { type: tmp(2000).ComponentType.MENTIONABLE_SELECT, id: tmp(6008).asComponentId(join.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
       ({ custom_id: obj36.customId, disabled: obj36.disabled, required: required5 } = type);
       if (required5 == null) {
         required5 = false;
@@ -21558,7 +21558,7 @@ function transformComponent(type, join) {
       ({ placeholder: obj36.placeholder, min_values: obj36.minValues, max_values: obj36.maxValues, default_values: obj36.defaultValues } = type);
       return obj13;
     } else if (tmp(2000).ComponentType.CHANNEL_SELECT === type2) {
-      const obj15 = { type: tmp(2000).ComponentType.CHANNEL_SELECT, id: tmp(6009).asComponentId(join.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, channelTypes: null, defaultValues: null };
+      const obj15 = { type: tmp(2000).ComponentType.CHANNEL_SELECT, id: tmp(6008).asComponentId(join.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, channelTypes: null, defaultValues: null };
       ({ custom_id: obj34.customId, disabled: obj34.disabled, required: required4 } = type);
       if (required4 == null) {
         required4 = false;
@@ -21590,23 +21590,23 @@ function transformComponent(type, join) {
       if (0 !== found1.length) {
         tmp30 = null;
         if (null != tmp29) {
-          const obj17 = { type: tmp(2000).ComponentType.SECTION, id: tmp(6009).asComponentId(join.join(",")), components: found1, accessory: tmp29 };
+          const obj17 = { type: tmp(2000).ComponentType.SECTION, id: tmp(6008).asComponentId(join.join(",")), components: found1, accessory: tmp29 };
           tmp30 = obj17;
-          const tmpResult34 = tmp(6009);
+          const tmpResult34 = tmp(6008);
         }
       }
       return tmp30;
     } else if (tmp(2000).ComponentType.TEXT_DISPLAY === type2) {
-      const obj18 = { type: tmp(2000).ComponentType.TEXT_DISPLAY, id: tmp(6009).asComponentId(join.join(",")), content: type.content };
+      const obj18 = { type: tmp(2000).ComponentType.TEXT_DISPLAY, id: tmp(6008).asComponentId(join.join(",")), content: type.content };
       return obj18;
     } else if (tmp(2000).ComponentType.THUMBNAIL === type2) {
-      const obj19 = { type: tmp(2000).ComponentType.THUMBNAIL, id: tmp(6009).asComponentId(join.join(",")), media: null, description: null, spoiler: null };
-      const tmpResult36 = tmp(6009);
-      obj19.media = tmp(6008).toUnfurledMediaItem(type.media);
+      const obj19 = { type: tmp(2000).ComponentType.THUMBNAIL, id: tmp(6008).asComponentId(join.join(",")), media: null, description: null, spoiler: null };
+      const tmpResult36 = tmp(6008);
+      obj19.media = tmp(6007).toUnfurledMediaItem(type.media);
       ({ description: obj27.description, spoiler: obj27.spoiler } = type);
       return obj19;
     } else if (tmp(2000).ComponentType.MEDIA_GALLERY === type2) {
-      const obj20 = { type: tmp(2000).ComponentType.MEDIA_GALLERY, id: tmp(6009).asComponentId(join.join(",")), items: null };
+      const obj20 = { type: tmp(2000).ComponentType.MEDIA_GALLERY, id: tmp(6008).asComponentId(join.join(",")), items: null };
       const items1 = type.items;
       obj20.items = items1.map((media) => {
         const obj = { media: join(dependencyMap[8]).toUnfurledMediaItem(media.media), description: null, spoiler: null };
@@ -21615,13 +21615,13 @@ function transformComponent(type, join) {
       });
       return obj20;
     } else if (tmp(2000).ComponentType.FILE === type2) {
-      const obj21 = { type: tmp(2000).ComponentType.FILE, id: tmp(6009).asComponentId(join.join(",")), file: null, name: null, size: null, spoiler: null };
-      const tmpResult39 = tmp(6009);
-      obj21.file = tmp(6008).toUnfurledMediaItem(type.file);
+      const obj21 = { type: tmp(2000).ComponentType.FILE, id: tmp(6008).asComponentId(join.join(",")), file: null, name: null, size: null, spoiler: null };
+      const tmpResult39 = tmp(6008);
+      obj21.file = tmp(6007).toUnfurledMediaItem(type.file);
       ({ name: obj22.name, size: obj22.size, spoiler: obj22.spoiler } = type);
       return obj21;
     } else if (tmp(2000).ComponentType.SEPARATOR === type2) {
-      const obj23 = { type: tmp(2000).ComponentType.SEPARATOR, id: tmp(6009).asComponentId(join.join(",")), divider: null, spacing: null };
+      const obj23 = { type: tmp(2000).ComponentType.SEPARATOR, id: tmp(6008).asComponentId(join.join(",")), divider: null, spacing: null };
       let flag2 = type.divider;
       if (flag2 == null) {
         flag2 = true;
@@ -21636,9 +21636,9 @@ function transformComponent(type, join) {
     } else if (tmp(2000).ComponentType.CONTENT_INVENTORY_ENTRY === type2) {
       let tmp22 = null;
       if (null != type.content_inventory_entry) {
-        const obj24 = { type: tmp(2000).ComponentType.CONTENT_INVENTORY_ENTRY, id: tmp(6009).asComponentId(join.join(",")), contentInventoryEntry: type.content_inventory_entry };
+        const obj24 = { type: tmp(2000).ComponentType.CONTENT_INVENTORY_ENTRY, id: tmp(6008).asComponentId(join.join(",")), contentInventoryEntry: type.content_inventory_entry };
         tmp22 = obj24;
-        const tmpResult42 = tmp(6009);
+        const tmpResult42 = tmp(6008);
       }
       return tmp22;
     } else if (tmp(2000).ComponentType.CONTAINER === type2) {
@@ -21656,7 +21656,7 @@ function transformComponent(type, join) {
       const obj25 = { type: null, id: null, accentColor: null, spoiler: null, components: null };
       const found2 = mapped2.filter(tmp(1388).isNotNullish);
       obj25.type = tmp(2000).ComponentType.CONTAINER;
-      obj25.id = tmp(6009).asComponentId(join.join(","));
+      obj25.id = tmp(6008).asComponentId(join.join(","));
       ({ accent_color: obj16.accentColor, spoiler: obj16.spoiler } = type);
       obj25.components = found2;
       return obj25;
@@ -21670,15 +21670,15 @@ function transformComponent(type, join) {
       }
       let tmp20 = null;
       if (null != tmp19) {
-        const obj26 = { type: tmp(2000).ComponentType.LABEL, id: tmp(6009).asComponentId(join.join(",")), label: null, description: null, component: null };
+        const obj26 = { type: tmp(2000).ComponentType.LABEL, id: tmp(6008).asComponentId(join.join(",")), label: null, description: null, component: null };
         ({ label: obj14.label, description: obj14.description } = type);
         obj26.component = tmp19;
         tmp20 = obj26;
-        const tmpResult44 = tmp(6009);
+        const tmpResult44 = tmp(6008);
       }
       return tmp20;
     } else if (tmp(2000).ComponentType.FILE_UPLOAD === type2) {
-      const obj28 = { type: type.type, id: tmp(6009).asComponentId(join.join(",")), customId: null, disabled: null, required: null, minValues: null, maxValues: null, fileTypes: null };
+      const obj28 = { type: type.type, id: tmp(6008).asComponentId(join.join(",")), customId: null, disabled: null, required: null, minValues: null, maxValues: null, fileTypes: null };
       ({ custom_id: obj12.customId, disabled: obj12.disabled, required: required3 } = type);
       if (required3 == null) {
         required3 = false;
@@ -21690,28 +21690,28 @@ function transformComponent(type, join) {
       const checkpoint_data = type.checkpoint_data;
       const version = checkpoint_data.version;
       if (CheckpointVersions.V2025 === version) {
-        const obj29 = { type: type.type, id: tmp(6009).asComponentId(join.join(",")), checkpointData: null };
-        const tmpResult46 = tmp(6009);
-        obj29.checkpointData = tmp(6010).transformCheckpoint2025CardComponent(checkpoint_data);
+        const obj29 = { type: type.type, id: tmp(6008).asComponentId(join.join(",")), checkpointData: null };
+        const tmpResult46 = tmp(6008);
+        obj29.checkpointData = tmp(6009).transformCheckpoint2025CardComponent(checkpoint_data);
         let tmp11 = obj29;
-        const tmpResult47 = tmp(6010);
+        const tmpResult47 = tmp(6009);
       } else {
         tmp11 = null;
         if (tmp9.V2026 === version) {
-          const result = tmp(6023).transformCheckpoint2026CardComponent(checkpoint_data);
+          const result = tmp(6022).transformCheckpoint2026CardComponent(checkpoint_data);
           let tmp12 = null;
           if (null != result) {
-            const obj30 = { type: type.type, id: tmp(6009).asComponentId(join.join(",")), checkpointData: result };
+            const obj30 = { type: type.type, id: tmp(6008).asComponentId(join.join(",")), checkpointData: result };
             tmp12 = obj30;
-            const tmpResult49 = tmp(6009);
+            const tmpResult49 = tmp(6008);
           }
           tmp11 = tmp12;
-          const tmpResult48 = tmp(6023);
+          const tmpResult48 = tmp(6022);
         }
       }
       return tmp11;
     } else if (tmp(2000).ComponentType.RADIO_GROUP === type2) {
-      const obj31 = { type: type.type, id: tmp(6009).asComponentId(join.join(",")), customId: null, options: null, required: null };
+      const obj31 = { type: type.type, id: tmp(6008).asComponentId(join.join(",")), customId: null, options: null, required: null };
       ({ custom_id: obj5.customId, options: obj5.options, required: required2 } = type);
       if (required2 == null) {
         required2 = false;
@@ -21719,7 +21719,7 @@ function transformComponent(type, join) {
       obj31.required = required2;
       return obj31;
     } else if (tmp(2000).ComponentType.CHECKBOX_GROUP === type2) {
-      const obj32 = { type: type.type, id: tmp(6009).asComponentId(join.join(",")), customId: null, options: null, minValues: null, maxValues: null, required: null };
+      const obj32 = { type: type.type, id: tmp(6008).asComponentId(join.join(",")), customId: null, options: null, minValues: null, maxValues: null, required: null };
       ({ custom_id: obj3.customId, options: obj3.options, min_values: obj3.minValues, max_values: obj3.maxValues, required } = type);
       if (required == null) {
         required = false;
@@ -21727,7 +21727,7 @@ function transformComponent(type, join) {
       obj32.required = required;
       return obj32;
     } else if (tmp(2000).ComponentType.CHECKBOX === type2) {
-      let obj = { type: type.type, id: tmp(6009).asComponentId(join.join(",")), customId: null, default: null };
+      let obj = { type: type.type, id: tmp(6008).asComponentId(join.join(",")), customId: null, default: null };
       ({ custom_id: obj.customId, default: obj.default } = type);
       return obj;
     } else {

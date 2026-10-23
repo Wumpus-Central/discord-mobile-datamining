@@ -15,7 +15,7 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7630).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_6 = fn(7631).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "https://support.discord.com/hc/articles/14155060633623";

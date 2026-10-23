@@ -4,7 +4,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Link from "../../../../_runtime/01506_Link.js";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod6919 from "../../../../_runtime/metro/06919__.js";
+import _mod6918 from "../../../../_runtime/metro/06918__.js";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -62,8 +62,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] !== onClose) {
           let headerCloseButton;
           if (null != onClose) {
-            headerCloseButton = subtitle(6910).getHeaderCloseButton(onClose);
-            const tmpResult = subtitle(6910);
+            headerCloseButton = subtitle(6909).getHeaderCloseButton(onClose);
+            const tmpResult = subtitle(6909);
           }
           cResult[3] = onClose;
           cResult[4] = headerCloseButton;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } =
           tmp4);
         obj3.headerStatusBarHeight = headerStatusBarHeight;
-        const tmp17 = jsx(subtitle(6919).Header, {
+        const tmp17 = jsx(subtitle(6918).Header, {
           headerStyle: tmp4.header,
           title,
           headerTitle: tmp10,
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerStatusBarHeight = num + nativeDefault.space.PX_8;
       }
       obj3.headerStatusBarHeight = headerStatusBarHeight;
-      return jsx(_mod6919.Header, {
+      return jsx(_mod6918.Header, {
         headerStyle: tmp.header,
         title,
         headerTitle(children) {

@@ -6,7 +6,7 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ArrowLargeLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import Search_SearchBar from "../../../../design/components/Search/native/SearchBar.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { children: null };
             const obj5 = { size: "md", round: true, ref: tmp6 };
             const merged = Object.assign(tmp5);
-            obj4.children = hasOwnProperty(SearchField.SearchField, obj5);
+            obj4.children = hasOwnProperty(Search_SearchBar.SearchBar, obj5);
             const tmp28 = hasOwnProperty(React4, obj4);
             cResult[14] = tmp5;
             cResult[15] = tmp6;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { style: tmp2.flex, children: null };
       const obj7 = { children: null };
       const merged1 = Object.assign(merged);
-      obj7.children = hasOwnProperty(SearchField.SearchField, { size: "md", round: true, ref });
+      obj7.children = hasOwnProperty(Search_SearchBar.SearchBar, { size: "md", round: true, ref });
       obj6.children = hasOwnProperty(React4, obj7);
       items[1] = hasOwnProperty(React4, obj6);
       const obj8 = { size: "md", round: true, ref };

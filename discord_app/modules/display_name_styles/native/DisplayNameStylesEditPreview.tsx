@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const tmp5 = closure_9();
       const obj = user(576);
-      const guildMemberAndUserPendingNameplate = user(8628).useGuildMemberAndUserPendingNameplate(user, guildId);
+      const guildMemberAndUserPendingNameplate = user(8635).useGuildMemberAndUserPendingNameplate(user, guildId);
       ({ guildNameplate, pendingNameplate, userNameplate } = guildMemberAndUserPendingNameplate);
       if (cResult[0] !== guildNameplate) {
         const nameplateData = tmp(1992).getNameplateData(guildNameplate);
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     pendingDisplayNameStyles: tmp13,
                                     pendingGlobalName: displayName,
                                   };
-                                  const tmp33 = closure_7(tmp(11138).NameplatePreview, obj4);
+                                  const tmp33 = closure_7(tmp(11147).NameplatePreview, obj4);
                                   cResult[28] = stateFromStores;
                                   cResult[29] = displayName;
                                   cResult[30] = tmp13;
@@ -572,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 maxWidth: 320,
                 accessibilityLabel: tmp14,
               };
-              const tmp20 = closure_7(guildId(11020), obj7);
+              const tmp20 = closure_7(guildId(11029), obj7);
               cResult[12] = displayName;
               cResult[13] = tmp13;
               cResult[14] = guildId;
@@ -604,7 +604,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = user.id;
       cResult[6] = fn;
       tmp11 = fn;
-      const tmpResult = user(8628);
+      const tmpResult = user(8635);
     }
   : function DisplayNameStylesEditPreview(user) {
       user = user.user;

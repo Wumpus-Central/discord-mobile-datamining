@@ -5,7 +5,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import _modDef7172 from "../../../../../../_runtime/metro/07172__.js";
+import _modDef7171 from "../../../../../../_runtime/metro/07171__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6, tmp7] = cResult;
       }
       if (cResult[3] !== tmp4.headerImage) {
-        const obj2 = { source: _modDef7172, style: tmp4.headerImage };
+        const obj2 = { source: _modDef7171, style: tmp4.headerImage };
         const tmp14 = React4(FastImageDefault, obj2);
         cResult[3] = tmp4.headerImage;
         cResult[4] = tmp14;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.onCancel = onClose.onClose;
       const obj2 = { source: null, style: null };
       const tmp2 = common_AlertDefault;
-      obj2.source = _modDef7172;
+      obj2.source = _modDef7171;
       obj2.style = tmp.headerImage;
       const items = [React4(FastImageDefault, obj2), ,];
       const obj3 = {

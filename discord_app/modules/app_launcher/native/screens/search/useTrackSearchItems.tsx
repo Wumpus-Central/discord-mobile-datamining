@@ -71,8 +71,8 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                   source,
                 };
                 obj2.properties = obj3;
-                closure_0(9330).trackImpression(obj2, false);
-                const obj = closure_0(9330);
+                closure_0(9337).trackImpression(obj2, false);
+                const obj = closure_0(9337);
               }
             }
           }
@@ -122,8 +122,8 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                   source,
                 };
                 obj2.properties = obj3;
-                closure_0(9330).trackImpression(obj2, false);
-                const obj = closure_0(9330);
+                closure_0(9337).trackImpression(obj2, false);
+                const obj = closure_0(9337);
               }
             }
           }

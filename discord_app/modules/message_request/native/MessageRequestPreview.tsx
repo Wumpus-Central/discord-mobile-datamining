@@ -35,7 +35,7 @@ export default noop.memo(
         const style = channel.style;
         const tmp4 = closure_9();
         let obj = channel(576);
-        const messageRequestPreview = channel(13441).useMessageRequestPreview(channel);
+        const messageRequestPreview = channel(13455).useMessageRequestPreview(channel);
         const message = messageRequestPreview.message;
         ({ loaded, error } = messageRequestPreview);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -90,7 +90,7 @@ export default noop.memo(
           }
           tmp9 = cResult[3];
         }
-        const obj2 = channel(13441);
+        const obj2 = channel(13455);
         const stateFromStoresObject = channel(504).useStateFromStoresObject(first, S, tmp9);
         if (cResult[4] === channel) {
           class S {
@@ -632,10 +632,10 @@ export default noop.memo(
     : function MessageRequestPreview(channel) {
         channel = channel.channel;
         const tmp = closure_9();
-        const messageRequestPreview = channel(13441).useMessageRequestPreview(channel);
+        const messageRequestPreview = channel(13455).useMessageRequestPreview(channel);
         const message = messageRequestPreview.message;
         ({ loaded, error } = messageRequestPreview);
-        let obj = channel(13441);
+        let obj = channel(13455);
         const items = [RelationshipStore];
         const items1 = [message];
         const stateFromStoresObject = channel(504).useStateFromStoresObject(
@@ -693,7 +693,7 @@ export default noop.memo(
             }
             if (null != content) {
               if ("" !== message.content) {
-                const content1 = message(8467)(message, {
+                const content1 = message(8468)(message, {
                   noStyleAndInteraction: true,
                   allowGameMentions: true,
                 }).content;
@@ -730,7 +730,7 @@ export default noop.memo(
               }
               stringResult = stringResult1;
               flag = false;
-              tmp2Result = tmp2(6474);
+              tmp2Result = tmp2(6473);
             } else {
               const intl = tmp2(1128).intl;
               stringResult = intl.string(tmp2(1128).t["0KfDxM"]);

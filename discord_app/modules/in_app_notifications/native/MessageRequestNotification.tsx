@@ -46,8 +46,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = cResult[5];
         }
         if (cResult[6] !== author) {
-          const obj3 = { user: author, size: native.AvatarSizes.NORMAL, guildId: "r" };
-          const tmp11 = jsx(native.Avatar, { user: author, size: native.AvatarSizes.NORMAL, guildId: "r" });
+          const obj3 = { user: author, size: native.AvatarSizes.NORMAL, guildId: "Array" };
+          const tmp11 = jsx(native.Avatar, { user: author, size: native.AvatarSizes.NORMAL, guildId: "Array" });
           cResult[6] = author;
           cResult[7] = tmp11;
           let tmp9 = tmp11;
@@ -110,15 +110,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       }, items);
       const callback = noop.useCallback(() => {
-        numMutualGuilds(13680).clearNotification();
-        const obj = numMutualGuilds(13680);
+        numMutualGuilds(13694).clearNotification();
+        const obj = numMutualGuilds(13694);
         const rootNavigationRef = author(5137).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.navigate("message-requests");
         }
       }, []);
       let obj = {
-        icon: jsx(author(1202).Avatar, { user: author, size: author(1202).AvatarSizes.NORMAL, guildId: "r" }),
+        icon: jsx(author(1202).Avatar, { user: author, size: author(1202).AvatarSizes.NORMAL, guildId: "Array" }),
         header: memo,
         children: null,
         onPress: null,
@@ -127,11 +127,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { text: null };
       let intl = author(1128).intl;
       obj3.text = intl.string(author(1128).t["Bx4/Lf"]);
-      obj.children = jsx(author(13687).SystemMessageText, { text: null });
+      obj.children = jsx(author(13701).SystemMessageText, { text: null });
       obj.onPress = callback;
       obj.notification = notification;
-      return jsx(author(13715).NotificationPressable, {
-        icon: jsx(author(1202).Avatar, { user: author, size: author(1202).AvatarSizes.NORMAL, guildId: "r" }),
+      return jsx(author(13729).NotificationPressable, {
+        icon: jsx(author(1202).Avatar, { user: author, size: author(1202).AvatarSizes.NORMAL, guildId: "Array" }),
         header: memo,
         children: null,
         onPress: null,

@@ -392,7 +392,7 @@ let closure_29 = async function _addFavoriteChannelsToParent(arg0) {
                       let tmp43 = closure_2_19(favoriteChannels.favoriteChannels);
                       let tmp46 = closure_2_20(favoriteChannels.favoriteChannels, tmp7);
                       flag = true;
-                      let obj3 = closure_0(10819);
+                      let obj3 = closure_0(10827);
                       let type;
                       if (tmp31 != null) {
                         type = tmp31.type;
@@ -416,7 +416,7 @@ let closure_29 = async function _addFavoriteChannelsToParent(arg0) {
                     if (flag) {
                       let BoolValue = closure_0(1242).BoolValue;
                       favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                      let obj4 = closure_0(10819);
+                      let obj4 = closure_0(10827);
                       let str = "auto";
                       let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                     }
@@ -569,7 +569,7 @@ let closure_32 = async function _removeInactiveFavoriteThreads(arg0) {
           const obj4 = {
             update(favoriteChannels) {
               const favoritesCleanupCandidates =
-                favoriteChannels(10822).getFavoritesCleanupCandidates(favoriteChannels);
+                favoriteChannels(10830).getFavoritesCleanupCandidates(favoriteChannels);
               const found = favoritesCleanupCandidates.filter((id) => {
                 let hasItem = set.has(id.id);
                 if (hasItem) {
@@ -587,7 +587,7 @@ let closure_32 = async function _removeInactiveFavoriteThreads(arg0) {
                   favoriteChannels = arg0.favoriteChannels;
                   let id = item10015.id;
                   delete tmp2[tmp];
-                  let obj2 = favoriteChannels(10819);
+                  let obj2 = favoriteChannels(10827);
                   let result = obj2.trackFavoritesGuildRemoveFromFavorites(
                     item10015.type,
                     closure_1_21(arg0.favoriteChannels),
@@ -595,7 +595,7 @@ let closure_32 = async function _removeInactiveFavoriteThreads(arg0) {
                   continue;
                 }
               }
-              const obj = favoriteChannels(10822);
+              const obj = favoriteChannels(10830);
             },
           };
           c3 = 1;
@@ -661,7 +661,7 @@ let closure_33 = async function _addFavoriteCategory(arg0) {
                   const obj2 = { limit: tmp5, canUpsell: false };
                   let tmp6 = obj2;
                 } else {
-                  const favoritesLimits = closure_0(10810).getFavoritesLimits();
+                  const favoritesLimits = closure_0(10818).getFavoritesLimits();
                   ({ favoriteLimit, canUpsellFavoriteLimit } = favoritesLimits);
                   tmp6 = null;
                   if (closure_0(1211).FavoriteChannelType.CATEGORY !== closure_0(1211).FavoriteChannelType.CATEGORY) {
@@ -677,12 +677,12 @@ let closure_33 = async function _addFavoriteCategory(arg0) {
                     }
                     tmp4Result = closure_1(12);
                   }
-                  const tmpResult = closure_0(10810);
+                  const tmpResult = closure_0(10818);
                 }
                 if (null != tmp6) {
                   const limit = tmp6.limit;
                   if (tmp6.canUpsell) {
-                    closure_1(10812)(limit);
+                    closure_1(10820)(limit);
                   } else {
                     const obj4 = { title: null, body: null };
                     const intl = closure_0(1128).intl;
@@ -690,8 +690,8 @@ let closure_33 = async function _addFavoriteCategory(arg0) {
                     const intl2 = closure_0(1128).intl;
                     const obj5 = { count: limit };
                     obj4.body = intl2.formatToPlainString(closure_0(1128).t.JaIyFi, obj5);
-                    closure_1(5895).show(obj4);
-                    const tmp4Result2 = closure_1(5895);
+                    closure_1(5894).show(obj4);
+                    const tmp4Result2 = closure_1(5894);
                   }
                   return false;
                 } else {
@@ -966,10 +966,10 @@ export const setFavoritesAutoAddJoinedThreads = function setFavoritesAutoAddJoin
               const intl2 = util.intl;
               const obj2 = { count: tmp11.limit };
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj2);
-              tmp7(5895).show(obj);
-              const tmp7Result2 = tmp7(5895);
+              tmp7(5894).show(obj);
+              const tmp7Result2 = tmp7(5894);
             }
-            str = tmp7(10812)(CATEGORY);
+            str = tmp7(10820)(CATEGORY);
             obj5 = _modDef12;
           }
         }

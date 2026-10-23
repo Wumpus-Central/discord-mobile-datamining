@@ -264,7 +264,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4) {
         const obj2 = { title: tmp4 };
-        const tmp8 = jsx(tmp(7232).BottomSheetTitleHeader, { title: tmp4 });
+        const tmp8 = jsx(tmp(7233).BottomSheetTitleHeader, { title: tmp4 });
         cResult[2] = tmp4;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -282,7 +282,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp11;
         }
         const obj3 = { header: tmp6, children: tmp9 };
-        const tmp13 = jsx(tmp(7282).ActionSheet, { header: tmp6, children: tmp9 });
+        const tmp13 = jsx(tmp(7283).ActionSheet, { header: tmp6, children: tmp9 });
         cResult[7] = tmp6;
         cResult[8] = tmp9;
         cResult[9] = tmp13;
@@ -290,7 +290,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = {
         hasIcons: false,
-        children: jsx(store(7278).ActionSheetRow, {
+        children: jsx(store(7279).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
@@ -303,9 +303,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           },
         }),
       };
-      const tmp10 = jsx(store(7278).ActionSheetRow.Group, {
+      const tmp10 = jsx(store(7279).ActionSheetRow.Group, {
         hasIcons: false,
-        children: jsx(store(7278).ActionSheetRow, {
+        children: jsx(store(7279).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
@@ -339,10 +339,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   : function DevToolsPersistedStoresActionSheet(store) {
       store = store.store;
       const close = store.close;
-      const obj = { header: jsx(store(7232).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+      const obj = { header: jsx(store(7233).BottomSheetTitleHeader, { title: store.getName() }), children: null };
       const obj3 = {
         hasIcons: false,
-        children: jsx(store(7278).ActionSheetRow, {
+        children: jsx(store(7279).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
@@ -355,9 +355,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           },
         }),
       };
-      obj.children = jsx(store(7278).ActionSheetRow.Group, {
+      obj.children = jsx(store(7279).ActionSheetRow.Group, {
         hasIcons: false,
-        children: jsx(store(7278).ActionSheetRow, {
+        children: jsx(store(7279).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
@@ -370,8 +370,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           },
         }),
       });
-      return jsx(store(7282).ActionSheet, {
-        header: jsx(store(7232).BottomSheetTitleHeader, { title: store.getName() }),
+      return jsx(store(7283).ActionSheet, {
+        header: jsx(store(7233).BottomSheetTitleHeader, { title: store.getName() }),
         children: null,
       });
     };
@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj5.onChange = function onChange(arg0) {
                   return dependencyMap(closure_1_1(arg0));
                 };
-                obj1.label = closure_1_8(closure_0(closure_2[20]).SearchField, obj5);
+                obj1.label = closure_1_8(closure_0(closure_2[20]).SearchBar, obj5);
                 return closure_1_8(closure_0(closure_2[10]).TableRow, obj1);
               } else {
                 num6 = 1;
@@ -584,7 +584,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj5.onChange = function onChange(arg0) {
                   return dependencyMap(closure_1_1(arg0));
                 };
-                obj1.label = closure_1_8(closure_0(closure_2[20]).SearchField, obj5);
+                obj1.label = closure_1_8(closure_0(closure_2[20]).SearchBar, obj5);
                 return closure_1_8(closure_0(closure_2[10]).TableRow, obj1);
               } else {
                 num6 = 1;
@@ -801,7 +801,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return closure_1_3(callback(arg0));
               },
             };
-            obj3.label = jsx(closure_0(persistedStores[20]).SearchField, {
+            obj3.label = jsx(closure_0(persistedStores[20]).SearchBar, {
               size: "md",
               onChange(arg0) {
                 return closure_1_3(callback(arg0));

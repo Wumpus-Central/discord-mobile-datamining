@@ -4,6 +4,7 @@ import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import conjureAppInServer from "conjureAppInServer.tsx";
+import ConjurePublishTypes from "../publish/ConjurePublishTypes.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
@@ -26,7 +27,7 @@ function readConjureRemoveTarget(project) {
   }
   if (null != guild) {
     if ("in_server" === obj5.readConjureAppServerPresence(project)) {
-      const result = tmp10(10701).findConjureAppChannels(guild.id, project.application_id);
+      const result = tmp10(10708).findConjureAppChannels(guild.id, project.application_id);
       const found = result.filter((item) => PermissionStore.can(constants.MANAGE_CHANNELS, item));
       const obj = {
         projectName: project.name,
@@ -65,22 +66,22 @@ function readConjureRemoveTarget(project) {
       obj.channelNames = found.map(channelName);
       const found1 = result.filter((item) => !found.includes(item));
       obj.keptChannelNames = found1.map(channelName);
-      const tmp10Result = tmp10(10701);
-      const tmp10Result5 = tmp10(10701);
-      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(10701).conjureProductionBotUserId(project));
+      const tmp10Result = tmp10(10708);
+      const tmp10Result5 = tmp10(10708);
+      obj.canRemoveBot = tmp10Result5.canRemoveConjureBot(guild, tmp10(10708).conjureProductionBotUserId(project));
       let canRemoveConjureBotResult = null == project.preview_application_id;
       if (!canRemoveConjureBotResult) {
-        const tmp10Result7 = tmp10(10701);
+        const tmp10Result7 = tmp10(10708);
         canRemoveConjureBotResult = tmp10Result7.canRemoveConjureBot(
           guild,
-          tmp10(10701).conjurePreviewBotUserId(project),
+          tmp10(10708).conjurePreviewBotUserId(project),
         );
-        const tmp10Result8 = tmp10(10701);
+        const tmp10Result8 = tmp10(10708);
       }
       obj.canRemovePreviewBot = canRemoveConjureBotResult;
       return obj;
     }
-    obj5 = found(10701);
+    obj5 = found(10708);
   }
   return null;
 }
@@ -327,14 +328,14 @@ function conjurePreviewAppItem(target) {
   return tmp;
 }
 function isPublishedConjureUserApp(project, publishStatus) {
-  let tmp = "user" === project.install_scope;
-  if (tmp) {
-    tmp = null != publishStatus;
+  let isConjureLiveResult = "user" === project.install_scope;
+  if (isConjureLiveResult) {
+    isConjureLiveResult = null != publishStatus;
   }
-  if (tmp) {
-    tmp = "unpublished" !== publishStatus.state;
+  if (isConjureLiveResult) {
+    isConjureLiveResult = ConjurePublishTypes.isConjureLive(publishStatus.publishState);
   }
-  return tmp;
+  return isConjureLiveResult;
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/conjureRemoveApp.tsx");
@@ -408,11 +409,11 @@ export const useIsPublishedConjureUserApp = ReactCompilerGating.isReactCompilerE
           let tmp4 = null != project;
           if (tmp4) {
             const publishStatus = ConjurePublishStatusStore.getPublishStatus(project.id);
-            let tmp7 = "user" === project.install_scope && null != publishStatus;
-            if (tmp7) {
-              tmp7 = "unpublished" !== publishStatus.state;
+            let isConjureLiveResult = "user" === project.install_scope && null != publishStatus;
+            if (isConjureLiveResult) {
+              isConjureLiveResult = ConjurePublishTypes.isConjureLive(publishStatus.publishState);
             }
-            tmp4 = tmp7;
+            tmp4 = isConjureLiveResult;
           }
           return tmp4;
         };
@@ -426,7 +427,7 @@ export const useIsPublishedConjureUserApp = ReactCompilerGating.isReactCompilerE
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      const obj = require("c");
+      let obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
   : function useIsPublishedConjureUserApp(arg0) {
@@ -443,11 +444,11 @@ export const useIsPublishedConjureUserApp = ReactCompilerGating.isReactCompilerE
           let tmp4 = null != project;
           if (tmp4) {
             const publishStatus = ConjurePublishStatusStore.getPublishStatus(project.id);
-            let tmp7 = "user" === project.install_scope && null != publishStatus;
-            if (tmp7) {
-              tmp7 = "unpublished" !== publishStatus.state;
+            let isConjureLiveResult = "user" === project.install_scope && null != publishStatus;
+            if (isConjureLiveResult) {
+              isConjureLiveResult = ConjurePublishTypes.isConjureLive(publishStatus.publishState);
             }
-            tmp4 = tmp7;
+            tmp4 = isConjureLiveResult;
           }
           return tmp4;
         },

@@ -150,7 +150,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         obj4.style = items1;
-        SvgUri = SvgUri(7946).SvgUri;
+        SvgUri = SvgUri(7947).SvgUri;
         let size = { height: "100%", width: "100%", uri: assetUrl, onError };
         obj4.children = <SvgUri height="100%" width="100%" uri={assetUrl} onError={onError} />;
         let tmp18Result = <closure_5 style={null}>{null}</closure_5>;

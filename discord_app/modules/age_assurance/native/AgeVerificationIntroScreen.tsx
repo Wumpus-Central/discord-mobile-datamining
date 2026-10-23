@@ -50,23 +50,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === onClose) {
           let tmp5 = cResult[2];
         }
-        const initiateAgeVerification1 = tmp(7931).useInitiateAgeVerification(tmp5);
+        const initiateAgeVerification1 = tmp(7932).useInitiateAgeVerification(tmp5);
         ({ loading, initiateAgeVerification } = initiateAgeVerification1);
         const _Symbol = Symbol;
         ({ getStartedContainer, getStartedHeaderContainer } = tmp4);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp10 = closure_7(tmp(7886).ShieldSpotIllustration, {});
+          const tmp10 = closure_7(tmp(7887).ShieldSpotIllustration, {});
           cResult[3] = tmp10;
           let tmp8 = tmp10;
         } else {
           tmp8 = cResult[3];
         }
         if (cResult[4] !== entryPoint) {
-          const ageVerificationGetStartedTitle = tmp(6640).getAgeVerificationGetStartedTitle(entryPoint);
+          const ageVerificationGetStartedTitle = tmp(6639).getAgeVerificationGetStartedTitle(entryPoint);
           cResult[4] = entryPoint;
           cResult[5] = ageVerificationGetStartedTitle;
           let tmp11 = ageVerificationGetStartedTitle;
-          const tmpResult4 = tmp(6640);
+          const tmpResult4 = tmp(6639);
         } else {
           tmp11 = cResult[5];
         }
@@ -75,11 +75,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp13 = cResult[8];
           }
           if (cResult[9] !== entryPoint) {
-            const ageVerificationGetStartedSubtitle = tmp(6640).getAgeVerificationGetStartedSubtitle(entryPoint);
+            const ageVerificationGetStartedSubtitle = tmp(6639).getAgeVerificationGetStartedSubtitle(entryPoint);
             cResult[9] = entryPoint;
             cResult[10] = ageVerificationGetStartedSubtitle;
             let tmp16 = ageVerificationGetStartedSubtitle;
-            const tmpResult5 = tmp(6640);
+            const tmpResult5 = tmp(6639);
           } else {
             tmp16 = cResult[10];
           }
@@ -144,11 +144,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  const ageVerificationGetStartedSteps = tmp(8075).getAgeVerificationGetStartedSteps(modalSessionId);
+                  const ageVerificationGetStartedSteps = tmp(8076).getAgeVerificationGetStartedSteps(modalSessionId);
                   const mapped = ageVerificationGetStartedSteps.map(F);
                   cResult[18] = modalSessionId;
                   cResult[19] = mapped;
-                  const tmpResult6 = tmp(8075);
+                  const tmpResult6 = tmp(8076);
                 } else {
                   class F {
                     constructor(arg0, arg1) {
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     let obj2 = { hasIcons: true, children: tmp25 };
-                    const tmp30 = closure_7(tmp(6973).TableRowGroup, obj2);
+                    const tmp30 = closure_7(tmp(6972).TableRowGroup, obj2);
                     cResult[21] = tmp25;
                     cResult[22] = tmp30;
                   } else {
@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp11;
         cResult[8] = tmp15;
         tmp13 = tmp15;
-        let tmpResult = tmp(7931);
+        let tmpResult = tmp(7932);
       }
       const obj12 = { onComplete: onClose, entryPoint };
       cResult[0] = entryPoint;
@@ -457,7 +457,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const modalSessionId = onComplete.modalSessionId;
       const entryPoint = onComplete.entryPoint;
       const tmp = closure_10();
-      let initiateAgeVerification = modalSessionId(7931).useInitiateAgeVerification({
+      let initiateAgeVerification = modalSessionId(7932).useInitiateAgeVerification({
         onComplete: onComplete.onClose,
         entryPoint,
       });
@@ -466,15 +466,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj3 = { children: null };
       let obj4 = { style: tmp.getStartedContainer, children: null };
       let obj5 = { style: tmp.getStartedHeaderContainer, children: null };
-      const items = [closure_7(modalSessionId(7886).ShieldSpotIllustration, {}), ,];
+      const items = [closure_7(modalSessionId(7887).ShieldSpotIllustration, {}), ,];
       const obj6 = {
         variant: "heading-xl/bold",
         color: "mobile-text-heading-primary",
         style: tmp.getStartedHeaderText,
         children: null,
       };
-      let obj = modalSessionId(7931);
-      obj6.children = modalSessionId(6640).getAgeVerificationGetStartedTitle(entryPoint);
+      let obj = modalSessionId(7932);
+      obj6.children = modalSessionId(6639).getAgeVerificationGetStartedTitle(entryPoint);
       items[1] = closure_7(modalSessionId(5220).Text, obj6);
       const obj8 = {
         variant: "heading-md/medium",
@@ -482,14 +482,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.getStartedHeaderText,
         children: null,
       };
-      const obj7 = modalSessionId(6640);
-      obj8.children = modalSessionId(6640).getAgeVerificationGetStartedSubtitle(entryPoint);
+      const obj7 = modalSessionId(6639);
+      obj8.children = modalSessionId(6639).getAgeVerificationGetStartedSubtitle(entryPoint);
       items[2] = closure_7(modalSessionId(5220).Text, obj8);
       obj5.children = items;
       const items1 = [closure_8(closure_5, obj5), ,];
       const obj10 = { hasIcons: true, children: null };
-      const obj9 = modalSessionId(6640);
-      const ageVerificationGetStartedSteps = modalSessionId(8075).getAgeVerificationGetStartedSteps(modalSessionId);
+      const obj9 = modalSessionId(6639);
+      const ageVerificationGetStartedSteps = modalSessionId(8076).getAgeVerificationGetStartedSteps(modalSessionId);
       obj10.children = ageVerificationGetStartedSteps.map((children, index) => {
         const description = children.description;
         const obj = {
@@ -507,9 +507,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmpResult = closure_1_7(modalSessionId(5220).Text, obj2);
         }
         obj.description = tmpResult;
-        return closure_1_7(initiateAgeVerification(8074), obj, index);
+        return closure_1_7(initiateAgeVerification(8075), obj, index);
       });
-      items1[1] = closure_7(modalSessionId(6973).TableRowGroup, obj10);
+      items1[1] = closure_7(modalSessionId(6972).TableRowGroup, obj10);
       const obj12 = { style: tmp.ageGroupLearnMoreContainer, children: null };
       const obj13 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = modalSessionId(1128).intl;
@@ -569,10 +569,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                const result = v3(6643).trackAgeVerificationModalClicked(
+                const result = v3(6642).trackAgeVerificationModalClicked(
                   modalSessionId,
-                  v3(6643).AgeVerificationModalVersion.PRIMARY,
-                  v3(6643).AgeVerificationModalCta.GET_STARTED,
+                  v3(6642).AgeVerificationModalVersion.PRIMARY,
+                  v3(6642).AgeVerificationModalCta.GET_STARTED,
                 );
                 c1 = 1;
                 v3 = 1;
@@ -596,7 +596,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       });
-      const obj11 = modalSessionId(8075);
+      const obj11 = modalSessionId(8076);
       const obj14 = {
         handleOnHelpUrlHook() {
           const obj = AgeVerificationActionCreatorsDefault;
@@ -608,7 +608,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       };
-      obj17.icon = closure_7(modalSessionId(8076).LinkExternalSmallIcon, {
+      obj17.icon = closure_7(modalSessionId(8077).LinkExternalSmallIcon, {
         color: initiateAgeVerification(587).colors.WHITE,
       });
       obj17.loading = initiateAgeVerification.loading;

@@ -7,7 +7,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import _modDef17453 from "../../../../_runtime/metro/17453__.js";
+import _modDef17475 from "../../../../_runtime/metro/17475__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -49,7 +49,7 @@ const Constants = fn(1087);
 const ChannelTypes = Constants.ChannelTypes;
 const Routes = Constants.Routes;
 const StaticChannelRoute = fn(4828).StaticChannelRoute;
-const UnreadSetting = fn(6691).UnreadSetting;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let items = [,];
@@ -69,7 +69,7 @@ obj.avatarStatus = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }
 obj.groupDmAvatar = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
 obj.channelInfoContainer = { paddingStart: 4 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.avatarStatusSelected = { backgroundColor: fn(6693).DARK_393C42_LIGHT_DEE0E4 };
+obj.avatarStatusSelected = { backgroundColor: fn(6692).DARK_393C42_LIGHT_DEE0E4 };
 let closure_17 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
@@ -130,7 +130,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (tmp5) {
-          let tmp11 = _modDef17453;
+          let tmp11 = _modDef17475;
           let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
         } else {
           if (cResult[10] === channel) {
@@ -218,7 +218,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (tmp2) {
-          let tmp12 = _modDef17453;
+          let tmp12 = _modDef17475;
           let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
           let tmp9 = require;
         } else {
@@ -242,7 +242,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           obj19 = {};
         }
         const merged = Object.assign(obj19);
-        return closure_1_14(tmp9(13193).BaseChannelIcon, obj10);
+        return closure_1_14(tmp9(13209).BaseChannelIcon, obj10);
       }
     };
 ReactCompilerGating = fn(558);
@@ -379,7 +379,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         status,
         isMobileOnline,
         isVROnline,
-        statusStyle: "GUILD_MEMBERS_CHUNK_BATCH",
+        statusStyle: "hash",
       };
       const items4 = [tmp.avatarStatus];
       if (avatarStatusSelected) {
@@ -390,7 +390,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_14(userId(1202).Avatar, obj3);
     };
 ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: fn(6693).DARK_393C42_LIGHT_DEE0E4 };
+let obj5 = { backgroundColor: fn(6692).DARK_393C42_LIGHT_DEE0E4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
 

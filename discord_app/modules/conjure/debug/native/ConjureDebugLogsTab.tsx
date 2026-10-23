@@ -10,12 +10,12 @@ import ConjureDebugLogStore from "../ConjureDebugLogStore.tsx";
 
 const util = Text(1128);
 const Text_Text = Text(5220);
-const Card = Text(6891);
-const Pressables = Text(6894);
-const ChevronSmallRightIcon2 = Text(7289);
-const ChevronSmallDownIcon = Text(11043);
-const ConjureTimeFormat = Text(12475);
-const ConjureDebugJson = Text(12482);
+const Card = Text(6890);
+const Pressables = Text(6893);
+const ChevronSmallRightIcon2 = Text(7290);
+const ChevronSmallDownIcon = Text(11052);
+const ConjureTimeFormat = Text(12486);
+const ConjureDebugJson = Text(12493);
 require = fn;
 function keyOf(key) {
   return String(key.key);
@@ -321,15 +321,15 @@ let closure_11 = noop.memo(
           str = "text-feedback-critical";
         }
         if (expanded) {
-          let ChevronSmallRightIcon = tmp3(11043).ChevronSmallDownIcon;
+          let ChevronSmallRightIcon = tmp3(11052).ChevronSmallDownIcon;
           let tmp6 = tmp3;
         } else {
-          ChevronSmallRightIcon = tmp3(7289).ChevronSmallRightIcon;
+          ChevronSmallRightIcon = tmp3(7290).ChevronSmallRightIcon;
           tmp6 = tmp3;
         }
         const obj = { style: tmp.row, children: null };
         const obj2 = { style: tmp.rowHead, children: null };
-        let ts = tmp6(12475).formatClockTime(entry.ts);
+        let ts = tmp6(12486).formatClockTime(entry.ts);
         if (ts == null) {
           ts = entry.ts;
         }
@@ -419,13 +419,13 @@ let closure_11 = noop.memo(
           obj10.children = items5;
           items4[1] = closure_8(tmp6(5220).Text, obj10);
           obj7.children = items4;
-          items3[1] = closure_8(tmp6(6894).PressableOpacity, obj7);
+          items3[1] = closure_8(tmp6(6893).PressableOpacity, obj7);
           let tmp9Result6 = null;
           if (expanded) {
             const obj12 = { variant: "primary", children: null };
             const obj13 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.pretty };
             obj12.children = closure_7(tmp6(5220).Text, obj13);
-            tmp9Result6 = closure_7(tmp6(6891).Card, obj12);
+            tmp9Result6 = closure_7(tmp6(6890).Card, obj12);
           }
           const obj14 = { children: null };
           items3[2] = tmp9Result6;
@@ -505,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first1 = tmp18[0];
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { pageWidth: 0, items: null, onSetActiveIndex: null };
-        const DEBUG_LOG_FILTERS = tmp(12483).DEBUG_LOG_FILTERS;
+        const DEBUG_LOG_FILTERS = tmp(12494).DEBUG_LOG_FILTERS;
         obj2.items = DEBUG_LOG_FILTERS.map((id) => {
           const obj = { id, label: projectId(showSource[20]).debugLogFilterLabel(id), page: null };
           return obj;
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp20 = cResult[8];
       }
       const tmp16 = first2(noop.useState("all"), 2);
-      const segmentedControlState = projectId(8869).useSegmentedControlState(tmp20);
+      const segmentedControlState = projectId(8876).useSegmentedControlState(tmp20);
       if (cResult[9] === tmp17) {
         if (cResult[10] === stateFromStores) {
           dependencyMap = tmp24;
@@ -608,7 +608,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj3 = { state: segmentedControlState, variant: "experimental_Small" };
-              const tmp31 = closure_7(tmp(9115).SegmentedControl, obj3);
+              const tmp31 = closure_7(tmp(9122).SegmentedControl, obj3);
               cResult[18] = segmentedControlState;
               cResult[19] = tmp31;
             } else {
@@ -647,7 +647,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl2 = tmp(1128).intl;
               obj5.placeholder = intl2.string(_modDef3830["m2+37Y"]);
               obj5.onChange = tmp18[1];
-              const tmp33 = closure_7(tmp(7131).SearchField, obj5);
+              const tmp33 = closure_7(tmp(7130).SearchBar, obj5);
               cResult[20] = tmp33;
               const tmp32 = tmp33;
             } else {
@@ -704,7 +704,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[27] = tmp41;
             }
             const obj7 = { state: stateFromStores1, hasRows: stateFromStores.length > 0 };
-            const tmp37 = closure_7(tmp(12485).ConjureHistoryNotice, obj7);
+            const tmp37 = closure_7(tmp(12496).ConjureHistoryNotice, obj7);
             cResult[21] = stateFromStores1;
             cResult[22] = stateFromStores.length > 0;
             cResult[23] = tmp37;
@@ -724,13 +724,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[17] = fn3;
         }
       }
-      const tmpResult5 = projectId(8869);
-      const tmpResult6 = projectId(12483);
+      const tmpResult5 = projectId(8876);
+      const tmpResult6 = projectId(12494);
       cResult[9] = tmp17;
       cResult[10] = stateFromStores;
       cResult[11] = first1;
-      cResult[12] = projectId(12483).filterDebugLogs(stateFromStores, tmp17, first1);
-      const filterDebugLogsResult = projectId(12483).filterDebugLogs(stateFromStores, tmp17, first1);
+      cResult[12] = projectId(12494).filterDebugLogs(stateFromStores, tmp17, first1);
+      const filterDebugLogsResult = projectId(12494).filterDebugLogs(stateFromStores, tmp17, first1);
     }
   : function ConjureDebugLogsTab(projectId) {
       projectId = projectId.projectId;
@@ -814,7 +814,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.accessibilityLabel = intl.string(stateFromStores(first[15])["m2+37Y"]);
       const intl2 = projectId(first[14]).intl;
       obj6.placeholder = intl2.string(stateFromStores(first[15])["m2+37Y"]);
-      items6[1] = closure_7(projectId(first[23]).SearchField, obj6);
+      items6[1] = closure_7(projectId(first[23]).SearchBar, obj6);
       items6[2] = closure_7(projectId(first[24]).ConjureHistoryNotice, {
         state: stateFromStores1,
         hasRows: stateFromStores.length > 0,

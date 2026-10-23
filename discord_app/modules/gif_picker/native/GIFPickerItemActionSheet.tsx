@@ -33,17 +33,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       const tmp4 = closure_7();
       if (cResult[0] !== item.url) {
-        const gifUrlKeyResult = tmp(10102).gifUrlKey(item.url);
+        const gifUrlKeyResult = tmp(10109).gifUrlKey(item.url);
         cResult[0] = item.url;
         cResult[1] = gifUrlKeyResult;
         let tmp5 = gifUrlKeyResult;
-        const tmpResult = tmp(10102);
+        const tmpResult = tmp(10109);
       } else {
         tmp5 = cResult[1];
       }
       let obj = item(576);
-      const isFavoriteGIF = item(10106).useIsFavoriteGIF(tmp5);
-      const tmpResult2 = item(10106);
+      const isFavoriteGIF = item(10113).useIsFavoriteGIF(tmp5);
+      const tmpResult2 = item(10113);
       ({ width, height } = isFavoriteGIF(1499)());
       const bound = Math.min((width - 2 * isFavoriteGIF(587).space.PX_16) / item.width, (0.5 * height) / item.height);
       const result = item.width * bound;
@@ -482,7 +482,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let obj3 = { children: null };
                 const items1 = [tmp26, tmp30];
                 obj3.children = items1;
-                const tmp32 = closure_6(tmp(6682).ButtonGroup, obj3);
+                const tmp32 = closure_6(tmp(6681).ButtonGroup, obj3);
                 cResult[27] = tmp26;
                 cResult[28] = tmp30;
                 cResult[29] = tmp32;

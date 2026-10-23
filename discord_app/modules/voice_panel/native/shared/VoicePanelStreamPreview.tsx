@@ -80,7 +80,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
       if (stream != null) {
         ownerId = stream.ownerId;
       }
-      const previewUrl = stream(11661)(guildId, channelId, ownerId).previewUrl;
+      const previewUrl = stream(11672)(guildId, channelId, ownerId).previewUrl;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ApplicationStreamingStore, AuthenticationStore];
         cResult[0] = items;
@@ -113,7 +113,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         tmp13 = cResult[2];
         tmp14 = cResult[3];
       }
-      const tmp6 = stream(11661);
+      const tmp6 = stream(11672);
       ownStreamTextContainer = mode(504).useStateFromStores(first, tmp13, tmp14);
       const tmpResult = mode(504);
       class M {
@@ -200,14 +200,14 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
                           tmp34 = tmp37;
                         }
                         const obj4 = { layout, children: tmp28 };
-                        const tmp33 = closure_7(tmp5(7154), obj4);
+                        const tmp33 = closure_7(tmp5(7153), obj4);
                         cResult[18] = layout;
                         cResult[19] = tmp28;
                         cResult[20] = tmp33;
                         tmp31 = tmp33;
                       }
                       const obj5 = { style: animatedStyle, children: cResult[14] };
-                      const tmp30 = closure_7(tmp5(7154), obj5);
+                      const tmp30 = closure_7(tmp5(7153), obj5);
                       cResult[15] = animatedStyle;
                       cResult[16] = cResult[14];
                       cResult[17] = tmp30;
@@ -254,8 +254,8 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         obj10.source = obj11;
         obj10.style = closure_3.absoluteFill;
         obj9.children = closure_7(tmp5(5655), obj10);
-        tmp18 = closure_7(tmp5(7154), obj9);
-        const tmp5Result = tmp5(7154);
+        tmp18 = closure_7(tmp5(7153), obj9);
+        const tmp5Result = tmp5(7153);
       }
       cResult[4] = layout;
       cResult[5] = tmp4.streamPreviewImage;
@@ -281,8 +281,8 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
       if (stream != null) {
         ownerId = stream.ownerId;
       }
-      const previewUrl = stream(11661)(guildId, channelId, ownerId).previewUrl;
-      const tmp4 = stream(11661);
+      const previewUrl = stream(11672)(guildId, channelId, ownerId).previewUrl;
+      const tmp4 = stream(11672);
       const items = [ApplicationStreamingStore, AuthenticationStore];
       const items1 = [stream];
       const stateFromStores = mode(504).useStateFromStores(
@@ -335,14 +335,14 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         obj6.source = obj7;
         obj6.style = closure_3.absoluteFill;
         obj5.children = closure_7(tmp2(5655), obj6);
-        tmp14 = closure_7(tmp2(7154), obj5);
-        const tmp2Result = tmp2(7154);
+        tmp14 = closure_7(tmp2(7153), obj5);
+        const tmp2Result = tmp2(7153);
       }
       const items2 = [tmp14];
       const obj8 = { layout, children: null };
       let obj3 = { mode, withTiming: mode(5192).withTiming, OPACITY_TIMING };
       const obj9 = { style: animatedStyle, children: null };
-      const tmp2Result3 = stream(7154);
+      const tmp2Result3 = stream(7153);
       if (stateFromStores) {
         const obj10 = { style: tmp.ownStreamTextContainer, children: null };
         const obj11 = {
@@ -363,7 +363,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         tmp18Result = closure_7(closure_10, obj12);
       }
       obj9.children = tmp18Result;
-      obj8.children = closure_7(stream(7154), obj9);
+      obj8.children = closure_7(stream(7153), obj9);
       items2[1] = closure_7(tmp2Result3, obj8);
       obj4.children = items2;
       return closure_8(closure_9, obj4);

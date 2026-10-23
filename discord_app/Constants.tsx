@@ -2068,6 +2068,7 @@ const frozen2 = Object.freeze({
   GAME_ORGANIZATION_INVITE(arg0) {
     return "/game-organization-invites/" + arg0;
   },
+  GAME_ORGANIZATIONS_INVITABLE: "/game-organizations/invitable/@me",
   GUILD_ROOM(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1;
   },
@@ -4137,6 +4138,7 @@ const obj2 = {
   GAME_ORGANIZATION_INVITE(arg0) {
     return "/game-organization-invites/" + arg0;
   },
+  GAME_ORGANIZATIONS_INVITABLE: "/game-organizations/invitable/@me",
   GUILD_ROOM(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1;
   },
@@ -5704,6 +5706,14 @@ const frozen16 = Object.freeze({
     if (null != arg0) {
       const _HermesInternal = HermesInternal;
       combined = "game-organization-invite/" + arg0;
+    }
+    return combined;
+  },
+  INVITABLE_GAME_ORGANIZATIONS(join) {
+    let combined = null;
+    if (join.length > 0) {
+      const _HermesInternal = HermesInternal;
+      combined = "invitable-game-organizations/" + join.join(",");
     }
     return combined;
   },
@@ -9232,7 +9242,6 @@ export const AnalyticEvents = {
   GAME_COMMUNITY_UPSELL_VIEWED: "game_community_upsell_viewed",
   GAME_COMMUNITY_UPSELL_DISMISSED: "game_community_upsell_dismissed",
   GAME_COMMUNITY_UPSELL_ACCEPTED: "game_community_upsell_accepted",
-  GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_JOINED: "game_community_multi_guild_upsell_card_joined",
   GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED: "game_community_multi_guild_upsell_card_dismissed",
   ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED: "on_platform_account_link_flow_started",
   CONNECTION_INDICATOR_SHOWN: "connection_indicator_shown",

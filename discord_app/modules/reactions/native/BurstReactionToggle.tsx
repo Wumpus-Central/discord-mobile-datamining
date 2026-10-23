@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = tmp5;
       }
       const ref = noop.useRef(null);
-      const tmp8 = tmp6(9809)(ref);
+      const tmp8 = tmp6(9816)(ref);
       importDefault = tmp8;
       if (cResult[0] === tmp8) {
         if (cResult[1] === onPress) {
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[10] !== INTERACTIVE_TEXT_DEFAULT) {
               const obj3 = { color: INTERACTIVE_TEXT_DEFAULT };
-              const tmp19 = jsx(tmp(9776).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
+              const tmp19 = jsx(tmp(9783).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
               cResult[10] = INTERACTIVE_TEXT_DEFAULT;
               cResult[11] = tmp19;
               let tmp17 = tmp19;
@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = tmp2;
       }
       const ref = noop.useRef(null);
-      importDefault = tmp5(9809)(ref);
+      importDefault = tmp5(9816)(ref);
       obj = {
         onPress: function handleOnPress() {
           closure_1(ContentDismissActionType.AUTO);
@@ -346,7 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: null, ref, children: null };
       const items = [closure_13().container, closure_12(isActive).containerStyle];
       obj2.style = items;
-      obj2.children = jsx(tmp11(9776).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
+      obj2.children = jsx(tmp11(9783).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
       obj.children = jsx(tmp5(5038).View, { style: null, ref, children: null });
       return (
         <Pressable

@@ -15,7 +15,7 @@ import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import BotTagDefault from "../../../../applications/native/BotTag.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef13961 from "../../../../../../_runtime/metro/13961__.js";
+import _modDef13975 from "../../../../../../_runtime/metro/13975__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -276,7 +276,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp13 = !tmp4;
                   if (!tmp4) {
                     const obj6 = {
-                      source: _modDef13961,
+                      source: _modDef13975,
                       size: native.Icon.Sizes.REFRESH_SMALL_16,
                       style: tmp5.arrowIcon,
                     };
@@ -379,7 +379,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = tmp8;
       let tmp5Result = !disableArrow;
       if (!disableArrow) {
-        const obj6 = { source: _modDef13961, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+        const obj6 = { source: _modDef13975, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
         tmp5Result = tmp5(native.Icon, obj6);
       }
       items[2] = tmp5Result;
@@ -445,7 +445,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         style: tmp4.channelIcon,
-        autoStatusCutout: "jsona",
+        autoStatusCutout: false,
       };
       const tmp7 = closure_1_8(native.Avatar, obj2);
       cResult[0] = isMobileOnline;
@@ -464,11 +464,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         avatarDecoration: user.avatarDecoration,
         guildId: "Boolean",
         size: native.AvatarSizes.REFRESH_MEDIUM_32,
-        status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
+        status: false,
         isMobileOnline: null,
-        isVROnline: "9353860856bfc05333c0c56840083d00",
-        style: "uk.messages.9353860856bfc05333c0c56840083d00.compiled.messages",
-        autoStatusCutout: "jsona",
+        isVROnline: true,
+        style: null,
+        autoStatusCutout: false,
       };
       let tmp3 = null;
       if (!user.isSystemUser()) {

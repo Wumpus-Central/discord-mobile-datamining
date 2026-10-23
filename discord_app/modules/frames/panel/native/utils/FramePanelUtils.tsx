@@ -4,7 +4,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import FramesStore from "../../../FramesStore.tsx";
 
 require = fn;
-const asLaunched = fn(6762).asLaunched;
+const asLaunched = fn(6761).asLaunched;
 const ActivityPanelModes = fn(5595).ActivityPanelModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

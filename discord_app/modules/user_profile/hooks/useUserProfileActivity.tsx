@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
       let tmp8 = null;
       if (stateFromStores) {
-        tmp8 = userProfileLiveActivities(10606)(arg0);
+        tmp8 = userProfileLiveActivities(10613)(arg0);
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [PresenceStore];
@@ -191,8 +191,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp6 = !userProfileLiveActivities.some((item) => {
                   let result = null != item;
                   if (result) {
-                    result = item(8793).isMatchingListeningActivity(item, item);
-                    const obj = item(8793);
+                    result = item(8800).isMatchingListeningActivity(item, item);
+                    const obj = item(8800);
                   }
                   return result;
                 });
@@ -203,8 +203,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 result = !userProfileLiveActivities.some((item) => {
                   let result = null != item;
                   if (result) {
-                    result = item(8793).isMatchingWatchActivity(item, item);
-                    const obj = item(8793);
+                    result = item(8800).isMatchingWatchActivity(item, item);
+                    const obj = item(8800);
                   }
                   return result;
                 });
@@ -277,8 +277,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp6 = !userProfileLiveActivities.some((item) => {
                     let result = null != item;
                     if (result) {
-                      result = userProfileLiveActivities(8793).isMatchingListeningActivity(closure_0, item);
-                      const obj = userProfileLiveActivities(8793);
+                      result = userProfileLiveActivities(8800).isMatchingListeningActivity(closure_0, item);
+                      const obj = userProfileLiveActivities(8800);
                     }
                     return result;
                   });
@@ -289,8 +289,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   result = !userProfileLiveActivities.some((item) => {
                     let result = null != item;
                     if (result) {
-                      result = userProfileLiveActivities(8793).isMatchingWatchActivity(closure_0, item);
-                      const obj = userProfileLiveActivities(8793);
+                      result = userProfileLiveActivities(8800).isMatchingWatchActivity(closure_0, item);
+                      const obj = userProfileLiveActivities(8800);
                     }
                     return result;
                   });

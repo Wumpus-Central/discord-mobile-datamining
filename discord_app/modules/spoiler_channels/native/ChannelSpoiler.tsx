@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4969);
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         isVocalResult = stateFromStores1.isVocal();
       }
       dependencyMap = isVocalResult;
-      setControlsMode = noop.useContext(tmp6(10864)).setControlsMode;
+      setControlsMode = noop.useContext(tmp6(10872)).setControlsMode;
       const items2 = [, , ,];
       ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
       items2[2] = setControlsMode;
@@ -195,8 +195,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items3);
       if (null != stateFromStores1) {
-        channelIconComponent = tmp(8487).getChannelIconComponent(stateFromStores1);
-        const tmpResult = tmp(8487);
+        channelIconComponent = tmp(8488).getChannelIconComponent(stateFromStores1);
+        const tmpResult = tmp(8488);
       }
       if (null != channelIconComponent) {
         let obj3 = { style: { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 }, children: null };
@@ -254,13 +254,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = tmp(1128).intl;
             obj13.children = intl2.string(tmp(1128).t["/QvRak"]);
             obj12.children = closure_10(tmp(5220).Text, obj13);
-            tmp24Result = closure_10(tmp(6894).PressableHighlight, obj12);
+            tmp24Result = closure_10(tmp(6893).PressableHighlight, obj12);
           }
           items5[2] = tmp24Result;
           const obj14 = { style: tmp4.divider };
           items5[3] = closure_10(View, obj14);
           obj6.children = items5;
-          tmp23Result = closure_11(tmp(5964).Stack, obj6);
+          tmp23Result = closure_11(tmp(5963).Stack, obj6);
           const tmp6Result3 = tmp6(5691);
         }
         str = stateFromStores1.topic;

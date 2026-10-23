@@ -27,7 +27,7 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(7859).SettingMode;
+const SettingMode = fn(7860).SettingMode;
 const Constants = fn(1087);
 ({
   ChannelTypes: closure_18,
@@ -92,7 +92,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== navigation) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -104,7 +104,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -114,7 +114,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -122,7 +122,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -130,7 +130,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -138,7 +138,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -189,13 +189,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_1 = tmp5;
                 closure_128_0 = undefined;
                 accessPermissions = accessPermissions.accessPermissions;
-                const result = v2(8941).isPrivateGuildChannel(accessPermissions);
-                const obj9 = v2(8941);
+                const result = v2(8948).isPrivateGuildChannel(accessPermissions);
+                const obj9 = v2(8948);
                 const tmp21 = v2;
-                closure_128_0 = v2(8941).flipEveryonePermission(accessPermissions, accessPermissions, result);
+                closure_128_0 = v2(8948).flipEveryonePermission(accessPermissions, accessPermissions, result);
                 currentUser = currentUser.getCurrentUser();
                 let tmp7 = ChannelSettingsPermissionsStore;
-                const obj10 = v2(8941);
+                const obj10 = v2(8948);
                 if (!ChannelSettingsPermissionsStore) {
                   tmp7 = null == currentUser;
                 }
@@ -206,7 +206,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                   v2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp21(8941).grantUserChannelAccess(accessPermissions, accessPermissions),
+                    value: tmp21(8948).grantUserChannelAccess(accessPermissions, accessPermissions),
                     done: false,
                   };
                   return obj4;
@@ -236,7 +236,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const items = [closure_128_0];
             v2 = 2;
             dependencyMap = 1;
-            const obj7 = { value: tmp2(8942).savePermissionUpdates(closure_129_0.id, items), done: false };
+            const obj7 = { value: tmp2(8949).savePermissionUpdates(closure_129_0.id, items), done: false };
             return obj7;
           } catch (tmp16) {
             dependencyMap = tmp;
@@ -277,7 +277,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                     c2 = 1;
                     dependencyMap = 1;
                     const obj6 = {
-                      value: tmp5(8943).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                      value: tmp5(8950).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                         guild_id,
                         constants.VIEW_CHANNEL,
                       ),
@@ -321,7 +321,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             closure_128_2 = onCancelResult;
             closure_129_2(!closure_129_1);
             const obj4 = tmp5(5590);
-            show = tmp2(5895).show;
+            show = tmp2(5894).show;
             const obj9 = {
               title: closure_128_0,
               body: closure_128_2,
@@ -344,7 +344,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             obj9.onCancel = onCancel;
             show(obj9);
             dependencyMap = 3;
-            const tmp42 = tmp2(5895);
+            const tmp42 = tmp2(5894);
           } catch (tmp54) {
             dependencyMap = tmp;
             throw tmp54;
@@ -371,7 +371,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
       const items1 = [navigation];
       const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-        navigation.setOptions({ headerRight: "Array" });
+        navigation.setOptions({ headerRight: "r" });
       }, items1);
       const items2 = [guild, sortedGuildRoles, channel];
       const memo = togglePrivateChannel.useMemo(() => {

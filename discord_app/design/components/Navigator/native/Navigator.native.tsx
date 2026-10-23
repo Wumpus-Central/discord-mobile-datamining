@@ -6,9 +6,9 @@ import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.t
 import Link from "../../../../../_runtime/01506_Link.js";
 import BackPressTracking from "../../../../modules/routing/native/BackPressTracking.android.tsx";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod6919 from "../../../../../_runtime/metro/06919__.js";
+import _mod6918 from "../../../../../_runtime/metro/06918__.js";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
-import StackNavigator from "../../../../../_runtime/07083_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07082_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -1026,7 +1026,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           onStateChange: tmp8,
           children: tmp20,
         });
-        obj2.children = jsx(tmp(6919).HeaderBackContext.Provider, { value: "Array", children: 0 });
+        obj2.children = jsx(tmp(6918).HeaderBackContext.Provider, { value: "Array", children: 0 });
         const tmp25 = jsx(tmp(1506).NavigationIndependentTree, { children: null });
         cResult[14] = navigationContainerRef;
         cResult[15] = tmp8;
@@ -1109,7 +1109,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         onStateChange: null,
         children: null,
       });
-      obj5.children = jsx(_mod6919.HeaderBackContext.Provider, { value: "Array", children: 0 });
+      obj5.children = jsx(_mod6918.HeaderBackContext.Provider, { value: "Array", children: 0 });
       return jsx(Link.NavigationIndependentTree, { children: null });
     };
 ReactCompilerGating = fn(558);

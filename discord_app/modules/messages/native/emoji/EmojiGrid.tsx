@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import EmojiUtilsDefault from "../../../../utils/EmojiUtils.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
-import chunkDefault from "../../../../../_runtime/09925_chunk.js";
+import chunkDefault from "../../../../../_runtime/09932_chunk.js";
 import LayoutUtils from "../../../guild_role_subscriptions/native/components/LayoutUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -193,7 +193,7 @@ export const EmojiGrid = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const found = substr.filter(F);
     const substr1 = found.slice(0, num3);
     const emojiGridContainer = tmp7.emojiGridContainer;
-    const GappedList = tmp(9927).GappedList;
+    const GappedList = tmp(9934).GappedList;
     if (cResult[18] !== tmp7.emojiGridRowContainer) {
       class U {
         constructor(arg0, arg1) {
@@ -265,7 +265,7 @@ export const EmojiGrid = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     num2 = 5;
   }
   let obj = {};
-  const merged = Object.assign(doNotDisplayEmojiIds(9909).useSharedMessageEmojiStyles());
+  const merged = Object.assign(doNotDisplayEmojiIds(9916).useSharedMessageEmojiStyles());
   const merged1 = Object.assign(closure_5());
   let emojis;
   if (expressionSourceGuild != null) {
@@ -277,13 +277,13 @@ export const EmojiGrid = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const substr = emojis.slice(0, num + 1);
   const found = substr.filter((id) => !doNotDisplayEmojiIds.includes(id.id));
   const substr1 = found.slice(0, num);
-  const obj2 = doNotDisplayEmojiIds(9909);
+  const obj2 = doNotDisplayEmojiIds(9916);
   const tmp = doNotDisplayEmojiIds;
   const obj3 = { style: obj.emojiGridContainer, children: null };
-  const arr4 = obj(9925)(substr1, num2);
-  obj3.children = jsx(tmp(9927).GappedList, {
+  const arr4 = obj(9932)(substr1, num2);
+  obj3.children = jsx(tmp(9934).GappedList, {
     gap: 8,
-    children: obj(9925)(substr1, num2).map((arr, index) => {
+    children: obj(9932)(substr1, num2).map((arr, index) => {
       obj = { style: obj.emojiGridRowContainer, children: jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) }) };
       return <View key={index} style={obj.emojiGridRowContainer}>{jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) })}</View>;
     })

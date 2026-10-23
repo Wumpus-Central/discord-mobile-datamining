@@ -1,7 +1,7 @@
 // discord_app/modules/orbs_arcade/native/OrbsArcadeSheetActions.tsx
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton.tsx";
 import openOrbsArcadeSheets from "openOrbsArcadeSheets.tsx";
+import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === sheetKey) {
             if (cResult[4] !== game) {
               const obj2 = { game, size: "lg" };
-              const tmp11 = closure_3(sheetKey(16314), obj2);
+              const tmp11 = closure_3(sheetKey(16336), obj2);
               cResult[4] = game;
               cResult[5] = tmp11;
               let tmp8 = tmp11;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { direction, size: "lg", style, children: null };
             const items = [tmp8, tmp12];
             obj4.children = items;
-            const tmp17 = closure_4(game(6682).ButtonGroup, obj4);
+            const tmp17 = closure_4(game(6681).ButtonGroup, obj4);
             cResult[8] = direction;
             cResult[9] = style;
             cResult[10] = tmp8;
@@ -143,6 +143,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       items[1] = tmp11Result;
       obj3.children = items;
-      return closure_4(game(6682).ButtonGroup, obj3);
+      return closure_4(game(6681).ButtonGroup, obj3);
     };
 export { OrbsArcadeSheetSecondaryAction };

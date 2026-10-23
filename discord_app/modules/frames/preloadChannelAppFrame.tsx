@@ -11,7 +11,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const Constants = fn(1087);
 ({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: c10 } = Constants);

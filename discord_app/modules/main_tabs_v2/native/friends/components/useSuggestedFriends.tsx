@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import FriendSuggestionStore from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
 
 require = fn;
-const SuggestedFriendSource = fn(13525).SuggestedFriendSource;
+const SuggestedFriendSource = fn(13539).SuggestedFriendSource;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");

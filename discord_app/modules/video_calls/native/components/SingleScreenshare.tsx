@@ -6,7 +6,7 @@ import ScreenshareParticipantDefault from "ScreenshareParticipant.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ChannelCallStore = fn(10847);
+const ChannelCallStore = fn(10855);
 ({ resetFocus: c3, toggleFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);

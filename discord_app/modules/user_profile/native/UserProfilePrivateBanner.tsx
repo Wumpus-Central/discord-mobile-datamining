@@ -23,7 +23,7 @@ let obj2 = {
     paddingHorizontal: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     position: "relative",
-    zIndex: fn(7288).PROFILE_TOP_LAYER_Z_INDEX,
+    zIndex: fn(7289).PROFILE_TOP_LAYER_Z_INDEX,
   },
 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -38,7 +38,7 @@ let obj3 = {
   paddingHorizontal: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   position: "relative",
-  zIndex: fn(7288).PROFILE_TOP_LAYER_Z_INDEX,
+  zIndex: fn(7289).PROFILE_TOP_LAYER_Z_INDEX,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateBanner.tsx");

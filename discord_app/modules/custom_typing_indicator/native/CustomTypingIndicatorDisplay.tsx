@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = PressableOpacity(1128);
 const Text_Text = PressableOpacity(5220);
-const Stack_Stack = PressableOpacity(5964);
-const Pressables = PressableOpacity(6894);
-const CustomTypingIndicatorUtils = PressableOpacity(12987);
+const Stack_Stack = PressableOpacity(5963);
+const Pressables = PressableOpacity(6893);
+const CustomTypingIndicatorUtils = PressableOpacity(13003);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);

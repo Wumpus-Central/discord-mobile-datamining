@@ -64,7 +64,7 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1087);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5843).SoundOutputChannel;
+const SoundOutputChannel = fn(5842).SoundOutputChannel;
 const MediaEngineContextTypes = fn(5704).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);

@@ -58,7 +58,7 @@ ReactCompilerGating = fn(558);
 function useHasBuildOverrideActive() {
   return null != closure_7();
 }
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useBuildOverrideActiveDescription() {
       const cResult = c.c(3);
@@ -140,7 +140,7 @@ let obj5 = {
     return intl.string(_modDef2145.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(11729).RefreshIcon,
+  IconComponent: fn(11740).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useBuildOverrideActiveDescription() {
         const cResult = c.c(3);
@@ -227,7 +227,7 @@ export default SettingBuilders.createStatic({
     return intl.string(_modDef2145.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(11729).RefreshIcon,
+  IconComponent: fn(11740).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useBuildOverrideActiveDescription() {
         const cResult = c.c(3);

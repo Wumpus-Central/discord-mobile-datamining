@@ -296,10 +296,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           user: stateFromStores,
           guildId: "Boolean",
           size: tmp2(1202).AvatarSizes.NORMAL,
-          status: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
+          status: false,
           isMobileOnline: null,
-          isVROnline: "9353860856bfc05333c0c56840083d00",
-          statusStyle: "uk.messages.9353860856bfc05333c0c56840083d00.compiled.messages",
+          isVROnline: true,
+          statusStyle: null,
         };
         let isSystemUserResult;
         if (stateFromStores != null) {
@@ -473,8 +473,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = Text(1128).intl;
         let stringResult = intl.string(_modDef3766["D+2/QP"]);
       } else {
-        stringResult = Text(5981).channelTypeString(channel);
-        const TextResult1 = Text(5981);
+        stringResult = Text(5980).channelTypeString(channel);
+        const TextResult1 = Text(5980);
       }
       const TextResult = Text(504);
     }
@@ -507,8 +507,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1128).intl;
         let stringResult = intl.string(_modDef3766["D+2/QP"]);
       } else {
-        stringResult = tmp(5981).channelTypeString(channel);
-        const tmpResult = tmp(5981);
+        stringResult = tmp(5980).channelTypeString(channel);
+        const tmpResult = tmp(5980);
       }
       let obj = channel(504);
     };
@@ -823,7 +823,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const containerStyle = channel.containerStyle;
       const tmp4 = closure_15();
-      analyticsLocations = analyticsLocations(7237)().analyticsLocations;
+      analyticsLocations = analyticsLocations(7238)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         if (cResult[1] === channel) {
           let tmp5 = cResult[2];
@@ -850,7 +850,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { style: tmp6, onPress: tmp5, children: tmp7 };
-          const tmp13 = closure_12(tmp(6894).PressableOpacity, obj3);
+          const tmp13 = closure_12(tmp(6893).PressableOpacity, obj3);
           cResult[8] = tmp5;
           cResult[9] = tmp6;
           cResult[10] = tmp7;
@@ -880,7 +880,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   : function DMChannelNameHeader(channel) {
       channel = channel.channel;
       let analyticsLocations;
-      analyticsLocations = analyticsLocations(7237)().analyticsLocations;
+      analyticsLocations = analyticsLocations(7238)().analyticsLocations;
       const items = [channel, analyticsLocations];
       const callback = noop.useCallback(() => {
         const recipientId = channel.getRecipientId();
@@ -892,7 +892,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { style: null, onPress: callback, children: closure_12(closure_19, { channel }) };
       const items1 = [closure_15().container, channel.containerStyle];
       obj.style = items1;
-      return closure_12(channel(6894).PressableOpacity, obj);
+      return closure_12(channel(6893).PressableOpacity, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()

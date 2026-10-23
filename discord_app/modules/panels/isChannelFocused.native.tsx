@@ -141,7 +141,7 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(6789).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6788).CHANNEL_PREFIX;
 let c9 = null;
 const ReactCompilerGating = fn(558);
 function isChannelFocused() {

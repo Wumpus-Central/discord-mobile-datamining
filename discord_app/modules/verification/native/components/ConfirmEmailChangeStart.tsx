@@ -42,7 +42,7 @@ export default function ConfirmEmailChangeStart() {
     const obj5 = { style: tmp.container, children: null };
     let obj6 = { style: tmp.image, source: null };
     const formatResult = intl.format(tmp2(1128).t.oMFSgi, obj3);
-    obj6.source = navigation(6990);
+    obj6.source = navigation(6989);
     const items1 = [closure_9(navigation(5655), obj6), , ,];
     let obj7 = {
       style: tmp.title,

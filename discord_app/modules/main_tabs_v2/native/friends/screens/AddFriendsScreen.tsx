@@ -70,7 +70,7 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(13525).Sections;
+const Sections = fn(13539).Sections;
 const Constants = fn(1087);
 ({
   AnalyticEvents: closure_12,
@@ -78,7 +78,7 @@ const Constants = fn(1087);
   InstantInviteSources: closure_14,
   RelationshipTypes: closure_15,
 } = Constants);
-let ContactPermissions = fn(13503).ContactPermissions;
+let ContactPermissions = fn(13517).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = {
@@ -124,11 +124,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
       if (cResult[0] !== contactSyncAccount) {
-        const isContactSyncEnabledResult = tmp(13505).isContactSyncEnabled(contactSyncAccount);
+        const isContactSyncEnabledResult = tmp(13519).isContactSyncEnabled(contactSyncAccount);
         cResult[0] = contactSyncAccount;
         cResult[1] = isContactSyncEnabledResult;
         let tmp5 = isContactSyncEnabledResult;
-        let tmpResult = tmp(13505);
+        let tmpResult = tmp(13519);
       } else {
         tmp5 = cResult[1];
       }

@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const project_id = build.project_id;
           const name = tmp;
           let obj2 = {
-            content: closure_1_3(closure_1_1(11789), {
+            content: closure_1_3(closure_1_1(11801), {
               sheetKey,
               title: build[project_id],
               value: build.build,
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj2.onConfirm = function onConfirm() {
                   return dependencyMap(closure_0);
                 };
-                project_id(5901).showConfirmModal(obj2);
+                project_id(5900).showConfirmModal(obj2);
               },
             }),
             key: sheetKey,

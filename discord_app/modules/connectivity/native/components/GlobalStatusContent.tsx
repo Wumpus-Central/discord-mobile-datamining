@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(11515).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(11526).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1087).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   tmp22 = tmp5ResultResult;
                 }
-                const isScreenLandscape = tmp(8664).useIsScreenLandscape();
+                const isScreenLandscape = tmp(8671).useIsScreenLandscape();
                 if (cResult[15] !== isScreenLandscape) {
                   let isModalOpenResult = isScreenLandscape;
                   if (isScreenLandscape) {
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = num11;
                 cResult[19] = obj4;
                 tmp33 = obj4;
-                const tmpResult6 = tmp(8664);
+                const tmpResult6 = tmp(8671);
               }
             }
           }

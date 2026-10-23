@@ -9,7 +9,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandConstants = fn(5970);
+const ApplicationCommandConstants = fn(5969);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
@@ -782,7 +782,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { size: "md", onChange: tmp4[1], placeholder: null };
         let intl = tmp(tmp2[17]).intl;
         obj9.placeholder = intl.string(tmp(tmp2[17]).t.m1UwbP);
-        obj7.children = sectionDescriptors(tmp(tmp2[20]).SearchField, obj9);
+        obj7.children = sectionDescriptors(tmp(tmp2[20]).SearchBar, obj9);
         tmp27Result = tmp27(closure_6, obj7);
       }
       const obj10 = { children: null };

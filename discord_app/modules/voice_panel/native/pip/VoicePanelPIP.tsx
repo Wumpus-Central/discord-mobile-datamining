@@ -27,12 +27,12 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10865);
+const VoicePanelConstants = fn(10873);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10863).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18344).VoicePanelPIPModes;
+const VoicePanelControlsModes = fn(10871).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18366).VoicePanelPIPModes;
 const ActivityPanelModes = fn(5595).ActivityPanelModes;
-const isLaunched = fn(6762).isLaunched;
+const isLaunched = fn(6761).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(4969);

@@ -454,7 +454,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
+      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     });
     if (flag) {
@@ -470,7 +470,7 @@ export default {
     };
     const obj2 = {
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
+      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     };
     const tmpResult2 = DispatcherDefault;
@@ -619,8 +619,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7408).checkGuildTemplateDirty(closure_128_2);
-        name(7408);
+        const result = name(7409).checkGuildTemplateDirty(closure_128_2);
+        name(7409);
       }
       return closure_128_1;
     })();

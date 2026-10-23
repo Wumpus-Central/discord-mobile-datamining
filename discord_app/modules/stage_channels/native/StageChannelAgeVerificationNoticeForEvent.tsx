@@ -43,7 +43,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_8();
       importDefault = tmp4;
       let obj = onConfirmPress(576);
-      let icon = onConfirmPress(6640).useIsVerifiedTeen();
+      let icon = onConfirmPress(6639).useIsVerifiedTeen();
       if (cResult[0] === icon) {
         if (cResult[1] === onConfirmPress) {
           if (cResult[2] === tmp4) {
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               if (icon) {
                 let WarningIcon = tmp(5672).CircleInformationIcon;
               } else {
-                WarningIcon = tmp(7941).WarningIcon;
+                WarningIcon = tmp(7942).WarningIcon;
               }
               const obj5 = { size: "refresh_sm", color: nativeDefault.colors.TEXT_DEFAULT, style: tmp4.icon };
               const tmp11Result = closure_5(WarningIcon, obj5);
@@ -108,7 +108,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 return tmp7;
               }
               const obj6 = { type: str, message: tmp5, role: "status" };
-              const tmp9 = closure_5(tmp(7937).InlineNotice, obj6);
+              const tmp9 = closure_5(tmp(7938).InlineNotice, obj6);
               cResult[14] = tmp5;
               cResult[15] = str;
               cResult[16] = tmp9;
@@ -147,9 +147,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               style: closure_1.linkText,
               onPress() {
-                const obj = closure_1(7867);
+                const obj = closure_1(7868);
                 const result = obj.showAgeVerificationGetStartedModal({
-                  entryPoint: onConfirmPress(6643).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+                  entryPoint: onConfirmPress(6642).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
                 });
                 if (closure_1_0 != null) {
                   closure_1_0();
@@ -165,14 +165,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = onConfirmPress;
       cResult[2] = tmp4;
       cResult[3] = formatResult;
-      const obj2 = onConfirmPress(6640);
+      const obj2 = onConfirmPress(6639);
     }
   : function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
       onConfirmPress = onConfirmPress.onConfirmPress;
       let contentText = closure_8();
       let Text = onConfirmPress;
       let tmp = dependencyMap;
-      const isVerifiedTeen = onConfirmPress(6640).useIsVerifiedTeen();
+      const isVerifiedTeen = onConfirmPress(6639).useIsVerifiedTeen();
       const intl = onConfirmPress(1128).intl;
       const format = intl.format;
       const t = onConfirmPress(1128).t;
@@ -203,9 +203,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               style: contentText.linkText,
               onPress() {
-                const obj = contentText(7867);
+                const obj = contentText(7868);
                 const result = obj.showAgeVerificationGetStartedModal({
-                  entryPoint: onConfirmPress(6643).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+                  entryPoint: onConfirmPress(6642).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
                 });
                 if (closure_1_0 != null) {
                   closure_1_0();
@@ -222,7 +222,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (isVerifiedTeen) {
           let WarningIcon = Text(5672).CircleInformationIcon;
         } else {
-          WarningIcon = Text(7941).WarningIcon;
+          WarningIcon = Text(7942).WarningIcon;
         }
         const obj5 = { size: "refresh_sm", color: contentText(587).colors.TEXT_DEFAULT, style: contentText.icon };
         const items = [closure_5(WarningIcon, obj5)];
@@ -241,9 +241,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           str = "info";
         }
         const obj7 = { type: str, message: formatResult, role: "status" };
-        return closure_5(Text(7937).InlineNotice, obj7);
+        return closure_5(Text(7938).InlineNotice, obj7);
       }
-      let obj = onConfirmPress(6640);
+      let obj = onConfirmPress(6639);
     };
 const obj8 = { TOP: 0, [0]: "TOP", BOTTOM: 1, [1]: "BOTTOM" };
 ReactCompilerGating = fn(558);

@@ -1,6 +1,6 @@
 // discord_app/modules/freeze/native/NativeFreezeScreens.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import enableScreens from "../../../../_runtime/05903_enableScreens.js";
+import enableScreens from "../../../../_runtime/05902_enableScreens.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -98,7 +98,7 @@ export const NativeFreezeScreens = ReactCompilerGating.isReactCompilerEnabled()
                         nativeID: "native-freeze-screens-container",
                         children: cResult[14],
                       };
-                      const tmp27 = first(tmp(5903).ScreenContainer, obj2);
+                      const tmp27 = first(tmp(5902).ScreenContainer, obj2);
                       cResult[23] = tmp4;
                       cResult[24] = tmp9.screens;
                       cResult[25] = cResult[14];

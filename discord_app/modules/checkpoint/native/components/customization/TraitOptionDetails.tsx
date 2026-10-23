@@ -26,47 +26,46 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp4;
       let tmp5 = null;
       if (!asset.hidden) {
-        if (asset.rarity === tmp(6003).CheckpointTraitRarity.NITRO) {
-          if (true === asset.locked) {
-            if (cResult[0] !== tmp4) {
-              const intl = tmp(1128).intl;
-              const obj2 = {
-                subscribeHook(children, arg1) {
-                  return React4(
-                    Text_Text.Text,
-                    {
-                      variant: "text-md/medium",
-                      color: "text-subtle",
-                      style: subscribeLink.subscribeLink,
-                      onPress() {
-                        const obj = { analyticsLocations: null };
-                        const items = [closure_1_1(7262).CHECKPOINT];
-                        obj.analyticsLocations = items;
-                        return closure_1_1(9762)(obj);
-                      },
-                      accessibilityRole: "link",
-                      children,
+        if (asset.status === tmp(6025).CheckpointTraitOptionStatus.NITRO_LOCKED) {
+          if (cResult[0] !== tmp4) {
+            const intl = tmp(1128).intl;
+            const obj2 = {
+              subscribeHook(children, arg1) {
+                return React4(
+                  Text_Text.Text,
+                  {
+                    variant: "text-md/medium",
+                    color: "text-subtle",
+                    style: subscribeLink.subscribeLink,
+                    onPress() {
+                      const obj = { analyticsLocations: null };
+                      const items = [closure_1_1(7263).CHECKPOINT];
+                      obj.analyticsLocations = items;
+                      return closure_1_1(9769)(obj);
                     },
-                    arg1,
-                  );
-                },
-              };
-              const formatResult = intl.format(_modDef3088["3Wq/bk"], obj2);
-              cResult[0] = tmp4;
-              cResult[1] = formatResult;
-            }
+                    accessibilityRole: "link",
+                    children,
+                  },
+                  arg1,
+                );
+              },
+            };
+            const formatResult = intl.format(_modDef3088["3Wq/bk"], obj2);
+            cResult[0] = tmp4;
+            cResult[1] = formatResult;
           }
-        }
-        if (cResult[2] !== asset) {
-          const assetDescription = tmp(6348).getAssetDescription(asset);
-          cResult[2] = asset;
-          cResult[3] = assetDescription;
-          let tmp6 = assetDescription;
-          const tmpResult = tmp(6348);
         } else {
-          tmp6 = cResult[3];
+          if (cResult[2] !== asset) {
+            const assetDescription = tmp(6347).getAssetDescription(asset);
+            cResult[2] = asset;
+            cResult[3] = assetDescription;
+            let tmp6 = assetDescription;
+            const tmpResult = tmp(6347);
+          } else {
+            tmp6 = cResult[3];
+          }
+          tmp5 = tmp6;
         }
-        tmp5 = tmp6;
       }
       if (cResult[4] === tmp5) {
         if (cResult[5] === tmp12) {
@@ -100,34 +99,35 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         let format = _require;
         let obj = dependencyMap;
-        if (asset.rarity !== require("CheckpointTraitRarity").CheckpointTraitRarity.NITRO) {
-          let assetDescription = format(6348).getAssetDescription(asset);
-          const formatResult = format(6348);
-        }
-        const intl = format(1128).intl;
-        format = intl.format;
-        obj = {
-          subscribeHook(children, arg1) {
-            return React4(
-              Text_Text.Text,
-              {
-                variant: "text-md/medium",
-                color: "text-subtle",
-                style: subscribeLink.subscribeLink,
-                onPress() {
-                  const obj = { analyticsLocations: null };
-                  const items = [closure_1_1(7262).CHECKPOINT];
-                  obj.analyticsLocations = items;
-                  return closure_1_1(9762)(obj);
+        if (asset.status === require("CheckpointCharacterAssets").CheckpointTraitOptionStatus.NITRO_LOCKED) {
+          const intl = format(1128).intl;
+          format = intl.format;
+          obj = {
+            subscribeHook(children, arg1) {
+              return React4(
+                Text_Text.Text,
+                {
+                  variant: "text-md/medium",
+                  color: "text-subtle",
+                  style: subscribeLink.subscribeLink,
+                  onPress() {
+                    const obj = { analyticsLocations: null };
+                    const items = [closure_1_1(7263).CHECKPOINT];
+                    obj.analyticsLocations = items;
+                    return closure_1_1(9769)(obj);
+                  },
+                  accessibilityRole: "link",
+                  children,
                 },
-                accessibilityRole: "link",
-                children,
-              },
-              arg1,
-            );
-          },
-        };
-        assetDescription = format(_modDef3088["3Wq/bk"], obj);
+                arg1,
+              );
+            },
+          };
+          let formatResult = format(_modDef3088["3Wq/bk"], obj);
+        } else {
+          formatResult = format(6347).getAssetDescription(asset);
+          const formatResult1 = format(6347);
+        }
       }
     };
 ReactCompilerGating = fn(558);

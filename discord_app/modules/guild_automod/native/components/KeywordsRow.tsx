@@ -37,8 +37,8 @@ export default function KeywordsRow(label) {
       obj4 = { type, maxWordCount };
     }
     const merged = Object.assign(obj4);
-    obj.openLazy(asyncRequireImpl(18926, dependencyMap.paths), "AutomodKeywords", obj2);
-    const tmp = asyncRequireImpl(18926, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(18949, dependencyMap.paths), "AutomodKeywords", obj2);
+    const tmp = asyncRequireImpl(18949, dependencyMap.paths);
   };
-  return keywords(label(6889).TableRow, obj);
+  return keywords(label(6888).TableRow, obj);
 }

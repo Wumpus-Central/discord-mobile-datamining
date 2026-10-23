@@ -14,8 +14,8 @@ import UserProfileStore from "../UserProfileStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getWishlistProductLines = fn(9340).getWishlistProductLines;
-let closure_12 = fn(8645).TrackUserProfileWishlistActions;
+const getWishlistProductLines = fn(9347).getWishlistProductLines;
+let closure_12 = fn(8652).TrackUserProfileWishlistActions;
 const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       const tmpResult = wishlistId(504);
-      const analyticsLocations2 = analyticsContext(7237)(
+      const analyticsLocations2 = analyticsContext(7238)(
         tmp9,
-        tmp8(7262).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+        tmp8(7263).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
       ).analyticsLocations;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
@@ -129,8 +129,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp12 = cResult[4];
       }
-      const tmp8Result = analyticsContext(7237);
-      ({ cardWidth: closure_5, rowWidth } = analyticsContext(14199)(tmp12));
+      const tmp8Result = analyticsContext(7238);
+      ({ cardWidth: closure_5, rowWidth } = analyticsContext(14213)(tmp12));
       if (null != rowWidth) {
         let obj3 = { width: rowWidth };
       }
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp14 = analyticsContext(14199)(tmp12);
+      const tmp14 = analyticsContext(14213)(tmp12);
       const stateFromStores = wishlistId(504).useStateFromStores(tmp16, V);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class V {
@@ -555,18 +555,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (analyticsLocations1 == null) {
         analyticsLocations1 = [];
       }
-      analyticsLocations = analyticsContext(7237)(
+      analyticsLocations = analyticsContext(7238)(
         analyticsLocations1,
-        tmp4(7262).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+        tmp4(7263).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
       ).analyticsLocations;
       let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-      const tmp5 = analyticsContext(7237);
-      ({ cardWidth: c5, rowWidth } = analyticsContext(14199)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+      const tmp5 = analyticsContext(7238);
+      ({ cardWidth: c5, rowWidth } = analyticsContext(14213)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
       if (null != rowWidth) {
         let obj3 = { width: rowWidth };
         let tmp7 = obj3;
       }
-      let tmp6 = analyticsContext(14199)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+      let tmp6 = analyticsContext(14213)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
       const items1 = [value];
       stateFromStores = wishlistId(504).useStateFromStores(items1, () => WishlistStore.getWishlist(wishlistId));
       const tmp2Result = wishlistId(504);
@@ -651,8 +651,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj10.subLabel = intl3.string(wishlistId(1128).t.dw58pE);
       obj10.value = value;
       obj10.onValueChange = callback;
-      obj9.children = closure_14(wishlistId(7279).TableSwitchRow, obj10);
-      obj8.children = closure_14(wishlistId(6973).TableRowGroup, obj9);
+      obj9.children = closure_14(wishlistId(7280).TableSwitchRow, obj10);
+      obj8.children = closure_14(wishlistId(6972).TableRowGroup, obj9);
       const items8 = [closure_14(stateFromStores, obj8)];
       if (stateFromStores1) {
         if (null == stateFromStores) {
@@ -724,5 +724,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         });
         tmp16Result = closure_14(tmp19, obj12);
       }
-      tmp4Result = analyticsContext(11040);
+      tmp4Result = analyticsContext(11049);
     };

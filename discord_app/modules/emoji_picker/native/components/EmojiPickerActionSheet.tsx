@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import Search_SearchBar from "../../../../design/components/Search/native/SearchBar.native.tsx";
 import openEmojiPickerActionSheet from "../openEmojiPickerActionSheet.tsx";
 import EmojiPickerUtils from "../../EmojiPickerUtils.tsx";
 import DoubleTapReminderToast from "../../../double_tap_to_react/native/DoubleTapReminderToast.tsx";
@@ -14,7 +14,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9798).EmojiPickerSource;
+const EmojiPickerSource = fn(9805).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
@@ -196,7 +196,7 @@ export default function EmojiPickerActionSheet(onClose) {
       onChange: handleTextChange,
       placeholder: EmojiPickerUtils.getSearchPlaceholder(pickerIntention, currentUser),
     };
-    const items2 = [v65535(SearchField.SearchField, obj3)];
+    const items2 = [v65535(Search_SearchBar.SearchBar, obj3)];
     let tmp4Result = pickerIntention === EmojiIntention.REACTION;
     if (tmp4Result) {
       tmp4Result = source !== EmojiPickerSource.NOTIFICATION;

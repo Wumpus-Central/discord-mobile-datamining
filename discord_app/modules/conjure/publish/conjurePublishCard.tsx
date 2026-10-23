@@ -13,7 +13,7 @@ export const isPublishCardLive = function isPublishCardLive(reason, arg1) {
     newUiUnpublished = newUiUnpublished.newUiUnpublished;
     let tmp3 = true === newUiUnpublished;
   } else {
-    tmp3 = "unpublished" === newUiUnpublished.state;
+    tmp3 = "not_live" === newUiUnpublished.publishState;
   }
 };
 export const isConjurePublishCtaVisible = function isConjurePublishCtaVisible(publish, cta) {
@@ -26,7 +26,7 @@ export const isConjurePublishCtaVisible = function isConjurePublishCtaVisible(pu
       newUiUnpublished = newUiUnpublished.newUiUnpublished;
       let tmp4 = true === newUiUnpublished;
     } else {
-      tmp4 = "unpublished" === newUiUnpublished.state;
+      tmp4 = "not_live" === newUiUnpublished.publishState;
     }
   }
   return tmp;
@@ -49,7 +49,7 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
       newUiUnpublished = newUiUnpublished.newUiUnpublished;
       let tmp4 = true === newUiUnpublished;
     } else {
-      tmp4 = "unpublished" === newUiUnpublished.state;
+      tmp4 = "not_live" === newUiUnpublished.publishState;
     }
   }
   return null;
@@ -88,7 +88,7 @@ export const withLivePublishCard = function withLivePublishCard(stateFromStores1
       newUiUnpublished = newUiUnpublished.newUiUnpublished;
       let tmp5 = true === newUiUnpublished;
     } else {
-      tmp5 = "unpublished" === newUiUnpublished.state;
+      tmp5 = "not_live" === newUiUnpublished.publishState;
     }
   }
   id = tmp2;

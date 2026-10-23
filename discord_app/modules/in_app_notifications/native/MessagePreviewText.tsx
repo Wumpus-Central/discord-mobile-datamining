@@ -20,7 +20,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13679);
+const InAppNotificationConstants = fn(13693);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Fonts = fn(1098).Fonts;

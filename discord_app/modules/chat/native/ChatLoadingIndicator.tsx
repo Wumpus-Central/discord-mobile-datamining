@@ -543,7 +543,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
           if (!stateFromStores1) {
             return tmp18;
           } else if (cResult[11] !== tmp18) {
-            PressableOpacity = PressableOpacity(6894).PressableOpacity;
+            PressableOpacity = PressableOpacity(6893).PressableOpacity;
             let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
             tmp = closure_13(PressableOpacity, obj4);
             cResult[11] = tmp18;
@@ -650,7 +650,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       let tmp7Result = tmp8;
       if (stateFromStores1) {
         let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-        tmp7Result = closure_13(tmp2(6894).PressableOpacity, obj8);
+        tmp7Result = closure_13(tmp2(6893).PressableOpacity, obj8);
       }
       return tmp7Result;
     };

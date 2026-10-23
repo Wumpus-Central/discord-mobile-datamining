@@ -5,7 +5,7 @@ import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useSelectedVariantIndex = fn(9390).useSelectedVariantIndex;
+const useSelectedVariantIndex = fn(9397).useSelectedVariantIndex;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

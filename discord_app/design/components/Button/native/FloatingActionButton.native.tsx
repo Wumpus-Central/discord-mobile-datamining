@@ -247,6 +247,6 @@ export const FloatingActionButton = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj6.icon = cloneElementResult;
       ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = tmp2);
-      obj3.children = jsx(positionBottom(7944).BaseIconButton, {});
+      obj3.children = jsx(positionBottom(7945).BaseIconButton, {});
       return jsx(positionRight(5038).View, { style: animatedStyle, children: null });
     };

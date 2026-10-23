@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx
 import useFontScale from "../../../../screen/native/useFontScale.tsx";
-import Badge from "../Badge.tsx";
+import shared_components_Badge from "../Badge.tsx";
 import ChannelListLayout from "layouts/ChannelListLayout.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const BadgeDefault = Badge;
+const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(12003).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6691).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(12014).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_7 = createStyles.createStyles({
@@ -50,7 +50,7 @@ export default noop.memo(
           const obj3 = { classic: tmp, size: null, badgeStyle: null };
           const tmp3Result = ChannelListLayout;
           const _Math = Math;
-          obj3.size = Badge.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
+          obj3.size = shared_components_Badge.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
           if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
             let num2 = MUTED_OPACITY_CONTENT;
           } else {
@@ -58,7 +58,7 @@ export default noop.memo(
           }
           const obj4 = { opacity: num2 };
           obj3.badgeStyle = obj4;
-          obj2.children = jsx(BadgeDefault, { classic: tmp, size: null, badgeStyle: null });
+          obj2.children = jsx(shared_components_BadgeDefault, { classic: tmp, size: null, badgeStyle: null });
           tmp9Result = <View style={null}>{null}</View>;
         }
         return tmp9Result;
@@ -88,7 +88,7 @@ export default noop.memo(
           const obj3 = { classic: flag, size: null, badgeStyle: null };
           const tmp2Result = ChannelListLayout;
           const _Math = Math;
-          obj3.size = Badge.CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
+          obj3.size = shared_components_Badge.CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
           if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
             let num2 = MUTED_OPACITY_CONTENT;
           } else {
@@ -96,7 +96,7 @@ export default noop.memo(
           }
           const obj4 = { opacity: num2 };
           obj3.badgeStyle = obj4;
-          obj2.children = jsx(BadgeDefault, { classic: flag, size: null, badgeStyle: null });
+          obj2.children = jsx(shared_components_BadgeDefault, { classic: flag, size: null, badgeStyle: null });
           tmp8Result = <View style={null}>{null}</View>;
         }
         return tmp8Result;

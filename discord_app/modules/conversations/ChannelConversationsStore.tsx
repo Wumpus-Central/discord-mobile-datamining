@@ -526,7 +526,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7684).mapConversation);
+      const mapped = rawConversations.map(set(7685).mapConversation);
       const found = mapped.filter(set(1388).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

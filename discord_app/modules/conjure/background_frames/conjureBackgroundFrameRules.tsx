@@ -10,7 +10,7 @@ import VoiceChannelAppStore from "../../voice_channel_apps/VoiceChannelAppStore.
 import ConjureBuilderPreviewStore from "../preview/ConjureBuilderPreviewStore.tsx";
 
 require = fn;
-const FrameIntent = fn(6762).FrameIntent;
+const FrameIntent = fn(6761).FrameIntent;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrameRules.tsx");
 
@@ -42,12 +42,12 @@ export const shouldRunInBackgroundOnRelease = function shouldRunInBackgroundOnRe
   }
   return tmp9;
 };
-export const isBuilderPreviewFrame = function isBuilderPreviewFrame(surface) {
-  let result = conjurePreviewSurface.isConjurePreviewSurface(surface.surface);
+export const isBuilderPreviewFrame = function isBuilderPreviewFrame(frame) {
+  let result = conjurePreviewSurface.isConjurePreviewSurface(frame.surface);
   if (!result) {
-    let tmp3 = surface.intent === FrameIntent.MAIN;
+    let tmp3 = frame.intent === FrameIntent.MAIN;
     if (tmp3) {
-      tmp3 = surface.applicationId === ConjureBuilderPreviewStore.getLastBuilderPreviewApplicationId();
+      tmp3 = frame.applicationId === ConjureBuilderPreviewStore.getLastBuilderPreviewApplicationId();
     }
     result = tmp3;
   }

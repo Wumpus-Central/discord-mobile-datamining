@@ -266,8 +266,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let obj = selectedTab(576);
-      const isGameProfileCommunitiesMobileEnabled = selectedTab(14099).useIsGameProfileCommunitiesMobileEnabled(first);
-      const tmpResult = selectedTab(14099);
+      const isGameProfileCommunitiesMobileEnabled = selectedTab(14113).useIsGameProfileCommunitiesMobileEnabled(first);
+      const tmpResult = selectedTab(14113);
       const token = selectedTab(5238).useToken(tmp4(587).colors.BACKGROUND_BASE_LOWEST);
       if (cResult[1] !== token) {
         let obj5 = tmp4(683)(token);
@@ -445,8 +445,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            tmp23[0] = tmp(9264).GameProfileNavTab.OVERVIEW;
-            tmp23[1] = tmp(9585).GameControllerIcon;
+            tmp23[0] = tmp(9271).GameProfileNavTab.OVERVIEW;
+            tmp23[1] = tmp(9592).GameControllerIcon;
             const intl = tmp(1128).intl;
             tmp23[2] = intl.string(tmp(1128).t.qHmbyh);
             cResult[8] = tmp23;
@@ -508,8 +508,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp24[0] = tmp23;
             let obj6 = {
-              tab: tmp(9264).GameProfileNavTab.COMMUNITIES,
-              IconComponent: tmp(8545).GroupIcon,
+              tab: tmp(9271).GameProfileNavTab.COMMUNITIES,
+              IconComponent: tmp(8546).GroupIcon,
               label: null,
             };
             const intl2 = tmp(1128).intl;
@@ -599,7 +599,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const tmp29 = closure_9(tmp(8881).BackgroundBlurFill, {});
+              const tmp29 = closure_9(tmp(8888).BackgroundBlurFill, {});
               cResult[13] = tmp29;
               const tmp28 = tmp29;
             } else {
@@ -770,7 +770,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[20] = selectedTab;
               cResult[21] = tmp5.item;
               cResult[22] = tmp5.label;
-              cResult[23] = closure_9(tmp(14094).YouScreenNavIconMeasurer, obj8);
+              cResult[23] = closure_9(tmp(14108).YouScreenNavIconMeasurer, obj8);
               class A {
                 constructor() {
                   tmp = closure_5;
@@ -800,7 +800,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 }
               }
-              const tmp37 = closure_9(tmp(14094).YouScreenNavIconMeasurer, obj8);
+              const tmp37 = closure_9(tmp(14108).YouScreenNavIconMeasurer, obj8);
             }
             const obj9 = { style: null, pointerEvents: "none" };
             let items = [tmp5.selection, animatedStyle];
@@ -918,10 +918,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const selectTab = navigation.selectTab;
       const tmp3 = closure_17(selectTab(1633)().bottom);
       dependencyMap = tmp3;
-      const isGameProfileCommunitiesMobileEnabled = selectedTab(14099).useIsGameProfileCommunitiesMobileEnabled({
+      const isGameProfileCommunitiesMobileEnabled = selectedTab(14113).useIsGameProfileCommunitiesMobileEnabled({
         location: "GameProfileFloatingNav",
       });
-      let obj = selectedTab(14099);
+      let obj = selectedTab(14113);
       const token = selectedTab(5238).useToken(selectTab(587).colors.BACKGROUND_BASE_LOWEST);
       let items = [token];
       const memo = noop.useMemo(() => {
@@ -982,14 +982,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData2;
       if (isGameProfileCommunitiesMobileEnabled) {
         let obj4 = {
-          tab: tmp4(9264).GameProfileNavTab.OVERVIEW,
-          IconComponent: tmp4(9585).GameControllerIcon,
+          tab: tmp4(9271).GameProfileNavTab.OVERVIEW,
+          IconComponent: tmp4(9592).GameControllerIcon,
           label: null,
         };
         const intl = tmp4(1128).intl;
         obj4.label = intl.string(tmp4(1128).t.qHmbyh);
         const items1 = [obj4];
-        let obj5 = { tab: tmp4(9264).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(8545).GroupIcon, label: null };
+        let obj5 = { tab: tmp4(9271).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(8546).GroupIcon, label: null };
         const intl2 = tmp4(1128).intl;
         obj5.label = intl2.string(tmp4(1128).t["3xFZEo"]);
         items1[1] = obj5;
@@ -1000,7 +1000,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = {
           style: tmp3.pillBlur,
           pointerEvents: "none",
-          children: closure_9(tmp4(8881).BackgroundBlurFill, {}),
+          children: closure_9(tmp4(8888).BackgroundBlurFill, {}),
         };
         const items3 = [closure_9(closure_7, obj9)];
         const obj10 = { style: tmp3.pillRow, children: null };
@@ -1030,7 +1030,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             );
           }),
         };
-        items5[1] = closure_9(tmp4(14094).YouScreenNavIconMeasurer, obj12);
+        items5[1] = closure_9(tmp4(14108).YouScreenNavIconMeasurer, obj12);
         obj10.children = items5;
         items3[1] = closure_10(closure_7, obj10);
         obj8.children = items3;

@@ -8,8 +8,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10847).useChannelCallStore;
-const Constants = fn(11313);
+const useChannelCallStore = fn(10855).useChannelCallStore;
+const Constants = fn(11322);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         position: sharedValue,
         THRESHOLD_VELOCITY,
         runOnJS: height(5038).runOnJS,
-        ModalActionCreators: sharedValue(6658),
+        ModalActionCreators: sharedValue(6657),
         withTiming: height(5192).withTiming,
         DECELERATED_EASING: height(1202).DECELERATED_EASING,
       };
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         position: sharedValue,
         THRESHOLD_VELOCITY,
         runOnJS: height(5038).runOnJS,
-        ModalActionCreators: sharedValue(6658),
+        ModalActionCreators: sharedValue(6657),
         withTiming: height(5192).withTiming,
         DECELERATED_EASING: height(1202).DECELERATED_EASING,
       };
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         position: sharedValue,
         THRESHOLD_VELOCITY,
         runOnJS: height(5038).runOnJS,
-        ModalActionCreators: sharedValue(6658),
+        ModalActionCreators: sharedValue(6657),
         withTiming: height(5192).withTiming,
         DECELERATED_EASING: height(1202).DECELERATED_EASING,
       };
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         position: sharedValue,
         THRESHOLD_VELOCITY,
         runOnJS: height(5038).runOnJS,
-        ModalActionCreators: sharedValue(6658),
+        ModalActionCreators: sharedValue(6657),
         withTiming: height(5192).withTiming,
         DECELERATED_EASING: height(1202).DECELERATED_EASING,
       };

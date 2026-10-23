@@ -25,11 +25,11 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 const initialize = intl(504);
 const util = intl(1128);
-const UserProfileApplicationWidgetTypes = intl(7692);
+const UserProfileApplicationWidgetTypes = intl(7693);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(11801);
+const conjureDesignFeedbackStore = fn(11813);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1087);
 ({
@@ -39,7 +39,7 @@ const Constants = fn(1087);
   AppStates: closure_19,
   ME: closure_20,
 } = Constants);
-const isLaunched = fn(6762).isLaunched;
+const isLaunched = fn(6761).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
 const createStyles = fn(4969);
@@ -1097,10 +1097,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           alwaysRespectKeyboard: true,
           disableGradient: true,
         };
-        const items8 = [closure_22(previewApplicationId(10856), obj7, stateFromStores.id)];
+        const items8 = [closure_22(previewApplicationId(10864), obj7, stateFromStores.id)];
         let tmp30Result = null;
         if (tmp7Result4.isAndroid()) {
-          tmp30Result = closure_22(tmp7(11951).PortalKeyboardRenderer, { portal: true });
+          tmp30Result = closure_22(tmp7(11965).PortalKeyboardRenderer, { portal: true });
         }
         items8[1] = tmp30Result;
         obj6.children = items8;

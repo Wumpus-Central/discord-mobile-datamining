@@ -1301,8 +1301,8 @@ const obj34 = {
     const obj2 = { permission: null, state: null };
     const requiredResult = array.array().required();
     const stringResult = array.string();
-    obj2.permission = array.string().valid("screen_capture").required();
-    const validResult = array.string().valid("screen_capture");
+    obj2.permission = array.string().valid("screen_capture", "connect_user_to_voice").required();
+    const validResult = array.string().valid("screen_capture", "connect_user_to_voice");
     const stringResult1 = array.string();
     obj2.state = array.string().valid("granted", "denied", "prompt", "unsupported").required();
     obj.permissions = requiredResult.items(array.object(obj2));
@@ -2213,7 +2213,9 @@ export const RPCCommandSchemas = {
       const uniqueResult = array.array().min(1).unique();
       const requiredResult = array.array().min(1).unique().required();
       const stringResult = array.string();
-      obj.permissions = requiredResult.items(array.string().valid("screen_capture").required());
+      obj.permissions = requiredResult.items(
+        array.string().valid("screen_capture", "connect_user_to_voice").required(),
+      );
       return obj;
     },
     response(array) {
@@ -2222,8 +2224,8 @@ export const RPCCommandSchemas = {
       const obj2 = { permission: null, state: null };
       const requiredResult = array.array().required();
       const stringResult = array.string();
-      obj2.permission = array.string().valid("screen_capture").required();
-      const validResult = array.string().valid("screen_capture");
+      obj2.permission = array.string().valid("screen_capture", "connect_user_to_voice").required();
+      const validResult = array.string().valid("screen_capture", "connect_user_to_voice");
       const stringResult1 = array.string();
       obj2.state = array.string().valid("granted", "denied", "prompt", "unsupported").required();
       obj.permissions = requiredResult.items(array.object(obj2));
@@ -2249,11 +2251,31 @@ export const RPCCommandSchemas = {
       const stringResult = string.string();
       size.status = string
         .string()
-        .valid("ok", "permission_required", "permission_denied", "unsupported", "no_game")
+        .valid(
+          "ok",
+          "permission_required",
+          "permission_denied",
+          "unsupported",
+          "no_game",
+          "game_not_focused",
+          "timeout",
+          "capture_failed",
+          "busy",
+        )
         .required();
       const validResult = string
         .string()
-        .valid("ok", "permission_required", "permission_denied", "unsupported", "no_game");
+        .valid(
+          "ok",
+          "permission_required",
+          "permission_denied",
+          "unsupported",
+          "no_game",
+          "game_not_focused",
+          "timeout",
+          "capture_failed",
+          "busy",
+        );
       size.image = string.string().optional();
       const stringResult1 = string.string();
       const numberResult = string.number();
@@ -2406,7 +2428,11 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "context", response: "add" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: {
+    embeddedAppSDK: true,
+    request: "applicationId",
+    response: "justifyContent",
+  },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

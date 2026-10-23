@@ -11,8 +11,8 @@ const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const EmojiCategoryTypes = fn(6714).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9798).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6713).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(9805).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1243).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);

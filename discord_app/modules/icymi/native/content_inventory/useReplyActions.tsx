@@ -13,7 +13,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7615).DraftType;
+const DraftType = fn(7616).DraftType;
 const EmojiIntention = fn(1395).EmojiIntention;
 const MessageSendLocation = fn(4974).MessageSendLocation;
 const size = fn(2);
@@ -275,7 +275,7 @@ export const useReplyActions = function useReplyActions(cResult) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17850, dependencyMap.paths),
+          asyncRequireImpl(17872, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

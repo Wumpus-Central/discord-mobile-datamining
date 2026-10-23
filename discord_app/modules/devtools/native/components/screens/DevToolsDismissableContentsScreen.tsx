@@ -7,11 +7,11 @@ import dismissible_content from "../../../../../../discord_common/js/packages/pr
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import DismissibleContentFrameworkActionCreators from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/06813_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/06812_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import SearchField from "../../../../../design/components/TextField/native/SearchField.native.tsx";
+import Search_SearchBar from "../../../../../design/components/Search/native/SearchBar.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import SearchEmpty from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import toggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
@@ -247,7 +247,7 @@ let closure_12 = noop.memo(
               tmp35 = tmp38;
             }
             const obj12 = { size: "md", defaultValue: initialSearchQuery, onChange: onSearchChange };
-            const tmp34 = React5(SearchField.SearchField, obj12);
+            const tmp34 = React5(Search_SearchBar.SearchBar, obj12);
             cResult[15] = initialSearchQuery;
             cResult[16] = onSearchChange;
             cResult[17] = tmp34;
@@ -350,7 +350,7 @@ let closure_12 = noop.memo(
         };
         items1[2] = React5(View, {
           style: tmp.search,
-          children: React5(SearchField.SearchField, {
+          children: React5(Search_SearchBar.SearchBar, {
             size: "md",
             defaultValue: initialSearchQuery,
             onChange: onSearchChange,
@@ -695,7 +695,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       DismissibleContentFrameworkStore = tmp19;
       if (cResult[7] !== tmp8[1]) {
-        class F {
+        class U {
           constructor(arg0) {
             tmp = closure_3(arg0);
             items = [];
@@ -733,9 +733,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[7] = tmp10;
-        cResult[8] = F;
+        cResult[8] = U;
       } else {
-        class F {
+        class U {
           constructor(arg0) {
             tmp = closure_3(arg0);
             items = [];
@@ -799,20 +799,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(tmp2[25]);
       cResult[10] = dailyCapOverridden;
-      cResult[11] = F;
+      cResult[11] = U;
       cResult[12] = first1;
       cResult[13] = newUserMinAgeRequiredOverridden;
       cResult[14] = closure_7(closure_12, {
         dailyCapOverridden,
         newUserMinAgeRequiredOverridden,
         initialSearchQuery: first1,
-        onSearchChange: F,
+        onSearchChange: U,
       });
       const tmp22 = closure_7(closure_12, {
         dailyCapOverridden,
         newUserMinAgeRequiredOverridden,
         initialSearchQuery: first1,
-        onSearchChange: F,
+        onSearchChange: U,
       });
     }
   : function DevToolsDismissableContentsScreen() {
@@ -820,8 +820,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const ref = initialSearchQuery.useRef(null);
       importDefault = initialSearchQuery.useRef(0);
       const tmp2 = useSafeAreaInsetsDefault();
-      let obj = ref(11500);
-      [dependencyMap, tmp5] = ref(11500).useLocalStorageState("devtools-dc-search", "");
+      let obj = ref(11511);
+      [dependencyMap, tmp5] = ref(11511).useLocalStorageState("devtools-dc-search", "");
       _slicedToArray = tmp5;
       initialSearchQuery = _slicedToArray(
         initialSearchQuery.useState(() => {
@@ -862,7 +862,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
         return items;
       });
-      let tmp4 = _slicedToArray(ref(11500).useLocalStorageState("devtools-dc-search", ""), 2);
+      let tmp4 = _slicedToArray(ref(11511).useLocalStorageState("devtools-dc-search", ""), 2);
       let items = [closure_6];
       const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
         dailyCapOverridden: closure_6.dailyCapOverridden,
@@ -953,6 +953,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4.renderItem = callback3;
       obj4.onScroll = callback2;
-      obj3.children = dailyCapOverridden(ref(7206).FlashList, obj4);
+      obj3.children = dailyCapOverridden(ref(7205).FlashList, obj4);
       return dailyCapOverridden(first1, obj3);
     };

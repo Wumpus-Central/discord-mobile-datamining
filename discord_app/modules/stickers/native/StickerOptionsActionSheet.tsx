@@ -42,9 +42,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { children: null };
         const obj3 = { hasIcons: true, children: null };
         const obj4 = { icon: tmp5, label: tmp6, onPress: tmp4 };
-        obj3.children = jsx(tmp(6889).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
-        obj2.children = jsx(tmp(6973).TableRowGroup, { hasIcons: true, children: null });
-        const tmp12 = jsx(tmp(7282).ActionSheet, { children: null });
+        obj3.children = jsx(tmp(6888).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
+        obj2.children = jsx(tmp(6972).TableRowGroup, { hasIcons: true, children: null });
+        const tmp12 = jsx(tmp(7283).ActionSheet, { children: null });
         cResult[4] = tmp4;
         cResult[5] = tmp12;
         let tmp10 = tmp12;
@@ -67,11 +67,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = stickerUrl(1128).intl;
       obj3.label = intl.string(stickerUrl(1128).t.B1ubHx);
       obj3.onPress = callback;
-      obj2.children = jsx(stickerUrl(6889).TableRow, {
+      obj2.children = jsx(stickerUrl(6888).TableRow, {
         icon: jsx(stickerUrl(5664).LinkIcon, {}),
         label: null,
         onPress: null,
       });
-      obj.children = jsx(stickerUrl(6973).TableRowGroup, { hasIcons: true, children: null });
-      return jsx(stickerUrl(7282).ActionSheet, { children: null });
+      obj.children = jsx(stickerUrl(6972).TableRowGroup, { hasIcons: true, children: null });
+      return jsx(stickerUrl(7283).ActionSheet, { children: null });
     };

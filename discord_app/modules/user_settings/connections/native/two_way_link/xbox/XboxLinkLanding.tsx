@@ -5,7 +5,7 @@ import GroupIcon from "../../../../../../design/components/Icon/native/redesign/
 import VoiceNormalIcon from "../../../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import ScreenStreamIcon from "../../../../../../design/components/Icon/native/redesign/generated/ScreenStreamIcon.tsx";
 import GameControllerIcon from "../../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import _modDef9586 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
+import _modDef9593 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -32,7 +32,7 @@ function getXboxValueProps() {
   items[3] = obj4;
   return items;
 }
-const XboxLinkModalScenes = fn(9581).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9588).XboxLinkModalScenes;
 const Constants = fn(1087);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp16[0] = _modDef9586;
+        tmp16[0] = _modDef9593;
         cResult[4] = tmp16;
       } else {
         class N {
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp22;
       }
-      tmp22 = jsx(navigation(9587).TwoWayLinkLanding, {
+      tmp22 = jsx(navigation(9594).TwoWayLinkLanding, {
         platformType: constants2.XBOX,
         img: tmp16,
         imgStyle: tmp4.image,
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         navigation.push(XboxLinkModalScenes.PRE_CONNECT);
       }, items);
-      const memo1 = noop.useMemo(() => ({ uri: _modDef9586 }), []);
+      const memo1 = noop.useMemo(() => ({ uri: _modDef9593 }), []);
       const obj3 = {
         platformType: constants2.XBOX,
         img: memo1,
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.body = intl.format(navigation(1128).t.CIc3IN, { helpdeskArticleUrl: articleURL });
       obj3.onNext = callback;
       obj3.valueProps = memo;
-      return jsx(navigation(9587).TwoWayLinkLanding, {
+      return jsx(navigation(9594).TwoWayLinkLanding, {
         platformType: constants2.XBOX,
         img: memo1,
         imgStyle: tmp.image,

@@ -23,7 +23,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_5(closure_1_1(19298), {});
+              return closure_1_5(closure_1_1(19321), {});
             },
           };
           obj[require("types").SafetyFlowScreens.VERIFY_EMAIL] = obj4;
@@ -35,7 +35,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_5(closure_1_1(19300), {});
+              return closure_1_5(closure_1_1(19323), {});
             },
           };
           obj[require("types").SafetyFlowScreens.AGE_VERIFICATION] = {
@@ -46,22 +46,22 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_5(closure_1_1(19301), {});
+              return closure_1_5(closure_1_1(19324), {});
             },
           };
           obj[require("types").SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
             headerShown: false,
             customNavbar() {
-              return closure_1_5(closure_1_0(19302).ParentalConsentConnectionNavbar, {});
+              return closure_1_5(closure_1_0(19325).ParentalConsentConnectionNavbar, {});
             },
             render() {
-              return closure_1_5(closure_1_1(19303), {});
+              return closure_1_5(closure_1_1(19326), {});
             },
           };
           obj[require("types").SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
             headerShown: false,
             render() {
-              return closure_1_5(closure_1_1(19311), {});
+              return closure_1_5(closure_1_1(19334), {});
             },
           };
           obj[require("types").SafetyFlowScreens.ERROR] = {
@@ -72,7 +72,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return closure_1_5(closure_1_1(19312), {});
+              return closure_1_5(closure_1_1(19335), {});
             },
           };
           return obj;
@@ -99,7 +99,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_5(closure_1_1(19298), {});
+            return closure_1_5(closure_1_1(19321), {});
           },
         };
         obj[require("types").SafetyFlowScreens.VERIFY_EMAIL] = obj4;
@@ -111,7 +111,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_5(closure_1_1(19300), {});
+            return closure_1_5(closure_1_1(19323), {});
           },
         };
         obj[require("types").SafetyFlowScreens.AGE_VERIFICATION] = {
@@ -122,22 +122,22 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_5(closure_1_1(19301), {});
+            return closure_1_5(closure_1_1(19324), {});
           },
         };
         obj[require("types").SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
           headerShown: false,
           customNavbar() {
-            return closure_1_5(closure_1_0(19302).ParentalConsentConnectionNavbar, {});
+            return closure_1_5(closure_1_0(19325).ParentalConsentConnectionNavbar, {});
           },
           render() {
-            return closure_1_5(closure_1_1(19303), {});
+            return closure_1_5(closure_1_1(19326), {});
           },
         };
         obj[require("types").SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
           headerShown: false,
           render() {
-            return closure_1_5(closure_1_1(19311), {});
+            return closure_1_5(closure_1_1(19334), {});
           },
         };
         obj[require("types").SafetyFlowScreens.ERROR] = {
@@ -148,7 +148,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return closure_1_5(closure_1_1(19312), {});
+            return closure_1_5(closure_1_1(19335), {});
           },
         };
         return obj;
@@ -303,9 +303,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const memo1 = noop.useMemo(() => ({ task, setTask }), items1);
       const tmp3 = closure_6();
-      return jsx(task(19293).SafetyFlowTaskContext.Provider, {
+      return jsx(task(19316).SafetyFlowTaskContext.Provider, {
         value: memo1,
-        children: jsx(task(12651).StepModal, {
+        children: jsx(task(12670).StepModal, {
           initialRouteName: initialRouteName.initialScreen,
           screens: closure_6(),
           steps: memo,

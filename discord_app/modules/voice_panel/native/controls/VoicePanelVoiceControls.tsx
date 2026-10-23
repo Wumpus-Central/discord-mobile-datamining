@@ -21,7 +21,7 @@ const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment
 
 require = fn;
 function NOOP() {}
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(10863).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(10871).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
 const createStyles = fn(4969);

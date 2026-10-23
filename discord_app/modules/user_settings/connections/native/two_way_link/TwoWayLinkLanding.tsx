@@ -34,7 +34,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
       ({ learnMoreLink, onNext } = platformType);
       const tmp4 = closure_8();
       const obj = platformType(576);
-      const twoWayLinkStyles = platformType(9588).useTwoWayLinkStyles();
+      const twoWayLinkStyles = platformType(9595).useTwoWayLinkStyles();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectedAccountsStore];
         cResult[0] = items;
@@ -57,7 +57,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      const obj2 = platformType(9588);
+      const obj2 = platformType(9595);
       const stateFromStores = platformType(504).useStateFromStores(first, tmp8);
       ({ container, content } = twoWayLinkStyles);
       if (imgStyle == null) {

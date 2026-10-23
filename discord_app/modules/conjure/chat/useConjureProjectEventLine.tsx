@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       actor_user_id = actor_user_id.actor_user_id;
       if (cResult[0] !== actor_user_id) {
         const fn = function c() {
-          return conjureMessageAuthors.requestMessageAuthor(actor_user_id);
+          const messageAuthor = conjureMessageAuthors.requestMessageAuthor(actor_user_id);
         };
         const items = [actor_user_id];
         cResult[0] = actor_user_id;
@@ -223,7 +223,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       importDefault = arg2;
       actor_user_id = actor_user_id.actor_user_id;
       const items = [actor_user_id];
-      const effect = stateFromStores.useEffect(() => conjureMessageAuthors.requestMessageAuthor(actor_user_id), items);
+      const effect = stateFromStores.useEffect(() => {
+        const messageAuthor = conjureMessageAuthors.requestMessageAuthor(actor_user_id);
+      }, items);
       const items1 = [UserStore];
       const items2 = [actor_user_id];
       stateFromStores = require("initialize").useStateFromStores(

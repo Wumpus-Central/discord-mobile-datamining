@@ -11,7 +11,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function BlockedUserRow(userRecord) {
       const cResult = userRecord(576).c(29);
       userRecord = userRecord.userRecord;
-      analyticsLocations = analyticsLocations(7237)().analyticsLocations;
+      analyticsLocations = analyticsLocations(7238)().analyticsLocations;
       if (cResult[0] === userRecord.globalName) {
         if (cResult[1] === userRecord.username) {
           let tmp4 = cResult[2];
@@ -97,7 +97,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 };
-                  const tmp25 = jsx(tmp(6889).TableRow, {
+                  const tmp25 = jsx(tmp(6888).TableRow, {
                     accessible: false,
                     icon: tmp8,
                     label: tmp14,
@@ -132,7 +132,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 };
-            const tmp16 = jsx(tmp(16016).RestrictedUserRowLabel, {
+            const tmp16 = jsx(tmp(16034).RestrictedUserRowLabel, {
               userRecord,
               accessibilityActions: tmp13,
               onAccessibilityAction: tmp7,
@@ -181,7 +181,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   : function BlockedUserRow(userRecord) {
       userRecord = userRecord.userRecord;
       let analyticsLocations;
-      analyticsLocations = analyticsLocations(7237)().analyticsLocations;
+      analyticsLocations = analyticsLocations(7238)().analyticsLocations;
       const intl = userRecord(1128).intl;
       let username = userRecord.globalName;
       if (username == null) {
@@ -213,7 +213,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
       obj3.accessibilityActions = items;
-      obj.label = jsx(userRecord(16016).RestrictedUserRowLabel, {
+      obj.label = jsx(userRecord(16034).RestrictedUserRowLabel, {
         userRecord,
         accessibilityActions: null,
         onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -241,7 +241,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         onPress: null,
       });
-      return jsx(userRecord(6889).TableRow, {
+      return jsx(userRecord(6888).TableRow, {
         accessible: false,
         icon: null,
         label: null,

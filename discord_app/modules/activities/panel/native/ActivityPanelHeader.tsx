@@ -142,7 +142,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj4 = {
-                  mode: setMode(18359).MorphablePanelModes.PANEL,
+                  mode: setMode(18381).MorphablePanelModes.PANEL,
                   panGestureEnabled: true,
                   pipState,
                   swipeRequiresPop: true,
@@ -236,7 +236,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
       const callback = noop.useCallback(fn, items2);
       const obj3 = {
-        mode: landscape(18359).MorphablePanelModes.PANEL,
+        mode: landscape(18381).MorphablePanelModes.PANEL,
         panGestureEnabled: true,
         pipState,
         swipeRequiresPop: true,
@@ -244,7 +244,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         onPanMinimizeGestureEnd: callback,
         disableHorizontalSafeAreas: true,
       };
-      obj2.gesture = setMode(18359)(obj3);
+      obj2.gesture = setMode(18381)(obj3);
       obj2.headerWrapperStyles = memo;
       obj2.headerStyles = memo1;
       obj2.styles = tmp;

@@ -12,7 +12,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7615).DraftType;
+const DraftType = fn(7616).DraftType;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const ACTION_SHEET_MAX_WIDTH = fn(5252).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);

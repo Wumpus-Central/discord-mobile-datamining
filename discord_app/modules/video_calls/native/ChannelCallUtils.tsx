@@ -8,10 +8,10 @@ import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertAct
 import StreamKeyUtils from "../../go_live/utils/StreamKeyUtils.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import openGroupDMAddMembersDefault from "../../group_dm/native/openGroupDMAddMembers.tsx";
-import _modDef11587 from "../../../../_runtime/metro/11587__.js";
-import _modDef14534 from "../../../../_runtime/metro/14534__.js";
-import _modDef18544 from "../../../../_runtime/metro/18544__.js";
-import _modDef18545 from "../../../../_runtime/metro/18545__.js";
+import _modDef11598 from "../../../../_runtime/metro/11598__.js";
+import _modDef14548 from "../../../../_runtime/metro/14548__.js";
+import _modDef18566 from "../../../../_runtime/metro/18566__.js";
+import _modDef18567 from "../../../../_runtime/metro/18567__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
@@ -33,7 +33,7 @@ export const voiceSettings = function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.dsXapM);
-  obj.icon = _modDef18544;
+  obj.icon = _modDef18566;
   obj.onPress = function onPress() {
     require("openUserSettings").openUserSettings({ screen: constants.VOICE });
     const obj = require("openUserSettings");
@@ -59,7 +59,7 @@ export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStre
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(18541, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(18563, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -89,7 +89,7 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
   let obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.KHGhHf);
-  obj.icon = _modDef18545;
+  obj.icon = _modDef18567;
   obj.onPress = function onPress() {
     const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(stream);
     let videoStats = StreamRTCConnectionStore.getVideoStats(encodeStreamKeyResult);
@@ -104,11 +104,11 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
       max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult),
     };
     const obj5 = ActionSheetActionCreatorsDefault;
-    obj5.openLazy(asyncRequireImpl(18546, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
+    obj5.openLazy(asyncRequireImpl(18568, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
       stream,
       analyticsData: obj3,
     });
-    const tmp6 = asyncRequireImpl(18546, dependencyMap.paths);
+    const tmp6 = asyncRequireImpl(18568, dependencyMap.paths);
   };
   return obj;
 };
@@ -146,7 +146,7 @@ export const invite = function invite(dependencyMap, stream, targetApplicationId
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.VINpSK);
-  obj.icon = _modDef11587;
+  obj.icon = _modDef11598;
   obj.onPress = onPress;
   return obj;
 };
@@ -155,7 +155,7 @@ export const rtcDebugPanel = function rtcDebugPanel(arg0) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.X8bCMe);
-  obj.icon = _modDef14534;
+  obj.icon = _modDef14548;
   obj.onPress = function onPress() {
     closure_0();
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -166,7 +166,7 @@ export const shareActivityLogs = function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
-  obj.icon = _modDef14534;
+  obj.icon = _modDef14548;
   obj.onPress = function onPress() {
     const items = [closure_1_7];
     const json = require("LogAggregator").stringify(items);

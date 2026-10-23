@@ -540,6 +540,12 @@ function transformInboundVideoStats(height, id, id, playout) {
     framesDecoded: null,
     framesDropped: null,
     framesDecodeErrors: null,
+    framesDecodeErrorsNoOutput: null,
+    framesDecodeErrorsTimeout: null,
+    framesDecodeErrorsGeneric: null,
+    framesDecodeErrorsFallback: null,
+    framesDecodeErrorsParameter: null,
+    framesDecodeErrorsOther: null,
     framesReceived: null,
     networkFramesDropped: null,
     keyFramesDecoded: null,
@@ -597,6 +603,12 @@ function transformInboundVideoStats(height, id, id, playout) {
     framesDecoded: obj.framesDecoded,
     framesDropped: obj.framesDropped,
     framesDecodeErrors: obj.framesDecodeErrors,
+    framesDecodeErrorsNoOutput: obj.framesDecodeErrorsNoOutput,
+    framesDecodeErrorsTimeout: obj.framesDecodeErrorsTimeout,
+    framesDecodeErrorsGeneric: obj.framesDecodeErrorsGeneric,
+    framesDecodeErrorsFallback: obj.framesDecodeErrorsFallback,
+    framesDecodeErrorsParameter: obj.framesDecodeErrorsParameter,
+    framesDecodeErrorsOther: obj.framesDecodeErrorsOther,
   } = height);
   obj.framesReceived = height.frameCounts.keyFrames + height.frameCounts.deltaFrames;
   let num5 = height.networkFramesDropped;

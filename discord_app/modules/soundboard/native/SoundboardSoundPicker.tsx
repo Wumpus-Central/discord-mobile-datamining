@@ -8,9 +8,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(18410);
+const ExpressionPickerStore = fn(18432);
 ({ setSearchQuery: metroRequire, useExpressionPickerStore: closure_7 } = ExpressionPickerStore);
-const SoundboardPickerType = fn(5995).SoundboardPickerType;
+const SoundboardPickerType = fn(5994).SoundboardPickerType;
 const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -19,7 +19,7 @@ let obj = {
   title: { marginBottom: 8 },
   container: { flex: 1, alignItems: "center" },
   header: {
-    paddingHorizontal: fn(18411).SOUND_ROW_HORIZONTAL_PADDING,
+    paddingHorizontal: fn(18433).SOUND_ROW_HORIZONTAL_PADDING,
     padding: nativeDefault.space.PX_8,
     width: "100%",
   },
@@ -28,7 +28,7 @@ let obj = {
 let closure_14 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  paddingHorizontal: fn(18411).SOUND_ROW_HORIZONTAL_PADDING,
+  paddingHorizontal: fn(18433).SOUND_ROW_HORIZONTAL_PADDING,
   padding: nativeDefault.space.PX_8,
   width: "100%",
 };
@@ -62,14 +62,14 @@ export default noop.memo(
         stateFromStores = channel(ref[15]).useStateFromStores(tmp8, tmp9);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [RTCConnectionStore];
-          class U {
+          class B {
             constructor() {
               return closure_1_8.getMediaSessionId();
             }
           }
           cResult[2] = items1;
-          cResult[3] = U;
-          let tmp13 = U;
+          cResult[3] = B;
+          let tmp13 = B;
           let tmp12 = items1;
         } else {
           tmp12 = cResult[2];
@@ -79,7 +79,7 @@ export default noop.memo(
         const stateFromStores1 = channel(ref[15]).useStateFromStores(tmp12, tmp13);
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           cResult[4] = { filterOutEmptyCurrentGuild: true };
-          class U {
+          class B {
             constructor() {
               return closure_1_8.getMediaSessionId();
             }
@@ -91,19 +91,19 @@ export default noop.memo(
         const tmpResult3 = channel(ref[15]);
         ({ categories, availableSounds } = initialScrollLocation(ref[16])(channel, tmp16));
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          class D {
+          class F {
             constructor(arg0) {
               return channel.searchQuery;
             }
           }
-          cResult[5] = D;
-          class U {
+          cResult[5] = F;
+          class B {
             constructor() {
               return closure_1_8.getMediaSessionId();
             }
           }
         } else {
-          class D {
+          class F {
             constructor(arg0) {
               return channel.searchQuery;
             }
@@ -111,7 +111,7 @@ export default noop.memo(
         }
         const tmp19 = closure_7(tmp18);
         if (cResult[6] === availableSounds) {
-          class D {
+          class F {
             constructor(arg0) {
               return channel.searchQuery;
             }
@@ -242,7 +242,7 @@ export default noop.memo(
         const intl2 = tmp6(tmp7[26]).intl;
         obj17.placeholder = intl2.string(channel(ref[26]).t.sKt3xS);
         obj17.onChange = callback;
-        obj16.children = closure_12(channel(ref[28]).SearchField, obj17);
+        obj16.children = closure_12(channel(ref[28]).SearchBar, obj17);
         items5[1] = closure_12(c5, obj16);
         const obj18 = { style: tmp.body, children: null };
         const obj19 = {

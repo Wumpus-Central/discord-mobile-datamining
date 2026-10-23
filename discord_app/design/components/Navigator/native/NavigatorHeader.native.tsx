@@ -8,7 +8,7 @@ import NavigatorConstants from "NavigatorConstants.native.tsx";
 import HeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
-import _mod6919 from "../../../../../_runtime/metro/06919__.js";
+import _mod6918 from "../../../../../_runtime/metro/06918__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -123,7 +123,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        tmp(6916).useNavigatorBackPressHandler(B);
+        tmp(6915).useNavigatorBackPressHandler(B);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class B {
@@ -174,12 +174,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.displayMode = "minimal";
         obj2.backImage = tmp19;
         obj2.accessibilityLabel = tmp16;
-        const tmp25 = closure_10(tmp(6919).HeaderBackButton, obj2);
+        const tmp25 = closure_10(tmp(6918).HeaderBackButton, obj2);
         cResult[11] = tmp11;
         cResult[12] = tmp5;
         cResult[13] = tmp19;
         cResult[14] = tmp25;
-        const tmpResult2 = tmp(6916);
+        const tmpResult2 = tmp(6915);
       }
       if (tmp4 == null) {
         class B {
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         return v65535(XSmallIcon.XSmallIcon, obj);
       };
       obj2.accessibilityLabel = stringResult;
-      return closure_10(require("../../../../../_runtime/metro/06919__.js").HeaderBackButton, obj2);
+      return closure_10(require("../../../../../_runtime/metro/06918__.js").HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
@@ -278,7 +278,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = tmp4;
       obj2.displayMode = "minimal";
       obj2.backImage = tmp11;
-      const tmp14 = closure_10(require("../../../../../_runtime/metro/06919__.js").HeaderBackButton, obj2);
+      const tmp14 = closure_10(require("../../../../../_runtime/metro/06918__.js").HeaderBackButton, obj2);
       cResult[6] = tmp4;
       cResult[7] = tmp5;
       cResult[8] = tmp14;
@@ -288,7 +288,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   : function CustomHeaderBackButton(onPress) {
       onPress = onPress.onPress;
       const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-      onPress(6916).useNavigatorBackPressHandler(() => {
+      onPress(6915).useNavigatorBackPressHandler(() => {
         if (null != onPress) {
           tmp();
         }
@@ -301,7 +301,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.backImage = function backImage() {
         return closure_1_10(closure_1_13, {});
       };
-      return closure_10(onPress(6919).HeaderBackButton, obj2);
+      return closure_10(onPress(6918).HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -368,7 +368,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.labelStyle = tmp14;
         obj3.backImage = tmp16;
         obj3.accessibilityLabel = tmp17;
-        const tmp23 = v65535(_mod6919.HeaderBackButton, obj3);
+        const tmp23 = v65535(_mod6918.HeaderBackButton, obj3);
         cResult[10] = tmp14;
         cResult[11] = tmp4;
         cResult[12] = tmp17;
@@ -403,7 +403,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = text;
       }
       obj2.accessibilityLabel = tmp5;
-      return v65535(_mod6919.HeaderBackButton, obj2);
+      return v65535(_mod6918.HeaderBackButton, obj2);
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()

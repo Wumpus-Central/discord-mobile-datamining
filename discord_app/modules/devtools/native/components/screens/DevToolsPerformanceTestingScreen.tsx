@@ -40,7 +40,7 @@ export default noop.memo(
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const _Object = Object;
-          const entries = Object.entries(tmp(16838).PerformanceTestingScreens);
+          const entries = Object.entries(tmp(16860).PerformanceTestingScreens);
           cResult[2] = entries;
           let arr = entries;
         } else {
@@ -52,10 +52,10 @@ export default noop.memo(
             children: arr.map((item) => {
               [screenKey, { headerTitle, Icon }] = item;
               return jsx(
-                navigation(6889).TableRow,
+                navigation(6888).TableRow,
                 {
                   label: headerTitle,
-                  icon: jsx(navigation(6889).TableRow.Icon, { IconComponent: Icon }),
+                  icon: jsx(navigation(6888).TableRow.Icon, { IconComponent: Icon }),
                   arrow: true,
                   onPress() {
                     if (null != navigation.push) {
@@ -70,15 +70,15 @@ export default noop.memo(
               );
             }),
           };
-          const tmp11 = jsx(tmp(6973).TableRowGroup, {
+          const tmp11 = jsx(tmp(6972).TableRowGroup, {
             hasIcons: true,
             children: arr.map((item) => {
               [screenKey, { headerTitle, Icon }] = item;
               return jsx(
-                navigation(6889).TableRow,
+                navigation(6888).TableRow,
                 {
                   label: headerTitle,
-                  icon: jsx(navigation(6889).TableRow.Icon, { IconComponent: Icon }),
+                  icon: jsx(navigation(6888).TableRow.Icon, { IconComponent: Icon }),
                   arrow: true,
                   onPress() {
                     if (null != navigation.push) {
@@ -130,10 +130,10 @@ export default noop.memo(
         obj4.children = entries.map((item) => {
           [tmp] = item;
           return jsx(
-            screenKey(6889).TableRow,
+            screenKey(6888).TableRow,
             {
               label: tmp2,
-              icon: jsx(screenKey(6889).TableRow.Icon, { IconComponent: tmp3 }),
+              icon: jsx(screenKey(6888).TableRow.Icon, { IconComponent: tmp3 }),
               arrow: true,
               onPress() {
                 if (null != screenKey.push) {

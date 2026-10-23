@@ -9,7 +9,7 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import utils_openGiftModal from "../../../native/utils/openGiftModal.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
-import _modDef18302 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import _modDef18324 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
 
@@ -51,11 +51,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       ({ currentTier, giftCount, variant } = markAsDismissed);
       const tmp4 = closure_9();
       if (cResult[0] !== currentTier) {
-        const giftingBadgeTierIconUrl = tmp(10472).getGiftingBadgeTierIconUrl(currentTier);
+        const giftingBadgeTierIconUrl = tmp(10479).getGiftingBadgeTierIconUrl(currentTier);
         cResult[0] = currentTier;
         cResult[1] = giftingBadgeTierIconUrl;
         let tmp5 = giftingBadgeTierIconUrl;
-        const tmpResult = tmp(10472);
+        const tmpResult = tmp(10479);
       } else {
         tmp5 = cResult[1];
       }
@@ -347,7 +347,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       markAsDismissed = markAsDismissed.markAsDismissed;
       ({ currentTier, giftCount } = markAsDismissed);
       const tmp = closure_9();
-      const giftingBadgeTierIconUrl = markAsDismissed(10472).getGiftingBadgeTierIconUrl(currentTier);
+      const giftingBadgeTierIconUrl = markAsDismissed(10479).getGiftingBadgeTierIconUrl(currentTier);
       const items = [markAsDismissed];
       const items1 = [markAsDismissed];
       const callback = noop.useCallback(() => {
@@ -449,7 +449,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp8[0] = _modDef18302;
+        tmp8[0] = _modDef18324;
         cResult[4] = tmp8;
       } else {
         class C {
@@ -606,7 +606,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.container, children: null };
       let obj3 = { style: tmp.graphicContainer, children: null };
       const obj4 = { source: null, style: null };
-      const obj5 = { uri: _modDef18302 };
+      const obj5 = { uri: _modDef18324 };
       obj4.source = obj5;
       obj4.style = tmp.newBadgeImage;
       obj3.children = closure_7(FastImageDefault, obj4);
@@ -631,7 +631,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { grow: true, text: null, icon: null, onPress: null };
       const intl3 = markAsDismissed(1128).intl;
       obj10.text = intl3.string(_modDef2632.DZnomS);
-      obj10.icon = closure_7(markAsDismissed(12806).GiftIcon, {
+      obj10.icon = closure_7(markAsDismissed(12825).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });

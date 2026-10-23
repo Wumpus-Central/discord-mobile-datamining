@@ -59,7 +59,7 @@ function shouldShowInviter(invite, isGuildMember) {
 const View = fn(17).View;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_9, InviteStates: c10 } = Constants);
-let closure_11 = fn(13583).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(13597).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(4969);
@@ -97,7 +97,7 @@ obj2.inviterIcon = size2;
 obj2.guildNameContainer = { flexDirection: "row", alignItems: "center", marginBottom: 8 };
 obj2.guildNameText = { textAlign: "center" };
 let obj3 = { borderRadius: nativeDefault.radii.none, marginRight: 8 };
-obj2.featureIcon = { flexGrow: 0, marginRight: 8, opacity: fn(6693).DARK_1_LIGHT_04 };
+obj2.featureIcon = { flexGrow: 0, marginRight: 8, opacity: fn(6692).DARK_1_LIGHT_04 };
 obj2.memberInfo = { flexDirection: "row", alignItems: "center", marginBottom: 8 };
 obj2.rolesList = { marginTop: 8, marginBottom: 8, alignItems: "center" };
 const size3 = {
@@ -117,7 +117,7 @@ const size4 = {
   backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400,
 };
 obj2.dotOffline = size4;
-let obj4 = { flexGrow: 0, marginRight: 8, opacity: fn(6693).DARK_1_LIGHT_04 };
+let obj4 = { flexGrow: 0, marginRight: 8, opacity: fn(6692).DARK_1_LIGHT_04 };
 obj2.embedDetailsCard = {
   width: "100%",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -164,7 +164,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != invite.inviter) {
             let tmp10 = null;
             if (null != invite.inviter) {
-              const obj2 = { avatarStyle: user.avatar, user: null, guildId: "Array", size: null };
+              const obj2 = { avatarStyle: user.avatar, user: null, guildId: "Array", size: true };
               const tmp16 = new UserRecord(invite.inviter);
               obj2.user = tmp16;
               obj2.size = native.AvatarSizes.XLARGE;
@@ -200,7 +200,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != invite.inviter) {
           let tmp2Result = null;
           if (null != invite.inviter) {
-            const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: null };
+            const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: true };
             const tmp14 = new UserRecord(invite.inviter);
             obj3.user = tmp14;
             obj3.size = native.AvatarSizes.XLARGE;
@@ -621,9 +621,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = isGuildMember(5018);
             }
           }
-          tmp3Result3 = tmp3(7792);
+          tmp3Result3 = tmp3(7793);
         }
-        tmp3Result = tmp3(7792);
+        tmp3Result = tmp3(7793);
       }
       const obj8 = { style: tmp.inviteJoinContainer, children: null };
       let tmp22 = null;
@@ -635,7 +635,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           obj10.children = closure_12(isGuildMember(5655), obj12);
           tmp22 = closure_12(View, obj10);
         }
-        tmp3Result4 = tmp3(7792);
+        tmp3Result4 = tmp3(7793);
       }
       const items1 = [
         tmp22,
@@ -1217,11 +1217,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp8Result) {
         const obj9 = { style: tmp.embedDetailsCard, children: null };
         const obj10 = { event: guild_scheduled_event };
-        const items3 = [closure_12(tmp4(8870).GuildEventCardHeader, obj10), ,];
+        const items3 = [closure_12(tmp4(8877).GuildEventCardHeader, obj10), ,];
         const obj11 = { event: guild_scheduled_event };
-        items3[1] = closure_12(tmp4(8870).GuildEventCardMetaInfo, obj11);
+        items3[1] = closure_12(tmp4(8877).GuildEventCardMetaInfo, obj11);
         const obj12 = { event: guild_scheduled_event };
-        items3[2] = closure_12(tmp4(8870).GuildEventCardGuildInfo, obj12);
+        items3[2] = closure_12(tmp4(8877).GuildEventCardGuildInfo, obj12);
         obj9.children = items3;
         tmp8Result = closure_13(View, obj9);
       }
@@ -1315,7 +1315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disabled: tmp3 === constants3.DECLINE,
       });
       obj17.children = items4;
-      items2[6] = closure_13(invite(6682).ButtonGroup, obj17);
+      items2[6] = closure_13(invite(6681).ButtonGroup, obj17);
       obj16.children = items2;
       return closure_13(closure_14, obj16);
     };

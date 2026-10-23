@@ -29,7 +29,7 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled()
       }
       _require = asyncGeneratorStep(async () => {
         const product = tmp3;
-        await product(7633).claimPremiumCollectiblesProduct(product.skuId);
+        await product(7634).claimPremiumCollectiblesProduct(product.skuId);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };
@@ -44,15 +44,15 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled()
         } else if (arg0 !== 2) {
           stageCollectibleChangeForEditProfile(5196).hideAllActionSheets();
           stageCollectibleChangeForEditProfile(5196);
-          stageCollectibleChangeForEditProfile(13882).open({
+          stageCollectibleChangeForEditProfile(13896).open({
             product,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile,
           });
-          stageCollectibleChangeForEditProfile(13882);
-          const collectiblesPurchases = product(7633).fetchCollectiblesPurchases();
+          stageCollectibleChangeForEditProfile(13896);
+          const collectiblesPurchases = product(7634).fetchCollectiblesPurchases();
           c3 = 0;
-          product(7633);
+          product(7634);
         }
         return value;
       });

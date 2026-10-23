@@ -8,7 +8,8 @@ import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
-import _modDef12903 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef12921 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
 import CheckpointGuildStatsDefault from "../../CheckpointGuildStats.tsx";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -19,7 +20,7 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6002);
+const CheckpointConstants = fn(6001);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
@@ -307,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ({ container, header, heading, title } = tmp4);
           if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-            const tmp12 = closure_6(tmp(9615).ServerIcon, obj2);
+            const tmp12 = closure_6(tmp(9622).ServerIcon, obj2);
             cResult[26] = tmp12;
             let tmp9 = tmp12;
           } else {
@@ -333,9 +334,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol2 = Symbol;
               if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj3 = { variant: "display-lg", children: null };
+                const obj3 = { children: null };
                 const intl2 = tmp(1128).intl;
-                const tmp26 = CheckpointTextDefault;
+                const tmp26 = CheckpointDisplayTextDefault;
                 obj3.children = intl2.string(_modDef3056.F0fkrh).toLocaleUpperCase();
                 const tmp27 = closure_6(tmp26, obj3);
                 cResult[34] = tmp27;
@@ -392,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   tmp5 = closure_1;
                                   tmp6 = closure_2;
                                   tmp8 = null;
-                                  tmp7 = closure_1(closure_2[18]);
+                                  tmp7 = closure_1(closure_2[19]);
                                   if (numMessagesSent == null) {
                                     numMessagesSent = 0;
                                   }
@@ -433,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 tmp5 = closure_1;
                                 tmp6 = closure_2;
                                 tmp8 = null;
-                                tmp7 = closure_1(closure_2[18]);
+                                tmp7 = closure_1(closure_2[19]);
                                 if (numMessagesSent == null) {
                                   numMessagesSent = 0;
                                 }
@@ -476,7 +477,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             tmp5 = closure_1;
                             tmp6 = closure_2;
                             tmp8 = null;
-                            tmp7 = closure_1(closure_2[18]);
+                            tmp7 = closure_1(closure_2[19]);
                             if (numMessagesSent == null) {
                               numMessagesSent = 0;
                             }
@@ -509,7 +510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp5 = closure_1;
                           tmp6 = closure_2;
                           tmp8 = null;
-                          tmp7 = closure_1(closure_2[18]);
+                          tmp7 = closure_1(closure_2[19]);
                           if (numMessagesSent == null) {
                             numMessagesSent = 0;
                           }
@@ -586,7 +587,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp5 = closure_1;
                 tmp6 = closure_2;
                 tmp8 = null;
-                tmp7 = closure_1(closure_2[18]);
+                tmp7 = closure_1(closure_2[19]);
                 if (numMessagesSent == null) {
                   numMessagesSent = 0;
                 }
@@ -602,7 +603,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return tmp2(tmp3, obj, guild.id);
             }
           }
-          obj12.uri = _modDef12903;
+          obj12.uri = _modDef12921;
           obj12.style = tmp4.globe;
           const tmp60 = closure_6(tmp59, obj12);
           cResult[5] = tmp4.globe;
@@ -625,7 +626,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp5 = closure_1;
               tmp6 = closure_2;
               tmp8 = null;
-              tmp7 = closure_1(closure_2[18]);
+              tmp7 = closure_1(closure_2[19]);
               if (numMessagesSent == null) {
                 numMessagesSent = 0;
               }
@@ -642,7 +643,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (tmp61 === Symbol.for("react.memo_cache_sentinel")) {
-          const obj13 = { variant: "display-lg", children: null };
+          const obj13 = { children: null };
           class B {
             constructor(arg0, arg1) {
               ({ guild, numMessagesSent, numVoiceMinutes } = arg0);
@@ -656,7 +657,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp5 = closure_1;
                 tmp6 = closure_2;
                 tmp8 = null;
-                tmp7 = closure_1(closure_2[18]);
+                tmp7 = closure_1(closure_2[19]);
                 if (numMessagesSent == null) {
                   numMessagesSent = 0;
                 }
@@ -700,7 +701,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp5 = closure_1;
                   tmp6 = closure_2;
                   tmp8 = null;
-                  tmp7 = closure_1(closure_2[18]);
+                  tmp7 = closure_1(closure_2[19]);
                   if (numMessagesSent == null) {
                     numMessagesSent = 0;
                   }
@@ -749,7 +750,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp5 = closure_1;
                         tmp6 = closure_2;
                         tmp8 = null;
-                        tmp7 = closure_1(closure_2[18]);
+                        tmp7 = closure_1(closure_2[19]);
                         if (numMessagesSent == null) {
                           numMessagesSent = 0;
                         }
@@ -790,7 +791,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp5 = closure_1;
                       tmp6 = closure_2;
                       tmp8 = null;
-                      tmp7 = closure_1(closure_2[18]);
+                      tmp7 = closure_1(closure_2[19]);
                       if (numMessagesSent == null) {
                         numMessagesSent = 0;
                       }
@@ -826,7 +827,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     tmp5 = closure_1;
                     tmp6 = closure_2;
                     tmp8 = null;
-                    tmp7 = closure_1(closure_2[18]);
+                    tmp7 = closure_1(closure_2[19]);
                     if (numMessagesSent == null) {
                       numMessagesSent = 0;
                     }
@@ -909,7 +910,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { style: tmp.heading, children: null };
           const obj6 = { style: tmp.title, children: null };
           const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-          const items1 = [closure_6(tmp2(9615).ServerIcon, obj7)];
+          const items1 = [closure_6(tmp2(9622).ServerIcon, obj7)];
           const obj8 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
           const tmp16 = CheckpointScreenDefault;
           const intl3 = tmp2(1128).intl;
@@ -918,10 +919,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           items1[1] = closure_6(tmp20, obj8);
           obj6.children = items1;
           const items2 = [closure_7(View, obj6)];
-          const obj9 = { variant: "display-lg", children: null };
+          const obj9 = { children: null };
           const stringResult = intl3.string(_modDef3088.Mb5E6r);
           const intl4 = tmp2(1128).intl;
-          const tmp21 = CheckpointTextDefault;
+          const tmp21 = CheckpointDisplayTextDefault;
           obj9.children = intl4.string(_modDef3056.F0fkrh).toLocaleUpperCase();
           items2[1] = closure_6(tmp21, obj9);
           obj5.children = items2;
@@ -975,12 +976,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("initialize");
       const obj15 = { uri: null, style: null };
       const tmp6 = CheckpointScreenDefault;
-      obj15.uri = _modDef12903;
+      obj15.uri = _modDef12921;
       obj15.style = tmp.globe;
       const items6 = [closure_6(CheckpointApngPlayerDefault, obj15)];
-      const obj16 = { variant: "display-lg", children: null };
+      const obj16 = { children: null };
       const intl = tmp2(1128).intl;
-      const tmp10 = CheckpointTextDefault;
+      const tmp10 = CheckpointDisplayTextDefault;
       obj16.children = intl.string(_modDef3056.F0fkrh).toLocaleUpperCase();
       items6[1] = closure_6(tmp10, obj16);
       obj14.children = items6;

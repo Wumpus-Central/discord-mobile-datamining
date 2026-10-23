@@ -65,8 +65,8 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelModes = fn(10865).VoicePanelModes;
-const VoicePanelPIPModes = fn(18344).VoicePanelPIPModes;
+const VoicePanelModes = fn(10873).VoicePanelModes;
+const VoicePanelPIPModes = fn(18366).VoicePanelPIPModes;
 let Constants = fn(1087);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(2026);
@@ -1143,7 +1143,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const items2 = [channelId];
-      const surfaceDirectRendererExperiment = participantId(5825).useSurfaceDirectRendererExperiment(id1, {
+      const surfaceDirectRendererExperiment = participantId(5824).useSurfaceDirectRendererExperiment(id1, {
         location: "VoicePanelPIPContent",
       });
       updateIsActivityFocused = obj.useCallback((arg0, arg1) => {
@@ -1160,7 +1160,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         }
         _undefined(tmp5);
       }, items2);
-      const tmp6Result = participantId(5825);
+      const tmp6Result = participantId(5824);
       const fn = function _() {
         value = focused.get();
         let id;
@@ -1229,7 +1229,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         layoutManager.setTargetDimensions(participantId, nativeEvent.width, nativeEvent.height);
       }, items4);
       const tmp6Result8 = participantId(573);
-      canRenderParticipantVideo = participantId(10870).useCanRenderParticipantVideo(stateFromStores);
+      canRenderParticipantVideo = participantId(10878).useCanRenderParticipantVideo(stateFromStores);
       if (canRenderParticipantVideo) {
         let tmp25 = tmp16;
         if (tmp16) {
@@ -1245,7 +1245,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items5);
       const obj6 = { style: null, children: null };
-      const tmp6Result9 = participantId(10870);
+      const tmp6Result9 = participantId(10878);
       if (canRenderParticipantVideo) {
         const items6 = [,];
         ({ blackBackground: arr8[0], user: arr8[1] } = tmp);
@@ -1285,7 +1285,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp33Result = null;
         if (null != user1) {
           const obj11 = {
-            source: tmp6(9388).getCachedSourceFromURI(user1.getAvatarURL(guildId, 80, false)),
+            source: tmp6(9395).getCachedSourceFromURI(user1.getAvatarURL(guildId, 80, false)),
             size: null,
             avatarDecoration: null,
           };
@@ -1297,10 +1297,10 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
           }
           obj11.avatarDecoration = userAvatarDecoration;
           tmp33Result = closure_22(tmp6(1202).Avatar, obj11);
-          const tmp6Result10 = tmp6(9388);
+          const tmp6Result10 = tmp6(9395);
         }
         obj10.children = tmp33Result;
-        items9[1] = closure_22(tmp3(6872), obj10);
+        items9[1] = closure_22(tmp3(6871), obj10);
         const obj12 = { style: tmp.userOpacity };
         items9[2] = closure_22(closure_29, obj12);
         let tmp33Result2 = null;
@@ -1308,16 +1308,16 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled()
           tmp33Result2 = null;
           if (consumedRequestToRespondToSeriousThermalState) {
             const obj13 = { style: tmp.thermalAlertIconContainer, children: null };
-            const obj14 = { style: tmp.thermalAlertIcon, source: tmp3(11391), color: tmp.thermalAlertIcon.color };
+            const obj14 = { style: tmp.thermalAlertIcon, source: tmp3(11402), color: tmp.thermalAlertIcon.color };
             obj13.children = closure_22(tmp6(1202).Icon, obj14);
-            tmp33Result2 = closure_22(tmp3(6872), obj13);
-            const tmp3Result6 = tmp3(6872);
+            tmp33Result2 = closure_22(tmp3(6871), obj13);
+            const tmp3Result6 = tmp3(6871);
           }
         }
         items9[3] = tmp33Result2;
         obj6.children = items9;
         tmp40 = obj6;
-        const tmp3Result5 = tmp3(6872);
+        const tmp3Result5 = tmp3(6871);
       }
       return closure_23(NativeViewDefault, tmp40);
     };
@@ -1879,11 +1879,11 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       let callback2;
       ({ transitionState, transitionCleanUp, layoutTransition } = participantId);
       const tmp = closure_24();
-      const mode = participantId(18389).usePIPState().mode;
+      const mode = participantId(18411).usePIPState().mode;
       let tmp4 = closure_28(tmp, transitionState, transitionCleanUp);
-      const context = video.useContext(mode(10864));
+      const context = video.useContext(mode(10872));
       ({ channelId: c2, layoutManager } = context);
-      let obj = participantId(18389);
+      let obj = participantId(18411);
       let tmp2 = participantId;
       const items = [callback2];
       const stateFromStoresObject = participantId(573).useStateFromStoresObject(items, () => {
@@ -1911,11 +1911,11 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       });
       video = stateFromStoresObject.streamId;
       const obj2 = participantId(573);
-      const surfaceDirectRendererExperiment = participantId(5825).useSurfaceDirectRendererExperiment(
+      const surfaceDirectRendererExperiment = participantId(5824).useSurfaceDirectRendererExperiment(
         stateFromStoresObject.userId,
         { location: "VoicePanelPIPContent.Stream" },
       );
-      const obj3 = participantId(5825);
+      const obj3 = participantId(5824);
       const items1 = [ApplicationStreamingStore];
       const stateFromStores = participantId(573).useStateFromStores(items1, () => {
         const activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(participantId);
@@ -1985,7 +1985,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       }, items6);
       if (stateFromStores === constants.ENDED) {
         const obj5 = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-        let tmp23 = closure_22(tmp2(11370).StreamEnded, obj5);
+        let tmp23 = closure_22(tmp2(11381).StreamEnded, obj5);
       } else {
         tmp23 = null;
         if (stateFromStores !== tmp16.FAILED) {
@@ -2031,7 +2031,7 @@ let closure_49 = noop.memo(
           const effect = noop.useEffect(tmp4, tmp5);
           if (cResult[4] !== tmp3.emptyPip) {
             const obj2 = { style: tmp3.emptyPip };
-            const tmp11 = closure_22(transitionCleanUp(6872), obj2);
+            const tmp11 = closure_22(transitionCleanUp(6871), obj2);
             cResult[4] = tmp3.emptyPip;
             cResult[5] = tmp11;
             let tmp8 = tmp11;
@@ -2064,7 +2064,7 @@ let closure_49 = noop.memo(
           }
         }, items);
         const tmp = closure_24();
-        return closure_22(transitionCleanUp(6872), { style: closure_24().emptyPip });
+        return closure_22(transitionCleanUp(6871), { style: closure_24().emptyPip });
       },
 );
 ReactCompilerGating = fn(558);

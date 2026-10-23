@@ -40,7 +40,7 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(6770).isGuildScheduledEventActive;
+let closure_8 = fn(6769).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(4827);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         function handleChangeEventEntityType(entityType) {
           _slicedToArray(null);
-          const obj = { entityType, scheduledEndTime: "r" };
+          const obj = { entityType, scheduledEndTime: "Array" };
           if (entityType === constants.EXTERNAL) {
             let obj2 = _modDef2049(guildEvent.scheduledStartTime);
             if (obj2 == null) {
@@ -383,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           entityType: guildEvent.entityType,
           onChange: function handleChangeEventEntityType(entityType) {
             _undefined(null);
-            const obj = { entityType, scheduledEndTime: "r" };
+            const obj = { entityType, scheduledEndTime: "Array" };
             if (entityType === constants.EXTERNAL) {
               let obj2 = _modDef2049(guildEvent.scheduledStartTime);
               if (obj2 == null) {
@@ -404,7 +404,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         entityType: guildEvent.entityType,
         onChange: function handleChangeEventEntityType(entityType) {
           _undefined(null);
-          const obj = { entityType, scheduledEndTime: "r" };
+          const obj = { entityType, scheduledEndTime: "Array" };
           if (entityType === constants.EXTERNAL) {
             let obj2 = _modDef2049(guildEvent.scheduledStartTime);
             if (obj2 == null) {

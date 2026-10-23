@@ -11,7 +11,7 @@ import TextInput from "../../../../design/components/TextInput/native/TextInput.
 import Input from "../../../../design/components/Input/native/Input.native.tsx";
 import TextField from "../../../../design/components/TextField/native/TextField.native.tsx";
 import SplitTextInput from "../../../../design/components/SplitTextInput/native/SplitTextInput.native.tsx";
-import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import Search_SearchBar from "../../../../design/components/Search/native/SearchBar.native.tsx";
 import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
@@ -609,7 +609,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp37 = cResult[13];
       }
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp47 = timestampProducer(SearchField.SearchField, { size: "md", round: true });
+        const tmp47 = timestampProducer(Search_SearchBar.SearchBar, { size: "md", round: true });
         cResult[14] = tmp47;
         let tmp45 = tmp47;
       } else {
@@ -1072,7 +1072,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       const obj10 = { children: null };
       const obj11 = { children: null };
-      const items4 = [timestampProducer(SearchField.SearchField, { size: "md", round: true })];
+      const items4 = [timestampProducer(Search_SearchBar.SearchBar, { size: "md", round: true })];
       const obj9 = { children: timestampProducer(closure_14, {}) };
       items4[1] = timestampProducer(IconButton.IconButton, {
         icon: timestampProducer(SettingsIcon.SettingsIcon, { size: "sm" }),

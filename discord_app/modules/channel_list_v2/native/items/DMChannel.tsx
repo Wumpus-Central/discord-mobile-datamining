@@ -10,12 +10,12 @@ import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const UnreadSetting = fn(6691).UnreadSetting;
+const UnreadSetting = fn(6690).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj = {
   container: {
-    marginVertical: fn(12003).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(12014).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -23,7 +23,7 @@ let obj = {
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(12003).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(12014).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

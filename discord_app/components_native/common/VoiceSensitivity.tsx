@@ -13,7 +13,7 @@ import AppStateStore from "../../stores/native/AppStateStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1087).AppStates;
-const NativePermissionTypes = fn(7852).NativePermissionTypes;
+const NativePermissionTypes = fn(7853).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(4969);
@@ -677,7 +677,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c1 = 1;
                   c2 = 1;
                   const obj4 = {
-                    value: onThresholdChange(7869).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                    value: onThresholdChange(7870).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                     done: false,
                   };
                   return obj4;

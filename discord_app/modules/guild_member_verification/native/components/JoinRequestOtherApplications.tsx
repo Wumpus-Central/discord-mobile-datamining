@@ -114,7 +114,7 @@ export default noop.memo(
             if (cResult[2] === userId) {
               let tmp5 = cResult[3];
             }
-            row = tmp(17933).useOtherGuildJoinRequestsForUser(tmp5);
+            row = tmp(17955).useOtherGuildJoinRequestsForUser(tmp5);
             if (0 === row.length) {
               return null;
             } else {
@@ -211,7 +211,7 @@ export default noop.memo(
               cResult[13] = fn;
               tmp13 = fn;
             }
-            const tmpResult = tmp(17933);
+            const tmpResult = tmp(17955);
           }
         }
         let obj5 = { guildId, userId, selectedJoinRequestId };

@@ -15,14 +15,14 @@ import StreamPreviewDefault from "../../../../../components_native/StreamPreview
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
 import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef17398 from "../../../../../../_runtime/metro/17398__.js";
-import _modDef17399 from "../../../../../../_runtime/metro/17399__.js";
+import _modDef17420 from "../../../../../../_runtime/metro/17420__.js";
+import _modDef17421 from "../../../../../../_runtime/metro/17421__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const _modDef17408 = tmp4(17408);
+const _modDef17430 = tmp4(17430);
 require = fn;
 function getActivityA11yLabel(activity) {
   if (isListeningOnSpotifyDefault(activity)) {
@@ -54,7 +54,7 @@ function getActivityA11yLabel(activity) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(16547);
+const HappeningNowConstants = fn(16569);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
@@ -66,7 +66,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef17398, _modDef17399];
+let items = [_modDef17420, _modDef17421];
 let c16 = 0.32;
 const createStyles = fn(4969);
 let obj = {
@@ -571,7 +571,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             const substr = userId.slice(-1);
             let tmp4Result = items[substr.charCodeAt(substr, 0) % items.length];
           } else {
-            tmp4Result = _modDef17408;
+            tmp4Result = _modDef17430;
           }
           tmp6 = activity == tmp6;
           let type2;
@@ -678,7 +678,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           userId = substr.charCodeAt(0);
           let tmpResult = items[userId % items.length];
         } else {
-          tmpResult = _modDef17408;
+          tmpResult = _modDef17430;
         }
       }
     };
@@ -771,13 +771,13 @@ export default noop.memo(function ActivityCard(userId) {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(constants3.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(12639, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(12639, dependencyMap.paths);
+      asyncRequireImpl(12650, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(12650, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8641, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8648, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8641, dependencyMap.paths);
+      const promise = asyncRequireImpl(8648, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

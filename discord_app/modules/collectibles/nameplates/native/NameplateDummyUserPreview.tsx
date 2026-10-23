@@ -118,7 +118,7 @@ export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnab
             if (cResult[7] === tmp6.nameplate) {
               let tmp13 = cResult[8];
             }
-            const tmp17 = importDefault(tmp11 ? 9382 : 9383);
+            const tmp17 = importDefault(tmp11 ? 9389 : 9390);
             if (cResult[9] === avatarSize) {
               if (cResult[10] === tmp6.avatar) {
                 if (cResult[11] === tmp17) {
@@ -228,7 +228,7 @@ export const NameplateDummyUserPreview = ReactCompilerGating.isReactCompilerEnab
       const obj4 = { style: tmp3.avatarContainer, children: null };
       const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
       obj4.children = hasOwnProperty(native.Avatar, {
-        source: importDefault(stateFromStores ? 9382 : 9383),
+        source: importDefault(stateFromStores ? 9389 : 9390),
         size: NORMAL,
         "aria-hidden": true,
         style: tmp3.avatar,

@@ -3,4 +3,4 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontTypes.tsx");
 
-export const RewardRequirementType = { SUBSCRIPTION: 0, [0]: "SUBSCRIPTION" };
+export const RewardRequirementType = { SUBSCRIPTION: 0, [0]: "SUBSCRIPTION", OWNS_MIN_SKUS: 1, [1]: "OWNS_MIN_SKUS" };

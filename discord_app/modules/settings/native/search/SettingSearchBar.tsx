@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.tsx";
-import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import Search_SearchBar from "../../../../design/components/Search/native/SearchBar.native.tsx";
 import settings_tracking_Tracking from "../../tracking/Tracking.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStore.tsx";
@@ -52,31 +52,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
-          constructor(arg0) {
-            obj = { query: arg0 };
-            setStateResult = closure_1_4.setState(obj);
-            return;
-          }
-        }
-        cResult[3] = F;
+        const fn4 = function v(query) {
+          UserSettingSearchStore.setState({ query });
+        };
+        cResult[3] = fn4;
+        let tmp9 = fn4;
       } else {
-        class F {
-          constructor(arg0) {
-            obj = { query: arg0 };
-            setStateResult = closure_1_4.setState(obj);
-            return;
-          }
-        }
+        tmp9 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
-          constructor(arg0) {
-            obj = { query: arg0 };
-            setStateResult = closure_1_4.setState(obj);
-            return;
-          }
-        }
         const obj2 = {
           ref,
           testID: "user_settings_search_input",
@@ -85,9 +69,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onBlur: tmp8,
           onClear: first,
           defaultValue: UserSettingSearchStore.getField("query"),
-          onChange: F,
+          onChange: tmp9,
         };
-        const tmp12 = jsx(SearchField.SearchField, {
+        const tmp13 = jsx(Search_SearchBar.SearchBar, {
           ref,
           testID: "user_settings_search_input",
           size: "md",
@@ -95,42 +79,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onBlur: tmp8,
           onClear: first,
           defaultValue: UserSettingSearchStore.getField("query"),
-          onChange: F,
+          onChange: tmp9,
         });
-        cResult[4] = tmp12;
-        const tmp10 = tmp12;
+        cResult[4] = tmp13;
+        let tmp10 = tmp13;
       } else {
-        class F {
-          constructor(arg0) {
-            obj = { query: arg0 };
-            setStateResult = closure_1_4.setState(obj);
-            return;
-          }
-        }
+        tmp10 = cResult[4];
       }
       if (cResult[5] !== tmp4.container) {
-        class F {
-          constructor(arg0) {
-            obj = { query: arg0 };
-            setStateResult = closure_1_4.setState(obj);
-            return;
-          }
-        }
         const obj3 = { style: tmp4.container, children: tmp10 };
-        const tmp15 = <View style={tmp4.container}>{tmp10}</View>;
+        const tmp17 = <View style={tmp4.container}>{tmp10}</View>;
         cResult[5] = tmp4.container;
-        cResult[6] = tmp15;
-        const tmp13 = tmp15;
+        cResult[6] = tmp17;
+        let tmp14 = tmp17;
       } else {
-        class F {
-          constructor(arg0) {
-            obj = { query: arg0 };
-            setStateResult = closure_1_4.setState(obj);
-            return;
-          }
-        }
+        tmp14 = cResult[6];
       }
-      return tmp13;
+      return tmp14;
     }
   : function SettingSearchBar() {
       const tmp = closure_6();
@@ -150,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         UserSettingSearchStore.setState({ query });
       }, []);
       const ref = noop.useRef(null);
-      obj.children = jsx(SearchField.SearchField, {
+      obj.children = jsx(Search_SearchBar.SearchBar, {
         ref: noop.useRef(null),
         testID: "user_settings_search_input",
         size: "md",

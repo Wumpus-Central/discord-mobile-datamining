@@ -3,7 +3,7 @@ import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchAp
 import ApplicationIconAndNameDefault from "ApplicationIconAndName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const UserProfileCardDefault = tmp5(7287);
+const UserProfileCardDefault = tmp5(7288);
 const require = fn;
 let jsx = fn(21).jsx;
 const createStyles = fn(4969);

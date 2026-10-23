@@ -50,7 +50,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === onConsoleSelect) {
           if (cResult[5] !== cResult[2]) {
             const obj2 = { hasIcons: true, children: tmp4 };
-            const tmp9 = closure_8(onConsoleSelect(6973).TableRowGroup, obj2);
+            const tmp9 = closure_8(onConsoleSelect(6972).TableRowGroup, obj2);
             cResult[5] = tmp4;
             cResult[6] = tmp9;
             let tmp7 = tmp9;
@@ -297,17 +297,17 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16357, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16380, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(9539).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(9539);
-  closure_4 = quest(9574).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(9546).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(9546);
+  closure_4 = quest(9581).useGetQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj2 = quest(9574);
+  let obj2 = quest(9581);
   return closure_8(closure_9, {
     consoles: openQuestBottomSheet.useMemo(
       () =>

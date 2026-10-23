@@ -9,7 +9,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import LinearGradientDefault from "../../../../_runtime/05244_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef16273 from "../../../../_runtime/metro/16273__.js";
+import _modDef16291 from "../../../../_runtime/metro/16291__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (!isChatLockedOpen) {
                     const obj5 = { children: null };
                     const obj6 = { style: tmp8.emptyImage, children: null };
-                    const obj7 = { style: tmp8.backgroundImage, source: _modDef16273, resizeMode: "cover" };
+                    const obj7 = { style: tmp8.backgroundImage, source: _modDef16291, resizeMode: "cover" };
                     obj6.children = hasOwnProperty(FastImageDefault, obj7);
                     const items1 = [hasOwnProperty(React3, obj6)];
                     const obj8 = { style: tmp8.gradient, end: null, start: null, colors: null };
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!useChatLayoutDefault().isChatLockedOpen) {
         const obj10 = { children: null };
         const obj11 = { style: tmp5.emptyImage, children: null };
-        const obj12 = { style: tmp5.backgroundImage, source: _modDef16273, resizeMode: "cover" };
+        const obj12 = { style: tmp5.backgroundImage, source: _modDef16291, resizeMode: "cover" };
         obj11.children = hasOwnProperty(FastImageDefault, obj12);
         const items2 = [hasOwnProperty(React3, obj11)];
         const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

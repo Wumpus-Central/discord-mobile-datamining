@@ -7,14 +7,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const isProjectOwner = fn(6759).isProjectOwner;
-let items = [fn(6760).ConjureSupportedSurface.BOT, _modDef3830.UnoAgo];
+const isProjectOwner = fn(6758).isProjectOwner;
+let items = [fn(6759).ConjureSupportedSurface.BOT, _modDef3830.UnoAgo];
 let items1 = [items, , ,];
-let items2 = [fn(6760).ConjureSupportedSurface.ACTIVITY, _modDef3830["I88/iG"]];
+let items2 = [fn(6759).ConjureSupportedSurface.ACTIVITY, _modDef3830["I88/iG"]];
 items1[1] = items2;
-const items3 = [fn(6760).ConjureSupportedSurface.PROFILE_WIDGET, _modDef3830.gXY1x1];
+const items3 = [fn(6759).ConjureSupportedSurface.PROFILE_WIDGET, _modDef3830.gXY1x1];
 items1[2] = items3;
-const items4 = [fn(6760).ConjureSupportedSurface.AUTOMOD, _modDef3830.Q9ruoM];
+const items4 = [fn(6759).ConjureSupportedSurface.AUTOMOD, _modDef3830.Q9ruoM];
 items1[3] = items4;
 let obj2 = { initial: _modDef3830.NUZBwo, notPublished: _modDef3830.Gdz7pg, published: _modDef3830["6E9W4F"] };
 const size = fn(2);
@@ -256,4 +256,7 @@ export default function useConjurePublishPanel(id, guildId) {
   return obj2;
 }
 export const CONJURE_PUBLISH_COMPONENTS = items1;
-export const CONJURE_PUBLISH_PERMISSION_LABELS = { screen_capture: _modDef3830["8/7kE7"] };
+export const CONJURE_PUBLISH_PERMISSION_LABELS = {
+  screen_capture: _modDef3830["8/7kE7"],
+  connect_user_to_voice: _modDef3830.uvDWXa,
+};

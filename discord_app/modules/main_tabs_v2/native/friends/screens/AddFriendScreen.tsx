@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1087).AnalyticEvents;
-const ContactPermissions = fn(13503).ContactPermissions;
+const ContactPermissions = fn(13517).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(4969);
@@ -28,17 +28,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
   const sourcePage = navigation.route.params.sourcePage;
   let tmp4 = closure_13();
   let obj = navigation(576);
-  const contactSyncAccount = navigation(13505).useContactSyncAccount();
+  const contactSyncAccount = navigation(13519).useContactSyncAccount();
   if (cResult[0] !== contactSyncAccount) {
-    const isContactSyncEnabledResult = tmp(13505).isContactSyncEnabled(contactSyncAccount);
+    const isContactSyncEnabledResult = tmp(13519).isContactSyncEnabled(contactSyncAccount);
     cResult[0] = contactSyncAccount;
     cResult[1] = isContactSyncEnabledResult;
     let tmp6 = isContactSyncEnabledResult;
-    const tmpResult = tmp(13505);
+    const tmpResult = tmp(13519);
   } else {
     tmp6 = cResult[1];
   }
-  let obj2 = navigation(13505);
+  let obj2 = navigation(13519);
   [tmp9, dependencyMap] = noop.useState(!tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class C {
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
           return;
         }
       }
-      const tmp14 = closure_10(contactSyncAccount(10595), { absolute: true });
+      const tmp14 = closure_10(contactSyncAccount(10602), { absolute: true });
       cResult[7] = tmp14;
       const tmp12 = tmp14;
     } else {
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
           }
         }
         const obj12 = { style: tmp4.rowContainer, location: "Add Friend Modal" };
-        tmp30 = closure_10(contactSyncAccount(15034), obj12);
+        tmp30 = closure_10(contactSyncAccount(15047), obj12);
       }
       cResult[18] = tmp9;
       cResult[19] = tmp4.rowContainer;
@@ -543,7 +543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     const obj13 = { style: tmp4.input, autoFocusInput: false, sourcePage };
     cResult[14] = sourcePage;
     cResult[15] = tmp4.input;
-    cResult[16] = closure_10(contactSyncAccount(15032), obj13);
+    cResult[16] = closure_10(contactSyncAccount(15045), obj13);
     class P {
       constructor() {
         obj = { headerRight() { ... } };
@@ -554,7 +554,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
         return;
       }
     }
-    const tmp26 = closure_10(contactSyncAccount(15032), obj13);
+    const tmp26 = closure_10(contactSyncAccount(15045), obj13);
   }
   class P {
     constructor() {
@@ -577,10 +577,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
   dependencyMap = undefined;
   let callback;
   const tmp = closure_13();
-  const contactSyncAccount = navigation(13505).useContactSyncAccount();
-  let obj = navigation(13505);
-  let obj2 = navigation(13505);
-  [tmp5, c2] = callback(noop.useState(!navigation(13505).isContactSyncEnabled(contactSyncAccount)), 2);
+  const contactSyncAccount = navigation(13519).useContactSyncAccount();
+  let obj = navigation(13519);
+  let obj2 = navigation(13519);
+  [tmp5, c2] = callback(noop.useState(!navigation(13519).isContactSyncEnabled(contactSyncAccount)), 2);
   callback = noop.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
     let userTag;
@@ -601,7 +601,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     navigation.setOptions({
       headerRight(arg0) {
         const intl = navigation(1128).intl;
-        const renderHeaderTextButton = navigation(9669).getRenderHeaderTextButton(intl.string(navigation(1128).t.RDE0Sc), callback);
+        const renderHeaderTextButton = navigation(9676).getRenderHeaderTextButton(intl.string(navigation(1128).t.RDE0Sc), callback);
         const merged = Object.assign(arg0);
         return renderHeaderTextButton({});
       }
@@ -611,14 +611,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       const obj = navigation(1384);
       let tmp5 = result === constants2.NOT_DETERMINED || navigation(1384).isAndroid() && result === constants2.UNAUTHORIZED;
       if (!tmp5) {
-        tmp5 = !navigation(13505).isContactSyncEnabled(contactSyncAccount);
-        const tmp2Result = navigation(13505);
+        tmp5 = !navigation(13519).isContactSyncEnabled(contactSyncAccount);
+        const tmp2Result = navigation(13519);
       }
       dependencyMap(tmp5);
       const tmp4 = navigation(1384).isAndroid() && result === constants2.UNAUTHORIZED;
     });
   }, items);
-  const items1 = [closure_10(contactSyncAccount(10595), { absolute: true }), ];
+  const items1 = [closure_10(contactSyncAccount(10602), { absolute: true }), ];
   let obj3 = { keyboardShouldPersistTaps: "handled", style: tmp.background, children: null };
   let obj4 = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1128).intl;
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
   const intl2 = navigation(1128).intl;
   obj5.children = intl2.string(navigation(1128).t["Rn/sLl"]);
   items2[1] = closure_10(navigation(5220).Text, obj5);
-  items2[2] = closure_10(contactSyncAccount(15032), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
+  items2[2] = closure_10(contactSyncAccount(15045), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj7 = { style: tmp.otherOptionsContainer, children: null };
   const obj8 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = navigation(1128).intl;
@@ -637,7 +637,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
   let tmp10Result = null;
   if (tmp5) {
     const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };
-    tmp10Result = closure_10(contactSyncAccount(15034), obj9);
+    tmp10Result = closure_10(contactSyncAccount(15047), obj9);
   }
   const obj10 = { children: null };
   items3[1] = tmp10Result;

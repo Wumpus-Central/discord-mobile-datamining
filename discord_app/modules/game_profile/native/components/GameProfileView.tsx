@@ -20,7 +20,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const GameProfileHeaderDefault = tmp5(9271);
+const GameProfileHeaderDefault = tmp5(9278);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -45,7 +45,7 @@ obj2.body = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(9269).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9276).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -54,7 +54,7 @@ let obj4 = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(9269).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9276).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };

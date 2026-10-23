@@ -36,32 +36,32 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(14404).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(14418).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(14404);
-  let isPartiallyOwnedBundle = balance(9440).useProductDisableState(product.skuId).isDisabled;
-  let obj2 = balance(9440);
+  let obj = balance(14418);
+  let isPartiallyOwnedBundle = balance(9447).useProductDisableState(product.skuId).isDisabled;
+  let obj2 = balance(9447);
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = !canAfford;
   }
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = obj3.useProductPurchaseState(product).isPartiallyOwnedBundle;
   }
-  obj3 = balance(9403);
+  obj3 = balance(9410);
   navigation = balance(1505).useNavigation();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(14407, dependencyMap.paths),
+      asyncRequireImpl(14421, dependencyMap.paths),
       {
         skuId: product.skuId,
         analyticsLocations,
         onCheckoutSuccess(arg0) {
-          const collectiblesPurchases = balance(7633).fetchCollectiblesPurchases();
-          const obj = balance(7633);
-          product(6658).popWithKey(ORB_CHECKOUT_MODAL);
+          const collectiblesPurchases = balance(7634).fetchCollectiblesPurchases();
+          const obj = balance(7634);
+          product(6657).popWithKey(ORB_CHECKOUT_MODAL);
           if (product.skuId === constants.ORB_PROFILE_BADGE) {
             const obj3 = {
               modalKey,
@@ -70,8 +70,8 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(6658).pushLazy(balance(2002)(14411, dependencyMap.paths), obj3, modalKey);
-            const tmp4Result = product(6658);
+            product(6657).pushLazy(balance(2002)(14425, dependencyMap.paths), obj3, modalKey);
+            const tmp4Result = product(6657);
           } else {
             const ALL = balance(1090).FractionalPremiumSKUsSets.ALL;
             if (ALL.has(product.skuId)) {
@@ -100,11 +100,11 @@ function VCButton(balance) {
                 product(5196).hideActionSheet();
               };
               tmp4Result3.openLazy(
-                balance(2002)(14412, dependencyMap.paths),
+                balance(2002)(14426, dependencyMap.paths),
                 "FractionalNitroCollectedActionSheet",
                 obj4,
               );
-              const tmp10 = balance(2002)(14412, dependencyMap.paths);
+              const tmp10 = balance(2002)(14426, dependencyMap.paths);
             } else {
               const obj5 = {
                 product,
@@ -113,11 +113,11 @@ function VCButton(balance) {
                 orbBalancePriorToPurchase,
                 stageCollectibleChangeForEditProfile,
               };
-              product(13882).open(obj5);
-              const tmp4Result4 = product(13882);
+              product(13896).open(obj5);
+              const tmp4Result4 = product(13896);
             }
           }
-          const obj2 = product(6658);
+          const obj2 = product(6657);
         },
       },
       ORB_CHECKOUT_MODAL,
@@ -185,7 +185,7 @@ const CollectiblesShopConstants = fn(1089);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const Constants = fn(1087);
 ({ MarketingURLs: closure_9, UserSettingsSections: c10 } = Constants);
-const RootNavigatorScreen = fn(11147).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11156).RootNavigatorScreen;
 const PremiumTypes = fn(1394).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

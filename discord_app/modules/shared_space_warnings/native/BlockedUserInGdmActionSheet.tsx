@@ -139,7 +139,7 @@ function getBlockedUserInGDMTableRows(arg0) {
   tmp3 = ignoredUserIds.length > 0;
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(14983);
+const SharedSpaceWarningConstants = fn(14996);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
@@ -219,7 +219,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.size = REFRESH_MEDIUM_32;
           let tmp17 = closure_10(tmp(1202).Avatar, obj2);
         } else {
-          tmp17 = closure_10(tmp(11780).UserIcon, {});
+          tmp17 = closure_10(tmp(11792).UserIcon, {});
         }
         cResult[8] = guildId;
         cResult[9] = tmp12;
@@ -228,7 +228,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[12] !== tmp7) {
           const obj3 = { users: tmp7, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-          const tmp11 = closure_10(tmp(10658).FacepileGroupDMAvatar, obj3);
+          const tmp11 = closure_10(tmp(10665).FacepileGroupDMAvatar, obj3);
           cResult[12] = tmp7;
           cResult[13] = tmp11;
           let tmp9 = tmp11;
@@ -260,11 +260,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           obj3.size = REFRESH_MEDIUM_32;
           let tmp6 = closure_10(tmp(1202).Avatar, obj3);
         } else {
-          tmp6 = closure_10(tmp(11780).UserIcon, {});
+          tmp6 = closure_10(tmp(11792).UserIcon, {});
         }
       } else {
         const obj4 = { users: found, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-        return closure_10(tmp(10658).FacepileGroupDMAvatar, obj4);
+        return closure_10(tmp(10665).FacepileGroupDMAvatar, obj4);
       }
       const obj = userIds(504);
     };

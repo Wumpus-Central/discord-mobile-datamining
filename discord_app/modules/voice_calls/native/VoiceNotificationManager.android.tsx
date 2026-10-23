@@ -27,10 +27,10 @@ class VoiceNotificationManager {
       channelId: "test",
       connectionState: "data",
       selfMute: false,
-      deafened: -966.115,
-      isPushToTalk: 68.019,
-      embeddedActivity: 11,
-      isStreaming: 242,
+      deafened: "comic",
+      isPushToTalk: "drip",
+      embeddedActivity: "droplet",
+      isStreaming: "droplets",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
@@ -150,8 +150,8 @@ class VoiceNotificationManager {
               name = application.name;
             }
             const _HermesInternal = HermesInternal;
-            str2 = " - " + tmp16(10620)(name);
-            const tmp16Result = tmp16(10620);
+            str2 = " - " + tmp16(10627)(name);
+            const tmp16Result = tmp16(10627);
           }
           const obj3 = RTCConnectionUtilsDefault;
           obj = {
@@ -171,7 +171,7 @@ class VoiceNotificationManager {
           obj.title = intl.formatToPlainString(obj2(1128).t["aUT3+M"], obj5);
           const _HermesInternal2 = HermesInternal;
           obj.content = "" + channelName + str2;
-          obj.priority = obj2(10071).ServiceNotificationPriority.HIGH;
+          obj.priority = obj2(10078).ServiceNotificationPriority.HIGH;
           obj.contentAction = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
           const intl2 = obj2(1128).intl;
           const items = [
@@ -197,11 +197,11 @@ class VoiceNotificationManager {
           }
           items[2] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
           obj.auxiliaryActions = items;
-          const ServiceNotificationType = tmp23(10071).ServiceNotificationType;
+          const ServiceNotificationType = tmp23(10078).ServiceNotificationType;
           obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
           obj.icon = tmp7;
           obj.color = tmp8;
-          tmp16 = tmp16(10069);
+          tmp16 = tmp16(10076);
           updateServiceHandler = tmp16.updateServiceHandler;
           updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
           const obj4 = obj2(5590);
@@ -239,10 +239,10 @@ obj2.state = {
   channelId: "test",
   connectionState: "data",
   selfMute: false,
-  deafened: -966.115,
-  isPushToTalk: 68.019,
-  embeddedActivity: 11,
-  isStreaming: 242,
+  deafened: "comic",
+  isPushToTalk: "drip",
+  embeddedActivity: "droplet",
+  isStreaming: "droplets",
 };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
@@ -362,8 +362,8 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
           name = application.name;
         }
         const _HermesInternal = HermesInternal;
-        str2 = " - " + tmp16(10620)(name);
-        const tmp16Result = tmp16(10620);
+        str2 = " - " + tmp16(10627)(name);
+        const tmp16Result = tmp16(10627);
       }
       const obj3 = RTCConnectionUtilsDefault;
       obj = {
@@ -383,7 +383,7 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
       obj.title = intl.formatToPlainString(obj2(1128).t["aUT3+M"], obj5);
       const _HermesInternal2 = HermesInternal;
       obj.content = "" + channelName + str2;
-      obj.priority = obj2(10071).ServiceNotificationPriority.HIGH;
+      obj.priority = obj2(10078).ServiceNotificationPriority.HIGH;
       obj.contentAction = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
       const intl2 = obj2(1128).intl;
       const items = [
@@ -409,11 +409,11 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
       }
       items[2] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
       obj.auxiliaryActions = items;
-      const ServiceNotificationType = tmp23(10071).ServiceNotificationType;
+      const ServiceNotificationType = tmp23(10078).ServiceNotificationType;
       obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
       obj.icon = tmp7;
       obj.color = tmp8;
-      tmp16 = tmp16(10069);
+      tmp16 = tmp16(10076);
       updateServiceHandler = tmp16.updateServiceHandler;
       updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
       const obj4 = obj2(5590);

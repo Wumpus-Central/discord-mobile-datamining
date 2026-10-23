@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef18144 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-1x.png.js";
-import _modDef18145 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-2x.png.js";
-import _modDef18146 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-3x.png.js";
+import _modDef18166 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-1x.png.js";
+import _modDef18167 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-2x.png.js";
+import _modDef18168 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18144 }, 3: null };
-let obj2 = { uri: _modDef18144 };
-obj[2] = { uri: _modDef18145 };
-const obj3 = { uri: _modDef18145 };
-obj[3] = { uri: _modDef18146 };
+let obj = { 1: null, 2: { uri: _modDef18166 }, 3: null };
+let obj2 = { uri: _modDef18166 };
+obj[2] = { uri: _modDef18167 };
+const obj3 = { uri: _modDef18167 };
+obj[3] = { uri: _modDef18168 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18146 };
+const obj4 = { uri: _modDef18168 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx",

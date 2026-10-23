@@ -3,14 +3,14 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
-import BadgeDefault from "../shared_components/Badge.tsx";
+import shared_components_BadgeDefault from "../shared_components/Badge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16334);
+const YouBarConstants = fn(16357);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -134,10 +134,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         position: "absolute",
         left: sum,
         top: sum1,
-        right: "ix",
-        bottom: "useEffect",
-        padding: "a",
-        minWidth: "application",
+        right: "application",
+        bottom: "w",
+        padding: "T",
+        minWidth: "r",
       };
       cResult[0] = sum;
       cResult[1] = sum1;
@@ -161,10 +161,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           position: "absolute",
           left: size - badgeSize + num,
           top: size - badgeSize + num2,
-          right: "ix",
-          bottom: "useEffect",
-          padding: "a",
-          minWidth: "application",
+          right: "application",
+          bottom: "w",
+          padding: "T",
+          minWidth: "r",
         };
         return rect;
       }, items);
@@ -228,7 +228,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp17 = hasBadge;
             if (hasBadge) {
               const obj5 = { style: tmp8, size: 8, badgeStyle };
-              tmp17 = React5(BadgeDefault, obj5);
+              tmp17 = React5(shared_components_BadgeDefault, obj5);
             }
             cResult[9] = badgeStyle;
             cResult[10] = hasBadge;
@@ -273,7 +273,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let items1 = [React5(ClipViewDefault, { cutouts: memo, children: icon })];
       if (hasBadge) {
         const obj4 = { style: tmp2, size: 8, badgeStyle };
-        hasBadge = React5(BadgeDefault, obj4);
+        hasBadge = React5(shared_components_BadgeDefault, obj4);
       }
       items1[1] = hasBadge;
       obj3.children = items1;

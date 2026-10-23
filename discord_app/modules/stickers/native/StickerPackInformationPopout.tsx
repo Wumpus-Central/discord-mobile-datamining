@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   accessibilityLabel: tmp12,
                   children: tmp14,
                 };
-                const tmp19 = closure_3(tmp(6894).PressableOpacity, obj5);
+                const tmp19 = closure_3(tmp(6893).PressableOpacity, obj5);
                 cResult[24] = onClose;
                 cResult[25] = tmp19;
                 let tmp17 = tmp19;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = informationHeader.informationContentDescription;
       cResult[13] = renderItem;
       tmp5 = renderItem;
-      tmpResult = informationHeader(6474);
+      tmpResult = informationHeader(6473);
     }
   : function StickerPackInformationPopout(stickerPack) {
       stickerPack = stickerPack.stickerPack;

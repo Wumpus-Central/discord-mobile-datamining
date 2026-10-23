@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHECKPOINT_NAV_HEIGHT = fn(6002).CHECKPOINT_NAV_HEIGHT;
+const CHECKPOINT_NAV_HEIGHT = fn(6001).CHECKPOINT_NAV_HEIGHT;
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
 const createStyles = fn(4969);

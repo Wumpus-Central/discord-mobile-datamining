@@ -97,7 +97,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const tmpResult4 = tmp(8711);
+              const tmpResult4 = tmp(8718);
               class E {
                 constructor() {
                   return closure_1_3.useReducedMotion;
@@ -174,7 +174,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.size = size;
       if (undefined !== pendingAvatarSrc) {
         const obj4 = { source: null };
-        const tmp2Result = tmp2(8711);
+        const tmp2Result = tmp2(8718);
         obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
         const merged = Object.assign(obj3);
         let obj5 = obj4;

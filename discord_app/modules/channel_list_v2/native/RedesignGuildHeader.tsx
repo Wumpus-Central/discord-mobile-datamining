@@ -27,7 +27,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(12003);
+const RedesignChannelListConstants = fn(12014);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: c10,

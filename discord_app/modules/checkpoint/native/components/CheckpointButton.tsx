@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const CheckpointPressableDefault = CheckpointPressable;
 
 require = fn;
-const CheckpointConstants = fn(6002);
+const CheckpointConstants = fn(6001);
 ({ CHECKPOINT_DARK_CYAN: closure_4, CHECKPOINT_PRIMARY: hasOwnProperty } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -17,13 +17,13 @@ const createStyles = fn(4969);
 let obj2 = {
   container: {
     justifyContent: "center",
-    marginRight: -fn(12928).SHADOW_OFFSET,
-    marginBottom: -fn(12928).SHADOW_OFFSET,
+    marginRight: -fn(12947).SHADOW_OFFSET,
+    marginBottom: -fn(12947).SHADOW_OFFSET,
   },
   button: null,
   label: null,
 };
-let obj3 = { justifyContent: "center", marginRight: -fn(12928).SHADOW_OFFSET, marginBottom: -fn(12928).SHADOW_OFFSET };
+let obj3 = { justifyContent: "center", marginRight: -fn(12947).SHADOW_OFFSET, marginBottom: -fn(12947).SHADOW_OFFSET };
 obj2.button = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2 };
 obj2.label = { textTransform: "uppercase" };
 let closure_8 = createStyles.createStyles(obj2);

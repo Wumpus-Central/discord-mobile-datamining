@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import BadgeDefault from "Badge.tsx";
+import shared_components_BadgeDefault from "Badge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { size, maskColor: backgroundColor, style: tmp4.unreadBadge };
-        const tmp9 = jsx(BadgeDefault, { size, maskColor: backgroundColor, style: tmp4.unreadBadge });
+        const tmp9 = jsx(shared_components_BadgeDefault, { size, maskColor: backgroundColor, style: tmp4.unreadBadge });
         cResult[15] = backgroundColor;
         cResult[16] = size;
         size = tmp4.unreadBadge;
@@ -138,7 +138,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7Result = null;
         if (unread) {
           const obj = { size, maskColor: backgroundColor, style: tmp.unreadBadge };
-          tmp7Result = jsx(BadgeDefault, { size, maskColor: backgroundColor, style: tmp.unreadBadge });
+          tmp7Result = jsx(shared_components_BadgeDefault, {
+            size,
+            maskColor: backgroundColor,
+            style: tmp.unreadBadge,
+          });
         }
       }
       return tmp7Result;

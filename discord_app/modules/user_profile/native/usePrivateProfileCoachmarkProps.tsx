@@ -56,7 +56,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
       const cResult = markAsDismissed(576).c(15);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const obj = markAsDismissed(576);
-      let userIsTeen = markAsDismissed(8108).useUserIsTeen();
+      let userIsTeen = markAsDismissed(8109).useUserIsTeen();
       const ProfileVisibility = markAsDismissed(4797).ProfileVisibility;
       const setting = ProfileVisibility.useSetting();
       if (userIsTeen) {
@@ -175,7 +175,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
         }
         obj4.string(tmp(1128).t["6hEfm1"]);
       }
-      const obj2 = markAsDismissed(8108);
+      const obj2 = markAsDismissed(8109);
     }
   : function usePrivateProfileCoachmarkProps(visibleContent) {
       visibleContent = visibleContent.visibleContent;

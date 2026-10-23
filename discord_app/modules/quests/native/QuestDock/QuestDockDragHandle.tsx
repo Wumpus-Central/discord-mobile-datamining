@@ -4,8 +4,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(6696).QuestDockMode;
-const QuestDockConstants = fn(16331);
+const QuestDockMode = fn(6695).QuestDockMode;
+const QuestDockConstants = fn(16354);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: hasOwnProperty, QUEST_DOCK_COLLAPSED_MAX_WIDTH: metroRequire } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -68,13 +68,13 @@ export default noop.memo(
         const cResult = activeQuestDockMode(576).c(26);
         isExpanded = isExpanded.isExpanded;
         const tmp4 = closure_9();
-        const context = youBarHorizontalMargin.useContext(activeQuestDockMode(16332).QuestDockGestureContext);
+        const context = youBarHorizontalMargin.useContext(activeQuestDockMode(16355).QuestDockGestureContext);
         activeQuestDockMode = context.activeQuestDockMode;
         const windowDimensions = context.windowDimensions;
         dependencyMap = tmp6;
         const obj = activeQuestDockMode(576);
-        youBarHorizontalMargin = activeQuestDockMode(16333).useYouBarHorizontalMargin();
-        let obj2 = activeQuestDockMode(16333);
+        youBarHorizontalMargin = activeQuestDockMode(16356).useYouBarHorizontalMargin();
+        let obj2 = activeQuestDockMode(16356);
         const fn = function n() {
           return { width: Math.min(windowDimensions.get().width, QUEST_DOCK_COLLAPSED_MAX_WIDTH) };
         };
@@ -239,7 +239,7 @@ export default noop.memo(
                       importantForAccessibility: "no-hide-descendants",
                       children: tmp27,
                     };
-                    const tmp33 = closure_7(windowDimensions(7154), obj12);
+                    const tmp33 = closure_7(windowDimensions(7153), obj12);
                     cResult[17] = tmp25;
                     cResult[18] = tmp33;
                     let tmp30 = tmp33;
@@ -258,7 +258,7 @@ export default noop.memo(
                         return tmp39;
                       }
                       const obj13 = { style: tmp12, children: tmp34 };
-                      const tmp42 = closure_7(windowDimensions(7154), obj13);
+                      const tmp42 = closure_7(windowDimensions(7153), obj13);
                       cResult[23] = tmp12;
                       cResult[24] = tmp34;
                       cResult[25] = tmp42;
@@ -267,18 +267,18 @@ export default noop.memo(
                   }
                   const obj14 = {
                     style: animatedStyle1,
-                    layout: tmp(16330).dimensionsLayoutTransition,
+                    layout: tmp(16353).dimensionsLayoutTransition,
                     children: null,
                   };
                   let items = [tmp21, tmp30];
                   obj14.children = items;
-                  const tmp38 = closure_8(windowDimensions(7154), obj14);
+                  const tmp38 = closure_8(windowDimensions(7153), obj14);
                   cResult[19] = animatedStyle1;
                   cResult[20] = tmp21;
                   cResult[21] = tmp30;
                   cResult[22] = tmp38;
                   tmp34 = tmp38;
-                  const tmp37 = windowDimensions(7154);
+                  const tmp37 = windowDimensions(7153);
                 }
                 const items1 = [tmp4.dragHandleOverlay, animatedStyle2];
                 cResult[13] = animatedStyle2;
@@ -287,7 +287,7 @@ export default noop.memo(
                 tmp25 = items1;
               }
               const obj15 = { style: tmp13, children: tmp18 };
-              const tmp24 = closure_7(windowDimensions(7154), obj15);
+              const tmp24 = closure_7(windowDimensions(7153), obj15);
               cResult[10] = tmp13;
               cResult[11] = tmp18;
               cResult[12] = tmp24;
@@ -316,12 +316,12 @@ export default noop.memo(
     : function QuestDockDragHandle(arg0) {
         ({ isExpanded, variant } = arg0);
         const tmp = closure_9();
-        const context = youBarHorizontalMargin.useContext(activeQuestDockMode(16332).QuestDockGestureContext);
+        const context = youBarHorizontalMargin.useContext(activeQuestDockMode(16355).QuestDockGestureContext);
         activeQuestDockMode = context.activeQuestDockMode;
         const windowDimensions = context.windowDimensions;
         dependencyMap = tmp5;
-        youBarHorizontalMargin = activeQuestDockMode(16333).useYouBarHorizontalMargin();
-        const obj = activeQuestDockMode(16333);
+        youBarHorizontalMargin = activeQuestDockMode(16356).useYouBarHorizontalMargin();
+        const obj = activeQuestDockMode(16356);
         const tmp2 = activeQuestDockMode;
         const fn = function n() {
           return { width: Math.min(windowDimensions.get().width, QUEST_DOCK_COLLAPSED_MAX_WIDTH) };
@@ -439,12 +439,12 @@ export default noop.memo(
         };
         const tmp12 = windowDimensions;
         const obj11 = { style: animatedStyle1, layout: null, children: null };
-        const tmp13 = windowDimensions(7154);
-        obj11.layout = activeQuestDockMode(16330).dimensionsLayoutTransition;
+        const tmp13 = windowDimensions(7153);
+        obj11.layout = activeQuestDockMode(16353).dimensionsLayoutTransition;
         const obj12 = { style: null, children: null };
         const items1 = [tmp.dragHandleOverlay, animatedStyle3];
         obj12.style = items1;
-        const tmp15 = windowDimensions(7154);
+        const tmp15 = windowDimensions(7153);
         const intl = activeQuestDockMode(1128).intl;
         const string = intl.string;
         const t = activeQuestDockMode(1128).t;
@@ -457,7 +457,7 @@ export default noop.memo(
           variant: "overlay",
           accessibilityLabel: stringResult,
         });
-        const items2 = [closure_7(windowDimensions(7154), obj12)];
+        const items2 = [closure_7(windowDimensions(7153), obj12)];
         const obj13 = {
           style: null,
           pointerEvents: "none",
@@ -467,9 +467,9 @@ export default noop.memo(
         };
         const items3 = [tmp.dragHandleOverlay, animatedStyle2];
         obj13.style = items3;
-        const tmp16 = windowDimensions(7154);
+        const tmp16 = windowDimensions(7153);
         obj13.children = closure_7(tmp2(5568).ActionSheetHeaderBar, { variant: "default" });
-        items2[1] = closure_7(tmp12(7154), obj13);
+        items2[1] = closure_7(tmp12(7153), obj13);
         obj11.children = items2;
         obj10.children = closure_8(tmp15, obj11);
         return closure_7(tmp13, obj10);

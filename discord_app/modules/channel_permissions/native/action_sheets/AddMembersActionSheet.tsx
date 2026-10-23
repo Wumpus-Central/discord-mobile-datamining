@@ -370,7 +370,7 @@ class AddMembersBody {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7859);
+const ChannelPermissionsConstants = fn(7860);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = ChannelPermissionsConstants);
 const Permissions = fn(1098).Permissions;
 const jsxProd = fn(21);
@@ -425,16 +425,16 @@ export default function AddMembersActionSheet(channel) {
       if (tmp) {
         if (row.rowType === constants.ROLE) {
           closure_2 = closure_2 + 1;
-          closure_1_0.push(channel(5981).permissionOverwriteForRole(row.id, closure_0.type));
-          const obj = channel(5981);
+          closure_1_0.push(channel(5980).permissionOverwriteForRole(row.id, closure_0.type));
+          const obj = channel(5980);
         } else if (row.rowType === tmp2.MEMBER) {
           closure_1 = closure_1 + 1;
-          closure_1_0.push(channel(5981).permissionOverwriteForUser(row.id, closure_0.type));
-          const obj2 = channel(5981);
+          closure_1_0.push(channel(5980).permissionOverwriteForUser(row.id, closure_0.type));
+          const obj2 = channel(5980);
         }
       }
     });
-    await closure_0(8942).savePermissionUpdates(channel.id, items);
+    await closure_0(8949).savePermissionUpdates(channel.id, items);
     if (1 === tmp7) {
       dependencyMap = 0;
       c5 = 3;
@@ -486,7 +486,7 @@ export default function AddMembersActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = closure_17(tmp12, obj7);
-      obj4.header = closure_17(tmp4(7232).BottomSheetTitleHeader, obj2);
+      obj4.header = closure_17(tmp4(7233).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = {
         channel,

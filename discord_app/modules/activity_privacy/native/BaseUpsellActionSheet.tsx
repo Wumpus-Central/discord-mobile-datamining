@@ -54,7 +54,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function StoreG
   const obj = guildId(576);
   const stateFromStores = guildId(504).useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp(6869).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp(6868).GuildIconSizes.XSMALL };
     const tmp12 = closure_7(GuildIconDefault, obj2);
     cResult[3] = stateFromStores;
     cResult[4] = tmp12;
@@ -69,7 +69,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function StoreG
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = { guild: stateFromStores, size: null };
   const obj = guildId(504);
-  obj2.size = guildId(6869).GuildIconSizes.XSMALL;
+  obj2.size = guildId(6868).GuildIconSizes.XSMALL;
   return closure_7(GuildIconDefault, obj2);
 });
 ReactCompilerGating = fn(558);
@@ -78,11 +78,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   ({ guildIds, direction, onPress } = arg0);
   const tmp4 = closure_9();
   if (cResult[0] !== guildIds) {
-    const result = tmp(16063).sortGuildIdsByFrecency(guildIds);
+    const result = tmp(16081).sortGuildIdsByFrecency(guildIds);
     cResult[0] = guildIds;
     cResult[1] = result;
     arr = result;
-    const tmpResult = tmp(16063);
+    const tmpResult = tmp(16081);
   } else {
     arr = cResult[1];
   }
@@ -245,7 +245,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       }
     }
     const statusRow = tmp4.statusRow;
-    if (direction === tmp(16063).ChangeDirection.RESTRICTING) {
+    if (direction === tmp(16081).ChangeDirection.RESTRICTING) {
       class B {
         constructor() {
           return closure_1.map(() => { ... });

@@ -311,7 +311,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5Result = closure_8(tmp6(5230).Button, obj3);
       }
       obj.trailing = tmp5Result;
-      const children = [closure_8(renderIcon(7232).BottomSheetTitleHeader, obj)];
+      const children = [closure_8(renderIcon(7233).BottomSheetTitleHeader, obj)];
       let tmp5Result4 = null;
       if (null != onQueryChange) {
         tmp5Result4 = null;
@@ -352,8 +352,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             }
             onQueryChange(ref);
           };
-          tmp5Result4 = closure_8(selectedOptions(8962), obj4);
-          const tmp13 = selectedOptions(8962);
+          tmp5Result4 = closure_8(selectedOptions(8969), obj4);
+          const tmp13 = selectedOptions(8969);
         }
       }
       children[1] = tmp5Result4;

@@ -8,9 +8,9 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SearchConstants = fn(9684);
+const SearchConstants = fn(9691);
 ({ EMPTY_SEARCH_QUERY_STRING: metroRequire, SearchQueryTagTypes: closure_7 } = SearchConstants);
-const SearchFilterAddLocations = fn(9683).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9690).SearchFilterAddLocations;
 const Constants = fn(1087);
 ({ SearchTokenTypes: closure_9, SearchTypes: c10 } = Constants);
 const prototype = function SearchQueryStateManager(type) {
@@ -187,11 +187,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1128).intl;
       const stringResult = intl.string(obj(1128).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(13149).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(13165).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(13149);
+      const obj4 = obj(13165);
     }
     items = items1;
   }

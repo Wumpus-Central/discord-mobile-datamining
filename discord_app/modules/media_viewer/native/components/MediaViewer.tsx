@@ -17,15 +17,15 @@ function MediaViewer(arg0) {
   let sharedValue1;
   __initData2 = undefined;
   ({ renderOverlay, swipeVelocityThreshold } = arg0);
-  value = [height(7262).MEDIA_VIEWER];
-  const tmp3 = height(7237);
+  value = [height(7263).MEDIA_VIEWER];
+  const tmp3 = height(7238);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   _require = tmp6;
   const tmp4 = sharedValue(sharedValue1.useState(true), 2);
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(14178)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(14192)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -52,7 +52,7 @@ function MediaViewer(arg0) {
   const overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
   const items1 = [dismiss, isClosing];
   const obj6 = require("useMediaViewerPanGesture");
-  height(5959)(
+  height(5958)(
     sharedValue1.useCallback(() => {
       if (!isClosing.get()) {
         dismiss();
@@ -61,7 +61,7 @@ function MediaViewer(arg0) {
     }, items1),
   );
   const absoluteFillObject = closure_6.absoluteFillObject;
-  const tmp17 = height(5959);
+  const tmp17 = height(5958);
   function te() {
     const obj = {};
     const merged = Object.assign(absoluteFillObject);
@@ -250,7 +250,7 @@ function MediaViewer(arg0) {
   });
   const obj17 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const items6 = [
-    dismiss(height(10854), { barStyle: "light-content", hidden: !tmp5 }),
+    dismiss(height(10862), { barStyle: "light-content", hidden: !tmp5 }),
     dismiss(height(5038).View, { style: animatedStyle }),
     ,
     ,
@@ -275,7 +275,7 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp29Result = tmp29(tmp(14180), obj20);
+    tmp29Result = tmp29(tmp(14194), obj20);
   }
   obj19.children = tmp29Result;
   items6[2] = dismiss(height(5039), obj19);
@@ -290,10 +290,10 @@ function MediaViewer(arg0) {
   obj21.pointerEvents = str;
   obj21.children = renderOverlay(dismiss, overlayEnabled);
   items6[3] = dismiss(height(5039), obj21);
-  items6[4] = dismiss(height(11316), {});
+  items6[4] = dismiss(height(11325), {});
   obj17.children = items6;
   const children = tmp31(tmp32, obj17);
-  return dismiss(tmp7(7237).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+  return dismiss(tmp7(7238).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);

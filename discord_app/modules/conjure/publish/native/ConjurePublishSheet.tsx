@@ -20,12 +20,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjurePublishSheet = "ConjurePublishSheet";
-let obj = { screen_capture: fn(9452).ScreenIcon };
+let obj = { screen_capture: fn(9459).ScreenIcon, connect_user_to_voice: fn(8558).VoiceNormalIcon };
 let obj2 = {};
-obj2[fn(6760).ConjureSupportedSurface.BOT] = fn(11740).RobotIcon;
-obj2[fn(6760).ConjureSupportedSurface.ACTIVITY] = fn(12231).ActivitiesIcon;
-obj2[fn(6760).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12233).BadgeIcon;
-obj2[fn(6760).ConjureSupportedSurface.AUTOMOD] = fn(10918).ShieldIcon;
+obj2[fn(6759).ConjureSupportedSurface.BOT] = fn(11751).RobotIcon;
+obj2[fn(6759).ConjureSupportedSurface.ACTIVITY] = fn(12242).ActivitiesIcon;
+obj2[fn(6759).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12244).BadgeIcon;
+obj2[fn(6759).ConjureSupportedSurface.AUTOMOD] = fn(10926).ShieldIcon;
 let closure_12 = { initial: "initialDot", notPublished: "pendingRing", published: "publishedDot" };
 const createStyles = fn(4969);
 let obj4 = {
@@ -201,7 +201,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       _require = publish;
       entryPoint = entryPoint.entryPoint;
       const tmp4 = closure_13();
-      const tmp6 = entryPoint(12235)(project, publish);
+      const tmp6 = entryPoint(12246)(project, publish);
       dependencyMap = tmp6;
       ({ initial: initialChannelNames, editable, identity, sharing } = tmp6);
       if (cResult[0] === initialChannelNames) {
@@ -253,9 +253,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                 class V {
                                                   constructor(arg0) {
                                                     obj = { icon: closure_1_10[entryPoint], label: null };
-                                                    intl = closure_0(closure_2[21]).intl;
+                                                    intl = closure_0(closure_2[22]).intl;
                                                     obj.label = intl.string(
-                                                      closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                      closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                         entryPoint
                                                       ],
                                                     );
@@ -267,9 +267,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                 class V {
                                                   constructor(arg0) {
                                                     obj = { icon: closure_1_10[entryPoint], label: null };
-                                                    intl = closure_0(closure_2[21]).intl;
+                                                    intl = closure_0(closure_2[22]).intl;
                                                     obj.label = intl.string(
-                                                      closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                      closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                         entryPoint
                                                       ],
                                                     );
@@ -285,9 +285,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                               class V {
                                                 constructor(arg0) {
                                                   obj = { icon: closure_1_10[entryPoint], label: null };
-                                                  intl = closure_0(closure_2[21]).intl;
+                                                  intl = closure_0(closure_2[22]).intl;
                                                   obj.label = intl.string(
-                                                    closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                    closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                       entryPoint
                                                     ],
                                                   );
@@ -298,9 +298,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                 class V {
                                                   constructor(arg0) {
                                                     obj = { icon: closure_1_10[entryPoint], label: null };
-                                                    intl = closure_0(closure_2[21]).intl;
+                                                    intl = closure_0(closure_2[22]).intl;
                                                     obj.label = intl.string(
-                                                      closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                      closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                         entryPoint
                                                       ],
                                                     );
@@ -311,9 +311,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                   class V {
                                                     constructor(arg0) {
                                                       obj = { icon: closure_1_10[entryPoint], label: null };
-                                                      intl = closure_0(closure_2[21]).intl;
+                                                      intl = closure_0(closure_2[22]).intl;
                                                       obj.label = intl.string(
-                                                        closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                        closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                           entryPoint
                                                         ],
                                                       );
@@ -326,9 +326,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                   class V {
                                                     constructor(arg0) {
                                                       obj = { icon: closure_1_10[entryPoint], label: null };
-                                                      intl = closure_0(closure_2[21]).intl;
+                                                      intl = closure_0(closure_2[22]).intl;
                                                       obj.label = intl.string(
-                                                        closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                        closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                           entryPoint
                                                         ],
                                                       );
@@ -344,9 +344,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                     class V {
                                                       constructor(arg0) {
                                                         obj = { icon: closure_1_10[entryPoint], label: null };
-                                                        intl = closure_0(closure_2[21]).intl;
+                                                        intl = closure_0(closure_2[22]).intl;
                                                         obj.label = intl.string(
-                                                          closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                          closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                             entryPoint
                                                           ],
                                                         );
@@ -354,16 +354,16 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                       }
                                                     }
                                                     tmp58[0] = sharing.guild;
-                                                    tmp58[1] = tmp(6869).GuildIconSizes.SMALL_36;
-                                                    let tmp53Result = closure_6(tmp5(6869), tmp58);
-                                                    const tmp5Result = tmp5(6869);
+                                                    tmp58[1] = tmp(6868).GuildIconSizes.SMALL_36;
+                                                    let tmp53Result = closure_6(tmp5(6868), tmp58);
+                                                    const tmp5Result = tmp5(6868);
                                                   } else {
                                                     class V {
                                                       constructor(arg0) {
                                                         obj = { icon: closure_1_10[entryPoint], label: null };
-                                                        intl = closure_0(closure_2[21]).intl;
+                                                        intl = closure_0(closure_2[22]).intl;
                                                         obj.label = intl.string(
-                                                          closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                          closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                             entryPoint
                                                           ],
                                                         );
@@ -372,7 +372,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                     }
                                                     tmp55[0] = tmp4.onlyMeIcon;
                                                     const obj7 = { size: "xs", color: tmp5(587).colors.ICON_DEFAULT };
-                                                    tmp55[1] = closure_6(tmp(11780).UserIcon, obj7);
+                                                    tmp55[1] = closure_6(tmp(11792).UserIcon, obj7);
                                                     tmp53Result = closure_6(View, tmp55);
                                                   }
                                                   const items1 = [tmp53Result];
@@ -382,9 +382,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                     class V {
                                                       constructor(arg0) {
                                                         obj = { icon: closure_1_10[entryPoint], label: null };
-                                                        intl = closure_0(closure_2[21]).intl;
+                                                        intl = closure_0(closure_2[22]).intl;
                                                         obj.label = intl.string(
-                                                          closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                          closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                             entryPoint
                                                           ],
                                                         );
@@ -396,9 +396,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                     class V {
                                                       constructor(arg0) {
                                                         obj = { icon: closure_1_10[entryPoint], label: null };
-                                                        intl = closure_0(closure_2[21]).intl;
+                                                        intl = closure_0(closure_2[22]).intl;
                                                         obj.label = intl.string(
-                                                          closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                          closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                             entryPoint
                                                           ],
                                                         );
@@ -419,9 +419,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                                     class V {
                                                       constructor(arg0) {
                                                         obj = { icon: closure_1_10[entryPoint], label: null };
-                                                        intl = closure_0(closure_2[21]).intl;
+                                                        intl = closure_0(closure_2[22]).intl;
                                                         obj.label = intl.string(
-                                                          closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[
+                                                          closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[
                                                             entryPoint
                                                           ],
                                                         );
@@ -465,9 +465,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                             class V {
                               constructor(arg0) {
                                 obj = { icon: closure_1_10[entryPoint], label: null };
-                                intl = closure_0(closure_2[21]).intl;
+                                intl = closure_0(closure_2[22]).intl;
                                 obj.label = intl.string(
-                                  closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint],
+                                  closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint],
                                 );
                                 return closure_1_6(closure_1_19, obj, entryPoint);
                               }
@@ -483,15 +483,15 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                             let intl = tmp(1128).intl;
                             obj13.label = intl.string(tmp5(3830).knevPu);
                             ({ name: obj3.value, setName: obj3.onChange } = tmp6);
-                            obj13.maxLength = tmp(6760).MAX_PROJECT_NAME_LENGTH;
+                            obj13.maxLength = tmp(6759).MAX_PROJECT_NAME_LENGTH;
                             ({ saving: obj3.disabled, nameError } = tmp6);
                             if (nameError == null) {
                               class V {
                                 constructor(arg0) {
                                   obj = { icon: closure_1_10[entryPoint], label: null };
-                                  intl = closure_0(closure_2[21]).intl;
+                                  intl = closure_0(closure_2[22]).intl;
                                   obj.label = intl.string(
-                                    closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint],
+                                    closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint],
                                   );
                                   return closure_1_6(closure_1_19, obj, entryPoint);
                                 }
@@ -499,7 +499,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                             const obj14 = { children: null };
                             obj13.errorMessage = nameError;
-                            const items3 = [tmp27(tmp(6994).TextInput, obj13)];
+                            const items3 = [tmp27(tmp(6993).TextInput, obj13)];
                             const obj26 = {
                               label: null,
                               placeholder: null,
@@ -513,18 +513,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                             const intl3 = tmp(1128).intl;
                             obj26.placeholder = intl3.string(tmp5(3830)["I+3UTL"]);
                             ({ description: obj5.value, setDescription: obj5.onChange } = identity);
-                            obj26.maxLength = tmp(6760).MAX_APP_DESCRIPTION_LENGTH;
+                            obj26.maxLength = tmp(6759).MAX_APP_DESCRIPTION_LENGTH;
                             obj26.disabled = tmp6.saving;
-                            items3[1] = tmp27(tmp(7166).TextArea, obj26);
+                            items3[1] = tmp27(tmp(7165).TextArea, obj26);
                             obj14.children = items3;
                             let tmp19Result = closure_8(closure_7, obj14);
                           } else {
                             class V {
                               constructor(arg0) {
                                 obj = { icon: closure_1_10[entryPoint], label: null };
-                                intl = closure_0(closure_2[21]).intl;
+                                intl = closure_0(closure_2[22]).intl;
                                 obj.label = intl.string(
-                                  closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint],
+                                  closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint],
                                 );
                                 return closure_1_6(closure_1_19, obj, entryPoint);
                               }
@@ -543,9 +543,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                               class V {
                                 constructor(arg0) {
                                   obj = { icon: closure_1_10[entryPoint], label: null };
-                                  intl = closure_0(closure_2[21]).intl;
+                                  intl = closure_0(closure_2[22]).intl;
                                   obj.label = intl.string(
-                                    closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint],
+                                    closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint],
                                   );
                                   return closure_1_6(closure_1_19, obj, entryPoint);
                                 }
@@ -576,8 +576,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                     class V {
                       constructor(arg0) {
                         obj = { icon: closure_1_10[entryPoint], label: null };
-                        intl = closure_0(closure_2[21]).intl;
-                        obj.label = intl.string(closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
+                        intl = closure_0(closure_2[22]).intl;
+                        obj.label = intl.string(closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
                         return closure_1_6(closure_1_19, obj, entryPoint);
                       }
                     }
@@ -591,18 +591,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                         obj = entryPoint(5649);
                       }
                     };
-                    let tmp13Result = closure_6(tmp(11753).ConjureAppIconTile, tmp16);
+                    let tmp13Result = closure_6(tmp(11764).ConjureAppIconTile, tmp16);
                   } else {
                     class V {
                       constructor(arg0) {
                         obj = { icon: closure_1_10[entryPoint], label: null };
-                        intl = closure_0(closure_2[21]).intl;
-                        obj.label = intl.string(closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
+                        intl = closure_0(closure_2[22]).intl;
+                        obj.label = intl.string(closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
                         return closure_1_6(closure_1_19, obj, entryPoint);
                       }
                     }
                     tmp14[0] = project;
-                    tmp13Result = closure_6(tmp5(11796), tmp14);
+                    tmp13Result = closure_6(tmp5(11808), tmp14);
                   }
                   cResult[10] = editable;
                   cResult[11] = identity;
@@ -644,8 +644,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     } else if (1 === tmp7) {
                       dependencyMap = 0;
-                      const intl = tmp3(dependencyMap[21]).intl;
-                      showCriticalToast(intl.string(entryPoint(dependencyMap[22]).Fi7boI));
+                      const intl = tmp3(dependencyMap[22]).intl;
+                      showCriticalToast(intl.string(entryPoint(dependencyMap[23]).Fi7boI));
                       c3 = 3;
                       return { value: "IconComponent", done: null };
                     } else if (arg0 === 1) {
@@ -659,7 +659,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                     } else {
                       dependencyMap = 0;
                       if (value) {
-                        entryPoint(dependencyMap[23]).hideActionSheet(ConjurePublishSheet);
+                        entryPoint(dependencyMap[24]).hideActionSheet(ConjurePublishSheet);
                         tmp3.run(c1);
                         c3 = 3;
                         return { value: "IconComponent", done: null };
@@ -700,8 +700,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         class V {
           constructor(arg0) {
             obj = { icon: closure_1_10[entryPoint], label: null };
-            intl = closure_0(closure_2[21]).intl;
-            obj.label = intl.string(closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
+            intl = closure_0(closure_2[22]).intl;
+            obj.label = intl.string(closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
             return closure_1_6(closure_1_19, obj, entryPoint);
           }
         }
@@ -710,8 +710,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         class V {
           constructor(arg0) {
             obj = { icon: closure_1_10[entryPoint], label: null };
-            intl = closure_0(closure_2[21]).intl;
-            obj.label = intl.string(closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
+            intl = closure_0(closure_2[22]).intl;
+            obj.label = intl.string(closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
             return closure_1_6(closure_1_19, obj, entryPoint);
           }
         }
@@ -720,18 +720,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         class V {
           constructor(arg0) {
             obj = { icon: closure_1_10[entryPoint], label: null };
-            intl = closure_0(closure_2[21]).intl;
-            obj.label = intl.string(closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
+            intl = closure_0(closure_2[22]).intl;
+            obj.label = intl.string(closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
             return closure_1_6(closure_1_19, obj, entryPoint);
           }
         }
-        let mapped1 = arr3.map((label) => closure_1_6(closure_1_19, { icon: closure_0(8562).AppsIcon, label }, label));
+        let mapped1 = arr3.map((label) => closure_1_6(closure_1_19, { icon: closure_0(8563).AppsIcon, label }, label));
       } else {
         class V {
           constructor(arg0) {
             obj = { icon: closure_1_10[entryPoint], label: null };
-            intl = closure_0(closure_2[21]).intl;
-            obj.label = intl.string(closure_0(closure_2[19]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
+            intl = closure_0(closure_2[22]).intl;
+            obj.label = intl.string(closure_0(closure_2[20]).CONJURE_PUBLISH_PERMISSION_LABELS[entryPoint]);
             return closure_1_6(closure_1_19, obj, entryPoint);
           }
         }
@@ -817,13 +817,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       const tmp = closure_13();
-      const tmp4 = entryPoint(12235)(project, publish);
+      const tmp4 = entryPoint(12246)(project, publish);
       dependencyMap = tmp4;
       ({ editable, identity, sharing } = tmp4);
       if (tmp4.initial) {
         const initialChannelNames = tmp4.initialChannelNames;
         let mapped = initialChannelNames.map((label) =>
-          closure_1_6(closure_1_19, { icon: publish(8562).AppsIcon, label }, label),
+          closure_1_6(closure_1_19, { icon: publish(8563).AppsIcon, label }, label),
         );
       } else {
         const channels = tmp4.channels;
@@ -859,10 +859,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             }
           },
         };
-        let tmp6Result = closure_6(publish(11753).ConjureAppIconTile, obj3);
+        let tmp6Result = closure_6(publish(11764).ConjureAppIconTile, obj3);
       } else {
         let obj4 = { project, size: "card" };
-        tmp6Result = closure_6(tmp2(11796), obj4);
+        tmp6Result = closure_6(tmp2(11808), obj4);
       }
       const items1 = [tmp6Result, , , , ,];
       if (editable) {
@@ -870,20 +870,20 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         let intl = publish(1128).intl;
         obj5.label = intl.string(tmp2(3830).knevPu);
         ({ name: obj8.value, setName: obj8.onChange } = tmp4);
-        obj5.maxLength = publish(6760).MAX_PROJECT_NAME_LENGTH;
+        obj5.maxLength = publish(6759).MAX_PROJECT_NAME_LENGTH;
         ({ saving: obj8.disabled, nameError } = tmp4);
         const obj6 = { children: null };
         obj5.errorMessage = nameError;
-        const items2 = [closure_6(publish(6994).TextInput, obj5)];
+        const items2 = [closure_6(publish(6993).TextInput, obj5)];
         const obj7 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
         const intl2 = publish(1128).intl;
         obj7.label = intl2.string(tmp2(3830).ynaGa1);
         const intl3 = publish(1128).intl;
         obj7.placeholder = intl3.string(tmp2(3830)["I+3UTL"]);
         ({ description: obj10.value, setDescription: obj10.onChange } = identity);
-        obj7.maxLength = publish(6760).MAX_APP_DESCRIPTION_LENGTH;
+        obj7.maxLength = publish(6759).MAX_APP_DESCRIPTION_LENGTH;
         obj7.disabled = tmp4.saving;
-        items2[1] = closure_6(publish(7166).TextArea, obj7);
+        items2[1] = closure_6(publish(7165).TextArea, obj7);
         obj6.children = items2;
         let tmp8Result = closure_8(closure_7, obj6);
       } else {
@@ -919,7 +919,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj14.rows = devicePermissions.map((item) => {
         obj = { icon: closure_1_10[item], label: null };
         const intl = publish(1128).intl;
-        obj.label = intl.string(publish(12235).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
+        obj.label = intl.string(publish(12246).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
         return closure_1_6(closure_1_19, obj, item);
       });
       items1[3] = closure_6(closure_18, obj14);
@@ -931,13 +931,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const items4 = [closure_6(closure_17, obj15)];
         const obj16 = { style: tmp.sharingRow, children: null };
         if (null != sharing.guild) {
-          const obj17 = { guild: sharing.guild, size: publish(6869).GuildIconSizes.SMALL_36 };
-          let tmp6Result6 = closure_6(tmp2(6869), obj17);
-          const tmp2Result = tmp2(6869);
+          const obj17 = { guild: sharing.guild, size: publish(6868).GuildIconSizes.SMALL_36 };
+          let tmp6Result6 = closure_6(tmp2(6868), obj17);
+          const tmp2Result = tmp2(6868);
         } else {
           const obj18 = { style: tmp.onlyMeIcon, children: null };
           const obj19 = { size: "xs", color: tmp2(587).colors.ICON_DEFAULT };
-          obj18.children = closure_6(publish(11780).UserIcon, obj19);
+          obj18.children = closure_6(publish(11792).UserIcon, obj19);
           tmp6Result6 = closure_6(View, obj18);
         }
         const items5 = [tmp6Result6];
@@ -1002,7 +1002,15 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         disabled = null != tmp4.nameError;
       }
       obj56.disabled = disabled;
-      obj56.loading = publish.publishing || tmp4.saving;
+      let saving = publish.publishing;
+      if (saving) {
+        saving = !(tmp4.initial && publish.showsProgress);
+        const tmp22 = tmp4.initial && publish.showsProgress;
+      }
+      if (!saving) {
+        saving = tmp4.saving;
+      }
+      obj56.loading = saving;
       obj56.onPress = function handlePublish() {
         const self = this;
         const apply = closure_3.apply;
@@ -1018,7 +1026,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       items1[5] = closure_8(View, obj24);
       obj2.children = items1;
       obj.children = closure_8(View, obj2);
-      return closure_6(publish(7282).ActionSheet, obj);
+      return closure_6(publish(7283).ActionSheet, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()

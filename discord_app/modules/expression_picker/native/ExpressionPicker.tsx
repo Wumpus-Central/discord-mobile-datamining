@@ -75,7 +75,7 @@ export default noop.memo(
           if (cResult[1] === visibleTabs) {
             let tmp5 = cResult[2];
           }
-          const tmp7 = expressionPickerViewType(10097)(tmp5);
+          const tmp7 = expressionPickerViewType(10104)(tmp5);
           ({ expressionPickerSelectedIndex, expressionPickerViewType } = tmp7);
           const prop = tmp7.expressionPickerTabStrings;
           if (cResult[3] !== channel) {
@@ -183,7 +183,7 @@ export default noop.memo(
                   return obj;
                 }
               }
-              const segmentedControlState = tmp(8869).useSegmentedControlState(tmp19);
+              const segmentedControlState = tmp(8876).useSegmentedControlState(tmp19);
               if (cResult[15] !== expressionPickerViewType) {
                 class Z {
                   constructor() {
@@ -367,8 +367,8 @@ export default noop.memo(
                   }
                 }
               }
-              const tmp28 = expressionPickerViewType(10098)(tmp27);
-              const tmpResult = tmp(8869);
+              const tmp28 = expressionPickerViewType(10105)(tmp27);
+              const tmpResult = tmp(8876);
               const isScreenReaderEnabled = tmp(5253).useIsScreenReaderEnabled();
               if (cResult[20] === tmp28) {
                 class Z {

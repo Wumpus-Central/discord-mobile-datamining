@@ -11,7 +11,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7520).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7521).useNativeCheckoutStore;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const GiftingOrigin = fn(1394).GiftingOrigin;
 const jsxProd = fn(21);

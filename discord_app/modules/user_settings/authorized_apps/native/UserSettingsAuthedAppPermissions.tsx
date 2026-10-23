@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children[2] = items.map((children, index) => {
             const obj = { style: items.permissionContainer, children: null };
             items = [,];
-            items[0] = closure_2_5(items(7251).CircleCheckIcon, {
+            items[0] = closure_2_5(items(7252).CircleCheckIcon, {
               style: items.permissionIcon,
               size: "xs",
               color: c1(587).colors.STATUS_POSITIVE,

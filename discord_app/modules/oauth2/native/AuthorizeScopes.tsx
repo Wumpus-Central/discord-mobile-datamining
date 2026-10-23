@@ -174,10 +174,10 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       if (isFake) {
         const obj3 = { style: tmp.fakeScopeIcon, color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-        let tmp10Result = React4(tmp6(7004).CircleXIcon, obj3);
+        let tmp10Result = React4(tmp6(7003).CircleXIcon, obj3);
       } else {
         const obj4 = { color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-        tmp10Result = React4(tmp6(7251).CircleCheckIcon, obj4);
+        tmp10Result = React4(tmp6(7252).CircleCheckIcon, obj4);
       }
       obj2.children = tmp10Result;
       const items = [React4(View, obj2)];
@@ -212,8 +212,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function p() {
           const random = Math.random();
-          return accountScopes(9600).FAKE_SCOPES[
-            Math.floor(Math, random * accountScopes(undefined, 9600).FAKE_SCOPES.length)
+          return accountScopes(9607).FAKE_SCOPES[
+            Math.floor(Math, random * accountScopes(undefined, 9607).FAKE_SCOPES.length)
           ];
         };
         cResult[0] = fn;
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const mapped = accountScopes.map((item) => {
               closure_0 = item;
-              const scopeNames = accountScopes(9600).getScopeNames(item, closure_0);
+              const scopeNames = accountScopes(9607).getScopeNames(item, closure_0);
               return scopeNames.map((text, index) => {
                 const obj = { text, error: null };
                 let tmp3;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         let hasItem = integrationType === accountScopes(5589).ApplicationIntegrationType.USER_INSTALL;
         if (hasItem) {
-          hasItem = requestedScopes.includes(accountScopes(8795).OAuth2Scopes.APPLICATIONS_COMMANDS);
+          hasItem = requestedScopes.includes(accountScopes(8802).OAuth2Scopes.APPLICATIONS_COMMANDS);
         }
         cResult[3] = integrationType;
         cResult[4] = requestedScopes;
@@ -382,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         let hasItem = integrationType === tmp5(5589).ApplicationIntegrationType.USER_INSTALL;
         if (hasItem) {
-          hasItem = requestedScopes.includes(tmp5(8795).OAuth2Scopes.APPLICATIONS_COMMANDS);
+          hasItem = requestedScopes.includes(tmp5(8802).OAuth2Scopes.APPLICATIONS_COMMANDS);
         }
         let obj = { style: tmp.scopesContainer, children: null };
         const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: tmp.scopes, children: null };
         const mapped = accountScopes.map((item) => {
           closure_0 = item;
-          const scopeNames = accountScopes(9600).getScopeNames(item, closure_0);
+          const scopeNames = accountScopes(9607).getScopeNames(item, closure_0);
           return scopeNames.map((text, index) => {
             const obj = { text, error: null };
             let tmp3;

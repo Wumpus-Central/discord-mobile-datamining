@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod7206 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7205 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import SuggestedSearchRowDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchRow.tsx";
 import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
@@ -202,7 +202,7 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9684);
+const SearchConstants = fn(9691);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -215,7 +215,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/list
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function SearchList(arg0) {
-        const cResult = c.c(21);
+        const cResult = c.c(25);
         ({
           contentContainerStyle,
           data,
@@ -224,81 +224,112 @@ export default noop.memo(
           ListHeaderComponent,
           ListFooterComponent,
           numColumns,
+          scrollToTopKey,
         } = arg0);
-        const tmp5 = closure_10();
-        let num = 0.5;
+        noop.useRef(null);
+        const ref = noop.useRef(scrollToTopKey);
+        if (cResult[0] !== scrollToTopKey) {
+          const fn = function c() {
+            if (ref.current !== scrollToTopKey) {
+              ref.current = scrollToTopKey;
+              const current = ref.current;
+              if (current != null) {
+                current.scrollToOffset({ offset: 0, animated: false });
+              }
+            }
+          };
+          const items = [scrollToTopKey];
+          cResult[0] = scrollToTopKey;
+          cResult[1] = fn;
+          cResult[2] = items;
+          let tmp6 = items;
+          let tmp5 = fn;
+        } else {
+          tmp5 = cResult[1];
+          tmp6 = cResult[2];
+        }
+        const effect = noop.useEffect(tmp5, tmp6);
+        const tmp8 = closure_10();
+        let num4 = 0.5;
         if (null != numColumns) {
-          num = 0.5;
+          num4 = 0.5;
           if (1 !== numColumns) {
-            num = 0.8;
+            num4 = 0.8;
             if (2 !== numColumns) {
               if (numColumns >= 3) {
-                num = 0.99;
+                num4 = 0.99;
               }
             }
           }
         }
-        if (cResult[0] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
-          let tmp9 = tmp7;
-          if (tmp7) {
-            const obj2 = { style: hasOwnProperty.absoluteFill, children: null };
-            const obj3 = { text: null };
+        if (cResult[3] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
+          let tmp12 = tmp10;
+          if (tmp10) {
+            const obj3 = { style: hasOwnProperty.absoluteFill, children: null };
+            const obj4 = { text: null };
             const intl = util.intl;
-            obj3.text = intl.string(util.t.V6nAfF);
-            obj2.children = closure_1_8(pages_ErrorScreenDefault, obj3);
-            tmp9 = closure_1_8(React4, obj2);
-            const tmp6Result = pages_ErrorScreenDefault;
+            obj4.text = intl.string(util.t.V6nAfF);
+            obj3.children = closure_1_8(pages_ErrorScreenDefault, obj4);
+            tmp12 = closure_1_8(React4, obj3);
+            const tmp9Result = pages_ErrorScreenDefault;
           }
-          cResult[0] = tmp7;
-          cResult[1] = tmp9;
-          let tmp8 = tmp9;
+          cResult[3] = tmp10;
+          cResult[4] = tmp12;
+          let tmp11 = tmp12;
         } else {
-          tmp8 = cResult[1];
+          tmp11 = cResult[4];
         }
-        if (cResult[2] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
-          let obj4;
-          if (tmp7) {
-            obj4 = { importantForAccessibility: "no", scrollEnabled: false };
+        if (cResult[5] !== (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent)) {
+          let obj5;
+          if (tmp10) {
+            obj5 = { importantForAccessibility: "no", scrollEnabled: false };
           }
-          cResult[2] = tmp7;
-          cResult[3] = obj4;
-          let tmp14 = obj4;
+          cResult[5] = tmp10;
+          cResult[6] = obj5;
+          let tmp17 = obj5;
         } else {
-          tmp14 = cResult[3];
+          tmp17 = cResult[6];
+        }
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj6 = { disabled: true };
+          cResult[7] = obj6;
+          let tmp18 = obj6;
+        } else {
+          tmp18 = cResult[7];
         }
         const sum = 16 + useSafeAreaInsetsDefault().bottom;
-        if (cResult[4] === contentContainerStyle) {
-          if (cResult[5] === sum) {
-            let tmp16 = cResult[6];
+        if (cResult[8] === contentContainerStyle) {
+          if (cResult[9] === sum) {
+            let tmp20 = cResult[10];
           }
-          if (cResult[7] === ItemSeparatorComponent) {
-            if (cResult[8] === ListFooterComponent) {
-              if (cResult[9] === ListHeaderComponent) {
-                if (cResult[10] === data) {
-                  if (cResult[11] === numColumns) {
-                    if (cResult[12] === onEndReached) {
-                      if (cResult[13] === tmp14) {
-                        if (cResult[14] === tmp16) {
-                          if (cResult[15] === num) {
-                            let tmp18 = cResult[16];
+          if (cResult[11] === ItemSeparatorComponent) {
+            if (cResult[12] === ListFooterComponent) {
+              if (cResult[13] === ListHeaderComponent) {
+                if (cResult[14] === data) {
+                  if (cResult[15] === numColumns) {
+                    if (cResult[16] === onEndReached) {
+                      if (cResult[17] === tmp17) {
+                        if (cResult[18] === tmp20) {
+                          if (cResult[19] === num4) {
+                            let tmp22 = cResult[20];
                           }
-                          if (cResult[17] === tmp5.container) {
-                            if (cResult[18] === tmp8) {
-                              if (cResult[19] === tmp18) {
-                                let tmp24 = cResult[20];
+                          if (cResult[21] === tmp8.container) {
+                            if (cResult[22] === tmp11) {
+                              if (cResult[23] === tmp22) {
+                                let tmp28 = cResult[24];
                               }
-                              return tmp24;
+                              return tmp28;
                             }
                           }
-                          const obj5 = { style: tmp5.container, children: null };
-                          const items = [tmp8, tmp18];
-                          obj5.children = items;
-                          const tmp27 = React6(React4, obj5);
-                          cResult[17] = tmp5.container;
-                          cResult[18] = tmp8;
-                          cResult[19] = tmp18;
-                          cResult[20] = tmp27;
-                          tmp24 = tmp27;
+                          const obj7 = { style: tmp8.container, children: null };
+                          const items1 = [tmp11, tmp22];
+                          obj7.children = items1;
+                          const tmp31 = React6(React4, obj7);
+                          cResult[21] = tmp8.container;
+                          cResult[22] = tmp11;
+                          cResult[23] = tmp22;
+                          cResult[24] = tmp31;
+                          tmp28 = tmp31;
                         }
                       }
                     }
@@ -307,17 +338,18 @@ export default noop.memo(
               }
             }
           }
-          const obj6 = {
+          const obj8 = {
             ref,
-            overrideProps: tmp14,
+            overrideProps: tmp17,
             keyboardDismissMode: "on-drag",
             keyboardShouldPersistTaps: "handled",
             data,
             renderItem,
-            onEndReachedThreshold: num,
+            onEndReachedThreshold: num4,
             onEndReached,
             scrollsToTop: true,
-            contentContainerStyle: tmp16,
+            maintainVisibleContentPosition: tmp18,
+            contentContainerStyle: tmp20,
             keyExtractor,
             getItemType,
             ListHeaderComponent,
@@ -326,31 +358,41 @@ export default noop.memo(
             numColumns,
             viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig,
           };
-          const tmp23 = closure_1_8(_mod7206.AnimatedFlashList, obj6);
-          cResult[7] = ItemSeparatorComponent;
-          cResult[8] = ListFooterComponent;
-          cResult[9] = ListHeaderComponent;
-          cResult[10] = data;
-          cResult[11] = numColumns;
-          cResult[12] = onEndReached;
-          cResult[13] = tmp14;
-          cResult[14] = tmp16;
-          cResult[15] = num;
-          cResult[16] = tmp23;
-          tmp18 = tmp23;
+          const tmp27 = closure_1_8(_mod7205.AnimatedFlashList, obj8);
+          cResult[11] = ItemSeparatorComponent;
+          cResult[12] = ListFooterComponent;
+          cResult[13] = ListHeaderComponent;
+          cResult[14] = data;
+          cResult[15] = numColumns;
+          cResult[16] = onEndReached;
+          cResult[17] = tmp17;
+          cResult[18] = tmp20;
+          cResult[19] = num4;
+          cResult[20] = tmp27;
+          tmp22 = tmp27;
         }
-        const obj7 = { paddingBottom: sum };
+        const obj9 = { paddingBottom: sum };
         const merged = Object.assign(contentContainerStyle);
-        cResult[4] = contentContainerStyle;
-        cResult[5] = sum;
-        cResult[6] = obj7;
-        tmp16 = obj7;
-        ref = noop.useRef(null);
+        cResult[8] = contentContainerStyle;
+        cResult[9] = sum;
+        cResult[10] = obj9;
+        tmp20 = obj9;
       }
     : function SearchList(arg0) {
-        ({ contentContainerStyle, data, ListHeaderComponent, ListFooterComponent, numColumns } = arg0);
+        ({ contentContainerStyle, data, ListHeaderComponent, ListFooterComponent, numColumns, scrollToTopKey } = arg0);
         ({ onEndReached, ItemSeparatorComponent } = arg0);
-        const ref = noop.useRef(null);
+        noop.useRef(null);
+        const ref = noop.useRef(scrollToTopKey);
+        const items = [scrollToTopKey];
+        const effect = noop.useEffect(() => {
+          if (ref.current !== scrollToTopKey) {
+            ref.current = scrollToTopKey;
+            const current = ref.current;
+            if (current != null) {
+              current.scrollToOffset({ offset: 0, animated: false });
+            }
+          }
+        }, items);
         let num = 0.5;
         if (null != numColumns) {
           num = 0.5;
@@ -364,17 +406,17 @@ export default noop.memo(
           }
         }
         const obj = { style: closure_10().container, children: null };
-        let tmp8 = tmp5;
+        let tmp9 = tmp6;
         if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
           const obj2 = { style: hasOwnProperty.absoluteFill, children: null };
           const obj3 = { text: null };
           const intl = util.intl;
           obj3.text = intl.string(util.t.V6nAfF);
           obj2.children = closure_1_8(pages_ErrorScreenDefault, obj3);
-          tmp8 = closure_1_8(React4, obj2);
-          const tmp3Result = pages_ErrorScreenDefault;
+          tmp9 = closure_1_8(React4, obj2);
+          const tmp4Result = pages_ErrorScreenDefault;
         }
-        const items = [tmp8];
+        const items1 = [tmp9];
         const obj4 = {
           ref,
           overrideProps: null,
@@ -385,6 +427,7 @@ export default noop.memo(
           onEndReachedThreshold: null,
           onEndReached: null,
           scrollsToTop: true,
+          maintainVisibleContentPosition: null,
           contentContainerStyle: null,
           keyExtractor: null,
           getItemType: null,
@@ -403,7 +446,8 @@ export default noop.memo(
         obj4.renderItem = renderItem;
         obj4.onEndReachedThreshold = num;
         obj4.onEndReached = onEndReached;
-        const tmp2 = closure_10();
+        obj4.maintainVisibleContentPosition = { disabled: true };
+        const tmp3 = closure_10();
         const merged = Object.assign(contentContainerStyle);
         obj4.contentContainerStyle = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
         obj4.keyExtractor = keyExtractor;
@@ -413,8 +457,8 @@ export default noop.memo(
         obj4.ItemSeparatorComponent = ItemSeparatorComponent;
         obj4.numColumns = numColumns;
         obj4.viewabilityConfigCallbackPairs = smartSearchViewabilityConfig.smartSearchViewabilityConfig;
-        items[1] = closure_1_8(_mod7206.AnimatedFlashList, obj4);
-        obj.children = items;
+        items1[1] = closure_1_8(_mod7205.AnimatedFlashList, obj4);
+        obj.children = items1;
         return React6(React4, obj);
       },
 );

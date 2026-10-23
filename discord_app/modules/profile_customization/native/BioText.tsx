@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = lineClamp(576);
       const obj7 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
-      const tmpResult = lineClamp(11125);
+      const tmpResult = lineClamp(11134);
       let num;
       if (tmpResult2.isAndroid()) {
         num = 3;

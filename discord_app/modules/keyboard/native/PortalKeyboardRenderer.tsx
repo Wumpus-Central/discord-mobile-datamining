@@ -167,7 +167,7 @@ export const PortalKeyboardRenderer = ReactCompilerGating.isReactCompilerEnabled
           } else {
             if (cResult[14] !== tmp19) {
               const obj5 = { value: true, children: tmp19 };
-              const tmp26 = jsx(PortalKeyboard(9895).PortalKeyboardInModalContext.Provider, {
+              const tmp26 = jsx(PortalKeyboard(9902).PortalKeyboardInModalContext.Provider, {
                 value: true,
                 children: tmp19,
               });
@@ -284,7 +284,7 @@ export const PortalKeyboardRenderer = ReactCompilerGating.isReactCompilerEnabled
         let tmp10Result = jsx(tmp5(5151).PortalKeyboard, { children: tmp11 });
       } else {
         const obj4 = { value: true, children: tmp11 };
-        tmp10Result = jsx(tmp5(9895).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
+        tmp10Result = jsx(tmp5(9902).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
       }
       return tmp10Result;
     };

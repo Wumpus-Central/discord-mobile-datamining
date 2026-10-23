@@ -12,6 +12,15 @@ const obj = {
       return intl.string(_modDef3830["2KIefJ"]);
     },
   },
+  connect_user_to_voice: {
+    isSupported() {
+      return true;
+    },
+    getLabel() {
+      const intl = util.intl;
+      return intl.string(_modDef3830["5Hp3Nx"]);
+    },
+  },
 };
 const keys = Object.keys(obj);
 const result = size.fileFinishedImporting("modules/conjure/device_permissions/conjureDevicePermissions.tsx");

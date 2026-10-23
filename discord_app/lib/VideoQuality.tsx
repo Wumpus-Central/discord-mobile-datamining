@@ -1396,6 +1396,12 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     let num66 = cryptorFailureCount;
     ({
       framesCodecError,
+      framesCodecErrorNoOutput,
+      framesCodecErrorTimeout,
+      framesCodecErrorGeneric,
+      framesCodecErrorFallback,
+      framesCodecErrorParameter,
+      framesCodecErrorOther,
       framesNetwork,
       packets,
       packetsLost,
@@ -1468,6 +1474,12 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     obj2.num_packets = packets;
     obj2.num_frames = framesNetwork;
     obj2.num_frames_codec_error = framesCodecError;
+    obj2.num_frames_codec_error_no_output = framesCodecErrorNoOutput;
+    obj2.num_frames_codec_error_timeout = framesCodecErrorTimeout;
+    obj2.num_frames_codec_error_generic = framesCodecErrorGeneric;
+    obj2.num_frames_codec_error_fallback = framesCodecErrorFallback;
+    obj2.num_frames_codec_error_parameter = framesCodecErrorParameter;
+    obj2.num_frames_codec_error_other = framesCodecErrorOther;
     obj2.time_to_first_frame_ms = aggregationDuration.timeToFirstFrame;
     obj2.num_frames_dropped = framesDropped + networkFramesDropped;
     obj2.num_nacks = nackCount;

@@ -63,7 +63,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
   let obj = modalSessionId(1505);
   [tmp5, c2] = callback(noop.useState({ type: "loading" }), 2);
   const tmp4 = callback(noop.useState({ type: "loading" }), 2);
-  const watchAgeVerificationStatusChange = modalSessionId(6640).useWatchAgeVerificationStatusChange(modalSessionId.onClose);
+  const watchAgeVerificationStatusChange = modalSessionId(6639).useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   const items = [navigation];
   callback = noop.useCallback(() => {
     navigation.goBack();
@@ -208,12 +208,12 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       callback();
     };
     obj7.children = closure_7(tmp(5230).Button, obj8);
-    items4[1] = closure_7(tmp(6682).ButtonGroup, obj7);
+    items4[1] = closure_7(tmp(6681).ButtonGroup, obj7);
     obj5.children = items4;
     tmp15 = closure_9(closure_8, obj5);
   }
   const obj9 = { children: null };
-  let obj2 = modalSessionId(6640);
-  obj9.children = closure_7(modalSessionId(7885).ModalContent, { children: closure_7(modalSessionId(5964).Stack, { align: "center", justify: "center", spacing: 16, children: tmp15 }) });
-  return closure_7(modalSessionId(7884).ModalScreen, obj9);
+  let obj2 = modalSessionId(6639);
+  obj9.children = closure_7(modalSessionId(7886).ModalContent, { children: closure_7(modalSessionId(5963).Stack, { align: "center", justify: "center", spacing: 16, children: tmp15 }) });
+  return closure_7(modalSessionId(7885).ModalScreen, obj9);
 };

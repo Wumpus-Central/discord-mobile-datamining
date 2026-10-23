@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import isForwardMessageDefault from "../../../forwarding/isForwardMessage.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
-import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07947_inlineStyles.js";
 import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import FileIcon from "../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
 import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";

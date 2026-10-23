@@ -7,13 +7,13 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import _modDef10414 from "../../../../../_runtime/metro/10414__.js";
-import _modDef10415 from "../../../../../_runtime/metro/10415__.js";
+import _modDef10421 from "../../../../../_runtime/metro/10421__.js";
+import _modDef10422 from "../../../../../_runtime/metro/10422__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const NativePermissionStatus = fn(7852).NativePermissionStatus;
+const NativePermissionStatus = fn(7853).NativePermissionStatus;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4969);
@@ -146,7 +146,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl3 = util.intl;
           obj2.actionLabel = intl3.string(util.t.JuXTi6);
           obj2.actionPress = tmp2;
-          obj2.imageSource = _modDef10414;
+          obj2.imageSource = _modDef10421;
           const intl4 = util.intl;
           obj2.label = intl4.string(util.t["5g7NcN"]);
           return hasOwnProperty(closure_8, obj2);
@@ -161,7 +161,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl = util.intl;
           obj.actionLabel = intl.string(util.t.tpoWUd);
           obj.actionPress = tmp;
-          obj.imageSource = _modDef10415;
+          obj.imageSource = _modDef10422;
           const intl2 = util.intl;
           obj.label = intl2.string(util.t.YOvRBZ);
           return hasOwnProperty(closure_8, obj);
@@ -179,7 +179,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
   const intl5 = util.intl;
   obj3.actionLabel = intl5.string(util.t["457oeG"]);
   obj3.actionPress = photosEmpty.onPressPrivacySettings;
-  obj3.imageSource = _modDef10414;
+  obj3.imageSource = _modDef10421;
   const intl6 = util.intl;
   obj3.label = intl6.string(util.t["8p9jGu"]);
   return hasOwnProperty(closure_8, obj3);

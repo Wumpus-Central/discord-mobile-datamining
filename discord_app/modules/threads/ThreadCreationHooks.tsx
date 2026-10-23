@@ -461,8 +461,8 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7615).DraftType;
-const SlowmodeType = fn(7744).SlowmodeType;
+const DraftType = fn(7616).DraftType;
+const SlowmodeType = fn(7745).SlowmodeType;
 const ThreadConstants = fn(1127);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1087);

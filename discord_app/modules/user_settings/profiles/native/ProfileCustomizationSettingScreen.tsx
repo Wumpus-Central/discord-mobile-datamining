@@ -77,7 +77,7 @@ export default noop.memo(
         let obj2 = obj5(5238);
         const nativeStackNavigation = obj5(1505).useNativeStackNavigation();
         let obj3 = obj5(1505);
-        const params = obj5(7076).useSettingNavigationRoute().params;
+        const params = obj5(7075).useSettingNavigationRoute().params;
         let autoFocusElement;
         if (params != null) {
           autoFocusElement = params.autoFocusElement;
@@ -121,7 +121,7 @@ export default noop.memo(
             }
           }
         }
-        let obj4 = obj5(7076);
+        let obj4 = obj5(7075);
         const obj6 = {
           items: tmp13,
           pageWidth: tmp8[0],
@@ -154,7 +154,7 @@ export default noop.memo(
           };
           return maybeShowUnsavedChangesAlertDefault(obj);
         };
-        const segmentedControlState = obj5(8869).useSegmentedControlState(obj6);
+        const segmentedControlState = obj5(8876).useSegmentedControlState(obj6);
         const activeIndex = segmentedControlState.activeIndex;
         const tmp18 = items[activeIndex.get(activeIndex)];
         if (tmp18 == null) {
@@ -278,7 +278,7 @@ export default noop.memo(
           }
           tmp35 = cResult[11];
         }
-        const tmpResult = obj5(8869);
+        const tmpResult = obj5(8876);
         stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
         closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
         if (cResult[12] === tmp29) {
@@ -428,11 +428,10 @@ export default noop.memo(
             headerShadowVisible: false,
             headerRight: closure_11
               ? () => closure_1_17(backgroundColor(first[29]).HeaderSubmittingIndicator, {})
-              : (arg0) => {
-                  let obj = {};
-                  const merged = Object.assign(arg0);
+              : () => {
+                  let obj = { text: null, disabled: null, onPress: null };
                   const intl = closure_0(first[11]).intl;
-                  obj.label = intl.string(closure_0(first[11]).t["R3BPH+"]);
+                  obj.text = intl.string(closure_0(first[11]).t["R3BPH+"]);
                   obj.disabled = !stateFromStores;
                   obj.onPress = handleSubmit(function* () {
                     if (c2 === 2) {
@@ -485,7 +484,7 @@ export default noop.memo(
                       }
                     }
                   });
-                  return closure_2_17(closure_0(first[30]).HeaderTextButton, obj);
+                  return closure_2_17(closure_0(first[30]).HeaderActionButton, obj);
                 },
           };
           nativeStackNavigation.setOptions(obj);

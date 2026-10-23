@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14399 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-1x.png.js";
-import _modDef14400 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-2x.png.js";
-import _modDef14401 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-3x.png.js";
+import _modDef14413 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-1x.png.js";
+import _modDef14414 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-2x.png.js";
+import _modDef14415 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14399 }, 3: null };
-let obj2 = { uri: _modDef14399 };
-obj[2] = { uri: _modDef14400 };
-const obj3 = { uri: _modDef14400 };
-obj[3] = { uri: _modDef14401 };
+let obj = { 1: null, 2: { uri: _modDef14413 }, 3: null };
+let obj2 = { uri: _modDef14413 };
+obj[2] = { uri: _modDef14414 };
+const obj3 = { uri: _modDef14414 };
+obj[3] = { uri: _modDef14415 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef14401 };
+const obj4 = { uri: _modDef14415 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx",

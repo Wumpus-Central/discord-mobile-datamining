@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const useAutomodRulesList = fn(18902).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(18904);
+const useAutomodRulesList = fn(18925).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(18927);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(12731).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(12750).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -556,13 +556,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             let v0 = 1;
                             c5 = 2;
                             c6 = 1;
-                            const obj6 = { value: closure_0(12736).deleteAutomodRule(id, closure_0), done: false };
+                            const obj6 = { value: closure_0(12755).deleteAutomodRule(id, closure_0), done: false };
                             return obj6;
                           }
                         } else if (1 === tmp7) {
                           v0 = 0;
                           closure_129_0 = closure_3;
-                          const aPIError = new closure_0(6360).APIError(closure_129_0);
+                          const aPIError = new closure_0(6359).APIError(closure_129_0);
                           const anyErrorMessage = aPIError.getAnyErrorMessage();
                           closure_0 = anyErrorMessage;
                           if (anyErrorMessage == null) {

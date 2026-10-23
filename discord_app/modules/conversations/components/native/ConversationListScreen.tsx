@@ -309,7 +309,7 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(7206).FlashList, {
+  obj7.children = jsx(tmp(7205).FlashList, {
     data: memo,
     renderItem,
     keyExtractor,

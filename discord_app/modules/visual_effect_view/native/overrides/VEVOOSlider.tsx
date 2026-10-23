@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import _modDef8742 from "../../../../../_runtime/metro/08742__.js";
+import _modDef8749 from "../../../../../_runtime/metro/08749__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -78,7 +78,7 @@ export default noop.memo(
             onValueChange,
             onResponderGrant: tmp10,
           };
-          const tmp15 = jsx(_modDef8742, {
+          const tmp15 = jsx(_modDef8749, {
             style: tmp7,
             disabled,
             value: current,

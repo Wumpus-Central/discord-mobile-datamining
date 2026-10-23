@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         RelationshipTypes.FRIEND,
       );
       const effect = stateFromStoresArray1.useEffect(() => {
-        const userAffinitiesV2 = closure_0(9052).fetchUserAffinitiesV2();
+        const userAffinitiesV2 = closure_0(9059).fetchUserAffinitiesV2();
       }, []);
       const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
       const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: null };
+                const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: 1 };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   user,
                   guildId: "r",
                   size: closure_0(1202).AvatarSizes.XSMALL,
-                  cutout: null,
+                  cutout: 1,
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: null };
+                const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: 1 };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   user,
                   guildId: "r",
                   size: closure_0(1202).AvatarSizes.XSMALL,
-                  cutout: null,
+                  cutout: 1,
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>

@@ -205,7 +205,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "r" };
+            let obj6 = { beforeItem: null, afterItem: "Array" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -217,18 +217,18 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6687).GuildsNodeType;
-const GuildsBarConstants = fn(17628);
+const GuildsNodeType = fn(6686).GuildsNodeType;
+const GuildsBarConstants = fn(17650);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(16334);
+const YouBarConstants = fn(16357);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });
-let closure_17 = { beforeItem: "r", afterItem: "emoji" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "r" };
+let closure_17 = { beforeItem: "Array", afterItem: "Reflect" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useUnreadBarWrapperStyles() {
@@ -611,7 +611,7 @@ export default noop.memo(
           obj.orientation = "visible";
           fastList.scrollToLocation(obj);
         }, items2);
-        obj3.children = jsx(top(17697), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
+        obj3.children = jsx(top(17719), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
         return (
           <scrollPosValue
             style={tmp7.style}

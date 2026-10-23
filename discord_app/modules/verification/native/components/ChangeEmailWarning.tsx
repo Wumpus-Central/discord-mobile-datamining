@@ -8,7 +8,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(6969).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const hcArticle = fn(6968).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           const _Symbol6 = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp15 = closure_9(tmp(6977).TrafficConeSpotIllustration, {});
+            const tmp15 = closure_9(tmp(6976).TrafficConeSpotIllustration, {});
             cResult[5] = tmp15;
             let tmp13 = tmp15;
           } else {
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != stateFromStores) {
         const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
         const obj4 = { style: tmp.container, children: null };
-        const items2 = [closure_9(tmp2(6977).TrafficConeSpotIllustration, {}), , ,];
+        const items2 = [closure_9(tmp2(6976).TrafficConeSpotIllustration, {}), , ,];
         const obj5 = {
           style: tmp.title,
           accessibilityRole: "header",

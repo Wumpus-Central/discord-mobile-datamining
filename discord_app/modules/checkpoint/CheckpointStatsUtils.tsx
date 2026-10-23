@@ -113,6 +113,33 @@ export const hasCheckpointEmojis = function hasCheckpointEmojis(stats) {
   }
   return tmp;
 };
+export const hasCheckpointGames = function hasCheckpointGames(stats) {
+  let num;
+  if (stats != null) {
+    const games = stats.games;
+    if (games != null) {
+      num = games.totalGamesPlayed;
+    }
+  }
+  if (num == null) {
+    num = 0;
+  }
+  let tmp = Math.round(num) > 0;
+  if (tmp) {
+    let num2;
+    if (stats != null) {
+      const games2 = stats.games;
+      if (games2 != null) {
+        num2 = games2.games.length;
+      }
+    }
+    if (num2 == null) {
+      num2 = 0;
+    }
+    tmp = num2 > 0;
+  }
+  return tmp;
+};
 export const statsFromServer = function statsFromServer(stats) {
   ({ voice, messages, emojis, games, sidekick, users, power } = stats);
   let obj = {

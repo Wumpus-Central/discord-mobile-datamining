@@ -118,10 +118,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx");
 
 export const OneColumnGuildUpsellList = ReactCompilerGating.isReactCompilerEnabled()
-  ? function OneColumnGuildUpsellList(onDismiss) {
-      const cResult = cardAction(ref[8]).c(22);
-      ({ suggestedGuilds, contentContainerStyle, subheader, cardAction } = onDismiss);
-      onDismiss = onDismiss.onDismiss;
+  ? function OneColumnGuildUpsellList(arg0) {
+      const cResult = onDismiss(first1[8]).c(21);
+      ({ suggestedGuilds, contentContainerStyle, subheader, onDismiss } = arg0);
       closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function v(id) {
@@ -132,105 +131,59 @@ export const OneColumnGuildUpsellList = ReactCompilerGating.isReactCompilerEnabl
       } else {
         first = cResult[0];
       }
-      ref = noop.useRef(null);
+      const ref = stateFromStoresObject.useRef(null);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
+        class S {
           constructor() {
             return closure_8 > 0;
           }
         }
-        cResult[1] = E;
+        cResult[1] = S;
       } else {
-        class E {
+        class S {
           constructor() {
             return closure_8 > 0;
           }
         }
       }
-      const tmp8 = first1(noop.useState(E), 2);
-      first1 = tmp8[0];
-      noop = tmp8[1];
+      [first1, _slicedToArray] = stateFromStoresObject.useState(S);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        class O {
-          constructor(arg0) {
-            closure_8 = onDismiss.nativeEvent.contentOffset.y;
-            return;
+        class S {
+          constructor() {
+            return closure_8 > 0;
           }
         }
-        cResult[2] = O;
+        cResult[2] = tmp11;
       } else {
-        class O {
-          constructor(arg0) {
-            closure_8 = onDismiss.nativeEvent.contentOffset.y;
-            return;
+        class S {
+          constructor() {
+            return closure_8 > 0;
           }
         }
       }
       if (cResult[3] !== first1) {
-        class A {
+        class S {
           constructor() {
-            if (closure_3) {
-              tmp = closure_2;
-              current = closure_2.current;
-              tmp2 = null;
-              if (current != null) {
-                obj = { offset: null, animated: false };
-                tmp3 = c8;
-                obj.offset = c8;
-                scrollToOffsetResult = current.scrollToOffset(obj);
-              }
-              tmp5 = globalThis;
-              _requestAnimationFrame = requestAnimationFrame;
-              animationFrame = requestAnimationFrame(() => {
-                const current = ref.current;
-                if (current != null) {
-                  const obj = { offset, animated: false };
-                  current.scrollToOffset(obj);
-                }
-                closure_1_4(false);
-              });
-            }
-            return;
+            return closure_8 > 0;
           }
         }
         cResult[3] = first1;
-        cResult[4] = A;
+        cResult[4] = tmp13;
       } else {
-        class A {
+        class S {
           constructor() {
-            if (closure_3) {
-              tmp = closure_2;
-              current = closure_2.current;
-              tmp2 = null;
-              if (current != null) {
-                obj = { offset: null, animated: false };
-                tmp3 = c8;
-                obj.offset = c8;
-                scrollToOffsetResult = current.scrollToOffset(obj);
-              }
-              tmp5 = globalThis;
-              _requestAnimationFrame = requestAnimationFrame;
-              animationFrame = requestAnimationFrame(() => {
-                const current = ref.current;
-                if (current != null) {
-                  const obj = { offset, animated: false };
-                  current.scrollToOffset(obj);
-                }
-                closure_1_4(false);
-              });
-            }
-            return;
+            return closure_8 > 0;
           }
         }
       }
       if (cResult[5] !== first1) {
         class D {
           constructor() {
-            if (closure_3) {
+            if (closure_2) {
               tmp = globalThis;
               _setTimeout = setTimeout;
               num = 500;
-              closure_0 = setTimeout(() => closure_1_4(false), 500);
+              closure_0 = setTimeout(() => closure_1_3(false), 500);
               return () => clearTimeout(closure_0);
             } else {
               return;
@@ -241,89 +194,163 @@ export const OneColumnGuildUpsellList = ReactCompilerGating.isReactCompilerEnabl
         cResult[5] = first1;
         cResult[6] = D;
         cResult[7] = items;
-        let tmp13 = items;
+        let tmp15 = items;
       } else {
         class D {
           constructor() {
-            if (closure_3) {
+            if (closure_2) {
               tmp = globalThis;
               _setTimeout = setTimeout;
               num = 500;
-              closure_0 = setTimeout(() => closure_1_4(false), 500);
+              closure_0 = setTimeout(() => closure_1_3(false), 500);
               return () => clearTimeout(closure_0);
             } else {
               return;
             }
           }
         }
-        tmp13 = cResult[7];
+        tmp15 = cResult[7];
       }
-      const effect = obj2.useEffect(D, tmp13);
+      const effect = obj2.useEffect(D, tmp15);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class D {
           constructor() {
-            if (closure_3) {
+            if (closure_2) {
               tmp = globalThis;
               _setTimeout = setTimeout;
               num = 500;
-              closure_0 = setTimeout(() => closure_1_4(false), 500);
+              closure_0 = setTimeout(() => closure_1_3(false), 500);
               return () => clearTimeout(closure_0);
             } else {
               return;
             }
           }
         }
-        const items1 = [stateFromStoresObject];
-        class N {
+        const items1 = [MobileGameCommunitiesStore];
+        class A {
           constructor() {
-            return closure_5.getGuildGameIds();
+            return closure_1_5.getGuildGameIds();
           }
         }
         cResult[8] = items1;
-        cResult[9] = N;
-        let tmp16 = N;
-        const tmp15 = items1;
+        cResult[9] = A;
+        let tmp18 = A;
+        const tmp17 = items1;
       } else {
         class D {
           constructor() {
-            if (closure_3) {
+            if (closure_2) {
               tmp = globalThis;
               _setTimeout = setTimeout;
               num = 500;
-              closure_0 = setTimeout(() => closure_1_4(false), 500);
+              closure_0 = setTimeout(() => closure_1_3(false), 500);
               return () => clearTimeout(closure_0);
             } else {
               return;
             }
           }
         }
-        tmp16 = cResult[9];
+        tmp18 = cResult[9];
       }
-      let obj = cardAction(ref[8]);
-      stateFromStoresObject = cardAction(ref[10]).useStateFromStoresObject(tmp15, tmp16);
-      onDismiss(ref[11]);
-      if (cResult[10] === cardAction) {
+      let obj = onDismiss(first1[8]);
+      stateFromStoresObject = onDismiss(first1[10]).useStateFromStoresObject(tmp17, tmp18);
+      ref(first1[11]);
+      if (cResult[10] === stateFromStoresObject) {
         class D {
           constructor() {
-            if (closure_3) {
+            if (closure_2) {
               tmp = globalThis;
               _setTimeout = setTimeout;
               num = 500;
-              closure_0 = setTimeout(() => closure_1_4(false), 500);
+              closure_0 = setTimeout(() => closure_1_3(false), 500);
               return () => clearTimeout(closure_0);
             } else {
               return;
             }
           }
         }
+        const tmp24 = closure_10(stateFromStoresObject, tmp21);
+        class A {
+          constructor() {
+            return closure_1_5.getGuildGameIds();
+          }
+        }
+        if (first1) {
+          class D {
+            constructor() {
+              if (closure_2) {
+                tmp = globalThis;
+                _setTimeout = setTimeout;
+                num = 500;
+                closure_0 = setTimeout(() => closure_1_3(false), 500);
+                return () => clearTimeout(closure_0);
+              } else {
+                return;
+              }
+            }
+          }
+        }
+        if (cResult[13] === contentContainerStyle) {
+          class D {
+            constructor() {
+              if (closure_2) {
+                tmp = globalThis;
+                _setTimeout = setTimeout;
+                num = 500;
+                closure_0 = setTimeout(() => closure_1_3(false), 500);
+                return () => clearTimeout(closure_0);
+              } else {
+                return;
+              }
+            }
+          }
+        }
+        const obj3 = {
+          ref,
+          style: tmp25,
+          onViewableItemsChanged: tmp24,
+          viewabilityConfig,
+          contentContainerStyle,
+          keyExtractor: first,
+          data: suggestedGuilds,
+          ListHeaderComponent: subheader,
+          renderItem: P,
+          drawDistance: 3000,
+          onScroll: tmp11,
+          scrollEventThrottle: 16,
+          onLoad: tmp13,
+        };
+        const tmp29 = jsx(onDismiss(tmp2[14]).FlashList, {
+          ref,
+          style: tmp25,
+          onViewableItemsChanged: tmp24,
+          viewabilityConfig,
+          contentContainerStyle,
+          keyExtractor: first,
+          data: suggestedGuilds,
+          ListHeaderComponent: subheader,
+          renderItem: P,
+          drawDistance: 3000,
+          onScroll: tmp11,
+          scrollEventThrottle: 16,
+          onLoad: tmp13,
+        });
+        cResult[13] = contentContainerStyle;
+        cResult[14] = tmp13;
+        cResult[15] = tmp24;
+        cResult[16] = P;
+        cResult[17] = subheader;
+        cResult[18] = suggestedGuilds;
+        cResult[19] = tmp25;
+        cResult[20] = tmp29;
       }
-      class V {
+      class P {
         constructor(arg0) {
-          item = onDismiss.item;
+          item = arg0.item;
           tmp = null;
-          tmp2 = null != closure_5[item.id];
+          tmp2 = null != closure_4[item.id];
           tmp3 = jsx;
-          obj = { guild: item, gameId: closure_5[item.id], cardAction, onDismiss: null };
+          obj = { guild: item, gameId: closure_4[item.id], onDismiss: null };
           tmp4 = closure_1(closure_2[13]);
           if (tmp2) {
             tmp = onDismiss;
@@ -332,35 +359,28 @@ export const OneColumnGuildUpsellList = ReactCompilerGating.isReactCompilerEnabl
           return tmp3(tmp4, obj, item.id);
         }
       }
-      cResult[10] = cardAction;
-      cResult[11] = stateFromStoresObject;
-      cResult[12] = onDismiss;
-      cResult[13] = V;
-      const tmpResult = cardAction(ref[10]);
+      cResult[10] = stateFromStoresObject;
+      cResult[11] = onDismiss;
+      cResult[12] = P;
+      const tmpResult = onDismiss(first1[10]);
     }
-  : function OneColumnGuildUpsellList(cardAction) {
-      cardAction = cardAction.cardAction;
-      const onDismiss = cardAction.onDismiss;
-      let first;
-      noop = undefined;
+  : function OneColumnGuildUpsellList(onDismiss) {
+      onDismiss = onDismiss.onDismiss;
+      first = undefined;
+      _slicedToArray = undefined;
       let stateFromStoresObject;
-      ({ suggestedGuilds, contentContainerStyle, subheader } = cardAction);
-      const callback = noop.useCallback((id) => id.id, []);
-      const ref = noop.useRef(null);
-      const tmp4 = first(
-        noop.useState(() => closure_8 > 0),
-        2,
-      );
-      first = tmp4[0];
-      noop = tmp4[1];
+      ({ suggestedGuilds, contentContainerStyle, subheader } = onDismiss);
+      const callback = stateFromStoresObject.useCallback((id) => id.id, []);
+      const ref = stateFromStoresObject.useRef(null);
+      [first, _slicedToArray] = stateFromStoresObject.useState(() => closure_8 > 0);
       const items = [first];
-      const callback1 = noop.useCallback((nativeEvent) => {
+      const callback1 = stateFromStoresObject.useCallback((nativeEvent) => {
         const y = nativeEvent.nativeEvent.contentOffset.y;
       }, []);
       const items1 = [first];
-      const callback2 = noop.useCallback(() => {
+      const callback2 = stateFromStoresObject.useCallback(() => {
         if (first) {
-          offset = closure_8;
+          const offset = closure_8;
           let current = ref.current;
           if (current != null) {
             let obj = { offset: tmp, animated: false };
@@ -373,39 +393,39 @@ export const OneColumnGuildUpsellList = ReactCompilerGating.isReactCompilerEnabl
               const obj = { offset, animated: false };
               current.scrollToOffset(obj);
             }
-            closure_4(false);
+            closure_3(false);
           });
         }
       }, items);
-      const effect = noop.useEffect(() => {
+      const effect = stateFromStoresObject.useEffect(() => {
         if (first) {
           const _setTimeout = setTimeout;
-          const timeout = setTimeout(() => closure_1_4(false), 500);
+          const timeout = setTimeout(() => closure_1_3(false), 500);
           return () => clearTimeout(closure_0);
         }
       }, items1);
       let tmp = closure_9();
-      const items2 = [stateFromStoresObject];
-      stateFromStoresObject = cardAction(ref[10]).useStateFromStoresObject(items2, () =>
-        stateFromStoresObject.getGuildGameIds(),
+      const items2 = [MobileGameCommunitiesStore];
+      stateFromStoresObject = onDismiss(first[10]).useStateFromStoresObject(items2, () =>
+        guildGameIds.getGuildGameIds(),
       );
-      let obj = cardAction(ref[10]);
-      const items3 = [onDismiss, stateFromStoresObject, cardAction];
-      const callback3 = noop.useCallback((item) => {
+      let obj = onDismiss(first[10]);
+      const items3 = [onDismiss, stateFromStoresObject];
+      const callback3 = stateFromStoresObject.useCallback((item) => {
         item = item.item;
         let tmp = null;
-        const obj = { guild: item, gameId: stateFromStoresObject[item.id], cardAction, onDismiss: null };
+        const obj = { guild: item, gameId: stateFromStoresObject[item.id], onDismiss: null };
         if (tmp2) {
           tmp = onDismiss;
         }
         obj.onDismiss = tmp;
         return jsx(
           GameCommunityMultiGuildUpsellCardDefault,
-          { guild: item, gameId: stateFromStoresObject[item.id], cardAction, onDismiss: null },
+          { guild: item, gameId: stateFromStoresObject[item.id], onDismiss: null },
           item.id,
         );
       }, items3);
-      const tmp10 = onDismiss(ref[11]);
+      const tmp10 = ref(first[11]);
       const obj2 = {
         ref,
         style: null,
@@ -428,8 +448,7 @@ export const OneColumnGuildUpsellList = ReactCompilerGating.isReactCompilerEnabl
       obj2.style = hidden;
       obj2.onViewableItemsChanged = closure_10(
         stateFromStoresObject,
-        onDismiss(ref[11])(onDismiss(ref[12]).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT)
-          .analyticsLocations,
+        ref(first[11])(ref(first[12]).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT).analyticsLocations,
       );
       obj2.viewabilityConfig = viewabilityConfig;
       obj2.contentContainerStyle = contentContainerStyle;
@@ -439,7 +458,7 @@ export const OneColumnGuildUpsellList = ReactCompilerGating.isReactCompilerEnabl
       obj2.renderItem = callback3;
       obj2.onScroll = callback1;
       obj2.onLoad = callback2;
-      return jsx(cardAction(ref[14]).FlashList, {
+      return jsx(onDismiss(first[14]).FlashList, {
         ref,
         style: null,
         onViewableItemsChanged: null,

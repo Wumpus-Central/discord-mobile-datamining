@@ -126,8 +126,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const mapped = keys.map(tmp16);
         const container = tmp4.container;
-        const Form = tmp(8919).Form;
-        const Stack = tmp(5964).Stack;
+        const Form = tmp(8926).Form;
+        const Stack = tmp(5963).Stack;
       }
     }
   : function UserSettingsCommunityNotifications() {
@@ -179,8 +179,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
           }),
         };
-        obj3.children = closure_4(tmp2(5964).Stack, obj4);
-        tmp5 = closure_4(tmp2(8919).Form, obj3);
+        obj3.children = closure_4(tmp2(5963).Stack, obj4);
+        tmp5 = closure_4(tmp2(8926).Form, obj3);
       }
       return tmp5;
     };

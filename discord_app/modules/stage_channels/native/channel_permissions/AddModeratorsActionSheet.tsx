@@ -7,7 +7,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const RowType = fn(7859).RowType;
+const RowType = fn(7860).RowType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 } };
@@ -31,20 +31,20 @@ export default function AddModeratorsActionSheet(channel) {
         row = row.row;
         if (row.rowType === constants.ROLE) {
           closure_1 = closure_1 + 1;
-          let moderatorOverwrite = channel(6624).createModeratorOverwrite(
+          let moderatorOverwrite = channel(6623).createModeratorOverwrite(
             row.id,
             channel(2000).PermissionOverwriteType.ROLE,
             closure_0,
           );
-          const obj2 = channel(6624);
+          const obj2 = channel(6623);
         } else {
           closure_0 = closure_0 + 1;
-          moderatorOverwrite = channel(6624).createModeratorOverwrite(
+          moderatorOverwrite = channel(6623).createModeratorOverwrite(
             row.id,
             channel(2000).PermissionOverwriteType.MEMBER,
             closure_0,
           );
-          const obj = channel(6624);
+          const obj = channel(6623);
         }
         return moderatorOverwrite;
       });
@@ -109,7 +109,7 @@ export default function AddModeratorsActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = <tmp13 {...obj7} />;
-      obj4.header = jsx(tmp4(7232).BottomSheetTitleHeader, obj2);
+      obj4.header = jsx(tmp4(7233).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = {
         inActionSheet: true,
@@ -119,7 +119,7 @@ export default function AddModeratorsActionSheet(channel) {
         pendingAdditions,
         setPendingAdditions: tmp2[1],
       };
-      obj5.children = jsx(tmp7(8971), {
+      obj5.children = jsx(tmp7(8978), {
         inActionSheet: true,
         channel,
         guild: stateFromStores,

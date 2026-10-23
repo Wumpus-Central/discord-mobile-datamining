@@ -102,6 +102,69 @@ const obj = {
       }
     })();
   },
+  fetchInvitableGameOrganizations(arg0) {
+    closure_0 = arg0;
+    return (async () => {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              const guild_ids = tmp5;
+              let body;
+              const HTTP = guild_ids(1297).HTTP;
+              const request = { url: constants.GAME_ORGANIZATIONS_INVITABLE, query: null, rejectWithError: true };
+              const obj4 = { guild_ids };
+              request.query = obj4;
+              dependencyMap = 1;
+              c3 = 1;
+              const obj5 = { value: HTTP.get(request), done: false };
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            body = value.body;
+            const obj7 = {
+              type: "INVITABLE_GAME_ORGANIZATIONS_FETCH_SUCCESS",
+              guildIds: closure_129_0,
+              gameOrganizations: body,
+            };
+            tmp2(584).dispatch(obj7);
+            c3 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp13) {
+          c3 = tmp;
+          throw tmp13;
+        }
+      }
+    })();
+  },
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationInviteActionCreators.tsx");

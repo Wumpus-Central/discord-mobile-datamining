@@ -5,8 +5,8 @@ import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import util from "../intl/index.native.tsx";
 import FastImageDefault from "common/FastImage.tsx";
 import Pressables from "../design/void/Pressables/native/Pressables.tsx";
-import _modDef11659 from "../../_runtime/metro/11659__.js";
-import _modDef11660 from "../../_runtime/metro/11660__.js";
+import _modDef11670 from "../../_runtime/metro/11670__.js";
+import _modDef11671 from "../../_runtime/metro/11671__.js";
 import useFetchStreamPreviewDefault from "../modules/go_live/useFetchStreamPreview.tsx";
 import noop from "../../_runtime/metro/00019__.js";
 import ThemeStore from "../modules/user_settings/ThemeStore.tsx";
@@ -42,9 +42,9 @@ DefaultFallback.prototype["render"] = function render() {
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   const tmp6 = FastImageDefault;
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp4Result = _modDef11659;
+    let tmp4Result = _modDef11670;
   } else {
-    tmp4Result = _modDef11660;
+    tmp4Result = _modDef11671;
   }
   obj2.source = tmp4Result;
   obj.children = hasOwnProperty(tmp6, obj2);

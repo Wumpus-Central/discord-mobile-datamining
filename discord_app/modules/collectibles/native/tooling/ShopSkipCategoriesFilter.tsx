@@ -162,7 +162,7 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
                           const obj4 = { spacing: 8, children: null };
                           const items1 = [tmp13, tmp35];
                           obj4.children = items1;
-                          const tmp41 = closure_6(tmp(5964).Stack, obj4);
+                          const tmp41 = closure_6(tmp(5963).Stack, obj4);
                           cResult[32] = tmp35;
                           cResult[33] = tmp13;
                           cResult[34] = tmp41;
@@ -288,6 +288,6 @@ export const ShopSkipCategoriesFilter = ReactCompilerGating.isReactCompilerEnabl
       obj4.children = items3;
       items1[1] = closure_6(closure_2, obj4);
       obj7.children = items1;
-      obj2.children = closure_6(stateFromStores(5964).Stack, obj7);
+      obj2.children = closure_6(stateFromStores(5963).Stack, obj7);
       return closure_5(closure_2, obj2);
     };

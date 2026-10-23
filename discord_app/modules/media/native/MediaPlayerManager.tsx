@@ -44,7 +44,7 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 150
+    currentlyDisplayedChannelId: 24
   };
   return obj;
 });

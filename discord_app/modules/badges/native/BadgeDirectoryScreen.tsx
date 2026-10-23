@@ -82,10 +82,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === stateFromStores1) {
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const headerCloseButton = Navigator(6910).getHeaderCloseButton(Navigator(11085).closeBadgeDirectoryScreen);
+            const headerCloseButton = Navigator(6909).getHeaderCloseButton(Navigator(11094).closeBadgeDirectoryScreen);
             cResult[8] = headerCloseButton;
             let tmp15 = headerCloseButton;
-            const NavigatorResult2 = Navigator(6910);
+            const NavigatorResult2 = Navigator(6909);
           } else {
             tmp15 = cResult[8];
           }
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[14] === view.sheetHeader) {
                   }
                 }
-                Navigator = Navigator(7081).Navigator;
+                Navigator = Navigator(7080).Navigator;
                 const obj2 = {
                   screens: sheetHeader,
                   initialRouteName,
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp18;
                 }
                 const obj3 = { screens: sheetHeader, initialRouteName, viewStyle: view.view };
-                const tmp21 = jsx(Navigator(11113).Modal, {
+                const tmp21 = jsx(Navigator(11122).Modal, {
                   screens: sheetHeader,
                   initialRouteName,
                   viewStyle: view.view,
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[19] = tmp21;
                 tmp18 = tmp21;
               }
-              NavigatorResult3 = Navigator(11085);
+              NavigatorResult3 = Navigator(11094);
             }
           }
           const obj4 = {};
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               viewStyle: null,
             };
             ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-            let tmp9Result = jsx(tmp2(7081).Navigator, {
+            let tmp9Result = jsx(tmp2(7080).Navigator, {
               screens: memo,
               initialRouteName,
               headerStatusBarHeight: 0,
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           } else {
             const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-            tmp9Result = jsx(tmp2(11113).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+            tmp9Result = jsx(tmp2(11122).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
           }
           return tmp9Result;
         }

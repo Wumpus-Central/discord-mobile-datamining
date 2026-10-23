@@ -7,7 +7,7 @@ import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
-import _modDef8764 from "../../../../_runtime/metro/08764__.js";
+import _modDef8771 from "../../../../_runtime/metro/08771__.js";
 import AdsVideoTypes from "AdsVideoTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -27,7 +27,7 @@ let rect = {
   top: nativeDefault.space.PX_16,
   bottom: nativeDefault.space.PX_16,
 };
-const _isNativeReflectConstruct = noop.memo(_modDef8764);
+const _isNativeReflectConstruct = noop.memo(_modDef8771);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
 }

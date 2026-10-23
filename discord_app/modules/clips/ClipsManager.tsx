@@ -21,7 +21,7 @@ const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
 const getSystemAnalyticsInfo = fn(5719).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8133);
+const ClipsConstants = fn(8134);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1,
@@ -31,7 +31,7 @@ const ClipsConstants = fn(8133);
 } = ClipsConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(6629).StreamTypes;
+const StreamTypes = fn(6628).StreamTypes;
 const Features = fn(5704).Features;
 class ClipsManager extends tmp4 {
   constructor() {

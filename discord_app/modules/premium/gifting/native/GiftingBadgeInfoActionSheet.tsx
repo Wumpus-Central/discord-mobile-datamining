@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8654).getSingleRequirementThreshold;
+let closure_7 = fn(8661).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1087).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [BadgeDirectoryStore];
         const fn = function x() {
-          return badgeById.getBadgeById(closure_0(8646).BadgeId.GIFTING);
+          return badgeById.getBadgeById(closure_0(8653).BadgeId.GIFTING);
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp;
       let items = [BadgeDirectoryStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        badgeById.getBadgeById(closure_0(8646).BadgeId.GIFTING),
+        badgeById.getBadgeById(closure_0(8653).BadgeId.GIFTING),
       );
       let obj = require("initialize");
       const items1 = [AccessibilityStore];

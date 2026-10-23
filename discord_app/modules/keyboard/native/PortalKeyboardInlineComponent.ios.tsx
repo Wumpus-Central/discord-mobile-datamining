@@ -25,7 +25,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const tmp9 = id(7013)(first);
+        const tmp9 = id(7012)(first);
         noop = tmp9;
         let obj = messagesRef(576);
         let obj2 = noop;
@@ -119,11 +119,11 @@ export default noop.memo(
                       const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                       const result1 = DCDChatManager3.customKeyboardWillShow(
                         tmp38,
-                        messagesRef(10884).getKeyboardActionSheetHeight().minimum,
+                        messagesRef(10892).getKeyboardActionSheetHeight().minimum,
                         0.25,
                         7,
                       );
-                      const obj3 = messagesRef(10884);
+                      const obj3 = messagesRef(10892);
                     }
                   }
                 }
@@ -195,7 +195,7 @@ export default noop.memo(
         const id = noop.useId();
         const tmp2 = id(5147)();
         dependencyMap = tmp2;
-        let tmp4 = id(7013)({ includeCustomKeyboard: false });
+        let tmp4 = id(7012)({ includeCustomKeyboard: false });
         noop = tmp4;
         let tmp3 = id(1899)();
         const keyboardContextForType = messagesRef(5147).useKeyboardContextForType(
@@ -241,11 +241,11 @@ export default noop.memo(
                       const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                       const result1 = DCDChatManager3.customKeyboardWillShow(
                         tmp38,
-                        messagesRef(10884).getKeyboardActionSheetHeight().minimum,
+                        messagesRef(10892).getKeyboardActionSheetHeight().minimum,
                         0.25,
                         7,
                       );
-                      const obj3 = messagesRef(10884);
+                      const obj3 = messagesRef(10892);
                     }
                   }
                 }

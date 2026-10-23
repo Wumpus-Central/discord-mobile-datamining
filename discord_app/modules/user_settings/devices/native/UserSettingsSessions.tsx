@@ -4,12 +4,12 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import MobilePhoneIcon from "../../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef8099 from "../../../../../_runtime/metro/08099__.js";
+import _modDef8100 from "../../../../../_runtime/metro/08100__.js";
 import ScreenIcon from "../../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
-import _modDef11663 from "../../../../../_runtime/metro/11663__.js";
+import _modDef11674 from "../../../../../_runtime/metro/11674__.js";
 import AuthSessionsActionCreators from "../../../auth_sessions/AuthSessionsActionCreators.tsx";
-import _modDef16164 from "../../../../../_runtime/metro/16164__.js";
-import _modDef16165 from "../../../../../_runtime/metro/16165__.js";
+import _modDef16182 from "../../../../../_runtime/metro/16182__.js";
+import _modDef16183 from "../../../../../_runtime/metro/16183__.js";
 import VrHeadsetIcon from "../../../../design/components/Icon/native/redesign/generated/VrHeadsetIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -29,15 +29,15 @@ function getOsDetails(text) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              const obj2 = { text, iconSource: _modDef11663, IconComponent: VrHeadsetIcon.VrHeadsetIcon };
+              const obj2 = { text, iconSource: _modDef11674, IconComponent: VrHeadsetIcon.VrHeadsetIcon };
               return obj2;
             } else {
-              const obj = { text, iconSource: _modDef16165, IconComponent: ScreenIcon.ScreenIcon };
+              const obj = { text, iconSource: _modDef16183, IconComponent: ScreenIcon.ScreenIcon };
               return obj;
             }
           }
         }
-        const obj3 = { text, iconSource: _modDef11663, IconComponent: MobilePhoneIcon.MobilePhoneIcon };
+        const obj3 = { text, iconSource: _modDef11674, IconComponent: MobilePhoneIcon.MobilePhoneIcon };
         return obj3;
       }
     }
@@ -45,7 +45,7 @@ function getOsDetails(text) {
   const obj4 = { text: null, iconSource: null, IconComponent: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.cDHCNY);
-  obj4.iconSource = _modDef16165;
+  obj4.iconSource = _modDef16183;
   obj4.IconComponent = ScreenIcon.ScreenIcon;
   return obj4;
 }
@@ -85,7 +85,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = otherSessions(576).c(31);
       const tmp4 = closure_13();
       const obj = otherSessions(576);
-      let authSessions = otherSessions(15993).useAuthSessions();
+      let authSessions = otherSessions(16011).useAuthSessions();
       ({ currentSession, otherSessions } = authSessions);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -99,7 +99,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const obj2 = otherSessions(15993);
+      const obj2 = otherSessions(16011);
       const stateFromStores = otherSessions(504).useStateFromStores(tmp6, tmp7);
       const tmp10 = _slicedToArray(noop.useState(false), 2);
       closure_1 = tmp10[1];
@@ -164,7 +164,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp16) {
           const obj6 = { title: tmp14, hasIcons: true, children: tmp16 };
-          const tmp22 = closure_10(otherSessions(6973).TableRowGroup, obj6);
+          const tmp22 = closure_10(otherSessions(6972).TableRowGroup, obj6);
           cResult[10] = tmp16;
           cResult[11] = tmp22;
           let tmp20 = tmp22;
@@ -190,7 +190,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               obj7.onPress = function onPress() {
                 return AuthSessionsActionCreators.logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
               };
-              tmp32 = closure_10(otherSessions(6889).TableRow, obj7);
+              tmp32 = closure_10(otherSessions(6888).TableRow, obj7);
             }
             cResult[15] = otherSessions;
             cResult[16] = tmp32;
@@ -210,7 +210,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { spacing: 24, style: tmp4.list, children: null };
           const items2 = [tmp20, tmp24, tmp31];
           obj8.children = items2;
-          const tmp36 = closure_11(otherSessions(5964).Stack, obj8);
+          const tmp36 = closure_11(otherSessions(5963).Stack, obj8);
           cResult[17] = tmp4.list;
           cResult[18] = tmp20;
           cResult[19] = tmp24;
@@ -227,7 +227,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             closure_10(closure_16, {}),
           ];
           obj9.children = items3;
-          let tmp26 = closure_11(otherSessions(6973).TableRowGroup, obj9);
+          let tmp26 = closure_11(otherSessions(6972).TableRowGroup, obj9);
         } else {
           let mfaEnabled1;
           if (stateFromStores != null) {
@@ -282,7 +282,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj12 = { bottom: true, children: null };
       const items4 = [tmp48, tmp34];
       obj12.children = items4;
-      const tmp52 = closure_11(otherSessions(7207).SafeAreaPaddingView, obj12);
+      const tmp52 = closure_11(otherSessions(7206).SafeAreaPaddingView, obj12);
       cResult[25] = tmp34;
       cResult[26] = tmp48;
       cResult[27] = tmp52;
@@ -291,9 +291,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function UserSettingsSessions() {
       const tmp = closure_13();
-      let authSessions = otherSessions(15993).useAuthSessions();
+      let authSessions = otherSessions(16011).useAuthSessions();
       ({ currentSession, otherSessions } = authSessions);
-      const obj = otherSessions(15993);
+      const obj = otherSessions(16011);
       const items = [UserStore];
       const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj2 = otherSessions(504);
@@ -324,7 +324,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           tmp21Result = closure_10(closure_15, obj6);
         }
         obj5.children = tmp21Result;
-        const items1 = [closure_10(otherSessions(6973).TableRowGroup, obj5), ,];
+        const items1 = [closure_10(otherSessions(6972).TableRowGroup, obj5), ,];
         if (otherSessions.length > 0) {
           const obj7 = { title: null, hasIcons: true, children: null };
           const intl = otherSessions(1128).intl;
@@ -334,7 +334,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             closure_10(closure_16, {}),
           ];
           obj7.children = items2;
-          let tmp20Result = closure_11(otherSessions(6973).TableRowGroup, obj7);
+          let tmp20Result = closure_11(otherSessions(6972).TableRowGroup, obj7);
         } else {
           let mfaEnabled;
           if (stateFromStores != null) {
@@ -353,11 +353,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           obj8.onPress = function onPress() {
             return AuthSessionsActionCreators.logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
           };
-          tmp21Result2 = closure_10(otherSessions(6889).TableRow, obj8);
+          tmp21Result2 = closure_10(otherSessions(6888).TableRow, obj8);
         }
         items1[2] = tmp21Result2;
         obj4.children = items1;
-        tmp20Result2 = closure_11(otherSessions(5964).Stack, obj4);
+        tmp20Result2 = closure_11(otherSessions(5963).Stack, obj4);
       }
       const obj9 = { style: tmp.container, children: null };
       const obj10 = { bottom: true, children: null };
@@ -366,7 +366,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       obj11.children = intl4.string(otherSessions(1128).t.zZp618);
       const items3 = [closure_10(otherSessions(5220).Text, obj11), tmp20Result2];
       obj10.children = items3;
-      obj9.children = closure_11(otherSessions(7207).SafeAreaPaddingView, obj10);
+      obj9.children = closure_11(otherSessions(7206).SafeAreaPaddingView, obj10);
       return closure_10(closure_7, obj9);
     };
 fn(558);
@@ -466,7 +466,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                       }
                                       const obj3 = { icon: tmp39, label: tmp35, subLabel: tmp50, trailing: tmp19 };
-                                      const tmp56 = closure_10(tmp(6889).TableRow, obj3);
+                                      const tmp56 = closure_10(tmp(6888).TableRow, obj3);
                                       cResult[42] = tmp19;
                                       cResult[43] = tmp35;
                                       cResult[44] = tmp50;
@@ -522,7 +522,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                             tmp42 = tmp43;
                           }
                           const obj9 = { source: tmp9, IconComponent: tmp8 };
-                          const tmp41 = closure_10(tmp(6889).TableRow.Icon, obj9);
+                          const tmp41 = closure_10(tmp(6888).TableRow.Icon, obj9);
                           cResult[28] = tmp8;
                           cResult[29] = tmp9;
                           cResult[30] = tmp41;
@@ -584,9 +584,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 return AuthSessionsActionCreators.logOutSessions(session.id_hash);
               };
               obj15.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
-              const obj16 = { style: tmp4.logoutButton, source: _modDef8099 };
+              const obj16 = { style: tmp4.logoutButton, source: _modDef8100 };
               obj15.children = closure_10(tmp(1202).Icon, obj16);
-              tmp20 = closure_10(tmp(6894).PressableOpacity, obj15);
+              tmp20 = closure_10(tmp(6893).PressableOpacity, obj15);
             }
             cResult[11] = current;
             cResult[12] = session.id_hash;
@@ -628,8 +628,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let formatDateResult = null;
       if (!current) {
-        formatDateResult = tmp(15993).formatDate(session.approx_last_used_time);
-        const tmpResult = tmp(15993);
+        formatDateResult = tmp(16011).formatDate(session.approx_last_used_time);
+        const tmpResult = tmp(16011);
       }
       cResult[8] = current;
       cResult[9] = session.approx_last_used_time;
@@ -667,8 +667,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = getOsDetails(os));
       if (!current) {
-        formatDateResult = session(15993).formatDate(session.approx_last_used_time);
-        const obj = session(15993);
+        formatDateResult = session(16011).formatDate(session.approx_last_used_time);
+        const obj = session(16011);
       }
       const items = [text, platform];
       const found = items.filter(session(1388).isNotNullish);
@@ -687,9 +687,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           return AuthSessionsActionCreators.logOutSessions(session.id_hash);
         };
         obj2.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
-        const obj3 = { style: tmp.logoutButton, source: _modDef8099 };
+        const obj3 = { style: tmp.logoutButton, source: _modDef8100 };
         obj2.children = closure_10(tmp11(1202).Icon, obj3);
-        tmp13 = closure_10(tmp11(6894).PressableOpacity, obj2);
+        tmp13 = closure_10(tmp11(6893).PressableOpacity, obj2);
       }
       const obj4 = { style: tmp.sessionInfo, accessible: true, children: null };
       const obj5 = { style: tmp.sessionInfoRow, children: null };
@@ -715,7 +715,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { variant: "text-md/semibold", children: found[0] };
       const tmp5Result = getOsDetails(os);
       const obj10 = {
-        icon: closure_10(session(6889).TableRow.Icon, { source: iconSource, IconComponent }),
+        icon: closure_10(session(6888).TableRow.Icon, { source: iconSource, IconComponent }),
         label: closure_10(closure_6, obj4),
         subLabel: null,
         trailing: null,
@@ -743,7 +743,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       items3[1] = tmp16Result4;
       obj10.subLabel = closure_11(closure_6, { accessible: true, children: items3 });
       obj10.trailing = tmp13;
-      return closure_10(session(6889).TableRow, obj10);
+      return closure_10(session(6888).TableRow, obj10);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -752,8 +752,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = navigation(576);
       navigation = navigation(1505).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { variant: "translucent", source: _modDef16164 };
-        const tmp9 = closure_10(tmp(6889).TableRow.Icon, obj3);
+        const obj3 = { variant: "translucent", source: _modDef16182 };
+        const tmp9 = closure_10(tmp(6888).TableRow.Icon, obj3);
         const intl = tmp(1128).intl;
         const stringResult = intl.string(tmp(1128).t.iUa0sn);
         cResult[0] = tmp9;
@@ -780,7 +780,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp11) {
         const obj5 = { icon: tmp5, label: tmp6, subLabel: tmp11 };
-        const tmp15 = closure_10(tmp(6889).TableRow, obj5);
+        const tmp15 = closure_10(tmp(6888).TableRow, obj5);
         cResult[4] = tmp11;
         cResult[5] = tmp15;
         let tmp13 = tmp15;
@@ -793,7 +793,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       _require = require("useNavigation").useNavigation();
       const obj2 = { icon: null, label: null, subLabel: null };
       const obj = require("useNavigation");
-      obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef16164 });
+      obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef16182 });
       const intl = require("util").intl;
       obj2.label = intl.string(require("util").t.iUa0sn);
       const intl2 = require("util").intl;

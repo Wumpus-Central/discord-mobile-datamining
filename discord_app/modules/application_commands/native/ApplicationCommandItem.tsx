@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10083).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10090).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4969);
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               };
                               const items1 = [tmp25, tmp36, tmp40];
                               obj4.children = items1;
-                              const tmp45 = closure_8(section(6894).PressableOpacity, obj4);
+                              const tmp45 = closure_8(section(6893).PressableOpacity, obj4);
                               cResult[32] = onPress;
                               cResult[33] = tmp36;
                               cResult[34] = tmp40;
@@ -230,12 +230,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = formatToPlainStringResult;
         }
         const tmpResult3 = section(504);
-        const applicationCommandsIconSource = section(13047).getApplicationCommandsIconSource(section, stateFromStores);
+        const applicationCommandsIconSource = section(13063).getApplicationCommandsIconSource(section, stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = section;
         cResult[6] = applicationCommandsIconSource;
         tmp10 = applicationCommandsIconSource;
-        const tmpResult4 = section(13047);
+        const tmpResult4 = section(13063);
       }
       const fn = function c() {
         if (null != guildId) {

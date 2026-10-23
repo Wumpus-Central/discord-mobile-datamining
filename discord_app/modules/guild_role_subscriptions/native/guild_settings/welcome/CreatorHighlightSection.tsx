@@ -5,8 +5,8 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
-import _mod7206 from "../../../../../../discord_common/js/packages/flash-list/index.js";
-import _modDef9833 from "../../../../../../_runtime/metro/09833__.js";
+import _mod7205 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _modDef9840 from "../../../../../../_runtime/metro/09840__.js";
 import EmojiIconDefault from "../../components/EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -114,7 +114,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                 size: native.Icon.Sizes.SMALL,
                 color: nativeDefault.unsafe_rawColors.WHITE,
                 style: tmp4.subscriberCountIcon,
-                source: _modDef9833,
+                source: _modDef9840,
               };
               const tmp12 = hasOwnProperty(native.Icon, obj2);
               cResult[7] = tmp4.subscriberCountIcon;
@@ -193,7 +193,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.WHITE,
           style: tmp.subscriberCountIcon,
-          source: _modDef9833,
+          source: _modDef9840,
         }),
       ];
       const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
@@ -217,7 +217,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const guild_id = highlightedCreatorGuild.guild_id;
       ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-      const tmp7 = guild_id(19134)(guild_id, 3, 60);
+      const tmp7 = guild_id(19157)(guild_id, 3, 60);
       dependencyMap = tmp7;
       const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
       if (cResult[0] === tmp7.details) {
@@ -227,7 +227,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp8) {
           const _Symbol2 = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp67 = closure_5(tmp6(19106), {});
+            const tmp67 = closure_5(tmp6(19129), {});
             cResult[3] = tmp67;
             let tmp65 = tmp67;
           } else {
@@ -546,12 +546,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const guild_id = highlightedCreatorGuild.guild_id;
       let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
       ({ quote, quote_attribution } = highlightedCreatorGuild);
-      const tmp6 = guild_id(19134)(guild_id, 3, 60);
+      const tmp6 = guild_id(19157)(guild_id, 3, 60);
       dependencyMap = tmp6;
       const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
       let items = [hasAllImperativeDetails, tmp6];
       if (tmp6.isLoading) {
-        const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(19106), {}) };
+        const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(19129), {}) };
         return closure_5(View, obj2);
       } else if (hasAllImperativeDetails) {
         const details = tmp6.details;
@@ -695,7 +695,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== highlightedCreators) {
         const obj2 = { data: highlightedCreators, horizontal: true, keyExtractor: first, renderItem };
-        const tmp8 = hasOwnProperty(_mod7206.FlashList, obj2);
+        const tmp8 = hasOwnProperty(_mod7205.FlashList, obj2);
         cResult[1] = highlightedCreators;
         cResult[2] = tmp8;
         let tmp5 = tmp8;
@@ -705,7 +705,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return tmp5;
     }
   : function CreatorHighlightSection(data) {
-      return hasOwnProperty(_mod7206.FlashList, {
+      return hasOwnProperty(_mod7205.FlashList, {
         data: data.highlightedCreators,
         horizontal: true,
         keyExtractor(guild_id) {

@@ -35,7 +35,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }),
       );
     };
-const SettingBuilders = fn(11172);
+const SettingBuilders = fn(11181);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountUsernameSettingDescription() {
       let Text = require;
@@ -84,7 +84,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8317).MobileUserSettings.ACCOUNT,
+  parent: fn(8318).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountUsernameSettingDescription() {

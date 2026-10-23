@@ -121,8 +121,8 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
     }
   })();
 };
-const setSendState = fn(9100).setSendState;
-const InviteSendStates = fn(7793).InviteSendStates;
+const setSendState = fn(9107).setSendState;
+const InviteSendStates = fn(7794).InviteSendStates;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_organization_invites/sendGameOrganizationInvite.tsx");

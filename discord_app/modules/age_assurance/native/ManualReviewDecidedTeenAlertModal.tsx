@@ -8,7 +8,7 @@ import ManualReviewInconclusiveCopyExperiment from "../ManualReviewInconclusiveC
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6642).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6641).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               variant: "text-md/normal",
               color: "text-link",
               onPress() {
-                const obj = closure_1_1(7867);
+                const obj = closure_1_1(7868);
                 const intl = closure_1_0(1128).intl;
                 return obj.openUrl(closure_1_1(2067).getArticleURL(intl.string(closure_1_1(3154).agiNYw)));
               },
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             variant: "text-md/normal",
             color: "text-link",
             onPress() {
-              const obj = closure_1_1(7867);
+              const obj = closure_1_1(7868);
               const intl = closure_1_0(1128).intl;
               return obj.openUrl(closure_1_1(2067).getArticleURL(intl.string(closure_1_1(3154).agiNYw)));
             },

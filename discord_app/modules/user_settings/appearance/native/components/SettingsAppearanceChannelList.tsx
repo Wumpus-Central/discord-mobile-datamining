@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   showsVerticalScrollIndicator: false,
                   importantForAccessibility: "no-hide-descendants",
                 };
-                const tmp21 = closure_5(animatedStyles(7206).FlashList, obj5);
+                const tmp21 = closure_5(animatedStyles(7205).FlashList, obj5);
                 cResult[14] = data;
                 cResult[15] = tmp5;
                 cResult[16] = tmp21;
@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         showsVerticalScrollIndicator: false,
         importantForAccessibility: "no-hide-descendants",
       };
-      items2[1] = closure_5(animatedStyles(7206).FlashList, obj4);
+      items2[1] = closure_5(animatedStyles(7205).FlashList, obj4);
       items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, {
         visible: isNitroLocked,
         theme: themes[themeIndex],

@@ -7,10 +7,10 @@ import LegacyBaseButton from "../../../../../_runtime/05283_LegacyBaseButton.js"
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LaunchPadTypes = fn(11168).LaunchPadTypes;
+const LaunchPadTypes = fn(11177).LaunchPadTypes;
 let PlatformUtils = fn(1384);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(17325);
+const PanelsConfig = fn(17347);
 let panelsConfig = PlatformUtils
   ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG
   : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;

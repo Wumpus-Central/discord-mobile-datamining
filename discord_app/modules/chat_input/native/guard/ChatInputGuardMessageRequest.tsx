@@ -429,14 +429,14 @@ export default noop.memo(
         };
         importDefault = channel(1505).useNavigation();
         let obj = channel(1505);
-        const isMessageRequestRestrictedViewer = channel(13270).useIsMessageRequestRestrictedViewer();
-        let obj2 = channel(13270);
+        const isMessageRequestRestrictedViewer = channel(13284).useIsMessageRequestRestrictedViewer();
+        let obj2 = channel(13284);
         const items = [closure_4];
         const stateFromStores = channel(504).useStateFromStores(items, () =>
           UserStore.getUser(channel.getRecipientId()),
         );
         let obj3 = channel(504);
-        const messageRequestActions = channel(13271).useMessageRequestActions({
+        const messageRequestActions = channel(13285).useMessageRequestActions({
           user: stateFromStores,
           onError: function handleRequestError() {
             const obj2 = { text: null, variant: "critical" };
@@ -483,7 +483,7 @@ export default noop.memo(
           buttonSecondaryDisabled: null,
           buttonSecondaryLoading: null,
         };
-        let obj4 = channel(13271);
+        let obj4 = channel(13285);
         let obj5 = {
           user: stateFromStores,
           onError: function handleRequestError() {

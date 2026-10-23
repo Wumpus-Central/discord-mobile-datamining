@@ -135,7 +135,7 @@ export const readConjureAppServerPresence = function readConjureAppServerPresenc
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(6760);
+              obj2 = application_id(6759);
             }
             str2 = tmp7;
           }

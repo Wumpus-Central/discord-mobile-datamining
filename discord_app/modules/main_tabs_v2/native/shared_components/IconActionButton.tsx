@@ -6,11 +6,11 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import Badge from "Badge.tsx";
+import shared_components_Badge from "Badge.tsx";
 import _readOnlyError from "../../../../../_runtime/metro/00377__readOnlyError.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const BadgeDefault = Badge;
+const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const jsxProd = fn(21);
@@ -155,10 +155,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp6;
       }
       const obj2 = { size: null, maskSize: 2, style: null, maskColor: null };
-      obj2.size = Badge.CHANNEL_BADGE_SIZE;
+      obj2.size = shared_components_Badge.CHANNEL_BADGE_SIZE;
       obj2.style = tmp5;
       obj2.maskColor = tmp4.unreadBadgeMask.color;
-      const tmp8 = React4(BadgeDefault, obj2);
+      const tmp8 = React4(shared_components_BadgeDefault, obj2);
       cResult[0] = tmp4.unreadBadgeMask.color;
       cResult[1] = tmp5;
       cResult[2] = tmp8;
@@ -171,12 +171,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_6();
       const obj = {
-        size: Badge.CHANNEL_BADGE_SIZE,
+        size: shared_components_Badge.CHANNEL_BADGE_SIZE,
         maskSize: 2,
         style: "left" === str ? tmp.unreadBadgeLeft : tmp.unreadBadgeRight,
         maskColor: tmp.unreadBadgeMask.color,
       };
-      return React4(BadgeDefault, obj);
+      return React4(shared_components_BadgeDefault, obj);
     };
 let closure_8 = tmp5;
 const size = fn(2);

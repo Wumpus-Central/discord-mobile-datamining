@@ -48,6 +48,12 @@ const dependencyMap = [
   "framesDropped",
   "networkFramesDropped",
   "framesCodecError",
+  "framesCodecErrorNoOutput",
+  "framesCodecErrorTimeout",
+  "framesCodecErrorGeneric",
+  "framesCodecErrorFallback",
+  "framesCodecErrorParameter",
+  "framesCodecErrorOther",
   "bytes",
   "nackCount",
   "pliCount",
@@ -182,6 +188,12 @@ class RawVideoStats {
       bytes: 0,
       framesCodec: 0,
       framesCodecError: null,
+      framesCodecErrorNoOutput: null,
+      framesCodecErrorTimeout: null,
+      framesCodecErrorGeneric: null,
+      framesCodecErrorFallback: null,
+      framesCodecErrorParameter: null,
+      framesCodecErrorOther: null,
       framesNetwork: 0,
       resolution: 0,
       minorResolution: 0,
@@ -236,6 +248,12 @@ RawVideoStats["parseInboundStats"] = function parseInboundStats(found, timestamp
       bytes: 0,
       framesCodec: 0,
       framesCodecError: null,
+      framesCodecErrorNoOutput: null,
+      framesCodecErrorTimeout: null,
+      framesCodecErrorGeneric: null,
+      framesCodecErrorFallback: null,
+      framesCodecErrorParameter: null,
+      framesCodecErrorOther: null,
       framesNetwork: 0,
       resolution: 0,
       minorResolution: 0,
@@ -288,6 +306,36 @@ RawVideoStats["parseInboundStats"] = function parseInboundStats(found, timestamp
         framesDecodeErrors = null;
       }
       merged.framesCodecError = framesDecodeErrors;
+      let prop = found.framesDecodeErrorsNoOutput;
+      if (prop == null) {
+        prop = null;
+      }
+      merged.framesCodecErrorNoOutput = prop;
+      let prop1 = found.framesDecodeErrorsTimeout;
+      if (prop1 == null) {
+        prop1 = null;
+      }
+      merged.framesCodecErrorTimeout = prop1;
+      let prop2 = found.framesDecodeErrorsGeneric;
+      if (prop2 == null) {
+        prop2 = null;
+      }
+      merged.framesCodecErrorGeneric = prop2;
+      let prop3 = found.framesDecodeErrorsFallback;
+      if (prop3 == null) {
+        prop3 = null;
+      }
+      merged.framesCodecErrorFallback = prop3;
+      let prop4 = found.framesDecodeErrorsParameter;
+      if (prop4 == null) {
+        prop4 = null;
+      }
+      merged.framesCodecErrorParameter = prop4;
+      let prop5 = found.framesDecodeErrorsOther;
+      if (prop5 == null) {
+        prop5 = null;
+      }
+      merged.framesCodecErrorOther = prop5;
       ({
         framesReceived: tmp3.framesNetwork,
         packetsReceived: tmp3.packets,
@@ -415,6 +463,12 @@ RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, ti
       bytes: 0,
       framesCodec: 0,
       framesCodecError: null,
+      framesCodecErrorNoOutput: null,
+      framesCodecErrorTimeout: null,
+      framesCodecErrorGeneric: null,
+      framesCodecErrorFallback: null,
+      framesCodecErrorParameter: null,
+      framesCodecErrorOther: null,
       framesNetwork: 0,
       resolution: 0,
       minorResolution: 0,
@@ -466,6 +520,12 @@ RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, ti
         bytes: null,
         framesCodec: null,
         framesCodecError: null,
+        framesCodecErrorNoOutput: null,
+        framesCodecErrorTimeout: null,
+        framesCodecErrorGeneric: null,
+        framesCodecErrorFallback: null,
+        framesCodecErrorParameter: null,
+        framesCodecErrorOther: null,
         framesNetwork: null,
         packets: null,
         packetsLost: null,
@@ -709,6 +769,12 @@ class InboundStats {
         bytes: 0,
         framesCodec: 0,
         framesCodecError: null,
+        framesCodecErrorNoOutput: null,
+        framesCodecErrorTimeout: null,
+        framesCodecErrorGeneric: null,
+        framesCodecErrorFallback: null,
+        framesCodecErrorParameter: null,
+        framesCodecErrorOther: null,
         framesNetwork: 0,
         resolution: 0,
         minorResolution: 0,
@@ -798,6 +864,12 @@ class InboundStats {
         framesDropped: 0,
         networkFramesDropped: 0,
         framesCodecError: 0,
+        framesCodecErrorNoOutput: 0,
+        framesCodecErrorTimeout: 0,
+        framesCodecErrorGeneric: 0,
+        framesCodecErrorFallback: 0,
+        framesCodecErrorParameter: 0,
+        framesCodecErrorOther: 0,
         bytes: 0,
         nackCount: 0,
         pliCount: 0,

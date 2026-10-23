@@ -6,7 +6,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
-import WebView from "../../../../../_runtime/07891_WebView.js";
+import WebView from "../../../../../_runtime/07892_WebView.js";
 import useEmbeddedAppCSPDefault from "../../csp/useEmbeddedAppCSP.tsx";
 import isAllowedFrameNavigation from "../utils/isAllowedFrameNavigation.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";

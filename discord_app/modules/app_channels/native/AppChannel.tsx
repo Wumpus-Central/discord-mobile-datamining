@@ -23,7 +23,7 @@ import useAppChannelClosedDefault from "../useAppChannelClosed.tsx";
 import useChannelAppFrameTeardownDefault from "../../frames/useChannelAppFrameTeardown.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const useChannelContentGate = obj(10857);
+const useChannelContentGate = obj(10865);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -59,15 +59,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 ({ frame, state } = useFrameLifecycleDefault(tmp9));
                 conjureBackgroundFramesDefault(applicationId, surface);
                 const tmp10 = useFrameLifecycleDefault(tmp9);
-                useEdgeOnlySwipeExitDefault(state === tmp(17941).FrameLifecycleState.Launched);
+                useEdgeOnlySwipeExitDefault(state === tmp(17963).FrameLifecycleState.Launched);
                 const tmp5Result = useEdgeOnlySwipeExitDefault;
                 let tmp15 = null;
-                if (state === tmp(17941).FrameLifecycleState.Launched) {
+                if (state === tmp(17963).FrameLifecycleState.Launched) {
                   tmp15 = applicationId;
                 }
                 useInlineFrameOAuthNavigationDefault(tmp15);
                 const tmp5Result3 = useInlineFrameOAuthNavigationDefault;
-                const isConjureChannelCandidate = tmp(7329).useIsConjureChannelCandidate(channel, "AppChannel");
+                const isConjureChannelCandidate = tmp(7330).useIsConjureChannelCandidate(channel, "AppChannel");
                 id = channel.id;
                 if (cResult[9] !== id) {
                   class M {
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                if (tmp(17941).FrameLifecycleState.Launched === state) {
+                if (tmp(17963).FrameLifecycleState.Launched === state) {
                   class M {
                     constructor(arg0) {
                       obj = closure_0(closure_2[15]);
@@ -98,7 +98,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const obj2 = {
                     frameId: frame.id,
-                    level: tmp(11832).FrameStackLevel.WithinAppContent,
+                    level: tmp(11846).FrameStackLevel.WithinAppContent,
                     presentation: tmp7,
                   };
                   const tmp22 = closure_5(FrameRenderTargetDefault, obj2);
@@ -115,7 +115,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const tmpResult = tmp(7329);
+                const tmpResult = tmp(7330);
               }
               const obj3 = { applicationId, surface };
               cResult[6] = applicationId;

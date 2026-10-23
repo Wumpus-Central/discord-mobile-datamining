@@ -28,7 +28,7 @@ let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(9269).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(9276).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -40,7 +40,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(9269).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9276).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -723,14 +723,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = {
           size: "sm",
           variant: "secondary",
-          icon: closure_11(tmp12(9483).LanguageIcon, { size: "sm" }),
+          icon: closure_11(tmp12(9490).LanguageIcon, { size: "sm" }),
           accessibilityLabel: null,
           onPress: null,
         };
         const intl2 = tmp12(1128).intl;
         obj4.accessibilityLabel = intl2.string(tmp12(1128).t.OlOHDH);
         obj4.onPress = callback;
-        showLocaleFilter = closure_11(tmp12(7943).IconButton, obj4);
+        showLocaleFilter = closure_11(tmp12(7944).IconButton, obj4);
       }
       items1[1] = showLocaleFilter;
       obj2.children = items1;

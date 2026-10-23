@@ -6,12 +6,12 @@ import timingPresets from "../../../design/animation/reanimated/timing/timingPre
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const util = SearchField(1128);
-const Text_Text = SearchField(5220);
-const Pressables = SearchField(6894);
-const SearchField2 = SearchField(7131);
-const GifProvider = SearchField(10103);
-const ChevronLargeLeftIcon = SearchField(10112);
+const util = SearchBar(1128);
+const Text_Text = SearchBar(5220);
+const Pressables = SearchBar(6893);
+const Search_SearchBar = SearchBar(7130);
+const GifProvider = SearchBar(10110);
+const ChevronLargeLeftIcon = SearchBar(10119);
 require = fn;
 const View = fn(17).View;
 fn(1087).GIFPickerResultTypes;
@@ -28,14 +28,14 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(10105).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10112).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10105).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10112).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(7010).InputHeights.MD,
+  height: fn(7009).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -302,24 +302,24 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       let obj = columnWidth(ref[11]);
-      class I {
+      const fn = function v() {
+        return { opacity: 1 - sharedValue.get() };
+      };
+      fn.__closure = { progress: sharedValue };
+      fn.__workletHash = 1563139253234;
+      fn.__initData = __initData3;
+      const animatedStyle = columnWidth(ref[11]).useAnimatedStyle(fn);
+      const obj2 = columnWidth(ref[11]);
+      class E {
         constructor() {
-          obj = { opacity: 1 - closure_5.get() };
+          obj = { width: closure_5.get() * columnWidth, opacity: closure_5.get() };
           return obj;
         }
       }
-      I.__closure = { progress: sharedValue };
-      I.__workletHash = 1563139253234;
-      I.__initData = __initData3;
-      const animatedStyle = columnWidth(ref[11]).useAnimatedStyle(I);
-      const obj2 = columnWidth(ref[11]);
-      const fn = function v() {
-        return { width: sharedValue.get() * columnWidth, opacity: sharedValue.get() };
-      };
-      fn.__closure = { progress: sharedValue, columnWidth };
-      fn.__workletHash = 7861705308411;
-      fn.__initData = __initData4;
-      const animatedStyle1 = columnWidth(ref[11]).useAnimatedStyle(fn);
+      E.__closure = { progress: sharedValue, columnWidth };
+      E.__workletHash = 7861705308411;
+      E.__initData = __initData4;
+      const animatedStyle1 = columnWidth(ref[11]).useAnimatedStyle(E);
       const callback = noop.useCallback(() => closure_4(true), []);
       const callback1 = noop.useCallback(() => {
         const current = ref.current;
@@ -382,7 +382,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj7 = { children: null };
       obj6.importantForAccessibility = str4;
-      obj6.children = closure_7(columnWidth(ref[17]).SearchField, {
+      obj6.children = closure_7(columnWidth(ref[17]).SearchBar, {
         ref,
         size: "md",
         onChange: onQueryChange,
@@ -404,7 +404,7 @@ let obj5 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(7010).InputHeights.MD,
+  height: fn(7009).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -415,7 +415,7 @@ let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerHead
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function GIFPickerHeader(arg0) {
-        let SearchField = require;
+        let SearchBar = require;
         let obj = dependencyMap;
         const cResult = c.c(13);
         ({
@@ -431,7 +431,7 @@ export default noop.memo(
           const searchPlaceholder = GifProvider.getSearchPlaceholder();
           cResult[0] = searchPlaceholder;
           let first = searchPlaceholder;
-          const SearchFieldResult = GifProvider;
+          const SearchBarResult = GifProvider;
         } else {
           first = cResult[0];
         }
@@ -464,7 +464,7 @@ export default noop.memo(
           }
         }
         if (categoryType === GIFPickerResultTypes.SEARCH) {
-          SearchField = SearchField2.SearchField;
+          SearchBar = Search_SearchBar.SearchBar;
           obj = {
             size: "md",
             onChange: onQueryChange,
@@ -473,7 +473,7 @@ export default noop.memo(
             ref: headerContainer,
             round: true,
           };
-          let tmp16Result = React5(SearchField, obj);
+          let tmp16Result = React5(SearchBar, obj);
         } else {
           const obj4 = { style: tmp2.headerContainer, children: null };
           const obj5 = {
@@ -543,7 +543,7 @@ export default noop.memo(
             ref: searchInputRef,
             round: true,
           };
-          let tmp13Result = React5(SearchField2.SearchField, obj2);
+          let tmp13Result = React5(Search_SearchBar.SearchBar, obj2);
         } else {
           const obj3 = { style: tmp.headerContainer, children: null };
           const obj4 = {

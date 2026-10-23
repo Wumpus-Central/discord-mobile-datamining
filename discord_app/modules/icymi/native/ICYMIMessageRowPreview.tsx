@@ -386,7 +386,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = cResult[7];
         }
         if (cResult[8] !== messageOptions) {
-          const obj4 = new tmp4(8117)();
+          const obj4 = new tmp4(8118)();
           const obj3 = {
             renderEmbeds: tmp10,
             inlineEmbedMedia: tmp12,
@@ -436,7 +436,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           messageSizeCacheRef,
           maxHeight,
         };
-        const tmp26 = jsx(tmp4(9742), {
+        const tmp26 = jsx(tmp4(9749), {
           pointerEvents: str,
           horizontalOffset: 0,
           modifyRow: tmp8,
@@ -512,7 +512,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return obj;
       }, items);
-      return jsx(messageOptions(9742), {
+      return jsx(messageOptions(9749), {
         pointerEvents: str,
         horizontalOffset: 0,
         modifyRow(arg0) {
@@ -653,7 +653,7 @@ export const MessageRowPreview = noop.memo(
         let obj = {};
         const merged1 = Object.assign(memo);
         const obj2 = {};
-        const merged2 = Object.assign(message(8119).DEFAULT_OPTIONS);
+        const merged2 = Object.assign(message(8120).DEFAULT_OPTIONS);
         obj2.ignoreMentioned = true;
         obj2.renderReplies = false;
         obj2.renderThreadEmbeds = false;

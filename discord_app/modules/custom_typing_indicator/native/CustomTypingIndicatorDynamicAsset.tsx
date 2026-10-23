@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         };
                         const items = [tmp10, tmp17];
                         obj2.children = items;
-                        const tmp22 = closure_5(tmp(5964).Stack, obj2);
+                        const tmp22 = closure_5(tmp(5963).Stack, obj2);
                         cResult[20] = spacing;
                         cResult[21] = style;
                         cResult[22] = tmp10;
@@ -101,14 +101,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl = tmp(1128).intl;
               const obj4 = { name };
               const formatResult = intl.format(
-                tmp(12987).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion),
+                tmp(13003).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion),
                 obj4,
               );
               cResult[11] = name;
               cResult[12] = suggestion;
               cResult[13] = formatResult;
               tmp15 = formatResult;
-              const tmpResult = tmp(12987);
+              const tmpResult = tmp(13003);
             }
             const items1 = [tmp4Result.text, textStyle];
             cResult[8] = tmp4Result.text;

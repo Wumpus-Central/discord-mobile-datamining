@@ -153,8 +153,8 @@ const obj9 = {
   [8]: "ML_AGE_INFERENCE",
   GOOGLE_WALLET: 9,
   [9]: "GOOGLE_WALLET",
-  NEW_METHOD: 10,
-  [10]: "NEW_METHOD",
+  AGE_KEY: 10,
+  [10]: "AGE_KEY",
   MANUAL_REVIEW: 11,
   [11]: "MANUAL_REVIEW",
   OS_SIGNAL_CONFIRMED: 12,
@@ -1861,7 +1861,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(partialSettings) {
-  obj = { emoji: { oneofKind: "Array" }, animated: false };
+  obj = { emoji: { oneofKind: "r" }, animated: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -3134,7 +3134,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(partialSettings) {
-  obj = { badge: { oneofKind: "Array" } };
+  obj = { badge: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -5811,7 +5811,7 @@ class PerkConfig$Type extends MessageType29 {
 }
 const prototype29 = PerkConfig$Type.prototype;
 prototype29["create"] = function create(partialSettings) {
-  obj = { source: [], kind: { oneofKind: "Array" } };
+  obj = { source: [], kind: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

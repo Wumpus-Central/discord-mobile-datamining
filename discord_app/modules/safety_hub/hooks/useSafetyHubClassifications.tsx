@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
-const ViolationType = fn(7882).ViolationType;
+const ViolationType = fn(7883).ViolationType;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSafetyHubClassifications() {
@@ -140,7 +140,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_5.getIsAppealEligible();
           }
         }
-        if (undefined === tmp(7883).MemberType.OWNER) {
+        if (undefined === tmp(7884).MemberType.OWNER) {
           let GUILD_MEMBER = ViolationType.GUILD_OWNER;
         } else {
           GUILD_MEMBER = ViolationType.GUILD_MEMBER;
@@ -264,7 +264,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (guild_metadata != null) {
           member_type = guild_metadata.member_type;
         }
-        if (member_type === tmp(7883).MemberType.OWNER) {
+        if (member_type === tmp(7884).MemberType.OWNER) {
           let GUILD_MEMBER = ViolationType.GUILD_OWNER;
         } else {
           GUILD_MEMBER = ViolationType.GUILD_MEMBER;

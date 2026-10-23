@@ -236,7 +236,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
         if (cResult[5] !== stateFromStores) {
           let tmp12;
           if (null != stateFromStores) {
-            const roleIconData = tmp(7267).getRoleIconData(stateFromStores, undefined);
+            const roleIconData = tmp(7268).getRoleIconData(stateFromStores, undefined);
             if (null != roleIconData) {
               const obj2 = {
                 src: roleIconData.customIconSrc,
@@ -249,7 +249,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
               obj2.unicodeEmoji = roleIconData.unicodeEmoji;
               tmp12 = obj2;
             }
-            const tmpResult2 = tmp(7267);
+            const tmpResult2 = tmp(7268);
           }
           cResult[5] = stateFromStores;
           cResult[6] = tmp12;

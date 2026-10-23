@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef11391 from "../../../../../_runtime/metro/11391__.js";
+import _modDef11402 from "../../../../../_runtime/metro/11402__.js";
 import GuildSettingsUtils from "../../GuildSettingsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const promptRow = tmp4.promptRow;
         if (tmpResult.isRolePowerful(role)) {
           if (cResult[0] !== tmp4.icon) {
-            const obj3 = { style: tmp4.icon, source: _modDef11391, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+            const obj3 = { style: tmp4.icon, source: _modDef11402, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
             const tmp23 = hasOwnProperty(native.Icon, obj3);
             cResult[0] = tmp4.icon;
             cResult[1] = tmp23;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp30 = tmp33;
         } else {
           if (cResult[9] !== tmp4.icon) {
-            const obj6 = { style: tmp4.icon, source: _modDef11391 };
+            const obj6 = { style: tmp4.icon, source: _modDef11402 };
             const tmp9 = hasOwnProperty(native.Icon, obj6);
             cResult[9] = tmp4.icon;
             cResult[10] = tmp9;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = GuildSettingsUtils;
         let Icon = native.Icon;
         if (isRolePowerfulResult) {
-          const obj3 = { style: string.icon, source: _modDef11391, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+          const obj3 = { style: string.icon, source: _modDef11402, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
           const items = [hasOwnProperty(Icon, obj3)];
           const obj4 = { style: string.promptText, variant: "text-sm/medium", children: null };
           const intl2 = util.intl;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = items;
           let tmp4Result = timestampProducer(View, obj2);
         } else {
-          const obj5 = { style: string.icon, source: _modDef11391 };
+          const obj5 = { style: string.icon, source: _modDef11402 };
           const items1 = [hasOwnProperty(Icon, obj5)];
           const obj6 = { style: string.promptText, variant: "text-sm/medium", children: null };
           const intl = util.intl;

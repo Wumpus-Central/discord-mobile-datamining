@@ -370,8 +370,8 @@ export const useVisibleAppliedForumTags = ReactCompilerGating.isReactCompilerEna
       }
       let result1 = found;
       if (result) {
-        result1 = tmp(7367).sortedModeratorReportTags(found);
-        const tmpResult2 = tmp(7367);
+        result1 = tmp(7368).sortedModeratorReportTags(found);
+        const tmpResult2 = tmp(7368);
       }
       cResult[5] = arr;
       cResult[6] = parent_id;

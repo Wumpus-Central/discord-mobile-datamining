@@ -412,7 +412,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const intl6 = guildId(onSave[15]).intl;
       obj7.placeholder = intl6.string(guildId(onSave[15]).t.Sojqsr);
       obj7.onChange = tmp8;
-      const items4 = [closure_10(guildId(onSave[20]).SearchField, obj7)];
+      const items4 = [closure_10(guildId(onSave[20]).SearchBar, obj7)];
       const obj8 = { style: tmp.roleListContent, children: null };
       if (0 === memo.length) {
         const obj9 = { style: tmp.roleListEmpty, children: null };

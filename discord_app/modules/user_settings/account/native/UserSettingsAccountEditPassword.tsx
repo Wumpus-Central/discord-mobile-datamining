@@ -13,7 +13,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef15963 from "../../../../../_runtime/metro/15963__.js";
+import _modDef15981 from "../../../../../_runtime/metro/15981__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef15963, style: tmp.image };
+    const obj4 = { source: _modDef15981, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EditPasswordWrapper() {
       const cResult = flag(576).c(6);
       let obj = flag(576);
-      const params = flag(7076).useSettingNavigationRoute().params;
+      const params = flag(7075).useSettingNavigationRoute().params;
       flag = undefined;
       if (params != null) {
         flag = params.isLoginRequiredAction;
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      let obj2 = flag(7076);
+      let obj2 = flag(7075);
       const stateFromStoresObject = flag(504).useStateFromStoresObject(first, tmp8);
       const tmpResult = flag(504);
       const navigation = flag(1505).useNavigation();
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult2 = flag(1505);
     }
   : function EditPasswordWrapper() {
-      const params = flag(7076).useSettingNavigationRoute().params;
+      const params = flag(7075).useSettingNavigationRoute().params;
       flag = undefined;
       if (params != null) {
         flag = params.isLoginRequiredAction;
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag == null) {
         flag = false;
       }
-      let obj = flag(7076);
+      let obj = flag(7075);
       let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
       const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
         const currentUser = UserStore.getCurrentUser();

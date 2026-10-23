@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalBans.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06813_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/06812_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -225,7 +225,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
     tmp19 = closure_12;
     const obj6 = { style: tmp.searchField, children: null };
     const obj7 = { size: "md", onChange: tmp15 };
-    obj6.children = closure_12(tmp2(tmp3[26]).SearchField, obj7);
+    obj6.children = closure_12(tmp2(tmp3[26]).SearchBar, obj7);
     const items7 = [closure_12(setting, obj6)];
     if ("" !== searchQuery) {
       if (0 === users.length) {

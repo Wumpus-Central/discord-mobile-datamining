@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MobileUserSettings = fn(8317).MobileUserSettings;
+const MobileUserSettings = fn(8318).MobileUserSettings;
 const HelpdeskArticles = fn(1087).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : function SettingsAgeGroupScreen() {
-      isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(15894).useIsTinyBroncoSettingsEnabled();
+      isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(15912).useIsTinyBroncoSettingsEnabled();
       let items = [isTinyBroncoSettingsEnabled];
       const node = noop.useMemo(() => {
         const obj2 = { sections: null, ListHeaderComponent: null };

@@ -351,7 +351,7 @@ const memoResult = noop.memo(
           }
         }
         let obj = name(576);
-        name = user(5976).getName(guildId, channelId, user);
+        name = user(5975).getName(guildId, channelId, user);
         const intl = tmp(1128).intl;
         const formatToPlainStringResult = intl.formatToPlainString(name(1128).t.sjSitP, { name });
         cResult[0] = channelId;
@@ -360,16 +360,16 @@ const memoResult = noop.memo(
         cResult[3] = name;
         cResult[4] = formatToPlainStringResult;
         tmp6 = formatToPlainStringResult;
-        let obj2 = user(5976);
+        let obj2 = user(5975);
       }
     : function UserProfileActivityEmptyOtherUser(user) {
         user = user.user;
         let name;
         ({ guildId, channelId } = user);
         const tmp = closure_10();
-        name = name(5976).getName(guildId, channelId, user);
+        name = name(5975).getName(guildId, channelId, user);
         const intl = user(1128).intl;
-        let obj = name(5976);
+        let obj = name(5975);
         items = [user.id];
         let obj2 = {
           heading: intl.formatToPlainString(user(1128).t.sjSitP, { name }),

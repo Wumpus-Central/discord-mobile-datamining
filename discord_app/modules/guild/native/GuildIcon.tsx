@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(6870).ExpressionSourceGuildRecord;
+let closure_5 = fn(6869).ExpressionSourceGuildRecord;
 const GuildRecord = fn(4839);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
 const Fonts = fn(1087).Fonts;

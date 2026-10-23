@@ -58,9 +58,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(6696);
+const QuestConstants = fn(6695);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(16218);
+const BountiesModalConstants = fn(16236);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -212,8 +212,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                               const tmpResult = tmp(504);
-                              const balance = tmp(9419).useFetchVirtualCurrencyBalance().balance;
-                              const tmpResult2 = tmp(9419);
+                              const balance = tmp(9426).useFetchVirtualCurrencyBalance().balance;
+                              const tmpResult2 = tmp(9426);
                               [tmp25, _slicedToArray] = noop.useState(null);
                               if (tmp25 == null) {
                                 class F {

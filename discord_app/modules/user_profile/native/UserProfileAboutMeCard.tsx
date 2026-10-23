@@ -22,7 +22,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7288);
+const Constants = fn(7289);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1087).Routes;
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
@@ -488,7 +488,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const tmpResult6 = tmp(504);
-        const tmpResult7 = tmp(7259);
+        const tmpResult7 = tmp(7260);
         const createdAtDate = tmpResult7.getCreatedAtDate(guildId(11).extractTimestamp(userId), stateFromStores);
         const obj6 = guildId(11);
         if (stateFromStores2 != null) {
@@ -503,7 +503,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const createdAtDate1 = tmp(7259).getCreatedAtDate(tmp22, stateFromStores);
+        const createdAtDate1 = tmp(7260).getCreatedAtDate(tmp22, stateFromStores);
         const _Symbol = Symbol;
         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
           class R {
@@ -647,7 +647,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[30] = tmp4.memberJoinDates;
         cResult[31] = tmp31;
         cResult[32] = items3;
-        const tmpResult8 = tmp(7259);
+        const tmpResult8 = tmp(7260);
       }
       class U {
         constructor() {
@@ -698,13 +698,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return member;
       });
       const obj3 = userId(504);
-      const obj4 = userId(7259);
+      const obj4 = userId(7260);
       const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
       let joinedAt;
       if (stateFromStores2 != null) {
         joinedAt = stateFromStores2.joinedAt;
       }
-      const createdAtDate1 = userId(7259).getCreatedAtDate(joinedAt, stateFromStores);
+      const createdAtDate1 = userId(7260).getCreatedAtDate(joinedAt, stateFromStores);
       const obj7 = { themeType, children: null };
       const intl = tmp4(1128).intl;
       obj7.children = intl.string(userId(1128).t.a6XYD9);
@@ -714,7 +714,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj8.style = items4;
       const obj9 = {
         themeType,
-        icon: closure_11(userId(10541).ClydeIcon, { size: "xs" }),
+        icon: closure_11(userId(10548).ClydeIcon, { size: "xs" }),
         accessibilityLabel: null,
         children: null,
       };
@@ -734,7 +734,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const items6 = [closure_11(tmp4(5220).Text, obj11)];
         const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-        const obj13 = { guild: stateFromStores1, size: tmp4(6869).GuildIconSizes.XXSMALL };
+        const obj13 = { guild: stateFromStores1, size: tmp4(6868).GuildIconSizes.XXSMALL };
         obj12.icon = closure_11(GuildIconDefault, obj13);
         const intl3 = tmp4(1128).intl;
         const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };

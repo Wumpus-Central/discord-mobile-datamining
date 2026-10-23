@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06813_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06812_fuzzysearch.js";
 import getFlattedChannelListDefault from "../../channel/getFlattedChannelList.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -95,7 +95,7 @@ export default noop.memo(
                     }
                     const tmp21 = tmp9(stringResult[24])();
                     const _Symbol = Symbol;
-                    class Q {
+                    class B {
                       constructor(arg0, arg1) {
                         tmp = channels[arg1];
                         closure_0 = tmp;
@@ -122,42 +122,41 @@ export default noop.memo(
                         return closure_1_12(guildId(closure_2[21]).TableRow, obj);
                       }
                     }
-                    class F {
-                      constructor() {
-                        if (null != closure_3) {
-                          str = "";
-                          if ("" !== tmp) {
-                            tmp14 = channels;
-                            length = channels.length;
-                            num = 0;
-                            if (length > 0) {
-                              tmp7 = closure_0;
-                              tmp8 = closure_2;
-                              intl2 = closure_0(closure_2[18]).intl;
-                              tmp9 = closure_0;
-                              tmp10 = closure_2;
-                              obj = { count: null };
-                              obj.count = length;
-                              formatToPlainStringResult = intl2.formatToPlainString(
-                                closure_0(closure_2[18]).t.ZGVL3g,
-                                obj,
-                              );
-                            } else {
-                              tmp2 = closure_0;
-                              tmp3 = closure_2;
-                              intl = closure_0(closure_2[18]).intl;
-                              tmp4 = closure_0;
-                              tmp5 = closure_2;
-                              formatToPlainStringResult = intl.string(closure_0(closure_2[18]).t.f5cMAg);
-                            }
-                            tmp11 = closure_0;
-                            tmp12 = closure_2;
-                            AccessibilityAnnouncer = closure_0(closure_2[19]).AccessibilityAnnouncer;
-                            announceResult = AccessibilityAnnouncer.announce(formatToPlainStringResult);
-                          }
+                    if (cResult[22] !== tmp4.searchContainer) {
+                      let obj2 = { style: tmp4.searchContainer, children: null };
+                      class B {
+                        constructor(arg0, arg1) {
+                          tmp = channels[arg1];
+                          closure_0 = tmp;
+                          obj = {
+                            icon: null,
+                            start: null,
+                            end: null,
+                            label: null,
+                            labelLineClamp: 1,
+                            arrow: true,
+                            onPress: null,
+                          };
+                          obj1 = { IconComponent: null };
+                          obj3 = guildId(closure_2[23]);
+                          obj1.IconComponent = obj3.getChannelIconComponent(tmp);
+                          obj.icon = closure_1_12(guildId(closure_2[22]).TableRowIcon, obj1);
+                          obj.start = 0 === arg1;
+                          obj.end = arg1 === channels.length - 1;
+                          obj4 = guildId(closure_2[16]);
+                          obj.label = obj4.computeChannelName(tmp, closure_1_9, closure_1_8);
+                          obj.onPress = function onPress() {
+                            navigation.push(constants2.CHANNEL_OVERRIDE, { channelId: id.id });
+                          };
+                          return closure_1_12(guildId(closure_2[21]).TableRow, obj);
                         }
-                        return;
                       }
+                      const tmp26 = closure_12(View, obj2);
+                      cResult[22] = tmp4.searchContainer;
+                      cResult[23] = tmp26;
+                      let tmp23 = tmp26;
+                    } else {
+                      tmp23 = cResult[23];
                     }
                     if (cResult[24] === channels.length) {
                       if (cResult[25] === insets) {
@@ -167,13 +166,13 @@ export default noop.memo(
                               if (cResult[29] === sections) {
                                 if (cResult[31] === tmp4.container) {
                                   if (cResult[32] === tmp23) {
-                                    if (cResult[33] === tmp24) {
-                                      let tmp31 = cResult[34];
+                                    if (cResult[33] === tmp27) {
+                                      let tmp32 = cResult[34];
                                     }
-                                    return tmp31;
+                                    return tmp32;
                                   }
                                 }
-                                class Q {
+                                class B {
                                   constructor(arg0, arg1) {
                                     tmp = channels[arg1];
                                     closure_0 = tmp;
@@ -200,51 +199,15 @@ export default noop.memo(
                                     return closure_1_12(guildId(closure_2[21]).TableRow, obj);
                                   }
                                 }
-                                class F {
-                                  constructor() {
-                                    if (null != closure_3) {
-                                      str = "";
-                                      if ("" !== tmp) {
-                                        tmp14 = channels;
-                                        length = channels.length;
-                                        num = 0;
-                                        if (length > 0) {
-                                          tmp7 = closure_0;
-                                          tmp8 = closure_2;
-                                          intl2 = closure_0(closure_2[18]).intl;
-                                          tmp9 = closure_0;
-                                          tmp10 = closure_2;
-                                          obj = { count: null };
-                                          obj.count = length;
-                                          formatToPlainStringResult = intl2.formatToPlainString(
-                                            closure_0(closure_2[18]).t.ZGVL3g,
-                                            obj,
-                                          );
-                                        } else {
-                                          tmp2 = closure_0;
-                                          tmp3 = closure_2;
-                                          intl = closure_0(closure_2[18]).intl;
-                                          tmp4 = closure_0;
-                                          tmp5 = closure_2;
-                                          formatToPlainStringResult = intl.string(closure_0(closure_2[18]).t.f5cMAg);
-                                        }
-                                        tmp11 = closure_0;
-                                        tmp12 = closure_2;
-                                        AccessibilityAnnouncer = closure_0(closure_2[19]).AccessibilityAnnouncer;
-                                        announceResult = AccessibilityAnnouncer.announce(formatToPlainStringResult);
-                                      }
-                                    }
-                                    return;
-                                  }
-                                }
+                                tmp35[0] = tmp4.container;
                                 const items2 = [tmp23, cResult[30]];
-                                tmp34[1] = items2;
-                                const tmp35 = closure_13(View, tmp34);
+                                tmp35[1] = items2;
+                                const tmp36 = closure_13(View, tmp35);
                                 cResult[31] = tmp4.container;
                                 cResult[32] = tmp23;
                                 cResult[33] = cResult[30];
-                                cResult[34] = tmp35;
-                                tmp31 = tmp35;
+                                cResult[34] = tmp36;
+                                tmp32 = tmp36;
                               }
                             }
                           }
@@ -252,8 +215,8 @@ export default noop.memo(
                       }
                     }
                     if (0 === channels.length) {
-                      let obj2 = { Illustration: tmp(stringResult[27]).NoResults, title: null, body: null };
-                      class Q {
+                      const obj4 = { Illustration: tmp(stringResult[27]).NoResults, title: null, body: null };
+                      class B {
                         constructor(arg0, arg1) {
                           tmp = channels[arg1];
                           closure_0 = tmp;
@@ -280,50 +243,13 @@ export default noop.memo(
                           return closure_1_12(guildId(closure_2[21]).TableRow, obj);
                         }
                       }
-                      class F {
-                        constructor() {
-                          if (null != closure_3) {
-                            str = "";
-                            if ("" !== tmp) {
-                              tmp14 = channels;
-                              length = channels.length;
-                              num = 0;
-                              if (length > 0) {
-                                tmp7 = closure_0;
-                                tmp8 = closure_2;
-                                intl2 = closure_0(closure_2[18]).intl;
-                                tmp9 = closure_0;
-                                tmp10 = closure_2;
-                                obj = { count: null };
-                                obj.count = length;
-                                formatToPlainStringResult = intl2.formatToPlainString(
-                                  closure_0(closure_2[18]).t.ZGVL3g,
-                                  obj,
-                                );
-                              } else {
-                                tmp2 = closure_0;
-                                tmp3 = closure_2;
-                                intl = closure_0(closure_2[18]).intl;
-                                tmp4 = closure_0;
-                                tmp5 = closure_2;
-                                formatToPlainStringResult = intl.string(closure_0(closure_2[18]).t.f5cMAg);
-                              }
-                              tmp11 = closure_0;
-                              tmp12 = closure_2;
-                              AccessibilityAnnouncer = closure_0(closure_2[19]).AccessibilityAnnouncer;
-                              announceResult = AccessibilityAnnouncer.announce(formatToPlainStringResult);
-                            }
-                          }
-                          return;
-                        }
-                      }
-                      obj2.title = tmp29(tmp(stringResult[18]).t.wM7uRI);
+                      obj4.title = obj8.string(tmp(stringResult[18]).t.wM7uRI);
                       let intl = tmp(stringResult[18]).intl;
                       stringResult = intl.string(tmp(stringResult[18]).t.f5cMAg);
-                      obj2.body = stringResult;
-                      let tmp26 = closure_12(tmp(stringResult[26]).EmptyState, obj2);
+                      obj4.body = stringResult;
+                      let tmp29 = closure_12(tmp(stringResult[26]).EmptyState, obj4);
                     } else {
-                      const obj4 = {
+                      const obj5 = {
                         sections,
                         renderItem: tmp20,
                         itemSize: null,
@@ -332,7 +258,7 @@ export default noop.memo(
                         placeholderConfig: null,
                         wrapChildren: true,
                       };
-                      class Q {
+                      class B {
                         constructor(arg0, arg1) {
                           tmp = channels[arg1];
                           closure_0 = tmp;
@@ -359,45 +285,9 @@ export default noop.memo(
                           return closure_1_12(guildId(closure_2[21]).TableRow, obj);
                         }
                       }
-                      class F {
-                        constructor() {
-                          if (null != closure_3) {
-                            str = "";
-                            if ("" !== tmp) {
-                              tmp14 = channels;
-                              length = channels.length;
-                              num = 0;
-                              if (length > 0) {
-                                tmp7 = closure_0;
-                                tmp8 = closure_2;
-                                intl2 = closure_0(closure_2[18]).intl;
-                                tmp9 = closure_0;
-                                tmp10 = closure_2;
-                                obj = { count: null };
-                                obj.count = length;
-                                formatToPlainStringResult = intl2.formatToPlainString(
-                                  closure_0(closure_2[18]).t.ZGVL3g,
-                                  obj,
-                                );
-                              } else {
-                                tmp2 = closure_0;
-                                tmp3 = closure_2;
-                                intl = closure_0(closure_2[18]).intl;
-                                tmp4 = closure_0;
-                                tmp5 = closure_2;
-                                formatToPlainStringResult = intl.string(closure_0(closure_2[18]).t.f5cMAg);
-                              }
-                              tmp11 = closure_0;
-                              tmp12 = closure_2;
-                              AccessibilityAnnouncer = closure_0(closure_2[19]).AccessibilityAnnouncer;
-                              announceResult = AccessibilityAnnouncer.announce(formatToPlainStringResult);
-                            }
-                          }
-                          return;
-                        }
-                      }
-                      obj4.placeholderConfig = tmp21;
-                      tmp26 = closure_12(tmp9(stringResult[28]), obj4);
+                      obj5.insetEnd = insets.bottom;
+                      obj5.placeholderConfig = tmp21;
+                      tmp29 = closure_12(tmp9(stringResult[28]), obj5);
                     }
                     channels = channels.length;
                     cResult[24] = channels;
@@ -406,9 +296,9 @@ export default noop.memo(
                     cResult[27] = tmp20;
                     cResult[28] = tmp21;
                     cResult[29] = sections;
-                    cResult[30] = tmp26;
+                    cResult[30] = tmp29;
                   }
-                  class Q {
+                  class B {
                     constructor(arg0, arg1) {
                       tmp = channels[arg1];
                       closure_0 = tmp;
@@ -435,132 +325,43 @@ export default noop.memo(
                       return closure_1_12(guildId(closure_2[21]).TableRow, obj);
                     }
                   }
-                  class F {
-                    constructor() {
-                      if (null != closure_3) {
-                        str = "";
-                        if ("" !== tmp) {
-                          tmp14 = channels;
-                          length = channels.length;
-                          num = 0;
-                          if (length > 0) {
-                            tmp7 = closure_0;
-                            tmp8 = closure_2;
-                            intl2 = closure_0(closure_2[18]).intl;
-                            tmp9 = closure_0;
-                            tmp10 = closure_2;
-                            obj = { count: null };
-                            obj.count = length;
-                            formatToPlainStringResult = intl2.formatToPlainString(
-                              closure_0(closure_2[18]).t.ZGVL3g,
-                              obj,
-                            );
-                          } else {
-                            tmp2 = closure_0;
-                            tmp3 = closure_2;
-                            intl = closure_0(closure_2[18]).intl;
-                            tmp4 = closure_0;
-                            tmp5 = closure_2;
-                            formatToPlainStringResult = intl.string(closure_0(closure_2[18]).t.f5cMAg);
-                          }
-                          tmp11 = closure_0;
-                          tmp12 = closure_2;
-                          AccessibilityAnnouncer = closure_0(closure_2[19]).AccessibilityAnnouncer;
-                          announceResult = AccessibilityAnnouncer.announce(formatToPlainStringResult);
-                        }
-                      }
-                      return;
-                    }
-                  }
                   cResult[18] = channels;
                   cResult[19] = navigation;
-                  cResult[20] = Q;
-                  tmp20 = Q;
+                  cResult[20] = B;
+                  tmp20 = B;
                 }
                 const items3 = [channels];
-                class F {
-                  constructor() {
-                    if (null != closure_3) {
-                      str = "";
-                      if ("" !== tmp) {
-                        tmp14 = channels;
-                        length = channels.length;
-                        num = 0;
-                        if (length > 0) {
-                          tmp7 = closure_0;
-                          tmp8 = closure_2;
-                          intl2 = closure_0(closure_2[18]).intl;
-                          tmp9 = closure_0;
-                          tmp10 = closure_2;
-                          obj = { count: null };
-                          obj.count = length;
-                          formatToPlainStringResult = intl2.formatToPlainString(closure_0(closure_2[18]).t.ZGVL3g, obj);
-                        } else {
-                          tmp2 = closure_0;
-                          tmp3 = closure_2;
-                          intl = closure_0(closure_2[18]).intl;
-                          tmp4 = closure_0;
-                          tmp5 = closure_2;
-                          formatToPlainStringResult = intl.string(closure_0(closure_2[18]).t.f5cMAg);
-                        }
-                        tmp11 = closure_0;
-                        tmp12 = closure_2;
-                        AccessibilityAnnouncer = closure_0(closure_2[19]).AccessibilityAnnouncer;
-                        announceResult = AccessibilityAnnouncer.announce(formatToPlainStringResult);
-                      }
-                    }
-                    return;
-                  }
-                }
                 cResult[15] = channels;
                 cResult[16] = first1;
                 cResult[17] = items3;
                 tmp17 = items3;
               }
-              class F {
-                constructor() {
-                  if (null != closure_3) {
-                    str = "";
-                    if ("" !== tmp) {
-                      tmp14 = channels;
-                      length = channels.length;
-                      num = 0;
-                      if (length > 0) {
-                        tmp7 = closure_0;
-                        tmp8 = closure_2;
-                        intl2 = closure_0(closure_2[18]).intl;
-                        tmp9 = closure_0;
-                        tmp10 = closure_2;
-                        obj = { count: null };
-                        obj.count = length;
-                        formatToPlainStringResult = intl2.formatToPlainString(closure_0(closure_2[18]).t.ZGVL3g, obj);
-                      } else {
-                        tmp2 = closure_0;
-                        tmp3 = closure_2;
-                        intl = closure_0(closure_2[18]).intl;
-                        tmp4 = closure_0;
-                        tmp5 = closure_2;
-                        formatToPlainStringResult = intl.string(closure_0(closure_2[18]).t.f5cMAg);
-                      }
-                      tmp11 = closure_0;
-                      tmp12 = closure_2;
-                      AccessibilityAnnouncer = closure_0(closure_2[19]).AccessibilityAnnouncer;
-                      announceResult = AccessibilityAnnouncer.announce(formatToPlainStringResult);
+              const fn2 = function x() {
+                if (null != first1) {
+                  if ("" !== tmp) {
+                    if (channels.length > 0) {
+                      const intl2 = util.intl;
+                      const obj = { count: length };
+                      let formatToPlainStringResult = intl2.formatToPlainString(util.t.ZGVL3g, obj);
+                    } else {
+                      const intl = util.intl;
+                      formatToPlainStringResult = intl.string(util.t.f5cMAg);
                     }
+                    const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+                    AccessibilityAnnouncer.announce(formatToPlainStringResult);
                   }
-                  return;
                 }
-              }
+              };
               cResult[12] = channels.length;
               cResult[13] = first1;
-              cResult[14] = F;
-              tmp16 = F;
+              cResult[14] = fn2;
+              tmp16 = fn2;
             }
-            const obj5 = { channels: null, sections: null };
+            const obj6 = { channels: null, sections: tmp14 };
             cResult[9] = cResult[5];
             cResult[10] = tmp14;
-            cResult[11] = obj5;
-            tmp15 = obj5;
+            cResult[11] = obj6;
+            tmp15 = obj6;
           }
         }
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
@@ -646,7 +447,7 @@ export default noop.memo(
         let tmp = closure_14();
         let items = [GuildCategoryStore];
         stateFromStores = require("initialize").useStateFromStores(items, () =>
-          GuildCategoryStore.getCategories(_require),
+          GuildCategoryStore.getCategories(require),
         );
         const tmp6 = first(channels.useState(""), 2);
         first = tmp6[0];
@@ -735,7 +536,7 @@ export default noop.memo(
         let intl = require("util").intl;
         obj4.placeholder = intl.string(require("util").t["5h0QOP"]);
         obj4.onChange = tmp6[1];
-        obj3.children = closure_12(require("SearchField").SearchField, obj4);
+        obj3.children = closure_12(require("Search/SearchBar").SearchBar, obj4);
         const items4 = [closure_12(View, obj3)];
         if (0 === channels.length) {
           const obj5 = { Illustration: require("generated/NoResults").NoResults, title: null, body: null };

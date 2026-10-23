@@ -14,7 +14,7 @@ import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7793).InviteTypes;
+const InviteTypes = fn(7794).InviteTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -215,5 +215,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
         },
         items2,
       );
-      memo(7241)(stateFromStoresArray);
+      memo(7242)(stateFromStoresArray);
     };

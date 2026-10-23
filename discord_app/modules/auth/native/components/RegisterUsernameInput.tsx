@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["username"];
 let closure_4 = ["username"];
-const RegistrationUIStore = fn(17259);
+const RegistrationUIStore = fn(17281);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -330,7 +330,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
         }
-        if (undefined === setUsername(15916).NameValidationState.ERROR) {
+        if (undefined === setUsername(15934).NameValidationState.ERROR) {
           class H {
             constructor() {
               tmp = closure_1(true);
@@ -366,7 +366,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
           status: null,
           submitBehavior: null,
         };
-        const TextInput = setUsername(6994).TextInput;
+        const TextInput = setUsername(6993).TextInput;
         if (tmpResult.isAndroid()) {
           class H {
             constructor() {
@@ -498,14 +498,14 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
         type = usernameStatus.type;
       }
       let str2;
-      if (type === tmp14(15916).NameValidationState.ERROR) {
+      if (type === tmp14(15934).NameValidationState.ERROR) {
         str2 = "error";
       }
       const obj6 = { children: null };
       obj3.status = str2;
       obj3.submitBehavior = submitBehavior;
       const items3 = [
-        closure_10(setUsername(6994).TextInput, obj3),
+        closure_10(setUsername(6993).TextInput, obj3),
         closure_10(closure_16, { usernameStatus, isUsernameFocused: tmp5[0] }),
       ];
       obj6.children = items3;

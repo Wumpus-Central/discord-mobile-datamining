@@ -12,10 +12,10 @@ import TrophyIcon from "../../../design/components/Icon/native/redesign/generate
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
 import PremiumUpsellSectionDivider from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
-import chunkDefault from "../../../../_runtime/09925_chunk.js";
-import _modDef10129 from "../../../../_runtime/metro/10129__.js";
+import chunkDefault from "../../../../_runtime/09932_chunk.js";
+import _modDef10136 from "../../../../_runtime/metro/10136__.js";
 import SoundButton from "SoundButton.tsx";
-import _modDef18425 from "../../../../_runtime/metro/18425__.js";
+import _modDef18447 from "../../../../_runtime/metro/18447__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -67,7 +67,7 @@ function getFastListSectionsFromCategories(categories, fastListSectionsFromCateg
   return items;
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(18411);
+const SoundboardStyleConstants = fn(18433);
 ({
   SOUND_ROW_HORIZONTAL_PADDING,
   SOUNDS_PER_ROW: metroRequire,
@@ -433,10 +433,10 @@ export const SoundboardSoundPickerList = noop.memo(
                       };
                       return React5(GuildIconDefault, obj2);
                     } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-                      const obj3 = { source: _modDef18425, style: currentUser.sectionIcon };
+                      const obj3 = { source: _modDef18447, style: currentUser.sectionIcon };
                       return React5(native.Icon, obj3);
                     } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-                      const obj4 = { source: _modDef10129, style: currentUser.sectionIcon };
+                      const obj4 = { source: _modDef10136, style: currentUser.sectionIcon };
                       return React5(native.Icon, obj4);
                     } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
                       const obj5 = { style: currentUser.sectionIcon };
@@ -970,10 +970,10 @@ export const SoundboardSoundPickerList = noop.memo(
               };
               let tmp8Result = React5(GuildIconDefault, obj3);
             } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-              const obj4 = { source: _modDef18425, style: currentUser.sectionIcon };
+              const obj4 = { source: _modDef18447, style: currentUser.sectionIcon };
               tmp8Result = React5(native.Icon, obj4);
             } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-              const obj5 = { source: _modDef10129, style: currentUser.sectionIcon };
+              const obj5 = { source: _modDef10136, style: currentUser.sectionIcon };
               tmp8Result = React5(native.Icon, obj5);
             } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
               const obj6 = { style: currentUser.sectionIcon };

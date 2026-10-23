@@ -11,7 +11,7 @@ import UserUtilsDefault from "UserUtils.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import RegexUtilsDefault from "RegexUtils.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/06813_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/06812_fuzzysearch.js";
 import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import OnboardingHomeUtils from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -436,7 +436,7 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(6695);
+const InAppNavigationRecord = fn(6694);
 ({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: metroRequire } = InAppNavigationRecord);
 const ChannelRecord = fn(4825);
 ({
@@ -456,18 +456,18 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1087);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(6811).AutocompleterResultTypes;
+fn(6810).AutocompleterResultTypes;
 const StaticChannelId = fn(4828).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(6812).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(6812).default.MENTION_HERE;
-const MENTION_GAME = fn(6812).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(6812).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(6812).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(6811).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(6811).default.MENTION_HERE;
+const MENTION_GAME = fn(6811).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(6811).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(6811).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({
@@ -1867,23 +1867,9 @@ export default {
         return hasItem;
       },
       type,
-      allowEmptyQueries: null,
+      allowEmptyQueries: "center",
     };
-    obj.channels = this.queryChannels({
-      query: channelTypes.query,
-      guildId: channel.getGuildId(),
-      limit: "r",
-      fuzzy: "IconComponent",
-      filter(type) {
-        let hasItem = null == channelTypes;
-        if (!hasItem) {
-          hasItem = channelTypes.includes(type.type);
-        }
-        return hasItem;
-      },
-      type,
-      allowEmptyQueries: null,
-    }).map((record) => record.record);
+    obj.channels = this.queryChannels(obj2).map((record) => record.record);
     return obj;
   },
   queryApplicationCommandChannelResults(limit) {
@@ -2016,12 +2002,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(6475).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(6474).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6475).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(6474).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(6475).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(6474).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -2059,7 +2045,7 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7427);
+              obj2 = flag(7428);
             }
           });
         });

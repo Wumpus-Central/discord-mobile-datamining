@@ -14,27 +14,25 @@ import getEmbedThemeColorsDefault from "../../../messages/native/renderer/row_da
 import ApplicationAssetUtils from "../../../../utils/ApplicationAssetUtils.tsx";
 import AppLauncherUtils from "../../../app_launcher/utils/AppLauncherUtils.tsx";
 import ApplicationUtils from "../../../../utils/native/ApplicationUtils.tsx";
+import GamesActionCreatorsDefault from "../../../../actions/GamesActionCreators.native.tsx";
 import canLaunchContextlessFrame from "../../../frames/utils/canLaunchContextlessFrame.tsx";
 import ContentClassificationVisibility from "../../../content_classification/ContentClassificationVisibility.tsx";
 import CodedLinksTypes from "../../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksTypes.tsx";
 import getPlayInContext from "../utils/getPlayInContext.tsx";
 import nativeAppMessageEmbedUtil from "utils/nativeAppMessageEmbedUtil.tsx";
-import joinOrStartActivityInChannel from "utils/joinOrStartActivityInChannel.tsx";
-import AppLauncherPlayUtils from "../../../app_launcher/utils/AppLauncherPlayUtils.tsx";
-import playFrameFromEmbedDefault from "../../../frames/playFrameFromEmbed.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(8606).FetchState;
+const FetchState = fn(8607).FetchState;
 const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(9974).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(9981).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
+const result = size.fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
 
 export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
   ({ appId, message } = arg0);
@@ -236,89 +234,80 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
   const actionId = appId.actionId;
   if ("play_in_channel" === actionId) {
     const obj8 = {
-      appId: appId.appId,
+      applicationId: appId.appId,
       channelId: appId.message.channel_id,
+      fromLink: true,
+      customId: value2,
+      referrerId: id,
       analyticsLocations: null,
-      referrerId: null,
-      customId: null,
+      commandOrigin: null,
     };
     const items = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
     obj8.analyticsLocations = items;
-    obj8.referrerId = id;
-    obj8.customId = value2;
-    const result = joinOrStartActivityInChannel.joinOrStartActivityInChannel(obj8);
-  } else if ("play_in_dm" === actionId) {
-    let bot;
-    if (application != null) {
-      bot = application.bot;
-    }
-    if (null != bot) {
-      const obj9 = {
-        appId: appId.appId,
-        botId: application.bot.id,
-        analyticsLocations: null,
-        commandOrigin: null,
-        referrerId: null,
-        customId: null,
-      };
-      const items1 = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
-      obj9.analyticsLocations = items1;
-      obj9.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
-      obj9.referrerId = id;
-      obj9.customId = value2;
-      const result1 = AppLauncherPlayUtils.launchActivityInBotDM(obj9);
-    }
-  } else if ("play_frame" === actionId) {
-    if (null != application) {
-      const obj10 = { application, analyticsContext: null };
-      const obj12 = { isStart: true, analyticsLocations: null };
-      const items2 = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
-      obj12.analyticsLocations = items2;
-      obj10.analyticsContext = obj12;
-      playFrameFromEmbedDefault(obj10);
-      const tmp2Result = playFrameFromEmbedDefault;
-    }
-  } else if ("view_in_app_launcher" === actionId) {
-    const bestActiveInput = ChatInputUtils.getBestActiveInput();
-    if (bestActiveInput != null) {
-      const obj13 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
-      const obj14 = {
-        initialRouteName: AppLauncherRouteName.APPLICATION_VIEW,
-        initiallyExpanded: true,
-        applicationId: appId.appId,
-        referrerId: id,
-        customId: value2,
-      };
-      obj13.context = obj14;
-      bestActiveInput.openCustomKeyboard(obj13);
-    }
-  } else if ("add_app" === actionId) {
-    if (null != application) {
-      ({
-        id: obj6.applicationId,
-        customInstallUrl: obj6.customInstallUrl,
-        installParams: obj6.installParams,
-        integrationTypesConfig: obj6.integrationTypesConfig,
-      } = application);
-      ApplicationUtils.installApplication({
-        applicationId: null,
-        customInstallUrl: null,
-        installParams: null,
-        integrationTypesConfig: null,
-        source: "app_message_embed",
-      });
-      const obj16 = {
-        applicationId: null,
-        customInstallUrl: null,
-        installParams: null,
-        integrationTypesConfig: null,
-        source: "app_message_embed",
-      };
-    }
-  } else if ("link_copied" === actionId) {
-    ClipboardUtils.copy(appId.embedUrl);
-    ToastUtils.presentLinkCopied();
+    obj8.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
+    GamesActionCreatorsDefault.launch(obj8);
+    const tmp2Result = GamesActionCreatorsDefault;
   } else {
-    GlobalUtils.assertNever(appId.actionId);
+    if ("play_in_dm" !== actionId) {
+      if ("play_frame" !== actionId) {
+        if ("view_in_app_launcher" === actionId) {
+          const bestActiveInput = ChatInputUtils.getBestActiveInput();
+          if (bestActiveInput != null) {
+            const obj9 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
+            const obj10 = {
+              initialRouteName: AppLauncherRouteName.APPLICATION_VIEW,
+              initiallyExpanded: true,
+              applicationId: appId.appId,
+              referrerId: id,
+              customId: value2,
+            };
+            obj9.context = obj10;
+            bestActiveInput.openCustomKeyboard(obj9);
+          }
+        } else if ("add_app" === actionId) {
+          if (null != application) {
+            ({
+              id: obj6.applicationId,
+              customInstallUrl: obj6.customInstallUrl,
+              installParams: obj6.installParams,
+              integrationTypesConfig: obj6.integrationTypesConfig,
+            } = application);
+            ApplicationUtils.installApplication({
+              applicationId: null,
+              customInstallUrl: null,
+              installParams: null,
+              integrationTypesConfig: null,
+              source: "app_message_embed",
+            });
+            const obj11 = {
+              applicationId: null,
+              customInstallUrl: null,
+              installParams: null,
+              integrationTypesConfig: null,
+              source: "app_message_embed",
+            };
+          }
+        } else if ("link_copied" === actionId) {
+          ClipboardUtils.copy(appId.embedUrl);
+          ToastUtils.presentLinkCopied();
+        } else {
+          GlobalUtils.assertNever(appId.actionId);
+        }
+      }
+    }
+    const obj12 = {
+      applicationId: appId.appId,
+      channelId: null,
+      fromLink: true,
+      customId: value2,
+      referrerId: id,
+      analyticsLocations: null,
+      commandOrigin: null,
+    };
+    const items1 = [AnalyticsLocationDefault.APP_MESSAGE_EMBED];
+    obj12.analyticsLocations = items1;
+    obj12.commandOrigin = ApplicationCommandTypes.CommandOrigin.APP_MESSAGE_EMBED;
+    GamesActionCreatorsDefault.launch(obj12);
+    const tmp2Result2 = GamesActionCreatorsDefault;
   }
 };

@@ -1,16 +1,13 @@
 // discord_app/modules/checkpoint/native/components/screens/stats/CheckpointGamesStatsScreen.tsx
 import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
-import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
 import _modDef3088 from "../../../../Checkpoint2026.messages.js";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
-import GameControllerIcon from "../../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
-import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointCountUpStatNumberDefault from "../../CheckpointCountUpStatNumber.tsx";
+import _modDef12921 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
 import GameStore from "../../../../../games/GameStore.tsx";
 import CheckpointStore from "../../../../CheckpointStore.tsx";
@@ -21,17 +18,27 @@ import "ReactCompilerGating";
 import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
+const CheckpointScreenDefault = tmp34(12913);
+const CheckpointApngPlayerDefault = tmp34(12916);
+const CheckpointDisplayTextDefault = tmp34(12926);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let obj = {
-  container: {
-    width: "100%",
-    flexGrow: 1,
-    justifyContent: "center",
-    gap: nativeDefault.space.PX_40,
-    paddingBottom: nativeDefault.space.PX_64,
-  },
+let items = [{ list: "gamesByPlayers", label: _modDef3088.b4s18j }, , , ,];
+let obj = { list: "gamesByPlayers", label: _modDef3088.b4s18j };
+items[1] = { list: "newGamesByPlayers", label: _modDef3088.DcxpNj };
+let obj2 = { list: "newGamesByPlayers", label: _modDef3088.DcxpNj };
+items[2] = { list: "indieGamesByPlayers", label: _modDef3088.OAUTki };
+let obj3 = { list: "indieGamesByPlayers", label: _modDef3088.OAUTki };
+items[3] = { list: "gamesByCoplayUsers", label: _modDef3088.ioC4Qg };
+let obj4 = { list: "gamesByCoplayUsers", label: _modDef3088.ioC4Qg };
+items[4] = { list: "gamesByStreamWatchMinutes", label: _modDef3088.M1L00s };
+let obj6 = {
+  container: null,
+  globalContainer: null,
+  header: null,
+  globalHeading: null,
+  globe: null,
   title: null,
   titleText: null,
   number: null,
@@ -43,60 +50,75 @@ let obj = {
   rank: null,
   gameText: null,
   gameName: null,
-  gameSessions: null,
+  gameLabel: null,
 };
-let obj2 = {
+let obj5 = { list: "gamesByStreamWatchMinutes", label: _modDef3088.M1L00s };
+obj6.container = {
   width: "100%",
   flexGrow: 1,
   justifyContent: "center",
   gap: nativeDefault.space.PX_40,
   paddingBottom: nativeDefault.space.PX_64,
 };
-obj.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj.titleText = { flexShrink: 1 };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj.number = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
-let obj4 = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
-obj.games = {
+let obj7 = {
+  width: "100%",
+  flexGrow: 1,
+  justifyContent: "center",
+  gap: nativeDefault.space.PX_40,
+  paddingBottom: nativeDefault.space.PX_64,
+};
+obj6.globalContainer = { gap: nativeDefault.space.PX_32 };
+let obj8 = { gap: nativeDefault.space.PX_32 };
+obj6.header = { gap: nativeDefault.space.PX_12 };
+let obj9 = { gap: nativeDefault.space.PX_12 };
+obj6.globalHeading = { alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
+obj6.globe = { width: 75, height: 56 };
+let obj10 = { alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
+obj6.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj6.titleText = { flexShrink: 1 };
+let obj11 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj6.number = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
+let obj12 = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
+obj6.games = {
   flexDirection: "row",
   flexWrap: "wrap",
   columnGap: nativeDefault.space.PX_16,
   rowGap: nativeDefault.space.PX_12,
 };
-let obj5 = {
+let obj13 = {
   flexDirection: "row",
   flexWrap: "wrap",
   columnGap: nativeDefault.space.PX_16,
   rowGap: nativeDefault.space.PX_12,
 };
-obj.game = { width: "30%", gap: nativeDefault.space.PX_8 };
-obj.cover = { width: "87.5%", aspectRatio: 0.75 };
-obj.coverImage = { width: "100%", height: "100%", borderWidth: 1, borderColor: CHECKPOINT_PRIMARY };
-let obj6 = { width: "30%", gap: nativeDefault.space.PX_8 };
-obj.unknownCover = { backgroundColor: nativeDefault.colors.BLACK, alignItems: "center", justifyContent: "center" };
-obj.rank = { position: "absolute", bottom: 0, left: 0 };
-let obj7 = { backgroundColor: nativeDefault.colors.BLACK, alignItems: "center", justifyContent: "center" };
-obj.gameText = { gap: nativeDefault.space.PX_4 };
-obj.gameName = { color: CheckpointConstants.CHECKPOINT_WHITE };
-obj.gameSessions = { fontSize: 14, lineHeight: 18 };
-let closure_9 = createStyles.createStyles(obj);
-let obj8 = { gap: nativeDefault.space.PX_4 };
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
+obj6.game = { width: "30%", gap: nativeDefault.space.PX_8 };
+obj6.cover = { width: "87.5%", aspectRatio: 0.75 };
+obj6.coverImage = { width: "100%", height: "100%", borderWidth: 1, borderColor: CHECKPOINT_PRIMARY };
+let obj14 = { width: "30%", gap: nativeDefault.space.PX_8 };
+obj6.unknownCover = { backgroundColor: nativeDefault.colors.BLACK, alignItems: "center", justifyContent: "center" };
+obj6.rank = { position: "absolute", bottom: 0, left: 0 };
+let obj15 = { backgroundColor: nativeDefault.colors.BLACK, alignItems: "center", justifyContent: "center" };
+obj6.gameText = { gap: nativeDefault.space.PX_4 };
+obj6.gameName = { color: CheckpointConstants.CHECKPOINT_WHITE };
+obj6.gameLabel = { fontSize: 14, lineHeight: 18 };
+let closure_10 = createStyles.createStyles(obj6);
+let obj16 = { gap: nativeDefault.space.PX_4 };
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function GameCard(arg0) {
-      const cResult = id(576).c(43);
-      ({ game, rank, numSessions } = arg0);
+      const cResult = id(576).c(34);
+      ({ game, rank, label, accessibilityLabel } = arg0);
       id = game.id;
       ({ name, iconHash, coverImageHash } = game);
-      const tmp4 = closure_9();
+      const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GameStore];
+        items = [GameStore];
         cResult[0] = items;
         let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== id) {
-        const fn = function l() {
+        const fn = function o() {
           return GameStore.getCoverImageUrl(id);
         };
         cResult[1] = id;
@@ -113,173 +135,135 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === id) {
               unknownCover = cResult[7];
             }
-            if (cResult[8] === name) {
-              if (cResult[9] === numSessions) {
-                if (cResult[10] === rank) {
-                  let tmp12 = cResult[11];
-                  let tmp13 = cResult[12];
-                  let flag = cResult[13];
-                  let tmp14 = cResult[14];
-                }
-                if (cResult[15] === unknownCover) {
-                  if (cResult[16] === tmp4.coverImage) {
-                    if (cResult[17] === tmp4.unknownCover) {
-                      if (cResult[19] === rank) {
-                        if (cResult[20] === tmp4.rank) {
-                          let tmp28 = cResult[21];
+            if (cResult[8] === unknownCover) {
+              if (cResult[9] === tmp4.coverImage) {
+                if (cResult[10] === tmp4.unknownCover) {
+                  if (cResult[12] === rank) {
+                    if (cResult[13] === tmp4.rank) {
+                      let tmp21 = cResult[14];
+                    }
+                    if (cResult[15] === tmp4.cover) {
+                      if (cResult[16] === tmp12) {
+                        if (cResult[17] === tmp21) {
+                          let tmp26 = cResult[18];
                         }
-                        if (cResult[22] === tmp4.cover) {
-                          if (cResult[23] === tmp19) {
-                            if (cResult[24] === tmp28) {
-                              let tmp32 = cResult[25];
+                        if (cResult[19] === name) {
+                          if (cResult[20] === tmp4.gameName) {
+                            let tmp30 = cResult[21];
+                          }
+                          if (cResult[22] === label) {
+                            if (cResult[23] === tmp4.gameLabel) {
+                              let tmp33 = cResult[24];
                             }
-                            if (cResult[26] === name) {
-                              if (cResult[27] === tmp4.gameName) {
-                                let tmp36 = cResult[28];
-                              }
-                              if (cResult[29] === tmp13) {
-                                if (cResult[30] === tmp4.gameSessions) {
-                                  let tmp39 = cResult[31];
+                            if (cResult[25] === tmp4.gameText) {
+                              if (cResult[26] === tmp30) {
+                                if (cResult[27] === tmp33) {
+                                  let tmp37 = cResult[28];
                                 }
-                                if (cResult[32] === tmp4.gameText) {
-                                  if (cResult[33] === tmp36) {
-                                    if (cResult[34] === tmp39) {
-                                      let tmp43 = cResult[35];
-                                    }
-                                    if (cResult[36] === tmp12) {
-                                      if (cResult[37] === tmp4.game) {
-                                        if (cResult[38] === tmp43) {
-                                          if (cResult[39] === flag) {
-                                            if (cResult[40] === tmp14) {
-                                              if (cResult[41] === tmp32) {
-                                                let tmp47 = cResult[42];
-                                              }
-                                              return tmp47;
-                                            }
-                                          }
-                                        }
+                                if (cResult[29] === accessibilityLabel) {
+                                  if (cResult[30] === tmp4.game) {
+                                    if (cResult[31] === tmp37) {
+                                      if (cResult[32] === tmp26) {
+                                        let tmp41 = cResult[33];
                                       }
+                                      return tmp41;
                                     }
-                                    const obj2 = {
-                                      accessible: flag,
-                                      accessibilityLabel: tmp14,
-                                      style: tmp4.game,
-                                      children: null,
-                                    };
-                                    const items1 = [tmp32, tmp43];
-                                    obj2.children = items1;
-                                    const tmp49 = closure_8(tmp12, obj2);
-                                    cResult[36] = tmp12;
-                                    cResult[37] = tmp4.game;
-                                    cResult[38] = tmp43;
-                                    cResult[39] = flag;
-                                    cResult[40] = tmp14;
-                                    cResult[41] = tmp32;
-                                    cResult[42] = tmp49;
-                                    tmp47 = tmp49;
                                   }
                                 }
-                                const obj4 = { style: tmp4.gameText, children: null };
-                                const items2 = [tmp36, tmp39];
-                                obj4.children = items2;
-                                const tmp46 = closure_8(View, obj4);
-                                cResult[32] = tmp4.gameText;
-                                cResult[33] = tmp36;
-                                cResult[34] = tmp39;
-                                cResult[35] = tmp46;
-                                tmp43 = tmp46;
+                                const obj2 = { accessible: true, accessibilityLabel, style: tmp4.game, children: null };
+                                const items1 = [tmp26, tmp37];
+                                obj2.children = items1;
+                                const tmp44 = closure_8(View, obj2);
+                                cResult[29] = accessibilityLabel;
+                                cResult[30] = tmp4.game;
+                                cResult[31] = tmp37;
+                                cResult[32] = tmp26;
+                                cResult[33] = tmp44;
+                                tmp41 = tmp44;
                               }
-                              const obj5 = {
-                                variant: "experimental/mono-md/bold",
-                                style: tmp4.gameSessions,
-                                children: tmp13,
-                              };
-                              const tmp42 = closure_7(CheckpointTextDefault, obj5);
-                              cResult[29] = tmp13;
-                              cResult[30] = tmp4.gameSessions;
-                              cResult[31] = tmp42;
-                              tmp39 = tmp42;
                             }
-                            const obj6 = {
-                              variant: "text-md/semibold",
-                              style: tmp4.gameName,
-                              lineClamp: 2,
-                              children: name,
-                            };
-                            const tmp38 = closure_7(tmp(5220).Text, obj6);
-                            cResult[26] = name;
-                            cResult[27] = tmp4.gameName;
-                            cResult[28] = tmp38;
-                            tmp36 = tmp38;
+                            const obj4 = { style: tmp4.gameText, children: null };
+                            const items2 = [tmp30, tmp33];
+                            obj4.children = items2;
+                            const tmp40 = closure_8(View, obj4);
+                            cResult[25] = tmp4.gameText;
+                            cResult[26] = tmp30;
+                            cResult[27] = tmp33;
+                            cResult[28] = tmp40;
+                            tmp37 = tmp40;
                           }
+                          const obj5 = { variant: "experimental/mono-md/bold", style: tmp4.gameLabel, children: label };
+                          const tmp36 = closure_7(CheckpointTextDefault, obj5);
+                          cResult[22] = label;
+                          cResult[23] = tmp4.gameLabel;
+                          cResult[24] = tmp36;
+                          tmp33 = tmp36;
                         }
-                        const obj7 = { style: tmp4.cover, children: null };
-                        const items3 = [tmp19, tmp28];
-                        obj7.children = items3;
-                        const tmp35 = closure_8(View, obj7);
-                        cResult[22] = tmp4.cover;
-                        cResult[23] = tmp19;
-                        cResult[24] = tmp28;
-                        cResult[25] = tmp35;
-                        tmp32 = tmp35;
+                        const obj6 = {
+                          variant: "text-md/semibold",
+                          style: tmp4.gameName,
+                          lineClamp: 2,
+                          children: name,
+                        };
+                        const tmp32 = closure_7(tmp(5220).Text, obj6);
+                        cResult[19] = name;
+                        cResult[20] = tmp4.gameName;
+                        cResult[21] = tmp32;
+                        tmp30 = tmp32;
                       }
-                      const obj9 = { rank, style: tmp4.rank };
-                      const tmp31 = closure_7(CheckpointRankTagDefault, obj9);
-                      cResult[19] = rank;
-                      cResult[20] = tmp4.rank;
-                      cResult[21] = tmp31;
-                      tmp28 = tmp31;
                     }
+                    const obj8 = { style: tmp4.cover, children: null };
+                    const items3 = [tmp12, tmp21];
+                    obj8.children = items3;
+                    const tmp29 = closure_8(View, obj8);
+                    cResult[15] = tmp4.cover;
+                    cResult[16] = tmp12;
+                    cResult[17] = tmp21;
+                    cResult[18] = tmp29;
+                    tmp26 = tmp29;
                   }
+                  let tmp23 = null != rank;
+                  if (tmp23) {
+                    const obj9 = { rank, style: tmp4.rank };
+                    tmp23 = closure_7(CheckpointRankTagDefault, obj9);
+                  }
+                  cResult[12] = rank;
+                  cResult[13] = tmp4.rank;
+                  cResult[14] = tmp23;
+                  tmp21 = tmp23;
                 }
-                if (null != unknownCover) {
-                  const obj10 = { source: null, style: null, resizeMode: "cover" };
-                  const tmp26 = FastImageDefault;
-                  obj10.source = AvatarUtilsDefault.makeSource(unknownCover);
-                  obj10.style = tmp4.coverImage;
-                  let tmp23 = closure_7(tmp26, obj10);
-                } else {
-                  const obj11 = { style: null, children: null };
-                  const items4 = [,];
-                  ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp4);
-                  obj11.style = items4;
-                  obj11.children = closure_7(tmp(8058).UnknownGameIcon, { size: "lg" });
-                  tmp23 = closure_7(View, obj11);
-                }
-                cResult[15] = unknownCover;
-                ({ coverImage: tmp3[16], unknownCover } = tmp4);
-                cResult[17] = unknownCover;
-                cResult[18] = tmp23;
               }
             }
-            const _Math = Math;
-            const rounded = Math.round(numSessions);
-            const intl = tmp(1128).intl;
-            const obj12 = { gameName: name, rank, numSessions: rounded };
-            const formatToPlainStringResult = intl.formatToPlainString(_modDef3088.mqdLhl, obj12);
-            cResult[8] = name;
-            cResult[9] = numSessions;
-            cResult[10] = rank;
-            cResult[11] = View;
-            cResult[12] = rounded;
-            cResult[13] = true;
-            cResult[14] = formatToPlainStringResult;
-            tmp14 = formatToPlainStringResult;
-            flag = true;
-            tmp13 = rounded;
-            tmp12 = View;
+            if (null != unknownCover) {
+              const obj10 = { source: null, style: null, resizeMode: "cover" };
+              const tmp19 = FastImageDefault;
+              obj10.source = AvatarUtilsDefault.makeSource(unknownCover);
+              obj10.style = tmp4.coverImage;
+              let tmp16 = closure_7(tmp19, obj10);
+            } else {
+              const obj11 = { style: null, children: null };
+              const items4 = [,];
+              ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp4);
+              obj11.style = items4;
+              obj11.children = closure_7(tmp(8059).UnknownGameIcon, { size: "lg" });
+              tmp16 = closure_7(View, obj11);
+            }
+            cResult[8] = unknownCover;
+            ({ coverImage: tmp3[9], unknownCover } = tmp4);
+            cResult[10] = unknownCover;
+            cResult[11] = tmp16;
           }
         }
       }
       let applicationIconURL = stateFromStores;
       if (stateFromStores == null) {
-        const obj13 = { id, icon: null, fallbackAvatar: false };
+        const obj12 = { id, icon: null, fallbackAvatar: false };
         let tmp11 = coverImageHash;
         if (coverImageHash == null) {
           tmp11 = iconHash;
         }
-        obj13.icon = tmp11;
-        applicationIconURL = AvatarUtilsDefault.getApplicationIconURL(obj13);
+        obj12.icon = tmp11;
+        applicationIconURL = AvatarUtilsDefault.getApplicationIconURL(obj12);
       }
       cResult[3] = coverImageHash;
       cResult[4] = stateFromStores;
@@ -292,60 +276,55 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   : function GameCard(game) {
       game = game.game;
       const id = game.id;
-      ({ name, coverImageHash } = game);
+      let coverImageHash = game.coverImageHash;
       const rank = game.rank;
-      const tmp = closure_9();
-      const items = [GameStore];
+      ({ name, iconHash } = game);
+      ({ label, accessibilityLabel } = game);
+      const tmp = closure_10();
+      items = [GameStore];
       let stateFromStores = id(504).useStateFromStores(items, () => GameStore.getCoverImageUrl(id));
       if (stateFromStores == null) {
         const obj3 = { id, icon: null, fallbackAvatar: false };
         if (coverImageHash == null) {
-          coverImageHash = game.iconHash;
+          coverImageHash = iconHash;
         }
         obj3.icon = coverImageHash;
         stateFromStores = AvatarUtilsDefault.getApplicationIconURL(obj3);
       }
-      const rounded = Math.round(game.numSessions);
-      const obj4 = { accessible: true, accessibilityLabel: null, style: null, children: null };
-      const intl = tmp2(1128).intl;
-      obj4.accessibilityLabel = intl.formatToPlainString(_modDef3088.mqdLhl, {
-        gameName: name,
-        rank,
-        numSessions: rounded,
-      });
-      obj4.style = tmp.game;
+      const obj4 = { accessible: true, accessibilityLabel, style: tmp.game, children: null };
       const obj5 = { style: tmp.cover, children: null };
       if (null != stateFromStores) {
         const obj6 = { source: null, style: null, resizeMode: "cover" };
-        const tmp9Result = FastImageDefault;
+        const tmp13 = FastImageDefault;
         obj6.source = AvatarUtilsDefault.makeSource(stateFromStores);
         obj6.style = tmp.coverImage;
-        let tmp11 = closure_7(tmp9Result, obj6);
-        let tmp10 = closure_7;
-        const tmp9Result2 = AvatarUtilsDefault;
+        let tmp10 = closure_7(tmp13, obj6);
+        let tmp9 = closure_7;
       } else {
-        tmp10 = closure_7;
         const obj7 = { style: null, children: null };
         const items1 = [,];
         ({ coverImage: arr2[0], unknownCover: arr2[1] } = tmp);
         obj7.style = items1;
-        obj7.children = closure_7(tmp2(8058).UnknownGameIcon, { size: "lg" });
-        tmp11 = closure_7(View, obj7);
+        obj7.children = closure_7(tmp2(8059).UnknownGameIcon, { size: "lg" });
+        tmp9 = closure_7;
+        tmp10 = closure_7(View, obj7);
       }
-      const items2 = [tmp11, tmp10(CheckpointRankTagDefault, { rank, style: tmp.rank })];
+      const items2 = [tmp10];
+      let tmp9Result = null != rank;
+      if (tmp9Result) {
+        const obj9 = { rank, style: tmp.rank };
+        tmp9Result = tmp9(CheckpointRankTagDefault, obj9);
+      }
+      items2[1] = tmp9Result;
       obj5.children = items2;
       const items3 = [closure_8(View, obj5)];
-      const obj9 = { style: tmp.gameText, children: null };
+      const obj10 = { style: tmp.gameText, children: null };
       const items4 = [
-        tmp10(id(5220).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }),
-        tmp10(CheckpointTextDefault, {
-          variant: "experimental/mono-md/bold",
-          style: tmp.gameSessions,
-          children: rounded,
-        }),
+        tmp9(id(5220).Text, { variant: "text-md/semibold", style: tmp.gameName, lineClamp: 2, children: name }),
+        tmp9(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.gameLabel, children: label }),
       ];
-      obj9.children = items4;
-      items3[1] = closure_8(View, obj9);
+      obj10.children = items4;
+      items3[1] = closure_8(View, obj10);
       obj4.children = items3;
       return closure_8(View, obj4);
     };
@@ -355,12 +334,12 @@ const result = size.fileFinishedImporting(
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function CheckpointGamesStatsScreen() {
-      const cResult = c.c(51);
-      const tmp4 = closure_9();
+      const cResult = stateFromStores1(576).c(86);
+      const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [CheckpointStore];
-        const fn = function o() {
-          stats = stats.stats;
+        items = [CheckpointStore];
+        const fn = function s() {
+          const stats = CheckpointStore.stats;
           let games;
           if (stats != null) {
             games = stats.games;
@@ -374,269 +353,493 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
+      let obj = stateFromStores1(576);
+      const stateFromStores = stateFromStores1(504).useStateFromStores(tmp5, tmp6);
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [CheckpointStore];
+        class S {
+          constructor() {
+            globalStats = closure_1_5.globalStats;
+            games = undefined;
+            if (globalStats != null) {
+              games = globalStats.games;
+            }
+            return games;
+          }
+        }
+        cResult[2] = items1;
+        cResult[3] = S;
+        let tmp10 = S;
+        let tmp9 = items1;
+      } else {
+        tmp9 = cResult[2];
+        tmp10 = cResult[3];
+      }
+      const tmpResult = stateFromStores1(504);
+      stateFromStores1 = stateFromStores1(504).useStateFromStores(tmp9, tmp10);
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const items2 = [CheckpointStore];
+        class S {
+          constructor() {
+            globalStats = closure_1_5.globalStats;
+            games = undefined;
+            if (globalStats != null) {
+              games = globalStats.games;
+            }
+            return games;
+          }
+        }
+        cResult[4] = items2;
+        cResult[5] = tmp16;
+        let tmp14 = tmp16;
+        let tmp13 = items2;
+      } else {
+        tmp13 = cResult[4];
+        tmp14 = cResult[5];
+      }
+      const tmpResult3 = stateFromStores1(504);
+      const stateFromStores2 = stateFromStores1(504).useStateFromStores(tmp13, tmp14);
       let totalGamesPlayed;
       if (stateFromStores != null) {
         totalGamesPlayed = stateFromStores.totalGamesPlayed;
       }
-      if (cResult[2] !== totalGamesPlayed) {
-        let num3;
-        if (stateFromStores != null) {
-          num3 = stateFromStores.totalGamesPlayed;
+      if (cResult[6] !== totalGamesPlayed) {
+        let num7;
+        class S {
+          constructor() {
+            globalStats = closure_1_5.globalStats;
+            games = undefined;
+            if (globalStats != null) {
+              games = globalStats.games;
+            }
+            return games;
+          }
         }
-        if (num3 == null) {
-          num3 = 0;
+        if (num7 == null) {
+          num7 = 0;
         }
-        const rounded = Math.round(num3);
+        let rounded = Math.round(num7);
         let totalGamesPlayed1;
         if (stateFromStores != null) {
           totalGamesPlayed1 = stateFromStores.totalGamesPlayed;
         }
-        cResult[2] = totalGamesPlayed1;
-        cResult[3] = rounded;
-        let tmp10 = rounded;
+        cResult[6] = totalGamesPlayed1;
+        cResult[7] = rounded;
+        let tmp19 = rounded;
       } else {
-        tmp10 = cResult[3];
+        tmp19 = cResult[7];
       }
-      let games;
+      let games1;
       if (stateFromStores != null) {
-        games = stateFromStores.games;
+        games1 = stateFromStores.games;
       }
-      if (cResult[4] !== games) {
-        let games1;
-        if (stateFromStores != null) {
-          games1 = stateFromStores.games;
-        }
-        if (games1 == null) {
-          games1 = [];
-        }
+      if (cResult[8] !== games1) {
         let games2;
         if (stateFromStores != null) {
           games2 = stateFromStores.games;
         }
-        cResult[4] = games2;
-        cResult[5] = games1;
-        let arr2 = games1;
-      } else {
-        arr2 = cResult[5];
+        if (games2 == null) {
+          games2 = [];
+        }
+        class S {
+          constructor() {
+            globalStats = closure_1_5.globalStats;
+            games = undefined;
+            if (globalStats != null) {
+              games = globalStats.games;
+            }
+            return games;
+          }
+        }
+        if (stateFromStores != null) {
+          let games = stateFromStores.games;
+        }
+        cResult[8] = games;
+        cResult[9] = games2;
       }
-      if (cResult[6] === tmp10) {
-        if (cResult[7] === tmp4.container) {
-          if (cResult[8] === tmp4.title) {
-            if (cResult[9] === tmp4.titleText) {
-              const _HermesInternal = HermesInternal;
-              const combined = "" + cResult[14] + " " + cResult[15];
-              if (cResult[20] !== tmp10) {
-                const obj2 = { end: tmp10 };
-                const tmp34 = React5(CheckpointCountUpStatNumberDefault, obj2);
-                cResult[20] = tmp10;
-                cResult[21] = tmp34;
-                let tmp31 = tmp34;
-              } else {
-                tmp31 = cResult[21];
-              }
-              if (cResult[22] === cResult[10]) {
-                if (cResult[23] === tmp4.number) {
-                  if (cResult[24] === tmp31) {
-                    if (cResult[25] === tmp19) {
-                      if (cResult[26] === combined) {
-                        let tmp35 = cResult[27];
-                      }
-                      if (cResult[28] !== tmp10) {
-                        const intl2 = util.intl;
-                        const obj3 = { numGames: tmp10 };
-                        const formatResult = intl2.format(_modDef3088.aJMJ6b, obj3);
-                        cResult[28] = tmp10;
-                        cResult[29] = formatResult;
-                        let tmp38 = formatResult;
-                      } else {
-                        tmp38 = cResult[29];
-                      }
-                      if (cResult[30] !== tmp38) {
-                        const obj4 = { variant: "heading-lg/medium", children: tmp38 };
-                        const tmp44 = React5(CheckpointTextDefault, obj4);
-                        cResult[30] = tmp38;
-                        cResult[31] = tmp44;
-                        let tmp41 = tmp44;
-                      } else {
-                        tmp41 = cResult[31];
-                      }
-                      if (cResult[32] === tmp16) {
-                        if (cResult[33] === tmp35) {
-                          if (cResult[34] === tmp41) {
-                            if (cResult[35] === tmp20) {
-                              let tmp45 = cResult[36];
+      if (cResult[10] === stateFromStores1) {
+        if (cResult[11] === stateFromStores2) {
+          if (cResult[12] === tmp19) {
+            if (cResult[13] === tmp4.container) {
+              if (cResult[14] === tmp4.games) {
+                if (cResult[15] === tmp4.globalContainer) {
+                  if (cResult[16] === tmp4.globalHeading) {
+                    if (cResult[17] === tmp4.globe) {
+                      if (cResult[18] === tmp4.header) {
+                        if (cResult[19] === tmp4.title) {
+                          if (cResult[20] === tmp4.titleText) {
+                            class S {
+                              constructor() {
+                                globalStats = closure_1_5.globalStats;
+                                games = undefined;
+                                if (globalStats != null) {
+                                  games = globalStats.games;
+                                }
+                                return games;
+                              }
                             }
-                            if (cResult[37] !== arr2) {
-                              const _Symbol = Symbol;
-                              if (cResult[39] === Symbol.for("react.memo_cache_sentinel")) {
-                                class F {
-                                  constructor(arg0, arg1) {
-                                    game = arg0.game;
-                                    obj = { game, rank: arg1 + 1, numSessions: arg0.numSessions };
-                                    return closure_1_7(closure_1_10, obj, game.id);
-                                  }
-                                }
-                                cResult[39] = F;
-                              } else {
-                                class F {
-                                  constructor(arg0, arg1) {
-                                    game = arg0.game;
-                                    obj = { game, rank: arg1 + 1, numSessions: arg0.numSessions };
-                                    return closure_1_7(closure_1_10, obj, game.id);
-                                  }
-                                }
-                              }
-                              const mapped = arr2.map(F);
-                              cResult[37] = arr2;
-                              cResult[38] = mapped;
+                            const _Symbol3 = Symbol;
+                            if (cResult[28] !== Symbol.for("react.early_return_sentinel")) {
+                              return tmp30;
                             } else {
-                              class F {
-                                constructor(arg0, arg1) {
-                                  game = arg0.game;
-                                  obj = { game, rank: arg1 + 1, numSessions: arg0.numSessions };
-                                  return closure_1_7(closure_1_10, obj, game.id);
+                              let _HermesInternal = HermesInternal;
+                              class S {
+                                constructor() {
+                                  globalStats = closure_1_5.globalStats;
+                                  games = undefined;
+                                  if (globalStats != null) {
+                                    games = globalStats.games;
+                                  }
+                                  return games;
                                 }
                               }
-                              if (cResult[40] === tmp4.games) {
-                                class F {
-                                  constructor(arg0, arg1) {
-                                    game = arg0.game;
-                                    obj = { game, rank: arg1 + 1, numSessions: arg0.numSessions };
-                                    return closure_1_7(closure_1_10, obj, game.id);
+                              if (cResult[55] !== tmp19) {
+                                class S {
+                                  constructor() {
+                                    globalStats = closure_1_5.globalStats;
+                                    games = undefined;
+                                    if (globalStats != null) {
+                                      games = globalStats.games;
+                                    }
+                                    return games;
                                   }
                                 }
-                                if (cResult[43] === tmp17) {
-                                  class F {
-                                    constructor(arg0, arg1) {
-                                      game = arg0.game;
-                                      obj = { game, rank: arg1 + 1, numSessions: arg0.numSessions };
-                                      return closure_1_7(closure_1_10, obj, game.id);
+                                const tmp73 = closure_7(CheckpointCountUpStatNumberDefault, { end: null });
+                                cResult[55] = tmp19;
+                                cResult[56] = tmp73;
+                                let tmp70 = tmp73;
+                                const obj2 = { end: null };
+                              } else {
+                                tmp70 = cResult[56];
+                              }
+                              if (cResult[57] === tmp24) {
+                                if (cResult[58] === tmp4.number) {
+                                  if (cResult[59] === tmp27) {
+                                    if (cResult[60] === tmp88) {
+                                      if (cResult[61] === tmp70) {
+                                        let tmp74 = cResult[62];
+                                      }
+                                      if (cResult[63] !== tmp19) {
+                                        const intl2 = tmp(1128).intl;
+                                        class S {
+                                          constructor() {
+                                            globalStats = closure_1_5.globalStats;
+                                            games = undefined;
+                                            if (globalStats != null) {
+                                              games = globalStats.games;
+                                            }
+                                            return games;
+                                          }
+                                        }
+                                        tmp79[0] = tmp19;
+                                        const formatResult = intl2.format(_modDef3088.aJMJ6b, tmp79);
+                                        cResult[63] = tmp19;
+                                        cResult[64] = formatResult;
+                                        let tmp77 = formatResult;
+                                      } else {
+                                        tmp77 = cResult[64];
+                                      }
+                                      if (cResult[65] !== tmp77) {
+                                        class S {
+                                          constructor() {
+                                            globalStats = closure_1_5.globalStats;
+                                            games = undefined;
+                                            if (globalStats != null) {
+                                              games = globalStats.games;
+                                            }
+                                            return games;
+                                          }
+                                        }
+                                        const tmp84 = closure_7(CheckpointTextDefault, {
+                                          variant: "heading-lg/medium",
+                                          children: null,
+                                        });
+                                        cResult[65] = tmp77;
+                                        cResult[66] = tmp84;
+                                        let tmp81 = tmp84;
+                                        const obj3 = { variant: "heading-lg/medium", children: null };
+                                      } else {
+                                        tmp81 = cResult[66];
+                                      }
+                                      class S {
+                                        constructor() {
+                                          globalStats = closure_1_5.globalStats;
+                                          games = undefined;
+                                          if (globalStats != null) {
+                                            games = globalStats.games;
+                                          }
+                                          return games;
+                                        }
+                                      }
+                                      const obj4 = { children: null };
+                                      const items3 = [tmp28, tmp74, tmp81];
+                                      obj4.children = items3;
+                                      const tmp87 = closure_8(tmp25, obj4);
+                                      cResult[67] = tmp25;
+                                      cResult[68] = tmp28;
+                                      cResult[69] = tmp74;
+                                      cResult[70] = tmp81;
+                                      cResult[71] = tmp87;
                                     }
                                   }
                                 }
-                                const obj5 = { style: tmp21, children: null };
-                                const items1 = [tmp45, tmp53];
-                                obj5.children = items1;
-                                const tmp59 = closure_1_8(tmp17, obj5);
-                                cResult[43] = tmp17;
-                                cResult[44] = tmp45;
-                                cResult[45] = tmp53;
-                                cResult[46] = tmp21;
-                                cResult[47] = tmp59;
                               }
-                              const obj6 = { style: tmp48, children: tmp49 };
-                              const tmp56 = React5(View, obj6);
-                              cResult[40] = tmp4.games;
-                              cResult[41] = tmp49;
-                              cResult[42] = tmp56;
+                              const obj5 = {
+                                accessible: tmp27,
+                                accessibilityLabel: tmp88,
+                                style: tmp4.number,
+                                children: tmp70,
+                              };
+                              const tmp76 = closure_7(tmp24, obj5);
+                              cResult[57] = tmp24;
+                              cResult[58] = tmp4.number;
+                              cResult[59] = tmp27;
+                              cResult[60] = tmp88;
+                              cResult[61] = tmp70;
+                              cResult[62] = tmp76;
+                              tmp74 = tmp76;
                             }
                           }
                         }
                       }
-                      const obj7 = { children: null };
-                      const items2 = [tmp20, tmp35, tmp41];
-                      obj7.children = items2;
-                      const tmp47 = closure_1_8(tmp16, obj7);
-                      cResult[32] = tmp16;
-                      cResult[33] = tmp35;
-                      cResult[34] = tmp41;
-                      cResult[35] = tmp20;
-                      cResult[36] = tmp47;
-                      tmp45 = tmp47;
                     }
                   }
                 }
               }
-              const obj8 = {
-                accessible: cResult[16],
-                accessibilityLabel: combined,
-                style: tmp4.number,
-                children: tmp31,
-              };
-              const tmp37 = React5(cResult[10], obj8);
-              cResult[22] = cResult[10];
-              cResult[23] = tmp4.number;
-              cResult[24] = tmp31;
-              cResult[25] = cResult[16];
-              cResult[26] = combined;
-              cResult[27] = tmp37;
-              tmp35 = tmp37;
             }
           }
         }
       }
-      const intl = util.intl;
-      let tmp22 = importDefault;
-      titleText = intl.string(_modDef3088.HM2fjf);
-      const tmpResult = initialize;
-      if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-        class F {
-          constructor(arg0, arg1) {
-            game = arg0.game;
-            obj = { game, rank: arg1 + 1, numSessions: arg0.numSessions };
-            return closure_1_7(closure_1_10, obj, game.id);
+      Symbol.for("react.early_return_sentinel");
+      let intl = tmp(1128).intl;
+      let tmp34 = importDefault;
+      let stringResult = intl.string(_modDef3088.HM2fjf);
+      if (!stateFromStores2) {
+        if (null != stateFromStores1) {
+          if (cResult[31] === tmp4.container) {
+            if (cResult[34] !== tmp4.globe) {
+              const obj6 = { uri: null, style: null };
+              class S {
+                constructor() {
+                  globalStats = closure_1_5.globalStats;
+                  games = undefined;
+                  if (globalStats != null) {
+                    games = globalStats.games;
+                  }
+                  return games;
+                }
+              }
+              obj6.style = tmp4.globe;
+              const tmp39 = closure_7(CheckpointApngPlayerDefault, obj6);
+              cResult[34] = tmp4.globe;
+              cResult[35] = tmp39;
+              let tmp36 = tmp39;
+              const tmp34Result = CheckpointApngPlayerDefault;
+            } else {
+              tmp36 = cResult[35];
+            }
+            const _Symbol = Symbol;
+            class S {
+              constructor() {
+                globalStats = closure_1_5.globalStats;
+                games = undefined;
+                if (globalStats != null) {
+                  games = globalStats.games;
+                }
+                return games;
+              }
+            }
+            if (tmp40 === Symbol.for("react.memo_cache_sentinel")) {
+              const obj7 = { children: null };
+              class S {
+                constructor() {
+                  globalStats = closure_1_5.globalStats;
+                  games = undefined;
+                  if (globalStats != null) {
+                    games = globalStats.games;
+                  }
+                  return games;
+                }
+              }
+              const tmp34Result3 = CheckpointDisplayTextDefault;
+              obj7.children = obj8.string(_modDef3088.qbCgI7).toLocaleUpperCase();
+              const tmp44 = closure_7(tmp34Result3, obj7);
+              cResult[36] = tmp44;
+              let tmp41 = tmp44;
+              const stringResult1 = obj8.string(_modDef3088.qbCgI7);
+            } else {
+              tmp41 = cResult[36];
+            }
+            if (cResult[37] === tmp4.globalHeading) {
+              if (cResult[38] === tmp36) {
+                if (cResult[39] === tmp41) {
+                  let tmp45 = cResult[40];
+                }
+                const _Symbol2 = Symbol;
+                class S {
+                  constructor() {
+                    globalStats = closure_1_5.globalStats;
+                    games = undefined;
+                    if (globalStats != null) {
+                      games = globalStats.games;
+                    }
+                    return games;
+                  }
+                }
+                if (cResult[42] === tmp4.header) {
+                  if (cResult[45] !== stateFromStores1) {
+                    const mapped = items.map((list) => {
+                      list = list.list;
+                      const first = stateFromStores1[list][0];
+                      if (null == first) {
+                        return null;
+                      } else {
+                        const intl = util.intl;
+                        const stringResult = intl.string(tmp);
+                        const obj = { game: first, label: stringResult.toLocaleUpperCase(), accessibilityLabel: null };
+                        const _HermesInternal = HermesInternal;
+                        obj.accessibilityLabel = "" + first.name + ", " + stringResult;
+                        return React5(closure_11, obj, list);
+                      }
+                    });
+                    class S {
+                      constructor() {
+                        globalStats = closure_1_5.globalStats;
+                        games = undefined;
+                        if (globalStats != null) {
+                          games = globalStats.games;
+                        }
+                        return games;
+                      }
+                    }
+                    cResult[46] = mapped;
+                    let tmp55 = mapped;
+                  } else {
+                    tmp55 = cResult[46];
+                  }
+                  class S {
+                    constructor() {
+                      globalStats = closure_1_5.globalStats;
+                      games = undefined;
+                      if (globalStats != null) {
+                        games = globalStats.games;
+                      }
+                      return games;
+                    }
+                  }
+                  const obj9 = { style: tmp4.games, children: tmp55 };
+                  const tmp61 = closure_7(View, obj9);
+                  cResult[47] = tmp4.games;
+                  cResult[48] = tmp55;
+                  cResult[49] = tmp61;
+                }
+                const obj10 = { style: tmp4.header, children: null };
+                const items4 = [tmp45, tmp50];
+                obj10.children = items4;
+                const tmp54 = closure_8(View, obj10);
+                cResult[42] = tmp4.header;
+                cResult[43] = tmp45;
+                cResult[44] = tmp54;
+              }
+            }
+            const obj11 = { style: tmp4.globalHeading, children: null };
+            const items5 = [tmp36, tmp41];
+            obj11.children = items5;
+            const tmp48 = closure_8(View, obj11);
+            cResult[37] = tmp4.globalHeading;
+            cResult[38] = tmp36;
+            cResult[39] = tmp41;
+            cResult[40] = tmp48;
+            tmp45 = tmp48;
           }
-        }
-        const obj9 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-        const tmp27 = React5(GameControllerIcon.GameControllerIcon, obj9);
-        cResult[19] = tmp27;
-        const tmp25 = tmp27;
-      } else {
-        class F {
-          constructor(arg0, arg1) {
-            game = arg0.game;
-            obj = { game, rank: arg1 + 1, numSessions: arg0.numSessions };
-            return closure_1_7(closure_1_10, obj, game.id);
+          const items6 = [tmp4.container];
+          class S {
+            constructor() {
+              globalStats = closure_1_5.globalStats;
+              games = undefined;
+              if (globalStats != null) {
+                games = globalStats.games;
+              }
+              return games;
+            }
           }
+          cResult[31] = tmp4.container;
+          cResult[32] = tmp4.globalContainer;
+          cResult[33] = items6;
         }
       }
-      const obj10 = { style: tmp4.title, children: null };
-      const items3 = [tmp25];
-      tmp22 = CheckpointTextDefault;
-      const tmp23 = CheckpointScreenDefault;
-      items3[1] = React5(tmp22, {
+      CheckpointScreenDefault;
+      const container = tmp4.container;
+      if (cResult[54] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor() {
+            globalStats = closure_1_5.globalStats;
+            games = undefined;
+            if (globalStats != null) {
+              games = globalStats.games;
+            }
+            return games;
+          }
+        }
+        const tmp67 = closure_7(tmp(9592).GameControllerIcon, { size: "refresh_sm", color: null });
+        cResult[54] = tmp67;
+        let tmp64 = tmp67;
+        const obj12 = { size: "refresh_sm", color: null };
+      } else {
+        tmp64 = cResult[54];
+      }
+      const obj13 = { style: tmp4.title, children: null };
+      const items7 = [tmp64];
+      tmp34 = CheckpointTextDefault;
+      const tmpResult4 = stateFromStores1(504);
+      items7[1] = closure_7(tmp34, {
         variant: "heading-md/extrabold",
         style: tmp4.titleText,
-        children: titleText.toLocaleUpperCase(),
+        children: stringResult.toLocaleUpperCase(),
       });
-      obj10.children = items3;
-      const obj11 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: titleText.toLocaleUpperCase() };
-      const tmp28 = closure_1_8(View, obj10);
-      cResult[6] = tmp10;
-      cResult[7] = tmp4.container;
-      ({ title: tmp3[8], titleText } = tmp4);
-      cResult[9] = titleText;
-      cResult[10] = View;
-      cResult[11] = View;
-      cResult[12] = View;
-      cResult[13] = tmp23;
-      cResult[14] = tmp10;
-      cResult[15] = titleText.toLocaleLowerCase();
-      cResult[16] = true;
-      cResult[17] = tmp28;
-      cResult[18] = tmp4.container;
-      const toLocaleLowerCaseResult = titleText.toLocaleLowerCase();
+      obj13.children = items7;
+      closure_8(View, obj13);
+      stringResult.toLocaleLowerCase();
+      const obj14 = {
+        variant: "heading-md/extrabold",
+        style: tmp4.titleText,
+        children: stringResult.toLocaleUpperCase(),
+      };
     }
   : function CheckpointGamesStatsScreen() {
-      const tmp = closure_9();
-      const items = [CheckpointStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => {
-        stats = stats.stats;
+      const tmp = closure_10();
+      items = [CheckpointStore];
+      const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => {
+        const stats = CheckpointStore.stats;
         let games;
         if (stats != null) {
           games = stats.games;
         }
         return games;
       });
+      let obj = stateFromStores1(504);
+      const items1 = [CheckpointStore];
+      stateFromStores1 = stateFromStores1(504).useStateFromStores(items1, () => {
+        const globalStats = CheckpointStore.globalStats;
+        let games;
+        if (globalStats != null) {
+          games = globalStats.games;
+        }
+        return games;
+      });
+      const obj2 = stateFromStores1(504);
+      const items2 = [CheckpointStore];
       let num;
+      const stateFromStores2 = stateFromStores1(504).useStateFromStores(items2, () =>
+        stateFromStores1(12896).hasCheckpointGames(CheckpointStore.stats),
+      );
       if (stateFromStores != null) {
         num = stateFromStores.totalGamesPlayed;
       }
       if (num == null) {
         num = 0;
       }
-      const rounded = Math.round(num);
+      let rounded = Math.round(num);
       let games;
       if (stateFromStores != null) {
         games = stateFromStores.games;
@@ -644,46 +847,125 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (games == null) {
         games = [];
       }
-      const intl = util.intl;
-      const stringResult = intl.string(_modDef3088.HM2fjf);
-      const obj2 = { children: null };
-      const obj3 = { style: tmp.container, children: null };
-      const obj4 = { children: null };
-      const obj5 = { style: tmp.title, children: null };
-      const items1 = [React5(GameControllerIcon.GameControllerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY })];
-      const obj7 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
-      const obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-      const tmp6 = CheckpointScreenDefault;
-      obj7.children = stringResult.toLocaleUpperCase();
-      items1[1] = React5(CheckpointTextDefault, obj7);
-      obj5.children = items1;
-      const items2 = [closure_1_8(View, obj5), ,];
-      items2[1] = React5(View, {
+      let intl = tmp2(1128).intl;
+      let stringResult = intl.string(_modDef3088.HM2fjf);
+      if (!stateFromStores2) {
+        if (null != stateFromStores1) {
+          let obj4 = { children: null };
+          const obj5 = { style: null, children: null };
+          const items3 = [,];
+          ({ container: arr8[0], globalContainer: arr8[1] } = tmp);
+          obj5.style = items3;
+          const obj6 = { style: tmp.header, children: null };
+          const obj7 = { style: tmp.globalHeading, children: null };
+          const obj8 = { uri: _modDef12921, style: tmp.globe };
+          const items4 = [closure_7(CheckpointApngPlayerDefault, obj8)];
+          const obj9 = { children: null };
+          const tmp8Result = CheckpointApngPlayerDefault;
+          const intl3 = tmp2(1128).intl;
+          const tmp8Result5 = CheckpointDisplayTextDefault;
+          obj9.children = intl3.string(_modDef3088.qbCgI7).toLocaleUpperCase();
+          items4[1] = closure_7(tmp8Result5, obj9);
+          obj7.children = items4;
+          const items5 = [closure_8(View, obj7)];
+          const obj10 = { variant: "heading-lg/medium", children: null };
+          const stringResult1 = intl3.string(_modDef3088.qbCgI7);
+          const intl4 = tmp2(1128).intl;
+          obj10.children = intl4.string(_modDef3088["0oDeiM"]);
+          items5[1] = closure_7(CheckpointTextDefault, obj10);
+          obj6.children = items5;
+          const items6 = [closure_8(View, obj6)];
+          const obj11 = {
+            style: tmp.games,
+            children: items.map((list) => {
+              list = list.list;
+              const first = stateFromStores1[list][0];
+              if (null == first) {
+                return null;
+              } else {
+                const intl = util.intl;
+                const stringResult = intl.string(tmp);
+                const obj = { game: first, label: stringResult.toLocaleUpperCase(), accessibilityLabel: null };
+                const _HermesInternal = HermesInternal;
+                obj.accessibilityLabel = "" + first.name + ", " + stringResult;
+                return React5(closure_11, obj, list);
+              }
+            }),
+          };
+          items6[1] = closure_7(View, obj11);
+          obj5.children = items6;
+          obj4.children = closure_8(View, obj5);
+          const tmp8Result6 = CheckpointTextDefault;
+        }
+        return closure_7(tmp10, obj4);
+      }
+      const obj12 = { children: null };
+      const obj13 = { style: tmp.container, children: null };
+      const obj14 = { children: null };
+      const obj15 = { style: tmp.title, children: null };
+      const items7 = [
+        closure_7(stateFromStores1(9592).GameControllerIcon, { size: "refresh_sm", color: CHECKPOINT_PRIMARY }),
+      ];
+      const obj17 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
+      const obj16 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
+      const obj3 = stateFromStores1(504);
+      obj17.children = stringResult.toLocaleUpperCase();
+      items7[1] = closure_7(CheckpointTextDefault, obj17);
+      obj15.children = items7;
+      const items8 = [closure_8(View, obj15), ,];
+      const tmp8Result7 = CheckpointTextDefault;
+      items8[1] = closure_7(View, {
         accessible: true,
         accessibilityLabel: "" + rounded + " " + stringResult.toLocaleLowerCase(),
         style: tmp.number,
-        children: React5(CheckpointCountUpStatNumberDefault, { end: rounded }),
+        children: closure_7(CheckpointCountUpStatNumberDefault, { end: rounded }),
       });
-      const obj9 = { variant: "heading-lg/medium", children: null };
-      const obj8 = {
+      const obj19 = { variant: "heading-lg/medium", children: null };
+      const obj18 = {
         accessible: true,
         accessibilityLabel: "" + rounded + " " + stringResult.toLocaleLowerCase(),
         style: tmp.number,
-        children: React5(CheckpointCountUpStatNumberDefault, { end: rounded }),
+        children: closure_7(CheckpointCountUpStatNumberDefault, { end: rounded }),
       };
-      const intl2 = util.intl;
-      obj9.children = intl2.format(_modDef3088.aJMJ6b, { numGames: rounded });
-      items2[2] = React5(CheckpointTextDefault, obj9);
-      obj4.children = items2;
-      const items3 = [closure_1_8(View, obj4)];
-      items3[1] = React5(View, {
+      const intl2 = tmp2(1128).intl;
+      obj19.children = intl2.format(_modDef3088.aJMJ6b, { numGames: rounded });
+      items8[2] = closure_7(CheckpointTextDefault, obj19);
+      obj14.children = items8;
+      const items9 = [closure_8(View, obj14)];
+      const tmp8Result8 = CheckpointTextDefault;
+      items9[1] = closure_7(View, {
         style: tmp.games,
         children: games.map((game, index) => {
           game = game.game;
-          return closure_1_7(closure_1_10, { game, rank: index + 1, numSessions: game.numSessions }, game.id);
+          const sum = index + 1;
+          const rounded = Math.round(game.numSessions);
+          const obj = { game, rank: sum, label: rounded, accessibilityLabel: null };
+          const intl = stateFromStores1(1128).intl;
+          obj.accessibilityLabel = intl.formatToPlainString(_modDef3088.mqdLhl, {
+            gameName: game.name,
+            rank: sum,
+            numSessions: rounded,
+          });
+          return closure_1_7(closure_1_11, obj, game.id);
         }),
       });
-      obj3.children = items3;
-      obj2.children = closure_1_8(View, obj3);
-      return React5(tmp6, obj2);
+      obj13.children = items9;
+      obj12.children = closure_8(View, obj13);
+      obj4 = obj12;
+      const obj20 = {
+        style: tmp.games,
+        children: games.map((game, index) => {
+          game = game.game;
+          const sum = index + 1;
+          const rounded = Math.round(game.numSessions);
+          const obj = { game, rank: sum, label: rounded, accessibilityLabel: null };
+          const intl = stateFromStores1(1128).intl;
+          obj.accessibilityLabel = intl.formatToPlainString(_modDef3088.mqdLhl, {
+            gameName: game.name,
+            rank: sum,
+            numSessions: rounded,
+          });
+          return closure_1_7(closure_1_11, obj, game.id);
+        }),
+      };
     };

@@ -13,16 +13,16 @@ const require = globalThis.__r;
 
 require = fn;
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(17570, dependencyMap.paths);
+  return asyncRequireImpl(17592, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(17572, dependencyMap.paths);
+  return asyncRequireImpl(17594, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(17575, dependencyMap.paths);
+  return asyncRequireImpl(17597, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(17577, dependencyMap.paths);
+  return asyncRequireImpl(17599, dependencyMap.paths);
 }
 const constants = fn(4818).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
@@ -40,7 +40,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (useIsGuildEligibleForRoleSubscriptionsUpsellDefault(id)) {
         items.push(tmp(4805).DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL);
       }
-      obj2 = id(17578);
+      obj2 = id(17600);
       if (tmpResult.useCanUseRoleSubscriptionIAP(id)) {
         items.push(tmp(4805).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL);
       }
@@ -131,7 +131,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (useIsGuildEligibleForRoleSubscriptionsUpsellDefault(id)) {
         items.push(tmp(4805).DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL);
       }
-      obj = id(17578);
+      obj = id(17600);
       if (tmpResult.useCanUseRoleSubscriptionIAP(id)) {
         items.push(tmp(4805).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL);
       }

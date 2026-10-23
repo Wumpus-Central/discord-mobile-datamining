@@ -83,11 +83,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       if (cResult[2] !== platform.type) {
-        const connectionBackgroundColor = tmp(16176).getConnectionBackgroundColor(platform.type);
+        const connectionBackgroundColor = tmp(16194).getConnectionBackgroundColor(platform.type);
         cResult[2] = platform.type;
         cResult[3] = connectionBackgroundColor;
         let tmp7 = connectionBackgroundColor;
-        const tmpResult = tmp(16176);
+        const tmpResult = tmp(16194);
       } else {
         tmp7 = cResult[3];
       }
@@ -122,7 +122,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           const obj2 = { onPress: tmp6, style: tmp4.card, border: "strong", children: tmp19 };
-                          const tmp25 = closure_6(tmp(6891).Card, obj2);
+                          const tmp25 = closure_6(tmp(6890).Card, obj2);
                           cResult[23] = tmp6;
                           cResult[24] = tmp4.card;
                           cResult[25] = tmp19;
@@ -392,21 +392,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ConnectionsEmptyStateUpsell() {
       const tmp = closure_8();
-      emptyStatePlatforms = emptyStatePlatforms(7596).useEmptyStatePlatforms();
+      emptyStatePlatforms = emptyStatePlatforms(7597).useEmptyStatePlatforms();
       const items = [emptyStatePlatforms];
       const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
       const items1 = [emptyStatePlatforms];
       const memo1 = noop.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
       const obj2 = { style: null, children: null };
       const items2 = [tmp.container];
-      const obj = emptyStatePlatforms(7596);
+      const obj = emptyStatePlatforms(7597);
       items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
       obj2.style = items2;
       const obj4 = { style: tmp.content, children: null };
       const obj5 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
       const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
       const items3 = [
-        closure_6(emptyStatePlatforms(5964).Stack, {
+        closure_6(emptyStatePlatforms(5963).Stack, {
           spacing: 16,
           justify: "center",
           direction: "horizontal",
@@ -419,9 +419,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_6(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 }),
       ];
       obj7.children = items4;
-      items3[1] = closure_7(emptyStatePlatforms(5964).Stack, obj7);
+      items3[1] = closure_7(emptyStatePlatforms(5963).Stack, obj7);
       obj5.children = items3;
-      const items5 = [closure_7(emptyStatePlatforms(5964).Stack, obj5)];
+      const items5 = [closure_7(emptyStatePlatforms(5963).Stack, obj5)];
       const obj9 = { spacing: 8, align: "center", style: tmp.textContainer, children: null };
       const obj10 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
       const intl = emptyStatePlatforms(1128).intl;
@@ -432,7 +432,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj11.children = intl2.string(emptyStatePlatforms(1128).t.XijaQP);
       items6[1] = closure_6(emptyStatePlatforms(5220).Text, obj11);
       obj9.children = items6;
-      items5[1] = closure_7(emptyStatePlatforms(5964).Stack, obj9);
+      items5[1] = closure_7(emptyStatePlatforms(5963).Stack, obj9);
       obj4.children = items5;
       obj2.children = closure_7(View, obj4);
       return closure_6(View, obj2);

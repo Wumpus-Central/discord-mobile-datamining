@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         items[2] = closure_6(closure_9, obj7);
         obj4.children = items;
-        const tmp17 = closure_7(tmp(5964).Stack, obj4);
+        const tmp17 = closure_7(tmp(5963).Stack, obj4);
         cResult[1] = tmp17;
         let tmp13 = tmp17;
       } else {
@@ -234,10 +234,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items3 = ["blur style: ", tmp9];
         obj13.children = items3;
         obj12.children = closure_7(tmp(5220).Text, obj13);
-        obj11.children = closure_6(tmp(6891).Card, obj12);
+        obj11.children = closure_6(tmp(6890).Card, obj12);
         items2[1] = closure_6(closure_5, obj11);
         obj9.children = items2;
-        tmp19 = closure_7(tmp(5954).Dialog, obj9);
+        tmp19 = closure_7(tmp(5953).Dialog, obj9);
       }
       cResult[2] = animatedStyle;
       cResult[3] = tmp9;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj4.children = items;
-      const items1 = [closure_7(showBackdrop(5964).Stack, obj4)];
+      const items1 = [closure_7(showBackdrop(5963).Stack, obj4)];
       if (showBackdrop) {
         function handleClose() {
           closure_1(false);
@@ -320,10 +320,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items3 = ["blur style: ", tmp6];
         obj9.children = items3;
         obj8.children = closure_7(tmp8(5220).Text, obj9);
-        obj7.children = closure_6(tmp8(6891).Card, obj8);
+        obj7.children = closure_6(tmp8(6890).Card, obj8);
         items2[1] = closure_6(closure_5, obj7);
         obj5.children = items2;
-        showBackdrop = closure_7(tmp8(5954).Dialog, obj5);
+        showBackdrop = closure_7(tmp8(5953).Dialog, obj5);
       }
       items1[1] = showBackdrop;
       obj3.children = items1;

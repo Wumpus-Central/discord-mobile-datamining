@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              Coachmark = Coachmark(9819).Coachmark;
+              Coachmark = Coachmark(9826).Coachmark;
               const obj2 = {
                 renderImgComponent: tmp9,
                 title: tmp12,
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.targetMeasurements = size;
         const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
         obj.surfaceMeasurements = size1;
-        tmp3 = jsx(markAsDismissed(9819).Coachmark, {
+        tmp3 = jsx(markAsDismissed(9826).Coachmark, {
           renderImgComponent: function appsIcon() {
             const obj = {
               style: closure_2.appsIcon,

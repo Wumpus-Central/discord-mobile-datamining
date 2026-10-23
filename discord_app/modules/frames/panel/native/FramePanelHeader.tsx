@@ -14,7 +14,7 @@ import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const asLaunched = fn(6762).asLaunched;
+const asLaunched = fn(6761).asLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);

@@ -16,8 +16,8 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7615).DraftType;
-const PollsConstants = fn(8295);
+const DraftType = fn(7616).DraftType;
+const PollsConstants = fn(8296);
 ({ MAX_POLL_ANSWER_LENGTH: closure_9, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: c10 } = PollsConstants);
 const EmojiIntention = fn(1395).EmojiIntention;
 const jsxProd = fn(21);
@@ -355,7 +355,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12187, dependencyMap.paths), v65535, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12198, dependencyMap.paths), v65535, {
           channelId,
           index,
           answer,

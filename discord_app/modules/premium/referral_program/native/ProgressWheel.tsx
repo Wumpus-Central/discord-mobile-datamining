@@ -3,10 +3,10 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07947_inlineStyles.js";
 import useReferralProgramBannerDetails from "../hooks/useReferralProgramBannerDetails.tsx";
-import _modDef14697 from "../../../../../_runtime/metro/14697__.js";
-import _modDef14698 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import _modDef14711 from "../../../../../_runtime/metro/14711__.js";
+import _modDef14712 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp23 = cResult[10];
             }
             if (altImage == null) {
-              altImage = _modDef14698;
+              altImage = _modDef14712;
             }
             if (cResult[11] !== altImage) {
               const obj5 = { uri: altImage };
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp12 = tmp10;
       if (tmp10) {
-        const obj9 = { source: _modDef14697, style: tmp4.glowImage };
+        const obj9 = { source: _modDef14711, style: tmp4.glowImage };
         tmp12 = React4(FastImageDefault, obj9);
         const tmp5Result = FastImageDefault;
       }
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
       let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
       if (tmp9) {
-        const obj4 = { source: _modDef14697, style: tmp.glowImage };
+        const obj4 = { source: _modDef14711, style: tmp.glowImage };
         tmp9 = React4(FastImageDefault, obj4);
         const tmp4Result = FastImageDefault;
       }
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp4Result3 = inlineStylesDefault;
       if (altImage == null) {
-        altImage = _modDef14698;
+        altImage = _modDef14712;
       }
       items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
       obj3.children = items;

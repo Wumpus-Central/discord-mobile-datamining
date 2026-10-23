@@ -9,7 +9,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import LinearGradientDefault from "../../../../_runtime/05244_LinearGradient.js";
-import _modDef6952 from "../../../../_runtime/metro/06952__.js";
+import _modDef6951 from "../../../../_runtime/metro/06951__.js";
 import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment.tsx";
 import ConnectionUnknownIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionUnknownIcon.tsx";
 import ConnectionFineIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx";
@@ -22,8 +22,8 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const constants = fn(14934).ConnectivityIndicatorState;
-const YouBarConstants = fn(16334);
+const constants = fn(14948).ConnectivityIndicatorState;
+const YouBarConstants = fn(16357);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1087).AnalyticEvents;
@@ -329,7 +329,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj7 = { style: tmp3.glow, maskElement: tmp17, children: tmp24 };
-                const tmp32 = __initData(_modDef6952, obj7);
+                const tmp32 = __initData(_modDef6951, obj7);
                 cResult[20] = tmp3.glow;
                 cResult[21] = tmp17;
                 cResult[22] = tmp24;
@@ -400,7 +400,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         start: start2,
         end: end2,
       });
-      obj2.children = closure_12(_modDef6952, obj3);
+      obj2.children = closure_12(_modDef6951, obj3);
       return closure_12(ReanimatedRexportDefault.View, obj2);
     };
 ReactCompilerGating = fn(558);

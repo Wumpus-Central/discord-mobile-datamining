@@ -110,7 +110,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         withSpring: theme(5233).withSpring,
         springStandard: theme(5234).springStandard,
       };
-      analyticsLocations = analyticsLocations(7237)(analyticsLocations(7262).CLIENT_THEMES_EDITOR).analyticsLocations;
+      analyticsLocations = analyticsLocations(7238)(analyticsLocations(7263).CLIENT_THEMES_EDITOR).analyticsLocations;
       if (cResult[0] !== analyticsLocations) {
         const fn2 = function l() {
           const obj = {
@@ -185,7 +185,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp15;
       cResult[9] = tmp19;
       tmp18 = tmp19;
-      const tmp6 = analyticsLocations(7237);
+      const tmp6 = analyticsLocations(7238);
     }
   : function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
       theme = theme.theme;
@@ -219,7 +219,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         withSpring: theme(5233).withSpring,
         springStandard: theme(5234).springStandard,
       };
-      analyticsLocations = analyticsLocations(7237)(analyticsLocations(7262).CLIENT_THEMES_EDITOR).analyticsLocations;
+      analyticsLocations = analyticsLocations(7238)(analyticsLocations(7263).CLIENT_THEMES_EDITOR).analyticsLocations;
       const items = [analyticsLocations];
       const obj3 = { style: tmp.nitroUpsell, children: null };
       const callback = noop.useCallback(() => {

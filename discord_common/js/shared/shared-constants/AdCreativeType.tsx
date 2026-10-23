@@ -14,4 +14,6 @@ export const AdCreativeType = {
   [3]: "BOUNTY",
   NO_FILL: 4,
   [4]: "NO_FILL",
+  PLAYABLE: 5,
+  [5]: "PLAYABLE",
 };

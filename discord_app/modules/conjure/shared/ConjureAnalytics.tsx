@@ -208,9 +208,9 @@ export const trackConjureErrored = function trackConjureErrored(projectId, turnI
   obj2.error_details = substr1;
   AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.CONJURE_ERRORED, obj2);
 };
-export const trackConjurePublishActionClicked = function trackConjurePublishActionClicked(project_id, installScope) {
-  installScope = installScope.installScope;
-  ({ entryPoint, publishState, surface, action } = installScope);
+export const trackConjurePublishActionClicked = function trackConjurePublishActionClicked(project_id, arg1) {
+  ({ publishState, installScope } = arg1);
+  ({ entryPoint, surface, action } = arg1);
   const project = ConjureProjectStore.getProject(project_id);
   const obj2 = { project_id, application_id: null };
   let application_id;
@@ -228,7 +228,22 @@ export const trackConjurePublishActionClicked = function trackConjurePublishActi
   }
   const merged = Object.assign(obj3);
   obj2.entry_point = entryPoint;
-  obj2.publish_state = publishState;
+  let tmp5 = null;
+  if (null != publishState) {
+    let str3 = "unpublished";
+    if ("nothing_built" !== publishState) {
+      str3 = "unpublished";
+      if ("not_live" !== publishState) {
+        let str5 = "up_to_date";
+        if ("live_outdated" === publishState) {
+          str5 = "changes";
+        }
+        str3 = str5;
+      }
+    }
+    tmp5 = str3;
+  }
+  obj2.publish_state = tmp5;
   obj2.surface = surface;
   obj2.install_scope = installScope;
   obj2.action = action;

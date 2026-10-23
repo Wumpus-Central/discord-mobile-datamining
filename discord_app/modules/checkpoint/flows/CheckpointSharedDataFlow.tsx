@@ -18,6 +18,7 @@ const items = [
   CheckpointNavigation.CheckpointRoute.EMOJI_INTRO,
   CheckpointNavigation.CheckpointRoute.EMOJI_STATS,
   CheckpointNavigation.CheckpointRoute.EMOJI_SHOES,
+  CheckpointNavigation.CheckpointRoute.GAMES_INTRO,
   CheckpointNavigation.CheckpointRoute.GAMES_STATS,
   CheckpointNavigation.CheckpointRoute.GAMES_WEARABLE,
   CheckpointNavigation.CheckpointRoute.GAME_TIME_STATS,

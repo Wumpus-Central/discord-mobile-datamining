@@ -168,6 +168,16 @@ let obj = {
     result: { status: "permission_denied" },
     answered: "denied; an agent may not capture the screen",
   }),
+  [RPCCommands.SELECT_VOICE_CHANNEL]: (args) => {
+    const channel_id = args.args.channel_id;
+    let subject;
+    if (typeof channel_id === "string") {
+      if ("" !== channel_id) {
+        subject = channel_id;
+      }
+    }
+    return { result: null, answered: "not joined; an agent may not move the user in or out of voice", subject };
+  },
   [RPCCommands.OPEN_USER_PROFILE]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.OPEN_USER_POPOUT]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.OPEN_GAME_PROFILE]: () => ({ result: { opened: true }, answered: "opened" }),
@@ -175,8 +185,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "ix", answered: false }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "ix", answered: false }),
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "ix", answered: "Arbeit" }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "ix", answered: "Arbeit" }),
 };
 let closure_5 = {
   drain() {
@@ -207,8 +217,8 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
       closure_6.unshift(obj2);
     }
     if (1 === arr.length) {
-      let result = obj2(9238).setRpcCommandInterceptor(answerFor);
-      obj = obj2(9238);
+      let result = obj2(9245).setRpcCommandInterceptor(answerFor);
+      obj = obj2(9245);
     }
     const obj3 = {
       iframeId,

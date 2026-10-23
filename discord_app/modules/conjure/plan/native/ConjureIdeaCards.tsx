@@ -11,10 +11,10 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4969);
-let obj2 = { ideaCards: { gap: fn(12295).BLOCK_GAP } };
+let obj2 = { ideaCards: { gap: fn(12306).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { gap: fn(12295).BLOCK_GAP };
+let obj3 = { gap: fn(12306).BLOCK_GAP };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");
 
@@ -81,8 +81,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmpResult = closure_1_4(onPick(5220).Text, obj4);
           }
           items[1] = tmpResult;
-          obj.children = closure_1_5(onPick(5964).Stack, { direction: "vertical", spacing: 4, children: items });
-          return closure_1_4(onPick(6891).Card, obj, title.id);
+          obj.children = closure_1_5(onPick(5963).Stack, { direction: "vertical", spacing: 4, children: items });
+          return closure_1_4(onPick(6890).Card, obj, title.id);
         };
         cResult[4] = onPick;
         cResult[5] = fn;

@@ -35,7 +35,7 @@ function createDraftWidget(type, name, locked) {
 }
 let c3 = "draft:";
 let closure_4 = 0;
-let items = [fn(18896).GuildSpaceWidgetType.POPULAR_MUSIC, fn(18896).GuildSpaceWidgetType.LEADERBOARD];
+let items = [fn(18919).GuildSpaceWidgetType.POPULAR_MUSIC, fn(18919).GuildSpaceWidgetType.LEADERBOARD];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/editorUtils.tsx");
 

@@ -58,6 +58,17 @@ export const getOrbsArcadeClaimableRewards = function getOrbsArcadeClaimableRewa
   });
   return found.sort((scoreTarget, scoreTarget2) => scoreTarget.scoreTarget - scoreTarget2.scoreTarget);
 };
+export const hasOrbsArcadeUnlockedRewards = function hasOrbsArcadeUnlockedRewards(stateFromStores1) {
+  let rewardGrants;
+  if (stateFromStores1 != null) {
+    rewardGrants = stateFromStores1.rewardGrants;
+  }
+  if (rewardGrants == null) {
+    rewardGrants = {};
+  }
+  const values = Object.values(rewardGrants);
+  return values.some((pendingAt) => null != pendingAt.pendingAt);
+};
 export const hasOrbsArcadeUnclaimedRewards = function hasOrbsArcadeUnclaimedRewards(gameState) {
   const values = Object.values(gameState.rewardGrants);
   return values.some((pendingAt) => null != pendingAt.pendingAt && null == pendingAt.claimedAt);

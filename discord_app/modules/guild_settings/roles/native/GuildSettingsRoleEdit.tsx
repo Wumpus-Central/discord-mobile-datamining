@@ -39,11 +39,11 @@ let closure_4 = ["guild"];
 let closure_5 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(4876).isEveryoneRole;
-const RoleColorsStyle = fn(19008).RoleColorsStyle;
-const constants = fn(19003).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(19031).RoleColorsStyle;
+const constants = fn(19026).GuildSettingsRoleEditSections;
 const Constants = fn(1087);
 ({ AnalyticEvents: closure_19, DEFAULT_ROLE_COLOR: closure_20, GuildSettingsSections: closure_21 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(19010).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(19033).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
 const createStyles = fn(4969);
@@ -195,10 +195,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(19022).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(19045).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(19022);
+          const obj = applyArgumentsResult(19045);
           const obj3 = { text: null, variant: "success" };
           const intl = applyArgumentsResult(1128).intl;
           obj3.text = intl.string(applyArgumentsResult(1128).t.ulZn1j);
@@ -229,15 +229,15 @@ class GuildSettingsRoleEdit extends PureComponent {
           updateRoleResult.then(
             () => {
               if (null != closure_1_2) {
-                const result = closure_3_0(11232).putRoleConnectionsConfigurations(closure_1_4, closure_1_5, tmp);
+                const result = closure_3_0(11241).putRoleConnectionsConfigurations(closure_1_4, closure_1_5, tmp);
                 result.then(success, failure);
-                const obj5 = closure_3_0(11232);
+                const obj5 = closure_3_0(11241);
               } else if (typeof success === "function") {
-                closure_3_0(19022).commitSectionChanges(closure_1_5, effectiveSection);
+                closure_3_0(19045).commitSectionChanges(closure_1_5, effectiveSection);
                 navigation.pop();
                 const obj2 = { submitting: false, formErrors: {} };
                 closure_0.setState(obj2);
-                const obj = closure_3_0(19022);
+                const obj = closure_3_0(19045);
                 obj4 = { text: null, variant: "success" };
                 const intl = closure_3_0(1128).intl;
                 obj4.text = intl.string(closure_3_0(1128).t.ulZn1j);
@@ -327,7 +327,7 @@ class GuildSettingsRoleEdit extends PureComponent {
                 if (null === guild_connections) {
                   v1 = 1;
                   c2 = 1;
-                  const obj6 = { value: tmp4(11232).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
+                  const obj6 = { value: tmp4(11241).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
                   return obj6;
                 }
               }
@@ -339,7 +339,7 @@ class GuildSettingsRoleEdit extends PureComponent {
               const obj = { value, done: true };
               return obj;
             }
-            v1(6816).deleteRole(closure_128_1.id, closure_128_2.id);
+            v1(6815).deleteRole(closure_128_1.id, closure_128_2.id);
             closure_128_3.pop();
             c2 = 3;
             return { value: "IconComponent", done: null };
@@ -397,16 +397,16 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(19022).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(19022);
+              const result = applyArgumentsResult(19045).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(19045);
             } else {
-              const result1 = applyArgumentsResult(19022).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(19022);
+              const result1 = applyArgumentsResult(19045).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(19045);
             }
             closure_0(true);
           };
           obj2.confirmColor = closure_1_0(1202).ButtonColors.BRAND;
-          closure_1_1(5895).show(obj2);
+          closure_1_1(5894).show(obj2);
         });
       } else {
         navigation.pop();
@@ -444,7 +444,7 @@ prototype["updateNavigation"] = function updateNavigation(role, submitting) {
   submitting = this.state.submitting;
   let setOptionsResult = { headerLeft: null, headerRight: null, headerTitle: null };
   const sectionChanges = self.getSectionChanges();
-  setOptionsResult.headerLeft = role(6910).getHeaderConditionalBackButton(self.handleBack);
+  setOptionsResult.headerLeft = role(6909).getHeaderConditionalBackButton(self.handleBack);
   if (submitting) {
     let fn = () => closure_1_23(role(dependencyMap[18]).HeaderSubmittingIndicator, {});
   } else if (sectionChanges) {
@@ -473,23 +473,23 @@ prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
   obj2.onPress = function onPress() {
     return self.onSubScreenValueChange(constants.PERMISSIONS);
   };
-  const items = [closure_23(self(6889).TableRow, obj2), ,];
+  const items = [closure_23(self(6888).TableRow, obj2), ,];
   const obj3 = { label: null, onPress: null, arrow: true };
   const intl2 = self(1128).intl;
   obj3.label = intl2.string(self(1128).t["5//Muu"]);
   obj3.onPress = function onPress() {
     return self.onSubScreenValueChange(constants.VERIFICATIONS);
   };
-  items[1] = closure_23(self(6889).TableRow, obj3);
+  items[1] = closure_23(self(6888).TableRow, obj3);
   const obj4 = { label: null, onPress: null, arrow: true };
   const intl3 = self(1128).intl;
   obj4.label = intl3.string(self(1128).t.J4ZtH1);
   obj4.onPress = function onPress() {
     return self.onSubScreenValueChange(constants.MEMBERS);
   };
-  items[2] = closure_23(self(6889).TableRow, obj4);
+  items[2] = closure_23(self(6888).TableRow, obj4);
   obj.children = items;
-  return closure_24(self(6973).TableRowGroup, obj);
+  return closure_24(self(6972).TableRowGroup, obj);
 };
 prototype["renderDeleteButton"] = function renderDeleteButton() {
   const obj = { hasIcons: false, children: null };

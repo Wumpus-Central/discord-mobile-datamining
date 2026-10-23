@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 const Text_Text = CheckmarkLargeIcon(5220);
 const components_Button_Button = CheckmarkLargeIcon(5230);
-const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6905);
+const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6904);
 require = fn;
 function getLabel(arg0, arg1) {
   if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === arg0) {

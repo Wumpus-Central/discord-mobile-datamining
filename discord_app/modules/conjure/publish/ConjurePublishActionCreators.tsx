@@ -127,8 +127,7 @@ let closure_10 = async function _unpublishUserApp() {
     closure_130_1(closure_130_2[8]).dispatch({
       type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
       projectId: closure_129_0,
-      published: false,
-      hasUnpublishedChanges: false,
+      publishState: "not_live",
       surface: publishStatus.surface,
       previewAppChannels: publishStatus.previewAppChannels,
       previewDevicePermissions: publishStatus.previewDevicePermissions,

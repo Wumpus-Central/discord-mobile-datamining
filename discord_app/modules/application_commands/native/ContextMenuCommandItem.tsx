@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp = closure_6();
       const tmp5 = item;
-      const applicationCommandsIconSource = item(13047).getApplicationCommandsIconSource(section);
+      const applicationCommandsIconSource = item(13063).getApplicationCommandsIconSource(section);
       const obj2 = {
         accessibilityLabel: memo,
         onPress,
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.trailing = jsx(tmp5(5666).SendMessageIcon, {});
       obj2.start = start;
       obj2.end = end;
-      return jsx(item(6889).TableRow, {
+      return jsx(item(6888).TableRow, {
         accessibilityLabel: memo,
         onPress,
         label: item.displayName,

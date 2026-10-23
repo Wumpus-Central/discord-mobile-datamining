@@ -20,7 +20,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileSections = fn(8645).UserProfileSections;
+const UserProfileSections = fn(8652).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
@@ -1004,7 +1004,7 @@ const memoResult = noop.memo(
           arr2 = cResult[4];
         }
         const type = widget.type;
-        if (userId(7688).WidgetType.FAVORITE_GAMES === type) {
+        if (userId(7689).WidgetType.FAVORITE_GAMES === type) {
           if (cResult[5] === tmp12) {
             if (cResult[6] === result) {
               if (cResult[7] === disableInteraction) {
@@ -1026,7 +1026,7 @@ const memoResult = noop.memo(
           num4 = 10;
           cResult[10] = tmp56;
         } else {
-          if (tmp(7688).WidgetType.CURRENT_GAMES === type) {
+          if (tmp(7689).WidgetType.CURRENT_GAMES === type) {
             if (cResult[11] === tmp10) {
               if (cResult[12] === arr2) {
                 let arr5 = cResult[13];
@@ -1126,8 +1126,8 @@ const memoResult = noop.memo(
             cResult[13] = substr;
             arr5 = substr;
           } else {
-            if (tmp(7688).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-              if (tmp(7688).WidgetType.PLAYED_GAMES !== type) {
+            if (tmp(7689).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+              if (tmp(7689).WidgetType.PLAYED_GAMES !== type) {
                 return null;
               }
             }
@@ -1230,11 +1230,11 @@ const memoResult = noop.memo(
             arr3 = substr1;
           }
           if (cResult[51] !== widget) {
-            const widgetTitle = tmp(14321).getWidgetTitle(widget);
+            const widgetTitle = tmp(14335).getWidgetTitle(widget);
             cResult[51] = widget;
             cResult[52] = widgetTitle;
             let tmp60 = widgetTitle;
-            const tmpResult2 = tmp(14321);
+            const tmpResult2 = tmp(14335);
           } else {
             tmp60 = cResult[52];
           }
@@ -1274,7 +1274,7 @@ const memoResult = noop.memo(
                   }
                 }
                 const obj14 = { style: cardStyle, title: tmp60, trailingAction: tmp62, children: tmp66 };
-                const tmp72 = closure_9(disableInteraction(7287), obj14);
+                const tmp72 = closure_9(disableInteraction(7288), obj14);
                 cResult[61] = cardStyle;
                 cResult[62] = tmp60;
                 cResult[63] = tmp62;
@@ -1290,7 +1290,7 @@ const memoResult = noop.memo(
           }
           if (tmp63) {
             const obj15 = { userId, widget };
-            tmp63 = closure_9(disableInteraction(14325), obj15);
+            tmp63 = closure_9(disableInteraction(14339), obj15);
           }
           cResult[53] = disableInteraction;
           cResult[54] = stateFromStores;
@@ -1510,7 +1510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_13();
       const obj = userId(576);
       const tmp4 = undefined === isVisible || isVisible;
-      const displayableBoardWidgets = userId(14331).useDisplayableBoardWidgets(userId);
+      const displayableBoardWidgets = userId(14345).useDisplayableBoardWidgets(userId);
       let num = 0;
       closure_15(tmp4, displayableBoardWidgets.length > 0);
       if (0 === displayableBoardWidgets.length) {
@@ -1553,7 +1553,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = fn;
         tmp8 = fn;
       }
-      const tmpResult = userId(14331);
+      const tmpResult = userId(14345);
     }
   : function UserProfileWidgetsBoard(userId) {
       userId = userId.userId;
@@ -1563,7 +1563,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const cardStyle = userId.cardStyle;
       const tmp = closure_13();
-      const displayableBoardWidgets = userId(14331).useDisplayableBoardWidgets(userId);
+      const displayableBoardWidgets = userId(14345).useDisplayableBoardWidgets(userId);
       closure_15(flag, displayableBoardWidgets.length > 0);
       let tmp3 = null;
       if (0 !== displayableBoardWidgets.length) {

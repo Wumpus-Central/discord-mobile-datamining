@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj5 = {
-                      value: closure_0(17487).saveGuildThemeNuxPreference(tmp48, closure_1_6),
+                      value: closure_0(17509).saveGuildThemeNuxPreference(tmp48, closure_1_6),
                       done: false,
                     };
                     return obj5;
@@ -306,8 +306,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores;
       let callback1;
       const tmp = closure_14();
-      [tmp5, c2] = noop.useState(guildId(17487).getInitialGuildThemeNuxSelection);
-      const tmp4 = _slicedToArray(noop.useState(guildId(17487).getInitialGuildThemeNuxSelection), 2);
+      [tmp5, c2] = noop.useState(guildId(17509).getInitialGuildThemeNuxSelection);
+      const tmp4 = _slicedToArray(noop.useState(guildId(17509).getInitialGuildThemeNuxSelection), 2);
       [tmp7, c3] = noop.useState(null);
       const tmp6 = _slicedToArray(noop.useState(null), 2);
       [tmp9, c4] = noop.useState(false);
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.onDismiss = callback3;
       obj3.contentStyles = tmp.container;
       const items7 = [
-        closure_10(markAsDismissed(17488), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
+        closure_10(markAsDismissed(17510), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
         ,
         ,
         ,
@@ -486,14 +486,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl5 = tmp2(1128).intl;
       obj8.label = intl5.string(guildId(1128).t.aN3RNQ);
       obj8.value = guildId(5187).GuildThemeSourcePreference.GUILD;
-      const items8 = [closure_10(guildId(6970).TableRadioRow, obj8)];
+      const items8 = [closure_10(guildId(6969).TableRadioRow, obj8)];
       const obj9 = { label: null, value: null };
       const intl6 = tmp2(1128).intl;
       obj9.label = intl6.string(guildId(1128).t.js8y7t);
       obj9.value = guildId(5187).GuildThemeSourcePreference.PERSONAL;
-      items8[1] = closure_10(guildId(6970).TableRadioRow, obj9);
+      items8[1] = closure_10(guildId(6969).TableRadioRow, obj9);
       obj7.children = items8;
-      obj6.children = closure_11(guildId(6971).TableRadioGroup, obj7);
+      obj6.children = closure_11(guildId(6970).TableRadioGroup, obj7);
       items7[3] = closure_10(closure_6, obj6);
       let tmp20Result = null;
       if (tmp10) {
@@ -501,7 +501,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { type: "warning", message: null, role: "status" };
         const intl7 = tmp2(1128).intl;
         obj11.message = intl7.string(tmp2(1128).t.tTHQAy);
-        obj10.children = closure_10(tmp2(7937).InlineNotice, obj11);
+        obj10.children = closure_10(tmp2(7938).InlineNotice, obj11);
         tmp20Result = closure_10(tmp21, obj10);
       }
       items7[4] = tmp20Result;
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp7) {
         const obj12 = { style: tmp.warning, children: null };
         const obj13 = { type: "critical", message: tmp7, role: "alert" };
-        obj12.children = closure_10(tmp2(7937).InlineNotice, obj13);
+        obj12.children = closure_10(tmp2(7938).InlineNotice, obj13);
         tmp20Result2 = closure_10(tmp21, obj12);
       }
       items7[5] = tmp20Result2;

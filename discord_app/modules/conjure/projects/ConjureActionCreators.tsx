@@ -987,7 +987,7 @@ let closure_48 = async function _deleteProject() {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1087).Endpoints;
-const ReadStateTypes = fn(6691).ReadStateTypes;
+const ReadStateTypes = fn(6690).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;
@@ -1203,8 +1203,7 @@ export const applyRemixPreview = function applyRemixPreview(id, remix_preview) {
   const obj6 = {
     type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
     projectId: id,
-    published: false,
-    hasUnpublishedChanges: true,
+    publishState: "not_live",
     surface: null,
     previewAppChannels: null,
   };

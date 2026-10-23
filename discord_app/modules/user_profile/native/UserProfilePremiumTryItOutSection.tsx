@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] !== tmp4.lockIcon) {
         const obj4 = { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp4.lockIcon };
-        const tmp18 = closure_5(tmp(8551).LockIcon, obj4);
+        const tmp18 = closure_5(tmp(8552).LockIcon, obj4);
         cResult[7] = tmp4.lockIcon;
         cResult[8] = tmp18;
         let tmp16 = tmp18;
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.lockCircle, children: null };
       const obj3 = { style: tmp.dividerLine };
       const tmp4 = UserProfileUpsellCardV2Default;
-      obj4.children = closure_5(analyticsLocations(8551).LockIcon, {
+      obj4.children = closure_5(analyticsLocations(8552).LockIcon, {
         size: "xs",
         color: nativeDefault.colors.ICON_MUTED,
         style: tmp.lockIcon,

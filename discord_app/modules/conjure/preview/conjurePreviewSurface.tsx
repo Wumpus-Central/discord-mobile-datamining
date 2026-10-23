@@ -6,7 +6,7 @@ import FramesStore from "../../frames/FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({ isLaunched: c3, makeFrameId: closure_4 } = FramesConstants);
 let c5 = "0";
 const CONJURE_PREVIEW_SURFACE = { type: fn(5612).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };

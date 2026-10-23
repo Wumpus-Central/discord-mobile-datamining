@@ -9,10 +9,10 @@ const GIFPickerItemViewDefault = GIFPickerItemView;
 require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
-let obj2 = { list: { marginHorizontal: -fn(10105).GIF_PICKER_GUTTER_SPACING / 2 } };
+let obj2 = { list: { marginHorizontal: -fn(10112).GIF_PICKER_GUTTER_SPACING / 2 } };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { length: 20 };
-let obj3 = { marginHorizontal: -fn(10105).GIF_PICKER_GUTTER_SPACING / 2 };
+let obj3 = { marginHorizontal: -fn(10112).GIF_PICKER_GUTTER_SPACING / 2 };
 let closure_7 = Array.from(obj4).map(() => {});
 const arr = Array.from(obj4);
 const dependencyMap2 = Array.from(obj4).map(() => {
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const safeAreaBottomKeyboardAware = onPressGIF(10098)(first).safeAreaBottomKeyboardAware;
+      const safeAreaBottomKeyboardAware = onPressGIF(10105)(first).safeAreaBottomKeyboardAware;
       if (loading.loading) {
         resultItems = closure_7;
       }
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[8] === onPressGIF) {
             let tmp10 = cResult[9];
           }
-          columnWidth(7206);
+          columnWidth(7205);
           class V {
             constructor(arg0) {
               ({ item, index, extraData } = loading);
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const isPortalKeyboardInModal = columnWidth(9895).useIsPortalKeyboardInModal();
+          const isPortalKeyboardInModal = columnWidth(9902).useIsPortalKeyboardInModal();
           if (cResult[10] !== safeAreaBottomKeyboardAware) {
             let obj3 = { paddingBottom: safeAreaBottomKeyboardAware };
             class V {
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = {
             contentContainerStyle: tmp14,
             data: resultItems,
-            drawDistance: columnWidth(10105).GIF_PICKER_ITEM_ESIMTATED_HEIGHT,
+            drawDistance: columnWidth(10112).GIF_PICKER_ITEM_ESIMTATED_HEIGHT,
             extraData: tmp9,
             keyExtractor: tmp7,
             keyboardDismissMode,
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             <tmp12
               contentContainerStyle={tmp14}
               data={resultItems}
-              drawDistance={columnWidth(10105).GIF_PICKER_ITEM_ESIMTATED_HEIGHT}
+              drawDistance={columnWidth(10112).GIF_PICKER_ITEM_ESIMTATED_HEIGHT}
               extraData={tmp9}
               keyExtractor={tmp7}
               keyboardDismissMode={keyboardDismissMode}
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[23] = inActionSheet;
           cResult[24] = tmp18;
           tmp16 = tmp18;
-          const tmpResult2 = columnWidth(9895);
+          const tmpResult2 = columnWidth(9902);
         }
         class V {
           constructor(arg0) {

@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef15047 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-1x.png.js";
-import _modDef15048 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-2x.png.js";
-import _modDef15049 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-3x.png.js";
+import _modDef15060 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-1x.png.js";
+import _modDef15061 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-2x.png.js";
+import _modDef15062 from "../../../../../../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15047 }, 3: null };
-let obj2 = { uri: _modDef15047 };
-obj[2] = { uri: _modDef15048 };
-const obj3 = { uri: _modDef15048 };
-obj[3] = { uri: _modDef15049 };
+let obj = { 1: null, 2: { uri: _modDef15060 }, 3: null };
+let obj2 = { uri: _modDef15060 };
+obj[2] = { uri: _modDef15061 };
+const obj3 = { uri: _modDef15061 };
+obj[3] = { uri: _modDef15062 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef15049 };
+const obj4 = { uri: _modDef15062 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx",

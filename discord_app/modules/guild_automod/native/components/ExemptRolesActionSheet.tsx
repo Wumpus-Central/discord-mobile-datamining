@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.getSearchText = getRoleName;
       obj2.renderLabel = renderRoleName;
       obj2.onSave = onSave;
-      return jsx(stateFromStores(18937), {
+      return jsx(stateFromStores(18960), {
         title: null,
         searchPlaceholder: null,
         listId: "automod-exempt-roles",

@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef14849 from "../../../../../_runtime/metro/14849__.js";
-import _mod14850 from "../../../../../_runtime/metro/14850__.js";
-import _modDef14851 from "../../../../../_runtime/metro/14851__.js";
+import _modDef14863 from "../../../../../_runtime/metro/14863__.js";
+import _mod14864 from "../../../../../_runtime/metro/14864__.js";
+import _modDef14865 from "../../../../../_runtime/metro/14865__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14849 };
+      const obj = { style, source: _modDef14863 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -76,7 +76,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod14850, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod14864, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     },
   },
@@ -90,7 +90,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14851 };
+      const obj = { style, source: _modDef14865 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -118,7 +118,7 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    const obj = { style, source: _modDef14849 };
+    const obj = { style, source: _modDef14863 };
     return hasOwnProperty(FastImageDefault, obj);
   },
 };
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 contentContainerStyle: tmp10,
                 children: tmp11,
               };
-              const tmp16 = closure_5(tmp(13413).MarketingCardsScroller, obj4);
+              const tmp16 = closure_5(tmp(13427).MarketingCardsScroller, obj4);
               cResult[9] = tmp4.scrollerContent;
               cResult[10] = tmp11;
               cResult[11] = tmp16;

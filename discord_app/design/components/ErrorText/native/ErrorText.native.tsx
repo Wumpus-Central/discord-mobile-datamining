@@ -48,7 +48,7 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp6, tmp7);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = closure_3(tmp(6998).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" });
+        const tmp11 = closure_3(tmp(6997).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" });
         cResult[5] = tmp11;
         let tmp9 = tmp11;
       } else {
@@ -96,9 +96,9 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
       const items1 = [
-        closure_3(nodeText(6998).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }),
+        closure_3(nodeText(6997).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }),
         closure_3(nodeText(5220).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
       ];
       obj2.children = items1;
-      return closure_4(nodeText(5964).Stack, obj2);
+      return closure_4(nodeText(5963).Stack, obj2);
     };

@@ -30,6 +30,7 @@ let closure_0 = {
   publish_approval_required: true,
   publish_cta: true,
   publish_options: true,
+  publish_progress: true,
   publish_result: true,
   publish_schedule_proposal: true,
   publish_status: true,

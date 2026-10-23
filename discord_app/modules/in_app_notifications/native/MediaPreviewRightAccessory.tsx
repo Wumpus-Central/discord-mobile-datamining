@@ -25,8 +25,8 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const ClipViewDefault = ClipView;
 
 const PlatformUtils = ImageWarningIcon(1384);
-const EyeIcon = ImageWarningIcon(7049);
-const ImageWarningIcon2 = ImageWarningIcon(8537);
+const EyeIcon = ImageWarningIcon(7048);
+const ImageWarningIcon2 = ImageWarningIcon(8538);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -114,7 +114,7 @@ let obj11 = {
   alignItems: "center",
 };
 let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(13679).RIGHT_ACCESSORY_LEFT_MARGIN },
+  rightAccessoryContainer: { marginLeft: fn(13693).RIGHT_ACCESSORY_LEFT_MARGIN },
 });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1045,7 +1045,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp4;
     };
 ReactCompilerGating = fn(558);
-let obj12 = { rightAccessoryContainer: { marginLeft: fn(13679).RIGHT_ACCESSORY_LEFT_MARGIN } };
+let obj12 = { rightAccessoryContainer: { marginLeft: fn(13693).RIGHT_ACCESSORY_LEFT_MARGIN } };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

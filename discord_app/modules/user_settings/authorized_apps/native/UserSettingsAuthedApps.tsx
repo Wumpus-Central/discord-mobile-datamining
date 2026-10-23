@@ -13,12 +13,12 @@ import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 const require = globalThis.__r;
 
 const CircleInformationIcon = GlobeEarthIcon(5672);
-const GlobeEarthIcon2 = GlobeEarthIcon(9461);
-const EmbedIcon = GlobeEarthIcon(14004);
+const GlobeEarthIcon2 = GlobeEarthIcon(9468);
+const EmbedIcon = GlobeEarthIcon(14018);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7189).FetchState;
+const FetchState = fn(7188).FetchState;
 const Constants = fn(1087);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);

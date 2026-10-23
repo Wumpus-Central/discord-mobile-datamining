@@ -82,7 +82,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
         React5.dismiss();
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(19033, dependencyMap.paths),
+          asyncRequireImpl(19056, dependencyMap.paths),
           "role-permission-templates-" + guild.id + "-" + role.id,
           { permissionsEdited, onPermissionsChanged, guildId: guild.id },
         );
@@ -95,7 +95,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(18182).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(18204).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -108,9 +108,9 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(19030), { role }), , ,];
+  const children = [closure_14(role(19053), { role }), , ,];
   const obj7 = {
-    children: closure_14(guild(7131).SearchField, {
+    children: closure_14(guild(7130).SearchBar, {
       size: "md",
       onChange: function handleSearchQuery(str) {
         closure_8(str);
@@ -215,7 +215,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     let tmp18Result4 = closure_14(closure_8, obj9);
   } else {
-    const obj10 = { Illustration: tmp27(8967).NoResultsAlt, style: null, bodyStyle: null, body: null };
+    const obj10 = { Illustration: tmp27(8974).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj11.style, emptyStateText: obj11.bodyStyle } = tmp);
     const intl2 = tmp27(1128).intl;
     const obj12 = { query };

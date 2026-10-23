@@ -7,6 +7,7 @@ import ColorUtils from "../../../utils/ColorUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
 import ChatInputNativeComponent from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
+import MobileMarkdownFormatMenuExperiment from "../experiments/MobileMarkdownFormatMenuExperiment.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgroundStore.tsx";
 
@@ -20,7 +21,7 @@ let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ChatInputNativeComponent(arg0) {
-      const cResult = c.c(30);
+      const cResult = c.c(31);
       ({
         accessible,
         placeholder,
@@ -80,18 +81,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = PRIMARY_500;
         cResult[3] = hexWithOpacityResult;
         let tmp11 = hexWithOpacityResult;
-        const tmpResult7 = ColorUtils;
+        const tmpResult8 = ColorUtils;
       } else {
         tmp11 = cResult[3];
       }
-      const tmpResult6 = shared;
+      const tmpResult7 = shared;
       let tmp15;
-      if (!tmpResult8.isAndroid()) {
+      if (!tmpResult9.isAndroid()) {
         tmp15 = accessibilityLabel;
       }
-      tmpResult8 = PlatformUtils;
+      tmpResult9 = PlatformUtils;
       let tmp16;
-      if (!tmpResult9.isAndroid()) {
+      if (!tmpResult10.isAndroid()) {
         tmp16 = customKeyboard;
       }
       PlatformUtils;
@@ -100,8 +101,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         num6 = 1;
       }
       if (maxHeight == null) {
-        maxHeight = tmp10(12466)(onMaxHeightChanged);
+        maxHeight = tmp10(12476)(onMaxHeightChanged);
       }
+      tmpResult10 = PlatformUtils;
+      const isMobileMarkdownFormatMenuEnabled =
+        MobileMarkdownFormatMenuExperiment.useIsMobileMarkdownFormatMenuEnabled("ChatInputNativeComponent");
       if (cResult[4] === tmp15) {
         if (cResult[5] === accessible) {
           if (cResult[6] === tmp16) {
@@ -124,12 +128,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                                             if (cResult[23] === tmp11) {
                                               if (cResult[24] === setNoExtractUI) {
                                                 if (cResult[25] === shouldShowCursor) {
-                                                  if (cResult[26] === style) {
-                                                    if (cResult[27] === color) {
-                                                      if (cResult[28] === verticalInset) {
-                                                        let tmp17 = cResult[29];
+                                                  if (cResult[26] === isMobileMarkdownFormatMenuEnabled) {
+                                                    if (cResult[27] === style) {
+                                                      if (cResult[28] === color) {
+                                                        if (cResult[29] === verticalInset) {
+                                                          let tmp18 = cResult[30];
+                                                        }
+                                                        return tmp18;
                                                       }
-                                                      return tmp17;
                                                     }
                                                   }
                                                 }
@@ -154,11 +160,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp18 = jsx(ChatInputNativeComponent.default, {
+      const tmp19 = jsx(ChatInputNativeComponent.default, {
         accessible,
         accessibilityLabel: tmp15,
         children: tmp16,
         editable,
+        showFormatMenu: isMobileMarkdownFormatMenuEnabled,
         keyboardAppearance: num6,
         keyboardType: "default",
         markAsSpoilerTitle: tmp4,
@@ -204,12 +211,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[23] = tmp11;
       cResult[24] = setNoExtractUI;
       cResult[25] = shouldShowCursor;
-      cResult[26] = style;
-      cResult[27] = color;
-      cResult[28] = verticalInset;
-      cResult[29] = tmp18;
-      tmp17 = tmp18;
-      tmpResult9 = PlatformUtils;
+      cResult[26] = isMobileMarkdownFormatMenuEnabled;
+      cResult[27] = style;
+      cResult[28] = color;
+      cResult[29] = verticalInset;
+      cResult[30] = tmp19;
+      tmp18 = tmp19;
+      const tmpResult12 = MobileMarkdownFormatMenuExperiment;
     }
   : function ChatInputNativeComponent(markAsSpoilerTitle) {
       markAsSpoilerTitle = markAsSpoilerTitle.markAsSpoilerTitle;
@@ -241,8 +249,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const unsafe_rawColors = nativeDefault.unsafe_rawColors;
       if (isThemeDarkResult) {
         let PRIMARY_500 = unsafe_rawColors.WHITE;
+        let tmp9 = importDefault;
       } else {
         PRIMARY_500 = unsafe_rawColors.PRIMARY_500;
+        tmp9 = importDefault;
       }
       let num = 0.6;
       if (null != ClientThemesBackgroundStore.gradientPreset) {
@@ -255,7 +265,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp4Result = PlatformUtils;
       let tmp12;
-      if (!tmp4Result3.isAndroid()) {
+      if (!tmp4Result4.isAndroid()) {
         tmp12 = customKeyboard;
       }
       PlatformUtils;
@@ -263,12 +273,16 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (isThemeDarkResult) {
         num2 = 1;
       }
-      tmp4Result3 = PlatformUtils;
+      tmp4Result4 = PlatformUtils;
+      const tmp13 = tmp9(12476)(onMaxHeightChanged);
+      const isMobileMarkdownFormatMenuEnabled =
+        MobileMarkdownFormatMenuExperiment.useIsMobileMarkdownFormatMenuEnabled("ChatInputNativeComponent");
       const obj4 = {
         accessible,
         accessibilityLabel: tmp11,
         children: tmp12,
         editable,
+        showFormatMenu: isMobileMarkdownFormatMenuEnabled,
         keyboardAppearance: num2,
         keyboardType: "default",
         markAsSpoilerTitle,
@@ -319,6 +333,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: tmp11,
         children: tmp12,
         editable,
+        showFormatMenu: isMobileMarkdownFormatMenuEnabled,
         keyboardAppearance: num2,
         keyboardType: "default",
         markAsSpoilerTitle,

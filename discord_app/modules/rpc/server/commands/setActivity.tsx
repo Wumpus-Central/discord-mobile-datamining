@@ -7,7 +7,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
 let closure_3 = ["buttons"];
-let Constants = fn(6364);
+let Constants = fn(6363);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 const TransportTypes = Constants.TransportTypes;
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
@@ -23,12 +23,12 @@ let closure_15 = ["1402418171662569542"];
 let items = [, ,];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15665);
+const CONTEXT_MENU_ICON_NAMES = fn(15678);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items1 = [
-  fn(8795).OAuth2Scopes.RPC,
-  fn(8795).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  fn(8802).OAuth2Scopes.RPC,
+  fn(8802).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
   RPC_LOCAL_SCOPE,
   RPC_EMBEDDED_APP_SCOPE,
 ];

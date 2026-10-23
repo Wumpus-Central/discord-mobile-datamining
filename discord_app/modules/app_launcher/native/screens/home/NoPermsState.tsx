@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EmptyState() {
       const cResult = c.c(10);
       const tmp4 = closure_6();
-      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12047 : 12048);
+      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12058 : 12059);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function EmptyState() {
       const tmp = closure_6();
-      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12047 : 12048);
+      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12058 : 12059);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );

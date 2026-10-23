@@ -4,6 +4,7 @@ import WebViewPostMessageTransportDefault from "server/transports/WebViewPostMes
 import commands_activitiesDefault from "server/commands/activities.tsx";
 import audioSessionDefault from "server/commands/audioSession.tsx";
 import authDefault from "server/commands/auth.tsx";
+import screenCaptureDefault from "server/commands/screenCapture.tsx";
 import setRunsInBackgroundDefault from "server/commands/setRunsInBackground.tsx";
 import frameRelaunchDeepLinkDefault from "../server/commands/frameRelaunchDeepLink.tsx";
 import voiceSettingsDefault from "server/commands/voiceSettings.tsx";
@@ -13,18 +14,19 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 
-const merged = Object.assign(fn(15657).crossPlatformCommands);
+const merged = Object.assign(fn(15670).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const audioSession = Object.assign(audioSessionDefault);
 const auth = Object.assign(authDefault);
+const screenCapture = Object.assign(screenCaptureDefault);
 const setRunsInBackground = Object.assign(setRunsInBackgroundDefault);
 const frameRelaunchDeepLink = Object.assign(frameRelaunchDeepLinkDefault);
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(15722);
-const merged9 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true));
-const merged10 = Object.assign(fn(15723).voiceSettingsEventHandlers);
+const discordEnvironmentEvents = fn(15736);
+const merged10 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true));
+const merged11 = Object.assign(fn(15737).voiceSettingsEventHandlers);
 const obj4 = {
   server: NativeRPCServerDefault,
   commands: {},

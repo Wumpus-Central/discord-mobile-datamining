@@ -17,7 +17,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(13583);
+const HubConstants = fn(13597);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1087).MarketingURLs;
 const jsxProd = fn(21);
@@ -323,7 +323,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = closure_12(invite(6993), obj11);
+  items1[3] = closure_12(invite(6992), obj11);
   obj6.children = items1;
   const items2 = [closure_13(ref, obj6), closure_12(ref, { style: tmp.growSpacing })];
   const obj15 = { style: tmp.buttonContainer, children: null };

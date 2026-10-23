@@ -153,14 +153,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_5 = undefined;
       const tmp = closure_10();
       importDefault = tmp;
-      let obj = onSelectFont(8632);
-      const visibleFontOrder = onSelectFont(16590).useVisibleFontOrder();
-      let obj2 = onSelectFont(16590);
-      const displayNameStylesNewFonts = onSelectFont(16592).useDisplayNameStylesNewFonts(visibleFontOrder);
+      let obj = onSelectFont(8639);
+      const visibleFontOrder = onSelectFont(16612).useVisibleFontOrder();
+      let obj2 = onSelectFont(16612);
+      const displayNameStylesNewFonts = onSelectFont(16614).useDisplayNameStylesNewFonts(visibleFontOrder);
       ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
       [first, closure_5] = first.useState(selectedFontId);
       let tmp15Result = first !== onSelectFont(1412).DisplayNameFont.DEFAULT;
-      let obj3 = onSelectFont(16592);
+      let obj3 = onSelectFont(16614);
       closure_6 = tmp9;
       let obj4 = onSelectFont(1409);
       constants = first.useCallback((arg0) => {
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: tmp.container, children: null };
       const obj9 = { style: tmp.contentContainer, children: null };
       let items1 = [
-        closure_8(onSelectFont(5964).Stack, {
+        closure_8(onSelectFont(5963).Stack, {
           direction: "horizontal",
           align: "center",
           justify: "center",

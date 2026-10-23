@@ -14,7 +14,7 @@ const PhoneActionCreatorsDefault = PhoneActionCreators;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(13502).useContactSyncModalStore;
+const useContactSyncModalStore = fn(13516).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4969);
@@ -98,7 +98,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPhoneScre
           }
         }
       }
-      const obj5 = { style: tmp5.container, reason: tmp(7126).ChangePhoneReason.CONTACT_SYNC, header: tmp16, onComplete: P };
+      const obj5 = { style: tmp5.container, reason: tmp(7125).ChangePhoneReason.CONTACT_SYNC, header: tmp16, onComplete: P };
       const tmp23 = closure_9(AddPhoneDefault, obj5);
       cResult[12] = tmp16;
       cResult[13] = tmp5.container;

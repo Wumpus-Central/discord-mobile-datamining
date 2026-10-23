@@ -12,15 +12,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8807).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8814).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(8798).PlatformType.DESKTOP] = fn(9452).ScreenIcon;
-obj.mobile = fn(7039).MobilePhoneIcon;
-obj[fn(8798).PlatformType.XBOX] = fn(9261).XboxNeutralIcon;
-obj[fn(8798).PlatformType.PLAYSTATION] = fn(9454).PlaystationNeutralIcon;
-obj[fn(8798).PlatformType.NINTENDO] = fn(9456).NintendoSwitchNeutralIcon;
+obj[fn(8805).PlatformType.DESKTOP] = fn(9459).ScreenIcon;
+obj.mobile = fn(7038).MobilePhoneIcon;
+obj[fn(8805).PlatformType.XBOX] = fn(9268).XboxNeutralIcon;
+obj[fn(8805).PlatformType.PLAYSTATION] = fn(9461).PlaystationNeutralIcon;
+obj[fn(8805).PlatformType.NINTENDO] = fn(9463).NintendoSwitchNeutralIcon;
 const createStyles = fn(4969);
 let obj3 = {
   container: { gap: nativeDefault.space.PX_8 },
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_11();
       importDefault = tmp4;
       obj = trackAction(576);
-      const gameProfileLinks = trackAction(9458).useGameProfileLinks(game);
+      const gameProfileLinks = trackAction(9465).useGameProfileLinks(game);
       const arr2 = useGameProfilePlatformsDefault(game);
       if (null != game) {
         if (cResult[1] === game) {
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let joined;
           if (game != null) {
             const genres1 = game.genres;
-            const mapped = genres1.map(trackAction(9272).getGenreText);
+            const mapped = genres1.map(trackAction(9279).getGenreText);
             joined = mapped.join(", ");
           }
           let genres2;
@@ -615,7 +615,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[67] = mapped4;
         }
       }
-      const obj2 = trackAction(9458);
+      const obj2 = trackAction(9465);
     }
   : function GameProfileDetails(game) {
       game = game.game;
@@ -689,7 +689,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (length.length <= 0) {
                   const mapped3 = gameProfileLinks.map((item) =>
-                    trackAction(9460)(item, trackAction(587).colors.ICON_SUBTLE),
+                    trackAction(9467)(item, trackAction(587).colors.ICON_SUBTLE),
                   );
                   const found = mapped3.filter((item) => null != item);
                   if (found.length > 0) {
@@ -735,7 +735,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       obj = {
                         size: "md",
                         color: trackAction(587).colors.ICON_SUBTLE,
-                        accessibilityLabel: game(9459).getGameProfilePlatformText(item),
+                        accessibilityLabel: game(9466).getGameProfilePlatformText(item),
                       };
                       return closure_1_8(closure_1_10[item], obj, item);
                     }),

@@ -14,7 +14,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6762).isLaunched;
+const isLaunched = fn(6761).isLaunched;
 const app_channel_header_mobile = "app_channel_header_mobile";
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -33,9 +33,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === application_id.id) {
           let tmp4 = cResult[2];
         }
-        const tmp6 = application_id(11825)(application_id, tmp4);
+        const tmp6 = application_id(11839)(application_id, tmp4);
         dependencyMap = tmp6;
-        const appChannelApplication = tmp(7330).useAppChannelApplication(application_id);
+        const appChannelApplication = tmp(7331).useAppChannelApplication(application_id);
         let bot;
         if (appChannelApplication != null) {
           bot = appChannelApplication.bot;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return restartFrames.restartFrame(closure_2);
               }
               if (cResult[7] !== t3) {
-                const obj2 = { label: tmp14, IconComponent: tmp(11729).RefreshIcon, action: t3 };
+                const obj2 = { label: tmp14, IconComponent: tmp(11740).RefreshIcon, action: t3 };
                 cResult[7] = t3;
                 cResult[8] = obj2;
                 let tmp16 = obj2;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[10] !== t6) {
                 const obj3 = { label: DoorExitIcon, IconComponent: null, action: null };
-                DoorExitIcon = tmp(11483).DoorExitIcon;
+                DoorExitIcon = tmp(11494).DoorExitIcon;
                 obj3.IconComponent = DoorExitIcon;
                 obj3.action = t6;
                 cResult[10] = t6;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[15] = items2;
             }
             const obj4 = { label: tmp26, IconComponent: null, variant: "destructive", action: null };
-            FlagIcon = tmp(9941).FlagIcon;
+            FlagIcon = tmp(9948).FlagIcon;
             obj4.IconComponent = FlagIcon;
             obj4.action = function action() {
               return openAppChannelReportModalDefault(application_id, closure_0, app_channel_header_mobile);
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return tmp10;
         }
-        const tmpResult = tmp(7330);
+        const tmpResult = tmp(7331);
       }
       const obj6 = {
         type: require("EmbeddedSurfaceType").EmbeddedSurfaceType.APP_CHANNEL,
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      const tmp3 = application_id(11825)(application_id, memo);
+      const tmp3 = application_id(11839)(application_id, memo);
       dependencyMap = tmp3;
       const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(application_id);
       bot = undefined;

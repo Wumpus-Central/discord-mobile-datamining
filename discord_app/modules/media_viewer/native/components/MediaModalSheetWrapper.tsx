@@ -91,11 +91,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       const merged = Object.assign(tmp4);
       obj3.onClose = M;
-      tmp16 = jsx(context(8753), {});
+      tmp16 = jsx(context(8760), {});
       cResult[8] = M;
       cResult[9] = tmp4;
       cResult[10] = tmp16;
-      const tmp8Result = context(8753);
+      const tmp8Result = context(8760);
     }
   : function MediaModalSheetWrapper(onCloseCallback) {
       onCloseCallback = onCloseCallback.onCloseCallback;
@@ -122,5 +122,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {};
       const merged1 = Object.assign(merged);
       obj.onClose = callback;
-      return jsx(context(8753), {});
+      return jsx(context(8760), {});
     };

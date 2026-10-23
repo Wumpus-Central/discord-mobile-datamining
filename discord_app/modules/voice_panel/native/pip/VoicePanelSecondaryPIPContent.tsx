@@ -9,7 +9,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = fn;
 const ActivityLayoutMode = fn(2026).ActivityLayoutMode;
 const ActivityPanelModes = fn(5595).ActivityPanelModes;
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);

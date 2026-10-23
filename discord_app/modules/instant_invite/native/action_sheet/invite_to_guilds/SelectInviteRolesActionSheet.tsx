@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp16 = cResult[9];
             }
             [first, closure_5] = first.useState(tmp16);
-            onSave(10594)();
-            onSave(7130)();
+            onSave(10601)();
+            onSave(7129)();
             const _Symbol2 = Symbol;
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
               class C {

@@ -10,11 +10,9 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import FramesStore from "../FramesStore.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
 const View = fn(17).View;
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({ FrameLayoutModes: closure_7, isLaunched: closure_8 } = FramesConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4969);
@@ -28,7 +26,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       id = frame.id;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function l() {
-          return first1(11410)();
+          return first1(11421)();
         };
         cResult[0] = fn;
         let first = fn;
@@ -102,7 +100,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const syncExternalStore = noop.useSyncExternalStore(first1(11830).subscribe, P);
+        const syncExternalStore = noop.useSyncExternalStore(first1(11844).subscribe, P);
         if (cResult[11] !== syncExternalStore) {
           class P {
             constructor() {
@@ -141,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 };
         const tmp23 = jsx(
-          first1(18329),
+          first1(18351),
           { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 },
           first1,
         );
@@ -171,7 +169,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       iframeId = undefined;
       dependencyMap = undefined;
       const id = frame.id;
-      [iframeId, dependencyMap] = noop.useState(() => first(11410)());
+      [iframeId, dependencyMap] = noop.useState(() => first(11421)());
       const items = [id, iframeId];
       const effect = noop.useEffect(() => {
         FramePoolManagerDefault.registerFrameEntry(id, first);
@@ -190,7 +188,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         dependencyMap(makeIframeIdDefault());
       }, []);
-      let syncExternalStore = noop.useSyncExternalStore(iframeId(11830).subscribe, () =>
+      let syncExternalStore = noop.useSyncExternalStore(iframeId(11844).subscribe, () =>
         FramePoolManagerDefault.getWinningTargetState(id),
       );
       let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
@@ -199,7 +197,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         syncExternalStore = obj2;
       }
       obj.presentation = syncExternalStore;
-      return jsx(iframeId(18329), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+      return jsx(iframeId(18351), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
     };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");
@@ -226,33 +224,92 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = initialize;
       [tmp10, require] = noop.useState(0);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function p(__nativeTag) {
-          let num = 0;
-          if (null != __nativeTag) {
-            let num2 = __nativeTag.__nativeTag;
-            if (num2 == null) {
-              num2 = 0;
+        class E {
+          constructor(arg0) {
+            num = 0;
+            if (null != arg0) {
+              num2 = arg0._nativeTag;
+              if (num2 == null) {
+                num2 = 0;
+              }
+              num = num2;
             }
-            num = num2;
+            tmp = closure_0(num);
+            obj = closure_1(closure_2[11]);
+            setPoolNodeTagResult = obj.setPoolNodeTag(num);
+            return;
           }
-          require(num);
-          FramePoolManagerDefault.setPoolNodeTag(num);
-        };
-        cResult[2] = fn2;
-        let tmp11 = fn2;
+        }
+        cResult[2] = E;
       } else {
-        tmp11 = cResult[2];
+        class E {
+          constructor(arg0) {
+            num = 0;
+            if (null != arg0) {
+              num2 = arg0._nativeTag;
+              if (num2 == null) {
+                num2 = 0;
+              }
+              num = num2;
+            }
+            tmp = closure_0(num);
+            obj = closure_1(closure_2[11]);
+            setPoolNodeTagResult = obj.setPoolNodeTag(num);
+            return;
+          }
+        }
       }
       if (cResult[3] === height) {
-        if (cResult[4] === width) {
-          let tmp12 = cResult[5];
+        class E {
+          constructor(arg0) {
+            num = 0;
+            if (null != arg0) {
+              num2 = arg0._nativeTag;
+              if (num2 == null) {
+                num2 = 0;
+              }
+              num = num2;
+            }
+            tmp = closure_0(num);
+            obj = closure_1(closure_2[11]);
+            setPoolNodeTagResult = obj.setPoolNodeTag(num);
+            return;
+          }
         }
         if (cResult[6] === tmp4.pool) {
-          if (cResult[7] === tmp12) {
-            let tmp13 = cResult[8];
+          class E {
+            constructor(arg0) {
+              num = 0;
+              if (null != arg0) {
+                num2 = arg0._nativeTag;
+                if (num2 == null) {
+                  num2 = 0;
+                }
+                num = num2;
+              }
+              tmp = closure_0(num);
+              obj = closure_1(closure_2[11]);
+              setPoolNodeTagResult = obj.setPoolNodeTag(num);
+              return;
+            }
           }
           if (cResult[9] !== stateFromStoresArray) {
-            const _Symbol = Symbol;
+            class E {
+              constructor(arg0) {
+                num = 0;
+                if (null != arg0) {
+                  num2 = arg0._nativeTag;
+                  if (num2 == null) {
+                    num2 = 0;
+                  }
+                  num = num2;
+                }
+                tmp = closure_0(num);
+                obj = closure_1(closure_2[11]);
+                setPoolNodeTagResult = obj.setPoolNodeTag(num);
+                return;
+              }
+            }
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               class M {
                 constructor(arg0) {
@@ -330,9 +387,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 return tmp21;
               }
-              const obj2 = { ref: tmp11, style: tmp13, pointerEvents: "none", children: tmp18 };
+              const obj2 = { ref: E, style: tmp13, pointerEvents: "none", children: tmp18 };
               const tmp24 = (
-                <View ref={tmp11} style={tmp13} pointerEvents="none">
+                <View ref={E} style={tmp13} pointerEvents="none">
                   {tmp18}
                 </View>
               );
@@ -352,13 +409,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = tmp4.pool;
         cResult[7] = tmp12;
         cResult[8] = items1;
-        tmp13 = items1;
       }
       const size = { width, height };
       cResult[3] = height;
       cResult[4] = width;
       cResult[5] = size;
-      tmp12 = size;
       const tmp9 = _slicedToArray(noop.useState(0), 2);
     }
   : function FramePool() {
@@ -369,16 +424,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => allFrames.getAllFrames());
       [tmp4, require] = noop.useState(0);
       const obj2 = {
-        ref: noop.useCallback((__nativeTag) => {
+        ref: noop.useCallback((_nativeTag) => {
           let num = 0;
-          if (null != __nativeTag) {
-            let num2 = __nativeTag.__nativeTag;
+          if (null != _nativeTag) {
+            let num2 = _nativeTag._nativeTag;
             if (num2 == null) {
               num2 = 0;
             }
             num = num2;
           }
-          require(num);
+          _require(num);
           FramePoolManagerDefault.setPoolNodeTag(num);
         }, []),
         style: null,
@@ -401,16 +456,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       return (
         <View
-          ref={noop.useCallback((__nativeTag) => {
+          ref={noop.useCallback((_nativeTag) => {
             let num = 0;
-            if (null != __nativeTag) {
-              let num2 = __nativeTag.__nativeTag;
+            if (null != _nativeTag) {
+              let num2 = _nativeTag._nativeTag;
               if (num2 == null) {
                 num2 = 0;
               }
               num = num2;
             }
-            require(num);
+            _require(num);
             FramePoolManagerDefault.setPoolNodeTag(num);
           }, [])}
           style={null}

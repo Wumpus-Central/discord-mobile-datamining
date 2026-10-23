@@ -15,7 +15,7 @@ import useIsViewingActivity from "../../../activities/native/useIsViewingActivit
 import VideoRenderer from "VideoRenderer.tsx";
 import UserTileDefault from "UserTile.tsx";
 import useAvatarSpeakingColor from "../../../calls/native/useAvatarSpeakingColor.tsx";
-import _modDef11391 from "../../../../../_runtime/metro/11391__.js";
+import _modDef11402 from "../../../../../_runtime/metro/11402__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -34,7 +34,7 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10847);
+const ChannelCallStore = fn(10855);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
 const ParticipantTypes = fn(5618).ParticipantTypes;
 const jsxProd = fn(21);
@@ -1019,7 +1019,7 @@ let closure_23 = noop.memo(
                               const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
                               const obj5 = {
                                 style: tmp4.thermalAlertIcon,
-                                source: _modDef11391,
+                                source: _modDef11402,
                                 color: tmp4.thermalAlertIcon.color,
                               };
                               obj4.children = value3(native2.Icon, obj5);
@@ -1165,7 +1165,7 @@ let closure_23 = noop.memo(
             let tmp18Result = null;
             if (tmp5) {
               const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11391, color: tmp.thermalAlertIcon.color };
+              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef11402, color: tmp.thermalAlertIcon.color };
               obj8.children = tmp18(native2.Icon, obj9);
               tmp18Result = tmp18(hasOwnProperty, obj8);
             }

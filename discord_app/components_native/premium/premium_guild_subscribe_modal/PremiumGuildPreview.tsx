@@ -6,14 +6,14 @@ import native from "../../../design/void/native.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import GuildIcon from "../../../modules/guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
-import _modDef14858 from "../../../../_runtime/metro/14858__.js";
-import _modDef14859 from "../../../../_runtime/metro/14859__.js";
-import _modDef14860 from "../../../../_runtime/metro/14860__.js";
-import _modDef14861 from "../../../../_runtime/metro/14861__.js";
-import _modDef14862 from "../../../../_runtime/metro/14862__.js";
-import _modDef14863 from "../../../../_runtime/metro/14863__.js";
-import _modDef14864 from "../../../../_runtime/metro/14864__.js";
-import _modDef14865 from "../../../../_runtime/metro/14865__.js";
+import _modDef14872 from "../../../../_runtime/metro/14872__.js";
+import _modDef14873 from "../../../../_runtime/metro/14873__.js";
+import _modDef14874 from "../../../../_runtime/metro/14874__.js";
+import _modDef14875 from "../../../../_runtime/metro/14875__.js";
+import _modDef14876 from "../../../../_runtime/metro/14876__.js";
+import _modDef14877 from "../../../../_runtime/metro/14877__.js";
+import _modDef14878 from "../../../../_runtime/metro/14878__.js";
+import _modDef14879 from "../../../../_runtime/metro/14879__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
@@ -22,29 +22,29 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 function getTierIcon(theme, tier) {
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp20 = _modDef14859;
-    const tmp19 = _modDef14858;
+    let tmp20 = _modDef14873;
+    const tmp19 = _modDef14872;
     if (obj4.isThemeDark(theme)) {
       tmp20 = tmp19;
     }
     return tmp20;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp15 = _modDef14861;
-    const tmp14 = _modDef14860;
+    let tmp15 = _modDef14875;
+    const tmp14 = _modDef14874;
     if (obj3.isThemeDark(theme)) {
       tmp15 = tmp14;
     }
     return tmp15;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp10 = _modDef14863;
-    const tmp9 = _modDef14862;
+    let tmp10 = _modDef14877;
+    const tmp9 = _modDef14876;
     if (obj2.isThemeDark(theme)) {
       tmp10 = tmp9;
     }
     return tmp10;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5 = _modDef14865;
-    const tmp4 = _modDef14864;
+    let tmp5 = _modDef14879;
+    const tmp4 = _modDef14878;
     if (obj.isThemeDark(theme)) {
       tmp5 = tmp4;
     }
@@ -75,8 +75,8 @@ let obj3 = {
   flexDirection: "row",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(6693).DARK_WHITE_500_LIGHT_BLACK_500 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: fn(6693).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(6692).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(6692).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.tierPill = {
   marginTop: 8,
   padding: 4,
@@ -96,7 +96,7 @@ let obj5 = {
   borderRadius: 11,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6693).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6692).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
@@ -176,7 +176,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       return React5(View, obj);
     };
 ReactCompilerGating = fn(558);
-let obj6 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6693).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+let obj6 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6692).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx",

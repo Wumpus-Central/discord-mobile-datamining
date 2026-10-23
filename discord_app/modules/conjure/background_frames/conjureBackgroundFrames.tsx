@@ -19,6 +19,13 @@ function releaseConjureFrame(frameId) {
   if (null != frame) {
     let result = conjureBackgroundFrameRules.shouldRunInBackgroundOnRelease(frame);
     if (result) {
+      result = !conjureBackgroundFrameRules.isBuilderPreviewFrame(frame);
+      const tmp13Result = conjureBackgroundFrameRules;
+    }
+    if (result) {
+      result = !conjureBackgroundFramePlatformDefault.hasOwnPictureInPicture(frame);
+    }
+    if (result) {
       result = !conjureBackgroundFramePlatformDefault.isInHostWindow(frame);
     }
     if (result) {
@@ -89,7 +96,7 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6762);
+const FramesConstants = fn(6761);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

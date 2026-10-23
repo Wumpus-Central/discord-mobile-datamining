@@ -34,7 +34,7 @@ const createStyles = fn(4969);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(6693).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(6692).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -154,7 +154,7 @@ prototype["render"] = function render() {
 };
 UserSettingsPremiumGuildSubscriptions.contextType = fn(5023).ThemeContext;
 const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, backgroundColor: fn(6693).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
+let obj3 = { flex: 1, backgroundColor: fn(6692).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -339,12 +339,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = true;
       }
       let obj = require("useSubscriptionPlansLoaded");
-      ({ fractionalState: c2, endsAt } = flag(7489)({ forceFetch: true }));
-      const tmp3 = flag(7489)({ forceFetch: true });
+      ({ fractionalState: c2, endsAt } = flag(7490)({ forceFetch: true }));
+      const tmp3 = flag(7490)({ forceFetch: true });
       isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
       const tmpResult = require("ReverseTrialUtils");
-      fpDurationText = flag(14707)(endsAt, tmp(14707).CountDownMessageTypes.LONG_TIME_LEFT);
-      const tmp4 = flag(14707);
+      fpDurationText = flag(14721)(endsAt, tmp(14721).CountDownMessageTypes.LONG_TIME_LEFT);
+      const tmp4 = flag(14721);
       const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
         const obj = {

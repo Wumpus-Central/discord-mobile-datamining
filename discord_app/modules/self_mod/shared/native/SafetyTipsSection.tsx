@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       showHeader = showHeader.showHeader;
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(safetyTips(10913).SafetyBookletSpotIllustration, {});
+        const tmp7 = closure_4(safetyTips(10921).SafetyBookletSpotIllustration, {});
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { spacing: 16, children: null };
                 const items = [tmp8, tmp18, tmp26];
                 obj3.children = items;
-                const tmp32 = closure_5(safetyTips(5964).Stack, obj3);
+                const tmp32 = closure_5(safetyTips(5963).Stack, obj3);
                 cResult[19] = tmp8;
                 cResult[20] = tmp18;
                 cResult[21] = tmp26;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { spacing: 8, align: "center", justify: "center", children: null };
           const items1 = [tmp12, tmp15];
           obj5.children = items1;
-          const tmp20 = closure_5(safetyTips(5964).Stack, obj5);
+          const tmp20 = closure_5(safetyTips(5963).Stack, obj5);
           cResult[9] = tmp12;
           cResult[10] = tmp15;
           cResult[11] = tmp20;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let showHeader = children.showHeader;
       const tmp = closure_6();
       const items = [
-        closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10913).SafetyBookletSpotIllustration, {}) }),
+        closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10921).SafetyBookletSpotIllustration, {}) }),
         ,
       ];
       if (showHeader) {
@@ -172,8 +172,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj4.children = items1;
-      items[1] = closure_5(safetyTips(5964).Stack, obj4);
-      const obj = { style: tmp.image, children: closure_4(safetyTips(10913).SafetyBookletSpotIllustration, {}) };
+      items[1] = closure_5(safetyTips(5963).Stack, obj4);
+      const obj = { style: tmp.image, children: closure_4(safetyTips(10921).SafetyBookletSpotIllustration, {}) };
       const obj5 = {
         style: tmp.text,
         accessibilityRole: "header",
@@ -188,5 +188,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ),
       });
       obj3.children = items;
-      return closure_5(safetyTips(5964).Stack, obj3);
+      return closure_5(safetyTips(5963).Stack, obj3);
     };

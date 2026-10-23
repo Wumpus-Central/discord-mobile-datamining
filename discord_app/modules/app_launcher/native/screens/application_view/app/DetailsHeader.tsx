@@ -101,11 +101,11 @@ export default noop.memo(
         ({ application, viewContainerStyle, mainContainerStyle, hideName } = arg0);
         const tmp4 = ref2();
         if (cResult[0] !== application) {
-          const isPartnerApplicationResult = tmp(9618).isPartnerApplication(application);
+          const isPartnerApplicationResult = tmp(9625).isPartnerApplication(application);
           cResult[0] = application;
           cResult[1] = isPartnerApplicationResult;
           let tmp5 = isPartnerApplicationResult;
-          const tmpResult = tmp(9618);
+          const tmpResult = tmp(9625);
         } else {
           tmp5 = cResult[1];
         }
@@ -120,16 +120,16 @@ export default noop.memo(
         let obj = ref(576);
         ({ containerStyle, containerHeight } = closure_15());
         if (cResult[2] !== application) {
-          const sectionName = tmp(9618).getSectionName(application);
+          const sectionName = tmp(9625).getSectionName(application);
           cResult[2] = application;
           cResult[3] = sectionName;
           let tmp14 = sectionName;
-          const tmpResult5 = tmp(9618);
+          const tmpResult5 = tmp(9625);
         } else {
           tmp14 = cResult[3];
         }
         if (cResult[4] !== application) {
-          const str = tmp(9618).getSectionDescription(application);
+          const str = tmp(9625).getSectionDescription(application);
           let tmp18 = null != str;
           if (tmp18) {
             tmp18 = str.trim().length > 0;
@@ -139,7 +139,7 @@ export default noop.memo(
           cResult[6] = tmp18;
           let tmp17 = tmp18;
           let tmp16 = str;
-          const tmpResult6 = tmp(9618);
+          const tmpResult6 = tmp(9625);
         } else {
           tmp16 = cResult[5];
           tmp17 = cResult[6];
@@ -158,8 +158,8 @@ export default noop.memo(
         const first4 = tmp8Result6[0];
         closure_15 = tmp8Result6[1];
         if (null == tmp16) {
-          const isScreenLandscape = tmp(8664).useIsScreenLandscape();
-          const tmp32 = first(6646)(isScreenLandscape);
+          const isScreenLandscape = tmp(8671).useIsScreenLandscape();
+          const tmp32 = first(6645)(isScreenLandscape);
           closure_17 = tmp32;
           if (cResult[9] === isScreenLandscape) {
             if (cResult[10] === tmp32) {
@@ -214,7 +214,7 @@ export default noop.memo(
                   if (cResult[21] === first) {
                     let tmp40 = cResult[22];
                   }
-                  const tmp41 = tmp31(6871)(ref);
+                  const tmp41 = tmp31(6870)(ref);
                   let tmp42 = first;
                   if (first) {
                     tmp42 = !first1;
@@ -511,7 +511,7 @@ export default noop.memo(
                                       children: null,
                                     };
                                     obj20.children = closure_8(tmp(5220).Text, obj21);
-                                    const items9 = [closure_8(tmp31(6952), obj20), ,];
+                                    const items9 = [closure_8(tmp31(6951), obj20), ,];
                                     let tmp60Result = null;
                                     if (tmp42) {
                                       const obj22 = { style: tmp4.viewMoreCTA, children: null };
@@ -550,7 +550,7 @@ export default noop.memo(
                                     items9[2] = tmp60Result3;
                                     obj11.children = items9;
                                     tmp58Result2 = tmp58(containerHeight, obj11);
-                                    const tmp31Result = tmp31(6952);
+                                    const tmp31Result = tmp31(6951);
                                   }
                                   cResult[41] = tmp41;
                                   cResult[42] = null;
@@ -688,12 +688,12 @@ export default noop.memo(
           cResult[12] = items14;
           tmp34 = items14;
           tmp33 = he;
-          const tmpResult7 = tmp(8664);
+          const tmpResult7 = tmp(8671);
         } else if (cResult[7] !== tmp16) {
-          let result = tmp(11125).parseBioReactWithCachedAST(tmp16);
+          let result = tmp(11134).parseBioReactWithCachedAST(tmp16);
           cResult[7] = tmp16;
           cResult[8] = result;
-          const tmpResult8 = tmp(11125);
+          const tmpResult8 = tmp(11134);
         }
       }
     : function DetailsHeader(viewContainerStyle) {
@@ -712,7 +712,7 @@ export default noop.memo(
         let isScreenLandscape;
         closure_18 = undefined;
         let tmp = ref();
-        let obj = ref(9618);
+        let obj = ref(9625);
         ref = noop.useRef(null);
         const tmp7 = first1(noop.useState(false), 2);
         const first = tmp7[0];
@@ -721,12 +721,12 @@ export default noop.memo(
         first1 = tmp9[0];
         noop = tmp9[1];
         closure_5 = noop.useRef(true);
-        const isPartnerApplicationResult = ref(9618).isPartnerApplication(application);
+        const isPartnerApplicationResult = ref(9625).isPartnerApplication(application);
         ({ containerHeight: c6, containerStyle } = first2());
         const tmp11 = first2();
-        const sectionName = ref(9618).getSectionName(application);
-        let obj3 = ref(9618);
-        const str = ref(9618).getSectionDescription(application);
+        const sectionName = ref(9625).getSectionName(application);
+        let obj3 = ref(9625);
+        const str = ref(9625).getSectionDescription(application);
         let tmp27Result5 = null != str;
         if (tmp27Result5) {
           tmp27Result5 = str.trim().length > 0;
@@ -739,7 +739,7 @@ export default noop.memo(
         colors = tmp6Result4[1];
         ref = obj2.useRef(0);
         noop.useRef(0);
-        const obj4 = ref(9618);
+        const obj4 = ref(9625);
         [tmp17, c14] = first1(noop.useState(false), 2);
         const tmp6Result6 = first1(noop.useState(false), 2);
         first2 = tmp6Result6[0];
@@ -753,8 +753,8 @@ export default noop.memo(
           return result;
         }, items);
         const tmp6Result5 = first1(noop.useState(false), 2);
-        isScreenLandscape = ref(8664).useIsScreenLandscape();
-        const tmp23 = first(6646)(isScreenLandscape);
+        isScreenLandscape = ref(8671).useIsScreenLandscape();
+        const tmp23 = first(6645)(isScreenLandscape);
         closure_18 = tmp23;
         const items1 = [isScreenLandscape, tmp23];
         const effect = obj2.useEffect(() => {
@@ -765,7 +765,7 @@ export default noop.memo(
           }
         }, items1);
         let tmp26 = first;
-        const tmp2Result = ref(8664);
+        const tmp2Result = ref(8671);
         if (first) {
           tmp26 = !first1;
         }
@@ -890,7 +890,7 @@ export default noop.memo(
           const obj20 = { maskElement: tmp29Result6, children: null };
           const obj21 = { variant: "text-sm/medium", color: "text-default", lineClamp: num4, children: memo };
           obj20.children = tmp29(tmp2(5220).Text, obj21);
-          const items10 = [tmp29(tmp22(6952), obj20), ,];
+          const items10 = [tmp29(tmp22(6951), obj20), ,];
           let tmp29Result7 = null;
           if (tmp26) {
             const obj22 = { style: tmp.viewMoreCTA, children: null };
@@ -929,7 +929,7 @@ export default noop.memo(
           items10[2] = tmp29Result8;
           obj11.children = items10;
           tmp27Result4 = tmp27(c6, obj11);
-          const tmp22Result = tmp22(6952);
+          const tmp22Result = tmp22(6951);
         }
         items5[1] = tmp27Result4;
         obj6.children = items5;

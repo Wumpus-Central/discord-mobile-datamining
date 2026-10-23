@@ -5,7 +5,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import inlineStyles from "../../../../../_runtime/07946_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07947_inlineStyles.js";
 import RevealProvider from "RevealProvider.tsx";
 import useGlobalStatusIndicatorState from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
 import GlobalStatusIndicator from "../../../connectivity/native/components/GlobalStatusIndicator.tsx";
@@ -56,7 +56,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const derivedValue = reveal(5038).useDerivedValue(fn);
       let obj2 = reveal(5038);
       const tmp6 = derivedValue;
-      const tmp7 = derivedValue(11513)();
+      const tmp7 = derivedValue(11524)();
       const fn2 = function o() {
         const obj = { transform: null };
         const obj2 = { translateY: timing.withTiming(derivedValue.get(), obj) };
@@ -93,7 +93,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const rect = { top: tmp9, left: isTouchingLeftScreenEdge, right: true, children: tmp10 };
-        const tmp14 = closure_7(reveal(7207).SafeAreaPaddingView, rect);
+        const tmp14 = closure_7(reveal(7206).SafeAreaPaddingView, rect);
         cResult[3] = isTouchingLeftScreenEdge;
         cResult[4] = tmp9;
         cResult[5] = tmp10;
@@ -124,7 +124,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData3;
       const derivedValue = TIMING_CONFIG.useDerivedValue(fn);
       const tmp = closure_9();
-      const tmp3 = derivedValue(11513)();
+      const tmp3 = derivedValue(11524)();
       const fn2 = function c() {
         const obj = { transform: null };
         const obj2 = { translateY: timing.withTiming(derivedValue.get(), obj) };
@@ -144,7 +144,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         right: true,
         children: closure_7(closure_5, { style: tmp.headerContainer, children: header }),
       };
-      obj4.children = closure_7(reveal(7207).SafeAreaPaddingView, rect);
+      obj4.children = closure_7(reveal(7206).SafeAreaPaddingView, rect);
       return closure_7(derivedValue(5038).View, obj4);
     };
 ReactCompilerGating = fn(558);
@@ -283,15 +283,15 @@ export default noop.memo(
           channel,
         } = isTouchingLeftScreenEdge);
         isTouchingLeftScreenEdge = isTouchingLeftScreenEdge.isTouchingLeftScreenEdge;
-        const globalStatusIndicatorState = channel(11514).useGlobalStatusIndicatorState();
+        const globalStatusIndicatorState = channel(11525).useGlobalStatusIndicatorState();
         const tmp4 = undefined !== forceReveal && forceReveal;
-        const tmpResult = channel(11514);
+        const tmpResult = channel(11525);
         const globalStatusIndicatorHeightSharedValue =
-          channel(11519).useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-        const tmp9 = globalStatusIndicatorHeightSharedValue(11513)();
+          channel(11530).useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
+        const tmp9 = globalStatusIndicatorHeightSharedValue(11524)();
         dependencyMap = tmp9;
-        reveal = reveal.useContext(channel(11314).RevealContext).reveal;
-        const tmpResult6 = channel(11519);
+        reveal = reveal.useContext(channel(11323).RevealContext).reveal;
+        const tmpResult6 = channel(11530);
         const isScreenReaderEnabled = channel(5253).useIsScreenReaderEnabled();
         if (!reveal) {
           reveal = tmp4;
@@ -345,10 +345,10 @@ export default noop.memo(
           TIMING_CONFIG,
           revealOpacity: derivedValue1,
         };
-        const analyticsLocations = globalStatusIndicatorHeightSharedValue(7237)(
-          tmp8(7262).FOCUSED_VOICE_CONTROLS,
+        const analyticsLocations = globalStatusIndicatorHeightSharedValue(7238)(
+          tmp8(7263).FOCUSED_VOICE_CONTROLS,
         ).analyticsLocations;
-        const tmp15 = globalStatusIndicatorHeightSharedValue(11400)();
+        const tmp15 = globalStatusIndicatorHeightSharedValue(11411)();
         closure_7 = tmp15;
         if (cResult[0] === analyticsLocations) {
           if (cResult[1] === channel.guild_id) {
@@ -446,7 +446,7 @@ export default noop.memo(
                             reveal,
                             children,
                           };
-                          tmp34 = closure_7(tmp8(11522), obj4);
+                          tmp34 = closure_7(tmp8(11533), obj4);
                         }
                       }
                       cResult[15] = actionBar;
@@ -514,7 +514,7 @@ export default noop.memo(
         cResult[4] = compositeInstanceId1;
         cResult[5] = handleOpenDrawer;
         tmp19 = handleOpenDrawer;
-        const tmp8Result = globalStatusIndicatorHeightSharedValue(7237);
+        const tmp8Result = globalStatusIndicatorHeightSharedValue(7238);
       }
     : function FocusedControlsRevamped(disableGradient) {
         ({ expandedControls, actionBar, forceReveal } = disableGradient);
@@ -537,7 +537,7 @@ export default noop.memo(
         const globalStatusIndicatorState = TIMING_CONFIG.useGlobalStatusIndicatorState();
         const globalStatusIndicatorHeightSharedValue =
           GlobalStatusIndicator.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-        const tmp6 = globalStatusIndicatorHeightSharedValue(11513)();
+        const tmp6 = globalStatusIndicatorHeightSharedValue(11524)();
         dependencyMap = tmp6;
         reveal = reveal.useContext(RevealProvider.RevealContext).reveal;
         const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
@@ -592,10 +592,10 @@ export default noop.memo(
         fn.__initData = __initData10;
         const animatedStyle = tmpResult4.useAnimatedStyle(fn);
         const obj4 = { withTiming: timing.withTiming, top: derivedValue, TIMING_CONFIG, revealOpacity: derivedValue1 };
-        analyticsLocations = globalStatusIndicatorHeightSharedValue(7237)(
-          tmp5(7262).FOCUSED_VOICE_CONTROLS,
+        analyticsLocations = globalStatusIndicatorHeightSharedValue(7238)(
+          tmp5(7263).FOCUSED_VOICE_CONTROLS,
         ).analyticsLocations;
-        closure_7 = tmp5(11400)();
+        closure_7 = tmp5(11411)();
         if (containerStyle == null) {
           containerStyle = derivedValue.absoluteFill;
         }
@@ -646,7 +646,7 @@ export default noop.memo(
               reveal,
               children,
             };
-            tmp17Result = closure_7(tmp5(11522), obj6);
+            tmp17Result = closure_7(tmp5(11533), obj6);
           }
         }
         items1[2] = tmp17Result;

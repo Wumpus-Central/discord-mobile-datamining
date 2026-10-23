@@ -18,7 +18,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const PanGestureAnimationsDefault = PanGestureAnimations;
 
 require = fn;
-const ChannelCallStore = fn(10847);
+const ChannelCallStore = fn(10855);
 ({
   useChannelCallOrientationHandlers: closure_7,
   resetChannelCallStore: closure_8,
@@ -26,8 +26,8 @@ const ChannelCallStore = fn(10847);
   setVoiceChatDrawerState: c10,
   useIsVoiceChatFocused: closure_11,
 } = ChannelCallStore);
-let VoiceChatDrawerState = fn(10848).VoiceChatDrawerState;
-const Constants = fn(11313);
+let VoiceChatDrawerState = fn(10856).VoiceChatDrawerState;
+const Constants = fn(11322);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -121,10 +121,10 @@ let closure_18 = noop.memo(
             if (null != first) {
               ChannelCallModalManagerDefault.initialize(tmp);
               return () => {
-                closure_1_1(11458).terminate();
-                const obj = closure_1_1(11458);
-                closure_1_1(10854).setHidden(false);
-                const obj2 = closure_1_1(10854);
+                closure_1_1(11469).terminate();
+                const obj = closure_1_1(11469);
+                closure_1_1(10862).setHidden(false);
+                const obj2 = closure_1_1(10862);
                 if (!obj3.isModalOpen(closure_1_34)) {
                   closure_1_8();
                 }
@@ -161,10 +161,10 @@ let closure_18 = noop.memo(
           if (null != first) {
             ChannelCallModalManagerDefault.initialize(tmp);
             return () => {
-              closure_1_1(11458).terminate();
-              const obj = closure_1_1(11458);
-              closure_1_1(10854).setHidden(false);
-              const obj2 = closure_1_1(10854);
+              closure_1_1(11469).terminate();
+              const obj = closure_1_1(11469);
+              closure_1_1(10862).setHidden(false);
+              const obj2 = closure_1_1(10862);
               if (!obj3.isModalOpen(closure_1_34)) {
                 closure_1_8();
               }

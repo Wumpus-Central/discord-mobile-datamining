@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef10653 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-1x.png.js";
-import _modDef10654 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-2x.png.js";
-import _modDef10655 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-3x.png.js";
+import _modDef10660 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-1x.png.js";
+import _modDef10661 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-2x.png.js";
+import _modDef10662 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WinnerTrophyBadge-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10653 }, 3: null };
-let obj2 = { uri: _modDef10653 };
-obj[2] = { uri: _modDef10654 };
-const obj3 = { uri: _modDef10654 };
-obj[3] = { uri: _modDef10655 };
+let obj = { 1: null, 2: { uri: _modDef10660 }, 3: null };
+let obj2 = { uri: _modDef10660 };
+obj[2] = { uri: _modDef10661 };
+const obj3 = { uri: _modDef10661 };
+obj[3] = { uri: _modDef10662 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef10655 };
+const obj4 = { uri: _modDef10662 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/WinnerTrophyBadge.native.tsx",

@@ -215,11 +215,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           user,
           guildId: "Boolean",
           status: true,
-          isMobileOnline: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
+          isMobileOnline: null,
           isVROnline: null,
-          size: "e0e5859330a31dbc4e68b866e0944f32",
-          avatarDecoration: "it.messages.e0e5859330a31dbc4e68b866e0944f32.compiled.messages",
-          autoStatusCutout: "jsona",
+          size: null,
+          avatarDecoration: null,
+          autoStatusCutout: null,
         };
         if (StatusTypes.OFFLINE !== status) {
           class A {
@@ -294,11 +294,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           user,
           guildId: "Boolean",
           status: true,
-          isMobileOnline: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
+          isMobileOnline: null,
           isVROnline: null,
-          size: "e0e5859330a31dbc4e68b866e0944f32",
-          avatarDecoration: "it.messages.e0e5859330a31dbc4e68b866e0944f32.compiled.messages",
-          autoStatusCutout: "jsona",
+          size: null,
+          avatarDecoration: null,
+          autoStatusCutout: null,
         };
         let tmp13 = null;
         if (StatusTypes.OFFLINE !== status) {
@@ -405,11 +405,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = tmp16;
       }
       const tmpResult = channel(504);
-      const tmp13 = closure_10(channel(12862).GuildIconWithChannelType, {
+      const tmp13 = closure_10(channel(12880).GuildIconWithChannelType, {
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(12862).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(12880).GuildIconWithChannelTypeSizes.SMALL_32,
       });
       cResult[3] = channel;
       cResult[4] = stateFromStores;
@@ -419,7 +419,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(12862).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(12880).GuildIconWithChannelTypeSizes.SMALL_32,
       };
     }
   : function FailedChannelRow(channel) {
@@ -437,11 +437,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(504);
       const tmp3 = useChannelNameDefault(channel);
       const items1 = [
-        closure_10(channel(12862).GuildIconWithChannelType, {
+        closure_10(channel(12880).GuildIconWithChannelType, {
           "aria-label": "",
           guild: stateFromStores,
           channel,
-          size: channel(12862).GuildIconWithChannelTypeSizes.SMALL_32,
+          size: channel(12880).GuildIconWithChannelTypeSizes.SMALL_32,
         }),
         closure_10(channel(5220).Text, {
           style: tmp.label,

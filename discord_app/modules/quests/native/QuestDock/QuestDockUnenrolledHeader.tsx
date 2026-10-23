@@ -5,8 +5,8 @@ import QuestTypes from "../../QuestTypes.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "../QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import QuestGameLogotypeDefault from "../QuestGameLogotype.tsx";
-import _modDef16427 from "../../../../../_runtime/metro/16427__.js";
-import _modDef16428 from "../../../../../_runtime/metro/16428__.js";
+import _modDef16449 from "../../../../../_runtime/metro/16449__.js";
+import _modDef16450 from "../../../../../_runtime/metro/16450__.js";
 import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -31,11 +31,11 @@ export default noop.memo(
     ? function QuestDockUnenrolledHeader() {
         const cResult = questCreative(576).c(21);
         let obj = questCreative(576);
-        const questDockQuest = questCreative(16359).useQuestDockQuest();
-        let obj2 = questCreative(16359);
-        questCreative = questCreative(16359).useQuestCreative(questDockQuest);
-        const obj3 = questCreative(16359);
-        const actionSheetPressHandler = questCreative(16328).useActionSheetPressHandler(questCreative);
+        const questDockQuest = questCreative(16382).useQuestDockQuest();
+        let obj2 = questCreative(16382);
+        questCreative = questCreative(16382).useQuestCreative(questDockQuest);
+        const obj3 = questCreative(16382);
+        const actionSheetPressHandler = questCreative(16351).useActionSheetPressHandler(questCreative);
         if (cResult[0] !== questCreative) {
           const fn = function t() {
             const obj2 = { creative: questCreative, isTargetedDisclosure: true, trackingCtx: null };
@@ -53,7 +53,7 @@ export default noop.memo(
         } else {
           tmp7 = cResult[1];
         }
-        const obj4 = questCreative(16328);
+        const obj4 = questCreative(16351);
         const tmp9 = useThemeDefault();
         if (tmpResult.isThemeDark(tmp9)) {
           let LIGHT = ThemeTypes.DARK;
@@ -64,7 +64,7 @@ export default noop.memo(
         }
         const tmp12 = closure_8();
         tmpResult = questCreative(4976);
-        const questGameLogotypeAssetUrl = questCreative(16327).useQuestGameLogotypeAssetUrl(questDockQuest);
+        const questGameLogotypeAssetUrl = questCreative(16350).useQuestGameLogotypeAssetUrl(questDockQuest);
         const questBarHeroBlurhash = questDockQuest.config.assets.questBarHeroBlurhash;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1128).intl;
@@ -89,9 +89,9 @@ export default noop.memo(
           tmp16 = cResult[4];
         }
         if (LIGHT === tmp11.DARK) {
-          let tmp8Result = _modDef16427;
+          let tmp8Result = _modDef16449;
         } else {
-          tmp8Result = _modDef16428;
+          tmp8Result = _modDef16450;
         }
         if (cResult[5] === tmp12.wreathImage) {
           if (cResult[6] === tmp8Result) {
@@ -163,15 +163,15 @@ export default noop.memo(
         cResult[7] = tmp21;
         tmp20 = tmp21;
         const obj9 = { source: tmp8Result, resizeMode: "contain", style: tmp12.wreathImage };
-        const tmpResult2 = questCreative(16327);
+        const tmpResult2 = questCreative(16350);
       }
     : function QuestDockUnenrolledHeader() {
-        const questDockQuest = questCreative(16359).useQuestDockQuest();
-        let obj = questCreative(16359);
-        questCreative = questCreative(16359).useQuestCreative(questDockQuest);
-        let obj2 = questCreative(16359);
+        const questDockQuest = questCreative(16382).useQuestDockQuest();
+        let obj = questCreative(16382);
+        questCreative = questCreative(16382).useQuestCreative(questDockQuest);
+        let obj2 = questCreative(16382);
         const items = [questCreative];
-        const obj3 = questCreative(16328);
+        const obj3 = questCreative(16351);
         const callback = noop.useCallback(() => {
           const obj2 = { creative: questCreative, isTargetedDisclosure: true, trackingCtx: null };
           const obj = QuestDisclosureModalActionCreatorsDefault;
@@ -182,7 +182,7 @@ export default noop.memo(
           };
           obj.showModal(obj2);
         }, items);
-        const actionSheetPressHandler = questCreative(16328).useActionSheetPressHandler(questCreative);
+        const actionSheetPressHandler = questCreative(16351).useActionSheetPressHandler(questCreative);
         const tmp8 = useThemeDefault();
         if (obj4.isThemeDark(tmp8)) {
           let LIGHT = ThemeTypes.DARK;
@@ -193,9 +193,9 @@ export default noop.memo(
         }
         const tmp11 = closure_8();
         obj4 = questCreative(4976);
-        const questGameLogotypeAssetUrl = questCreative(16327).useQuestGameLogotypeAssetUrl(questDockQuest);
+        const questGameLogotypeAssetUrl = questCreative(16350).useQuestGameLogotypeAssetUrl(questDockQuest);
         const questBarHeroBlurhash = questDockQuest.config.assets.questBarHeroBlurhash;
-        const tmpResult = questCreative(16327);
+        const tmpResult = questCreative(16350);
         const obj5 = {
           blurHash: questBarHeroBlurhash,
           collapsedContent: null,
@@ -218,9 +218,9 @@ export default noop.memo(
         const obj7 = { style: tmp11.primaryContent, children: null };
         const tmp7Result = QuestDockBackgroundBlurHeaderDefault;
         if (LIGHT === tmp10.DARK) {
-          let tmp7Result4 = _modDef16427;
+          let tmp7Result4 = _modDef16449;
         } else {
-          tmp7Result4 = _modDef16428;
+          tmp7Result4 = _modDef16450;
         }
         const items1 = [
           closure_6(FastImageDefault, { source: tmp7Result4, resizeMode: "contain", style: tmp11.wreathImage }),

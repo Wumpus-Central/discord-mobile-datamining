@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         lineHeight: "ix",
         textAlign: "<string:4294865153>",
         width: num,
-        marginBottom: "<string:1090519040>",
+        marginBottom: "<string:1816265119>",
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         lineHeight: "ix",
         textAlign: "<string:4294865153>",
         width: size,
-        marginBottom: "<string:1090519040>",
+        marginBottom: "<string:1816265119>",
       };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };

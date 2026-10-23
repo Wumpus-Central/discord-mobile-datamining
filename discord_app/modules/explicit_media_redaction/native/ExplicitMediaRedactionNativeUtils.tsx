@@ -11,8 +11,8 @@ import ExplicitMediaRedactionUtils from "../ExplicitMediaRedactionUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_4 = fn(7376).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
-const SearchMediaTypes = fn(9684).SearchMediaTypes;
+let closure_4 = fn(7377).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
+const SearchMediaTypes = fn(9691).SearchMediaTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx",
@@ -75,7 +75,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj3);
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16039, dependencyMap.paths), closure_4, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16057, dependencyMap.paths), closure_4, {
     title,
     subtitle,
     options: items,

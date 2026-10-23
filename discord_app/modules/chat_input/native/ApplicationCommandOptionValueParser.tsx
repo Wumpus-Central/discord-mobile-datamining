@@ -78,7 +78,7 @@ function getChannels(getGuildId, arr) {
   }
 }
 let closure_6 = fn(4825).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5971);
+const ChannelAutocompleteConstants = fn(5970);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {}
 class ApplicationCommandOptionValueParser {

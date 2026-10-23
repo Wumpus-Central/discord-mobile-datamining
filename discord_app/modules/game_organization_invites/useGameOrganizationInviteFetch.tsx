@@ -1,15 +1,17 @@
 // discord_app/modules/game_organization_invites/useGameOrganizationInviteFetch.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
+import isRetryableFetchErrorDefault from "isRetryableFetchError.tsx";
 import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GameOrganizationInviteStore from "GameOrganizationInviteStore.tsx";
 
-const constants = fn(10994).GameOrganizationInviteStates;
+const constants = fn(11002).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1087).QueryIds.GAME_ORGANIZATION_INVITE,
   staleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: 5 * DurationsDefault.Seconds.MINUTE,
+  retryConfig: { retryableErrors: isRetryableFetchErrorDefault },
   get(arg0) {
     const invite = GameOrganizationInviteStore.getInvite(arg0);
     let state;

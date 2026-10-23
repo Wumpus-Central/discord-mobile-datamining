@@ -15,8 +15,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11239 from "../../../../_runtime/metro/11239__.js";
-import _modDef11240 from "../../../../_runtime/metro/11240__.js";
+import _modDef11248 from "../../../../_runtime/metro/11248__.js";
+import _modDef11249 from "../../../../_runtime/metro/11249__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -49,26 +49,25 @@ function generateMetadataForPlatform(arg0) {
   }
 }
 const View = fn(17).View;
-let Constants = fn(7288);
-({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = Constants);
+let Constants = fn(7289);
+({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8 } = Constants);
 Constants = fn(1087);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(7260).MetadataFields;
+const MetadataFields = fn(7261).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1202).Icon.Sizes.REFRESH_SMALL_16;
 let native = fn(1202);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
 const createStyles = fn(4969);
-let obj = { cardContainer: { paddingBottom: CARD_PADDING - 12 }, refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, linkIcon: { marginEnd: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
-let obj4 = { paddingBottom: CARD_PADDING - 12 };
-let obj5 = { marginBottom: nativeDefault.space.PX_8 };
+let obj = { refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, linkIcon: { marginEnd: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
+let obj4 = { marginBottom: nativeDefault.space.PX_8 };
 obj.metadataItem = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.poweredByContainer = { flexDirection: "row", alignItems: "center", marginTop: 6 };
-let obj7 = { borderRadius: null };
+let obj6 = { borderRadius: null };
 native = fn(1202);
-obj7.borderRadius = native.getIconSize(fn(1202).Icon.Sizes.MEDIUM);
-obj.applicationIcon = obj7;
+obj6.borderRadius = native.getIconSize(fn(1202).Icon.Sizes.MEDIUM);
+obj.applicationIcon = obj6;
 let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function VerifiedIcon(arg0) {
@@ -118,7 +117,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
         cResult[11] = tmp24;
         tmp21 = tmp24;
       }
-      const obj4 = { source: _modDef11240, color: WHITE };
+      const obj4 = { source: _modDef11249, color: WHITE };
       const merged = Object.assign(tmp6);
       const tmp20 = __initData(native2.Icon, obj4);
       cResult[5] = WHITE;
@@ -126,7 +125,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       cResult[7] = tmp20;
       tmp15 = tmp20;
     }
-    const obj5 = { source: _modDef11239, color: PLATFORM_TWITTER };
+    const obj5 = { source: _modDef11248, color: PLATFORM_TWITTER };
     const merged1 = Object.assign(tmp6);
     const tmp14 = __initData(native2.Icon, obj5);
     cResult[2] = PLATFORM_TWITTER;
@@ -152,10 +151,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Verifi
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11239, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11248, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [__initData(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11240, color: WHITE };
+    const obj5 = { source: _modDef11249, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = __initData(native2.Icon, obj5);
     obj3.children = items;
@@ -207,7 +206,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                   if (cResult[18] === account.name) {
                     if (cResult[21] === account.name) {
                       if (cResult[22] === tmp9) {
-                        class H {
+                        class B {
                           constructor() {
                             tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                             obj = closure_0(closure_2[25]);
@@ -251,7 +250,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                           }
                           if (cResult[30] !== tmp43) {
                             const tmp43Result = tmp43();
-                            class H {
+                            class B {
                               constructor() {
                                 tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                                 obj = closure_0(closure_2[25]);
@@ -265,7 +264,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                             }
                             cResult[31] = tmp43Result;
                           }
-                          class H {
+                          class B {
                             constructor() {
                               tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                               obj = closure_0(closure_2[25]);
@@ -374,7 +373,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                         tmp43 = Y;
                       }
                     }
-                    class H {
+                    class B {
                       constructor() {
                         tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                         obj = closure_0(closure_2[25]);
@@ -413,7 +412,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                     arr2.push(account.name);
                     if (null == tmp9) {
                       cResult[21] = account.name;
-                      class H {
+                      class B {
                         constructor() {
                           tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                           obj = closure_0(closure_2[25]);
@@ -455,7 +454,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                     } else {
                       if (cResult[25] !== tmp9) {
                         let intl = tmp(tmp2[28]).intl;
-                        class H {
+                        class B {
                           constructor() {
                             tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                             obj = closure_0(closure_2[25]);
@@ -496,7 +495,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       arr2.push(tmp37);
                     }
                   }
-                  class H {
+                  class B {
                     constructor() {
                       tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                       obj = closure_0(closure_2[25]);
@@ -528,7 +527,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       return;
                     }
                   }
-                  cResult[20] = H;
+                  cResult[20] = B;
                 }
               }
             }
@@ -562,7 +561,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           const source = tmp(tmp2[21]).makeSource(tmp25);
           if (tmp22 != null) {
             const getPlatformUserUrl = tmp22.getPlatformUserUrl;
-            class H {
+            class B {
               constructor() {
                 tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
                 obj = closure_0(closure_2[25]);
@@ -592,7 +591,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   if (undefined === showMetadata || showMetadata) {
     tmp(tmp2[19]);
-    class H {
+    class B {
       constructor() {
         tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
         obj = closure_0(closure_2[25]);
@@ -607,7 +606,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   if (undefined === showMetadata || showMetadata) {
     const obj3 = { accountType: null, metadata: null, style: null };
-    class H {
+    class B {
       constructor() {
         tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
         obj = closure_0(closure_2[25]);
@@ -840,7 +839,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   application = application.application;
   const tmp4 = closure_16();
   let obj = trackUserProfileAction(576);
-  trackUserProfileAction = trackUserProfileAction(8652).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = trackUserProfileAction(8659).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] !== application) {
     const iconSource = application.getIconSource(closure_7);
     cResult[0] = application;
@@ -893,25 +892,14 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
         }
         const obj5 = { label: str, icon: tmp14, onPress: tmp8, onLongPress: tmp8, accessibilityLabel: joined, accessibilityHint: tmp12, accessibilityRole: "button" };
+        const tmp20 = closure_12(tmp(6888).TableRow, obj5);
         cResult[13] = tmp12;
         cResult[14] = joined;
         cResult[15] = tmp8;
         cResult[16] = str;
         cResult[17] = tmp14;
-        class C {
-          constructor() {
-            tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
-            obj = closure_0(closure_2[25]);
-            result = obj.triggerHapticFeedback(closure_0(closure_2[25]).HapticFeedbackTypes.IMPACT_LIGHT);
-            obj2 = closure_0(closure_2[26]);
-            copyResult = obj2.copy(c1);
-            obj3 = closure_0(closure_2[27]);
-            result1 = obj3.presentCopiedToClipboard();
-            return;
-          }
-        }
-        tmp18 = closure_12(tmp(6889).TableRow, obj5);
-        const tmp20 = closure_12(tmp(6889).TableRow, obj5);
+        cResult[18] = tmp20;
+        tmp18 = tmp20;
       }
       let tmp15;
       if (null != tmp5) {
@@ -931,23 +919,17 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[7] = items;
     obj3 = items;
   }
-  class C {
-    constructor() {
-      tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
-      obj = closure_0(closure_2[25]);
-      result = obj.triggerHapticFeedback(closure_0(closure_2[25]).HapticFeedbackTypes.IMPACT_LIGHT);
-      obj2 = closure_0(closure_2[26]);
-      copyResult = obj2.copy(c1);
-      obj3 = closure_0(closure_2[27]);
-      result1 = obj3.presentCopiedToClipboard();
-      return;
-    }
-  }
+  const fn = function f() {
+    trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
+    const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+    ClipboardUtils.copy(str);
+    const result1 = ToastUtils.presentCopiedToClipboard();
+  };
   cResult[2] = str;
   cResult[3] = trackUserProfileAction;
-  cResult[4] = C;
-  tmp8 = C;
-  let obj2 = trackUserProfileAction(8652);
+  cResult[4] = fn;
+  tmp8 = fn;
+  let obj2 = trackUserProfileAction(8659);
 }) : (function UserAccountApplicationConnection(application) {
   application = application.application;
   let str;
@@ -1188,10 +1170,10 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   return __initData(TableRow.TableRow, obj10);
 }));
 fn(558);
-let obj6 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj5 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileAccountConnectionsCard(userId) {
-  const cResult = userId(stateFromStores[13]).c(25);
+  const cResult = userId(stateFromStores[13]).c(22);
   userId = userId.userId;
   const style = userId.style;
   const tmp4 = closure_16();
@@ -1237,39 +1219,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
         if (cResult[6] === stateFromStores) {
           if (cResult[7] === theme) {
             if (cResult[8] === userId) {
-              if (cResult[15] === style) {
-                if (cResult[16] === tmp4.cardContainer) {
-                  let tmp17 = cResult[17];
-                }
-                const _Symbol = Symbol;
-                class I {
-                  constructor() {
-                    return closure_1_6.hidePersonalInformation;
-                  }
-                }
-                class M {
-                  constructor(arg0) {
-                    obj = { account: userId, theme, locale: closure_2, userId };
-                    return jsx(closure_19, obj, userId.id);
-                  }
-                }
-                if (cResult[21] === tmp4.refreshCardTitle) {
-                  if (cResult[22] === tmp17) {
-                    if (cResult[23] === tmp20) {
-                      let tmp21 = cResult[24];
-                    }
-                    return tmp21;
-                  }
-                }
-                const obj3 = { style: tmp17, title: tmp19, titleStyle: tmp4.refreshCardTitle, children: tmp20 };
-                const tmp23 = closure_12(tmp13(tmp2[37]), obj3);
-                cResult[21] = tmp4.refreshCardTitle;
-                cResult[22] = tmp17;
-                cResult[23] = tmp20;
-                cResult[24] = tmp23;
-                tmp21 = tmp23;
-              }
-              const items2 = [, ];
+              const _Symbol = Symbol;
               class I {
                 constructor() {
                   return closure_1_6.hidePersonalInformation;
@@ -1281,10 +1231,21 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
                   return jsx(closure_19, obj, userId.id);
                 }
               }
-              cResult[15] = style;
-              cResult[16] = tmp4.cardContainer;
-              cResult[17] = items2;
-              tmp17 = items2;
+              if (cResult[18] === style) {
+                if (cResult[19] === tmp4.refreshCardTitle) {
+                  if (cResult[20] === tmp19) {
+                    let tmp20 = cResult[21];
+                  }
+                  return tmp20;
+                }
+              }
+              const obj3 = { title: tmp18, style, titleStyle: tmp4.refreshCardTitle, children: tmp19 };
+              const tmp22 = closure_12(tmp13(tmp2[37]), obj3);
+              cResult[18] = style;
+              cResult[19] = tmp4.refreshCardTitle;
+              cResult[20] = tmp19;
+              cResult[21] = tmp22;
+              tmp20 = tmp22;
             }
           }
         }
@@ -1319,23 +1280,22 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(14351)(userId));
+  ({ connections, appIdentities } = theme(14365)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
       const identity = application.identity;
       return closure_1_12(closure_1_20, { identity, application: application.application }, "" + identity.application_id + "-" + identity.provider_issued_user_id);
     }), HermesBuiltin.arraySpread(connections.map((account) => __initData(closure_19, { account, theme, locale, userId }, account.id)), 0));
-    const obj4 = { style: null, title: null, titleStyle: null, children: null };
-    const items3 = [tmp.cardContainer, userId.style];
-    obj4.style = items3;
+    const obj4 = { title: null, style: null, titleStyle: null, children: null };
     const arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => __initData(closure_19, { account, theme, locale, userId }, account.id)), 0);
     const intl = tmp2(1128).intl;
     obj4.title = intl.string(tmp2(1128).t["3fe7U5"]);
+    obj4.style = userId.style;
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(6973).TableRowGroup, obj5);
-    return closure_12(tmp5(7287), obj4);
+    obj4.children = closure_12(tmp2(6972).TableRowGroup, obj5);
+    return closure_12(tmp5(7288), obj4);
   }
   return null;
 });
@@ -1345,7 +1305,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export const ApplicationRoleConnection = memoResult;
 export const UserProfileAccountConnectionsCard = tmp7;
 export const UserProfileApplicationRoleConnectionsCard = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileApplicationRoleConnectionsCard(style) {
-  const cResult = c.c(15);
+  const cResult = c.c(12);
   style = style.style;
   const tmp4 = closure_16();
   const arr = useUserProfileApplicationRoleConnectionsDefault(style.userId);
@@ -1378,66 +1338,55 @@ export const UserProfileApplicationRoleConnectionsCard = ReactCompilerGating.isR
         cResult[2] = arr;
         cResult[3] = mapped;
       } else {
-        if (cResult[5] === style) {
-          if (cResult[6] === tmp4.cardContainer) {
-            let tmp13 = cResult[7];
-          }
-          const _Symbol2 = Symbol;
-          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = util.intl;
-            const stringResult = intl.string(util.t.PHjkRE);
-            cResult[8] = stringResult;
-            let tmp14 = stringResult;
-          } else {
-            tmp14 = cResult[8];
-          }
-          if (cResult[9] !== tmp9) {
-            const obj2 = { hasIcons: true, children: tmp9 };
-            const tmp18 = __initData(TableRowGroup.TableRowGroup, obj2);
-            cResult[9] = tmp9;
-            cResult[10] = tmp18;
-            let tmp16 = tmp18;
-          } else {
-            tmp16 = cResult[10];
-          }
-          if (cResult[11] === tmp4.refreshCardTitle) {
-            if (cResult[12] === tmp13) {
-              if (cResult[13] === tmp16) {
-                let tmp19 = cResult[14];
-              }
-              return tmp19;
-            }
-          }
-          const obj3 = { style: tmp13, title: tmp14, titleStyle: tmp4.refreshCardTitle, children: tmp16 };
-          const tmp21 = __initData(UserProfileCardDefault, obj3);
-          cResult[11] = tmp4.refreshCardTitle;
-          cResult[12] = tmp13;
-          cResult[13] = tmp16;
-          cResult[14] = tmp21;
-          tmp19 = tmp21;
+        const _Symbol2 = Symbol;
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = util.intl;
+          const stringResult = intl.string(util.t.PHjkRE);
+          cResult[5] = stringResult;
+          let tmp13 = stringResult;
+        } else {
+          tmp13 = cResult[5];
         }
-        const items1 = [tmp4.cardContainer, style];
-        cResult[5] = style;
-        cResult[6] = tmp4.cardContainer;
-        cResult[7] = items1;
-        tmp13 = items1;
+        if (cResult[6] !== cResult[3]) {
+          const obj2 = { hasIcons: true, children: tmp9 };
+          const tmp17 = __initData(TableRowGroup.TableRowGroup, obj2);
+          cResult[6] = tmp9;
+          cResult[7] = tmp17;
+          let tmp15 = tmp17;
+        } else {
+          tmp15 = cResult[7];
+        }
+        if (cResult[8] === style) {
+          if (cResult[9] === tmp4.refreshCardTitle) {
+            if (cResult[10] === tmp15) {
+              let tmp18 = cResult[11];
+            }
+            return tmp18;
+          }
+        }
+        const obj3 = { title: tmp13, style, titleStyle: tmp4.refreshCardTitle, children: tmp15 };
+        const tmp20 = __initData(UserProfileCardDefault, obj3);
+        cResult[8] = style;
+        cResult[9] = tmp4.refreshCardTitle;
+        cResult[10] = tmp15;
+        cResult[11] = tmp20;
+        tmp18 = tmp20;
       }
     }
   }
   return null;
 }) : (function UserProfileApplicationRoleConnectionsCard(arg0) {
   ({ userId, style } = arg0);
-  const tmp = closure_16();
   const arr = useUserProfileApplicationRoleConnectionsDefault(userId);
+  const tmp = closure_16();
   const items = [StreamerModeStore];
   if (!obj.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation)) {
     if (0 !== arr.length) {
       const mapped = arr.map((applicationRoleConnection) => closure_1_12(closure_1_21, { applicationRoleConnection }, applicationRoleConnection.application.id));
-      const obj2 = { style: null, title: null, titleStyle: null, children: null };
-      const items1 = [tmp.cardContainer, style];
-      obj2.style = items1;
+      const obj2 = { title: null, style: null, titleStyle: null, children: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t.PHjkRE);
+      obj2.style = style;
       obj2.titleStyle = tmp.refreshCardTitle;
       const obj3 = { hasIcons: true, children: mapped };
       obj2.children = __initData(TableRowGroup.TableRowGroup, obj3);

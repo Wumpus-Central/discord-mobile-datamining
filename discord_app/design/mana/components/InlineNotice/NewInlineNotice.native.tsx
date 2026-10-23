@@ -11,7 +11,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
   critical: {
-    Icon: fn(6998).CircleErrorIcon,
+    Icon: fn(6997).CircleErrorIcon,
     iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
     background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
     border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL,
@@ -22,21 +22,21 @@ let obj = {
   positive: null,
 };
 let obj2 = {
-  Icon: fn(6998).CircleErrorIcon,
+  Icon: fn(6997).CircleErrorIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
   border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL,
   typeLabel: _modDef2081.uKMqrF,
 };
 obj.warning = {
-  Icon: fn(7941).WarningIcon,
+  Icon: fn(7942).WarningIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
   border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING,
   typeLabel: _modDef2081["7vL/d/"],
 };
 let obj3 = {
-  Icon: fn(7941).WarningIcon,
+  Icon: fn(7942).WarningIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
   border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING,
@@ -57,7 +57,7 @@ let obj4 = {
   typeLabel: _modDef2081.BReS7U,
 };
 obj.positive = {
-  Icon: fn(7251).CircleCheckIcon,
+  Icon: fn(7252).CircleCheckIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE,
   border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE,
@@ -110,7 +110,7 @@ let closure_9 = createStyles.createStyles((arg0, height) => {
 });
 const ReactCompilerGating = fn(558);
 let obj5 = {
-  Icon: fn(7251).CircleCheckIcon,
+  Icon: fn(7252).CircleCheckIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE,
   border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE,

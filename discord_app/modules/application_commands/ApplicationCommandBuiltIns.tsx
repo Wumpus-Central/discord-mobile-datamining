@@ -22,7 +22,7 @@ function getOptionValue(arr, arg1) {
   }
   return value;
 }
-const BuiltInSectionId = fn(5970).BuiltInSectionId;
+const BuiltInSectionId = fn(5969).BuiltInSectionId;
 const Constants = fn(1087);
 ({
   Permissions: closure_7,
@@ -31,7 +31,7 @@ const Constants = fn(1087);
   DISPLAY_NAME_MAX_LENGTH,
   MAX_CHANNEL_NAME_LENGTH,
 } = Constants);
-const DiceRollConstants = fn(9628);
+const DiceRollConstants = fn(9635);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
 let closure_11 = fn(4883).getDisableCommunicationDurationOptions;
 const MessageSendLocation = fn(4974).MessageSendLocation;
@@ -54,7 +54,7 @@ Object.defineProperty(obj3, "name", {
   set: undefined,
 });
 obj[BuiltInSectionId.FRECENCY] = obj3;
-let items = [...fn(9629).default];
+let items = [...fn(9636).default];
 let obj4 = {
   id: "-1",
   untranslatedName: "shrug",
@@ -1358,17 +1358,17 @@ obj32.execute = function execute(arr, channel) {
             return obj4;
           } else {
             const obj5 = { recipientIds };
-            const obj2 = v1(7395);
+            const obj2 = v1(7396);
             v1 = 1;
             c0 = 1;
             const obj6 = {
-              value: v1(7395)
+              value: v1(7396)
                 .openPrivateChannel(obj5)
                 .then((result) => {
                   channel = channel.getChannel(result);
                   c1(38)(null != channel, "Newly created PrivateChannel is null");
-                  const obj = c1(7550);
-                  obj.sendMessage(channel.id, c1(7739).parse(channel, dependencyMap), true, {
+                  const obj = c1(7551);
+                  obj.sendMessage(channel.id, c1(7740).parse(channel, dependencyMap), true, {
                     location: constants.PRIVATE_MESSAGE_COMMAND,
                   });
                 }),
@@ -1528,7 +1528,7 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(9629).default;
+export const PLATFORM_COMMANDS = fn(9636).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;
